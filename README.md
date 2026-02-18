@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EduForge Web Starter
 
-## Getting Started
+EduForge is a web-first educational platform starter built with Next.js App Router and TypeScript.
 
-First, run the development server:
+## Included foundation
+
+- Next.js + TypeScript + Tailwind starter app
+- Supabase client/server helpers (`@supabase/ssr`)
+- Stripe checkout and webhook route scaffolding
+- AI token budget logic with hard-cap fallback support
+- Offline progress storage helper (IndexedDB via `idb`)
+- Mixpanel event helper for lesson tracking
+- Media placeholders in `public/placeholders/`
+- AI prompt catalog in `public/AI-MEDIA-PROMPTS.md`
+
+## Quick start
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Configure environment variables
+
+```bash
+copy .env.example .env.local
+```
+
+3. Start development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open app
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+`http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## API endpoints (starter)
 
-## Learn More
+- `GET /api/health`
+- `GET /api/auth/me`
+- `GET /api/ai/analyze` (schema info)
+- `POST /api/ai/analyze` (budget-aware recommendation mock)
+- `POST /api/stripe/checkout`
+- `POST /api/stripe/webhook`
+- `POST /api/compliance/age-gate`
+- `POST /api/compliance/parent-consent`
+- `POST /api/compliance/parent-consent/verify`
 
-To learn more about Next.js, take a look at the following resources:
+## Compliance routes (starter UI)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `/auth/age-gate`
+- `/auth/parent-consent`
+- `/auth/parent-consent/verify`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Auth routes
 
-## Deploy on Vercel
+- `/auth/sign-up`
+- `/auth/sign-in`
+- `/dashboard` (protected)
+- `/billing/checkout`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Session cookie refresh proxy is configured in `src/proxy.ts`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dashboard access includes an onboarding guard:
+
+- Missing age-gate profile state redirects to `/auth/age-gate`
+- Under-13 pending consent redirects to `/auth/parent-consent`
+
+Parental verification uses signed link tokens (`PARENT_CONSENT_TOKEN_SECRET`) and the verify API requires a valid token.
+
+## Supabase setup
+
+Run `supabase/schema.sql` in your Supabase SQL editor.
+
+Tables included:
+
+- `user_profiles`
+- `user_tokens`
+- `parent_consents`
+- `subscriptions`
+- `dsar_requests`
+
+Includes baseline RLS policies and updated-at triggers.
+
+## Seed data (optional)
+
+1. Set environment variables from `.env.example` in your shell (or `.env.local`).
+2. Run:
+
+```bash
+npm run seed:supabase
+```
+
+This creates (or reuses) a test user and seeds sample records in `user_profiles`, `user_tokens`, and `dsar_requests`.
+
+## Core files
+
+- `src/lib/config/env.ts`
+- `src/lib/ai/token-budget.ts`
+- `src/lib/supabase/client.ts`
+- `src/lib/supabase/server.ts`
+- `src/lib/offline/progress-db.ts`
+- `src/lib/analytics/mixpanel.ts`
+- `public/AI-MEDIA-PROMPTS.md`
+
+## Notes
+
+- Stripe, Supabase, translation, and AI routes are scaffolded for integration and need real keys in `.env.local`.
+- The token budget utility follows project constraints and can be wired to per-user Supabase tracking tables.
+- Stripe webhook lifecycle now persists subscription state into `subscriptions` using `SUPABASE_SERVICE_ROLE_KEY`.
+- Checkout and parent-consent APIs now derive `userId` from the authenticated Supabase session.

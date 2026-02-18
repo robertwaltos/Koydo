@@ -6,12 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed:supabase": "node scripts/seed-supabase.mjs"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.96.0",
+    "i18next": "^25.8.10",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "idb": "^8.0.3",
+    "mixpanel-browser": "^2.74.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-i18next": "^16.5.4",
+    "stripe": "^20.3.1",
+    "workbox-window": "^7.4.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

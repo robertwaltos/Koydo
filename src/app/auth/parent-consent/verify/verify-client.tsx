@@ -1,0 +1,72 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
+
+type Props = {
+  token: string;
+};
+
+export default function ParentConsentVerifyClient({ token }: Props) {
+  const [status, setStatus] = useState(
+    token ? "Checking verification link..." : "Missing verification token.",
+  );
+
+  useEffect(() => {
+    if (!token) {
+      return;
+    }
+
+    let cancelled = false;
+
+    const verify = async () => {
+      try {
+        const response = await fetch("/api/compliance/parent-consent/verify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token }),
+        });
+
+        const payload = (await response.json()) as { message?: string; error?: string };
+
+        if (cancelled) {
+          return;
+        }
+
+        if (!response.ok) {
+          setStatus(payload.error ?? "Unable to verify consent.");
+          return;
+        }
+
+        setStatus(payload.message ?? "Parental consent verified.");
+      } catch {
+        if (!cancelled) {
+          setStatus("Unable to verify consent. Try again later.");
+        }
+      }
+    };
+
+    void verify();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [token]);
+
+  return (
+    <div className="mt-6 space-y-4">
+      <p className="text-sm text-zinc-700 dark:text-zinc-200">{status}</p>
+      <div className="flex gap-3">
+        <Link
+          href="/auth/sign-in"
+          className="rounded-md border border-black/15 px-4 py-2 text-sm dark:border-white/20"
+        >
+          Return to Sign In
+        </Link>
+        <Link href="/dashboard" className="rounded-md bg-foreground px-4 py-2 text-sm text-background">
+          Go to Dashboard
+        </Link>
+      </div>
+    </div>
+  );
+}

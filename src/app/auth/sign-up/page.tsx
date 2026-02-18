@@ -1,0 +1,85 @@
+"use client";
+
+import Link from "next/link";
+import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
+import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+
+export default function SignUpPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
+
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("");
+    setIsSubmitting(true);
+
+    try {
+      const supabase = createSupabaseBrowserClient();
+      const { error } = await supabase.auth.signUp({ email, password });
+
+      if (error) {
+        setStatus(error.message);
+        return;
+      }
+
+      setStatus("Account created. If email confirmation is enabled, verify your inbox.");
+      router.push("/auth/sign-in");
+    } catch {
+      setStatus("Unable to sign up. Check environment configuration and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <main className="mx-auto max-w-md px-6 py-12">
+      <h1 className="text-2xl font-semibold">Create Account</h1>
+      <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">Register a learner account for EduForge.</p>
+
+      <form onSubmit={onSubmit} className="mt-6 space-y-4">
+        <div>
+          <label htmlFor="email" className="mb-1 block text-sm font-medium">Email</label>
+          <input
+            id="email"
+            type="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            className="w-full rounded-md border border-black/15 px-3 py-2 text-sm"
+            required
+          />
+        </div>
+
+        <div>
+          <label htmlFor="password" className="mb-1 block text-sm font-medium">Password</label>
+          <input
+            id="password"
+            type="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            className="w-full rounded-md border border-black/15 px-3 py-2 text-sm"
+            minLength={8}
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="rounded-md bg-foreground px-4 py-2 text-sm text-background disabled:opacity-70"
+        >
+          {isSubmitting ? "Creating..." : "Create Account"}
+        </button>
+
+        {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+      </form>
+
+      <p className="mt-6 text-sm text-zinc-600 dark:text-zinc-300">
+        Already have an account? <Link href="/auth/sign-in" className="underline">Sign in</Link>
+      </p>
+    </main>
+  );
+}
