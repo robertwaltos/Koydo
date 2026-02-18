@@ -33,6 +33,7 @@ export default function ParentConsentForm() {
         message?: string;
         error?: string;
         verificationUrl?: string;
+        deliveryMode?: "email" | "simulation" | "provider-error";
       };
 
       if (response.status === 401) {
@@ -46,7 +47,11 @@ export default function ParentConsentForm() {
       }
 
       setVerificationUrl(payload.verificationUrl ?? null);
-      setStatus(payload.message ?? "Consent request submitted.");
+      setStatus(
+        payload.deliveryMode === "email"
+          ? "Consent request submitted. A verification email was sent to the parent address."
+          : payload.message ?? "Consent request submitted.",
+      );
     } catch {
       setStatus("Unable to submit request. Try again.");
     } finally {

@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { serverEnv } from "@/lib/config/env";
-import { verifyParentConsentVerificationToken } from "@/lib/compliance/parent-consent-token";
+import {
+  hashParentConsentToken,
+  verifyParentConsentVerificationToken,
+} from "@/lib/compliance/parent-consent-token";
 
 const requestSchema = z.object({
   token: z.string().min(8),
@@ -43,7 +46,7 @@ export async function POST(request: NextRequest) {
 
     const { data: consentRequest, error: consentFetchError } = await supabase
       .from("parent_consents")
-      .select("id, status")
+      .select("id, status, parent_email, evidence")
       .eq("id", tokenVerification.payload.consentRequestId)
       .eq("child_user_id", tokenVerification.payload.childUserId)
       .maybeSingle();
@@ -62,10 +65,68 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (consentRequest.status === "verified") {
+      return NextResponse.json(
+        { error: "Verification link has already been used." },
+        { status: 409 },
+      );
+    }
+
+    if (consentRequest.status !== "pending_verification") {
+      return NextResponse.json(
+        { error: `Consent request is not verifiable in current state: ${consentRequest.status}` },
+        { status: 409 },
+      );
+    }
+
+    if (
+      (consentRequest.parent_email ?? "").toLowerCase() !==
+      tokenVerification.payload.parentEmail.toLowerCase()
+    ) {
+      return NextResponse.json(
+        { error: "Verification token does not match request owner." },
+        { status: 400 },
+      );
+    }
+
+    const evidence = (consentRequest.evidence ?? {}) as Record<string, unknown>;
+    const expectedTokenHash = typeof evidence.verification_token_hash === "string"
+      ? evidence.verification_token_hash
+      : null;
+
+    if (!expectedTokenHash) {
+      return NextResponse.json(
+        { error: "Consent request is missing verification token metadata." },
+        { status: 400 },
+      );
+    }
+
+    const presentedTokenHash = hashParentConsentToken(parsed.data.token);
+    if (presentedTokenHash !== expectedTokenHash) {
+      return NextResponse.json(
+        { error: "Verification token mismatch." },
+        { status: 400 },
+      );
+    }
+
+    if (typeof evidence.verification_used_at === "string") {
+      return NextResponse.json(
+        { error: "Verification link has already been consumed." },
+        { status: 409 },
+      );
+    }
+
     if (consentRequest.status !== "verified") {
       const { error: verifyError } = await supabase
         .from("parent_consents")
-        .update({ status: "verified", verified_at: new Date().toISOString() })
+        .update({
+          status: "verified",
+          verified_at: new Date().toISOString(),
+          evidence: {
+            ...evidence,
+            verification_used_at: new Date().toISOString(),
+          },
+        })
         .eq("id", consentRequest.id);
 
       if (verifyError) {

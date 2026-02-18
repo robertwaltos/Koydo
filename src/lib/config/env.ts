@@ -14,6 +14,8 @@ const serverEnvSchema = z.object({
   GROK_MODEL: z.string().default("grok-4-fast"),
   AI_MONTHLY_BUDGET_USD: z.coerce.number().positive().default(1),
   PARENT_CONSENT_TOKEN_SECRET: z.string().min(16).optional(),
+  RESEND_API_KEY: z.string().optional(),
+  PARENT_CONSENT_FROM_EMAIL: z.string().email().optional(),
   NEXT_PUBLIC_MIXPANEL_TOKEN: z.string().optional(),
 });
 

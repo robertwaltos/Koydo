@@ -19,6 +19,10 @@ function signPayload(encodedPayload: string, secret: string) {
   return crypto.createHmac("sha256", secret).update(encodedPayload).digest("base64url");
 }
 
+export function hashParentConsentToken(token: string) {
+  return crypto.createHash("sha256").update(token).digest("hex");
+}
+
 export function createParentConsentVerificationToken(
   payload: Omit<ParentConsentTokenPayload, "exp">,
   secret: string,

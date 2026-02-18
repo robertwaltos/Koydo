@@ -70,6 +70,8 @@ Dashboard access includes an onboarding guard:
 - Under-13 pending consent redirects to `/auth/parent-consent`
 
 Parental verification uses signed link tokens (`PARENT_CONSENT_TOKEN_SECRET`) and the verify API requires a valid token.
+If `RESEND_API_KEY` and `PARENT_CONSENT_FROM_EMAIL` are configured, the link is sent via email; otherwise a simulation link is returned for local testing.
+Verification links are single-use: token hash is bound to the consent request and consumed on successful verification.
 
 ## Supabase setup
 

@@ -3,7 +3,11 @@ import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { serverEnv } from "@/lib/config/env";
-import { createParentConsentVerificationToken } from "@/lib/compliance/parent-consent-token";
+import {
+  createParentConsentVerificationToken,
+  hashParentConsentToken,
+} from "@/lib/compliance/parent-consent-token";
+import { sendParentConsentVerificationEmail } from "@/lib/email/parent-consent-email";
 
 const requestSchema = z.object({
   parentEmail: z.string().email(),
@@ -67,6 +71,39 @@ export async function POST(request: NextRequest) {
       verificationToken,
     )}`;
 
+    const tokenHash = hashParentConsentToken(verificationToken);
+
+    const { error: evidenceError } = await supabase
+      .from("parent_consents")
+      .update({
+        evidence: {
+          verification_token_hash: tokenHash,
+          verification_sent_at: new Date().toISOString(),
+        },
+      })
+      .eq("id", data.id)
+      .eq("child_user_id", userData.user.id);
+
+    if (evidenceError) {
+      return NextResponse.json(
+        { error: "Failed to persist consent verification metadata", details: evidenceError.message },
+        { status: 500 },
+      );
+    }
+
+    const emailResult = await sendParentConsentVerificationEmail({
+      toEmail: parsed.data.parentEmail,
+      verificationUrl,
+      childUserId: userData.user.id,
+    });
+
+    if (!emailResult.delivered && emailResult.mode === "provider-error") {
+      return NextResponse.json(
+        { error: "Failed to send parent verification email", details: emailResult.reason },
+        { status: 502 },
+      );
+    }
+
     await supabase
       .from("user_profiles")
       .upsert(
@@ -82,7 +119,8 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       message: "Consent request submitted.",
       consentRequest: data,
-      verificationUrl,
+      verificationUrl: emailResult.mode === "simulation" ? verificationUrl : null,
+      deliveryMode: emailResult.mode,
       nextStep: "Send verification workflow to parent and verify before unlocking features.",
     });
   } catch (error) {
