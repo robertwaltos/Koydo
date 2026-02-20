@@ -256,6 +256,8 @@ Retry failed/canceled jobs back to queued state:
 npm run media:retry -- --status failed,canceled --limit 100 --apply
 ```
 
+The retry flow skips jobs when a queued/running/completed asset already exists for the same module + lesson + asset type.
+
 Optional filters:
 
 - `--module <module-id>`

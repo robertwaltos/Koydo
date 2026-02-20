@@ -10,6 +10,9 @@ type RetryableStatus = (typeof RETRYABLE_STATUSES)[number];
 type MediaJobRow = {
   id: string;
   status: RetryableStatus;
+  module_id: string | null;
+  lesson_id: string | null;
+  asset_type: string | null;
   metadata: Record<string, unknown> | null;
 };
 
@@ -56,7 +59,7 @@ export async function POST(request: Request) {
   const admin = createSupabaseAdminClient();
   let query = admin
     .from("media_generation_jobs")
-    .select("id, status, metadata")
+    .select("id, status, module_id, lesson_id, asset_type, metadata")
     .in("status", statuses);
 
   if (jobIds.length > 0) {
@@ -100,8 +103,32 @@ export async function POST(request: Request) {
 
   const retriedIds: string[] = [];
   let failedUpdates = 0;
+  let skippedActive = 0;
 
   for (const job of matchingJobs) {
+    if (job.module_id && job.lesson_id && job.asset_type) {
+      const { data: activeJob, error: activeCheckError } = await admin
+        .from("media_generation_jobs")
+        .select("id")
+        .eq("module_id", job.module_id)
+        .eq("lesson_id", job.lesson_id)
+        .eq("asset_type", job.asset_type)
+        .neq("id", job.id)
+        .in("status", ["queued", "running", "completed"])
+        .limit(1)
+        .maybeSingle();
+
+      if (activeCheckError) {
+        failedUpdates += 1;
+        continue;
+      }
+
+      if (activeJob?.id) {
+        skippedActive += 1;
+        continue;
+      }
+    }
+
     const previousRetryCount = Number((job.metadata ?? {}).retry_count ?? 0);
     const nextMetadata = {
       ...(job.metadata ?? {}),
@@ -134,6 +161,7 @@ export async function POST(request: Request) {
     scanned: matchingJobs.length,
     retried: retriedIds.length,
     failedUpdates,
+    skippedActive,
     jobIds: retriedIds,
     filters: {
       moduleId: moduleId || null,

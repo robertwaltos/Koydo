@@ -47,6 +47,7 @@ type RetryResponse = {
   scanned?: number;
   retried?: number;
   failedUpdates?: number;
+  skippedActive?: number;
   message?: string;
 };
 
@@ -300,7 +301,11 @@ export default function LessonMediaOps({
       }
 
       if ((payload.retried ?? 0) === 0) {
-        setActionStatus(payload.message ?? `No retryable ${assetType} jobs found for this lesson.`);
+        if ((payload.skippedActive ?? 0) > 0) {
+          setActionStatus(`Skipped retry because an active/completed ${assetType} job already exists.`);
+        } else {
+          setActionStatus(payload.message ?? `No retryable ${assetType} jobs found for this lesson.`);
+        }
       } else {
         setActionStatus(
           `Retried ${payload.retried ?? 0} ${assetType} job${(payload.retried ?? 0) === 1 ? "" : "s"} for this lesson.`,

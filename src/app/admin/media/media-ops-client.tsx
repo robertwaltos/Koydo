@@ -38,6 +38,7 @@ type RetryResponse = {
   scanned?: number;
   retried?: number;
   failedUpdates?: number;
+  skippedActive?: number;
   message?: string;
 };
 
@@ -268,7 +269,7 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
         setStatus(result.message);
       } else {
         setStatus(
-          `Retry complete. Scanned ${result.scanned ?? 0}, retried ${result.retried ?? 0}, failed updates ${result.failedUpdates ?? 0}.`,
+          `Retry complete. Scanned ${result.scanned ?? 0}, retried ${result.retried ?? 0}, skipped active ${result.skippedActive ?? 0}, failed updates ${result.failedUpdates ?? 0}.`,
         );
       }
       await refreshJobs();

@@ -5,6 +5,10 @@ import { createClient } from "@supabase/supabase-js";
 const envPath = path.resolve(".env");
 const VALID_STATUSES = ["failed", "canceled"];
 
+function buildKey(moduleId, lessonId, assetType) {
+  return `${moduleId}::${lessonId}::${assetType}`;
+}
+
 function parseArgs(argv) {
   const options = {
     apply: false,
@@ -121,8 +125,29 @@ async function main() {
     return;
   }
 
+  let activeQuery = supabase
+    .from("media_generation_jobs")
+    .select("module_id, lesson_id, asset_type")
+    .in("status", ["queued", "running", "completed"]);
+
+  if (options.moduleId) activeQuery = activeQuery.eq("module_id", options.moduleId);
+  if (options.lessonId) activeQuery = activeQuery.eq("lesson_id", options.lessonId);
+  if (assetType) activeQuery = activeQuery.eq("asset_type", assetType);
+
+  const { data: activeJobs, error: activeFetchError } = await activeQuery;
+  if (activeFetchError) {
+    throw new Error(`Unable to fetch active media jobs: ${activeFetchError.message}`);
+  }
+
+  const activeKeys = new Set();
+  for (const row of activeJobs ?? []) {
+    if (!row.module_id || !row.lesson_id || !row.asset_type) continue;
+    activeKeys.add(buildKey(row.module_id, row.lesson_id, row.asset_type));
+  }
+
   console.log(`Retry candidates: ${jobs.length}`);
   console.log(`Statuses: ${retryStatuses.join(", ")}`);
+  console.log(`Active conflicts detected: ${activeKeys.size}`);
   console.log(`Mode: ${options.apply ? "apply" : "dry-run"}`);
 
   if (!options.apply) {
@@ -140,7 +165,16 @@ async function main() {
 
   let retried = 0;
   let failedUpdates = 0;
+  let skippedActive = 0;
   for (const job of jobs) {
+    if (job.module_id && job.lesson_id && job.asset_type) {
+      const key = buildKey(job.module_id, job.lesson_id, job.asset_type);
+      if (activeKeys.has(key)) {
+        skippedActive += 1;
+        continue;
+      }
+    }
+
     const previousRetryCount = Number((job.metadata ?? {}).retry_count ?? 0);
     const nowIso = new Date().toISOString();
     const nextMetadata = {
@@ -170,6 +204,7 @@ async function main() {
   }
 
   console.log(`Retried: ${retried}`);
+  console.log(`Skipped (active duplicate exists): ${skippedActive}`);
   console.log(`Failed updates: ${failedUpdates}`);
 
   if (failedUpdates > 0) {
