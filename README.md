@@ -51,6 +51,7 @@ GitHub Actions workflow: `.github/workflows/ci.yml`
 Checks on push/PR:
 
 - `npm run modules:check`
+- `npm run curriculum:validate`
 - `npm run lint`
 - `npm run build`
 
@@ -125,6 +126,7 @@ To add a new learning module with minimal changes:
 2. Export a typed `LearningModule` object with metadata + lessons.
 3. Run `npm run modules:sync` to regenerate the validated registry.
 4. Optional: run `npm run modules:generate:exams` to add SAT/ACT/AP/GCSE/A-Level/JEE-NEET/Gaokao tracks.
+5. Run `npm run curriculum:validate` to enforce content integrity rules (unique IDs, quiz structure, lesson-type coverage).
 
 Fast scaffold option (recommended):
 

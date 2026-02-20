@@ -8,6 +8,7 @@
     "module:new": "node scripts/create-module.mjs",
     "modules:sync": "node scripts/sync-modules.mjs",
     "modules:check": "npm run modules:sync && git diff --exit-code -- src/lib/modules/generated/registry.ts",
+    "curriculum:validate": "node scripts/validate-curriculum.mjs",
     "media:report": "node scripts/media-readiness-report.mjs",
     "compliance:audit": "node scripts/appstore-compliance-audit.mjs",
     "curriculum:report": "node scripts/curriculum-coverage-report.mjs",

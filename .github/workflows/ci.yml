@@ -27,6 +27,9 @@ jobs:
       - name: Verify generated module registry is up to date
         run: npm run modules:check
 
+      - name: Validate curriculum data quality rules
+        run: npm run curriculum:validate
+
       - name: Lint
         run: npm run lint
 
