@@ -365,6 +365,14 @@ export default function CurriculumClient({
           >
             Export Backlog (Filtered CSV)
           </a>
+          <a
+            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            href="/CURRICULUM-BACKLOG-REPORT.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Backlog Report (MD)
+          </a>
         </div>
       </section>
 

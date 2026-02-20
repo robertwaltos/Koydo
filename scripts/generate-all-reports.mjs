@@ -5,6 +5,7 @@ const commands = [
   ["node", ["scripts/curriculum-quality-report.mjs"]],
   ["node", ["scripts/exam-prep-coverage-report.mjs"]],
   ["node", ["scripts/curriculum-expansion-plan.mjs"]],
+  ["node", ["scripts/curriculum-backlog-report.mjs"]],
   ["node", ["scripts/generate-lesson-media-prompts.mjs"]],
   ["node", ["scripts/media-readiness-report.mjs"]],
   ["node", ["scripts/appstore-compliance-audit.mjs"]],

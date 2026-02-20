@@ -78,7 +78,7 @@ Checks on push/PR:
 
 Ops workflow output:
 
-- Uploads an `ops-report-bundle` artifact with curriculum/exam-prep/media/compliance/prompt-pack reports.
+- Uploads an `ops-report-bundle` artifact with curriculum/exam-prep/backlog/media/compliance/prompt-pack reports.
 - Processes due `admin_report_jobs` queue entries into `admin_report_exports` rows.
 
 Media automation workflow behavior:
@@ -256,6 +256,17 @@ This generates:
 
 - `public/EXAM-PREP-COVERAGE-REPORT.json`
 - `public/EXAM-PREP-COVERAGE-REPORT.md`
+
+To generate a consolidated curriculum backlog report (coverage + exam-track + quality remediation tasks):
+
+```bash
+npm run curriculum:backlog:report
+```
+
+This generates:
+
+- `public/CURRICULUM-BACKLOG-REPORT.json`
+- `public/CURRICULUM-BACKLOG-REPORT.md`
 
 Media production readiness reporting:
 

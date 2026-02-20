@@ -22,6 +22,7 @@
     "curriculum:report": "node scripts/curriculum-coverage-report.mjs",
     "curriculum:quality": "node scripts/curriculum-quality-report.mjs",
     "curriculum:plan": "npm run curriculum:report && node scripts/curriculum-expansion-plan.mjs",
+    "curriculum:backlog:report": "node scripts/curriculum-backlog-report.mjs",
     "exam:report": "node scripts/exam-prep-coverage-report.mjs",
     "prompts:lesson-media": "node scripts/generate-lesson-media-prompts.mjs",
     "reports:refresh": "node scripts/generate-all-reports.mjs",
