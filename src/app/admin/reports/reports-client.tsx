@@ -13,6 +13,20 @@ type ReportJob = {
   error?: string | null;
 };
 
+type ReportType = "dsar" | "support" | "audit";
+
+type ReportTypeBreakdownEntry = {
+  queuedReady: number;
+  running: number;
+  backlog: number;
+  staleQueued: number;
+  staleRunning: number;
+  stale: number;
+  failed24h: number;
+};
+
+type ReportTypeBreakdown = Record<ReportType, ReportTypeBreakdownEntry>;
+
 type ReportQueueSummary = {
   generatedAt: string;
   queuedReadyCount: number;
@@ -29,11 +43,14 @@ type ReportQueueSummary = {
   backlogThreshold: number;
   failure24hThreshold: number;
   slaBreaches: number;
+  reportTypeBreakdown: ReportTypeBreakdown;
 };
 
 type ReportQueueSummaryResponse = Partial<ReportQueueSummary> & {
   error?: string;
 };
+
+const REPORT_TYPES: ReportType[] = ["dsar", "support", "audit"];
 
 function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
@@ -53,6 +70,70 @@ function formatAgeFromIso(isoTimestamp: string | null) {
   if (diffHours < 24) return `${diffHours}h`;
   const diffDays = Math.floor(diffHours / 24);
   return `${diffDays}d`;
+}
+
+function buildDefaultReportTypeBreakdown(): ReportTypeBreakdown {
+  return {
+    dsar: {
+      queuedReady: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+    support: {
+      queuedReady: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+    audit: {
+      queuedReady: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+  };
+}
+
+function parseReportTypeBreakdown(value: unknown): ReportTypeBreakdown {
+  const fallback = buildDefaultReportTypeBreakdown();
+  if (!value || typeof value !== "object") {
+    return fallback;
+  }
+  const record = value as Record<string, unknown>;
+  for (const reportType of REPORT_TYPES) {
+    const entry = record[reportType];
+    if (!entry || typeof entry !== "object") {
+      continue;
+    }
+    const entryRecord = entry as Record<string, unknown>;
+    const queuedReady = isFiniteNumber(entryRecord.queuedReady) ? entryRecord.queuedReady : 0;
+    const running = isFiniteNumber(entryRecord.running) ? entryRecord.running : 0;
+    const staleQueued = isFiniteNumber(entryRecord.staleQueued) ? entryRecord.staleQueued : 0;
+    const staleRunning = isFiniteNumber(entryRecord.staleRunning) ? entryRecord.staleRunning : 0;
+    const failed24h = isFiniteNumber(entryRecord.failed24h) ? entryRecord.failed24h : 0;
+    const backlog = isFiniteNumber(entryRecord.backlog) ? entryRecord.backlog : queuedReady + running;
+    const stale = isFiniteNumber(entryRecord.stale) ? entryRecord.stale : staleQueued + staleRunning;
+    fallback[reportType] = {
+      queuedReady,
+      running,
+      backlog,
+      staleQueued,
+      staleRunning,
+      stale,
+      failed24h,
+    };
+  }
+  return fallback;
 }
 
 export default function ReportsClient({
@@ -113,6 +194,7 @@ export default function ReportsClient({
           ? payload.failure24hThreshold
           : 10,
         slaBreaches: isFiniteNumber(payload.slaBreaches) ? payload.slaBreaches : 0,
+        reportTypeBreakdown: parseReportTypeBreakdown(payload.reportTypeBreakdown),
       };
 
       setQueueSummary(nextSummary);
@@ -354,6 +436,28 @@ export default function ReportsClient({
           Stale threshold: {queueSummary.staleHoursThreshold}h | stale cutoff{" "}
           {new Date(queueSummary.staleCutoffAt).toLocaleString()}
         </p>
+        <div className="mt-3 grid gap-2 sm:grid-cols-3">
+          {REPORT_TYPES.map((reportType) => {
+            const breakdown = queueSummary.reportTypeBreakdown[reportType];
+            return (
+              <article
+                key={reportType}
+                className="rounded-md border border-black/10 bg-white p-3 text-xs dark:border-white/10 dark:bg-zinc-900"
+              >
+                <p className="font-semibold uppercase tracking-wide text-zinc-700 dark:text-zinc-200">
+                  {reportType}
+                </p>
+                <p className="mt-1 text-zinc-600 dark:text-zinc-300">
+                  backlog {breakdown.backlog} (q {breakdown.queuedReady} / r {breakdown.running})
+                </p>
+                <p className="text-zinc-600 dark:text-zinc-300">
+                  stale {breakdown.stale} (q {breakdown.staleQueued} / r {breakdown.staleRunning})
+                </p>
+                <p className="text-zinc-600 dark:text-zinc-300">failed24h {breakdown.failed24h}</p>
+              </article>
+            );
+          })}
+        </div>
       </div>
 
       <form onSubmit={createJob} className="mt-3 grid gap-3 md:grid-cols-3">

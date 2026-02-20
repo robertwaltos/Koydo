@@ -66,6 +66,20 @@ type RequeueStaleResponse = {
   message?: string;
 };
 
+type MediaAssetType = "video" | "animation" | "image";
+
+type MediaAssetBreakdownEntry = {
+  queued: number;
+  running: number;
+  backlog: number;
+  staleQueued: number;
+  staleRunning: number;
+  stale: number;
+  failed24h: number;
+};
+
+type MediaAssetBreakdown = Record<MediaAssetType, MediaAssetBreakdownEntry>;
+
 type MediaQueueSummary = {
   generatedAt: string;
   queuedCount: number;
@@ -81,6 +95,7 @@ type MediaQueueSummary = {
   backlogThreshold: number;
   failure24hThreshold: number;
   slaBreaches: number;
+  assetBreakdown: MediaAssetBreakdown;
 };
 
 type MediaQueueSummaryResponse = Partial<MediaQueueSummary> & {
@@ -98,6 +113,8 @@ type JobsPaginationState = {
   nextOffset: number | null;
   previousOffset: number | null;
 };
+
+const MEDIA_ASSET_TYPES: MediaAssetType[] = ["video", "animation", "image"];
 
 async function postJson(url: string, payload: unknown) {
   const response = await fetch(url, {
@@ -137,6 +154,71 @@ function formatAgeFromIso(isoTimestamp: string | null) {
 
 function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
+}
+
+function buildDefaultAssetBreakdown(): MediaAssetBreakdown {
+  return {
+    video: {
+      queued: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+    animation: {
+      queued: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+    image: {
+      queued: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+  };
+}
+
+function parseAssetBreakdown(value: unknown): MediaAssetBreakdown {
+  const fallback = buildDefaultAssetBreakdown();
+  if (!value || typeof value !== "object") {
+    return fallback;
+  }
+
+  const record = value as Record<string, unknown>;
+  for (const assetType of MEDIA_ASSET_TYPES) {
+    const entry = record[assetType];
+    if (!entry || typeof entry !== "object") {
+      continue;
+    }
+    const entryRecord = entry as Record<string, unknown>;
+    const queued = isFiniteNumber(entryRecord.queued) ? entryRecord.queued : 0;
+    const running = isFiniteNumber(entryRecord.running) ? entryRecord.running : 0;
+    const staleQueued = isFiniteNumber(entryRecord.staleQueued) ? entryRecord.staleQueued : 0;
+    const staleRunning = isFiniteNumber(entryRecord.staleRunning) ? entryRecord.staleRunning : 0;
+    const failed24h = isFiniteNumber(entryRecord.failed24h) ? entryRecord.failed24h : 0;
+    const backlog = isFiniteNumber(entryRecord.backlog) ? entryRecord.backlog : queued + running;
+    const stale = isFiniteNumber(entryRecord.stale) ? entryRecord.stale : staleQueued + staleRunning;
+    fallback[assetType] = {
+      queued,
+      running,
+      backlog,
+      staleQueued,
+      staleRunning,
+      stale,
+      failed24h,
+    };
+  }
+  return fallback;
 }
 
 export default function MediaOpsClient({
@@ -240,6 +322,7 @@ export default function MediaOpsClient({
         backlogThreshold: isFiniteNumber(payload.backlogThreshold) ? payload.backlogThreshold : 30,
         failure24hThreshold: isFiniteNumber(payload.failure24hThreshold) ? payload.failure24hThreshold : 20,
         slaBreaches: isFiniteNumber(payload.slaBreaches) ? payload.slaBreaches : 0,
+        assetBreakdown: parseAssetBreakdown(payload.assetBreakdown),
       };
       setQueueSummary(nextSummary);
       setSummaryLastUpdatedAt(nextSummary.generatedAt);
@@ -727,6 +810,23 @@ export default function MediaOpsClient({
               Stale threshold: {queueSummary.staleHoursThreshold}h | stale cutoff{" "}
               {new Date(queueSummary.staleCutoffAt).toLocaleString()}
             </p>
+            <div className="mt-3 grid gap-2 sm:grid-cols-3">
+              {MEDIA_ASSET_TYPES.map((assetType) => {
+                const breakdown = queueSummary.assetBreakdown[assetType];
+                return (
+                  <article key={assetType} className="rounded-md border border-black/10 bg-white p-3 text-xs">
+                    <p className="font-semibold uppercase tracking-wide text-zinc-700">{assetType}</p>
+                    <p className="mt-1 text-zinc-600">
+                      backlog {breakdown.backlog} (q {breakdown.queued} / r {breakdown.running})
+                    </p>
+                    <p className="text-zinc-600">
+                      stale {breakdown.stale} (q {breakdown.staleQueued} / r {breakdown.staleRunning})
+                    </p>
+                    <p className="text-zinc-600">failed24h {breakdown.failed24h}</p>
+                  </article>
+                );
+              })}
+            </div>
           </>
         ) : null}
       </section>

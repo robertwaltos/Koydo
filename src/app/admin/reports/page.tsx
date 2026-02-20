@@ -4,6 +4,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import ReportsClient from "./reports-client";
 
 export const dynamic = "force-dynamic";
+const REPORT_TYPES = ["dsar", "support", "audit"] as const;
 
 function coerceNumber(value: unknown) {
   if (typeof value === "number" && Number.isFinite(value)) return value;
@@ -40,6 +41,18 @@ type ReportQueueSummary = {
   backlogThreshold: number;
   failure24hThreshold: number;
   slaBreaches: number;
+  reportTypeBreakdown: Record<
+    (typeof REPORT_TYPES)[number],
+    {
+      queuedReady: number;
+      running: number;
+      backlog: number;
+      staleQueued: number;
+      staleRunning: number;
+      stale: number;
+      failed24h: number;
+    }
+  >;
 };
 
 export default async function AdminReportsPage() {
@@ -193,6 +206,114 @@ export default async function AdminReportsPage() {
     backlogCount >= backlogThreshold,
     failed24hCount >= failure24hThreshold,
   ].filter(Boolean).length;
+
+  const [
+    queuedReadyByType,
+    runningByType,
+    staleQueuedByType,
+    staleRunningStartedByType,
+    staleRunningUnstartedByType,
+    failed24hByType,
+  ] = await Promise.all([
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "queued")
+          .eq("report_type", reportType)
+          .lte("run_after", nowIso);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "running")
+          .eq("report_type", reportType);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "queued")
+          .eq("report_type", reportType)
+          .lt("run_after", staleCutoffIso);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "running")
+          .eq("report_type", reportType)
+          .not("started_at", "is", null)
+          .lt("started_at", staleCutoffIso);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "running")
+          .eq("report_type", reportType)
+          .is("started_at", null)
+          .lt("created_at", staleCutoffIso);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "failed")
+          .eq("report_type", reportType)
+          .gte("completed_at", failure24hCutoff);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+  ]);
+
+  const reportTypeBreakdown = Object.fromEntries(
+    REPORT_TYPES.map((reportType) => {
+      const queuedReady =
+        queuedReadyByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const running = runningByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const staleQueued =
+        staleQueuedByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const staleRunningStarted =
+        staleRunningStartedByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const staleRunningUnstarted =
+        staleRunningUnstartedByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const failed24h =
+        failed24hByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const staleRunning = staleRunningStarted + staleRunningUnstarted;
+
+      return [
+        reportType,
+        {
+          queuedReady,
+          running,
+          backlog: queuedReady + running,
+          staleQueued,
+          staleRunning,
+          stale: staleQueued + staleRunning,
+          failed24h,
+        },
+      ];
+    }),
+  ) as ReportQueueSummary["reportTypeBreakdown"];
+
   const queueSummary: ReportQueueSummary = {
     generatedAt: nowIso,
     queuedReadyCount,
@@ -209,6 +330,7 @@ export default async function AdminReportsPage() {
     backlogThreshold,
     failure24hThreshold,
     slaBreaches,
+    reportTypeBreakdown,
   };
 
   const exportHistory = exportHistoryResult.data ?? [];

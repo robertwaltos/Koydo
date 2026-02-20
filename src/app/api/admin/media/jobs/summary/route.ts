@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
+const ASSET_TYPES = ["video", "animation", "image"] as const;
+
 function coerceNumber(value: unknown) {
   if (typeof value === "number" && Number.isFinite(value)) return value;
   if (typeof value === "string") {
@@ -125,6 +127,105 @@ export async function GET() {
     failed24hCount >= failure24hThreshold,
   ].filter(Boolean).length;
 
+  const [
+    queuedByAsset,
+    runningByAsset,
+    staleQueuedByAsset,
+    staleRunningByAsset,
+    failed24hByAsset,
+  ] = await Promise.all([
+    Promise.all(
+      ASSET_TYPES.map(async (assetType) => {
+        const { count, error } = await admin
+          .from("media_generation_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "queued")
+          .eq("asset_type", assetType);
+        return { assetType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      ASSET_TYPES.map(async (assetType) => {
+        const { count, error } = await admin
+          .from("media_generation_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "running")
+          .eq("asset_type", assetType);
+        return { assetType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      ASSET_TYPES.map(async (assetType) => {
+        const { count, error } = await admin
+          .from("media_generation_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "queued")
+          .eq("asset_type", assetType)
+          .lt("created_at", staleCutoffIso);
+        return { assetType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      ASSET_TYPES.map(async (assetType) => {
+        const { count, error } = await admin
+          .from("media_generation_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "running")
+          .eq("asset_type", assetType)
+          .lt("updated_at", staleCutoffIso);
+        return { assetType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      ASSET_TYPES.map(async (assetType) => {
+        const { count, error } = await admin
+          .from("media_generation_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "failed")
+          .eq("asset_type", assetType)
+          .gte("updated_at", failure24hCutoff);
+        return { assetType, count: count ?? 0, error };
+      }),
+    ),
+  ]);
+
+  const breakdownError =
+    queuedByAsset.find((entry) => entry.error)?.error ??
+    runningByAsset.find((entry) => entry.error)?.error ??
+    staleQueuedByAsset.find((entry) => entry.error)?.error ??
+    staleRunningByAsset.find((entry) => entry.error)?.error ??
+    failed24hByAsset.find((entry) => entry.error)?.error;
+
+  if (breakdownError) {
+    return NextResponse.json({ error: breakdownError.message }, { status: 500 });
+  }
+
+  const assetBreakdown = Object.fromEntries(
+    ASSET_TYPES.map((assetType) => {
+      const queued = queuedByAsset.find((entry) => entry.assetType === assetType)?.count ?? 0;
+      const running = runningByAsset.find((entry) => entry.assetType === assetType)?.count ?? 0;
+      const staleQueued =
+        staleQueuedByAsset.find((entry) => entry.assetType === assetType)?.count ?? 0;
+      const staleRunning =
+        staleRunningByAsset.find((entry) => entry.assetType === assetType)?.count ?? 0;
+      const failed24h =
+        failed24hByAsset.find((entry) => entry.assetType === assetType)?.count ?? 0;
+
+      return [
+        assetType,
+        {
+          queued,
+          running,
+          backlog: queued + running,
+          staleQueued,
+          staleRunning,
+          stale: staleQueued + staleRunning,
+          failed24h,
+        },
+      ];
+    }),
+  );
+
   return NextResponse.json({
     generatedAt: nowIso,
     queuedCount,
@@ -140,5 +241,6 @@ export async function GET() {
     backlogThreshold,
     failure24hThreshold,
     slaBreaches,
+    assetBreakdown,
   });
 }

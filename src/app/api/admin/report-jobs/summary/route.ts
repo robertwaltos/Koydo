@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
+const REPORT_TYPES = ["dsar", "support", "audit"] as const;
+
 function coerceNumber(value: unknown) {
   if (typeof value === "number" && Number.isFinite(value)) return value;
   if (typeof value === "string") {
@@ -159,6 +161,125 @@ export async function GET() {
     failed24hCount >= failure24hThreshold,
   ].filter(Boolean).length;
 
+  const [
+    queuedReadyByType,
+    runningByType,
+    staleQueuedByType,
+    staleRunningStartedByType,
+    staleRunningUnstartedByType,
+    failed24hByType,
+  ] = await Promise.all([
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "queued")
+          .eq("report_type", reportType)
+          .lte("run_after", nowIso);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "running")
+          .eq("report_type", reportType);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "queued")
+          .eq("report_type", reportType)
+          .lt("run_after", staleCutoffIso);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "running")
+          .eq("report_type", reportType)
+          .not("started_at", "is", null)
+          .lt("started_at", staleCutoffIso);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "running")
+          .eq("report_type", reportType)
+          .is("started_at", null)
+          .lt("created_at", staleCutoffIso);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+    Promise.all(
+      REPORT_TYPES.map(async (reportType) => {
+        const { count, error } = await admin
+          .from("admin_report_jobs")
+          .select("id", { count: "exact", head: true })
+          .eq("status", "failed")
+          .eq("report_type", reportType)
+          .gte("completed_at", failure24hCutoff);
+        return { reportType, count: count ?? 0, error };
+      }),
+    ),
+  ]);
+
+  const breakdownError =
+    queuedReadyByType.find((entry) => entry.error)?.error ??
+    runningByType.find((entry) => entry.error)?.error ??
+    staleQueuedByType.find((entry) => entry.error)?.error ??
+    staleRunningStartedByType.find((entry) => entry.error)?.error ??
+    staleRunningUnstartedByType.find((entry) => entry.error)?.error ??
+    failed24hByType.find((entry) => entry.error)?.error;
+
+  if (breakdownError) {
+    return NextResponse.json({ error: breakdownError.message }, { status: 500 });
+  }
+
+  const reportTypeBreakdown = Object.fromEntries(
+    REPORT_TYPES.map((reportType) => {
+      const queuedReady =
+        queuedReadyByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const running = runningByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const staleQueued =
+        staleQueuedByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const staleRunningStarted =
+        staleRunningStartedByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const staleRunningUnstarted =
+        staleRunningUnstartedByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+      const staleRunning = staleRunningStarted + staleRunningUnstarted;
+      const failed24h =
+        failed24hByType.find((entry) => entry.reportType === reportType)?.count ?? 0;
+
+      return [
+        reportType,
+        {
+          queuedReady,
+          running,
+          backlog: queuedReady + running,
+          staleQueued,
+          staleRunning,
+          stale: staleQueued + staleRunning,
+          failed24h,
+        },
+      ];
+    }),
+  );
+
   return NextResponse.json({
     generatedAt: nowIso,
     queuedReadyCount,
@@ -175,5 +296,6 @@ export async function GET() {
     backlogThreshold,
     failure24hThreshold,
     slaBreaches,
+    reportTypeBreakdown,
   });
 }
