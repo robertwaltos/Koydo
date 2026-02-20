@@ -20,20 +20,41 @@ async function getAdminUserId() {
   return user.id;
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   const adminUserId = await getAdminUserId();
   if (!adminUserId) {
     return NextResponse.json({ error: "Admin access required." }, { status: 403 });
   }
 
+  const { searchParams } = new URL(request.url);
+  const moduleId = searchParams.get("moduleId")?.trim() ?? "";
+  const lessonId = searchParams.get("lessonId")?.trim() ?? "";
+  const assetType = searchParams.get("assetType")?.trim() ?? "";
+  const rawLimit = Number(searchParams.get("limit") ?? "100");
+  const limit = Number.isFinite(rawLimit) ? Math.min(200, Math.max(1, rawLimit)) : 100;
+
+  if (assetType && !["video", "animation", "image"].includes(assetType)) {
+    return NextResponse.json({ error: "assetType must be video, animation, or image." }, { status: 400 });
+  }
+
   const admin = createSupabaseAdminClient();
-  const { data, error } = await admin
+  let query = admin
     .from("media_generation_jobs")
     .select(
       "id, module_id, lesson_id, asset_type, provider, prompt, status, output_url, error, created_at, updated_at, completed_at",
-    )
-    .order("created_at", { ascending: false })
-    .limit(100);
+    );
+
+  if (moduleId) {
+    query = query.eq("module_id", moduleId);
+  }
+  if (lessonId) {
+    query = query.eq("lesson_id", lessonId);
+  }
+  if (assetType) {
+    query = query.eq("asset_type", assetType);
+  }
+
+  const { data, error } = await query.order("created_at", { ascending: false }).limit(limit);
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
