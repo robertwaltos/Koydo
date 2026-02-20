@@ -217,6 +217,13 @@ npm run modules:generate:prek
 npm run modules:sync
 ```
 
+To regenerate existing Pre-K modules from the latest template changes:
+
+```bash
+npm run modules:generate:prek:overwrite
+npm run modules:sync
+```
+
 To inspect curriculum breadth and identify coverage gaps:
 
 ```bash

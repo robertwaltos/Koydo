@@ -268,21 +268,22 @@ function buildModuleSource(blueprint) {
   const constName = toConstName(moduleId);
   const subject = escapeValue(blueprint.subject);
   const title = escapeValue(`Pre-K ${blueprint.title}`);
+  const lessonTopic = escapeValue(blueprint.title);
   const focus = escapeValue(blueprint.focus);
   const strandA = escapeValue(blueprint.strandA);
   const strandB = escapeValue(blueprint.strandB);
 
   const lessons = [
-    videoLesson(moduleId, 1, `Welcome to ${blueprint.title}`, focus),
-    interactiveLesson(moduleId, 2, "Guided Play Activity", strandA),
-    quizLesson(moduleId, 3, "Checkpoint: Core Idea", focus, strandA, strandB),
-    videoLesson(moduleId, 4, "Story and Example Time", strandA),
-    interactiveLesson(moduleId, 5, "Hands-On Practice", strandB),
-    quizLesson(moduleId, 6, "Checkpoint: Practice Skills", focus, strandA, strandB),
-    videoLesson(moduleId, 7, "Build and Create", focus),
-    interactiveLesson(moduleId, 8, "Reflection Circle", strandA),
-    quizLesson(moduleId, 9, "Review Game", focus, strandA, strandB),
-    quizLesson(moduleId, 10, "Celebration Quiz", focus, strandA, strandB),
+    videoLesson(moduleId, 1, `Welcome to ${lessonTopic}`, focus),
+    interactiveLesson(moduleId, 2, `Guided Play: ${lessonTopic}`, strandA),
+    quizLesson(moduleId, 3, `Checkpoint: Core Idea (${lessonTopic})`, focus, strandA, strandB),
+    videoLesson(moduleId, 4, `Story and Example Time: ${lessonTopic}`, strandA),
+    interactiveLesson(moduleId, 5, `Hands-On Practice: ${lessonTopic}`, strandB),
+    quizLesson(moduleId, 6, `Checkpoint: Practice Skills (${lessonTopic})`, focus, strandA, strandB),
+    videoLesson(moduleId, 7, `Build and Create: ${lessonTopic}`, focus),
+    interactiveLesson(moduleId, 8, `Reflection Circle: ${lessonTopic}`, strandA),
+    quizLesson(moduleId, 9, `Review Game: ${lessonTopic}`, focus, strandA, strandB),
+    quizLesson(moduleId, 10, `Celebration Quiz: ${lessonTopic}`, focus, strandA, strandB),
   ].join(",\n    ");
 
   return `import type { LearningModule } from "@/lib/modules/types";
@@ -314,7 +315,9 @@ export const ${constName}: LearningModule = {
 
 async function main() {
   let createdCount = 0;
+  let updatedCount = 0;
   let skippedCount = 0;
+  const shouldOverwrite = process.argv.includes("--overwrite");
 
   await fs.mkdir(catalogDir, { recursive: true });
 
@@ -323,7 +326,12 @@ async function main() {
     const outPath = path.join(catalogDir, `${moduleId}.ts`);
     try {
       await fs.access(outPath);
-      skippedCount += 1;
+      if (!shouldOverwrite) {
+        skippedCount += 1;
+        continue;
+      }
+      await fs.writeFile(outPath, buildModuleSource(blueprint), "utf8");
+      updatedCount += 1;
       continue;
     } catch {
       // file does not exist
@@ -332,10 +340,13 @@ async function main() {
     createdCount += 1;
   }
 
-  console.log(`Created ${createdCount} Pre-K module file(s), skipped ${skippedCount} existing file(s).`);
+  console.log(
+    `Created ${createdCount} Pre-K module file(s), updated ${updatedCount}, skipped ${skippedCount} existing file(s).`,
+  );
   console.log("Next steps:");
   console.log("1) npm run modules:sync");
-  console.log("2) npm run reports:refresh");
+  console.log("2) npm run curriculum:validate");
+  console.log("3) npm run reports:refresh");
 }
 
 main().catch((error) => {

@@ -108,7 +108,7 @@ export const AtarPrep101Module: LearningModule = {
     },
     {
       id: "atar-prep-101-l04",
-      title: "High-Value Topic Prioritization",
+      title: "ATAR High-Value Topic Prioritization",
       type: "interactive",
       duration: 14,
       metadata: {
@@ -119,8 +119,8 @@ export const AtarPrep101Module: LearningModule = {
         ]
       },
       learningAids: [
-        { id: "atar-prep-101-l04-a1", type: "image", title: "Concept Snapshot", content: "Visual summary for High-Value Topic Prioritization." },
-        { id: "atar-prep-101-l04-a2", type: "animation", title: "Animated Walkthrough", content: "Step-by-step explanation of High-Value Topic Prioritization." }
+        { id: "atar-prep-101-l04-a1", type: "image", title: "Concept Snapshot", content: "Visual summary for ATAR High-Value Topic Prioritization." },
+        { id: "atar-prep-101-l04-a2", type: "animation", title: "Animated Walkthrough", content: "Step-by-step explanation of ATAR High-Value Topic Prioritization." }
       ]
     },
     {

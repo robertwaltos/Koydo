@@ -31,7 +31,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l02",
-      title: "Guided Play Activity",
+      title: "Guided Play: Home Routines and Helpers",
       type: "interactive",
       duration: 10,
       metadata: {
@@ -47,7 +47,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l03",
-      title: "Checkpoint: Core Idea",
+      title: "Checkpoint: Core Idea (Home Routines and Helpers)",
       type: "quiz",
       duration: 10,
       questions: [
@@ -106,7 +106,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l04",
-      title: "Story and Example Time",
+      title: "Story and Example Time: Home Routines and Helpers",
       type: "video",
       duration: 8,
       learningAids: [
@@ -116,7 +116,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l05",
-      title: "Hands-On Practice",
+      title: "Hands-On Practice: Home Routines and Helpers",
       type: "interactive",
       duration: 10,
       metadata: {
@@ -132,7 +132,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l06",
-      title: "Checkpoint: Practice Skills",
+      title: "Checkpoint: Practice Skills (Home Routines and Helpers)",
       type: "quiz",
       duration: 10,
       questions: [
@@ -191,7 +191,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l07",
-      title: "Build and Create",
+      title: "Build and Create: Home Routines and Helpers",
       type: "video",
       duration: 8,
       learningAids: [
@@ -201,7 +201,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l08",
-      title: "Reflection Circle",
+      title: "Reflection Circle: Home Routines and Helpers",
       type: "interactive",
       duration: 10,
       metadata: {
@@ -217,7 +217,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l09",
-      title: "Review Game",
+      title: "Review Game: Home Routines and Helpers",
       type: "quiz",
       duration: 10,
       questions: [
@@ -276,7 +276,7 @@ export const PreKHouseholdManagement101Module: LearningModule = {
     },
     {
       id: "pre-k-household-management-101-l10",
-      title: "Celebration Quiz",
+      title: "Celebration Quiz: Home Routines and Helpers",
       type: "quiz",
       duration: 10,
       questions: [

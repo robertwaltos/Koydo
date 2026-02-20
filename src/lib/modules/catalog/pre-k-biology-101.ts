@@ -31,7 +31,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l02",
-      title: "Guided Play Activity",
+      title: "Guided Play: Living Things Club",
       type: "interactive",
       duration: 10,
       metadata: {
@@ -47,7 +47,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l03",
-      title: "Checkpoint: Core Idea",
+      title: "Checkpoint: Core Idea (Living Things Club)",
       type: "quiz",
       duration: 10,
       questions: [
@@ -106,7 +106,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l04",
-      title: "Story and Example Time",
+      title: "Story and Example Time: Living Things Club",
       type: "video",
       duration: 8,
       learningAids: [
@@ -116,7 +116,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l05",
-      title: "Hands-On Practice",
+      title: "Hands-On Practice: Living Things Club",
       type: "interactive",
       duration: 10,
       metadata: {
@@ -132,7 +132,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l06",
-      title: "Checkpoint: Practice Skills",
+      title: "Checkpoint: Practice Skills (Living Things Club)",
       type: "quiz",
       duration: 10,
       questions: [
@@ -191,7 +191,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l07",
-      title: "Build and Create",
+      title: "Build and Create: Living Things Club",
       type: "video",
       duration: 8,
       learningAids: [
@@ -201,7 +201,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l08",
-      title: "Reflection Circle",
+      title: "Reflection Circle: Living Things Club",
       type: "interactive",
       duration: 10,
       metadata: {
@@ -217,7 +217,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l09",
-      title: "Review Game",
+      title: "Review Game: Living Things Club",
       type: "quiz",
       duration: 10,
       questions: [
@@ -276,7 +276,7 @@ export const PreKBiology101Module: LearningModule = {
     },
     {
       id: "pre-k-biology-101-l10",
-      title: "Celebration Quiz",
+      title: "Celebration Quiz: Living Things Club",
       type: "quiz",
       duration: 10,
       questions: [

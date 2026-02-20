@@ -284,7 +284,7 @@ const exams = [
       "ATAR Pathways and Subject Selection",
       "Study Design Interpretation",
       "Exam Technique by Subject Type",
-      "High-Value Topic Prioritization",
+      "ATAR High-Value Topic Prioritization",
       "Timed Response Quality Control",
       "Marking Criteria and Self-Assessment",
       "Revision Cycle Planning",
