@@ -163,6 +163,7 @@ export default function CurriculumClient({
   const [backlogError, setBacklogError] = useState("");
   const [backlogLastUpdatedAt, setBacklogLastUpdatedAt] = useState(initialSummary.generatedAt);
   const [backlogWorkstreamFilter, setBacklogWorkstreamFilter] = useState<"all" | BacklogWorkstream>("all");
+  const [backlogPriorityFilter, setBacklogPriorityFilter] = useState<"all" | BacklogPriority>("all");
 
   const refreshBacklog = useCallback(async () => {
     setBacklogLoading(true);
@@ -245,10 +246,26 @@ export default function CurriculumClient({
   const filteredBacklogItems = useMemo(
     () =>
       backlogItems
-        .filter((item) => backlogWorkstreamFilter === "all" || item.workstream === backlogWorkstreamFilter)
+        .filter(
+          (item) =>
+            (backlogWorkstreamFilter === "all" || item.workstream === backlogWorkstreamFilter) &&
+            (backlogPriorityFilter === "all" || item.priority === backlogPriorityFilter),
+        )
         .slice(0, 40),
-    [backlogItems, backlogWorkstreamFilter],
+    [backlogItems, backlogPriorityFilter, backlogWorkstreamFilter],
   );
+  const backlogCsvHref = useMemo(() => {
+    const params = new URLSearchParams();
+    if (backlogWorkstreamFilter !== "all") {
+      params.set("workstream", backlogWorkstreamFilter);
+    }
+    if (backlogPriorityFilter !== "all") {
+      params.set("priority", backlogPriorityFilter);
+    }
+    params.set("limit", "1000");
+    const query = params.toString();
+    return query.length > 0 ? `/api/admin/curriculum/backlog?${query}` : "/api/admin/curriculum/backlog";
+  }, [backlogPriorityFilter, backlogWorkstreamFilter]);
 
   const completionClass =
     summary.expansion.completionPercent >= 60
@@ -342,11 +359,11 @@ export default function CurriculumClient({
           </a>
           <a
             className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
-            href="/api/admin/curriculum/backlog"
+            href={backlogCsvHref}
             target="_blank"
             rel="noreferrer"
           >
-            Export Backlog (CSV)
+            Export Backlog (Filtered CSV)
           </a>
         </div>
       </section>
@@ -375,6 +392,18 @@ export default function CurriculumClient({
               <option value="curriculum">Curriculum</option>
               <option value="exam-prep">Exam Prep</option>
               <option value="quality">Quality</option>
+            </select>
+            <select
+              value={backlogPriorityFilter}
+              onChange={(event) =>
+                setBacklogPriorityFilter(event.target.value as "all" | BacklogPriority)
+              }
+              className="rounded-md border border-black/15 px-2 py-1 text-sm"
+            >
+              <option value="all">All priorities</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
             </select>
             <button
               type="button"
@@ -414,6 +443,9 @@ export default function CurriculumClient({
             </p>
           </article>
         </div>
+        <p className="mt-2 text-xs text-zinc-600">
+          Showing {filteredBacklogItems.length} of {backlogSummary.total} items for current filters.
+        </p>
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full border-collapse text-sm">
             <thead>

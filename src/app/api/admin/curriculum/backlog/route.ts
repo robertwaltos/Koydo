@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import {
+  type CurriculumBacklogPriority,
+  type CurriculumBacklogWorkstream,
   buildCurriculumBacklog,
   curriculumBacklogToCsv,
   summarizeCurriculumBacklog,
@@ -33,13 +35,29 @@ export async function GET(request: Request) {
     const searchParams = new URL(request.url).searchParams;
     const requestedFormat = (searchParams.get("format") ?? "csv").toLowerCase();
     const format = requestedFormat === "json" ? "json" : "csv";
+    const requestedWorkstream = (searchParams.get("workstream") ?? "").toLowerCase();
+    const workstreamFilter: CurriculumBacklogWorkstream | null =
+      requestedWorkstream === "curriculum" ||
+      requestedWorkstream === "exam-prep" ||
+      requestedWorkstream === "quality"
+        ? requestedWorkstream
+        : null;
+    const requestedPriority = (searchParams.get("priority") ?? "").toLowerCase();
+    const priorityFilter: CurriculumBacklogPriority | null =
+      requestedPriority === "high" || requestedPriority === "medium" || requestedPriority === "low"
+        ? requestedPriority
+        : null;
     const requestedLimit = Number(searchParams.get("limit") ?? "500");
     const limit = Number.isFinite(requestedLimit)
       ? Math.max(1, Math.min(2000, Math.floor(requestedLimit)))
       : 500;
 
     const summary = await loadCurriculumSummary();
-    const allItems = buildCurriculumBacklog(summary);
+    const allItems = buildCurriculumBacklog(summary).filter(
+      (item) =>
+        (workstreamFilter === null || item.workstream === workstreamFilter) &&
+        (priorityFilter === null || item.priority === priorityFilter),
+    );
     const items = allItems.slice(0, limit);
     const fullSummary = summarizeCurriculumBacklog(allItems);
     const returnedSummary = summarizeCurriculumBacklog(items);
@@ -48,6 +66,10 @@ export async function GET(request: Request) {
       return NextResponse.json({
         generatedAt: new Date().toISOString(),
         sourceGeneratedAt: summary.generatedAt,
+        filters: {
+          workstream: workstreamFilter,
+          priority: priorityFilter,
+        },
         limit,
         totalItems: allItems.length,
         returnedItems: items.length,
