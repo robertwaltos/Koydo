@@ -77,6 +77,7 @@ Checks on push/PR:
 - `POST /api/admin/media/jobs/run`
 - `POST /api/admin/media/jobs/[jobId]/status`
 - `POST /api/admin/users/update-roles`
+- `GET /api/parent/reports`
 - `GET/POST /api/admin/approvals`
 - `POST /api/admin/approvals/[approvalId]`
 
@@ -102,6 +103,7 @@ Checks on push/PR:
 - `/account/settings` (user self-service account deletion)
 - `/account/privacy` (DSAR + policy acknowledgment history)
 - `/parent/compliance` (parent consent history view)
+- `/parent/reports` (parent-facing learner grade/mastery analytics)
 - `/admin/audit` (owner/admin action audit trail)
 - `/legal/privacy`, `/legal/terms`, `/legal/refunds`
 

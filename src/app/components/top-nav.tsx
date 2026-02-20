@@ -23,6 +23,7 @@ const authenticatedNavItems = [
 
 const parentNavItems = [
   { href: "/parent/dashboard", labelKey: "nav_parent_dashboard" },
+  { href: "/parent/reports", labelKey: "nav_parent_reports" },
   { href: "/parent/compliance", labelKey: "nav_parent_compliance" },
 ] as const;
 
