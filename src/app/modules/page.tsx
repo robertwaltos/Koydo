@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllLearningModules } from "@/lib/modules";
+import ModuleCoverImage from "@/app/components/module-cover-image";
 
 export default function ModulesPage() {
   const learningModules = getAllLearningModules();
@@ -19,7 +20,13 @@ export default function ModulesPage() {
             key={learningModule.id}
             className="rounded-2xl border border-sky-200 bg-white p-5 shadow-sm"
           >
-            <p className="text-xs uppercase tracking-wide text-zinc-500">
+            <ModuleCoverImage
+              moduleId={learningModule.id}
+              moduleTitle={learningModule.title}
+              fallbackSrc={learningModule.thumbnail}
+              className="h-40 w-full rounded-xl border border-sky-100 object-cover"
+            />
+            <p className="mt-3 text-xs uppercase tracking-wide text-zinc-500">
               {learningModule.subject}
             </p>
             <h2 className="mt-2 text-lg font-semibold text-zinc-900">{learningModule.title}</h2>

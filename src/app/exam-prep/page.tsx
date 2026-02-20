@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllLearningModules } from "@/lib/modules";
+import ModuleCoverImage from "@/app/components/module-cover-image";
 
 export const dynamic = "force-dynamic";
 
@@ -24,7 +25,13 @@ export default function ExamPrepPage() {
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {examModules.map((module) => (
           <article key={module.id} className="rounded-xl border border-black/10 bg-white p-5 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">{module.subject}</p>
+            <ModuleCoverImage
+              moduleId={module.id}
+              moduleTitle={module.title}
+              fallbackSrc={module.thumbnail}
+              className="h-36 w-full rounded-lg border border-black/5 object-cover"
+            />
+            <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-indigo-700">{module.subject}</p>
             <h2 className="mt-2 text-lg font-semibold text-zinc-900">{module.title}</h2>
             <p className="mt-2 text-sm text-zinc-700">{module.description}</p>
             <p className="mt-3 text-xs text-zinc-500">

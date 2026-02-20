@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { getLearningModuleByLookupKey } from "@/lib/modules";
+import ModuleCoverImage from "@/app/components/module-cover-image";
 
 export default function ModuleDetailsPage({
   params,
@@ -39,6 +40,15 @@ async function ModuleDetailsPageContent({
           {learningModule.version ? ` | Version: ${learningModule.version}` : ""}
         </p>
       </header>
+
+      <section className="overflow-hidden rounded-2xl border border-sky-200 bg-white p-3 shadow-sm">
+        <ModuleCoverImage
+          moduleId={learningModule.id}
+          moduleTitle={learningModule.title}
+          fallbackSrc={learningModule.thumbnail}
+          className="h-56 w-full rounded-xl object-cover"
+        />
+      </section>
 
       <section className="rounded-2xl border border-emerald-200 bg-white p-5 shadow-sm">
         <h2 className="text-lg font-semibold">Lessons</h2>

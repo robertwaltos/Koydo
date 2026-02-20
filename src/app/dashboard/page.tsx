@@ -5,6 +5,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getOnboardingRedirect } from "@/lib/compliance/onboarding";
 import SignOutButton from "./sign-out-button";
 import RecommendedLesson from "./recommended-lesson";
+import ModuleCoverImage from "@/app/components/module-cover-image";
 
 export const dynamic = "force-dynamic";
 
@@ -115,7 +116,13 @@ export default async function DashboardPage() {
               key={learningModule.id}
               className="rounded-2xl border border-violet-200 bg-white p-6 shadow-sm"
             >
-              <h3 className="text-lg font-bold text-violet-900">{learningModule.title}</h3>
+              <ModuleCoverImage
+                moduleId={learningModule.id}
+                moduleTitle={learningModule.title}
+                fallbackSrc={learningModule.thumbnail}
+                className="h-32 w-full rounded-lg border border-violet-100 object-cover"
+              />
+              <h3 className="mt-3 text-lg font-bold text-violet-900">{learningModule.title}</h3>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
                 {learningModule.description}
               </p>

@@ -1,7 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+
+type GenerateImageResponse = {
+  url?: string;
+  queued?: boolean;
+  error?: string;
+};
+
+const FALLBACK_IMAGE_URL = "/placeholders/lesson-robot.svg";
+const POLL_INTERVAL_MS = 12000;
+const MAX_POLL_ATTEMPTS = 10;
 
 export default function LessonImage({
   prompt,
@@ -14,11 +23,16 @@ export default function LessonImage({
 }) {
   const [imageUrl, setImageUrl] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isQueued, setIsQueued] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const generateImage = async () => {
+    let isActive = true;
+    let timeoutId: number | undefined;
+
+    const generateImage = async (attempt: number) => {
       try {
+        setError(null);
         const response = await fetch("/api/images/generate", {
           method: "POST",
           headers: {
@@ -27,20 +41,48 @@ export default function LessonImage({
           body: JSON.stringify({ prompt, moduleId, lessonId }),
         });
 
+        const data = (await response.json().catch(() => ({}))) as GenerateImageResponse;
         if (!response.ok) {
-          throw new Error("Failed to generate image.");
+          throw new Error(data.error ?? "Failed to generate image.");
         }
 
-        const data = await response.json();
-        setImageUrl(data.url);
+        if (!isActive) {
+          return;
+        }
+
+        const nextImageUrl = typeof data.url === "string" && data.url.length > 0 ? data.url : FALLBACK_IMAGE_URL;
+        const queued = data.queued === true;
+        setImageUrl(nextImageUrl);
+        setIsQueued(queued);
+
+        if (queued && attempt < MAX_POLL_ATTEMPTS) {
+          timeoutId = window.setTimeout(() => {
+            void generateImage(attempt + 1);
+          }, POLL_INTERVAL_MS);
+        }
       } catch (err) {
-        setError(err instanceof Error ? err.message : "An unknown error occurred.");
+        if (isActive) {
+          setError(err instanceof Error ? err.message : "An unknown error occurred.");
+          setIsQueued(false);
+        }
       } finally {
-        setIsLoading(false);
+        if (isActive) {
+          setIsLoading(false);
+        }
       }
     };
 
-    generateImage();
+    setIsLoading(true);
+    setIsQueued(false);
+    setImageUrl(null);
+    void generateImage(0);
+
+    return () => {
+      isActive = false;
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+    };
   }, [prompt, moduleId, lessonId]);
 
   if (isLoading) {
@@ -59,19 +101,23 @@ export default function LessonImage({
     );
   }
 
-  if (imageUrl) {
-    return (
+  return (
+    <div className="space-y-2">
       <div className="aspect-video w-full overflow-hidden rounded-lg">
-        <Image
-          src={imageUrl}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={imageUrl ?? FALLBACK_IMAGE_URL}
           alt={prompt}
-          width={1280}
-          height={720}
           className="h-full w-full object-cover"
+          loading="lazy"
+          referrerPolicy="no-referrer"
         />
       </div>
-    );
-  }
-
-  return null;
+      {isQueued ? (
+        <p className="text-xs text-zinc-500">
+          Generating final lesson image. This preview will auto-refresh when it is ready.
+        </p>
+      ) : null}
+    </div>
+  );
 }
