@@ -245,6 +245,14 @@ export default function CurriculumClient({
           </a>
           <a
             className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            href="/EXAM-PREP-COVERAGE-REPORT.md"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open Exam Prep Report (MD)
+          </a>
+          <a
+            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
             href="/AI-RESEARCH-AGENT-PROMPTS.md"
             target="_blank"
             rel="noreferrer"

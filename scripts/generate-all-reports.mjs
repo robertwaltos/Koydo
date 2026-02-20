@@ -3,6 +3,7 @@ import { spawnSync } from "node:child_process";
 const commands = [
   ["node", ["scripts/curriculum-coverage-report.mjs"]],
   ["node", ["scripts/curriculum-quality-report.mjs"]],
+  ["node", ["scripts/exam-prep-coverage-report.mjs"]],
   ["node", ["scripts/curriculum-expansion-plan.mjs"]],
   ["node", ["scripts/generate-lesson-media-prompts.mjs"]],
   ["node", ["scripts/media-readiness-report.mjs"]],

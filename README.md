@@ -245,6 +245,17 @@ This generates:
 - `public/CURRICULUM-EXPANSION-PLAN.json`
 - `public/CURRICULUM-EXPANSION-PLAN.md`
 
+To generate exam-prep track readiness coverage (SAT/ACT/AP/GCSE/A-Level/JEE-NEET/Gaokao):
+
+```bash
+npm run exam:report
+```
+
+This generates:
+
+- `public/EXAM-PREP-COVERAGE-REPORT.json`
+- `public/EXAM-PREP-COVERAGE-REPORT.md`
+
 Media production readiness reporting:
 
 ```bash

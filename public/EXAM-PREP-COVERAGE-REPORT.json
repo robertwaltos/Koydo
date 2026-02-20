@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-02-20T23:28:13.515Z",
+  "sourceReportGeneratedAt": "2026-02-20T15:22:25.240Z",
+  "totals": {
+    "targetTrackCount": 7,
+    "availableTrackCount": 7,
+    "completionPercent": 100,
+    "totalModules": 7,
+    "totalLessons": 70,
+    "averageScore": 100
+  },
+  "missingTracks": [],
+  "tracks": [
+    {
+      "track": "A-Level",
+      "trackKey": "a-level",
+      "region": "UK",
+      "moduleId": "a-level-prep-101",
+      "title": "A-Level Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "ACT",
+      "trackKey": "act",
+      "region": "US",
+      "moduleId": "act-prep-101",
+      "title": "ACT Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "AP",
+      "trackKey": "ap",
+      "region": "US",
+      "moduleId": "ap-prep-101",
+      "title": "AP Exam Prep Toolkit",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "Gaokao",
+      "trackKey": "gaokao",
+      "region": "China",
+      "moduleId": "gaokao-prep-101",
+      "title": "Gaokao Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "GCSE",
+      "trackKey": "gcse",
+      "region": "UK",
+      "moduleId": "gcse-prep-101",
+      "title": "GCSE Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "JEE/NEET",
+      "trackKey": "jee-neet",
+      "region": "India",
+      "moduleId": "jee-neet-prep-101",
+      "title": "JEE / NEET Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "SAT",
+      "trackKey": "sat",
+      "region": "US",
+      "moduleId": "sat-prep-101",
+      "title": "SAT Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    }
+  ]
+}
