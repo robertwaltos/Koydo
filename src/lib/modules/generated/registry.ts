@@ -21,6 +21,24 @@ import { JeeNeetPrep101Module } from "@/lib/modules/catalog/jee-neet-prep-101";
 import { LanguageArts101Module } from "@/lib/modules/catalog/language-arts-101";
 import { math101Module } from "@/lib/modules/catalog/math-101";
 import { Physics101Module } from "@/lib/modules/catalog/physics-101";
+import { PreKAdvancedMath101Module } from "@/lib/modules/catalog/pre-k-advanced-math-101";
+import { PreKArts101Module } from "@/lib/modules/catalog/pre-k-arts-101";
+import { PreKAstronomy101Module } from "@/lib/modules/catalog/pre-k-astronomy-101";
+import { PreKBasicMath101Module } from "@/lib/modules/catalog/pre-k-basic-math-101";
+import { PreKBiology101Module } from "@/lib/modules/catalog/pre-k-biology-101";
+import { PreKChemistry101Module } from "@/lib/modules/catalog/pre-k-chemistry-101";
+import { PreKCoding101Module } from "@/lib/modules/catalog/pre-k-coding-101";
+import { PreKFarming101Module } from "@/lib/modules/catalog/pre-k-farming-101";
+import { PreKFinancialLiteracy101Module } from "@/lib/modules/catalog/pre-k-financial-literacy-101";
+import { PreKGeneralRelativity101Module } from "@/lib/modules/catalog/pre-k-general-relativity-101";
+import { PreKGeneralScience101Module } from "@/lib/modules/catalog/pre-k-general-science-101";
+import { PreKGeography101Module } from "@/lib/modules/catalog/pre-k-geography-101";
+import { PreKHouseholdManagement101Module } from "@/lib/modules/catalog/pre-k-household-management-101";
+import { PreKLanguageArts101Module } from "@/lib/modules/catalog/pre-k-language-arts-101";
+import { PreKPhysics101Module } from "@/lib/modules/catalog/pre-k-physics-101";
+import { PreKSocialStudiesUs101Module } from "@/lib/modules/catalog/pre-k-social-studies-us-101";
+import { PreKSocialStudiesWorld101Module } from "@/lib/modules/catalog/pre-k-social-studies-world-101";
+import { PreKWorldHistory101Module } from "@/lib/modules/catalog/pre-k-world-history-101";
 import { reading101Module } from "@/lib/modules/catalog/reading-101";
 import { SatPrep101Module } from "@/lib/modules/catalog/sat-prep-101";
 import { science101Module } from "@/lib/modules/catalog/science-101";
@@ -53,6 +71,24 @@ export const generatedModuleRegistry: LearningModule[] = [
   LanguageArts101Module,
   math101Module,
   Physics101Module,
+  PreKAdvancedMath101Module,
+  PreKArts101Module,
+  PreKAstronomy101Module,
+  PreKBasicMath101Module,
+  PreKBiology101Module,
+  PreKChemistry101Module,
+  PreKCoding101Module,
+  PreKFarming101Module,
+  PreKFinancialLiteracy101Module,
+  PreKGeneralRelativity101Module,
+  PreKGeneralScience101Module,
+  PreKGeography101Module,
+  PreKHouseholdManagement101Module,
+  PreKLanguageArts101Module,
+  PreKPhysics101Module,
+  PreKSocialStudiesUs101Module,
+  PreKSocialStudiesWorld101Module,
+  PreKWorldHistory101Module,
   reading101Module,
   SatPrep101Module,
   science101Module,

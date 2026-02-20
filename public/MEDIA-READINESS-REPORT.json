@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-02-20T15:22:25.614Z",
+  "generatedAt": "2026-02-20T23:49:43.563Z",
   "totals": {
-    "moduleCount": 29,
-    "placeholderRefs": 7,
-    "learningAidRefs": 272
+    "moduleCount": 47,
+    "placeholderRefs": 25,
+    "learningAidRefs": 452
   },
   "modules": [
     {
@@ -58,6 +58,186 @@
     },
     {
       "moduleId": "jee-neet-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-advanced-math-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-arts-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-astronomy-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-basic-math-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-biology-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-chemistry-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-coding-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-farming-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-financial-literacy-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-general-relativity-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-general-science-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-geography-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-household-management-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-language-arts-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-physics-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-social-studies-us-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-social-studies-world-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "pre-k-world-history-101",
       "totalLessons": 10,
       "videoLessons": 3,
       "interactiveLessons": 3,

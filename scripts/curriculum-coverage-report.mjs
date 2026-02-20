@@ -46,6 +46,36 @@ function inferGradeBand(minAge, maxAge) {
   return "unknown";
 }
 
+function inferCoveredGradeBands(minAge, maxAge) {
+  const bands = [
+    { id: "pre-k", min: 3, max: 5 },
+    { id: "elementary", min: 6, max: 10 },
+    { id: "middle-school", min: 11, max: 13 },
+    { id: "high-school", min: 14, max: 18 },
+  ];
+
+  if (!Number.isFinite(minAge) && !Number.isFinite(maxAge)) {
+    return ["unknown"];
+  }
+
+  const normalizedMin = Number.isFinite(minAge) ? minAge : Number.NEGATIVE_INFINITY;
+  const normalizedMax = Number.isFinite(maxAge) ? maxAge : Number.POSITIVE_INFINITY;
+
+  if (normalizedMin > normalizedMax) {
+    return [inferGradeBand(minAge, maxAge)];
+  }
+
+  const covered = bands
+    .filter((band) => normalizedMax >= band.min && normalizedMin <= band.max)
+    .map((band) => band.id);
+
+  if (covered.length === 0) {
+    return [inferGradeBand(minAge, maxAge)];
+  }
+
+  return covered;
+}
+
 function firstMatch(text, regex, fallback = null) {
   const match = text.match(regex);
   return match?.[1] ?? fallback;
@@ -102,6 +132,7 @@ function parseCatalogModule(file) {
     subject: normalizeSubject(subjectRaw),
     subjectRaw,
     gradeBand: inferGradeBand(minAge, maxAge),
+    coveredGradeBands: inferCoveredGradeBands(minAge, maxAge),
     minAge,
     maxAge,
     lessonCount,
@@ -154,16 +185,21 @@ function generateCoverage() {
 
   if (usingCatalog) {
     for (const row of catalogRows) {
-      const key = `${row.gradeBand}::${row.subject}`;
-      const current = coverage.get(key) ?? {
-        gradeBand: row.gradeBand,
-        subject: row.subject,
-        count: 0,
-        files: [],
-      };
-      current.count += row.lessonCount;
-      current.files.push(row.fileName);
-      coverage.set(key, current);
+      const gradeBands = Array.isArray(row.coveredGradeBands) && row.coveredGradeBands.length > 0
+        ? row.coveredGradeBands
+        : [row.gradeBand];
+      for (const gradeBand of gradeBands) {
+        const key = `${gradeBand}::${row.subject}`;
+        const current = coverage.get(key) ?? {
+          gradeBand,
+          subject: row.subject,
+          count: 0,
+          files: [],
+        };
+        current.count += row.lessonCount;
+        current.files.push(row.fileName);
+        coverage.set(key, current);
+      }
       rows.push(row);
     }
   } else {
@@ -207,7 +243,9 @@ function generateCoverage() {
     .map(([subject, count]) => ({ subject, count }))
     .sort((a, b) => a.subject.localeCompare(b.subject));
 
-  const totalLessons = rows.reduce((acc, row) => acc + Number(row.lessonCount ?? 0), 0);
+  const totalLessons = usingCatalog
+    ? rows.reduce((acc, row) => acc + Number(row.lessonCount ?? 0), 0)
+    : rows.length;
 
   const summary = Array.from(coverage.values()).sort((a, b) => {
     if (a.gradeBand !== b.gradeBand) return a.gradeBand.localeCompare(b.gradeBand);

@@ -1,10 +1,10 @@
 # Media Readiness Report
 
-Generated: 2026-02-20T15:22:25.614Z
+Generated: 2026-02-20T23:49:43.563Z
 
-Modules scanned: 29
-Placeholder references: 7
-Learning aid references: 272
+Modules scanned: 47
+Placeholder references: 25
+Learning aid references: 452
 
 | Module | Lessons | Placeholders | Readiness Score |
 |---|---:|---:|---:|
@@ -14,6 +14,24 @@ Learning aid references: 272
 | gaokao-prep-101 | 10 | 1 | 95 |
 | gcse-prep-101 | 10 | 1 | 95 |
 | jee-neet-prep-101 | 10 | 1 | 95 |
+| pre-k-advanced-math-101 | 10 | 1 | 95 |
+| pre-k-arts-101 | 10 | 1 | 95 |
+| pre-k-astronomy-101 | 10 | 1 | 95 |
+| pre-k-basic-math-101 | 10 | 1 | 95 |
+| pre-k-biology-101 | 10 | 1 | 95 |
+| pre-k-chemistry-101 | 10 | 1 | 95 |
+| pre-k-coding-101 | 10 | 1 | 95 |
+| pre-k-farming-101 | 10 | 1 | 95 |
+| pre-k-financial-literacy-101 | 10 | 1 | 95 |
+| pre-k-general-relativity-101 | 10 | 1 | 95 |
+| pre-k-general-science-101 | 10 | 1 | 95 |
+| pre-k-geography-101 | 10 | 1 | 95 |
+| pre-k-household-management-101 | 10 | 1 | 95 |
+| pre-k-language-arts-101 | 10 | 1 | 95 |
+| pre-k-physics-101 | 10 | 1 | 95 |
+| pre-k-social-studies-us-101 | 10 | 1 | 95 |
+| pre-k-social-studies-world-101 | 10 | 1 | 95 |
+| pre-k-world-history-101 | 10 | 1 | 95 |
 | sat-prep-101 | 10 | 1 | 95 |
 | advanced-math-201 | 10 | 0 | 100 |
 | apple-vision-science-lab | 6 | 0 | 100 |

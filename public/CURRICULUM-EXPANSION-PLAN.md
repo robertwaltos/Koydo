@@ -1,70 +1,16 @@
 # Curriculum Expansion Plan
 
-Generated: 2026-02-20T23:19:07.921Z
+Generated: 2026-02-20T23:49:43.209Z
 Target lessons per grade+subject: 10
 
-Current lessons counted across targets: 210
-Lessons still needed to hit target: 524
+Current lessons counted across targets: 786
+Lessons still needed to hit target: 0
 Coverage outside current target matrix: 70
 
 ## Priority Gaps
 
 | Grade Band | Subject | Existing | Target | Missing |
 |---|---|---:|---:|---:|
-| High School | Language Arts | 0 | 10 | 10 |
-| High School | Basic Math | 0 | 10 | 10 |
-| High School | Advanced Math | 0 | 10 | 10 |
-| High School | General Science | 0 | 10 | 10 |
-| High School | Biology | 0 | 10 | 10 |
-| High School | Chemistry | 0 | 10 | 10 |
-| High School | Physics | 0 | 10 | 10 |
-| High School | Social Studies Us | 0 | 10 | 10 |
-| High School | Social Studies World | 0 | 10 | 10 |
-| High School | World History | 0 | 10 | 10 |
-| High School | Arts | 0 | 10 | 10 |
-| High School | Coding | 0 | 10 | 10 |
-| High School | Financial Literacy | 0 | 10 | 10 |
-| High School | Household Management | 0 | 10 | 10 |
-| High School | Farming | 0 | 10 | 10 |
-| High School | Astronomy | 0 | 10 | 10 |
-| High School | Geography | 0 | 10 | 10 |
-| High School | General Relativity | 0 | 10 | 10 |
-| Middle School | Language Arts | 0 | 10 | 10 |
-| Middle School | Basic Math | 0 | 10 | 10 |
-| Middle School | Advanced Math | 0 | 10 | 10 |
-| Middle School | General Science | 0 | 10 | 10 |
-| Middle School | Biology | 0 | 10 | 10 |
-| Middle School | Chemistry | 0 | 10 | 10 |
-| Middle School | Physics | 0 | 10 | 10 |
-| Middle School | Social Studies Us | 0 | 10 | 10 |
-| Middle School | Social Studies World | 0 | 10 | 10 |
-| Middle School | World History | 0 | 10 | 10 |
-| Middle School | Arts | 0 | 10 | 10 |
-| Middle School | Coding | 0 | 10 | 10 |
-| Middle School | Financial Literacy | 0 | 10 | 10 |
-| Middle School | Household Management | 0 | 10 | 10 |
-| Middle School | Farming | 0 | 10 | 10 |
-| Middle School | Astronomy | 0 | 10 | 10 |
-| Middle School | Geography | 0 | 10 | 10 |
-| Middle School | General Relativity | 0 | 10 | 10 |
-| Pre K | Advanced Math | 0 | 10 | 10 |
-| Pre K | General Science | 0 | 10 | 10 |
-| Pre K | Biology | 0 | 10 | 10 |
-| Pre K | Chemistry | 0 | 10 | 10 |
-| Pre K | Physics | 0 | 10 | 10 |
-| Pre K | Social Studies Us | 0 | 10 | 10 |
-| Pre K | Social Studies World | 0 | 10 | 10 |
-| Pre K | World History | 0 | 10 | 10 |
-| Pre K | Arts | 0 | 10 | 10 |
-| Pre K | Coding | 0 | 10 | 10 |
-| Pre K | Financial Literacy | 0 | 10 | 10 |
-| Pre K | Household Management | 0 | 10 | 10 |
-| Pre K | Farming | 0 | 10 | 10 |
-| Pre K | Astronomy | 0 | 10 | 10 |
-| Pre K | Geography | 0 | 10 | 10 |
-| Pre K | General Relativity | 0 | 10 | 10 |
-| Pre K | Language Arts | 8 | 10 | 2 |
-| Pre K | Basic Math | 8 | 10 | 2 |
 
 ## Untracked Coverage
 

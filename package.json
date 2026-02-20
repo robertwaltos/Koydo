@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "modules:generate:exams": "node scripts/generate-exam-modules.mjs",
+    "modules:generate:prek": "node scripts/generate-prek-gap-modules.mjs",
     "module:new": "node scripts/create-module.mjs",
     "modules:sync": "node scripts/sync-modules.mjs",
     "modules:check": "npm run modules:sync && git diff --exit-code -- src/lib/modules/generated/registry.ts",

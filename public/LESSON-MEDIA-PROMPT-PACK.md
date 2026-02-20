@@ -1,9 +1,9 @@
 # Lesson Media Prompt Pack
 
-Generated: 2026-02-20T15:22:25.492Z
+Generated: 2026-02-20T23:49:43.442Z
 
-Modules covered: 29
-Lessons covered: 280
+Modules covered: 47
+Lessons covered: 460
 
 ## Usage
 
@@ -38,6 +38,24 @@ Lessons covered: 280
 | language-arts-101 | Language Arts | 10 | 7-18 |
 | math-101 | Math | 8 | 4-8 |
 | physics-101 | Physics | 10 | 7-18 |
+| pre-k-advanced-math-101 | Advanced Math | 10 | 3-5 |
+| pre-k-arts-101 | Arts | 10 | 3-5 |
+| pre-k-astronomy-101 | Astronomy | 10 | 3-5 |
+| pre-k-basic-math-101 | Basic Math | 10 | 3-5 |
+| pre-k-biology-101 | Biology | 10 | 3-5 |
+| pre-k-chemistry-101 | Chemistry | 10 | 3-5 |
+| pre-k-coding-101 | Coding | 10 | 3-5 |
+| pre-k-farming-101 | Farming | 10 | 3-5 |
+| pre-k-financial-literacy-101 | Financial Literacy | 10 | 3-5 |
+| pre-k-general-relativity-101 | General Relativity | 10 | 3-5 |
+| pre-k-general-science-101 | General Science | 10 | 3-5 |
+| pre-k-geography-101 | Geography | 10 | 3-5 |
+| pre-k-household-management-101 | Household Management | 10 | 3-5 |
+| pre-k-language-arts-101 | Language Arts | 10 | 3-5 |
+| pre-k-physics-101 | Physics | 10 | 3-5 |
+| pre-k-social-studies-us-101 | Social Studies US | 10 | 3-5 |
+| pre-k-social-studies-world-101 | Social Studies World | 10 | 3-5 |
+| pre-k-world-history-101 | World History | 10 | 3-5 |
 | reading-101 | Reading | 8 | 4-9 |
 | sat-prep-101 | Exam Prep | 10 | 14-19 |
 | science-101 | Science | 8 | 6-12 |

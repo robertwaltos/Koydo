@@ -199,13 +199,21 @@ To add a new learning module with minimal changes:
 2. Export a typed `LearningModule` object with metadata + lessons.
 3. Run `npm run modules:sync` to regenerate the validated registry.
 4. Optional: run `npm run modules:generate:exams` to add SAT/ACT/AP/GCSE/A-Level/JEE-NEET/Gaokao tracks.
-5. Run `npm run curriculum:validate` to enforce content integrity rules (unique IDs, quiz structure, lesson-type coverage).
-6. Optional: enrich quiz questions with `hint`, `explanation`, `imageUrl`, and `imageAlt` (plus option-level images) for deeper interactive feedback.
+5. Optional: run `npm run modules:generate:prek` to auto-generate Pre-K coverage modules for every target subject.
+6. Run `npm run curriculum:validate` to enforce content integrity rules (unique IDs, quiz structure, lesson-type coverage).
+7. Optional: enrich quiz questions with `hint`, `explanation`, `imageUrl`, and `imageAlt` (plus option-level images) for deeper interactive feedback.
 
 Fast scaffold option (recommended):
 
 ```bash
 npm run module:new -- --id algebra-201 --title "Algebra Foundations" --subject "Math" --description "Build algebra fluency with guided practice."
+npm run modules:sync
+```
+
+Bulk Pre-K gap generation:
+
+```bash
+npm run modules:generate:prek
 npm run modules:sync
 ```
 

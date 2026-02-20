@@ -1,50 +1,54 @@
 {
-  "generatedAt": "2026-02-20T23:19:07.830Z",
+  "generatedAt": "2026-02-20T23:49:42.902Z",
   "source": "module-catalog",
-  "totalLessons": 280,
-  "totalModules": 29,
+  "totalLessons": 460,
+  "totalModules": 47,
   "gradeBandSummary": [
     {
       "gradeBand": "elementary",
-      "count": 194
+      "count": 210
     },
     {
       "gradeBand": "high-school",
-      "count": 70
+      "count": 256
+    },
+    {
+      "gradeBand": "middle-school",
+      "count": 194
     },
     {
       "gradeBand": "pre-k",
-      "count": 16
+      "count": 196
     }
   ],
   "subjectSummary": [
     {
       "subject": "advanced-math",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "arts",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "astronomy",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "basic-math",
-      "count": 18
+      "count": 56
     },
     {
       "subject": "biology",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "chemistry",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "coding",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "exam-prep",
@@ -52,47 +56,47 @@
     },
     {
       "subject": "farming",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "financial-literacy",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "general-relativity",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "general-science",
-      "count": 24
+      "count": 74
     },
     {
       "subject": "geography",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "household-management",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "language-arts",
-      "count": 18
+      "count": 56
     },
     {
       "subject": "physics",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "social-studies-us",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "social-studies-world",
-      "count": 10
+      "count": 40
     },
     {
       "subject": "world-history",
-      "count": 10
+      "count": 40
     }
   ],
   "gradeSubjectSummary": [
@@ -123,9 +127,10 @@
     {
       "gradeBand": "elementary",
       "subject": "basic-math",
-      "count": 10,
+      "count": 18,
       "files": [
-        "basic-math-101.ts"
+        "basic-math-101.ts",
+        "math-101.ts"
       ]
     },
     {
@@ -205,9 +210,10 @@
     {
       "gradeBand": "elementary",
       "subject": "language-arts",
-      "count": 10,
+      "count": 18,
       "files": [
-        "language-arts-101.ts"
+        "language-arts-101.ts",
+        "reading-101.ts"
       ]
     },
     {
@@ -244,6 +250,62 @@
     },
     {
       "gradeBand": "high-school",
+      "subject": "advanced-math",
+      "count": 10,
+      "files": [
+        "advanced-math-201.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "arts",
+      "count": 10,
+      "files": [
+        "arts-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "astronomy",
+      "count": 10,
+      "files": [
+        "astronomy-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "basic-math",
+      "count": 10,
+      "files": [
+        "basic-math-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "biology",
+      "count": 10,
+      "files": [
+        "biology-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "chemistry",
+      "count": 10,
+      "files": [
+        "chemistry-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "coding",
+      "count": 10,
+      "files": [
+        "coding-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
       "subject": "exam-prep",
       "count": 70,
       "files": [
@@ -257,19 +319,384 @@
       ]
     },
     {
+      "gradeBand": "high-school",
+      "subject": "farming",
+      "count": 10,
+      "files": [
+        "farming-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "financial-literacy",
+      "count": 10,
+      "files": [
+        "financial-literacy-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "general-relativity",
+      "count": 10,
+      "files": [
+        "general-relativity-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "general-science",
+      "count": 16,
+      "files": [
+        "apple-vision-science-lab.ts",
+        "general-science-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "geography",
+      "count": 10,
+      "files": [
+        "geography-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "household-management",
+      "count": 10,
+      "files": [
+        "household-management-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "language-arts",
+      "count": 10,
+      "files": [
+        "language-arts-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "physics",
+      "count": 10,
+      "files": [
+        "physics-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "social-studies-us",
+      "count": 10,
+      "files": [
+        "social-studies-us-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "social-studies-world",
+      "count": 10,
+      "files": [
+        "social-studies-world-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "world-history",
+      "count": 10,
+      "files": [
+        "world-history-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "advanced-math",
+      "count": 10,
+      "files": [
+        "advanced-math-201.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "arts",
+      "count": 10,
+      "files": [
+        "arts-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "astronomy",
+      "count": 10,
+      "files": [
+        "astronomy-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "basic-math",
+      "count": 10,
+      "files": [
+        "basic-math-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "biology",
+      "count": 10,
+      "files": [
+        "biology-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "chemistry",
+      "count": 10,
+      "files": [
+        "chemistry-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "coding",
+      "count": 10,
+      "files": [
+        "coding-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "farming",
+      "count": 10,
+      "files": [
+        "farming-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "financial-literacy",
+      "count": 10,
+      "files": [
+        "financial-literacy-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "general-relativity",
+      "count": 10,
+      "files": [
+        "general-relativity-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "general-science",
+      "count": 24,
+      "files": [
+        "apple-vision-science-lab.ts",
+        "general-science-101.ts",
+        "science-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "geography",
+      "count": 10,
+      "files": [
+        "geography-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "household-management",
+      "count": 10,
+      "files": [
+        "household-management-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "language-arts",
+      "count": 10,
+      "files": [
+        "language-arts-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "physics",
+      "count": 10,
+      "files": [
+        "physics-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "social-studies-us",
+      "count": 10,
+      "files": [
+        "social-studies-us-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "social-studies-world",
+      "count": 10,
+      "files": [
+        "social-studies-world-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "world-history",
+      "count": 10,
+      "files": [
+        "world-history-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "advanced-math",
+      "count": 10,
+      "files": [
+        "pre-k-advanced-math-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "arts",
+      "count": 10,
+      "files": [
+        "pre-k-arts-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "astronomy",
+      "count": 10,
+      "files": [
+        "pre-k-astronomy-101.ts"
+      ]
+    },
+    {
       "gradeBand": "pre-k",
       "subject": "basic-math",
-      "count": 8,
+      "count": 18,
       "files": [
-        "math-101.ts"
+        "math-101.ts",
+        "pre-k-basic-math-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "biology",
+      "count": 10,
+      "files": [
+        "pre-k-biology-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "chemistry",
+      "count": 10,
+      "files": [
+        "pre-k-chemistry-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "coding",
+      "count": 10,
+      "files": [
+        "pre-k-coding-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "farming",
+      "count": 10,
+      "files": [
+        "pre-k-farming-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "financial-literacy",
+      "count": 10,
+      "files": [
+        "pre-k-financial-literacy-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "general-relativity",
+      "count": 10,
+      "files": [
+        "pre-k-general-relativity-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "general-science",
+      "count": 10,
+      "files": [
+        "pre-k-general-science-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "geography",
+      "count": 10,
+      "files": [
+        "pre-k-geography-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "household-management",
+      "count": 10,
+      "files": [
+        "pre-k-household-management-101.ts"
       ]
     },
     {
       "gradeBand": "pre-k",
       "subject": "language-arts",
-      "count": 8,
+      "count": 18,
       "files": [
+        "pre-k-language-arts-101.ts",
         "reading-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "physics",
+      "count": 10,
+      "files": [
+        "pre-k-physics-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "social-studies-us",
+      "count": 10,
+      "files": [
+        "pre-k-social-studies-us-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "social-studies-world",
+      "count": 10,
+      "files": [
+        "pre-k-social-studies-world-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "world-history",
+      "count": 10,
+      "files": [
+        "pre-k-world-history-101.ts"
       ]
     }
   ],
@@ -282,6 +709,9 @@
       "subject": "exam-prep",
       "subjectRaw": "Exam Prep",
       "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
       "minAge": 15,
       "maxAge": 19,
       "lessonCount": 10,
@@ -299,6 +729,9 @@
       "subject": "exam-prep",
       "subjectRaw": "Exam Prep",
       "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
       "minAge": 14,
       "maxAge": 19,
       "lessonCount": 10,
@@ -316,6 +749,11 @@
       "subject": "advanced-math",
       "subjectRaw": "Advanced Math",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -333,6 +771,9 @@
       "subject": "exam-prep",
       "subjectRaw": "Exam Prep",
       "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
       "minAge": 14,
       "maxAge": 19,
       "lessonCount": 10,
@@ -350,6 +791,11 @@
       "subject": "general-science",
       "subjectRaw": "Science",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 9,
       "maxAge": 18,
       "lessonCount": 6,
@@ -367,6 +813,11 @@
       "subject": "arts",
       "subjectRaw": "Arts",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -384,6 +835,11 @@
       "subject": "astronomy",
       "subjectRaw": "Astronomy",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -401,6 +857,11 @@
       "subject": "basic-math",
       "subjectRaw": "Math",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -418,6 +879,11 @@
       "subject": "biology",
       "subjectRaw": "Biology",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -435,6 +901,11 @@
       "subject": "chemistry",
       "subjectRaw": "Chemistry",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -452,6 +923,11 @@
       "subject": "coding",
       "subjectRaw": "Coding",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -469,6 +945,11 @@
       "subject": "farming",
       "subjectRaw": "Farming",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -486,6 +967,11 @@
       "subject": "financial-literacy",
       "subjectRaw": "Financial Literacy",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -503,6 +989,9 @@
       "subject": "exam-prep",
       "subjectRaw": "Exam Prep",
       "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
       "minAge": 15,
       "maxAge": 20,
       "lessonCount": 10,
@@ -520,6 +1009,9 @@
       "subject": "exam-prep",
       "subjectRaw": "Exam Prep",
       "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
       "minAge": 14,
       "maxAge": 18,
       "lessonCount": 10,
@@ -537,6 +1029,11 @@
       "subject": "general-relativity",
       "subjectRaw": "General Relativity",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -554,6 +1051,11 @@
       "subject": "general-science",
       "subjectRaw": "Science",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -571,6 +1073,11 @@
       "subject": "geography",
       "subjectRaw": "Geography",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -588,6 +1095,11 @@
       "subject": "household-management",
       "subjectRaw": "Household Management",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -605,6 +1117,9 @@
       "subject": "exam-prep",
       "subjectRaw": "Exam Prep",
       "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
       "minAge": 15,
       "maxAge": 20,
       "lessonCount": 10,
@@ -622,6 +1137,11 @@
       "subject": "language-arts",
       "subjectRaw": "Language Arts",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -639,6 +1159,10 @@
       "subject": "basic-math",
       "subjectRaw": "Math",
       "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k",
+        "elementary"
+      ],
       "minAge": 4,
       "maxAge": 8,
       "lessonCount": 8,
@@ -656,8 +1180,373 @@
       "subject": "physics",
       "subjectRaw": "Physics",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-advanced-math-101.ts",
+      "moduleId": "pre-k-advanced-math-101",
+      "moduleTitle": "Pre-K Math Thinking Adventures",
+      "subject": "advanced-math",
+      "subjectRaw": "Advanced Math",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-arts-101.ts",
+      "moduleId": "pre-k-arts-101",
+      "moduleTitle": "Pre-K Creative Arts Studio",
+      "subject": "arts",
+      "subjectRaw": "Arts",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-astronomy-101.ts",
+      "moduleId": "pre-k-astronomy-101",
+      "moduleTitle": "Pre-K Sky and Space Explorers",
+      "subject": "astronomy",
+      "subjectRaw": "Astronomy",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-basic-math-101.ts",
+      "moduleId": "pre-k-basic-math-101",
+      "moduleTitle": "Pre-K Math Explorers",
+      "subject": "basic-math",
+      "subjectRaw": "Basic Math",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-biology-101.ts",
+      "moduleId": "pre-k-biology-101",
+      "moduleTitle": "Pre-K Living Things Club",
+      "subject": "biology",
+      "subjectRaw": "Biology",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-chemistry-101.ts",
+      "moduleId": "pre-k-chemistry-101",
+      "moduleTitle": "Pre-K Matter and Mixtures Playlab",
+      "subject": "chemistry",
+      "subjectRaw": "Chemistry",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-coding-101.ts",
+      "moduleId": "pre-k-coding-101",
+      "moduleTitle": "Pre-K Coding Play Patterns",
+      "subject": "coding",
+      "subjectRaw": "Coding",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-farming-101.ts",
+      "moduleId": "pre-k-farming-101",
+      "moduleTitle": "Pre-K Garden and Food Explorers",
+      "subject": "farming",
+      "subjectRaw": "Farming",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-financial-literacy-101.ts",
+      "moduleId": "pre-k-financial-literacy-101",
+      "moduleTitle": "Pre-K Money Choices for Kids",
+      "subject": "financial-literacy",
+      "subjectRaw": "Financial Literacy",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-general-relativity-101.ts",
+      "moduleId": "pre-k-general-relativity-101",
+      "moduleTitle": "Pre-K Space and Time Wonder Lab",
+      "subject": "general-relativity",
+      "subjectRaw": "General Relativity",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-general-science-101.ts",
+      "moduleId": "pre-k-general-science-101",
+      "moduleTitle": "Pre-K Science Discovery Lab",
+      "subject": "general-science",
+      "subjectRaw": "General Science",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-geography-101.ts",
+      "moduleId": "pre-k-geography-101",
+      "moduleTitle": "Pre-K Maps and Places Around Us",
+      "subject": "geography",
+      "subjectRaw": "Geography",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-household-management-101.ts",
+      "moduleId": "pre-k-household-management-101",
+      "moduleTitle": "Pre-K Home Routines and Helpers",
+      "subject": "household-management",
+      "subjectRaw": "Household Management",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-language-arts-101.ts",
+      "moduleId": "pre-k-language-arts-101",
+      "moduleTitle": "Pre-K Language Arts Explorers",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-physics-101.ts",
+      "moduleId": "pre-k-physics-101",
+      "moduleTitle": "Pre-K Motion and Force Playground",
+      "subject": "physics",
+      "subjectRaw": "Physics",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-social-studies-us-101.ts",
+      "moduleId": "pre-k-social-studies-us-101",
+      "moduleTitle": "Pre-K My Community in the US",
+      "subject": "social-studies-us",
+      "subjectRaw": "Social Studies US",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-social-studies-world-101.ts",
+      "moduleId": "pre-k-social-studies-world-101",
+      "moduleTitle": "Pre-K World Friends and Cultures",
+      "subject": "social-studies-world",
+      "subjectRaw": "Social Studies World",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "pre-k-world-history-101.ts",
+      "moduleId": "pre-k-world-history-101",
+      "moduleTitle": "Pre-K Long Ago Stories",
+      "subject": "world-history",
+      "subjectRaw": "World History",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -673,6 +1562,10 @@
       "subject": "language-arts",
       "subjectRaw": "Reading",
       "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k",
+        "elementary"
+      ],
       "minAge": 4,
       "maxAge": 9,
       "lessonCount": 8,
@@ -690,6 +1583,9 @@
       "subject": "exam-prep",
       "subjectRaw": "Exam Prep",
       "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
       "minAge": 14,
       "maxAge": 19,
       "lessonCount": 10,
@@ -707,6 +1603,10 @@
       "subject": "general-science",
       "subjectRaw": "Science",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school"
+      ],
       "minAge": 6,
       "maxAge": 12,
       "lessonCount": 8,
@@ -724,6 +1624,11 @@
       "subject": "social-studies-us",
       "subjectRaw": "Social Studies US",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -741,6 +1646,11 @@
       "subject": "social-studies-world",
       "subjectRaw": "Social Studies World",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,
@@ -758,6 +1668,11 @@
       "subject": "world-history",
       "subjectRaw": "History Worldwide",
       "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
       "minAge": 7,
       "maxAge": 18,
       "lessonCount": 10,

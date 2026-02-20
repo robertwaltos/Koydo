@@ -1,15 +1,15 @@
 # Curriculum Quality Report
 
-Generated: 2026-02-20T15:22:25.240Z
+Generated: 2026-02-20T23:49:43.009Z
 
 ## Summary
 
-- Modules analyzed: 29
-- Lessons analyzed: 280
+- Modules analyzed: 47
+- Lessons analyzed: 460
 - Average quality score: 100
 - High priority modules: 0
 - Medium priority modules: 0
-- Low priority modules: 29
+- Low priority modules: 47
 - Placeholder options found: 0
 - Generic reflection prompts found: 0
 
@@ -39,13 +39,14 @@ Generated: 2026-02-20T15:22:25.240Z
 | LOW | 100 | Language Arts Foundations | Language Arts | 10 | 16 |  |
 | LOW | 100 | Introduction to Counting | Math | 8 | 13 |  |
 | LOW | 100 | Physics Essentials | Physics | 10 | 16 |  |
-| LOW | 100 | The Alphabet | Reading | 8 | 13 |  |
-| LOW | 100 | SAT Prep Foundations | Exam Prep | 10 | 16 |  |
-| LOW | 100 | Our Solar System | Science | 8 | 13 |  |
-| LOW | 100 | Apple Vision Science Lab | Science | 6 | 8 |  |
-| LOW | 100 | Social Studies: United States | Social Studies US | 10 | 16 |  |
-| LOW | 100 | Social Studies: World | Social Studies World | 10 | 16 |  |
-| LOW | 100 | World History Journey | History Worldwide | 10 | 16 |  |
+| LOW | 100 | Pre-K Math Thinking Adventures | Advanced Math | 10 | 16 |  |
+| LOW | 100 | Pre-K Creative Arts Studio | Arts | 10 | 16 |  |
+| LOW | 100 | Pre-K Sky and Space Explorers | Astronomy | 10 | 16 |  |
+| LOW | 100 | Pre-K Math Explorers | Basic Math | 10 | 16 |  |
+| LOW | 100 | Pre-K Living Things Club | Biology | 10 | 16 |  |
+| LOW | 100 | Pre-K Matter and Mixtures Playlab | Chemistry | 10 | 16 |  |
+| LOW | 100 | Pre-K Coding Play Patterns | Coding | 10 | 16 |  |
+| LOW | 100 | Pre-K Garden and Food Explorers | Farming | 10 | 16 |  |
 
 ## Suggested Actions
 

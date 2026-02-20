@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-02-20T15:22:25.240Z",
+  "generatedAt": "2026-02-20T23:49:43.009Z",
   "sourceDir": "src/lib/modules/catalog",
   "totals": {
-    "modules": 29,
-    "lessons": 280,
-    "quizLessons": 111,
-    "interactiveLessons": 84,
-    "videoLessons": 85,
-    "questions": 447,
-    "learningAidBlocks": 272,
+    "modules": 47,
+    "lessons": 460,
+    "quizLessons": 183,
+    "interactiveLessons": 138,
+    "videoLessons": 139,
+    "questions": 735,
+    "learningAidBlocks": 452,
     "placeholderOptionCount": 0,
     "genericReflectionCount": 0,
     "averageScore": 100,
     "highPriorityModules": 0,
     "mediumPriorityModules": 0,
-    "lowPriorityModules": 29
+    "lowPriorityModules": 47
   },
   "topPriorityModules": [
     {
@@ -524,33 +524,10 @@
       ]
     },
     {
-      "moduleId": "reading-101",
-      "title": "The Alphabet",
-      "subject": "Reading",
-      "file": "src/lib/modules/catalog/reading-101.ts",
-      "lessonCount": 8,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 2,
-        "quiz": 3
-      },
-      "questionCount": 13,
-      "learningAidBlocks": 6,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4.33,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "sat-prep-101",
-      "title": "SAT Prep Foundations",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/sat-prep-101.ts",
+      "moduleId": "pre-k-advanced-math-101",
+      "title": "Pre-K Math Thinking Adventures",
+      "subject": "Advanced Math",
+      "file": "src/lib/modules/catalog/pre-k-advanced-math-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -570,56 +547,10 @@
       ]
     },
     {
-      "moduleId": "science-101",
-      "title": "Our Solar System",
-      "subject": "Science",
-      "file": "src/lib/modules/catalog/science-101.ts",
-      "lessonCount": 8,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 2,
-        "quiz": 3
-      },
-      "questionCount": 13,
-      "learningAidBlocks": 5,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4.33,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "science-vision-lab",
-      "title": "Apple Vision Science Lab",
-      "subject": "Science",
-      "file": "src/lib/modules/catalog/apple-vision-science-lab.ts",
-      "lessonCount": 6,
-      "lessonTypeCounts": {
-        "video": 1,
-        "interactive": 3,
-        "quiz": 2
-      },
-      "questionCount": 8,
-      "learningAidBlocks": 4,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "social-studies-us-101",
-      "title": "Social Studies: United States",
-      "subject": "Social Studies US",
-      "file": "src/lib/modules/catalog/social-studies-us-101.ts",
+      "moduleId": "pre-k-arts-101",
+      "title": "Pre-K Creative Arts Studio",
+      "subject": "Arts",
+      "file": "src/lib/modules/catalog/pre-k-arts-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -639,10 +570,10 @@
       ]
     },
     {
-      "moduleId": "social-studies-world-101",
-      "title": "Social Studies: World",
-      "subject": "Social Studies World",
-      "file": "src/lib/modules/catalog/social-studies-world-101.ts",
+      "moduleId": "pre-k-astronomy-101",
+      "title": "Pre-K Sky and Space Explorers",
+      "subject": "Astronomy",
+      "file": "src/lib/modules/catalog/pre-k-astronomy-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -662,10 +593,102 @@
       ]
     },
     {
-      "moduleId": "world-history-101",
-      "title": "World History Journey",
-      "subject": "History Worldwide",
-      "file": "src/lib/modules/catalog/world-history-101.ts",
+      "moduleId": "pre-k-basic-math-101",
+      "title": "Pre-K Math Explorers",
+      "subject": "Basic Math",
+      "file": "src/lib/modules/catalog/pre-k-basic-math-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-biology-101",
+      "title": "Pre-K Living Things Club",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/pre-k-biology-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-chemistry-101",
+      "title": "Pre-K Matter and Mixtures Playlab",
+      "subject": "Chemistry",
+      "file": "src/lib/modules/catalog/pre-k-chemistry-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-coding-101",
+      "title": "Pre-K Coding Play Patterns",
+      "subject": "Coding",
+      "file": "src/lib/modules/catalog/pre-k-coding-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-farming-101",
+      "title": "Pre-K Garden and Food Explorers",
+      "subject": "Farming",
+      "file": "src/lib/modules/catalog/pre-k-farming-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -1174,6 +1197,420 @@
       "title": "Physics Essentials",
       "subject": "Physics",
       "file": "src/lib/modules/catalog/physics-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-advanced-math-101",
+      "title": "Pre-K Math Thinking Adventures",
+      "subject": "Advanced Math",
+      "file": "src/lib/modules/catalog/pre-k-advanced-math-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-arts-101",
+      "title": "Pre-K Creative Arts Studio",
+      "subject": "Arts",
+      "file": "src/lib/modules/catalog/pre-k-arts-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-astronomy-101",
+      "title": "Pre-K Sky and Space Explorers",
+      "subject": "Astronomy",
+      "file": "src/lib/modules/catalog/pre-k-astronomy-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-basic-math-101",
+      "title": "Pre-K Math Explorers",
+      "subject": "Basic Math",
+      "file": "src/lib/modules/catalog/pre-k-basic-math-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-biology-101",
+      "title": "Pre-K Living Things Club",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/pre-k-biology-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-chemistry-101",
+      "title": "Pre-K Matter and Mixtures Playlab",
+      "subject": "Chemistry",
+      "file": "src/lib/modules/catalog/pre-k-chemistry-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-coding-101",
+      "title": "Pre-K Coding Play Patterns",
+      "subject": "Coding",
+      "file": "src/lib/modules/catalog/pre-k-coding-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-farming-101",
+      "title": "Pre-K Garden and Food Explorers",
+      "subject": "Farming",
+      "file": "src/lib/modules/catalog/pre-k-farming-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-financial-literacy-101",
+      "title": "Pre-K Money Choices for Kids",
+      "subject": "Financial Literacy",
+      "file": "src/lib/modules/catalog/pre-k-financial-literacy-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-general-relativity-101",
+      "title": "Pre-K Space and Time Wonder Lab",
+      "subject": "General Relativity",
+      "file": "src/lib/modules/catalog/pre-k-general-relativity-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-general-science-101",
+      "title": "Pre-K Science Discovery Lab",
+      "subject": "General Science",
+      "file": "src/lib/modules/catalog/pre-k-general-science-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-geography-101",
+      "title": "Pre-K Maps and Places Around Us",
+      "subject": "Geography",
+      "file": "src/lib/modules/catalog/pre-k-geography-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-household-management-101",
+      "title": "Pre-K Home Routines and Helpers",
+      "subject": "Household Management",
+      "file": "src/lib/modules/catalog/pre-k-household-management-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-language-arts-101",
+      "title": "Pre-K Language Arts Explorers",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/pre-k-language-arts-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-physics-101",
+      "title": "Pre-K Motion and Force Playground",
+      "subject": "Physics",
+      "file": "src/lib/modules/catalog/pre-k-physics-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-social-studies-us-101",
+      "title": "Pre-K My Community in the US",
+      "subject": "Social Studies US",
+      "file": "src/lib/modules/catalog/pre-k-social-studies-us-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-social-studies-world-101",
+      "title": "Pre-K World Friends and Cultures",
+      "subject": "Social Studies World",
+      "file": "src/lib/modules/catalog/pre-k-social-studies-world-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-world-history-101",
+      "title": "Pre-K Long Ago Stories",
+      "subject": "World History",
+      "file": "src/lib/modules/catalog/pre-k-world-history-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
