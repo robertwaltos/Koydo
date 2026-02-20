@@ -17,6 +17,34 @@ export default function AlertsClient({ initialAlerts }: { initialAlerts: AlertRo
   const [alerts, setAlerts] = useState(initialAlerts);
   const [status, setStatus] = useState("");
 
+  const refreshAlerts = async () => {
+    const response = await fetch("/api/admin/alerts");
+    const data = (await response.json().catch(() => ({}))) as { alerts?: AlertRow[]; error?: string };
+    if (!response.ok) {
+      throw new Error(data.error ?? "Unable to refresh alerts.");
+    }
+    setAlerts(data.alerts ?? []);
+  };
+
+  const runChecks = async () => {
+    setStatus("");
+    try {
+      const response = await fetch("/api/admin/alerts/run", { method: "POST" });
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        triggeredCount?: number;
+      };
+      if (!response.ok) {
+        setStatus(data.error ?? "Unable to run alert checks.");
+        return;
+      }
+      setStatus(`Alert checks completed. New alerts triggered: ${data.triggeredCount ?? 0}.`);
+      await refreshAlerts();
+    } catch {
+      setStatus("Unable to run alert checks.");
+    }
+  };
+
   const acknowledgeAlert = async (alertId: string) => {
     setStatus("");
     try {
@@ -45,6 +73,22 @@ export default function AlertsClient({ initialAlerts }: { initialAlerts: AlertRo
 
   return (
     <div className="space-y-3">
+      <div className="flex flex-wrap gap-2">
+        <button
+          type="button"
+          onClick={() => void runChecks()}
+          className="rounded border border-black/15 px-2 py-1 text-xs"
+        >
+          Run Checks
+        </button>
+        <button
+          type="button"
+          onClick={() => void refreshAlerts()}
+          className="rounded border border-black/15 px-2 py-1 text-xs"
+        >
+          Refresh
+        </button>
+      </div>
       {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
       {alerts.map((entry) => (
         <article key={entry.id} className="rounded-md border border-black/10 p-3 dark:border-white/10">

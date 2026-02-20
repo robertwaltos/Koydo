@@ -66,6 +66,7 @@ Checks on push/PR:
 - `POST /api/admin/compliance/dsar/[requestId]`
 - `POST /api/admin/compliance/dsar/bulk`
 - `GET/POST /api/admin/alerts`
+- `POST /api/admin/alerts/run`
 - `GET /api/admin/report-exports`
 - `GET/POST /api/admin/report-jobs`
 - `POST /api/admin/report-jobs/run`
