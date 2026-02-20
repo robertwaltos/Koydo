@@ -12,12 +12,16 @@ const settingsSchema = z.object({
   staleHours: z.number().min(1).max(168),
   backlogLimit: z.number().min(1).max(10000),
   failure24hLimit: z.number().min(1).max(10000),
+  dedupeWindowHours: z.number().min(1).max(168),
+  autoResolveHours: z.number().min(1).max(720),
 });
 
 const ALERT_SETTING_KEYS = {
   staleHours: "media_queue_sla_stale_hours",
   backlogLimit: "media_queue_sla_backlog_limit",
   failure24hLimit: "media_queue_sla_failure_24h_limit",
+  dedupeWindowHours: "media_queue_alert_dedupe_hours",
+  autoResolveHours: "media_queue_alert_auto_resolve_hours",
 } as const;
 
 function coerceNumber(value: unknown) {
@@ -69,6 +73,8 @@ export async function GET() {
     staleHours: readNumericSetting(settingsMap.get(ALERT_SETTING_KEYS.staleHours), 6),
     backlogLimit: readNumericSetting(settingsMap.get(ALERT_SETTING_KEYS.backlogLimit), 30),
     failure24hLimit: readNumericSetting(settingsMap.get(ALERT_SETTING_KEYS.failure24hLimit), 20),
+    dedupeWindowHours: readNumericSetting(settingsMap.get(ALERT_SETTING_KEYS.dedupeWindowHours), 24),
+    autoResolveHours: readNumericSetting(settingsMap.get(ALERT_SETTING_KEYS.autoResolveHours), 12),
   };
 
   return NextResponse.json({ alerts: data, settings });
@@ -124,6 +130,8 @@ export async function PATCH(request: Request) {
     staleHours: Number(body.staleHours),
     backlogLimit: Number(body.backlogLimit),
     failure24hLimit: Number(body.failure24hLimit),
+    dedupeWindowHours: Number(body.dedupeWindowHours),
+    autoResolveHours: Number(body.autoResolveHours),
   });
 
   if (!parsed.success) {
@@ -151,6 +159,18 @@ export async function PATCH(request: Request) {
       updated_by: auth.userId,
       updated_at: nowIso,
     },
+    {
+      key: ALERT_SETTING_KEYS.dedupeWindowHours,
+      value: parsed.data.dedupeWindowHours,
+      updated_by: auth.userId,
+      updated_at: nowIso,
+    },
+    {
+      key: ALERT_SETTING_KEYS.autoResolveHours,
+      value: parsed.data.autoResolveHours,
+      updated_by: auth.userId,
+      updated_at: nowIso,
+    },
   ];
 
   const { error } = await admin.from("app_settings").upsert(rows, { onConflict: "key" });
@@ -166,6 +186,8 @@ export async function PATCH(request: Request) {
       staleHours: parsed.data.staleHours,
       backlogLimit: parsed.data.backlogLimit,
       failure24hLimit: parsed.data.failure24hLimit,
+      dedupeWindowHours: parsed.data.dedupeWindowHours,
+      autoResolveHours: parsed.data.autoResolveHours,
     },
   });
 

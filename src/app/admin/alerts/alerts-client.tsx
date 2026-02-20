@@ -17,6 +17,8 @@ type AlertSettings = {
   staleHours: number;
   backlogLimit: number;
   failure24hLimit: number;
+  dedupeWindowHours: number;
+  autoResolveHours: number;
 };
 
 export default function AlertsClient({
@@ -54,12 +56,15 @@ export default function AlertsClient({
       const data = (await response.json().catch(() => ({}))) as {
         error?: string;
         triggeredCount?: number;
+        autoResolvedCount?: number;
       };
       if (!response.ok) {
         setStatus(data.error ?? "Unable to run alert checks.");
         return;
       }
-      setStatus(`Alert checks completed. New alerts triggered: ${data.triggeredCount ?? 0}.`);
+      setStatus(
+        `Alert checks completed. New alerts: ${data.triggeredCount ?? 0}. Auto-resolved: ${data.autoResolvedCount ?? 0}.`,
+      );
       await refreshAlerts();
     } catch {
       setStatus("Unable to run alert checks.");
@@ -103,6 +108,8 @@ export default function AlertsClient({
           staleHours: settings.staleHours,
           backlogLimit: settings.backlogLimit,
           failure24hLimit: settings.failure24hLimit,
+          dedupeWindowHours: settings.dedupeWindowHours,
+          autoResolveHours: settings.autoResolveHours,
         }),
       });
       const data = (await response.json().catch(() => ({}))) as {
@@ -131,7 +138,7 @@ export default function AlertsClient({
         <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-300">
           These thresholds control stale/backlog/failure alerts for media job automation.
         </p>
-        <div className="mt-3 grid gap-2 md:grid-cols-3">
+        <div className="mt-3 grid gap-2 md:grid-cols-5">
           <label className="text-xs text-zinc-600 dark:text-zinc-300">
             Stale Hours
             <input
@@ -175,6 +182,38 @@ export default function AlertsClient({
                 setSettings((previous) => ({
                   ...previous,
                   failure24hLimit: Math.max(1, Math.min(10000, Number(event.target.value) || 1)),
+                }))
+              }
+              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+            />
+          </label>
+          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+            Dedupe Window (h)
+            <input
+              type="number"
+              min={1}
+              max={168}
+              value={settings.dedupeWindowHours}
+              onChange={(event) =>
+                setSettings((previous) => ({
+                  ...previous,
+                  dedupeWindowHours: Math.max(1, Math.min(168, Number(event.target.value) || 1)),
+                }))
+              }
+              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+            />
+          </label>
+          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+            Auto-Resolve Age (h)
+            <input
+              type="number"
+              min={1}
+              max={720}
+              value={settings.autoResolveHours}
+              onChange={(event) =>
+                setSettings((previous) => ({
+                  ...previous,
+                  autoResolveHours: Math.max(1, Math.min(720, Number(event.target.value) || 1)),
                 }))
               }
               className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"

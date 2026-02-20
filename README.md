@@ -154,6 +154,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `/admin/reports` (CSV exports for DSAR/support/audit)
 - `/admin/alerts` (operational anomaly and rate-limit alerts)
   - Includes editable media queue SLA thresholds (stale hours, backlog limit, 24h failure limit)
+  - Includes editable dedupe and auto-resolve windows for media queue alerts
 - Critical actions (`delete user`, `refund`, `set price`) require approved request IDs.
 - `/account/settings` (user self-service account deletion)
 - `/account/privacy` (DSAR + policy acknowledgment history)
@@ -271,6 +272,8 @@ Optional `app_settings` keys for media queue SLA thresholds:
 - `media_queue_sla_stale_hours` (default: `6`)
 - `media_queue_sla_backlog_limit` (default: `30`)
 - `media_queue_sla_failure_24h_limit` (default: `20`)
+- `media_queue_alert_dedupe_hours` (default: `24`)
+- `media_queue_alert_auto_resolve_hours` (default: `12`)
 
 Optional filters:
 

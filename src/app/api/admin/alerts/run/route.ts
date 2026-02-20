@@ -52,6 +52,73 @@ async function shouldCreateAlert(category: string) {
   return !data || data.length === 0;
 }
 
+async function shouldCreateAlertWithinWindow(
+  admin: ReturnType<typeof createSupabaseAdminClient>,
+  category: string,
+  dedupeWindowHours: number,
+) {
+  const recentWindowIso = new Date(Date.now() - dedupeWindowHours * 60 * 60 * 1000).toISOString();
+  const { data } = await admin
+    .from("admin_alerts")
+    .select("id")
+    .eq("category", category)
+    .eq("acknowledged", false)
+    .gte("created_at", recentWindowIso)
+    .limit(1);
+  return !data || data.length === 0;
+}
+
+async function autoResolveAlerts(
+  admin: ReturnType<typeof createSupabaseAdminClient>,
+  category: string,
+  autoResolveHours: number,
+  reason: string,
+) {
+  const cutoffIso = new Date(Date.now() - autoResolveHours * 60 * 60 * 1000).toISOString();
+  const nowIso = new Date().toISOString();
+  const { data, error } = await admin
+    .from("admin_alerts")
+    .select("id, metadata")
+    .eq("category", category)
+    .eq("acknowledged", false)
+    .lt("created_at", cutoffIso)
+    .limit(100);
+
+  if (error || !data || data.length === 0) {
+    return 0;
+  }
+
+  let resolvedCount = 0;
+  for (const row of data) {
+    const metadata =
+      row.metadata && typeof row.metadata === "object"
+        ? (row.metadata as Record<string, unknown>)
+        : {};
+
+    const { error: updateError } = await admin
+      .from("admin_alerts")
+      .update({
+        acknowledged: true,
+        acknowledged_by: null,
+        acknowledged_at: nowIso,
+        metadata: {
+          ...metadata,
+          auto_resolved: true,
+          auto_resolved_at: nowIso,
+          auto_resolved_reason: reason,
+        },
+      })
+      .eq("id", row.id)
+      .eq("acknowledged", false);
+
+    if (!updateError) {
+      resolvedCount += 1;
+    }
+  }
+
+  return resolvedCount;
+}
+
 export async function POST() {
   const auth = await requireAdminForApi();
   if (!auth.isAuthorized) {
@@ -60,6 +127,7 @@ export async function POST() {
 
   const admin = createSupabaseAdminClient();
   const triggered: string[] = [];
+  const autoResolved: Record<string, number> = {};
 
   const currentMonthKey = monthKeyFromDate(new Date());
   const { data: monthTokens } = await admin
@@ -103,6 +171,8 @@ export async function POST() {
       "media_queue_sla_stale_hours",
       "media_queue_sla_backlog_limit",
       "media_queue_sla_failure_24h_limit",
+      "media_queue_alert_dedupe_hours",
+      "media_queue_alert_auto_resolve_hours",
     ]);
 
   const mediaSlaSettingMap = new Map((mediaSlaSettings ?? []).map((row) => [row.key, row.value]));
@@ -117,6 +187,14 @@ export async function POST() {
   const failure24hThreshold = Math.max(
     1,
     readNumericSetting(mediaSlaSettingMap.get("media_queue_sla_failure_24h_limit"), 20),
+  );
+  const dedupeWindowHours = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("media_queue_alert_dedupe_hours"), 24),
+  );
+  const autoResolveHours = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("media_queue_alert_auto_resolve_hours"), 12),
   );
 
   const staleMediaCutoff = new Date(Date.now() - staleHoursThreshold * 60 * 60 * 1000).toISOString();
@@ -143,35 +221,61 @@ export async function POST() {
     .in("status", ["queued", "running"])
     .lt("created_at", staleMediaCutoff);
 
-  if ((staleMediaCount ?? 0) > 0 && (await shouldCreateAlert("media_queue_stale"))) {
-    await createAdminAlert({
-      severity:
-        oldestAgeHours >= staleHoursThreshold * 2 || (staleMediaCount ?? 0) >= backlogThreshold
-          ? "critical"
-          : "warning",
-      category: "media_queue_stale",
-      message: `Detected ${staleMediaCount} media jobs pending/running beyond ${staleHoursThreshold}h SLA.`,
-      metadata: {
-        staleMediaCount,
-        staleMediaCutoff,
-        staleHoursThreshold,
-        oldestAgeHours: Number(oldestAgeHours.toFixed(2)),
-      },
-    });
-    triggered.push("media_queue_stale");
+  if ((staleMediaCount ?? 0) > 0) {
+    if (await shouldCreateAlertWithinWindow(admin, "media_queue_stale", dedupeWindowHours)) {
+      await createAdminAlert({
+        severity:
+          oldestAgeHours >= staleHoursThreshold * 2 || (staleMediaCount ?? 0) >= backlogThreshold
+            ? "critical"
+            : "warning",
+        category: "media_queue_stale",
+        message: `Detected ${staleMediaCount} media jobs pending/running beyond ${staleHoursThreshold}h SLA.`,
+        metadata: {
+          staleMediaCount,
+          staleMediaCutoff,
+          staleHoursThreshold,
+          oldestAgeHours: Number(oldestAgeHours.toFixed(2)),
+          dedupeWindowHours,
+        },
+      });
+      triggered.push("media_queue_stale");
+    }
+  } else {
+    const resolvedCount = await autoResolveAlerts(
+      admin,
+      "media_queue_stale",
+      autoResolveHours,
+      "stale queue condition cleared",
+    );
+    if (resolvedCount > 0) {
+      autoResolved.media_queue_stale = resolvedCount;
+    }
   }
 
-  if ((queuedOrRunningCount ?? 0) >= backlogThreshold && (await shouldCreateAlert("media_queue_backlog"))) {
-    await createAdminAlert({
-      severity: (queuedOrRunningCount ?? 0) >= backlogThreshold * 2 ? "critical" : "warning",
-      category: "media_queue_backlog",
-      message: `Media queue backlog is ${queuedOrRunningCount}, above threshold ${backlogThreshold}.`,
-      metadata: {
-        queuedOrRunningCount,
-        backlogThreshold,
-      },
-    });
-    triggered.push("media_queue_backlog");
+  if ((queuedOrRunningCount ?? 0) >= backlogThreshold) {
+    if (await shouldCreateAlertWithinWindow(admin, "media_queue_backlog", dedupeWindowHours)) {
+      await createAdminAlert({
+        severity: (queuedOrRunningCount ?? 0) >= backlogThreshold * 2 ? "critical" : "warning",
+        category: "media_queue_backlog",
+        message: `Media queue backlog is ${queuedOrRunningCount}, above threshold ${backlogThreshold}.`,
+        metadata: {
+          queuedOrRunningCount,
+          backlogThreshold,
+          dedupeWindowHours,
+        },
+      });
+      triggered.push("media_queue_backlog");
+    }
+  } else {
+    const resolvedCount = await autoResolveAlerts(
+      admin,
+      "media_queue_backlog",
+      autoResolveHours,
+      "media backlog condition cleared",
+    );
+    if (resolvedCount > 0) {
+      autoResolved.media_queue_backlog = resolvedCount;
+    }
   }
 
   const failure24hCutoff = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
@@ -181,18 +285,31 @@ export async function POST() {
     .eq("status", "failed")
     .gte("updated_at", failure24hCutoff);
 
-  if ((failedMediaCount24h ?? 0) >= failure24hThreshold && (await shouldCreateAlert("media_queue_failure_spike"))) {
-    await createAdminAlert({
-      severity: (failedMediaCount24h ?? 0) >= failure24hThreshold * 2 ? "critical" : "warning",
-      category: "media_queue_failure_spike",
-      message: `Media queue had ${failedMediaCount24h} failures in the last 24h (threshold: ${failure24hThreshold}).`,
-      metadata: {
-        failedMediaCount24h,
-        failure24hCutoff,
-        failure24hThreshold,
-      },
-    });
-    triggered.push("media_queue_failure_spike");
+  if ((failedMediaCount24h ?? 0) >= failure24hThreshold) {
+    if (await shouldCreateAlertWithinWindow(admin, "media_queue_failure_spike", dedupeWindowHours)) {
+      await createAdminAlert({
+        severity: (failedMediaCount24h ?? 0) >= failure24hThreshold * 2 ? "critical" : "warning",
+        category: "media_queue_failure_spike",
+        message: `Media queue had ${failedMediaCount24h} failures in the last 24h (threshold: ${failure24hThreshold}).`,
+        metadata: {
+          failedMediaCount24h,
+          failure24hCutoff,
+          failure24hThreshold,
+          dedupeWindowHours,
+        },
+      });
+      triggered.push("media_queue_failure_spike");
+    }
+  } else {
+    const resolvedCount = await autoResolveAlerts(
+      admin,
+      "media_queue_failure_spike",
+      autoResolveHours,
+      "media failure spike condition cleared",
+    );
+    if (resolvedCount > 0) {
+      autoResolved.media_queue_failure_spike = resolvedCount;
+    }
   }
 
   const dsarCutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
@@ -233,12 +350,21 @@ export async function POST() {
   await logAdminAction({
     adminUserId: auth.userId,
     actionType: "admin_alert_run_checks",
-    metadata: { triggeredCount: triggered.length, triggeredCategories: triggered },
+    metadata: {
+      triggeredCount: triggered.length,
+      triggeredCategories: triggered,
+      autoResolvedCount: Object.values(autoResolved).reduce((acc, value) => acc + value, 0),
+      autoResolvedCategories: autoResolved,
+      dedupeWindowHours,
+      autoResolveHours,
+    },
   });
 
   return NextResponse.json({
     success: true,
     triggeredCount: triggered.length,
     triggeredCategories: triggered,
+    autoResolvedCount: Object.values(autoResolved).reduce((acc, value) => acc + value, 0),
+    autoResolvedCategories: autoResolved,
   });
 }

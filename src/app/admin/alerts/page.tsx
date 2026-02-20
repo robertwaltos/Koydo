@@ -63,6 +63,8 @@ export default async function AdminAlertsPage() {
       "media_queue_sla_stale_hours",
       "media_queue_sla_backlog_limit",
       "media_queue_sla_failure_24h_limit",
+      "media_queue_alert_dedupe_hours",
+      "media_queue_alert_auto_resolve_hours",
     ]);
 
   const settingsMap = new Map((settingsRows ?? []).map((row) => [row.key, row.value]));
@@ -70,6 +72,8 @@ export default async function AdminAlertsPage() {
     staleHours: readNumericSetting(settingsMap.get("media_queue_sla_stale_hours"), 6),
     backlogLimit: readNumericSetting(settingsMap.get("media_queue_sla_backlog_limit"), 30),
     failure24hLimit: readNumericSetting(settingsMap.get("media_queue_sla_failure_24h_limit"), 20),
+    dedupeWindowHours: readNumericSetting(settingsMap.get("media_queue_alert_dedupe_hours"), 24),
+    autoResolveHours: readNumericSetting(settingsMap.get("media_queue_alert_auto_resolve_hours"), 12),
   };
 
   return (

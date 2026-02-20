@@ -88,6 +88,56 @@ async function insertAlert(supabase, payload) {
   }
 }
 
+async function autoResolveAlerts(supabase, category, autoResolveHours, reason, apply) {
+  const cutoffIso = new Date(Date.now() - autoResolveHours * 60 * 60 * 1000).toISOString();
+  const nowIso = new Date().toISOString();
+  const { data, error } = await supabase
+    .from("admin_alerts")
+    .select("id, metadata")
+    .eq("category", category)
+    .eq("acknowledged", false)
+    .lt("created_at", cutoffIso)
+    .limit(100);
+
+  if (error) {
+    throw new Error(`Failed loading auto-resolve candidates for ${category}: ${error.message}`);
+  }
+
+  if (!data || data.length === 0) {
+    return 0;
+  }
+
+  if (!apply) {
+    return data.length;
+  }
+
+  let resolvedCount = 0;
+  for (const row of data) {
+    const metadata = row.metadata && typeof row.metadata === "object" ? row.metadata : {};
+    const { error: updateError } = await supabase
+      .from("admin_alerts")
+      .update({
+        acknowledged: true,
+        acknowledged_by: null,
+        acknowledged_at: nowIso,
+        metadata: {
+          ...metadata,
+          auto_resolved: true,
+          auto_resolved_at: nowIso,
+          auto_resolved_reason: reason,
+        },
+      })
+      .eq("id", row.id)
+      .eq("acknowledged", false);
+
+    if (!updateError) {
+      resolvedCount += 1;
+    }
+  }
+
+  return resolvedCount;
+}
+
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   const envValues = parseEnvFile(envPath);
@@ -109,6 +159,8 @@ async function main() {
       "media_queue_sla_stale_hours",
       "media_queue_sla_backlog_limit",
       "media_queue_sla_failure_24h_limit",
+      "media_queue_alert_dedupe_hours",
+      "media_queue_alert_auto_resolve_hours",
     ]);
 
   if (settingsError) {
@@ -127,6 +179,14 @@ async function main() {
   const failure24hThreshold = Math.max(
     1,
     readNumericSetting(mediaSlaSettingMap.get("media_queue_sla_failure_24h_limit"), 20),
+  );
+  const dedupeWindowHours = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("media_queue_alert_dedupe_hours"), 24),
+  );
+  const autoResolveHours = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("media_queue_alert_auto_resolve_hours"), 12),
   );
 
   const staleMediaCutoff = new Date(Date.now() - staleHoursThreshold * 60 * 60 * 1000).toISOString();
@@ -198,6 +258,7 @@ async function main() {
     : 0;
 
   const candidateAlerts = [];
+  const clearCategories = [];
   if (staleMediaCount > 0) {
     candidateAlerts.push({
       severity:
@@ -209,7 +270,13 @@ async function main() {
         staleMediaCutoff,
         staleHoursThreshold,
         oldestAgeHours: Number(oldestAgeHours.toFixed(2)),
+        dedupeWindowHours,
       },
+    });
+  } else {
+    clearCategories.push({
+      category: "media_queue_stale",
+      reason: "stale queue condition cleared",
     });
   }
 
@@ -221,7 +288,13 @@ async function main() {
       metadata: {
         queuedOrRunningCount,
         backlogThreshold,
+        dedupeWindowHours,
       },
+    });
+  } else {
+    clearCategories.push({
+      category: "media_queue_backlog",
+      reason: "media backlog condition cleared",
     });
   }
 
@@ -234,14 +307,20 @@ async function main() {
         failedMediaCount24h,
         failure24hCutoff,
         failure24hThreshold,
+        dedupeWindowHours,
       },
+    });
+  } else {
+    clearCategories.push({
+      category: "media_queue_failure_spike",
+      reason: "media failure spike condition cleared",
     });
   }
 
   const createdCategories = [];
   const skippedCategories = [];
   for (const candidate of candidateAlerts) {
-    const shouldCreate = await shouldCreateAlert(supabase, candidate.category);
+    const shouldCreate = await shouldCreateAlert(supabase, candidate.category, dedupeWindowHours);
     if (!shouldCreate) {
       skippedCategories.push(candidate.category);
       continue;
@@ -253,13 +332,35 @@ async function main() {
     createdCategories.push(candidate.category);
   }
 
+  const autoResolvedCategories = [];
+  const autoResolvedCounts = {};
+  for (const clearCategory of clearCategories) {
+    const resolvedCount = await autoResolveAlerts(
+      supabase,
+      clearCategory.category,
+      autoResolveHours,
+      clearCategory.reason,
+      options.apply,
+    );
+    if (resolvedCount > 0) {
+      autoResolvedCounts[clearCategory.category] = resolvedCount;
+      autoResolvedCategories.push(clearCategory.category);
+    }
+  }
+
   console.log(`Mode: ${options.apply ? "apply" : "dry-run"}`);
+  console.log(`Dedupe window (hours): ${dedupeWindowHours}`);
+  console.log(`Auto-resolve age (hours): ${autoResolveHours}`);
   console.log(`Queued/running jobs: ${queuedOrRunningCount}`);
   console.log(`Stale jobs: ${staleMediaCount} (threshold hours: ${staleHoursThreshold})`);
   console.log(`Failures in 24h: ${failedMediaCount24h} (threshold: ${failure24hThreshold})`);
   console.log(`Alert candidates: ${candidateAlerts.length}`);
   console.log(`Created alerts: ${createdCategories.length} (${createdCategories.join(", ") || "none"})`);
   console.log(`Skipped (deduped): ${skippedCategories.length} (${skippedCategories.join(", ") || "none"})`);
+  console.log(
+    `Auto-resolved alerts: ${autoResolvedCategories.length} (${autoResolvedCategories.join(", ") || "none"})`,
+  );
+  console.log(`Auto-resolved counts: ${JSON.stringify(autoResolvedCounts)}`);
 }
 
 main().catch((error) => {
