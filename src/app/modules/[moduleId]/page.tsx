@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { getLearningModuleById } from "@/lib/modules";
+import { notFound, redirect } from "next/navigation";
+import { getLearningModuleByLookupKey } from "@/lib/modules";
 
 export default function ModuleDetailsPage({
   params,
@@ -16,10 +16,14 @@ async function ModuleDetailsPageContent({
   params: { moduleId: string } | Promise<{ moduleId: string }>;
 }) {
   const resolvedParams = await Promise.resolve(params);
-  const learningModule = getLearningModuleById(resolvedParams.moduleId);
+  const learningModule = getLearningModuleByLookupKey(resolvedParams.moduleId);
 
   if (!learningModule) {
     notFound();
+  }
+
+  if (resolvedParams.moduleId !== learningModule.id) {
+    redirect(`/modules/${learningModule.id}`);
   }
 
   return (

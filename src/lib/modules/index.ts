@@ -9,12 +9,44 @@ if (!parsedRegistry.success) {
 
 const moduleRegistry: LearningModule[] = parsedRegistry.data;
 
+function normalizeLookupKey(value: string) {
+  try {
+    return decodeURIComponent(value).trim().toLowerCase();
+  } catch {
+    return value.trim().toLowerCase();
+  }
+}
+
+function slugify(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 export function getAllLearningModules() {
   return moduleRegistry;
 }
 
 export function getLearningModuleById(moduleId: string) {
   return moduleRegistry.find((learningModule) => learningModule.id === moduleId) ?? null;
+}
+
+export function getLearningModuleByLookupKey(moduleKey: string) {
+  const normalizedLookup = normalizeLookupKey(moduleKey);
+  return (
+    moduleRegistry.find((learningModule) => {
+      const normalizedId = normalizeLookupKey(learningModule.id);
+      const normalizedTitle = normalizeLookupKey(learningModule.title);
+      const titleSlug = slugify(learningModule.title);
+      return (
+        normalizedId === normalizedLookup ||
+        normalizedTitle === normalizedLookup ||
+        titleSlug === normalizedLookup
+      );
+    }) ?? null
+  );
 }
 
 export function getAllLessons() {
