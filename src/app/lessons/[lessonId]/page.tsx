@@ -10,6 +10,7 @@ import LessonMediaOps from "./lesson-media-ops";
 import VideoLessonPlayer from "./video-lesson-player";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import LessonAnimationPreview from "./lesson-animation-preview";
+import { toLessonPath } from "@/lib/routing/paths";
 
 export default function LessonPage({
   params,
@@ -33,7 +34,7 @@ async function LessonPageContent({
 
   const { lesson, learningModule } = resolvedLesson;
   if (resolvedParams.lessonId !== lesson.id) {
-    redirect(`/lessons/${encodeURIComponent(lesson.id)}`);
+    redirect(toLessonPath(lesson.id));
   }
 
   const supabase = await createSupabaseServerClient();

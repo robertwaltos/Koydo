@@ -6,6 +6,7 @@ import { getOnboardingRedirect } from "@/lib/compliance/onboarding";
 import SignOutButton from "./sign-out-button";
 import RecommendedLesson from "./recommended-lesson";
 import ModuleCoverImage from "@/app/components/module-cover-image";
+import { toLessonPath } from "@/lib/routing/paths";
 
 export const dynamic = "force-dynamic";
 
@@ -134,7 +135,7 @@ export default async function DashboardPage() {
                     return (
                       <li key={lesson.id}>
                         <Link
-                          href={`/lessons/${encodeURIComponent(lesson.id)}`}
+                          href={toLessonPath(lesson.id)}
                           className="flex items-center justify-between rounded-md p-2 text-sm hover:bg-violet-50"
                         >
                           <span className="flex items-center gap-2">

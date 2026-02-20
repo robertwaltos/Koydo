@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getAllLearningModules } from "@/lib/modules";
+import { toModulePath } from "@/lib/routing/paths";
 
 export default function LessonNotFound() {
   const modules = getAllLearningModules().slice(0, 8);
@@ -28,7 +29,7 @@ export default function LessonNotFound() {
           {modules.map((learningModule) => (
             <li key={learningModule.id}>
               <Link
-                href={`/modules/${encodeURIComponent(learningModule.id)}`}
+                href={toModulePath(learningModule.id)}
                 className="flex items-center justify-between rounded-lg border border-black/10 px-3 py-2 text-sm hover:bg-zinc-50"
               >
                 <span className="font-medium text-zinc-900">{learningModule.title}</span>

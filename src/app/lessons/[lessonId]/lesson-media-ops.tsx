@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { toLessonPath } from "@/lib/routing/paths";
 
 type MediaAssetType = "video" | "animation" | "image";
 
@@ -217,7 +218,7 @@ export default function LessonMediaOps({
           prompt: entry.prompt,
           metadata: {
             source: "lesson-page",
-            lessonPath: `/lessons/${encodeURIComponent(lessonId)}`,
+            lessonPath: toLessonPath(lessonId),
           },
         }),
       });

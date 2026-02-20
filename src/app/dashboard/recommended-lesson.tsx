@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Lesson } from "@/lib/data/curriculum";
+import { toLessonPath } from "@/lib/routing/paths";
 
 export default function RecommendedLesson() {
   const [recommendation, setRecommendation] = useState<Lesson | null>(null);
@@ -44,7 +45,7 @@ export default function RecommendedLesson() {
 
   return (
     <Link
-      href={`/lessons/${encodeURIComponent(recommendation.id)}`}
+      href={toLessonPath(recommendation.id)}
       className="block rounded-2xl border-2 border-indigo-300 bg-gradient-to-r from-indigo-50 via-rose-50 to-sky-50 p-6 shadow-md transition-transform hover:scale-[1.02]"
     >
       <div className="flex items-center justify-between">

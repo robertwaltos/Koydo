@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { getLearningModuleByLookupKey } from "@/lib/modules";
 import ModuleCoverImage from "@/app/components/module-cover-image";
+import { toLessonPath, toModulePath } from "@/lib/routing/paths";
 
 export default function ModuleDetailsPage({
   params,
@@ -24,7 +25,7 @@ async function ModuleDetailsPageContent({
   }
 
   if (resolvedParams.moduleId !== learningModule.id) {
-    redirect(`/modules/${encodeURIComponent(learningModule.id)}`);
+    redirect(toModulePath(learningModule.id));
   }
 
   return (
@@ -56,7 +57,7 @@ async function ModuleDetailsPageContent({
           {learningModule.lessons.map((lesson) => (
             <li key={lesson.id}>
               <Link
-                href={`/lessons/${encodeURIComponent(lesson.id)}`}
+                href={toLessonPath(lesson.id)}
                 className="flex items-center justify-between rounded-md border border-emerald-200 px-3 py-2 text-sm hover:bg-emerald-50"
               >
                 <span>{lesson.title}</span>
