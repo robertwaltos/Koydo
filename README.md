@@ -95,6 +95,7 @@ Checks on push/PR:
 - `GET /api/admin/reports/support`
 - `GET /api/admin/reports/audit`
 - `GET /api/admin/curriculum/coverage`
+- `GET /api/admin/system/db-readiness`
 - `GET/POST /api/admin/media/jobs`
 - `POST /api/admin/media/jobs/run`
 - `POST /api/admin/media/jobs/[jobId]/status`

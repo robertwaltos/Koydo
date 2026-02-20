@@ -11,6 +11,19 @@ type DsarRow = {
   resolved_at: string | null;
 };
 
+type DbReadinessRow = {
+  table: string;
+  status: "present" | "missing" | "error";
+  detail: string;
+};
+
+type DbReadinessResult = {
+  generatedAt: string;
+  healthy: boolean;
+  totals: { present: number; missing: number; error: number; total: number };
+  tables: DbReadinessRow[];
+};
+
 export default function ComplianceAdminClient({
   initialDsarRequests,
 }: {
@@ -21,6 +34,8 @@ export default function ComplianceAdminClient({
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [bulkStatus, setBulkStatus] = useState<DsarRow["status"]>("in_progress");
   const [bulkConfirm, setBulkConfirm] = useState("");
+  const [dbCheck, setDbCheck] = useState<DbReadinessResult | null>(null);
+  const [dbCheckLoading, setDbCheckLoading] = useState(false);
 
   const updateStatus = async (requestId: string, nextStatus: DsarRow["status"]) => {
     setStatus("");
@@ -115,12 +130,63 @@ export default function ComplianceAdminClient({
     }
   };
 
+  const runDbReadinessCheck = async () => {
+    setDbCheckLoading(true);
+    setStatus("");
+    try {
+      const response = await fetch("/api/admin/system/db-readiness", { method: "GET" });
+      const data = (await response.json().catch(() => ({}))) as DbReadinessResult & { error?: string };
+      if (!response.ok && !data.tables) {
+        setStatus(data.error ?? "Unable to run DB readiness check.");
+        return;
+      }
+      setDbCheck(data);
+      setStatus(
+        data.healthy
+          ? "DB readiness check passed."
+          : `DB readiness check found issues: missing ${data.totals.missing}, errors ${data.totals.error}.`,
+      );
+    } catch {
+      setStatus("Unable to run DB readiness check.");
+    } finally {
+      setDbCheckLoading(false);
+    }
+  };
+
   return (
     <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
       <h2 className="text-lg font-semibold">DSAR Queue</h2>
       {status ? (
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{status}</p>
       ) : null}
+      <div className="mt-3 rounded-md border border-black/10 p-3 dark:border-white/10">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-sm font-medium">Live DB Readiness Check</p>
+          <button
+            type="button"
+            onClick={runDbReadinessCheck}
+            disabled={dbCheckLoading}
+            className="rounded border border-black/15 px-2 py-1 text-xs"
+          >
+            {dbCheckLoading ? "Running..." : "Run DB Check"}
+          </button>
+        </div>
+        {dbCheck ? (
+          <div className="mt-2 text-xs text-zinc-600 dark:text-zinc-300">
+            <p>
+              Generated {new Date(dbCheck.generatedAt).toLocaleString()} | Present {dbCheck.totals.present} | Missing{" "}
+              {dbCheck.totals.missing} | Error {dbCheck.totals.error}
+            </p>
+            <div className="mt-2 max-h-40 overflow-auto rounded border border-black/10 p-2 dark:border-white/10">
+              {dbCheck.tables.map((row) => (
+                <p key={row.table} className="mb-1">
+                  [{row.status.toUpperCase()}] {row.table}
+                </p>
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
       <div className="mt-3 rounded-md border border-black/10 p-3 dark:border-white/10">
         <p className="text-sm font-medium">Bulk Update</p>
         <div className="mt-2 flex flex-wrap items-center gap-2">
