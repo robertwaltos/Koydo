@@ -67,6 +67,7 @@ npm run ops:doctor
 GitHub Actions workflow: `.github/workflows/ci.yml`
 Scheduled ops workflow: `.github/workflows/ops-reports.yml` (daily + manual dispatch)
 Scheduled media automation workflow: `.github/workflows/media-automation.yml` (daily + manual dispatch)
+Scheduled report automation workflow: `.github/workflows/report-automation.yml` (hourly + manual dispatch)
 
 Checks on push/PR:
 
@@ -89,6 +90,13 @@ Media automation workflow behavior:
 - Processes queued/failed alert notifications using `scripts/process-alert-notifications.mjs`.
 - Processes queued media jobs using `scripts/process-media-jobs.mjs`.
 - Skips queue writes gracefully if Supabase secrets are not configured.
+
+Report automation workflow behavior:
+
+- Processes due jobs from `admin_report_jobs` using `scripts/process-report-jobs.mjs`.
+- Runs media/report queue SLA alert checks using `scripts/check-media-sla-alerts.mjs`.
+- Processes queued/failed alert notifications using `scripts/process-alert-notifications.mjs`.
+- Skips processing gracefully if Supabase secrets are not configured.
 
 Required GitHub secrets/vars for media queue apply mode:
 

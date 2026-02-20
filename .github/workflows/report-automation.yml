@@ -1,0 +1,66 @@
+name: Report Automation
+
+on:
+  schedule:
+    - cron: "20 * * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: Max report jobs to process
+        required: false
+        default: "50"
+
+concurrency:
+  group: report-automation
+  cancel-in-progress: false
+
+jobs:
+  process-reports:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL || '' }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY || '' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY || '' }}
+      ADMIN_ALERT_FROM_EMAIL: ${{ vars.ADMIN_ALERT_FROM_EMAIL || secrets.ADMIN_ALERT_FROM_EMAIL || secrets.PARENT_CONSENT_FROM_EMAIL || '' }}
+      QUEUE_LIMIT: ${{ inputs.limit || '50' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Process queued admin report jobs
+        run: |
+          if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ] || [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "Supabase environment variables are missing. Skipping report queue processing."
+            exit 0
+          fi
+
+          node scripts/process-report-jobs.mjs --apply --limit "$QUEUE_LIMIT"
+
+      - name: Run queue SLA alert checks
+        run: |
+          if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ] || [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "Supabase environment variables are missing. Skipping SLA alert step."
+            exit 0
+          fi
+
+          npm run alerts:media:sla -- --apply
+
+      - name: Process alert notification queue
+        run: |
+          if [ -z "$NEXT_PUBLIC_SUPABASE_URL" ] || [ -z "$SUPABASE_SERVICE_ROLE_KEY" ]; then
+            echo "Supabase environment variables are missing. Skipping notification step."
+            exit 0
+          fi
+
+          npm run alerts:notifications -- --apply --limit "$QUEUE_LIMIT" --retry-failed
