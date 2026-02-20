@@ -24,6 +24,24 @@ function readNumericSetting(value: unknown, fallback: number) {
   return fallback;
 }
 
+type ReportQueueSummary = {
+  generatedAt: string;
+  queuedReadyCount: number;
+  runningCount: number;
+  backlogCount: number;
+  staleCount: number;
+  staleQueuedCount: number;
+  staleRunningCount: number;
+  failed24hCount: number;
+  oldestQueuedReadyAt: string | null;
+  oldestRunningAt: string | null;
+  staleCutoffAt: string;
+  staleHoursThreshold: number;
+  backlogThreshold: number;
+  failure24hThreshold: number;
+  slaBreaches: number;
+};
+
 export default async function AdminReportsPage() {
   const supabase = await createSupabaseServerClient();
   const {
@@ -95,8 +113,12 @@ export default async function AdminReportsPage() {
     queuedReadyResult,
     runningResult,
     staleQueuedResult,
-    staleRunningResult,
+    staleRunningStartedResult,
+    staleRunningUnstartedResult,
     failed24hResult,
+    oldestQueuedReadyResult,
+    oldestRunningStartedResult,
+    oldestRunningUnstartedResult,
   ] = await Promise.all([
     admin
       .from("admin_report_jobs")
@@ -116,24 +138,78 @@ export default async function AdminReportsPage() {
       .from("admin_report_jobs")
       .select("id", { count: "exact", head: true })
       .eq("status", "running")
+      .not("started_at", "is", null)
+      .lt("started_at", staleCutoffIso),
+    admin
+      .from("admin_report_jobs")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "running")
+      .is("started_at", null)
       .lt("created_at", staleCutoffIso),
     admin
       .from("admin_report_jobs")
       .select("id", { count: "exact", head: true })
       .eq("status", "failed")
       .gte("completed_at", failure24hCutoff),
+    admin
+      .from("admin_report_jobs")
+      .select("run_after")
+      .eq("status", "queued")
+      .lte("run_after", nowIso)
+      .order("run_after", { ascending: true })
+      .limit(1)
+      .maybeSingle(),
+    admin
+      .from("admin_report_jobs")
+      .select("started_at")
+      .eq("status", "running")
+      .not("started_at", "is", null)
+      .order("started_at", { ascending: true })
+      .limit(1)
+      .maybeSingle(),
+    admin
+      .from("admin_report_jobs")
+      .select("created_at")
+      .eq("status", "running")
+      .is("started_at", null)
+      .order("created_at", { ascending: true })
+      .limit(1)
+      .maybeSingle(),
   ]);
 
   const queuedReadyCount = queuedReadyResult.count ?? 0;
   const runningCount = runningResult.count ?? 0;
-  const staleCount = (staleQueuedResult.count ?? 0) + (staleRunningResult.count ?? 0);
+  const staleQueuedCount = staleQueuedResult.count ?? 0;
+  const staleRunningCount =
+    (staleRunningStartedResult.count ?? 0) + (staleRunningUnstartedResult.count ?? 0);
+  const staleCount = staleQueuedCount + staleRunningCount;
   const failed24hCount = failed24hResult.count ?? 0;
   const backlogCount = queuedReadyCount + runningCount;
+  const oldestQueuedReadyAt = oldestQueuedReadyResult.data?.run_after ?? null;
+  const oldestRunningAt =
+    oldestRunningStartedResult.data?.started_at ?? oldestRunningUnstartedResult.data?.created_at ?? null;
   const slaBreaches = [
     staleCount > 0,
     backlogCount >= backlogThreshold,
     failed24hCount >= failure24hThreshold,
   ].filter(Boolean).length;
+  const queueSummary: ReportQueueSummary = {
+    generatedAt: nowIso,
+    queuedReadyCount,
+    runningCount,
+    backlogCount,
+    staleCount,
+    staleQueuedCount,
+    staleRunningCount,
+    failed24hCount,
+    oldestQueuedReadyAt,
+    oldestRunningAt,
+    staleCutoffAt: staleCutoffIso,
+    staleHoursThreshold,
+    backlogThreshold,
+    failure24hThreshold,
+    slaBreaches,
+  };
 
   const exportHistory = exportHistoryResult.data ?? [];
   const jobs = jobsResult.data ?? [];
@@ -146,17 +222,6 @@ export default async function AdminReportsPage() {
           Export operational records as CSV for audits, legal workflows, and finance reconciliation.
         </p>
       </header>
-
-      <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
-        <h2 className="text-lg font-semibold">Queue Health</h2>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
-          queued-ready={queuedReadyCount} | running={runningCount} | stale={staleCount}/{staleHoursThreshold}h |
-          failed24h={failed24hCount}/{failure24hThreshold} | backlog={backlogCount}/{backlogThreshold}
-        </p>
-        <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
-          SLA status: {slaBreaches === 0 ? "OK" : `${slaBreaches} breach${slaBreaches === 1 ? "" : "es"}`}
-        </p>
-      </section>
 
       <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
         <ul className="space-y-3">
@@ -205,7 +270,7 @@ export default async function AdminReportsPage() {
         </div>
       </section>
 
-      <ReportsClient initialJobs={jobs} />
+      <ReportsClient initialJobs={jobs} initialSummary={queueSummary} />
     </main>
   );
 }

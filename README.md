@@ -134,6 +134,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `POST /api/admin/alerts/notifications/run`
 - `GET /api/admin/report-exports`
 - `GET/POST /api/admin/report-jobs`
+- `GET /api/admin/report-jobs/summary`
 - `POST /api/admin/report-jobs/run`
 - `POST /api/admin/report-jobs/retry`
 - `POST /api/admin/report-jobs/requeue-stale`
@@ -174,7 +175,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `/lessons/[lessonId]` includes admin-only prompt copy, queue, and lesson-specific queue processing controls.
   - Video lessons automatically embed completed generated video assets when available.
 - `/admin/compliance` (app store policy readiness checklist)
-- `/admin/reports` (CSV exports for DSAR/support/audit)
+- `/admin/reports` (CSV exports for DSAR/support/audit + live report queue-health SLA widgets)
 - `/admin/alerts` (operational anomaly and rate-limit alerts)
   - Includes editable media queue SLA thresholds (stale hours, backlog limit, 24h failure limit)
   - Includes editable report queue SLA thresholds (stale hours, backlog limit, 24h failure limit)

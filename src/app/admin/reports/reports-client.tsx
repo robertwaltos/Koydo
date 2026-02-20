@@ -13,12 +13,119 @@ type ReportJob = {
   error?: string | null;
 };
 
-export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[] }) {
+type ReportQueueSummary = {
+  generatedAt: string;
+  queuedReadyCount: number;
+  runningCount: number;
+  backlogCount: number;
+  staleCount: number;
+  staleQueuedCount: number;
+  staleRunningCount: number;
+  failed24hCount: number;
+  oldestQueuedReadyAt: string | null;
+  oldestRunningAt: string | null;
+  staleCutoffAt: string;
+  staleHoursThreshold: number;
+  backlogThreshold: number;
+  failure24hThreshold: number;
+  slaBreaches: number;
+};
+
+type ReportQueueSummaryResponse = Partial<ReportQueueSummary> & {
+  error?: string;
+};
+
+function isFiniteNumber(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
+function formatAgeFromIso(isoTimestamp: string | null) {
+  if (!isoTimestamp) return "n/a";
+  const timestamp = new Date(isoTimestamp);
+  if (Number.isNaN(timestamp.getTime())) return "n/a";
+
+  const diffMs = Date.now() - timestamp.getTime();
+  if (diffMs < 0) return "<1m";
+
+  const diffMinutes = Math.floor(diffMs / 60000);
+  if (diffMinutes < 60) return `${diffMinutes}m`;
+  const diffHours = Math.floor(diffMinutes / 60);
+  if (diffHours < 24) return `${diffHours}h`;
+  const diffDays = Math.floor(diffHours / 24);
+  return `${diffDays}d`;
+}
+
+export default function ReportsClient({
+  initialJobs,
+  initialSummary,
+}: {
+  initialJobs: ReportJob[];
+  initialSummary: ReportQueueSummary;
+}) {
   const [jobs, setJobs] = useState(initialJobs);
   const [status, setStatus] = useState("");
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [isRequeueingStale, setIsRequeueingStale] = useState(false);
   const [staleRequeueMinutes, setStaleRequeueMinutes] = useState(90);
+  const [queueSummary, setQueueSummary] = useState<ReportQueueSummary>(initialSummary);
+  const [summaryLoading, setSummaryLoading] = useState(false);
+  const [summaryError, setSummaryError] = useState("");
+  const [summaryLastUpdatedAt, setSummaryLastUpdatedAt] = useState(initialSummary.generatedAt);
+
+  const backlogBreached = queueSummary.backlogCount >= queueSummary.backlogThreshold;
+  const staleBreached = queueSummary.staleCount > 0;
+  const failed24hBreached = queueSummary.failed24hCount >= queueSummary.failure24hThreshold;
+  const summaryStatusClass =
+    queueSummary.slaBreaches === 0
+      ? "border-emerald-200 bg-emerald-50 text-emerald-800"
+      : "border-red-200 bg-red-50 text-red-800";
+
+  const refreshSummary = useCallback(async () => {
+    setSummaryLoading(true);
+    try {
+      const response = await fetch("/api/admin/report-jobs/summary", {
+        method: "GET",
+        cache: "no-store",
+      });
+      const payload = (await response.json().catch(() => ({}))) as ReportQueueSummaryResponse;
+      if (!response.ok) {
+        throw new Error(payload.error ?? "Unable to refresh report queue health.");
+      }
+
+      const nextSummary: ReportQueueSummary = {
+        generatedAt:
+          typeof payload.generatedAt === "string" ? payload.generatedAt : new Date().toISOString(),
+        queuedReadyCount: isFiniteNumber(payload.queuedReadyCount) ? payload.queuedReadyCount : 0,
+        runningCount: isFiniteNumber(payload.runningCount) ? payload.runningCount : 0,
+        backlogCount: isFiniteNumber(payload.backlogCount) ? payload.backlogCount : 0,
+        staleCount: isFiniteNumber(payload.staleCount) ? payload.staleCount : 0,
+        staleQueuedCount: isFiniteNumber(payload.staleQueuedCount) ? payload.staleQueuedCount : 0,
+        staleRunningCount: isFiniteNumber(payload.staleRunningCount) ? payload.staleRunningCount : 0,
+        failed24hCount: isFiniteNumber(payload.failed24hCount) ? payload.failed24hCount : 0,
+        oldestQueuedReadyAt:
+          typeof payload.oldestQueuedReadyAt === "string" ? payload.oldestQueuedReadyAt : null,
+        oldestRunningAt: typeof payload.oldestRunningAt === "string" ? payload.oldestRunningAt : null,
+        staleCutoffAt:
+          typeof payload.staleCutoffAt === "string" ? payload.staleCutoffAt : new Date().toISOString(),
+        staleHoursThreshold: isFiniteNumber(payload.staleHoursThreshold) ? payload.staleHoursThreshold : 6,
+        backlogThreshold: isFiniteNumber(payload.backlogThreshold) ? payload.backlogThreshold : 15,
+        failure24hThreshold: isFiniteNumber(payload.failure24hThreshold)
+          ? payload.failure24hThreshold
+          : 10,
+        slaBreaches: isFiniteNumber(payload.slaBreaches) ? payload.slaBreaches : 0,
+      };
+
+      setQueueSummary(nextSummary);
+      setSummaryLastUpdatedAt(nextSummary.generatedAt);
+      setSummaryError("");
+    } catch (error) {
+      setSummaryError(
+        error instanceof Error ? error.message : "Unable to refresh report queue health.",
+      );
+    } finally {
+      setSummaryLoading(false);
+    }
+  }, []);
 
   const createJob = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -155,8 +262,9 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
       setStatus("Unable to refresh report jobs.");
     } finally {
       setIsRefreshing(false);
+      void refreshSummary();
     }
-  }, []);
+  }, [refreshSummary]);
 
   useEffect(() => {
     const interval = window.setInterval(() => {
@@ -173,6 +281,81 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
       <h2 className="text-lg font-semibold">Report Job Queue</h2>
       {status ? <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
 
+      <div className="mt-3 rounded-md border border-black/10 bg-zinc-50 p-4 dark:border-white/10 dark:bg-zinc-950">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h3 className="text-sm font-semibold">Queue Health</h3>
+          <button
+            type="button"
+            onClick={() => void refreshSummary()}
+            disabled={summaryLoading}
+            className="rounded-md border border-black/15 px-3 py-1 text-xs hover:bg-black/5 disabled:opacity-70 dark:border-white/20 dark:hover:bg-white/5"
+          >
+            {summaryLoading ? "Refreshing..." : "Refresh Health"}
+          </button>
+        </div>
+        <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-300">
+          {summaryLoading
+            ? "Refreshing queue health..."
+            : summaryError
+              ? summaryError
+              : `Last updated ${new Date(summaryLastUpdatedAt).toLocaleTimeString()}`}
+        </p>
+        <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+          <article
+            className={`rounded-md border p-3 ${
+              backlogBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-white"
+            } dark:border-white/10 dark:bg-zinc-900`}
+          >
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Backlog</p>
+            <p className="mt-1 text-2xl font-semibold">{queueSummary.backlogCount}</p>
+            <p className="text-xs">Threshold {queueSummary.backlogThreshold}</p>
+          </article>
+          <article
+            className={`rounded-md border p-3 ${
+              staleBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-white"
+            } dark:border-white/10 dark:bg-zinc-900`}
+          >
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Stale</p>
+            <p className="mt-1 text-2xl font-semibold">{queueSummary.staleCount}</p>
+            <p className="text-xs">
+              queued {queueSummary.staleQueuedCount} | running {queueSummary.staleRunningCount}
+            </p>
+          </article>
+          <article
+            className={`rounded-md border p-3 ${
+              failed24hBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-white"
+            } dark:border-white/10 dark:bg-zinc-900`}
+          >
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Failed (24h)</p>
+            <p className="mt-1 text-2xl font-semibold">{queueSummary.failed24hCount}</p>
+            <p className="text-xs">Threshold {queueSummary.failure24hThreshold}</p>
+          </article>
+          <article className="rounded-md border border-black/10 bg-white p-3 dark:border-white/10 dark:bg-zinc-900">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Queued Ready</p>
+            <p className="mt-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
+              {queueSummary.queuedReadyCount}
+            </p>
+            <p className="text-xs text-zinc-600 dark:text-zinc-300">Running {queueSummary.runningCount}</p>
+          </article>
+          <article className={`rounded-md border p-3 ${summaryStatusClass}`}>
+            <p className="text-xs uppercase tracking-wide">SLA Status</p>
+            <p className="mt-1 text-2xl font-semibold">
+              {queueSummary.slaBreaches === 0
+                ? "OK"
+                : `${queueSummary.slaBreaches} breach${queueSummary.slaBreaches === 1 ? "" : "es"}`}
+            </p>
+            <p className="text-xs">
+              Oldest queued {formatAgeFromIso(queueSummary.oldestQueuedReadyAt)} | oldest running{" "}
+              {formatAgeFromIso(queueSummary.oldestRunningAt)}
+            </p>
+          </article>
+        </div>
+        <p className="mt-2 text-xs text-zinc-600 dark:text-zinc-300">
+          Stale threshold: {queueSummary.staleHoursThreshold}h | stale cutoff{" "}
+          {new Date(queueSummary.staleCutoffAt).toLocaleString()}
+        </p>
+      </div>
+
       <form onSubmit={createJob} className="mt-3 grid gap-3 md:grid-cols-3">
         <select name="reportType" className="rounded-md border border-black/15 px-3 py-2 text-sm">
           <option value="dsar">DSAR</option>
@@ -185,43 +368,51 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
         </button>
       </form>
 
-      <button type="button" onClick={runQueued} className="mt-3 rounded-md border border-black/15 px-4 py-2 text-sm">
-        Run Due Jobs Now
-      </button>
-      <button
-        type="button"
-        onClick={retryFailed}
-        className="ml-2 mt-3 rounded-md border border-black/15 px-4 py-2 text-sm"
-      >
-        Retry Failed Jobs
-      </button>
-      <button
-        type="button"
-        onClick={requeueStale}
-        disabled={isRequeueingStale}
-        className="ml-2 mt-3 rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70"
-      >
-        {isRequeueingStale ? "Requeueing..." : "Requeue Stale Running"}
-      </button>
-      <button
-        type="button"
-        onClick={() => void refreshJobs()}
-        disabled={isRefreshing}
-        className="ml-2 mt-3 rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70"
-      >
-        {isRefreshing ? "Refreshing..." : "Refresh Jobs"}
-      </button>
-      <label className="ml-2 mt-3 inline-flex items-center gap-2 rounded-md border border-black/15 px-3 py-2 text-xs text-zinc-600">
-        Stale min
-        <input
-          type="number"
-          min={5}
-          max={10080}
-          value={staleRequeueMinutes}
-          onChange={(event) => setStaleRequeueMinutes(Math.max(5, Math.min(10080, Number(event.target.value) || 5)))}
-          className="w-20 rounded border border-black/15 px-2 py-1 text-xs"
-        />
-      </label>
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <button
+          type="button"
+          onClick={runQueued}
+          className="rounded-md border border-black/15 px-4 py-2 text-sm dark:border-white/20"
+        >
+          Run Due Jobs Now
+        </button>
+        <button
+          type="button"
+          onClick={retryFailed}
+          className="rounded-md border border-black/15 px-4 py-2 text-sm dark:border-white/20"
+        >
+          Retry Failed Jobs
+        </button>
+        <button
+          type="button"
+          onClick={requeueStale}
+          disabled={isRequeueingStale}
+          className="rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70 dark:border-white/20"
+        >
+          {isRequeueingStale ? "Requeueing..." : "Requeue Stale Running"}
+        </button>
+        <button
+          type="button"
+          onClick={() => void refreshJobs()}
+          disabled={isRefreshing}
+          className="rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70 dark:border-white/20"
+        >
+          {isRefreshing ? "Refreshing..." : "Refresh Jobs"}
+        </button>
+        <label className="inline-flex items-center gap-2 rounded-md border border-black/15 px-3 py-2 text-xs text-zinc-600 dark:border-white/20 dark:text-zinc-300">
+          Stale min
+          <input
+            type="number"
+            min={5}
+            max={10080}
+            value={staleRequeueMinutes}
+            onChange={(event) =>
+              setStaleRequeueMinutes(Math.max(5, Math.min(10080, Number(event.target.value) || 5)))
+            }
+            className="w-20 rounded border border-black/15 px-2 py-1 text-xs dark:border-white/20"
+          />
+        </label>
+      </div>
 
       <div className="mt-4 space-y-2">
         {jobs.map((job) => (
