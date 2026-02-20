@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useCallback, useEffect, useState } from "react";
 
 type ReportJob = {
   id: string;
@@ -101,7 +101,7 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
     }
   };
 
-  const refreshJobs = async () => {
+  const refreshJobs = useCallback(async () => {
     setIsRefreshing(true);
     try {
       const response = await fetch("/api/admin/report-jobs");
@@ -119,7 +119,17 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
     } finally {
       setIsRefreshing(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      void refreshJobs();
+    }, 15000);
+
+    return () => {
+      window.clearInterval(interval);
+    };
+  }, [refreshJobs]);
 
   return (
     <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
