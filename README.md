@@ -95,6 +95,7 @@ Media automation workflow behavior:
 Report automation workflow behavior:
 
 - Processes due jobs from `admin_report_jobs` using `scripts/process-report-jobs.mjs`.
+- Re-queues stale `running` report jobs using `scripts/requeue-stale-report-jobs.mjs`.
 - Requeues recent failed report jobs before processing (`--retry-failed`).
 - Runs media/report queue SLA alert checks using `scripts/check-media-sla-alerts.mjs`.
 - Processes queued/failed alert notifications using `scripts/process-alert-notifications.mjs`.
@@ -135,6 +136,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `GET/POST /api/admin/report-jobs`
 - `POST /api/admin/report-jobs/run`
 - `POST /api/admin/report-jobs/retry`
+- `POST /api/admin/report-jobs/requeue-stale`
 - `GET /api/admin/reports/dsar`
 - `GET /api/admin/reports/support`
 - `GET /api/admin/reports/audit`
@@ -319,6 +321,12 @@ Apply with automatic retry of failed jobs:
 node scripts/process-report-jobs.mjs --apply --limit 50 --retry-failed --retry-limit 50
 ```
 
+Requeue stale running report jobs:
+
+```bash
+npm run report-jobs:requeue:stale -- --max-age-minutes 90 --limit 100 --apply
+```
+
 Optional `app_settings` keys for media queue SLA thresholds:
 
 - `media_queue_sla_stale_hours` (default: `6`)
@@ -342,6 +350,7 @@ Optional filters:
 - `--asset video|animation|image|all`
 - `--created-by <admin-user-uuid>`
 - `--max-age-minutes <minutes>` (for `media:requeue:stale`)
+- `--report-type dsar|support|audit|all` (for `report-jobs:requeue:stale`)
 
 Lesson-level media operations:
 

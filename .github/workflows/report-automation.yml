@@ -45,6 +45,7 @@ jobs:
             exit 0
           fi
 
+          npm run report-jobs:requeue:stale -- --apply --max-age-minutes 90 --limit "$QUEUE_LIMIT"
           node scripts/process-report-jobs.mjs --apply --limit "$QUEUE_LIMIT" --retry-failed --retry-limit "$QUEUE_LIMIT"
 
       - name: Run queue SLA alert checks

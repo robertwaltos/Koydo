@@ -45,6 +45,7 @@ jobs:
             exit 0
           fi
 
+          npm run report-jobs:requeue:stale -- --apply --max-age-minutes 90 --limit 100
           node scripts/process-report-jobs.mjs --apply --limit 50 --retry-failed --retry-limit 50
 
       - name: Generate lesson prompt pack

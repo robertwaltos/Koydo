@@ -16,6 +16,7 @@
     "alerts:media:sla": "node scripts/check-media-sla-alerts.mjs",
     "alerts:notifications": "node scripts/process-alert-notifications.mjs",
     "report-jobs:process": "node scripts/process-report-jobs.mjs",
+    "report-jobs:requeue:stale": "node scripts/requeue-stale-report-jobs.mjs",
     "media:process": "node scripts/process-media-jobs.mjs",
     "compliance:audit": "node scripts/appstore-compliance-audit.mjs",
     "curriculum:report": "node scripts/curriculum-coverage-report.mjs",

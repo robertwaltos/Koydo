@@ -17,6 +17,8 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
   const [jobs, setJobs] = useState(initialJobs);
   const [status, setStatus] = useState("");
   const [isRefreshing, setIsRefreshing] = useState(false);
+  const [isRequeueingStale, setIsRequeueingStale] = useState(false);
+  const [staleRequeueMinutes, setStaleRequeueMinutes] = useState(90);
 
   const createJob = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -101,6 +103,41 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
     }
   };
 
+  const requeueStale = async () => {
+    setStatus("");
+    setIsRequeueingStale(true);
+    try {
+      const response = await fetch("/api/admin/report-jobs/requeue-stale", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ maxAgeMinutes: staleRequeueMinutes, limit: 100 }),
+      });
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        message?: string;
+        scanned?: number;
+        requeued?: number;
+        failedUpdates?: number;
+      };
+      if (!response.ok) {
+        setStatus(data.error ?? "Unable to requeue stale report jobs.");
+        return;
+      }
+      if (data.message) {
+        setStatus(data.message);
+      } else {
+        setStatus(
+          `Stale requeue complete. scanned=${data.scanned ?? 0}, requeued=${data.requeued ?? 0}, failedUpdates=${data.failedUpdates ?? 0}.`,
+        );
+      }
+      await refreshJobs();
+    } catch {
+      setStatus("Unable to requeue stale report jobs.");
+    } finally {
+      setIsRequeueingStale(false);
+    }
+  };
+
   const refreshJobs = useCallback(async () => {
     setIsRefreshing(true);
     try {
@@ -160,12 +197,31 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
       </button>
       <button
         type="button"
+        onClick={requeueStale}
+        disabled={isRequeueingStale}
+        className="ml-2 mt-3 rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70"
+      >
+        {isRequeueingStale ? "Requeueing..." : "Requeue Stale Running"}
+      </button>
+      <button
+        type="button"
         onClick={() => void refreshJobs()}
         disabled={isRefreshing}
         className="ml-2 mt-3 rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70"
       >
         {isRefreshing ? "Refreshing..." : "Refresh Jobs"}
       </button>
+      <label className="ml-2 mt-3 inline-flex items-center gap-2 rounded-md border border-black/15 px-3 py-2 text-xs text-zinc-600">
+        Stale min
+        <input
+          type="number"
+          min={5}
+          max={10080}
+          value={staleRequeueMinutes}
+          onChange={(event) => setStaleRequeueMinutes(Math.max(5, Math.min(10080, Number(event.target.value) || 5)))}
+          className="w-20 rounded border border-black/15 px-2 py-1 text-xs"
+        />
+      </label>
 
       <div className="mt-4 space-y-2">
         {jobs.map((job) => (
