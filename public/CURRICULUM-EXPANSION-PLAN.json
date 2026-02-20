@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-02-20T23:49:43.209Z",
+  "generatedAt": "2026-02-20T23:53:05.645Z",
   "targetPerSubjectPerGrade": 10,
   "totals": {
     "targetRows": 72,
     "totalExisting": 786,
     "totalNeeded": 0,
-    "totalUntracked": 70
+    "totalUntracked": 120
   },
   "targets": [
     {
@@ -517,7 +517,7 @@
     {
       "gradeBand": "high-school",
       "subject": "exam-prep",
-      "count": 70
+      "count": 120
     }
   ]
 }

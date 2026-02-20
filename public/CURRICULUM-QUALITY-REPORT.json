@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-02-20T23:49:43.009Z",
+  "generatedAt": "2026-02-20T23:53:05.450Z",
   "sourceDir": "src/lib/modules/catalog",
   "totals": {
-    "modules": 47,
-    "lessons": 460,
-    "quizLessons": 183,
-    "interactiveLessons": 138,
-    "videoLessons": 139,
-    "questions": 735,
-    "learningAidBlocks": 452,
+    "modules": 52,
+    "lessons": 510,
+    "quizLessons": 203,
+    "interactiveLessons": 153,
+    "videoLessons": 154,
+    "questions": 815,
+    "learningAidBlocks": 502,
     "placeholderOptionCount": 0,
     "genericReflectionCount": 0,
     "averageScore": 100,
     "highPriorityModules": 0,
     "mediumPriorityModules": 0,
-    "lowPriorityModules": 47
+    "lowPriorityModules": 52
   },
   "topPriorityModules": [
     {
@@ -156,6 +156,29 @@
       ]
     },
     {
+      "moduleId": "atar-prep-101",
+      "title": "ATAR Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/atar-prep-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "basic-math-101",
       "title": "Basic Math Foundations",
       "subject": "Math",
@@ -229,6 +252,29 @@
       "title": "Coding Foundations",
       "subject": "Coding",
       "file": "src/lib/modules/catalog/coding-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "title": "CUET Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/cuet-prep-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -413,6 +459,52 @@
       "title": "Household Management Skills",
       "subject": "Household Management",
       "file": "src/lib/modules/catalog/household-management-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "title": "IB Diploma Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/ib-prep-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ielts-prep-101",
+      "title": "IELTS Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/ielts-prep-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -614,98 +706,6 @@
       "recommendedActions": [
         "Maintain current quality and continue periodic review for factual depth and age alignment."
       ]
-    },
-    {
-      "moduleId": "pre-k-biology-101",
-      "title": "Pre-K Living Things Club",
-      "subject": "Biology",
-      "file": "src/lib/modules/catalog/pre-k-biology-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-chemistry-101",
-      "title": "Pre-K Matter and Mixtures Playlab",
-      "subject": "Chemistry",
-      "file": "src/lib/modules/catalog/pre-k-chemistry-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-coding-101",
-      "title": "Pre-K Coding Play Patterns",
-      "subject": "Coding",
-      "file": "src/lib/modules/catalog/pre-k-coding-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-farming-101",
-      "title": "Pre-K Garden and Food Explorers",
-      "subject": "Farming",
-      "file": "src/lib/modules/catalog/pre-k-farming-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
     }
   ],
   "modules": [
@@ -848,6 +848,29 @@
       ]
     },
     {
+      "moduleId": "atar-prep-101",
+      "title": "ATAR Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/atar-prep-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "basic-math-101",
       "title": "Basic Math Foundations",
       "subject": "Math",
@@ -921,6 +944,29 @@
       "title": "Coding Foundations",
       "subject": "Coding",
       "file": "src/lib/modules/catalog/coding-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "title": "CUET Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/cuet-prep-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -1105,6 +1151,52 @@
       "title": "Household Management Skills",
       "subject": "Household Management",
       "file": "src/lib/modules/catalog/household-management-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "title": "IB Diploma Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/ib-prep-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ielts-prep-101",
+      "title": "IELTS Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/ielts-prep-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -1749,6 +1841,29 @@
       "title": "Social Studies: World",
       "subject": "Social Studies World",
       "file": "src/lib/modules/catalog/social-studies-world-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "toefl-prep-101",
+      "title": "TOEFL iBT Prep Foundations",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/toefl-prep-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,

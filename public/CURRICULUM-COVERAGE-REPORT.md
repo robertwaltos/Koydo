@@ -1,10 +1,10 @@
 # Curriculum Coverage Report
 
-Generated: 2026-02-20T23:49:42.902Z
+Generated: 2026-02-20T23:53:05.330Z
 
 Source: module-catalog
-Total lessons: 460
-Total modules: 47
+Total lessons: 510
+Total modules: 52
 
 ## Grade x Subject Coverage
 
@@ -35,7 +35,7 @@ Total modules: 47
 | High School | Biology | 10 |
 | High School | Chemistry | 10 |
 | High School | Coding | 10 |
-| High School | Exam Prep | 70 |
+| High School | Exam Prep | 120 |
 | High School | Farming | 10 |
 | High School | Financial Literacy | 10 |
 | High School | General Relativity | 10 |
@@ -89,7 +89,7 @@ Total modules: 47
 | Grade Band | Lesson Count |
 |---|---:|
 | Elementary | 210 |
-| High School | 256 |
+| High School | 306 |
 | Middle School | 194 |
 | Pre K | 196 |
 
@@ -104,7 +104,7 @@ Total modules: 47
 | Biology | 40 |
 | Chemistry | 40 |
 | Coding | 40 |
-| Exam Prep | 70 |
+| Exam Prep | 120 |
 | Farming | 40 |
 | Financial Literacy | 40 |
 | General Relativity | 40 |

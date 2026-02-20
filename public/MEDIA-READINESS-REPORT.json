@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-02-20T23:49:43.563Z",
+  "generatedAt": "2026-02-20T23:53:05.979Z",
   "totals": {
-    "moduleCount": 47,
-    "placeholderRefs": 25,
-    "learningAidRefs": 452
+    "moduleCount": 52,
+    "placeholderRefs": 30,
+    "learningAidRefs": 502
   },
   "modules": [
     {
@@ -37,6 +37,26 @@
       "readinessScore": 95
     },
     {
+      "moduleId": "atar-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
       "moduleId": "gaokao-prep-101",
       "totalLessons": 10,
       "videoLessons": 3,
@@ -48,6 +68,26 @@
     },
     {
       "moduleId": "gcse-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "ielts-prep-101",
       "totalLessons": 10,
       "videoLessons": 3,
       "interactiveLessons": 3,
@@ -248,6 +288,16 @@
     },
     {
       "moduleId": "sat-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "toefl-prep-101",
       "totalLessons": 10,
       "videoLessons": 3,
       "interactiveLessons": 3,

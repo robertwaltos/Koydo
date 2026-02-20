@@ -1,15 +1,15 @@
 # Curriculum Quality Report
 
-Generated: 2026-02-20T23:49:43.009Z
+Generated: 2026-02-20T23:53:05.450Z
 
 ## Summary
 
-- Modules analyzed: 47
-- Lessons analyzed: 460
+- Modules analyzed: 52
+- Lessons analyzed: 510
 - Average quality score: 100
 - High priority modules: 0
 - Medium priority modules: 0
-- Low priority modules: 47
+- Low priority modules: 52
 - Placeholder options found: 0
 - Generic reflection prompts found: 0
 
@@ -23,10 +23,12 @@ Generated: 2026-02-20T23:49:43.009Z
 | LOW | 100 | AP Exam Prep Toolkit | Exam Prep | 10 | 16 |  |
 | LOW | 100 | Creative Arts Studio | Arts | 10 | 16 |  |
 | LOW | 100 | Astronomy Explorer | Astronomy | 10 | 16 |  |
+| LOW | 100 | ATAR Prep Foundations | Exam Prep | 10 | 16 |  |
 | LOW | 100 | Basic Math Foundations | Math | 10 | 16 |  |
 | LOW | 100 | Biology Essentials | Biology | 10 | 16 |  |
 | LOW | 100 | Chemistry Essentials | Chemistry | 10 | 16 |  |
 | LOW | 100 | Coding Foundations | Coding | 10 | 16 |  |
+| LOW | 100 | CUET Prep Foundations | Exam Prep | 10 | 16 |  |
 | LOW | 100 | Farming and Food Systems | Farming | 10 | 16 |  |
 | LOW | 100 | Financial Literacy Basics | Financial Literacy | 10 | 16 |  |
 | LOW | 100 | Gaokao Prep Foundations | Exam Prep | 10 | 16 |  |
@@ -35,6 +37,8 @@ Generated: 2026-02-20T23:49:43.009Z
 | LOW | 100 | General Science Explorer | Science | 10 | 16 |  |
 | LOW | 100 | Geography and Maps | Geography | 10 | 16 |  |
 | LOW | 100 | Household Management Skills | Household Management | 10 | 16 |  |
+| LOW | 100 | IB Diploma Prep Foundations | Exam Prep | 10 | 16 |  |
+| LOW | 100 | IELTS Prep Foundations | Exam Prep | 10 | 16 |  |
 | LOW | 100 | JEE / NEET Prep Foundations | Exam Prep | 10 | 16 |  |
 | LOW | 100 | Language Arts Foundations | Language Arts | 10 | 16 |  |
 | LOW | 100 | Introduction to Counting | Math | 8 | 13 |  |
@@ -43,10 +47,6 @@ Generated: 2026-02-20T23:49:43.009Z
 | LOW | 100 | Pre-K Creative Arts Studio | Arts | 10 | 16 |  |
 | LOW | 100 | Pre-K Sky and Space Explorers | Astronomy | 10 | 16 |  |
 | LOW | 100 | Pre-K Math Explorers | Basic Math | 10 | 16 |  |
-| LOW | 100 | Pre-K Living Things Club | Biology | 10 | 16 |  |
-| LOW | 100 | Pre-K Matter and Mixtures Playlab | Chemistry | 10 | 16 |  |
-| LOW | 100 | Pre-K Coding Play Patterns | Coding | 10 | 16 |  |
-| LOW | 100 | Pre-K Garden and Food Explorers | Farming | 10 | 16 |  |
 
 ## Suggested Actions
 
@@ -68,6 +68,9 @@ Generated: 2026-02-20T23:49:43.009Z
 ### Astronomy Explorer (LOW, score 100)
 - Maintain current quality and continue periodic review for factual depth and age alignment.
 
+### ATAR Prep Foundations (LOW, score 100)
+- Maintain current quality and continue periodic review for factual depth and age alignment.
+
 ### Basic Math Foundations (LOW, score 100)
 - Maintain current quality and continue periodic review for factual depth and age alignment.
 
@@ -78,6 +81,9 @@ Generated: 2026-02-20T23:49:43.009Z
 - Maintain current quality and continue periodic review for factual depth and age alignment.
 
 ### Coding Foundations (LOW, score 100)
+- Maintain current quality and continue periodic review for factual depth and age alignment.
+
+### CUET Prep Foundations (LOW, score 100)
 - Maintain current quality and continue periodic review for factual depth and age alignment.
 
 ### Farming and Food Systems (LOW, score 100)
@@ -102,10 +108,4 @@ Generated: 2026-02-20T23:49:43.009Z
 - Maintain current quality and continue periodic review for factual depth and age alignment.
 
 ### Household Management Skills (LOW, score 100)
-- Maintain current quality and continue periodic review for factual depth and age alignment.
-
-### JEE / NEET Prep Foundations (LOW, score 100)
-- Maintain current quality and continue periodic review for factual depth and age alignment.
-
-### Language Arts Foundations (LOW, score 100)
 - Maintain current quality and continue periodic review for factual depth and age alignment.

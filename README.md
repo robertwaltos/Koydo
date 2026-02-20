@@ -143,7 +143,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `GET /api/admin/reports/audit`
 - `GET /api/admin/curriculum/backlog` (supports `format=csv|json`, `limit`, `workstream`, `priority` for coverage gaps + exam-track gaps + quality remediation priorities)
 - `GET /api/admin/curriculum/coverage`
-- `GET /api/admin/curriculum/summary` (includes exam-prep track readiness: SAT/ACT/AP/GCSE/A-Level/JEE-NEET/Gaokao)
+- `GET /api/admin/curriculum/summary` (includes exam-prep track readiness: SAT/ACT/AP/TOEFL/IELTS/GCSE/A-Level/IB/CUET/JEE-NEET/Gaokao/ATAR)
 - `GET /api/admin/system/db-readiness`
 - `GET/POST /api/admin/media/jobs` (GET supports `moduleId`, `lessonId`, `assetType`, `status`, `limit`, `offset` query params)
 - `GET /api/admin/media/jobs/summary`
@@ -198,7 +198,7 @@ To add a new learning module with minimal changes:
 1. Create a module file in `src/lib/modules/catalog/` using `module-template.example.ts`.
 2. Export a typed `LearningModule` object with metadata + lessons.
 3. Run `npm run modules:sync` to regenerate the validated registry.
-4. Optional: run `npm run modules:generate:exams` to add SAT/ACT/AP/GCSE/A-Level/JEE-NEET/Gaokao tracks.
+4. Optional: run `npm run modules:generate:exams` to add SAT/ACT/AP/TOEFL/IELTS/GCSE/A-Level/IB/CUET/JEE-NEET/Gaokao/ATAR tracks.
 5. Optional: run `npm run modules:generate:prek` to auto-generate Pre-K coverage modules for every target subject.
 6. Run `npm run curriculum:validate` to enforce content integrity rules (unique IDs, quiz structure, lesson-type coverage).
 7. Optional: enrich quiz questions with `hint`, `explanation`, `imageUrl`, and `imageAlt` (plus option-level images) for deeper interactive feedback.
@@ -254,7 +254,7 @@ This generates:
 - `public/CURRICULUM-EXPANSION-PLAN.json`
 - `public/CURRICULUM-EXPANSION-PLAN.md`
 
-To generate exam-prep track readiness coverage (SAT/ACT/AP/GCSE/A-Level/JEE-NEET/Gaokao):
+To generate exam-prep track readiness coverage (SAT/ACT/AP/TOEFL/IELTS/GCSE/A-Level/IB/CUET/JEE-NEET/Gaokao/ATAR):
 
 ```bash
 npm run exam:report

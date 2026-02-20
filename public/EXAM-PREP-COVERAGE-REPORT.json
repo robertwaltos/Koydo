@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-02-20T23:49:43.110Z",
-  "sourceReportGeneratedAt": "2026-02-20T23:49:43.009Z",
+  "generatedAt": "2026-02-20T23:53:05.551Z",
+  "sourceReportGeneratedAt": "2026-02-20T23:53:05.450Z",
   "totals": {
-    "targetTrackCount": 7,
-    "availableTrackCount": 7,
+    "targetTrackCount": 12,
+    "availableTrackCount": 12,
     "completionPercent": 100,
-    "totalModules": 7,
-    "totalLessons": 70,
+    "totalModules": 12,
+    "totalLessons": 120,
     "averageScore": 100
   },
   "missingTracks": [],
@@ -42,6 +42,26 @@
       "priority": "low"
     },
     {
+      "track": "ATAR",
+      "trackKey": "atar",
+      "region": "Australia",
+      "moduleId": "atar-prep-101",
+      "title": "ATAR Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "CUET",
+      "trackKey": "cuet",
+      "region": "India",
+      "moduleId": "cuet-prep-101",
+      "title": "CUET Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
       "track": "Gaokao",
       "trackKey": "gaokao",
       "region": "China",
@@ -62,6 +82,26 @@
       "priority": "low"
     },
     {
+      "track": "IB Diploma",
+      "trackKey": "ib",
+      "region": "Global",
+      "moduleId": "ib-prep-101",
+      "title": "IB Diploma Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "IELTS",
+      "trackKey": "ielts",
+      "region": "Global",
+      "moduleId": "ielts-prep-101",
+      "title": "IELTS Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
       "track": "JEE/NEET",
       "trackKey": "jee-neet",
       "region": "India",
@@ -77,6 +117,16 @@
       "region": "US",
       "moduleId": "sat-prep-101",
       "title": "SAT Prep Foundations",
+      "lessonCount": 10,
+      "score": 100,
+      "priority": "low"
+    },
+    {
+      "track": "TOEFL",
+      "trackKey": "toefl",
+      "region": "Global",
+      "moduleId": "toefl-prep-101",
+      "title": "TOEFL iBT Prep Foundations",
       "lessonCount": 10,
       "score": 100,
       "priority": "low"

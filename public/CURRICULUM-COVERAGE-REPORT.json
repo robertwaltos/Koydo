@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-02-20T23:49:42.902Z",
+  "generatedAt": "2026-02-20T23:53:05.330Z",
   "source": "module-catalog",
-  "totalLessons": 460,
-  "totalModules": 47,
+  "totalLessons": 510,
+  "totalModules": 52,
   "gradeBandSummary": [
     {
       "gradeBand": "elementary",
@@ -10,7 +10,7 @@
     },
     {
       "gradeBand": "high-school",
-      "count": 256
+      "count": 306
     },
     {
       "gradeBand": "middle-school",
@@ -52,7 +52,7 @@
     },
     {
       "subject": "exam-prep",
-      "count": 70
+      "count": 120
     },
     {
       "subject": "farming",
@@ -307,15 +307,20 @@
     {
       "gradeBand": "high-school",
       "subject": "exam-prep",
-      "count": 70,
+      "count": 120,
       "files": [
         "a-level-prep-101.ts",
         "act-prep-101.ts",
         "ap-prep-101.ts",
+        "atar-prep-101.ts",
+        "cuet-prep-101.ts",
         "gaokao-prep-101.ts",
         "gcse-prep-101.ts",
+        "ib-prep-101.ts",
+        "ielts-prep-101.ts",
         "jee-neet-prep-101.ts",
-        "sat-prep-101.ts"
+        "sat-prep-101.ts",
+        "toefl-prep-101.ts"
       ]
     },
     {
@@ -851,6 +856,26 @@
     },
     {
       "source": "module-catalog",
+      "fileName": "atar-prep-101.ts",
+      "moduleId": "atar-prep-101",
+      "moduleTitle": "ATAR Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 20,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
       "fileName": "basic-math-101.ts",
       "moduleId": "basic-math-101",
       "moduleTitle": "Basic Math Foundations",
@@ -930,6 +955,26 @@
       ],
       "minAge": 7,
       "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cuet-prep-101.ts",
+      "moduleId": "cuet-prep-101",
+      "moduleTitle": "CUET Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 21,
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -1102,6 +1147,46 @@
       ],
       "minAge": 7,
       "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "ib-prep-101.ts",
+      "moduleId": "ib-prep-101",
+      "moduleTitle": "IB Diploma Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 19,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "ielts-prep-101.ts",
+      "moduleId": "ielts-prep-101",
+      "moduleTitle": "IELTS Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 24,
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -1653,6 +1738,26 @@
       ],
       "minAge": 7,
       "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "toefl-prep-101.ts",
+      "moduleId": "toefl-prep-101",
+      "moduleTitle": "TOEFL iBT Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 24,
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,

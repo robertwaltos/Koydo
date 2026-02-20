@@ -9,10 +9,15 @@ const targetTracks = [
   { key: "sat", label: "SAT", region: "US" },
   { key: "act", label: "ACT", region: "US" },
   { key: "ap", label: "AP", region: "US" },
+  { key: "toefl", label: "TOEFL", region: "Global" },
+  { key: "ielts", label: "IELTS", region: "Global" },
   { key: "gcse", label: "GCSE", region: "UK" },
   { key: "a-level", label: "A-Level", region: "UK" },
+  { key: "ib", label: "IB Diploma", region: "Global" },
   { key: "jee-neet", label: "JEE/NEET", region: "India" },
+  { key: "cuet", label: "CUET", region: "India" },
   { key: "gaokao", label: "Gaokao", region: "China" },
+  { key: "atar", label: "ATAR", region: "Australia" },
 ];
 
 function slugify(input) {
@@ -25,7 +30,12 @@ function slugify(input) {
 
 function resolveTrackKey(moduleId, title) {
   const haystack = `${moduleId} ${title}`.toLowerCase();
+  if (haystack.includes("toefl")) return "toefl";
+  if (haystack.includes("ielts")) return "ielts";
+  if (haystack.includes(" ib ") || haystack.includes("ib-")) return "ib";
   if (haystack.includes("jee-neet")) return "jee-neet";
+  if (haystack.includes("cuet")) return "cuet";
+  if (haystack.includes("atar")) return "atar";
   if (haystack.includes("a-level") || haystack.includes("alevel")) return "a-level";
   if (haystack.includes("gaokao")) return "gaokao";
   if (haystack.includes("gcse")) return "gcse";

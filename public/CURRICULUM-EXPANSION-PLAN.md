@@ -1,11 +1,11 @@
 # Curriculum Expansion Plan
 
-Generated: 2026-02-20T23:49:43.209Z
+Generated: 2026-02-20T23:53:05.645Z
 Target lessons per grade+subject: 10
 
 Current lessons counted across targets: 786
 Lessons still needed to hit target: 0
-Coverage outside current target matrix: 70
+Coverage outside current target matrix: 120
 
 ## Priority Gaps
 
@@ -16,7 +16,7 @@ Coverage outside current target matrix: 70
 
 | Grade Band | Subject | Existing |
 |---|---|---:|
-| High School | Exam Prep | 70 |
+| High School | Exam Prep | 120 |
 
 ## Execution Notes
 

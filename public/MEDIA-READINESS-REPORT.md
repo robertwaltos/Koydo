@@ -1,18 +1,22 @@
 # Media Readiness Report
 
-Generated: 2026-02-20T23:49:43.563Z
+Generated: 2026-02-20T23:53:05.979Z
 
-Modules scanned: 47
-Placeholder references: 25
-Learning aid references: 452
+Modules scanned: 52
+Placeholder references: 30
+Learning aid references: 502
 
 | Module | Lessons | Placeholders | Readiness Score |
 |---|---:|---:|---:|
 | a-level-prep-101 | 10 | 1 | 95 |
 | act-prep-101 | 10 | 1 | 95 |
 | ap-prep-101 | 10 | 1 | 95 |
+| atar-prep-101 | 10 | 1 | 95 |
+| cuet-prep-101 | 10 | 1 | 95 |
 | gaokao-prep-101 | 10 | 1 | 95 |
 | gcse-prep-101 | 10 | 1 | 95 |
+| ib-prep-101 | 10 | 1 | 95 |
+| ielts-prep-101 | 10 | 1 | 95 |
 | jee-neet-prep-101 | 10 | 1 | 95 |
 | pre-k-advanced-math-101 | 10 | 1 | 95 |
 | pre-k-arts-101 | 10 | 1 | 95 |
@@ -33,6 +37,7 @@ Learning aid references: 452
 | pre-k-social-studies-world-101 | 10 | 1 | 95 |
 | pre-k-world-history-101 | 10 | 1 | 95 |
 | sat-prep-101 | 10 | 1 | 95 |
+| toefl-prep-101 | 10 | 1 | 95 |
 | advanced-math-201 | 10 | 0 | 100 |
 | apple-vision-science-lab | 6 | 0 | 100 |
 | arts-101 | 10 | 0 | 100 |
