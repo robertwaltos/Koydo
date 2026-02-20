@@ -59,6 +59,7 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
   const [packModuleId, setPackModuleId] = useState("");
   const [packLessonId, setPackLessonId] = useState("");
   const [packAssetType, setPackAssetType] = useState<MediaJob["asset_type"]>("video");
+  const [packQueueLimit, setPackQueueLimit] = useState(50);
 
   const queuedCount = useMemo(() => jobs.filter((job) => job.status === "queued").length, [jobs]);
   const runningCount = useMemo(() => jobs.filter((job) => job.status === "running").length, [jobs]);
@@ -120,6 +121,23 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
       await refreshJobs();
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Failed to queue prompt-pack job.");
+    }
+  };
+
+  const handleBulkQueueFromPromptPack = async () => {
+    try {
+      const result = (await postJson("/api/admin/media/jobs/queue-from-pack", {
+        moduleId: packModuleId || undefined,
+        lessonId: packLessonId || undefined,
+        assetType: packAssetType,
+        limit: packQueueLimit,
+      })) as { scanned?: number; queued?: number; skipped?: number };
+      setStatus(
+        `Prompt-pack bulk queue complete. Scanned ${result.scanned ?? 0}, queued ${result.queued ?? 0}, skipped ${result.skipped ?? 0}.`,
+      );
+      await refreshJobs();
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : "Failed to bulk queue prompt-pack jobs.");
     }
   };
 
@@ -213,11 +231,15 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
               onChange={(event) => {
                 const nextModuleId = event.target.value;
                 setPackModuleId(nextModuleId);
+                if (!nextModuleId) {
+                  setPackLessonId("");
+                  return;
+                }
                 const nextModule = promptModules.find((entry) => entry.moduleId === nextModuleId);
                 setPackLessonId(nextModule?.lessons[0]?.lessonId ?? "");
               }}
             >
-              <option value="">{packLoading ? "Loading modules..." : "Select module"}</option>
+              <option value="">{packLoading ? "Loading modules..." : "All modules"}</option>
               {promptModules.map((moduleEntry) => (
                 <option key={moduleEntry.moduleId} value={moduleEntry.moduleId}>
                   {moduleEntry.moduleTitle}
@@ -228,9 +250,8 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
               className="rounded-md border border-black/15 px-2 py-2 text-sm"
               value={packLessonId}
               onChange={(event) => setPackLessonId(event.target.value)}
-              disabled={!selectedPromptModule}
             >
-              <option value="">{selectedPromptModule ? "Select lesson" : "Select module first"}</option>
+              <option value="">{selectedPromptModule ? "All lessons in module" : "All lessons"}</option>
               {(selectedPromptModule?.lessons ?? []).map((lesson) => (
                 <option key={lesson.lessonId} value={lesson.lessonId}>
                   {lesson.lessonTitle}
@@ -251,7 +272,27 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
               className="rounded-md bg-emerald-600 px-3 py-2 text-sm font-medium text-white hover:bg-emerald-500"
               onClick={() => void handleQuickQueueFromPromptPack()}
             >
-              Queue From Pack
+              Queue One
+            </button>
+          </div>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <label className="text-xs text-zinc-600">
+              Bulk limit
+              <input
+                type="number"
+                min={1}
+                max={500}
+                value={packQueueLimit}
+                onChange={(event) => setPackQueueLimit(Math.max(1, Math.min(500, Number(event.target.value) || 1)))}
+                className="ml-2 w-20 rounded border border-black/15 px-2 py-1 text-xs"
+              />
+            </label>
+            <button
+              type="button"
+              className="rounded-md border border-black/15 px-3 py-1 text-xs hover:bg-black/5"
+              onClick={() => void handleBulkQueueFromPromptPack()}
+            >
+              Bulk Queue From Pack
             </button>
           </div>
         </div>

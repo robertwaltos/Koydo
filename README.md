@@ -98,6 +98,7 @@ Checks on push/PR:
 - `GET /api/admin/system/db-readiness`
 - `GET/POST /api/admin/media/jobs`
 - `POST /api/admin/media/jobs/run`
+- `POST /api/admin/media/jobs/queue-from-pack`
 - `POST /api/admin/media/jobs/[jobId]/status`
 - `POST /api/admin/users/update-roles`
 - `GET /api/parent/reports`
