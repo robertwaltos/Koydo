@@ -28,7 +28,7 @@ export default function LessonNotFound() {
           {modules.map((learningModule) => (
             <li key={learningModule.id}>
               <Link
-                href={`/modules/${learningModule.id}`}
+                href={`/modules/${encodeURIComponent(learningModule.id)}`}
                 className="flex items-center justify-between rounded-lg border border-black/10 px-3 py-2 text-sm hover:bg-zinc-50"
               >
                 <span className="font-medium text-zinc-900">{learningModule.title}</span>

@@ -134,7 +134,7 @@ export default async function DashboardPage() {
                     return (
                       <li key={lesson.id}>
                         <Link
-                          href={`/lessons/${lesson.id}`}
+                          href={`/lessons/${encodeURIComponent(lesson.id)}`}
                           className="flex items-center justify-between rounded-md p-2 text-sm hover:bg-violet-50"
                         >
                           <span className="flex items-center gap-2">

@@ -44,7 +44,7 @@ export default function RecommendedLesson() {
 
   return (
     <Link
-      href={`/lessons/${recommendation.id}`}
+      href={`/lessons/${encodeURIComponent(recommendation.id)}`}
       className="block rounded-2xl border-2 border-indigo-300 bg-gradient-to-r from-indigo-50 via-rose-50 to-sky-50 p-6 shadow-md transition-transform hover:scale-[1.02]"
     >
       <div className="flex items-center justify-between">

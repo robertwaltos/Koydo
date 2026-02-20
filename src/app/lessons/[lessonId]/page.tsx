@@ -33,7 +33,7 @@ async function LessonPageContent({
 
   const { lesson, learningModule } = resolvedLesson;
   if (resolvedParams.lessonId !== lesson.id) {
-    redirect(`/lessons/${lesson.id}`);
+    redirect(`/lessons/${encodeURIComponent(lesson.id)}`);
   }
 
   const supabase = await createSupabaseServerClient();

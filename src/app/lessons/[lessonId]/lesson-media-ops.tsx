@@ -217,7 +217,7 @@ export default function LessonMediaOps({
           prompt: entry.prompt,
           metadata: {
             source: "lesson-page",
-            lessonPath: `/lessons/${lessonId}`,
+            lessonPath: `/lessons/${encodeURIComponent(lessonId)}`,
           },
         }),
       });

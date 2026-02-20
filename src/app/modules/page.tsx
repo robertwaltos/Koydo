@@ -38,7 +38,7 @@ export default function ModulesPage() {
               {learningModule.version ? ` | Version: ${learningModule.version}` : ""}
             </p>
             <Link
-              href={`/modules/${learningModule.id}`}
+              href={`/modules/${encodeURIComponent(learningModule.id)}`}
               className="mt-4 inline-block rounded-md border border-sky-300 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-900 hover:bg-sky-100"
             >
               View Module

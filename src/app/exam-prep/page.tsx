@@ -39,7 +39,7 @@ export default function ExamPrepPage() {
             </p>
             <div className="mt-4">
               <Link
-                href={`/modules/${module.id}`}
+                href={`/modules/${encodeURIComponent(module.id)}`}
                 className="inline-flex rounded-md border border-indigo-300 bg-indigo-50 px-3 py-2 text-sm font-medium text-indigo-800 hover:bg-indigo-100"
               >
                 Open Track

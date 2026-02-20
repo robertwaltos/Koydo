@@ -24,7 +24,7 @@ async function ModuleDetailsPageContent({
   }
 
   if (resolvedParams.moduleId !== learningModule.id) {
-    redirect(`/modules/${learningModule.id}`);
+    redirect(`/modules/${encodeURIComponent(learningModule.id)}`);
   }
 
   return (
@@ -56,7 +56,7 @@ async function ModuleDetailsPageContent({
           {learningModule.lessons.map((lesson) => (
             <li key={lesson.id}>
               <Link
-                href={`/lessons/${lesson.id}`}
+                href={`/lessons/${encodeURIComponent(lesson.id)}`}
                 className="flex items-center justify-between rounded-md border border-emerald-200 px-3 py-2 text-sm hover:bg-emerald-50"
               >
                 <span>{lesson.title}</span>
