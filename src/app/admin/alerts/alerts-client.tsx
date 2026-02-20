@@ -21,6 +21,13 @@ type AlertSettings = {
   autoResolveHours: number;
 };
 
+type RunSummary = {
+  triggeredCount: number;
+  triggeredCategories: string[];
+  autoResolvedCount: number;
+  autoResolvedCategories: Record<string, number>;
+};
+
 export default function AlertsClient({
   initialAlerts,
   initialSettings,
@@ -32,6 +39,7 @@ export default function AlertsClient({
   const [settings, setSettings] = useState(initialSettings);
   const [status, setStatus] = useState("");
   const [isSavingSettings, setIsSavingSettings] = useState(false);
+  const [lastRunSummary, setLastRunSummary] = useState<RunSummary | null>(null);
 
   const refreshAlerts = async () => {
     const response = await fetch("/api/admin/alerts");
@@ -56,12 +64,22 @@ export default function AlertsClient({
       const data = (await response.json().catch(() => ({}))) as {
         error?: string;
         triggeredCount?: number;
+        triggeredCategories?: string[];
         autoResolvedCount?: number;
+        autoResolvedCategories?: Record<string, number>;
       };
       if (!response.ok) {
         setStatus(data.error ?? "Unable to run alert checks.");
         return;
       }
+      const triggeredCategories = data.triggeredCategories ?? [];
+      const autoResolvedCategories = data.autoResolvedCategories ?? {};
+      setLastRunSummary({
+        triggeredCount: data.triggeredCount ?? 0,
+        triggeredCategories,
+        autoResolvedCount: data.autoResolvedCount ?? 0,
+        autoResolvedCategories,
+      });
       setStatus(
         `Alert checks completed. New alerts: ${data.triggeredCount ?? 0}. Auto-resolved: ${data.autoResolvedCount ?? 0}.`,
       );
@@ -247,6 +265,22 @@ export default function AlertsClient({
         </button>
       </div>
       {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+      {lastRunSummary ? (
+        <section className="rounded-md border border-black/10 bg-zinc-50 p-3 text-xs dark:border-white/10 dark:bg-zinc-900/20">
+          <p className="font-semibold">Last Check Summary</p>
+          <p className="mt-1 text-zinc-600 dark:text-zinc-300">
+            Triggered categories: {lastRunSummary.triggeredCategories.join(", ") || "none"}
+          </p>
+          <p className="mt-1 text-zinc-600 dark:text-zinc-300">
+            Auto-resolved categories:{" "}
+            {Object.keys(lastRunSummary.autoResolvedCategories).length > 0
+              ? Object.entries(lastRunSummary.autoResolvedCategories)
+                  .map(([category, count]) => `${category} (${count})`)
+                  .join(", ")
+              : "none"}
+          </p>
+        </section>
+      ) : null}
       {alerts.map((entry) => (
         <article key={entry.id} className="rounded-md border border-black/10 p-3 dark:border-white/10">
           <p className="font-medium">
