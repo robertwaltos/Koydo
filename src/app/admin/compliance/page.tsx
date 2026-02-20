@@ -55,6 +55,11 @@ export default async function AdminCompliancePage() {
       </header>
 
       <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+        <div className="mb-4 flex flex-wrap gap-3 text-xs">
+          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/APPSTORE-COMPLIANCE-AUDIT.md" target="_blank" rel="noreferrer">
+            Open Compliance Audit Report
+          </a>
+        </div>
         <ul className="space-y-4">
           {appStoreComplianceChecklist.map((item) => (
             <li key={item.id} className="rounded-md border border-black/10 p-4 dark:border-white/10">

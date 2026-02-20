@@ -143,6 +143,17 @@ This generates:
 - `public/MEDIA-READINESS-REPORT.json`
 - `public/MEDIA-READINESS-REPORT.md`
 
+App store compliance audit report:
+
+```bash
+npm run compliance:audit
+```
+
+This generates:
+
+- `public/APPSTORE-COMPLIANCE-AUDIT.json`
+- `public/APPSTORE-COMPLIANCE-AUDIT.md`
+
 Once registered, the module automatically appears in:
 
 - `GET`/lookup logic via `src/lib/modules/index.ts` (validated with Zod)

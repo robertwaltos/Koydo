@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-02-20T06:54:27.814Z",
+  "totals": {
+    "pass": 11,
+    "warn": 1,
+    "fail": 0,
+    "total": 12
+  },
+  "checks": [
+    {
+      "id": "file:src/app/account/settings/page.tsx",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/account/settings/page.tsx"
+    },
+    {
+      "id": "file:src/app/api/account/delete/route.ts",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/api/account/delete/route.ts"
+    },
+    {
+      "id": "file:src/app/legal/privacy/page.tsx",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/legal/privacy/page.tsx"
+    },
+    {
+      "id": "file:src/app/legal/terms/page.tsx",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/legal/terms/page.tsx"
+    },
+    {
+      "id": "file:src/app/legal/refunds/page.tsx",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/legal/refunds/page.tsx"
+    },
+    {
+      "id": "file:src/app/auth/age-gate/page.tsx",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/auth/age-gate/page.tsx"
+    },
+    {
+      "id": "file:src/app/auth/parent-consent/page.tsx",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/auth/parent-consent/page.tsx"
+    },
+    {
+      "id": "file:src/app/api/compliance/age-gate/route.ts",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/api/compliance/age-gate/route.ts"
+    },
+    {
+      "id": "file:src/app/api/compliance/parent-consent/route.ts",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/api/compliance/parent-consent/route.ts"
+    },
+    {
+      "id": "file:src/app/api/compliance/policy-acceptance/route.ts",
+      "category": "required-file",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/api/compliance/policy-acceptance/route.ts"
+    },
+    {
+      "id": "env:BILLING_PROVIDER_MODE",
+      "category": "billing-mode",
+      "status": "pass",
+      "detail": "Configured as stripe_external",
+      "expected": "stripe_external | app_store_iap"
+    },
+    {
+      "id": "auth:oauth-parity",
+      "category": "auth",
+      "status": "warn",
+      "detail": "Missing or inconsistent: google, facebook, apple, twitter"
+    }
+  ]
+}
