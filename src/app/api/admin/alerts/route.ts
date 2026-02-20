@@ -61,11 +61,38 @@ export async function GET() {
     .select("key, value")
     .in("key", Object.values(ALERT_SETTING_KEYS));
 
+  const [queuedSummary, failedSummary, sentSummary] = await Promise.all([
+    admin
+      .from("admin_alert_notifications")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "queued"),
+    admin
+      .from("admin_alert_notifications")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "failed"),
+    admin
+      .from("admin_alert_notifications")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "sent"),
+  ]);
+
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
   if (settingsError) {
     return NextResponse.json({ error: settingsError.message }, { status: 500 });
+  }
+  if (queuedSummary.error || failedSummary.error || sentSummary.error) {
+    return NextResponse.json(
+      {
+        error:
+          queuedSummary.error?.message ??
+          failedSummary.error?.message ??
+          sentSummary.error?.message ??
+          "Unable to load notification summary.",
+      },
+      { status: 500 },
+    );
   }
 
   const settingsMap = new Map((settingsData ?? []).map((entry) => [entry.key, entry.value]));
@@ -77,7 +104,15 @@ export async function GET() {
     autoResolveHours: readNumericSetting(settingsMap.get(ALERT_SETTING_KEYS.autoResolveHours), 12),
   };
 
-  return NextResponse.json({ alerts: data, settings });
+  return NextResponse.json({
+    alerts: data,
+    settings,
+    notificationSummary: {
+      queuedCount: queuedSummary.count ?? 0,
+      failedCount: failedSummary.count ?? 0,
+      sentCount: sentSummary.count ?? 0,
+    },
+  });
 }
 
 export async function POST(request: Request) {

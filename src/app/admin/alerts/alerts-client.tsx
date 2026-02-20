@@ -28,12 +28,20 @@ type RunSummary = {
   autoResolvedCategories: Record<string, number>;
 };
 
+type NotificationSummary = {
+  queuedCount: number;
+  failedCount: number;
+  sentCount: number;
+};
+
 export default function AlertsClient({
   initialAlerts,
   initialSettings,
+  initialNotificationSummary,
 }: {
   initialAlerts: AlertRow[];
   initialSettings: AlertSettings;
+  initialNotificationSummary: NotificationSummary;
 }) {
   const [alerts, setAlerts] = useState(initialAlerts);
   const [settings, setSettings] = useState(initialSettings);
@@ -41,12 +49,16 @@ export default function AlertsClient({
   const [isSavingSettings, setIsSavingSettings] = useState(false);
   const [isProcessingNotifications, setIsProcessingNotifications] = useState(false);
   const [lastRunSummary, setLastRunSummary] = useState<RunSummary | null>(null);
+  const [notificationSummary, setNotificationSummary] = useState<NotificationSummary | null>(
+    initialNotificationSummary,
+  );
 
   const refreshAlerts = async () => {
     const response = await fetch("/api/admin/alerts");
     const data = (await response.json().catch(() => ({}))) as {
       alerts?: AlertRow[];
       settings?: AlertSettings;
+      notificationSummary?: NotificationSummary;
       error?: string;
     };
     if (!response.ok) {
@@ -55,6 +67,9 @@ export default function AlertsClient({
     setAlerts(data.alerts ?? []);
     if (data.settings) {
       setSettings(data.settings);
+    }
+    if (data.notificationSummary) {
+      setNotificationSummary(data.notificationSummary);
     }
   };
 
@@ -314,6 +329,15 @@ export default function AlertsClient({
         </button>
       </div>
       {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+      {notificationSummary ? (
+        <section className="rounded-md border border-black/10 bg-zinc-50 p-3 text-xs dark:border-white/10 dark:bg-zinc-900/20">
+          <p className="font-semibold">Notification Queue</p>
+          <p className="mt-1 text-zinc-600 dark:text-zinc-300">
+            queued={notificationSummary.queuedCount} | failed={notificationSummary.failedCount} | sent=
+            {notificationSummary.sentCount}
+          </p>
+        </section>
+      ) : null}
       {lastRunSummary ? (
         <section className="rounded-md border border-black/10 bg-zinc-50 p-3 text-xs dark:border-white/10 dark:bg-zinc-900/20">
           <p className="font-semibold">Last Check Summary</p>

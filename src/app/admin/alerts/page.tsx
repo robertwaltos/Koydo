@@ -51,29 +51,48 @@ export default async function AdminAlertsPage() {
   }
 
   const admin = createSupabaseAdminClient();
-  const { data: alerts } = await admin
-    .from("admin_alerts")
-    .select("id, severity, category, message, metadata, acknowledged, acknowledged_at, created_at")
-    .order("created_at", { ascending: false })
-    .limit(200);
-  const { data: settingsRows } = await admin
-    .from("app_settings")
-    .select("key, value")
-    .in("key", [
-      "media_queue_sla_stale_hours",
-      "media_queue_sla_backlog_limit",
-      "media_queue_sla_failure_24h_limit",
-      "media_queue_alert_dedupe_hours",
-      "media_queue_alert_auto_resolve_hours",
-    ]);
+  const [alertsResult, settingsResult, queuedSummaryResult, failedSummaryResult, sentSummaryResult] = await Promise.all([
+    admin
+      .from("admin_alerts")
+      .select("id, severity, category, message, metadata, acknowledged, acknowledged_at, created_at")
+      .order("created_at", { ascending: false })
+      .limit(200),
+    admin
+      .from("app_settings")
+      .select("key, value")
+      .in("key", [
+        "media_queue_sla_stale_hours",
+        "media_queue_sla_backlog_limit",
+        "media_queue_sla_failure_24h_limit",
+        "media_queue_alert_dedupe_hours",
+        "media_queue_alert_auto_resolve_hours",
+      ]),
+    admin
+      .from("admin_alert_notifications")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "queued"),
+    admin
+      .from("admin_alert_notifications")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "failed"),
+    admin
+      .from("admin_alert_notifications")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "sent"),
+  ]);
 
-  const settingsMap = new Map((settingsRows ?? []).map((row) => [row.key, row.value]));
+  const settingsMap = new Map((settingsResult.data ?? []).map((row) => [row.key, row.value]));
   const initialSettings = {
     staleHours: readNumericSetting(settingsMap.get("media_queue_sla_stale_hours"), 6),
     backlogLimit: readNumericSetting(settingsMap.get("media_queue_sla_backlog_limit"), 30),
     failure24hLimit: readNumericSetting(settingsMap.get("media_queue_sla_failure_24h_limit"), 20),
     dedupeWindowHours: readNumericSetting(settingsMap.get("media_queue_alert_dedupe_hours"), 24),
     autoResolveHours: readNumericSetting(settingsMap.get("media_queue_alert_auto_resolve_hours"), 12),
+  };
+  const initialNotificationSummary = {
+    queuedCount: queuedSummaryResult.count ?? 0,
+    failedCount: failedSummaryResult.count ?? 0,
+    sentCount: sentSummaryResult.count ?? 0,
   };
 
   return (
@@ -85,7 +104,11 @@ export default async function AdminAlertsPage() {
         </p>
       </header>
 
-      <AlertsClient initialAlerts={alerts ?? []} initialSettings={initialSettings} />
+      <AlertsClient
+        initialAlerts={alertsResult.data ?? []}
+        initialSettings={initialSettings}
+        initialNotificationSummary={initialNotificationSummary}
+      />
     </main>
   );
 }
