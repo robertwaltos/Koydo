@@ -16,6 +16,7 @@ type ReportJob = {
 export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[] }) {
   const [jobs, setJobs] = useState(initialJobs);
   const [status, setStatus] = useState("");
+  const [isRefreshing, setIsRefreshing] = useState(false);
 
   const createJob = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -53,14 +54,39 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
       const data = (await response.json().catch(() => ({}))) as {
         error?: string;
         processed?: number;
+        claimed?: number;
+        skipped?: number;
       };
       if (!response.ok) {
         setStatus(data.error ?? "Unable to run report jobs.");
         return;
       }
-      setStatus(`Processed ${data.processed ?? 0} queued job(s). Refresh to view updated statuses.`);
+      setStatus(
+        `Run complete. claimed=${data.claimed ?? 0}, processed=${data.processed ?? 0}, skipped=${data.skipped ?? 0}.`,
+      );
+      await refreshJobs();
     } catch {
       setStatus("Unable to run report jobs.");
+    }
+  };
+
+  const refreshJobs = async () => {
+    setIsRefreshing(true);
+    try {
+      const response = await fetch("/api/admin/report-jobs");
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        jobs?: ReportJob[];
+      };
+      if (!response.ok) {
+        setStatus(data.error ?? "Unable to refresh report jobs.");
+        return;
+      }
+      setJobs(data.jobs ?? []);
+    } catch {
+      setStatus("Unable to refresh report jobs.");
+    } finally {
+      setIsRefreshing(false);
     }
   };
 
@@ -83,6 +109,14 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
 
       <button type="button" onClick={runQueued} className="mt-3 rounded-md border border-black/15 px-4 py-2 text-sm">
         Run Due Jobs Now
+      </button>
+      <button
+        type="button"
+        onClick={() => void refreshJobs()}
+        disabled={isRefreshing}
+        className="ml-2 mt-3 rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70"
+      >
+        {isRefreshing ? "Refreshing..." : "Refresh Jobs"}
       </button>
 
       <div className="mt-4 space-y-2">

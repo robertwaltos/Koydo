@@ -129,11 +129,36 @@ async function buildReportCsv(supabase, reportType) {
   };
 }
 
-async function markJob(supabase, jobId, payload) {
-  const { error } = await supabase.from("admin_report_jobs").update(payload).eq("id", jobId);
+async function markJob(supabase, jobId, payload, expectedStatus = null) {
+  let query = supabase.from("admin_report_jobs").update(payload).eq("id", jobId);
+  if (expectedStatus) {
+    query = query.eq("status", expectedStatus);
+  }
+  const { error } = await query;
   if (error) {
     throw new Error(`Failed updating report job ${jobId}: ${error.message}`);
   }
+}
+
+async function claimReportJob(supabase, jobId, startedAtIso) {
+  const { data, error } = await supabase
+    .from("admin_report_jobs")
+    .update({
+      status: "running",
+      started_at: startedAtIso,
+      completed_at: null,
+      error: null,
+    })
+    .eq("id", jobId)
+    .eq("status", "queued")
+    .select("id")
+    .maybeSingle();
+
+  if (error) {
+    throw new Error(`Failed claiming report job ${jobId}: ${error.message}`);
+  }
+
+  return Boolean(data?.id);
 }
 
 async function main() {
@@ -178,14 +203,18 @@ async function main() {
   }
 
   let processed = 0;
+  let claimed = 0;
+  let skipped = 0;
   let failed = 0;
 
   for (const job of dueJobs) {
-    await markJob(supabase, job.id, {
-      status: "running",
-      started_at: new Date().toISOString(),
-      error: null,
-    });
+    const startedAtIso = new Date().toISOString();
+    const wasClaimed = await claimReportJob(supabase, job.id, startedAtIso);
+    if (!wasClaimed) {
+      skipped += 1;
+      continue;
+    }
+    claimed += 1;
 
     try {
       const { csvContent, rowCount } = await buildReportCsv(supabase, job.report_type);
@@ -214,7 +243,7 @@ async function main() {
         status: "completed",
         completed_at: completedAt,
         error: null,
-      });
+      }, "running");
       processed += 1;
     } catch (error) {
       const message = error instanceof Error ? error.message : "Unknown error";
@@ -222,11 +251,13 @@ async function main() {
         status: "failed",
         completed_at: new Date().toISOString(),
         error: message,
-      });
+      }, "running");
       failed += 1;
     }
   }
 
+  console.log(`Claimed report jobs: ${claimed}`);
+  console.log(`Skipped (already claimed): ${skipped}`);
   console.log(`Processed report jobs: ${processed}`);
   console.log(`Failed report jobs: ${failed}`);
 }
