@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-basic-math-order-of-operations",
+  "subject": "Basic Math",
+  "gradeLevel": "5th Grade",
+  "topic": "Order of Operations (PEMDAS)",
+  "title": "PEMDAS: The Secret Code of Math",
+  "learningObjectives": [
+    "Understand and apply the order of operations (PEMDAS) to solve numerical expressions.",
+    "Correctly evaluate expressions containing parentheses, multiplication, division, addition, and subtraction.",
+    "Recognize that a consistent order of operations is necessary for solving problems."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "When you have a math problem with more than one operation, you need to solve it in the correct order. We use PEMDAS to remember the order: Parentheses, Exponents, Multiplication and Division (from left to right), and Addition and Subtraction (from left to right)."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/pemdas.svg",
+      "alt": "An icon showing the PEMDAS acronym with corresponding math symbols."
+    },
+    {
+      "type": "text",
+      "body": "For example, in the problem 10 - 2 * 3, we do the multiplication first (2 * 3 = 6), and then the subtraction (10 - 6 = 4)."
+    }
+  ],
+  "quiz": {
+    "title": "Order of Operations Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the first step in solving the expression (8 + 2) * 5?",
+        "type": "multiple-choice",
+        "options": [
+          "8 + 2",
+          "2 * 5",
+          "8 * 5"
+        ],
+        "correctAnswer": "8 + 2"
+      },
+      {
+        "id": "q2",
+        "question": "What is the value of the expression 12 / 4 + 2?",
+        "type": "multiple-choice",
+        "options": [
+          "3",
+          "5",
+          "2"
+        ],
+        "correctAnswer": "5"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "PEMDAS: El Código Secreto de las Matemáticas",
+      "content": [
+        {
+          "type": "text",
+          "body": "Cuando tienes un problema de matemáticas con más de una operación, necesitas resolverlo en el orden correcto. Usamos PEMDAS para recordar el orden: Paréntesis, Exponentes, Multiplicación y División (de izquierda a derecha), y Suma y Resta (de izquierda a derecha)."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Orden de Operaciones",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuál es el primer paso para resolver la expresión (8 + 2) * 5?",
+            "options": [
+              "8 + 2",
+              "2 * 5",
+              "8 * 5"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuál es el valor de la expresión 12 / 4 + 2?",
+            "options": [
+              "3",
+              "5",
+              "2"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

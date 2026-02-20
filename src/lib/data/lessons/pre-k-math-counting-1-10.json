@@ -1,0 +1,77 @@
+{
+  "id": "pre-k-math-counting-1-10",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Counting",
+  "title": "Counting 1 to 10",
+  "learningObjectives": [
+    "Recognize and name numbers from 1 to 10.",
+    "Count objects up to 10.",
+    "Understand the one-to-one correspondence between objects and numbers."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's learn to count from 1 to 10! Counting helps us know 'how many' there are."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/counting-fingers.svg",
+      "alt": "A hand showing 10 fingers."
+    },
+    {
+      "type": "text",
+      "body": "One, two, three, four, five, six, seven, eight, nine, ten!"
+    }
+  ],
+  "quiz": {
+    "title": "Counting Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "How many apples do you see?",
+        "type": "multiple-choice",
+        "options": ["3", "5", "8"],
+        "correctAnswer": "5",
+        "image": "/placeholders/5-apples.svg"
+      },
+      {
+        "id": "q2",
+        "question": "Which number comes after 7?",
+        "type": "multiple-choice",
+        "options": ["6", "8", "9"],
+        "correctAnswer": "8"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Contando del 1 al 10",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a aprender a contar del 1 al 10! Contar nos ayuda a saber 'cuántos' hay."
+        },
+        {
+          "type": "text",
+          "body": "¡Uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Contar",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuántas manzanas ves?",
+            "options": ["3", "5", "8"]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué número viene después del 7?",
+            "options": ["6", "8", "9"]
+          }
+        ]
+      }
+    }
+  }
+}

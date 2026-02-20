@@ -1,0 +1,85 @@
+{
+  "id": "pre-k-math-number-recognition-0-10",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Number Recognition 0-10",
+  "title": "Number Recognition 0-10",
+  "learningObjectives": [
+    "Recognize and name numerals 0-10.",
+    "Count objects up to 10 with one-to-one correspondence."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Lets learn our numbers from 0 to 10!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/numbers-0-10.svg",
+      "alt": "The numbers 0 through 10."
+    }
+  ],
+  "quiz": {
+    "title": "Number Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What number is this?",
+        "type": "multiple-choice",
+        "options": [
+          "7",
+          "8",
+          "9"
+        ],
+        "correctAnswer": "8",
+        "image": "/placeholders/number-8.svg"
+      },
+      {
+        "id": "q2",
+        "question": "How many stars do you see?",
+        "type": "multiple-choice",
+        "options": [
+          "4",
+          "5",
+          "6"
+        ],
+        "correctAnswer": "5",
+        "image": "/placeholders/5-stars.svg"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Reconocimiento de Números 0-10",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Aprendamos nuestros números del 0 al 10!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Números",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué número es este?",
+            "options": [
+              "7",
+              "8",
+              "9"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuántas estrellas ves?",
+            "options": [
+              "4",
+              "5",
+              "6"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

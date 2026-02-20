@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-our-bodies",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Our Bodies",
+  "title": "My Amazing Body",
+  "learningObjectives": [
+    "Identify and name major external body parts (head, shoulders, knees, toes).",
+    "Understand that our bodies can do many things, like run, jump, and play.",
+    "Learn the importance of keeping our bodies healthy (eating good food, washing hands)."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Our bodies are amazing! We can run, jump, and play. Let's learn about the parts of our body."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/our-bodies.svg",
+      "alt": "A simple drawing of a child with labels for head, arms, and legs."
+    },
+    {
+      "type": "text",
+      "body": "We have a head, shoulders, knees, and toes. Can you point to your nose?"
+    }
+  ],
+  "quiz": {
+    "title": "Body Part Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What part of your body do you use to see?",
+        "type": "multiple-choice",
+        "options": [
+          "Eyes",
+          "Ears",
+          "Nose"
+        ],
+        "correctAnswer": "Eyes"
+      },
+      {
+        "id": "q2",
+        "question": "What should we do to keep our bodies healthy?",
+        "type": "multiple-choice",
+        "options": [
+          "Eat candy all day",
+          "Never wash our hands",
+          "Eat fruits and vegetables"
+        ],
+        "correctAnswer": "Eat fruits and vegetables"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Mi Cuerpo Asombroso",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Nuestros cuerpos son asombrosos! Podemos correr, saltar y jugar. Vamos a aprender sobre las partes de nuestro cuerpo."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Partes del Cuerpo",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué parte de tu cuerpo usas para ver?",
+            "options": [
+              "Ojos",
+              "Orejas",
+              "Nariz"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué debemos hacer para mantener nuestro cuerpo sano?",
+            "options": [
+              "Comer dulces todo el día",
+              "Nunca lavarnos las manos",
+              "Comer frutas y verduras"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-basic-math-multiplying-and-dividing-fractions",
+  "subject": "Basic Math",
+  "gradeLevel": "5th Grade",
+  "topic": "Fractions: Multiplying and Dividing",
+  "title": "Fraction Action: Multiplying and Dividing Fractions",
+  "learningObjectives": [
+    "Multiply a fraction or whole number by a fraction.",
+    "Divide a unit fraction by a whole number and a whole number by a unit fraction.",
+    "Solve real-world problems involving multiplication and division of fractions."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Multiplying fractions is simple: multiply the numerators, then multiply the denominators. To divide fractions, we use a trick called \"keep, change, flip\". You keep the first fraction, change the division sign to multiplication, and flip the second fraction (find its reciprocal). Then, multiply as usual!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/multiplying-dividing-fractions.svg",
+      "alt": "An example showing how to multiply and divide two fractions."
+    },
+    {
+      "type": "text",
+      "body": "For example, 1/2 * 3/4 = (1*3)/(2*4) = 3/8. To divide 1/2 by 1/4, you would calculate 1/2 * 4/1 = 4/2 = 2."
+    }
+  ],
+  "quiz": {
+    "title": "Fraction Multiplication and Division Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is 2/3 * 1/5?",
+        "type": "multiple-choice",
+        "options": [
+          "2/15",
+          "3/10",
+          "2/8"
+        ],
+        "correctAnswer": "2/15"
+      },
+      {
+        "id": "q2",
+        "question": "What is 1/2 / 4?",
+        "type": "multiple-choice",
+        "options": [
+          "2",
+          "1/8",
+          "1/6"
+        ],
+        "correctAnswer": "1/8"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Acción de Fracciones: Multiplicando y Dividiendo Fracciones",
+      "content": [
+        {
+          "type": "text",
+          "body": "Multiplicar fracciones es simple: multiplica los numeradores, luego multiplica los denominadores. Para dividir fracciones, usamos un truco llamado \"mantener, cambiar, voltear\". Mantienes la primera fracción, cambias el signo de división a multiplicación y volteas la segunda fracción (encuentras su recíproco). ¡Luego, multiplica como de costumbre!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Multiplicación y División de Fracciones",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuánto es 2/3 * 1/5?",
+            "options": [
+              "2/15",
+              "3/10",
+              "2/8"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuánto es 1/2 / 4?",
+            "options": [
+              "2",
+              "1/8",
+              "1/6"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

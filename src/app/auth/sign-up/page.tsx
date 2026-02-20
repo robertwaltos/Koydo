@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import OAuthButtons from "@/app/auth/sign-in/oauth-buttons";
 
 export default function SignUpPage() {
   const [email, setEmail] = useState("");
@@ -76,6 +77,17 @@ export default function SignUpPage() {
 
         {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
       </form>
+
+      <div className="relative mt-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-zinc-300 dark:border-zinc-700" />
+        </div>
+        <div className="relative flex justify-center text-sm">
+          <span className="bg-white px-2 text-zinc-500 dark:bg-zinc-950">OR</span>
+        </div>
+      </div>
+
+      <OAuthButtons intent="up" />
 
       <p className="mt-6 text-sm text-zinc-600 dark:text-zinc-300">
         Already have an account? <Link href="/auth/sign-in" className="underline">Sign in</Link>

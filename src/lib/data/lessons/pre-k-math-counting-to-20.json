@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-math-counting-to-20",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Counting to 20",
+  "title": "Lets Count to 20!",
+  "learningObjectives": [
+    "Rote count to 20.",
+    "Recognize and identify numbers from 0 to 20.",
+    "Count objects up to 20 with one-to-one correspondence."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Hi friends! Today, we're going on an adventure to count all the way to 20! Are you ready?"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/counting-to-20.svg",
+      "alt": "A colorful display of numbers from 1 to 20."
+    },
+    {
+      "type": "text",
+      "body": "Let's count together! 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20! Great job!"
+    }
+  ],
+  "quiz": {
+    "title": "Counting Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What number comes after 15?",
+        "type": "multiple-choice",
+        "options": [
+          "14",
+          "16",
+          "17"
+        ],
+        "correctAnswer": "16"
+      },
+      {
+        "id": "q2",
+        "question": "How many fingers and toes do you have in all?",
+        "type": "multiple-choice",
+        "options": [
+          "10",
+          "15",
+          "20"
+        ],
+        "correctAnswer": "20"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "¡Contemos hasta 20!",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Hola amigos! Hoy, vamos a una aventura para contar hasta 20. ¿Están listos?"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Contar",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué número viene después de 15?",
+            "options": [
+              "14",
+              "16",
+              "17"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuántos dedos de las manos y de los pies tienes en total?",
+            "options": [
+              "10",
+              "15",
+              "20"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

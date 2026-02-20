@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-dinosaurs",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Dinosaurs",
+  "title": "Dinosaur Discovery",
+  "learningObjectives": [
+    "Identify at least two different types of dinosaurs (e.g., T-Rex, Triceratops).",
+    "Understand that dinosaurs lived a long time ago and are now extinct.",
+    "Learn what a fossil is."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's travel back in time to learn about dinosaurs! Dinosaurs were giant reptiles that lived a long, long time ago."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/dinosaurs.svg",
+      "alt": "A friendly T-Rex and a Triceratops."
+    },
+    {
+      "type": "text",
+      "body": "Some dinosaurs were plant-eaters, and some were meat-eaters. We learn about them by studying their fossils."
+    }
+  ],
+  "quiz": {
+    "title": "Dinosaur Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which of these is a famous dinosaur?",
+        "type": "multiple-choice",
+        "options": [
+          "Tyrannosaurus Rex",
+          "Lion",
+          "Elephant"
+        ],
+        "correctAnswer": "Tyrannosaurus Rex"
+      },
+      {
+        "id": "q2",
+        "question": "What do we call the preserved remains of dinosaurs?",
+        "type": "multiple-choice",
+        "options": [
+          "Rocks",
+          "Fossils",
+          "Toys"
+        ],
+        "correctAnswer": "Fossils"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Descubrimiento de Dinosaurios",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Viajemos en el tiempo para aprender sobre los dinosaurios! Los dinosaurios eran reptiles gigantes que vivieron hace mucho, mucho tiempo."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Dinosaurios",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuál de estos es un dinosaurio famoso?",
+            "options": [
+              "Tiranosaurio Rex",
+              "León",
+              "Elefante"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cómo llamamos a los restos preservados de los dinosaurios?",
+            "options": [
+              "Rocas",
+              "Fósiles",
+              "Juguetes"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

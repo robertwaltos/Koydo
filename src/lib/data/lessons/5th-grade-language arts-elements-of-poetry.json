@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-elements-of-poetry",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Poetry: Understanding Elements of Poetry (Rhyme, Rhythm, Stanza)",
+  "title": "The Magic of Words: Exploring Poetry",
+  "learningObjectives": [
+    "Identify and define key elements of poetry: rhyme, rhythm, and stanza.",
+    "Recognize figurative language in poems (similes, metaphors).",
+    "Analyze how the elements of poetry work together to create meaning and feeling."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Poetry is a special kind of writing that uses the power of words to make us feel and think. Poets use tools like rhyme, rhythm, and stanzas to create their magic."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/poetry-elements.svg",
+      "alt": "Icons representing rhyme (two rhyming words), rhythm (musical notes), and a stanza (a group of lines)."
+    },
+    {
+      "type": "text",
+      "body": "Rhyme is when words have the same ending sound. Rhythm is the beat or pattern of a poem. A stanza is a group of lines in a poem, like a paragraph in a story."
+    }
+  ],
+  "quiz": {
+    "title": "Poetry Elements Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is a stanza in a poem?",
+        "type": "multiple-choice",
+        "options": [
+          "A single line of a poem",
+          "A group of lines in a poem",
+          "The title of a poem"
+        ],
+        "correctAnswer": "A group of lines in a poem"
+      },
+      {
+        "id": "q2",
+        "question": "Which pair of words rhymes?",
+        "type": "multiple-choice",
+        "options": [
+          "cat, dog",
+          "sun, fun",
+          "big, small"
+        ],
+        "correctAnswer": "sun, fun"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "La Magia de las Palabras: Explorando la Poesía",
+      "content": [
+        {
+          "type": "text",
+          "body": "La poesía es un tipo especial de escritura que usa el poder de las palabras para hacernos sentir y pensar. Los poetas usan herramientas como la rima, el ritmo y las estrofas para crear su magia."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Elementos de Poesía",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué es una estrofa en un poema?",
+            "options": [
+              "Una sola línea de un poema",
+              "Un grupo de líneas en un poema",
+              "El título de un poema"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué par de palabras riman?",
+            "options": [
+              "gato, perro",
+              "sol, diversión",
+              "grande, pequeño"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

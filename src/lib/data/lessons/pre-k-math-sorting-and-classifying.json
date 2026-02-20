@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-math-sorting-and-classifying",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Sorting and Classifying",
+  "title": "Let's Sort!",
+  "learningObjectives": [
+    "Identify similarities and differences between objects.",
+    "Sort a collection of objects based on a single attribute (e.g., color, shape, size).",
+    "Describe the attribute used for sorting."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Sorting is putting things together that are alike. Let's be super sorters!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/sorting.svg",
+      "alt": "A collection of colorful shapes being sorted into groups."
+    },
+    {
+      "type": "text",
+      "body": "We can sort by color, shape, or size. How would you sort your toys?"
+    }
+  ],
+  "quiz": {
+    "title": "Sorting Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "If you sort by color, which of these belong together?",
+        "type": "multiple-choice",
+        "options": [
+          "Red apple, red ball",
+          "Big ball, small ball",
+          "Square block, circle block"
+        ],
+        "correctAnswer": "Red apple, red ball"
+      },
+      {
+        "id": "q2",
+        "question": "You have a pile of socks. How can you sort them?",
+        "type": "multiple-choice",
+        "options": [
+          "By color",
+          "By size",
+          "Both are correct"
+        ],
+        "correctAnswer": "Both are correct"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "¡Vamos a Clasificar!",
+      "content": [
+        {
+          "type": "text",
+          "body": "Clasificar es juntar cosas que son iguales. ¡Seamos súper clasificadores!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Clasificación",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Si clasificas por color, ¿cuáles de estos van juntos?",
+            "options": [
+              "Manzana roja, pelota roja",
+              "Pelota grande, pelota pequeña",
+              "Bloque cuadrado, bloque circular"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "Tienes un montón de calcetines. ¿Cómo puedes clasificarlos?",
+            "options": [
+              "Por color",
+              "Por tamaño",
+              "Ambas son correctas"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

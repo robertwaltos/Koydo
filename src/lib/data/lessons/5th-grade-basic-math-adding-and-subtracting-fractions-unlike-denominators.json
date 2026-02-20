@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-basic-math-adding-and-subtracting-fractions-unlike-denominators",
+  "subject": "Basic Math",
+  "gradeLevel": "5th Grade",
+  "topic": "Fractions: Adding and Subtracting with Unlike Denominators",
+  "title": "Finding Common Ground: Fractions with Unlike Denominators",
+  "learningObjectives": [
+    "Add and subtract fractions with unlike denominators by finding a common denominator.",
+    "Solve word problems involving addition and subtraction of fractions with unlike denominators.",
+    "Understand why a common denominator is necessary to add and subtract fractions."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "To add or subtract fractions with different denominators, you first need to find a common denominator. This means making the bottom numbers (the denominators) the same."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/unlike-denominators.svg",
+      "alt": "An example showing two fractions with unlike denominators being converted to equivalent fractions with a common denominator."
+    },
+    {
+      "type": "text",
+      "body": "Once you have a common denominator, you can add or subtract the numerators (the top numbers) and keep the denominator the same. For example, to solve 1/2 + 1/4, you can rewrite 1/2 as 2/4. Then, 2/4 + 1/4 = 3/4."
+    }
+  ],
+  "quiz": {
+    "title": "Fractions with Unlike Denominators Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the first step when adding fractions with unlike denominators?",
+        "type": "multiple-choice",
+        "options": [
+          "Add the numerators",
+          "Find a common denominator",
+          "Add the denominators"
+        ],
+        "correctAnswer": "Find a common denominator"
+      },
+      {
+        "id": "q2",
+        "question": "What is 1/3 + 1/6?",
+        "type": "multiple-choice",
+        "options": [
+          "2/9",
+          "1/2",
+          "2/6"
+        ],
+        "correctAnswer": "1/2"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Encontrando un Terreno Común: Fracciones con Denominadores Diferentes",
+      "content": [
+        {
+          "type": "text",
+          "body": "Para sumar o restar fracciones con diferentes denominadores, primero necesitas encontrar un denominador común. Esto significa hacer que los números de abajo (los denominadores) sean iguales."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Fracciones con Denominadores Diferentes",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuál es el primer paso al sumar fracciones con denominadores diferentes?",
+            "options": [
+              "Sumar los numeradores",
+              "Encontrar un denominador común",
+              "Sumar los denominadores"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuánto es 1/3 + 1/6?",
+            "options": [
+              "2/9",
+              "1/2",
+              "2/6"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

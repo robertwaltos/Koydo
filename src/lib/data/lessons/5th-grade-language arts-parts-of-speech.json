@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-parts-of-speech",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Grammar: Parts of Speech (Nouns, Verbs, Adjectives, Adverbs)",
+  "title": "The Building Blocks of Language: Parts of Speech",
+  "learningObjectives": [
+    "Define and identify nouns, verbs, adjectives, and adverbs.",
+    "Understand the function of each part of speech in a sentence.",
+    "Use different parts of speech to build and enhance sentences."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Every word in a sentence has a job to do. These jobs are called \"parts of speech\". Today we will learn about four of them: nouns, verbs, adjectives, and adverbs."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/parts-of-speech.svg",
+      "alt": "Icons representing a noun (person), verb (running), adjective (happy face), and adverb (fast forward)."
+    },
+    {
+      "type": "text",
+      "body": "A noun is a person, place, or thing. A verb is an action word. An adjective describes a noun. An adverb describes a verb."
+    }
+  ],
+  "quiz": {
+    "title": "Parts of Speech Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which word in the following sentence is a noun: \"The happy dog ran quickly.\"?",
+        "type": "multiple-choice",
+        "options": [
+          "happy",
+          "dog",
+          "ran"
+        ],
+        "correctAnswer": "dog"
+      },
+      {
+        "id": "q2",
+        "question": "Which word in the following sentence is an adjective: \"The big, red ball bounced.\"?",
+        "type": "multiple-choice",
+        "options": [
+          "ball",
+          "bounced",
+          "red"
+        ],
+        "correctAnswer": "red"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Los Bloques de Construcción del Lenguaje: Partes de la Oración",
+      "content": [
+        {
+          "type": "text",
+          "body": "Cada palabra en una oración tiene un trabajo que hacer. Estos trabajos se llaman \"partes de la oración\". Hoy aprenderemos sobre cuatro de ellos: sustantivos, verbos, adjetivos y adverbios."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Partes de la Oración",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué palabra en la siguiente oración es un sustantivo: \"El perro feliz corrió rápidamente.\"?",
+            "options": [
+              "feliz",
+              "perro",
+              "corrió"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué palabra en la siguiente oración es un adjetivo: \"La pelota grande y roja rebotó.\"?",
+            "options": [
+              "pelota",
+              "rebotó",
+              "roja"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

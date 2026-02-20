@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-space",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Space (Sun, Moon, Stars)",
+  "title": "A Trip to Space",
+  "learningObjectives": [
+    "Identify the sun, moon, and stars.",
+    "Describe when we can see the sun (day) and the moon and stars (night).",
+    "Understand that the sun is a star and gives us light and heat."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's go on an adventure to space! We will learn about the sun, the moon, and the stars."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/space.svg",
+      "alt": "A simple drawing of the sun, moon, and stars in space."
+    },
+    {
+      "type": "text",
+      "body": "The sun is a big star that we see during the day. At night, we see the moon and many other stars."
+    }
+  ],
+  "quiz": {
+    "title": "Space Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What do we see in the sky at night?",
+        "type": "multiple-choice",
+        "options": [
+          "The moon and stars",
+          "The sun",
+          "A big cloud"
+        ],
+        "correctAnswer": "The moon and stars"
+      },
+      {
+        "id": "q2",
+        "question": "What is the sun?",
+        "type": "multiple-choice",
+        "options": [
+          "A planet",
+          "A star",
+          "A moon"
+        ],
+        "correctAnswer": "A star"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Un Viaje al Espacio",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a una aventura al espacio! Aprenderemos sobre el sol, la luna y las estrellas."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba del Espacio",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué vemos en el cielo por la noche?",
+            "options": [
+              "La luna y las estrellas",
+              "El sol",
+              "Una gran nube"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué es el sol?",
+            "options": [
+              "Un planeta",
+              "Una estrella",
+              "Una luna"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "pre-k-math-comparing-numbers",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Comparing Numbers",
+  "title": "Comparing Numbers",
+  "learningObjectives": [
+    "Use words like \"more\", \"less\", and \"same\" to compare groups of objects.",
+    "Compare two numbers between 1 and 10."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Lets learn to compare numbers!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/more-less.svg",
+      "alt": "A group of 3 apples and a group of 5 apples."
+    }
+  ],
+  "quiz": {
+    "title": "Comparing Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which group has more?",
+        "type": "multiple-choice",
+        "options": [
+          "Group A",
+          "Group B"
+        ],
+        "correctAnswer": "Group B",
+        "image": "/placeholders/comparing-groups.svg"
+      },
+      {
+        "id": "q2",
+        "question": "Which number is less than 7?",
+        "type": "multiple-choice",
+        "options": [
+          "6",
+          "7",
+          "8"
+        ],
+        "correctAnswer": "6"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Comparando Números",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Aprendamos a comparar números!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Comparación",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué grupo tiene más?",
+            "options": [
+              "Grupo A",
+              "Grupo B"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué número es menor que 7?",
+            "options": [
+              "6",
+              "7",
+              "8"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

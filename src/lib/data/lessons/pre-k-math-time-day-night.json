@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-math-time-day-night",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Time (day, night)",
+  "title": "Day and Night",
+  "learningObjectives": [
+    "Identify common objects seen in the sky during the day (sun) and at night (moon, stars).",
+    "Describe typical activities that happen during the day and at night.",
+    "Understand that day and night follow a repeating pattern."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "The sun shines during the day. We play and learn during the day."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/day-night.svg",
+      "alt": "A sun and a moon with stars."
+    },
+    {
+      "type": "text",
+      "body": "The moon and stars come out at night. We sleep at night."
+    }
+  ],
+  "quiz": {
+    "title": "Day and Night Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What do we see in the sky during the day?",
+        "type": "multiple-choice",
+        "options": [
+          "Sun",
+          "Moon",
+          "Stars"
+        ],
+        "correctAnswer": "Sun"
+      },
+      {
+        "id": "q2",
+        "question": "What do we usually do at night?",
+        "type": "multiple-choice",
+        "options": [
+          "Play outside",
+          "Go to school",
+          "Sleep"
+        ],
+        "correctAnswer": "Sleep"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Día y Noche",
+      "content": [
+        {
+          "type": "text",
+          "body": "El sol brilla durante el día. Jugamos y aprendemos durante el día."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Día y Noche",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué vemos en el cielo durante el día?",
+            "options": [
+              "Sol",
+              "Luna",
+              "Estrellas"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué hacemos normalmente por la noche?",
+            "options": [
+              "Jugar afuera",
+              "Ir a la escuela",
+              "Dormir"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

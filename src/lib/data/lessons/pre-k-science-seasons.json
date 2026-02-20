@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-seasons",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Seasons",
+  "title": "The Four Seasons",
+  "learningObjectives": [
+    "Identify the four seasons: Spring, Summer, Autumn (Fall), and Winter.",
+    "Describe basic characteristics of each season (weather, clothing, activities).",
+    "Understand that seasons change in a cycle."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "There are four seasons in a year: spring, summer, autumn, and winter. Each season is special!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/seasons.svg",
+      "alt": "Four icons representing the four seasons: a flower for spring, a sun for summer, a leaf for autumn, and a snowflake for winter."
+    },
+    {
+      "type": "text",
+      "body": "In the spring, flowers bloom. In the summer, it's hot. In the autumn, leaves fall. In the winter, it's cold."
+    }
+  ],
+  "quiz": {
+    "title": "Seasons Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "In which season do leaves fall from the trees?",
+        "type": "multiple-choice",
+        "options": [
+          "Spring",
+          "Summer",
+          "Autumn"
+        ],
+        "correctAnswer": "Autumn"
+      },
+      {
+        "id": "q2",
+        "question": "What season is hot and sunny?",
+        "type": "multiple-choice",
+        "options": [
+          "Winter",
+          "Summer",
+          "Spring"
+        ],
+        "correctAnswer": "Summer"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Las Cuatro Estaciones",
+      "content": [
+        {
+          "type": "text",
+          "body": "Hay cuatro estaciones en un año: primavera, verano, otoño e invierno. ¡Cada estación es especial!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de las Estaciones",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿En qué estación se caen las hojas de los árboles?",
+            "options": [
+              "Primavera",
+              "Verano",
+              "Otoño"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué estación es calurosa y soleada?",
+            "options": [
+              "Invierno",
+              "Verano",
+              "Primavera"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

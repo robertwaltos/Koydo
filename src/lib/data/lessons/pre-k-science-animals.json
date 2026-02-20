@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-animals",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Animals",
+  "title": "Our Animal Friends",
+  "learningObjectives": [
+    "Identify at least three different animals by name.",
+    "Imitate the sounds of at least two different animals.",
+    "Describe where an animal lives (habitat)."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's learn about animals! There are so many different kinds of animals all around the world."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/animals.svg",
+      "alt": "A collection of cartoon animals like a lion, a monkey, and a fish."
+    },
+    {
+      "type": "text",
+      "body": "A cow says \"moo\". A duck says \"quack\". What does a dog say?"
+    }
+  ],
+  "quiz": {
+    "title": "Animal Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which animal lives in the water?",
+        "type": "multiple-choice",
+        "options": [
+          "Fish",
+          "Bird",
+          "Cat"
+        ],
+        "correctAnswer": "Fish"
+      },
+      {
+        "id": "q2",
+        "question": "What sound does a pig make?",
+        "type": "multiple-choice",
+        "options": [
+          "Oink",
+          "Meow",
+          "Chirp"
+        ],
+        "correctAnswer": "Oink"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Nuestros Amigos los Animales",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a aprender sobre los animales! Hay tantos tipos diferentes de animales en todo el mundo."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Animales",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué animal vive en el agua?",
+            "options": [
+              "Pez",
+              "Pájaro",
+              "Gato"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué sonido hace un cerdo?",
+            "options": [
+              "Oink",
+              "Miau",
+              "Pío"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

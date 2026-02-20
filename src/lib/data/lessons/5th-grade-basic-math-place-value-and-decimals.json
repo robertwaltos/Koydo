@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-basic-math-place-value-and-decimals",
+  "subject": "Basic Math",
+  "gradeLevel": "5th Grade",
+  "topic": "Place Value and Decimals",
+  "title": "Diving into Decimals: Understanding Place Value",
+  "learningObjectives": [
+    "Read, write, and compare decimals to thousandths.",
+    "Understand the relationship between decimal places (10 times and 1/10).",
+    "Round decimals to any place."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Decimals are a way of writing parts of a whole number. The decimal point separates the whole number part from the fractional part."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/place-value-decimals.svg",
+      "alt": "A place value chart showing the tenths, hundredths, and thousandths places."
+    },
+    {
+      "type": "text",
+      "body": "Each place to the right of the decimal point is 10 times smaller than the place to its left. For example, the tenths place is 10 times bigger than the hundredths place."
+    }
+  ],
+  "quiz": {
+    "title": "Decimals and Place Value Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "In the number 3.456, what place is the 5 in?",
+        "type": "multiple-choice",
+        "options": [
+          "Tenths",
+          "Hundredths",
+          "Thousandths"
+        ],
+        "correctAnswer": "Hundredths"
+      },
+      {
+        "id": "q2",
+        "question": "How do you write \"two and sixty-three hundredths\" as a decimal?",
+        "type": "multiple-choice",
+        "options": [
+          "2.63",
+          "2.063",
+          "26.3"
+        ],
+        "correctAnswer": "2.63"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Sumergiéndose en los Decimales: Entendiendo el Valor Posicional",
+      "content": [
+        {
+          "type": "text",
+          "body": "Los decimales son una forma de escribir partes de un número entero. El punto decimal separa la parte del número entero de la parte fraccionaria."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Decimales y Valor Posicional",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "En el número 3.456, ¿en qué lugar está el 5?",
+            "options": [
+              "Décimas",
+              "Centésimas",
+              "Milésimas"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cómo se escribe \"dos y sesenta y tres centésimas\" como decimal?",
+            "options": [
+              "2.63",
+              "2.063",
+              "26.3"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

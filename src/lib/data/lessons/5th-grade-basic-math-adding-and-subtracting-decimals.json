@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-basic-math-adding-and-subtracting-decimals",
+  "subject": "Basic Math",
+  "gradeLevel": "5th Grade",
+  "topic": "Adding and Subtracting Decimals",
+  "title": "Decimal Dance: Adding and Subtracting Decimals",
+  "learningObjectives": [
+    "Add and subtract decimals to the hundredths place.",
+    "Understand the importance of lining up decimal points.",
+    "Solve word problems involving addition and subtraction of decimals."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Adding and subtracting decimals is just like working with whole numbers, with one important rule: you must line up the decimal points!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/adding-subtracting-decimals.svg",
+      "alt": "An example showing two decimal numbers aligned by their decimal points for addition."
+    },
+    {
+      "type": "text",
+      "body": "Once the decimal points are lined up, you can add or subtract as you normally would. Remember to bring the decimal point straight down in your answer."
+    }
+  ],
+  "quiz": {
+    "title": "Decimal Addition and Subtraction Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is 3.45 + 1.2?",
+        "type": "multiple-choice",
+        "options": [
+          "4.65",
+          "3.57",
+          "4.57"
+        ],
+        "correctAnswer": "4.65"
+      },
+      {
+        "id": "q2",
+        "question": "What is 5.7 - 2.34?",
+        "type": "multiple-choice",
+        "options": [
+          "3.36",
+          "3.46",
+          "3.03"
+        ],
+        "correctAnswer": "3.36"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "El Baile de los Decimales: Sumando y Restando Decimales",
+      "content": [
+        {
+          "type": "text",
+          "body": "Sumar y restar decimales es como trabajar con números enteros, con una regla importante: ¡debes alinear los puntos decimales!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Suma y Resta de Decimales",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuánto es 3.45 + 1.2?",
+            "options": [
+              "4.65",
+              "3.57",
+              "4.57"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuánto es 5.7 - 2.34?",
+            "options": [
+              "3.36",
+              "3.46",
+              "3.03"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

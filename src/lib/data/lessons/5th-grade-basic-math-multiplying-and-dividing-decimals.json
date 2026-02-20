@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-basic-math-multiplying-and-dividing-decimals",
+  "subject": "Basic Math",
+  "gradeLevel": "5th Grade",
+  "topic": "Multiplying and Dividing Decimals",
+  "title": "Mastering Decimals: Multiplication and Division",
+  "learningObjectives": [
+    "Multiply decimals by whole numbers and other decimals.",
+    "Divide decimals by whole numbers and other decimals.",
+    "Accurately place the decimal point in products and quotients."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Multiplying decimals is like multiplying whole numbers, but with an extra step. First, multiply the numbers as if they were whole numbers. Then, count the total number of decimal places in the numbers you multiplied. Finally, place the decimal point in your answer so it has that many decimal places."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/multiplying-decimals.svg",
+      "alt": "An example showing the multiplication of two decimal numbers and the placement of the decimal point in the product."
+    },
+    {
+      "type": "text",
+      "body": "Dividing decimals is a bit different. If you divide a decimal by a whole number, you place the decimal point in the quotient directly above the decimal point in the dividend. If you divide by a decimal, you move the decimal point in the divisor to make it a whole number, and move the decimal point in the dividend the same number of places."
+    }
+  ],
+  "quiz": {
+    "title": "Decimal Multiplication and Division Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is 2.5 * 3?",
+        "type": "multiple-choice",
+        "options": [
+          "7.5",
+          "0.75",
+          "75"
+        ],
+        "correctAnswer": "7.5"
+      },
+      {
+        "id": "q2",
+        "question": "What is 6.4 / 2?",
+        "type": "multiple-choice",
+        "options": [
+          "3.2",
+          "32",
+          "0.32"
+        ],
+        "correctAnswer": "3.2"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Dominando los Decimales: Multiplicación y División",
+      "content": [
+        {
+          "type": "text",
+          "body": "Multiplicar decimales es como multiplicar números enteros, pero con un paso adicional. Primero, multiplica los números como si fueran números enteros. Luego, cuenta el número total de lugares decimales en los números que multiplicaste. Finalmente, coloca el punto decimal en tu respuesta para que tenga esa cantidad de lugares decimales."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Multiplicación y División de Decimales",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuánto es 2.5 * 3?",
+            "options": [
+              "7.5",
+              "0.75",
+              "75"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuánto es 6.4 / 2?",
+            "options": [
+              "3.2",
+              "32",
+              "0.32"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

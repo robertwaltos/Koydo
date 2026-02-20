@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+  const externalCheckoutAllowed = (process.env.NEXT_PUBLIC_BILLING_PROVIDER_MODE ?? "stripe_external") !== "app_store_iap";
+
   return (
     <div className="min-h-screen bg-background font-sans">
       <main className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-12 sm:px-10">
@@ -109,11 +111,79 @@ export default function Home() {
             Learner Dashboard
           </Link>
           <Link
-            href="/billing/checkout"
+            href="/modules"
             className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
           >
-            Start Subscription Checkout
+            Module Catalog
           </Link>
+          <Link
+            href="/science-lab"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Science Lab (Apple Vision)
+          </Link>
+          <Link
+            href="/support"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Support Center
+          </Link>
+          <Link
+            href="/admin/operations"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Owner Operations
+          </Link>
+          <Link
+            href="/admin/compliance"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            App Store Compliance
+          </Link>
+          <Link
+            href="/admin/audit"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Admin Audit Logs
+          </Link>
+          <Link
+            href="/admin/reports"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Admin Reports
+          </Link>
+          <Link
+            href="/admin/alerts"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Admin Alerts
+          </Link>
+          <Link
+            href="/account/settings"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Account Settings
+          </Link>
+          <Link
+            href="/account/privacy"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Privacy Center
+          </Link>
+          <Link
+            href="/parent/compliance"
+            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+          >
+            Parent Compliance
+          </Link>
+          {externalCheckoutAllowed ? (
+            <Link
+              href="/billing/checkout"
+              className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+            >
+              Start Subscription Checkout
+            </Link>
+          ) : null}
         </section>
       </main>
     </div>

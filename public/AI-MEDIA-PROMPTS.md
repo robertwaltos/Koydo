@@ -36,6 +36,28 @@ Create a 20-second educational intro video for Pre-K shapes. Storyboard: (1) che
 ### Prompt ID: `VIDEO_SCIENCE_LOOP_01`
 Create a 30-second looping ambient background video for a science lesson dashboard. Scene: subtle animated lab with floating molecules and soft motion. Style: minimal distraction, smooth loop, medium contrast for overlay UI, no text, no logos. Resolution 1920x1080.
 
+## Seedance 2.0 Prompts
+
+### Prompt ID: `SEEDANCE_LESSON_VIDEO_TEMPLATE_01`
+Create a child-safe educational lesson video for subject `[SUBJECT]` and lesson `[LESSON_TITLE]`.
+Target audience: pre-K through grade 12 (adaptable complexity).
+Visual style: bright pastel palette (red, yellow, blue, green, white), high readability, soft rounded shapes.
+Structure: 3 acts (hook, explained concept, recap) with simple visual storytelling and no on-screen logos.
+Camera: gentle motion, medium framing, occasional close-ups on key concept visuals.
+Duration: 35-55 seconds. Aspect: 16:9. FPS: 24.
+Safety constraints: no violence, no fear-based scenes, no stereotypes, no copyrighted characters.
+Accessibility constraints: high contrast objects, slower transitions, clean backgrounds, low visual clutter.
+End frame: calm celebratory transition inviting learner to continue to quiz/activity.
+
+### Prompt ID: `SEEDANCE_LESSON_ANIMATION_TEMPLATE_01`
+Generate a short concept animation for `[SUBJECT]` lesson `[LESSON_TITLE]`.
+Length: 8-12 seconds, seamless loop.
+Palette: happy pastels only, no dark backgrounds.
+Motion design: one concept transforms step-by-step using arrows/highlights and soft easing.
+No text overlays required; visual metaphor must be understandable for young learners.
+Include one mascot-neutral guiding shape to direct attention.
+Output: classroom-safe, no logos, no copyrighted references, no sensitive content.
+
 ## Prompt Variables
 
 - `[AGE_GROUP]`: pre-k | elementary | middle-school | high-school

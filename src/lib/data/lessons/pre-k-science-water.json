@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-water",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Water",
+  "title": "Wonderful Water",
+  "learningObjectives": [
+    "Identify water as a liquid.",
+    "Describe some properties of water (clear, flows).",
+    "Understand that water is essential for living things."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's learn about water! Water is a liquid that we can drink, and it's all around us in rivers, lakes, and oceans."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/water.svg",
+      "alt": "A simple drawing of a glass of water and a raindrop."
+    },
+    {
+      "type": "text",
+      "body": "All living things need water to survive, including people, animals, and plants."
+    }
+  ],
+  "quiz": {
+    "title": "Water Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is something that needs water to live?",
+        "type": "multiple-choice",
+        "options": [
+          "A flower",
+          "A rock",
+          "A toy car"
+        ],
+        "correctAnswer": "A flower"
+      },
+      {
+        "id": "q2",
+        "question": "When you pour water, it...",
+        "type": "multiple-choice",
+        "options": [
+          "Stays still",
+          "Flows",
+          "Disappears"
+        ],
+        "correctAnswer": "Flows"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "El Agua Maravillosa",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a aprender sobre el agua! El agua es un líquido que podemos beber, y está a nuestro alrededor en ríos, lagos y océanos."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba del Agua",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué es algo que necesita agua para vivir?",
+            "options": [
+              "Una flor",
+              "Una roca",
+              "Un coche de juguete"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "Cuando viertes agua, ...",
+            "options": [
+              "Se queda quieta",
+              "Fluye",
+              "Desaparece"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

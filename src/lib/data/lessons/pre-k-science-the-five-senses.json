@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-the-five-senses",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "The Five Senses",
+  "title": "My Amazing Senses",
+  "learningObjectives": [
+    "Identify and name the five senses: sight, hearing, smell, taste, and touch.",
+    "Understand that each sense helps us explore the world.",
+    "Use descriptive language for sensory experiences."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "We have five senses that help us learn about the world. Let's explore them!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/five-senses.svg",
+      "alt": "Icons representing the five senses: an eye, an ear, a nose, a mouth, and a hand."
+    },
+    {
+      "type": "text",
+      "body": "We use our eyes to see, our ears to hear, our nose to smell, our tongue to taste, and our hands to touch."
+    }
+  ],
+  "quiz": {
+    "title": "Senses Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which sense do you use to see a rainbow?",
+        "type": "multiple-choice",
+        "options": [
+          "Sight",
+          "Hearing",
+          "Smell"
+        ],
+        "correctAnswer": "Sight"
+      },
+      {
+        "id": "q2",
+        "question": "Which sense do you use to feel a soft blanket?",
+        "type": "multiple-choice",
+        "options": [
+          "Touch",
+          "Taste",
+          "Hearing"
+        ],
+        "correctAnswer": "Touch"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Mis Sentidos Asombrosos",
+      "content": [
+        {
+          "type": "text",
+          "body": "Tenemos cinco sentidos que nos ayudan a aprender sobre el mundo. ¡Vamos a explorarlos!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de los Sentidos",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué sentido usas para ver un arcoíris?",
+            "options": [
+              "Vista",
+              "Oído",
+              "Olfato"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué sentido usas para sentir una manta suave?",
+            "options": [
+              "Tacto",
+              "Gusto",
+              "Oído"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

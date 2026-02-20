@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-narrative-writing",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Writing: Narrative Writing",
+  "title": "Telling Your Story: Narrative Writing",
+  "learningObjectives": [
+    "Identify the key elements of a narrative (characters, setting, plot, conflict, resolution).",
+    "Brainstorm and plan a personal narrative.",
+    "Write a narrative with a clear beginning, middle, and end."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Narrative writing is all about telling a story. It can be a real story from your life or a fictional story from your imagination."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/narrative-writing.svg",
+      "alt": "An icon representing a story with a beginning, middle, and end."
+    },
+    {
+      "type": "text",
+      "body": "A good narrative has interesting characters, a vivid setting, and a clear plot with a beginning, middle, and end. It also has a conflict, or problem, that the characters must face and resolve."
+    }
+  ],
+  "quiz": {
+    "title": "Narrative Writing Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the plot of a story?",
+        "type": "multiple-choice",
+        "options": [
+          "The characters in the story",
+          "The sequence of events",
+          "The time and place of the story"
+        ],
+        "correctAnswer": "The sequence of events"
+      },
+      {
+        "id": "q2",
+        "question": "What is the conflict in a narrative?",
+        "type": "multiple-choice",
+        "options": [
+          "The problem the characters face",
+          "The end of the story",
+          "The lesson of the story"
+        ],
+        "correctAnswer": "The problem the characters face"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Contando tu Historia: Escritura Narrativa",
+      "content": [
+        {
+          "type": "text",
+          "body": "La escritura narrativa se trata de contar una historia. Puede ser una historia real de tu vida o una historia de ficción de tu imaginación."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Escritura Narrativa",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué es la trama de una historia?",
+            "options": [
+              "Los personajes de la historia",
+              "La secuencia de eventos",
+              "El tiempo y el lugar de la historia"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué es el conflicto en una narrativa?",
+            "options": [
+              "El problema que enfrentan los personajes",
+              "El final de la historia",
+              "La lección de la historia"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

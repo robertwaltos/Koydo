@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-living-and-non-living-things",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Living and Non-living Things",
+  "title": "What's Alive?",
+  "learningObjectives": [
+    "Identify characteristics of living things (needs food, water, air, grows).",
+    "Distinguish between living and non-living things.",
+    "Sort objects into 'living' and 'non-living' categories."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Some things are alive, and some are not. Living things need food, water, and air to grow."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/living-nonliving.svg",
+      "alt": "A flower (living) and a rock (non-living)."
+    },
+    {
+      "type": "text",
+      "body": "A car is non-living. It does not need food or water. A tree is living. It needs sunlight and water to grow."
+    }
+  ],
+  "quiz": {
+    "title": "Living or Not?",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which of these is a living thing?",
+        "type": "multiple-choice",
+        "options": [
+          "A book",
+          "A flower",
+          "A toy"
+        ],
+        "correctAnswer": "A flower"
+      },
+      {
+        "id": "q2",
+        "question": "Which of these is a non-living thing?",
+        "type": "multiple-choice",
+        "options": [
+          "A dog",
+          "A rock",
+          "A person"
+        ],
+        "correctAnswer": "A rock"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "¿Qué está vivo?",
+      "content": [
+        {
+          "type": "text",
+          "body": "Algunas cosas están vivas y otras no. Los seres vivos necesitan comida, agua y aire para crecer."
+        }
+      ],
+      "quiz": {
+        "title": "¿Vivo o no?",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuál de estos es un ser vivo?",
+            "options": [
+              "Un libro",
+              "Una flor",
+              "Un juguete"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuál de estos es un ser no vivo?",
+            "options": [
+              "Un perro",
+              "Una roca",
+              "Una persona"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "pre-k-math-measurement-size",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Measurement (size)",
+  "title": "Big and Small, Short and Tall",
+  "learningObjectives": [
+    "Compare objects using size-related vocabulary (big/small, long/short, tall/short).",
+    "Order objects by size.",
+    "Measure objects using non-standard units (like hands or blocks)."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's learn about size! Some things are big, and some are small. Some are short, and some are tall!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/measurement.svg",
+      "alt": "A big block and a small block, a long pencil and a short pencil."
+    },
+    {
+      "type": "text",
+      "body": "Can you find something in the room that is BIG? Can you find something that is SMALL?"
+    }
+  ],
+  "quiz": {
+    "title": "Size Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which is bigger, an elephant or a mouse?",
+        "type": "multiple-choice",
+        "options": [
+          "Elephant",
+          "Mouse"
+        ],
+        "correctAnswer": "Elephant"
+      },
+      {
+        "id": "q2",
+        "question": "Which is shorter, a pencil or a crayon?",
+        "type": "multiple-choice",
+        "options": [
+          "Pencil",
+          "Crayon"
+        ],
+        "correctAnswer": "Crayon"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Grande y Pequeño, Corto y Alto",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a aprender sobre el tamaño! Algunas cosas son grandes y otras pequeñas. ¡Algunas son cortas y otras altas!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Tamaño",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué es más grande, un elefante o un ratón?",
+            "options": [
+              "Elefante",
+              "Ratón"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué es más corto, un lápiz o un crayón?",
+            "options": [
+              "Lápiz",
+              "Crayón"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "modules:sync": "node scripts/sync-modules.mjs",
+    "prebuild": "npm run modules:sync",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",

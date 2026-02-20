@@ -17,6 +17,14 @@ const serverEnvSchema = z.object({
   RESEND_API_KEY: z.string().optional(),
   PARENT_CONSENT_FROM_EMAIL: z.string().email().optional(),
   NEXT_PUBLIC_MIXPANEL_TOKEN: z.string().optional(),
+  BILLING_PROVIDER_MODE: z
+    .enum(["stripe_external", "app_store_iap"])
+    .catch("stripe_external"),
+  ADMIN_ALERT_EMAILS: z.string().optional(),
+  REQUIRE_ADMIN_APPROVALS: z
+    .enum(["true", "false"])
+    .default("true")
+    .transform((value) => value === "true"),
 });
 
 const publicEnvSchema = z.object({
@@ -24,7 +32,14 @@ const publicEnvSchema = z.object({
   NEXT_PUBLIC_SUPABASE_URL: z.string().url().optional(),
   NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string().optional(),
   NEXT_PUBLIC_MIXPANEL_TOKEN: z.string().optional(),
+  NEXT_PUBLIC_BILLING_PROVIDER_MODE: z.enum(["stripe_external", "app_store_iap"]).catch("stripe_external"),
 });
 
-export const serverEnv = serverEnvSchema.parse(process.env);
-export const publicEnv = publicEnvSchema.parse(process.env);
+const normalizedEnv = {
+  ...process.env,
+  NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL ?? process.env.EXPO_PUBLIC_SUPABASE_URL,
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? process.env.EXPO_PUBLIC_SUPABASE_KEY,
+};
+
+export const serverEnv = serverEnvSchema.parse(normalizedEnv);
+export const publicEnv = publicEnvSchema.parse(normalizedEnv);

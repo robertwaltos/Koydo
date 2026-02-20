@@ -1,0 +1,42 @@
+{
+  "id": "pre-k-math-simple-addition",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Simple Addition",
+  "title": "Introduction to Addition",
+  "learningObjectives": [
+    "Understand the concept of adding numbers.",
+    "Solve simple addition problems up to 5."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Addition is putting numbers together. Let's try!"
+    },
+    {
+      "type": "text",
+      "body": "1 + 1 = 2"
+    }
+  ],
+  "quiz": {
+    "title": "Addition Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is 2 + 1?",
+        "type": "multiple-choice",
+        "options": [
+          "2",
+          "3",
+          "4"
+        ],
+        "correctAnswer": "3"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Introducción a la Suma"
+    }
+  }
+}

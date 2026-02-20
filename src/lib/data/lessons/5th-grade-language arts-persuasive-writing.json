@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-persuasive-writing",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Writing: Persuasive Writing",
+  "title": "Convince Me! The Art of Persuasive Writing",
+  "learningObjectives": [
+    "Define persuasive writing and understand its purpose.",
+    "Differentiate between facts and opinions.",
+    "Structure a persuasive argument with an introduction, reasons, and a conclusion."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Persuasive writing is used to convince, or persuade, a reader to believe an idea or to take a specific action. It's all about making a strong argument!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/persuasive-writing.svg",
+      "alt": "An icon of a person giving a speech with a speech bubble."
+    },
+    {
+      "type": "text",
+      "body": "A good persuasive piece includes a clear opinion, strong reasons to support that opinion, and facts or evidence to back up those reasons. A popular structure to remember this is OREO: Opinion, Reason, Evidence, Opinion (restated)."
+    }
+  ],
+  "quiz": {
+    "title": "Persuasive Writing Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the main purpose of persuasive writing?",
+        "type": "multiple-choice",
+        "options": [
+          "To entertain the reader with a story",
+          "To inform the reader about a topic",
+          "To convince the reader of an opinion"
+        ],
+        "correctAnswer": "To convince the reader of an opinion"
+      },
+      {
+        "id": "q2",
+        "question": "Which of the following is a FACT, not an opinion?",
+        "type": "multiple-choice",
+        "options": [
+          "Pizza is the best food.",
+          "The Earth revolves around the Sun.",
+          "Recess should be longer."
+        ],
+        "correctAnswer": "The Earth revolves around the Sun."
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "¡Convénceme! El Arte de la Escritura Persuasiva",
+      "content": [
+        {
+          "type": "text",
+          "body": "La escritura persuasiva se usa para convencer, o persuadir, a un lector para que crea una idea o tome una acción específica. ¡Se trata de hacer un argumento fuerte!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Escritura Persuasiva",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuál es el propósito principal de la escritura persuasiva?",
+            "options": [
+              "Entretener al lector con una historia",
+              "Informar al lector sobre un tema",
+              "Convencer al lector de una opinión"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuál de los siguientes es un HECHO, no una opinión?",
+            "options": [
+              "La pizza es la mejor comida.",
+              "La Tierra gira alrededor del Sol.",
+              "El recreo debería ser más largo."
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -41,6 +41,7 @@ npm run dev
 
 - `GET /api/health`
 - `GET /api/auth/me`
+- `GET/PATCH /api/user/preferences`
 - `GET /api/ai/analyze` (schema info)
 - `POST /api/ai/analyze` (budget-aware recommendation mock)
 - `POST /api/stripe/checkout`
@@ -48,6 +49,21 @@ npm run dev
 - `POST /api/compliance/age-gate`
 - `POST /api/compliance/parent-consent`
 - `POST /api/compliance/parent-consent/verify`
+- `GET/POST /api/compliance/policy-acceptance`
+- `GET/POST /api/privacy/dsar`
+- `GET /api/admin/compliance/dsar`
+- `POST /api/admin/compliance/dsar/[requestId]`
+- `POST /api/admin/compliance/dsar/bulk`
+- `GET/POST /api/admin/alerts`
+- `GET /api/admin/report-exports`
+- `GET/POST /api/admin/report-jobs`
+- `POST /api/admin/report-jobs/run`
+- `GET /api/admin/reports/dsar`
+- `GET /api/admin/reports/support`
+- `GET /api/admin/reports/audit`
+- `POST /api/admin/users/update-roles`
+- `GET/POST /api/admin/approvals`
+- `POST /api/admin/approvals/[approvalId]`
 
 ## Compliance routes (starter UI)
 
@@ -55,14 +71,98 @@ npm run dev
 - `/auth/parent-consent`
 - `/auth/parent-consent/verify`
 
+## Immersive learning routes
+
+- `/science-lab` (Apple Vision/WebXR capability foundation)
+- `/modules` (dynamic module catalog from central registry)
+- `/support` (user issue reporting and ticket tracking)
+- `/admin/operations` (owner/admin operations console)
+- `/admin/compliance` (app store policy readiness checklist)
+- `/admin/reports` (CSV exports for DSAR/support/audit)
+- `/admin/alerts` (operational anomaly and rate-limit alerts)
+- Critical actions (`delete user`, `refund`, `set price`) require approved request IDs.
+- `/account/settings` (user self-service account deletion)
+- `/account/privacy` (DSAR + policy acknowledgment history)
+- `/parent/compliance` (parent consent history view)
+- `/admin/audit` (owner/admin action audit trail)
+- `/legal/privacy`, `/legal/terms`, `/legal/refunds`
+
+## Learning module architecture
+
+To add a new learning module with minimal changes:
+
+1. Create a module file in `src/lib/modules/catalog/` using `module-template.example.ts`.
+2. Export a typed `LearningModule` object with metadata + lessons.
+3. Run `npm run modules:sync` to regenerate the validated registry.
+
+Once registered, the module automatically appears in:
+
+- `GET`/lookup logic via `src/lib/modules/index.ts` (validated with Zod)
+- `/modules` catalog UI
+- `/dashboard` learning path cards
+- lesson lookup routes (`/lessons/[lessonId]`)
+
 ## Auth routes
 
 - `/auth/sign-up`
 - `/auth/sign-in`
+- `/auth/callback` (OAuth + email magic link callback)
 - `/dashboard` (protected)
 - `/billing/checkout`
 
+## Themes and grading
+
+- Global theme controls with mode (`System`, `Light`, `Dark`) and packs (`Sunrise`, `Ocean`, `Forest`, `Candy`, `Space`).
+- User theme preferences sync to `user_profiles` through `GET/PATCH /api/user/preferences`.
+- Learner-visible grade cards on `/dashboard`:
+  - Overall grade (A-F)
+  - Mastery score %
+  - Accuracy %
+  - Completed lesson count
+- Lesson quiz completion is student-friendly (stars/badges/progress); numeric grading remains available for analytics/reporting.
+
 Session cookie refresh proxy is configured in `src/proxy.ts`.
+
+Current sign-in methods on `/auth/sign-in`:
+
+- Email + password
+- Email magic link (OTP)
+- Phone OTP (SMS, via Supabase + Twilio)
+- OAuth: Google, Facebook, X (Twitter)
+
+Supabase auth provider setup checklist:
+
+- Add site URL and redirect URL: `http://localhost:3000/auth/callback` (plus your production callback URL).
+- Enable providers in Supabase Auth: Google, Facebook, Twitter.
+- Enable Email and Phone providers in Supabase Auth.
+- Configure Twilio credentials in Supabase Auth for phone OTP delivery.
+
+Owner operations (admin-only) include:
+
+- Create accounts
+- Password reset link generation
+- Reset learner progress/mastery
+- Delete accounts (soft/hard)
+- Process refunds (Stripe)
+- Issue promo codes and sales events (Stripe coupons/promotion codes)
+- Create new Stripe prices and set active default checkout price via `app_settings`
+- Resolve support tickets
+- Audit operational actions (`admin_action_logs`)
+- Process DSAR queue statuses from `/admin/compliance`
+- Update role flags explicitly (`is_admin`, `is_parent`)
+- Export signed CSV reports with checksum and export history
+- Monitor and acknowledge operational alerts
+
+App store readiness highlights:
+
+- In-app account deletion flow (`/account/settings` + `/api/account/delete`)
+- Child safety gates (age gate + parent consent)
+- Subscription checkout with promotion code support
+- Admin compliance checklist at `/admin/compliance`
+- Billing mode switch for store channels: `BILLING_PROVIDER_MODE`
+  - `stripe_external`: standard Stripe Checkout
+  - `app_store_iap`: blocks external checkout route for compliant app-store builds
+- Policy version acknowledgment recording via `policy_acceptances`
 
 Dashboard access includes an onboarding guard:
 
@@ -84,6 +184,17 @@ Tables included:
 - `parent_consents`
 - `subscriptions`
 - `dsar_requests`
+- `app_settings`
+- `admin_action_logs`
+- `support_tickets`
+- `sales_events`
+- `policy_acceptances`
+- `admin_alerts`
+- `admin_rate_limit_events`
+- `admin_report_exports`
+- `admin_approval_requests`
+- `admin_alert_notifications`
+- `admin_report_jobs`
 
 Includes baseline RLS policies and updated-at triggers.
 

@@ -3,6 +3,7 @@ import { DBSchema, IDBPDatabase, openDB } from "idb";
 type ProgressRecord = {
   lessonId: string;
   score: number;
+  totalQuestions: number;
   completedAt: string;
   synced: boolean;
 };
@@ -38,3 +39,9 @@ export async function getUnsyncedProgress() {
   const all = await db.getAll("lessonProgress");
   return all.filter((item) => !item.synced);
 }
+
+export async function deleteSyncedProgress(lessonId: string) {
+  const db = await getDb();
+  await db.delete("lessonProgress", lessonId);
+}
+

@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-main-idea",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Reading Comprehension: Main Idea and Supporting Details",
+  "title": "Finding the Main Idea",
+  "learningObjectives": [
+    "Determine the main idea of a text.",
+    "Explain how the main idea is supported by key details.",
+    "Summarize a text by identifying the main idea and key details."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "The main idea is the most important point the author is trying to make. Supporting details are facts and examples that explain the main idea."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/main-idea.svg",
+      "alt": "A diagram showing a main idea with several supporting details branching off."
+    },
+    {
+      "type": "text",
+      "body": "To find the main idea, look at the title, headings, and the first and last sentences of a paragraph. Ask yourself, \"What is this text mostly about?\""
+    }
+  ],
+  "quiz": {
+    "title": "Main Idea Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the main idea of a text?",
+        "type": "multiple-choice",
+        "options": [
+          "A small detail",
+          "The most important point",
+          "The title of the text"
+        ],
+        "correctAnswer": "The most important point"
+      },
+      {
+        "id": "q2",
+        "question": "What is the purpose of supporting details?",
+        "type": "multiple-choice",
+        "options": [
+          "To confuse the reader",
+          "To explain the main idea",
+          "To introduce a new topic"
+        ],
+        "correctAnswer": "To explain the main idea"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Encontrando la Idea Principal",
+      "content": [
+        {
+          "type": "text",
+          "body": "La idea principal es el punto más importante que el autor intenta comunicar. Los detalles de apoyo son hechos y ejemplos que explican la idea principal."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Idea Principal",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuál es la idea principal de un texto?",
+            "options": [
+              "Un pequeño detalle",
+              "El punto más importante",
+              "El título del texto"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuál es el propósito de los detalles de apoyo?",
+            "options": [
+              "Confundir al lector",
+              "Explicar la idea principal",
+              "Introducir un nuevo tema"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

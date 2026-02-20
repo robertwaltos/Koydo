@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-expository-writing",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Writing: Expository Writing",
+  "title": "Explain It! The Power of Expository Writing",
+  "learningObjectives": [
+    "Define expository writing and its purpose.",
+    "Differentiate between expository writing and other types of writing.",
+    "Structure an expository essay with an introduction, body paragraphs, and a conclusion."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Expository writing is all about explaining or informing. Its main purpose is to present information in a clear and organized way."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/expository-writing.svg",
+      "alt": "An icon representing an informational text with a title and paragraphs."
+    },
+    {
+      "type": "text",
+      "body": "Unlike narrative writing, which tells a story, or persuasive writing, which tries to convince you of something, expository writing presents facts and evidence to teach the reader about a topic."
+    }
+  ],
+  "quiz": {
+    "title": "Expository Writing Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What is the main purpose of expository writing?",
+        "type": "multiple-choice",
+        "options": [
+          "To tell a story",
+          "To explain or inform",
+          "To persuade the reader"
+        ],
+        "correctAnswer": "To explain or inform"
+      },
+      {
+        "id": "q2",
+        "question": "Which of these is an example of expository writing?",
+        "type": "multiple-choice",
+        "options": [
+          "A science textbook",
+          "A fictional story",
+          "A persuasive essay"
+        ],
+        "correctAnswer": "A science textbook"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "¡Explícalo! El Poder de la Escritura Expositiva",
+      "content": [
+        {
+          "type": "text",
+          "body": "La escritura expositiva se trata de explicar o informar. Su propósito principal es presentar información de una manera clara y organizada."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Escritura Expositiva",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuál es el propósito principal de la escritura expositiva?",
+            "options": [
+              "Contar una historia",
+              "Explicar o informar",
+              "Persuadir al lector"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuál de estos es un ejemplo de escritura expositiva?",
+            "options": [
+              "Un libro de texto de ciencias",
+              "Una historia de ficción",
+              "Un ensayo persuasivo"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

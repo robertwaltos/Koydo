@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-weather",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Weather",
+  "title": "Wonderful Weather",
+  "learningObjectives": [
+    "Identify different types of weather (sunny, rainy, cloudy, windy).",
+    "Describe what they see and feel during different weather conditions.",
+    "Understand that weather changes."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's learn about the weather! The weather is what it's like outside. Is it sunny, rainy, or cloudy today?"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/weather.svg",
+      "alt": "A collection of weather icons: a sun, a cloud, a raindrop, and a gust of wind."
+    },
+    {
+      "type": "text",
+      "body": "When it's sunny, we can play outside. When it's rainy, we need an umbrella."
+    }
+  ],
+  "quiz": {
+    "title": "Weather Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What do you need on a rainy day?",
+        "type": "multiple-choice",
+        "options": [
+          "An umbrella",
+          "Sunglasses",
+          "A kite"
+        ],
+        "correctAnswer": "An umbrella"
+      },
+      {
+        "id": "q2",
+        "question": "Which word describes a day with a lot of sun?",
+        "type": "multiple-choice",
+        "options": [
+          "Sunny",
+          "Cloudy",
+          "Windy"
+        ],
+        "correctAnswer": "Sunny"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "El Clima Maravilloso",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a aprender sobre el clima! El clima es cómo está afuera. ¿Está soleado, lluvioso o nublado hoy?"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba del Clima",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué necesitas en un día lluvioso?",
+            "options": [
+              "Un paraguas",
+              "Gafas de sol",
+              "Una cometa"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué palabra describe un día con mucho sol?",
+            "options": [
+              "Soleado",
+              "Nublado",
+              "Ventoso"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

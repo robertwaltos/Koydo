@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-science-plants",
+  "subject": "Science",
+  "gradeLevel": "Pre-K",
+  "topic": "Plants",
+  "title": "The World of Plants",
+  "learningObjectives": [
+    "Identify the basic parts of a plant (roots, stem, leaves, flower).",
+    "Understand that plants need sunlight and water to grow.",
+    "Describe different characteristics of plants."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's learn about plants! Plants are all around us, from the big trees to the little flowers."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/plants.svg",
+      "alt": "A simple drawing of a flower with roots, a stem, and leaves."
+    },
+    {
+      "type": "text",
+      "body": "Plants need sunlight and water to grow big and strong. We eat plants too, like apples and carrots!"
+    }
+  ],
+  "quiz": {
+    "title": "Plant Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "What part of the plant is usually underground?",
+        "type": "multiple-choice",
+        "options": [
+          "Roots",
+          "Stem",
+          "Leaves"
+        ],
+        "correctAnswer": "Roots"
+      },
+      {
+        "id": "q2",
+        "question": "What do plants need to grow?",
+        "type": "multiple-choice",
+        "options": [
+          "Toys and candy",
+          "Sunlight and water",
+          "Milk and cookies"
+        ],
+        "correctAnswer": "Sunlight and water"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "El Mundo de las Plantas",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a aprender sobre las plantas! Las plantas están a nuestro alrededor, desde los grandes árboles hasta las pequeñas flores."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Plantas",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué parte de la planta suele estar bajo tierra?",
+            "options": [
+              "Raíces",
+              "Tallo",
+              "Hojas"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué necesitan las plantas para crecer?",
+            "options": [
+              "Juguetes y dulces",
+              "Luz solar y agua",
+              "Leche y galletas"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

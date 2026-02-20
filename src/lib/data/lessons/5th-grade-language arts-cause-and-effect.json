@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-cause-and-effect",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Reading Comprehension: Cause and Effect",
+  "title": "Why Did It Happen? Understanding Cause and Effect",
+  "learningObjectives": [
+    "Define cause and effect.",
+    "Identify cause and effect relationships in a text.",
+    "Use signal words to identify cause and effect relationships."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "In stories and in real life, one event often leads to another. The \"cause\" is why something happens, and the \"effect\" is what happens as a result."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/cause-and-effect.svg",
+      "alt": "A diagram showing a cause leading to an effect with an arrow."
+    },
+    {
+      "type": "text",
+      "body": "Look for signal words like \"because,\" \"since,\" \"so,\" and \"as a result\" to help you find cause and effect relationships. For example: \"The plant died (effect) because it did not get enough water (cause).\""
+    }
+  ],
+  "quiz": {
+    "title": "Cause and Effect Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "In the sentence, \"I studied for the test, so I got a good grade,\" what is the cause?",
+        "type": "multiple-choice",
+        "options": [
+          "I got a good grade.",
+          "I studied for the test.",
+          "The test was easy."
+        ],
+        "correctAnswer": "I studied for the test."
+      },
+      {
+        "id": "q2",
+        "question": "Which of the following is a signal word for an effect?",
+        "type": "multiple-choice",
+        "options": [
+          "because",
+          "since",
+          "as a result"
+        ],
+        "correctAnswer": "as a result"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "¿Por qué sucedió? Entendiendo Causa y Efecto",
+      "content": [
+        {
+          "type": "text",
+          "body": "En las historias y en la vida real, un evento a menudo conduce a otro. La \"causa\" es por qué sucede algo, y el \"efecto\" es lo que sucede como resultado."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Causa y Efecto",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "En la oración, \"Estudié para el examen, así que saqué una buena nota\", ¿cuál es la causa?",
+            "options": [
+              "Saqué una buena nota.",
+              "Estudié para el examen.",
+              "El examen fue fácil."
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuál de las siguientes es una palabra de señal para un efecto?",
+            "options": [
+              "porque",
+              "ya que",
+              "como resultado"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

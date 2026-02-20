@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-punctuation-and-capitalization",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Grammar: Punctuation and Capitalization",
+  "title": "The Rules of Writing: Punctuation and Capitalization",
+  "learningObjectives": [
+    "Identify and use correct end-of-sentence punctuation (period, question mark, exclamation point).",
+    "Use commas correctly in a series, in dates, and in addresses.",
+    "Apply capitalization rules for the beginning of sentences, proper nouns, and titles."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Punctuation and capitalization are like traffic signals for writing. They tell the reader when to pause, when to stop, and what is important."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/punctuation-capitalization.svg",
+      "alt": "An icon showing a period, question mark, exclamation point, and a capital letter \"A\"."
+    },
+    {
+      "type": "text",
+      "body": "We use a period (.) at the end of a statement, a question mark (?) at the end of a question, and an exclamation point (!) to show strong feeling. We use capital letters for the first word of a sentence and for proper nouns like names and places."
+    }
+  ],
+  "quiz": {
+    "title": "Punctuation and Capitalization Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which sentence is punctuated correctly?",
+        "type": "multiple-choice",
+        "options": [
+          "Where are you going.",
+          "Where are you going?",
+          "Where are you going!"
+        ],
+        "correctAnswer": "Where are you going?"
+      },
+      {
+        "id": "q2",
+        "question": "Which word in the following sentence should be capitalized: \"my friend, sarah, is coming over.\"?",
+        "type": "multiple-choice",
+        "options": [
+          "my",
+          "friend",
+          "sarah"
+        ],
+        "correctAnswer": "sarah"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Las Reglas de la Escritura: Puntuación y Mayúsculas",
+      "content": [
+        {
+          "type": "text",
+          "body": "La puntuación y las mayúsculas son como las señales de tráfico para la escritura. Le dicen al lector cuándo hacer una pausa, cuándo detenerse y qué es importante."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Puntuación y Mayúsculas",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué oración está puntuada correctly?",
+            "options": [
+              "¿A dónde vas.",
+              "¿A dónde vas?",
+              "¡A dónde vas!"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué palabra en la siguiente oración debería ir en mayúscula: \"mi amiga, sarah, viene.\"?",
+            "options": [
+              "mi",
+              "amiga",
+              "sarah"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-context-clues",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Vocabulary: Context Clues",
+  "title": "Becoming a Word Detective: Using Context Clues",
+  "learningObjectives": [
+    "Define context clues and explain their importance.",
+    "Identify different types of context clues (definition, synonym, antonym, example, inference).",
+    "Use context clues to determine the meaning of unfamiliar words."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Have you ever come across a word you don't know while reading? You can be a word detective and use \"context clues\" to figure it out! Context clues are hints the author gives you in the surrounding text."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/context-clues.svg",
+      "alt": "A magnifying glass over a book, highlighting a word."
+    },
+    {
+      "type": "text",
+      "body": "There are different types of context clues. Sometimes the author gives a definition, a synonym (a word that means the same), an antonym (a word that means the opposite), an example, or you have to make an inference based on the information given."
+    }
+  ],
+  "quiz": {
+    "title": "Context Clues Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "In the sentence, \"The vibrant, or colorful, bird flew by,\" what type of context clue helps you understand the word \"vibrant\"?",
+        "type": "multiple-choice",
+        "options": [
+          "Synonym",
+          "Antonym",
+          "Example"
+        ],
+        "correctAnswer": "Synonym"
+      },
+      {
+        "id": "q2",
+        "question": "What are context clues?",
+        "type": "multiple-choice",
+        "options": [
+          "Words that are hard to read",
+          "Hints in the text that help you understand a word",
+          "Pictures in a book"
+        ],
+        "correctAnswer": "Hints in the text that help you understand a word"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Conviértete en un Detective de Palabras: Usando Pistas de Contexto",
+      "content": [
+        {
+          "type": "text",
+          "body": "¿Alguna vez te has encontrado con una palabra que no conoces mientras lees? ¡Puedes ser un detective de palabras y usar \"pistas de contexto\" para resolverlo! Las pistas de contexto son pistas que el autor te da en el texto circundante."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Pistas de Contexto",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "En la oración, \"El pájaro vibrante, o colorido, pasó volando\", ¿qué tipo de pista de contexto te ayuda a entender la palabra \"vibrante\"?",
+            "options": [
+              "Sinónimo",
+              "Antónimo",
+              "Ejemplo"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué son las pistas de contexto?",
+            "options": [
+              "Palabras difíciles de leer",
+              "Pistas en el texto que te ayudan a entender una palabra",
+              "Imágenes en un libro"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-math-money",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Money (pennies, nickels, dimes)",
+  "title": "Coin Collectors",
+  "learningObjectives": [
+    "Identify a penny, nickel, and dime by name.",
+    "Recognize the physical characteristics of each coin (size, color).",
+    "Sort pennies, nickels, and dimes."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's learn about money! We use coins to buy things. Today, we will learn about pennies, nickels, and dimes."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/coins.svg",
+      "alt": "A penny, a nickel, and a dime."
+    },
+    {
+      "type": "text",
+      "body": "A penny is brown. A nickel is bigger than a penny. A dime is the smallest."
+    }
+  ],
+  "quiz": {
+    "title": "Coin Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which coin is brown?",
+        "type": "multiple-choice",
+        "options": [
+          "Penny",
+          "Nickel",
+          "Dime"
+        ],
+        "correctAnswer": "Penny"
+      },
+      {
+        "id": "q2",
+        "question": "Which coin is the smallest?",
+        "type": "multiple-choice",
+        "options": [
+          "Penny",
+          "Nickel",
+          "Dime"
+        ],
+        "correctAnswer": "Dime"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Coleccionistas de Monedas",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a aprender sobre el dinero! Usamos monedas para comprar cosas. Hoy aprenderemos sobre los centavos, las monedas de cinco centavos y las monedas de diez centavos."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Monedas",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué moneda es de color café?",
+            "options": [
+              "Centavo",
+              "Moneda de cinco centavos",
+              "Moneda de diez centavos"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Qué moneda es la más pequeña?",
+            "options": [
+              "Centavo",
+              "Moneda de cinco centavos",
+              "Moneda de diez centavos"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

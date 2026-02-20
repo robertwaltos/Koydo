@@ -1,0 +1,88 @@
+{
+  "id": "pre-k-math-patterns",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Patterns",
+  "title": "Fun with Patterns!",
+  "learningObjectives": [
+    "Identify simple AB patterns.",
+    "Extend simple AB patterns.",
+    "Create simple AB patterns."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Patterns are all around us! A pattern is something that repeats. Let's look for patterns together!"
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/patterns.svg",
+      "alt": "A simple AB pattern with a red square and a blue circle."
+    },
+    {
+      "type": "text",
+      "body": "Look at the pattern: Red, Blue, Red, Blue. What comes next? That's right, Red!"
+    }
+  ],
+  "quiz": {
+    "title": "Pattern Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Look at the pattern: Circle, Square, Circle, Square. What comes next?",
+        "type": "multiple-choice",
+        "options": [
+          "Circle",
+          "Square",
+          "Triangle"
+        ],
+        "correctAnswer": "Circle"
+      },
+      {
+        "id": "q2",
+        "question": "Which of these is a pattern?",
+        "type": "multiple-choice",
+        "options": [
+          "Apple, Banana, Orange",
+          "Clap, Stomp, Clap, Stomp",
+          "Red, Green, Blue"
+        ],
+        "correctAnswer": "Clap, Stomp, Clap, Stomp"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "¡Diversión con Patrones!",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Los patrones están a nuestro alrededor! Un patrón es algo que se repite. ¡Busquemos patrones juntos!"
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Patrones",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "Mira el patrón: Círculo, Cuadrado, Círculo, Cuadrado. ¿Qué sigue?",
+            "options": [
+              "Círculo",
+              "Cuadrado",
+              "Triángulo"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuál de estos es un patrón?",
+            "options": [
+              "Manzana, Plátano, Naranja",
+              "Aplaude, Pisa, Aplaude, Pisa",
+              "Rojo, Verde, Azul"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

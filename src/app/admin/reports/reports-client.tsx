@@ -1,0 +1,104 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+
+type ReportJob = {
+  id: string;
+  report_type: string;
+  status: string;
+  run_after: string;
+  created_at: string;
+  started_at?: string | null;
+  completed_at?: string | null;
+  error?: string | null;
+};
+
+export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[] }) {
+  const [jobs, setJobs] = useState(initialJobs);
+  const [status, setStatus] = useState("");
+
+  const createJob = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("");
+    const form = new FormData(event.currentTarget);
+    try {
+      const response = await fetch("/api/admin/report-jobs", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          reportType: form.get("reportType"),
+          runAfterIso: form.get("runAfterIso") || undefined,
+        }),
+      });
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        job?: ReportJob;
+      };
+      if (!response.ok || !data.job) {
+        setStatus(data.error ?? "Unable to queue report job.");
+        return;
+      }
+      setJobs((previous) => [data.job!, ...previous]);
+      setStatus(`Queued job ${data.job.id}.`);
+      event.currentTarget.reset();
+    } catch {
+      setStatus("Unable to queue report job.");
+    }
+  };
+
+  const runQueued = async () => {
+    setStatus("");
+    try {
+      const response = await fetch("/api/admin/report-jobs/run", { method: "POST" });
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        processed?: number;
+      };
+      if (!response.ok) {
+        setStatus(data.error ?? "Unable to run report jobs.");
+        return;
+      }
+      setStatus(`Processed ${data.processed ?? 0} queued job(s). Refresh to view updated statuses.`);
+    } catch {
+      setStatus("Unable to run report jobs.");
+    }
+  };
+
+  return (
+    <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+      <h2 className="text-lg font-semibold">Report Job Queue</h2>
+      {status ? <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+
+      <form onSubmit={createJob} className="mt-3 grid gap-3 md:grid-cols-3">
+        <select name="reportType" className="rounded-md border border-black/15 px-3 py-2 text-sm">
+          <option value="dsar">DSAR</option>
+          <option value="support">Support</option>
+          <option value="audit">Audit</option>
+        </select>
+        <input name="runAfterIso" type="datetime-local" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
+        <button type="submit" className="rounded-md border border-black/15 px-4 py-2 text-sm">
+          Queue Job
+        </button>
+      </form>
+
+      <button type="button" onClick={runQueued} className="mt-3 rounded-md border border-black/15 px-4 py-2 text-sm">
+        Run Due Jobs Now
+      </button>
+
+      <div className="mt-4 space-y-2">
+        {jobs.map((job) => (
+          <article key={job.id} className="rounded-md border border-black/10 p-3 text-sm dark:border-white/10">
+            <p className="font-medium">
+              {job.report_type} ({job.status})
+            </p>
+            <p className="text-xs text-zinc-500">
+              run_after: {new Date(job.run_after).toLocaleString()} | created: {new Date(job.created_at).toLocaleString()}
+            </p>
+            {job.error ? <p className="text-xs text-red-600">{job.error}</p> : null}
+          </article>
+        ))}
+        {jobs.length === 0 ? <p className="text-sm text-zinc-500">No queued jobs.</p> : null}
+      </div>
+    </section>
+  );
+}

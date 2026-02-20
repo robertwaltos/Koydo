@@ -1,0 +1,83 @@
+{
+  "id": "pre-k-math-basic-shapes",
+  "subject": "Math",
+  "gradeLevel": "Pre-K",
+  "topic": "Basic Shapes",
+  "title": "Learning Basic Shapes",
+  "learningObjectives": [
+    "Identify circles, squares, and triangles.",
+    "Recognize basic shapes in everyday objects."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Let's learn about shapes! Shapes are all around us."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/shapes.svg",
+      "alt": "A circle, a square, and a triangle."
+    }
+  ],
+  "quiz": {
+    "title": "Shape Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which shape is round?",
+        "type": "multiple-choice",
+        "options": [
+          "Circle",
+          "Square",
+          "Triangle"
+        ],
+        "correctAnswer": "Circle"
+      },
+      {
+        "id": "q2",
+        "question": "How many sides does a square have?",
+        "type": "multiple-choice",
+        "options": [
+          "3",
+          "4",
+          "5"
+        ],
+        "correctAnswer": "4"
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Aprendiendo Formas Básicas",
+      "content": [
+        {
+          "type": "text",
+          "body": "¡Vamos a aprender sobre las formas! Las formas están a nuestro alrededor."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Formas",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Qué forma es redonda?",
+            "options": [
+              "Círculo",
+              "Cuadrado",
+              "Triángulo"
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuántos lados tiene un cuadrado?",
+            "options": [
+              "3",
+              "4",
+              "5"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

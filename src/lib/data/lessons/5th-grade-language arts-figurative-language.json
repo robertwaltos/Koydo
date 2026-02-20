@@ -1,0 +1,88 @@
+{
+  "id": "5th-grade-language arts-figurative-language",
+  "subject": "Language Arts",
+  "gradeLevel": "5th Grade",
+  "topic": "Figurative Language",
+  "title": "Unlocking Figurative Language",
+  "learningObjectives": [
+    "Define and identify similes, metaphors, and personification.",
+    "Interpret the meaning of figurative language in context.",
+    "Use figurative language in their own writing."
+  ],
+  "content": [
+    {
+      "type": "text",
+      "body": "Figurative language makes writing more interesting and vivid. It uses words in a non-literal way to create a special effect or meaning."
+    },
+    {
+      "type": "image",
+      "url": "/placeholders/figurative-language.svg",
+      "alt": "An icon representing different types of figurative language."
+    },
+    {
+      "type": "text",
+      "body": "A simile compares two things using 'like' or 'as' (e.g., 'as brave as a lion'). A metaphor directly compares two things (e.g., 'The world is a stage'). Personification gives human qualities to objects or animals (e.g., 'The wind whispered through the trees')."
+    }
+  ],
+  "quiz": {
+    "title": "Figurative Language Quiz",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Which of the following is a simile?",
+        "type": "multiple-choice",
+        "options": [
+          "The car was a furnace.",
+          "He is as strong as an ox.",
+          "The sun smiled down on us."
+        ],
+        "correctAnswer": "He is as strong as an ox."
+      },
+      {
+        "id": "q2",
+        "question": "What is the meaning of the metaphor 'The classroom was a zoo'?",
+        "type": "multiple-choice",
+        "options": [
+          "The classroom was full of animals.",
+          "The classroom was very chaotic and noisy.",
+          "The classroom was clean and organized."
+        ],
+        "correctAnswer": "The classroom was very chaotic and noisy."
+      }
+    ]
+  },
+  "multilingual": {
+    "es": {
+      "title": "Desbloqueando el Lenguaje Figurado",
+      "content": [
+        {
+          "type": "text",
+          "body": "El lenguaje figurado hace que la escritura sea más interesante y vívida. Usa palabras de una manera no literal para crear un efecto o significado especial."
+        }
+      ],
+      "quiz": {
+        "title": "Prueba de Lenguaje Figurado",
+        "questions": [
+          {
+            "id": "q1",
+            "question": "¿Cuál de los siguientes es un símil?",
+            "options": [
+              "El coche era un horno.",
+              "Es tan fuerte como un buey.",
+              "El sol nos sonrió."
+            ]
+          },
+          {
+            "id": "q2",
+            "question": "¿Cuál es el significado de la metáfora 'El aula era un zoológico'?",
+            "options": [
+              "El aula estaba llena de animales.",
+              "El aula era muy caótica y ruidosa.",
+              "El aula estaba limpia y organizada."
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
