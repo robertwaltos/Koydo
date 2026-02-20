@@ -21,6 +21,15 @@ export async function GET() {
     return NextResponse.json({ error: "Unauthorized." }, { status: 401 });
   }
 
+  const { data: parentProfile } = await supabase
+    .from("user_profiles")
+    .select("is_parent")
+    .eq("user_id", user.id)
+    .maybeSingle();
+  if (!parentProfile?.is_parent) {
+    return NextResponse.json({ error: "Parent access required." }, { status: 403 });
+  }
+
   const parentEmail = user.email?.trim().toLowerCase();
   if (!parentEmail) {
     return NextResponse.json({ reports: [] });
