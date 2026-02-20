@@ -117,6 +117,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `GET /api/ai/recommendations`
 - `POST /api/images/generate`
 - `GET /api/media/resolve`
+- `GET /api/media/resolve/batch`
 - `POST /api/stripe/checkout`
 - `POST /api/stripe/webhook`
 - `POST /api/compliance/age-gate`
