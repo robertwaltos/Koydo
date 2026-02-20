@@ -38,6 +38,12 @@ npm run dev
 
 `http://localhost:3000`
 
+Optional environment diagnostics:
+
+```bash
+npm run env:check
+```
+
 ## Continuous integration
 
 GitHub Actions workflow: `.github/workflows/ci.yml`
@@ -137,6 +143,17 @@ This generates:
 
 - `public/CURRICULUM-COVERAGE-REPORT.json`
 - `public/CURRICULUM-COVERAGE-REPORT.md`
+
+To audit lesson-content quality and placeholder risk across module catalog files:
+
+```bash
+npm run curriculum:quality
+```
+
+This generates:
+
+- `public/CURRICULUM-QUALITY-REPORT.json`
+- `public/CURRICULUM-QUALITY-REPORT.md`
 
 To generate a curriculum expansion plan against the target matrix:
 
