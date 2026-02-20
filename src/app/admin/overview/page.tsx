@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { loadCurriculumSummary } from "@/lib/admin/curriculum-summary";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
@@ -89,7 +90,6 @@ export default async function AdminOverviewPage() {
   mediaDayCutoffDate.setUTCHours(mediaDayCutoffDate.getUTCHours() - 24);
   const mediaDayCutoff = mediaDayCutoffDate.toISOString();
   const projectRoot = process.cwd();
-  const qualityReportPath = path.join(projectRoot, "public", "CURRICULUM-QUALITY-REPORT.json");
   const promptPackPath = path.join(projectRoot, "public", "LESSON-MEDIA-PROMPT-PACK.json");
 
   const [
@@ -103,7 +103,7 @@ export default async function AdminOverviewPage() {
     approvalsResult,
     currentMonthTokensResult,
     mediaSlaSettingsResult,
-    qualityReportRaw,
+    curriculumSummary,
     promptPackRaw,
   ] = await Promise.all([
     admin
@@ -158,13 +158,10 @@ export default async function AdminOverviewPage() {
         "report_queue_sla_backlog_limit",
         "report_queue_sla_failure_24h_limit",
       ]),
-    fs.readFile(qualityReportPath, "utf8").catch(() => '{"totals":{"averageScore":0,"modules":0}}'),
+    loadCurriculumSummary(projectRoot),
     fs.readFile(promptPackPath, "utf8").catch(() => '{"totals":{"lessons":0}}'),
   ]);
 
-  const qualityReport = JSON.parse(qualityReportRaw) as {
-    totals?: { averageScore?: number; modules?: number };
-  };
   const promptPack = JSON.parse(promptPackRaw) as {
     totals?: { lessons?: number };
   };
@@ -347,8 +344,20 @@ export default async function AdminOverviewPage() {
     },
     {
       title: "Curriculum Quality Score",
-      value: String(qualityReport.totals?.averageScore ?? 0),
-      subtext: `Across ${qualityReport.totals?.modules ?? 0} modules`,
+      value: String(curriculumSummary.quality.averageScore),
+      subtext: `${curriculumSummary.quality.highPriorityModules} high-priority modules across ${curriculumSummary.quality.modules} modules`,
+      href: "/admin/curriculum",
+    },
+    {
+      title: "Curriculum Coverage",
+      value: `${curriculumSummary.expansion.completionPercent}%`,
+      subtext: `${curriculumSummary.expansion.totalNeeded} lessons still needed to hit target matrix`,
+      href: "/admin/curriculum",
+    },
+    {
+      title: "Curriculum Report Freshness",
+      value: curriculumSummary.reports.stale ? "STALE" : "FRESH",
+      subtext: `Newest artifact age ${formatAgeFromIso(curriculumSummary.reports.newestGeneratedAt)}`,
       href: "/admin/curriculum",
     },
     {
