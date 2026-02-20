@@ -63,6 +63,8 @@ npm run dev
 - `GET /api/admin/reports/support`
 - `GET /api/admin/reports/audit`
 - `GET /api/admin/curriculum/coverage`
+- `GET/POST /api/admin/media/jobs`
+- `POST /api/admin/media/jobs/[jobId]/status`
 - `POST /api/admin/users/update-roles`
 - `GET/POST /api/admin/approvals`
 - `POST /api/admin/approvals/[approvalId]`
@@ -81,6 +83,7 @@ npm run dev
 - `/support` (user issue reporting and ticket tracking)
 - `/admin/operations` (owner/admin operations console)
 - `/admin/curriculum` (curriculum coverage and gap planning console)
+- `/admin/media` (AI media generation queue operations)
 - `/admin/compliance` (app store policy readiness checklist)
 - `/admin/reports` (CSV exports for DSAR/support/audit)
 - `/admin/alerts` (operational anomaly and rate-limit alerts)
@@ -231,6 +234,7 @@ Tables included:
 - `admin_approval_requests`
 - `admin_alert_notifications`
 - `admin_report_jobs`
+- `media_generation_jobs`
 
 Includes baseline RLS policies and updated-at triggers.
 

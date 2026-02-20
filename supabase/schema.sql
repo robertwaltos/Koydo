@@ -507,3 +507,69 @@ create table if not exists public.admin_report_jobs (
 alter table public.admin_approval_requests enable row level security;
 alter table public.admin_alert_notifications enable row level security;
 alter table public.admin_report_jobs enable row level security;
+
+create table if not exists public.media_generation_jobs (
+  id uuid primary key default gen_random_uuid(),
+  created_by uuid not null references auth.users(id) on delete cascade,
+  module_id text,
+  lesson_id text,
+  asset_type text not null,
+  provider text not null default 'seedance',
+  prompt text not null,
+  status text not null default 'queued',
+  output_url text,
+  error text,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  completed_at timestamptz,
+  constraint media_generation_jobs_asset_type_check
+    check (asset_type in ('video', 'animation', 'image')),
+  constraint media_generation_jobs_status_check
+    check (status in ('queued', 'running', 'completed', 'failed', 'canceled'))
+);
+
+drop trigger if exists media_generation_jobs_set_updated_at on public.media_generation_jobs;
+create trigger media_generation_jobs_set_updated_at
+before update on public.media_generation_jobs
+for each row execute function public.set_updated_at();
+
+alter table public.media_generation_jobs enable row level security;
+
+drop policy if exists "media_jobs_select_own_or_admin" on public.media_generation_jobs;
+create policy "media_jobs_select_own_or_admin"
+on public.media_generation_jobs
+for select
+to authenticated
+using (
+  auth.uid() = created_by
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+drop policy if exists "media_jobs_insert_own" on public.media_generation_jobs;
+create policy "media_jobs_insert_own"
+on public.media_generation_jobs
+for insert
+to authenticated
+with check (auth.uid() = created_by);
+
+drop policy if exists "media_jobs_update_admin_only" on public.media_generation_jobs;
+create policy "media_jobs_update_admin_only"
+on public.media_generation_jobs
+for update
+to authenticated
+using (
+  exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+)
+with check (
+  exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
