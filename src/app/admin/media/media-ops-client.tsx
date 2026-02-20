@@ -34,6 +34,8 @@ type PromptPack = {
   modules?: PromptModule[];
 };
 
+type AssetFilter = "all" | MediaJob["asset_type"];
+
 async function postJson(url: string, payload: unknown) {
   const response = await fetch(url, {
     method: "POST",
@@ -56,6 +58,13 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
   const [packLessonId, setPackLessonId] = useState("");
   const [packAssetType, setPackAssetType] = useState<MediaJob["asset_type"]>("video");
   const [packQueueLimit, setPackQueueLimit] = useState(50);
+  const [jobsLoading, setJobsLoading] = useState(false);
+  const [jobFilterModuleId, setJobFilterModuleId] = useState("");
+  const [jobFilterLessonId, setJobFilterLessonId] = useState("");
+  const [jobFilterAssetType, setJobFilterAssetType] = useState<AssetFilter>("all");
+  const [jobFilterLimit, setJobFilterLimit] = useState(100);
+  const [jobAutoRefresh, setJobAutoRefresh] = useState(true);
+  const [jobsLastUpdatedAt, setJobsLastUpdatedAt] = useState<string | null>(null);
 
   const queuedCount = useMemo(() => jobs.filter((job) => job.status === "queued").length, [jobs]);
   const runningCount = useMemo(() => jobs.filter((job) => job.status === "running").length, [jobs]);
@@ -67,6 +76,37 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
     () => selectedPromptModule?.lessons.find((entry) => entry.lessonId === packLessonId) ?? null,
     [packLessonId, selectedPromptModule],
   );
+  const selectedJobFilterModule = useMemo(
+    () => promptModules.find((entry) => entry.moduleId === jobFilterModuleId) ?? null,
+    [jobFilterModuleId, promptModules],
+  );
+
+  const refreshJobs = useCallback(async () => {
+    setJobsLoading(true);
+    try {
+      const params = new URLSearchParams({
+        limit: String(jobFilterLimit),
+      });
+      if (jobFilterModuleId) params.set("moduleId", jobFilterModuleId);
+      if (jobFilterLessonId) params.set("lessonId", jobFilterLessonId);
+      if (jobFilterAssetType !== "all") params.set("assetType", jobFilterAssetType);
+
+      const response = await fetch(`/api/admin/media/jobs?${params.toString()}`, {
+        method: "GET",
+        cache: "no-store",
+      });
+      const payload = (await response.json().catch(() => ({}))) as { jobs?: MediaJob[]; error?: string };
+      if (!response.ok) {
+        throw new Error(payload.error ?? "Failed to load jobs.");
+      }
+      setJobs(payload.jobs ?? []);
+      setJobsLastUpdatedAt(new Date().toISOString());
+    } catch (error) {
+      setStatus(error instanceof Error ? error.message : "Failed to load jobs.");
+    } finally {
+      setJobsLoading(false);
+    }
+  }, [jobFilterAssetType, jobFilterLessonId, jobFilterLimit, jobFilterModuleId]);
 
   const loadPromptPack = useCallback(async () => {
     if (promptModules.length > 0 || packLoading) return;
@@ -91,6 +131,19 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
   useEffect(() => {
     void loadPromptPack();
   }, [loadPromptPack]);
+
+  useEffect(() => {
+    void refreshJobs();
+  }, [refreshJobs]);
+
+  useEffect(() => {
+    if (!jobAutoRefresh) return;
+    const intervalId = window.setInterval(() => {
+      void refreshJobs();
+    }, 20000);
+
+    return () => window.clearInterval(intervalId);
+  }, [jobAutoRefresh, refreshJobs]);
 
   const handleQuickQueueFromPromptPack = async () => {
     if (!selectedPromptLesson || !packModuleId || !packLessonId) {
@@ -150,18 +203,14 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
     }
   };
 
-  const refreshJobs = async () => {
-    const response = await fetch("/api/admin/media/jobs", { method: "GET" });
-    const payload = (await response.json().catch(() => ({}))) as { jobs?: MediaJob[]; error?: string };
-    if (!response.ok) {
-      throw new Error(payload.error ?? "Failed to load jobs.");
-    }
-    setJobs(payload.jobs ?? []);
-  };
-
   const handleRunQueue = async () => {
     try {
-      const result = (await postJson("/api/admin/media/jobs/run", { batchSize: 10 })) as {
+      const result = (await postJson("/api/admin/media/jobs/run", {
+        batchSize: 10,
+        moduleId: jobFilterModuleId || undefined,
+        lessonId: jobFilterLessonId || undefined,
+        assetType: jobFilterAssetType === "all" ? undefined : jobFilterAssetType,
+      })) as {
         processed?: number;
         completed?: number;
         failed?: number;
@@ -322,7 +371,7 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
               className="rounded-md bg-indigo-600 px-3 py-1 text-sm text-white hover:bg-indigo-500"
               onClick={() => void handleRunQueue()}
             >
-              Process Queue
+              Process Filtered Queue
             </button>
             <button
               type="button"
@@ -333,8 +382,70 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
             </button>
           </div>
         </div>
+        <div className="mt-3 grid gap-2 md:grid-cols-5">
+          <select
+            className="rounded-md border border-black/15 px-2 py-2 text-sm"
+            value={jobFilterModuleId}
+            onChange={(event) => {
+              const nextModuleId = event.target.value;
+              setJobFilterModuleId(nextModuleId);
+              setJobFilterLessonId("");
+            }}
+          >
+            <option value="">{packLoading ? "Loading modules..." : "All modules"}</option>
+            {promptModules.map((moduleEntry) => (
+              <option key={moduleEntry.moduleId} value={moduleEntry.moduleId}>
+                {moduleEntry.moduleTitle}
+              </option>
+            ))}
+          </select>
+          <select
+            className="rounded-md border border-black/15 px-2 py-2 text-sm"
+            value={jobFilterLessonId}
+            onChange={(event) => setJobFilterLessonId(event.target.value)}
+          >
+            <option value="">{selectedJobFilterModule ? "All lessons in module" : "All lessons"}</option>
+            {(selectedJobFilterModule?.lessons ?? []).map((lesson) => (
+              <option key={lesson.lessonId} value={lesson.lessonId}>
+                {lesson.lessonTitle}
+              </option>
+            ))}
+          </select>
+          <select
+            className="rounded-md border border-black/15 px-2 py-2 text-sm"
+            value={jobFilterAssetType}
+            onChange={(event) => setJobFilterAssetType(event.target.value as AssetFilter)}
+          >
+            <option value="all">All asset types</option>
+            <option value="video">Video</option>
+            <option value="animation">Animation</option>
+            <option value="image">Image</option>
+          </select>
+          <label className="flex items-center gap-2 rounded-md border border-black/15 px-2 py-2 text-sm">
+            <span className="text-xs text-zinc-600">Limit</span>
+            <input
+              type="number"
+              min={1}
+              max={200}
+              value={jobFilterLimit}
+              onChange={(event) =>
+                setJobFilterLimit(Math.max(1, Math.min(200, Number(event.target.value) || 1)))
+              }
+              className="w-20 rounded border border-black/15 px-2 py-1 text-xs"
+            />
+          </label>
+          <label className="flex items-center gap-2 rounded-md border border-black/15 px-2 py-2 text-sm">
+            <input
+              type="checkbox"
+              checked={jobAutoRefresh}
+              onChange={(event) => setJobAutoRefresh(event.target.checked)}
+            />
+            Auto-refresh
+          </label>
+        </div>
         <p className="mt-2 text-xs text-zinc-600">
-          Queued: {queuedCount} | Running: {runningCount} | Total: {jobs.length}
+          {jobsLoading ? "Loading jobs..." : `Queued: ${queuedCount} | Running: ${runningCount} | Total: ${jobs.length}`}
+          {jobsLastUpdatedAt ? ` | Updated: ${new Date(jobsLastUpdatedAt).toLocaleTimeString()}` : ""}
         </p>
         {status ? <p className="mt-2 text-sm text-indigo-700">{status}</p> : null}
 
