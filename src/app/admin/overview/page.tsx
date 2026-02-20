@@ -1,3 +1,5 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
@@ -42,6 +44,9 @@ export default async function AdminOverviewPage() {
   const dsarCutoffDate = new Date();
   dsarCutoffDate.setUTCDate(dsarCutoffDate.getUTCDate() - 7);
   const dsarCutoff = dsarCutoffDate.toISOString();
+  const projectRoot = process.cwd();
+  const qualityReportPath = path.join(projectRoot, "public", "CURRICULUM-QUALITY-REPORT.json");
+  const promptPackPath = path.join(projectRoot, "public", "LESSON-MEDIA-PROMPT-PACK.json");
 
   const [
     supportCountsResult,
@@ -50,6 +55,8 @@ export default async function AdminOverviewPage() {
     alertsResult,
     approvalsResult,
     currentMonthTokensResult,
+    qualityReportRaw,
+    promptPackRaw,
   ] = await Promise.all([
     admin
       .from("support_tickets")
@@ -75,7 +82,16 @@ export default async function AdminOverviewPage() {
       .from("user_tokens")
       .select("user_id, spent_usd")
       .eq("month_key", currentMonth),
+    fs.readFile(qualityReportPath, "utf8").catch(() => '{"totals":{"averageScore":0,"modules":0}}'),
+    fs.readFile(promptPackPath, "utf8").catch(() => '{"totals":{"lessons":0}}'),
   ]);
+
+  const qualityReport = JSON.parse(qualityReportRaw) as {
+    totals?: { averageScore?: number; modules?: number };
+  };
+  const promptPack = JSON.parse(promptPackRaw) as {
+    totals?: { lessons?: number };
+  };
 
   const supportRows = supportCountsResult.data ?? [];
   const openTickets = supportRows.filter((row) => row.status === "open" || row.status === "in_progress").length;
@@ -122,6 +138,18 @@ export default async function AdminOverviewPage() {
       value: `$${totalCost.toFixed(2)}`,
       subtext: `Avg/user: $${avgCostPerUser.toFixed(4)}`,
       href: "/admin/costs",
+    },
+    {
+      title: "Curriculum Quality Score",
+      value: String(qualityReport.totals?.averageScore ?? 0),
+      subtext: `Across ${qualityReport.totals?.modules ?? 0} modules`,
+      href: "/admin/curriculum",
+    },
+    {
+      title: "Lesson Prompt Coverage",
+      value: String(promptPack.totals?.lessons ?? 0),
+      subtext: "Lessons with generated media prompts",
+      href: "/admin/media",
     },
   ];
 
