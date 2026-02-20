@@ -1,9 +1,12 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 const imageGenerateSchema = z.object({
   prompt: z.string().min(10, "Prompt must be at least 10 characters long."),
+  moduleId: z.string().min(1).optional(),
+  lessonId: z.string().min(1).optional(),
 });
 
 // A basic in-memory cache to avoid re-generating the same image
@@ -32,30 +35,72 @@ export async function POST(request: Request) {
     }
 
     const { prompt } = validation.data;
+    const moduleId = validation.data.moduleId?.trim() || null;
+    const lessonId = validation.data.lessonId?.trim() || null;
+    const cacheKey = [prompt, moduleId ?? "", lessonId ?? ""].join("::");
 
     // Check cache first
-    if (imageCache.has(prompt)) {
-      return NextResponse.json({ url: imageCache.get(prompt) });
+    if (imageCache.has(cacheKey)) {
+      return NextResponse.json({ url: imageCache.get(cacheKey) });
     }
 
-    // --- MOCK API CALL ---
-    console.log("--- Mock Image Generation ---");
-    console.log("User:", user.id);
-    console.log("Prompt:", prompt);
-    console.log("-----------------------------");
+    const admin = createSupabaseAdminClient();
 
-    // Simulate network delay for image generation
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const completedQuery = admin
+      .from("media_generation_jobs")
+      .select("output_url, prompt")
+      .eq("asset_type", "image")
+      .eq("status", "completed")
+      .order("completed_at", { ascending: false })
+      .limit(1);
 
-    // In a real app, you would call an external API like Replicate or Hugging Face.
-    // Here, we just return a static placeholder.
-    const imageUrl = "/placeholders/lesson-robot.svg";
+    const completedScopedQuery = lessonId
+      ? completedQuery.eq("lesson_id", lessonId)
+      : moduleId
+        ? completedQuery.eq("module_id", moduleId)
+        : completedQuery.eq("prompt", prompt);
 
-    // Cache the result
-    imageCache.set(prompt, imageUrl);
-    // --- END MOCK API CALL ---
+    const { data: completedRows } = await completedScopedQuery;
+    const completedUrl = completedRows?.[0]?.output_url ?? null;
+    if (completedUrl) {
+      imageCache.set(cacheKey, completedUrl);
+      return NextResponse.json({ url: completedUrl, queued: false });
+    }
 
-    return NextResponse.json({ url: imageUrl });
+    const existingPendingQuery = admin
+      .from("media_generation_jobs")
+      .select("id")
+      .eq("asset_type", "image")
+      .in("status", ["queued", "running"])
+      .limit(1);
+
+    const pendingScopedQuery = lessonId
+      ? existingPendingQuery.eq("lesson_id", lessonId)
+      : moduleId
+        ? existingPendingQuery.eq("module_id", moduleId)
+        : existingPendingQuery.eq("prompt", prompt);
+
+    const { data: pendingRows } = await pendingScopedQuery;
+
+    if (!pendingRows || pendingRows.length === 0) {
+      await admin.from("media_generation_jobs").insert({
+        created_by: user.id,
+        module_id: moduleId,
+        lesson_id: lessonId,
+        asset_type: "image",
+        provider: "seedance",
+        prompt,
+        status: "queued",
+        metadata: {
+          requested_via: "api/images/generate",
+        },
+      });
+    }
+
+    const placeholderUrl = "/placeholders/lesson-robot.svg";
+    imageCache.set(cacheKey, placeholderUrl);
+
+    return NextResponse.json({ url: placeholderUrl, queued: true });
   } catch (err) {
     console.error("Unexpected error in image generation route:", err);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

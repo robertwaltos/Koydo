@@ -55,6 +55,7 @@ Checks on push/PR:
 - `GET/PATCH /api/user/preferences`
 - `GET /api/ai/analyze` (schema info)
 - `POST /api/ai/analyze` (budget-aware recommendation mock)
+- `POST /api/images/generate`
 - `POST /api/stripe/checkout`
 - `POST /api/stripe/webhook`
 - `POST /api/compliance/age-gate`
@@ -210,6 +211,11 @@ Current sign-in methods on `/auth/sign-in`:
 - Email magic link (OTP)
 - Phone OTP (SMS, via Supabase + Twilio)
 - OAuth: Google, Facebook, X (Twitter)
+
+Image generation behavior:
+
+- `POST /api/images/generate` checks completed `media_generation_jobs` first.
+- If no completed image exists, it queues an image job and returns a placeholder until processing completes.
 
 Supabase auth provider setup checklist:
 
