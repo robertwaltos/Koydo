@@ -13,6 +13,28 @@ function monthKeyFromDate(date: Date) {
   return `${year}-${month}`;
 }
 
+function formatAgeFromIso(isoTimestamp: string | null) {
+  if (!isoTimestamp) return "n/a";
+  const createdAt = new Date(isoTimestamp);
+  if (Number.isNaN(createdAt.getTime())) return "n/a";
+
+  const diffMs = Date.now() - createdAt.getTime();
+  if (diffMs < 0) return "<1m";
+
+  const diffMinutes = Math.floor(diffMs / (1000 * 60));
+  if (diffMinutes < 60) {
+    return `${diffMinutes}m`;
+  }
+
+  const diffHours = Math.floor(diffMinutes / 60);
+  if (diffHours < 24) {
+    return `${diffHours}h`;
+  }
+
+  const diffDays = Math.floor(diffHours / 24);
+  return `${diffDays}d`;
+}
+
 export default async function AdminOverviewPage() {
   const supabase = await createSupabaseServerClient();
   const {
@@ -44,6 +66,9 @@ export default async function AdminOverviewPage() {
   const dsarCutoffDate = new Date();
   dsarCutoffDate.setUTCDate(dsarCutoffDate.getUTCDate() - 7);
   const dsarCutoff = dsarCutoffDate.toISOString();
+  const mediaDayCutoffDate = new Date();
+  mediaDayCutoffDate.setUTCHours(mediaDayCutoffDate.getUTCHours() - 24);
+  const mediaDayCutoff = mediaDayCutoffDate.toISOString();
   const projectRoot = process.cwd();
   const qualityReportPath = path.join(projectRoot, "public", "CURRICULUM-QUALITY-REPORT.json");
   const promptPackPath = path.join(projectRoot, "public", "LESSON-MEDIA-PROMPT-PACK.json");
@@ -52,6 +77,9 @@ export default async function AdminOverviewPage() {
     supportCountsResult,
     dsarBacklogResult,
     mediaQueueResult,
+    mediaCompleted24hResult,
+    mediaFailed24hResult,
+    mediaOldestQueuedResult,
     alertsResult,
     approvalsResult,
     currentMonthTokensResult,
@@ -70,6 +98,23 @@ export default async function AdminOverviewPage() {
       .from("media_generation_jobs")
       .select("status", { count: "exact" })
       .in("status", ["queued", "running"]),
+    admin
+      .from("media_generation_jobs")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "completed")
+      .gte("completed_at", mediaDayCutoff),
+    admin
+      .from("media_generation_jobs")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "failed")
+      .gte("completed_at", mediaDayCutoff),
+    admin
+      .from("media_generation_jobs")
+      .select("created_at")
+      .eq("status", "queued")
+      .order("created_at", { ascending: true })
+      .limit(1)
+      .maybeSingle(),
     admin
       .from("admin_alerts")
       .select("id", { count: "exact", head: true })
@@ -101,6 +146,9 @@ export default async function AdminOverviewPage() {
   const totalCost = tokens.reduce((acc, row) => acc + Number(row.spent_usd ?? 0), 0);
   const activeUsers = new Set(tokens.map((row) => row.user_id)).size;
   const avgCostPerUser = activeUsers > 0 ? totalCost / activeUsers : 0;
+  const oldestQueuedAge = formatAgeFromIso(mediaOldestQueuedResult.data?.created_at ?? null);
+  const mediaCompleted24h = mediaCompleted24hResult.count ?? 0;
+  const mediaFailed24h = mediaFailed24hResult.count ?? 0;
 
   const cards = [
     {
@@ -118,7 +166,13 @@ export default async function AdminOverviewPage() {
     {
       title: "Media Queue Load",
       value: String(mediaQueueResult.count ?? 0),
-      subtext: "Queued or running jobs",
+      subtext: `Queued/running jobs · oldest queued ${oldestQueuedAge}`,
+      href: "/admin/media",
+    },
+    {
+      title: "Media Throughput (24h)",
+      value: String(mediaCompleted24h),
+      subtext: `Completed jobs · failed ${mediaFailed24h}`,
       href: "/admin/media",
     },
     {
