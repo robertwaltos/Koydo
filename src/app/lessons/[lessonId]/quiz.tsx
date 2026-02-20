@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Lesson, Question } from "@/lib/data/curriculum";
 import { trackLessonCompleted } from "@/lib/analytics/mixpanel";
+import { saveOfflineProgress } from "@/lib/offline/progress-db";
 import Link from "next/link";
 
 export default function Quiz({ lesson }: { lesson: Lesson & { questions: Question[] } }) {
-  const [startTime] = useState(() => Date.now());
+  const [startTime, setStartTime] = useState(() => Date.now());
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -14,6 +15,8 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
+  const [progressSyncState, setProgressSyncState] = useState<"idle" | "syncing" | "synced" | "queued">("idle");
+  const completionPersistedRef = useRef(false);
 
   const currentQuestion = lesson.questions[currentQuestionIndex];
   const isQuizFinished = currentQuestionIndex >= lesson.questions.length;
@@ -22,15 +25,58 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
     scorePercent >= 90 ? "A" : scorePercent >= 80 ? "B" : scorePercent >= 70 ? "C" : scorePercent >= 60 ? "D" : "F";
 
   useEffect(() => {
-    if (isQuizFinished) {
-      // Track analytics for the whole lesson completion
-      trackLessonCompleted({
-        lessonId: lesson.id,
-        score: score,
-        timeSpentSeconds: Math.round((Date.now() - startTime) / 1000),
-      });
+    if (!isQuizFinished || completionPersistedRef.current) {
+      return;
     }
-  }, [isQuizFinished, lesson.id, score, startTime]);
+
+    completionPersistedRef.current = true;
+    const completedAt = new Date().toISOString();
+
+    // Track analytics for the whole lesson completion.
+    trackLessonCompleted({
+      lessonId: lesson.id,
+      score,
+      timeSpentSeconds: Math.round((Date.now() - startTime) / 1000),
+    });
+
+    const syncProgress = async () => {
+      setProgressSyncState("syncing");
+      try {
+        const response = await fetch("/api/progress", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            lessonId: lesson.id,
+            scorePercentage: lesson.questions.length > 0 ? score / lesson.questions.length : 0,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Progress sync failed: ${response.status}`);
+        }
+
+        setProgressSyncState("synced");
+      } catch (error) {
+        console.error("Unable to sync lesson progress online. Saving offline.", error);
+        try {
+          await saveOfflineProgress({
+            lessonId: lesson.id,
+            score,
+            totalQuestions: lesson.questions.length,
+            completedAt,
+            synced: false,
+          });
+        } catch (offlineError) {
+          console.error("Unable to save lesson progress offline.", offlineError);
+        }
+        setProgressSyncState("queued");
+      }
+    };
+
+    void syncProgress();
+  }, [isQuizFinished, lesson.id, lesson.questions.length, score, startTime]);
 
   const handleOptionSelect = (optionId: string) => {
     if (isAnswered) return;
@@ -87,6 +133,9 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
     setLastAnswerCorrect(null);
     setIsAnswered(false);
     setSelectedOptionId(null);
+    setProgressSyncState("idle");
+    setStartTime(Date.now());
+    completionPersistedRef.current = false;
   };
 
   const progressPercent = Math.round((currentQuestionIndex / lesson.questions.length) * 100);
@@ -152,6 +201,17 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
               Next Lesson
             </Link>
           </div>
+          {progressSyncState === "syncing" ? (
+            <p className="text-xs text-zinc-500">Saving your learning progress...</p>
+          ) : null}
+          {progressSyncState === "synced" ? (
+            <p className="text-xs text-emerald-700 dark:text-emerald-300">Progress saved to your account.</p>
+          ) : null}
+          {progressSyncState === "queued" ? (
+            <p className="text-xs text-amber-700 dark:text-amber-300">
+              Progress saved offline and will sync when your connection is restored.
+            </p>
+          ) : null}
         </div>
       </div>
     );
