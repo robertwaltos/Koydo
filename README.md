@@ -78,6 +78,7 @@ Checks on push/PR:
 Ops workflow output:
 
 - Uploads an `ops-report-bundle` artifact with curriculum/media/compliance/prompt-pack reports.
+- Processes due `admin_report_jobs` queue entries into `admin_report_exports` rows.
 
 Media automation workflow behavior:
 
@@ -279,6 +280,18 @@ Process queued/failed alert notifications:
 
 ```bash
 npm run alerts:notifications -- --apply --limit 200 --retry-failed
+```
+
+Process due admin report jobs (dry-run by default):
+
+```bash
+npm run report-jobs:process
+```
+
+Apply status updates and export inserts:
+
+```bash
+node scripts/process-report-jobs.mjs --apply --limit 50
 ```
 
 Optional `app_settings` keys for media queue SLA thresholds:
