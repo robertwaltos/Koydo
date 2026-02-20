@@ -8,6 +8,7 @@ import InteractiveActivity from "./interactive-activity";
 import { buildSeedanceAnimationPrompt, buildSeedanceVideoPrompt } from "@/lib/media/seedance-prompts";
 import LessonMediaOps from "./lesson-media-ops";
 import VideoLessonPlayer from "./video-lesson-player";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export default function LessonPage({
   params,
@@ -33,6 +34,23 @@ async function LessonPageContent({
   if (resolvedParams.lessonId !== lesson.id) {
     redirect(`/lessons/${lesson.id}`);
   }
+
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser();
+
+  let isAdmin = false;
+  if (!userError && user) {
+    const { data: profile } = await supabase
+      .from("user_profiles")
+      .select("is_admin")
+      .eq("user_id", user.id)
+      .maybeSingle();
+    isAdmin = Boolean(profile?.is_admin);
+  }
+
   const lessonImagePrompt = `Create a warm, child-friendly educational illustration for a ${learningModule.subject} lesson about ${lesson.title}. Style: clean 2D digital illustration, soft shapes, high readability.`;
   const seedanceVideoPrompt = buildSeedanceVideoPrompt(learningModule, lesson);
   const seedanceAnimationPrompt = buildSeedanceAnimationPrompt(learningModule, lesson);
@@ -129,21 +147,23 @@ async function LessonPageContent({
         </section>
       ) : null}
 
-      <section className="rounded-3xl border border-amber-200 bg-amber-50 p-4 shadow-sm sm:p-6">
-        <h2 className="text-xl font-bold text-amber-900">Seedance 2.0 Production Prompts</h2>
-        <p className="mt-1 text-sm text-amber-800">
-          Use these placeholders to generate final video and animation assets for this lesson.
-        </p>
-        <div className="mt-3">
-          <LessonMediaOps
-            moduleId={learningModule.id}
-            lessonId={lesson.id}
-            videoPrompt={seedanceVideoPrompt}
-            animationPrompt={seedanceAnimationPrompt}
-            imagePrompt={lessonImagePrompt}
-          />
-        </div>
-      </section>
+      {isAdmin ? (
+        <section className="rounded-3xl border border-amber-200 bg-amber-50 p-4 shadow-sm sm:p-6">
+          <h2 className="text-xl font-bold text-amber-900">Seedance 2.0 Production Prompts</h2>
+          <p className="mt-1 text-sm text-amber-800">
+            Use these placeholders to generate final video and animation assets for this lesson.
+          </p>
+          <div className="mt-3">
+            <LessonMediaOps
+              moduleId={learningModule.id}
+              lessonId={lesson.id}
+              videoPrompt={seedanceVideoPrompt}
+              animationPrompt={seedanceAnimationPrompt}
+              imagePrompt={lessonImagePrompt}
+            />
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }
