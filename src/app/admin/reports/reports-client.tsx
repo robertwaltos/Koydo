@@ -22,13 +22,21 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
     event.preventDefault();
     setStatus("");
     const form = new FormData(event.currentTarget);
+    const runAfterRaw = String(form.get("runAfterIso") ?? "").trim();
+    const runAfterDate = runAfterRaw ? new Date(runAfterRaw) : null;
+    if (runAfterRaw && (!runAfterDate || Number.isNaN(runAfterDate.getTime()))) {
+      setStatus("Invalid run-after datetime.");
+      return;
+    }
+    const runAfterIso = runAfterDate ? runAfterDate.toISOString() : undefined;
+
     try {
       const response = await fetch("/api/admin/report-jobs", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           reportType: form.get("reportType"),
-          runAfterIso: form.get("runAfterIso") || undefined,
+          runAfterIso,
         }),
       });
       const data = (await response.json().catch(() => ({}))) as {

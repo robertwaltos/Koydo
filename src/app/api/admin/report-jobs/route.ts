@@ -5,7 +5,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 const createSchema = z.object({
   reportType: z.enum(["dsar", "support", "audit"]),
-  runAfterIso: z.string().datetime().optional(),
+  runAfterIso: z.string().optional(),
 });
 
 export async function GET() {
@@ -40,7 +40,15 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid payload", details: parsed.error.flatten() }, { status: 400 });
   }
 
-  const runAfter = parsed.data.runAfterIso ?? new Date().toISOString();
+  let runAfter = new Date().toISOString();
+  if (parsed.data.runAfterIso) {
+    const parsedRunAfter = new Date(parsed.data.runAfterIso);
+    if (Number.isNaN(parsedRunAfter.getTime())) {
+      return NextResponse.json({ error: "Invalid runAfterIso datetime." }, { status: 400 });
+    }
+    runAfter = parsedRunAfter.toISOString();
+  }
+
   const admin = createSupabaseAdminClient();
   const { data, error } = await admin
     .from("admin_report_jobs")
