@@ -10,6 +10,7 @@ import ThemeControls from "./theme-controls";
 const publicNavItems = [
   { href: "/", labelKey: "nav_home" },
   { href: "/modules", labelKey: "nav_modules" },
+  { href: "/exam-prep", labelKey: "nav_exam_prep" },
   { href: "/science-lab", labelKey: "nav_science_lab" },
 ] as const;
 

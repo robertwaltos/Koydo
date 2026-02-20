@@ -77,6 +77,7 @@ npm run dev
 
 - `/science-lab` (Apple Vision/WebXR capability foundation)
 - `/modules` (dynamic module catalog from central registry)
+- `/exam-prep` (global exam-preparation pathways)
 - `/support` (user issue reporting and ticket tracking)
 - `/admin/operations` (owner/admin operations console)
 - `/admin/curriculum` (curriculum coverage and gap planning console)
@@ -97,6 +98,7 @@ To add a new learning module with minimal changes:
 1. Create a module file in `src/lib/modules/catalog/` using `module-template.example.ts`.
 2. Export a typed `LearningModule` object with metadata + lessons.
 3. Run `npm run modules:sync` to regenerate the validated registry.
+4. Optional: run `npm run modules:generate:exams` to add SAT/ACT/AP/GCSE/A-Level/JEE-NEET/Gaokao tracks.
 
 To inspect curriculum breadth and identify coverage gaps:
 

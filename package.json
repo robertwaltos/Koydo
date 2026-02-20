@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "modules:generate:exams": "node scripts/generate-exam-modules.mjs",
     "modules:sync": "node scripts/sync-modules.mjs",
     "curriculum:report": "node scripts/curriculum-coverage-report.mjs",
     "curriculum:plan": "npm run curriculum:report && node scripts/curriculum-expansion-plan.mjs",
