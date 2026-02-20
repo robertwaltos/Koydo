@@ -59,6 +59,10 @@ export async function POST(request: Request) {
 
   const assetType = String(body.assetType ?? "").trim();
   const prompt = String(body.prompt ?? "").trim();
+  const moduleId = body.moduleId ? String(body.moduleId).trim() : "";
+  const lessonId = body.lessonId ? String(body.lessonId).trim() : "";
+  const provider = body.provider ? String(body.provider).trim() : "seedance";
+
   if (!["video", "animation", "image"].includes(assetType)) {
     return NextResponse.json({ error: "assetType must be video, animation, or image." }, { status: 400 });
   }
@@ -67,14 +71,35 @@ export async function POST(request: Request) {
   }
 
   const admin = createSupabaseAdminClient();
+  if (moduleId && lessonId) {
+    const { data: existingJob, error: existingJobError } = await admin
+      .from("media_generation_jobs")
+      .select("id, status")
+      .eq("module_id", moduleId)
+      .eq("lesson_id", lessonId)
+      .eq("asset_type", assetType)
+      .in("status", ["queued", "running", "completed"])
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+
+    if (existingJobError) {
+      return NextResponse.json({ error: existingJobError.message }, { status: 500 });
+    }
+
+    if (existingJob) {
+      return NextResponse.json({ duplicate: true, job: existingJob });
+    }
+  }
+
   const { data, error } = await admin
     .from("media_generation_jobs")
     .insert({
       created_by: adminUserId,
-      module_id: body.moduleId ? String(body.moduleId).trim() : null,
-      lesson_id: body.lessonId ? String(body.lessonId).trim() : null,
+      module_id: moduleId || null,
+      lesson_id: lessonId || null,
       asset_type: assetType,
-      provider: body.provider ? String(body.provider).trim() : "seedance",
+      provider,
       prompt,
       status: "queued",
       metadata: body.metadata ?? {},

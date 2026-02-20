@@ -6,6 +6,7 @@ import Quiz from "./quiz";
 import LessonImage from "./lesson-image";
 import InteractiveActivity from "./interactive-activity";
 import { buildSeedanceAnimationPrompt, buildSeedanceVideoPrompt } from "@/lib/media/seedance-prompts";
+import LessonMediaOps from "./lesson-media-ops";
 
 export default function LessonPage({
   params,
@@ -28,6 +29,7 @@ async function LessonPageContent({
   }
 
   const { lesson, learningModule } = resolvedLesson;
+  const lessonImagePrompt = `Create a warm, child-friendly educational illustration for a ${learningModule.subject} lesson about ${lesson.title}. Style: clean 2D digital illustration, soft shapes, high readability.`;
   const seedanceVideoPrompt = buildSeedanceVideoPrompt(learningModule, lesson);
   const seedanceAnimationPrompt = buildSeedanceAnimationPrompt(learningModule, lesson);
   const activityPrompts =
@@ -100,9 +102,7 @@ async function LessonPageContent({
       </header>
 
       <section className="rounded-3xl border border-border bg-surface p-4 shadow-sm sm:p-6">
-        <LessonImage
-          prompt={`Create a warm, child-friendly educational illustration for a ${learningModule.subject} lesson about ${lesson.title}. Style: clean 2D digital illustration, soft shapes, high readability.`}
-        />
+        <LessonImage prompt={lessonImagePrompt} />
       </section>
 
       <section className="rounded-3xl border border-border bg-surface p-4 shadow-sm sm:p-6">{renderContent()}</section>
@@ -127,14 +127,15 @@ async function LessonPageContent({
         <p className="mt-1 text-sm text-amber-800">
           Use these placeholders to generate final video and animation assets for this lesson.
         </p>
-        <article className="mt-3 rounded-xl border border-amber-200 bg-white p-4">
-          <h3 className="text-sm font-semibold text-zinc-900">Video Prompt</h3>
-          <p className="mt-2 text-xs text-zinc-700">{seedanceVideoPrompt}</p>
-        </article>
-        <article className="mt-3 rounded-xl border border-amber-200 bg-white p-4">
-          <h3 className="text-sm font-semibold text-zinc-900">Animation Prompt</h3>
-          <p className="mt-2 text-xs text-zinc-700">{seedanceAnimationPrompt}</p>
-        </article>
+        <div className="mt-3">
+          <LessonMediaOps
+            moduleId={learningModule.id}
+            lessonId={lesson.id}
+            videoPrompt={seedanceVideoPrompt}
+            animationPrompt={seedanceAnimationPrompt}
+            imagePrompt={lessonImagePrompt}
+          />
+        </div>
       </section>
     </main>
   );
