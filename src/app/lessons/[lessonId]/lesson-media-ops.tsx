@@ -290,9 +290,10 @@ export default function LessonMediaOps({
               </button>
               <button
                 type="button"
-                disabled={workingAssetType === entry.assetType}
+                disabled={workingAssetType === entry.assetType || jobsAccessDenied}
                 onClick={() => void handleQueue(entry)}
                 className="rounded-md bg-amber-600 px-3 py-1 text-xs font-medium text-white hover:bg-amber-500 disabled:opacity-70"
+                title={jobsAccessDenied ? "Admin access required to queue media jobs." : undefined}
               >
                 {workingAssetType === entry.assetType ? "Queueing..." : "Queue Media Job"}
               </button>
