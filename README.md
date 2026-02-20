@@ -131,6 +131,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `GET /api/admin/report-exports`
 - `GET/POST /api/admin/report-jobs`
 - `POST /api/admin/report-jobs/run`
+- `POST /api/admin/report-jobs/retry`
 - `GET /api/admin/reports/dsar`
 - `GET /api/admin/reports/support`
 - `GET /api/admin/reports/audit`

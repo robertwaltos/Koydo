@@ -70,6 +70,29 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
     }
   };
 
+  const retryFailed = async () => {
+    setStatus("");
+    try {
+      const response = await fetch("/api/admin/report-jobs/retry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ limit: 50 }),
+      });
+      const data = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        retried?: number;
+      };
+      if (!response.ok) {
+        setStatus(data.error ?? "Unable to retry failed report jobs.");
+        return;
+      }
+      setStatus(`Retried ${data.retried ?? 0} failed report job(s).`);
+      await refreshJobs();
+    } catch {
+      setStatus("Unable to retry failed report jobs.");
+    }
+  };
+
   const refreshJobs = async () => {
     setIsRefreshing(true);
     try {
@@ -109,6 +132,13 @@ export default function ReportsClient({ initialJobs }: { initialJobs: ReportJob[
 
       <button type="button" onClick={runQueued} className="mt-3 rounded-md border border-black/15 px-4 py-2 text-sm">
         Run Due Jobs Now
+      </button>
+      <button
+        type="button"
+        onClick={retryFailed}
+        className="ml-2 mt-3 rounded-md border border-black/15 px-4 py-2 text-sm"
+      >
+        Retry Failed Jobs
       </button>
       <button
         type="button"
