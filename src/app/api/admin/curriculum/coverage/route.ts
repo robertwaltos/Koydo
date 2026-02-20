@@ -60,6 +60,7 @@ export async function GET() {
         },
         topPriorityModules: summary.quality.topPriorityModules,
       },
+      examPrep: summary.examPrep,
       reports: summary.reports,
     });
   } catch (error) {

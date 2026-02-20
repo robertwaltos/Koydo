@@ -142,7 +142,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `GET /api/admin/reports/support`
 - `GET /api/admin/reports/audit`
 - `GET /api/admin/curriculum/coverage`
-- `GET /api/admin/curriculum/summary`
+- `GET /api/admin/curriculum/summary` (includes exam-prep track readiness: SAT/ACT/AP/GCSE/A-Level/JEE-NEET/Gaokao)
 - `GET /api/admin/system/db-readiness`
 - `GET/POST /api/admin/media/jobs` (GET supports `moduleId`, `lessonId`, `assetType`, `status`, `limit`, `offset` query params)
 - `GET /api/admin/media/jobs/summary`
@@ -171,7 +171,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `/support` (user issue reporting and ticket tracking)
 - `/admin/operations` (owner/admin operations console)
 - `/admin/overview` (admin command center summary)
-- `/admin/curriculum` (curriculum coverage + gap planning with live freshness/completion/quality metrics)
+- `/admin/curriculum` (curriculum coverage + gap planning with live freshness/completion/quality + exam-prep readiness metrics)
 - `/admin/media` (AI media generation queue operations + live queue-health SLA widgets)
 - `/lessons/[lessonId]` includes admin-only prompt copy, queue, and lesson-specific queue processing controls.
   - Video lessons automatically embed completed generated video assets when available.

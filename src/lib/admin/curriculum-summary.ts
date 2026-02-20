@@ -24,6 +24,25 @@ export type QualityRow = {
   issues: string[];
 };
 
+export type QualityModuleRow = {
+  moduleId: string;
+  title: string;
+  subject: string;
+  lessonCount: number;
+  score: number;
+  priority: string;
+};
+
+export type ExamPrepTrackRow = {
+  track: string;
+  region: string;
+  moduleId: string;
+  title: string;
+  lessonCount: number;
+  score: number;
+  priority: string;
+};
+
 export type CurriculumSummary = {
   generatedAt: string;
   reports: {
@@ -62,6 +81,16 @@ export type CurriculumSummary = {
     genericReflectionCount: number;
     topPriorityModules: QualityRow[];
   };
+  examPrep: {
+    targetTrackCount: number;
+    availableTrackCount: number;
+    completionPercent: number;
+    totalModules: number;
+    totalLessons: number;
+    averageScore: number;
+    missingTracks: string[];
+    tracks: ExamPrepTrackRow[];
+  };
 };
 
 const DEFAULT_COVERAGE = {
@@ -96,10 +125,42 @@ const DEFAULT_QUALITY = {
     genericReflectionCount: 0,
   },
   topPriorityModules: [] as QualityRow[],
+  modules: [] as QualityModuleRow[],
 };
+
+const EXAM_PREP_TRACK_TARGETS = [
+  { key: "sat", label: "SAT", region: "US" },
+  { key: "act", label: "ACT", region: "US" },
+  { key: "ap", label: "AP", region: "US" },
+  { key: "gcse", label: "GCSE", region: "UK" },
+  { key: "a-level", label: "A-Level", region: "UK" },
+  { key: "jee-neet", label: "JEE/NEET", region: "India" },
+  { key: "gaokao", label: "Gaokao", region: "China" },
+] as const;
+type ExamPrepTrackKey = (typeof EXAM_PREP_TRACK_TARGETS)[number]["key"];
 
 function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
+}
+
+function slugify(input: string) {
+  return input
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function resolveExamPrepTrack(moduleId: string, title: string): ExamPrepTrackKey | null {
+  const haystack = `${moduleId} ${title}`.toLowerCase();
+  if (haystack.includes("jee-neet")) return "jee-neet";
+  if (haystack.includes("a-level") || haystack.includes("alevel")) return "a-level";
+  if (haystack.includes("gaokao")) return "gaokao";
+  if (haystack.includes("gcse")) return "gcse";
+  if (haystack.includes("sat")) return "sat";
+  if (haystack.includes("act")) return "act";
+  if (haystack.includes("ap")) return "ap";
+  return null;
 }
 
 function parseJson(raw: string | null): unknown {
@@ -208,6 +269,7 @@ function parseQuality(value: unknown) {
       ? (record.totals as Record<string, unknown>)
       : {};
   const rawTopPriorityModules = Array.isArray(record.topPriorityModules) ? record.topPriorityModules : [];
+  const rawModules = Array.isArray(record.modules) ? record.modules : [];
   const topPriorityModules = rawTopPriorityModules
     .map((row) => {
       if (!row || typeof row !== "object") return null;
@@ -222,6 +284,20 @@ function parseQuality(value: unknown) {
       };
     })
     .filter((row): row is QualityRow => row !== null);
+  const modules = rawModules
+    .map((row) => {
+      if (!row || typeof row !== "object") return null;
+      const entry = row as Record<string, unknown>;
+      return {
+        moduleId: typeof entry.moduleId === "string" ? entry.moduleId : "unknown",
+        title: typeof entry.title === "string" ? entry.title : "Untitled module",
+        subject: typeof entry.subject === "string" ? entry.subject : "Unknown",
+        lessonCount: isFiniteNumber(entry.lessonCount) ? entry.lessonCount : 0,
+        score: isFiniteNumber(entry.score) ? entry.score : 0,
+        priority: typeof entry.priority === "string" ? entry.priority : "unknown",
+      };
+    })
+    .filter((row): row is QualityModuleRow => row !== null);
 
   return {
     generatedAt: toIsoOrNull(record.generatedAt),
@@ -246,6 +322,7 @@ function parseQuality(value: unknown) {
         : 0,
     },
     topPriorityModules,
+    modules,
   };
 }
 
@@ -317,6 +394,50 @@ export async function loadCurriculumSummary(rootDir: string = process.cwd()): Pr
   const newestAgeHours = ageHours(newestGeneratedAt);
   const stale = newestAgeHours === null || newestAgeHours > staleAfterHours;
 
+  const examPrepCandidates = quality.modules.filter((moduleEntry) => {
+    const subjectSlug = slugify(moduleEntry.subject);
+    return subjectSlug === "exam-prep" || moduleEntry.moduleId.includes("-prep-");
+  });
+
+  const examPrepTracks = examPrepCandidates
+    .map((moduleEntry) => {
+      const trackKey = resolveExamPrepTrack(moduleEntry.moduleId, moduleEntry.title);
+      const trackTarget = EXAM_PREP_TRACK_TARGETS.find((entry) => entry.key === trackKey);
+      return {
+        track: trackTarget?.label ?? "Other",
+        region: trackTarget?.region ?? "Global",
+        moduleId: moduleEntry.moduleId,
+        title: moduleEntry.title,
+        lessonCount: moduleEntry.lessonCount,
+        score: moduleEntry.score,
+        priority: moduleEntry.priority,
+      };
+    })
+    .sort((a, b) => a.track.localeCompare(b.track) || a.moduleId.localeCompare(b.moduleId));
+
+  const availableTrackKeys = new Set(
+    examPrepCandidates
+      .map((moduleEntry) => resolveExamPrepTrack(moduleEntry.moduleId, moduleEntry.title))
+      .filter((key): key is ExamPrepTrackKey => typeof key === "string" && key.length > 0),
+  );
+  const missingTracks = EXAM_PREP_TRACK_TARGETS
+    .filter((entry) => !availableTrackKeys.has(entry.key))
+    .map((entry) => entry.label);
+  const targetTrackCount = EXAM_PREP_TRACK_TARGETS.length;
+  const availableTrackCount = targetTrackCount - missingTracks.length;
+  const examCompletionPercent =
+    targetTrackCount > 0 ? Number(((availableTrackCount / targetTrackCount) * 100).toFixed(2)) : 0;
+  const examTotalLessons = examPrepTracks.reduce((acc, row) => acc + row.lessonCount, 0);
+  const examAverageScore =
+    examPrepTracks.length > 0
+      ? Number(
+          (
+            examPrepTracks.reduce((acc, row) => acc + row.score, 0) /
+            examPrepTracks.length
+          ).toFixed(2),
+        )
+      : 0;
+
   return {
     generatedAt: new Date().toISOString(),
     reports: {
@@ -354,6 +475,16 @@ export async function loadCurriculumSummary(rootDir: string = process.cwd()): Pr
       placeholderOptionCount: quality.totals.placeholderOptionCount,
       genericReflectionCount: quality.totals.genericReflectionCount,
       topPriorityModules: quality.topPriorityModules,
+    },
+    examPrep: {
+      targetTrackCount,
+      availableTrackCount,
+      completionPercent: examCompletionPercent,
+      totalModules: examPrepTracks.length,
+      totalLessons: examTotalLessons,
+      averageScore: examAverageScore,
+      missingTracks,
+      tracks: examPrepTracks,
     },
   };
 }

@@ -361,6 +361,21 @@ export default async function AdminOverviewPage() {
       href: "/admin/curriculum",
     },
     {
+      title: "Exam Prep Track Coverage",
+      value: `${curriculumSummary.examPrep.availableTrackCount}/${curriculumSummary.examPrep.targetTrackCount}`,
+      subtext:
+        curriculumSummary.examPrep.missingTracks.length > 0
+          ? `Missing: ${curriculumSummary.examPrep.missingTracks.join(", ")}`
+          : "All target exam tracks available",
+      href: "/admin/curriculum",
+    },
+    {
+      title: "Exam Prep Content",
+      value: String(curriculumSummary.examPrep.totalLessons),
+      subtext: `${curriculumSummary.examPrep.totalModules} modules · avg score ${curriculumSummary.examPrep.averageScore}`,
+      href: "/admin/curriculum",
+    },
+    {
       title: "Lesson Prompt Coverage",
       value: String(promptPack.totals?.lessons ?? 0),
       subtext: "Lessons with generated media prompts",

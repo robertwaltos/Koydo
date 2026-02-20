@@ -63,6 +63,24 @@ type CurriculumSummary = {
     genericReflectionCount: number;
     topPriorityModules: QualityRow[];
   };
+  examPrep: {
+    targetTrackCount: number;
+    availableTrackCount: number;
+    completionPercent: number;
+    totalModules: number;
+    totalLessons: number;
+    averageScore: number;
+    missingTracks: string[];
+    tracks: Array<{
+      track: string;
+      region: string;
+      moduleId: string;
+      title: string;
+      lessonCount: number;
+      score: number;
+      priority: string;
+    }>;
+  };
 };
 
 type CurriculumSummaryResponse = CurriculumSummary & {
@@ -149,6 +167,7 @@ export default function CurriculumClient({
     () => summary.expansion.missingBySubject.slice(0, 8),
     [summary.expansion.missingBySubject],
   );
+  const topExamTracks = useMemo(() => summary.examPrep.tracks.slice(0, 20), [summary.examPrep.tracks]);
 
   const completionClass =
     summary.expansion.completionPercent >= 60
@@ -285,6 +304,72 @@ export default function CurriculumClient({
           Reports become stale after {summary.reports.staleAfterHours}h. Oldest artifact age:{" "}
           {formatAgeFromIso(summary.reports.oldestGeneratedAt)}.
         </p>
+      </section>
+
+      <section className="rounded-lg border border-black/10 bg-white p-5">
+        <h2 className="text-lg font-semibold">Exam Prep Readiness</h2>
+        <div className="mt-3 grid gap-3 md:grid-cols-5">
+          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Track coverage</p>
+            <p className="mt-1 text-2xl font-semibold text-zinc-900">
+              {summary.examPrep.availableTrackCount}/{summary.examPrep.targetTrackCount}
+            </p>
+            <p className="text-xs text-zinc-600">{summary.examPrep.completionPercent}% of target tracks</p>
+          </article>
+          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Exam modules</p>
+            <p className="mt-1 text-2xl font-semibold text-zinc-900">{summary.examPrep.totalModules}</p>
+          </article>
+          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Exam lessons</p>
+            <p className="mt-1 text-2xl font-semibold text-zinc-900">{summary.examPrep.totalLessons}</p>
+          </article>
+          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Average score</p>
+            <p className="mt-1 text-2xl font-semibold text-zinc-900">{summary.examPrep.averageScore}</p>
+          </article>
+          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Missing tracks</p>
+            <p className="mt-1 text-lg font-semibold text-zinc-900">
+              {summary.examPrep.missingTracks.length > 0
+                ? summary.examPrep.missingTracks.join(", ")
+                : "None"}
+            </p>
+          </article>
+        </div>
+        <div className="mt-4 overflow-x-auto">
+          <table className="min-w-full border-collapse text-sm">
+            <thead>
+              <tr className="border-b border-black/10 text-left">
+                <th className="p-2">Track</th>
+                <th className="p-2">Region</th>
+                <th className="p-2">Module</th>
+                <th className="p-2">Lessons</th>
+                <th className="p-2">Score</th>
+                <th className="p-2">Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              {topExamTracks.map((row) => (
+                <tr key={row.moduleId} className="border-b border-black/5">
+                  <td className="p-2 font-medium">{row.track}</td>
+                  <td className="p-2">{row.region}</td>
+                  <td className="p-2">{row.title}</td>
+                  <td className="p-2">{row.lessonCount}</td>
+                  <td className="p-2">{row.score}</td>
+                  <td className="p-2 uppercase">{row.priority}</td>
+                </tr>
+              ))}
+              {topExamTracks.length === 0 ? (
+                <tr>
+                  <td className="p-2 text-zinc-500" colSpan={6}>
+                    No exam-prep modules detected yet.
+                  </td>
+                </tr>
+              ) : null}
+            </tbody>
+          </table>
+        </div>
       </section>
 
       {summary.expansion.untrackedCoverage.length > 0 ? (
