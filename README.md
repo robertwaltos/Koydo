@@ -105,6 +105,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `POST /api/ai/analyze` (budget-aware recommendation mock)
 - `GET /api/ai/recommendations`
 - `POST /api/images/generate`
+- `GET /api/media/resolve`
 - `POST /api/stripe/checkout`
 - `POST /api/stripe/webhook`
 - `POST /api/compliance/age-gate`
@@ -154,6 +155,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `/admin/curriculum` (curriculum coverage and gap planning console)
 - `/admin/media` (AI media generation queue operations)
 - `/lessons/[lessonId]` includes admin-only prompt copy, queue, and lesson-specific queue processing controls.
+  - Video lessons automatically embed completed generated video assets when available.
 - `/admin/compliance` (app store policy readiness checklist)
 - `/admin/reports` (CSV exports for DSAR/support/audit)
 - `/admin/alerts` (operational anomaly and rate-limit alerts)

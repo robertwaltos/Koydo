@@ -46,6 +46,7 @@ async function LessonPageContent({
       case "video":
         return (
           <VideoLessonPlayer
+            moduleId={learningModule.id}
             lessonId={lesson.id}
             lessonTitle={lesson.title}
             subject={learningModule.subject}

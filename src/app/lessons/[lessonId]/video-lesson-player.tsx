@@ -5,6 +5,7 @@ import type { LearningAid } from "@/lib/modules/types";
 import { deleteSyncedProgress, saveOfflineProgress } from "@/lib/offline/progress-db";
 
 type VideoLessonPlayerProps = {
+  moduleId: string;
   lessonId: string;
   lessonTitle: string;
   subject: string;
@@ -17,6 +18,7 @@ type ProgressSyncState = "idle" | "syncing" | "synced" | "queued";
 const VIDEO_COMPLETION_SCORE_PERCENTAGE = 0.8;
 
 export default function VideoLessonPlayer({
+  moduleId,
   lessonId,
   lessonTitle,
   subject,
@@ -26,6 +28,9 @@ export default function VideoLessonPlayer({
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [syncState, setSyncState] = useState<ProgressSyncState>("idle");
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
+  const [videoResolveError, setVideoResolveError] = useState<string | null>(null);
+  const [videoLoading, setVideoLoading] = useState(true);
   const completionPersistedRef = useRef(false);
 
   const checkpoints = useMemo(() => {
@@ -50,7 +55,7 @@ export default function VideoLessonPlayer({
   }, [learningAids, lessonId, subject]);
 
   useEffect(() => {
-    if (!isPlaying || progress >= 100) {
+    if (videoUrl || !isPlaying || progress >= 100) {
       return;
     }
 
@@ -61,7 +66,47 @@ export default function VideoLessonPlayer({
     }, 500);
 
     return () => window.clearInterval(intervalId);
-  }, [durationMinutes, isPlaying, progress]);
+  }, [durationMinutes, isPlaying, progress, videoUrl]);
+
+  useEffect(() => {
+    const resolveVideo = async () => {
+      try {
+        setVideoLoading(true);
+        setVideoResolveError(null);
+
+        const params = new URLSearchParams({
+          moduleId,
+          lessonId,
+          assetType: "video",
+        });
+
+        const response = await fetch(`/api/media/resolve?${params.toString()}`, {
+          method: "GET",
+          cache: "no-store",
+        });
+
+        const payload = (await response.json().catch(() => ({}))) as {
+          error?: string;
+          found?: boolean;
+          url?: string | null;
+        };
+
+        if (!response.ok) {
+          throw new Error(payload.error ?? "Unable to resolve video asset.");
+        }
+
+        if (payload.found && payload.url) {
+          setVideoUrl(payload.url);
+        }
+      } catch (error) {
+        setVideoResolveError(error instanceof Error ? error.message : "Unable to resolve lesson video.");
+      } finally {
+        setVideoLoading(false);
+      }
+    };
+
+    void resolveVideo();
+  }, [lessonId, moduleId]);
 
   useEffect(() => {
     if (progress >= 100 && isPlaying) {
@@ -134,6 +179,25 @@ export default function VideoLessonPlayer({
         </p>
       </header>
 
+      {videoUrl ? (
+        <div className="overflow-hidden rounded-xl border border-sky-300 bg-white">
+          <video
+            className="h-auto w-full"
+            src={videoUrl}
+            controls
+            preload="metadata"
+            onTimeUpdate={(event) => {
+              const element = event.currentTarget;
+              const duration = Number.isFinite(element.duration) && element.duration > 0 ? element.duration : 0;
+              if (duration <= 0) return;
+              const nextProgress = Math.max(0, Math.min(100, Math.round((element.currentTime / duration) * 100)));
+              setProgress(nextProgress);
+            }}
+            onEnded={() => setProgress(100)}
+          />
+        </div>
+      ) : null}
+
       <div className="rounded-xl border border-sky-300 bg-white p-4">
         <div className="flex items-center justify-between text-sm font-semibold text-zinc-700">
           <span>Playback Progress</span>
@@ -161,29 +225,56 @@ export default function VideoLessonPlayer({
         })}
       </div>
 
-      <div className="flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={() => setIsPlaying((previous) => !previous)}
-          disabled={progress >= 100}
-          className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          {isPlaying ? "Pause" : progress === 0 ? "Play Lesson" : "Resume"}
-        </button>
-        <button
-          type="button"
-          onClick={restartLesson}
-          className="rounded-full border border-sky-300 bg-white px-4 py-2 text-sm font-semibold text-sky-700"
-        >
-          Restart
-        </button>
-      </div>
+      {videoUrl ? (
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setProgress(100)}
+            disabled={progress >= 100}
+            className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            Mark Complete
+          </button>
+          <button
+            type="button"
+            onClick={restartLesson}
+            className="rounded-full border border-sky-300 bg-white px-4 py-2 text-sm font-semibold text-sky-700"
+          >
+            Reset Progress
+          </button>
+        </div>
+      ) : (
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => setIsPlaying((previous) => !previous)}
+            disabled={progress >= 100}
+            className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {isPlaying ? "Pause" : progress === 0 ? "Play Lesson" : "Resume"}
+          </button>
+          <button
+            type="button"
+            onClick={restartLesson}
+            className="rounded-full border border-sky-300 bg-white px-4 py-2 text-sm font-semibold text-sky-700"
+          >
+            Restart
+          </button>
+        </div>
+      )}
 
       {progress >= 100 ? (
         <p className="rounded-md border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-800">
           Lesson complete. Great focus.
         </p>
       ) : null}
+      {!videoUrl && videoLoading ? (
+        <p className="text-xs text-zinc-500">Looking for completed lesson video...</p>
+      ) : null}
+      {!videoUrl && !videoLoading ? (
+        <p className="text-xs text-zinc-500">No completed generated video found yet. Simulation mode is active.</p>
+      ) : null}
+      {videoResolveError ? <p className="text-xs text-amber-700">{videoResolveError}</p> : null}
 
       {syncState === "syncing" ? <p className="text-xs text-zinc-500">Saving your progress...</p> : null}
       {syncState === "synced" ? (
