@@ -11,18 +11,38 @@ type InteractiveActivityProps = {
 
 type ProgressSyncState = "idle" | "syncing" | "synced" | "queued";
 
-const INTERACTIVE_COMPLETION_SCORE_PERCENTAGE = 0.75;
+const MIN_RESPONSE_CHARACTERS = 10;
+const MIN_INTERACTIVE_SCORE = 0.6;
+const MAX_INTERACTIVE_SCORE = 0.95;
 
 export default function InteractiveActivity({ lessonId, title, prompts }: InteractiveActivityProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [reflection, setReflection] = useState("");
+  const [responses, setResponses] = useState<string[]>(() => prompts.map(() => ""));
+  const [validationMessage, setValidationMessage] = useState("");
   const [isComplete, setIsComplete] = useState(false);
   const [syncState, setSyncState] = useState<ProgressSyncState>("idle");
   const completionPersistedRef = useRef(false);
 
   const currentPrompt = useMemo(() => prompts[currentIndex] ?? "Try the activity in your own words.", [prompts, currentIndex]);
+  const currentResponse = responses[currentIndex] ?? "";
 
-  const persistCompletion = async () => {
+  const answeredCount = useMemo(
+    () => responses.filter((entry) => entry.trim().length >= MIN_RESPONSE_CHARACTERS).length,
+    [responses],
+  );
+
+  const completionScore = useMemo(() => {
+    if (prompts.length === 0) {
+      return MIN_INTERACTIVE_SCORE;
+    }
+    const completionRatio = answeredCount / prompts.length;
+    return Math.min(
+      MAX_INTERACTIVE_SCORE,
+      Math.max(MIN_INTERACTIVE_SCORE, completionRatio),
+    );
+  }, [answeredCount, prompts.length]);
+
+  const persistCompletion = async (scorePercentage: number) => {
     if (completionPersistedRef.current) return;
     completionPersistedRef.current = true;
     setSyncState("syncing");
@@ -35,7 +55,7 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
         },
         body: JSON.stringify({
           lessonId,
-          scorePercentage: INTERACTIVE_COMPLETION_SCORE_PERCENTAGE,
+          scorePercentage,
         }),
       });
 
@@ -50,7 +70,7 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
       try {
         await saveOfflineProgress({
           lessonId,
-          score: Math.round(INTERACTIVE_COMPLETION_SCORE_PERCENTAGE * 10),
+          score: Math.round(scorePercentage * 10),
           totalQuestions: 10,
           completedAt: new Date().toISOString(),
           synced: false,
@@ -62,18 +82,40 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
     }
   };
 
+  const setResponseAtCurrentPrompt = (nextValue: string) => {
+    setResponses((previous) => previous.map((entry, index) => (index === currentIndex ? nextValue : entry)));
+    if (validationMessage) {
+      setValidationMessage("");
+    }
+  };
+
   const onNextPrompt = async () => {
+    if (currentResponse.trim().length < MIN_RESPONSE_CHARACTERS) {
+      setValidationMessage(
+        `Please add at least ${MIN_RESPONSE_CHARACTERS} characters before continuing.`,
+      );
+      return;
+    }
+
+    setValidationMessage("");
+
     if (currentIndex >= prompts.length - 1) {
       setIsComplete(true);
-      await persistCompletion();
+      await persistCompletion(completionScore);
       return;
     }
     setCurrentIndex((prev) => prev + 1);
   };
 
+  const onPreviousPrompt = () => {
+    setValidationMessage("");
+    setCurrentIndex((previous) => Math.max(0, previous - 1));
+  };
+
   const onRestart = () => {
     setCurrentIndex(0);
-    setReflection("");
+    setResponses(prompts.map(() => ""));
+    setValidationMessage("");
     setIsComplete(false);
     setSyncState("idle");
     completionPersistedRef.current = false;
@@ -89,19 +131,34 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
 
       <div className="mt-4 space-y-2">
         <label className="block text-sm font-medium text-zinc-700" htmlFor="reflection">
-          Learner notes
+          Learner response
         </label>
         <textarea
           id="reflection"
           rows={3}
-          value={reflection}
-          onChange={(event) => setReflection(event.target.value)}
+          value={currentResponse}
+          onChange={(event) => setResponseAtCurrentPrompt(event.target.value)}
           className="w-full rounded-md border border-amber-200 bg-white px-3 py-2 text-sm text-zinc-900"
-          placeholder="Write what you discovered..."
+          placeholder="Write your answer for this prompt..."
         />
+        {validationMessage ? (
+          <p className="text-xs text-amber-700">{validationMessage}</p>
+        ) : (
+          <p className="text-xs text-zinc-500">
+            Add at least {MIN_RESPONSE_CHARACTERS} characters to unlock the next prompt.
+          </p>
+        )}
       </div>
 
       <div className="mt-4 flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          onClick={onPreviousPrompt}
+          disabled={currentIndex === 0}
+          className="rounded-full border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-700 disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          Previous
+        </button>
         <button
           type="button"
           onClick={onNextPrompt}
@@ -112,6 +169,25 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
         <p className="text-xs text-zinc-600">
           Prompt {Math.min(currentIndex + 1, prompts.length)} / {prompts.length}
         </p>
+        <p className="text-xs text-zinc-600">Answered: {answeredCount} / {prompts.length}</p>
+      </div>
+
+      <div className="mt-3 grid gap-2 sm:grid-cols-2">
+        {prompts.map((prompt, index) => {
+          const isAnswered = (responses[index] ?? "").trim().length >= MIN_RESPONSE_CHARACTERS;
+          return (
+            <article
+              key={`${lessonId}-prompt-progress-${index}`}
+              className={`rounded-lg border px-3 py-2 text-xs ${
+                isAnswered ? "border-emerald-300 bg-emerald-50 text-emerald-800" : "border-amber-200 bg-white text-zinc-700"
+              }`}
+            >
+              <p className="font-semibold">Prompt {index + 1}</p>
+              <p className="mt-1 line-clamp-2">{prompt}</p>
+              <p className="mt-1">{isAnswered ? "Answered" : "Pending"}</p>
+            </article>
+          );
+        })}
       </div>
 
       {isComplete ? (
@@ -119,6 +195,21 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
           <p className="rounded-md border border-emerald-300 bg-emerald-50 px-3 py-2 text-sm font-semibold text-emerald-800">
             Great work. You completed this activity.
           </p>
+          <p className="text-xs text-zinc-600">
+            Activity score saved: {Math.round(completionScore * 100)}%
+          </p>
+          <div className="rounded-lg border border-amber-200 bg-white p-3">
+            <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">Activity Recap</p>
+            <div className="mt-2 space-y-2">
+              {prompts.map((prompt, index) => (
+                <article key={`${lessonId}-recap-${index}`} className="rounded-md border border-amber-100 bg-amber-50/40 p-2">
+                  <p className="text-xs font-semibold text-zinc-800">Prompt {index + 1}</p>
+                  <p className="mt-1 text-xs text-zinc-700">{prompt}</p>
+                  <p className="mt-1 text-xs text-zinc-900">{responses[index]?.trim() || "No response recorded."}</p>
+                </article>
+              ))}
+            </div>
+          </div>
           <button
             type="button"
             onClick={onRestart}
