@@ -132,6 +132,17 @@ This generates:
 - `public/CURRICULUM-EXPANSION-PLAN.json`
 - `public/CURRICULUM-EXPANSION-PLAN.md`
 
+Media production readiness reporting:
+
+```bash
+npm run media:report
+```
+
+This generates:
+
+- `public/MEDIA-READINESS-REPORT.json`
+- `public/MEDIA-READINESS-REPORT.md`
+
 Once registered, the module automatically appears in:
 
 - `GET`/lookup logic via `src/lib/modules/index.ts` (validated with Zod)

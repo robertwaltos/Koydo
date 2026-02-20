@@ -7,6 +7,7 @@
     "modules:generate:exams": "node scripts/generate-exam-modules.mjs",
     "module:new": "node scripts/create-module.mjs",
     "modules:sync": "node scripts/sync-modules.mjs",
+    "media:report": "node scripts/media-readiness-report.mjs",
     "curriculum:report": "node scripts/curriculum-coverage-report.mjs",
     "curriculum:plan": "npm run curriculum:report && node scripts/curriculum-expansion-plan.mjs",
     "prebuild": "npm run modules:sync",

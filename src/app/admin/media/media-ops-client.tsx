@@ -82,6 +82,14 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
         <p className="mt-2 text-sm text-zinc-600">
           Queue placeholder-to-production asset generation for lesson videos, animations, and images.
         </p>
+        <div className="mt-3 flex flex-wrap gap-3 text-xs">
+          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/MEDIA-READINESS-REPORT.md" target="_blank" rel="noreferrer">
+            Open Media Readiness Report
+          </a>
+          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/AI-MEDIA-PROMPTS.md" target="_blank" rel="noreferrer">
+            Open AI Media Prompt Catalog
+          </a>
+        </div>
         <form className="mt-4 grid gap-3 md:grid-cols-2" onSubmit={handleCreateJob}>
           <input name="moduleId" placeholder="Module ID (optional)" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
           <input name="lessonId" placeholder="Lesson ID (optional)" className="rounded-md border border-black/15 px-3 py-2 text-sm" />

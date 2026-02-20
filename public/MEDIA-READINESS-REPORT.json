@@ -1,0 +1,300 @@
+{
+  "generatedAt": "2026-02-20T06:52:09.238Z",
+  "totals": {
+    "moduleCount": 29,
+    "placeholderRefs": 7,
+    "learningAidRefs": 250
+  },
+  "modules": [
+    {
+      "moduleId": "a-level-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "act-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "gaokao-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "gcse-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "jee-neet-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 1,
+      "readinessScore": 95
+    },
+    {
+      "moduleId": "advanced-math-201",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "apple-vision-science-lab",
+      "totalLessons": 1,
+      "videoLessons": 0,
+      "interactiveLessons": 1,
+      "quizLessons": 0,
+      "learningAidRefs": 0,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "arts-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "astronomy-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "basic-math-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "biology-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "chemistry-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "coding-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "farming-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "financial-literacy-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "general-relativity-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "general-science-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "geography-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "household-management-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "language-arts-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "math-101",
+      "totalLessons": 4,
+      "videoLessons": 1,
+      "interactiveLessons": 1,
+      "quizLessons": 2,
+      "learningAidRefs": 0,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "physics-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "reading-101",
+      "totalLessons": 4,
+      "videoLessons": 2,
+      "interactiveLessons": 1,
+      "quizLessons": 1,
+      "learningAidRefs": 0,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "science-101",
+      "totalLessons": 4,
+      "videoLessons": 2,
+      "interactiveLessons": 1,
+      "quizLessons": 1,
+      "learningAidRefs": 0,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "social-studies-us-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "social-studies-world-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    },
+    {
+      "moduleId": "world-history-101",
+      "totalLessons": 10,
+      "videoLessons": 3,
+      "interactiveLessons": 3,
+      "quizLessons": 4,
+      "learningAidRefs": 10,
+      "placeholderRefs": 0,
+      "readinessScore": 100
+    }
+  ]
+}
