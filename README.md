@@ -78,7 +78,7 @@ Checks on push/PR:
 
 Ops workflow output:
 
-- Uploads an `ops-report-bundle` artifact with curriculum/media/compliance/prompt-pack reports.
+- Uploads an `ops-report-bundle` artifact with curriculum/exam-prep/media/compliance/prompt-pack reports.
 - Processes due `admin_report_jobs` queue entries into `admin_report_exports` rows.
 
 Media automation workflow behavior:

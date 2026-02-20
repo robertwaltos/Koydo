@@ -89,6 +89,8 @@ jobs:
             public/CURRICULUM-QUALITY-REPORT.md
             public/CURRICULUM-EXPANSION-PLAN.json
             public/CURRICULUM-EXPANSION-PLAN.md
+            public/EXAM-PREP-COVERAGE-REPORT.json
+            public/EXAM-PREP-COVERAGE-REPORT.md
             public/MEDIA-READINESS-REPORT.json
             public/MEDIA-READINESS-REPORT.md
             public/APPSTORE-COMPLIANCE-AUDIT.json
