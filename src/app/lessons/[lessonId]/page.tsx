@@ -7,6 +7,7 @@ import LessonImage from "./lesson-image";
 import InteractiveActivity from "./interactive-activity";
 import { buildSeedanceAnimationPrompt, buildSeedanceVideoPrompt } from "@/lib/media/seedance-prompts";
 import LessonMediaOps from "./lesson-media-ops";
+import VideoLessonPlayer from "./video-lesson-player";
 
 export default function LessonPage({
   params,
@@ -41,11 +42,13 @@ async function LessonPageContent({
     switch (lesson.type) {
       case "video":
         return (
-          <div className="rounded-2xl border border-sky-200 bg-sky-50 p-5">
-            <div className="flex aspect-video items-center justify-center rounded-xl border border-sky-300 bg-white">
-              <p className="text-zinc-600">Video lesson player</p>
-            </div>
-          </div>
+          <VideoLessonPlayer
+            lessonId={lesson.id}
+            lessonTitle={lesson.title}
+            subject={learningModule.subject}
+            durationMinutes={lesson.duration}
+            learningAids={lesson.learningAids ?? []}
+          />
         );
       case "interactive":
         if (lesson.metadata?.route && typeof lesson.metadata.route === "string") {
