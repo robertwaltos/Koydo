@@ -13,6 +13,25 @@ function monthKeyFromDate(date: Date) {
   return `${year}-${month}`;
 }
 
+function coerceNumber(value: unknown) {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string") {
+    const parsed = Number(value);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return null;
+}
+
+function readNumericSetting(value: unknown, fallback: number) {
+  const direct = coerceNumber(value);
+  if (direct !== null) return direct;
+  if (value && typeof value === "object" && "value" in value) {
+    const nested = coerceNumber((value as { value?: unknown }).value);
+    if (nested !== null) return nested;
+  }
+  return fallback;
+}
+
 function formatAgeFromIso(isoTimestamp: string | null) {
   if (!isoTimestamp) return "n/a";
   const createdAt = new Date(isoTimestamp);
@@ -83,6 +102,7 @@ export default async function AdminOverviewPage() {
     alertsResult,
     approvalsResult,
     currentMonthTokensResult,
+    mediaSlaSettingsResult,
     qualityReportRaw,
     promptPackRaw,
   ] = await Promise.all([
@@ -127,6 +147,14 @@ export default async function AdminOverviewPage() {
       .from("user_tokens")
       .select("user_id, spent_usd")
       .eq("month_key", currentMonth),
+    admin
+      .from("app_settings")
+      .select("key, value")
+      .in("key", [
+        "media_queue_sla_stale_hours",
+        "media_queue_sla_backlog_limit",
+        "media_queue_sla_failure_24h_limit",
+      ]),
     fs.readFile(qualityReportPath, "utf8").catch(() => '{"totals":{"averageScore":0,"modules":0}}'),
     fs.readFile(promptPackPath, "utf8").catch(() => '{"totals":{"lessons":0}}'),
   ]);
@@ -149,6 +177,35 @@ export default async function AdminOverviewPage() {
   const oldestQueuedAge = formatAgeFromIso(mediaOldestQueuedResult.data?.created_at ?? null);
   const mediaCompleted24h = mediaCompleted24hResult.count ?? 0;
   const mediaFailed24h = mediaFailed24hResult.count ?? 0;
+  const mediaSettingsMap = new Map((mediaSlaSettingsResult.data ?? []).map((row) => [row.key, row.value]));
+  const staleHoursThreshold = Math.max(
+    1,
+    readNumericSetting(mediaSettingsMap.get("media_queue_sla_stale_hours"), 6),
+  );
+  const backlogThreshold = Math.max(
+    1,
+    readNumericSetting(mediaSettingsMap.get("media_queue_sla_backlog_limit"), 30),
+  );
+  const failure24hThreshold = Math.max(
+    1,
+    readNumericSetting(mediaSettingsMap.get("media_queue_sla_failure_24h_limit"), 20),
+  );
+  const staleCutoffDate = new Date();
+  staleCutoffDate.setUTCHours(staleCutoffDate.getUTCHours() - staleHoursThreshold);
+  const staleCutoffIso = staleCutoffDate.toISOString();
+  const { count: mediaStaleCountRaw } = await admin
+    .from("media_generation_jobs")
+    .select("id", { count: "exact", head: true })
+    .in("status", ["queued", "running"])
+    .lt("created_at", staleCutoffIso);
+  const mediaStaleCount = mediaStaleCountRaw ?? 0;
+  const mediaBacklogCount = mediaQueueResult.count ?? 0;
+  const slaBreaches = [
+    mediaStaleCount > 0,
+    mediaBacklogCount >= backlogThreshold,
+    mediaFailed24h >= failure24hThreshold,
+  ].filter(Boolean).length;
+  const mediaSlaSummary = `Stale ${mediaStaleCount}/${staleHoursThreshold}h | backlog ${mediaBacklogCount}/${backlogThreshold} | failed24h ${mediaFailed24h}/${failure24hThreshold}`;
 
   const cards = [
     {
@@ -174,6 +231,12 @@ export default async function AdminOverviewPage() {
       value: String(mediaCompleted24h),
       subtext: `Completed jobs · failed ${mediaFailed24h}`,
       href: "/admin/media",
+    },
+    {
+      title: "Media SLA Status",
+      value: slaBreaches === 0 ? "OK" : `${slaBreaches} breach${slaBreaches === 1 ? "" : "es"}`,
+      subtext: mediaSlaSummary,
+      href: "/admin/alerts",
     },
     {
       title: "Unacknowledged Alerts",
