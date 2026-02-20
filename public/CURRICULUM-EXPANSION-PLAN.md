@@ -1,33 +1,15 @@
 # Curriculum Expansion Plan
 
-Generated: 2026-02-20T15:22:25.356Z
+Generated: 2026-02-20T23:16:50.080Z
 Target lessons per grade+subject: 10
 
-Current lessons counted across targets: 0
-Lessons still needed to hit target: 720
+Current lessons counted across targets: 210
+Lessons still needed to hit target: 524
 
 ## Priority Gaps
 
 | Grade Band | Subject | Existing | Target | Missing |
 |---|---|---:|---:|---:|
-| Elementary | Language Arts | 0 | 10 | 10 |
-| Elementary | Basic Math | 0 | 10 | 10 |
-| Elementary | Advanced Math | 0 | 10 | 10 |
-| Elementary | General Science | 0 | 10 | 10 |
-| Elementary | Biology | 0 | 10 | 10 |
-| Elementary | Chemistry | 0 | 10 | 10 |
-| Elementary | Physics | 0 | 10 | 10 |
-| Elementary | Social Studies Us | 0 | 10 | 10 |
-| Elementary | Social Studies World | 0 | 10 | 10 |
-| Elementary | World History | 0 | 10 | 10 |
-| Elementary | Arts | 0 | 10 | 10 |
-| Elementary | Coding | 0 | 10 | 10 |
-| Elementary | Financial Literacy | 0 | 10 | 10 |
-| Elementary | Household Management | 0 | 10 | 10 |
-| Elementary | Farming | 0 | 10 | 10 |
-| Elementary | Astronomy | 0 | 10 | 10 |
-| Elementary | Geography | 0 | 10 | 10 |
-| Elementary | General Relativity | 0 | 10 | 10 |
 | High School | Language Arts | 0 | 10 | 10 |
 | High School | Basic Math | 0 | 10 | 10 |
 | High School | Advanced Math | 0 | 10 | 10 |
@@ -64,8 +46,6 @@ Lessons still needed to hit target: 720
 | Middle School | Astronomy | 0 | 10 | 10 |
 | Middle School | Geography | 0 | 10 | 10 |
 | Middle School | General Relativity | 0 | 10 | 10 |
-| Pre K | Language Arts | 0 | 10 | 10 |
-| Pre K | Basic Math | 0 | 10 | 10 |
 | Pre K | Advanced Math | 0 | 10 | 10 |
 | Pre K | General Science | 0 | 10 | 10 |
 | Pre K | Biology | 0 | 10 | 10 |
@@ -82,6 +62,8 @@ Lessons still needed to hit target: 720
 | Pre K | Astronomy | 0 | 10 | 10 |
 | Pre K | Geography | 0 | 10 | 10 |
 | Pre K | General Relativity | 0 | 10 | 10 |
+| Pre K | Language Arts | 8 | 10 | 2 |
+| Pre K | Basic Math | 8 | 10 | 2 |
 
 ## Execution Notes
 

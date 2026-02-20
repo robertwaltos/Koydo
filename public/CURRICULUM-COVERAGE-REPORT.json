@@ -1,288 +1,771 @@
 {
-  "generatedAt": "2026-02-20T15:22:25.111Z",
-  "totalLessons": 37,
+  "generatedAt": "2026-02-20T23:16:49.983Z",
+  "source": "module-catalog",
+  "totalLessons": 280,
+  "totalModules": 29,
+  "gradeBandSummary": [
+    {
+      "gradeBand": "elementary",
+      "count": 194
+    },
+    {
+      "gradeBand": "high-school",
+      "count": 70
+    },
+    {
+      "gradeBand": "pre-k",
+      "count": 16
+    }
+  ],
+  "subjectSummary": [
+    {
+      "subject": "advanced-math",
+      "count": 10
+    },
+    {
+      "subject": "arts",
+      "count": 10
+    },
+    {
+      "subject": "astronomy",
+      "count": 10
+    },
+    {
+      "subject": "basic-math",
+      "count": 18
+    },
+    {
+      "subject": "biology",
+      "count": 10
+    },
+    {
+      "subject": "chemistry",
+      "count": 10
+    },
+    {
+      "subject": "coding",
+      "count": 10
+    },
+    {
+      "subject": "exam-prep",
+      "count": 70
+    },
+    {
+      "subject": "farming",
+      "count": 10
+    },
+    {
+      "subject": "financial-literacy",
+      "count": 10
+    },
+    {
+      "subject": "general-relativity",
+      "count": 10
+    },
+    {
+      "subject": "general-science",
+      "count": 24
+    },
+    {
+      "subject": "geography",
+      "count": 10
+    },
+    {
+      "subject": "household-management",
+      "count": 10
+    },
+    {
+      "subject": "language-arts",
+      "count": 18
+    },
+    {
+      "subject": "physics",
+      "count": 10
+    },
+    {
+      "subject": "social-studies-us",
+      "count": 10
+    },
+    {
+      "subject": "social-studies-world",
+      "count": 10
+    },
+    {
+      "subject": "world-history",
+      "count": 10
+    }
+  ],
   "gradeSubjectSummary": [
     {
-      "gradeBand": "5th",
-      "subject": "grade",
-      "count": 16,
-      "files": [
-        "5th-grade-basic-math-adding-and-subtracting-decimals.json",
-        "5th-grade-basic-math-adding-and-subtracting-fractions-unlike-denominators.json",
-        "5th-grade-basic-math-multiplying-and-dividing-decimals.json",
-        "5th-grade-basic-math-multiplying-and-dividing-fractions.json",
-        "5th-grade-basic-math-order-of-operations.json",
-        "5th-grade-basic-math-place-value-and-decimals.json",
-        "5th-grade-language arts-cause-and-effect.json",
-        "5th-grade-language arts-context-clues.json",
-        "5th-grade-language arts-elements-of-poetry.json",
-        "5th-grade-language arts-expository-writing.json",
-        "5th-grade-language arts-figurative-language.json",
-        "5th-grade-language arts-main-idea.json",
-        "5th-grade-language arts-narrative-writing.json",
-        "5th-grade-language arts-parts-of-speech.json",
-        "5th-grade-language arts-persuasive-writing.json",
-        "5th-grade-language arts-punctuation-and-capitalization.json"
-      ]
-    },
-    {
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "count": 11,
-      "files": [
-        "pre-k-math-basic-shapes.json",
-        "pre-k-math-comparing-numbers.json",
-        "pre-k-math-counting-1-10.json",
-        "pre-k-math-counting-to-20.json",
-        "pre-k-math-measurement-size.json",
-        "pre-k-math-money.json",
-        "pre-k-math-number-recognition-0-10.json",
-        "pre-k-math-patterns.json",
-        "pre-k-math-simple-addition.json",
-        "pre-k-math-sorting-and-classifying.json",
-        "pre-k-math-time-day-night.json"
-      ]
-    },
-    {
-      "gradeBand": "pre-k",
-      "subject": "science",
+      "gradeBand": "elementary",
+      "subject": "advanced-math",
       "count": 10,
       "files": [
-        "pre-k-science-animals.json",
-        "pre-k-science-dinosaurs.json",
-        "pre-k-science-living-and-non-living-things.json",
-        "pre-k-science-our-bodies.json",
-        "pre-k-science-plants.json",
-        "pre-k-science-seasons.json",
-        "pre-k-science-space.json",
-        "pre-k-science-the-five-senses.json",
-        "pre-k-science-water.json",
-        "pre-k-science-weather.json"
+        "advanced-math-201.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "arts",
+      "count": 10,
+      "files": [
+        "arts-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "astronomy",
+      "count": 10,
+      "files": [
+        "astronomy-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "basic-math",
+      "count": 10,
+      "files": [
+        "basic-math-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "biology",
+      "count": 10,
+      "files": [
+        "biology-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "chemistry",
+      "count": 10,
+      "files": [
+        "chemistry-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "coding",
+      "count": 10,
+      "files": [
+        "coding-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "farming",
+      "count": 10,
+      "files": [
+        "farming-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "financial-literacy",
+      "count": 10,
+      "files": [
+        "financial-literacy-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "general-relativity",
+      "count": 10,
+      "files": [
+        "general-relativity-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "general-science",
+      "count": 24,
+      "files": [
+        "apple-vision-science-lab.ts",
+        "general-science-101.ts",
+        "science-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "geography",
+      "count": 10,
+      "files": [
+        "geography-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "household-management",
+      "count": 10,
+      "files": [
+        "household-management-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "language-arts",
+      "count": 10,
+      "files": [
+        "language-arts-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "physics",
+      "count": 10,
+      "files": [
+        "physics-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "social-studies-us",
+      "count": 10,
+      "files": [
+        "social-studies-us-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "social-studies-world",
+      "count": 10,
+      "files": [
+        "social-studies-world-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "elementary",
+      "subject": "world-history",
+      "count": 10,
+      "files": [
+        "world-history-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "exam-prep",
+      "count": 70,
+      "files": [
+        "a-level-prep-101.ts",
+        "act-prep-101.ts",
+        "ap-prep-101.ts",
+        "gaokao-prep-101.ts",
+        "gcse-prep-101.ts",
+        "jee-neet-prep-101.ts",
+        "sat-prep-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "basic-math",
+      "count": 8,
+      "files": [
+        "math-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "pre-k",
+      "subject": "language-arts",
+      "count": 8,
+      "files": [
+        "reading-101.ts"
       ]
     }
   ],
   "lessons": [
     {
-      "fileName": "5th-grade-basic-math-adding-and-subtracting-decimals.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "basic-math-adding-and-subtracting-decimals"
+      "source": "module-catalog",
+      "fileName": "a-level-prep-101.ts",
+      "moduleId": "a-level-prep-101",
+      "moduleTitle": "A-Level Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "minAge": 15,
+      "maxAge": 19,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-basic-math-adding-and-subtracting-fractions-unlike-denominators.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "basic-math-adding-and-subtracting-fractions-unlike-denominators"
+      "source": "module-catalog",
+      "fileName": "act-prep-101.ts",
+      "moduleId": "act-prep-101",
+      "moduleTitle": "ACT Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "minAge": 14,
+      "maxAge": 19,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-basic-math-multiplying-and-dividing-decimals.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "basic-math-multiplying-and-dividing-decimals"
+      "source": "module-catalog",
+      "fileName": "advanced-math-201.ts",
+      "moduleId": "advanced-math-201",
+      "moduleTitle": "Advanced Math Topics",
+      "subject": "advanced-math",
+      "subjectRaw": "Advanced Math",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-basic-math-multiplying-and-dividing-fractions.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "basic-math-multiplying-and-dividing-fractions"
+      "source": "module-catalog",
+      "fileName": "ap-prep-101.ts",
+      "moduleId": "ap-prep-101",
+      "moduleTitle": "AP Exam Prep Toolkit",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "minAge": 14,
+      "maxAge": 19,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-basic-math-order-of-operations.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "basic-math-order-of-operations"
+      "source": "module-catalog",
+      "fileName": "apple-vision-science-lab.ts",
+      "moduleId": "science-vision-lab",
+      "moduleTitle": "Apple Vision Science Lab",
+      "subject": "general-science",
+      "subjectRaw": "Science",
+      "gradeBand": "elementary",
+      "minAge": 9,
+      "maxAge": 18,
+      "lessonCount": 6,
+      "lessonTypeCounts": {
+        "video": 1,
+        "interactive": 3,
+        "quiz": 2
+      }
     },
     {
-      "fileName": "5th-grade-basic-math-place-value-and-decimals.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "basic-math-place-value-and-decimals"
+      "source": "module-catalog",
+      "fileName": "arts-101.ts",
+      "moduleId": "arts-101",
+      "moduleTitle": "Creative Arts Studio",
+      "subject": "arts",
+      "subjectRaw": "Arts",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-cause-and-effect.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-cause-and-effect"
+      "source": "module-catalog",
+      "fileName": "astronomy-101.ts",
+      "moduleId": "astronomy-101",
+      "moduleTitle": "Astronomy Explorer",
+      "subject": "astronomy",
+      "subjectRaw": "Astronomy",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-context-clues.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-context-clues"
+      "source": "module-catalog",
+      "fileName": "basic-math-101.ts",
+      "moduleId": "basic-math-101",
+      "moduleTitle": "Basic Math Foundations",
+      "subject": "basic-math",
+      "subjectRaw": "Math",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-elements-of-poetry.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-elements-of-poetry"
+      "source": "module-catalog",
+      "fileName": "biology-101.ts",
+      "moduleId": "biology-101",
+      "moduleTitle": "Biology Essentials",
+      "subject": "biology",
+      "subjectRaw": "Biology",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-expository-writing.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-expository-writing"
+      "source": "module-catalog",
+      "fileName": "chemistry-101.ts",
+      "moduleId": "chemistry-101",
+      "moduleTitle": "Chemistry Essentials",
+      "subject": "chemistry",
+      "subjectRaw": "Chemistry",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-figurative-language.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-figurative-language"
+      "source": "module-catalog",
+      "fileName": "coding-101.ts",
+      "moduleId": "coding-101",
+      "moduleTitle": "Coding Foundations",
+      "subject": "coding",
+      "subjectRaw": "Coding",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-main-idea.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-main-idea"
+      "source": "module-catalog",
+      "fileName": "farming-101.ts",
+      "moduleId": "farming-101",
+      "moduleTitle": "Farming and Food Systems",
+      "subject": "farming",
+      "subjectRaw": "Farming",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-narrative-writing.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-narrative-writing"
+      "source": "module-catalog",
+      "fileName": "financial-literacy-101.ts",
+      "moduleId": "financial-literacy-101",
+      "moduleTitle": "Financial Literacy Basics",
+      "subject": "financial-literacy",
+      "subjectRaw": "Financial Literacy",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-parts-of-speech.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-parts-of-speech"
+      "source": "module-catalog",
+      "fileName": "gaokao-prep-101.ts",
+      "moduleId": "gaokao-prep-101",
+      "moduleTitle": "Gaokao Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "minAge": 15,
+      "maxAge": 20,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-persuasive-writing.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-persuasive-writing"
+      "source": "module-catalog",
+      "fileName": "gcse-prep-101.ts",
+      "moduleId": "gcse-prep-101",
+      "moduleTitle": "GCSE Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "minAge": 14,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "5th-grade-language arts-punctuation-and-capitalization.json",
-      "gradeBand": "5th",
-      "subject": "grade",
-      "lessonSlug": "language arts-punctuation-and-capitalization"
+      "source": "module-catalog",
+      "fileName": "general-relativity-101.ts",
+      "moduleId": "general-relativity-101",
+      "moduleTitle": "General Relativity Intro",
+      "subject": "general-relativity",
+      "subjectRaw": "General Relativity",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "pre-k-math-basic-shapes.json",
+      "source": "module-catalog",
+      "fileName": "general-science-101.ts",
+      "moduleId": "general-science-101",
+      "moduleTitle": "General Science Explorer",
+      "subject": "general-science",
+      "subjectRaw": "Science",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "geography-101.ts",
+      "moduleId": "geography-101",
+      "moduleTitle": "Geography and Maps",
+      "subject": "geography",
+      "subjectRaw": "Geography",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "household-management-101.ts",
+      "moduleId": "household-management-101",
+      "moduleTitle": "Household Management Skills",
+      "subject": "household-management",
+      "subjectRaw": "Household Management",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "jee-neet-prep-101.ts",
+      "moduleId": "jee-neet-prep-101",
+      "moduleTitle": "JEE / NEET Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "minAge": 15,
+      "maxAge": 20,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "language-arts-101.ts",
+      "moduleId": "language-arts-101",
+      "moduleTitle": "Language Arts Foundations",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "math-101.ts",
+      "moduleId": "math-101",
+      "moduleTitle": "Introduction to Counting",
+      "subject": "basic-math",
+      "subjectRaw": "Math",
       "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "basic-shapes"
+      "minAge": 4,
+      "maxAge": 8,
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      }
     },
     {
-      "fileName": "pre-k-math-comparing-numbers.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "comparing-numbers"
+      "source": "module-catalog",
+      "fileName": "physics-101.ts",
+      "moduleId": "physics-101",
+      "moduleTitle": "Physics Essentials",
+      "subject": "physics",
+      "subjectRaw": "Physics",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "pre-k-math-counting-1-10.json",
+      "source": "module-catalog",
+      "fileName": "reading-101.ts",
+      "moduleId": "reading-101",
+      "moduleTitle": "The Alphabet",
+      "subject": "language-arts",
+      "subjectRaw": "Reading",
       "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "counting-1-10"
+      "minAge": 4,
+      "maxAge": 9,
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      }
     },
     {
-      "fileName": "pre-k-math-counting-to-20.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "counting-to-20"
+      "source": "module-catalog",
+      "fileName": "sat-prep-101.ts",
+      "moduleId": "sat-prep-101",
+      "moduleTitle": "SAT Prep Foundations",
+      "subject": "exam-prep",
+      "subjectRaw": "Exam Prep",
+      "gradeBand": "high-school",
+      "minAge": 14,
+      "maxAge": 19,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "pre-k-math-measurement-size.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "measurement-size"
+      "source": "module-catalog",
+      "fileName": "science-101.ts",
+      "moduleId": "science-101",
+      "moduleTitle": "Our Solar System",
+      "subject": "general-science",
+      "subjectRaw": "Science",
+      "gradeBand": "elementary",
+      "minAge": 6,
+      "maxAge": 12,
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      }
     },
     {
-      "fileName": "pre-k-math-money.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "money"
+      "source": "module-catalog",
+      "fileName": "social-studies-us-101.ts",
+      "moduleId": "social-studies-us-101",
+      "moduleTitle": "Social Studies: United States",
+      "subject": "social-studies-us",
+      "subjectRaw": "Social Studies US",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "pre-k-math-number-recognition-0-10.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "number-recognition-0-10"
+      "source": "module-catalog",
+      "fileName": "social-studies-world-101.ts",
+      "moduleId": "social-studies-world-101",
+      "moduleTitle": "Social Studies: World",
+      "subject": "social-studies-world",
+      "subjectRaw": "Social Studies World",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     },
     {
-      "fileName": "pre-k-math-patterns.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "patterns"
-    },
-    {
-      "fileName": "pre-k-math-simple-addition.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "simple-addition"
-    },
-    {
-      "fileName": "pre-k-math-sorting-and-classifying.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "sorting-and-classifying"
-    },
-    {
-      "fileName": "pre-k-math-time-day-night.json",
-      "gradeBand": "pre-k",
-      "subject": "math",
-      "lessonSlug": "time-day-night"
-    },
-    {
-      "fileName": "pre-k-science-animals.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "animals"
-    },
-    {
-      "fileName": "pre-k-science-dinosaurs.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "dinosaurs"
-    },
-    {
-      "fileName": "pre-k-science-living-and-non-living-things.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "living-and-non-living-things"
-    },
-    {
-      "fileName": "pre-k-science-our-bodies.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "our-bodies"
-    },
-    {
-      "fileName": "pre-k-science-plants.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "plants"
-    },
-    {
-      "fileName": "pre-k-science-seasons.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "seasons"
-    },
-    {
-      "fileName": "pre-k-science-space.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "space"
-    },
-    {
-      "fileName": "pre-k-science-the-five-senses.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "the-five-senses"
-    },
-    {
-      "fileName": "pre-k-science-water.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "water"
-    },
-    {
-      "fileName": "pre-k-science-weather.json",
-      "gradeBand": "pre-k",
-      "subject": "science",
-      "lessonSlug": "weather"
+      "source": "module-catalog",
+      "fileName": "world-history-101.ts",
+      "moduleId": "world-history-101",
+      "moduleTitle": "World History Journey",
+      "subject": "world-history",
+      "subjectRaw": "History Worldwide",
+      "gradeBand": "elementary",
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
     }
   ]
 }

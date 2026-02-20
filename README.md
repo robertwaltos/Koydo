@@ -214,6 +214,8 @@ To inspect curriculum breadth and identify coverage gaps:
 npm run curriculum:report
 ```
 
+The coverage report now derives lesson totals from the module catalog (`src/lib/modules/catalog`) and infers grade bands from module age ranges (`minAge`/`maxAge`), with fallback to legacy JSON lessons only when needed.
+
 This generates:
 
 - `public/CURRICULUM-COVERAGE-REPORT.json`
