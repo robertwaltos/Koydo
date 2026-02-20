@@ -2,16 +2,31 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { checkAiBudget } from "@/lib/ai/token-budget";
 import { serverEnv } from "@/lib/config/env";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const requestSchema = z.object({
-  userId: z.string().min(1),
-  monthlySpentUsd: z.number().min(0).default(0),
   estimatedInputTokens: z.number().int().min(0).default(1200),
   estimatedOutputTokens: z.number().int().min(0).default(700),
   weakPoints: z.array(z.string()).default([]),
 });
 
+function monthKeyFromDate(date: Date) {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  return `${year}-${month}`;
+}
+
 export async function POST(request: NextRequest) {
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   const body = await request.json().catch(() => null);
   const parsed = requestSchema.safeParse(body);
 
@@ -25,8 +40,18 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const monthKey = monthKeyFromDate(new Date());
+  const { data: usageRow } = await supabase
+    .from("user_tokens")
+    .select("spent_usd")
+    .eq("user_id", user.id)
+    .eq("month_key", monthKey)
+    .maybeSingle();
+
+  const monthlySpentUsd = Number(usageRow?.spent_usd ?? 0);
+
   const budget = checkAiBudget({
-    spentUsd: parsed.data.monthlySpentUsd,
+    spentUsd: monthlySpentUsd,
     monthlyBudgetUsd: serverEnv.AI_MONTHLY_BUDGET_USD,
     inputTokens: parsed.data.estimatedInputTokens,
     outputTokens: parsed.data.estimatedOutputTokens,
@@ -42,6 +67,11 @@ export async function POST(request: NextRequest) {
           "Repeat the last two modules with visual hints enabled.",
           "Schedule a 10-minute review tomorrow using SRS intervals.",
         ],
+        context: {
+          userId: user.id,
+          monthKey,
+          monthlySpentUsd,
+        },
       },
       { status: 200 },
     );
@@ -51,6 +81,11 @@ export async function POST(request: NextRequest) {
     mode: "ai-enabled",
     warning: budget.isWarning,
     budget,
+    context: {
+      userId: user.id,
+      monthKey,
+      monthlySpentUsd,
+    },
     recommendation: parsed.data.weakPoints.length
       ? parsed.data.weakPoints.map((topic) => `Assign remedial module for ${topic}.`)
       : ["Continue with next scheduled lesson and 1 retrieval quiz."],
@@ -61,9 +96,8 @@ export async function GET() {
   return NextResponse.json({
     route: "/api/ai/analyze",
     method: "POST",
+    auth: "required",
     bodyExample: {
-      userId: "user_123",
-      monthlySpentUsd: 0.25,
       estimatedInputTokens: 1200,
       estimatedOutputTokens: 700,
       weakPoints: ["reading comprehension"],

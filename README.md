@@ -55,6 +55,7 @@ Checks on push/PR:
 - `GET/PATCH /api/user/preferences`
 - `GET /api/ai/analyze` (schema info)
 - `POST /api/ai/analyze` (budget-aware recommendation mock)
+- `GET /api/ai/recommendations`
 - `POST /api/images/generate`
 - `POST /api/stripe/checkout`
 - `POST /api/stripe/webhook`
@@ -216,6 +217,11 @@ Image generation behavior:
 
 - `POST /api/images/generate` checks completed `media_generation_jobs` first.
 - If no completed image exists, it queues an image job and returns a placeholder until processing completes.
+
+AI routes hardening:
+
+- `POST /api/ai/analyze` now derives authenticated user + month spend server-side from `user_tokens`.
+- `GET /api/ai/recommendations` now uses mastery + progress scoring (weak skills, due review, new lesson bias) instead of simple placeholder selection.
 
 Supabase auth provider setup checklist:
 
