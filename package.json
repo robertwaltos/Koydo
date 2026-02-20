@@ -19,6 +19,7 @@
     "reports:refresh": "node scripts/generate-all-reports.mjs",
     "env:check": "node scripts/check-env.mjs",
     "db:check": "node scripts/check-db-readiness.mjs",
+    "ops:doctor": "npm run env:check && npm run db:check && npm run curriculum:validate",
     "prebuild": "npm run modules:sync",
     "build": "next build",
     "start": "next start",

@@ -56,6 +56,12 @@ Optional report output:
 node scripts/check-db-readiness.mjs --write-report --no-fail
 ```
 
+Run all operational diagnostics in one command:
+
+```bash
+npm run ops:doctor
+```
+
 ## Continuous integration
 
 GitHub Actions workflow: `.github/workflows/ci.yml`
