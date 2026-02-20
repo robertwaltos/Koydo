@@ -1,6 +1,6 @@
 # Media Readiness Report
 
-Generated: 2026-02-20T15:17:09.880Z
+Generated: 2026-02-20T15:22:25.614Z
 
 Modules scanned: 29
 Placeholder references: 7

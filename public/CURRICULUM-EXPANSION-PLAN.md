@@ -1,6 +1,6 @@
 # Curriculum Expansion Plan
 
-Generated: 2026-02-20T15:17:09.782Z
+Generated: 2026-02-20T15:22:25.356Z
 Target lessons per grade+subject: 10
 
 Current lessons counted across targets: 0

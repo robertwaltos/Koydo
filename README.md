@@ -179,6 +179,17 @@ This generates:
 - `public/MEDIA-READINESS-REPORT.json`
 - `public/MEDIA-READINESS-REPORT.md`
 
+Generate lesson-by-lesson Seedance and research-agent prompt payloads:
+
+```bash
+npm run prompts:lesson-media
+```
+
+This generates:
+
+- `public/LESSON-MEDIA-PROMPT-PACK.json`
+- `public/LESSON-MEDIA-PROMPT-PACK.md`
+
 App store compliance audit report:
 
 ```bash

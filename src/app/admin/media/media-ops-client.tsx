@@ -107,6 +107,9 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
           <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/MEDIA-READINESS-REPORT.md" target="_blank" rel="noreferrer">
             Open Media Readiness Report
           </a>
+          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/LESSON-MEDIA-PROMPT-PACK.md" target="_blank" rel="noreferrer">
+            Open Lesson Media Prompt Pack
+          </a>
           <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/AI-MEDIA-PROMPTS.md" target="_blank" rel="noreferrer">
             Open AI Media Prompt Catalog
           </a>
