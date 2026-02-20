@@ -1,10 +1,10 @@
 # Media Readiness Report
 
-Generated: 2026-02-20T15:12:42.084Z
+Generated: 2026-02-20T15:17:09.880Z
 
 Modules scanned: 29
 Placeholder references: 7
-Learning aid references: 250
+Learning aid references: 272
 
 | Module | Lessons | Placeholders | Readiness Score |
 |---|---:|---:|---:|
@@ -16,7 +16,7 @@ Learning aid references: 250
 | jee-neet-prep-101 | 10 | 1 | 95 |
 | sat-prep-101 | 10 | 1 | 95 |
 | advanced-math-201 | 10 | 0 | 100 |
-| apple-vision-science-lab | 1 | 0 | 100 |
+| apple-vision-science-lab | 6 | 0 | 100 |
 | arts-101 | 10 | 0 | 100 |
 | astronomy-101 | 10 | 0 | 100 |
 | basic-math-101 | 10 | 0 | 100 |
@@ -30,10 +30,10 @@ Learning aid references: 250
 | geography-101 | 10 | 0 | 100 |
 | household-management-101 | 10 | 0 | 100 |
 | language-arts-101 | 10 | 0 | 100 |
-| math-101 | 4 | 0 | 100 |
+| math-101 | 8 | 0 | 100 |
 | physics-101 | 10 | 0 | 100 |
-| reading-101 | 4 | 0 | 100 |
-| science-101 | 4 | 0 | 100 |
+| reading-101 | 8 | 0 | 100 |
+| science-101 | 8 | 0 | 100 |
 | social-studies-us-101 | 10 | 0 | 100 |
 | social-studies-world-101 | 10 | 0 | 100 |
 | world-history-101 | 10 | 0 | 100 |

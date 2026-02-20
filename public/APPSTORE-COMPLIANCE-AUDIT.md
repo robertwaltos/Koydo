@@ -1,6 +1,6 @@
 # App Store Compliance Audit
 
-Generated: 2026-02-20T15:12:42.198Z
+Generated: 2026-02-20T15:17:09.966Z
 
 Checks: 12 | Pass: 11 | Warn: 1 | Fail: 0
 

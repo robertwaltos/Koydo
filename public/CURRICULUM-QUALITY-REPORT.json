@@ -1,136 +1,22 @@
 {
-  "generatedAt": "2026-02-20T15:12:41.856Z",
+  "generatedAt": "2026-02-20T15:17:09.681Z",
   "sourceDir": "src/lib/modules/catalog",
   "totals": {
     "modules": 29,
-    "lessons": 263,
-    "quizLessons": 104,
-    "interactiveLessons": 79,
-    "videoLessons": 80,
-    "questions": 405,
-    "learningAidBlocks": 250,
+    "lessons": 280,
+    "quizLessons": 111,
+    "interactiveLessons": 84,
+    "videoLessons": 85,
+    "questions": 447,
+    "learningAidBlocks": 272,
     "placeholderOptionCount": 0,
     "genericReflectionCount": 0,
-    "averageScore": 93.1,
-    "highPriorityModules": 4,
+    "averageScore": 100,
+    "highPriorityModules": 0,
     "mediumPriorityModules": 0,
-    "lowPriorityModules": 25
+    "lowPriorityModules": 29
   },
   "topPriorityModules": [
-    {
-      "moduleId": "science-vision-lab",
-      "title": "Apple Vision Science Lab",
-      "subject": "Science",
-      "file": "src/lib/modules/catalog/apple-vision-science-lab.ts",
-      "lessonCount": 1,
-      "lessonTypeCounts": {
-        "video": 0,
-        "interactive": 1,
-        "quiz": 0
-      },
-      "questionCount": 0,
-      "learningAidBlocks": 0,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 0,
-      "score": 20,
-      "priority": "high",
-      "issues": [
-        "Low lesson volume (1) for a full module.",
-        "No quiz lessons found.",
-        "No video lessons found.",
-        "No quiz questions found.",
-        "Limited learning aid coverage across lessons."
-      ],
-      "recommendedActions": [
-        "Add at least one short video lesson with storyboard-backed visuals.",
-        "Add learning aids (image, animation, mnemonic, practice) to improve concept retention."
-      ]
-    },
-    {
-      "moduleId": "math-101",
-      "title": "Introduction to Counting",
-      "subject": "Math",
-      "file": "src/lib/modules/catalog/math-101.ts",
-      "lessonCount": 4,
-      "lessonTypeCounts": {
-        "video": 1,
-        "interactive": 1,
-        "quiz": 2
-      },
-      "questionCount": 3,
-      "learningAidBlocks": 0,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 1.5,
-      "score": 60,
-      "priority": "high",
-      "issues": [
-        "Low lesson volume (4) for a full module.",
-        "Low quiz depth (1.5 questions per quiz lesson).",
-        "Limited learning aid coverage across lessons."
-      ],
-      "recommendedActions": [
-        "Increase each quiz lesson to at least 3-5 high-quality questions.",
-        "Add learning aids (image, animation, mnemonic, practice) to improve concept retention."
-      ]
-    },
-    {
-      "moduleId": "reading-101",
-      "title": "The Alphabet",
-      "subject": "Reading",
-      "file": "src/lib/modules/catalog/reading-101.ts",
-      "lessonCount": 4,
-      "lessonTypeCounts": {
-        "video": 2,
-        "interactive": 1,
-        "quiz": 1
-      },
-      "questionCount": 1,
-      "learningAidBlocks": 0,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 1,
-      "score": 60,
-      "priority": "high",
-      "issues": [
-        "Low lesson volume (4) for a full module.",
-        "Low quiz depth (1.0 questions per quiz lesson).",
-        "Limited learning aid coverage across lessons."
-      ],
-      "recommendedActions": [
-        "Increase each quiz lesson to at least 3-5 high-quality questions.",
-        "Add learning aids (image, animation, mnemonic, practice) to improve concept retention."
-      ]
-    },
-    {
-      "moduleId": "science-101",
-      "title": "Our Solar System",
-      "subject": "Science",
-      "file": "src/lib/modules/catalog/science-101.ts",
-      "lessonCount": 4,
-      "lessonTypeCounts": {
-        "video": 2,
-        "interactive": 1,
-        "quiz": 1
-      },
-      "questionCount": 1,
-      "learningAidBlocks": 0,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 1,
-      "score": 60,
-      "priority": "high",
-      "issues": [
-        "Low lesson volume (4) for a full module.",
-        "Low quiz depth (1.0 questions per quiz lesson).",
-        "Limited learning aid coverage across lessons."
-      ],
-      "recommendedActions": [
-        "Increase each quiz lesson to at least 3-5 high-quality questions.",
-        "Add learning aids (image, animation, mnemonic, practice) to improve concept retention."
-      ]
-    },
     {
       "moduleId": "a-level-prep-101",
       "title": "A-Level Prep Foundations",
@@ -592,6 +478,29 @@
       ]
     },
     {
+      "moduleId": "math-101",
+      "title": "Introduction to Counting",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/math-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      },
+      "questionCount": 13,
+      "learningAidBlocks": 7,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.33,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "physics-101",
       "title": "Physics Essentials",
       "subject": "Physics",
@@ -615,6 +524,29 @@
       ]
     },
     {
+      "moduleId": "reading-101",
+      "title": "The Alphabet",
+      "subject": "Reading",
+      "file": "src/lib/modules/catalog/reading-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      },
+      "questionCount": 13,
+      "learningAidBlocks": 6,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.33,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "sat-prep-101",
       "title": "SAT Prep Foundations",
       "subject": "Exam Prep",
@@ -627,6 +559,52 @@
       },
       "questionCount": 16,
       "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "science-101",
+      "title": "Our Solar System",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/science-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      },
+      "questionCount": 13,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.33,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "science-vision-lab",
+      "title": "Apple Vision Science Lab",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/apple-vision-science-lab.ts",
+      "lessonCount": 6,
+      "lessonTypeCounts": {
+        "video": 1,
+        "interactive": 3,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -709,120 +687,6 @@
   ],
   "modules": [
     {
-      "moduleId": "science-vision-lab",
-      "title": "Apple Vision Science Lab",
-      "subject": "Science",
-      "file": "src/lib/modules/catalog/apple-vision-science-lab.ts",
-      "lessonCount": 1,
-      "lessonTypeCounts": {
-        "video": 0,
-        "interactive": 1,
-        "quiz": 0
-      },
-      "questionCount": 0,
-      "learningAidBlocks": 0,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 0,
-      "score": 20,
-      "priority": "high",
-      "issues": [
-        "Low lesson volume (1) for a full module.",
-        "No quiz lessons found.",
-        "No video lessons found.",
-        "No quiz questions found.",
-        "Limited learning aid coverage across lessons."
-      ],
-      "recommendedActions": [
-        "Add at least one short video lesson with storyboard-backed visuals.",
-        "Add learning aids (image, animation, mnemonic, practice) to improve concept retention."
-      ]
-    },
-    {
-      "moduleId": "math-101",
-      "title": "Introduction to Counting",
-      "subject": "Math",
-      "file": "src/lib/modules/catalog/math-101.ts",
-      "lessonCount": 4,
-      "lessonTypeCounts": {
-        "video": 1,
-        "interactive": 1,
-        "quiz": 2
-      },
-      "questionCount": 3,
-      "learningAidBlocks": 0,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 1.5,
-      "score": 60,
-      "priority": "high",
-      "issues": [
-        "Low lesson volume (4) for a full module.",
-        "Low quiz depth (1.5 questions per quiz lesson).",
-        "Limited learning aid coverage across lessons."
-      ],
-      "recommendedActions": [
-        "Increase each quiz lesson to at least 3-5 high-quality questions.",
-        "Add learning aids (image, animation, mnemonic, practice) to improve concept retention."
-      ]
-    },
-    {
-      "moduleId": "reading-101",
-      "title": "The Alphabet",
-      "subject": "Reading",
-      "file": "src/lib/modules/catalog/reading-101.ts",
-      "lessonCount": 4,
-      "lessonTypeCounts": {
-        "video": 2,
-        "interactive": 1,
-        "quiz": 1
-      },
-      "questionCount": 1,
-      "learningAidBlocks": 0,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 1,
-      "score": 60,
-      "priority": "high",
-      "issues": [
-        "Low lesson volume (4) for a full module.",
-        "Low quiz depth (1.0 questions per quiz lesson).",
-        "Limited learning aid coverage across lessons."
-      ],
-      "recommendedActions": [
-        "Increase each quiz lesson to at least 3-5 high-quality questions.",
-        "Add learning aids (image, animation, mnemonic, practice) to improve concept retention."
-      ]
-    },
-    {
-      "moduleId": "science-101",
-      "title": "Our Solar System",
-      "subject": "Science",
-      "file": "src/lib/modules/catalog/science-101.ts",
-      "lessonCount": 4,
-      "lessonTypeCounts": {
-        "video": 2,
-        "interactive": 1,
-        "quiz": 1
-      },
-      "questionCount": 1,
-      "learningAidBlocks": 0,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 1,
-      "score": 60,
-      "priority": "high",
-      "issues": [
-        "Low lesson volume (4) for a full module.",
-        "Low quiz depth (1.0 questions per quiz lesson).",
-        "Limited learning aid coverage across lessons."
-      ],
-      "recommendedActions": [
-        "Increase each quiz lesson to at least 3-5 high-quality questions.",
-        "Add learning aids (image, animation, mnemonic, practice) to improve concept retention."
-      ]
-    },
-    {
       "moduleId": "a-level-prep-101",
       "title": "A-Level Prep Foundations",
       "subject": "Exam Prep",
@@ -1283,6 +1147,29 @@
       ]
     },
     {
+      "moduleId": "math-101",
+      "title": "Introduction to Counting",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/math-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      },
+      "questionCount": 13,
+      "learningAidBlocks": 7,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.33,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "physics-101",
       "title": "Physics Essentials",
       "subject": "Physics",
@@ -1306,6 +1193,29 @@
       ]
     },
     {
+      "moduleId": "reading-101",
+      "title": "The Alphabet",
+      "subject": "Reading",
+      "file": "src/lib/modules/catalog/reading-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      },
+      "questionCount": 13,
+      "learningAidBlocks": 6,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.33,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "sat-prep-101",
       "title": "SAT Prep Foundations",
       "subject": "Exam Prep",
@@ -1318,6 +1228,52 @@
       },
       "questionCount": 16,
       "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "science-101",
+      "title": "Our Solar System",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/science-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 3
+      },
+      "questionCount": 13,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.33,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "science-vision-lab",
+      "title": "Apple Vision Science Lab",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/apple-vision-science-lab.ts",
+      "lessonCount": 6,
+      "lessonTypeCounts": {
+        "video": 1,
+        "interactive": 3,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-02-20T15:12:42.084Z",
+  "generatedAt": "2026-02-20T15:17:09.880Z",
   "totals": {
     "moduleCount": 29,
     "placeholderRefs": 7,
-    "learningAidRefs": 250
+    "learningAidRefs": 272
   },
   "modules": [
     {
@@ -88,11 +88,11 @@
     },
     {
       "moduleId": "apple-vision-science-lab",
-      "totalLessons": 1,
-      "videoLessons": 0,
-      "interactiveLessons": 1,
-      "quizLessons": 0,
-      "learningAidRefs": 0,
+      "totalLessons": 6,
+      "videoLessons": 1,
+      "interactiveLessons": 3,
+      "quizLessons": 2,
+      "learningAidRefs": 4,
       "placeholderRefs": 0,
       "readinessScore": 100
     },
@@ -228,11 +228,11 @@
     },
     {
       "moduleId": "math-101",
-      "totalLessons": 4,
-      "videoLessons": 1,
-      "interactiveLessons": 1,
-      "quizLessons": 2,
-      "learningAidRefs": 0,
+      "totalLessons": 8,
+      "videoLessons": 3,
+      "interactiveLessons": 2,
+      "quizLessons": 3,
+      "learningAidRefs": 7,
       "placeholderRefs": 0,
       "readinessScore": 100
     },
@@ -248,21 +248,21 @@
     },
     {
       "moduleId": "reading-101",
-      "totalLessons": 4,
-      "videoLessons": 2,
-      "interactiveLessons": 1,
-      "quizLessons": 1,
-      "learningAidRefs": 0,
+      "totalLessons": 8,
+      "videoLessons": 3,
+      "interactiveLessons": 2,
+      "quizLessons": 3,
+      "learningAidRefs": 6,
       "placeholderRefs": 0,
       "readinessScore": 100
     },
     {
       "moduleId": "science-101",
-      "totalLessons": 4,
-      "videoLessons": 2,
-      "interactiveLessons": 1,
-      "quizLessons": 1,
-      "learningAidRefs": 0,
+      "totalLessons": 8,
+      "videoLessons": 3,
+      "interactiveLessons": 2,
+      "quizLessons": 3,
+      "learningAidRefs": 5,
       "placeholderRefs": 0,
       "readinessScore": 100
     },
