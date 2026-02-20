@@ -32,7 +32,9 @@ export async function GET(request: Request) {
   const assetType = searchParams.get("assetType")?.trim() ?? "";
   const status = searchParams.get("status")?.trim() ?? "";
   const rawLimit = Number(searchParams.get("limit") ?? "100");
+  const rawOffset = Number(searchParams.get("offset") ?? "0");
   const limit = Number.isFinite(rawLimit) ? Math.min(200, Math.max(1, rawLimit)) : 100;
+  const offset = Number.isFinite(rawOffset) ? Math.max(0, rawOffset) : 0;
 
   if (assetType && !["video", "animation", "image"].includes(assetType)) {
     return NextResponse.json({ error: "assetType must be video, animation, or image." }, { status: 400 });
@@ -46,6 +48,7 @@ export async function GET(request: Request) {
     .from("media_generation_jobs")
     .select(
       "id, module_id, lesson_id, asset_type, provider, prompt, status, output_url, error, created_at, updated_at, completed_at",
+      { count: "exact" },
     );
 
   if (moduleId) {
@@ -61,13 +64,30 @@ export async function GET(request: Request) {
     query = query.eq("status", status);
   }
 
-  const { data, error } = await query.order("created_at", { ascending: false }).limit(limit);
+  const { data, error, count } = await query
+    .order("created_at", { ascending: false })
+    .order("id", { ascending: false })
+    .range(offset, offset + limit - 1);
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  return NextResponse.json({ jobs: data ?? [] });
+  const total = count ?? 0;
+  const jobs = data ?? [];
+  const nextOffset = offset + jobs.length;
+
+  return NextResponse.json({
+    jobs,
+    pagination: {
+      total,
+      limit,
+      offset,
+      hasMore: nextOffset < total,
+      nextOffset: nextOffset < total ? nextOffset : null,
+      previousOffset: offset > 0 ? Math.max(0, offset - limit) : null,
+    },
+  });
 }
 
 export async function POST(request: Request) {

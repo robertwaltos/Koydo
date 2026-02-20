@@ -34,6 +34,21 @@ type PromptPack = {
   modules?: PromptModule[];
 };
 
+type JobsPagination = {
+  total?: number;
+  limit?: number;
+  offset?: number;
+  hasMore?: boolean;
+  nextOffset?: number | null;
+  previousOffset?: number | null;
+};
+
+type JobsResponse = {
+  jobs?: MediaJob[];
+  error?: string;
+  pagination?: JobsPagination;
+};
+
 type RetryResponse = {
   scanned?: number;
   retried?: number;
@@ -44,6 +59,15 @@ type RetryResponse = {
 
 type AssetFilter = "all" | MediaJob["asset_type"];
 type StatusFilter = "all" | MediaJob["status"];
+
+type JobsPaginationState = {
+  total: number;
+  limit: number;
+  offset: number;
+  hasMore: boolean;
+  nextOffset: number | null;
+  previousOffset: number | null;
+};
 
 async function postJson(url: string, payload: unknown) {
   const response = await fetch(url, {
@@ -81,17 +105,28 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
   const [jobFilterAssetType, setJobFilterAssetType] = useState<AssetFilter>("all");
   const [jobFilterStatus, setJobFilterStatus] = useState<StatusFilter>("all");
   const [jobFilterLimit, setJobFilterLimit] = useState(100);
+  const [jobFilterOffset, setJobFilterOffset] = useState(0);
   const [jobRetryIncludeCanceled, setJobRetryIncludeCanceled] = useState(false);
   const [jobAutoRefresh, setJobAutoRefresh] = useState(true);
   const [jobsLastUpdatedAt, setJobsLastUpdatedAt] = useState<string | null>(null);
   const [isRetryingFiltered, setIsRetryingFiltered] = useState(false);
   const [retryingJobId, setRetryingJobId] = useState<string | null>(null);
+  const [jobsPagination, setJobsPagination] = useState<JobsPaginationState>({
+    total: initialJobs.length,
+    limit: 100,
+    offset: 0,
+    hasMore: false,
+    nextOffset: null,
+    previousOffset: null,
+  });
 
   const queuedCount = useMemo(() => jobs.filter((job) => job.status === "queued").length, [jobs]);
   const runningCount = useMemo(() => jobs.filter((job) => job.status === "running").length, [jobs]);
   const completedCount = useMemo(() => jobs.filter((job) => job.status === "completed").length, [jobs]);
   const failedCount = useMemo(() => jobs.filter((job) => job.status === "failed").length, [jobs]);
   const canceledCount = useMemo(() => jobs.filter((job) => job.status === "canceled").length, [jobs]);
+  const pageStart = jobsPagination.total === 0 ? 0 : jobsPagination.offset + 1;
+  const pageEnd = jobs.length === 0 ? 0 : jobsPagination.offset + jobs.length;
   const selectedPromptModule = useMemo(
     () => promptModules.find((entry) => entry.moduleId === packModuleId) ?? null,
     [packModuleId, promptModules],
@@ -110,6 +145,7 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
     try {
       const params = new URLSearchParams({
         limit: String(jobFilterLimit),
+        offset: String(jobFilterOffset),
       });
       if (jobFilterModuleId) params.set("moduleId", jobFilterModuleId);
       if (jobFilterLessonId) params.set("lessonId", jobFilterLessonId);
@@ -120,18 +156,44 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
         method: "GET",
         cache: "no-store",
       });
-      const payload = (await response.json().catch(() => ({}))) as { jobs?: MediaJob[]; error?: string };
+      const payload = (await response.json().catch(() => ({}))) as JobsResponse;
       if (!response.ok) {
         throw new Error(payload.error ?? "Failed to load jobs.");
       }
-      setJobs(payload.jobs ?? []);
+      const nextJobs = payload.jobs ?? [];
+      const pagination = payload.pagination ?? {};
+      const total = Number.isFinite(Number(pagination.total)) ? Number(pagination.total) : nextJobs.length;
+      const limit = Number.isFinite(Number(pagination.limit)) ? Number(pagination.limit) : jobFilterLimit;
+      const offset = Number.isFinite(Number(pagination.offset)) ? Number(pagination.offset) : jobFilterOffset;
+      const hasMore = Boolean(pagination.hasMore);
+      const parsedNextOffset =
+        pagination.nextOffset !== undefined && pagination.nextOffset !== null
+          ? Number(pagination.nextOffset)
+          : null;
+      const parsedPreviousOffset =
+        pagination.previousOffset !== undefined && pagination.previousOffset !== null
+          ? Number(pagination.previousOffset)
+          : null;
+      const nextOffset = parsedNextOffset !== null && Number.isFinite(parsedNextOffset) ? parsedNextOffset : null;
+      const previousOffset =
+        parsedPreviousOffset !== null && Number.isFinite(parsedPreviousOffset) ? parsedPreviousOffset : null;
+
+      setJobs(nextJobs);
+      setJobsPagination({
+        total,
+        limit,
+        offset,
+        hasMore,
+        nextOffset,
+        previousOffset,
+      });
       setJobsLastUpdatedAt(new Date().toISOString());
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Failed to load jobs.");
     } finally {
       setJobsLoading(false);
     }
-  }, [jobFilterAssetType, jobFilterLessonId, jobFilterLimit, jobFilterModuleId, jobFilterStatus]);
+  }, [jobFilterAssetType, jobFilterLessonId, jobFilterLimit, jobFilterModuleId, jobFilterOffset, jobFilterStatus]);
 
   const loadPromptPack = useCallback(async () => {
     if (promptModules.length > 0 || packLoading) return;
@@ -252,6 +314,16 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
     } catch (error) {
       setStatus(error instanceof Error ? error.message : "Failed to run media queue.");
     }
+  };
+
+  const handlePreviousPage = () => {
+    if (jobsPagination.previousOffset === null) return;
+    setJobFilterOffset(jobsPagination.previousOffset);
+  };
+
+  const handleNextPage = () => {
+    if (jobsPagination.nextOffset === null) return;
+    setJobFilterOffset(jobsPagination.nextOffset);
   };
 
   const handleRetryFiltered = async () => {
@@ -470,6 +542,7 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
               const nextModuleId = event.target.value;
               setJobFilterModuleId(nextModuleId);
               setJobFilterLessonId("");
+              setJobFilterOffset(0);
             }}
           >
             <option value="">{packLoading ? "Loading modules..." : "All modules"}</option>
@@ -482,7 +555,10 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
           <select
             className="rounded-md border border-black/15 px-2 py-2 text-sm"
             value={jobFilterLessonId}
-            onChange={(event) => setJobFilterLessonId(event.target.value)}
+            onChange={(event) => {
+              setJobFilterLessonId(event.target.value);
+              setJobFilterOffset(0);
+            }}
           >
             <option value="">{selectedJobFilterModule ? "All lessons in module" : "All lessons"}</option>
             {(selectedJobFilterModule?.lessons ?? []).map((lesson) => (
@@ -494,7 +570,10 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
           <select
             className="rounded-md border border-black/15 px-2 py-2 text-sm"
             value={jobFilterAssetType}
-            onChange={(event) => setJobFilterAssetType(event.target.value as AssetFilter)}
+            onChange={(event) => {
+              setJobFilterAssetType(event.target.value as AssetFilter);
+              setJobFilterOffset(0);
+            }}
           >
             <option value="all">All asset types</option>
             <option value="video">Video</option>
@@ -504,7 +583,10 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
           <select
             className="rounded-md border border-black/15 px-2 py-2 text-sm"
             value={jobFilterStatus}
-            onChange={(event) => setJobFilterStatus(event.target.value as StatusFilter)}
+            onChange={(event) => {
+              setJobFilterStatus(event.target.value as StatusFilter);
+              setJobFilterOffset(0);
+            }}
           >
             <option value="all">All statuses</option>
             <option value="queued">Queued</option>
@@ -520,9 +602,10 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
               min={1}
               max={200}
               value={jobFilterLimit}
-              onChange={(event) =>
-                setJobFilterLimit(Math.max(1, Math.min(200, Number(event.target.value) || 1)))
-              }
+              onChange={(event) => {
+                setJobFilterLimit(Math.max(1, Math.min(200, Number(event.target.value) || 1)));
+                setJobFilterOffset(0);
+              }}
               className="w-20 rounded border border-black/15 px-2 py-1 text-xs"
             />
           </label>
@@ -546,9 +629,30 @@ export default function MediaOpsClient({ initialJobs }: { initialJobs: MediaJob[
         <p className="mt-2 text-xs text-zinc-600">
           {jobsLoading
             ? "Loading jobs..."
-            : `Queued: ${queuedCount} | Running: ${runningCount} | Completed: ${completedCount} | Failed: ${failedCount} | Canceled: ${canceledCount} | Total: ${jobs.length}`}
+            : `Queued: ${queuedCount} | Running: ${runningCount} | Completed: ${completedCount} | Failed: ${failedCount} | Canceled: ${canceledCount} | Total shown: ${jobs.length} of ${jobsPagination.total}`}
           {jobsLastUpdatedAt ? ` | Updated: ${new Date(jobsLastUpdatedAt).toLocaleTimeString()}` : ""}
         </p>
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-zinc-600">
+          <button
+            type="button"
+            className="rounded border border-black/15 px-2 py-1 hover:bg-black/5 disabled:opacity-60"
+            onClick={handlePreviousPage}
+            disabled={jobsLoading || jobsPagination.previousOffset === null}
+          >
+            Previous
+          </button>
+          <button
+            type="button"
+            className="rounded border border-black/15 px-2 py-1 hover:bg-black/5 disabled:opacity-60"
+            onClick={handleNextPage}
+            disabled={jobsLoading || !jobsPagination.hasMore || jobsPagination.nextOffset === null}
+          >
+            Next
+          </button>
+          <span>
+            Showing {pageStart}-{pageEnd} of {jobsPagination.total}
+          </span>
+        </div>
         {status ? <p className="mt-2 text-sm text-indigo-700">{status}</p> : null}
 
         <div className="mt-4 space-y-3">
