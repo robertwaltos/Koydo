@@ -67,6 +67,31 @@ export function getLessonById(lessonId: string): {
   return null;
 }
 
+export function getLessonByLookupKey(lessonKey: string): {
+  lesson: Lesson;
+  learningModule: LearningModule;
+} | null {
+  const normalizedLookup = normalizeLookupKey(lessonKey);
+
+  for (const learningModule of moduleRegistry) {
+    for (const lesson of learningModule.lessons) {
+      const normalizedId = normalizeLookupKey(lesson.id);
+      const normalizedTitle = normalizeLookupKey(lesson.title);
+      const titleSlug = slugify(lesson.title);
+
+      if (
+        normalizedId === normalizedLookup ||
+        normalizedTitle === normalizedLookup ||
+        titleSlug === normalizedLookup
+      ) {
+        return { lesson, learningModule };
+      }
+    }
+  }
+
+  return null;
+}
+
 export function getModuleRegistryCount() {
   return moduleRegistry.length;
 }

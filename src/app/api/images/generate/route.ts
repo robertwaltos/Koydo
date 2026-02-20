@@ -9,7 +9,7 @@ const imageGenerateSchema = z.object({
   lessonId: z.string().min(1).optional(),
 });
 
-// A basic in-memory cache to avoid re-generating the same image
+// Cache only completed image URLs to avoid repeated DB hits.
 const imageCache = new Map<string, string>();
 
 export async function POST(request: Request) {
@@ -97,10 +97,7 @@ export async function POST(request: Request) {
       });
     }
 
-    const placeholderUrl = "/placeholders/lesson-robot.svg";
-    imageCache.set(cacheKey, placeholderUrl);
-
-    return NextResponse.json({ url: placeholderUrl, queued: true });
+    return NextResponse.json({ url: "/placeholders/lesson-robot.svg", queued: true });
   } catch (err) {
     console.error("Unexpected error in image generation route:", err);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });

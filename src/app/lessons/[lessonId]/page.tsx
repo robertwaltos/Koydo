@@ -1,6 +1,6 @@
 import { type Lesson, type Question } from "@/lib/data/curriculum";
-import { getLessonById } from "@/lib/modules";
-import { notFound } from "next/navigation";
+import { getLessonByLookupKey } from "@/lib/modules";
+import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import Quiz from "./quiz";
 import LessonImage from "./lesson-image";
@@ -23,13 +23,16 @@ async function LessonPageContent({
   params: { lessonId: string } | Promise<{ lessonId: string }>;
 }) {
   const resolvedParams = await Promise.resolve(params);
-  const resolvedLesson = getLessonById(resolvedParams.lessonId);
+  const resolvedLesson = getLessonByLookupKey(resolvedParams.lessonId);
 
   if (!resolvedLesson) {
     notFound();
   }
 
   const { lesson, learningModule } = resolvedLesson;
+  if (resolvedParams.lessonId !== lesson.id) {
+    redirect(`/lessons/${lesson.id}`);
+  }
   const lessonImagePrompt = `Create a warm, child-friendly educational illustration for a ${learningModule.subject} lesson about ${lesson.title}. Style: clean 2D digital illustration, soft shapes, high readability.`;
   const seedanceVideoPrompt = buildSeedanceVideoPrompt(learningModule, lesson);
   const seedanceAnimationPrompt = buildSeedanceAnimationPrompt(learningModule, lesson);
