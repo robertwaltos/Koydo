@@ -226,6 +226,8 @@ Owner operations (admin-only) include:
 - Update role flags explicitly (`is_admin`, `is_parent`)
 - Export signed CSV reports with checksum and export history
 - Monitor and acknowledge operational alerts
+- Monitor monthly AI spend, MoM change, and top spenders via `/admin/costs`
+  - Optional budget override in `app_settings` with key `cost_budget_cap_usd`
 
 App store readiness highlights:
 
