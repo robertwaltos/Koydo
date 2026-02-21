@@ -3,6 +3,8 @@ import path from "node:path";
 import vm from "node:vm";
 
 const catalogDir = path.resolve("src/lib/modules/catalog");
+const reportJsonPath = path.resolve("public/CURRICULUM-VALIDATION-REPORT.json");
+const reportMarkdownPath = path.resolve("public/CURRICULUM-VALIDATION-REPORT.md");
 
 function loadModuleFromFile(filePath) {
   const source = fs.readFileSync(filePath, "utf8");
@@ -264,7 +266,51 @@ function validateModule(moduleEntry, state) {
   return issues;
 }
 
+function parseArgs(argv) {
+  const flags = new Set(argv.slice(2));
+  return {
+    json: flags.has("--json"),
+    writeReport: flags.has("--write-report"),
+    noFail: flags.has("--no-fail"),
+  };
+}
+
+function toMarkdown(report) {
+  const lines = [];
+  lines.push("# Curriculum Validation Report");
+  lines.push("");
+  lines.push(`Generated: ${report.generatedAt}`);
+  lines.push(`Modules validated: ${report.totals.modules}`);
+  lines.push(`Errors: ${report.totals.errors}`);
+  lines.push(`Warnings: ${report.totals.warnings}`);
+  lines.push("");
+  lines.push("## Summary");
+  lines.push("");
+  lines.push(
+    report.totals.errors === 0
+      ? "- Validation status: PASS"
+      : "- Validation status: FAIL (blocking errors present)",
+  );
+  lines.push(`- Modules with issues: ${report.totals.modulesWithIssues}`);
+  lines.push("");
+  lines.push("## Modules With Issues");
+  lines.push("");
+  if (report.modulesWithIssues.length === 0) {
+    lines.push("- None");
+  } else {
+    for (const entry of report.modulesWithIssues) {
+      lines.push(`### ${entry.moduleId} (${entry.fileName})`);
+      for (const issue of entry.issues) {
+        lines.push(`- [${issue.level.toUpperCase()}] ${issue.message}`);
+      }
+      lines.push("");
+    }
+  }
+  return lines.join("\n");
+}
+
 function main() {
+  const args = parseArgs(process.argv);
   const modules = loadCatalogModules();
   const state = {
     moduleIds: new Map(),
@@ -292,22 +338,49 @@ function main() {
 
   const modulesWithIssues = byModule.filter((entry) => entry.issues.length > 0);
 
-  console.log(`Validated ${modules.length} module(s).`);
-  console.log(`Errors: ${errorCount}`);
-  console.log(`Warnings: ${warnCount}`);
+  const report = {
+    generatedAt: new Date().toISOString(),
+    sourceDir: path.relative(process.cwd(), catalogDir).replace(/\\/g, "/"),
+    totals: {
+      modules: modules.length,
+      modulesWithIssues: modulesWithIssues.length,
+      errors: errorCount,
+      warnings: warnCount,
+    },
+    modules: byModule,
+    modulesWithIssues,
+  };
 
-  if (modulesWithIssues.length > 0) {
-    console.log("");
-    console.log("Issue details:");
-    for (const entry of modulesWithIssues) {
-      console.log(`- ${entry.moduleId} (${entry.fileName})`);
-      for (const issue of entry.issues) {
-        console.log(`  [${issue.level.toUpperCase()}] ${issue.message}`);
+  if (args.writeReport) {
+    fs.mkdirSync(path.dirname(reportJsonPath), { recursive: true });
+    fs.writeFileSync(reportJsonPath, JSON.stringify(report, null, 2));
+    fs.writeFileSync(reportMarkdownPath, toMarkdown(report));
+    if (!args.json) {
+      console.log(`Wrote ${reportJsonPath}`);
+      console.log(`Wrote ${reportMarkdownPath}`);
+    }
+  }
+
+  if (args.json) {
+    process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
+  } else {
+    console.log(`Validated ${modules.length} module(s).`);
+    console.log(`Errors: ${errorCount}`);
+    console.log(`Warnings: ${warnCount}`);
+
+    if (modulesWithIssues.length > 0) {
+      console.log("");
+      console.log("Issue details:");
+      for (const entry of modulesWithIssues) {
+        console.log(`- ${entry.moduleId} (${entry.fileName})`);
+        for (const issue of entry.issues) {
+          console.log(`  [${issue.level.toUpperCase()}] ${issue.message}`);
+        }
       }
     }
   }
 
-  if (errorCount > 0) {
+  if (errorCount > 0 && !args.noFail) {
     process.exitCode = 1;
   }
 }

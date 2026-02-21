@@ -1,0 +1,273 @@
+{
+  "generatedAt": "2026-02-21T00:05:13.730Z",
+  "sourceDir": "src/lib/modules/catalog",
+  "totals": {
+    "modules": 52,
+    "modulesWithIssues": 0,
+    "errors": 0,
+    "warnings": 0
+  },
+  "modules": [
+    {
+      "moduleId": "a-level-prep-101",
+      "fileName": "a-level-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "act-prep-101",
+      "fileName": "act-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "advanced-math-201",
+      "fileName": "advanced-math-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "fileName": "ap-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "science-vision-lab",
+      "fileName": "apple-vision-science-lab.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "arts-101",
+      "fileName": "arts-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "astronomy-101",
+      "fileName": "astronomy-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "atar-prep-101",
+      "fileName": "atar-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-101",
+      "fileName": "basic-math-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "biology-101",
+      "fileName": "biology-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "chemistry-101",
+      "fileName": "chemistry-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "coding-101",
+      "fileName": "coding-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "fileName": "cuet-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "farming-101",
+      "fileName": "farming-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "financial-literacy-101",
+      "fileName": "financial-literacy-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "gaokao-prep-101",
+      "fileName": "gaokao-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "gcse-prep-101",
+      "fileName": "gcse-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "general-relativity-101",
+      "fileName": "general-relativity-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "general-science-101",
+      "fileName": "general-science-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "geography-101",
+      "fileName": "geography-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "household-management-101",
+      "fileName": "household-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "fileName": "ib-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ielts-prep-101",
+      "fileName": "ielts-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "jee-neet-prep-101",
+      "fileName": "jee-neet-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "language-arts-101",
+      "fileName": "language-arts-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "math-101",
+      "fileName": "math-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "physics-101",
+      "fileName": "physics-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-advanced-math-101",
+      "fileName": "pre-k-advanced-math-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-arts-101",
+      "fileName": "pre-k-arts-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-astronomy-101",
+      "fileName": "pre-k-astronomy-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-basic-math-101",
+      "fileName": "pre-k-basic-math-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-biology-101",
+      "fileName": "pre-k-biology-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-chemistry-101",
+      "fileName": "pre-k-chemistry-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-coding-101",
+      "fileName": "pre-k-coding-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-farming-101",
+      "fileName": "pre-k-farming-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-financial-literacy-101",
+      "fileName": "pre-k-financial-literacy-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-general-relativity-101",
+      "fileName": "pre-k-general-relativity-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-general-science-101",
+      "fileName": "pre-k-general-science-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-geography-101",
+      "fileName": "pre-k-geography-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-household-management-101",
+      "fileName": "pre-k-household-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-language-arts-101",
+      "fileName": "pre-k-language-arts-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-physics-101",
+      "fileName": "pre-k-physics-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-social-studies-us-101",
+      "fileName": "pre-k-social-studies-us-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-social-studies-world-101",
+      "fileName": "pre-k-social-studies-world-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "pre-k-world-history-101",
+      "fileName": "pre-k-world-history-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "reading-101",
+      "fileName": "reading-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "fileName": "sat-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "science-101",
+      "fileName": "science-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "social-studies-us-101",
+      "fileName": "social-studies-us-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "social-studies-world-101",
+      "fileName": "social-studies-world-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "toefl-prep-101",
+      "fileName": "toefl-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "world-history-101",
+      "fileName": "world-history-101.ts",
+      "issues": []
+    }
+  ],
+  "modulesWithIssues": []
+}

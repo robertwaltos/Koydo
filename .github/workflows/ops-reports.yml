@@ -85,6 +85,8 @@ jobs:
           path: |
             public/CURRICULUM-COVERAGE-REPORT.json
             public/CURRICULUM-COVERAGE-REPORT.md
+            public/CURRICULUM-VALIDATION-REPORT.json
+            public/CURRICULUM-VALIDATION-REPORT.md
             public/CURRICULUM-QUALITY-REPORT.json
             public/CURRICULUM-QUALITY-REPORT.md
             public/CURRICULUM-EXPANSION-PLAN.json

@@ -78,7 +78,7 @@ Checks on push/PR:
 
 Ops workflow output:
 
-- Uploads an `ops-report-bundle` artifact with curriculum/exam-prep/backlog/media/compliance/prompt-pack reports.
+- Uploads an `ops-report-bundle` artifact with curriculum validation/coverage/expansion/quality, exam-prep, backlog, media, compliance, and prompt-pack reports.
 - Processes due `admin_report_jobs` queue entries into `admin_report_exports` rows.
 
 Media automation workflow behavior:
@@ -236,6 +236,17 @@ This generates:
 
 - `public/CURRICULUM-COVERAGE-REPORT.json`
 - `public/CURRICULUM-COVERAGE-REPORT.md`
+
+To generate a machine-readable validation report (without failing the command on existing issues):
+
+```bash
+npm run curriculum:validate:report
+```
+
+This generates:
+
+- `public/CURRICULUM-VALIDATION-REPORT.json`
+- `public/CURRICULUM-VALIDATION-REPORT.md`
 
 To audit lesson-content quality and placeholder risk across module catalog files:
 
