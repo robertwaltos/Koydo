@@ -178,6 +178,15 @@ export async function POST() {
       "report_queue_sla_failure_24h_limit",
       "report_queue_alert_dedupe_hours",
       "report_queue_alert_auto_resolve_hours",
+      "remediation_worksheet_sla_stale_hours",
+      "remediation_worksheet_sla_backlog_limit",
+      "remediation_worksheet_sla_failure_24h_limit",
+      "remediation_worksheet_sla_min_view_to_download_rate",
+      "remediation_worksheet_sla_min_download_to_completion_rate",
+      "remediation_worksheet_sla_min_view_sample",
+      "remediation_worksheet_sla_min_download_sample",
+      "remediation_worksheet_alert_dedupe_hours",
+      "remediation_worksheet_alert_auto_resolve_hours",
     ]);
 
   const mediaSlaSettingMap = new Map((mediaSlaSettings ?? []).map((row) => [row.key, row.value]));
@@ -220,6 +229,54 @@ export async function POST() {
   const reportAutoResolveHours = Math.max(
     1,
     readNumericSetting(mediaSlaSettingMap.get("report_queue_alert_auto_resolve_hours"), 12),
+  );
+  const remediationStaleHoursThreshold = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("remediation_worksheet_sla_stale_hours"), 24),
+  );
+  const remediationBacklogThreshold = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("remediation_worksheet_sla_backlog_limit"), 80),
+  );
+  const remediationFailure24hThreshold = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("remediation_worksheet_sla_failure_24h_limit"), 15),
+  );
+  const remediationMinViewToDownloadRate = Math.max(
+    0,
+    Math.min(
+      100,
+      readNumericSetting(
+        mediaSlaSettingMap.get("remediation_worksheet_sla_min_view_to_download_rate"),
+        45,
+      ),
+    ),
+  );
+  const remediationMinDownloadToCompletionRate = Math.max(
+    0,
+    Math.min(
+      100,
+      readNumericSetting(
+        mediaSlaSettingMap.get("remediation_worksheet_sla_min_download_to_completion_rate"),
+        40,
+      ),
+    ),
+  );
+  const remediationMinViewSample = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("remediation_worksheet_sla_min_view_sample"), 10),
+  );
+  const remediationMinDownloadSample = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("remediation_worksheet_sla_min_download_sample"), 8),
+  );
+  const remediationDedupeWindowHours = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("remediation_worksheet_alert_dedupe_hours"), 24),
+  );
+  const remediationAutoResolveHours = Math.max(
+    1,
+    readNumericSetting(mediaSlaSettingMap.get("remediation_worksheet_alert_auto_resolve_hours"), 12),
   );
 
   const staleMediaCutoff = new Date(Date.now() - staleHoursThreshold * 60 * 60 * 1000).toISOString();

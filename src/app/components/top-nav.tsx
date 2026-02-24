@@ -95,18 +95,18 @@ export default function TopNav() {
   return (
     <header
       className={`w-full border-b px-4 py-3 backdrop-blur ${isAdminRoute
-        ? "border-violet-200 bg-white/95"
+        ? "border-violet-200 bg-surface"
         : "border-violet-200 bg-gradient-to-r from-rose-50 via-amber-50 to-sky-50"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-3">
-        <p className="mr-2 text-sm font-semibold tracking-wide">EduForge</p>
+      <div className="ui-soft-card mx-auto flex w-full max-w-6xl flex-wrap items-center gap-3 border-violet-200 bg-surface px-3 py-2">
+        <p className="mr-2 text-sm font-semibold tracking-wide text-violet-900">EduForge</p>
         <nav className="flex flex-wrap items-center gap-2">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-2 py-1 text-sm text-zinc-700 hover:bg-white/80 hover:text-zinc-900"
+              className="ui-soft-button ui-focus-ring inline-flex min-h-9 items-center rounded-full border border-transparent px-3 py-1 text-sm text-foreground hover:border-violet-200 hover:bg-surface-muted hover:text-foreground"
             >
               {t(item.labelKey)}
             </Link>

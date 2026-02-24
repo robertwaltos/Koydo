@@ -13,7 +13,7 @@ type ReportJob = {
   error?: string | null;
 };
 
-type ReportType = "dsar" | "support" | "audit";
+type ReportType = "dsar" | "support" | "audit" | "telemetry";
 
 type ReportTypeBreakdownEntry = {
   queuedReady: number;
@@ -50,7 +50,7 @@ type ReportQueueSummaryResponse = Partial<ReportQueueSummary> & {
   error?: string;
 };
 
-const REPORT_TYPES: ReportType[] = ["dsar", "support", "audit"];
+const REPORT_TYPES: ReportType[] = ["dsar", "support", "audit", "telemetry"];
 
 function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
@@ -93,6 +93,15 @@ function buildDefaultReportTypeBreakdown(): ReportTypeBreakdown {
       failed24h: 0,
     },
     audit: {
+      queuedReady: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+    telemetry: {
       queuedReady: 0,
       running: 0,
       backlog: 0,
@@ -359,23 +368,23 @@ export default function ReportsClient({
   }, [refreshJobs]);
 
   return (
-    <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+    <section className="ui-soft-card p-5">
       <h2 className="text-lg font-semibold">Report Job Queue</h2>
-      {status ? <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+      {status ? <p className="mt-2 text-sm text-zinc-600">{status}</p> : null}
 
-      <div className="mt-3 rounded-md border border-black/10 bg-zinc-50 p-4 dark:border-white/10 dark:bg-zinc-950">
+      <div className="mt-3 rounded-2xl border border-border bg-surface-muted p-4">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h3 className="text-sm font-semibold">Queue Health</h3>
           <button
             type="button"
             onClick={() => void refreshSummary()}
             disabled={summaryLoading}
-            className="rounded-md border border-black/15 px-3 py-1 text-xs hover:bg-black/5 disabled:opacity-70 dark:border-white/20 dark:hover:bg-white/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface px-3 py-1 text-xs font-semibold text-foreground hover:bg-surface-muted disabled:opacity-70"
           >
             {summaryLoading ? "Refreshing..." : "Refresh Health"}
           </button>
         </div>
-        <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-300">
+        <p className="mt-1 text-xs text-zinc-600">
           {summaryLoading
             ? "Refreshing queue health..."
             : summaryError
@@ -385,8 +394,8 @@ export default function ReportsClient({
         <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
           <article
             className={`rounded-md border p-3 ${
-              backlogBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-white"
-            } dark:border-white/10 dark:bg-zinc-900`}
+              backlogBreached ? "border-red-200 bg-red-50 text-red-800" : "border-border bg-surface"
+            }`}
           >
             <p className="text-xs uppercase tracking-wide text-zinc-500">Backlog</p>
             <p className="mt-1 text-2xl font-semibold">{queueSummary.backlogCount}</p>
@@ -394,8 +403,8 @@ export default function ReportsClient({
           </article>
           <article
             className={`rounded-md border p-3 ${
-              staleBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-white"
-            } dark:border-white/10 dark:bg-zinc-900`}
+              staleBreached ? "border-red-200 bg-red-50 text-red-800" : "border-border bg-surface"
+            }`}
           >
             <p className="text-xs uppercase tracking-wide text-zinc-500">Stale</p>
             <p className="mt-1 text-2xl font-semibold">{queueSummary.staleCount}</p>
@@ -405,19 +414,19 @@ export default function ReportsClient({
           </article>
           <article
             className={`rounded-md border p-3 ${
-              failed24hBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-white"
-            } dark:border-white/10 dark:bg-zinc-900`}
+              failed24hBreached ? "border-red-200 bg-red-50 text-red-800" : "border-border bg-surface"
+            }`}
           >
             <p className="text-xs uppercase tracking-wide text-zinc-500">Failed (24h)</p>
             <p className="mt-1 text-2xl font-semibold">{queueSummary.failed24hCount}</p>
             <p className="text-xs">Threshold {queueSummary.failure24hThreshold}</p>
           </article>
-          <article className="rounded-md border border-black/10 bg-white p-3 dark:border-white/10 dark:bg-zinc-900">
+          <article className="rounded-md border border-border bg-surface p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Queued Ready</p>
-            <p className="mt-1 text-2xl font-semibold text-zinc-900 dark:text-zinc-100">
+            <p className="mt-1 text-2xl font-semibold text-zinc-900">
               {queueSummary.queuedReadyCount}
             </p>
-            <p className="text-xs text-zinc-600 dark:text-zinc-300">Running {queueSummary.runningCount}</p>
+            <p className="text-xs text-zinc-600">Running {queueSummary.runningCount}</p>
           </article>
           <article className={`rounded-md border p-3 ${summaryStatusClass}`}>
             <p className="text-xs uppercase tracking-wide">SLA Status</p>
@@ -432,28 +441,28 @@ export default function ReportsClient({
             </p>
           </article>
         </div>
-        <p className="mt-2 text-xs text-zinc-600 dark:text-zinc-300">
+        <p className="mt-2 text-xs text-zinc-600">
           Stale threshold: {queueSummary.staleHoursThreshold}h | stale cutoff{" "}
           {new Date(queueSummary.staleCutoffAt).toLocaleString()}
         </p>
-        <div className="mt-3 grid gap-2 sm:grid-cols-3">
+        <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {REPORT_TYPES.map((reportType) => {
             const breakdown = queueSummary.reportTypeBreakdown[reportType];
             return (
               <article
                 key={reportType}
-                className="rounded-md border border-black/10 bg-white p-3 text-xs dark:border-white/10 dark:bg-zinc-900"
+                className="rounded-md border border-border bg-surface p-3 text-xs"
               >
-                <p className="font-semibold uppercase tracking-wide text-zinc-700 dark:text-zinc-200">
+                <p className="font-semibold uppercase tracking-wide text-zinc-700">
                   {reportType}
                 </p>
-                <p className="mt-1 text-zinc-600 dark:text-zinc-300">
+                <p className="mt-1 text-zinc-600">
                   backlog {breakdown.backlog} (q {breakdown.queuedReady} / r {breakdown.running})
                 </p>
-                <p className="text-zinc-600 dark:text-zinc-300">
+                <p className="text-zinc-600">
                   stale {breakdown.stale} (q {breakdown.staleQueued} / r {breakdown.staleRunning})
                 </p>
-                <p className="text-zinc-600 dark:text-zinc-300">failed24h {breakdown.failed24h}</p>
+                <p className="text-zinc-600">failed24h {breakdown.failed24h}</p>
               </article>
             );
           })}
@@ -461,13 +470,26 @@ export default function ReportsClient({
       </div>
 
       <form onSubmit={createJob} className="mt-3 grid gap-3 md:grid-cols-3">
-        <select name="reportType" className="rounded-md border border-black/15 px-3 py-2 text-sm">
+        <select
+          name="reportType"
+          aria-label="Report type"
+          className="ui-focus-ring rounded-full border border-border bg-surface px-3 py-2 text-sm"
+        >
           <option value="dsar">DSAR</option>
           <option value="support">Support</option>
           <option value="audit">Audit</option>
+          <option value="telemetry">Telemetry</option>
         </select>
-        <input name="runAfterIso" type="datetime-local" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
-        <button type="submit" className="rounded-md border border-black/15 px-4 py-2 text-sm">
+        <input
+          name="runAfterIso"
+          type="datetime-local"
+          aria-label="Run report after date and time"
+          className="ui-focus-ring rounded-full border border-border bg-surface px-3 py-2 text-sm"
+        />
+        <button
+          type="submit"
+          className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground"
+        >
           Queue Job
         </button>
       </form>
@@ -476,14 +498,14 @@ export default function ReportsClient({
         <button
           type="button"
           onClick={runQueued}
-          className="rounded-md border border-black/15 px-4 py-2 text-sm dark:border-white/20"
+          className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground"
         >
           Run Due Jobs Now
         </button>
         <button
           type="button"
           onClick={retryFailed}
-          className="rounded-md border border-black/15 px-4 py-2 text-sm dark:border-white/20"
+          className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground"
         >
           Retry Failed Jobs
         </button>
@@ -491,7 +513,7 @@ export default function ReportsClient({
           type="button"
           onClick={requeueStale}
           disabled={isRequeueingStale}
-          className="rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70 dark:border-white/20"
+          className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground disabled:opacity-70"
         >
           {isRequeueingStale ? "Requeueing..." : "Requeue Stale Running"}
         </button>
@@ -499,11 +521,11 @@ export default function ReportsClient({
           type="button"
           onClick={() => void refreshJobs()}
           disabled={isRefreshing}
-          className="rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70 dark:border-white/20"
+          className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground disabled:opacity-70"
         >
           {isRefreshing ? "Refreshing..." : "Refresh Jobs"}
         </button>
-        <label className="inline-flex items-center gap-2 rounded-md border border-black/15 px-3 py-2 text-xs text-zinc-600 dark:border-white/20 dark:text-zinc-300">
+        <label className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-2 text-xs text-zinc-600">
           Stale min
           <input
             type="number"
@@ -513,14 +535,14 @@ export default function ReportsClient({
             onChange={(event) =>
               setStaleRequeueMinutes(Math.max(5, Math.min(10080, Number(event.target.value) || 5)))
             }
-            className="w-20 rounded border border-black/15 px-2 py-1 text-xs dark:border-white/20"
+            className="ui-focus-ring w-20 rounded-full border border-border bg-surface px-2 py-1 text-xs"
           />
         </label>
       </div>
 
       <div className="mt-4 space-y-2">
         {jobs.map((job) => (
-          <article key={job.id} className="rounded-md border border-black/10 p-3 text-sm dark:border-white/10">
+          <article key={job.id} className="rounded-2xl border border-border p-3 text-sm">
             <p className="font-medium">
               {job.report_type} ({job.status})
             </p>
@@ -535,3 +557,4 @@ export default function ReportsClient({
     </section>
   );
 }
+

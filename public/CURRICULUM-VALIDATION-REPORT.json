@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-02-21T00:05:13.730Z",
+  "generatedAt": "2026-02-24T04:20:22.385Z",
   "sourceDir": "src/lib/modules/catalog",
   "totals": {
-    "modules": 52,
+    "modules": 118,
     "modulesWithIssues": 0,
     "errors": 0,
     "warnings": 0
@@ -24,6 +24,16 @@
       "issues": []
     },
     {
+      "moduleId": "advanced-math-301",
+      "fileName": "advanced-math-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "advanced-math-401",
+      "fileName": "advanced-math-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "ap-prep-101",
       "fileName": "ap-prep-101.ts",
       "issues": []
@@ -39,8 +49,28 @@
       "issues": []
     },
     {
+      "moduleId": "arts-201",
+      "fileName": "arts-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "arts-301",
+      "fileName": "arts-301.ts",
+      "issues": []
+    },
+    {
       "moduleId": "astronomy-101",
       "fileName": "astronomy-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "astronomy-201",
+      "fileName": "astronomy-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "astronomy-301",
+      "fileName": "astronomy-301.ts",
       "issues": []
     },
     {
@@ -54,8 +84,68 @@
       "issues": []
     },
     {
+      "moduleId": "basic-math-1112-u1-external",
+      "fileName": "basic-math-1112-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-201",
+      "fileName": "basic-math-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-301",
+      "fileName": "basic-math-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-35-u1-external",
+      "fileName": "basic-math-35-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-401",
+      "fileName": "basic-math-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-68-u1-external",
+      "fileName": "basic-math-68-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-910-u1-external",
+      "fileName": "basic-math-910-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-k2-u1-external",
+      "fileName": "basic-math-k2-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "basic-math-prek-u1-external",
+      "fileName": "basic-math-prek-u1-external.ts",
+      "issues": []
+    },
+    {
       "moduleId": "biology-101",
       "fileName": "biology-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "biology-201",
+      "fileName": "biology-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "biology-301",
+      "fileName": "biology-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "biology-401",
+      "fileName": "biology-401.ts",
       "issues": []
     },
     {
@@ -64,8 +154,38 @@
       "issues": []
     },
     {
+      "moduleId": "chemistry-201",
+      "fileName": "chemistry-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "chemistry-301",
+      "fileName": "chemistry-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "chemistry-401",
+      "fileName": "chemistry-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "coding-101",
       "fileName": "coding-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "coding-201",
+      "fileName": "coding-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "coding-301",
+      "fileName": "coding-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "coding-401",
+      "fileName": "coding-401.ts",
       "issues": []
     },
     {
@@ -79,8 +199,33 @@
       "issues": []
     },
     {
+      "moduleId": "farming-201",
+      "fileName": "farming-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "farming-301",
+      "fileName": "farming-301.ts",
+      "issues": []
+    },
+    {
       "moduleId": "financial-literacy-101",
       "fileName": "financial-literacy-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "financial-literacy-201",
+      "fileName": "financial-literacy-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "financial-literacy-301",
+      "fileName": "financial-literacy-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "financial-literacy-401",
+      "fileName": "financial-literacy-401.ts",
       "issues": []
     },
     {
@@ -94,8 +239,48 @@
       "issues": []
     },
     {
+      "moduleId": "gen-science-1112-u1-external",
+      "fileName": "gen-science-1112-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "gen-science-35-u1-external",
+      "fileName": "gen-science-35-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "gen-science-68-u1-external",
+      "fileName": "gen-science-68-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "gen-science-910-u1-external",
+      "fileName": "gen-science-910-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "gen-science-k2-u1-external",
+      "fileName": "gen-science-k2-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "gen-science-prek-u1-external",
+      "fileName": "gen-science-prek-u1-external.ts",
+      "issues": []
+    },
+    {
       "moduleId": "general-relativity-101",
       "fileName": "general-relativity-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "general-relativity-201",
+      "fileName": "general-relativity-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "general-relativity-301",
+      "fileName": "general-relativity-301.ts",
       "issues": []
     },
     {
@@ -104,13 +289,53 @@
       "issues": []
     },
     {
+      "moduleId": "general-science-201",
+      "fileName": "general-science-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "general-science-301",
+      "fileName": "general-science-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "general-science-401",
+      "fileName": "general-science-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "geography-101",
       "fileName": "geography-101.ts",
       "issues": []
     },
     {
+      "moduleId": "geography-201",
+      "fileName": "geography-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "geography-301",
+      "fileName": "geography-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "geography-401",
+      "fileName": "geography-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "household-management-101",
       "fileName": "household-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "household-management-201",
+      "fileName": "household-management-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "household-management-301",
+      "fileName": "household-management-301.ts",
       "issues": []
     },
     {
@@ -129,8 +354,53 @@
       "issues": []
     },
     {
+      "moduleId": "lang-arts-1112-u1-external",
+      "fileName": "lang-arts-1112-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "lang-arts-35-u1-external",
+      "fileName": "lang-arts-35-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "lang-arts-68-u1-external",
+      "fileName": "lang-arts-68-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "lang-arts-910-u1-external",
+      "fileName": "lang-arts-910-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "lang-arts-k2-u1-external",
+      "fileName": "lang-arts-k2-u1-external.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "lang-arts-prek-u1-external",
+      "fileName": "lang-arts-prek-u1-external.ts",
+      "issues": []
+    },
+    {
       "moduleId": "language-arts-101",
       "fileName": "language-arts-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "language-arts-201",
+      "fileName": "language-arts-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "language-arts-301",
+      "fileName": "language-arts-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "language-arts-401",
+      "fileName": "language-arts-401.ts",
       "issues": []
     },
     {
@@ -141,6 +411,21 @@
     {
       "moduleId": "physics-101",
       "fileName": "physics-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "physics-201",
+      "fileName": "physics-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "physics-301",
+      "fileName": "physics-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "physics-401",
+      "fileName": "physics-401.ts",
       "issues": []
     },
     {
@@ -254,8 +539,38 @@
       "issues": []
     },
     {
+      "moduleId": "social-studies-us-201",
+      "fileName": "social-studies-us-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "social-studies-us-301",
+      "fileName": "social-studies-us-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "social-studies-us-401",
+      "fileName": "social-studies-us-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "social-studies-world-101",
       "fileName": "social-studies-world-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "social-studies-world-201",
+      "fileName": "social-studies-world-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "social-studies-world-301",
+      "fileName": "social-studies-world-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "social-studies-world-401",
+      "fileName": "social-studies-world-401.ts",
       "issues": []
     },
     {
@@ -266,6 +581,21 @@
     {
       "moduleId": "world-history-101",
       "fileName": "world-history-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "world-history-201",
+      "fileName": "world-history-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "world-history-301",
+      "fileName": "world-history-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "world-history-401",
+      "fileName": "world-history-401.ts",
       "issues": []
     }
   ],

@@ -36,7 +36,7 @@ function extractLessonTypeCounts(text) {
   };
 
   const matches = text.matchAll(
-    /\{\s*id:\s*"([^"]+)"[\s\S]{0,280}?title:\s*"([^"]+)"[\s\S]{0,180}?type:\s*"([^"]+)"/g,
+    /\{\s*"?id"?\s*:\s*"([^"]+)"[\s\S]{0,280}?"?title"?\s*:\s*"([^"]+)"[\s\S]{0,180}?"?type"?\s*:\s*"([^"]+)"/g,
   );
 
   for (const match of matches) {
@@ -153,14 +153,14 @@ function analyzeModuleFile(filePath) {
   const raw = fs.readFileSync(filePath, "utf8");
   const relativeFile = path.relative(process.cwd(), filePath).replace(/\\/g, "/");
 
-  const moduleId = firstMatch(raw, /\bid:\s*"([^"]+)"/, path.basename(filePath, ".ts"));
-  const moduleTitle = firstMatch(raw, /\btitle:\s*"([^"]+)"/, moduleId);
-  const subject = firstMatch(raw, /\bsubject:\s*"([^"]+)"/, "Unknown");
+  const moduleId = firstMatch(raw, /"?id"?\s*:\s*"([^"]+)"/, path.basename(filePath, ".ts"));
+  const moduleTitle = firstMatch(raw, /"?title"?\s*:\s*"([^"]+)"/, moduleId);
+  const subject = firstMatch(raw, /"?subject"?\s*:\s*"([^"]+)"/, "Unknown");
 
   const lessonTypeCounts = extractLessonTypeCounts(raw);
   const lessonCount = lessonTypeCounts.video + lessonTypeCounts.interactive + lessonTypeCounts.quiz;
-  const questionCount = countMatches(raw, /\bcorrectOptionId:\s*"/g);
-  const learningAidBlocks = countMatches(raw, /\blearningAids:\s*\[/g);
+  const questionCount = countMatches(raw, /"?correctOptionId"?\s*:\s*"/g);
+  const learningAidBlocks = countMatches(raw, /"?learningAids"?\s*:\s*\[/g);
   const placeholderOptionCount = countMatches(
     raw,
     new RegExp(placeholderOptionText.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"),
@@ -269,7 +269,7 @@ function toMarkdown(report) {
   lines.push("## Priority Modules");
   lines.push("");
   lines.push("| Priority | Score | Module | Subject | Lessons | Questions | Issues |");
-  lines.push("|---|---:|---|---|---:|---:|---|");
+  lines.push("| --- | ---: | --- | --- | ---: | ---: | --- |");
   for (const moduleEntry of report.topPriorityModules) {
     lines.push(
       `| ${moduleEntry.priority.toUpperCase()} | ${moduleEntry.score} | ${moduleEntry.title} | ${moduleEntry.subject} | ${moduleEntry.lessonCount} | ${moduleEntry.questionCount} | ${moduleEntry.issues.join("; ")} |`,

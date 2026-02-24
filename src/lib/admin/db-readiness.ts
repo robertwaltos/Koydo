@@ -20,6 +20,11 @@ export const requiredDbTables = [
   "admin_alert_notifications",
   "admin_report_jobs",
   "media_generation_jobs",
+  "learning_events",
+  "user_exam_error_logs",
+  "ai_followup_materials",
+  "ai_tutor_conversations",
+  "ai_remediation_worksheets",
 ] as const;
 
 export type DbReadinessStatus = "present" | "missing" | "error";

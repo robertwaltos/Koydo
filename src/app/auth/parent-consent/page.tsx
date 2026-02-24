@@ -12,7 +12,7 @@ export default async function ParentConsentPage({ searchParams }: PageProps) {
   return (
     <main className="mx-auto max-w-xl px-6 py-12">
       <h1 className="text-2xl font-semibold">Parent Consent</h1>
-      <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
+      <p className="mt-3 text-sm text-zinc-600">
         {childAge
           ? `Child age ${childAge} requires verified parental consent before access is granted.`
           : "Parental consent is required before account activation."}

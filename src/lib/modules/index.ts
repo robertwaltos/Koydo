@@ -75,14 +75,67 @@ export function getLessonByLookupKey(lessonKey: string): {
 
   for (const learningModule of moduleRegistry) {
     for (const lesson of learningModule.lessons) {
+      if (normalizeLookupKey(lesson.id) === normalizedLookup) {
+        return { lesson, learningModule };
+      }
+    }
+  }
+
+  const scopedMatch = normalizedLookup.match(/^([^:\/]+)[:\/]([\s\S]+)$/);
+  if (scopedMatch) {
+    const scopedModuleId = scopedMatch[1];
+    const scopedLessonLookup = scopedMatch[2];
+    const targetModule = moduleRegistry.find(
+      (learningModule) => normalizeLookupKey(learningModule.id) === scopedModuleId,
+    );
+    if (targetModule) {
+      const normalizedScopedLessonLookup = normalizeLookupKey(scopedLessonLookup);
+      for (const lesson of targetModule.lessons) {
+        const normalizedId = normalizeLookupKey(lesson.id);
+        const normalizedTitle = normalizeLookupKey(lesson.title);
+        const titleSlug = slugify(lesson.title);
+        if (
+          normalizedId === normalizedScopedLessonLookup ||
+          normalizedTitle === normalizedScopedLessonLookup ||
+          titleSlug === normalizedScopedLessonLookup
+        ) {
+          return { lesson, learningModule: targetModule };
+        }
+      }
+    }
+  }
+
+  const plainTitleMatches: Array<{ lesson: Lesson; learningModule: LearningModule }> = [];
+  for (const learningModule of moduleRegistry) {
+    for (const lesson of learningModule.lessons) {
+      const normalizedTitle = normalizeLookupKey(lesson.title);
+      const titleSlug = slugify(lesson.title);
+      if (normalizedTitle === normalizedLookup || titleSlug === normalizedLookup) {
+        plainTitleMatches.push({ lesson, learningModule });
+      }
+    }
+  }
+  if (plainTitleMatches.length === 1) {
+    return plainTitleMatches[0] ?? null;
+  }
+
+  for (const learningModule of moduleRegistry) {
+    const normalizedModuleId = normalizeLookupKey(learningModule.id);
+    for (const lesson of learningModule.lessons) {
       const normalizedId = normalizeLookupKey(lesson.id);
       const normalizedTitle = normalizeLookupKey(lesson.title);
       const titleSlug = slugify(lesson.title);
+      const scopedNormalizedTitle = `${normalizedModuleId}:${normalizedTitle}`;
+      const scopedTitleSlug = `${normalizedModuleId}:${titleSlug}`;
+      const scopedSlashNormalizedTitle = `${normalizedModuleId}/${normalizedTitle}`;
+      const scopedSlashTitleSlug = `${normalizedModuleId}/${titleSlug}`;
 
       if (
         normalizedId === normalizedLookup ||
-        normalizedTitle === normalizedLookup ||
-        titleSlug === normalizedLookup
+        scopedNormalizedTitle === normalizedLookup ||
+        scopedTitleSlug === normalizedLookup ||
+        scopedSlashNormalizedTitle === normalizedLookup ||
+        scopedSlashTitleSlug === normalizedLookup
       ) {
         return { lesson, learningModule };
       }

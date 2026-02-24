@@ -6,7 +6,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 const requeueStaleSchema = z.object({
   limit: z.number().int().min(1).max(500).optional(),
   maxAgeMinutes: z.number().int().min(5).max(10080).optional(),
-  reportType: z.enum(["dsar", "support", "audit"]).optional(),
+  reportType: z.enum(["dsar", "support", "audit", "telemetry"]).optional(),
 });
 
 export async function POST(request: Request) {

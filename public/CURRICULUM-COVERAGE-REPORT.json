@@ -1,313 +1,388 @@
 {
-  "generatedAt": "2026-02-21T00:05:13.847Z",
+  "generatedAt": "2026-02-24T04:20:22.531Z",
   "source": "module-catalog",
-  "totalLessons": 510,
-  "totalModules": 52,
+  "totalLessons": 1654,
+  "totalModules": 118,
   "gradeBandSummary": [
     {
       "gradeBand": "elementary",
-      "count": 210
+      "count": 1110
     },
     {
       "gradeBand": "high-school",
-      "count": 306
+      "count": 1311
     },
     {
       "gradeBand": "middle-school",
-      "count": 194
+      "count": 1094
     },
     {
       "gradeBand": "pre-k",
-      "count": 196
+      "count": 290
     }
   ],
   "subjectSummary": [
     {
       "subject": "advanced-math",
-      "count": 40
+      "count": 145
     },
     {
       "subject": "arts",
-      "count": 40
+      "count": 145
     },
     {
       "subject": "astronomy",
-      "count": 40
+      "count": 145
     },
     {
       "subject": "basic-math",
-      "count": 56
+      "count": 341
     },
     {
       "subject": "biology",
-      "count": 40
+      "count": 190
     },
     {
       "subject": "chemistry",
-      "count": 40
+      "count": 190
     },
     {
       "subject": "coding",
-      "count": 40
+      "count": 190
     },
     {
       "subject": "exam-prep",
-      "count": 120
+      "count": 180
     },
     {
       "subject": "farming",
-      "count": 40
+      "count": 145
     },
     {
       "subject": "financial-literacy",
-      "count": 40
+      "count": 190
     },
     {
       "subject": "general-relativity",
-      "count": 40
+      "count": 145
     },
     {
       "subject": "general-science",
-      "count": 74
+      "count": 360
     },
     {
       "subject": "geography",
-      "count": 40
+      "count": 190
     },
     {
       "subject": "household-management",
-      "count": 40
+      "count": 145
     },
     {
       "subject": "language-arts",
-      "count": 56
+      "count": 344
     },
     {
       "subject": "physics",
-      "count": 40
+      "count": 190
     },
     {
       "subject": "social-studies-us",
-      "count": 40
+      "count": 190
     },
     {
       "subject": "social-studies-world",
-      "count": 40
+      "count": 190
     },
     {
       "subject": "world-history",
-      "count": 40
+      "count": 190
     }
   ],
   "gradeSubjectSummary": [
     {
       "gradeBand": "elementary",
       "subject": "advanced-math",
-      "count": 10,
+      "count": 45,
       "files": [
-        "advanced-math-201.ts"
+        "advanced-math-201.ts",
+        "advanced-math-301.ts",
+        "advanced-math-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "arts",
-      "count": 10,
+      "count": 45,
       "files": [
-        "arts-101.ts"
+        "arts-101.ts",
+        "arts-201.ts",
+        "arts-301.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "astronomy",
-      "count": 10,
+      "count": 45,
       "files": [
-        "astronomy-101.ts"
+        "astronomy-101.ts",
+        "astronomy-201.ts",
+        "astronomy-301.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "basic-math",
-      "count": 18,
+      "count": 98,
       "files": [
         "basic-math-101.ts",
+        "basic-math-201.ts",
+        "basic-math-301.ts",
+        "basic-math-35-u1-external.ts",
+        "basic-math-401.ts",
+        "basic-math-k2-u1-external.ts",
         "math-101.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "biology",
-      "count": 10,
+      "count": 60,
       "files": [
-        "biology-101.ts"
+        "biology-101.ts",
+        "biology-201.ts",
+        "biology-301.ts",
+        "biology-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "chemistry",
-      "count": 10,
+      "count": 60,
       "files": [
-        "chemistry-101.ts"
+        "chemistry-101.ts",
+        "chemistry-201.ts",
+        "chemistry-301.ts",
+        "chemistry-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "coding",
-      "count": 10,
+      "count": 60,
       "files": [
-        "coding-101.ts"
+        "coding-101.ts",
+        "coding-201.ts",
+        "coding-301.ts",
+        "coding-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "farming",
-      "count": 10,
+      "count": 45,
       "files": [
-        "farming-101.ts"
+        "farming-101.ts",
+        "farming-201.ts",
+        "farming-301.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "financial-literacy",
-      "count": 10,
+      "count": 60,
       "files": [
-        "financial-literacy-101.ts"
+        "financial-literacy-101.ts",
+        "financial-literacy-201.ts",
+        "financial-literacy-301.ts",
+        "financial-literacy-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "general-relativity",
-      "count": 10,
+      "count": 45,
       "files": [
-        "general-relativity-101.ts"
+        "general-relativity-101.ts",
+        "general-relativity-201.ts",
+        "general-relativity-301.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "general-science",
-      "count": 24,
+      "count": 104,
       "files": [
         "apple-vision-science-lab.ts",
+        "gen-science-35-u1-external.ts",
+        "gen-science-k2-u1-external.ts",
         "general-science-101.ts",
+        "general-science-201.ts",
+        "general-science-301.ts",
+        "general-science-401.ts",
         "science-101.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "geography",
-      "count": 10,
+      "count": 60,
       "files": [
-        "geography-101.ts"
+        "geography-101.ts",
+        "geography-201.ts",
+        "geography-301.ts",
+        "geography-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "household-management",
-      "count": 10,
+      "count": 45,
       "files": [
-        "household-management-101.ts"
+        "household-management-101.ts",
+        "household-management-201.ts",
+        "household-management-301.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "language-arts",
-      "count": 18,
+      "count": 98,
       "files": [
+        "lang-arts-35-u1-external.ts",
+        "lang-arts-k2-u1-external.ts",
         "language-arts-101.ts",
+        "language-arts-201.ts",
+        "language-arts-301.ts",
+        "language-arts-401.ts",
         "reading-101.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "physics",
-      "count": 10,
+      "count": 60,
       "files": [
-        "physics-101.ts"
+        "physics-101.ts",
+        "physics-201.ts",
+        "physics-301.ts",
+        "physics-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "social-studies-us",
-      "count": 10,
+      "count": 60,
       "files": [
-        "social-studies-us-101.ts"
+        "social-studies-us-101.ts",
+        "social-studies-us-201.ts",
+        "social-studies-us-301.ts",
+        "social-studies-us-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "social-studies-world",
-      "count": 10,
+      "count": 60,
       "files": [
-        "social-studies-world-101.ts"
+        "social-studies-world-101.ts",
+        "social-studies-world-201.ts",
+        "social-studies-world-301.ts",
+        "social-studies-world-401.ts"
       ]
     },
     {
       "gradeBand": "elementary",
       "subject": "world-history",
-      "count": 10,
+      "count": 60,
       "files": [
-        "world-history-101.ts"
+        "world-history-101.ts",
+        "world-history-201.ts",
+        "world-history-301.ts",
+        "world-history-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "advanced-math",
-      "count": 10,
+      "count": 45,
       "files": [
-        "advanced-math-201.ts"
+        "advanced-math-201.ts",
+        "advanced-math-301.ts",
+        "advanced-math-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "arts",
-      "count": 10,
+      "count": 45,
       "files": [
-        "arts-101.ts"
+        "arts-101.ts",
+        "arts-201.ts",
+        "arts-301.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "astronomy",
-      "count": 10,
+      "count": 45,
       "files": [
-        "astronomy-101.ts"
+        "astronomy-101.ts",
+        "astronomy-201.ts",
+        "astronomy-301.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "basic-math",
-      "count": 10,
+      "count": 105,
       "files": [
-        "basic-math-101.ts"
+        "basic-math-101.ts",
+        "basic-math-1112-u1-external.ts",
+        "basic-math-201.ts",
+        "basic-math-301.ts",
+        "basic-math-401.ts",
+        "basic-math-68-u1-external.ts",
+        "basic-math-910-u1-external.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "biology",
-      "count": 10,
+      "count": 60,
       "files": [
-        "biology-101.ts"
+        "biology-101.ts",
+        "biology-201.ts",
+        "biology-301.ts",
+        "biology-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "chemistry",
-      "count": 10,
+      "count": 60,
       "files": [
-        "chemistry-101.ts"
+        "chemistry-101.ts",
+        "chemistry-201.ts",
+        "chemistry-301.ts",
+        "chemistry-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "coding",
-      "count": 10,
+      "count": 60,
       "files": [
-        "coding-101.ts"
+        "coding-101.ts",
+        "coding-201.ts",
+        "coding-301.ts",
+        "coding-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "exam-prep",
-      "count": 120,
+      "count": 180,
       "files": [
         "a-level-prep-101.ts",
         "act-prep-101.ts",
@@ -326,236 +401,326 @@
     {
       "gradeBand": "high-school",
       "subject": "farming",
-      "count": 10,
+      "count": 45,
       "files": [
-        "farming-101.ts"
+        "farming-101.ts",
+        "farming-201.ts",
+        "farming-301.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "financial-literacy",
-      "count": 10,
+      "count": 60,
       "files": [
-        "financial-literacy-101.ts"
+        "financial-literacy-101.ts",
+        "financial-literacy-201.ts",
+        "financial-literacy-301.ts",
+        "financial-literacy-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "general-relativity",
-      "count": 10,
+      "count": 45,
       "files": [
-        "general-relativity-101.ts"
+        "general-relativity-101.ts",
+        "general-relativity-201.ts",
+        "general-relativity-301.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "general-science",
-      "count": 16,
+      "count": 111,
       "files": [
         "apple-vision-science-lab.ts",
-        "general-science-101.ts"
+        "gen-science-1112-u1-external.ts",
+        "gen-science-68-u1-external.ts",
+        "gen-science-910-u1-external.ts",
+        "general-science-101.ts",
+        "general-science-201.ts",
+        "general-science-301.ts",
+        "general-science-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "geography",
-      "count": 10,
+      "count": 60,
       "files": [
-        "geography-101.ts"
+        "geography-101.ts",
+        "geography-201.ts",
+        "geography-301.ts",
+        "geography-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "household-management",
-      "count": 10,
+      "count": 45,
       "files": [
-        "household-management-101.ts"
+        "household-management-101.ts",
+        "household-management-201.ts",
+        "household-management-301.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "language-arts",
-      "count": 10,
+      "count": 105,
       "files": [
-        "language-arts-101.ts"
+        "lang-arts-1112-u1-external.ts",
+        "lang-arts-68-u1-external.ts",
+        "lang-arts-910-u1-external.ts",
+        "language-arts-101.ts",
+        "language-arts-201.ts",
+        "language-arts-301.ts",
+        "language-arts-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "physics",
-      "count": 10,
+      "count": 60,
       "files": [
-        "physics-101.ts"
+        "physics-101.ts",
+        "physics-201.ts",
+        "physics-301.ts",
+        "physics-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "social-studies-us",
-      "count": 10,
+      "count": 60,
       "files": [
-        "social-studies-us-101.ts"
+        "social-studies-us-101.ts",
+        "social-studies-us-201.ts",
+        "social-studies-us-301.ts",
+        "social-studies-us-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "social-studies-world",
-      "count": 10,
+      "count": 60,
       "files": [
-        "social-studies-world-101.ts"
+        "social-studies-world-101.ts",
+        "social-studies-world-201.ts",
+        "social-studies-world-301.ts",
+        "social-studies-world-401.ts"
       ]
     },
     {
       "gradeBand": "high-school",
       "subject": "world-history",
-      "count": 10,
+      "count": 60,
       "files": [
-        "world-history-101.ts"
+        "world-history-101.ts",
+        "world-history-201.ts",
+        "world-history-301.ts",
+        "world-history-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "advanced-math",
-      "count": 10,
+      "count": 45,
       "files": [
-        "advanced-math-201.ts"
+        "advanced-math-201.ts",
+        "advanced-math-301.ts",
+        "advanced-math-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "arts",
-      "count": 10,
+      "count": 45,
       "files": [
-        "arts-101.ts"
+        "arts-101.ts",
+        "arts-201.ts",
+        "arts-301.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "astronomy",
-      "count": 10,
+      "count": 45,
       "files": [
-        "astronomy-101.ts"
+        "astronomy-101.ts",
+        "astronomy-201.ts",
+        "astronomy-301.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "basic-math",
-      "count": 10,
+      "count": 90,
       "files": [
-        "basic-math-101.ts"
+        "basic-math-101.ts",
+        "basic-math-201.ts",
+        "basic-math-301.ts",
+        "basic-math-35-u1-external.ts",
+        "basic-math-401.ts",
+        "basic-math-68-u1-external.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "biology",
-      "count": 10,
+      "count": 60,
       "files": [
-        "biology-101.ts"
+        "biology-101.ts",
+        "biology-201.ts",
+        "biology-301.ts",
+        "biology-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "chemistry",
-      "count": 10,
+      "count": 60,
       "files": [
-        "chemistry-101.ts"
+        "chemistry-101.ts",
+        "chemistry-201.ts",
+        "chemistry-301.ts",
+        "chemistry-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "coding",
-      "count": 10,
+      "count": 60,
       "files": [
-        "coding-101.ts"
+        "coding-101.ts",
+        "coding-201.ts",
+        "coding-301.ts",
+        "coding-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "farming",
-      "count": 10,
+      "count": 45,
       "files": [
-        "farming-101.ts"
+        "farming-101.ts",
+        "farming-201.ts",
+        "farming-301.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "financial-literacy",
-      "count": 10,
+      "count": 60,
       "files": [
-        "financial-literacy-101.ts"
+        "financial-literacy-101.ts",
+        "financial-literacy-201.ts",
+        "financial-literacy-301.ts",
+        "financial-literacy-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "general-relativity",
-      "count": 10,
+      "count": 45,
       "files": [
-        "general-relativity-101.ts"
+        "general-relativity-101.ts",
+        "general-relativity-201.ts",
+        "general-relativity-301.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "general-science",
-      "count": 24,
+      "count": 104,
       "files": [
         "apple-vision-science-lab.ts",
+        "gen-science-35-u1-external.ts",
+        "gen-science-68-u1-external.ts",
         "general-science-101.ts",
+        "general-science-201.ts",
+        "general-science-301.ts",
+        "general-science-401.ts",
         "science-101.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "geography",
-      "count": 10,
+      "count": 60,
       "files": [
-        "geography-101.ts"
+        "geography-101.ts",
+        "geography-201.ts",
+        "geography-301.ts",
+        "geography-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "household-management",
-      "count": 10,
+      "count": 45,
       "files": [
-        "household-management-101.ts"
+        "household-management-101.ts",
+        "household-management-201.ts",
+        "household-management-301.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "language-arts",
-      "count": 10,
+      "count": 90,
       "files": [
-        "language-arts-101.ts"
+        "lang-arts-35-u1-external.ts",
+        "lang-arts-68-u1-external.ts",
+        "language-arts-101.ts",
+        "language-arts-201.ts",
+        "language-arts-301.ts",
+        "language-arts-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "physics",
-      "count": 10,
+      "count": 60,
       "files": [
-        "physics-101.ts"
+        "physics-101.ts",
+        "physics-201.ts",
+        "physics-301.ts",
+        "physics-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "social-studies-us",
-      "count": 10,
+      "count": 60,
       "files": [
-        "social-studies-us-101.ts"
+        "social-studies-us-101.ts",
+        "social-studies-us-201.ts",
+        "social-studies-us-301.ts",
+        "social-studies-us-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "social-studies-world",
-      "count": 10,
+      "count": 60,
       "files": [
-        "social-studies-world-101.ts"
+        "social-studies-world-101.ts",
+        "social-studies-world-201.ts",
+        "social-studies-world-301.ts",
+        "social-studies-world-401.ts"
       ]
     },
     {
       "gradeBand": "middle-school",
       "subject": "world-history",
-      "count": 10,
+      "count": 60,
       "files": [
-        "world-history-101.ts"
+        "world-history-101.ts",
+        "world-history-201.ts",
+        "world-history-301.ts",
+        "world-history-401.ts"
       ]
     },
     {
@@ -585,8 +750,10 @@
     {
       "gradeBand": "pre-k",
       "subject": "basic-math",
-      "count": 18,
+      "count": 48,
       "files": [
+        "basic-math-k2-u1-external.ts",
+        "basic-math-prek-u1-external.ts",
         "math-101.ts",
         "pre-k-basic-math-101.ts"
       ]
@@ -642,8 +809,10 @@
     {
       "gradeBand": "pre-k",
       "subject": "general-science",
-      "count": 10,
+      "count": 41,
       "files": [
+        "gen-science-k2-u1-external.ts",
+        "gen-science-prek-u1-external.ts",
         "pre-k-general-science-101.ts"
       ]
     },
@@ -666,8 +835,10 @@
     {
       "gradeBand": "pre-k",
       "subject": "language-arts",
-      "count": 18,
+      "count": 51,
       "files": [
+        "lang-arts-k2-u1-external.ts",
+        "lang-arts-prek-u1-external.ts",
         "pre-k-language-arts-101.ts",
         "reading-101.ts"
       ]
@@ -719,11 +890,11 @@
       ],
       "minAge": 15,
       "maxAge": 19,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -739,11 +910,11 @@
       ],
       "minAge": 14,
       "maxAge": 19,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -761,11 +932,55 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "advanced-math-301.ts",
+      "moduleId": "advanced-math-301",
+      "moduleTitle": "Advanced Math Modeling",
+      "subject": "advanced-math",
+      "subjectRaw": "Advanced Math",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "advanced-math-401.ts",
+      "moduleId": "advanced-math-401",
+      "moduleTitle": "Advanced Math Capstone Proofs and Models",
+      "subject": "advanced-math",
+      "subjectRaw": "Advanced Math",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -781,11 +996,11 @@
       ],
       "minAge": 14,
       "maxAge": 19,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -825,11 +1040,55 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "arts-201.ts",
+      "moduleId": "arts-201",
+      "moduleTitle": "Creative Arts Studio II",
+      "subject": "arts",
+      "subjectRaw": "Arts",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "arts-301.ts",
+      "moduleId": "arts-301",
+      "moduleTitle": "Creative Arts Composition and Curation",
+      "subject": "arts",
+      "subjectRaw": "Arts",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -847,11 +1106,55 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "astronomy-201.ts",
+      "moduleId": "astronomy-201",
+      "moduleTitle": "Astronomy Observation and Models",
+      "subject": "astronomy",
+      "subjectRaw": "Astronomy",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "astronomy-301.ts",
+      "moduleId": "astronomy-301",
+      "moduleTitle": "Astronomy Data Interpretation and Prediction",
+      "subject": "astronomy",
+      "subjectRaw": "Astronomy",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -867,11 +1170,11 @@
       ],
       "minAge": 15,
       "maxAge": 20,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -889,11 +1192,200 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-1112-u1-external.ts",
+      "moduleId": "basic-math-1112-u1-external",
+      "moduleTitle": "Calculus: Limits, Derivatives & Integration",
+      "subject": "basic-math",
+      "subjectRaw": "Mathematics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-201.ts",
+      "moduleId": "basic-math-201",
+      "moduleTitle": "Basic Math Applications",
+      "subject": "basic-math",
+      "subjectRaw": "Math",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-301.ts",
+      "moduleId": "basic-math-301",
+      "moduleTitle": "Quantitative Reasoning Lab",
+      "subject": "basic-math",
+      "subjectRaw": "Math",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-35-u1-external.ts",
+      "moduleId": "basic-math-35-u1-external",
+      "moduleTitle": "Multiplication, Division & Fractions",
+      "subject": "basic-math",
+      "subjectRaw": "Mathematics",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school"
+      ],
+      "minAge": 8,
+      "maxAge": 11,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-401.ts",
+      "moduleId": "basic-math-401",
+      "moduleTitle": "Math Capstone Reasoning",
+      "subject": "basic-math",
+      "subjectRaw": "Math",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-68-u1-external.ts",
+      "moduleId": "basic-math-68-u1-external",
+      "moduleTitle": "Pre-Algebra: Expressions, Equations & Ratios",
+      "subject": "basic-math",
+      "subjectRaw": "Mathematics",
+      "gradeBand": "middle-school",
+      "coveredGradeBands": [
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 11,
+      "maxAge": 14,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-910-u1-external.ts",
+      "moduleId": "basic-math-910-u1-external",
+      "moduleTitle": "Algebra II: Functions, Systems & Polynomials",
+      "subject": "basic-math",
+      "subjectRaw": "Mathematics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 16,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-k2-u1-external.ts",
+      "moduleId": "basic-math-k2-u1-external",
+      "moduleTitle": "Addition & Subtraction (0–20)",
+      "subject": "basic-math",
+      "subjectRaw": "Mathematics",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k",
+        "elementary"
+      ],
+      "minAge": 5,
+      "maxAge": 8,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "basic-math-prek-u1-external.ts",
+      "moduleId": "basic-math-prek-u1-external",
+      "moduleTitle": "Counting & Numbers 1–10",
+      "subject": "basic-math",
+      "subjectRaw": "Mathematics",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -911,11 +1403,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "biology-201.ts",
+      "moduleId": "biology-201",
+      "moduleTitle": "Biology Systems and Change",
+      "subject": "biology",
+      "subjectRaw": "Biology",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "biology-301.ts",
+      "moduleId": "biology-301",
+      "moduleTitle": "Biology Data and Systems",
+      "subject": "biology",
+      "subjectRaw": "Biology",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "biology-401.ts",
+      "moduleId": "biology-401",
+      "moduleTitle": "Biology Capstone Inquiry",
+      "subject": "biology",
+      "subjectRaw": "Biology",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -933,11 +1491,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "chemistry-201.ts",
+      "moduleId": "chemistry-201",
+      "moduleTitle": "Chemistry Reactions and Models",
+      "subject": "chemistry",
+      "subjectRaw": "Chemistry",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "chemistry-301.ts",
+      "moduleId": "chemistry-301",
+      "moduleTitle": "Chemistry Quantitative Reasoning",
+      "subject": "chemistry",
+      "subjectRaw": "Chemistry",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "chemistry-401.ts",
+      "moduleId": "chemistry-401",
+      "moduleTitle": "Chemistry Capstone Systems",
+      "subject": "chemistry",
+      "subjectRaw": "Chemistry",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -955,11 +1579,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "coding-201.ts",
+      "moduleId": "coding-201",
+      "moduleTitle": "Coding Projects and Problem Solving",
+      "subject": "coding",
+      "subjectRaw": "Coding",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "coding-301.ts",
+      "moduleId": "coding-301",
+      "moduleTitle": "Coding Architecture and Quality",
+      "subject": "coding",
+      "subjectRaw": "Coding",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "coding-401.ts",
+      "moduleId": "coding-401",
+      "moduleTitle": "Coding Capstone Systems",
+      "subject": "coding",
+      "subjectRaw": "Coding",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -975,11 +1665,11 @@
       ],
       "minAge": 15,
       "maxAge": 21,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -997,11 +1687,55 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "farming-201.ts",
+      "moduleId": "farming-201",
+      "moduleTitle": "Sustainable Farming Systems",
+      "subject": "farming",
+      "subjectRaw": "Farming",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "farming-301.ts",
+      "moduleId": "farming-301",
+      "moduleTitle": "Agriculture Systems Optimization",
+      "subject": "farming",
+      "subjectRaw": "Farming",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1019,11 +1753,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "financial-literacy-201.ts",
+      "moduleId": "financial-literacy-201",
+      "moduleTitle": "Financial Planning and Decisions",
+      "subject": "financial-literacy",
+      "subjectRaw": "Financial Literacy",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "financial-literacy-301.ts",
+      "moduleId": "financial-literacy-301",
+      "moduleTitle": "Financial Strategy and Risk",
+      "subject": "financial-literacy",
+      "subjectRaw": "Financial Literacy",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "financial-literacy-401.ts",
+      "moduleId": "financial-literacy-401",
+      "moduleTitle": "Financial Capstone Planning",
+      "subject": "financial-literacy",
+      "subjectRaw": "Financial Literacy",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1039,11 +1839,11 @@
       ],
       "minAge": 15,
       "maxAge": 20,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -1059,11 +1859,134 @@
       ],
       "minAge": 14,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "gen-science-1112-u1-external.ts",
+      "moduleId": "gen-science-1112-u1-external",
+      "moduleTitle": "Physics: Mechanics, Thermodynamics & Waves",
+      "subject": "general-science",
+      "subjectRaw": "General Science",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "gen-science-35-u1-external.ts",
+      "moduleId": "gen-science-35-u1-external",
+      "moduleTitle": "Matter, Energy & Earth's Systems",
+      "subject": "general-science",
+      "subjectRaw": "General Science",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school"
+      ],
+      "minAge": 8,
+      "maxAge": 11,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "gen-science-68-u1-external.ts",
+      "moduleId": "gen-science-68-u1-external",
+      "moduleTitle": "Life Science: Cells, Genetics & Evolution",
+      "subject": "general-science",
+      "subjectRaw": "General Science",
+      "gradeBand": "middle-school",
+      "coveredGradeBands": [
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 11,
+      "maxAge": 14,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "gen-science-910-u1-external.ts",
+      "moduleId": "gen-science-910-u1-external",
+      "moduleTitle": "Chemistry: Atomic Structure & Chemical Bonding",
+      "subject": "general-science",
+      "subjectRaw": "General Science",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 16,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "gen-science-k2-u1-external.ts",
+      "moduleId": "gen-science-k2-u1-external",
+      "moduleTitle": "Plants, Animals & Their Habitats",
+      "subject": "general-science",
+      "subjectRaw": "General Science",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k",
+        "elementary"
+      ],
+      "minAge": 5,
+      "maxAge": 8,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "gen-science-prek-u1-external.ts",
+      "moduleId": "gen-science-prek-u1-external",
+      "moduleTitle": "Living & Non-Living Things",
+      "subject": "general-science",
+      "subjectRaw": "General Science",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -1081,11 +2004,55 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "general-relativity-201.ts",
+      "moduleId": "general-relativity-201",
+      "moduleTitle": "General Relativity Applications",
+      "subject": "general-relativity",
+      "subjectRaw": "General Relativity",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "general-relativity-301.ts",
+      "moduleId": "general-relativity-301",
+      "moduleTitle": "General Relativity Modeling and Evidence",
+      "subject": "general-relativity",
+      "subjectRaw": "General Relativity",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1103,11 +2070,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "general-science-201.ts",
+      "moduleId": "general-science-201",
+      "moduleTitle": "General Science Investigations",
+      "subject": "general-science",
+      "subjectRaw": "Science",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "general-science-301.ts",
+      "moduleId": "general-science-301",
+      "moduleTitle": "Science Systems and Engineering",
+      "subject": "general-science",
+      "subjectRaw": "Science",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "general-science-401.ts",
+      "moduleId": "general-science-401",
+      "moduleTitle": "Science Capstone Inquiry",
+      "subject": "general-science",
+      "subjectRaw": "Science",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1125,11 +2158,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "geography-201.ts",
+      "moduleId": "geography-201",
+      "moduleTitle": "Geography, Environment, and Data",
+      "subject": "geography",
+      "subjectRaw": "Geography",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "geography-301.ts",
+      "moduleId": "geography-301",
+      "moduleTitle": "Geography and Climate Resilience",
+      "subject": "geography",
+      "subjectRaw": "Geography",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "geography-401.ts",
+      "moduleId": "geography-401",
+      "moduleTitle": "Geography Capstone Resilience",
+      "subject": "geography",
+      "subjectRaw": "Geography",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1147,11 +2246,55 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "household-management-201.ts",
+      "moduleId": "household-management-201",
+      "moduleTitle": "Household Systems and Planning II",
+      "subject": "household-management",
+      "subjectRaw": "Household Management",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "household-management-301.ts",
+      "moduleId": "household-management-301",
+      "moduleTitle": "Household Operations and Resilience",
+      "subject": "household-management",
+      "subjectRaw": "Household Management",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1167,11 +2310,11 @@
       ],
       "minAge": 15,
       "maxAge": 19,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -1187,11 +2330,11 @@
       ],
       "minAge": 14,
       "maxAge": 24,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -1207,11 +2350,134 @@
       ],
       "minAge": 15,
       "maxAge": 20,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "lang-arts-1112-u1-external.ts",
+      "moduleId": "lang-arts-1112-u1-external",
+      "moduleTitle": "AP Literature & Research Writing",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "lang-arts-35-u1-external.ts",
+      "moduleId": "lang-arts-35-u1-external",
+      "moduleTitle": "Reading Comprehension & Writing",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school"
+      ],
+      "minAge": 8,
+      "maxAge": 11,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "lang-arts-68-u1-external.ts",
+      "moduleId": "lang-arts-68-u1-external",
+      "moduleTitle": "Literary Analysis & Argumentative Writing",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "middle-school",
+      "coveredGradeBands": [
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 11,
+      "maxAge": 14,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "lang-arts-910-u1-external.ts",
+      "moduleId": "lang-arts-910-u1-external",
+      "moduleTitle": "Advanced Composition & Rhetoric",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 16,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "lang-arts-k2-u1-external.ts",
+      "moduleId": "lang-arts-k2-u1-external",
+      "moduleTitle": "Phonics & Early Reading",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k",
+        "elementary"
+      ],
+      "minAge": 5,
+      "maxAge": 8,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "lang-arts-prek-u1-external.ts",
+      "moduleId": "lang-arts-prek-u1-external",
+      "moduleTitle": "Oral Language & Listening",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "pre-k",
+      "coveredGradeBands": [
+        "pre-k"
+      ],
+      "minAge": 3,
+      "maxAge": 5,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -1229,11 +2495,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "language-arts-201.ts",
+      "moduleId": "language-arts-201",
+      "moduleTitle": "Language Arts Workshop II",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "language-arts-301.ts",
+      "moduleId": "language-arts-301",
+      "moduleTitle": "Language Arts Seminar",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "language-arts-401.ts",
+      "moduleId": "language-arts-401",
+      "moduleTitle": "Language Arts Capstone Communication",
+      "subject": "language-arts",
+      "subjectRaw": "Language Arts",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1272,11 +2604,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "physics-201.ts",
+      "moduleId": "physics-201",
+      "moduleTitle": "Physics Modeling and Applications",
+      "subject": "physics",
+      "subjectRaw": "Physics",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "physics-301.ts",
+      "moduleId": "physics-301",
+      "moduleTitle": "Physics Systems and Modeling",
+      "subject": "physics",
+      "subjectRaw": "Physics",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "physics-401.ts",
+      "moduleId": "physics-401",
+      "moduleTitle": "Physics Capstone Modeling",
+      "subject": "physics",
+      "subjectRaw": "Physics",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1492,11 +2890,11 @@
       ],
       "minAge": 3,
       "maxAge": 5,
-      "lessonCount": 10,
+      "lessonCount": 11,
       "lessonTypeCounts": {
         "video": 3,
         "interactive": 3,
-        "quiz": 4
+        "quiz": 5
       }
     },
     {
@@ -1552,11 +2950,11 @@
       ],
       "minAge": 3,
       "maxAge": 5,
-      "lessonCount": 10,
+      "lessonCount": 13,
       "lessonTypeCounts": {
         "video": 3,
         "interactive": 3,
-        "quiz": 4
+        "quiz": 7
       }
     },
     {
@@ -1673,11 +3071,11 @@
       ],
       "minAge": 14,
       "maxAge": 19,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -1716,11 +3114,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "social-studies-us-201.ts",
+      "moduleId": "social-studies-us-201",
+      "moduleTitle": "US Civics and Institutions II",
+      "subject": "social-studies-us",
+      "subjectRaw": "Social Studies US",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "social-studies-us-301.ts",
+      "moduleId": "social-studies-us-301",
+      "moduleTitle": "US Policy, Institutions, and Change",
+      "subject": "social-studies-us",
+      "subjectRaw": "Social Studies US",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "social-studies-us-401.ts",
+      "moduleId": "social-studies-us-401",
+      "moduleTitle": "US Civics Capstone Analysis",
+      "subject": "social-studies-us",
+      "subjectRaw": "Social Studies US",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1738,11 +3202,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "social-studies-world-201.ts",
+      "moduleId": "social-studies-world-201",
+      "moduleTitle": "Global Systems and Citizenship",
+      "subject": "social-studies-world",
+      "subjectRaw": "Social Studies World",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "social-studies-world-301.ts",
+      "moduleId": "social-studies-world-301",
+      "moduleTitle": "Global Governance and Development",
+      "subject": "social-studies-world",
+      "subjectRaw": "Social Studies World",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "social-studies-world-401.ts",
+      "moduleId": "social-studies-world-401",
+      "moduleTitle": "Global Systems Capstone Analysis",
+      "subject": "social-studies-world",
+      "subjectRaw": "Social Studies World",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     },
     {
@@ -1758,11 +3288,11 @@
       ],
       "minAge": 14,
       "maxAge": 24,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       }
     },
     {
@@ -1780,11 +3310,77 @@
       ],
       "minAge": 7,
       "maxAge": 18,
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "world-history-201.ts",
+      "moduleId": "world-history-201",
+      "moduleTitle": "World History Themes and Turning Points",
+      "subject": "world-history",
+      "subjectRaw": "History Worldwide",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "world-history-301.ts",
+      "moduleId": "world-history-301",
+      "moduleTitle": "World History Interpretation and Synthesis",
+      "subject": "world-history",
+      "subjectRaw": "History Worldwide",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "world-history-401.ts",
+      "moduleId": "world-history-401",
+      "moduleTitle": "World History Capstone Interpretation",
+      "subject": "world-history",
+      "subjectRaw": "History Worldwide",
+      "gradeBand": "elementary",
+      "coveredGradeBands": [
+        "elementary",
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 7,
+      "maxAge": 18,
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       }
     }
   ]

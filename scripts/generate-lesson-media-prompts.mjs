@@ -5,6 +5,9 @@ import vm from "node:vm";
 const catalogDir = path.resolve("src/lib/modules/catalog");
 const outJson = path.resolve("public/LESSON-MEDIA-PROMPT-PACK.json");
 const outMd = path.resolve("public/LESSON-MEDIA-PROMPT-PACK.md");
+const PROMPT_PACK_SCHEMA_VERSION = "media-prompt-pack.v2";
+const GENERATED_PROMPT_VERSION = "generated.v1";
+const LESSON_PROMPT_FALLBACK_VERSION = "lesson.v1";
 
 function loadModuleFromFile(filePath) {
   const source = fs.readFileSync(filePath, "utf8");
@@ -104,22 +107,105 @@ function buildResearchAgentPrompt(learningModule, lesson) {
   ].join(" ");
 }
 
+function readLessonPrompt(lesson, key) {
+  const value = lesson?.prompts?.[key];
+  if (typeof value !== "string") return null;
+  const trimmed = value.trim();
+  return trimmed.length > 0 ? trimmed : null;
+}
+
+function readPromptMetaField(lesson, key, field) {
+  const containers = [
+    lesson?.promptMeta,
+    lesson?.promptsMeta,
+    lesson?.promptsMetadata,
+    lesson?.metadata?.promptMeta,
+    lesson?.metadata?.promptsMeta,
+  ];
+
+  for (const container of containers) {
+    if (!container || typeof container !== "object") continue;
+    const perKey = container[key];
+    if (!perKey || typeof perKey !== "object") continue;
+    const value = perKey[field];
+    if (typeof value === "string" && value.trim().length > 0) {
+      return value.trim();
+    }
+  }
+
+  return null;
+}
+
+function buildPromptMetaEntry(lesson, key, source) {
+  const explicitVersion = readPromptMetaField(lesson, key, "version");
+  const explicitQaStatus = readPromptMetaField(lesson, key, "qaStatus");
+  return {
+    source,
+    version:
+      explicitVersion ??
+      (source === "lesson" ? LESSON_PROMPT_FALLBACK_VERSION : GENERATED_PROMPT_VERSION),
+    qaStatus: explicitQaStatus ?? (source === "lesson" ? "reviewed" : "needs_review"),
+  };
+}
+
 function buildPromptPack() {
   const modules = loadCatalogModules();
 
   const moduleEntries = modules.map(({ fileName, module: learningModule }) => {
-    const lessonEntries = (learningModule.lessons ?? []).map((lesson) => ({
-      lessonId: lesson.id,
-      lessonTitle: lesson.title,
-      lessonType: lesson.type,
-      durationMinutes: lesson.duration,
-      prompts: {
+    const lessonEntries = (learningModule.lessons ?? []).map((lesson) => {
+      const generatedPrompts = {
         seedanceVideo: buildSeedanceVideoPrompt(learningModule, lesson),
         seedanceAnimation: buildSeedanceAnimationPrompt(learningModule, lesson),
         lessonImage: buildImagePrompt(learningModule, lesson),
         researchAgent: buildResearchAgentPrompt(learningModule, lesson),
-      },
-    }));
+      };
+
+      const promptSources = {
+        seedanceVideo: "generated",
+        seedanceAnimation: "generated",
+        lessonImage: "generated",
+        researchAgent: "generated",
+      };
+
+      const lessonSeedanceVideo = readLessonPrompt(lesson, "seedanceVideo");
+      const lessonSeedanceAnimation = readLessonPrompt(lesson, "seedanceAnimation");
+      const lessonImage = readLessonPrompt(lesson, "lessonImage");
+      const lessonResearch = readLessonPrompt(lesson, "researchAgent");
+
+      if (lessonSeedanceVideo) {
+        generatedPrompts.seedanceVideo = lessonSeedanceVideo;
+        promptSources.seedanceVideo = "lesson";
+      }
+      if (lessonSeedanceAnimation) {
+        generatedPrompts.seedanceAnimation = lessonSeedanceAnimation;
+        promptSources.seedanceAnimation = "lesson";
+      }
+      if (lessonImage) {
+        generatedPrompts.lessonImage = lessonImage;
+        promptSources.lessonImage = "lesson";
+      }
+      if (lessonResearch) {
+        generatedPrompts.researchAgent = lessonResearch;
+        promptSources.researchAgent = "lesson";
+      }
+
+      const promptMeta = {
+        seedanceVideo: buildPromptMetaEntry(lesson, "seedanceVideo", promptSources.seedanceVideo),
+        seedanceAnimation: buildPromptMetaEntry(lesson, "seedanceAnimation", promptSources.seedanceAnimation),
+        lessonImage: buildPromptMetaEntry(lesson, "lessonImage", promptSources.lessonImage),
+        researchAgent: buildPromptMetaEntry(lesson, "researchAgent", promptSources.researchAgent),
+      };
+
+      return {
+        lessonId: lesson.id,
+        lessonTitle: lesson.title,
+        lessonType: lesson.type,
+        durationMinutes: lesson.duration,
+        prompts: generatedPrompts,
+        promptSources,
+        promptMeta,
+      };
+    });
 
     return {
       moduleId: learningModule.id,
@@ -134,13 +220,35 @@ function buildPromptPack() {
   });
 
   const totalLessons = moduleEntries.reduce((sum, moduleEntry) => sum + moduleEntry.lessonCount, 0);
+  const totalsByPromptSource = { lesson: 0, generated: 0 };
+  const totalsByQaStatus = {};
+
+  for (const moduleEntry of moduleEntries) {
+    for (const lessonEntry of moduleEntry.lessons) {
+      for (const source of Object.values(lessonEntry.promptSources)) {
+        if (source === "lesson") {
+          totalsByPromptSource.lesson += 1;
+        } else {
+          totalsByPromptSource.generated += 1;
+        }
+      }
+      for (const metaEntry of Object.values(lessonEntry.promptMeta ?? {})) {
+        const qaStatus = typeof metaEntry?.qaStatus === "string" ? metaEntry.qaStatus : "unknown";
+        totalsByQaStatus[qaStatus] = (totalsByQaStatus[qaStatus] ?? 0) + 1;
+      }
+    }
+  }
 
   return {
+    schemaVersion: PROMPT_PACK_SCHEMA_VERSION,
     generatedAt: new Date().toISOString(),
     sourceDir: path.relative(process.cwd(), catalogDir).replace(/\\/g, "/"),
     totals: {
       modules: moduleEntries.length,
       lessons: totalLessons,
+      promptsFromLesson: totalsByPromptSource.lesson,
+      promptsGenerated: totalsByPromptSource.generated,
+      promptQaStatusCounts: totalsByQaStatus,
     },
     modules: moduleEntries,
   };
@@ -150,10 +258,17 @@ function toMarkdown(promptPack) {
   const lines = [];
   lines.push("# Lesson Media Prompt Pack");
   lines.push("");
+  lines.push(`Schema: ${promptPack.schemaVersion ?? "unknown"}`);
+  lines.push("");
   lines.push(`Generated: ${promptPack.generatedAt}`);
   lines.push("");
   lines.push(`Modules covered: ${promptPack.totals.modules}`);
   lines.push(`Lessons covered: ${promptPack.totals.lessons}`);
+  lines.push(`Prompt fields from lesson data: ${promptPack.totals.promptsFromLesson ?? 0}`);
+  lines.push(`Prompt fields generated by defaults: ${promptPack.totals.promptsGenerated ?? 0}`);
+  lines.push(
+    `Prompt QA counts: ${JSON.stringify(promptPack.totals.promptQaStatusCounts ?? {}, null, 0)}`,
+  );
   lines.push("");
   lines.push("## Usage");
   lines.push("");
@@ -164,7 +279,7 @@ function toMarkdown(promptPack) {
   lines.push("## Module Coverage");
   lines.push("");
   lines.push("| Module ID | Subject | Lesson Count | Age Range |");
-  lines.push("|---|---|---:|---|");
+  lines.push("| --- | --- | ---: | --- |");
 
   for (const moduleEntry of promptPack.modules) {
     const ageRange =

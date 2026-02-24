@@ -31,6 +31,8 @@ export async function GET(request: Request) {
   const lessonId = searchParams.get("lessonId")?.trim() ?? "";
   const assetType = searchParams.get("assetType")?.trim() ?? "";
   const status = searchParams.get("status")?.trim() ?? "";
+  const promptSource = searchParams.get("promptSource")?.trim() ?? "";
+  const promptQaStatus = searchParams.get("promptQaStatus")?.trim() ?? "";
   const rawLimit = Number(searchParams.get("limit") ?? "100");
   const rawOffset = Number(searchParams.get("offset") ?? "0");
   const limit = Number.isFinite(rawLimit) ? Math.min(200, Math.max(1, rawLimit)) : 100;
@@ -47,7 +49,7 @@ export async function GET(request: Request) {
   let query = admin
     .from("media_generation_jobs")
     .select(
-      "id, module_id, lesson_id, asset_type, provider, prompt, status, output_url, error, created_at, updated_at, completed_at",
+      "id, module_id, lesson_id, asset_type, provider, prompt, status, output_url, error, metadata, created_at, updated_at, completed_at",
       { count: "exact" },
     );
 
@@ -62,6 +64,12 @@ export async function GET(request: Request) {
   }
   if (status) {
     query = query.eq("status", status);
+  }
+  if (promptSource) {
+    query = query.eq("metadata->>prompt_source", promptSource);
+  }
+  if (promptQaStatus) {
+    query = query.eq("metadata->>prompt_qa_status", promptQaStatus);
   }
 
   const { data, error, count } = await query

@@ -68,22 +68,22 @@ export default function PolicyAcceptance({ policyType }: Props) {
   }
 
   return (
-    <div className="rounded-md border border-black/10 bg-zinc-50 p-3 dark:border-white/10 dark:bg-zinc-800">
-      <p className="text-xs text-zinc-600 dark:text-zinc-300">
+    <div className="ui-soft-card rounded-md p-3">
+      <p className="text-xs text-zinc-600">
         Current version: {version ?? "unknown"}
       </p>
       {accepted ? (
-        <p className="mt-1 text-sm text-emerald-700 dark:text-emerald-300">You acknowledged this policy.</p>
+        <p className="mt-1 text-sm text-emerald-700">You acknowledged this policy.</p>
       ) : (
         <button
           type="button"
           onClick={acceptPolicy}
-          className="mt-2 rounded-md border border-black/15 px-3 py-1 text-sm"
+          className="ui-soft-button ui-focus-ring mt-2 rounded-md border border-border bg-surface-muted px-3 py-1 text-sm"
         >
           Acknowledge Policy
         </button>
       )}
-      {status ? <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+      {status ? <p className="mt-1 text-xs text-zinc-600">{status}</p> : null}
     </div>
   );
 }

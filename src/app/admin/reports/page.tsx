@@ -2,9 +2,11 @@ import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import ReportsClient from "./reports-client";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
 
 export const dynamic = "force-dynamic";
-const REPORT_TYPES = ["dsar", "support", "audit"] as const;
+const REPORT_TYPES = ["dsar", "support", "audit", "telemetry"] as const;
 
 function coerceNumber(value: unknown) {
   if (typeof value === "number" && Number.isFinite(value)) return value;
@@ -55,6 +57,21 @@ type ReportQueueSummary = {
   >;
 };
 
+type TelemetryWindowSummary = {
+  daysWindow: number;
+  totalEvents: number;
+  activeLearners: number;
+  activeLearnersCapped: boolean;
+  lessonViews: number;
+  lessonCompletions: number;
+  quizAnswers: number;
+  chunkViews: number;
+  flashcardFlips: number;
+  activityInteractions: number;
+  completionRate: number;
+  interactionDepth: number;
+};
+
 export default async function AdminReportsPage() {
   const supabase = await createSupabaseServerClient();
   const {
@@ -74,9 +91,13 @@ export default async function AdminReportsPage() {
 
   if (profileError || !profile?.is_admin) {
     return (
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-4 px-6 py-24">
-        <h1 className="text-2xl font-semibold">Access Denied</h1>
-        <p className="text-sm text-red-600">You must be an administrator to access reports.</p>
+      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
+        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8 text-center">
+          <h1 className="text-2xl font-semibold">Access Denied</h1>
+          <p className="mt-3 text-sm text-rose-700">
+            You must be an administrator to access reports.
+          </p>
+        </SoftCard>
       </main>
     );
   }
@@ -333,43 +354,216 @@ export default async function AdminReportsPage() {
     reportTypeBreakdown,
   };
 
+  const telemetryDaysWindow = 7;
+  const telemetryCutoffIso = new Date(
+    currentTime.getTime() - telemetryDaysWindow * 24 * 60 * 60 * 1000,
+  ).toISOString();
+  const uniqueLearnerSampleLimit = 20000;
+  const [
+    telemetryEvents7dResult,
+    lessonViews7dResult,
+    lessonCompletions7dResult,
+    quizAnswers7dResult,
+    chunkViews7dResult,
+    flashcardFlips7dResult,
+    activityInteractions7dResult,
+    telemetryUniqueUsers7dResult,
+  ] = await Promise.all([
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .gte("event_at", telemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("event_type", "lesson_viewed")
+      .gte("event_at", telemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("event_type", "lesson_completed")
+      .gte("event_at", telemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("event_type", "quiz_answered")
+      .gte("event_at", telemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("event_type", "chunk_viewed")
+      .gte("event_at", telemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("event_type", "flashcard_flipped")
+      .gte("event_at", telemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("event_type", "activity_interacted")
+      .gte("event_at", telemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("user_id")
+      .gte("event_at", telemetryCutoffIso)
+      .limit(uniqueLearnerSampleLimit),
+  ]);
+
+  const uniqueLearnerSet = new Set(
+    (telemetryUniqueUsers7dResult.data ?? [])
+      .map((row) => row.user_id)
+      .filter((value): value is string => typeof value === "string" && value.length > 0),
+  );
+  const telemetryErrorMessage =
+    telemetryEvents7dResult.error?.message ??
+    lessonViews7dResult.error?.message ??
+    lessonCompletions7dResult.error?.message ??
+    quizAnswers7dResult.error?.message ??
+    chunkViews7dResult.error?.message ??
+    flashcardFlips7dResult.error?.message ??
+    activityInteractions7dResult.error?.message ??
+    telemetryUniqueUsers7dResult.error?.message ??
+    null;
+  const lessonViews = lessonViews7dResult.count ?? 0;
+  const lessonCompletions = lessonCompletions7dResult.count ?? 0;
+  const quizAnswers = quizAnswers7dResult.count ?? 0;
+  const chunkViews = chunkViews7dResult.count ?? 0;
+  const flashcardFlips = flashcardFlips7dResult.count ?? 0;
+  const activityInteractions = activityInteractions7dResult.count ?? 0;
+  const interactionDepthBase = chunkViews + flashcardFlips + activityInteractions + quizAnswers;
+  const telemetrySummary: TelemetryWindowSummary = {
+    daysWindow: telemetryDaysWindow,
+    totalEvents: telemetryEvents7dResult.count ?? 0,
+    activeLearners: uniqueLearnerSet.size,
+    activeLearnersCapped: uniqueLearnerSet.size >= uniqueLearnerSampleLimit,
+    lessonViews,
+    lessonCompletions,
+    quizAnswers,
+    chunkViews,
+    flashcardFlips,
+    activityInteractions,
+    completionRate: lessonViews > 0 ? Number((lessonCompletions / lessonViews).toFixed(3)) : 0,
+    interactionDepth: lessonViews > 0 ? Number((interactionDepthBase / lessonViews).toFixed(3)) : 0,
+  };
+
   const exportHistory = exportHistoryResult.data ?? [];
   const jobs = jobsResult.data ?? [];
 
   return (
-    <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12">
-      <header>
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-6 py-12">
+      <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
         <h1 className="text-3xl font-semibold tracking-tight">Admin Reports</h1>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <p className="mt-2 text-sm text-zinc-700">
           Export operational records as CSV for audits, legal workflows, and finance reconciliation.
         </p>
-      </header>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <ProgressChip label="Backlog" value={queueSummary.backlogCount} tone={queueSummary.backlogCount > queueSummary.backlogThreshold ? "warning" : "info"} />
+          <ProgressChip label="Stale" value={queueSummary.staleCount} tone={queueSummary.staleCount > 0 ? "warning" : "success"} />
+          <ProgressChip label="Failed 24h" value={queueSummary.failed24hCount} tone={queueSummary.failed24hCount >= queueSummary.failure24hThreshold ? "warning" : "neutral"} />
+          <ProgressChip label="Events 7d" value={telemetrySummary.totalEvents} tone="neutral" />
+        </div>
+      </SoftCard>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+      <SoftCard as="section" className="p-5">
         <ul className="space-y-3">
           <li>
-            <a href="/api/admin/reports/dsar" className="text-sm font-medium underline">
+            <a
+              href="/api/admin/reports/dsar"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
               Download DSAR Report (CSV)
             </a>
           </li>
           <li>
-            <a href="/api/admin/reports/support" className="text-sm font-medium underline">
+            <a
+              href="/api/admin/reports/support"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
               Download Support Tickets Report (CSV)
             </a>
           </li>
           <li>
-            <a href="/api/admin/reports/audit" className="text-sm font-medium underline">
+            <a
+              href="/api/admin/reports/audit"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
               Download Admin Audit Report (CSV)
             </a>
           </li>
+          <li>
+            <a
+              href="/api/admin/reports/telemetry?days=30"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Learning Telemetry Report (CSV, 30d)
+            </a>
+          </li>
         </ul>
-      </section>
+      </SoftCard>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+      <SoftCard as="section" className="p-5">
+        <h2 className="text-lg font-semibold">Learning Telemetry Snapshot (Last 7 Days)</h2>
+        <p className="mt-1 text-xs text-zinc-600">
+          Derived from xAPI-lite `learning_events`. Use this for engagement and completion trend checks.
+        </p>
+        {telemetryErrorMessage ? (
+          <p className="mt-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+            Telemetry snapshot currently unavailable: {telemetryErrorMessage}
+          </p>
+        ) : null}
+        <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <article className="rounded-md border border-border bg-surface p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Total Events</p>
+            <p className="mt-1 text-2xl font-semibold">{telemetrySummary.totalEvents}</p>
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Active Learners</p>
+            <p className="mt-1 text-2xl font-semibold">
+              {telemetrySummary.activeLearners}
+              {telemetrySummary.activeLearnersCapped ? "+" : ""}
+            </p>
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Completion / View</p>
+            <p className="mt-1 text-2xl font-semibold">{telemetrySummary.completionRate}</p>
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Interaction Depth</p>
+            <p className="mt-1 text-2xl font-semibold">{telemetrySummary.interactionDepth}</p>
+          </article>
+        </div>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            lesson_viewed: {telemetrySummary.lessonViews}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            lesson_completed: {telemetrySummary.lessonCompletions}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            quiz_answered: {telemetrySummary.quizAnswers}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            chunk_viewed: {telemetrySummary.chunkViews}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            flashcard_flipped: {telemetrySummary.flashcardFlips}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            activity_interacted: {telemetrySummary.activityInteractions}
+          </article>
+        </div>
+      </SoftCard>
+
+      <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Recent Export History</h2>
         <div className="mt-3 space-y-2">
           {(exportHistory ?? []).map((entry) => (
-            <article key={entry.id} className="rounded-md border border-black/10 p-3 text-sm dark:border-white/10">
+            <SoftCard
+              key={entry.id}
+              as="article"
+              className="border-border/70 p-3 text-sm"
+            >
               <p className="font-medium">
                 {entry.report_type} ({entry.row_count} rows)
               </p>
@@ -384,13 +578,13 @@ export default async function AdminReportsPage() {
               <p className="mt-1 break-all text-xs text-zinc-500">
                 SHA256: {entry.checksum_sha256 ?? "n/a"}
               </p>
-            </article>
+            </SoftCard>
           ))}
           {exportHistory.length === 0 ? (
             <p className="text-sm text-zinc-500">No export history yet.</p>
           ) : null}
         </div>
-      </section>
+      </SoftCard>
 
       <ReportsClient initialJobs={jobs} initialSummary={queueSummary} />
     </main>

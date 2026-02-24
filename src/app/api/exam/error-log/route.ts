@@ -1,0 +1,154 @@
+import { NextResponse } from "next/server";
+import { z } from "zod";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+
+const metadataValueSchema = z.union([
+  z.string(),
+  z.number(),
+  z.boolean(),
+  z.null(),
+  z.array(z.union([z.string(), z.number(), z.boolean(), z.null()])),
+]);
+
+const createErrorLogSchema = z.object({
+  moduleId: z.string().min(1).optional(),
+  lessonId: z.string().min(1),
+  questionId: z.string().min(1),
+  skillId: z.string().min(1).optional(),
+  errorType: z
+    .enum(["incorrect_answer", "timed_out", "strategy_gap", "careless_mistake", "concept_gap"])
+    .optional(),
+  selectedOptionId: z.string().min(1).optional(),
+  correctOptionId: z.string().min(1).optional(),
+  questionText: z.string().min(1).optional(),
+  notes: z.string().max(4000).optional(),
+  metadata: z.record(z.string(), metadataValueSchema).optional(),
+});
+
+function toInt(value: string | null, fallback: number) {
+  if (!value) return fallback;
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed)) return fallback;
+  return Math.trunc(parsed);
+}
+
+export async function GET(request: Request) {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const url = new URL(request.url);
+    const moduleId = url.searchParams.get("moduleId")?.trim() || null;
+    const lessonId = url.searchParams.get("lessonId")?.trim() || null;
+    const unresolvedOnly =
+      url.searchParams.get("unresolved") === "1" ||
+      url.searchParams.get("unresolved") === "true";
+    const limit = Math.max(1, Math.min(200, toInt(url.searchParams.get("limit"), 100)));
+
+    let query = supabase
+      .from("user_exam_error_logs")
+      .select(
+        "id,user_id,module_id,lesson_id,question_id,skill_id,error_type,selected_option_id,correct_option_id,question_text,notes,resolved,resolved_at,metadata,created_at,updated_at",
+      )
+      .eq("user_id", user.id)
+      .order("resolved", { ascending: true })
+      .order("created_at", { ascending: false })
+      .limit(limit);
+
+    if (moduleId) {
+      query = query.eq("module_id", moduleId);
+    }
+    if (lessonId) {
+      query = query.eq("lesson_id", lessonId);
+    }
+    if (unresolvedOnly) {
+      query = query.eq("resolved", false);
+    }
+
+    const [{ data: rows, error: rowsError }, { count: unresolvedCount, error: countError }] = await Promise.all([
+      query,
+      supabase
+        .from("user_exam_error_logs")
+        .select("id", { head: true, count: "exact" })
+        .eq("user_id", user.id)
+        .eq("resolved", false),
+    ]);
+
+    if (rowsError) {
+      return NextResponse.json({ error: rowsError.message }, { status: 500 });
+    }
+    if (countError) {
+      return NextResponse.json({ error: countError.message }, { status: 500 });
+    }
+
+    return NextResponse.json({
+      success: true,
+      unresolvedCount: unresolvedCount ?? 0,
+      total: rows?.length ?? 0,
+      rows: rows ?? [],
+    });
+  } catch (error) {
+    console.error("Unexpected exam error log GET error:", error);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  }
+}
+
+export async function POST(request: Request) {
+  try {
+    const supabase = await createSupabaseServerClient();
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    const body = await request.json().catch(() => ({}));
+    const validation = createErrorLogSchema.safeParse(body);
+    if (!validation.success) {
+      return NextResponse.json(
+        { error: "Invalid request body", details: validation.error.issues },
+        { status: 400 },
+      );
+    }
+
+    const payload = validation.data;
+    const insertRow = {
+      user_id: user.id,
+      module_id: payload.moduleId ?? null,
+      lesson_id: payload.lessonId,
+      question_id: payload.questionId,
+      skill_id: payload.skillId ?? null,
+      error_type: payload.errorType ?? "incorrect_answer",
+      selected_option_id: payload.selectedOptionId ?? null,
+      correct_option_id: payload.correctOptionId ?? null,
+      question_text: payload.questionText ?? null,
+      notes: payload.notes ?? null,
+      metadata: payload.metadata ?? {},
+    };
+
+    const { data, error } = await supabase
+      .from("user_exam_error_logs")
+      .insert(insertRow)
+      .select("id, created_at")
+      .single();
+
+    if (error) {
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true, row: data });
+  } catch (error) {
+    console.error("Unexpected exam error log POST error:", error);
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  }
+}

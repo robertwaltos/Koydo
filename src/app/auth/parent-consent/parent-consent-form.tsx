@@ -70,7 +70,7 @@ export default function ParentConsentForm() {
           type="email"
           value={parentEmail}
           onChange={(event) => setParentEmail(event.target.value)}
-          className="w-full rounded-md border border-black/15 px-3 py-2 text-sm"
+          className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
           required
         />
       </div>
@@ -83,7 +83,7 @@ export default function ParentConsentForm() {
           id="consentMethod"
           value={consentMethod}
           onChange={(event) => setConsentMethod(event.target.value as ConsentMethod)}
-          className="w-full rounded-md border border-black/15 px-3 py-2 text-sm"
+          className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
         >
           <option value="email_verification">Email verification</option>
           <option value="micro_charge">Credit card micro-charge</option>
@@ -99,7 +99,7 @@ export default function ParentConsentForm() {
           id="region"
           value={region}
           onChange={(event) => setRegion(event.target.value)}
-          className="w-full rounded-md border border-black/15 px-3 py-2 text-sm"
+          className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
           required
         />
       </div>
@@ -107,7 +107,7 @@ export default function ParentConsentForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="rounded-md bg-foreground px-4 py-2 text-sm text-background disabled:opacity-70"
+        className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
       >
         {isSubmitting ? "Submitting..." : "Submit consent request"}
       </button>
@@ -115,13 +115,13 @@ export default function ParentConsentForm() {
       {verificationUrl ? (
         <a
           href={verificationUrl}
-          className="ml-3 inline-block rounded-md border border-black/15 px-4 py-2 text-sm dark:border-white/20"
+          className="ui-soft-button ui-focus-ring ml-3 inline-block rounded-md border border-border bg-surface-muted px-4 py-2 text-sm"
         >
           Open parent verification link (simulation)
         </a>
       ) : null}
 
-      {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+      {status ? <p className="text-sm text-zinc-600">{status}</p> : null}
     </form>
   );
 }

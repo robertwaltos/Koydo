@@ -172,16 +172,33 @@ function validateModule(moduleEntry, state) {
       label: "Lesson",
       issues,
     });
+    const normalizedModuleId = normalizeLookupKey(learningModule.id);
+    const normalizedLessonTitle = normalizeLookupKey(lesson.title);
+    const slugLessonTitle = slugify(lesson.title);
     registerLookupKey({
       map: state.lessonLookupKeys,
-      key: normalizeLookupKey(lesson.title),
+      key: `${normalizedModuleId}:${normalizedLessonTitle}`,
       owner: lessonLookupOwner,
       label: "Lesson",
       issues,
     });
     registerLookupKey({
       map: state.lessonLookupKeys,
-      key: slugify(lesson.title),
+      key: `${normalizedModuleId}:${slugLessonTitle}`,
+      owner: lessonLookupOwner,
+      label: "Lesson",
+      issues,
+    });
+    registerLookupKey({
+      map: state.lessonLookupKeys,
+      key: `${normalizedModuleId}/${normalizedLessonTitle}`,
+      owner: lessonLookupOwner,
+      label: "Lesson",
+      issues,
+    });
+    registerLookupKey({
+      map: state.lessonLookupKeys,
+      key: `${normalizedModuleId}/${slugLessonTitle}`,
       owner: lessonLookupOwner,
       label: "Lesson",
       issues,
@@ -306,7 +323,7 @@ function toMarkdown(report) {
       lines.push("");
     }
   }
-  return lines.join("\n");
+  return `${lines.join("\n")}\n`;
 }
 
 function main() {

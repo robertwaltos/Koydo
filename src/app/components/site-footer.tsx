@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SiteFooter() {
   return (
-    <footer className="mt-12 border-t border-black/10 px-4 py-6 text-sm text-zinc-600 dark:border-white/10 dark:text-zinc-300">
+    <footer className="mt-12 border-t border-border px-4 py-6 text-sm text-zinc-600">
       <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center gap-4">
         <span>EduForge</span>
         <Link href="/legal/privacy" className="hover:underline">

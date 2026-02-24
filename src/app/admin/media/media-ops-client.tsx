@@ -12,15 +12,32 @@ type MediaJob = {
   status: "queued" | "running" | "completed" | "failed" | "canceled";
   output_url: string | null;
   error: string | null;
+  metadata?: {
+    prompt_source?: string;
+    prompt_qa_status?: string;
+    prompt_version?: string;
+    prompt_key?: string;
+    [key: string]: unknown;
+  } | null;
   created_at: string;
   updated_at: string;
   completed_at: string | null;
+};
+
+type PromptAssetKey = "seedanceVideo" | "seedanceAnimation" | "lessonImage";
+
+type PromptMetaEntry = {
+  source?: string;
+  version?: string;
+  qaStatus?: string;
 };
 
 type PromptLesson = {
   lessonId: string;
   lessonTitle: string;
   lessonType: string;
+  promptSources?: Partial<Record<PromptAssetKey, string>>;
+  promptMeta?: Partial<Record<PromptAssetKey, PromptMetaEntry>>;
 };
 
 type PromptModule = {
@@ -31,6 +48,8 @@ type PromptModule = {
 };
 
 type PromptPack = {
+  generatedAt?: string;
+  schemaVersion?: string;
   modules?: PromptModule[];
 };
 
@@ -104,6 +123,8 @@ type MediaQueueSummaryResponse = Partial<MediaQueueSummary> & {
 
 type AssetFilter = "all" | MediaJob["asset_type"];
 type StatusFilter = "all" | MediaJob["status"];
+type PromptSourceFilter = "all" | "lesson" | "generated" | "unknown";
+type PromptQaFilter = "all" | "reviewed" | "needs_review" | "approved" | "draft" | "unknown";
 
 type JobsPaginationState = {
   total: number;
@@ -135,6 +156,22 @@ function statusBadgeClass(status: MediaJob["status"]) {
   if (status === "running") return "bg-indigo-100 text-indigo-800";
   if (status === "canceled") return "bg-zinc-200 text-zinc-700";
   return "bg-amber-100 text-amber-800";
+}
+
+function assetTypeToPromptKey(assetType: MediaJob["asset_type"]): PromptAssetKey {
+  if (assetType === "video") return "seedanceVideo";
+  if (assetType === "animation") return "seedanceAnimation";
+  return "lessonImage";
+}
+
+function promptQaBadgeClass(qaStatus: string | undefined) {
+  if (qaStatus === "reviewed" || qaStatus === "approved") {
+    return "border-emerald-200 bg-emerald-50 text-emerald-800";
+  }
+  if (qaStatus === "needs_review" || qaStatus === "draft") {
+    return "border-amber-200 bg-amber-50 text-amber-800";
+  }
+  return "border-zinc-200 bg-zinc-100 text-zinc-700";
 }
 
 function formatAgeFromIso(isoTimestamp: string | null) {
@@ -232,6 +269,8 @@ export default function MediaOpsClient({
   const [status, setStatus] = useState("");
   const [promptModules, setPromptModules] = useState<PromptModule[]>([]);
   const [packLoading, setPackLoading] = useState(false);
+  const [promptPackGeneratedAt, setPromptPackGeneratedAt] = useState<string | null>(null);
+  const [promptPackSchemaVersion, setPromptPackSchemaVersion] = useState<string | null>(null);
   const [packModuleId, setPackModuleId] = useState("");
   const [packLessonId, setPackLessonId] = useState("");
   const [packAssetType, setPackAssetType] = useState<MediaJob["asset_type"]>("video");
@@ -241,6 +280,8 @@ export default function MediaOpsClient({
   const [jobFilterLessonId, setJobFilterLessonId] = useState("");
   const [jobFilterAssetType, setJobFilterAssetType] = useState<AssetFilter>("all");
   const [jobFilterStatus, setJobFilterStatus] = useState<StatusFilter>("all");
+  const [jobFilterPromptSource, setJobFilterPromptSource] = useState<PromptSourceFilter>("all");
+  const [jobFilterPromptQaStatus, setJobFilterPromptQaStatus] = useState<PromptQaFilter>("all");
   const [jobFilterLimit, setJobFilterLimit] = useState(100);
   const [jobFilterOffset, setJobFilterOffset] = useState(0);
   const [jobRetryIncludeCanceled, setJobRetryIncludeCanceled] = useState(false);
@@ -280,6 +321,18 @@ export default function MediaOpsClient({
     () => selectedPromptModule?.lessons.find((entry) => entry.lessonId === packLessonId) ?? null,
     [packLessonId, selectedPromptModule],
   );
+  const selectedPromptMeta = useMemo(() => {
+    const promptKey = assetTypeToPromptKey(packAssetType);
+    const metadata = selectedPromptLesson?.promptMeta?.[promptKey];
+    const sourceFallback = selectedPromptLesson?.promptSources?.[promptKey];
+    return {
+      source: metadata?.source ?? sourceFallback ?? "unknown",
+      version: metadata?.version ?? (sourceFallback === "lesson" ? "lesson.v1" : "generated.v1"),
+      qaStatus:
+        metadata?.qaStatus ??
+        (sourceFallback === "lesson" ? "reviewed" : sourceFallback ? "needs_review" : "unknown"),
+    };
+  }, [packAssetType, selectedPromptLesson]);
   const selectedJobFilterModule = useMemo(
     () => promptModules.find((entry) => entry.moduleId === jobFilterModuleId) ?? null,
     [jobFilterModuleId, promptModules],
@@ -345,6 +398,8 @@ export default function MediaOpsClient({
       if (jobFilterLessonId) params.set("lessonId", jobFilterLessonId);
       if (jobFilterAssetType !== "all") params.set("assetType", jobFilterAssetType);
       if (jobFilterStatus !== "all") params.set("status", jobFilterStatus);
+      if (jobFilterPromptSource !== "all") params.set("promptSource", jobFilterPromptSource);
+      if (jobFilterPromptQaStatus !== "all") params.set("promptQaStatus", jobFilterPromptQaStatus);
 
       const response = await fetch(`/api/admin/media/jobs?${params.toString()}`, {
         method: "GET",
@@ -394,6 +449,8 @@ export default function MediaOpsClient({
     jobFilterLimit,
     jobFilterModuleId,
     jobFilterOffset,
+    jobFilterPromptQaStatus,
+    jobFilterPromptSource,
     jobFilterStatus,
     refreshSummary,
   ]);
@@ -405,6 +462,8 @@ export default function MediaOpsClient({
       const response = await fetch("/api/admin/media/prompt-pack", { method: "GET" });
       const payload = (await response.json().catch(() => ({}))) as PromptPack;
       const modules = Array.isArray(payload.modules) ? payload.modules : [];
+      setPromptPackGeneratedAt(typeof payload.generatedAt === "string" ? payload.generatedAt : null);
+      setPromptPackSchemaVersion(typeof payload.schemaVersion === "string" ? payload.schemaVersion : null);
       setPromptModules(modules);
       if (modules.length > 0) {
         const firstModule = modules[0];
@@ -614,32 +673,50 @@ export default function MediaOpsClient({
 
   return (
     <div className="space-y-6">
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <h2 className="text-lg font-semibold">Queue Media Job</h2>
         <p className="mt-2 text-sm text-zinc-600">
           Queue placeholder-to-production asset generation for lesson videos, animations, and images.
         </p>
         <div className="mt-3 flex flex-wrap gap-3 text-xs">
-          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/MEDIA-READINESS-REPORT.md" target="_blank" rel="noreferrer">
+          <a className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-2 py-1 hover:bg-surface" href="/MEDIA-READINESS-REPORT.md" target="_blank" rel="noreferrer">
             Open Media Readiness Report
           </a>
-          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/LESSON-MEDIA-PROMPT-PACK.md" target="_blank" rel="noreferrer">
+          <a className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-2 py-1 hover:bg-surface" href="/LESSON-MEDIA-PROMPT-PACK.md" target="_blank" rel="noreferrer">
             Open Lesson Media Prompt Pack
           </a>
-          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/AI-MEDIA-PROMPTS.md" target="_blank" rel="noreferrer">
+          <a className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-2 py-1 hover:bg-surface" href="/AI-MEDIA-PROMPTS.md" target="_blank" rel="noreferrer">
             Open AI Media Prompt Catalog
           </a>
         </div>
 
-        <div className="mt-4 rounded-md border border-black/10 bg-zinc-50 p-4">
+        <div className="mt-4 rounded-md border border-border bg-surface-muted p-4">
           <h3 className="text-sm font-semibold">Quick Queue From Lesson Prompt Pack</h3>
           <p className="mt-1 text-xs text-zinc-600">
             Select a module/lesson and queue a pre-generated Seedance prompt without manual copy/paste.
           </p>
+          <p className="mt-1 text-[11px] text-zinc-500">
+            Pack schema {promptPackSchemaVersion ?? "unknown"} • Generated{" "}
+            {promptPackGeneratedAt ? new Date(promptPackGeneratedAt).toLocaleString() : "unknown"}
+          </p>
+          <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px]">
+            <span
+              className={`rounded-full border px-2 py-0.5 font-medium ${promptQaBadgeClass(selectedPromptMeta.qaStatus)}`}
+            >
+              QA {selectedPromptMeta.qaStatus}
+            </span>
+            <span className="rounded-full border border-border bg-surface px-2 py-0.5 text-zinc-700">
+              Source {selectedPromptMeta.source}
+            </span>
+            <span className="rounded-full border border-border bg-surface px-2 py-0.5 text-zinc-700">
+              Version {selectedPromptMeta.version}
+            </span>
+          </div>
           <div className="mt-3 grid gap-2 md:grid-cols-4">
             <select
-              className="rounded-md border border-black/15 px-2 py-2 text-sm"
+              className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
               value={packModuleId}
+              aria-label="Filter prompt pack by module"
               onChange={(event) => {
                 const nextModuleId = event.target.value;
                 setPackModuleId(nextModuleId);
@@ -659,8 +736,9 @@ export default function MediaOpsClient({
               ))}
             </select>
             <select
-              className="rounded-md border border-black/15 px-2 py-2 text-sm"
+              className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
               value={packLessonId}
+              aria-label="Filter prompt pack by lesson"
               onChange={(event) => setPackLessonId(event.target.value)}
             >
               <option value="">{selectedPromptModule ? "All lessons in module" : "All lessons"}</option>
@@ -671,8 +749,9 @@ export default function MediaOpsClient({
               ))}
             </select>
             <select
-              className="rounded-md border border-black/15 px-2 py-2 text-sm"
+              className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
               value={packAssetType}
+              aria-label="Select prompt pack asset type"
               onChange={(event) => setPackAssetType(event.target.value as MediaJob["asset_type"])}
             >
               <option value="video">Video Prompt</option>
@@ -681,7 +760,7 @@ export default function MediaOpsClient({
             </select>
             <button
               type="button"
-              className="rounded-md bg-emerald-600 px-3 py-2 text-sm font-medium text-white hover:bg-emerald-500"
+              className="ui-soft-button ui-focus-ring rounded-md bg-emerald-600 px-3 py-2 text-sm font-medium text-white hover:bg-emerald-500"
               onClick={() => void handleQuickQueueFromPromptPack()}
             >
               Queue One
@@ -696,12 +775,12 @@ export default function MediaOpsClient({
                 max={500}
                 value={packQueueLimit}
                 onChange={(event) => setPackQueueLimit(Math.max(1, Math.min(500, Number(event.target.value) || 1)))}
-                className="ml-2 w-20 rounded border border-black/15 px-2 py-1 text-xs"
+                className="ui-focus-ring ml-2 w-20 rounded border border-border bg-surface px-2 py-1 text-xs"
               />
             </label>
             <button
               type="button"
-              className="rounded-md border border-black/15 px-3 py-1 text-xs hover:bg-black/5"
+              className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-3 py-1 text-xs hover:bg-surface"
               onClick={() => void handleBulkQueueFromPromptPack()}
             >
               Bulk Queue From Pack
@@ -710,32 +789,32 @@ export default function MediaOpsClient({
         </div>
 
         <form className="mt-4 grid gap-3 md:grid-cols-2" onSubmit={handleCreateJob}>
-          <input name="moduleId" placeholder="Module ID (optional)" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
-          <input name="lessonId" placeholder="Lesson ID (optional)" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
-          <select name="assetType" className="rounded-md border border-black/15 px-3 py-2 text-sm" defaultValue="video">
+          <input name="moduleId" placeholder="Module ID (optional)" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" />
+          <input name="lessonId" placeholder="Lesson ID (optional)" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" />
+          <select name="assetType" aria-label="Asset type" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" defaultValue="video">
             <option value="video">Video</option>
             <option value="animation">Animation</option>
             <option value="image">Image</option>
           </select>
-          <input name="provider" defaultValue="seedance" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
+          <input name="provider" aria-label="Media provider" defaultValue="seedance" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" />
           <textarea
             name="prompt"
             required
             minLength={20}
             rows={5}
             placeholder="Describe the media asset to generate..."
-            className="rounded-md border border-black/15 px-3 py-2 text-sm md:col-span-2"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2"
           />
           <button
             type="submit"
-            className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500"
+            className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm font-medium text-white"
           >
             Queue Job
           </button>
         </form>
       </section>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-lg font-semibold">Queue Health</h2>
@@ -751,7 +830,7 @@ export default function MediaOpsClient({
           </div>
           <button
             type="button"
-            className="rounded-md border border-black/15 px-3 py-1 text-sm hover:bg-black/5 disabled:opacity-70"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-sm font-semibold text-foreground disabled:opacity-70"
             onClick={() => void refreshSummary()}
             disabled={summaryLoading}
           >
@@ -764,7 +843,7 @@ export default function MediaOpsClient({
             <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
               <article
                 className={`rounded-md border p-3 ${
-                  backlogBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-zinc-50"
+                  backlogBreached ? "border-red-200 bg-red-50 text-red-800" : "border-border bg-surface-muted"
                 }`}
               >
                 <p className="text-xs uppercase tracking-wide text-zinc-500">Backlog</p>
@@ -773,7 +852,7 @@ export default function MediaOpsClient({
               </article>
               <article
                 className={`rounded-md border p-3 ${
-                  staleBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-zinc-50"
+                  staleBreached ? "border-red-200 bg-red-50 text-red-800" : "border-border bg-surface-muted"
                 }`}
               >
                 <p className="text-xs uppercase tracking-wide text-zinc-500">Stale</p>
@@ -784,14 +863,14 @@ export default function MediaOpsClient({
               </article>
               <article
                 className={`rounded-md border p-3 ${
-                  failed24hBreached ? "border-red-200 bg-red-50 text-red-800" : "border-black/10 bg-zinc-50"
+                  failed24hBreached ? "border-red-200 bg-red-50 text-red-800" : "border-border bg-surface-muted"
                 }`}
               >
                 <p className="text-xs uppercase tracking-wide text-zinc-500">Failed (24h)</p>
                 <p className="mt-1 text-2xl font-semibold">{queueSummary.failed24hCount}</p>
                 <p className="text-xs">Threshold {queueSummary.failure24hThreshold}</p>
               </article>
-              <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+              <article className="rounded-md border border-border bg-surface-muted p-3">
                 <p className="text-xs uppercase tracking-wide text-zinc-500">Queued</p>
                 <p className="mt-1 text-2xl font-semibold text-zinc-900">{queueSummary.queuedCount}</p>
                 <p className="text-xs text-zinc-600">Running {queueSummary.runningCount}</p>
@@ -814,7 +893,7 @@ export default function MediaOpsClient({
               {MEDIA_ASSET_TYPES.map((assetType) => {
                 const breakdown = queueSummary.assetBreakdown[assetType];
                 return (
-                  <article key={assetType} className="rounded-md border border-black/10 bg-white p-3 text-xs">
+                  <article key={assetType} className="rounded-md border border-border bg-surface p-3 text-xs">
                     <p className="font-semibold uppercase tracking-wide text-zinc-700">{assetType}</p>
                     <p className="mt-1 text-zinc-600">
                       backlog {breakdown.backlog} (q {breakdown.queued} / r {breakdown.running})
@@ -831,7 +910,7 @@ export default function MediaOpsClient({
         ) : null}
       </section>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h2 className="text-lg font-semibold">Media Job Queue</h2>
           <div className="flex flex-wrap gap-2">
@@ -860,7 +939,7 @@ export default function MediaOpsClient({
             </button>
             <button
               type="button"
-              className="rounded-md border border-black/15 px-3 py-1 text-sm hover:bg-black/5"
+              className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-sm font-semibold text-foreground"
               onClick={() => void refreshJobs()}
             >
               Refresh
@@ -869,8 +948,9 @@ export default function MediaOpsClient({
         </div>
         <div className="mt-3 grid gap-2 md:grid-cols-7">
           <select
-            className="rounded-md border border-black/15 px-2 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
             value={jobFilterModuleId}
+            aria-label="Filter jobs by module"
             onChange={(event) => {
               const nextModuleId = event.target.value;
               setJobFilterModuleId(nextModuleId);
@@ -886,8 +966,9 @@ export default function MediaOpsClient({
             ))}
           </select>
           <select
-            className="rounded-md border border-black/15 px-2 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
             value={jobFilterLessonId}
+            aria-label="Filter jobs by lesson"
             onChange={(event) => {
               setJobFilterLessonId(event.target.value);
               setJobFilterOffset(0);
@@ -901,8 +982,9 @@ export default function MediaOpsClient({
             ))}
           </select>
           <select
-            className="rounded-md border border-black/15 px-2 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
             value={jobFilterAssetType}
+            aria-label="Filter jobs by asset type"
             onChange={(event) => {
               setJobFilterAssetType(event.target.value as AssetFilter);
               setJobFilterOffset(0);
@@ -914,8 +996,9 @@ export default function MediaOpsClient({
             <option value="image">Image</option>
           </select>
           <select
-            className="rounded-md border border-black/15 px-2 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
             value={jobFilterStatus}
+            aria-label="Filter jobs by status"
             onChange={(event) => {
               setJobFilterStatus(event.target.value as StatusFilter);
               setJobFilterOffset(0);
@@ -928,7 +1011,37 @@ export default function MediaOpsClient({
             <option value="failed">Failed</option>
             <option value="canceled">Canceled</option>
           </select>
-          <label className="flex items-center gap-2 rounded-md border border-black/15 px-2 py-2 text-sm">
+          <select
+            className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
+            value={jobFilterPromptSource}
+            aria-label="Filter jobs by prompt source"
+            onChange={(event) => {
+              setJobFilterPromptSource(event.target.value as PromptSourceFilter);
+              setJobFilterOffset(0);
+            }}
+          >
+            <option value="all">All prompt sources</option>
+            <option value="lesson">Lesson</option>
+            <option value="generated">Generated</option>
+            <option value="unknown">Unknown</option>
+          </select>
+          <select
+            className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm"
+            value={jobFilterPromptQaStatus}
+            aria-label="Filter jobs by prompt QA status"
+            onChange={(event) => {
+              setJobFilterPromptQaStatus(event.target.value as PromptQaFilter);
+              setJobFilterOffset(0);
+            }}
+          >
+            <option value="all">All QA states</option>
+            <option value="reviewed">Reviewed</option>
+            <option value="approved">Approved</option>
+            <option value="needs_review">Needs review</option>
+            <option value="draft">Draft</option>
+            <option value="unknown">Unknown</option>
+          </select>
+          <label className="flex items-center gap-2 rounded-md border border-border bg-surface-muted px-2 py-2 text-sm">
             <span className="text-xs text-zinc-600">Limit</span>
             <input
               type="number"
@@ -939,10 +1052,10 @@ export default function MediaOpsClient({
                 setJobFilterLimit(Math.max(1, Math.min(200, Number(event.target.value) || 1)));
                 setJobFilterOffset(0);
               }}
-              className="w-20 rounded border border-black/15 px-2 py-1 text-xs"
+              className="ui-focus-ring w-20 rounded border border-border bg-surface px-2 py-1 text-xs"
             />
           </label>
-          <label className="flex items-center gap-2 rounded-md border border-black/15 px-2 py-2 text-sm">
+          <label className="flex items-center gap-2 rounded-md border border-border bg-surface-muted px-2 py-2 text-sm">
             <input
               type="checkbox"
               checked={jobRetryIncludeCanceled}
@@ -950,7 +1063,7 @@ export default function MediaOpsClient({
             />
             Retry canceled too
           </label>
-          <label className="flex items-center gap-2 rounded-md border border-black/15 px-2 py-2 text-sm">
+          <label className="flex items-center gap-2 rounded-md border border-border bg-surface-muted px-2 py-2 text-sm">
             <span className="text-xs text-zinc-600">Stale min</span>
             <input
               type="number"
@@ -960,10 +1073,10 @@ export default function MediaOpsClient({
               onChange={(event) =>
                 setStaleRequeueMinutes(Math.max(5, Math.min(10080, Number(event.target.value) || 5)))
               }
-              className="w-20 rounded border border-black/15 px-2 py-1 text-xs"
+              className="ui-focus-ring w-20 rounded border border-border bg-surface px-2 py-1 text-xs"
             />
           </label>
-          <label className="flex items-center gap-2 rounded-md border border-black/15 px-2 py-2 text-sm">
+          <label className="flex items-center gap-2 rounded-md border border-border bg-surface-muted px-2 py-2 text-sm">
             <input
               type="checkbox"
               checked={jobAutoRefresh}
@@ -981,7 +1094,7 @@ export default function MediaOpsClient({
         <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-zinc-600">
           <button
             type="button"
-            className="rounded border border-black/15 px-2 py-1 hover:bg-black/5 disabled:opacity-60"
+            className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 hover:bg-surface disabled:opacity-60"
             onClick={handlePreviousPage}
             disabled={jobsLoading || jobsPagination.previousOffset === null}
           >
@@ -989,7 +1102,7 @@ export default function MediaOpsClient({
           </button>
           <button
             type="button"
-            className="rounded border border-black/15 px-2 py-1 hover:bg-black/5 disabled:opacity-60"
+            className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 hover:bg-surface disabled:opacity-60"
             onClick={handleNextPage}
             disabled={jobsLoading || !jobsPagination.hasMore || jobsPagination.nextOffset === null}
           >
@@ -1003,15 +1116,24 @@ export default function MediaOpsClient({
 
         <div className="mt-4 space-y-3">
           {jobs.map((job) => (
-            <article key={job.id} className="rounded-md border border-black/10 p-4">
+            <article key={job.id} className="rounded-md border border-border p-4">
               <div className="flex flex-wrap items-center gap-2 text-xs">
                 <span className="rounded bg-zinc-100 px-2 py-1">{job.asset_type}</span>
                 <span className="rounded bg-zinc-100 px-2 py-1">{job.provider}</span>
                 <span className={`rounded px-2 py-1 ${statusBadgeClass(job.status)}`}>{job.status}</span>
+                <span className="rounded border border-border bg-surface px-2 py-1">
+                  src {job.metadata?.prompt_source ?? "unknown"}
+                </span>
+                <span className={`rounded border px-2 py-1 ${promptQaBadgeClass(job.metadata?.prompt_qa_status)}`}>
+                  qa {job.metadata?.prompt_qa_status ?? "unknown"}
+                </span>
               </div>
               <p className="mt-2 text-xs text-zinc-500">Job ID: {job.id}</p>
               <p className="mt-1 text-xs text-zinc-500">
                 Module: {job.module_id ?? "n/a"} | Lesson: {job.lesson_id ?? "n/a"}
+              </p>
+              <p className="mt-1 text-xs text-zinc-500">
+                Prompt version: {job.metadata?.prompt_version ?? "n/a"} | Prompt key: {job.metadata?.prompt_key ?? "n/a"}
               </p>
               <p className="mt-2 text-sm text-zinc-800 line-clamp-3">{job.prompt}</p>
               {job.output_url ? (
@@ -1032,28 +1154,28 @@ export default function MediaOpsClient({
                   </button>
                 ) : null}
                 <button
-                  className="rounded-md border border-black/15 px-2 py-1 text-xs hover:bg-black/5"
+                  className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-2 py-1 text-xs hover:bg-surface"
                   onClick={() => void handleStatusUpdate(job.id, "running")}
                   type="button"
                 >
                   Mark Running
                 </button>
                 <button
-                  className="rounded-md border border-black/15 px-2 py-1 text-xs hover:bg-black/5"
+                  className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-2 py-1 text-xs hover:bg-surface"
                   onClick={() => void handleStatusUpdate(job.id, "completed")}
                   type="button"
                 >
                   Mark Completed
                 </button>
                 <button
-                  className="rounded-md border border-black/15 px-2 py-1 text-xs hover:bg-black/5"
+                  className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-2 py-1 text-xs hover:bg-surface"
                   onClick={() => void handleStatusUpdate(job.id, "failed")}
                   type="button"
                 >
                   Mark Failed
                 </button>
                 <button
-                  className="rounded-md border border-black/15 px-2 py-1 text-xs hover:bg-black/5"
+                  className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-2 py-1 text-xs hover:bg-surface"
                   onClick={() => void handleStatusUpdate(job.id, "canceled")}
                   type="button"
                 >
@@ -1068,3 +1190,5 @@ export default function MediaOpsClient({
     </div>
   );
 }
+
+

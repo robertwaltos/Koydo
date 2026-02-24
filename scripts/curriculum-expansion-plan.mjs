@@ -119,7 +119,7 @@ function renderMarkdown(plan) {
   lines.push("## Priority Gaps");
   lines.push("");
   lines.push("| Grade Band | Subject | Existing | Target | Missing |");
-  lines.push("|---|---|---:|---:|---:|");
+  lines.push("| --- | --- | ---: | ---: | ---: |");
   for (const row of plan.targets) {
     if (row.missingCount <= 0) continue;
     lines.push(
@@ -131,7 +131,7 @@ function renderMarkdown(plan) {
     lines.push("## Untracked Coverage");
     lines.push("");
     lines.push("| Grade Band | Subject | Existing |");
-    lines.push("|---|---|---:|");
+    lines.push("| --- | --- | ---: |");
     for (const row of plan.untrackedCoverage) {
       lines.push(`| ${toTitle(row.gradeBand)} | ${toTitle(row.subject)} | ${row.count} |`);
     }

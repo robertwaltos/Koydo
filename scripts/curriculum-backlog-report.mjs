@@ -148,7 +148,7 @@ function toMarkdown(report) {
   lines.push("## Backlog Items");
   lines.push("");
   lines.push("| Workstream | Type | Priority | Key | Gap/Score | Details |");
-  lines.push("|---|---|---|---|---:|---|");
+  lines.push("| --- | --- | --- | --- | ---: | --- |");
   for (const item of report.items) {
     const gapOrScore =
       item.missingCount !== null

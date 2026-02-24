@@ -1,11 +1,11 @@
 # App Store Compliance Audit
 
-Generated: 2026-02-21T00:05:14.644Z
+Generated: 2026-02-24T04:20:25.925Z
 
 Checks: 12 | Pass: 11 | Warn: 1 | Fail: 0
 
 | Category | ID | Status | Detail |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | required-file | file:src/app/account/settings/page.tsx | PASS | Exists |
 | required-file | file:src/app/api/account/delete/route.ts | PASS | Exists |
 | required-file | file:src/app/legal/privacy/page.tsx | PASS | Exists |

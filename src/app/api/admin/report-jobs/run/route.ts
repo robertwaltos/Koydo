@@ -3,6 +3,11 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toCsv } from "@/lib/admin/csv";
 import { logReportExport } from "@/lib/admin/report-export";
+import {
+  buildTelemetryDailyCsvRows,
+  buildTelemetrySummary,
+  type LearningEventReportRow,
+} from "@/lib/admin/telemetry-report";
 
 async function buildReportCsv(reportType: string) {
   const admin = createSupabaseAdminClient();
@@ -23,7 +28,7 @@ async function buildReportCsv(reportType: string) {
       "requested_at",
       "resolved_at",
     ]);
-    return { csv, rowCount: rows.length };
+    return { csv, rowCount: rows.length, metadata: { sourceRows: rows.length } };
   }
 
   if (reportType === "support") {
@@ -48,7 +53,7 @@ async function buildReportCsv(reportType: string) {
       "updated_at",
       "resolved_at",
     ]);
-    return { csv, rowCount: rows.length };
+    return { csv, rowCount: rows.length, metadata: { sourceRows: rows.length } };
   }
 
   if (reportType === "audit") {
@@ -66,7 +71,42 @@ async function buildReportCsv(reportType: string) {
       "metadata",
       "created_at",
     ]);
-    return { csv, rowCount: rows.length };
+    return { csv, rowCount: rows.length, metadata: { sourceRows: rows.length } };
+  }
+
+  if (reportType === "telemetry") {
+    const days = 30;
+    const cutoffIso = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString();
+    const { data, error } = await admin
+      .from("learning_events")
+      .select("user_id, module_id, lesson_id, event_type, event_at")
+      .gte("event_at", cutoffIso)
+      .order("event_at", { ascending: false })
+      .limit(200000);
+    if (error) {
+      throw new Error(`Failed loading telemetry rows: ${error.message}`);
+    }
+    const sourceRows = (data ?? []) as LearningEventReportRow[];
+    const rollupRows = buildTelemetryDailyCsvRows(sourceRows);
+    const summary = buildTelemetrySummary(sourceRows);
+    const csv = toCsv(rollupRows, [
+      "day",
+      "event_type",
+      "event_count",
+      "unique_users",
+      "unique_modules",
+      "unique_lessons",
+    ]);
+    return {
+      csv,
+      rowCount: rollupRows.length,
+      metadata: {
+        daysWindow: days,
+        sourceEventCount: sourceRows.length,
+        cutoffIso,
+        summary,
+      },
+    };
   }
 
   throw new Error(`Unsupported report type: ${reportType}`);
@@ -133,12 +173,13 @@ export async function POST() {
     claimed += 1;
 
     try {
-      const { csv, rowCount } = await buildReportCsv(job.report_type);
+      const { csv, rowCount, metadata } = await buildReportCsv(job.report_type);
       await logReportExport({
         adminUserId: job.requested_by ?? auth.userId,
         reportType: job.report_type,
         csvContent: csv,
         rowCount,
+        metadata,
       });
       await admin
         .from("admin_report_jobs")

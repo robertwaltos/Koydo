@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { LearningAid } from "@/lib/modules/types";
 import { deleteSyncedProgress, saveOfflineProgress } from "@/lib/offline/progress-db";
+import { trackLearningEvent } from "@/lib/analytics/xapi-lite";
+import SoftCard from "@/app/components/ui/soft-card";
 
 type VideoLessonPlayerProps = {
   moduleId: string;
@@ -34,6 +36,7 @@ export default function VideoLessonPlayer({
   const [videoResolveError, setVideoResolveError] = useState<string | null>(null);
   const [videoLoading, setVideoLoading] = useState(true);
   const completionPersistedRef = useRef(false);
+  const trackedCheckpointsRef = useRef<Set<string>>(new Set());
 
   const checkpoints = useMemo(() => {
     const aidCheckpoints = learningAids
@@ -143,6 +146,30 @@ export default function VideoLessonPlayer({
   }, [lessonId, moduleId]);
 
   useEffect(() => {
+    for (const checkpoint of checkpoints) {
+      if (progress < checkpoint.threshold) {
+        continue;
+      }
+      if (trackedCheckpointsRef.current.has(checkpoint.id)) {
+        continue;
+      }
+      trackedCheckpointsRef.current.add(checkpoint.id);
+      void trackLearningEvent({
+        eventType: "chunk_viewed",
+        moduleId,
+        lessonId,
+        payload: {
+          chunkId: checkpoint.id,
+          label: checkpoint.label,
+          threshold: checkpoint.threshold,
+          progress,
+          source: videoUrl ? "video-asset" : "simulated-player",
+        },
+      });
+    }
+  }, [checkpoints, lessonId, moduleId, progress, videoUrl]);
+
+  useEffect(() => {
     if (progress >= 100 && isPlaying) {
       setIsPlaying(false);
     }
@@ -154,6 +181,17 @@ export default function VideoLessonPlayer({
     }
 
     completionPersistedRef.current = true;
+    void trackLearningEvent({
+      eventType: "lesson_completed",
+      moduleId,
+      lessonId,
+      payload: {
+        completionSource: "video",
+        progress,
+        masteryPercentage: Math.round(VIDEO_COMPLETION_SCORE_PERCENTAGE * 100),
+        playbackMode: videoUrl ? "video-asset" : "simulated-player",
+      },
+    });
 
     const persistCompletion = async () => {
       setSyncState("syncing");
@@ -194,17 +232,18 @@ export default function VideoLessonPlayer({
     };
 
     void persistCompletion();
-  }, [lessonId, progress]);
+  }, [lessonId, moduleId, progress, videoUrl]);
 
   const restartLesson = () => {
     setProgress(0);
     setIsPlaying(false);
     setSyncState("idle");
     completionPersistedRef.current = false;
+    trackedCheckpointsRef.current = new Set();
   };
 
   return (
-    <section className="space-y-4 rounded-2xl border border-sky-200 bg-sky-50 p-5">
+    <SoftCard as="section" className="space-y-4 border-sky-200 bg-sky-50 p-5">
       <header>
         <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">Guided Video Lesson</p>
         <h3 className="mt-1 text-lg font-bold text-zinc-900">{lessonTitle}</h3>
@@ -214,7 +253,7 @@ export default function VideoLessonPlayer({
       </header>
 
       {videoUrl ? (
-        <div className="overflow-hidden rounded-xl border border-sky-300 bg-white">
+        <SoftCard className="overflow-hidden border-sky-300 bg-surface p-0">
           <video
             className="h-auto w-full"
             src={videoUrl}
@@ -229,18 +268,21 @@ export default function VideoLessonPlayer({
             }}
             onEnded={() => setProgress(100)}
           />
-        </div>
+        </SoftCard>
       ) : null}
 
-      <div className="rounded-xl border border-sky-300 bg-white p-4">
+      <SoftCard className="border-sky-300 bg-surface p-4">
         <div className="flex items-center justify-between text-sm font-semibold text-zinc-700">
           <span>Playback Progress</span>
           <span>{progress}%</span>
         </div>
-        <div className="mt-2 h-3 overflow-hidden rounded-full bg-sky-100">
-          <div className="h-full rounded-full bg-sky-500 transition-all" style={{ width: `${progress}%` }} />
-        </div>
-      </div>
+        <progress
+          className="ui-progress ui-progress--sky mt-2 h-3 w-full"
+          value={progress}
+          max={100}
+          aria-label="Video playback progress"
+        />
+      </SoftCard>
 
       <div className="grid gap-2 sm:grid-cols-2">
         {checkpoints.map((checkpoint) => {
@@ -265,14 +307,14 @@ export default function VideoLessonPlayer({
             type="button"
             onClick={() => setProgress(100)}
             disabled={progress >= 100}
-            className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-transparent bg-sky-600 px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
           >
             Mark Complete
           </button>
           <button
             type="button"
             onClick={restartLesson}
-            className="rounded-full border border-sky-300 bg-white px-4 py-2 text-sm font-semibold text-sky-700"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-sky-300 bg-surface px-4 py-2 text-sm font-semibold text-sky-700"
           >
             Reset Progress
           </button>
@@ -283,14 +325,14 @@ export default function VideoLessonPlayer({
             type="button"
             onClick={() => setIsPlaying((previous) => !previous)}
             disabled={progress >= 100}
-            className="rounded-full bg-sky-600 px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-transparent bg-sky-600 px-4 py-2 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isPlaying ? "Pause" : progress === 0 ? "Play Lesson" : "Resume"}
           </button>
           <button
             type="button"
             onClick={restartLesson}
-            className="rounded-full border border-sky-300 bg-white px-4 py-2 text-sm font-semibold text-sky-700"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-sky-300 bg-surface px-4 py-2 text-sm font-semibold text-sky-700"
           >
             Restart
           </button>
@@ -314,13 +356,13 @@ export default function VideoLessonPlayer({
 
       {syncState === "syncing" ? <p className="text-xs text-zinc-500">Saving your progress...</p> : null}
       {syncState === "synced" ? (
-        <p className="text-xs text-emerald-700 dark:text-emerald-300">Progress saved to your account.</p>
+        <p className="text-xs text-emerald-700">Progress saved to your account.</p>
       ) : null}
       {syncState === "queued" ? (
-        <p className="text-xs text-amber-700 dark:text-amber-300">
+        <p className="text-xs text-amber-700">
           Progress saved offline and will sync when your connection is restored.
         </p>
       ) : null}
-    </section>
+    </SoftCard>
   );
 }

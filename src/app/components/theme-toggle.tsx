@@ -7,11 +7,11 @@ export default function ThemeToggle() {
 
   return (
     <label className="flex items-center gap-2 text-sm">
-      <span className="text-zinc-600 dark:text-zinc-300">Theme</span>
+      <span className="text-zinc-600">Theme</span>
       <select
         value={themeMode}
         onChange={(event) => setThemeMode(event.target.value as "light" | "system")}
-        className="rounded-md border border-black/15 bg-white px-2 py-1 text-sm dark:bg-zinc-900"
+        className="ui-focus-ring rounded-full border border-border bg-surface px-3 py-1 text-sm"
       >
         <option value="system">System</option>
         <option value="light">Light</option>

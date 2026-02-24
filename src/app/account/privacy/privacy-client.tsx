@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import SoftCard from "@/app/components/ui/soft-card";
 
 type DsarRequest = {
   id: string;
@@ -64,15 +65,19 @@ export default function PrivacyClient({
   return (
     <div className="space-y-6">
       {status ? (
-        <div className="rounded-md border border-black/10 bg-zinc-50 px-4 py-3 text-sm dark:border-white/15 dark:bg-zinc-800">
+        <div role="status" className="ui-soft-card rounded-md px-4 py-3 text-sm">
           {status}
         </div>
       ) : null}
 
-      <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+      <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Submit Data Rights Request</h2>
         <form onSubmit={submitRequest} className="mt-4 grid gap-3">
-          <select name="requestType" className="w-72 rounded-md border border-black/15 px-3 py-2 text-sm">
+          <select
+            name="requestType"
+            aria-label="Privacy request type"
+            className="ui-focus-ring w-72 rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          >
             <option value="access">Data access</option>
             <option value="erasure">Delete my data</option>
             <option value="rectification">Correct data</option>
@@ -82,23 +87,23 @@ export default function PrivacyClient({
           <textarea
             name="note"
             placeholder="Optional details for the request"
-            className="min-h-28 rounded-md border border-black/15 px-3 py-2 text-sm"
+            className="ui-focus-ring min-h-28 rounded-md border border-border bg-surface px-3 py-2 text-sm"
           />
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-fit rounded-md bg-indigo-600 px-4 py-2 text-sm text-white disabled:opacity-70"
+            className="ui-soft-button ui-focus-ring min-h-11 w-fit rounded-full bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
           >
             {isSubmitting ? "Submitting..." : "Submit Request"}
           </button>
         </form>
-      </section>
+      </SoftCard>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+      <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Policy Acknowledgments</h2>
         <div className="mt-3 space-y-2">
           {acceptances.map((entry) => (
-            <article key={entry.id} className="rounded-md border border-black/10 p-3 text-sm dark:border-white/10">
+            <article key={entry.id} className="ui-soft-card rounded-md p-3 text-sm">
               <p className="font-medium capitalize">{entry.policy_type}</p>
               <p className="text-xs text-zinc-500">Version: {entry.policy_version}</p>
               <p className="text-xs text-zinc-500">
@@ -110,13 +115,13 @@ export default function PrivacyClient({
             <p className="text-sm text-zinc-500">No policy acknowledgments recorded yet.</p>
           ) : null}
         </div>
-      </section>
+      </SoftCard>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+      <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Your Privacy Requests</h2>
         <div className="mt-3 space-y-2">
           {requests.map((entry) => (
-            <article key={entry.id} className="rounded-md border border-black/10 p-3 text-sm dark:border-white/10">
+            <article key={entry.id} className="ui-soft-card rounded-md p-3 text-sm">
               <p className="font-medium capitalize">{entry.request_type}</p>
               <p className="text-xs text-zinc-500">Status: {entry.status}</p>
               <p className="text-xs text-zinc-500">
@@ -131,7 +136,7 @@ export default function PrivacyClient({
           ))}
           {requests.length === 0 ? <p className="text-sm text-zinc-500">No requests submitted yet.</p> : null}
         </div>
-      </section>
+      </SoftCard>
     </div>
   );
 }

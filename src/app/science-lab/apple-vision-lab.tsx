@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
 
 type CapabilityState = "unknown" | "supported" | "unsupported";
 
@@ -49,22 +51,26 @@ export default function AppleVisionLab() {
   };
 
   return (
-    <section className="space-y-4 rounded-xl border border-black/10 p-5 dark:border-white/15">
+    <SoftCard as="section" className="space-y-4 p-5">
       <h2 className="text-lg font-semibold">Apple Vision Readiness</h2>
-      <p className="text-sm text-zinc-600 dark:text-zinc-300">
+      <p className="text-sm text-zinc-700">
         This checks WebXR support for immersive AR and provides a safe fallback if unavailable.
       </p>
 
-      <ul className="list-disc space-y-1 pl-5 text-sm text-zinc-600 dark:text-zinc-300">
-        <li>Apple-like device detected: {isAppleDevice ? "Yes" : "No"}</li>
-        <li>Safari-like browser detected: {isSafariLike ? "Yes" : "No"}</li>
-        <li>Immersive AR support: {capability}</li>
-      </ul>
+      <div className="flex flex-wrap gap-2">
+        <ProgressChip label="Apple-like Device" value={isAppleDevice ? "Yes" : "No"} tone={isAppleDevice ? "success" : "neutral"} />
+        <ProgressChip label="Safari-like Browser" value={isSafariLike ? "Yes" : "No"} tone={isSafariLike ? "success" : "neutral"} />
+        <ProgressChip
+          label="Immersive AR"
+          value={capability}
+          tone={capability === "supported" ? "success" : capability === "unsupported" ? "warning" : "neutral"}
+        />
+      </div>
 
       <button
         type="button"
         onClick={checkSupport}
-        className="rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white"
+        className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground"
       >
         Check Apple Vision Capability
       </button>
@@ -73,13 +79,15 @@ export default function AppleVisionLab() {
         <p
           className={`text-sm ${
             capability === "unsupported"
-              ? "text-amber-700 dark:text-amber-300"
-              : "text-zinc-700 dark:text-zinc-200"
+              ? "text-amber-700"
+              : "text-zinc-700"
           }`}
+          role="status"
+          aria-live="polite"
         >
           {status}
         </p>
       ) : null}
-    </section>
+    </SoftCard>
   );
 }

@@ -71,7 +71,7 @@ function toMarkdown(report) {
   lines.push(`Learning aid references: ${report.totals.learningAidRefs}`);
   lines.push("");
   lines.push("| Module | Lessons | Placeholders | Readiness Score |");
-  lines.push("|---|---:|---:|---:|");
+  lines.push("| --- | ---: | ---: | ---: |");
   for (const moduleRow of report.modules) {
     lines.push(
       `| ${moduleRow.moduleId} | ${moduleRow.totalLessons} | ${moduleRow.placeholderRefs} | ${moduleRow.readinessScore} |`,

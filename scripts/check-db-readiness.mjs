@@ -102,7 +102,7 @@ function toMarkdown(report) {
   lines.push("## Table Status");
   lines.push("");
   lines.push("| Table | Status | Detail |");
-  lines.push("|---|---|---|");
+  lines.push("| --- | --- | --- |");
   for (const row of report.tables) {
     lines.push(`| ${row.table} | ${row.status} | ${String(row.detail).replace(/\|/g, "\\|")} |`);
   }

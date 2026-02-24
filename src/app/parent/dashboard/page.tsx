@@ -2,8 +2,22 @@ import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { SupabaseClient } from "@supabase/supabase-js";
 import { skills } from "@/lib/data/curriculum";
+import Link from "next/link";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
+import ParentAiInterventionsCard from "./parent-ai-interventions-card";
 
 export const dynamic = "force-dynamic";
+
+function toneFromPercent(value: number): "success" | "info" | "warning" {
+  if (value >= 80) return "success";
+  if (value >= 60) return "info";
+  return "warning";
+}
+
+function toPercent(masteryLevel: number | null | undefined) {
+  return Math.round(Number(masteryLevel ?? 0) * 100);
+}
 
 // Helper to find a child associated with the current user (as a parent)
 async function getChildData(supabase: SupabaseClient, parentUserId: string) {
@@ -64,9 +78,13 @@ export default async function ParentDashboardPage() {
 
   if (!profile?.is_parent) {
     return (
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-6 px-6 py-24">
-        <h1 className="text-2xl font-semibold">Parent Dashboard</h1>
-        <p className="text-center text-red-600">Parent role is required to view this dashboard.</p>
+      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
+        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8 text-center">
+          <h1 className="text-2xl font-semibold">Parent Dashboard</h1>
+          <p className="mt-3 text-sm text-rose-700">
+            Parent role is required to view this dashboard.
+          </p>
+        </SoftCard>
       </main>
     );
   }
@@ -78,80 +96,161 @@ export default async function ParentDashboardPage() {
 
   if (error || !childProfile || !childSkills) {
     return (
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-6 px-6 py-24">
-        <h1 className="text-2xl font-semibold">Parent Dashboard</h1>
-        <p className="text-center text-red-600">{error || "Could not load child data."}</p>
-        <p className="text-center text-sm text-zinc-500">
-          Please ensure you are signed in with the email address used for parent consent and that your child has started using the app.
-        </p>
+      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
+        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8">
+          <h1 className="text-center text-2xl font-semibold">Parent Dashboard</h1>
+          <p className="mt-3 text-center text-sm text-rose-700">
+            {error || "Could not load child data."}
+          </p>
+          <p className="mt-2 text-center text-sm text-zinc-600">
+            Please ensure you are signed in with the email used for parent
+            consent and that your child has started using the app.
+          </p>
+        </SoftCard>
       </main>
     );
   }
 
   const skillMap = new Map(skills.map((s) => [s.id, s.name]));
   const strengths = childSkills.slice(0, 3);
-  const weaknesses = childSkills.filter(s => s.mastery_level < 0.7).slice(-3).reverse();
+  const weaknesses = childSkills
+    .filter((skill) => Number(skill.mastery_level ?? 0) < 0.7)
+    .sort((a, b) => Number(a.mastery_level ?? 0) - Number(b.mastery_level ?? 0))
+    .slice(0, 3);
+  const averageMastery =
+    childSkills.length > 0
+      ? Math.round(
+          (childSkills.reduce(
+            (total, skill) => total + Number(skill.mastery_level ?? 0),
+            0,
+          ) /
+            childSkills.length) *
+            100,
+        )
+      : 0;
+  const readySkills = childSkills.filter(
+    (skill) => Number(skill.mastery_level ?? 0) >= 0.8,
+  ).length;
 
   return (
-    <main className="mx-auto flex w-full max-w-4xl flex-col gap-8 px-6 py-12">
-      <header>
+    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-12">
+      <SoftCard as="header" className="border-accent/20 bg-(--gradient-hero) p-6">
         <h1 className="text-3xl font-bold tracking-tight">Parent Dashboard</h1>
-        <p className="mt-2 text-zinc-500">
+        <p className="mt-2 text-sm text-zinc-700">
           Viewing progress for{" "}
-          <span className="font-semibold text-zinc-700 dark:text-zinc-200">
+          <span className="font-semibold text-zinc-900">
             {childProfile.display_name ?? "your child"}
           </span>
         </p>
-      </header>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <ProgressChip
+            label="Average Mastery"
+            value={`${averageMastery}%`}
+            tone={toneFromPercent(averageMastery)}
+          />
+          <ProgressChip label="Recent Wins" value={readySkills} tone="success" />
+          <ProgressChip
+            label="Focus Areas"
+            value={weaknesses.length}
+            tone={weaknesses.length === 0 ? "success" : "warning"}
+          />
+        </div>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link
+            href="/parent/reports"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface px-4 py-2 text-sm font-semibold text-foreground"
+          >
+            View detailed reports
+          </Link>
+          <Link
+            href="/parent/compliance"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface px-4 py-2 text-sm font-semibold text-foreground"
+          >
+            Review consent history
+          </Link>
+        </div>
+      </SoftCard>
 
       <section className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        {/* Strengths */}
-        <div className="rounded-lg border border-green-500/30 bg-white p-6 shadow-sm dark:bg-zinc-900">
-          <h2 className="text-xl font-bold text-green-700 dark:text-green-300">
-            Recent Wins
-          </h2>
-          <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+        <SoftCard as="section" className="border-emerald-200 p-6">
+          <h2 className="text-xl font-bold text-emerald-800">Recent Wins</h2>
+          <p className="mt-1 text-sm text-zinc-600">
             Your child is excelling in these areas. Great work!
           </p>
           <ul className="mt-4 flex flex-col gap-2">
             {strengths.map((skill) => (
-              <li key={skill.skill_id} className="rounded-md bg-green-50 p-3 font-medium text-green-800 dark:bg-green-900/40 dark:text-green-200">
-                {skillMap.get(skill.skill_id) ?? skill.skill_id}
+              <li
+                key={skill.skill_id}
+                className="rounded-2xl border border-emerald-200 bg-emerald-50 p-3"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="font-medium text-emerald-900">
+                    {skillMap.get(skill.skill_id) ?? skill.skill_id}
+                  </span>
+                  <ProgressChip
+                    label="Mastery"
+                    value={`${toPercent(skill.mastery_level)}%`}
+                    tone={toneFromPercent(toPercent(skill.mastery_level))}
+                  />
+                </div>
               </li>
             ))}
-            {strengths.length === 0 && <p className="text-sm text-zinc-500">No mastered skills yet. Keep practicing!</p>}
+            {strengths.length === 0 ? (
+              <li className="text-sm text-zinc-500">
+                No mastered skills yet. Keep practicing.
+              </li>
+            ) : null}
           </ul>
-        </div>
+        </SoftCard>
 
-        {/* Weaknesses */}
-        <div className="rounded-lg border border-amber-500/30 bg-white p-6 shadow-sm dark:bg-zinc-900">
-          <h2 className="text-xl font-bold text-amber-700 dark:text-amber-300">
+        <SoftCard as="section" className="border-amber-200 p-6">
+          <h2 className="text-xl font-bold text-amber-800">
             Opportunities
           </h2>
-          <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+          <p className="mt-1 text-sm text-zinc-600">
             Here are a few areas to focus on for improvement.
           </p>
           <ul className="mt-4 flex flex-col gap-2">
             {weaknesses.map((skill) => (
-              <li key={skill.skill_id} className="rounded-md bg-amber-50 p-3 font-medium text-amber-800 dark:bg-amber-900/40 dark:text-amber-200">
-                {skillMap.get(skill.skill_id) ?? skill.skill_id}
+              <li
+                key={skill.skill_id}
+                className="rounded-2xl border border-amber-200 bg-amber-50 p-3"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="font-medium text-amber-900">
+                    {skillMap.get(skill.skill_id) ?? skill.skill_id}
+                  </span>
+                  <ProgressChip
+                    label="Mastery"
+                    value={`${toPercent(skill.mastery_level)}%`}
+                    tone={toneFromPercent(toPercent(skill.mastery_level))}
+                  />
+                </div>
               </li>
             ))}
-             {weaknesses.length === 0 && <p className="text-sm text-zinc-500">No areas for improvement found. Amazing!</p>}
+            {weaknesses.length === 0 ? (
+              <li className="text-sm text-zinc-500">
+                No areas for improvement found. Amazing.
+              </li>
+            ) : null}
           </ul>
-        </div>
+        </SoftCard>
       </section>
 
-      <section className="rounded-lg bg-indigo-50 p-6 dark:bg-indigo-900/30">
-        <h2 className="text-xl font-bold text-indigo-700 dark:text-indigo-200">What to do tonight (10 mins)</h2>
-        <p className="mt-2 text-zinc-700 dark:text-zinc-300">
+      <ParentAiInterventionsCard />
+
+      <SoftCard as="aside" organicCorners className="border-sky-200 bg-sky-50 p-6">
+        <h2 className="text-xl font-bold text-sky-800">What to do tonight (10 mins)</h2>
+        <p className="mt-2 text-zinc-700">
           Based on recent progress, try this simple activity: practice{" "}
           <strong className="font-semibold">
-            {weaknesses.length > 0 ? (skillMap.get(weaknesses[0].skill_id) ?? weaknesses[0].skill_id) : "reviewing past lessons"}
+            {weaknesses.length > 0
+              ? (skillMap.get(weaknesses[0].skill_id) ?? weaknesses[0].skill_id)
+              : "reviewing past lessons"}
           </strong>{" "}
           with your child. A little encouragement goes a long way!
         </p>
-      </section>
+      </SoftCard>
     </main>
   );
 }

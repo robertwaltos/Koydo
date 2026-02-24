@@ -455,7 +455,7 @@ create table if not exists public.admin_report_exports (
 
 alter table public.admin_report_exports drop constraint if exists admin_report_exports_report_type_check;
 alter table public.admin_report_exports add constraint admin_report_exports_report_type_check
-  check (report_type in ('dsar', 'support', 'audit'));
+  check (report_type in ('dsar', 'support', 'audit', 'telemetry'));
 
 alter table public.admin_report_exports drop constraint if exists admin_report_exports_format_check;
 alter table public.admin_report_exports add constraint admin_report_exports_format_check
@@ -514,7 +514,7 @@ create table if not exists public.admin_report_jobs (
 
 alter table public.admin_report_jobs drop constraint if exists admin_report_jobs_report_type_check;
 alter table public.admin_report_jobs add constraint admin_report_jobs_report_type_check
-  check (report_type in ('dsar', 'support', 'audit'));
+  check (report_type in ('dsar', 'support', 'audit', 'telemetry'));
 
 alter table public.admin_approval_requests enable row level security;
 alter table public.admin_alert_notifications enable row level security;
@@ -586,6 +586,325 @@ with check (
   )
 );
 
+create table if not exists public.learning_events (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  module_id text,
+  lesson_id text not null,
+  event_type text not null,
+  event_at timestamptz not null default now(),
+  payload jsonb not null default '{}'::jsonb,
+  user_agent text,
+  created_at timestamptz not null default now(),
+  constraint learning_events_event_type_check
+    check (
+      event_type in (
+        'lesson_viewed',
+        'chunk_viewed',
+        'flashcard_flipped',
+        'activity_interacted',
+        'quiz_answered',
+        'lesson_completed'
+      )
+    )
+);
+
+alter table public.learning_events enable row level security;
+
+drop policy if exists "learning_events_select_own_or_admin" on public.learning_events;
+create policy "learning_events_select_own_or_admin"
+on public.learning_events
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+drop policy if exists "learning_events_insert_own" on public.learning_events;
+create policy "learning_events_insert_own"
+on public.learning_events
+for insert
+to authenticated
+with check (auth.uid() = user_id);
+
+create table if not exists public.user_exam_error_logs (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  module_id text,
+  lesson_id text not null,
+  question_id text not null,
+  skill_id text,
+  error_type text not null default 'incorrect_answer',
+  selected_option_id text,
+  correct_option_id text,
+  question_text text,
+  notes text,
+  resolved boolean not null default false,
+  resolved_at timestamptz,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint user_exam_error_logs_error_type_check
+    check (
+      error_type in (
+        'incorrect_answer',
+        'timed_out',
+        'strategy_gap',
+        'careless_mistake',
+        'concept_gap'
+      )
+    )
+);
+
+drop trigger if exists user_exam_error_logs_set_updated_at on public.user_exam_error_logs;
+create trigger user_exam_error_logs_set_updated_at
+before update on public.user_exam_error_logs
+for each row execute function public.set_updated_at();
+
+alter table public.user_exam_error_logs enable row level security;
+
+drop policy if exists "exam_error_logs_select_own_or_admin" on public.user_exam_error_logs;
+create policy "exam_error_logs_select_own_or_admin"
+on public.user_exam_error_logs
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+drop policy if exists "exam_error_logs_insert_own" on public.user_exam_error_logs;
+create policy "exam_error_logs_insert_own"
+on public.user_exam_error_logs
+for insert
+to authenticated
+with check (auth.uid() = user_id);
+
+drop policy if exists "exam_error_logs_update_own_or_admin" on public.user_exam_error_logs;
+create policy "exam_error_logs_update_own_or_admin"
+on public.user_exam_error_logs
+for update
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+)
+with check (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+create table if not exists public.ai_followup_materials (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  lesson_id text not null,
+  module_id text,
+  status text not null default 'generating',
+  generation_mode text not null default 'rule_based',
+  model text,
+  pack jsonb not null default '{}'::jsonb,
+  context jsonb not null default '{}'::jsonb,
+  error text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint ai_followup_materials_status_check
+    check (status in ('generating', 'completed', 'failed')),
+  constraint ai_followup_materials_generation_mode_check
+    check (generation_mode in ('rule_based', 'openai')),
+  unique (user_id, lesson_id)
+);
+
+drop trigger if exists ai_followup_materials_set_updated_at on public.ai_followup_materials;
+create trigger ai_followup_materials_set_updated_at
+before update on public.ai_followup_materials
+for each row execute function public.set_updated_at();
+
+alter table public.ai_followup_materials enable row level security;
+
+drop policy if exists "ai_followup_select_own_or_admin" on public.ai_followup_materials;
+create policy "ai_followup_select_own_or_admin"
+on public.ai_followup_materials
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+drop policy if exists "ai_followup_insert_own" on public.ai_followup_materials;
+create policy "ai_followup_insert_own"
+on public.ai_followup_materials
+for insert
+to authenticated
+with check (auth.uid() = user_id);
+
+drop policy if exists "ai_followup_update_own_or_admin" on public.ai_followup_materials;
+create policy "ai_followup_update_own_or_admin"
+on public.ai_followup_materials
+for update
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+)
+with check (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+create table if not exists public.ai_tutor_conversations (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  lesson_id text,
+  module_id text,
+  role text not null,
+  source text not null default 'user',
+  message text not null,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  constraint ai_tutor_conversations_role_check
+    check (role in ('user', 'assistant')),
+  constraint ai_tutor_conversations_source_check
+    check (source in ('user', 'openai', 'rule_based', 'system'))
+);
+
+alter table public.ai_tutor_conversations enable row level security;
+
+drop policy if exists "ai_tutor_conversations_select_own_or_admin" on public.ai_tutor_conversations;
+create policy "ai_tutor_conversations_select_own_or_admin"
+on public.ai_tutor_conversations
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+drop policy if exists "ai_tutor_conversations_insert_own_or_admin" on public.ai_tutor_conversations;
+create policy "ai_tutor_conversations_insert_own_or_admin"
+on public.ai_tutor_conversations
+for insert
+to authenticated
+with check (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+drop policy if exists "ai_tutor_conversations_delete_own_or_admin" on public.ai_tutor_conversations;
+create policy "ai_tutor_conversations_delete_own_or_admin"
+on public.ai_tutor_conversations
+for delete
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+create table if not exists public.ai_remediation_worksheets (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  lesson_id text not null,
+  module_id text,
+  status text not null default 'generating',
+  generation_mode text not null default 'rule_based',
+  model text,
+  worksheet jsonb not null default '{}'::jsonb,
+  context jsonb not null default '{}'::jsonb,
+  error text,
+  viewed_at timestamptz,
+  downloaded_at timestamptz,
+  completed_at timestamptz,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint ai_remediation_worksheets_status_check
+    check (status in ('generating', 'completed', 'failed')),
+  constraint ai_remediation_worksheets_generation_mode_check
+    check (generation_mode in ('rule_based', 'openai')),
+  unique (user_id, lesson_id)
+);
+
+alter table public.ai_remediation_worksheets add column if not exists viewed_at timestamptz;
+alter table public.ai_remediation_worksheets add column if not exists downloaded_at timestamptz;
+alter table public.ai_remediation_worksheets add column if not exists completed_at timestamptz;
+
+drop trigger if exists ai_remediation_worksheets_set_updated_at on public.ai_remediation_worksheets;
+create trigger ai_remediation_worksheets_set_updated_at
+before update on public.ai_remediation_worksheets
+for each row execute function public.set_updated_at();
+
+alter table public.ai_remediation_worksheets enable row level security;
+
+drop policy if exists "ai_remediation_worksheets_select_own_or_admin" on public.ai_remediation_worksheets;
+create policy "ai_remediation_worksheets_select_own_or_admin"
+on public.ai_remediation_worksheets
+for select
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
+drop policy if exists "ai_remediation_worksheets_insert_own" on public.ai_remediation_worksheets;
+create policy "ai_remediation_worksheets_insert_own"
+on public.ai_remediation_worksheets
+for insert
+to authenticated
+with check (auth.uid() = user_id);
+
+drop policy if exists "ai_remediation_worksheets_update_own_or_admin" on public.ai_remediation_worksheets;
+create policy "ai_remediation_worksheets_update_own_or_admin"
+on public.ai_remediation_worksheets
+for update
+to authenticated
+using (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+)
+with check (
+  auth.uid() = user_id
+  or exists (
+    select 1 from public.user_profiles up
+    where up.user_id = auth.uid() and up.is_admin = true
+  )
+);
+
 create index if not exists idx_user_tokens_user_month
   on public.user_tokens(user_id, month_key);
 
@@ -633,3 +952,36 @@ create index if not exists idx_media_jobs_lesson_status
 
 create index if not exists idx_media_jobs_module_status
   on public.media_generation_jobs(module_id, status, created_at desc);
+
+create index if not exists idx_learning_events_user_lesson_event_at
+  on public.learning_events(user_id, lesson_id, event_at desc);
+
+create index if not exists idx_learning_events_event_type_event_at
+  on public.learning_events(event_type, event_at desc);
+
+create index if not exists idx_exam_error_logs_user_resolved_created
+  on public.user_exam_error_logs(user_id, resolved, created_at desc);
+
+create index if not exists idx_exam_error_logs_user_lesson_created
+  on public.user_exam_error_logs(user_id, lesson_id, created_at desc);
+
+create index if not exists idx_ai_followup_materials_user_updated
+  on public.ai_followup_materials(user_id, updated_at desc);
+
+create index if not exists idx_ai_followup_materials_lesson_updated
+  on public.ai_followup_materials(lesson_id, updated_at desc);
+
+create index if not exists idx_ai_tutor_conversations_user_created
+  on public.ai_tutor_conversations(user_id, created_at desc);
+
+create index if not exists idx_ai_tutor_conversations_user_lesson_created
+  on public.ai_tutor_conversations(user_id, lesson_id, created_at desc);
+
+create index if not exists idx_ai_remediation_worksheets_user_updated
+  on public.ai_remediation_worksheets(user_id, updated_at desc);
+
+create index if not exists idx_ai_remediation_worksheets_lesson_updated
+  on public.ai_remediation_worksheets(lesson_id, updated_at desc);
+
+create index if not exists idx_ai_remediation_worksheets_completed_at
+  on public.ai_remediation_worksheets(completed_at desc);

@@ -5,6 +5,13 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 type AssetType = "video" | "animation" | "image";
+type PromptKey = "seedanceVideo" | "seedanceAnimation" | "lessonImage";
+
+type PromptMetaEntry = {
+  source?: string;
+  version?: string;
+  qaStatus?: string;
+};
 
 type PromptLesson = {
   lessonId: string;
@@ -14,6 +21,8 @@ type PromptLesson = {
     seedanceAnimation: string;
     lessonImage: string;
   };
+  promptSources?: Partial<Record<PromptKey, string>>;
+  promptMeta?: Partial<Record<PromptKey, PromptMetaEntry>>;
 };
 
 type PromptModule = {
@@ -22,6 +31,8 @@ type PromptModule = {
 };
 
 type PromptPack = {
+  schemaVersion?: string;
+  generatedAt?: string;
   modules?: PromptModule[];
 };
 
@@ -35,6 +46,38 @@ function resolvePrompt(lesson: PromptLesson, assetType: AssetType) {
   if (assetType === "video") return lesson.prompts.seedanceVideo;
   if (assetType === "animation") return lesson.prompts.seedanceAnimation;
   return lesson.prompts.lessonImage;
+}
+
+function assetTypeToPromptKey(assetType: AssetType): PromptKey {
+  if (assetType === "video") return "seedanceVideo";
+  if (assetType === "animation") return "seedanceAnimation";
+  return "lessonImage";
+}
+
+function resolvePromptMeta(lesson: PromptLesson, promptKey: PromptKey) {
+  const promptMeta = lesson.promptMeta?.[promptKey];
+  const promptSource =
+    typeof promptMeta?.source === "string" && promptMeta.source.length > 0
+      ? promptMeta.source
+      : lesson.promptSources?.[promptKey] ?? "unknown";
+  const promptVersion =
+    typeof promptMeta?.version === "string" && promptMeta.version.length > 0
+      ? promptMeta.version
+      : promptSource === "lesson"
+        ? "lesson.v1"
+        : "generated.v1";
+  const promptQaStatus =
+    typeof promptMeta?.qaStatus === "string" && promptMeta.qaStatus.length > 0
+      ? promptMeta.qaStatus
+      : promptSource === "lesson"
+        ? "reviewed"
+        : "needs_review";
+
+  return {
+    promptSource,
+    promptVersion,
+    promptQaStatus,
+  };
 }
 
 function buildCandidateKey(moduleId: string, lessonId: string, assetType: AssetType) {
@@ -81,6 +124,10 @@ export async function POST(request: Request) {
     assetType: AssetType;
     provider: string;
     prompt: string;
+    promptKey: PromptKey;
+    promptSource: string;
+    promptVersion: string;
+    promptQaStatus: string;
   }> = [];
 
   for (const moduleEntry of promptPack.modules ?? []) {
@@ -88,12 +135,18 @@ export async function POST(request: Request) {
     for (const lesson of moduleEntry.lessons ?? []) {
       if (lessonId && lesson.lessonId !== lessonId) continue;
       for (const assetType of assetTypes) {
+        const promptKey = assetTypeToPromptKey(assetType);
+        const promptMeta = resolvePromptMeta(lesson, promptKey);
         candidates.push({
           moduleId: moduleEntry.moduleId,
           lessonId: lesson.lessonId,
           assetType,
           provider: "seedance",
           prompt: resolvePrompt(lesson, assetType),
+          promptKey,
+          promptSource: promptMeta.promptSource,
+          promptVersion: promptMeta.promptVersion,
+          promptQaStatus: promptMeta.promptQaStatus,
         });
       }
     }
@@ -134,6 +187,12 @@ export async function POST(request: Request) {
       metadata: {
         source: "admin-media-queue-from-pack",
         queued_at: new Date().toISOString(),
+        prompt_pack_schema_version: promptPack.schemaVersion ?? null,
+        prompt_pack_generated_at: promptPack.generatedAt ?? null,
+        prompt_key: candidate.promptKey,
+        prompt_source: candidate.promptSource,
+        prompt_version: candidate.promptVersion,
+        prompt_qa_status: candidate.promptQaStatus,
       },
     }));
 

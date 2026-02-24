@@ -38,10 +38,10 @@ export default function BillingCheckoutPage() {
   return (
     <main className="mx-auto max-w-xl px-6 py-12">
       <h1 className="text-2xl font-semibold">Subscription Checkout</h1>
-      <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
+      <p className="mt-3 text-sm text-zinc-600">
         Start the EduForge monthly subscription checkout flow.
       </p>
-      <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">
+      <p className="mt-2 text-xs text-zinc-500">
         Subscription renews automatically unless canceled before renewal.
         <span> </span>
         <Link href="/legal/terms" className="underline">
@@ -58,18 +58,18 @@ export default function BillingCheckoutPage() {
           type="button"
           onClick={onStartCheckout}
           disabled={isLoading}
-          className="mt-6 rounded-md bg-foreground px-4 py-2 text-sm text-background disabled:opacity-70"
+          className="ui-soft-button ui-focus-ring mt-6 rounded-md bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
         >
           {isLoading ? "Starting checkout..." : "Start Checkout"}
         </button>
       ) : (
-        <div className="mt-6 rounded-md border border-indigo-300 bg-indigo-50 p-3 text-sm text-indigo-900 dark:border-indigo-500/30 dark:bg-indigo-950/30 dark:text-indigo-200">
+        <div className="ui-soft-card mt-6 rounded-md border border-indigo-300 bg-indigo-50 p-3 text-sm text-indigo-900">
           This build uses in-app purchase mode. External Stripe checkout is disabled.
         </div>
       )}
 
-      {status ? <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
-      <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400">Billing behavior follows app-store policy mode.</p>
+      {status ? <p className="mt-4 text-sm text-zinc-600">{status}</p> : null}
+      <p className="mt-2 text-xs text-zinc-500">Billing behavior follows app-store policy mode.</p>
     </main>
   );
 }

@@ -27,6 +27,29 @@ export const appleVisionScienceLabModule: LearningModule = {
           "Confirm play-space boundaries and hand-tracking readiness.",
         ],
       },
+      interactiveActivities: [
+        {
+          id: "svl-l1-ia1",
+          type: "lab_virtual",
+          title: "Immersive Preflight Checklist",
+          description: "Complete a guided setup and safety readiness run before lab tasks.",
+          estimatedMinutes: 5,
+          difficultyLevel: "easy",
+          instructions: [
+            "Confirm room boundary scan.",
+            "Validate hand tracking and sensor permissions.",
+            "Acknowledge safety reminders before launching.",
+          ],
+          data: {
+            checks: [
+              { id: "boundary", label: "Boundary mapped", required: true },
+              { id: "tracking", label: "Hand tracking stable", required: true },
+              { id: "lighting", label: "Room lighting acceptable", required: true },
+              { id: "stance", label: "Centered stance confirmed", required: true },
+            ],
+          },
+        },
+      ],
       learningAids: [
         { id: "svl-l1-a1", type: "practice", title: "Preflight Checklist", content: "Verify sensor permissions, room lighting, and safe movement area." },
       ],
@@ -54,6 +77,25 @@ export const appleVisionScienceLabModule: LearningModule = {
           "Describe one strategy that improved your measurement accuracy.",
         ],
       },
+      interactiveActivities: [
+        {
+          id: "svl-l3-ia1",
+          type: "virtual_manipulative",
+          title: "AR Measurement Bench",
+          description: "Capture estimate vs measured values and compute error margins.",
+          estimatedMinutes: 10,
+          difficultyLevel: "medium",
+          instructions: [
+            "Select an object and estimate its length.",
+            "Use AR tool to take an actual reading.",
+            "Compare results and log the error margin.",
+          ],
+          data: {
+            fields: ["estimate", "measured", "difference", "notes"],
+            requiredTrials: 3,
+          },
+        },
+      ],
       learningAids: [
         { id: "svl-l3-a1", type: "practice", title: "Measurement Log", content: "Capture estimate, observed value, and error margin for each object." },
       ],
@@ -71,6 +113,25 @@ export const appleVisionScienceLabModule: LearningModule = {
           "Explain one misconception corrected during this activity.",
         ],
       },
+      interactiveActivities: [
+        {
+          id: "svl-l4-ia1",
+          type: "simulation",
+          title: "Solar Scale AR Placement",
+          description: "Arrange planets in 3D space and test orbital distance assumptions.",
+          estimatedMinutes: 9,
+          difficultyLevel: "medium",
+          instructions: [
+            "Place planets in distance order from the Sun.",
+            "Toggle scale hints to compare your model.",
+            "Record one corrected misconception.",
+          ],
+          data: {
+            objects: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
+            validationMode: "distance-order",
+          },
+        },
+      ],
       learningAids: [
         { id: "svl-l4-a1", type: "animation", title: "Orbit Spacing Guide", content: "Animated overlay showing relative spacing and orbital paths." },
       ],
@@ -130,6 +191,44 @@ export const appleVisionScienceLabModule: LearningModule = {
           correctOptionId: "a",
         },
       ],
+      interactiveActivities: [
+        {
+          id: "svl-l5-ia1",
+          type: "matching_pairs",
+          title: "Safety Action Match",
+          description: "Match immersive lab risks to the correct safety response.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            left: [
+              { id: "l1", label: "Unmapped room boundary" },
+              { id: "l2", label: "Unstable hand tracking" },
+              { id: "l3", label: "Rushed measurement workflow" },
+            ],
+            right: [
+              { id: "r1", label: "Run boundary setup before lab start" },
+              { id: "r2", label: "Pause and recalibrate controls" },
+              { id: "r3", label: "Use repeated readings and logging" },
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+            ],
+          },
+        },
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 9,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
+        difficultyDistribution: { easy: 2, medium: 2, hard: 0 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.75,
+      },
     },
     {
       id: "svl-l6",
@@ -186,6 +285,44 @@ export const appleVisionScienceLabModule: LearningModule = {
           correctOptionId: "a",
         },
       ],
+      interactiveActivities: [
+        {
+          id: "svl-l6-ia1",
+          type: "matching_pairs",
+          title: "Investigation Flow Match",
+          description: "Pair each investigation signal with a high-quality scientific action.",
+          estimatedMinutes: 7,
+          difficultyLevel: "medium",
+          data: {
+            left: [
+              { id: "l1", label: "No setup check completed" },
+              { id: "l2", label: "Data logged without reflection" },
+              { id: "l3", label: "Claim made without evidence link" },
+            ],
+            right: [
+              { id: "r1", label: "Run setup preflight before collection" },
+              { id: "r2", label: "Review estimate-measure gaps and annotate" },
+              { id: "r3", label: "Attach observed evidence to claim" },
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+            ],
+          },
+        },
+      ],
+      quizBlueprint: {
+        frequency: "mastery_check",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 10,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [2, 3, 4] }],
+        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.8,
+      },
     },
   ],
 };

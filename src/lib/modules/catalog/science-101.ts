@@ -36,6 +36,37 @@ export const science101Module: LearningModule = {
           "Choose one planet and describe one surprising fact.",
         ],
       },
+      interactiveActivities: [
+        {
+          id: "s101-l2-ia1",
+          type: "sorting_buckets",
+          title: "Planet Type Sort",
+          description: "Sort planets by composition and compare relative size.",
+          estimatedMinutes: 8,
+          difficultyLevel: "easy",
+          instructions: [
+            "Read each planet card.",
+            "Drop it into rocky or gas/ice giant.",
+            "Check size ranking hints after submit.",
+          ],
+          data: {
+            buckets: [
+              { id: "rocky", label: "Rocky Planet" },
+              { id: "giant", label: "Gas or Ice Giant" },
+            ],
+            items: [
+              { id: "mercury", label: "Mercury", correctBucketId: "rocky" },
+              { id: "venus", label: "Venus", correctBucketId: "rocky" },
+              { id: "earth", label: "Earth", correctBucketId: "rocky" },
+              { id: "mars", label: "Mars", correctBucketId: "rocky" },
+              { id: "jupiter", label: "Jupiter", correctBucketId: "giant" },
+              { id: "saturn", label: "Saturn", correctBucketId: "giant" },
+              { id: "uranus", label: "Uranus", correctBucketId: "giant" },
+              { id: "neptune", label: "Neptune", correctBucketId: "giant" },
+            ],
+          },
+        },
+      ],
       learningAids: [
         { id: "s101-l2-a1", type: "practice", title: "Planet Card Sort", content: "Drag and drop planets into category bins." },
       ],
@@ -95,6 +126,44 @@ export const science101Module: LearningModule = {
           correctOptionId: "b",
         },
       ],
+      interactiveActivities: [
+        {
+          id: "s101-l3-ia1",
+          type: "matching_pairs",
+          title: "Inner Planet Concept Match",
+          description: "Match each inner-planet clue to the best scientific statement.",
+          estimatedMinutes: 7,
+          difficultyLevel: "medium",
+          data: {
+            left: [
+              { id: "l1", label: "Red Planet" },
+              { id: "l2", label: "Hottest inner planet with thick clouds" },
+              { id: "l3", label: "All inner planets share this trait" },
+            ],
+            right: [
+              { id: "r1", label: "Mars" },
+              { id: "r2", label: "Venus" },
+              { id: "r3", label: "Mostly rocky composition" },
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+            ],
+          },
+        },
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 9,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
+        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.75,
+      },
     },
     {
       id: "s101-l4",
@@ -118,6 +187,26 @@ export const science101Module: LearningModule = {
           "Describe why all planets stay in orbit instead of flying away.",
         ],
       },
+      interactiveActivities: [
+        {
+          id: "s101-l5-ia1",
+          type: "simulation",
+          title: "Orbit Speed Sandbox",
+          description: "Adjust orbital distance and compare speed and period changes.",
+          estimatedMinutes: 10,
+          difficultyLevel: "medium",
+          instructions: [
+            "Choose a planet profile.",
+            "Adjust distance from the Sun slider.",
+            "Observe speed and period changes in the chart.",
+          ],
+          data: {
+            controls: ["distance", "massProfile"],
+            outputs: ["orbitalSpeed", "orbitalPeriod"],
+            presets: ["innerOrbit", "earthLikeOrbit", "outerOrbit"],
+          },
+        },
+      ],
       learningAids: [
         { id: "s101-l5-a1", type: "practice", title: "Orbit Control Panel", content: "Adjust distance and watch orbital period updates." },
       ],
@@ -177,6 +266,44 @@ export const science101Module: LearningModule = {
           correctOptionId: "c",
         },
       ],
+      interactiveActivities: [
+        {
+          id: "s101-l6-ia1",
+          type: "matching_pairs",
+          title: "Outer Planet Reasoning Match",
+          description: "Match orbit and planet clues with the best explanation.",
+          estimatedMinutes: 7,
+          difficultyLevel: "medium",
+          data: {
+            left: [
+              { id: "l1", label: "Largest planet" },
+              { id: "l2", label: "Bright ring system" },
+              { id: "l3", label: "Farther orbit path" },
+            ],
+            right: [
+              { id: "r1", label: "Jupiter" },
+              { id: "r2", label: "Saturn" },
+              { id: "r3", label: "Longer orbital period" },
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+            ],
+          },
+        },
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 10,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
+        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.75,
+      },
     },
     {
       id: "s101-l7",
@@ -254,6 +381,44 @@ export const science101Module: LearningModule = {
           correctOptionId: "a",
         },
       ],
+      interactiveActivities: [
+        {
+          id: "s101-l8-ia1",
+          type: "matching_pairs",
+          title: "Solar System Mastery Match",
+          description: "Pair big ideas with the most accurate science evidence.",
+          estimatedMinutes: 8,
+          difficultyLevel: "medium",
+          data: {
+            left: [
+              { id: "l1", label: "Inner vs outer planet pattern" },
+              { id: "l2", label: "Closest planet to the Sun" },
+              { id: "l3", label: "Main Sun role in the system" },
+            ],
+            right: [
+              { id: "r1", label: "Inner mostly rocky, outer mostly gas/ice giants" },
+              { id: "r2", label: "Mercury" },
+              { id: "r3", label: "Source of gravity and energy for the system" },
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+            ],
+          },
+        },
+      ],
+      quizBlueprint: {
+        frequency: "mastery_check",
+        questionsPerCheck: 5,
+        totalQuestions: 5,
+        timeLimitMinutes: 12,
+        questionTypes: [{ type: "mcq_single", count: 5, pointsEach: 1, bloomsLevels: [1, 2, 3, 4] }],
+        difficultyDistribution: { easy: 1, medium: 3, hard: 1 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.8,
+      },
     },
   ],
 };

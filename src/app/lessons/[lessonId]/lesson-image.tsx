@@ -87,14 +87,14 @@ export default function LessonImage({
 
   if (isLoading) {
     return (
-      <div className="aspect-video w-full animate-pulse rounded-lg bg-zinc-200 dark:bg-zinc-800" />
+      <div className="aspect-video w-full animate-pulse rounded-lg bg-surface-muted" />
     );
   }
 
   if (error) {
     return (
-      <div className="aspect-video w-full flex items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/50">
-        <p className="text-sm text-red-700 dark:text-red-300">
+      <div className="aspect-video w-full flex items-center justify-center rounded-lg bg-red-100">
+        <p className="text-sm text-red-700">
           Could not load image.
         </p>
       </div>

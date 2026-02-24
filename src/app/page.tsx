@@ -1,190 +1,137 @@
 import Image from "next/image";
 import Link from "next/link";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
+
+type QuickLink = {
+  href: string;
+  label: string;
+  external?: boolean;
+};
+
+const quickLinks: QuickLink[] = [
+  { href: "/api/health", label: "API Health Check" },
+  { href: "/api/ai/analyze", label: "AI Analyze Route (POST)" },
+  { href: "/AI-MEDIA-PROMPTS.md", label: "AI Media Prompt Catalog", external: true },
+  { href: "https://supabase.com/docs", label: "Supabase Docs", external: true },
+  { href: "/auth/age-gate", label: "COPPA Age Gate" },
+  { href: "/auth/parent-consent", label: "Parent Consent Form" },
+  { href: "/auth/sign-up", label: "Create Account" },
+  { href: "/auth/sign-in", label: "Sign In" },
+  { href: "/dashboard", label: "Learner Dashboard" },
+  { href: "/modules", label: "Module Catalog" },
+  { href: "/science-lab", label: "Science Lab (Apple Vision)" },
+  { href: "/support", label: "Support Center" },
+  { href: "/admin/operations", label: "Owner Operations" },
+  { href: "/admin/compliance", label: "App Store Compliance" },
+  { href: "/admin/audit", label: "Admin Audit Logs" },
+  { href: "/admin/reports", label: "Admin Reports" },
+  { href: "/admin/alerts", label: "Admin Alerts" },
+  { href: "/account/settings", label: "Account Settings" },
+  { href: "/account/privacy", label: "Privacy Center" },
+  { href: "/parent/compliance", label: "Parent Compliance" },
+];
+
+const artworkCards = [
+  {
+    src: "/placeholders/lesson-robot.svg",
+    alt: "Lesson artwork placeholder",
+    label: "Artwork Placeholder",
+  },
+  {
+    src: "/placeholders/avatar-student.svg",
+    alt: "Avatar placeholder",
+    label: "Avatar Placeholder",
+  },
+  {
+    src: "/placeholders/video-placeholder.svg",
+    alt: "Video placeholder",
+    label: "Video Placeholder",
+  },
+];
 
 export default function Home() {
-  const externalCheckoutAllowed = (process.env.NEXT_PUBLIC_BILLING_PROVIDER_MODE ?? "stripe_external") !== "app_store_iap";
+  const externalCheckoutAllowed =
+    (process.env.NEXT_PUBLIC_BILLING_PROVIDER_MODE ?? "stripe_external") !==
+    "app_store_iap";
+
+  const links = externalCheckoutAllowed
+    ? [...quickLinks, { href: "/billing/checkout", label: "Start Subscription Checkout" }]
+    : quickLinks;
 
   return (
     <div className="min-h-screen bg-background font-sans">
-      <main className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-12 sm:px-10">
-        <header className="space-y-4">
-          <p className="text-sm uppercase tracking-wide text-zinc-500">EduForge MVP Starter</p>
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+      <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-12 sm:px-10">
+        <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
+          <p className="text-sm uppercase tracking-wide text-zinc-600">
+            EduForge MVP Starter
+          </p>
+          <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
             Multilingual learning platform foundation is ready.
           </h1>
-          <p className="max-w-3xl text-zinc-600 dark:text-zinc-300">
-            This starter includes Supabase and Stripe API scaffolding, token budget logic,
-            offline progress utilities, analytics hooks, media placeholders, and a central AI
-            media prompt catalog.
+          <p className="mt-2 max-w-3xl text-sm text-zinc-700">
+            This starter includes Supabase and Stripe API scaffolding, token
+            budget logic, offline progress utilities, analytics hooks, media
+            placeholders, and a central AI media prompt catalog.
           </p>
-        </header>
+          <div className="mt-4 flex flex-wrap gap-2">
+            <ProgressChip label="Backend" value="Supabase" tone="info" />
+            <ProgressChip label="Billing" value="Stripe" tone="neutral" />
+            <ProgressChip label="Media" value="AI prompt packs" tone="success" />
+          </div>
+        </SoftCard>
 
         <section className="grid gap-4 sm:grid-cols-3">
-          <div className="rounded-xl border border-black/10 p-4 dark:border-white/15">
-            <Image
-              src="/placeholders/lesson-robot.svg"
-              alt="Lesson artwork placeholder"
-              width={400}
-              height={240}
-              className="h-auto w-full"
-              priority
-            />
-            <p className="mt-3 text-sm text-zinc-500">Artwork Placeholder</p>
-          </div>
-          <div className="rounded-xl border border-black/10 p-4 dark:border-white/15">
-            <Image
-              src="/placeholders/avatar-student.svg"
-              alt="Avatar placeholder"
-              width={400}
-              height={240}
-              className="h-auto w-full"
-            />
-            <p className="mt-3 text-sm text-zinc-500">Avatar Placeholder</p>
-          </div>
-          <div className="rounded-xl border border-black/10 p-4 dark:border-white/15">
-            <Image
-              src="/placeholders/video-placeholder.svg"
-              alt="Video placeholder"
-              width={400}
-              height={240}
-              className="h-auto w-full"
-            />
-            <p className="mt-3 text-sm text-zinc-500">Video Placeholder</p>
-          </div>
+          {artworkCards.map((card, index) => (
+            <SoftCard
+              key={card.src}
+              as="article"
+              interactive
+              organicCorners={index % 2 === 0}
+              className="p-4"
+            >
+              <Image
+                src={card.src}
+                alt={card.alt}
+                width={400}
+                height={240}
+                className="h-auto w-full"
+                priority={index === 0}
+              />
+              <p className="mt-3 text-sm text-zinc-600">{card.label}</p>
+            </SoftCard>
+          ))}
         </section>
 
-        <section className="grid gap-3 sm:grid-cols-2">
-          <Link
-            href="/api/health"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            API Health Check
-          </Link>
-          <Link
-            href="/api/ai/analyze"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            AI Analyze Route (POST)
-          </Link>
-          <a
-            href="/AI-MEDIA-PROMPTS.md"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            AI Media Prompt Catalog
-          </a>
-          <a
-            href="https://supabase.com/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Supabase Docs
-          </a>
-          <Link
-            href="/auth/age-gate"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            COPPA Age Gate
-          </Link>
-          <Link
-            href="/auth/parent-consent"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Parent Consent Form
-          </Link>
-          <Link
-            href="/auth/sign-up"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Create Account
-          </Link>
-          <Link
-            href="/auth/sign-in"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Sign In
-          </Link>
-          <Link
-            href="/dashboard"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Learner Dashboard
-          </Link>
-          <Link
-            href="/modules"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Module Catalog
-          </Link>
-          <Link
-            href="/science-lab"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Science Lab (Apple Vision)
-          </Link>
-          <Link
-            href="/support"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Support Center
-          </Link>
-          <Link
-            href="/admin/operations"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Owner Operations
-          </Link>
-          <Link
-            href="/admin/compliance"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            App Store Compliance
-          </Link>
-          <Link
-            href="/admin/audit"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Admin Audit Logs
-          </Link>
-          <Link
-            href="/admin/reports"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Admin Reports
-          </Link>
-          <Link
-            href="/admin/alerts"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Admin Alerts
-          </Link>
-          <Link
-            href="/account/settings"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Account Settings
-          </Link>
-          <Link
-            href="/account/privacy"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Privacy Center
-          </Link>
-          <Link
-            href="/parent/compliance"
-            className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-          >
-            Parent Compliance
-          </Link>
-          {externalCheckoutAllowed ? (
-            <Link
-              href="/billing/checkout"
-              className="rounded-lg border border-black/10 px-4 py-3 text-sm hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
-            >
-              Start Subscription Checkout
-            </Link>
-          ) : null}
-        </section>
+        <SoftCard as="section" className="p-5">
+          <h2 className="text-lg font-semibold text-zinc-900">Quick Access</h2>
+          <p className="mt-1 text-sm text-zinc-600">
+            Core routes and operational tools used during development and QA.
+          </p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {links.map((link) =>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-4 py-3 text-sm text-foreground hover:bg-surface"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-4 py-3 text-sm text-foreground hover:bg-surface"
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
+          </div>
+        </SoftCard>
       </main>
     </div>
   );

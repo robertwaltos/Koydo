@@ -154,30 +154,32 @@ export default function ComplianceAdminClient({
   };
 
   return (
-    <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+    <section className="ui-soft-card p-5">
       <h2 className="text-lg font-semibold">DSAR Queue</h2>
       {status ? (
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{status}</p>
+        <p className="mt-2 text-sm text-zinc-600" role="status" aria-live="polite">
+          {status}
+        </p>
       ) : null}
-      <div className="mt-3 rounded-md border border-black/10 p-3 dark:border-white/10">
+      <div className="mt-3 rounded-2xl border border-border p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-sm font-medium">Live DB Readiness Check</p>
           <button
             type="button"
             onClick={runDbReadinessCheck}
             disabled={dbCheckLoading}
-            className="rounded border border-black/15 px-2 py-1 text-xs"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
           >
             {dbCheckLoading ? "Running..." : "Run DB Check"}
           </button>
         </div>
         {dbCheck ? (
-          <div className="mt-2 text-xs text-zinc-600 dark:text-zinc-300">
+          <div className="mt-2 text-xs text-zinc-600">
             <p>
               Generated {new Date(dbCheck.generatedAt).toLocaleString()} | Present {dbCheck.totals.present} | Missing{" "}
               {dbCheck.totals.missing} | Error {dbCheck.totals.error}
             </p>
-            <div className="mt-2 max-h-40 overflow-auto rounded border border-black/10 p-2 dark:border-white/10">
+            <div className="mt-2 max-h-40 overflow-auto rounded-2xl border border-border p-2">
               {dbCheck.tables.map((row) => (
                 <p key={row.table} className="mb-1">
                   [{row.status.toUpperCase()}] {row.table}
@@ -187,13 +189,14 @@ export default function ComplianceAdminClient({
           </div>
         ) : null}
       </div>
-      <div className="mt-3 rounded-md border border-black/10 p-3 dark:border-white/10">
+      <div className="mt-3 rounded-2xl border border-border p-3">
         <p className="text-sm font-medium">Bulk Update</p>
         <div className="mt-2 flex flex-wrap items-center gap-2">
           <select
             value={bulkStatus}
             onChange={(event) => setBulkStatus(event.target.value as DsarRow["status"])}
-            className="rounded border border-black/15 px-2 py-1 text-xs"
+            aria-label="Bulk DSAR status"
+            className="ui-focus-ring rounded-full border border-border bg-surface px-3 py-1 text-xs"
           >
             <option value="pending">Pending</option>
             <option value="in_progress">In progress</option>
@@ -204,12 +207,12 @@ export default function ComplianceAdminClient({
             value={bulkConfirm}
             onChange={(event) => setBulkConfirm(event.target.value)}
             placeholder="Type UPDATE_DSAR_BULK"
-            className="rounded border border-black/15 px-2 py-1 text-xs"
+            className="ui-focus-ring rounded-full border border-border bg-surface px-3 py-1 text-xs"
           />
           <button
             type="button"
             onClick={applyBulkStatus}
-            className="rounded border border-black/15 px-2 py-1 text-xs"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
           >
             Apply to Selected ({selectedIds.length})
           </button>
@@ -217,7 +220,7 @@ export default function ComplianceAdminClient({
       </div>
       <div className="mt-3 space-y-3">
         {rows.map((row) => (
-          <article key={row.id} className="rounded-md border border-black/10 p-3 dark:border-white/10">
+          <article key={row.id} className="rounded-2xl border border-border p-3">
             <label className="mb-2 flex items-center gap-2 text-xs text-zinc-500">
               <input
                 type="checkbox"
@@ -244,21 +247,21 @@ export default function ComplianceAdminClient({
               <button
                 type="button"
                 onClick={() => updateStatus(row.id, "in_progress")}
-                className="rounded border border-black/15 px-2 py-1 text-xs"
+                className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
               >
                 In Progress
               </button>
               <button
                 type="button"
                 onClick={() => updateStatus(row.id, "completed")}
-                className="rounded border border-black/15 px-2 py-1 text-xs"
+                className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
               >
                 Complete
               </button>
               <button
                 type="button"
                 onClick={() => updateStatus(row.id, "rejected")}
-                className="rounded border border-black/15 px-2 py-1 text-xs"
+                className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
               >
                 Reject
               </button>

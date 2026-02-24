@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-02-24T04:20:25.669Z",
+  "status": "ok",
+  "windowDays": 30,
+  "totals": {
+    "totalEvents": 0,
+    "uniqueUsers": 0,
+    "uniqueModules": 0,
+    "uniqueLessons": 0,
+    "lessonViews": 0,
+    "lessonCompletions": 0,
+    "completionToViewRatio": 0,
+    "interactionDepth": 0
+  },
+  "eventTypeCounts": {},
+  "daily": [],
+  "topModules": [],
+  "cutoffIso": "2026-01-25T04:20:25.046Z"
+}

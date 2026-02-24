@@ -37,6 +37,37 @@ export const math101Module: LearningModule = {
           "Describe what happens if you add one object to a group of 3.",
         ],
       },
+      interactiveActivities: [
+        {
+          id: "m101-l2-ia1",
+          type: "drag_and_drop",
+          title: "Five-Frame Builder",
+          description: "Drag counters into frames to model groups from 1 to 5.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          instructions: [
+            "Read the target number.",
+            "Drag the same number of counters into the frame.",
+            "Say the count out loud before submitting.",
+          ],
+          data: {
+            targets: [
+              { id: "t1", label: "1" },
+              { id: "t2", label: "2" },
+              { id: "t3", label: "3" },
+              { id: "t4", label: "4" },
+              { id: "t5", label: "5" },
+            ],
+            draggables: [
+              { id: "c1", label: "One counter", correctTargetId: "t1" },
+              { id: "c2", label: "Two counters", correctTargetId: "t2" },
+              { id: "c3", label: "Three counters", correctTargetId: "t3" },
+              { id: "c4", label: "Four counters", correctTargetId: "t4" },
+              { id: "c5", label: "Five counters", correctTargetId: "t5" },
+            ],
+          },
+        },
+      ],
       learningAids: [
         { id: "m101-l2-a1", type: "practice", title: "Counting Mat", content: "Drag objects into a five-frame and count aloud." },
       ],
@@ -96,6 +127,44 @@ export const math101Module: LearningModule = {
           correctOptionId: "b",
         },
       ],
+      interactiveActivities: [
+        {
+          id: "m101-l3-ia1",
+          type: "matching_pairs",
+          title: "Match Number Stories",
+          description: "Match each count clue with the correct number idea.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            left: [
+              { id: "l1", label: "One more than 3" },
+              { id: "l2", label: "Exactly five objects" },
+              { id: "l3", label: "Need to make 3 into 5" },
+            ],
+            right: [
+              { id: "r1", label: "4" },
+              { id: "r2", label: "5" },
+              { id: "r3", label: "Add 2 more" },
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+            ],
+          },
+        },
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 9,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2] }],
+        difficultyDistribution: { easy: 2, medium: 2, hard: 0 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.75,
+      },
       learningAids: [
         { id: "m101-l3-a1", type: "practice", title: "Quick Count Cards", content: "Answer 8 rapid card prompts for numbers 1-5." },
       ],
@@ -122,6 +191,26 @@ export const math101Module: LearningModule = {
           "Explain how the number line helps you count without recounting objects.",
         ],
       },
+      interactiveActivities: [
+        {
+          id: "m101-l5-ia1",
+          type: "number_line",
+          title: "Jump and Land",
+          description: "Use jumps on a number line to model add-on counting to 10.",
+          estimatedMinutes: 7,
+          difficultyLevel: "medium",
+          instructions: [
+            "Start on the given number.",
+            "Make the requested jump count.",
+            "Read the landing number and compare with your estimate.",
+          ],
+          data: {
+            startPoints: [5, 6, 7],
+            jumpSets: [1, 2, 3, 4],
+            maxNumber: 10,
+          },
+        },
+      ],
       learningAids: [
         { id: "m101-l5-a1", type: "practice", title: "Number Line Board", content: "Tap jumps on a 0-10 line to solve movement prompts." },
       ],
@@ -181,6 +270,44 @@ export const math101Module: LearningModule = {
           correctOptionId: "c",
         },
       ],
+      interactiveActivities: [
+        {
+          id: "m101-l6-ia1",
+          type: "matching_pairs",
+          title: "Pair Counting Clues",
+          description: "Connect each clue to the best number-line or make-ten strategy.",
+          estimatedMinutes: 6,
+          difficultyLevel: "medium",
+          data: {
+            left: [
+              { id: "l1", label: "One more than 7" },
+              { id: "l2", label: "Number before 10" },
+              { id: "l3", label: "How to make 6 into 10" },
+            ],
+            right: [
+              { id: "r1", label: "8" },
+              { id: "r2", label: "9" },
+              { id: "r3", label: "Add 4" },
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+            ],
+          },
+        },
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 10,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2] }],
+        difficultyDistribution: { easy: 1, medium: 3, hard: 0 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.75,
+      },
       learningAids: [
         { id: "m101-l6-a1", type: "mnemonic", title: "Make Ten Trick", content: "Think: 6 needs 4 friends to make 10." },
       ],
@@ -261,6 +388,44 @@ export const math101Module: LearningModule = {
           correctOptionId: "b",
         },
       ],
+      interactiveActivities: [
+        {
+          id: "m101-l8-ia1",
+          type: "matching_pairs",
+          title: "Strategy Match: Counting and Addition",
+          description: "Match each prompt to a strong counting or addition move.",
+          estimatedMinutes: 7,
+          difficultyLevel: "medium",
+          data: {
+            left: [
+              { id: "l1", label: "5 + 3" },
+              { id: "l2", label: "9 minus 1" },
+              { id: "l3", label: "Need to make 8 into 10" },
+            ],
+            right: [
+              { id: "r1", label: "Count on to 8" },
+              { id: "r2", label: "Take one away to get 8" },
+              { id: "r3", label: "Add 2 more" },
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+            ],
+          },
+        },
+      ],
+      quizBlueprint: {
+        frequency: "mastery_check",
+        questionsPerCheck: 5,
+        totalQuestions: 5,
+        timeLimitMinutes: 12,
+        questionTypes: [{ type: "mcq_single", count: 5, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
+        difficultyDistribution: { easy: 2, medium: 2, hard: 1 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.8,
+      },
     },
   ],
 };

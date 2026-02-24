@@ -6,6 +6,8 @@ import {
 import { loadCurriculumSummary } from "@/lib/admin/curriculum-summary";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import CurriculumClient from "./curriculum-client";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
 
 export const dynamic = "force-dynamic";
 
@@ -28,9 +30,13 @@ export default async function AdminCurriculumPage() {
 
   if (!profile?.is_admin) {
     return (
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-4 px-6 py-24">
-        <h1 className="text-2xl font-semibold">Access Denied</h1>
-        <p className="text-sm text-red-600">You must be an administrator to access curriculum operations.</p>
+      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
+        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8 text-center">
+          <h1 className="text-2xl font-semibold">Access Denied</h1>
+          <p className="mt-3 text-sm text-rose-700">
+            You must be an administrator to access curriculum operations.
+          </p>
+        </SoftCard>
       </main>
     );
   }
@@ -41,12 +47,17 @@ export default async function AdminCurriculumPage() {
 
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-12">
-      <header>
+      <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
         <h1 className="text-3xl font-semibold tracking-tight">Curriculum Operations</h1>
-        <p className="mt-2 text-sm text-zinc-600">
+        <p className="mt-2 text-sm text-zinc-700">
           Track subject/grade coverage, prioritize missing lessons, and drive curriculum expansion.
         </p>
-      </header>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <ProgressChip label="Coverage" value={`${initialSummary.expansion.completionPercent}%`} tone={initialSummary.expansion.completionPercent >= 60 ? "success" : "warning"} />
+          <ProgressChip label="Backlog" value={initialBacklogSummary.total} tone={initialBacklogSummary.byPriority.high > 0 ? "warning" : "info"} />
+          <ProgressChip label="Exam Tracks" value={`${initialSummary.examPrep.availableTrackCount}/${initialSummary.examPrep.targetTrackCount}`} tone={initialSummary.examPrep.missingTracks.length > 0 ? "warning" : "success"} />
+        </div>
+      </SoftCard>
 
       <CurriculumClient
         initialSummary={initialSummary}

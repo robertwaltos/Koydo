@@ -55,15 +55,15 @@ export default function ParentConsentVerifyClient({ token }: Props) {
 
   return (
     <div className="mt-6 space-y-4">
-      <p className="text-sm text-zinc-700 dark:text-zinc-200">{status}</p>
+      <p className="text-sm text-zinc-700">{status}</p>
       <div className="flex gap-3">
         <Link
           href="/auth/sign-in"
-          className="rounded-md border border-black/15 px-4 py-2 text-sm dark:border-white/20"
+          className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm"
         >
           Return to Sign In
         </Link>
-        <Link href="/dashboard" className="rounded-md bg-foreground px-4 py-2 text-sm text-background">
+        <Link href="/dashboard" className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm text-white">
           Go to Dashboard
         </Link>
       </div>

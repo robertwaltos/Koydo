@@ -95,9 +95,19 @@ jobs:
             public/CURRICULUM-BACKLOG-REPORT.md
             public/EXAM-PREP-COVERAGE-REPORT.json
             public/EXAM-PREP-COVERAGE-REPORT.md
+            public/EXAM-PREP-CONTENT-QUALITY-REPORT.json
+            public/EXAM-PREP-CONTENT-QUALITY-REPORT.md
+            public/EXAM-AUTHORING-BACKLOG-REPORT.json
+            public/EXAM-AUTHORING-BACKLOG-REPORT.md
             public/MEDIA-READINESS-REPORT.json
             public/MEDIA-READINESS-REPORT.md
             public/APPSTORE-COMPLIANCE-AUDIT.json
             public/APPSTORE-COMPLIANCE-AUDIT.md
             public/LESSON-MEDIA-PROMPT-PACK.json
             public/LESSON-MEDIA-PROMPT-PACK.md
+            public/CURRICULUM-STATE-FOR-EXTERNAL-AGENTS.json
+            public/CURRICULUM-STATE-FOR-EXTERNAL-AGENTS.md
+            public/EXTERNAL-CURRICULUM-IMPORT-REPORT.json
+            public/EXTERNAL-CURRICULUM-IMPORT-REPORT.md
+            public/TELEMETRY-LEARNING-EVENTS-REPORT.json
+            public/TELEMETRY-LEARNING-EVENTS-REPORT.md

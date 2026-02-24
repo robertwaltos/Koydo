@@ -4,7 +4,7 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 const createSchema = z.object({
-  reportType: z.enum(["dsar", "support", "audit"]),
+  reportType: z.enum(["dsar", "support", "audit", "telemetry"]),
   runAfterIso: z.string().optional(),
 });
 

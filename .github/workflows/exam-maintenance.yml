@@ -1,0 +1,185 @@
+name: Exam Maintenance
+
+on:
+  schedule:
+    - cron: "45 8 * * *"
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Apply updates (false = dry-run)"
+        required: false
+        default: "true"
+      limit_users:
+        description: "Maximum users to process"
+        required: false
+        default: "150"
+      limit_items_per_user:
+        description: "Maximum unresolved rows per user to evaluate"
+        required: false
+        default: "200"
+
+concurrency:
+  group: exam-maintenance
+  cancel-in-progress: false
+
+jobs:
+  auto-resolve-errors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co' }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY || '' }}
+      ADMIN_ALERT_EMAILS: ${{ vars.ADMIN_ALERT_EMAILS || secrets.ADMIN_ALERT_EMAILS || '' }}
+      APPLY: ${{ inputs.apply || 'true' }}
+      LIMIT_USERS: ${{ inputs.limit_users || '150' }}
+      LIMIT_ITEMS_PER_USER: ${{ inputs.limit_items_per_user || '200' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run exam error auto-resolve batch
+        run: |
+          if [ -z "$SUPABASE_SERVICE_ROLE_KEY" ] || [ "$NEXT_PUBLIC_SUPABASE_URL" = "https://placeholder.supabase.co" ]; then
+            echo "Supabase service role or real URL missing. Skipping exam maintenance run."
+            echo '{"skipped":true,"reason":"missing_supabase_env"}' > exam-auto-resolve-summary.json
+            exit 0
+          fi
+
+          APPLY_FLAG=""
+          if [ "$APPLY" = "true" ]; then
+            APPLY_FLAG="--apply"
+          fi
+
+          for attempt in 1 2; do
+            if node scripts/auto-resolve-exam-errors.mjs \
+              $APPLY_FLAG \
+              --limit-users "$LIMIT_USERS" \
+              --limit-items-per-user "$LIMIT_ITEMS_PER_USER" \
+              > exam-auto-resolve-summary.json; then
+              echo "Exam maintenance run succeeded on attempt $attempt."
+              break
+            fi
+
+            if [ "$attempt" -eq 2 ]; then
+              echo "Exam maintenance run failed after 2 attempts."
+              exit 1
+            fi
+
+            echo "Exam maintenance run failed on attempt $attempt. Retrying in 15s..."
+            sleep 15
+          done
+
+      - name: Upload exam maintenance artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: exam-auto-resolve-summary
+          path: exam-auto-resolve-summary.json
+
+      - name: Build run summary alert metadata
+        if: always()
+        run: |
+          node - <<'NODE'
+          const fs = require("node:fs");
+          let summary = {};
+          try {
+            summary = JSON.parse(fs.readFileSync("exam-auto-resolve-summary.json", "utf8"));
+          } catch {
+            summary = { skipped: true, reason: "missing_summary_file" };
+          }
+
+          const repository = process.env.GITHUB_REPOSITORY ?? null;
+          const runId = process.env.GITHUB_RUN_ID ?? null;
+          const runUrl = repository && runId ? `https://github.com/${repository}/actions/runs/${runId}` : null;
+          const erroredUsers = Number(summary?.totals?.erroredUsers ?? 0);
+          const eligible = Number(summary?.totals?.eligible ?? 0);
+          const updated = Number(summary?.totals?.updated ?? 0);
+          const skipped = summary?.skipped === true;
+          const dryRun = summary?.apply === true ? false : true;
+          const severity = skipped || erroredUsers > 0 ? "warning" : "info";
+
+          const message = skipped
+            ? "Exam maintenance run skipped due to missing Supabase environment variables."
+            : `Exam maintenance ${dryRun ? "dry-run" : "apply"} completed. Eligible: ${eligible}, updated: ${updated}, errored users: ${erroredUsers}.`;
+
+          const metadata = {
+            ...summary,
+            dryRun,
+            runUrl,
+            workflow: {
+              workflow: process.env.GITHUB_WORKFLOW ?? null,
+              job: process.env.GITHUB_JOB ?? null,
+              runId,
+              runNumber: process.env.GITHUB_RUN_NUMBER ?? null,
+              repository,
+              ref: process.env.GITHUB_REF ?? null,
+              sha: process.env.GITHUB_SHA ?? null,
+              actor: process.env.GITHUB_ACTOR ?? null,
+              runUrl,
+            },
+            artifact: {
+              name: "exam-auto-resolve-summary",
+              file: "exam-auto-resolve-summary.json",
+              note: "Open the workflow run and download the exam-auto-resolve-summary artifact for full per-user diagnostics.",
+            },
+          };
+
+          fs.writeFileSync("exam-maintenance-run-alert-metadata.json", JSON.stringify(metadata, null, 2));
+          fs.writeFileSync("exam-maintenance-run-alert-severity.txt", severity);
+          fs.writeFileSync("exam-maintenance-run-alert-message.txt", message);
+          NODE
+
+      - name: Create admin run summary alert
+        if: always()
+        run: |
+          if [ -z "$SUPABASE_SERVICE_ROLE_KEY" ] || [ "$NEXT_PUBLIC_SUPABASE_URL" = "https://placeholder.supabase.co" ]; then
+            echo "Supabase service role or real URL missing. Cannot write run summary alert."
+            exit 0
+          fi
+
+          npm run alerts:create -- \
+            --severity "$(cat exam-maintenance-run-alert-severity.txt)" \
+            --category exam_maintenance_run_summary \
+            --message "$(cat exam-maintenance-run-alert-message.txt)" \
+            --metadata-file exam-maintenance-run-alert-metadata.json
+
+      - name: Create admin alert on failure
+        if: failure()
+        run: |
+          if [ -z "$SUPABASE_SERVICE_ROLE_KEY" ] || [ "$NEXT_PUBLIC_SUPABASE_URL" = "https://placeholder.supabase.co" ]; then
+            echo "Supabase service role or real URL missing. Cannot write failure alert."
+            exit 0
+          fi
+
+          cat > exam-maintenance-failure-metadata.json <<EOF
+          {
+            "workflow": "${GITHUB_WORKFLOW}",
+            "job": "${GITHUB_JOB}",
+            "runId": "${GITHUB_RUN_ID}",
+            "runNumber": "${GITHUB_RUN_NUMBER}",
+            "repository": "${GITHUB_REPOSITORY}",
+            "ref": "${GITHUB_REF}",
+            "sha": "${GITHUB_SHA}",
+            "actor": "${GITHUB_ACTOR}",
+            "apply": "${APPLY}",
+            "limitUsers": "${LIMIT_USERS}",
+            "limitItemsPerUser": "${LIMIT_ITEMS_PER_USER}",
+            "runUrl": "https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          }
+          EOF
+
+          npm run alerts:create -- \
+            --severity critical \
+            --category exam_maintenance_failure \
+            --message "Exam maintenance workflow failed. Review run logs and re-run." \
+            --metadata-file exam-maintenance-failure-metadata.json

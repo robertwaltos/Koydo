@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-02-21T03:40:43.306Z",
+  "totalFindings": 0,
+  "checks": [
+    {
+      "id": "legacy_border_black",
+      "label": "Legacy border-black classes",
+      "count": 0
+    },
+    {
+      "id": "legacy_bg_zinc",
+      "label": "Legacy bg-zinc-50 classes",
+      "count": 0
+    },
+    {
+      "id": "legacy_hover_black",
+      "label": "Legacy hover:bg-black/5 classes",
+      "count": 0
+    },
+    {
+      "id": "legacy_dark_border",
+      "label": "Legacy dark:border* classes",
+      "count": 0
+    },
+    {
+      "id": "legacy_dark_bg_zinc",
+      "label": "Legacy dark:bg-zinc* classes",
+      "count": 0
+    },
+    {
+      "id": "legacy_dark_text_zinc",
+      "label": "Legacy dark:text-zinc* classes",
+      "count": 0
+    }
+  ],
+  "findings": []
+}

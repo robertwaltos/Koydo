@@ -281,7 +281,7 @@ export default function CurriculumClient({
 
   return (
     <div className="space-y-6">
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-lg font-semibold">Coverage Status</h2>
@@ -291,7 +291,7 @@ export default function CurriculumClient({
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <label className="inline-flex items-center gap-2 rounded-md border border-black/15 px-3 py-1 text-xs">
+            <label className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-muted px-3 py-1 text-xs">
               <input
                 type="checkbox"
                 checked={autoRefresh}
@@ -301,7 +301,7 @@ export default function CurriculumClient({
             </label>
             <button
               type="button"
-              className="rounded-md border border-black/15 px-3 py-1 text-sm hover:bg-black/5 disabled:opacity-70"
+              className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-sm font-semibold text-foreground disabled:opacity-70"
               onClick={() => void refreshSummary()}
               disabled={summaryLoading}
             >
@@ -318,7 +318,7 @@ export default function CurriculumClient({
         </p>
         <div className="mt-4 flex flex-wrap gap-3 text-sm">
           <a
-            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 text-sm font-semibold text-foreground"
             href="/CURRICULUM-COVERAGE-REPORT.md"
             target="_blank"
             rel="noreferrer"
@@ -326,7 +326,7 @@ export default function CurriculumClient({
             Open Coverage Report (MD)
           </a>
           <a
-            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 text-sm font-semibold text-foreground"
             href="/CURRICULUM-EXPANSION-PLAN.md"
             target="_blank"
             rel="noreferrer"
@@ -334,7 +334,7 @@ export default function CurriculumClient({
             Open Expansion Plan (MD)
           </a>
           <a
-            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 text-sm font-semibold text-foreground"
             href="/CURRICULUM-QUALITY-REPORT.md"
             target="_blank"
             rel="noreferrer"
@@ -342,7 +342,7 @@ export default function CurriculumClient({
             Open Quality Report (MD)
           </a>
           <a
-            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 text-sm font-semibold text-foreground"
             href="/EXAM-PREP-COVERAGE-REPORT.md"
             target="_blank"
             rel="noreferrer"
@@ -350,7 +350,7 @@ export default function CurriculumClient({
             Open Exam Prep Report (MD)
           </a>
           <a
-            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 text-sm font-semibold text-foreground"
             href="/AI-RESEARCH-AGENT-PROMPTS.md"
             target="_blank"
             rel="noreferrer"
@@ -358,7 +358,7 @@ export default function CurriculumClient({
             Open Research Prompt Pack
           </a>
           <a
-            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 text-sm font-semibold text-foreground"
             href={backlogCsvHref}
             target="_blank"
             rel="noreferrer"
@@ -366,7 +366,7 @@ export default function CurriculumClient({
             Export Backlog (Filtered CSV)
           </a>
           <a
-            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 text-sm font-semibold text-foreground"
             href="/CURRICULUM-BACKLOG-REPORT.md"
             target="_blank"
             rel="noreferrer"
@@ -374,7 +374,7 @@ export default function CurriculumClient({
             Open Backlog Report (MD)
           </a>
           <a
-            className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 text-sm font-semibold text-foreground"
             href="/api/admin/curriculum/backlog?format=json&limit=1000"
             target="_blank"
             rel="noreferrer"
@@ -384,7 +384,7 @@ export default function CurriculumClient({
         </div>
       </section>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <h2 className="text-lg font-semibold">Execution Backlog</h2>
@@ -402,7 +402,8 @@ export default function CurriculumClient({
               onChange={(event) =>
                 setBacklogWorkstreamFilter(event.target.value as "all" | BacklogWorkstream)
               }
-              className="rounded-md border border-black/15 px-2 py-1 text-sm"
+              aria-label="Filter backlog by workstream"
+              className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-1 text-sm"
             >
               <option value="all">All workstreams</option>
               <option value="curriculum">Curriculum</option>
@@ -414,7 +415,8 @@ export default function CurriculumClient({
               onChange={(event) =>
                 setBacklogPriorityFilter(event.target.value as "all" | BacklogPriority)
               }
-              className="rounded-md border border-black/15 px-2 py-1 text-sm"
+              aria-label="Filter backlog by priority"
+              className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-1 text-sm"
             >
               <option value="all">All priorities</option>
               <option value="high">High</option>
@@ -423,7 +425,7 @@ export default function CurriculumClient({
             </select>
             <button
               type="button"
-              className="rounded-md border border-black/15 px-3 py-1 text-sm hover:bg-black/5 disabled:opacity-70"
+              className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-sm font-semibold text-foreground disabled:opacity-70"
               onClick={() => void refreshBacklog()}
               disabled={backlogLoading}
             >
@@ -432,7 +434,7 @@ export default function CurriculumClient({
           </div>
         </div>
         <div className="mt-3 grid gap-3 md:grid-cols-5">
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Total items</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">{backlogSummary.total}</p>
           </article>
@@ -440,19 +442,19 @@ export default function CurriculumClient({
             <p className="text-xs uppercase tracking-wide">High priority</p>
             <p className="mt-1 text-2xl font-semibold">{backlogSummary.byPriority.high}</p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Curriculum gaps</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">
               {backlogSummary.byWorkstream.curriculum}
             </p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Exam-prep gaps</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">
               {backlogSummary.byWorkstream["exam-prep"]}
             </p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Quality fixes</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">
               {backlogSummary.byWorkstream.quality}
@@ -465,7 +467,7 @@ export default function CurriculumClient({
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full border-collapse text-sm">
             <thead>
-              <tr className="border-b border-black/10 text-left">
+              <tr className="border-b border-border text-left">
                 <th className="p-2">Workstream</th>
                 <th className="p-2">Type</th>
                 <th className="p-2">Priority</th>
@@ -503,10 +505,10 @@ export default function CurriculumClient({
         </div>
       </section>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <h2 className="text-lg font-semibold">Program Health</h2>
         <div className="mt-3 grid gap-3 md:grid-cols-3 lg:grid-cols-7">
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Lessons tracked</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">{summary.coverage.totalLessons}</p>
           </article>
@@ -522,19 +524,19 @@ export default function CurriculumClient({
             <p className="mt-1 text-2xl font-semibold">{summary.quality.highPriorityModules}</p>
             <p className="text-xs">avg score {summary.quality.averageScore}</p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Placeholder options</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">
               {summary.quality.placeholderOptionCount}
             </p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Generic prompts</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">
               {summary.quality.genericReflectionCount}
             </p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Outside matrix</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">
               {summary.expansion.totalUntracked}
@@ -555,29 +557,29 @@ export default function CurriculumClient({
         </p>
       </section>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <h2 className="text-lg font-semibold">Exam Prep Readiness</h2>
         <div className="mt-3 grid gap-3 md:grid-cols-5">
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Track coverage</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">
               {summary.examPrep.availableTrackCount}/{summary.examPrep.targetTrackCount}
             </p>
             <p className="text-xs text-zinc-600">{summary.examPrep.completionPercent}% of target tracks</p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Exam modules</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">{summary.examPrep.totalModules}</p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Exam lessons</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">{summary.examPrep.totalLessons}</p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Average score</p>
             <p className="mt-1 text-2xl font-semibold text-zinc-900">{summary.examPrep.averageScore}</p>
           </article>
-          <article className="rounded-md border border-black/10 bg-zinc-50 p-3">
+          <article className="rounded-md border border-border bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Missing tracks</p>
             <p className="mt-1 text-lg font-semibold text-zinc-900">
               {summary.examPrep.missingTracks.length > 0
@@ -589,7 +591,7 @@ export default function CurriculumClient({
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full border-collapse text-sm">
             <thead>
-              <tr className="border-b border-black/10 text-left">
+              <tr className="border-b border-border text-left">
                 <th className="p-2">Track</th>
                 <th className="p-2">Region</th>
                 <th className="p-2">Module</th>
@@ -622,7 +624,7 @@ export default function CurriculumClient({
       </section>
 
       {summary.expansion.untrackedCoverage.length > 0 ? (
-        <section className="rounded-lg border border-black/10 bg-white p-5">
+        <section className="ui-soft-card p-5">
           <h2 className="text-lg font-semibold">Coverage Outside Target Matrix</h2>
           <p className="mt-2 text-sm text-zinc-600">
             These lessons exist but are not counted in the current grade+subject planning grid.
@@ -630,7 +632,7 @@ export default function CurriculumClient({
           <div className="mt-4 overflow-x-auto">
             <table className="min-w-full border-collapse text-sm">
               <thead>
-                <tr className="border-b border-black/10 text-left">
+                <tr className="border-b border-border text-left">
                   <th className="p-2">Grade Band</th>
                   <th className="p-2">Subject</th>
                   <th className="p-2">Lessons</th>
@@ -650,10 +652,10 @@ export default function CurriculumClient({
         </section>
       ) : null}
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <h2 className="text-lg font-semibold">Largest Missing Coverage Areas</h2>
         <div className="mt-3 grid gap-3 md:grid-cols-2">
-          <div className="rounded-md border border-black/10 p-3">
+          <div className="rounded-md border border-border p-3">
             <p className="text-sm font-semibold">By Grade Band</p>
             <div className="mt-2 grid gap-2">
               {topMissingGradeBands.map((entry) => (
@@ -667,7 +669,7 @@ export default function CurriculumClient({
               ) : null}
             </div>
           </div>
-          <div className="rounded-md border border-black/10 p-3">
+          <div className="rounded-md border border-border p-3">
             <p className="text-sm font-semibold">By Subject</p>
             <div className="mt-2 grid gap-2">
               {topMissingSubjects.map((entry) => (
@@ -684,30 +686,30 @@ export default function CurriculumClient({
         </div>
       </section>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <h2 className="text-lg font-semibold">Content Quality and Placeholder Risk</h2>
         <div className="mt-3 grid gap-3 text-sm md:grid-cols-5">
-          <div className="rounded-md border border-black/10 p-3">
+          <div className="rounded-md border border-border p-3">
             <p className="text-zinc-500">Modules scanned</p>
             <p className="mt-1 text-xl font-semibold">{summary.quality.modules}</p>
           </div>
-          <div className="rounded-md border border-black/10 p-3">
+          <div className="rounded-md border border-border p-3">
             <p className="text-zinc-500">Average score</p>
             <p className="mt-1 text-xl font-semibold">{summary.quality.averageScore}</p>
           </div>
-          <div className="rounded-md border border-black/10 p-3">
+          <div className="rounded-md border border-border p-3">
             <p className="text-zinc-500">High priority modules</p>
             <p className="mt-1 text-xl font-semibold text-red-700">
               {summary.quality.highPriorityModules}
             </p>
           </div>
-          <div className="rounded-md border border-black/10 p-3">
+          <div className="rounded-md border border-border p-3">
             <p className="text-zinc-500">Placeholder options</p>
             <p className="mt-1 text-xl font-semibold text-amber-700">
               {summary.quality.placeholderOptionCount}
             </p>
           </div>
-          <div className="rounded-md border border-black/10 p-3">
+          <div className="rounded-md border border-border p-3">
             <p className="text-zinc-500">Generic prompts</p>
             <p className="mt-1 text-xl font-semibold text-amber-700">
               {summary.quality.genericReflectionCount}
@@ -717,7 +719,7 @@ export default function CurriculumClient({
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full border-collapse text-sm">
             <thead>
-              <tr className="border-b border-black/10 text-left">
+              <tr className="border-b border-border text-left">
                 <th className="p-2">Priority</th>
                 <th className="p-2">Module</th>
                 <th className="p-2">Subject</th>
@@ -740,12 +742,12 @@ export default function CurriculumClient({
         </div>
       </section>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <h2 className="text-lg font-semibold">Current Grade x Subject Counts</h2>
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full border-collapse text-sm">
             <thead>
-              <tr className="border-b border-black/10 text-left">
+              <tr className="border-b border-border text-left">
                 <th className="p-2">Grade Band</th>
                 <th className="p-2">Subject</th>
                 <th className="p-2">Lessons</th>
@@ -764,7 +766,7 @@ export default function CurriculumClient({
         </div>
       </section>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5">
+      <section className="ui-soft-card p-5">
         <h2 className="text-lg font-semibold">Top Curriculum Gaps</h2>
         <p className="mt-2 text-sm text-zinc-600">
           Ranked by missing lessons vs target ({summary.expansion.targetPerSubjectPerGrade} per
@@ -773,7 +775,7 @@ export default function CurriculumClient({
         <div className="mt-4 overflow-x-auto">
           <table className="min-w-full border-collapse text-sm">
             <thead>
-              <tr className="border-b border-black/10 text-left">
+              <tr className="border-b border-border text-left">
                 <th className="p-2">Grade Band</th>
                 <th className="p-2">Subject</th>
                 <th className="p-2">Existing</th>
@@ -798,3 +800,5 @@ export default function CurriculumClient({
     </div>
   );
 }
+
+

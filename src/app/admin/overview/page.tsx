@@ -4,8 +4,12 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { buildCurriculumBacklog, summarizeCurriculumBacklog } from "@/lib/admin/curriculum-backlog";
 import { loadCurriculumSummary } from "@/lib/admin/curriculum-summary";
+import { loadAiTutorUsageSummary } from "@/lib/admin/ai-tutor-usage";
+import { loadAiRemediationUsageSummary } from "@/lib/admin/ai-remediation-usage";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
 
 export const dynamic = "force-dynamic";
 
@@ -75,9 +79,13 @@ export default async function AdminOverviewPage() {
 
   if (!profile?.is_admin) {
     return (
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-4 px-6 py-24">
-        <h1 className="text-2xl font-semibold">Access Denied</h1>
-        <p className="text-sm text-red-600">You must be an administrator to access the overview.</p>
+      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
+        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8 text-center">
+          <h1 className="text-2xl font-semibold">Access Denied</h1>
+          <p className="mt-3 text-sm text-rose-700">
+            You must be an administrator to access the overview.
+          </p>
+        </SoftCard>
       </main>
     );
   }
@@ -105,6 +113,8 @@ export default async function AdminOverviewPage() {
     currentMonthTokensResult,
     mediaSlaSettingsResult,
     curriculumSummary,
+    aiTutorUsageSummary,
+    aiRemediationUsageSummary,
     promptPackRaw,
   ] = await Promise.all([
     admin
@@ -160,6 +170,8 @@ export default async function AdminOverviewPage() {
         "report_queue_sla_failure_24h_limit",
       ]),
     loadCurriculumSummary(projectRoot),
+    loadAiTutorUsageSummary(admin),
+    loadAiRemediationUsageSummary(admin),
     fs.readFile(promptPackPath, "utf8").catch(() => '{"totals":{"lessons":0}}'),
   ]);
 
@@ -284,6 +296,18 @@ export default async function AdminOverviewPage() {
   const curriculumBacklogSummary = summarizeCurriculumBacklog(
     buildCurriculumBacklog(curriculumSummary),
   );
+  const tutorUsageSubtext = aiTutorUsageSummary.setupRequired
+    ? (aiTutorUsageSummary.message ?? "Tutor usage tracking unavailable")
+    : `Answers ${aiTutorUsageSummary.answersToday} · active users ${aiTutorUsageSummary.activeUsersToday}${
+        aiTutorUsageSummary.dailyLimit > 0
+          ? ` · at/over limit ${aiTutorUsageSummary.usersAtOrAboveLimit}`
+          : ""
+      }${aiTutorUsageSummary.rowsTruncated ? " · sampled rows capped" : ""}`;
+  const remediationUsageSubtext = aiRemediationUsageSummary.setupRequired
+    ? (aiRemediationUsageSummary.message ?? "Worksheet usage tracking unavailable")
+    : `7d generated ${aiRemediationUsageSummary.generated7d} · 7d downloaded ${aiRemediationUsageSummary.downloaded7d} · 7d completed ${aiRemediationUsageSummary.completed7d} · today funnel ${aiRemediationUsageSummary.viewToDownloadRateToday}%->${aiRemediationUsageSummary.downloadToCompletionRateToday}% · active users ${aiRemediationUsageSummary.activeUsersToday}${
+        aiRemediationUsageSummary.rowsTruncated ? " · sampled rows capped" : ""
+      }`;
 
   const cards = [
     {
@@ -391,23 +415,58 @@ export default async function AdminOverviewPage() {
       subtext: "Lessons with generated media prompts",
       href: "/admin/media",
     },
+    {
+      title: "AI Tutor Questions (Today)",
+      value: aiTutorUsageSummary.setupRequired ? "N/A" : String(aiTutorUsageSummary.questionsToday),
+      subtext: tutorUsageSubtext,
+      href: "/api/admin/ai/tutor-usage",
+    },
+    {
+      title: "AI Worksheets (Today)",
+      value: aiRemediationUsageSummary.setupRequired ? "N/A" : String(aiRemediationUsageSummary.generatedToday),
+      subtext: remediationUsageSubtext,
+      href: "/api/admin/ai/remediation-usage",
+    },
+    {
+      title: "AI Worksheet Completion",
+      value: aiRemediationUsageSummary.setupRequired ? "N/A" : `${aiRemediationUsageSummary.completionRateToday}%`,
+      subtext: aiRemediationUsageSummary.setupRequired
+        ? (aiRemediationUsageSummary.message ?? "Worksheet funnel unavailable")
+        : `View->download ${aiRemediationUsageSummary.viewToDownloadRateToday}% · download->complete ${aiRemediationUsageSummary.downloadToCompletionRateToday}%`,
+      href: "/api/admin/ai/remediation-usage/timeseries?days=14",
+    },
+    {
+      title: "AI Worksheet Analytics Export",
+      value: aiRemediationUsageSummary.setupRequired ? "N/A" : `${aiRemediationUsageSummary.generated7d}`,
+      subtext: aiRemediationUsageSummary.setupRequired
+        ? (aiRemediationUsageSummary.message ?? "Worksheet export unavailable")
+        : "Download CSV with daily trend + top downloaded/completed lessons",
+      href: "/api/admin/ai/remediation-usage/export?days=14",
+    },
   ];
 
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-12">
-      <header>
+      <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
         <h1 className="text-3xl font-semibold tracking-tight">Admin Overview</h1>
-        <p className="mt-2 text-sm text-zinc-600">
+        <p className="mt-2 text-sm text-zinc-700">
           Operational command center for the current platform state.
         </p>
-      </header>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <ProgressChip label="Open Tickets" value={openTickets} tone={openTickets > 0 ? "warning" : "success"} />
+          <ProgressChip label="Media Backlog" value={mediaBacklogCount} tone={mediaBacklogCount >= backlogThreshold ? "warning" : "info"} />
+          <ProgressChip label="Report Backlog" value={reportBacklogCount} tone={reportBacklogCount >= reportBacklogThreshold ? "warning" : "info"} />
+          <ProgressChip label="Tutor Q Today" value={aiTutorUsageSummary.setupRequired ? "n/a" : aiTutorUsageSummary.questionsToday} tone={aiTutorUsageSummary.setupRequired ? "warning" : "info"} />
+          <ProgressChip label="Worksheets Done" value={aiRemediationUsageSummary.setupRequired ? "n/a" : aiRemediationUsageSummary.completedToday} tone={aiRemediationUsageSummary.setupRequired ? "warning" : "success"} />
+        </div>
+      </SoftCard>
 
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <Link
             key={card.title}
             href={card.href}
-            className="rounded-xl border border-black/10 bg-white p-5 shadow-sm transition hover:shadow"
+            className="ui-focus-ring ui-soft-card ui-soft-card--interactive block p-5"
           >
             <p className="text-xs uppercase tracking-wide text-zinc-500">{card.title}</p>
             <p className="mt-2 text-3xl font-bold text-zinc-900">{card.value}</p>
@@ -416,32 +475,44 @@ export default async function AdminOverviewPage() {
         ))}
       </section>
 
-      <section className="rounded-xl border border-black/10 bg-white p-5 shadow-sm">
+      <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Quick Actions</h2>
         <div className="mt-3 flex flex-wrap gap-2 text-sm">
-          <Link href="/admin/alerts" className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5">
+          <Link href="/admin/alerts" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
             Review Alerts
           </Link>
-          <Link href="/admin/media" className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5">
+          <Link href="/admin/media" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
             Process Media Queue
           </Link>
-          <Link href="/admin/curriculum" className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5">
+          <Link href="/admin/curriculum" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
             Review Curriculum Backlog
           </Link>
-          <Link href="/api/admin/curriculum/backlog" className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5">
+          <Link href="/api/admin/curriculum/backlog" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
             Export Backlog CSV
           </Link>
-          <Link href="/api/admin/curriculum/backlog?format=json&limit=1000" className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5">
+          <Link href="/api/admin/curriculum/backlog?format=json&limit=1000" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
             Open Backlog JSON
           </Link>
-          <Link href="/admin/compliance" className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5">
+          <Link href="/admin/compliance" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
             Review DSAR/Compliance
           </Link>
-          <Link href="/admin/reports" className="rounded-md border border-black/15 px-3 py-2 hover:bg-black/5">
+          <Link href="/admin/reports" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
             Export Reports
           </Link>
+          <Link href="/api/admin/ai/tutor-usage" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
+            View AI Tutor Usage
+          </Link>
+          <Link href="/api/admin/ai/remediation-usage" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
+            View Worksheet Usage
+          </Link>
+          <Link href="/api/admin/ai/remediation-usage/timeseries?days=14" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
+            View Worksheet Timeseries
+          </Link>
+          <Link href="/api/admin/ai/remediation-usage/export?days=14" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
+            Export Worksheet Analytics CSV
+          </Link>
         </div>
-      </section>
+      </SoftCard>
     </main>
   );
 }

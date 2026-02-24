@@ -1,13 +1,177 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 
-import { useEffect, useRef, useState } from "react";
-import type { Lesson, Question } from "@/lib/data/curriculum";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { Lesson, Question } from "@/lib/modules/types";
 import { trackLessonCompleted } from "@/lib/analytics/mixpanel";
+import { trackLearningEvent } from "@/lib/analytics/xapi-lite";
 import { deleteSyncedProgress, saveOfflineProgress } from "@/lib/offline/progress-db";
+import type { ExamSection } from "@/lib/exam/tracks";
+import { getExamTrackProfileByModuleId } from "@/lib/exam/tracks";
 import Link from "next/link";
 
-export default function Quiz({ lesson }: { lesson: Lesson & { questions: Question[] } }) {
+function queueExamErrorLog(payload: {
+  moduleId: string;
+  lessonId: string;
+  questionId: string;
+  skillId?: string;
+  errorType: "incorrect_answer" | "timed_out" | "strategy_gap" | "careless_mistake" | "concept_gap";
+  selectedOptionId?: string;
+  correctOptionId?: string;
+  questionText?: string;
+  metadata?: Record<string, string | number | boolean | null | Array<string | number | boolean | null>>;
+}) {
+  fetch("/api/exam/error-log", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(payload),
+  }).catch((error) => {
+    console.error("Failed to save exam error log item.", error);
+  });
+}
+
+type DrillMode = "untimed" | "paced" | "section_sprint";
+
+function normalizeForMatch(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function pickBestSectionForLesson(lessonTitle: string, sections: ExamSection[]): ExamSection | null {
+  if (sections.length === 0) {
+    return null;
+  }
+
+  const normalizedTitle = normalizeForMatch(lessonTitle);
+  const titleTokens = new Set(normalizedTitle.split(" ").filter((token) => token.length > 2));
+
+  let bestSection: ExamSection | null = null;
+  let bestScore = Number.NEGATIVE_INFINITY;
+
+  for (const section of sections) {
+    const sectionTitle = normalizeForMatch(section.title);
+    const sectionFocus = normalizeForMatch(section.focus);
+    const sectionId = normalizeForMatch(section.id);
+    const combined = `${sectionTitle} ${sectionFocus} ${sectionId}`;
+    const combinedTokens = new Set(combined.split(" ").filter((token) => token.length > 2));
+
+    let score = 0;
+    for (const token of titleTokens) {
+      if (combinedTokens.has(token)) {
+        score += 1;
+      }
+    }
+
+    if (normalizedTitle.includes(sectionTitle) && sectionTitle.length > 0) {
+      score += 4;
+    }
+    if (normalizedTitle.includes(sectionId) && sectionId.length > 0) {
+      score += 3;
+    }
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestSection = section;
+    }
+  }
+
+  return bestSection ?? sections[0] ?? null;
+}
+
+function deriveSectionSprintMinutes(params: {
+  section: ExamSection | null;
+  questionCount: number;
+  fallbackMinutes: number | null;
+}) {
+  const { section, questionCount, fallbackMinutes } = params;
+  if (!section || !section.durationMinutes || section.durationMinutes <= 0) {
+    return fallbackMinutes;
+  }
+
+  if (!section.questionCount || section.questionCount <= 0) {
+    return Math.max(3, Math.round(section.durationMinutes * 0.4));
+  }
+
+  const pacePerQuestion = section.durationMinutes / section.questionCount;
+  const projectedMinutes = pacePerQuestion * Math.max(questionCount, 1);
+  const boundedMinutes = Math.min(Math.max(Math.round(projectedMinutes), 3), section.durationMinutes);
+
+  return boundedMinutes;
+}
+
+function formatMinutes(minutes: number | null) {
+  if (!minutes || minutes <= 0) return null;
+  return `${minutes}m`;
+}
+
+export default function Quiz({
+  moduleId,
+  lesson,
+}: {
+  moduleId: string;
+  lesson: Lesson & { questions: Question[] };
+}) {
+  const baseTimeLimitMinutes =
+    typeof lesson.quizBlueprint?.timeLimitMinutes === "number" && lesson.quizBlueprint.timeLimitMinutes > 0
+      ? lesson.quizBlueprint.timeLimitMinutes
+      : null;
+  const examTrackProfile = useMemo(() => getExamTrackProfileByModuleId(moduleId), [moduleId]);
+  const matchedSection = useMemo(
+    () => pickBestSectionForLesson(lesson.title, examTrackProfile?.sectionOrder ?? []),
+    [examTrackProfile?.sectionOrder, lesson.title],
+  );
+  const sectionSprintMinutes = useMemo(
+    () =>
+      deriveSectionSprintMinutes({
+        section: matchedSection,
+        questionCount: lesson.questions.length,
+        fallbackMinutes: baseTimeLimitMinutes,
+      }),
+    [baseTimeLimitMinutes, lesson.questions.length, matchedSection],
+  );
+  const isExamDrillLesson = typeof lesson.metadata?.examDrill === "string" && lesson.metadata.examDrill.length > 0;
+
+  const availableDrillModes = useMemo(() => {
+    const modes: DrillMode[] = ["untimed"];
+    if (baseTimeLimitMinutes) {
+      modes.push("paced");
+    }
+    if (sectionSprintMinutes && sectionSprintMinutes > 0) {
+      modes.push("section_sprint");
+    }
+    return modes;
+  }, [baseTimeLimitMinutes, sectionSprintMinutes]);
+
+  const recommendedDrillMode: DrillMode = useMemo(() => {
+    if (isExamDrillLesson && availableDrillModes.includes("section_sprint")) {
+      return "section_sprint";
+    }
+    if (availableDrillModes.includes("paced")) {
+      return "paced";
+    }
+    return "untimed";
+  }, [availableDrillModes, isExamDrillLesson]);
+
+  const [drillMode, setDrillMode] = useState<DrillMode>(recommendedDrillMode);
+  const getTimeLimitForMode = (mode: DrillMode) => {
+    if (mode === "paced") {
+      return baseTimeLimitMinutes;
+    }
+    if (mode === "section_sprint") {
+      return sectionSprintMinutes;
+    }
+    return null;
+  };
+  const activeTimeLimitMinutes = getTimeLimitForMode(drillMode);
+  const initialRemainingSeconds = activeTimeLimitMinutes
+    ? Math.round(activeTimeLimitMinutes * 60)
+    : null;
+
   const [startTime, setStartTime] = useState(() => Date.now());
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
@@ -17,6 +181,8 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [lastAnswerCorrect, setLastAnswerCorrect] = useState<boolean | null>(null);
+  const [remainingSeconds, setRemainingSeconds] = useState<number | null>(() => initialRemainingSeconds);
+  const [timedOut, setTimedOut] = useState(false);
   const [progressSyncState, setProgressSyncState] = useState<"idle" | "syncing" | "synced" | "queued">("idle");
   const completionPersistedRef = useRef(false);
 
@@ -27,18 +193,123 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
     scorePercent >= 90 ? "A" : scorePercent >= 80 ? "B" : scorePercent >= 70 ? "C" : scorePercent >= 60 ? "D" : "F";
 
   useEffect(() => {
+    setDrillMode(recommendedDrillMode);
+  }, [lesson.id, recommendedDrillMode]);
+
+  useEffect(() => {
+    void trackLearningEvent({
+      eventType: "activity_interacted",
+      moduleId,
+      lessonId: lesson.id,
+      payload: {
+        action: "quiz_drill_mode_selected",
+        drillMode,
+        timeLimitMinutes: activeTimeLimitMinutes ?? 0,
+        examDrillLesson: isExamDrillLesson,
+      },
+    });
+  }, [activeTimeLimitMinutes, drillMode, isExamDrillLesson, lesson.id, moduleId]);
+
+  useEffect(() => {
+    setRemainingSeconds(initialRemainingSeconds);
+    setTimedOut(false);
+  }, [initialRemainingSeconds, lesson.id]);
+
+  useEffect(() => {
+    if (remainingSeconds === null || isQuizFinished) {
+      return;
+    }
+
+    const timerId = window.setInterval(() => {
+      setRemainingSeconds((previous) => {
+        if (previous === null) return previous;
+        return Math.max(previous - 1, 0);
+      });
+    }, 1000);
+
+    return () => window.clearInterval(timerId);
+  }, [isQuizFinished, remainingSeconds]);
+
+  useEffect(() => {
+    if (remainingSeconds !== 0 || isQuizFinished) {
+      return;
+    }
+
+    setTimedOut(true);
+    setIsAnswered(false);
+    setSelectedOptionId(null);
+    setShowHint(false);
+    setCurrentQuestionIndex(lesson.questions.length);
+
+    void trackLearningEvent({
+      eventType: "activity_interacted",
+      moduleId,
+      lessonId: lesson.id,
+      payload: {
+        action: "quiz_time_expired",
+        drillMode,
+        timeLimitMinutes: activeTimeLimitMinutes ?? 0,
+        scoreSoFar: score,
+        answeredQuestions: currentQuestionIndex,
+        totalQuestions: lesson.questions.length,
+      },
+    });
+
+    queueExamErrorLog({
+      moduleId,
+      lessonId: lesson.id,
+      questionId: `${lesson.id}-timed-out-${Date.now()}`,
+      errorType: "timed_out",
+      questionText: "Timed quiz attempt expired before all questions were answered.",
+      metadata: {
+        drillMode,
+        timeLimitMinutes: activeTimeLimitMinutes ?? 0,
+        scoreSoFar: score,
+        answeredQuestions: currentQuestionIndex,
+        totalQuestions: lesson.questions.length,
+      },
+    });
+  }, [
+    activeTimeLimitMinutes,
+    currentQuestionIndex,
+    drillMode,
+    isQuizFinished,
+    lesson.id,
+    lesson.questions.length,
+    moduleId,
+    remainingSeconds,
+    score,
+  ]);
+
+  useEffect(() => {
     if (!isQuizFinished || completionPersistedRef.current) {
       return;
     }
 
     completionPersistedRef.current = true;
     const completedAt = new Date().toISOString();
+    const timeSpentSeconds = Math.round((Date.now() - startTime) / 1000);
 
-    // Track analytics for the whole lesson completion.
+    void trackLearningEvent({
+      eventType: "lesson_completed",
+      moduleId,
+      lessonId: lesson.id,
+      payload: {
+        score,
+        totalQuestions: lesson.questions.length,
+        masteryPercentage: scorePercent,
+        bestStreak,
+        timeSpentSeconds,
+        completionSource: "quiz",
+        drillMode,
+        timeLimitMinutes: activeTimeLimitMinutes ?? 0,
+      },
+    });
+
     trackLessonCompleted({
       lessonId: lesson.id,
       score,
-      timeSpentSeconds: Math.round((Date.now() - startTime) / 1000),
+      timeSpentSeconds,
     });
 
     const syncProgress = async () => {
@@ -79,7 +350,49 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
     };
 
     void syncProgress();
-  }, [isQuizFinished, lesson.id, lesson.questions.length, score, startTime]);
+  }, [
+    activeTimeLimitMinutes,
+    bestStreak,
+    drillMode,
+    isQuizFinished,
+    lesson.id,
+    lesson.questions.length,
+    moduleId,
+    score,
+    scorePercent,
+    startTime,
+  ]);
+
+  const formatDrillModeLabel = (mode: DrillMode) => {
+    if (mode === "untimed") return "Untimed Review";
+    if (mode === "paced") return `Paced Drill${formatMinutes(baseTimeLimitMinutes) ? ` (${formatMinutes(baseTimeLimitMinutes)})` : ""}`;
+    return `Section Sprint${formatMinutes(sectionSprintMinutes) ? ` (${formatMinutes(sectionSprintMinutes)})` : ""}`;
+  };
+
+  const resetAttempt = (nextMode: DrillMode) => {
+    setCurrentQuestionIndex(0);
+    setScore(0);
+    setStreak(0);
+    setBestStreak(0);
+    setLastAnswerCorrect(null);
+    setIsAnswered(false);
+    setShowHint(false);
+    setSelectedOptionId(null);
+    setProgressSyncState("idle");
+    setStartTime(Date.now());
+    const nextTimeLimitMinutes = getTimeLimitForMode(nextMode);
+    setRemainingSeconds(nextTimeLimitMinutes ? Math.round(nextTimeLimitMinutes * 60) : null);
+    setTimedOut(false);
+    completionPersistedRef.current = false;
+  };
+
+  const handleDrillModeChange = (nextMode: DrillMode) => {
+    if (nextMode === drillMode) {
+      return;
+    }
+    setDrillMode(nextMode);
+    resetAttempt(nextMode);
+  };
 
   const handleOptionSelect = (optionId: string) => {
     if (isAnswered) return;
@@ -103,6 +416,23 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
     setLastAnswerCorrect(isCorrect);
     setIsAnswered(true);
 
+    void trackLearningEvent({
+      eventType: "quiz_answered",
+      moduleId,
+      lessonId: lesson.id,
+      payload: {
+        questionId: currentQuestion.id,
+        skillId: currentQuestion.skillId,
+        questionIndex: currentQuestionIndex + 1,
+        totalQuestions: lesson.questions.length,
+        selectedOptionId,
+        correctOptionId: currentQuestion.correctOptionId,
+        isCorrect,
+        drillMode,
+        timeLimitMinutes: activeTimeLimitMinutes ?? 0,
+      },
+    });
+
     // Don't wait for the API call to finish to keep the UI snappy
     fetch("/api/answers", {
       method: "POST",
@@ -119,6 +449,25 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
       // For now, we just log it.
       console.error("Failed to save answer to server.", error);
     });
+
+    if (!isCorrect) {
+      queueExamErrorLog({
+        moduleId,
+        lessonId: lesson.id,
+        questionId: currentQuestion.id,
+        skillId: currentQuestion.skillId,
+        errorType: "incorrect_answer",
+        selectedOptionId,
+        correctOptionId: currentQuestion.correctOptionId,
+        questionText: currentQuestion.text,
+        metadata: {
+          drillMode,
+          timeLimitMinutes: activeTimeLimitMinutes ?? 0,
+          questionIndex: currentQuestionIndex + 1,
+          totalQuestions: lesson.questions.length,
+        },
+      });
+    }
   };
 
   const handleNext = () => {
@@ -130,17 +479,7 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
   };
 
   const handleRestart = () => {
-    setCurrentQuestionIndex(0);
-    setScore(0);
-    setStreak(0);
-    setBestStreak(0);
-    setLastAnswerCorrect(null);
-    setIsAnswered(false);
-    setShowHint(false);
-    setSelectedOptionId(null);
-    setProgressSyncState("idle");
-    setStartTime(Date.now());
-    completionPersistedRef.current = false;
+    resetAttempt(drillMode);
   };
 
   const progressPercent = Math.round((currentQuestionIndex / lesson.questions.length) * 100);
@@ -151,6 +490,10 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
       : scorePercent >= 70
         ? "Great effort! You are building strong skills every step."
         : "Nice try! Practice one more round to power up your skills.";
+  const formattedRemainingTime =
+    remainingSeconds === null
+      ? null
+      : `${String(Math.floor(remainingSeconds / 60)).padStart(2, "0")}:${String(remainingSeconds % 60).padStart(2, "0")}`;
 
   if (isQuizFinished) {
     return (
@@ -162,7 +505,7 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
           <div className="absolute bottom-14 right-12 h-4 w-4 animate-bounce rounded-full bg-danger" />
         </div>
         <div className="relative flex flex-col items-center gap-4 text-center">
-          <p className="text-xs font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-300">Adventure Complete</p>
+          <p className="text-xs font-semibold uppercase tracking-wide text-zinc-600">Adventure Complete</p>
           <h2 className="text-3xl font-extrabold">You did it! 🎉</h2>
           <div className="flex items-center gap-2 text-3xl" aria-label={`${starsEarned} stars earned`}>
             {Array.from({ length: 3 }).map((_, index) => (
@@ -171,7 +514,15 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
               </span>
             ))}
           </div>
-          <p className="max-w-xl text-sm text-zinc-700 dark:text-zinc-300">{encouragement}</p>
+          {timedOut ? (
+            <p className="rounded-xl border border-amber-300 bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-800">
+              Time expired before all questions were answered.
+            </p>
+          ) : null}
+          <p className="rounded-xl border border-indigo-200 bg-indigo-50 px-3 py-2 text-xs font-semibold text-indigo-800">
+            Mode: {formatDrillModeLabel(drillMode)}
+          </p>
+          <p className="max-w-xl text-sm text-zinc-700">{encouragement}</p>
           <div className="grid w-full max-w-md grid-cols-2 gap-3 text-left">
             <article className="rounded-xl border border-border bg-surface-muted p-3">
               <p className="text-xs uppercase text-zinc-500">Points</p>
@@ -198,22 +549,25 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
           <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={handleRestart}
-              className="rounded-full bg-accent px-6 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+              className="ui-soft-button ui-focus-ring min-h-11 rounded-full bg-accent px-6 py-2 text-sm font-semibold text-white transition hover:opacity-90"
             >
               Play Again
             </button>
-            <Link href="/dashboard" className="rounded-full border border-border bg-surface-muted px-6 py-2 text-sm font-semibold">
+            <Link href="/dashboard" className="ui-soft-button ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-border bg-surface-muted px-6 py-2 text-sm font-semibold">
               Next Lesson
+            </Link>
+            <Link href="/exam-prep/error-log" className="ui-soft-button ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-border bg-surface-muted px-6 py-2 text-sm font-semibold">
+              Review Error Logbook
             </Link>
           </div>
           {progressSyncState === "syncing" ? (
-            <p className="text-xs text-zinc-500">Saving your learning progress...</p>
+            <p role="status" className="text-xs text-zinc-500">Saving your learning progress...</p>
           ) : null}
           {progressSyncState === "synced" ? (
-            <p className="text-xs text-emerald-700 dark:text-emerald-300">Progress saved to your account.</p>
+            <p role="status" className="text-xs text-emerald-700">Progress saved to your account.</p>
           ) : null}
           {progressSyncState === "queued" ? (
-            <p className="text-xs text-amber-700 dark:text-amber-300">
+            <p role="status" className="text-xs text-amber-700">
               Progress saved offline and will sync when your connection is restored.
             </p>
           ) : null}
@@ -224,21 +578,69 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
 
   return (
     <div className="space-y-5 rounded-3xl border border-border bg-surface p-4 shadow-sm sm:p-6">
+      {availableDrillModes.length > 1 || isExamDrillLesson ? (
+        <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
+          <p className="text-xs font-semibold uppercase tracking-wide text-indigo-700">Drill Mode</p>
+          <p className="mt-1 text-sm text-indigo-900">
+            {isExamDrillLesson
+              ? "This quiz is configured as an exam drill. Pick your timing mode."
+              : "Pick the timing mode that matches your current goal."}
+          </p>
+          {matchedSection ? (
+            <p className="mt-1 text-xs text-indigo-700">
+              Target section: {matchedSection.title}
+              {matchedSection.durationMinutes ? ` (${matchedSection.durationMinutes}m)` : ""}
+            </p>
+          ) : null}
+          <div className="mt-3 flex flex-wrap gap-2">
+            {availableDrillModes.map((mode) => {
+              const selected = mode === drillMode;
+              return (
+                <button
+                  key={mode}
+                  type="button"
+                  onClick={() => handleDrillModeChange(mode)}
+                  className={`ui-soft-button ui-focus-ring min-h-11 rounded-full border px-4 py-2 text-xs font-semibold ${
+                    selected
+                      ? "border-indigo-400 bg-indigo-600 text-white"
+                      : "border-indigo-200 bg-white text-indigo-800 hover:bg-indigo-100"
+                  }`}
+                >
+                  {formatDrillModeLabel(mode)}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+
       <div className="rounded-2xl border border-border bg-surface-muted p-4">
-        <div className="mb-2 flex items-center justify-between text-sm font-semibold">
+        <div className="mb-2 flex flex-wrap items-center justify-between gap-2 text-sm font-semibold">
           <span>Question {currentQuestionIndex + 1} of {lesson.questions.length}</span>
-          <span>{progressPercent}%</span>
+          <div className="flex items-center gap-3">
+            {formattedRemainingTime !== null ? (
+              <span className="rounded-full border border-amber-300 bg-amber-50 px-2 py-1 text-xs font-semibold text-amber-800">
+                Time {formattedRemainingTime}
+              </span>
+            ) : null}
+            <span>{progressPercent}%</span>
+          </div>
         </div>
-        <div className="h-3 overflow-hidden rounded-full bg-white/70 dark:bg-black/30">
-          <div className="h-full rounded-full bg-accent transition-all" style={{ width: `${progressPercent}%` }} />
-        </div>
+        <progress
+          className="ui-progress ui-progress--accent mt-2 h-3 w-full"
+          value={progressPercent}
+          max={100}
+          aria-label="Quiz progress"
+        />
       </div>
 
       {isAnswered && lastAnswerCorrect !== null ? (
         <div
+          role="status"
+          aria-live="polite"
           className={`rounded-2xl border p-3 text-sm font-semibold ${lastAnswerCorrect
-            ? "border-emerald-300 bg-emerald-50 text-emerald-800 dark:border-emerald-600/40 dark:bg-emerald-900/25 dark:text-emerald-200"
-            : "border-amber-300 bg-amber-50 text-amber-800 dark:border-amber-600/40 dark:bg-amber-900/25 dark:text-amber-200"
+            ? "border-emerald-300 bg-emerald-50 text-emerald-800"
+            : "border-amber-300 bg-amber-50 text-amber-800"
           }`}
         >
           {lastAnswerCorrect ? "Great job! That is correct. 🌟" : "Nice effort. Let's learn from this one and keep going. 💪"}
@@ -246,39 +648,39 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
       ) : null}
 
       {isAnswered && currentQuestion.explanation ? (
-        <div className="rounded-2xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-900 dark:border-sky-700/40 dark:bg-sky-900/25 dark:text-sky-100">
+        <div className="rounded-2xl border border-sky-300 bg-sky-50 p-3 text-sm text-sky-900">
           <p className="text-xs font-semibold uppercase tracking-wide">Why this answer works</p>
           <p className="mt-1">{currentQuestion.explanation}</p>
         </div>
       ) : null}
 
-      <article className="rounded-2xl border border-border bg-[var(--gradient-hero)] p-5">
+      <article className="rounded-2xl border border-border bg-(--gradient-hero) p-5">
         <h2 className="text-xl font-extrabold sm:text-2xl">{currentQuestion.text}</h2>
         {currentQuestion.imageUrl ? (
           <img
             src={currentQuestion.imageUrl}
             alt={currentQuestion.imageAlt ?? `${currentQuestion.text} visual aid`}
-            className="mt-3 w-full rounded-xl border border-black/10 bg-white object-cover"
+            className="mt-3 w-full rounded-xl border border-border bg-surface object-cover"
             loading="lazy"
           />
         ) : null}
       </article>
 
       {!isAnswered && currentQuestion.hint ? (
-        <div className="rounded-2xl border border-amber-300 bg-amber-50 p-3 dark:border-amber-600/40 dark:bg-amber-900/20">
+        <div className="rounded-2xl border border-amber-300 bg-amber-50 p-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="text-xs font-semibold uppercase tracking-wide text-amber-800 dark:text-amber-200">
+            <p className="text-xs font-semibold uppercase tracking-wide text-amber-800">
               Hint
             </p>
             <button
               type="button"
               onClick={() => setShowHint((previous) => !previous)}
-              className="rounded-full border border-amber-300 bg-white px-3 py-1 text-xs font-semibold text-amber-700 dark:border-amber-500/50 dark:bg-transparent dark:text-amber-200"
+              className="ui-soft-button ui-focus-ring rounded-full border border-amber-300 bg-white px-3 py-1 text-xs font-semibold text-amber-700"
             >
               {showHint ? "Hide Hint" : "Show Hint"}
             </button>
           </div>
-          {showHint ? <p className="mt-2 text-sm text-amber-900 dark:text-amber-100">{currentQuestion.hint}</p> : null}
+          {showHint ? <p className="mt-2 text-sm text-amber-900">{currentQuestion.hint}</p> : null}
         </div>
       ) : null}
 
@@ -288,17 +690,17 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
           const isCorrect = currentQuestion.correctOptionId === option.id;
 
           let optionClass =
-            "cursor-pointer rounded-2xl border p-4 text-left text-base font-semibold transition sm:p-5 ";
+            "lesson-quiz-option ui-focus-ring cursor-pointer rounded-2xl border p-4 text-left text-base font-semibold sm:p-5 ";
           if (isAnswered) {
             if (isCorrect) {
-              optionClass += "border-green-500 bg-green-100 dark:bg-green-900/50";
+              optionClass += "is-correct border-green-500 bg-green-100";
             } else if (isSelected) {
-              optionClass += "border-red-500 bg-red-100 dark:bg-red-900/50";
+              optionClass += "is-wrong border-red-500 bg-red-100";
             } else {
               optionClass += "border-border bg-surface";
             }
           } else if (isSelected) {
-            optionClass += "border-accent bg-surface-muted";
+            optionClass += "is-selected border-accent bg-surface-muted";
           } else {
             optionClass += "border-border bg-surface hover:bg-surface-muted";
           }
@@ -311,7 +713,7 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
               className={optionClass}
             >
               <span className="flex items-start gap-2">
-                <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black/5 text-sm dark:bg-white/10">
+                <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-black/5 text-sm">
                   {option.id.toUpperCase()}
                 </span>
                 <span className="flex-1">
@@ -320,7 +722,7 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
                     <img
                       src={option.imageUrl}
                       alt={option.imageAlt ?? `Option ${option.id.toUpperCase()} image`}
-                      className="mt-2 w-full rounded-lg border border-black/10 bg-white object-cover"
+                      className="mt-2 w-full rounded-lg border border-border bg-surface object-cover"
                       loading="lazy"
                     />
                   ) : null}
@@ -337,7 +739,7 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
         {isAnswered ? (
           <button
             onClick={handleNext}
-            className="rounded-full bg-accent px-6 py-2 text-sm font-semibold text-white hover:opacity-90"
+            className="ui-soft-button ui-focus-ring min-h-11 rounded-full bg-accent px-6 py-2 text-sm font-semibold text-white hover:opacity-90"
           >
             Next
           </button>
@@ -345,7 +747,7 @@ export default function Quiz({ lesson }: { lesson: Lesson & { questions: Questio
           <button
             onClick={handleSubmit}
             disabled={selectedOptionId === null}
-            className="rounded-full bg-accent px-6 py-2 text-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+            className="ui-soft-button ui-focus-ring min-h-11 rounded-full bg-accent px-6 py-2 text-sm font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
           >
             Submit
           </button>

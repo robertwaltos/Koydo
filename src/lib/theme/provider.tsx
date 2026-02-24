@@ -67,6 +67,13 @@ function resolveTheme(mode: ThemeMode): ThemeResolved {
   return "light";
 }
 
+function resolveMotionDatasetValue() {
+  if (typeof window === "undefined") {
+    return "standard";
+  }
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "reduced" : "standard";
+}
+
 function applyTheme(
   theme: ThemeResolved,
   mode: ThemeMode,
@@ -78,7 +85,7 @@ function applyTheme(
   document.documentElement.dataset.theme = theme;
   document.documentElement.dataset.themeMode = mode;
   document.documentElement.dataset.themePack = pack;
-  document.documentElement.dataset.motion = "standard";
+  document.documentElement.dataset.motion = resolveMotionDatasetValue();
   document.documentElement.dataset.contrast = "standard";
   document.documentElement.style.colorScheme = theme;
 }
@@ -148,6 +155,24 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     window.localStorage.setItem(MODE_STORAGE_KEY, themeMode);
     window.localStorage.setItem(PACK_STORAGE_KEY, themePack);
     applyTheme(resolveTheme(themeMode), themeMode, themePack);
+  }, [themeMode, themePack]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncMotionPreference = () => {
+      applyTheme(resolveTheme(themeMode), themeMode, themePack);
+    };
+
+    syncMotionPreference();
+    mediaQuery.addEventListener("change", syncMotionPreference);
+
+    return () => {
+      mediaQuery.removeEventListener("change", syncMotionPreference);
+    };
   }, [themeMode, themePack]);
 
   const value = useMemo(

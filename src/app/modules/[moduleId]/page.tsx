@@ -3,6 +3,8 @@ import { notFound, redirect } from "next/navigation";
 import { getLearningModuleByLookupKey } from "@/lib/modules";
 import ModuleCoverImage from "@/app/components/module-cover-image";
 import { toLessonPath, toModulePath } from "@/lib/routing/paths";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
 
 export default function ModuleDetailsPage({
   params,
@@ -36,29 +38,29 @@ async function ModuleDetailsPageContent({
         </Link>
         <h1 className="text-3xl font-semibold tracking-tight">{learningModule.title}</h1>
         <p className="text-sm text-zinc-700">{learningModule.description}</p>
-        <p className="text-xs text-zinc-500">
-          Subject: {learningModule.subject}
-          {learningModule.version ? ` | Version: ${learningModule.version}` : ""}
-        </p>
+        <div className="flex flex-wrap items-center gap-2">
+          <ProgressChip label="Subject" value={learningModule.subject} tone="info" />
+          {learningModule.version ? <ProgressChip label="Version" value={learningModule.version} /> : null}
+        </div>
       </header>
 
-      <section className="overflow-hidden rounded-2xl border border-sky-200 bg-white p-3 shadow-sm">
+      <SoftCard as="section" className="overflow-hidden border-sky-200 p-3">
         <ModuleCoverImage
           moduleId={learningModule.id}
           moduleTitle={learningModule.title}
           fallbackSrc={learningModule.thumbnail}
           className="h-56 w-full rounded-xl object-cover"
         />
-      </section>
+      </SoftCard>
 
-      <section className="rounded-2xl border border-emerald-200 bg-white p-5 shadow-sm">
+      <SoftCard as="section" className="border-emerald-200 p-5">
         <h2 className="text-lg font-semibold">Lessons</h2>
         <ul className="mt-3 space-y-2">
           {learningModule.lessons.map((lesson) => (
             <li key={lesson.id}>
               <Link
                 href={toLessonPath(lesson.id)}
-                className="flex items-center justify-between rounded-md border border-emerald-200 px-3 py-2 text-sm hover:bg-emerald-50"
+                className="ui-soft-button ui-focus-ring flex min-h-11 items-center justify-between rounded-2xl border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm hover:bg-emerald-100"
               >
                 <span>{lesson.title}</span>
                 <span className="text-xs text-zinc-500">{lesson.duration} min</span>
@@ -66,7 +68,7 @@ async function ModuleDetailsPageContent({
             </li>
           ))}
         </ul>
-      </section>
+      </SoftCard>
     </main>
   );
 }

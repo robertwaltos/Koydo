@@ -41,6 +41,28 @@ export const PreKBasicMath101Module: LearningModule = {
           "Teach one new word from this lesson to a grown-up."
         ]
       },
+      interactiveActivities: [
+        {
+          id: "pre-k-basic-math-101-l02-ia1",
+          type: "drag_and_drop",
+          title: "Learning Steps Game",
+          description: "Drag each idea to the right step.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            targets: [
+              { id: "plan", label: "Plan" },
+              { id: "play", label: "Play" },
+              { id: "share", label: "Share" }
+            ],
+            draggables: [
+              { id: "d1", label: "Say what we will learn about counting", correctTargetId: "plan" },
+              { id: "d2", label: "Try the activity with a helper", correctTargetId: "play" },
+              { id: "d3", label: "Tell someone one thing you learned", correctTargetId: "share" }
+            ]
+          }
+        }
+      ],
       learningAids: [
         { id: "pre-k-basic-math-101-l02-a1", type: "practice", title: "Play Activity", content: "Guided hands-on practice for counting with caregiver support." }
       ]
@@ -100,6 +122,44 @@ export const PreKBasicMath101Module: LearningModule = {
           correctOptionId: "a"
         }
       ],
+      interactiveActivities: [
+        {
+          id: "pre-k-basic-math-101-l03-ia1",
+          type: "matching_pairs",
+          title: "Match and Learn",
+          description: "Match each learning clue to the best action.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            left: [
+              { id: "l1", label: "I forgot counting" },
+              { id: "l2", label: "I am unsure about shape patterns" },
+              { id: "l3", label: "I need to remember counting, shapes, and number play" }
+            ],
+            right: [
+              { id: "r1", label: "Look at one example and say it out loud" },
+              { id: "r2", label: "Use step-by-step practice with help" },
+              { id: "r3", label: "Do a quick review game before trying again" }
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" }
+            ]
+          }
+        }
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 10,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2] }],
+        difficultyDistribution: { easy: 2, medium: 2, hard: 0 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.7
+      },
       learningAids: [
         { id: "pre-k-basic-math-101-l03-a1", type: "mnemonic", title: "Remembering Phrase", content: "Think, Try, Explain for every counting, shapes, and number play challenge." }
       ]
@@ -126,6 +186,28 @@ export const PreKBasicMath101Module: LearningModule = {
           "Teach one new word from this lesson to a grown-up."
         ]
       },
+      interactiveActivities: [
+        {
+          id: "pre-k-basic-math-101-l05-ia1",
+          type: "drag_and_drop",
+          title: "Learning Steps Game",
+          description: "Drag each idea to the right step.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            targets: [
+              { id: "plan", label: "Plan" },
+              { id: "play", label: "Play" },
+              { id: "share", label: "Share" }
+            ],
+            draggables: [
+              { id: "d1", label: "Say what we will learn about shape patterns", correctTargetId: "plan" },
+              { id: "d2", label: "Try the activity with a helper", correctTargetId: "play" },
+              { id: "d3", label: "Tell someone one thing you learned", correctTargetId: "share" }
+            ]
+          }
+        }
+      ],
       learningAids: [
         { id: "pre-k-basic-math-101-l05-a1", type: "practice", title: "Play Activity", content: "Guided hands-on practice for shape patterns with caregiver support." }
       ]
@@ -185,6 +267,44 @@ export const PreKBasicMath101Module: LearningModule = {
           correctOptionId: "a"
         }
       ],
+      interactiveActivities: [
+        {
+          id: "pre-k-basic-math-101-l06-ia1",
+          type: "matching_pairs",
+          title: "Match and Learn",
+          description: "Match each learning clue to the best action.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            left: [
+              { id: "l1", label: "I forgot counting" },
+              { id: "l2", label: "I am unsure about shape patterns" },
+              { id: "l3", label: "I need to remember counting, shapes, and number play" }
+            ],
+            right: [
+              { id: "r1", label: "Look at one example and say it out loud" },
+              { id: "r2", label: "Use step-by-step practice with help" },
+              { id: "r3", label: "Do a quick review game before trying again" }
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" }
+            ]
+          }
+        }
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 10,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2] }],
+        difficultyDistribution: { easy: 2, medium: 2, hard: 0 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.7
+      },
       learningAids: [
         { id: "pre-k-basic-math-101-l06-a1", type: "mnemonic", title: "Remembering Phrase", content: "Think, Try, Explain for every counting, shapes, and number play challenge." }
       ]
@@ -211,6 +331,28 @@ export const PreKBasicMath101Module: LearningModule = {
           "Teach one new word from this lesson to a grown-up."
         ]
       },
+      interactiveActivities: [
+        {
+          id: "pre-k-basic-math-101-l08-ia1",
+          type: "drag_and_drop",
+          title: "Learning Steps Game",
+          description: "Drag each idea to the right step.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            targets: [
+              { id: "plan", label: "Plan" },
+              { id: "play", label: "Play" },
+              { id: "share", label: "Share" }
+            ],
+            draggables: [
+              { id: "d1", label: "Say what we will learn about counting", correctTargetId: "plan" },
+              { id: "d2", label: "Try the activity with a helper", correctTargetId: "play" },
+              { id: "d3", label: "Tell someone one thing you learned", correctTargetId: "share" }
+            ]
+          }
+        }
+      ],
       learningAids: [
         { id: "pre-k-basic-math-101-l08-a1", type: "practice", title: "Play Activity", content: "Guided hands-on practice for counting with caregiver support." }
       ]
@@ -270,6 +412,44 @@ export const PreKBasicMath101Module: LearningModule = {
           correctOptionId: "a"
         }
       ],
+      interactiveActivities: [
+        {
+          id: "pre-k-basic-math-101-l09-ia1",
+          type: "matching_pairs",
+          title: "Match and Learn",
+          description: "Match each learning clue to the best action.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            left: [
+              { id: "l1", label: "I forgot counting" },
+              { id: "l2", label: "I am unsure about shape patterns" },
+              { id: "l3", label: "I need to remember counting, shapes, and number play" }
+            ],
+            right: [
+              { id: "r1", label: "Look at one example and say it out loud" },
+              { id: "r2", label: "Use step-by-step practice with help" },
+              { id: "r3", label: "Do a quick review game before trying again" }
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" }
+            ]
+          }
+        }
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 10,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2] }],
+        difficultyDistribution: { easy: 2, medium: 2, hard: 0 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.7
+      },
       learningAids: [
         { id: "pre-k-basic-math-101-l09-a1", type: "mnemonic", title: "Remembering Phrase", content: "Think, Try, Explain for every counting, shapes, and number play challenge." }
       ]
@@ -329,6 +509,44 @@ export const PreKBasicMath101Module: LearningModule = {
           correctOptionId: "a"
         }
       ],
+      interactiveActivities: [
+        {
+          id: "pre-k-basic-math-101-l10-ia1",
+          type: "matching_pairs",
+          title: "Match and Learn",
+          description: "Match each learning clue to the best action.",
+          estimatedMinutes: 6,
+          difficultyLevel: "easy",
+          data: {
+            left: [
+              { id: "l1", label: "I forgot counting" },
+              { id: "l2", label: "I am unsure about shape patterns" },
+              { id: "l3", label: "I need to remember counting, shapes, and number play" }
+            ],
+            right: [
+              { id: "r1", label: "Look at one example and say it out loud" },
+              { id: "r2", label: "Use step-by-step practice with help" },
+              { id: "r3", label: "Do a quick review game before trying again" }
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" }
+            ]
+          }
+        }
+      ],
+      quizBlueprint: {
+        frequency: "lesson_assessment",
+        questionsPerCheck: 4,
+        totalQuestions: 4,
+        timeLimitMinutes: 10,
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2] }],
+        difficultyDistribution: { easy: 2, medium: 2, hard: 0 },
+        feedbackMode: "after_submit",
+        adaptive: false,
+        masteryThreshold: 0.7
+      },
       learningAids: [
         { id: "pre-k-basic-math-101-l10-a1", type: "mnemonic", title: "Remembering Phrase", content: "Think, Try, Explain for every counting, shapes, and number play challenge." }
       ]

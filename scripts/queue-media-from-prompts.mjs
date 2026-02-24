@@ -77,6 +77,37 @@ function resolvePrompt(lesson, assetType) {
   return lesson.prompts.lessonImage;
 }
 
+function assetTypeToPromptKey(assetType) {
+  if (assetType === "video") return "seedanceVideo";
+  if (assetType === "animation") return "seedanceAnimation";
+  return "lessonImage";
+}
+
+function resolvePromptMeta(lesson, promptKey) {
+  const promptMeta = lesson?.promptMeta?.[promptKey] ?? {};
+  const promptSources = lesson?.promptSources ?? {};
+  const promptSource =
+    typeof promptMeta.source === "string" && promptMeta.source.trim().length > 0
+      ? promptMeta.source.trim()
+      : typeof promptSources[promptKey] === "string"
+        ? promptSources[promptKey]
+        : "unknown";
+  const promptVersion =
+    typeof promptMeta.version === "string" && promptMeta.version.trim().length > 0
+      ? promptMeta.version.trim()
+      : promptSource === "lesson"
+        ? "lesson.v1"
+        : "generated.v1";
+  const promptQaStatus =
+    typeof promptMeta.qaStatus === "string" && promptMeta.qaStatus.trim().length > 0
+      ? promptMeta.qaStatus.trim()
+      : promptSource === "lesson"
+        ? "reviewed"
+        : "needs_review";
+
+  return { promptSource, promptVersion, promptQaStatus };
+}
+
 function assetTypesFromOption(option) {
   if (option === "all") return ["video", "animation", "image"];
   if (["video", "animation", "image"].includes(option)) return [option];
@@ -92,12 +123,18 @@ function flattenCandidates(promptPack, options) {
     for (const lesson of moduleEntry.lessons ?? []) {
       if (options.lessonId && lesson.lessonId !== options.lessonId) continue;
       for (const assetType of assetTypes) {
+        const promptKey = assetTypeToPromptKey(assetType);
+        const promptMeta = resolvePromptMeta(lesson, promptKey);
         candidates.push({
           moduleId: moduleEntry.moduleId,
           lessonId: lesson.lessonId,
           assetType,
           provider: "seedance",
           prompt: resolvePrompt(lesson, assetType),
+          promptKey,
+          promptSource: promptMeta.promptSource,
+          promptVersion: promptMeta.promptVersion,
+          promptQaStatus: promptMeta.promptQaStatus,
         });
       }
     }
@@ -248,12 +285,18 @@ async function main() {
     asset_type: candidate.assetType,
     provider: candidate.provider,
     prompt: candidate.prompt,
-    status: "queued",
-    metadata: {
-      source: "LESSON-MEDIA-PROMPT-PACK",
-      queued_at: nowIso,
-    },
-  }));
+      status: "queued",
+      metadata: {
+        source: "LESSON-MEDIA-PROMPT-PACK",
+        queued_at: nowIso,
+        prompt_pack_schema_version: promptPack.schemaVersion ?? null,
+        prompt_pack_generated_at: promptPack.generatedAt ?? null,
+        prompt_key: candidate.promptKey,
+        prompt_source: candidate.promptSource,
+        prompt_version: candidate.promptVersion,
+        prompt_qa_status: candidate.promptQaStatus,
+      },
+    }));
 
   await insertRows(supabase, insertRowsPayload);
   console.log(`Inserted ${insertRowsPayload.length} media_generation_jobs row(s).`);

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getAllLearningModules } from "@/lib/modules";
 import ModuleCoverImage from "@/app/components/module-cover-image";
 import { toModulePath } from "@/lib/routing/paths";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
 
 export default function ModulesPage() {
   const learningModules = getAllLearningModules();
@@ -17,9 +19,11 @@ export default function ModulesPage() {
 
       <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {learningModules.map((learningModule) => (
-          <article
+          <SoftCard
             key={learningModule.id}
-            className="rounded-2xl border border-sky-200 bg-white p-5 shadow-sm"
+            as="article"
+            interactive
+            className="border-sky-200 p-5"
           >
             <ModuleCoverImage
               moduleId={learningModule.id}
@@ -34,17 +38,17 @@ export default function ModulesPage() {
             <p className="mt-2 text-sm text-zinc-700">
               {learningModule.description}
             </p>
-            <p className="mt-3 text-xs text-zinc-500">
-              Lessons: {learningModule.lessons.length}
-              {learningModule.version ? ` | Version: ${learningModule.version}` : ""}
-            </p>
+            <div className="mt-3 flex flex-wrap items-center gap-2">
+              <ProgressChip label="Lessons" value={learningModule.lessons.length} tone="info" />
+              {learningModule.version ? <ProgressChip label="Version" value={learningModule.version} /> : null}
+            </div>
             <Link
               href={toModulePath(learningModule.id)}
-              className="mt-4 inline-block rounded-md border border-sky-300 bg-sky-50 px-3 py-2 text-sm font-medium text-sky-900 hover:bg-sky-100"
+              className="ui-soft-button ui-focus-ring mt-4 inline-flex min-h-11 items-center justify-center border border-sky-300 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-900 hover:bg-sky-100"
             >
               View Module
             </Link>
-          </article>
+          </SoftCard>
         ))}
       </section>
     </main>

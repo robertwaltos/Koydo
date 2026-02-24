@@ -34,6 +34,18 @@ const REPORT_CONFIG = {
     orderColumn: "created_at",
     columns: ["id", "admin_user_id", "action_type", "target_user_id", "metadata", "created_at"],
   },
+  telemetry: {
+    select: "user_id, module_id, lesson_id, event_type, event_at",
+    orderColumn: "event_at",
+    columns: [
+      "day",
+      "event_type",
+      "event_count",
+      "unique_users",
+      "unique_modules",
+      "unique_lessons",
+    ],
+  },
 };
 
 function parseArgs(argv) {
@@ -117,10 +129,83 @@ function toCsv(rows, columns) {
   return `${header}\n${body}`;
 }
 
+function buildTelemetryDailyRows(rows) {
+  const bucketMap = new Map();
+  for (const row of rows) {
+    const eventAt = new Date(row.event_at);
+    if (Number.isNaN(eventAt.getTime())) continue;
+    const day = eventAt.toISOString().slice(0, 10);
+    const eventType = String(row.event_type || "unknown");
+    const key = `${day}|${eventType}`;
+    if (!bucketMap.has(key)) {
+      bucketMap.set(key, {
+        eventCount: 0,
+        userIds: new Set(),
+        moduleIds: new Set(),
+        lessonIds: new Set(),
+      });
+    }
+    const bucket = bucketMap.get(key);
+    bucket.eventCount += 1;
+    if (row.user_id) bucket.userIds.add(row.user_id);
+    if (row.module_id) bucket.moduleIds.add(row.module_id);
+    if (row.lesson_id) bucket.lessonIds.add(row.lesson_id);
+  }
+
+  const rowsOut = [];
+  for (const [key, bucket] of bucketMap.entries()) {
+    const [day, eventType] = key.split("|");
+    rowsOut.push({
+      day,
+      event_type: eventType,
+      event_count: bucket.eventCount,
+      unique_users: bucket.userIds.size,
+      unique_modules: bucket.moduleIds.size,
+      unique_lessons: bucket.lessonIds.size,
+    });
+  }
+
+  rowsOut.sort((left, right) => {
+    if (left.day !== right.day) {
+      return left.day < right.day ? 1 : -1;
+    }
+    return String(left.event_type).localeCompare(String(right.event_type));
+  });
+
+  return rowsOut;
+}
+
 async function buildReportCsv(supabase, reportType) {
   const config = REPORT_CONFIG[reportType];
   if (!config) {
     throw new Error(`Unsupported report type: ${reportType}`);
+  }
+
+  if (reportType === "telemetry") {
+    const daysWindow = 30;
+    const cutoffIso = new Date(Date.now() - daysWindow * 24 * 60 * 60 * 1000).toISOString();
+    const { data, error } = await supabase
+      .from("learning_events")
+      .select(config.select)
+      .gte("event_at", cutoffIso)
+      .order(config.orderColumn, { ascending: false })
+      .limit(200000);
+
+    if (error) {
+      throw new Error(`Failed loading telemetry rows: ${error.message}`);
+    }
+
+    const sourceRows = data ?? [];
+    const rollupRows = buildTelemetryDailyRows(sourceRows);
+    return {
+      csvContent: toCsv(rollupRows, config.columns),
+      rowCount: rollupRows.length,
+      metadata: {
+        daysWindow,
+        sourceEventCount: sourceRows.length,
+        cutoffIso,
+      },
+    };
   }
 
   const table =
@@ -140,6 +225,9 @@ async function buildReportCsv(supabase, reportType) {
   return {
     csvContent: toCsv(rows, config.columns),
     rowCount: rows.length,
+    metadata: {
+      sourceRows: rows.length,
+    },
   };
 }
 
@@ -273,7 +361,7 @@ async function main() {
     claimed += 1;
 
     try {
-      const { csvContent, rowCount } = await buildReportCsv(supabase, job.report_type);
+      const { csvContent, rowCount, metadata } = await buildReportCsv(supabase, job.report_type);
       const checksum = createHash("sha256").update(csvContent).digest("hex");
       const completedAt = new Date().toISOString();
 
@@ -288,6 +376,7 @@ async function main() {
         metadata: {
           generatedAt: completedAt,
           source: "report-jobs-script",
+          ...(metadata ?? {}),
         },
       });
 

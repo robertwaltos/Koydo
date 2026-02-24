@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { publicEnv } from "@/lib/config/env";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import OAuthButtons from "@/app/auth/sign-in/oauth-buttons";
+import SoftCard from "@/app/components/ui/soft-card";
 
 export default function SignUpPage() {
   const [email, setEmail] = useState("");
@@ -45,63 +46,67 @@ export default function SignUpPage() {
 
   return (
     <main className="mx-auto max-w-md px-6 py-12">
-      <h1 className="text-2xl font-semibold">Create Account</h1>
-      <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">Register a learner account for EduForge.</p>
+      <SoftCard as="section" organicCorners className="bg-[var(--gradient-hero)] p-5">
+        <h1 className="text-2xl font-semibold">Create Account</h1>
+        <p className="mt-3 text-sm text-zinc-600">Register a learner account for EduForge.</p>
+      </SoftCard>
 
-      <form onSubmit={onSubmit} className="mt-6 space-y-4">
-        <div>
-          <label htmlFor="email" className="mb-1 block text-sm font-medium">Email</label>
-          <input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-            className="w-full rounded-md border border-black/15 px-3 py-2 text-sm"
-            required
-          />
-        </div>
+      <SoftCard as="section" className="mt-6 p-4">
+        <form onSubmit={onSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="email" className="mb-1 block text-sm font-medium">Email</label>
+            <input
+              id="email"
+              type="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="password" className="mb-1 block text-sm font-medium">Password</label>
-          <input
-            id="password"
-            type="password"
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
-            className="w-full rounded-md border border-black/15 px-3 py-2 text-sm"
-            minLength={8}
-            required
-          />
-        </div>
+          <div>
+            <label htmlFor="password" className="mb-1 block text-sm font-medium">Password</label>
+            <input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(event) => setPassword(event.target.value)}
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              minLength={8}
+              required
+            />
+          </div>
 
-        <button
-          type="submit"
-          disabled={isSubmitting || !hasSupabaseConfig}
-          className="rounded-md bg-foreground px-4 py-2 text-sm text-background disabled:opacity-70"
-        >
-          {isSubmitting ? "Creating..." : "Create Account"}
-        </button>
+          <button
+            type="submit"
+            disabled={isSubmitting || !hasSupabaseConfig}
+            className="ui-soft-button ui-focus-ring min-h-11 rounded-full bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
+          >
+            {isSubmitting ? "Creating..." : "Create Account"}
+          </button>
 
-        {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
-        {!hasSupabaseConfig ? (
-          <p className="text-xs text-amber-700 dark:text-amber-400">
-            Missing `NEXT_PUBLIC_SUPABASE_URL` and/or `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
-          </p>
-        ) : null}
-      </form>
+          {status ? <p role="status" className="text-sm text-zinc-600">{status}</p> : null}
+          {!hasSupabaseConfig ? (
+            <p role="status" className="text-xs text-amber-700">
+              Missing `NEXT_PUBLIC_SUPABASE_URL` and/or `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
+            </p>
+          ) : null}
+        </form>
+      </SoftCard>
 
       <div className="relative mt-8">
         <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-zinc-300 dark:border-zinc-700" />
+          <div className="w-full border-t border-border" />
         </div>
         <div className="relative flex justify-center text-sm">
-          <span className="bg-white px-2 text-zinc-500 dark:bg-zinc-950">OR</span>
+          <span className="bg-surface px-2 text-zinc-500">OR</span>
         </div>
       </div>
 
       <OAuthButtons intent="up" />
 
-      <p className="mt-6 text-sm text-zinc-600 dark:text-zinc-300">
+      <p className="mt-6 text-sm text-zinc-600">
         Already have an account? <Link href="/auth/sign-in" className="underline">Sign in</Link>
       </p>
     </main>

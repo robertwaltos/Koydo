@@ -9,6 +9,7 @@ const outJson = path.join(outDir, "CURRICULUM-COVERAGE-REPORT.json");
 
 const subjectAliases = {
   math: "basic-math",
+  mathematics: "basic-math",
   reading: "language-arts",
   science: "general-science",
   "history-worldwide": "world-history",
@@ -81,6 +82,36 @@ function firstMatch(text, regex, fallback = null) {
   return match?.[1] ?? fallback;
 }
 
+function firstMatchAny(text, regexes, fallback = null) {
+  for (const regex of regexes) {
+    const value = firstMatch(text, regex, null);
+    if (value !== null && value !== undefined) return value;
+  }
+  return fallback;
+}
+
+function headerBlock(raw) {
+  const marker = /(?:"lessons"|lessons)\s*:\s*\[/;
+  const match = raw.match(marker);
+  if (!match || typeof match.index !== "number") return raw;
+  return raw.slice(0, match.index);
+}
+
+function normalizeGradeBand(input) {
+  const value = String(input ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  if (!value) return "unknown";
+  if (value === "prek" || value === "pre-k" || value === "prekinder" || value === "pre-kindergarten") return "pre-k";
+  if (value === "k-2" || value === "k2" || value === "kindergarten" || value === "lower-elementary") return "elementary";
+  if (value === "middle" || value === "middle-school" || value === "middleschool") return "middle-school";
+  if (value === "high" || value === "high-school" || value === "highschool") return "high-school";
+  if (value === "elementary") return "elementary";
+  return value;
+}
+
 function extractLessonTypeCounts(text) {
   const counts = {
     video: 0,
@@ -89,7 +120,7 @@ function extractLessonTypeCounts(text) {
   };
 
   const matches = text.matchAll(
-    /\{\s*id:\s*"([^"]+)"[\s\S]{0,280}?title:\s*"([^"]+)"[\s\S]{0,180}?type:\s*"([^"]+)"/g,
+    /\{\s*(?:"id"|id)\s*:\s*"([^"]+)"[\s\S]{0,320}?(?:"title"|title)\s*:\s*"([^"]+)"[\s\S]{0,220}?(?:"type"|type)\s*:\s*"([^"]+)"/g,
   );
 
   for (const match of matches) {
@@ -116,23 +147,45 @@ function readCatalogFiles() {
 
 function parseCatalogModule(file) {
   const raw = fs.readFileSync(file.fullPath, "utf8");
+  const header = headerBlock(raw);
   const lessonTypeCounts = extractLessonTypeCounts(raw);
   const lessonCount = lessonTypeCounts.video + lessonTypeCounts.interactive + lessonTypeCounts.quiz;
-  const subjectRaw = firstMatch(raw, /\bsubject:\s*"([^"]+)"/, "unknown");
-  const minAgeRaw = firstMatch(raw, /\bminAge:\s*(\d+)/);
-  const maxAgeRaw = firstMatch(raw, /\bmaxAge:\s*(\d+)/);
+  const subjectRaw = firstMatchAny(
+    header,
+    [/"subject"\s*:\s*"([^"]+)"/, /\bsubject\s*:\s*"([^"]+)"/],
+    "unknown",
+  );
+  const minAgeRaw = firstMatchAny(header, [/"minAge"\s*:\s*(\d+)/, /\bminAge\s*:\s*(\d+)/], null);
+  const maxAgeRaw = firstMatchAny(header, [/"maxAge"\s*:\s*(\d+)/, /\bmaxAge\s*:\s*(\d+)/], null);
+  const declaredGradeBandRaw = firstMatchAny(
+    header,
+    [/"gradeBand"\s*:\s*"([^"]+)"/, /\bgradeBand\s*:\s*"([^"]+)"/],
+    null,
+  );
   const minAge = minAgeRaw === null ? null : Number(minAgeRaw);
   const maxAge = maxAgeRaw === null ? null : Number(maxAgeRaw);
+  const inferredGradeBand = inferGradeBand(minAge, maxAge);
+  const fallbackGradeBand = normalizeGradeBand(declaredGradeBandRaw);
+  const finalGradeBand = inferredGradeBand === "unknown" ? fallbackGradeBand : inferredGradeBand;
+  const coveredGradeBands = inferCoveredGradeBands(minAge, maxAge);
+  const finalCoveredGradeBands =
+    coveredGradeBands.length === 1 && coveredGradeBands[0] === "unknown" && fallbackGradeBand !== "unknown"
+      ? [fallbackGradeBand]
+      : coveredGradeBands;
 
   return {
     source: "module-catalog",
     fileName: file.fileName,
-    moduleId: firstMatch(raw, /\bid:\s*"([^"]+)"/, file.fileName.replace(/\.ts$/i, "")),
-    moduleTitle: firstMatch(raw, /\btitle:\s*"([^"]+)"/, "Untitled module"),
+    moduleId: firstMatchAny(
+      header,
+      [/"id"\s*:\s*"([^"]+)"/, /\bid\s*:\s*"([^"]+)"/],
+      file.fileName.replace(/\.ts$/i, ""),
+    ),
+    moduleTitle: firstMatchAny(header, [/"title"\s*:\s*"([^"]+)"/, /\btitle\s*:\s*"([^"]+)"/], "Untitled module"),
     subject: normalizeSubject(subjectRaw),
     subjectRaw,
-    gradeBand: inferGradeBand(minAge, maxAge),
-    coveredGradeBands: inferCoveredGradeBands(minAge, maxAge),
+    gradeBand: finalGradeBand,
+    coveredGradeBands: finalCoveredGradeBands,
     minAge,
     maxAge,
     lessonCount,
@@ -279,7 +332,7 @@ function toMarkdown(report) {
   lines.push("## Grade x Subject Coverage");
   lines.push("");
   lines.push("| Grade Band | Subject | Lesson Count |");
-  lines.push("|---|---|---:|");
+  lines.push("| --- | --- | ---: |");
   for (const item of report.gradeSubjectSummary) {
     lines.push(
       `| ${titleCase(item.gradeBand)} | ${titleCase(item.subject)} | ${item.count} |`,
@@ -289,7 +342,7 @@ function toMarkdown(report) {
   lines.push("## Grade Band Totals");
   lines.push("");
   lines.push("| Grade Band | Lesson Count |");
-  lines.push("|---|---:|");
+  lines.push("| --- | ---: |");
   for (const item of report.gradeBandSummary) {
     lines.push(`| ${titleCase(item.gradeBand)} | ${item.count} |`);
   }
@@ -297,7 +350,7 @@ function toMarkdown(report) {
   lines.push("## Subject Totals");
   lines.push("");
   lines.push("| Subject | Lesson Count |");
-  lines.push("|---|---:|");
+  lines.push("| --- | ---: |");
   for (const item of report.subjectSummary) {
     lines.push(`| ${titleCase(item.subject)} | ${item.count} |`);
   }

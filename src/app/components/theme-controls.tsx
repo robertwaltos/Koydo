@@ -67,11 +67,11 @@ export default function ThemeControls({ compact = false }: { compact?: boolean }
   return (
     <div className="flex items-center gap-2 text-xs">
       <label className="flex items-center gap-1">
-        <span className="text-zinc-700">Theme</span>
+        <span className="text-foreground">Theme</span>
         <select
           value={currentSelection}
           onChange={(event) => applySelection(event.target.value as ThemeSelectionValue)}
-          className="min-w-40 rounded-md border border-zinc-300 bg-white px-2 py-1 text-zinc-900 shadow-sm [color-scheme:light]"
+          className="ui-focus-ring min-h-9 min-w-40 rounded-full border border-border bg-surface px-3 py-1 text-foreground shadow-sm [color-scheme:light]"
         >
           <option value="system">System</option>
           {!compact ? (

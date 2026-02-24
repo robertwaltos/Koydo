@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import SoftCard from "@/app/components/ui/soft-card";
 
 type AnimationResolveResponse = {
   found?: boolean;
@@ -91,28 +92,32 @@ export default function LessonAnimationPreview({
   }, [lessonId, moduleId]);
 
   if (loading) {
-    return <div className="h-40 w-full animate-pulse rounded-xl bg-indigo-100" />;
+    return (
+      <SoftCard className="h-40 w-full animate-pulse border-sky-200 bg-sky-50">
+        <span className="sr-only">Loading animation preview</span>
+      </SoftCard>
+    );
   }
 
   if (error) {
     return (
-      <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs text-amber-800">
+      <SoftCard className="border-amber-200 bg-amber-50 p-4 text-xs text-amber-800">
         {error}
-      </div>
+      </SoftCard>
     );
   }
 
   if (!animationUrl) {
     return (
-      <div className="rounded-xl border border-indigo-200 bg-white p-4 text-xs text-zinc-600">
+      <SoftCard className="border-sky-200 bg-surface p-4 text-xs text-zinc-600">
         No completed lesson animation is available yet. This panel will keep checking automatically.
-      </div>
+      </SoftCard>
     );
   }
 
   return (
-    <div className="overflow-hidden rounded-xl border border-indigo-200 bg-white">
+    <SoftCard className="overflow-hidden border-sky-200 bg-surface p-0">
       <video className="h-auto w-full" src={animationUrl} autoPlay loop muted controls playsInline />
-    </div>
+    </SoftCard>
   );
 }

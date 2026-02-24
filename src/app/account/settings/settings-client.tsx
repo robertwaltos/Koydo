@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
+import SoftCard from "@/app/components/ui/soft-card";
 
 export default function SettingsClient() {
   const externalBillingAllowed = (process.env.NEXT_PUBLIC_BILLING_PROVIDER_MODE ?? "stripe_external") !== "app_store_iap";
@@ -63,9 +64,9 @@ export default function SettingsClient() {
 
   return (
     <div className="space-y-6">
-      <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+      <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Subscription Management</h2>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <p className="mt-2 text-sm text-zinc-600">
           {externalBillingAllowed
             ? "Manage billing method, invoices, and cancellation via Stripe's secure portal."
             : "This build uses in-app purchase mode. Subscription management is handled in-app."}
@@ -75,37 +76,37 @@ export default function SettingsClient() {
             type="button"
             onClick={openBillingPortal}
             disabled={isOpeningPortal}
-            className="mt-4 rounded-md border border-black/15 px-4 py-2 text-sm disabled:opacity-70"
+            className="ui-soft-button ui-focus-ring mt-4 min-h-11 rounded-full border border-border bg-surface-muted px-4 py-2 text-sm disabled:opacity-70"
           >
             {isOpeningPortal ? "Opening portal..." : "Manage Subscription"}
           </button>
         ) : null}
-      </section>
+      </SoftCard>
 
-      <section className="rounded-lg border border-red-300 bg-red-50 p-5 dark:bg-red-900/20">
-      <h2 className="text-lg font-semibold text-red-800 dark:text-red-300">Delete Account</h2>
-      <p className="mt-2 text-sm text-red-700 dark:text-red-300">
-        This permanently removes your account and associated profile data. Type <code>DELETE</code> to confirm.
-      </p>
+      <SoftCard as="section" className="border-red-300 bg-red-50 p-5 dark:bg-red-900/20">
+        <h2 className="text-lg font-semibold text-red-800 dark:text-red-300">Delete Account</h2>
+        <p className="mt-2 text-sm text-red-700 dark:text-red-300">
+          This permanently removes your account and associated profile data. Type <code>DELETE</code> to confirm.
+        </p>
 
-      <form onSubmit={handleDeleteAccount} className="mt-4 flex flex-wrap items-center gap-3">
-        <input
-          name="confirmation"
-          className="rounded-md border border-red-300 px-3 py-2 text-sm"
-          placeholder="Type DELETE"
-          required
-        />
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="rounded-md bg-red-600 px-4 py-2 text-sm text-white disabled:opacity-70"
-        >
-          {isSubmitting ? "Deleting..." : "Delete My Account"}
-        </button>
-      </form>
+        <form onSubmit={handleDeleteAccount} className="mt-4 flex flex-wrap items-center gap-3">
+          <input
+            name="confirmation"
+            className="ui-focus-ring rounded-md border border-red-300 px-3 py-2 text-sm"
+            placeholder="Type DELETE"
+            required
+          />
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="ui-soft-button ui-focus-ring min-h-11 rounded-full bg-red-600 px-4 py-2 text-sm text-white disabled:opacity-70"
+          >
+            {isSubmitting ? "Deleting..." : "Delete My Account"}
+          </button>
+        </form>
 
-      {status ? <p className="mt-3 text-sm text-red-800 dark:text-red-300">{status}</p> : null}
-      </section>
+        {status ? <p role="status" className="mt-3 text-sm text-red-800 dark:text-red-300">{status}</p> : null}
+      </SoftCard>
     </div>
   );
 }

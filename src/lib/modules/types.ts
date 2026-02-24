@@ -3,6 +3,8 @@ export type Skill = {
   name: string;
 };
 
+export type LocalizedText = Record<string, string>;
+
 export type LessonOption = {
   id: string;
   text: string;
@@ -33,6 +35,143 @@ export type LearningAid = {
   content: string;
 };
 
+export type LessonChunk = {
+  id: string;
+  title: string;
+  content: string;
+  kind?: "intro" | "concept" | "example" | "practice" | "recap" | (string & {});
+  durationSeconds?: number;
+};
+
+export type Flashcard = {
+  id: string;
+  front: string;
+  back: string;
+  hint?: string;
+  imageUrl?: string;
+  imageAlt?: string;
+};
+
+export type InteractiveActivityType =
+  | "drag_and_drop"
+  | "matching_pairs"
+  | "sorting_buckets"
+  | "tap_to_select"
+  | "fill_in_blank"
+  | "word_building"
+  | "number_line"
+  | "virtual_manipulative"
+  | "graphing_tool"
+  | "simulation"
+  | "drawing_canvas"
+  | "coding_editor"
+  | "timeline_builder"
+  | "map_explorer"
+  | "audio_recorder"
+  | "flashcards"
+  | "quiz_game"
+  | "debate_simulator"
+  | "lab_virtual"
+  | "project_builder"
+  | (string & {});
+
+export type InteractiveActivity = {
+  id: string;
+  type: InteractiveActivityType;
+  title: string;
+  description?: string;
+  estimatedMinutes?: number;
+  difficultyLevel?: "easy" | "medium" | "hard" | "adaptive" | (string & {});
+  instructions?: string[];
+  udlEngagement?: string[];
+  data?: Record<string, unknown>;
+};
+
+export type LessonMediaAsset = {
+  assetId: string;
+  type: string;
+  purpose?: string;
+  altText?: LocalizedText;
+  durationSeconds?: number;
+  fileSizeKb?: number;
+  resolution?: string;
+  license?: string;
+  captionsAvailable?: boolean;
+  audioDescriptionAvailable?: boolean;
+  contentTier?: 1 | 2 | 3;
+};
+
+export type LessonContentTier = {
+  textContent?: LocalizedText;
+  staticImages?: LessonMediaAsset[];
+  animations?: LessonMediaAsset[];
+  interactiveSims?: InteractiveActivity[];
+  videos?: LessonMediaAsset[];
+  highResImages?: LessonMediaAsset[];
+};
+
+export type LessonContentTiers = {
+  tier1Essential?: LessonContentTier;
+  tier2Enhanced?: LessonContentTier;
+  tier3Rich?: LessonContentTier;
+};
+
+export type LessonMediaPrompts = {
+  seedanceVideo?: string;
+  seedanceAnimation?: string;
+  lessonImage?: string;
+  researchAgent?: string;
+};
+
+export type QuizQuestionType =
+  | "mcq_single"
+  | "mcq_multi"
+  | "true_false"
+  | "matching"
+  | "drag_and_drop"
+  | "fill_in_blank"
+  | "short_response"
+  | "image_tap"
+  | "audio_match"
+  | "sequence_order"
+  | "constructed_response"
+  | "essay"
+  | "performance_task"
+  | (string & {});
+
+export type QuizQuestionDistribution = {
+  type: QuizQuestionType;
+  percentage?: number;
+  count?: number;
+  pointsEach?: number;
+  bloomsLevels?: number[];
+};
+
+export type QuizDifficultyDistribution = {
+  easy: number;
+  medium: number;
+  hard: number;
+};
+
+export type QuizBlueprint = {
+  frequency?: string;
+  questionsPerCheck?: number;
+  totalQuestions?: number;
+  timeLimitMinutes?: number;
+  questionTypes?: QuizQuestionDistribution[];
+  difficultyDistribution?: QuizDifficultyDistribution;
+  feedbackMode?: string;
+  adaptive?: boolean;
+  masteryThreshold?: number;
+};
+
+export type StandardsMapping = {
+  frameworkId: string;
+  code: string;
+  description?: string;
+  url?: string;
+};
+
 export type Lesson = {
   id: string;
   title: string;
@@ -41,6 +180,20 @@ export type Lesson = {
   questions?: Question[];
   learningAids?: LearningAid[];
   metadata?: Record<string, string | number | boolean | string[]>;
+  objectives?: string[];
+  standardsCodes?: string[];
+  chunks?: LessonChunk[];
+  flashcards?: Flashcard[];
+  interactiveActivities?: InteractiveActivity[];
+  quizBlueprint?: QuizBlueprint;
+  prompts?: LessonMediaPrompts;
+  contentTiers?: LessonContentTiers;
+  localized?: {
+    title?: LocalizedText;
+    concept?: LocalizedText;
+    description?: LocalizedText;
+  };
+  external?: Record<string, unknown>;
 };
 
 export type Subject =
@@ -66,4 +219,10 @@ export type LearningModule = {
   localeSupport?: string[];
   thumbnail?: string;
   learningObjectives?: string[];
+  gradeBand?: string;
+  standardsMappings?: StandardsMapping[];
+  quizBlueprint?: QuizBlueprint;
+  interactiveActivitiesCatalog?: InteractiveActivity[];
+  metadata?: Record<string, unknown>;
+  external?: Record<string, unknown>;
 };

@@ -2,8 +2,10 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { deleteSyncedProgress, saveOfflineProgress } from "@/lib/offline/progress-db";
+import { trackLearningEvent } from "@/lib/analytics/xapi-lite";
 
 type InteractiveActivityProps = {
+  moduleId: string;
   lessonId: string;
   title: string;
   prompts: string[];
@@ -15,7 +17,7 @@ const MIN_RESPONSE_CHARACTERS = 10;
 const MIN_INTERACTIVE_SCORE = 0.6;
 const MAX_INTERACTIVE_SCORE = 0.95;
 
-export default function InteractiveActivity({ lessonId, title, prompts }: InteractiveActivityProps) {
+export default function InteractiveActivity({ moduleId, lessonId, title, prompts }: InteractiveActivityProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [responses, setResponses] = useState<string[]>(() => prompts.map(() => ""));
   const [validationMessage, setValidationMessage] = useState("");
@@ -146,9 +148,33 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
     }
 
     setValidationMessage("");
+    const isFinalPrompt = currentIndex >= prompts.length - 1;
 
-    if (currentIndex >= prompts.length - 1) {
+    void trackLearningEvent({
+      eventType: "activity_interacted",
+      moduleId,
+      lessonId,
+      payload: {
+        promptIndex: currentIndex + 1,
+        totalPrompts: prompts.length,
+        responseLength: currentResponse.trim().length,
+        isFinalPrompt,
+      },
+    });
+
+    if (isFinalPrompt) {
       setIsComplete(true);
+      void trackLearningEvent({
+        eventType: "lesson_completed",
+        moduleId,
+        lessonId,
+        payload: {
+          completionSource: "interactive",
+          answeredCount,
+          totalPrompts: prompts.length,
+          masteryPercentage: Math.round(completionScore * 100),
+        },
+      });
       await persistCompletion(completionScore);
       return;
     }
@@ -171,15 +197,15 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
   };
 
   return (
-    <section className="rounded-2xl border border-amber-200 bg-amber-50 p-4 shadow-sm sm:p-5">
+    <section className="ui-soft-card rounded-2xl border-amber-200 bg-amber-50 p-4 sm:p-5">
       <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">Interactive Activity</p>
-      <h3 className="mt-1 text-lg font-bold text-zinc-900">{title}</h3>
-      <article className="mt-3 rounded-xl border border-amber-200 bg-white p-4">
+      <h3 className="mt-1 text-lg font-bold text-foreground">{title}</h3>
+      <article className="mt-3 rounded-xl border border-amber-200 bg-surface p-4">
         <p className="text-sm font-semibold text-zinc-800">{currentPrompt}</p>
       </article>
 
       <div className="mt-4 space-y-2">
-        <label className="block text-sm font-medium text-zinc-700" htmlFor="reflection">
+        <label className="block text-sm font-medium text-foreground" htmlFor="reflection">
           Learner response
         </label>
         <textarea
@@ -187,7 +213,7 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
           rows={3}
           value={currentResponse}
           onChange={(event) => setResponseAtCurrentPrompt(event.target.value)}
-          className="w-full rounded-md border border-amber-200 bg-white px-3 py-2 text-sm text-zinc-900"
+          className="ui-focus-ring w-full rounded-md border border-amber-200 bg-surface px-3 py-2 text-sm text-foreground"
           placeholder="Write your answer for this prompt..."
         />
         {validationMessage ? (
@@ -204,14 +230,14 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
           type="button"
           onClick={onPreviousPrompt}
           disabled={currentIndex === 0}
-          className="rounded-full border border-amber-300 bg-white px-4 py-2 text-sm font-semibold text-amber-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="ui-soft-button ui-focus-ring rounded-full border border-amber-300 bg-surface px-4 py-2 text-sm font-semibold text-amber-700 disabled:cursor-not-allowed disabled:opacity-60"
         >
           Previous
         </button>
         <button
           type="button"
           onClick={onNextPrompt}
-          className="rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-600"
+          className="ui-soft-button ui-focus-ring rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white hover:bg-amber-600"
         >
           {currentIndex >= prompts.length - 1 ? "Finish Activity" : "Next Prompt"}
         </button>
@@ -228,7 +254,7 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
             <article
               key={`${lessonId}-prompt-progress-${index}`}
               className={`rounded-lg border px-3 py-2 text-xs ${
-                isAnswered ? "border-emerald-300 bg-emerald-50 text-emerald-800" : "border-amber-200 bg-white text-zinc-700"
+                isAnswered ? "border-emerald-300 bg-emerald-50 text-emerald-800" : "border-amber-200 bg-surface text-foreground"
               }`}
             >
               <p className="font-semibold">Prompt {index + 1}</p>
@@ -247,14 +273,14 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
           <p className="text-xs text-zinc-600">
             Activity score saved: {Math.round(completionScore * 100)}%
           </p>
-          <div className="rounded-lg border border-amber-200 bg-white p-3">
+          <div className="rounded-lg border border-amber-200 bg-surface p-3">
             <p className="text-xs font-semibold uppercase tracking-wide text-amber-700">Activity Recap</p>
             <div className="mt-2 space-y-2">
               {prompts.map((prompt, index) => (
                 <article key={`${lessonId}-recap-${index}`} className="rounded-md border border-amber-100 bg-amber-50/40 p-2">
                   <p className="text-xs font-semibold text-zinc-800">Prompt {index + 1}</p>
-                  <p className="mt-1 text-xs text-zinc-700">{prompt}</p>
-                  <p className="mt-1 text-xs text-zinc-900">{responses[index]?.trim() || "No response recorded."}</p>
+                  <p className="mt-1 text-xs text-foreground">{prompt}</p>
+                  <p className="mt-1 text-xs text-foreground">{responses[index]?.trim() || "No response recorded."}</p>
                 </article>
               ))}
             </div>
@@ -262,18 +288,18 @@ export default function InteractiveActivity({ lessonId, title, prompts }: Intera
           <button
             type="button"
             onClick={onRestart}
-            className="rounded-full border border-amber-300 bg-white px-3 py-1 text-xs font-semibold text-amber-700"
+            className="ui-soft-button ui-focus-ring rounded-full border border-amber-300 bg-surface px-3 py-1 text-xs font-semibold text-amber-700"
           >
             Restart Activity
           </button>
         </div>
       ) : null}
-      {syncState === "syncing" ? <p className="mt-2 text-xs text-zinc-500">Saving your progress...</p> : null}
+      {syncState === "syncing" ? <p role="status" className="mt-2 text-xs text-zinc-500">Saving your progress...</p> : null}
       {syncState === "synced" ? (
-        <p className="mt-2 text-xs text-emerald-700 dark:text-emerald-300">Progress saved to your account.</p>
+        <p role="status" className="mt-2 text-xs text-emerald-700">Progress saved to your account.</p>
       ) : null}
       {syncState === "queued" ? (
-        <p className="mt-2 text-xs text-amber-700 dark:text-amber-300">
+        <p role="status" className="mt-2 text-xs text-amber-700">
           Progress saved offline and will sync when your connection is restored.
         </p>
       ) : null}

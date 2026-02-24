@@ -61,7 +61,7 @@ export default function AgeGatePage() {
   return (
     <main className="mx-auto max-w-xl px-6 py-12">
       <h1 className="text-2xl font-semibold">Age Gate</h1>
-      <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-300">
+      <p className="mt-3 text-sm text-zinc-600">
         To comply with child privacy laws, we need age confirmation before account activation.
       </p>
 
@@ -71,7 +71,7 @@ export default function AgeGatePage() {
         </label>
         <select
           id="birthYear"
-          className="w-full rounded-md border border-black/15 px-3 py-2 text-sm"
+          className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
           value={birthYear}
           onChange={(event) => setBirthYear(event.target.value)}
         >
@@ -87,12 +87,12 @@ export default function AgeGatePage() {
           type="button"
           onClick={onContinue}
           disabled={isSubmitting}
-          className="rounded-md bg-foreground px-4 py-2 text-sm text-background disabled:opacity-70"
+          className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
         >
           {isSubmitting ? "Saving..." : "Continue"}
         </button>
 
-        {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+        {status ? <p className="text-sm text-zinc-600">{status}</p> : null}
       </div>
     </main>
   );

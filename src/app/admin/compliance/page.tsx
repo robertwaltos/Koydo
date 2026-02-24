@@ -3,13 +3,21 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { appStoreComplianceChecklist } from "@/lib/compliance/app-store-checklist";
 import ComplianceAdminClient from "./compliance-admin-client";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
 
 export const dynamic = "force-dynamic";
 
 const statusStyle = {
-  implemented: "text-emerald-700 dark:text-emerald-300",
-  partial: "text-amber-700 dark:text-amber-300",
-  pending: "text-red-700 dark:text-red-300",
+  implemented: "text-emerald-700",
+  partial: "text-amber-700",
+  pending: "text-rose-700",
+} as const;
+
+const statusTone = {
+  implemented: "success",
+  partial: "warning",
+  pending: "warning",
 } as const;
 
 export default async function AdminCompliancePage() {
@@ -31,9 +39,13 @@ export default async function AdminCompliancePage() {
 
   if (profileError || !profile?.is_admin) {
     return (
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-4 px-6 py-24">
-        <h1 className="text-2xl font-semibold">Access Denied</h1>
-        <p className="text-sm text-red-600">You must be an administrator to view compliance controls.</p>
+      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
+        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8 text-center">
+          <h1 className="text-2xl font-semibold">Access Denied</h1>
+          <p className="mt-3 text-sm text-rose-700">
+            You must be an administrator to view compliance controls.
+          </p>
+        </SoftCard>
       </main>
     );
   }
@@ -45,38 +57,70 @@ export default async function AdminCompliancePage() {
     .order("requested_at", { ascending: false })
     .limit(100);
 
+  const statusCounts = appStoreComplianceChecklist.reduce(
+    (acc, item) => {
+      acc[item.status] += 1;
+      return acc;
+    },
+    { implemented: 0, partial: 0, pending: 0 },
+  );
+
   return (
     <main className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-6 py-12">
-      <header>
+      <SoftCard as="header" className="border-accent/20 bg-(--gradient-hero) p-6">
         <h1 className="text-3xl font-semibold tracking-tight">App Store Compliance</h1>
-        <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+        <p className="mt-2 text-sm text-zinc-700">
           Operational checklist for App Store and Google Play policy readiness.
         </p>
-      </header>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <ProgressChip label="Implemented" value={statusCounts.implemented} tone="success" />
+          <ProgressChip label="Partial" value={statusCounts.partial} tone="warning" />
+          <ProgressChip label="Pending" value={statusCounts.pending} tone="warning" />
+        </div>
+      </SoftCard>
 
-      <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+      <SoftCard as="section" className="p-5">
         <div className="mb-4 flex flex-wrap gap-3 text-xs">
-          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/APPSTORE-COMPLIANCE-AUDIT.md" target="_blank" rel="noreferrer">
+          <a
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
+            href="/APPSTORE-COMPLIANCE-AUDIT.md"
+            target="_blank"
+            rel="noreferrer"
+          >
             Open Compliance Audit Report
           </a>
-          <a className="rounded-md border border-black/15 px-2 py-1 hover:bg-black/5" href="/DB-READINESS-REPORT.md" target="_blank" rel="noreferrer">
+          <a
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
+            href="/DB-READINESS-REPORT.md"
+            target="_blank"
+            rel="noreferrer"
+          >
             Open DB Readiness Report
           </a>
         </div>
         <ul className="space-y-4">
           {appStoreComplianceChecklist.map((item) => (
-            <li key={item.id} className="rounded-md border border-black/10 p-4 dark:border-white/10">
-              <div className="flex items-center justify-between gap-4">
-                <h2 className="font-semibold">{item.title}</h2>
-                <span className={`text-sm font-semibold capitalize ${statusStyle[item.status]}`}>
-                  {item.status}
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">{item.rationale}</p>
+            <li key={item.id}>
+              <SoftCard className="border-border/70 p-4">
+                <div className="flex items-center justify-between gap-4">
+                  <h2 className="font-semibold">{item.title}</h2>
+                  <div className="flex items-center gap-2">
+                    <ProgressChip
+                      label="Status"
+                      value={item.status}
+                      tone={statusTone[item.status]}
+                    />
+                    <span className={`text-sm font-semibold capitalize ${statusStyle[item.status]}`}>
+                      {item.status}
+                    </span>
+                  </div>
+                </div>
+                <p className="mt-2 text-sm text-zinc-700">{item.rationale}</p>
+              </SoftCard>
             </li>
           ))}
         </ul>
-      </section>
+      </SoftCard>
 
       <ComplianceAdminClient initialDsarRequests={dsarRequests ?? []} />
     </main>

@@ -3,7 +3,7 @@ import path from "node:path";
 import { createClient } from "@supabase/supabase-js";
 
 const envPath = path.resolve(".env");
-const VALID_REPORT_TYPES = ["dsar", "support", "audit"];
+const VALID_REPORT_TYPES = ["dsar", "support", "audit", "telemetry"];
 
 function parseArgs(argv) {
   const options = {
@@ -60,7 +60,7 @@ function readEnvValue(fileValues, key, fallbackKey) {
 function normalizeReportType(value) {
   if (!value || value === "all") return "";
   if (VALID_REPORT_TYPES.includes(value)) return value;
-  throw new Error(`Invalid report type "${value}". Use dsar|support|audit|all.`);
+  throw new Error(`Invalid report type "${value}". Use dsar|support|audit|telemetry|all.`);
 }
 
 async function main() {

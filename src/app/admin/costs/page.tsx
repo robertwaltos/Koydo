@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import SoftCard from "@/app/components/ui/soft-card";
+import ProgressChip from "@/app/components/ui/progress-chip";
 
 export const dynamic = "force-dynamic";
 
@@ -40,11 +42,13 @@ export default async function AdminCostsPage() {
 
   if (profileError || !profile?.is_admin) {
     return (
-      <main className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center gap-6 px-6 py-24">
-        <h1 className="text-2xl font-semibold">Access Denied</h1>
-        <p className="text-center text-red-600">
-          You must be an administrator to view this page.
-        </p>
+      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
+        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8 text-center">
+          <h1 className="text-2xl font-semibold">Access Denied</h1>
+          <p className="mt-3 text-sm text-rose-700">
+            You must be an administrator to view this page.
+          </p>
+        </SoftCard>
       </main>
     );
   }
@@ -60,7 +64,9 @@ export default async function AdminCostsPage() {
     return (
       <main className="mx-auto flex w-full max-w-4xl flex-col gap-4 px-6 py-12">
         <h1 className="text-2xl font-semibold">Cost Monitoring</h1>
-        <p className="text-red-600">Could not load cost data: {tokenError.message}</p>
+        <SoftCard className="border-rose-200 bg-rose-50 p-4">
+          <p className="text-rose-700">Could not load cost data: {tokenError.message}</p>
+        </SoftCard>
       </main>
     );
   }
@@ -127,15 +133,23 @@ export default async function AdminCostsPage() {
 
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-col gap-8 px-6 py-12">
-      <header>
+      <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
         <h1 className="text-3xl font-bold tracking-tight">Cost Monitoring</h1>
-        <p className="mt-2 text-zinc-500">
+        <p className="mt-2 text-sm text-zinc-700">
           AI and infrastructure spend overview for {nowMonthKey}.
         </p>
-      </header>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <ProgressChip
+            label="Budget"
+            value={isWithinBudget ? "Within cap" : "Over cap"}
+            tone={isWithinBudget ? "success" : "warning"}
+          />
+          <ProgressChip label="Active Users" value={currentUsers} tone="info" />
+        </div>
+      </SoftCard>
 
       <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="rounded-lg bg-white p-6 shadow dark:bg-zinc-900">
+        <SoftCard as="article" className="p-6">
           <h3 className="text-sm font-medium text-zinc-500">Current Month Cost</h3>
           <p className="mt-2 text-3xl font-bold">
             ${currentCost.toFixed(2)}
@@ -143,13 +157,13 @@ export default async function AdminCostsPage() {
           <p className="mt-1 text-xs text-zinc-500">
             Previous month ({priorMonthKey}): ${priorCost.toFixed(2)}
           </p>
-        </div>
-        <div className="rounded-lg bg-white p-6 shadow dark:bg-zinc-900">
+        </SoftCard>
+        <SoftCard as="article" className="p-6">
           <h3 className="text-sm font-medium text-zinc-500">Active Users (Current Month)</h3>
           <p className="mt-2 text-3xl font-bold">{currentUsers}</p>
           <p className="mt-1 text-xs text-zinc-500">Previous month: {priorUsers}</p>
-        </div>
-        <div className="rounded-lg bg-white p-6 shadow dark:bg-zinc-900">
+        </SoftCard>
+        <SoftCard as="article" className="p-6">
           <h3 className="text-sm font-medium text-zinc-500">Avg. Cost / User</h3>
           <p className="mt-2 text-3xl font-bold">
             ${currentAvgCostPerUser.toFixed(4)}
@@ -160,10 +174,10 @@ export default async function AdminCostsPage() {
           <p className={`mt-1 text-sm font-semibold ${isWithinBudget ? 'text-green-600' : 'text-red-600'}`}>
             {isWithinBudget ? 'Within' : 'Over'} Budget Cap (${perUserBudgetCap.toFixed(2)})
           </p>
-        </div>
+        </SoftCard>
       </section>
 
-      <section className="rounded-lg bg-white p-6 shadow dark:bg-zinc-900">
+      <SoftCard as="section" className="p-6">
         <h2 className="text-lg font-semibold">Month-over-Month Change</h2>
         <p className={`mt-2 text-2xl font-bold ${monthOverMonthDelta > 0 ? "text-red-600" : "text-green-600"}`}>
           {monthOverMonthDelta >= 0 ? "+" : ""}{monthOverMonthDelta.toFixed(1)}%
@@ -171,13 +185,16 @@ export default async function AdminCostsPage() {
         <p className="mt-1 text-xs text-zinc-500">
           Based on total spend comparing {nowMonthKey} vs {priorMonthKey}.
         </p>
-      </section>
+      </SoftCard>
 
-      <section className="rounded-lg bg-white p-6 shadow dark:bg-zinc-900">
+      <SoftCard as="section" className="p-6">
         <h2 className="text-lg font-semibold">Top Spenders (Current Month)</h2>
         <div className="mt-3 space-y-2">
           {topSpenders.map((entry) => (
-            <div key={entry.userId} className="flex items-center justify-between rounded-md border border-black/10 p-3 text-sm">
+            <div
+              key={entry.userId}
+              className="flex items-center justify-between rounded-2xl border border-border p-3 text-sm"
+            >
               <span>{entry.displayName}</span>
               <span className="font-semibold">${entry.spendUsd.toFixed(2)}</span>
             </div>
@@ -186,7 +203,7 @@ export default async function AdminCostsPage() {
             <p className="text-sm text-zinc-500">No token usage records for current month.</p>
           ) : null}
         </div>
-      </section>
+      </SoftCard>
     </main>
   );
 }

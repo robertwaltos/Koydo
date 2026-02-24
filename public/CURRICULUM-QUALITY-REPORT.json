@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-02-21T00:05:13.962Z",
+  "generatedAt": "2026-02-24T04:20:22.679Z",
   "sourceDir": "src/lib/modules/catalog",
   "totals": {
-    "modules": 52,
-    "lessons": 510,
-    "quizLessons": 203,
-    "interactiveLessons": 153,
-    "videoLessons": 154,
-    "questions": 815,
-    "learningAidBlocks": 502,
+    "modules": 118,
+    "lessons": 1654,
+    "quizLessons": 633,
+    "interactiveLessons": 543,
+    "videoLessons": 478,
+    "questions": 2609,
+    "learningAidBlocks": 1646,
     "placeholderOptionCount": 0,
     "genericReflectionCount": 0,
     "averageScore": 100,
     "highPriorityModules": 0,
     "mediumPriorityModules": 0,
-    "lowPriorityModules": 52
+    "lowPriorityModules": 118
   },
   "topPriorityModules": [
     {
@@ -22,17 +22,17 @@
       "title": "A-Level Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/a-level-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -45,17 +45,17 @@
       "title": "ACT Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/act-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -68,14 +68,60 @@
       "title": "Advanced Math Topics",
       "subject": "Advanced Math",
       "file": "src/lib/modules/catalog/advanced-math-201.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "advanced-math-301",
+      "title": "Advanced Math Modeling",
+      "subject": "Advanced Math",
+      "file": "src/lib/modules/catalog/advanced-math-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "advanced-math-401",
+      "title": "Advanced Math Capstone Proofs and Models",
+      "subject": "Advanced Math",
+      "file": "src/lib/modules/catalog/advanced-math-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -91,17 +137,17 @@
       "title": "AP Exam Prep Toolkit",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/ap-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -114,14 +160,60 @@
       "title": "Creative Arts Studio",
       "subject": "Arts",
       "file": "src/lib/modules/catalog/arts-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "arts-201",
+      "title": "Creative Arts Studio II",
+      "subject": "Arts",
+      "file": "src/lib/modules/catalog/arts-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "arts-301",
+      "title": "Creative Arts Composition and Curation",
+      "subject": "Arts",
+      "file": "src/lib/modules/catalog/arts-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -137,14 +229,60 @@
       "title": "Astronomy Explorer",
       "subject": "Astronomy",
       "file": "src/lib/modules/catalog/astronomy-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "astronomy-201",
+      "title": "Astronomy Observation and Models",
+      "subject": "Astronomy",
+      "file": "src/lib/modules/catalog/astronomy-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "astronomy-301",
+      "title": "Astronomy Data Interpretation and Prediction",
+      "subject": "Astronomy",
+      "file": "src/lib/modules/catalog/astronomy-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -160,17 +298,17 @@
       "title": "ATAR Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/atar-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -183,17 +321,224 @@
       "title": "Basic Math Foundations",
       "subject": "Math",
       "file": "src/lib/modules/catalog/basic-math-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-1112-u1-external",
+      "title": "Calculus: Limits, Derivatives & Integration",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-1112-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-201",
+      "title": "Basic Math Applications",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/basic-math-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-301",
+      "title": "Quantitative Reasoning Lab",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/basic-math-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-35-u1-external",
+      "title": "Multiplication, Division & Fractions",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-35-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-401",
+      "title": "Math Capstone Reasoning",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/basic-math-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-68-u1-external",
+      "title": "Pre-Algebra: Expressions, Equations & Ratios",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-68-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-910-u1-external",
+      "title": "Algebra II: Functions, Systems & Polynomials",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-910-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-k2-u1-external",
+      "title": "Addition & Subtraction (0–20)",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-k2-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-prek-u1-external",
+      "title": "Counting & Numbers 1–10",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-prek-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -206,14 +551,83 @@
       "title": "Biology Essentials",
       "subject": "Biology",
       "file": "src/lib/modules/catalog/biology-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "biology-201",
+      "title": "Biology Systems and Change",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/biology-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "biology-301",
+      "title": "Biology Data and Systems",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/biology-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "biology-401",
+      "title": "Biology Capstone Inquiry",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/biology-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -229,14 +643,14 @@
       "title": "Chemistry Essentials",
       "subject": "Chemistry",
       "file": "src/lib/modules/catalog/chemistry-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -248,18 +662,18 @@
       ]
     },
     {
-      "moduleId": "coding-101",
-      "title": "Coding Foundations",
-      "subject": "Coding",
-      "file": "src/lib/modules/catalog/coding-101.ts",
-      "lessonCount": 10,
+      "moduleId": "chemistry-201",
+      "title": "Chemistry Reactions and Models",
+      "subject": "Chemistry",
+      "file": "src/lib/modules/catalog/chemistry-201.ts",
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -271,432 +685,18 @@
       ]
     },
     {
-      "moduleId": "cuet-prep-101",
-      "title": "CUET Prep Foundations",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/cuet-prep-101.ts",
-      "lessonCount": 10,
+      "moduleId": "chemistry-301",
+      "title": "Chemistry Quantitative Reasoning",
+      "subject": "Chemistry",
+      "file": "src/lib/modules/catalog/chemistry-301.ts",
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "farming-101",
-      "title": "Farming and Food Systems",
-      "subject": "Farming",
-      "file": "src/lib/modules/catalog/farming-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "financial-literacy-101",
-      "title": "Financial Literacy Basics",
-      "subject": "Financial Literacy",
-      "file": "src/lib/modules/catalog/financial-literacy-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "gaokao-prep-101",
-      "title": "Gaokao Prep Foundations",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/gaokao-prep-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "gcse-prep-101",
-      "title": "GCSE Prep Foundations",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/gcse-prep-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "general-relativity-101",
-      "title": "General Relativity Intro",
-      "subject": "General Relativity",
-      "file": "src/lib/modules/catalog/general-relativity-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "general-science-101",
-      "title": "General Science Explorer",
-      "subject": "Science",
-      "file": "src/lib/modules/catalog/general-science-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "geography-101",
-      "title": "Geography and Maps",
-      "subject": "Geography",
-      "file": "src/lib/modules/catalog/geography-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "household-management-101",
-      "title": "Household Management Skills",
-      "subject": "Household Management",
-      "file": "src/lib/modules/catalog/household-management-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "ib-prep-101",
-      "title": "IB Diploma Prep Foundations",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/ib-prep-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "ielts-prep-101",
-      "title": "IELTS Prep Foundations",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/ielts-prep-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "jee-neet-prep-101",
-      "title": "JEE / NEET Prep Foundations",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/jee-neet-prep-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "language-arts-101",
-      "title": "Language Arts Foundations",
-      "subject": "Language Arts",
-      "file": "src/lib/modules/catalog/language-arts-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "math-101",
-      "title": "Introduction to Counting",
-      "subject": "Math",
-      "file": "src/lib/modules/catalog/math-101.ts",
-      "lessonCount": 8,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 2,
-        "quiz": 3
-      },
-      "questionCount": 13,
-      "learningAidBlocks": 7,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4.33,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "physics-101",
-      "title": "Physics Essentials",
-      "subject": "Physics",
-      "file": "src/lib/modules/catalog/physics-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-advanced-math-101",
-      "title": "Pre-K Math Thinking Adventures",
-      "subject": "Advanced Math",
-      "file": "src/lib/modules/catalog/pre-k-advanced-math-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-arts-101",
-      "title": "Pre-K Creative Arts Studio",
-      "subject": "Arts",
-      "file": "src/lib/modules/catalog/pre-k-arts-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-astronomy-101",
-      "title": "Pre-K Sky and Space Explorers",
-      "subject": "Astronomy",
-      "file": "src/lib/modules/catalog/pre-k-astronomy-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-basic-math-101",
-      "title": "Pre-K Math Explorers",
-      "subject": "Basic Math",
-      "file": "src/lib/modules/catalog/pre-k-basic-math-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -714,17 +714,17 @@
       "title": "A-Level Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/a-level-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -737,17 +737,17 @@
       "title": "ACT Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/act-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -760,14 +760,60 @@
       "title": "Advanced Math Topics",
       "subject": "Advanced Math",
       "file": "src/lib/modules/catalog/advanced-math-201.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "advanced-math-301",
+      "title": "Advanced Math Modeling",
+      "subject": "Advanced Math",
+      "file": "src/lib/modules/catalog/advanced-math-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "advanced-math-401",
+      "title": "Advanced Math Capstone Proofs and Models",
+      "subject": "Advanced Math",
+      "file": "src/lib/modules/catalog/advanced-math-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -783,17 +829,17 @@
       "title": "AP Exam Prep Toolkit",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/ap-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -806,14 +852,60 @@
       "title": "Creative Arts Studio",
       "subject": "Arts",
       "file": "src/lib/modules/catalog/arts-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "arts-201",
+      "title": "Creative Arts Studio II",
+      "subject": "Arts",
+      "file": "src/lib/modules/catalog/arts-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "arts-301",
+      "title": "Creative Arts Composition and Curation",
+      "subject": "Arts",
+      "file": "src/lib/modules/catalog/arts-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -829,14 +921,60 @@
       "title": "Astronomy Explorer",
       "subject": "Astronomy",
       "file": "src/lib/modules/catalog/astronomy-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "astronomy-201",
+      "title": "Astronomy Observation and Models",
+      "subject": "Astronomy",
+      "file": "src/lib/modules/catalog/astronomy-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "astronomy-301",
+      "title": "Astronomy Data Interpretation and Prediction",
+      "subject": "Astronomy",
+      "file": "src/lib/modules/catalog/astronomy-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -852,17 +990,17 @@
       "title": "ATAR Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/atar-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -875,17 +1013,224 @@
       "title": "Basic Math Foundations",
       "subject": "Math",
       "file": "src/lib/modules/catalog/basic-math-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-1112-u1-external",
+      "title": "Calculus: Limits, Derivatives & Integration",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-1112-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-201",
+      "title": "Basic Math Applications",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/basic-math-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-301",
+      "title": "Quantitative Reasoning Lab",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/basic-math-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-35-u1-external",
+      "title": "Multiplication, Division & Fractions",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-35-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-401",
+      "title": "Math Capstone Reasoning",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/basic-math-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-68-u1-external",
+      "title": "Pre-Algebra: Expressions, Equations & Ratios",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-68-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-910-u1-external",
+      "title": "Algebra II: Functions, Systems & Polynomials",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-910-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-k2-u1-external",
+      "title": "Addition & Subtraction (0–20)",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-k2-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "basic-math-prek-u1-external",
+      "title": "Counting & Numbers 1–10",
+      "subject": "Mathematics",
+      "file": "src/lib/modules/catalog/basic-math-prek-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -898,14 +1243,83 @@
       "title": "Biology Essentials",
       "subject": "Biology",
       "file": "src/lib/modules/catalog/biology-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "biology-201",
+      "title": "Biology Systems and Change",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/biology-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "biology-301",
+      "title": "Biology Data and Systems",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/biology-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "biology-401",
+      "title": "Biology Capstone Inquiry",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/biology-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -921,14 +1335,83 @@
       "title": "Chemistry Essentials",
       "subject": "Chemistry",
       "file": "src/lib/modules/catalog/chemistry-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "chemistry-201",
+      "title": "Chemistry Reactions and Models",
+      "subject": "Chemistry",
+      "file": "src/lib/modules/catalog/chemistry-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "chemistry-301",
+      "title": "Chemistry Quantitative Reasoning",
+      "subject": "Chemistry",
+      "file": "src/lib/modules/catalog/chemistry-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "chemistry-401",
+      "title": "Chemistry Capstone Systems",
+      "subject": "Chemistry",
+      "file": "src/lib/modules/catalog/chemistry-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -944,14 +1427,83 @@
       "title": "Coding Foundations",
       "subject": "Coding",
       "file": "src/lib/modules/catalog/coding-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "coding-201",
+      "title": "Coding Projects and Problem Solving",
+      "subject": "Coding",
+      "file": "src/lib/modules/catalog/coding-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "coding-301",
+      "title": "Coding Architecture and Quality",
+      "subject": "Coding",
+      "file": "src/lib/modules/catalog/coding-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "coding-401",
+      "title": "Coding Capstone Systems",
+      "subject": "Coding",
+      "file": "src/lib/modules/catalog/coding-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -967,17 +1519,17 @@
       "title": "CUET Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/cuet-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -990,14 +1542,60 @@
       "title": "Farming and Food Systems",
       "subject": "Farming",
       "file": "src/lib/modules/catalog/farming-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "farming-201",
+      "title": "Sustainable Farming Systems",
+      "subject": "Farming",
+      "file": "src/lib/modules/catalog/farming-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "farming-301",
+      "title": "Agriculture Systems Optimization",
+      "subject": "Farming",
+      "file": "src/lib/modules/catalog/farming-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1013,14 +1611,83 @@
       "title": "Financial Literacy Basics",
       "subject": "Financial Literacy",
       "file": "src/lib/modules/catalog/financial-literacy-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "financial-literacy-201",
+      "title": "Financial Planning and Decisions",
+      "subject": "Financial Literacy",
+      "file": "src/lib/modules/catalog/financial-literacy-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "financial-literacy-301",
+      "title": "Financial Strategy and Risk",
+      "subject": "Financial Literacy",
+      "file": "src/lib/modules/catalog/financial-literacy-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "financial-literacy-401",
+      "title": "Financial Capstone Planning",
+      "subject": "Financial Literacy",
+      "file": "src/lib/modules/catalog/financial-literacy-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1036,17 +1703,17 @@
       "title": "Gaokao Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/gaokao-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1059,17 +1726,155 @@
       "title": "GCSE Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/gcse-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "gen-science-1112-u1-external",
+      "title": "Physics: Mechanics, Thermodynamics & Waves",
+      "subject": "General Science",
+      "file": "src/lib/modules/catalog/gen-science-1112-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "gen-science-35-u1-external",
+      "title": "Matter, Energy & Earth's Systems",
+      "subject": "General Science",
+      "file": "src/lib/modules/catalog/gen-science-35-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "gen-science-68-u1-external",
+      "title": "Life Science: Cells, Genetics & Evolution",
+      "subject": "General Science",
+      "file": "src/lib/modules/catalog/gen-science-68-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "gen-science-910-u1-external",
+      "title": "Chemistry: Atomic Structure & Chemical Bonding",
+      "subject": "General Science",
+      "file": "src/lib/modules/catalog/gen-science-910-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "gen-science-k2-u1-external",
+      "title": "Plants, Animals & Their Habitats",
+      "subject": "General Science",
+      "file": "src/lib/modules/catalog/gen-science-k2-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "gen-science-prek-u1-external",
+      "title": "Living & Non-Living Things",
+      "subject": "General Science",
+      "file": "src/lib/modules/catalog/gen-science-prek-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1082,14 +1887,60 @@
       "title": "General Relativity Intro",
       "subject": "General Relativity",
       "file": "src/lib/modules/catalog/general-relativity-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "general-relativity-201",
+      "title": "General Relativity Applications",
+      "subject": "General Relativity",
+      "file": "src/lib/modules/catalog/general-relativity-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "general-relativity-301",
+      "title": "General Relativity Modeling and Evidence",
+      "subject": "General Relativity",
+      "file": "src/lib/modules/catalog/general-relativity-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1105,14 +1956,83 @@
       "title": "General Science Explorer",
       "subject": "Science",
       "file": "src/lib/modules/catalog/general-science-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "general-science-201",
+      "title": "General Science Investigations",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/general-science-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "general-science-301",
+      "title": "Science Systems and Engineering",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/general-science-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "general-science-401",
+      "title": "Science Capstone Inquiry",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/general-science-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1128,14 +2048,83 @@
       "title": "Geography and Maps",
       "subject": "Geography",
       "file": "src/lib/modules/catalog/geography-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "geography-201",
+      "title": "Geography, Environment, and Data",
+      "subject": "Geography",
+      "file": "src/lib/modules/catalog/geography-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "geography-301",
+      "title": "Geography and Climate Resilience",
+      "subject": "Geography",
+      "file": "src/lib/modules/catalog/geography-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "geography-401",
+      "title": "Geography Capstone Resilience",
+      "subject": "Geography",
+      "file": "src/lib/modules/catalog/geography-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1151,14 +2140,60 @@
       "title": "Household Management Skills",
       "subject": "Household Management",
       "file": "src/lib/modules/catalog/household-management-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "household-management-201",
+      "title": "Household Systems and Planning II",
+      "subject": "Household Management",
+      "file": "src/lib/modules/catalog/household-management-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "household-management-301",
+      "title": "Household Operations and Resilience",
+      "subject": "Household Management",
+      "file": "src/lib/modules/catalog/household-management-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1174,17 +2209,17 @@
       "title": "IB Diploma Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/ib-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1197,17 +2232,17 @@
       "title": "IELTS Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/ielts-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1220,17 +2255,155 @@
       "title": "JEE / NEET Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/jee-neet-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "lang-arts-1112-u1-external",
+      "title": "AP Literature & Research Writing",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/lang-arts-1112-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "lang-arts-35-u1-external",
+      "title": "Reading Comprehension & Writing",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/lang-arts-35-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "lang-arts-68-u1-external",
+      "title": "Literary Analysis & Argumentative Writing",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/lang-arts-68-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "lang-arts-910-u1-external",
+      "title": "Advanced Composition & Rhetoric",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/lang-arts-910-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "lang-arts-k2-u1-external",
+      "title": "Phonics & Early Reading",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/lang-arts-k2-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "lang-arts-prek-u1-external",
+      "title": "Oral Language & Listening",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/lang-arts-prek-u1-external.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
+      },
+      "questionCount": 15,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1243,14 +2416,83 @@
       "title": "Language Arts Foundations",
       "subject": "Language Arts",
       "file": "src/lib/modules/catalog/language-arts-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "language-arts-201",
+      "title": "Language Arts Workshop II",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/language-arts-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "language-arts-301",
+      "title": "Language Arts Seminar",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/language-arts-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "language-arts-401",
+      "title": "Language Arts Capstone Communication",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/language-arts-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1289,14 +2531,83 @@
       "title": "Physics Essentials",
       "subject": "Physics",
       "file": "src/lib/modules/catalog/physics-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "physics-201",
+      "title": "Physics Modeling and Applications",
+      "subject": "Physics",
+      "file": "src/lib/modules/catalog/physics-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "physics-301",
+      "title": "Physics Systems and Modeling",
+      "subject": "Physics",
+      "file": "src/lib/modules/catalog/physics-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "physics-401",
+      "title": "Physics Capstone Modeling",
+      "subject": "Physics",
+      "file": "src/lib/modules/catalog/physics-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1542,17 +2853,17 @@
       "title": "Pre-K Science Discovery Lab",
       "subject": "General Science",
       "file": "src/lib/modules/catalog/pre-k-general-science-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 11,
       "lessonTypeCounts": {
         "video": 3,
         "interactive": 3,
-        "quiz": 4
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 19,
+      "learningAidBlocks": 11,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 3.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1611,17 +2922,17 @@
       "title": "Pre-K Language Arts Explorers",
       "subject": "Language Arts",
       "file": "src/lib/modules/catalog/pre-k-language-arts-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 13,
       "lessonTypeCounts": {
         "video": 3,
         "interactive": 3,
-        "quiz": 4
+        "quiz": 7
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 25,
+      "learningAidBlocks": 13,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 3.57,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1749,17 +3060,17 @@
       "title": "SAT Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/sat-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1818,14 +3129,83 @@
       "title": "Social Studies: United States",
       "subject": "Social Studies US",
       "file": "src/lib/modules/catalog/social-studies-us-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "social-studies-us-201",
+      "title": "US Civics and Institutions II",
+      "subject": "Social Studies US",
+      "file": "src/lib/modules/catalog/social-studies-us-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "social-studies-us-301",
+      "title": "US Policy, Institutions, and Change",
+      "subject": "Social Studies US",
+      "file": "src/lib/modules/catalog/social-studies-us-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "social-studies-us-401",
+      "title": "US Civics Capstone Analysis",
+      "subject": "Social Studies US",
+      "file": "src/lib/modules/catalog/social-studies-us-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1841,14 +3221,83 @@
       "title": "Social Studies: World",
       "subject": "Social Studies World",
       "file": "src/lib/modules/catalog/social-studies-world-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "social-studies-world-201",
+      "title": "Global Systems and Citizenship",
+      "subject": "Social Studies World",
+      "file": "src/lib/modules/catalog/social-studies-world-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "social-studies-world-301",
+      "title": "Global Governance and Development",
+      "subject": "Social Studies World",
+      "file": "src/lib/modules/catalog/social-studies-world-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "social-studies-world-401",
+      "title": "Global Systems Capstone Analysis",
+      "subject": "Social Studies World",
+      "file": "src/lib/modules/catalog/social-studies-world-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1864,17 +3313,17 @@
       "title": "TOEFL iBT Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/toefl-prep-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 5,
+        "interactive": 5,
+        "quiz": 5
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 34,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 6.8,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1887,14 +3336,83 @@
       "title": "World History Journey",
       "subject": "History Worldwide",
       "file": "src/lib/modules/catalog/world-history-101.ts",
-      "lessonCount": 10,
+      "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "world-history-201",
+      "title": "World History Themes and Turning Points",
+      "subject": "History Worldwide",
+      "file": "src/lib/modules/catalog/world-history-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "world-history-301",
+      "title": "World History Interpretation and Synthesis",
+      "subject": "History Worldwide",
+      "file": "src/lib/modules/catalog/world-history-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "world-history-401",
+      "title": "World History Capstone Interpretation",
+      "subject": "History Worldwide",
+      "file": "src/lib/modules/catalog/world-history-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,

@@ -5,8 +5,13 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getOnboardingRedirect } from "@/lib/compliance/onboarding";
 import SignOutButton from "./sign-out-button";
 import RecommendedLesson from "./recommended-lesson";
+import AiCoachCard from "./ai-coach-card";
+import AiTutorPanel from "./ai-tutor-panel";
+import AiWeeklyPlanCard from "./ai-weekly-plan-card";
+import AiRemediationWorksheetCard from "./ai-remediation-worksheet-card";
 import ModuleCoverImage from "@/app/components/module-cover-image";
 import { toLessonPath } from "@/lib/routing/paths";
+import SoftCard from "@/app/components/ui/soft-card";
 
 export const dynamic = "force-dynamic";
 
@@ -35,7 +40,7 @@ export default async function DashboardPage() {
     redirect("/auth/sign-in");
   }
 
-  const [profileResult, progressResult, masteryResult] = await Promise.all([
+  const [profileResult, progressResult, masteryResult, examErrorResult] = await Promise.all([
     supabase
       .from("user_profiles")
       .select("birth_date, parental_consent_required, parental_consent_status")
@@ -49,11 +54,17 @@ export default async function DashboardPage() {
       .from("user_skill_mastery")
       .select("mastery_level, attempts, correct_attempts")
       .eq("user_id", data.user.id),
+    supabase
+      .from("user_exam_error_logs")
+      .select("id", { head: true, count: "exact" })
+      .eq("user_id", data.user.id)
+      .eq("resolved", false),
   ]);
 
   const profile = profileResult.data;
   const progressData = progressResult.data ?? [];
   const masteryData = masteryResult.data ?? [];
+  const openExamErrors = Math.max(0, Number(examErrorResult.count ?? 0));
 
   const onboardingRedirect = getOnboardingRedirect(profile ?? null);
   if (onboardingRedirect) {
@@ -79,7 +90,7 @@ export default async function DashboardPage() {
       <header className="flex items-start justify-between gap-4">
         <div>
           <h1 className="text-2xl font-semibold">Learner Dashboard</h1>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+          <p className="mt-2 text-sm text-zinc-600">
             Signed in as {data.user.email ?? data.user.id}
           </p>
         </div>
@@ -87,35 +98,48 @@ export default async function DashboardPage() {
       </header>
 
       <section className="flex flex-col gap-8">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-2xl border border-rose-200 bg-rose-50 p-4 shadow-sm">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          <SoftCard as="article" className="border-rose-200 bg-rose-50 p-4">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Achievement Level</p>
             <p className="mt-2 text-3xl font-bold">{level}</p>
             <p className="mt-1 text-xs text-zinc-500">Progress band: {grade}</p>
-          </div>
-          <div className="rounded-2xl border border-sky-200 bg-sky-50 p-4 shadow-sm">
+          </SoftCard>
+          <SoftCard as="article" className="border-sky-200 bg-sky-50 p-4">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Mastery Score</p>
             <p className="mt-2 text-3xl font-bold">{averageMasteryPercent}%</p>
-          </div>
-          <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 shadow-sm">
+          </SoftCard>
+          <SoftCard as="article" className="border-emerald-200 bg-emerald-50 p-4">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Lessons Completed</p>
             <p className="mt-2 text-3xl font-bold">{completedLessons}</p>
-          </div>
-          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 shadow-sm">
+          </SoftCard>
+          <SoftCard as="article" className="border-amber-200 bg-amber-50 p-4">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Stars Earned</p>
             <p className="mt-2 text-3xl font-bold">{starsEarned}</p>
             <p className="mt-1 text-xs text-zinc-500">Accuracy: {accuracyPercent}%</p>
-          </div>
+          </SoftCard>
+          <SoftCard as="article" className="border-indigo-200 bg-indigo-50 p-4">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Open Exam Errors</p>
+            <p className="mt-2 text-3xl font-bold">{openExamErrors}</p>
+            <Link href="/exam-prep/error-log" className="mt-1 inline-block text-xs font-medium text-indigo-700 hover:underline">
+              Review logbook
+            </Link>
+          </SoftCard>
         </div>
 
         <RecommendedLesson />
+        <AiCoachCard />
+        <AiRemediationWorksheetCard />
+        <AiWeeklyPlanCard />
+        <AiTutorPanel />
 
         <h2 className="mt-4 text-xl font-semibold">Your Learning Path</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {learningModules.map((learningModule) => (
-            <div
+            <SoftCard
               key={learningModule.id}
-              className="rounded-2xl border border-violet-200 bg-white p-6 shadow-sm"
+              as="article"
+              interactive
+              className="border-violet-200 p-6"
             >
               <ModuleCoverImage
                 moduleId={learningModule.id}
@@ -124,7 +148,7 @@ export default async function DashboardPage() {
                 className="h-32 w-full rounded-lg border border-violet-100 object-cover"
               />
               <h3 className="mt-3 text-lg font-bold text-violet-900">{learningModule.title}</h3>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+              <p className="mt-2 text-sm text-zinc-600">
                 {learningModule.description}
               </p>
               <div className="mt-4 border-t border-violet-100 pt-4">
@@ -136,7 +160,7 @@ export default async function DashboardPage() {
                       <li key={lesson.id}>
                         <Link
                           href={toLessonPath(lesson.id)}
-                          className="flex items-center justify-between rounded-md p-2 text-sm hover:bg-violet-50"
+                          className="ui-focus-ring ui-soft-button flex min-h-11 items-center justify-between rounded-2xl border border-violet-100 bg-violet-50 p-2 text-sm hover:bg-violet-100"
                         >
                           <span className="flex items-center gap-2">
                             {isCompleted && (
@@ -153,7 +177,7 @@ export default async function DashboardPage() {
                   })}
                 </ul>
               </div>
-            </div>
+            </SoftCard>
           ))}
         </div>
       </section>

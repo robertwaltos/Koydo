@@ -1,84 +1,84 @@
 # Curriculum Coverage Report
 
-Generated: 2026-02-21T00:05:13.847Z
+Generated: 2026-02-24T04:20:22.531Z
 
 Source: module-catalog
-Total lessons: 510
-Total modules: 52
+Total lessons: 1654
+Total modules: 118
 
 ## Grade x Subject Coverage
 
 | Grade Band | Subject | Lesson Count |
-|---|---|---:|
-| Elementary | Advanced Math | 10 |
-| Elementary | Arts | 10 |
-| Elementary | Astronomy | 10 |
-| Elementary | Basic Math | 18 |
-| Elementary | Biology | 10 |
-| Elementary | Chemistry | 10 |
-| Elementary | Coding | 10 |
-| Elementary | Farming | 10 |
-| Elementary | Financial Literacy | 10 |
-| Elementary | General Relativity | 10 |
-| Elementary | General Science | 24 |
-| Elementary | Geography | 10 |
-| Elementary | Household Management | 10 |
-| Elementary | Language Arts | 18 |
-| Elementary | Physics | 10 |
-| Elementary | Social Studies Us | 10 |
-| Elementary | Social Studies World | 10 |
-| Elementary | World History | 10 |
-| High School | Advanced Math | 10 |
-| High School | Arts | 10 |
-| High School | Astronomy | 10 |
-| High School | Basic Math | 10 |
-| High School | Biology | 10 |
-| High School | Chemistry | 10 |
-| High School | Coding | 10 |
-| High School | Exam Prep | 120 |
-| High School | Farming | 10 |
-| High School | Financial Literacy | 10 |
-| High School | General Relativity | 10 |
-| High School | General Science | 16 |
-| High School | Geography | 10 |
-| High School | Household Management | 10 |
-| High School | Language Arts | 10 |
-| High School | Physics | 10 |
-| High School | Social Studies Us | 10 |
-| High School | Social Studies World | 10 |
-| High School | World History | 10 |
-| Middle School | Advanced Math | 10 |
-| Middle School | Arts | 10 |
-| Middle School | Astronomy | 10 |
-| Middle School | Basic Math | 10 |
-| Middle School | Biology | 10 |
-| Middle School | Chemistry | 10 |
-| Middle School | Coding | 10 |
-| Middle School | Farming | 10 |
-| Middle School | Financial Literacy | 10 |
-| Middle School | General Relativity | 10 |
-| Middle School | General Science | 24 |
-| Middle School | Geography | 10 |
-| Middle School | Household Management | 10 |
-| Middle School | Language Arts | 10 |
-| Middle School | Physics | 10 |
-| Middle School | Social Studies Us | 10 |
-| Middle School | Social Studies World | 10 |
-| Middle School | World History | 10 |
+| --- | --- | ---: |
+| Elementary | Advanced Math | 45 |
+| Elementary | Arts | 45 |
+| Elementary | Astronomy | 45 |
+| Elementary | Basic Math | 98 |
+| Elementary | Biology | 60 |
+| Elementary | Chemistry | 60 |
+| Elementary | Coding | 60 |
+| Elementary | Farming | 45 |
+| Elementary | Financial Literacy | 60 |
+| Elementary | General Relativity | 45 |
+| Elementary | General Science | 104 |
+| Elementary | Geography | 60 |
+| Elementary | Household Management | 45 |
+| Elementary | Language Arts | 98 |
+| Elementary | Physics | 60 |
+| Elementary | Social Studies Us | 60 |
+| Elementary | Social Studies World | 60 |
+| Elementary | World History | 60 |
+| High School | Advanced Math | 45 |
+| High School | Arts | 45 |
+| High School | Astronomy | 45 |
+| High School | Basic Math | 105 |
+| High School | Biology | 60 |
+| High School | Chemistry | 60 |
+| High School | Coding | 60 |
+| High School | Exam Prep | 180 |
+| High School | Farming | 45 |
+| High School | Financial Literacy | 60 |
+| High School | General Relativity | 45 |
+| High School | General Science | 111 |
+| High School | Geography | 60 |
+| High School | Household Management | 45 |
+| High School | Language Arts | 105 |
+| High School | Physics | 60 |
+| High School | Social Studies Us | 60 |
+| High School | Social Studies World | 60 |
+| High School | World History | 60 |
+| Middle School | Advanced Math | 45 |
+| Middle School | Arts | 45 |
+| Middle School | Astronomy | 45 |
+| Middle School | Basic Math | 90 |
+| Middle School | Biology | 60 |
+| Middle School | Chemistry | 60 |
+| Middle School | Coding | 60 |
+| Middle School | Farming | 45 |
+| Middle School | Financial Literacy | 60 |
+| Middle School | General Relativity | 45 |
+| Middle School | General Science | 104 |
+| Middle School | Geography | 60 |
+| Middle School | Household Management | 45 |
+| Middle School | Language Arts | 90 |
+| Middle School | Physics | 60 |
+| Middle School | Social Studies Us | 60 |
+| Middle School | Social Studies World | 60 |
+| Middle School | World History | 60 |
 | Pre K | Advanced Math | 10 |
 | Pre K | Arts | 10 |
 | Pre K | Astronomy | 10 |
-| Pre K | Basic Math | 18 |
+| Pre K | Basic Math | 48 |
 | Pre K | Biology | 10 |
 | Pre K | Chemistry | 10 |
 | Pre K | Coding | 10 |
 | Pre K | Farming | 10 |
 | Pre K | Financial Literacy | 10 |
 | Pre K | General Relativity | 10 |
-| Pre K | General Science | 10 |
+| Pre K | General Science | 41 |
 | Pre K | Geography | 10 |
 | Pre K | Household Management | 10 |
-| Pre K | Language Arts | 18 |
+| Pre K | Language Arts | 51 |
 | Pre K | Physics | 10 |
 | Pre K | Social Studies Us | 10 |
 | Pre K | Social Studies World | 10 |
@@ -87,35 +87,35 @@ Total modules: 52
 ## Grade Band Totals
 
 | Grade Band | Lesson Count |
-|---|---:|
-| Elementary | 210 |
-| High School | 306 |
-| Middle School | 194 |
-| Pre K | 196 |
+| --- | ---: |
+| Elementary | 1110 |
+| High School | 1311 |
+| Middle School | 1094 |
+| Pre K | 290 |
 
 ## Subject Totals
 
 | Subject | Lesson Count |
-|---|---:|
-| Advanced Math | 40 |
-| Arts | 40 |
-| Astronomy | 40 |
-| Basic Math | 56 |
-| Biology | 40 |
-| Chemistry | 40 |
-| Coding | 40 |
-| Exam Prep | 120 |
-| Farming | 40 |
-| Financial Literacy | 40 |
-| General Relativity | 40 |
-| General Science | 74 |
-| Geography | 40 |
-| Household Management | 40 |
-| Language Arts | 56 |
-| Physics | 40 |
-| Social Studies Us | 40 |
-| Social Studies World | 40 |
-| World History | 40 |
+| --- | ---: |
+| Advanced Math | 145 |
+| Arts | 145 |
+| Astronomy | 145 |
+| Basic Math | 341 |
+| Biology | 190 |
+| Chemistry | 190 |
+| Coding | 190 |
+| Exam Prep | 180 |
+| Farming | 145 |
+| Financial Literacy | 190 |
+| General Relativity | 145 |
+| General Science | 360 |
+| Geography | 190 |
+| Household Management | 145 |
+| Language Arts | 344 |
+| Physics | 190 |
+| Social Studies Us | 190 |
+| Social Studies World | 190 |
+| World History | 190 |
 
 ## Next Expansion Targets
 

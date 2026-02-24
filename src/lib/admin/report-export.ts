@@ -6,6 +6,7 @@ type ReportExportLogInput = {
   reportType: string;
   csvContent: string;
   rowCount: number;
+  metadata?: Record<string, unknown>;
 };
 
 export async function logReportExport({
@@ -13,6 +14,7 @@ export async function logReportExport({
   reportType,
   csvContent,
   rowCount,
+  metadata = {},
 }: ReportExportLogInput) {
   const checksum = createHash("sha256").update(csvContent).digest("hex");
   const admin = createSupabaseAdminClient();
@@ -28,6 +30,7 @@ export async function logReportExport({
       completed_at: new Date().toISOString(),
       metadata: {
         generatedAt: new Date().toISOString(),
+        ...metadata,
       },
     })
     .select("id")

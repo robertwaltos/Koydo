@@ -103,7 +103,7 @@ function toMarkdown(audit) {
   lines.push(`Checks: ${audit.totals.total} | Pass: ${audit.totals.pass} | Warn: ${audit.totals.warn} | Fail: ${audit.totals.fail}`);
   lines.push("");
   lines.push("| Category | ID | Status | Detail |");
-  lines.push("|---|---|---|---|");
+  lines.push("| --- | --- | --- | --- |");
   for (const check of audit.checks) {
     lines.push(`| ${check.category} | ${check.id} | ${String(check.status).toUpperCase()} | ${check.detail} |`);
   }

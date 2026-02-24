@@ -227,13 +227,13 @@ export default function AlertsClient({
 
   return (
     <div className="space-y-3">
-      <section className="rounded-md border border-black/10 p-3 dark:border-white/10">
+      <section className="rounded-2xl border border-border p-3">
         <h2 className="text-sm font-semibold">Media Queue SLA Settings</h2>
-        <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-300">
+        <p className="mt-1 text-xs text-zinc-600">
           These thresholds control stale/backlog/failure alerts for media job automation.
         </p>
         <div className="mt-3 grid gap-2 md:grid-cols-5">
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Stale Hours
             <input
               type="number"
@@ -246,10 +246,10 @@ export default function AlertsClient({
                   staleHours: Math.max(1, Math.min(168, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Backlog Limit
             <input
               type="number"
@@ -262,10 +262,10 @@ export default function AlertsClient({
                   backlogLimit: Math.max(1, Math.min(10000, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Failure 24h Limit
             <input
               type="number"
@@ -278,10 +278,10 @@ export default function AlertsClient({
                   failure24hLimit: Math.max(1, Math.min(10000, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Dedupe Window (h)
             <input
               type="number"
@@ -294,10 +294,10 @@ export default function AlertsClient({
                   dedupeWindowHours: Math.max(1, Math.min(168, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Auto-Resolve Age (h)
             <input
               type="number"
@@ -310,19 +310,19 @@ export default function AlertsClient({
                   autoResolveHours: Math.max(1, Math.min(720, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
         </div>
       </section>
 
-      <section className="rounded-md border border-black/10 p-3 dark:border-white/10">
+      <section className="rounded-2xl border border-border p-3">
         <h2 className="text-sm font-semibold">Report Queue SLA Settings</h2>
-        <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-300">
+        <p className="mt-1 text-xs text-zinc-600">
           These thresholds control stale/backlog/failure alerts for admin report job processing.
         </p>
         <div className="mt-3 grid gap-2 md:grid-cols-5">
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Stale Hours
             <input
               type="number"
@@ -335,10 +335,10 @@ export default function AlertsClient({
                   staleHours: Math.max(1, Math.min(168, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Backlog Limit
             <input
               type="number"
@@ -351,10 +351,10 @@ export default function AlertsClient({
                   backlogLimit: Math.max(1, Math.min(10000, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Failure 24h Limit
             <input
               type="number"
@@ -367,10 +367,10 @@ export default function AlertsClient({
                   failure24hLimit: Math.max(1, Math.min(10000, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Dedupe Window (h)
             <input
               type="number"
@@ -383,10 +383,10 @@ export default function AlertsClient({
                   dedupeWindowHours: Math.max(1, Math.min(168, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
-          <label className="text-xs text-zinc-600 dark:text-zinc-300">
+          <label className="text-xs text-zinc-600">
             Auto-Resolve Age (h)
             <input
               type="number"
@@ -399,7 +399,7 @@ export default function AlertsClient({
                   autoResolveHours: Math.max(1, Math.min(720, Number(event.target.value) || 1)),
                 }))
               }
-              className="mt-1 w-full rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-1 w-full ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             />
           </label>
         </div>
@@ -407,7 +407,7 @@ export default function AlertsClient({
           type="button"
           onClick={() => void saveSettings()}
           disabled={isSavingSettings}
-          className="mt-3 rounded border border-black/15 px-2 py-1 text-xs disabled:opacity-70"
+          className="mt-3 ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground disabled:opacity-70"
         >
           {isSavingSettings ? "Saving..." : "Save SLA Settings"}
         </button>
@@ -417,14 +417,14 @@ export default function AlertsClient({
         <button
           type="button"
           onClick={() => void runChecks()}
-          className="rounded border border-black/15 px-2 py-1 text-xs"
+          className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
         >
           Run Checks
         </button>
         <button
           type="button"
           onClick={() => void refreshAlerts()}
-          className="rounded border border-black/15 px-2 py-1 text-xs"
+          className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
         >
           Refresh
         </button>
@@ -432,28 +432,28 @@ export default function AlertsClient({
           type="button"
           onClick={() => void processNotifications()}
           disabled={isProcessingNotifications}
-          className="rounded border border-black/15 px-2 py-1 text-xs disabled:opacity-70"
+          className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground disabled:opacity-70"
         >
           {isProcessingNotifications ? "Processing Notifications..." : "Process Notifications"}
         </button>
       </div>
-      {status ? <p className="text-sm text-zinc-600 dark:text-zinc-300">{status}</p> : null}
+      {status ? <p className="text-sm text-zinc-600">{status}</p> : null}
       {notificationSummary ? (
-        <section className="rounded-md border border-black/10 bg-zinc-50 p-3 text-xs dark:border-white/10 dark:bg-zinc-900/20">
+        <section className="rounded-2xl border border-border bg-surface-muted p-3 text-xs">
           <p className="font-semibold">Notification Queue</p>
-          <p className="mt-1 text-zinc-600 dark:text-zinc-300">
+          <p className="mt-1 text-zinc-600">
             queued={notificationSummary.queuedCount} | failed={notificationSummary.failedCount} | sent=
             {notificationSummary.sentCount}
           </p>
         </section>
       ) : null}
       {lastRunSummary ? (
-        <section className="rounded-md border border-black/10 bg-zinc-50 p-3 text-xs dark:border-white/10 dark:bg-zinc-900/20">
+        <section className="rounded-2xl border border-border bg-surface-muted p-3 text-xs">
           <p className="font-semibold">Last Check Summary</p>
-          <p className="mt-1 text-zinc-600 dark:text-zinc-300">
+          <p className="mt-1 text-zinc-600">
             Triggered categories: {lastRunSummary.triggeredCategories.join(", ") || "none"}
           </p>
-          <p className="mt-1 text-zinc-600 dark:text-zinc-300">
+          <p className="mt-1 text-zinc-600">
             Auto-resolved categories:{" "}
             {Object.keys(lastRunSummary.autoResolvedCategories).length > 0
               ? Object.entries(lastRunSummary.autoResolvedCategories)
@@ -464,25 +464,25 @@ export default function AlertsClient({
         </section>
       ) : null}
       {alerts.map((entry) => (
-        <article key={entry.id} className="rounded-md border border-black/10 p-3 dark:border-white/10">
+        <article key={entry.id} className="rounded-2xl border border-border p-3">
           <p className="font-medium">
             [{entry.severity}] {entry.message}
           </p>
           <p className="text-xs text-zinc-500">
             category: {entry.category} | created: {new Date(entry.created_at).toLocaleString()}
           </p>
-          <pre className="mt-2 overflow-x-auto rounded bg-zinc-100 p-2 text-xs dark:bg-zinc-800">
+          <pre className="mt-2 overflow-x-auto rounded-2xl border border-border bg-surface-muted p-2 text-xs">
             {JSON.stringify(entry.metadata ?? {}, null, 2)}
           </pre>
           {entry.acknowledged ? (
-            <p className="mt-2 text-xs text-emerald-700 dark:text-emerald-300">
+            <p className="mt-2 text-xs text-emerald-700">
               Acknowledged {entry.acknowledged_at ? new Date(entry.acknowledged_at).toLocaleString() : ""}
             </p>
           ) : (
             <button
               type="button"
               onClick={() => acknowledgeAlert(entry.id)}
-              className="mt-2 rounded border border-black/15 px-2 py-1 text-xs"
+              className="mt-2 ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
             >
               Acknowledge
             </button>
@@ -493,3 +493,4 @@ export default function AlertsClient({
     </div>
   );
 }
+

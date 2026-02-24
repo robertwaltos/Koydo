@@ -337,7 +337,7 @@ export default function LessonMediaOps({
               <button
                 type="button"
                 onClick={() => void handleCopy(entry)}
-                className="rounded-md border border-black/15 px-3 py-1 text-xs hover:bg-black/5"
+                className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-3 py-1 text-xs hover:bg-surface"
               >
                 Copy Prompt
               </button>
@@ -363,7 +363,7 @@ export default function LessonMediaOps({
               ) : null}
             </div>
             {latestJob ? (
-              <div className="mt-3 rounded-md border border-black/10 bg-zinc-50 p-3 text-[11px]">
+              <div className="mt-3 rounded-md border border-border bg-surface-muted p-3 text-[11px]">
                 <p className="text-zinc-600">
                   Latest status:{" "}
                   <span className={`rounded px-2 py-0.5 font-semibold ${statusBadgeClass(latestJob.status)}`}>
@@ -400,14 +400,14 @@ export default function LessonMediaOps({
           <span>{jobsLoading ? "Loading lesson queue status..." : `Tracked jobs: ${jobs.length}`}</span>
           <button
             type="button"
-            className="rounded border border-black/15 px-2 py-1 hover:bg-black/5"
+            className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 hover:bg-surface"
             onClick={() => void refreshJobs()}
           >
             Refresh Status
           </button>
           <button
             type="button"
-            className="rounded border border-black/15 px-2 py-1 hover:bg-black/5 disabled:opacity-70"
+            className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 hover:bg-surface disabled:opacity-70"
             disabled={isProcessingLessonQueue}
             onClick={() => void handleProcessLessonQueue()}
           >

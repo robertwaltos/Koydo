@@ -1,0 +1,1399 @@
+{
+  "generatedAt": "2026-02-24T04:20:23.621Z",
+  "genericPatternSources": [
+    "which approach best improves",
+    "after a timed .* drill",
+    "which weekly habit most improves consistency",
+    "what is the strongest pacing strategy"
+  ],
+  "totals": {
+    "quizLessons": 60,
+    "highPriority": 0,
+    "mediumPriority": 0,
+    "lowPriority": 60,
+    "averageRiskScore": 0
+  },
+  "promptTemplate": "You are contributing production-ready exam-prep lesson content for our Next.js + TypeScript learning platform.\nOutput only JSON using this structure:\n{ moduleId, lessonId, rewrittenQuestions: [{ id, text, skillId, options:[{id,text}], correctOptionId, hint?, explanation? }], interactiveActivities:[...], quizBlueprint:{...}, notes }\nRequirements:\n- Keep existing lessonId and question IDs stable where possible.\n- Make stems and distractors exam-track specific (no generic wording).\n- Include one timed-drill rationale tied to section pacing.\n- Include one remediation interactive activity mapped to top missed skill.\n- Keep content child-safe and culturally neutral.",
+  "lessons": [
+    {
+      "moduleId": "a-level-prep-101",
+      "moduleTitle": "A-Level Prep Foundations",
+      "track": "A-Level",
+      "lessonId": "a-level-prep-101-l03",
+      "lessonTitle": "A-Level: High-Value Topic Prioritization",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "a-level-prep-101",
+      "moduleTitle": "A-Level Prep Foundations",
+      "track": "A-Level",
+      "lessonId": "a-level-prep-101-l06",
+      "lessonTitle": "A-Level: Synoptic Question Strategy",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "a-level-prep-101",
+      "moduleTitle": "A-Level Prep Foundations",
+      "track": "A-Level",
+      "lessonId": "a-level-prep-101-l09",
+      "lessonTitle": "A-Level: Coursework/Practical Integration",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "a-level-prep-101",
+      "moduleTitle": "A-Level Prep Foundations",
+      "track": "A-Level",
+      "lessonId": "a-level-prep-101-l12",
+      "lessonTitle": "A-Level: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "a-level-prep-101",
+      "moduleTitle": "A-Level Prep Foundations",
+      "track": "A-Level",
+      "lessonId": "a-level-prep-101-l15",
+      "lessonTitle": "A-Level: Full Mock and Gap Closure",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "act-prep-101",
+      "moduleTitle": "ACT Prep Foundations",
+      "track": "ACT",
+      "lessonId": "act-prep-101-l03",
+      "lessonTitle": "ACT: Math Core Skill Review",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "act-prep-101",
+      "moduleTitle": "ACT Prep Foundations",
+      "track": "ACT",
+      "lessonId": "act-prep-101-l06",
+      "lessonTitle": "ACT: Pacing Under Time Limits",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "drag_and_drop"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "act-prep-101",
+      "moduleTitle": "ACT Prep Foundations",
+      "track": "ACT",
+      "lessonId": "act-prep-101-l09",
+      "lessonTitle": "ACT: Section Drill: Math + Science",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "act-prep-101",
+      "moduleTitle": "ACT Prep Foundations",
+      "track": "ACT",
+      "lessonId": "act-prep-101-l12",
+      "lessonTitle": "ACT: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "act-prep-101",
+      "moduleTitle": "ACT Prep Foundations",
+      "track": "ACT",
+      "lessonId": "act-prep-101-l15",
+      "lessonTitle": "ACT: Full ACT Mock and Review",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "moduleTitle": "AP Exam Prep Toolkit",
+      "track": "AP",
+      "lessonId": "ap-prep-101-l03",
+      "lessonTitle": "AP: Free-Response Planning",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "moduleTitle": "AP Exam Prep Toolkit",
+      "track": "AP",
+      "lessonId": "ap-prep-101-l06",
+      "lessonTitle": "AP: Time Management in FRQ",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "drag_and_drop"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "moduleTitle": "AP Exam Prep Toolkit",
+      "track": "AP",
+      "lessonId": "ap-prep-101-l09",
+      "lessonTitle": "AP: Practice Set: FRQ",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "moduleTitle": "AP Exam Prep Toolkit",
+      "track": "AP",
+      "lessonId": "ap-prep-101-l12",
+      "lessonTitle": "AP: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "moduleTitle": "AP Exam Prep Toolkit",
+      "track": "AP",
+      "lessonId": "ap-prep-101-l15",
+      "lessonTitle": "AP: Mock AP Session and Reflection",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "atar-prep-101",
+      "moduleTitle": "ATAR Prep Foundations",
+      "track": "ATAR",
+      "lessonId": "atar-prep-101-l03",
+      "lessonTitle": "ATAR: Exam Technique by Subject Type",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "atar-prep-101",
+      "moduleTitle": "ATAR Prep Foundations",
+      "track": "ATAR",
+      "lessonId": "atar-prep-101-l06",
+      "lessonTitle": "ATAR: Marking Criteria and Self-Assessment",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "atar-prep-101",
+      "moduleTitle": "ATAR Prep Foundations",
+      "track": "ATAR",
+      "lessonId": "atar-prep-101-l09",
+      "lessonTitle": "ATAR: Stress and Consistency Routines",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "drag_and_drop"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "atar-prep-101",
+      "moduleTitle": "ATAR Prep Foundations",
+      "track": "ATAR",
+      "lessonId": "atar-prep-101-l12",
+      "lessonTitle": "ATAR: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "atar-prep-101",
+      "moduleTitle": "ATAR Prep Foundations",
+      "track": "ATAR",
+      "lessonId": "atar-prep-101-l15",
+      "lessonTitle": "ATAR: Final ATAR Readiness Blueprint",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "moduleTitle": "CUET Prep Foundations",
+      "track": "CUET",
+      "lessonId": "cuet-prep-101-l03",
+      "lessonTitle": "CUET: Domain Subject Prioritization",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "moduleTitle": "CUET Prep Foundations",
+      "track": "CUET",
+      "lessonId": "cuet-prep-101-l06",
+      "lessonTitle": "CUET: Current Affairs and GK Workflow",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "moduleTitle": "CUET Prep Foundations",
+      "track": "CUET",
+      "lessonId": "cuet-prep-101-l09",
+      "lessonTitle": "CUET: CUET Mock Review Cycle",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "moduleTitle": "CUET Prep Foundations",
+      "track": "CUET",
+      "lessonId": "cuet-prep-101-l12",
+      "lessonTitle": "CUET: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "cuet-prep-101",
+      "moduleTitle": "CUET Prep Foundations",
+      "track": "CUET",
+      "lessonId": "cuet-prep-101-l15",
+      "lessonTitle": "CUET: Final Revision and Exam-Day Plan",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gaokao-prep-101",
+      "moduleTitle": "Gaokao Prep Foundations",
+      "track": "Gaokao",
+      "lessonId": "gaokao-prep-101-l03",
+      "lessonTitle": "Gaokao: Mathematics Intensive Strategy",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gaokao-prep-101",
+      "moduleTitle": "Gaokao Prep Foundations",
+      "track": "Gaokao",
+      "lessonId": "gaokao-prep-101-l06",
+      "lessonTitle": "Gaokao: Speed and Accuracy Training",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "drag_and_drop"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gaokao-prep-101",
+      "moduleTitle": "Gaokao Prep Foundations",
+      "track": "Gaokao",
+      "lessonId": "gaokao-prep-101-l09",
+      "lessonTitle": "Gaokao: Performance Week Simulation",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gaokao-prep-101",
+      "moduleTitle": "Gaokao Prep Foundations",
+      "track": "Gaokao",
+      "lessonId": "gaokao-prep-101-l12",
+      "lessonTitle": "Gaokao: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gaokao-prep-101",
+      "moduleTitle": "Gaokao Prep Foundations",
+      "track": "Gaokao",
+      "lessonId": "gaokao-prep-101-l15",
+      "lessonTitle": "Gaokao: Final Sprint and Recovery Plan",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gcse-prep-101",
+      "moduleTitle": "GCSE Prep Foundations",
+      "track": "GCSE",
+      "lessonId": "gcse-prep-101-l03",
+      "lessonTitle": "GCSE: Math Non-Calculator Skills",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gcse-prep-101",
+      "moduleTitle": "GCSE Prep Foundations",
+      "track": "GCSE",
+      "lessonId": "gcse-prep-101-l06",
+      "lessonTitle": "GCSE: Structured Long Answers",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gcse-prep-101",
+      "moduleTitle": "GCSE Prep Foundations",
+      "track": "GCSE",
+      "lessonId": "gcse-prep-101-l09",
+      "lessonTitle": "GCSE: Exam-Day Readiness",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gcse-prep-101",
+      "moduleTitle": "GCSE Prep Foundations",
+      "track": "GCSE",
+      "lessonId": "gcse-prep-101-l12",
+      "lessonTitle": "GCSE: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "gcse-prep-101",
+      "moduleTitle": "GCSE Prep Foundations",
+      "track": "GCSE",
+      "lessonId": "gcse-prep-101-l15",
+      "lessonTitle": "GCSE: Full Mock Cycle and Review",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "moduleTitle": "IB Diploma Prep Foundations",
+      "track": "IB",
+      "lessonId": "ib-prep-101-l03",
+      "lessonTitle": "IB: Theory of Knowledge Reasoning Skills",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "moduleTitle": "IB Diploma Prep Foundations",
+      "track": "IB",
+      "lessonId": "ib-prep-101-l06",
+      "lessonTitle": "IB: Command Terms and Markscheme Use",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "moduleTitle": "IB Diploma Prep Foundations",
+      "track": "IB",
+      "lessonId": "ib-prep-101-l09",
+      "lessonTitle": "IB: Exam Session Simulation",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "moduleTitle": "IB Diploma Prep Foundations",
+      "track": "IB",
+      "lessonId": "ib-prep-101-l12",
+      "lessonTitle": "IB: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ib-prep-101",
+      "moduleTitle": "IB Diploma Prep Foundations",
+      "track": "IB",
+      "lessonId": "ib-prep-101-l15",
+      "lessonTitle": "IB: Final IB Sprint and Reflection",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ielts-prep-101",
+      "moduleTitle": "IELTS Prep Foundations",
+      "track": "IELTS",
+      "lessonId": "ielts-prep-101-l03",
+      "lessonTitle": "IELTS: Academic Reading Passage Tactics",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ielts-prep-101",
+      "moduleTitle": "IELTS Prep Foundations",
+      "track": "IELTS",
+      "lessonId": "ielts-prep-101-l06",
+      "lessonTitle": "IELTS: Speaking Part 1 and 2 Fluency",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ielts-prep-101",
+      "moduleTitle": "IELTS Prep Foundations",
+      "track": "IELTS",
+      "lessonId": "ielts-prep-101-l09",
+      "lessonTitle": "IELTS: Timed Multi-Skill Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "drag_and_drop"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ielts-prep-101",
+      "moduleTitle": "IELTS Prep Foundations",
+      "track": "IELTS",
+      "lessonId": "ielts-prep-101-l12",
+      "lessonTitle": "IELTS: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "ielts-prep-101",
+      "moduleTitle": "IELTS Prep Foundations",
+      "track": "IELTS",
+      "lessonId": "ielts-prep-101-l15",
+      "lessonTitle": "IELTS: Full IELTS Mock and Improvement Plan",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "jee-neet-prep-101",
+      "moduleTitle": "JEE / NEET Prep Foundations",
+      "track": "JEE/NEET",
+      "lessonId": "jee-neet-prep-101-l03",
+      "lessonTitle": "JEE/NEET: Chemistry Memory + Application",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "jee-neet-prep-101",
+      "moduleTitle": "JEE / NEET Prep Foundations",
+      "track": "JEE/NEET",
+      "lessonId": "jee-neet-prep-101-l06",
+      "lessonTitle": "JEE/NEET: Question Selection Strategy",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "jee-neet-prep-101",
+      "moduleTitle": "JEE / NEET Prep Foundations",
+      "track": "JEE/NEET",
+      "lessonId": "jee-neet-prep-101-l09",
+      "lessonTitle": "JEE/NEET: Mock Test Analysis Loop",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "jee-neet-prep-101",
+      "moduleTitle": "JEE / NEET Prep Foundations",
+      "track": "JEE/NEET",
+      "lessonId": "jee-neet-prep-101-l12",
+      "lessonTitle": "JEE/NEET: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "jee-neet-prep-101",
+      "moduleTitle": "JEE / NEET Prep Foundations",
+      "track": "JEE/NEET",
+      "lessonId": "jee-neet-prep-101-l15",
+      "lessonTitle": "JEE/NEET: Final 60-Day Exam Plan",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "moduleTitle": "SAT Prep Foundations",
+      "track": "SAT",
+      "lessonId": "sat-prep-101-l03",
+      "lessonTitle": "SAT: Writing and Language Rules",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "moduleTitle": "SAT Prep Foundations",
+      "track": "SAT",
+      "lessonId": "sat-prep-101-l06",
+      "lessonTitle": "SAT: Timing and Pacing Practice",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "drag_and_drop"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "moduleTitle": "SAT Prep Foundations",
+      "track": "SAT",
+      "lessonId": "sat-prep-101-l09",
+      "lessonTitle": "SAT: Section Drill: Math",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "moduleTitle": "SAT Prep Foundations",
+      "track": "SAT",
+      "lessonId": "sat-prep-101-l12",
+      "lessonTitle": "SAT: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "moduleTitle": "SAT Prep Foundations",
+      "track": "SAT",
+      "lessonId": "sat-prep-101-l15",
+      "lessonTitle": "SAT: Full SAT Mock and Review",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "toefl-prep-101",
+      "moduleTitle": "TOEFL iBT Prep Foundations",
+      "track": "TOEFL",
+      "lessonId": "toefl-prep-101-l03",
+      "lessonTitle": "TOEFL: Listening for Main Ideas and Detail",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "toefl-prep-101",
+      "moduleTitle": "TOEFL iBT Prep Foundations",
+      "track": "TOEFL",
+      "lessonId": "toefl-prep-101-l06",
+      "lessonTitle": "TOEFL: Integrated Writing Structure",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "toefl-prep-101",
+      "moduleTitle": "TOEFL iBT Prep Foundations",
+      "track": "TOEFL",
+      "lessonId": "toefl-prep-101-l09",
+      "lessonTitle": "TOEFL: Full Section Drill and Review",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "toefl-prep-101",
+      "moduleTitle": "TOEFL iBT Prep Foundations",
+      "track": "TOEFL",
+      "lessonId": "toefl-prep-101-l12",
+      "lessonTitle": "TOEFL: Mixed-Section Decision Drill",
+      "questionCount": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "matching_pairs"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 12,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    },
+    {
+      "moduleId": "toefl-prep-101",
+      "moduleTitle": "TOEFL iBT Prep Foundations",
+      "track": "TOEFL",
+      "lessonId": "toefl-prep-101-l15",
+      "lessonTitle": "TOEFL: Mock TOEFL and Gap Closure Plan",
+      "questionCount": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 100,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [
+        "sorting_buckets"
+      ],
+      "hasExamDrillTag": true,
+      "timedMinutes": 24,
+      "riskScore": 0,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam."
+      ]
+    }
+  ]
+}

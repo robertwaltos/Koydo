@@ -1,0 +1,61 @@
+name: External Curriculum Import
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+    inputs:
+      apply_changes:
+        description: Apply merge/create changes in this workflow run
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      merge_threshold:
+        description: Merge confidence threshold (0-100)
+        required: false
+        default: "75"
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Dry-run external curriculum import
+        run: |
+          THRESHOLD="${{ inputs.merge_threshold || '75' }}"
+          node scripts/import-external-curriculum.mjs --source-dir ../External_AI_Agents --merge-threshold "$THRESHOLD" --no-sync-registry
+
+      - name: Apply external curriculum import
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.apply_changes == 'true' }}
+        run: |
+          THRESHOLD="${{ inputs.merge_threshold || '75' }}"
+          node scripts/import-external-curriculum.mjs --source-dir ../External_AI_Agents --apply --merge-threshold "$THRESHOLD"
+
+      - name: Export curriculum handoff state
+        run: node scripts/export-curriculum-state-for-external-agents.mjs
+
+      - name: Upload external curriculum artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: external-curriculum-import
+          path: |
+            public/EXTERNAL-CURRICULUM-IMPORT-REPORT.json
+            public/EXTERNAL-CURRICULUM-IMPORT-REPORT.md
+            public/CURRICULUM-STATE-FOR-EXTERNAL-AGENTS.json
+            public/CURRICULUM-STATE-FOR-EXTERNAL-AGENTS.md

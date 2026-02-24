@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
-const REPORT_TYPES = ["dsar", "support", "audit"] as const;
+const REPORT_TYPES = ["dsar", "support", "audit", "telemetry"] as const;
 
 function coerceNumber(value: unknown) {
   if (typeof value === "number" && Number.isFinite(value)) return value;

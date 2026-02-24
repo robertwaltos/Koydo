@@ -11,6 +11,34 @@ type SupportTicket = {
   created_at: string;
 };
 
+type ExamMaintenanceAlert = {
+  id: string;
+  severity: "info" | "warning" | "critical";
+  category: string;
+  message: string;
+  acknowledged: boolean;
+  created_at: string;
+  metadata: Record<string, unknown> | null;
+};
+
+type ExamMaintenanceRun = {
+  id: string;
+  admin_user_id: string;
+  action_type: string;
+  metadata: Record<string, unknown> | null;
+  created_at: string;
+};
+
+type ExamMaintenanceRunSummaryAlert = {
+  id: string;
+  severity: "info" | "warning" | "critical";
+  category: string;
+  message: string;
+  acknowledged: boolean;
+  created_at: string;
+  metadata: Record<string, unknown> | null;
+};
+
 function Section({
   title,
   children,
@@ -19,7 +47,7 @@ function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section className="rounded-lg border border-black/10 bg-white p-5 dark:border-white/15 dark:bg-zinc-900">
+    <section className="ui-soft-card p-5">
       <h2 className="text-lg font-semibold">{title}</h2>
       <div className="mt-4">{children}</div>
     </section>
@@ -39,18 +67,160 @@ async function postJson(url: string, payload: unknown) {
   return data;
 }
 
+type ParsedRunSummary = {
+  dryRun?: boolean;
+  totals: { eligible: number; updated: number; erroredUsers: number };
+  runUrl: string | null;
+  artifactName: string | null;
+  artifactHint: string | null;
+  workflow: {
+    workflow: string | null;
+    runId: string | null;
+    runNumber: string | null;
+    repository: string | null;
+    actor: string | null;
+    ref: string | null;
+    sha: string | null;
+  };
+  diagnostics: {
+    generatedAt: string | null;
+    topEligibleUsers: Array<{ userId: string; eligibleCount: number }>;
+    topUpdatedUsers: Array<{ userId: string; updatedCount: number }>;
+    topErroredUsers: Array<{ userId: string; error: string }>;
+  };
+};
+
+function toRecord(value: unknown): Record<string, unknown> | null {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null;
+  return value as Record<string, unknown>;
+}
+
+function toNumber(value: unknown, fallback = 0) {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string") {
+    const parsed = Number(value);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return fallback;
+}
+
+function toStringValue(value: unknown) {
+  return typeof value === "string" && value.length > 0 ? value : null;
+}
+
+function toUserCountList(
+  value: unknown,
+  countKey: "eligibleCount" | "updatedCount",
+): Array<{ userId: string; eligibleCount?: number; updatedCount?: number }> {
+  if (!Array.isArray(value)) return [];
+  const rows: Array<{ userId: string; eligibleCount?: number; updatedCount?: number }> = [];
+  for (const entry of value.slice(0, 5)) {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) continue;
+    const userId = toStringValue((entry as Record<string, unknown>).userId);
+    if (!userId) continue;
+    const rawCount = toNumber((entry as Record<string, unknown>)[countKey], 0);
+    if (countKey === "eligibleCount") {
+      rows.push({ userId, eligibleCount: rawCount });
+    } else {
+      rows.push({ userId, updatedCount: rawCount });
+    }
+  }
+  return rows;
+}
+
+function toErroredUsers(value: unknown): Array<{ userId: string; error: string }> {
+  if (!Array.isArray(value)) return [];
+  const rows: Array<{ userId: string; error: string }> = [];
+  for (const entry of value.slice(0, 5)) {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) continue;
+    const userId = toStringValue((entry as Record<string, unknown>).userId);
+    const error = toStringValue((entry as Record<string, unknown>).error);
+    if (!userId || !error) continue;
+    rows.push({ userId, error });
+  }
+  return rows;
+}
+
+function formatUserId(userId: string) {
+  if (userId.length <= 8) return userId;
+  return `${userId.slice(0, 8)}...`;
+}
+
+function parseRunSummaryFromMetadata(metadata: Record<string, unknown> | null): ParsedRunSummary {
+  const totalsRecord = toRecord(metadata?.totals);
+  const workflowRecord = toRecord(metadata?.workflow);
+  const artifactRecord = toRecord(metadata?.artifact);
+  const diagnosticsRecord = toRecord(metadata?.diagnostics);
+
+  return {
+    dryRun: typeof metadata?.dryRun === "boolean" ? metadata.dryRun : undefined,
+    totals: {
+      eligible: toNumber(totalsRecord?.eligible),
+      updated: toNumber(totalsRecord?.updated),
+      erroredUsers: toNumber(totalsRecord?.erroredUsers),
+    },
+    runUrl:
+      toStringValue(metadata?.runUrl) ??
+      toStringValue(workflowRecord?.runUrl),
+    artifactName: toStringValue(artifactRecord?.name),
+    artifactHint: toStringValue(artifactRecord?.note),
+    workflow: {
+      workflow: toStringValue(workflowRecord?.workflow),
+      runId: toStringValue(workflowRecord?.runId),
+      runNumber: toStringValue(workflowRecord?.runNumber),
+      repository: toStringValue(workflowRecord?.repository),
+      actor: toStringValue(workflowRecord?.actor),
+      ref: toStringValue(workflowRecord?.ref),
+      sha: toStringValue(workflowRecord?.sha),
+    },
+    diagnostics: {
+      generatedAt: toStringValue(diagnosticsRecord?.generatedAt),
+      topEligibleUsers: toUserCountList(diagnosticsRecord?.topEligibleUsers, "eligibleCount").map((entry) => ({
+        userId: entry.userId,
+        eligibleCount: entry.eligibleCount ?? 0,
+      })),
+      topUpdatedUsers: toUserCountList(diagnosticsRecord?.topUpdatedUsers, "updatedCount").map((entry) => ({
+        userId: entry.userId,
+        updatedCount: entry.updatedCount ?? 0,
+      })),
+      topErroredUsers: toErroredUsers(diagnosticsRecord?.topErroredUsers),
+    },
+  };
+}
+
 export default function OperationsConsole({
   initialTickets,
+  initialExamMaintenanceAlerts,
+  initialExamMaintenanceRuns,
+  initialExamMaintenanceRunSummaries,
 }: {
   initialTickets: SupportTicket[];
+  initialExamMaintenanceAlerts: ExamMaintenanceAlert[];
+  initialExamMaintenanceRuns: ExamMaintenanceRun[];
+  initialExamMaintenanceRunSummaries: ExamMaintenanceRunSummaryAlert[];
 }) {
   const [status, setStatus] = useState("");
   const [tickets, setTickets] = useState(initialTickets);
   const [approvalStatus, setApprovalStatus] = useState("");
+  const [examMaintenanceStatus, setExamMaintenanceStatus] = useState("");
+  const [examMaintenanceBusy, setExamMaintenanceBusy] = useState(false);
+  const [examMaintenanceRuns, setExamMaintenanceRuns] = useState(initialExamMaintenanceRuns);
+  const [examMaintenanceAlerts, setExamMaintenanceAlerts] = useState(initialExamMaintenanceAlerts);
+  const [examMaintenanceRunSummaries, setExamMaintenanceRunSummaries] = useState(
+    initialExamMaintenanceRunSummaries,
+  );
 
   const activeTicketCount = useMemo(
     () => tickets.filter((ticket) => ticket.status === "open" || ticket.status === "in_progress").length,
     [tickets]
+  );
+  const openExamMaintenanceAlerts = useMemo(
+    () => examMaintenanceAlerts.filter((alert) => !alert.acknowledged).length,
+    [examMaintenanceAlerts],
+  );
+  const unacknowledgedRunSummaries = useMemo(
+    () => examMaintenanceRunSummaries.filter((alert) => !alert.acknowledged).length,
+    [examMaintenanceRunSummaries],
   );
 
   const handleCreateUser = async (event: FormEvent<HTMLFormElement>) => {
@@ -272,22 +442,96 @@ export default function OperationsConsole({
     }
   };
 
+  const runExamMaintenance = async (dryRun: boolean) => {
+    setExamMaintenanceBusy(true);
+    setExamMaintenanceStatus("");
+    try {
+      const result = await postJson("/api/admin/exam/error-log/auto-resolve", {
+        dryRun,
+        limitUsers: 150,
+        limitItemsPerUser: 200,
+      });
+      const totals = (result.totals ?? {}) as { eligible?: number; updated?: number; erroredUsers?: number };
+      setExamMaintenanceStatus(
+        `${dryRun ? "Dry run" : "Apply run"} complete. Eligible: ${Number(totals.eligible ?? 0)}, updated: ${Number(
+          totals.updated ?? 0,
+        )}, errored users: ${Number(totals.erroredUsers ?? 0)}.`,
+      );
+      setExamMaintenanceRuns((previous) => [
+        {
+          id: `local-${Date.now()}`,
+          admin_user_id: "current",
+          action_type: "exam_error_auto_resolve_run",
+          metadata: {
+            dryRun,
+            totals,
+            userCount: result.userCount,
+            diagnostics:
+              result && typeof result === "object"
+                ? (result as { diagnostics?: Record<string, unknown> }).diagnostics
+                : undefined,
+          },
+          created_at: new Date().toISOString(),
+        },
+        ...previous,
+      ]);
+    } catch (error) {
+      setExamMaintenanceStatus(error instanceof Error ? error.message : "Failed to run exam maintenance.");
+    } finally {
+      setExamMaintenanceBusy(false);
+    }
+  };
+
+  const acknowledgeExamMaintenanceAlert = async (alertId: string) => {
+    setExamMaintenanceStatus("");
+    try {
+      await postJson("/api/admin/alerts", { alertId });
+      setExamMaintenanceAlerts((previous) =>
+        previous.map((alert) =>
+          alert.id === alertId
+            ? { ...alert, acknowledged: true, created_at: alert.created_at }
+            : alert,
+        ),
+      );
+      setExamMaintenanceStatus(`Alert ${alertId} acknowledged.`);
+    } catch (error) {
+      setExamMaintenanceStatus(error instanceof Error ? error.message : "Failed to acknowledge alert.");
+    }
+  };
+
+  const acknowledgeExamMaintenanceRunSummary = async (alertId: string) => {
+    setExamMaintenanceStatus("");
+    try {
+      await postJson("/api/admin/alerts", { alertId });
+      setExamMaintenanceRunSummaries((previous) =>
+        previous.map((alert) =>
+          alert.id === alertId
+            ? { ...alert, acknowledged: true, created_at: alert.created_at }
+            : alert,
+        ),
+      );
+      setExamMaintenanceStatus(`Run summary ${alertId} acknowledged.`);
+    } catch (error) {
+      setExamMaintenanceStatus(error instanceof Error ? error.message : "Failed to acknowledge run summary.");
+    }
+  };
+
   return (
     <div className="space-y-6">
-      <div className="rounded-md border border-indigo-300 bg-indigo-50 px-4 py-3 text-sm text-indigo-900 dark:bg-indigo-900/30 dark:text-indigo-200">
+      <div className="ui-soft-card rounded-2xl border border-indigo-300 bg-indigo-50 px-4 py-3 text-sm text-indigo-900">
         Active support tickets: {activeTicketCount}
       </div>
       {status ? (
-        <div className="rounded-md border border-black/10 bg-zinc-50 px-4 py-3 text-sm dark:border-white/15 dark:bg-zinc-800">
+        <div className="rounded-2xl border border-border bg-surface-muted px-4 py-3 text-sm">
           {status}
         </div>
       ) : null}
 
       <Section title="Create Account">
         <form onSubmit={handleCreateUser} className="grid gap-3 md:grid-cols-2">
-          <input name="email" type="email" placeholder="email@example.com" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <input name="password" type="password" placeholder="Temporary password" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <input name="displayName" placeholder="Display name (optional)" className="rounded-md border border-black/15 px-3 py-2 text-sm md:col-span-2" />
+          <input name="email" type="email" placeholder="email@example.com" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <input name="password" type="password" placeholder="Temporary password" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <input name="displayName" placeholder="Display name (optional)" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2" />
           <label className="flex items-center gap-2 text-sm">
             <input name="isAdmin" type="checkbox" />
             Grant admin access
@@ -296,14 +540,14 @@ export default function OperationsConsole({
             <input name="isParent" type="checkbox" />
             Grant parent role
           </label>
-          <button type="submit" className="rounded-md bg-indigo-600 px-4 py-2 text-sm text-white">Create User</button>
+          <button type="submit" className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm text-white">Create User</button>
         </form>
       </Section>
 
       <Section title="Approvals">
-        {approvalStatus ? <p className="mb-3 text-sm text-zinc-600 dark:text-zinc-300">{approvalStatus}</p> : null}
+        {approvalStatus ? <p className="mb-3 text-sm text-zinc-600">{approvalStatus}</p> : null}
         <form onSubmit={handleCreateApprovalRequest} className="mb-4 grid gap-3 md:grid-cols-2">
-          <select name="actionType" className="rounded-md border border-black/15 px-3 py-2 text-sm">
+          <select name="actionType" aria-label="Approval action type" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
             <option value="user_delete">User delete</option>
             <option value="billing_refund">Billing refund</option>
             <option value="billing_set_price">Set billing price</option>
@@ -311,30 +555,250 @@ export default function OperationsConsole({
           <input
             name="reason"
             placeholder="Why this action is needed"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
             required
           />
-          <button type="submit" className="w-fit rounded-md border border-black/15 px-4 py-2 text-sm">
+          <button type="submit" className="ui-soft-button ui-focus-ring w-fit rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">
             Create Approval Request
           </button>
         </form>
 
         <form onSubmit={handleUpdateApprovalStatus} className="grid gap-3 md:grid-cols-3">
-          <input name="approvalId" placeholder="Approval UUID" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <select name="status" className="rounded-md border border-black/15 px-3 py-2 text-sm">
+          <input name="approvalId" placeholder="Approval UUID" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <select name="status" aria-label="Approval status" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
             <option value="approved">Approve</option>
             <option value="rejected">Reject</option>
           </select>
-          <input name="note" placeholder="Optional note" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
-          <button type="submit" className="w-fit rounded-md border border-black/15 px-4 py-2 text-sm">
+          <input name="note" placeholder="Optional note" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" />
+          <button type="submit" className="ui-soft-button ui-focus-ring w-fit rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">
             Update Approval Status
           </button>
         </form>
       </Section>
 
+      <Section title="Exam Maintenance">
+        <div className="mb-3 rounded-md border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-900">
+          Open exam-maintenance failure alerts: {openExamMaintenanceAlerts} | unacknowledged run summaries:{" "}
+          {unacknowledgedRunSummaries}
+        </div>
+        {examMaintenanceStatus ? (
+          <p className="mb-3 text-sm text-zinc-700">{examMaintenanceStatus}</p>
+        ) : null}
+        <div className="mb-4 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => void runExamMaintenance(true)}
+            disabled={examMaintenanceBusy}
+            className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-3 py-2 text-sm disabled:opacity-60"
+          >
+            {examMaintenanceBusy ? "Running..." : "Run Auto-Resolve (Dry Run)"}
+          </button>
+          <button
+            type="button"
+            onClick={() => void runExamMaintenance(false)}
+            disabled={examMaintenanceBusy}
+            className="ui-soft-button ui-focus-ring rounded-md bg-accent px-3 py-2 text-sm text-white disabled:opacity-60"
+          >
+            {examMaintenanceBusy ? "Running..." : "Run Auto-Resolve (Apply)"}
+          </button>
+        </div>
+
+        <div className="space-y-2">
+          {examMaintenanceAlerts.length === 0 ? (
+            <p className="text-sm text-zinc-500">No recent exam-maintenance failure alerts.</p>
+          ) : (
+            examMaintenanceAlerts.slice(0, 5).map((alert) => (
+              <div key={alert.id} className="rounded-2xl border border-border p-3 text-sm">
+                <p className="font-medium">
+                  [{alert.severity.toUpperCase()}] {alert.message}
+                </p>
+                <p className="text-xs text-zinc-500">
+                  {new Date(alert.created_at).toLocaleString()} | acknowledged: {alert.acknowledged ? "yes" : "no"}
+                </p>
+                {!alert.acknowledged ? (
+                  <button
+                    type="button"
+                    onClick={() => void acknowledgeExamMaintenanceAlert(alert.id)}
+                    className="ui-soft-button ui-focus-ring mt-2 rounded border border-border bg-surface-muted px-2 py-1 text-xs"
+                  >
+                    Acknowledge
+                  </button>
+                ) : null}
+              </div>
+            ))
+          )}
+        </div>
+
+        <div className="mt-4 space-y-2">
+          <p className="text-sm font-semibold">Workflow Run Summaries</p>
+          {examMaintenanceRunSummaries.length === 0 ? (
+            <p className="text-sm text-zinc-500">No workflow run summaries yet.</p>
+          ) : (
+            examMaintenanceRunSummaries.slice(0, 8).map((summaryAlert) => {
+              const parsed = parseRunSummaryFromMetadata(summaryAlert.metadata);
+              return (
+                <div key={summaryAlert.id} className="rounded-2xl border border-border p-3 text-xs">
+                  <p className="font-semibold">
+                    [{summaryAlert.severity.toUpperCase()}] {summaryAlert.message}
+                  </p>
+                  <p className="mt-1 text-zinc-500">
+                    {new Date(summaryAlert.created_at).toLocaleString()} | acknowledged:{" "}
+                    {summaryAlert.acknowledged ? "yes" : "no"}
+                  </p>
+                  <p className="mt-1 text-zinc-500">
+                    Mode: {parsed.dryRun === undefined ? "n/a" : parsed.dryRun ? "dry-run" : "apply"} | eligible:{" "}
+                    {parsed.totals.eligible} | updated: {parsed.totals.updated} | errored users:{" "}
+                    {parsed.totals.erroredUsers}
+                  </p>
+                  {(parsed.workflow.workflow || parsed.workflow.runNumber || parsed.workflow.actor) ? (
+                    <p className="mt-1 text-zinc-500">
+                      Workflow: {parsed.workflow.workflow ?? "n/a"}
+                      {parsed.workflow.runNumber ? ` #${parsed.workflow.runNumber}` : ""}
+                      {parsed.workflow.actor ? ` | actor: ${parsed.workflow.actor}` : ""}
+                    </p>
+                  ) : null}
+                  {parsed.diagnostics.topEligibleUsers.length > 0 ? (
+                    <p className="mt-1 text-zinc-500">
+                      Top eligible users:{" "}
+                      {parsed.diagnostics.topEligibleUsers
+                        .map((entry) => `${formatUserId(entry.userId)} (${entry.eligibleCount})`)
+                        .join(" | ")}
+                    </p>
+                  ) : null}
+                  {parsed.diagnostics.topUpdatedUsers.length > 0 ? (
+                    <p className="mt-1 text-zinc-500">
+                      Top updated users:{" "}
+                      {parsed.diagnostics.topUpdatedUsers
+                        .map((entry) => `${formatUserId(entry.userId)} (${entry.updatedCount})`)
+                        .join(" | ")}
+                    </p>
+                  ) : null}
+                  {parsed.diagnostics.topErroredUsers.length > 0 ? (
+                    <p className="mt-1 text-zinc-500">
+                      Top errored users:{" "}
+                      {parsed.diagnostics.topErroredUsers
+                        .map((entry) => `${formatUserId(entry.userId)} (${entry.error})`)
+                        .join(" | ")}
+                    </p>
+                  ) : null}
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                    {parsed.runUrl ? (
+                      <a
+                        href={parsed.runUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 text-xs"
+                      >
+                        Open Workflow Run
+                      </a>
+                    ) : null}
+                    {parsed.runUrl && parsed.artifactName ? (
+                      <a
+                        href={`${parsed.runUrl}#artifacts`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 text-xs"
+                      >
+                        Open Artifacts
+                      </a>
+                    ) : null}
+                    {!summaryAlert.acknowledged ? (
+                      <button
+                        type="button"
+                        onClick={() => void acknowledgeExamMaintenanceRunSummary(summaryAlert.id)}
+                        className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 text-xs"
+                      >
+                        Acknowledge
+                      </button>
+                    ) : null}
+                  </div>
+                  {parsed.artifactHint ? <p className="mt-1 text-zinc-500">{parsed.artifactHint}</p> : null}
+                </div>
+              );
+            })
+          )}
+        </div>
+
+        <div className="mt-4 space-y-2">
+          <p className="text-sm font-semibold">Recent Auto-Resolve Runs</p>
+          {examMaintenanceRuns.length === 0 ? (
+            <p className="text-sm text-zinc-500">No run history yet.</p>
+          ) : (
+            examMaintenanceRuns.slice(0, 6).map((run) => {
+              const parsed = parseRunSummaryFromMetadata(run.metadata);
+              return (
+                <div key={run.id} className="rounded-2xl border border-border p-3 text-xs">
+                  <p className="font-semibold">
+                    {parsed.dryRun ? "Dry run" : "Apply run"} | eligible: {parsed.totals.eligible} | updated:{" "}
+                    {parsed.totals.updated} | errored users: {parsed.totals.erroredUsers}
+                  </p>
+                  <p className="text-zinc-500">{new Date(run.created_at).toLocaleString()}</p>
+                  {(parsed.workflow.workflow || parsed.workflow.runNumber || parsed.workflow.actor) ? (
+                    <p className="mt-1 text-zinc-500">
+                      Workflow: {parsed.workflow.workflow ?? "n/a"}
+                      {parsed.workflow.runNumber ? ` #${parsed.workflow.runNumber}` : ""}
+                      {parsed.workflow.actor ? ` | actor: ${parsed.workflow.actor}` : ""}
+                    </p>
+                  ) : null}
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {parsed.runUrl ? (
+                      <a
+                        href={parsed.runUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 text-xs"
+                      >
+                        Open Workflow Run
+                      </a>
+                    ) : null}
+                    {parsed.runUrl && parsed.artifactName ? (
+                      <a
+                        href={`${parsed.runUrl}#artifacts`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 text-xs"
+                      >
+                        Open Artifacts
+                      </a>
+                    ) : null}
+                  </div>
+                  {parsed.diagnostics.topEligibleUsers.length > 0 ? (
+                    <p className="mt-1 text-zinc-500">
+                      Top eligible users:{" "}
+                      {parsed.diagnostics.topEligibleUsers
+                        .slice(0, 2)
+                        .map((entry) => `${formatUserId(entry.userId)} (${entry.eligibleCount})`)
+                        .join(" | ")}
+                    </p>
+                  ) : null}
+                  {parsed.diagnostics.topUpdatedUsers.length > 0 ? (
+                    <p className="mt-1 text-zinc-500">
+                      Top updated users:{" "}
+                      {parsed.diagnostics.topUpdatedUsers
+                        .slice(0, 2)
+                        .map((entry) => `${formatUserId(entry.userId)} (${entry.updatedCount})`)
+                        .join(" | ")}
+                    </p>
+                  ) : null}
+                  {parsed.diagnostics.topErroredUsers.length > 0 ? (
+                    <p className="mt-1 text-zinc-500">
+                      Sample user errors:{" "}
+                      {parsed.diagnostics.topErroredUsers
+                        .slice(0, 2)
+                        .map((entry) => `${formatUserId(entry.userId)} (${entry.error})`)
+                        .join(" | ")}
+                    </p>
+                  ) : null}
+                </div>
+              );
+            })
+          )}
+        </div>
+      </Section>
+
       <Section title="Role Management">
         <form onSubmit={handleUpdateRoles} className="grid gap-3 md:grid-cols-2">
-          <input name="userId" placeholder="User UUID" className="rounded-md border border-black/15 px-3 py-2 text-sm md:col-span-2" required />
+          <input name="userId" placeholder="User UUID" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2" required />
           <label className="flex items-center gap-2 text-sm">
             <input name="setIsAdmin" type="checkbox" />
             Set admin role
@@ -346,10 +810,10 @@ export default function OperationsConsole({
           <input
             name="confirmText"
             placeholder="Type UPDATE_ROLES"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm md:col-span-2"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2"
             required
           />
-          <button type="submit" className="w-fit rounded-md border border-black/15 px-4 py-2 text-sm">
+          <button type="submit" className="ui-soft-button w-fit ui-focus-ring rounded-md border border-border bg-surface px-4 py-2 text-sm">
             Apply Role Updates
           </button>
         </form>
@@ -357,15 +821,15 @@ export default function OperationsConsole({
 
       <Section title="Account Recovery">
         <form onSubmit={handleResetPassword} className="flex flex-wrap gap-3">
-          <input name="email" type="email" placeholder="User email" className="min-w-80 rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <button type="submit" className="rounded-md border border-black/15 px-4 py-2 text-sm">Generate Password Reset Link</button>
+          <input name="email" type="email" placeholder="User email" className="min-w-80 ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Generate Password Reset Link</button>
         </form>
       </Section>
 
       <Section title="Account Reset / Deletion">
         <form onSubmit={handleResetProgress} className="mb-4 flex flex-wrap gap-3">
-          <input name="userId" placeholder="User UUID" className="min-w-80 rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <select name="scope" className="rounded-md border border-black/15 px-3 py-2 text-sm">
+          <input name="userId" placeholder="User UUID" className="min-w-80 ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <select name="scope" aria-label="Reset scope" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
             <option value="all">All learning data</option>
             <option value="progress">Only progress</option>
             <option value="mastery">Only mastery</option>
@@ -373,13 +837,13 @@ export default function OperationsConsole({
           <input
             name="confirmText"
             placeholder="Type RESET_PROGRESS"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
             required
           />
-          <button type="submit" className="rounded-md border border-black/15 px-4 py-2 text-sm">Reset Learning Data</button>
+          <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Reset Learning Data</button>
         </form>
         <form onSubmit={handleDeleteUser} className="flex flex-wrap gap-3">
-          <input name="userId" placeholder="User UUID" className="min-w-80 rounded-md border border-black/15 px-3 py-2 text-sm" required />
+          <input name="userId" placeholder="User UUID" className="min-w-80 ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <label className="flex items-center gap-2 text-sm">
             <input name="hardDelete" type="checkbox" />
             Hard delete
@@ -387,24 +851,24 @@ export default function OperationsConsole({
           <input
             name="confirmText"
             placeholder="Type DELETE_USER"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
             required
           />
           <input
             name="approvalRequestId"
             placeholder="Approved request UUID"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
             required
           />
-          <button type="submit" className="rounded-md bg-red-600 px-4 py-2 text-sm text-white">Delete User</button>
+          <button type="submit" className="ui-soft-button ui-focus-ring rounded-md bg-red-600 px-4 py-2 text-sm text-white">Delete User</button>
         </form>
       </Section>
 
       <Section title="Refunds">
         <form onSubmit={handleRefund} className="grid gap-3 md:grid-cols-3">
-          <input name="paymentIntentId" placeholder="pi_..." className="rounded-md border border-black/15 px-3 py-2 text-sm md:col-span-2" required />
-          <input name="amountCents" type="number" min={0} placeholder="Amount cents (optional)" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
-          <select name="reason" className="rounded-md border border-black/15 px-3 py-2 text-sm">
+          <input name="paymentIntentId" placeholder="pi_..." className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2" required />
+          <input name="amountCents" type="number" min={0} placeholder="Amount cents (optional)" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" />
+          <select name="reason" aria-label="Refund reason" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
             <option value="requested_by_customer">Requested by customer</option>
             <option value="duplicate">Duplicate</option>
             <option value="fraudulent">Fraudulent</option>
@@ -412,45 +876,45 @@ export default function OperationsConsole({
           <input
             name="confirmText"
             placeholder="Type PROCESS_REFUND"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm md:col-span-2"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2"
             required
           />
           <input
             name="approvalRequestId"
             placeholder="Approved request UUID"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
             required
           />
-          <button type="submit" className="rounded-md border border-black/15 px-4 py-2 text-sm">Process Refund</button>
+          <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Process Refund</button>
         </form>
       </Section>
 
       <Section title="Promotions and Sales">
         <form onSubmit={handlePromoCode} className="mb-4 grid gap-3 md:grid-cols-3">
-          <input name="code" placeholder="PROMO2026" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <input name="percentOff" type="number" min={1} max={100} placeholder="Percent off" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <select name="duration" className="rounded-md border border-black/15 px-3 py-2 text-sm">
+          <input name="code" placeholder="PROMO2026" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <input name="percentOff" type="number" min={1} max={100} placeholder="Percent off" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <select name="duration" aria-label="Promotion duration" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
             <option value="once">Once</option>
             <option value="forever">Forever</option>
             <option value="repeating">Repeating</option>
           </select>
-          <button type="submit" className="rounded-md border border-black/15 px-4 py-2 text-sm md:col-span-3">Create Promo Code</button>
+          <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm md:col-span-3">Create Promo Code</button>
         </form>
 
         <form onSubmit={handleSalesEvent} className="grid gap-3 md:grid-cols-4">
-          <input name="name" placeholder="Back to School Sale" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <input name="code" placeholder="SCHOOL2026" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <input name="discountPercent" type="number" min={1} max={100} placeholder="Discount %" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <input name="endsAtIso" type="datetime-local" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <button type="submit" className="rounded-md border border-black/15 px-4 py-2 text-sm md:col-span-4">Create Sales Event</button>
+          <input name="name" placeholder="Back to School Sale" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <input name="code" placeholder="SCHOOL2026" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <input name="discountPercent" type="number" min={1} max={100} placeholder="Discount %" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <input name="endsAtIso" aria-label="Sales event end date and time" type="datetime-local" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm md:col-span-4">Create Sales Event</button>
         </form>
       </Section>
 
       <Section title="Pricing">
         <form onSubmit={handleSetPrice} className="grid gap-3 md:grid-cols-3">
-          <input name="productId" placeholder="prod_..." className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <input name="monthlyPriceUsd" type="number" step="0.01" min={0.01} placeholder="Monthly USD" className="rounded-md border border-black/15 px-3 py-2 text-sm" required />
-          <input name="nickname" placeholder="Plan nickname (optional)" className="rounded-md border border-black/15 px-3 py-2 text-sm" />
+          <input name="productId" placeholder="prod_..." className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <input name="monthlyPriceUsd" type="number" step="0.01" min={0.01} placeholder="Monthly USD" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
+          <input name="nickname" placeholder="Plan nickname (optional)" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" />
           <label className="flex items-center gap-2 text-sm md:col-span-2">
             <input name="makeDefault" type="checkbox" defaultChecked />
             Make this the default checkout price
@@ -458,23 +922,23 @@ export default function OperationsConsole({
           <input
             name="confirmText"
             placeholder="Type SET_PRICE"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm md:col-span-2"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2"
             required
           />
           <input
             name="approvalRequestId"
             placeholder="Approved request UUID"
-            className="rounded-md border border-black/15 px-3 py-2 text-sm"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
             required
           />
-          <button type="submit" className="rounded-md border border-black/15 px-4 py-2 text-sm">Create Price</button>
+          <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Create Price</button>
         </form>
       </Section>
 
       <Section title="Support Queue">
         <div className="space-y-3">
           {tickets.map((ticket) => (
-            <div key={ticket.id} className="rounded-md border border-black/10 p-3 dark:border-white/10">
+            <div key={ticket.id} className="rounded-2xl border border-border p-3">
               <p className="font-medium">{ticket.subject}</p>
               <p className="text-xs text-zinc-500">
                 {ticket.id} | user: {ticket.user_id} | priority: {ticket.priority} | status: {ticket.status}
@@ -483,21 +947,21 @@ export default function OperationsConsole({
                 <button
                   type="button"
                   onClick={() => handleResolveTicket(ticket.id, "in_progress")}
-                  className="rounded border border-black/15 px-2 py-1 text-xs"
+                  className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 text-xs"
                 >
                   Mark In Progress
                 </button>
                 <button
                   type="button"
                   onClick={() => handleResolveTicket(ticket.id, "resolved")}
-                  className="rounded border border-black/15 px-2 py-1 text-xs"
+                  className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 text-xs"
                 >
                   Resolve
                 </button>
                 <button
                   type="button"
                   onClick={() => handleResolveTicket(ticket.id, "closed")}
-                  className="rounded border border-black/15 px-2 py-1 text-xs"
+                  className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 text-xs"
                 >
                   Close
                 </button>
@@ -510,3 +974,5 @@ export default function OperationsConsole({
     </div>
   );
 }
+
+

@@ -10,6 +10,7 @@ function parseArgs(argv) {
     lessonId: "",
     assetType: "",
     limit: 50,
+    strictProvider: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -18,12 +19,13 @@ function parseArgs(argv) {
     else if (arg === "--lesson") options.lessonId = String(argv[index + 1] ?? "");
     else if (arg === "--asset") options.assetType = String(argv[index + 1] ?? "");
     else if (arg === "--limit") options.limit = Number(argv[index + 1] ?? 50);
+    else if (arg === "--strict-provider") options.strictProvider = true;
   }
 
   options.moduleId = options.moduleId.trim();
   options.lessonId = options.lessonId.trim();
   options.assetType = options.assetType.trim();
-  options.limit = Number.isFinite(options.limit) ? Math.min(200, Math.max(1, options.limit)) : 50;
+  options.limit = Number.isFinite(options.limit) ? Math.min(500, Math.max(1, options.limit)) : 50;
 
   return options;
 }
@@ -55,6 +57,12 @@ function readEnvValue(fileValues, key, fallbackKey) {
   return "";
 }
 
+function readBooleanEnv(fileValues, key, fallback = false) {
+  const value = readEnvValue(fileValues, key);
+  if (!value) return fallback;
+  return ["1", "true", "yes", "on"].includes(String(value).toLowerCase());
+}
+
 function normalizeAssetType(value) {
   if (!value) return "";
   if (["video", "animation", "image"].includes(value)) return value;
@@ -78,8 +86,224 @@ function buildSimulatedOutputUrl(assetType, moduleId, lessonId) {
   return token ? `/placeholders/lesson-robot.svg?token=${token}` : "/placeholders/lesson-robot.svg";
 }
 
-async function processJob(supabase, job) {
+function normalizeMimeType(value) {
+  const normalized = String(value || "").toLowerCase();
+  if (normalized === "image/jpeg" || normalized === "image/jpg") return "image/jpeg";
+  if (normalized === "image/webp") return "image/webp";
+  return "image/png";
+}
+
+function extensionForMimeType(mimeType) {
+  if (mimeType === "image/jpeg") return "jpg";
+  if (mimeType === "image/webp") return "webp";
+  return "png";
+}
+
+async function requestOpenAIImage({
+  apiKey,
+  model,
+  size,
+  quality,
+  prompt,
+}) {
+  const response = await fetch("https://api.openai.com/v1/images/generations", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model,
+      prompt,
+      size,
+      quality,
+    }),
+  });
+
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const message =
+      payload?.error?.message ||
+      payload?.message ||
+      `OpenAI image generation failed with status ${response.status}`;
+    throw new Error(message);
+  }
+
+  const first = Array.isArray(payload?.data) ? payload.data[0] : null;
+  if (!first || typeof first !== "object") {
+    throw new Error("OpenAI response did not include image data.");
+  }
+
+  const imageUrl = typeof first.url === "string" && first.url.length > 0 ? first.url : null;
+  const b64 = typeof first.b64_json === "string" && first.b64_json.length > 0 ? first.b64_json : null;
+  const mimeType = normalizeMimeType(first.mime_type);
+
+  if (!imageUrl && !b64) {
+    throw new Error("OpenAI response missing image URL and base64 payload.");
+  }
+
+  return { imageUrl, b64, mimeType };
+}
+
+async function uploadImageToSupabaseStorage({
+  supabase,
+  bucket,
+  jobId,
+  moduleId,
+  lessonId,
+  mimeType,
+  base64Data,
+}) {
+  const extension = extensionForMimeType(mimeType);
+  const safeModule = (moduleId || "module").replace(/[^a-zA-Z0-9_-]/g, "_");
+  const safeLesson = (lessonId || "lesson").replace(/[^a-zA-Z0-9_-]/g, "_");
+  const objectPath = `generated/${safeModule}/${safeLesson}/${jobId}.${extension}`;
+  const buffer = Buffer.from(base64Data, "base64");
+
+  const { error: uploadError } = await supabase.storage.from(bucket).upload(objectPath, buffer, {
+    contentType: mimeType,
+    upsert: true,
+  });
+
+  if (uploadError) {
+    throw new Error(`Supabase storage upload failed: ${uploadError.message}`);
+  }
+
+  const { data } = supabase.storage.from(bucket).getPublicUrl(objectPath);
+  if (!data?.publicUrl) {
+    throw new Error("Supabase storage did not return a public URL.");
+  }
+
+  return data.publicUrl;
+}
+
+async function resolveImageOutput({
+  supabase,
+  job,
+  prompt,
+  openAiApiKey,
+  openAiModel,
+  openAiSize,
+  openAiQuality,
+  mediaOutputBucket,
+  strictProvider,
+}) {
+  const fallbackUrl = buildSimulatedOutputUrl("image", job.module_id, job.lesson_id);
+
+  if (!openAiApiKey) {
+    return {
+      outputUrl: fallbackUrl,
+      generationMode: "placeholder",
+      warning: "OPENAI_API_KEY is not configured.",
+    };
+  }
+
+  try {
+    const generated = await requestOpenAIImage({
+      apiKey: openAiApiKey,
+      model: openAiModel,
+      size: openAiSize,
+      quality: openAiQuality,
+      prompt,
+    });
+
+    if (generated.imageUrl) {
+      return {
+        outputUrl: generated.imageUrl,
+        generationMode: "openai_url",
+      };
+    }
+
+    if (generated.b64 && mediaOutputBucket) {
+      const uploadedUrl = await uploadImageToSupabaseStorage({
+        supabase,
+        bucket: mediaOutputBucket,
+        jobId: job.id,
+        moduleId: job.module_id,
+        lessonId: job.lesson_id,
+        mimeType: generated.mimeType,
+        base64Data: generated.b64,
+      });
+
+      return {
+        outputUrl: uploadedUrl,
+        generationMode: "openai_supabase_storage",
+      };
+    }
+
+    if (strictProvider) {
+      throw new Error(
+        "OpenAI returned base64 image data, but MEDIA_OUTPUT_BUCKET is not configured for durable upload.",
+      );
+    }
+
+    return {
+      outputUrl: fallbackUrl,
+      generationMode: "placeholder",
+      warning: "OpenAI returned base64 image data but MEDIA_OUTPUT_BUCKET is not configured.",
+    };
+  } catch (error) {
+    if (strictProvider) {
+      throw error;
+    }
+
+    return {
+      outputUrl: fallbackUrl,
+      generationMode: "placeholder",
+      warning: error instanceof Error ? error.message : "OpenAI image generation failed.",
+    };
+  }
+}
+
+async function resolveOutput({
+  supabase,
+  job,
+  openAiApiKey,
+  openAiModel,
+  openAiSize,
+  openAiQuality,
+  mediaOutputBucket,
+  strictProvider,
+}) {
+  if (job.asset_type === "image") {
+    return resolveImageOutput({
+      supabase,
+      job,
+      prompt: job.prompt,
+      openAiApiKey,
+      openAiModel,
+      openAiSize,
+      openAiQuality,
+      mediaOutputBucket,
+      strictProvider,
+    });
+  }
+
+  return {
+    outputUrl: buildSimulatedOutputUrl(job.asset_type, job.module_id, job.lesson_id),
+    generationMode: "placeholder",
+    warning: null,
+  };
+}
+
+async function processJob(
+  supabase,
+  job,
+  {
+    openAiApiKey,
+    openAiModel,
+    openAiSize,
+    openAiQuality,
+    mediaOutputBucket,
+    strictProvider,
+  },
+) {
   const runningAt = new Date().toISOString();
+  const runningMetadata = {
+    ...(job.metadata ?? {}),
+    runner: "media-process-script",
+    started_at: runningAt,
+  };
 
   const { data: claimedRow, error: runningError } = await supabase
     .from("media_generation_jobs")
@@ -87,11 +311,7 @@ async function processJob(supabase, job) {
       status: "running",
       error: null,
       completed_at: null,
-      metadata: {
-        ...(job.metadata ?? {}),
-        runner: "media-process-script",
-        started_at: runningAt,
-      },
+      metadata: runningMetadata,
     })
     .eq("id", job.id)
     .eq("status", "queued")
@@ -106,46 +326,69 @@ async function processJob(supabase, job) {
   }
 
   const completedAt = new Date().toISOString();
-  const outputUrl = buildSimulatedOutputUrl(job.asset_type, job.module_id, job.lesson_id);
-  const completedPayload = {
-    status: "completed",
-    output_url: outputUrl,
-    error: null,
-    completed_at: completedAt,
-    metadata: {
-      ...(job.metadata ?? {}),
-      runner: "media-process-script",
+
+  try {
+    const output = await resolveOutput({
+      supabase,
+      job,
+      openAiApiKey,
+      openAiModel,
+      openAiSize,
+      openAiQuality,
+      mediaOutputBucket,
+      strictProvider,
+    });
+
+    const completedPayload = {
+      status: "completed",
+      output_url: output.outputUrl,
+      error: null,
       completed_at: completedAt,
-      processed_provider: job.provider || "seedance",
-    },
-  };
+      metadata: {
+        ...runningMetadata,
+        completed_at: completedAt,
+        processed_provider: job.provider || "seedance",
+        generation_mode: output.generationMode,
+        generation_warning: output.warning ?? null,
+      },
+    };
 
-  const { error: completedError } = await supabase
-    .from("media_generation_jobs")
-    .update(completedPayload)
-    .eq("id", job.id)
-    .eq("status", "running");
+    const { error: completedError } = await supabase
+      .from("media_generation_jobs")
+      .update(completedPayload)
+      .eq("id", job.id)
+      .eq("status", "running");
 
-  if (completedError) {
+    if (completedError) {
+      throw completedError;
+    }
+
+    return {
+      id: job.id,
+      status: "completed",
+      outputUrl: output.outputUrl,
+      generationMode: output.generationMode,
+      warning: output.warning ?? null,
+    };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Media generation failed.";
     await supabase
       .from("media_generation_jobs")
       .update({
         status: "failed",
-        error: completedError.message,
+        error: message,
         completed_at: completedAt,
         metadata: {
-          ...(job.metadata ?? {}),
-          runner: "media-process-script",
+          ...runningMetadata,
           failed_at: completedAt,
+          generation_mode: "failed",
         },
       })
       .eq("id", job.id)
       .eq("status", "running");
 
-    return { id: job.id, status: "failed", error: completedError.message };
+    return { id: job.id, status: "failed", error: message };
   }
-
-  return { id: job.id, status: "completed", outputUrl };
 }
 
 async function main() {
@@ -154,6 +397,12 @@ async function main() {
 
   const supabaseUrl = readEnvValue(envValues, "NEXT_PUBLIC_SUPABASE_URL", "EXPO_PUBLIC_SUPABASE_URL");
   const serviceRoleKey = readEnvValue(envValues, "SUPABASE_SERVICE_ROLE_KEY");
+  const openAiApiKey = readEnvValue(envValues, "OPENAI_API_KEY");
+  const openAiModel = readEnvValue(envValues, "OPENAI_IMAGE_MODEL") || "gpt-image-1";
+  const openAiSize = readEnvValue(envValues, "OPENAI_IMAGE_SIZE") || "1024x1024";
+  const openAiQuality = readEnvValue(envValues, "OPENAI_IMAGE_QUALITY") || "auto";
+  const mediaOutputBucket = readEnvValue(envValues, "MEDIA_OUTPUT_BUCKET");
+  const strictProvider = options.strictProvider || readBooleanEnv(envValues, "STRICT_MEDIA_PROVIDER", false);
 
   if (!supabaseUrl || !serviceRoleKey) {
     throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL/EXPO_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY.");
@@ -167,7 +416,7 @@ async function main() {
 
   let query = supabase
     .from("media_generation_jobs")
-    .select("id, asset_type, module_id, lesson_id, provider, metadata")
+    .select("id, asset_type, module_id, lesson_id, provider, prompt, metadata")
     .eq("status", "queued");
 
   if (options.moduleId) query = query.eq("module_id", options.moduleId);
@@ -184,20 +433,33 @@ async function main() {
     return;
   }
 
+  const processingConfig = {
+    openAiApiKey,
+    openAiModel,
+    openAiSize,
+    openAiQuality,
+    mediaOutputBucket,
+    strictProvider,
+  };
+
   const results = [];
   for (const job of queuedJobs) {
-    const result = await processJob(supabase, job);
+    const result = await processJob(supabase, job, processingConfig);
     results.push(result);
   }
 
   const completedCount = results.filter((item) => item.status === "completed").length;
   const failedCount = results.filter((item) => item.status === "failed").length;
   const skippedCount = results.filter((item) => item.status === "skipped").length;
+  const placeholderWarnings = results.filter(
+    (item) => item.status === "completed" && "generationMode" in item && item.generationMode === "placeholder",
+  ).length;
 
   console.log(`Processed: ${results.length}`);
   console.log(`Completed: ${completedCount}`);
   console.log(`Failed: ${failedCount}`);
   console.log(`Skipped: ${skippedCount}`);
+  console.log(`Placeholder completions: ${placeholderWarnings}`);
 
   if (failedCount > 0) {
     console.log("");
