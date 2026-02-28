@@ -1,4 +1,4 @@
-# EduForge External AI Research Prompt Pack
+# Koydo External AI Research Prompt Pack
 
 Use these prompts with web-enabled AI agents to accelerate curriculum, market, and brand decisions.
 
@@ -126,3 +126,87 @@ Deliverables:
 - team composition and hiring priorities
 - risk register with mitigation plans
 - technical debt prevention checklist.
+
+## Prompt 6: Language Learning + Voice Intelligence (Build vs License)
+
+You are a principal architect and market researcher for multilingual EdTech. Produce a production-ready strategy for adding language learning to an existing K-12 platform with live translation, voice recording, pronunciation comparison, and automated grading.
+
+Context:
+- Existing stack: Next.js web app, Supabase backend, AI-generated lesson media pipeline.
+- Must be extensible and safe for continuous feature expansion.
+- Primary users include minors; privacy and compliance are non-negotiable.
+
+Research tasks:
+1. Market and product:
+  - Identify top 8-12 current trends in language learning UX (2025-2026), including short-form speaking drills, adaptive micro-lessons, and parent/teacher visibility.
+  - Map which features are now baseline vs differentiators.
+2. Technical architecture:
+  - Propose a modular architecture for:
+    - real-time and async speech-to-text
+    - on-the-fly translation (text + optional speech)
+    - pronunciation scoring and feedback
+    - voice activity detection, noise handling, and confidence scoring
+    - rubric-based speaking grading (fluency, accuracy, prosody, vocabulary, grammar).
+  - Include API boundaries, data contracts, and fallback strategy for low bandwidth/offline.
+3. Build vs buy decision:
+  - Compare at least 6 candidate providers/approaches (cloud APIs + open-source/hybrid).
+  - For each: quality, latency, multilingual coverage, pricing model, privacy posture, SDK maturity, and lock-in risk.
+  - Recommend what to build in-house vs what to license in each phase.
+4. Data and governance:
+  - Define data model additions for attempts, recordings, transcripts, scores, and revision history.
+  - Include retention, deletion, parental controls, and compliance checks (COPPA/FERPA/GDPR-K where relevant).
+5. Rollout:
+  - Create a 3-phase rollout (MVP, scale, advanced coaching) with engineering effort estimates.
+  - Include KPI framework (activation, completion, speaking score lift, latency, cost per active learner).
+
+Output format:
+- Section A: Executive summary (1 page max)
+- Section B: Build-vs-buy comparison matrix
+- Section C: Reference architecture diagram (ASCII or Mermaid)
+- Section D: Implementation backlog (epics -> stories -> acceptance criteria)
+- Section E: Risk register + mitigation plan
+
+Constraints:
+- Prioritize child-safe defaults and explainability of scores.
+- Avoid vendor-specific lock-in where practical.
+- Keep recommendations directly implementable for a small-to-mid engineering team.
+
+## Prompt 7: Phase-1 Launch Content Prioritization + Dark Theme UX Calibration
+
+You are a senior EdTech product strategist and UX researcher. Produce a launch-focused plan that prioritizes what content and design changes matter most for Phase 1 release quality.
+
+Context:
+- Current platform has large media backlog and a reviewed 200-image sample gate.
+- Team wants to ship fast without sacrificing usability.
+- Current dark theme has overly drastic contrast and abrupt color shifts.
+
+Tasks:
+1. Phase-1 content scope:
+  - Define the smallest high-value launch content set for first public release.
+  - Prioritize by learner impact, parent trust, and implementation effort.
+  - Recommend what to exclude from Phase 1 to reduce launch risk.
+2. Content ops model:
+  - Propose a repeatable workflow for approving media assets before production use.
+  - Include reviewer roles, acceptance criteria, and quality gates.
+  - Provide a simple status model (`pending`, `in_review`, `approved`, `rejected`, `needs_regen`).
+3. Dark theme refinement:
+  - Recommend dark-theme palettes with reduced contrast shock and smoother tonal hierarchy.
+  - Define contrast targets for headings/body/buttons (WCAG-aware) without harsh neon transitions.
+  - Provide tokenized design guidance (semantic color tokens + elevation/surface rules).
+4. Validation:
+  - Propose a 2-week validation plan with measurable UX metrics:
+    - task completion
+    - reading comfort
+    - visual fatigue feedback
+    - CTA click-through
+    - parent/student satisfaction.
+
+Output format:
+- Section A: Phase-1 must-have vs defer table
+- Section B: Content approval operating model
+- Section C: Dark theme token proposal (with example values)
+- Section D: 14-day validation plan with KPI targets
+
+Constraints:
+- Keep recommendations practical for a small team.
+- Must support continuous upgrades without redesigning foundations each month.

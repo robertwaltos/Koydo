@@ -33,9 +33,10 @@ export const LangArts910U1ExternalModule: LearningModule = {
   "gradeBand": "910",
   "metadata": {
     "source": "../External_AI_Agents/lesson_platform (1).jsx",
-    "sourceUnitId": "lang_arts-910-u1",
+    "sourceUnitId": "lang-arts-910-u1",
     "sourceUnitIdCanonical": "lang-arts-910-u1",
-    "importedAt": "2026-02-24T03:43:31.742Z"
+    "sourceUnitIdRaw": "lang_arts-910-u1",
+    "importedAt": "2026-02-25T02:03:30.427Z"
   },
   "external": {
     "unitOrder": 3,

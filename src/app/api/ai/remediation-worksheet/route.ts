@@ -8,6 +8,7 @@ import {
 import { getLessonById } from "@/lib/modules";
 import { createSimpleTextPdf } from "@/lib/pdf/simple-text-pdf";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const worksheetRequestSchema = z.object({
   lessonId: z.string().min(1).optional(),
@@ -157,7 +158,7 @@ export async function GET(request: Request) {
 
     return NextResponse.json({ worksheet: mapped }, { status: 200 });
   } catch (error) {
-    console.error("Unexpected remediation worksheet GET error:", error);
+    console.error("Unexpected remediation worksheet GET error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
@@ -213,7 +214,7 @@ export async function POST(request: Request) {
       { status: 200 },
     );
   } catch (error) {
-    console.error("Unexpected remediation worksheet POST error:", error);
+    console.error("Unexpected remediation worksheet POST error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

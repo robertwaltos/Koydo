@@ -2,12 +2,27 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const requestSchema = z.object({
   confirmation: z.literal("DELETE"),
 });
 
 export async function POST(request: Request) {
+  const rateLimit = enforceIpRateLimit(request, "api:auth:account-delete", {
+    max: 3,
+    windowMs: 15 * 60 * 1000,
+  });
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many account deletion attempts. Please retry later." },
+      {
+        status: 429,
+        headers: { "Retry-After": String(rateLimit.retryAfterSeconds) },
+      },
+    );
+  }
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -27,6 +42,11 @@ export async function POST(request: Request) {
   const { error } = await admin.auth.admin.deleteUser(user.id, false);
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
+  const { error: signOutError } = await supabase.auth.signOut();
+  if (signOutError) {
+    console.warn("Account deleted but failed to clear session cookie:", signOutError);
   }
 
   return NextResponse.json({ success: true });

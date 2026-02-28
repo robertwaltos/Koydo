@@ -141,7 +141,14 @@ function synthesizeInteractiveActivities(
     const bucketIdBySkill = new Map(buckets.map((bucket) => [bucket.skillId, bucket.id] as const));
     const items = matchingQuestions
       .map((question, index) => {
-        const bucketId = bucketIdBySkill.get(question.skillId);
+        const questionSkillId =
+          typeof question.skillId === "string" && question.skillId.length > 0
+            ? question.skillId
+            : null;
+        if (!questionSkillId) {
+          return null;
+        }
+        const bucketId = bucketIdBySkill.get(questionSkillId);
         if (!bucketId) {
           return null;
         }
@@ -218,6 +225,10 @@ export default function LessonExperience({
   const typedActivities = useMemo(() => {
     if (Array.isArray(lesson.interactiveActivities) && lesson.interactiveActivities.length > 0) {
       return lesson.interactiveActivities;
+    }
+    // Fall back to `activities` field (used by gold-standard modules)
+    if (Array.isArray((lesson as Record<string, unknown>).activities) && ((lesson as Record<string, unknown>).activities as unknown[]).length > 0) {
+      return (lesson as Record<string, unknown>).activities as NonNullable<typeof lesson.interactiveActivities>;
     }
     return synthesizeInteractiveActivities(lesson, quizQuestions);
   }, [lesson, quizQuestions]);

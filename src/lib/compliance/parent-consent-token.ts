@@ -4,6 +4,7 @@ type ParentConsentTokenPayload = {
   consentRequestId: string;
   childUserId: string;
   parentEmail: string;
+  nextPath?: string;
   exp: number;
 };
 
@@ -71,6 +72,10 @@ export function verifyParentConsentVerificationToken(token: string, secret: stri
     typeof payload.exp !== "number"
   ) {
     return { valid: false as const, reason: "Incomplete payload" };
+  }
+
+  if (payload.nextPath !== undefined && typeof payload.nextPath !== "string") {
+    return { valid: false as const, reason: "Invalid payload" };
   }
 
   const now = Math.floor(Date.now() / 1000);

@@ -2,9 +2,11 @@ import type { SupabaseClient } from "@supabase/supabase-js";
 
 export const requiredDbTables = [
   "user_profiles",
+  "student_profiles",
   "user_tokens",
   "parent_consents",
   "subscriptions",
+  "stripe_webhook_events",
   "dsar_requests",
   "user_learning_progress",
   "user_skill_mastery",
@@ -25,6 +27,15 @@ export const requiredDbTables = [
   "ai_followup_materials",
   "ai_tutor_conversations",
   "ai_remediation_worksheets",
+  "pronunciation_attempts",
+  "gamification_states",
+  "gamification_events",
+  "language_usage_tracking",
+  "language_pricing_config",
+  "pricing_ladders",
+  "exam_unlock_purchases",
+  "transaction_ledger",
+  "reconciliation_queue",
 ] as const;
 
 export type DbReadinessStatus = "present" | "missing" | "error";
@@ -49,7 +60,7 @@ export async function runDbReadinessChecks(admin: SupabaseClient): Promise<{
   const rows: DbReadinessRow[] = [];
 
   for (const table of requiredDbTables) {
-    const { error } = await admin.from(table).select("*", { count: "exact", head: true }).limit(1);
+    const { error } = await admin.from(table).select("*").limit(1);
     if (!error) {
       rows.push({ table, status: "present", detail: "Present" });
       continue;

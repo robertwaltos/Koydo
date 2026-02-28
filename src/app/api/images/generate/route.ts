@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const imageGenerateSchema = z.object({
   prompt: z.string().min(10, "Prompt must be at least 10 characters long."),
@@ -99,7 +100,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ url: "/placeholders/lesson-robot.svg", queued: true });
   } catch (err) {
-    console.error("Unexpected error in image generation route:", err);
+    console.error("Unexpected error in image generation route:", toSafeErrorRecord(err));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

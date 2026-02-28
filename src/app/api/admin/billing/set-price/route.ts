@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import Stripe from "stripe";
 import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { serverEnv } from "@/lib/config/env";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { logAdminAction } from "@/lib/admin/audit";
 import { enforceAdminActionRateLimit } from "@/lib/admin/rate-limit";
+import { createStripeServerClient } from "@/lib/billing/stripe-client";
 import { markApprovalRequestExecuted, requireApprovedRequestForAction } from "@/lib/admin/approvals";
 
 const requestSchema = z.object({
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const stripe = new Stripe(serverEnv.STRIPE_SECRET_KEY);
+  const stripe = createStripeServerClient(serverEnv.STRIPE_SECRET_KEY);
   const approvalCheck = await requireApprovedRequestForAction({
     actionType: "billing_set_price",
     approvalRequestId: payload.data.approvalRequestId,

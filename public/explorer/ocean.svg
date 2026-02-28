@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="oceanTitle oceanDesc">
+  <title id="oceanTitle">Ocean world</title>
+  <desc id="oceanDesc">An ocean scene with waves and fish.</desc>
+  <defs>
+    <linearGradient id="oceanSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9fe8ff"/>
+      <stop offset="100%" stop-color="#d8f8ff"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3cc8ff"/>
+      <stop offset="100%" stop-color="#2078cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="240" rx="24" fill="url(#oceanSky)"/>
+  <circle cx="262" cy="48" r="20" fill="#fff39a"/>
+  <rect x="0" y="106" width="320" height="134" fill="url(#sea)"/>
+  <path d="M0 120C24 108 48 108 72 120C96 132 120 132 144 120C168 108 192 108 216 120C240 132 264 132 288 120C300 114 310 114 320 120V240H0Z" fill="#56d7ff"/>
+  <path d="M0 148C22 136 44 136 66 148C88 160 110 160 132 148C154 136 176 136 198 148C220 160 242 160 264 148C286 136 304 136 320 144V240H0Z" fill="#27a8e8"/>
+  <ellipse cx="92" cy="172" rx="28" ry="16" fill="#ff9b7e"/>
+  <circle cx="105" cy="168" r="2.8" fill="#1b4b6f"/>
+  <polygon points="66,172 52,162 52,182" fill="#ff9b7e"/>
+  <ellipse cx="215" cy="192" rx="24" ry="14" fill="#ffe27b"/>
+  <circle cx="224" cy="188" r="2.5" fill="#1b4b6f"/>
+  <polygon points="191,192 178,184 178,200" fill="#ffe27b"/>
+</svg>

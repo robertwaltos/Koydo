@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { skills } from "@/lib/data/curriculum";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 type InterventionSuggestion = {
   id: string;
@@ -238,7 +239,7 @@ export async function GET() {
       suggestions,
     });
   } catch (error) {
-    console.error("Unexpected parent AI interventions error:", error);
+    console.error("Unexpected parent AI interventions error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

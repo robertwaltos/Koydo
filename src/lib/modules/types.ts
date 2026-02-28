@@ -15,7 +15,7 @@ export type LessonOption = {
 export type Question = {
   id: string;
   text: string;
-  skillId: string;
+  skillId?: string;
   options: LessonOption[];
   correctOptionId: string;
   hint?: string;
@@ -78,17 +78,19 @@ export type InteractiveActivityType =
 export type InteractiveActivity = {
   id: string;
   type: InteractiveActivityType;
-  title: string;
+  title?: string;
   description?: string;
   estimatedMinutes?: number;
   difficultyLevel?: "easy" | "medium" | "hard" | "adaptive" | (string & {});
   instructions?: string[];
   udlEngagement?: string[];
   data?: Record<string, unknown>;
+  [key: string]: unknown;
 };
 
 export type LessonMediaAsset = {
   assetId: string;
+  url?: string;
   type: string;
   purpose?: string;
   altText?: LocalizedText;
@@ -163,6 +165,7 @@ export type QuizBlueprint = {
   feedbackMode?: string;
   adaptive?: boolean;
   masteryThreshold?: number;
+  [key: string]: unknown;
 };
 
 export type StandardsMapping = {
@@ -184,6 +187,7 @@ export type Lesson = {
   standardsCodes?: string[];
   chunks?: LessonChunk[];
   flashcards?: Flashcard[];
+  activities?: InteractiveActivity[];
   interactiveActivities?: InteractiveActivity[];
   quizBlueprint?: QuizBlueprint;
   prompts?: LessonMediaPrompts;
@@ -194,6 +198,7 @@ export type Lesson = {
     description?: LocalizedText;
   };
   external?: Record<string, unknown>;
+  [key: string]: unknown;
 };
 
 export type Subject =

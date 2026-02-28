@@ -2,16 +2,32 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { serverEnv } from "@/lib/config/env";
+import { sanitizeNextPath } from "@/lib/routing/next-path";
 import {
   hashParentConsentToken,
   verifyParentConsentVerificationToken,
 } from "@/lib/compliance/parent-consent-token";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const requestSchema = z.object({
   token: z.string().min(8),
 });
 
 export async function POST(request: NextRequest) {
+  const rateLimit = enforceIpRateLimit(request, "api:compliance:parent-consent-verify", {
+    max: 30,
+    windowMs: 5 * 60 * 1000,
+  });
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many verification attempts. Please retry shortly." },
+      {
+        status: 429,
+        headers: { "Retry-After": String(rateLimit.retryAfterSeconds) },
+      },
+    );
+  }
+
   const body = await request.json().catch(() => ({}));
   const parsed = requestSchema.safeParse(body);
 
@@ -157,7 +173,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       message: "Parental consent verified.",
       consentRequestId: consentRequest.id,
-      nextRoute: "/dashboard",
+      nextRoute: sanitizeNextPath(tokenVerification.payload.nextPath) ?? "/dashboard",
     });
   } catch (error) {
     return NextResponse.json(

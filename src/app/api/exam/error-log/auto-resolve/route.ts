@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { buildAutoResolveCandidates } from "@/lib/exam/error-auto-resolve";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const autoResolveSchema = z.object({
   dryRun: z.boolean().optional(),
@@ -82,7 +83,7 @@ export async function GET(request: Request) {
       preview: eligibility.eligibleItems,
     });
   } catch (error) {
-    console.error("Unexpected exam auto-resolve GET error:", error);
+    console.error("Unexpected exam auto-resolve GET error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
@@ -151,7 +152,7 @@ export async function POST(request: Request) {
       preview: eligibility.eligibleItems,
     });
   } catch (error) {
-    console.error("Unexpected exam auto-resolve POST error:", error);
+    console.error("Unexpected exam auto-resolve POST error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

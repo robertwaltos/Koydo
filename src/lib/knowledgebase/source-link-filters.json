@@ -1,0 +1,145 @@
+{
+  "uk-national-curriculum": {
+    "allowContainsAny": [
+      "/government/collections/national-curriculum",
+      "/government/publications/national-curriculum",
+      "/education/school-curriculum",
+      "/education/primary-curriculum",
+      "/education/secondary-curriculum",
+      "/national-curriculum"
+    ],
+    "denyContainsAny": [
+      "/browse/",
+      "/search",
+      "/help/",
+      "webarchive.nationalarchives.gov.uk"
+    ]
+  },
+  "acara-australian-curriculum": {
+    "allowContainsAny": [
+      "/f-10-curriculum",
+      "/senior-secondary-curriculum",
+      "/student-diversity",
+      "/downloads",
+      "/resources",
+      "/machine-readable-australian-curriculum"
+    ],
+    "denyContainsAny": [
+      "/help/",
+      "/search"
+    ]
+  },
+  "india-cbse-curriculum": {
+    "allowContainsAny": [
+      "curriculum",
+      "/web_material/curriculummain"
+    ],
+    "denyContainsAny": []
+  },
+  "india-ncert-textbooks": {
+    "allowContainsAny": [
+      "textbook",
+      "curriculum",
+      "syllabus",
+      "course"
+    ],
+    "denyContainsAny": []
+  },
+  "ontario-curriculum": {
+    "allowContainsAny": [
+      "/curriculum",
+      "/courses"
+    ],
+    "denyContainsAny": []
+  },
+  "south-africa-caps": {
+    "allowContainsAny": [
+      "/curriculum/",
+      "/caps",
+      "/nationalcurriculum",
+      "/learningandteachingsupportmaterials"
+    ],
+    "denyContainsAny": [
+      "/newsroom/"
+    ]
+  },
+  "kenya-kicd": {
+    "allowContainsAny": [
+      "/curriculum",
+      "/cbc",
+      "/materials",
+      "/design"
+    ],
+    "denyContainsAny": []
+  },
+  "mit-ocw": {
+    "allowContainsAny": [
+      "/courses/",
+      "/search/?q="
+    ],
+    "denyContainsAny": [
+      "/search/?t=",
+      "/search/?l=",
+      "/about",
+      "/contact",
+      "/pages/get-started",
+      "/educator",
+      "youtube.com",
+      "simplecast.com",
+      "zendesk.com"
+    ]
+  },
+  "open-yale-courses": {
+    "allowContainsAny": [
+      "/courses",
+      "/philosophy/",
+      "/economics/",
+      "/english/",
+      "/history-of-art/",
+      "/american-studies/",
+      "/political-science/",
+      "/sociology/"
+    ],
+    "denyContainsAny": [
+      "/help",
+      "/about",
+      "/terms",
+      "facebook.com",
+      "twitter.com",
+      "youtube.com",
+      "itunes."
+    ]
+  },
+  "openlearn": {
+    "allowContainsAny": [
+      "/openlearn/search-results?query=",
+      "/openlearn/health-sports-psychology/",
+      "/openlearn/money-business/",
+      "/openlearn/science-maths-technology/",
+      "/openlearn/society-politics-law/"
+    ],
+    "denyContainsAny": [
+      "/about/",
+      "/contact-us",
+      "/news/",
+      "/help/",
+      "facebook.com",
+      "x.com",
+      "youtube.com"
+    ]
+  },
+  "grokipedia": {
+    "allowContainsAny": [
+      "/page/",
+      "/category/"
+    ],
+    "denyContainsAny": [
+      "/api/",
+      "/legal/",
+      "/sitemap/",
+      "/search",
+      "x.com",
+      "youtube.com"
+    ]
+  }
+}

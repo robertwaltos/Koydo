@@ -69,7 +69,7 @@ async function sendWithResend({ resendApiKey, fromEmail, recipient, alert }) {
     body: JSON.stringify({
       from: fromEmail,
       to: [recipient],
-      subject: `[EduForge Alert] ${alert.severity.toUpperCase()} - ${alert.category}`,
+      subject: `[Koydo Alert] ${alert.severity.toUpperCase()} - ${alert.category}`,
       html: buildEmailHtml(alert),
     }),
   });

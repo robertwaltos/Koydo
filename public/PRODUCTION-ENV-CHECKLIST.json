@@ -1,0 +1,119 @@
+{
+  "generatedAt": "2026-02-28T16:24:12.662Z",
+  "command": "node scripts/check-env.mjs --json --runtime production --source-file .env.production.audit --fail-on-warn",
+  "commandExitCode": 1,
+  "sourceFile": ".env.production.audit",
+  "runtime": "production",
+  "envReport": {
+    "generatedAt": "2026-02-28T16:24:12.647Z",
+    "source": "D:\\PythonProjects\\Koydo\\eduforge-web\\.env.production.audit (process.env fallback)",
+    "options": {
+      "runtimeOverride": "production",
+      "envFile": ".env.production.audit",
+      "failOnWarn": true
+    },
+    "runtime": {
+      "runtime": "production",
+      "isProduction": true,
+      "overrideApplied": true
+    },
+    "totals": {
+      "pass": 4,
+      "warn": 7,
+      "fail": 7,
+      "total": 18
+    },
+    "checks": [
+      {
+        "label": "Env Source File",
+        "status": "fail",
+        "detail": "Specified env file not found: D:\\PythonProjects\\Koydo\\eduforge-web\\.env.production.audit"
+      },
+      {
+        "label": "Public App URL",
+        "status": "fail",
+        "detail": "Missing NEXT_PUBLIC_APP_URL."
+      },
+      {
+        "label": "Supabase URL",
+        "status": "fail",
+        "detail": "Missing NEXT_PUBLIC_SUPABASE_URL/EXPO_PUBLIC_SUPABASE_URL"
+      },
+      {
+        "label": "Supabase Anon Key",
+        "status": "fail",
+        "detail": "Missing NEXT_PUBLIC_SUPABASE_ANON_KEY/EXPO_PUBLIC_SUPABASE_KEY"
+      },
+      {
+        "label": "Supabase Service Role Key",
+        "status": "warn",
+        "detail": "Missing (admin APIs requiring service role will fail)"
+      },
+      {
+        "label": "Billing Provider Mode",
+        "status": "pass",
+        "detail": "stripe_external"
+      },
+      {
+        "label": "Billing Mode Consistency",
+        "status": "warn",
+        "detail": "Missing BILLING_PROVIDER_MODE and NEXT_PUBLIC_BILLING_PROVIDER_MODE (defaults apply)."
+      },
+      {
+        "label": "Stripe Secret + Webhook",
+        "status": "fail",
+        "detail": "Billing blocked in production: missing STRIPE_SECRET_KEY or STRIPE_WEBHOOK_SECRET while BILLING_PROVIDER_MODE=stripe_external."
+      },
+      {
+        "label": "Stripe Publishable Key",
+        "status": "warn",
+        "detail": "Missing (optional for hosted Checkout redirects, required for Stripe Elements/Card UI flows)"
+      },
+      {
+        "label": "RevenueCat Client Keys",
+        "status": "fail",
+        "detail": "Missing NEXT_PUBLIC_REVENUECAT_APPLE_KEY and/or NEXT_PUBLIC_REVENUECAT_GOOGLE_KEY."
+      },
+      {
+        "label": "RevenueCat Webhook Secret",
+        "status": "fail",
+        "detail": "Missing REVENUECAT_WEBHOOK_SECRET."
+      },
+      {
+        "label": "Admin Approval Enforcement",
+        "status": "warn",
+        "detail": "REQUIRE_ADMIN_APPROVALS missing."
+      },
+      {
+        "label": "Debug Flags",
+        "status": "pass",
+        "detail": "No production debug flags enabled."
+      },
+      {
+        "label": "Escaped Line Ending Audit",
+        "status": "pass",
+        "detail": "No values with literal escaped line endings detected in .env file."
+      },
+      {
+        "label": "Placeholder Secrets Audit",
+        "status": "pass",
+        "detail": "No placeholder-style values detected in critical env keys."
+      },
+      {
+        "label": "Parent Consent Email",
+        "status": "warn",
+        "detail": "Missing RESEND_API_KEY or PARENT_CONSENT_FROM_EMAIL (falls back to local simulation link)"
+      },
+      {
+        "label": "Parent Consent Token Secret",
+        "status": "warn",
+        "detail": "Missing/short (verification link signing may be weaker or disabled)"
+      },
+      {
+        "label": "Mixpanel Token",
+        "status": "warn",
+        "detail": "Missing (analytics disabled)"
+      }
+    ]
+  }
+}

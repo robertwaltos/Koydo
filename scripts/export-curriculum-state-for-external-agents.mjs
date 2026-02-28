@@ -278,7 +278,7 @@ function main() {
   const handoff = {
     generatedAt: new Date().toISOString(),
     app: {
-      name: packageJson.name ?? "eduforge-web",
+      name: packageJson.name ?? "koydo-web",
       version: packageJson.version ?? "0.0.0",
       private: Boolean(packageJson.private),
       stack: {

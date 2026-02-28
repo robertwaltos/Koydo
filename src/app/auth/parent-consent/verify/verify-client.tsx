@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { sanitizeNextPath } from "@/lib/routing/next-path";
 
 type Props = {
   token: string;
@@ -11,6 +12,7 @@ export default function ParentConsentVerifyClient({ token }: Props) {
   const [status, setStatus] = useState(
     token ? "Checking verification link..." : "Missing verification token.",
   );
+  const [nextRoute, setNextRoute] = useState("/dashboard");
 
   useEffect(() => {
     if (!token) {
@@ -27,7 +29,11 @@ export default function ParentConsentVerifyClient({ token }: Props) {
           body: JSON.stringify({ token }),
         });
 
-        const payload = (await response.json()) as { message?: string; error?: string };
+        const payload = (await response.json()) as {
+          message?: string;
+          error?: string;
+          nextRoute?: string;
+        };
 
         if (cancelled) {
           return;
@@ -39,6 +45,7 @@ export default function ParentConsentVerifyClient({ token }: Props) {
         }
 
         setStatus(payload.message ?? "Parental consent verified.");
+        setNextRoute(sanitizeNextPath(payload.nextRoute) ?? "/dashboard");
       } catch {
         if (!cancelled) {
           setStatus("Unable to verify consent. Try again later.");
@@ -63,7 +70,7 @@ export default function ParentConsentVerifyClient({ token }: Props) {
         >
           Return to Sign In
         </Link>
-        <Link href="/dashboard" className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm text-white">
+        <Link href={nextRoute} className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm text-white">
           Go to Dashboard
         </Link>
       </div>

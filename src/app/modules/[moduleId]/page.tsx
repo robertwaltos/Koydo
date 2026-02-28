@@ -9,7 +9,7 @@ import ProgressChip from "@/app/components/ui/progress-chip";
 export default function ModuleDetailsPage({
   params,
 }: {
-  params: { moduleId: string } | Promise<{ moduleId: string }>;
+  params: Promise<{ moduleId: string }>;
 }) {
   return <ModuleDetailsPageContent params={params} />;
 }
@@ -17,9 +17,9 @@ export default function ModuleDetailsPage({
 async function ModuleDetailsPageContent({
   params,
 }: {
-  params: { moduleId: string } | Promise<{ moduleId: string }>;
+  params: Promise<{ moduleId: string }>;
 }) {
-  const resolvedParams = await Promise.resolve(params);
+  const resolvedParams = await params;
   const learningModule = getLearningModuleByLookupKey(resolvedParams.moduleId);
 
   if (!learningModule) {

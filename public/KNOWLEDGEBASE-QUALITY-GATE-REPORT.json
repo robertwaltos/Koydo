@@ -1,0 +1,353 @@
+{
+  "generatedAt": "2026-02-26T06:15:42.134Z",
+  "thresholds": {
+    "maxSearchRatio": 0.35,
+    "maxDuplicateRatio": 0.25
+  },
+  "totals": {
+    "docs": 123,
+    "searchDocs": 33,
+    "searchRatio": 0.268,
+    "courseDocs": 18,
+    "courseRatio": 0.146,
+    "nonSearchDocs": 90,
+    "duplicateDocsAll": 38,
+    "duplicateRatioAll": 0.309,
+    "duplicateDocsNonSearch": 5,
+    "duplicateRatioNonSearch": 0.056
+  },
+  "gate": {
+    "status": "pass",
+    "violations": []
+  },
+  "duplicates": [
+    {
+      "hash": "6ff91d04",
+      "docs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-04242a06.md",
+          "url": "https://ocw.mit.edu/search/?q=cpu%20gpu%20memory%20design",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-061d5e04.md",
+          "url": "https://ocw.mit.edu/search/?q=patient%20care",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-07cff25c.md",
+          "url": "https://ocw.mit.edu/search/?q=meteorology",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-1047b774.md",
+          "url": "https://ocw.mit.edu/search/?q=threat",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-175714c4.md",
+          "url": "https://ocw.mit.edu/search/?q=plumbing",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-1abc9f38.md",
+          "url": "https://ocw.mit.edu/search/?q=heating",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-27791380.md",
+          "url": "https://ocw.mit.edu/search/?q=ventilation",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-2cdf5706.md",
+          "url": "https://ocw.mit.edu/search/?q=weather",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-31e517cc.md",
+          "url": "https://ocw.mit.edu/search/?q=cpu",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-480b3448.md",
+          "url": "https://ocw.mit.edu/search/?q=climate",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-4aaddb14.md",
+          "url": "https://ocw.mit.edu/search/?q=nursing",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-61cd4954.md",
+          "url": "https://ocw.mit.edu/search/?q=security",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-61ff86ec.md",
+          "url": "https://ocw.mit.edu/search/?q=program%20management",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-7d5ba658.md",
+          "url": "https://ocw.mit.edu/search/?q=gpu",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-80dd13dc.md",
+          "url": "https://ocw.mit.edu/search/?q=infosec",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-8fc20048.md",
+          "url": "https://ocw.mit.edu/search/?q=drainage",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-9113eba0.md",
+          "url": "https://ocw.mit.edu/search/?q=pipe",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-a97f645c.md",
+          "url": "https://ocw.mit.edu/search/?q=pmp",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-b2cf45b8.md",
+          "url": "https://ocw.mit.edu/search/?q=sanitation",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-b58ef3b6.md",
+          "url": "https://ocw.mit.edu/search/?q=scrum",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-c4467078.md",
+          "url": "https://ocw.mit.edu/search/?q=memory%20design",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-cb3359b1.md",
+          "url": "https://ocw.mit.edu/search/?q=semiconductor",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-cca8405c.md",
+          "url": "https://ocw.mit.edu/search/?q=cybersecurity",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-d0173f18.md",
+          "url": "https://ocw.mit.edu/search/?q=computer%20architecture",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-d0727764.md",
+          "url": "https://ocw.mit.edu/search/?q=clinical%20skills",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-db21c170.md",
+          "url": "https://ocw.mit.edu/search/?q=project%20management",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-e1d35248.md",
+          "url": "https://ocw.mit.edu/search/?q=health%20assessment",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-e28e0d8c.md",
+          "url": "https://ocw.mit.edu/search/?q=hvac",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-e46bddfc.md",
+          "url": "https://ocw.mit.edu/search/?q=agile",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-e48f6468.md",
+          "url": "https://ocw.mit.edu/search/",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-f2bec33c.md",
+          "url": "https://ocw.mit.edu/search/?t=Anatomy&",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-f92652dc.md",
+          "url": "https://ocw.mit.edu/search/?q=microelectronics",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-fc206118.md",
+          "url": "https://ocw.mit.edu/search/?q=refrigeration",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        }
+      ]
+    },
+    {
+      "hash": "9a2720f0",
+      "docs": [
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-0e40a1ba.md",
+          "url": "https://www.australiancurriculum.edu.au/#main-navigation",
+          "bodyHash": "9a2720f0",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-d8b43968.md",
+          "url": "https://www.australiancurriculum.edu.au/",
+          "bodyHash": "9a2720f0",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-f0ba5df4.md",
+          "url": "https://www.australiancurriculum.edu.au/#main-content",
+          "bodyHash": "9a2720f0",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        }
+      ]
+    },
+    {
+      "hash": "b62e2714",
+      "docs": [
+        {
+          "path": "data\\knowledgebase\\raw\\openlearn-0ca119ec.md",
+          "url": "https://www.open.edu/openlearn/search-results?query=leadership",
+          "bodyHash": "b62e2714",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\openlearn-4bc98340.md",
+          "url": "https://www.open.edu/openlearn/search-results?query=nursing",
+          "bodyHash": "b62e2714",
+          "isSearchLanding": true,
+          "isCourseContent": false
+        }
+      ]
+    }
+  ],
+  "duplicatesNonSearch": [
+    {
+      "hash": "6ff91d04",
+      "docs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-e48f6468.md",
+          "url": "https://ocw.mit.edu/search/",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-f2bec33c.md",
+          "url": "https://ocw.mit.edu/search/?t=Anatomy&",
+          "bodyHash": "6ff91d04",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        }
+      ]
+    },
+    {
+      "hash": "9a2720f0",
+      "docs": [
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-0e40a1ba.md",
+          "url": "https://www.australiancurriculum.edu.au/#main-navigation",
+          "bodyHash": "9a2720f0",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-d8b43968.md",
+          "url": "https://www.australiancurriculum.edu.au/",
+          "bodyHash": "9a2720f0",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-f0ba5df4.md",
+          "url": "https://www.australiancurriculum.edu.au/#main-content",
+          "bodyHash": "9a2720f0",
+          "isSearchLanding": false,
+          "isCourseContent": false
+        }
+      ]
+    }
+  ]
+}

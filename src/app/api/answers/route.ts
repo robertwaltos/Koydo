@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const answerSchema = z.object({
   skillId: z.string(),
@@ -60,7 +61,7 @@ export async function POST(request: Request) {
       .upsert(upsertData);
 
     if (upsertError) {
-      console.error("Error upserting skill mastery", upsertError);
+      console.error("Error upserting skill mastery", toSafeErrorRecord(upsertError));
       return NextResponse.json(
         { error: "Could not update skill mastery" },
         { status: 500 }
@@ -69,7 +70,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, newMasteryLevel: mastery_level });
   } catch (err) {
-    console.error("Unexpected error in answers route:", err);
+    console.error("Unexpected error in answers route:", toSafeErrorRecord(err));
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

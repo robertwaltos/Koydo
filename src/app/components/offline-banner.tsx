@@ -1,36 +1,33 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n/provider";
+import { useNetworkStatus } from "@/lib/platform/network-monitor";
 
 export default function OfflineBanner() {
   const { t } = useI18n();
-  const [isOnline, setIsOnline] = useState(true);
+  const { isOnline, isLoading } = useNetworkStatus();
+  const [wasOffline, setWasOffline] = useState(false);
   const [showOnlineMessage, setShowOnlineMessage] = useState(false);
-  const hasInitialized = useRef(false);
 
   useEffect(() => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine;
-      setIsOnline(online);
+    if (isLoading) return;
 
-      if (hasInitialized.current && online) {
-        setShowOnlineMessage(true);
-        window.setTimeout(() => setShowOnlineMessage(false), 3000);
-      }
-    };
+    if (!isOnline) {
+      setWasOffline(true);
+    } else if (isOnline && wasOffline) {
+      setShowOnlineMessage(true);
+      const timer = setTimeout(() => {
+        setShowOnlineMessage(false);
+        setWasOffline(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [isOnline, isLoading, wasOffline]);
 
-    updateOnlineStatus();
-    hasInitialized.current = true;
-
-    window.addEventListener("online", updateOnlineStatus);
-    window.addEventListener("offline", updateOnlineStatus);
-
-    return () => {
-      window.removeEventListener("online", updateOnlineStatus);
-      window.removeEventListener("offline", updateOnlineStatus);
-    };
-  }, []);
+  if (isLoading) {
+    return null;
+  }
 
   if (!isOnline) {
     return (

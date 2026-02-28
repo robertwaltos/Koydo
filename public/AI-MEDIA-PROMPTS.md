@@ -1,4 +1,4 @@
-# EduForge AI Media Prompt Catalog
+# Koydo AI Media Prompt Catalog
 
 This file stores reusable prompt templates for generating artwork, avatars, and videos later via OpenAI APIs.
 

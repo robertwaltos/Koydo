@@ -4,6 +4,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { learningEventTypes } from "@/lib/analytics/learning-events";
 import { generateAndStoreFollowupMaterial } from "@/lib/ai/follow-up";
 import { generateAndStoreRemediationWorksheet } from "@/lib/ai/remediation-worksheet";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const eventTypeSchema = z.enum(learningEventTypes);
 const payloadValueSchema = z.union([
@@ -103,7 +104,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, inserted: rows.length });
   } catch (error) {
-    console.error("Unexpected telemetry ingestion error:", error);
+    console.error("Unexpected telemetry ingestion error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

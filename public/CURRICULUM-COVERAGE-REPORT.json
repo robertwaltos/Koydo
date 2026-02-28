@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-02-24T04:20:22.531Z",
+  "generatedAt": "2026-02-26T03:41:15.463Z",
   "source": "module-catalog",
-  "totalLessons": 1654,
-  "totalModules": 118,
+  "totalLessons": 2484,
+  "totalModules": 201,
   "gradeBandSummary": [
     {
       "gradeBand": "elementary",
@@ -10,11 +10,11 @@
     },
     {
       "gradeBand": "high-school",
-      "count": 1311
+      "count": 2141
     },
     {
       "gradeBand": "middle-school",
-      "count": 1094
+      "count": 1104
     },
     {
       "gradeBand": "pre-k",
@@ -23,8 +23,16 @@
   ],
   "subjectSummary": [
     {
+      "subject": "accounting-and-finance",
+      "count": 40
+    },
+    {
       "subject": "advanced-math",
       "count": 145
+    },
+    {
+      "subject": "ai-and-ml",
+      "count": 40
     },
     {
       "subject": "arts",
@@ -43,12 +51,52 @@
       "count": 190
     },
     {
+      "subject": "biotechnology",
+      "count": 10
+    },
+    {
       "subject": "chemistry",
       "count": 190
     },
     {
+      "subject": "civil-engineering",
+      "count": 40
+    },
+    {
+      "subject": "cloud-computing",
+      "count": 20
+    },
+    {
       "subject": "coding",
       "count": 190
+    },
+    {
+      "subject": "computer-architecture",
+      "count": 40
+    },
+    {
+      "subject": "cybersecurity",
+      "count": 40
+    },
+    {
+      "subject": "data-science",
+      "count": 40
+    },
+    {
+      "subject": "digital-marketing",
+      "count": 10
+    },
+    {
+      "subject": "electrical-engineering",
+      "count": 40
+    },
+    {
+      "subject": "electricity",
+      "count": 40
+    },
+    {
+      "subject": "entrepreneurship",
+      "count": 10
     },
     {
       "subject": "exam-prep",
@@ -79,12 +127,60 @@
       "count": 145
     },
     {
+      "subject": "hvac",
+      "count": 40
+    },
+    {
       "subject": "language-arts",
       "count": 344
     },
     {
+      "subject": "law",
+      "count": 40
+    },
+    {
+      "subject": "medicine",
+      "count": 40
+    },
+    {
+      "subject": "meteorology",
+      "count": 50
+    },
+    {
+      "subject": "micro-circuits",
+      "count": 30
+    },
+    {
+      "subject": "microelectronics",
+      "count": 40
+    },
+    {
+      "subject": "network-engineering",
+      "count": 20
+    },
+    {
+      "subject": "nursing",
+      "count": 40
+    },
+    {
       "subject": "physics",
       "count": 190
+    },
+    {
+      "subject": "plumbing",
+      "count": 40
+    },
+    {
+      "subject": "project-management",
+      "count": 40
+    },
+    {
+      "subject": "renewable-energy",
+      "count": 40
+    },
+    {
+      "subject": "robotics",
+      "count": 40
     },
     {
       "subject": "social-studies-us",
@@ -93,6 +189,10 @@
     {
       "subject": "social-studies-world",
       "count": 190
+    },
+    {
+      "subject": "ux-design",
+      "count": 10
     },
     {
       "subject": "world-history",
@@ -304,12 +404,34 @@
     },
     {
       "gradeBand": "high-school",
+      "subject": "accounting-and-finance",
+      "count": 40,
+      "files": [
+        "accounting-finance-101.ts",
+        "accounting-finance-201.ts",
+        "accounting-finance-301.ts",
+        "accounting-finance-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
       "subject": "advanced-math",
       "count": 45,
       "files": [
         "advanced-math-201.ts",
         "advanced-math-301.ts",
         "advanced-math-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "ai-and-ml",
+      "count": 40,
+      "files": [
+        "ai-machine-learning-101.ts",
+        "ai-machine-learning-201.ts",
+        "ai-machine-learning-301.ts",
+        "ai-machine-learning-401.ts"
       ]
     },
     {
@@ -359,6 +481,14 @@
     },
     {
       "gradeBand": "high-school",
+      "subject": "biotechnology",
+      "count": 10,
+      "files": [
+        "biotechnology-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
       "subject": "chemistry",
       "count": 60,
       "files": [
@@ -370,6 +500,26 @@
     },
     {
       "gradeBand": "high-school",
+      "subject": "civil-engineering",
+      "count": 40,
+      "files": [
+        "civil-engineering-101.ts",
+        "civil-engineering-201.ts",
+        "civil-engineering-301.ts",
+        "civil-engineering-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "cloud-computing",
+      "count": 20,
+      "files": [
+        "cloud-computing-101.ts",
+        "cloud-computing-201.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
       "subject": "coding",
       "count": 60,
       "files": [
@@ -377,6 +527,77 @@
         "coding-201.ts",
         "coding-301.ts",
         "coding-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "computer-architecture",
+      "count": 40,
+      "files": [
+        "cpu-gpu-memory-design-101.ts",
+        "cpu-gpu-memory-design-201.ts",
+        "cpu-gpu-memory-design-301.ts",
+        "cpu-gpu-memory-design-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "cybersecurity",
+      "count": 40,
+      "files": [
+        "cybersecurity-101.ts",
+        "cybersecurity-201.ts",
+        "cybersecurity-301.ts",
+        "cybersecurity-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "data-science",
+      "count": 40,
+      "files": [
+        "data-science-101.ts",
+        "data-science-201.ts",
+        "data-science-301.ts",
+        "data-science-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "digital-marketing",
+      "count": 10,
+      "files": [
+        "digital-marketing-101.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "electrical-engineering",
+      "count": 40,
+      "files": [
+        "electrical-engineering-101.ts",
+        "electrical-engineering-201.ts",
+        "electrical-engineering-301.ts",
+        "electrical-engineering-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "electricity",
+      "count": 40,
+      "files": [
+        "electrician-electricity-101.ts",
+        "electrician-electricity-201.ts",
+        "electrician-electricity-301.ts",
+        "electrician-electricity-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "entrepreneurship",
+      "count": 10,
+      "files": [
+        "entrepreneurship-101.ts"
       ]
     },
     {
@@ -467,6 +688,17 @@
     },
     {
       "gradeBand": "high-school",
+      "subject": "hvac",
+      "count": 40,
+      "files": [
+        "hvac-101.ts",
+        "hvac-201.ts",
+        "hvac-301.ts",
+        "hvac-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
       "subject": "language-arts",
       "count": 105,
       "files": [
@@ -481,6 +713,80 @@
     },
     {
       "gradeBand": "high-school",
+      "subject": "law",
+      "count": 40,
+      "files": [
+        "law-studies-101.ts",
+        "law-studies-201.ts",
+        "law-studies-301.ts",
+        "law-studies-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "medicine",
+      "count": 40,
+      "files": [
+        "medicine-101.ts",
+        "medicine-201.ts",
+        "medicine-301.ts",
+        "medicine-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "meteorology",
+      "count": 40,
+      "files": [
+        "meteorology-101.ts",
+        "meteorology-201.ts",
+        "meteorology-301.ts",
+        "meteorology-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "micro-circuits",
+      "count": 30,
+      "files": [
+        "micro-circuits-101.ts",
+        "micro-circuits-201.ts",
+        "micro-circuits-301.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "microelectronics",
+      "count": 40,
+      "files": [
+        "microelectronics-101.ts",
+        "microelectronics-201.ts",
+        "microelectronics-301.ts",
+        "microelectronics-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "network-engineering",
+      "count": 20,
+      "files": [
+        "network-engineering-101.ts",
+        "network-engineering-201.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "nursing",
+      "count": 40,
+      "files": [
+        "nursing-101.ts",
+        "nursing-201.ts",
+        "nursing-301.ts",
+        "nursing-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
       "subject": "physics",
       "count": 60,
       "files": [
@@ -488,6 +794,50 @@
         "physics-201.ts",
         "physics-301.ts",
         "physics-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "plumbing",
+      "count": 40,
+      "files": [
+        "plumbing-101.ts",
+        "plumbing-201.ts",
+        "plumbing-301.ts",
+        "plumbing-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "project-management",
+      "count": 40,
+      "files": [
+        "project-management-101.ts",
+        "project-management-201.ts",
+        "project-management-301.ts",
+        "project-management-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "renewable-energy",
+      "count": 40,
+      "files": [
+        "renewable-energy-systems-101.ts",
+        "renewable-energy-systems-201.ts",
+        "renewable-energy-systems-301.ts",
+        "renewable-energy-systems-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "robotics",
+      "count": 40,
+      "files": [
+        "robotics-101.ts",
+        "robotics-201.ts",
+        "robotics-301.ts",
+        "robotics-401.ts"
       ]
     },
     {
@@ -510,6 +860,14 @@
         "social-studies-world-201.ts",
         "social-studies-world-301.ts",
         "social-studies-world-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "high-school",
+      "subject": "ux-design",
+      "count": 10,
+      "files": [
+        "ux-design-101.ts"
       ]
     },
     {
@@ -677,6 +1035,14 @@
         "language-arts-201.ts",
         "language-arts-301.ts",
         "language-arts-401.ts"
+      ]
+    },
+    {
+      "gradeBand": "middle-school",
+      "subject": "meteorology",
+      "count": 10,
+      "files": [
+        "meteorology-101.ts"
       ]
     },
     {
@@ -899,6 +1265,86 @@
     },
     {
       "source": "module-catalog",
+      "fileName": "accounting-finance-101.ts",
+      "moduleId": "accounting-finance-101",
+      "moduleTitle": "Accounting and Finance Fundamentals",
+      "subject": "accounting-and-finance",
+      "subjectRaw": "Accounting and Finance",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "accounting-finance-201.ts",
+      "moduleId": "accounting-finance-201",
+      "moduleTitle": "Accounting and Finance Practice",
+      "subject": "accounting-and-finance",
+      "subjectRaw": "Accounting and Finance",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "accounting-finance-301.ts",
+      "moduleId": "accounting-finance-301",
+      "moduleTitle": "Corporate Finance and Control",
+      "subject": "accounting-and-finance",
+      "subjectRaw": "Accounting and Finance",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "accounting-finance-401.ts",
+      "moduleId": "accounting-finance-401",
+      "moduleTitle": "Strategic Finance Leadership",
+      "subject": "accounting-and-finance",
+      "subjectRaw": "Accounting and Finance",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
       "fileName": "act-prep-101.ts",
       "moduleId": "act-prep-101",
       "moduleTitle": "ACT Prep Foundations",
@@ -934,9 +1380,9 @@
       "maxAge": 18,
       "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 4,
+        "video": 5,
         "interactive": 5,
-        "quiz": 6
+        "quiz": 5
       }
     },
     {
@@ -981,6 +1427,86 @@
         "video": 4,
         "interactive": 5,
         "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "ai-machine-learning-101.ts",
+      "moduleId": "ai-machine-learning-101",
+      "moduleTitle": "AI and Machine Learning Fundamentals",
+      "subject": "ai-and-ml",
+      "subjectRaw": "AI and ML",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "ai-machine-learning-201.ts",
+      "moduleId": "ai-machine-learning-201",
+      "moduleTitle": "Machine Learning Practice",
+      "subject": "ai-and-ml",
+      "subjectRaw": "AI and ML",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "ai-machine-learning-301.ts",
+      "moduleId": "ai-machine-learning-301",
+      "moduleTitle": "Machine Learning Engineering",
+      "subject": "ai-and-ml",
+      "subjectRaw": "AI and ML",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "ai-machine-learning-401.ts",
+      "moduleId": "ai-machine-learning-401",
+      "moduleTitle": "AI Systems and Governance",
+      "subject": "ai-and-ml",
+      "subjectRaw": "AI and ML",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       }
     },
     {
@@ -1478,6 +2004,26 @@
     },
     {
       "source": "module-catalog",
+      "fileName": "biotechnology-101.ts",
+      "moduleId": "biotechnology-101",
+      "moduleTitle": "Biotechnology Foundations",
+      "subject": "biotechnology",
+      "subjectRaw": "Biotechnology",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
       "fileName": "chemistry-101.ts",
       "moduleId": "chemistry-101",
       "moduleTitle": "Chemistry Essentials",
@@ -1562,6 +2108,126 @@
         "video": 4,
         "interactive": 5,
         "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "civil-engineering-101.ts",
+      "moduleId": "civil-engineering-101",
+      "moduleTitle": "Civil Engineering I",
+      "subject": "civil-engineering",
+      "subjectRaw": "Civil Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "civil-engineering-201.ts",
+      "moduleId": "civil-engineering-201",
+      "moduleTitle": "Civil Engineering II",
+      "subject": "civil-engineering",
+      "subjectRaw": "Civil Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "civil-engineering-301.ts",
+      "moduleId": "civil-engineering-301",
+      "moduleTitle": "Civil Engineering III",
+      "subject": "civil-engineering",
+      "subjectRaw": "Civil Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "civil-engineering-401.ts",
+      "moduleId": "civil-engineering-401",
+      "moduleTitle": "Civil Engineering IV",
+      "subject": "civil-engineering",
+      "subjectRaw": "Civil Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cloud-computing-101.ts",
+      "moduleId": "cloud-computing-101",
+      "moduleTitle": "Cloud Computing Foundations",
+      "subject": "cloud-computing",
+      "subjectRaw": "Cloud Computing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cloud-computing-201.ts",
+      "moduleId": "cloud-computing-201",
+      "moduleTitle": "Cloud Platform Engineering",
+      "subject": "cloud-computing",
+      "subjectRaw": "Cloud Computing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       }
     },
     {
@@ -1654,6 +2320,86 @@
     },
     {
       "source": "module-catalog",
+      "fileName": "cpu-gpu-memory-design-101.ts",
+      "moduleId": "cpu-gpu-memory-design-101",
+      "moduleTitle": "CPU/GPU/Memory Design I",
+      "subject": "computer-architecture",
+      "subjectRaw": "Computer Architecture",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cpu-gpu-memory-design-201.ts",
+      "moduleId": "cpu-gpu-memory-design-201",
+      "moduleTitle": "CPU/GPU/Memory Design II",
+      "subject": "computer-architecture",
+      "subjectRaw": "Computer Architecture",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cpu-gpu-memory-design-301.ts",
+      "moduleId": "cpu-gpu-memory-design-301",
+      "moduleTitle": "CPU/GPU/Memory Design III",
+      "subject": "computer-architecture",
+      "subjectRaw": "Computer Architecture",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cpu-gpu-memory-design-401.ts",
+      "moduleId": "cpu-gpu-memory-design-401",
+      "moduleTitle": "CPU/GPU/Memory Design IV",
+      "subject": "computer-architecture",
+      "subjectRaw": "Computer Architecture",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
       "fileName": "cuet-prep-101.ts",
       "moduleId": "cuet-prep-101",
       "moduleTitle": "CUET Prep Foundations",
@@ -1670,6 +2416,366 @@
         "video": 5,
         "interactive": 5,
         "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cybersecurity-101.ts",
+      "moduleId": "cybersecurity-101",
+      "moduleTitle": "Cybersecurity Fundamentals",
+      "subject": "cybersecurity",
+      "subjectRaw": "Cybersecurity",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cybersecurity-201.ts",
+      "moduleId": "cybersecurity-201",
+      "moduleTitle": "Cybersecurity Operations",
+      "subject": "cybersecurity",
+      "subjectRaw": "Cybersecurity",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cybersecurity-301.ts",
+      "moduleId": "cybersecurity-301",
+      "moduleTitle": "Cybersecurity Engineering",
+      "subject": "cybersecurity",
+      "subjectRaw": "Cybersecurity",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "cybersecurity-401.ts",
+      "moduleId": "cybersecurity-401",
+      "moduleTitle": "Cybersecurity Leadership",
+      "subject": "cybersecurity",
+      "subjectRaw": "Cybersecurity",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "data-science-101.ts",
+      "moduleId": "data-science-101",
+      "moduleTitle": "Data Science Fundamentals",
+      "subject": "data-science",
+      "subjectRaw": "Data Science",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "data-science-201.ts",
+      "moduleId": "data-science-201",
+      "moduleTitle": "Data Science Practice",
+      "subject": "data-science",
+      "subjectRaw": "Data Science",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "data-science-301.ts",
+      "moduleId": "data-science-301",
+      "moduleTitle": "Data Science Modeling",
+      "subject": "data-science",
+      "subjectRaw": "Data Science",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "data-science-401.ts",
+      "moduleId": "data-science-401",
+      "moduleTitle": "Data Science Systems",
+      "subject": "data-science",
+      "subjectRaw": "Data Science",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "digital-marketing-101.ts",
+      "moduleId": "digital-marketing-101",
+      "moduleTitle": "Digital Marketing Fundamentals",
+      "subject": "digital-marketing",
+      "subjectRaw": "Digital Marketing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "electrical-engineering-101.ts",
+      "moduleId": "electrical-engineering-101",
+      "moduleTitle": "Electrical Engineering I",
+      "subject": "electrical-engineering",
+      "subjectRaw": "Electrical Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "electrical-engineering-201.ts",
+      "moduleId": "electrical-engineering-201",
+      "moduleTitle": "Electrical Engineering II",
+      "subject": "electrical-engineering",
+      "subjectRaw": "Electrical Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "electrical-engineering-301.ts",
+      "moduleId": "electrical-engineering-301",
+      "moduleTitle": "Electrical Engineering III",
+      "subject": "electrical-engineering",
+      "subjectRaw": "Electrical Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "electrical-engineering-401.ts",
+      "moduleId": "electrical-engineering-401",
+      "moduleTitle": "Electrical Engineering IV",
+      "subject": "electrical-engineering",
+      "subjectRaw": "Electrical Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "electrician-electricity-101.ts",
+      "moduleId": "electrician-electricity-101",
+      "moduleTitle": "Electricity for Electricians I",
+      "subject": "electricity",
+      "subjectRaw": "Electricity",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "electrician-electricity-201.ts",
+      "moduleId": "electrician-electricity-201",
+      "moduleTitle": "Electricity for Electricians II",
+      "subject": "electricity",
+      "subjectRaw": "Electricity",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "electrician-electricity-301.ts",
+      "moduleId": "electrician-electricity-301",
+      "moduleTitle": "Electricity for Electricians III",
+      "subject": "electricity",
+      "subjectRaw": "Electricity",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "electrician-electricity-401.ts",
+      "moduleId": "electrician-electricity-401",
+      "moduleTitle": "Electricity for Electricians IV",
+      "subject": "electricity",
+      "subjectRaw": "Electricity",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "entrepreneurship-101.ts",
+      "moduleId": "entrepreneurship-101",
+      "moduleTitle": "Entrepreneurship Fundamentals",
+      "subject": "entrepreneurship",
+      "subjectRaw": "Entrepreneurship",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       }
     },
     {
@@ -2299,6 +3405,86 @@
     },
     {
       "source": "module-catalog",
+      "fileName": "hvac-101.ts",
+      "moduleId": "hvac-101",
+      "moduleTitle": "HVAC Fundamentals",
+      "subject": "hvac",
+      "subjectRaw": "HVAC",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "hvac-201.ts",
+      "moduleId": "hvac-201",
+      "moduleTitle": "HVAC Service and Controls",
+      "subject": "hvac",
+      "subjectRaw": "HVAC",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "hvac-301.ts",
+      "moduleId": "hvac-301",
+      "moduleTitle": "HVAC Advanced Systems",
+      "subject": "hvac",
+      "subjectRaw": "HVAC",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "hvac-401.ts",
+      "moduleId": "hvac-401",
+      "moduleTitle": "HVAC Master Practice",
+      "subject": "hvac",
+      "subjectRaw": "HVAC",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
       "fileName": "ib-prep-101.ts",
       "moduleId": "ib-prep-101",
       "moduleTitle": "IB Diploma Prep Foundations",
@@ -2570,6 +3756,86 @@
     },
     {
       "source": "module-catalog",
+      "fileName": "law-studies-101.ts",
+      "moduleId": "law-studies-101",
+      "moduleTitle": "Law Studies I",
+      "subject": "law",
+      "subjectRaw": "Law",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "law-studies-201.ts",
+      "moduleId": "law-studies-201",
+      "moduleTitle": "Law Studies II",
+      "subject": "law",
+      "subjectRaw": "Law",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "law-studies-301.ts",
+      "moduleId": "law-studies-301",
+      "moduleTitle": "Law Studies III",
+      "subject": "law",
+      "subjectRaw": "Law",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "law-studies-401.ts",
+      "moduleId": "law-studies-401",
+      "moduleTitle": "Law Studies IV",
+      "subject": "law",
+      "subjectRaw": "Law",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
       "fileName": "math-101.ts",
       "moduleId": "math-101",
       "moduleTitle": "Introduction to Counting",
@@ -2591,6 +3857,427 @@
     },
     {
       "source": "module-catalog",
+      "fileName": "medicine-101.ts",
+      "moduleId": "medicine-101",
+      "moduleTitle": "Medicine Foundations",
+      "subject": "medicine",
+      "subjectRaw": "Medicine",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "medicine-201.ts",
+      "moduleId": "medicine-201",
+      "moduleTitle": "Medicine Clinical Systems",
+      "subject": "medicine",
+      "subjectRaw": "Medicine",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "medicine-301.ts",
+      "moduleId": "medicine-301",
+      "moduleTitle": "Medicine III",
+      "subject": "medicine",
+      "subjectRaw": "Medicine",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "medicine-401.ts",
+      "moduleId": "medicine-401",
+      "moduleTitle": "Medicine IV",
+      "subject": "medicine",
+      "subjectRaw": "Medicine",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "meteorology-101.ts",
+      "moduleId": "meteorology-101",
+      "moduleTitle": "Meteorology I",
+      "subject": "meteorology",
+      "subjectRaw": "Meteorology",
+      "gradeBand": "middle-school",
+      "coveredGradeBands": [
+        "middle-school",
+        "high-school"
+      ],
+      "minAge": 13,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "meteorology-201.ts",
+      "moduleId": "meteorology-201",
+      "moduleTitle": "Meteorology II",
+      "subject": "meteorology",
+      "subjectRaw": "Meteorology",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "meteorology-301.ts",
+      "moduleId": "meteorology-301",
+      "moduleTitle": "Meteorology III",
+      "subject": "meteorology",
+      "subjectRaw": "Meteorology",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "meteorology-401.ts",
+      "moduleId": "meteorology-401",
+      "moduleTitle": "Meteorology IV",
+      "subject": "meteorology",
+      "subjectRaw": "Meteorology",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "micro-circuits-101.ts",
+      "moduleId": "micro-circuits-101",
+      "moduleTitle": "Micro Circuits I",
+      "subject": "micro-circuits",
+      "subjectRaw": "Micro Circuits",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "micro-circuits-201.ts",
+      "moduleId": "micro-circuits-201",
+      "moduleTitle": "Micro Circuits II",
+      "subject": "micro-circuits",
+      "subjectRaw": "Micro Circuits",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "micro-circuits-301.ts",
+      "moduleId": "micro-circuits-301",
+      "moduleTitle": "Micro Circuits III",
+      "subject": "micro-circuits",
+      "subjectRaw": "Micro Circuits",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "microelectronics-101.ts",
+      "moduleId": "microelectronics-101",
+      "moduleTitle": "Microelectronics I",
+      "subject": "microelectronics",
+      "subjectRaw": "Microelectronics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "microelectronics-201.ts",
+      "moduleId": "microelectronics-201",
+      "moduleTitle": "Microelectronics II",
+      "subject": "microelectronics",
+      "subjectRaw": "Microelectronics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "microelectronics-301.ts",
+      "moduleId": "microelectronics-301",
+      "moduleTitle": "Microelectronics III",
+      "subject": "microelectronics",
+      "subjectRaw": "Microelectronics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "microelectronics-401.ts",
+      "moduleId": "microelectronics-401",
+      "moduleTitle": "Microelectronics IV",
+      "subject": "microelectronics",
+      "subjectRaw": "Microelectronics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "network-engineering-101.ts",
+      "moduleId": "network-engineering-101",
+      "moduleTitle": "Network Engineering Foundations",
+      "subject": "network-engineering",
+      "subjectRaw": "Network Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "network-engineering-201.ts",
+      "moduleId": "network-engineering-201",
+      "moduleTitle": "Network Engineering Operations",
+      "subject": "network-engineering",
+      "subjectRaw": "Network Engineering",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "nursing-101.ts",
+      "moduleId": "nursing-101",
+      "moduleTitle": "Nursing Foundations",
+      "subject": "nursing",
+      "subjectRaw": "Nursing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "nursing-201.ts",
+      "moduleId": "nursing-201",
+      "moduleTitle": "Nursing Clinical Practice",
+      "subject": "nursing",
+      "subjectRaw": "Nursing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "nursing-301.ts",
+      "moduleId": "nursing-301",
+      "moduleTitle": "Nursing Advanced Clinical Practice",
+      "subject": "nursing",
+      "subjectRaw": "Nursing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "nursing-401.ts",
+      "moduleId": "nursing-401",
+      "moduleTitle": "Nursing Leadership and Systems",
+      "subject": "nursing",
+      "subjectRaw": "Nursing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
       "fileName": "physics-101.ts",
       "moduleId": "physics-101",
       "moduleTitle": "Physics Essentials",
@@ -2606,9 +4293,9 @@
       "maxAge": 18,
       "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 4,
+        "video": 5,
         "interactive": 5,
-        "quiz": 6
+        "quiz": 5
       }
     },
     {
@@ -2675,6 +4362,86 @@
         "video": 4,
         "interactive": 5,
         "quiz": 6
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "plumbing-101.ts",
+      "moduleId": "plumbing-101",
+      "moduleTitle": "Plumbing Fundamentals",
+      "subject": "plumbing",
+      "subjectRaw": "Plumbing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "plumbing-201.ts",
+      "moduleId": "plumbing-201",
+      "moduleTitle": "Plumbing Systems and Codes",
+      "subject": "plumbing",
+      "subjectRaw": "Plumbing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "plumbing-301.ts",
+      "moduleId": "plumbing-301",
+      "moduleTitle": "Plumbing Advanced Systems",
+      "subject": "plumbing",
+      "subjectRaw": "Plumbing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "plumbing-401.ts",
+      "moduleId": "plumbing-401",
+      "moduleTitle": "Plumbing Master Practice",
+      "subject": "plumbing",
+      "subjectRaw": "Plumbing",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 18,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       }
     },
     {
@@ -3039,6 +4806,86 @@
     },
     {
       "source": "module-catalog",
+      "fileName": "project-management-101.ts",
+      "moduleId": "project-management-101",
+      "moduleTitle": "Project Management Fundamentals",
+      "subject": "project-management",
+      "subjectRaw": "Project Management",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "project-management-201.ts",
+      "moduleId": "project-management-201",
+      "moduleTitle": "Project Delivery Practice",
+      "subject": "project-management",
+      "subjectRaw": "Project Management",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "project-management-301.ts",
+      "moduleId": "project-management-301",
+      "moduleTitle": "Program Management",
+      "subject": "project-management",
+      "subjectRaw": "Project Management",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "project-management-401.ts",
+      "moduleId": "project-management-401",
+      "moduleTitle": "Enterprise Project Leadership",
+      "subject": "project-management",
+      "subjectRaw": "Project Management",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
       "fileName": "reading-101.ts",
       "moduleId": "reading-101",
       "moduleTitle": "The Alphabet",
@@ -3056,6 +4903,166 @@
         "video": 3,
         "interactive": 2,
         "quiz": 3
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "renewable-energy-systems-101.ts",
+      "moduleId": "renewable-energy-systems-101",
+      "moduleTitle": "Renewable Energy Systems",
+      "subject": "renewable-energy",
+      "subjectRaw": "Renewable Energy",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "renewable-energy-systems-201.ts",
+      "moduleId": "renewable-energy-systems-201",
+      "moduleTitle": "Renewable Energy Engineering",
+      "subject": "renewable-energy",
+      "subjectRaw": "Renewable Energy",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "renewable-energy-systems-301.ts",
+      "moduleId": "renewable-energy-systems-301",
+      "moduleTitle": "Renewable Energy Optimization",
+      "subject": "renewable-energy",
+      "subjectRaw": "Renewable Energy",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "renewable-energy-systems-401.ts",
+      "moduleId": "renewable-energy-systems-401",
+      "moduleTitle": "Renewable Energy Systems Leadership",
+      "subject": "renewable-energy",
+      "subjectRaw": "Renewable Energy",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "robotics-101.ts",
+      "moduleId": "robotics-101",
+      "moduleTitle": "Robotics Fundamentals",
+      "subject": "robotics",
+      "subjectRaw": "Robotics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "robotics-201.ts",
+      "moduleId": "robotics-201",
+      "moduleTitle": "Robotics Integration",
+      "subject": "robotics",
+      "subjectRaw": "Robotics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 15,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "robotics-301.ts",
+      "moduleId": "robotics-301",
+      "moduleTitle": "Robotics Autonomy",
+      "subject": "robotics",
+      "subjectRaw": "Robotics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 16,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "robotics-401.ts",
+      "moduleId": "robotics-401",
+      "moduleTitle": "Robotics Systems Engineering",
+      "subject": "robotics",
+      "subjectRaw": "Robotics",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 17,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       }
     },
     {
@@ -3116,9 +5123,9 @@
       "maxAge": 18,
       "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 4,
+        "video": 5,
         "interactive": 5,
-        "quiz": 6
+        "quiz": 5
       }
     },
     {
@@ -3293,6 +5300,26 @@
         "video": 5,
         "interactive": 5,
         "quiz": 5
+      }
+    },
+    {
+      "source": "module-catalog",
+      "fileName": "ux-design-101.ts",
+      "moduleId": "ux-design-101",
+      "moduleTitle": "UX Design Foundations",
+      "subject": "ux-design",
+      "subjectRaw": "UX Design",
+      "gradeBand": "high-school",
+      "coveredGradeBands": [
+        "high-school"
+      ],
+      "minAge": 14,
+      "maxAge": 99,
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       }
     },
     {

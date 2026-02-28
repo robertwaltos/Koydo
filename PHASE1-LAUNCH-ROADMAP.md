@@ -87,7 +87,7 @@ Ship the highest-value content experience first: stable media pipeline, reviewed
 | P1-26 | Accessibility audit (WCAG AA) — explore surfaces | DONE | Claude | Fixed chip contrast failures (2–3.5:1 → text-zinc-900+border tint, all stages pass ≥4.5:1); aria-labels on all stage + module card Links; locked-card aria-disabled + aria-hidden overlay; back link min-h-11 touch target; prefers-reduced-motion guard on 3D tilt; removed static willChange:transform GPU layer waste |
 | P1-27 | Performance: next.config.ts hardening | DONE | Claude | Security response headers (CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy); compiler.removeConsole in production; optimizePackageImports for supabase/date-fns; images.remotePatterns for Supabase CDN + avif/webp + 7-day TTL; reactStrictMode:true |
 | P1-28 | Performance: lesson flow lazy loading | DONE | Claude | Phases 2–5 of ExploreLessonFlow (VisualFlashcards, VisualActivity, VisualQuiz, LessonCelebration) converted to next/dynamic. Initial lesson-page JS bundle reduced by ~4 heavy client components. |
-| P1-29 | Brand rename: EduForge → Koydo | DONE | Claude | All source code, configs, translations, native configs, store assets, and docs renamed. Zero `EduForge`/`eduforge` references remain. Cookie keys `koydo.*`, IndexedDB name `koydo`, TypeScript interface `KoydoDb`, health route `koydo-api`, email domains `@koydo.app`. Two media files intentionally skipped (actual filenames on disk). |
+| P1-29 | Brand rename: Koydo | DONE | Claude | All source code, configs, translations, native configs, store assets, and docs renamed to Koydo branding. Cookie keys `koydo.*`, IndexedDB name `koydo`, TypeScript interface `KoydoDb`, health route `koydo-api`, email domains `@koydo.app`. Note: local folder path `eduforge-web` remains for backward-compatible filesystem layout. |
 | P1-30 | Build fix + type check (launch gate) | DONE | Claude | Removed deprecated `bundledWebRuntime` from capacitor.config.ts. Cleared stale `.next` cache. `next build` 0 errors, `npx tsc --noEmit` 0 type errors. |
 | P1-31 | Learning-paths.ts stage alignment | DONE | Claude | Added `inferEducationStageId()` (age/grade → 6-stage ID) and `learnerStageToEducationStageId()` (old 4-tier → new 6-tier bridge). Backward compatible with 3 existing consumers. |
 | P1-32 | Visual QA pass (19 launch pages) | DONE | Claude | 15/19 CLEAN. 4 i18n gaps on secondary pages (sign-in, modules, billing/checkout) subsequently fixed by Codex (P1-24). Zero TODO/FIXME in any page or layout file. |
@@ -106,8 +106,12 @@ Ship the highest-value content experience first: stable media pipeline, reviewed
 | P1-45 | Gemini: Profile context provider (enhanced) | IN_PROGRESS | Gemini | `ActiveProfileProvider` upgraded to fetch full `student_profiles` data from Supabase (display_name, grade_level, avatar_url, ai_skill_level_map). Exposes `profile` object + `isLoading` state. Next: profile-aware stage recommendation in `/explore`. |
 | P1-46 | Codex: Curriculum expansion (67 modules) | DONE | Codex | 67 new domain modules (~670 lessons) across trade, engineering, health, law, and digital careers. Registry now 201 modules. |
 | P1-47 | Codex: Knowledgebase ingestion pipeline | DONE | Codex | Full pipeline: harvest → queue → ingest → PDF extract → manifest. 90 docs, 17 domains, 0 gaps. Domain gate passes all 12 priority domains. |
+| P1-48 | Opus: 7 module content rewrites (v2.0.0) | DONE | Opus 4.6 | language-arts-201, us-civics-201, accounting-finance-101, project-management-101, cybersecurity-101, ai-machine-learning-101, math-101. All gold-standard quality. |
+| P1-49 | Opus: Comprehensive codebase review | DONE | Opus 4.6 | 13 issues found (3 critical, 4 high, 6 medium, 4 low). Report: `CODEBASE-REVIEW-REPORT.md`. |
+| P1-50 | Opus: Critical bug fixes (C-1, C-3, H-2, M-4) | DONE | Opus 4.6 | Zod `activities` field preserved, env vars required, lazy Supabase client, `.bak*` gitignored. Build GREEN. |
+| P1-51 | Opus: 5-agent work assignments | DONE | Opus 4.6 | Comprehensive assignments for Opus, Codex, Gemini, Sonnet, Grok in `V1-LAUNCH-COORDINATION.md`. |
 
-## Active Execution Plan (Current — Sprint Day 1)
+## Active Execution Plan (Current — Post-Review Sprint)
 
 ### Web Launch Gate: GREEN
 
@@ -116,15 +120,16 @@ Ship the highest-value content experience first: stable media pipeline, reviewed
 - Brand rename: complete (0 stale references)
 - i18n: 400+ EN/ES keys, all 19 pages wired
 - Security: CSRF, rate limiting, RLS on 44 tables, admin policies
+- Critical bugs fixed: Zod activities field, env validation, lazy clients
 - SEO + PWA: metadata, manifest, icons all configured
 
-### Active Work Streams
+### Remaining Critical Work
 
-1. **Gemini (Track C)**: Profile context enhancement (P1-45) — fetching full profile data, next step is profile-aware stage recommendation
-2. **Gemini (Track C)**: Native build verification post-rename, app ID alignment (`app.koydo.learn` vs `com.koydo.app`)
-3. **Gemini (Track C)**: Store submission preparation (screenshots, AAB/IPA upload, IAP product configuration)
-4. **Claude (Track A)**: Visual polish, final QA, web deployment readiness
-5. **Codex (Track B)**: Production env audit, DB migration push, final stability testing
+1. **Codex (Track B)**: Redis rate limiting (C-2), CSP cleanup (H-3), unprotected route rate limiting (H-1)
+2. **Sonnet (Track D)**: Type safety cleanup — `activities` deprecation (M-1), index signatures (M-2), draft flag (H-4)
+3. **Opus (Track A)**: Template module upgrades (10 priority modules), game components (5 games)
+4. **Gemini (Track C)**: Game components (3 games), native builds, store submission
+5. **Grok (Track E)**: Content research for 10 more modules, game content banks, exam prep questions
 
 ### Completed (can be removed from active tracking)
 
@@ -133,6 +138,76 @@ Ship the highest-value content experience first: stable media pipeline, reviewed
 - ~~Tranche-2 language/gamification surfaces~~ — wired into dashboards
 - ~~i18n extraction + wiring~~ — all launch pages covered
 - ~~Security hardening~~ — CSRF, rate limits, RLS, admin policies all done
+- ~~Codebase review~~ — complete, report filed, critical fixes applied
+- ~~7 module content rewrites~~ — all v2.0.0+, build GREEN
+
+## Phase 2 Feature Proposals (Post-Launch)
+
+> Features proposed based on codebase review findings and product maturity assessment.
+> Prioritized by user impact and technical complexity.
+
+### P2-01: Adaptive Learning Engine
+**Priority**: HIGH | **Effort**: 2-3 weeks
+- Track per-question accuracy to identify weak topics
+- Generate personalized review sessions from missed questions
+- Spaced repetition for flashcard scheduling (SM-2 algorithm)
+- Pre-requisite chaining: if student fails Algebra Quiz, suggest "Fractions Review" module
+
+### P2-02: Real-Time Multiplayer Quiz Battles
+**Priority**: HIGH | **Effort**: 2-3 weeks
+- WebSocket-based real-time quiz competitions (2-4 players)
+- Matchmaking by age group + difficulty level
+- Points awarded for speed + accuracy
+- Weekly leaderboards per education stage
+- Requires: Supabase Realtime or dedicated WebSocket server
+
+### P2-03: AI Tutor v2 — Contextual Help
+**Priority**: HIGH | **Effort**: 1-2 weeks
+- "Ask AI" button on every lesson chunk and quiz question
+- Provides hints without giving answers
+- Explains wrong answers with step-by-step breakdown
+- Budget-capped per learner (existing policy: ≤$0.05/month per active learner)
+- Integrate with lesson content for context-aware responses
+
+### P2-04: Parent Analytics Dashboard v2
+**Priority**: MEDIUM | **Effort**: 1-2 weeks
+- Weekly progress email digest (via Resend API — already configured)
+- Per-subject strength/weakness radar chart
+- Time-spent-learning trends (daily/weekly/monthly)
+- Comparison view across siblings (multi-profile)
+- Exportable progress report (PDF)
+
+### P2-05: Content Creation Studio (Admin)
+**Priority**: MEDIUM | **Effort**: 3-4 weeks
+- Visual module builder (drag-and-drop lessons, quizzes, activities)
+- AI-assisted content generation from topic prompts
+- Preview mode matching student experience exactly
+- Version control for modules (diff viewer)
+- Bulk import from JSON/CSV
+- Eliminates need for TypeScript knowledge to author content
+
+### P2-06: Offline Mode (Full PWA)
+**Priority**: MEDIUM | **Effort**: 2-3 weeks
+- Service worker caching for lesson content (already have `OfflineBanner`)
+- Download modules for offline use (IndexedDB storage)
+- Sync progress when back online
+- Configurable: "Download over Wi-Fi only" setting
+- Storage management UI showing cached module sizes
+
+### P2-07: Achievement & Social Features
+**Priority**: LOW | **Effort**: 2-3 weeks
+- Shareable achievement cards (image generation for social media)
+- Class/group feature: teacher creates a group, students join via code
+- Group leaderboards and collaborative challenges
+- "Study Buddy" matching within same education stage
+- Certificate generation for module completion (printable PDF)
+
+### P2-08: Additional Language Support (Phase 2 i18n)
+**Priority**: LOW | **Effort**: 2's per language
+- French (fr), German (de), Arabic (ar) — highest demand after EN/ES
+- Requires: translate 400+ keys per language, RTL layout support for Arabic
+- Content localization: adapt cultural references in modules
+- Auto-detection based on browser/device locale
 
 ## Overnight GPU Runner Runbook
 
@@ -196,7 +271,7 @@ python3 /mnt/d/PythonProjects/Koydo/launch_overnight.py  # start runner
 
 ## Controlled Queue Draining Runbook
 
-Use these commands in `PowerShell` from `d:\PythonProjects\Koydo\eduforge-web`:
+Use these commands in `PowerShell` from `d:\PythonProjects\Koydo\eduforge-web` (legacy repo folder name):
 
 ```powershell
 # 1) Inspect existing candidate pressure without inserting new jobs
@@ -261,3 +336,4 @@ Before store submission:
 - [ ] IAP products configured in RevenueCat + store consoles
 - [ ] Privacy policy URL + support URL set in store listings
 - [ ] Billing test plan executed (12 test cases in `BILLING-TEST-PLAN.md`)
+

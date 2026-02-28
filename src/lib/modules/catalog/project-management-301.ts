@@ -1,0 +1,241 @@
+import type { LearningModule } from "@/lib/modules/types";
+
+export const ProjectManagement301Module: LearningModule = {
+  id: "project-management-301",
+  title: "Program Management",
+  description: "Advanced program governance, portfolio sequencing, risk orchestration, and delivery optimization.",
+  subject: "Project Management",
+  tags: ["curriculum", "interactive"],
+  minAge: 16,
+  maxAge: 99,
+  moduleVersion: "1.0.0",
+  version: "1.0.0",
+  difficultyBand: "advanced",
+  localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],
+  thumbnail: "/placeholders/lesson-robot.svg",
+  learningObjectives: [
+    "Understand core concepts in Project Management",
+    "Apply Project Management skills through guided practice",
+    "Demonstrate mastery through checkpoint quizzes"
+  ],
+  lessons: [
+    {
+      id: "project-management-301-l01",
+      title: "Project Management Concepts 1",
+      type: "video",
+      duration: 9,
+      learningAids: [
+        { id: "project-management-301-l01-a1", type: "image", title: "Concept Card", content: "Visual summary for Project Management." },
+        { id: "project-management-301-l01-a2", type: "animation", title: "Animated Example", content: "Step-by-step walkthrough for Project Management." }
+      ]
+    },
+    {
+      id: "project-management-301-l02",
+      title: "Project Management Practice 2",
+      type: "interactive",
+      duration: 12,
+      metadata: {
+        prompts: [
+          "State the key concept in one sentence.",
+          "Apply it to one example.",
+          "Explain your improvement step for next time."
+        ]
+      },
+      learningAids: [
+        { id: "project-management-301-l02-a1", type: "practice", title: "Guided Practice", content: "Follow the challenge flow and record your approach." }
+      ]
+    },
+    {
+      id: "project-management-301-l03",
+      title: "Checkpoint 1: Project Management",
+      type: "quiz",
+      duration: 10,
+      questions: [
+        {
+          id: "project-management-301-l03-q1",
+          text: "Which choice best matches the main idea of Project Management?",
+          skillId: "project-management-301-skill-core",
+          options: [
+            { id: "a", text: "A complete, evidence-based explanation" },
+            { id: "b", text: "An unrelated claim" },
+            { id: "c", text: "A random guess" },
+            { id: "d", text: "A conflicting idea" }
+          ],
+          correctOptionId: "a"
+        },
+        {
+          id: "project-management-301-l03-q2",
+          text: "What should a learner do after getting an answer wrong?",
+          skillId: "project-management-301-skill-review",
+          options: [
+            { id: "a", text: "Review error cause and retry with strategy" },
+            { id: "b", text: "Skip all corrections" },
+            { id: "c", text: "Memorize only the answer letter" },
+            { id: "d", text: "Stop practicing" }
+          ],
+          correctOptionId: "a"
+        }
+      ],
+      learningAids: [
+        { id: "project-management-301-l03-a1", type: "mnemonic", title: "Memory Cue", content: "Use Plan, Solve, Explain to structure each response." }
+      ]
+    },
+    {
+      id: "project-management-301-l04",
+      title: "Project Management Practice 4",
+      type: "interactive",
+      duration: 12,
+      metadata: {
+        prompts: [
+          "State the key concept in one sentence.",
+          "Apply it to one example.",
+          "Explain your improvement step for next time."
+        ]
+      },
+      learningAids: [
+        { id: "project-management-301-l04-a1", type: "practice", title: "Guided Practice", content: "Follow the challenge flow and record your approach." }
+      ]
+    },
+    {
+      id: "project-management-301-l05",
+      title: "Project Management Concepts 5",
+      type: "video",
+      duration: 9,
+      learningAids: [
+        { id: "project-management-301-l05-a1", type: "image", title: "Concept Card", content: "Visual summary for Project Management." },
+        { id: "project-management-301-l05-a2", type: "animation", title: "Animated Example", content: "Step-by-step walkthrough for Project Management." }
+      ]
+    },
+    {
+      id: "project-management-301-l06",
+      title: "Checkpoint 2: Project Management",
+      type: "quiz",
+      duration: 10,
+      questions: [
+        {
+          id: "project-management-301-l06-q1",
+          text: "Which choice best matches the main idea of Project Management?",
+          skillId: "project-management-301-skill-core",
+          options: [
+            { id: "a", text: "A complete, evidence-based explanation" },
+            { id: "b", text: "An unrelated claim" },
+            { id: "c", text: "A random guess" },
+            { id: "d", text: "A conflicting idea" }
+          ],
+          correctOptionId: "a"
+        },
+        {
+          id: "project-management-301-l06-q2",
+          text: "What should a learner do after getting an answer wrong?",
+          skillId: "project-management-301-skill-review",
+          options: [
+            { id: "a", text: "Review error cause and retry with strategy" },
+            { id: "b", text: "Skip all corrections" },
+            { id: "c", text: "Memorize only the answer letter" },
+            { id: "d", text: "Stop practicing" }
+          ],
+          correctOptionId: "a"
+        }
+      ],
+      learningAids: [
+        { id: "project-management-301-l06-a1", type: "mnemonic", title: "Memory Cue", content: "Use Plan, Solve, Explain to structure each response." }
+      ]
+    },
+    {
+      id: "project-management-301-l07",
+      title: "Project Management Concepts 7",
+      type: "video",
+      duration: 9,
+      learningAids: [
+        { id: "project-management-301-l07-a1", type: "image", title: "Concept Card", content: "Visual summary for Project Management." },
+        { id: "project-management-301-l07-a2", type: "animation", title: "Animated Example", content: "Step-by-step walkthrough for Project Management." }
+      ]
+    },
+    {
+      id: "project-management-301-l08",
+      title: "Project Management Practice 8",
+      type: "interactive",
+      duration: 12,
+      metadata: {
+        prompts: [
+          "State the key concept in one sentence.",
+          "Apply it to one example.",
+          "Explain your improvement step for next time."
+        ]
+      },
+      learningAids: [
+        { id: "project-management-301-l08-a1", type: "practice", title: "Guided Practice", content: "Follow the challenge flow and record your approach." }
+      ]
+    },
+    {
+      id: "project-management-301-l09",
+      title: "Checkpoint 3: Project Management",
+      type: "quiz",
+      duration: 10,
+      questions: [
+        {
+          id: "project-management-301-l09-q1",
+          text: "Which choice best matches the main idea of Project Management?",
+          skillId: "project-management-301-skill-core",
+          options: [
+            { id: "a", text: "A complete, evidence-based explanation" },
+            { id: "b", text: "An unrelated claim" },
+            { id: "c", text: "A random guess" },
+            { id: "d", text: "A conflicting idea" }
+          ],
+          correctOptionId: "a"
+        },
+        {
+          id: "project-management-301-l09-q2",
+          text: "What should a learner do after getting an answer wrong?",
+          skillId: "project-management-301-skill-review",
+          options: [
+            { id: "a", text: "Review error cause and retry with strategy" },
+            { id: "b", text: "Skip all corrections" },
+            { id: "c", text: "Memorize only the answer letter" },
+            { id: "d", text: "Stop practicing" }
+          ],
+          correctOptionId: "a"
+        }
+      ],
+      learningAids: [
+        { id: "project-management-301-l09-a1", type: "mnemonic", title: "Memory Cue", content: "Use Plan, Solve, Explain to structure each response." }
+      ]
+    },
+    {
+      id: "project-management-301-l10",
+      title: "Checkpoint 4: Project Management",
+      type: "quiz",
+      duration: 10,
+      questions: [
+        {
+          id: "project-management-301-l10-q1",
+          text: "Which choice best matches the main idea of Project Management?",
+          skillId: "project-management-301-skill-core",
+          options: [
+            { id: "a", text: "A complete, evidence-based explanation" },
+            { id: "b", text: "An unrelated claim" },
+            { id: "c", text: "A random guess" },
+            { id: "d", text: "A conflicting idea" }
+          ],
+          correctOptionId: "a"
+        },
+        {
+          id: "project-management-301-l10-q2",
+          text: "What should a learner do after getting an answer wrong?",
+          skillId: "project-management-301-skill-review",
+          options: [
+            { id: "a", text: "Review error cause and retry with strategy" },
+            { id: "b", text: "Skip all corrections" },
+            { id: "c", text: "Memorize only the answer letter" },
+            { id: "d", text: "Stop practicing" }
+          ],
+          correctOptionId: "a"
+        }
+      ],
+      learningAids: [
+        { id: "project-management-301-l10-a1", type: "mnemonic", title: "Memory Cue", content: "Use Plan, Solve, Explain to structure each response." }
+      ]
+    }
+  ],
+};

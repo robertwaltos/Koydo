@@ -6,6 +6,7 @@ import {
   getFollowupLessonLink,
 } from "@/lib/ai/follow-up";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const payloadValueSchema = z.union([
   z.string(),
@@ -111,7 +112,7 @@ export async function GET(request: Request) {
 
     return NextResponse.json({ material: mapRecord(row) }, { status: 200 });
   } catch (error) {
-    console.error("Unexpected AI follow-up GET error:", error);
+    console.error("Unexpected AI follow-up GET error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
@@ -168,7 +169,7 @@ export async function POST(request: Request) {
       { status: 200 },
     );
   } catch (error) {
-    console.error("Unexpected AI follow-up POST error:", error);
+    console.error("Unexpected AI follow-up POST error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

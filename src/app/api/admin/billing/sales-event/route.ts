@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import Stripe from "stripe";
 import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { serverEnv } from "@/lib/config/env";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { logAdminAction } from "@/lib/admin/audit";
 import { enforceAdminActionRateLimit } from "@/lib/admin/rate-limit";
+import { createStripeServerClient } from "@/lib/billing/stripe-client";
 
 const requestSchema = z.object({
   name: z.string().min(3).max(80),
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "endsAtIso must be in the future." }, { status: 400 });
   }
 
-  const stripe = new Stripe(serverEnv.STRIPE_SECRET_KEY);
+  const stripe = createStripeServerClient(serverEnv.STRIPE_SECRET_KEY);
   const coupon = await stripe.coupons.create({
     percent_off: payload.data.discountPercent,
     duration: "once",

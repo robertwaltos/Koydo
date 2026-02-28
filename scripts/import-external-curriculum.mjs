@@ -59,6 +59,41 @@ function cloneJson(value) {
   return JSON.parse(JSON.stringify(value));
 }
 
+function sortObjectKeys(value) {
+  if (Array.isArray(value)) return value.map((entry) => sortObjectKeys(entry));
+  if (value && typeof value === "object") {
+    const sorted = {};
+    for (const key of Object.keys(value).sort()) {
+      sorted[key] = sortObjectKeys(value[key]);
+    }
+    return sorted;
+  }
+  return value;
+}
+
+function stripVolatileModuleFields(moduleEntry) {
+  const cloned = cloneJson(moduleEntry ?? {});
+
+  if (cloned?.metadata && typeof cloned.metadata === "object") {
+    delete cloned.metadata.importedAt;
+    delete cloned.metadata.externalMergeLastAt;
+    if (Object.keys(cloned.metadata).length === 0) delete cloned.metadata;
+  }
+
+  if (cloned?.external && typeof cloned.external === "object") {
+    delete cloned.external.externalMergeLastAt;
+    if (Object.keys(cloned.external).length === 0) delete cloned.external;
+  }
+
+  return cloned;
+}
+
+function modulesEqualForPersistence(currentModule, nextModule) {
+  const currentNormalized = sortObjectKeys(stripVolatileModuleFields(currentModule));
+  const nextNormalized = sortObjectKeys(stripVolatileModuleFields(nextModule));
+  return JSON.stringify(currentNormalized) === JSON.stringify(nextNormalized);
+}
+
 function normalizeStringToken(value) {
   return slugify(value).replace(/-/g, "");
 }
@@ -165,7 +200,21 @@ function discoverSources(options) {
   if (options.sourceDir && fs.existsSync(options.sourceDir)) {
     for (const filePath of listCurriculumFilesRecursive(options.sourceDir)) files.add(path.resolve(filePath));
   }
-  const sorted = Array.from(files).sort();
+  const sourcePriority = {
+    ".jsx": 0,
+    ".js": 1,
+    ".ts": 1,
+    ".tsx": 1,
+    ".json": 2,
+  };
+  const sorted = Array.from(files).sort((left, right) => {
+    const leftExt = path.extname(left).toLowerCase();
+    const rightExt = path.extname(right).toLowerCase();
+    const leftPriority = leftExt in sourcePriority ? sourcePriority[leftExt] : 99;
+    const rightPriority = rightExt in sourcePriority ? sourcePriority[rightExt] : 99;
+    if (leftPriority !== rightPriority) return leftPriority - rightPriority;
+    return left.localeCompare(right);
+  });
   const deduped = [];
   const seenFingerprints = new Set();
 
@@ -994,7 +1043,8 @@ function resolveSourceUnitId(unit) {
 
 function canonicalizeSourceUnitId(value) {
   const normalized = slugify(value);
-  return normalized || "external-unit";
+  if (!normalized) return "external-unit";
+  return normalized.replace(/-external(?:-v\d+)?$/, "");
 }
 
 function registerModuleEntry(index, entry) {
@@ -1686,8 +1736,9 @@ function convertUnitToModule({ unit, sourcePath, subjectMap, gradeBandMap, local
       : undefined,
     metadata: {
       source: sourcePath,
-      sourceUnitId,
+      sourceUnitId: sourceUnitIdCanonical,
       sourceUnitIdCanonical,
+      ...(sourceUnitId !== sourceUnitIdCanonical ? { sourceUnitIdRaw: sourceUnitId } : {}),
       importedAt: new Date().toISOString(),
     },
     external: {
@@ -1759,6 +1810,7 @@ function main() {
 
   const modules = [];
   const sources = [];
+  const processedSourceUnitIds = new Set();
   let remainingLimit = options.limit;
   let discoveredUnits = 0;
 
@@ -1805,6 +1857,28 @@ function main() {
     for (const unit of selectedUnits) {
       const sourceUnitId = resolveSourceUnitId(unit);
       const sourceUnitIdCanonical = canonicalizeSourceUnitId(sourceUnitId);
+
+      if (processedSourceUnitIds.has(sourceUnitIdCanonical)) {
+        modules.push({
+          moduleId: sourceUnitIdCanonical,
+          targetModuleId: sourceUnitIdCanonical,
+          unitId: sourceUnitId,
+          fileName: `${sourceUnitIdCanonical}-external.ts`,
+          sourcePath,
+          filePath: path.relative(projectRoot, path.join(catalogDir, `${sourceUnitIdCanonical}-external.ts`)).replace(/\\/g, "/"),
+          lessonCount: 0,
+          status: "skipped_duplicate_source_unit",
+          mergeStrategy: "duplicate_source_unit",
+          mergeScore: null,
+          mergeThreshold: options.mergeThreshold,
+          mergeCandidatesConsidered: 0,
+          lessonsAdded: 0,
+          lessonsSkipped: 0,
+        });
+        continue;
+      }
+      processedSourceUnitIds.add(sourceUnitIdCanonical);
+
       const moduleObject = convertUnitToModule({
         unit,
         sourcePath,
@@ -1859,9 +1933,16 @@ function main() {
         fileName = directMatchEntry.fileName;
         filePath = directMatchEntry.filePath;
         mergeStrategy = "source_unit_external_replace";
-        status = options.apply ? "updated_existing_external" : "planned_update_existing_external";
+        const replaceHasChanges = !modulesEqualForPersistence(directMatchEntry.module, moduleObject);
+        status = options.apply
+          ? replaceHasChanges
+            ? "updated_existing_external"
+            : "skipped_existing_external_no_changes"
+          : replaceHasChanges
+            ? "planned_update_existing_external"
+            : "planned_existing_external_no_changes";
 
-        if (options.apply) {
+        if (options.apply && replaceHasChanges) {
           fs.writeFileSync(filePath, buildModuleSource(moduleObject.id, moduleObject));
           directMatchEntry.module = moduleObject;
         }
@@ -1873,20 +1954,29 @@ function main() {
         filePath = targetEntry.filePath;
         lessonsAdded = merged.mergeMeta.lessonsAdded;
         lessonsSkipped = merged.mergeMeta.lessonsSkipped;
-        status = options.apply ? "merged_existing" : "planned_merge_existing";
+        const mergeHasChanges = !modulesEqualForPersistence(targetEntry.module, merged.module);
+        status = options.apply
+          ? mergeHasChanges
+            ? "merged_existing"
+            : "skipped_existing_merge_no_changes"
+          : mergeHasChanges
+            ? "planned_merge_existing"
+            : "planned_merge_existing_no_changes";
 
-        if (options.apply) {
+        if (options.apply && mergeHasChanges) {
           fs.writeFileSync(filePath, buildModuleSource(targetEntry.module.id, merged.module));
           targetEntry.module = merged.module;
         }
       } else if (options.createExternalWhenNoMatch) {
         const exists = fs.existsSync(filePath);
+        const existingEntry = moduleIndex.byId.get(moduleObject.id);
+        const createHasChanges = !existingEntry || !modulesEqualForPersistence(existingEntry.module, moduleObject);
         mergeStrategy = mergeDeferredLowConfidence
           ? `low_confidence_${mergeCandidate.strategy}`
           : "create_external";
         mergeThreshold = mergeDeferredLowConfidence ? options.mergeThreshold : mergeThreshold;
         if (options.apply) {
-          if (options.overwrite || !exists) {
+          if ((options.overwrite || !exists) && createHasChanges) {
             fs.writeFileSync(filePath, buildModuleSource(moduleObject.id, moduleObject));
             if (mergeDeferredLowConfidence) {
               status = exists ? "overwritten_external_low_confidence" : "created_external_low_confidence";
@@ -1903,6 +1993,8 @@ function main() {
             };
             registerModuleEntry(moduleIndex, newEntry);
             existingIds.add(moduleObject.id);
+          } else if ((options.overwrite || !exists) && !createHasChanges) {
+            status = "skipped_existing_external_no_changes";
           } else {
             status = "skipped_existing";
           }
@@ -1976,8 +2068,17 @@ function main() {
           "merged_existing",
         ].includes(entry.status),
       ).length,
-      filesSkipped: modules.filter((entry) => ["skipped_existing", "skipped_no_merge_target", "skipped_low_confidence"].includes(entry.status)).length,
-      modulesMerged: modules.filter((entry) => ["merged_existing", "planned_merge_existing"].includes(entry.status)).length,
+      filesSkipped: modules.filter((entry) =>
+        [
+          "skipped_existing",
+          "skipped_no_merge_target",
+          "skipped_low_confidence",
+          "skipped_existing_external_no_changes",
+          "skipped_existing_merge_no_changes",
+          "skipped_duplicate_source_unit",
+        ].includes(entry.status),
+      ).length,
+      modulesMerged: modules.filter((entry) => ["merged_existing", "planned_merge_existing", "planned_merge_existing_no_changes"].includes(entry.status)).length,
       lessonsMergedAdded: modules.reduce((total, entry) => total + (typeof entry.lessonsAdded === "number" ? entry.lessonsAdded : 0), 0),
       lessonsMergedSkipped: modules.reduce((total, entry) => total + (typeof entry.lessonsSkipped === "number" ? entry.lessonsSkipped : 0), 0),
       lowConfidenceDeferrals: modules.filter((entry) => String(entry.mergeStrategy ?? "").startsWith("low_confidence_")).length,

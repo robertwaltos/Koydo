@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="storyTitle storyDesc">
+  <title id="storyTitle">Story world</title>
+  <desc id="storyDesc">An open storybook with stars.</desc>
+  <rect width="320" height="240" rx="24" fill="#ffe8f6"/>
+  <rect x="44" y="54" width="232" height="140" rx="16" fill="#ffffff"/>
+  <path d="M160 54V194" stroke="#efd8ea" stroke-width="4"/>
+  <path d="M62 74Q105 62 148 76V172Q105 158 62 170Z" fill="#f7f0ff"/>
+  <path d="M258 74Q215 62 172 76V172Q215 158 258 170Z" fill="#eef8ff"/>
+  <circle cx="104" cy="114" r="16" fill="#ffcf6e"/>
+  <circle cx="215" cy="106" r="14" fill="#9dd8ff"/>
+  <polygon points="108,154 113,164 124,165 116,172 118,183 108,177 98,183 100,172 92,165 103,164" fill="#ff8bb3"/>
+  <polygon points="216,146 220,154 230,155 223,161 225,171 216,166 207,171 209,161 202,155 212,154" fill="#7cd79b"/>
+</svg>

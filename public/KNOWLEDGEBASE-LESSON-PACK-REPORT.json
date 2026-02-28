@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-02-26T06:15:44.578Z",
+  "options": {
+    "maxChunksPerDomain": 80,
+    "minScore": 2
+  },
+  "totals": {
+    "domains": 17,
+    "chunksScanned": 1911,
+    "chunksExported": 488
+  },
+  "domainSummaries": [
+    {
+      "domainId": "electricians",
+      "chunkCount": 50,
+      "sourceCount": 1
+    },
+    {
+      "domainId": "microelectronics",
+      "chunkCount": 20,
+      "sourceCount": 1
+    },
+    {
+      "domainId": "micro-circuits",
+      "chunkCount": 22,
+      "sourceCount": 1
+    },
+    {
+      "domainId": "cpu-gpu-memory-design",
+      "chunkCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "domainId": "electrical-engineering",
+      "chunkCount": 33,
+      "sourceCount": 1
+    },
+    {
+      "domainId": "civil-engineering",
+      "chunkCount": 16,
+      "sourceCount": 4
+    },
+    {
+      "domainId": "plumbing",
+      "chunkCount": 2,
+      "sourceCount": 1
+    },
+    {
+      "domainId": "hvac",
+      "chunkCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "domainId": "meteorology",
+      "chunkCount": 3,
+      "sourceCount": 2
+    },
+    {
+      "domainId": "nursing",
+      "chunkCount": 1,
+      "sourceCount": 1
+    },
+    {
+      "domainId": "law",
+      "chunkCount": 43,
+      "sourceCount": 4
+    },
+    {
+      "domainId": "medicine",
+      "chunkCount": 50,
+      "sourceCount": 3
+    },
+    {
+      "domainId": "cybersecurity",
+      "chunkCount": 9,
+      "sourceCount": 4
+    },
+    {
+      "domainId": "data-science",
+      "chunkCount": 80,
+      "sourceCount": 4
+    },
+    {
+      "domainId": "ai-ml",
+      "chunkCount": 80,
+      "sourceCount": 3
+    },
+    {
+      "domainId": "project-management",
+      "chunkCount": 37,
+      "sourceCount": 5
+    },
+    {
+      "domainId": "finance",
+      "chunkCount": 40,
+      "sourceCount": 6
+    }
+  ],
+  "outputs": {
+    "pack": "data\\knowledgebase\\lesson-authoring-pack.json",
+    "reportJson": "public\\KNOWLEDGEBASE-LESSON-PACK-REPORT.json",
+    "reportMd": "public\\KNOWLEDGEBASE-LESSON-PACK-REPORT.md"
+  }
+}

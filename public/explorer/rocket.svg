@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="rocketTitle rocketDesc">
+  <title id="rocketTitle">Space world</title>
+  <desc id="rocketDesc">A rocket flying through stars.</desc>
+  <defs>
+    <linearGradient id="spaceBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a2c90"/>
+      <stop offset="100%" stop-color="#13183d"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe08a"/>
+      <stop offset="100%" stop-color="#ff833f"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="240" rx="24" fill="url(#spaceBg)"/>
+  <circle cx="50" cy="40" r="3" fill="#fff8c2"/>
+  <circle cx="84" cy="62" r="2.5" fill="#fff8c2"/>
+  <circle cx="284" cy="44" r="3" fill="#fff8c2"/>
+  <circle cx="250" cy="88" r="2.5" fill="#fff8c2"/>
+  <circle cx="40" cy="160" r="2.5" fill="#fff8c2"/>
+  <circle cx="290" cy="170" r="2.5" fill="#fff8c2"/>
+  <g transform="translate(166 114) rotate(25)">
+    <ellipse cx="0" cy="-8" rx="26" ry="54" fill="#f7f8ff"/>
+    <rect x="-26" y="-16" width="52" height="44" fill="#f7f8ff"/>
+    <polygon points="-26,16 -46,34 -26,34" fill="#ff5d7f"/>
+    <polygon points="26,16 46,34 26,34" fill="#ff5d7f"/>
+    <circle cx="0" cy="-8" r="11" fill="#89d8ff"/>
+    <polygon points="0,40 -12,64 0,58 12,64" fill="url(#flame)"/>
+  </g>
+</svg>

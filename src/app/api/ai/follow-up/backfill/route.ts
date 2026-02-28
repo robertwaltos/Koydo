@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { generateAndStoreFollowupMaterial } from "@/lib/ai/follow-up";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const backfillRequestSchema = z.object({
   limit: z.number().int().min(1).max(20).default(4),
@@ -123,7 +124,7 @@ export async function POST(request: Request) {
       inspected: uniqueCompleted.length,
     });
   } catch (error) {
-    console.error("Unexpected AI follow-up backfill error:", error);
+    console.error("Unexpected AI follow-up backfill error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

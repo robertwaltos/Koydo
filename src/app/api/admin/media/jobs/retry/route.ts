@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
@@ -15,6 +16,15 @@ type MediaJobRow = {
   asset_type: string | null;
   metadata: Record<string, unknown> | null;
 };
+
+const retryRequestSchema = z.object({
+  jobIds: z.array(z.string().trim().min(1).max(120)).max(200).optional(),
+  moduleId: z.string().trim().max(120).optional(),
+  lessonId: z.string().trim().max(120).optional(),
+  assetType: z.enum(ALLOWED_ASSET_TYPES).optional(),
+  includeCanceled: z.boolean().default(false),
+  limit: z.coerce.number().int().min(1).max(200).default(50),
+});
 
 function isRetryableStatus(status: string): status is RetryableStatus {
   return RETRYABLE_STATUSES.includes(status as RetryableStatus);
@@ -34,25 +44,15 @@ export async function POST(request: Request) {
     return auth.response;
   }
 
-  const body = (await request.json().catch(() => ({}))) as {
-    jobIds?: string[];
-    moduleId?: string;
-    lessonId?: string;
-    assetType?: string;
-    includeCanceled?: boolean;
-    limit?: number;
-  };
-
-  const jobIds = parseJobIds(body.jobIds);
-  const moduleId = typeof body.moduleId === "string" ? body.moduleId.trim() : "";
-  const lessonId = typeof body.lessonId === "string" ? body.lessonId.trim() : "";
-  const assetType = typeof body.assetType === "string" ? body.assetType.trim() : "";
-  const includeCanceled = Boolean(body.includeCanceled);
-  const limit = Math.min(200, Math.max(1, Number(body.limit ?? 50)));
-
-  if (assetType && !ALLOWED_ASSET_TYPES.includes(assetType as (typeof ALLOWED_ASSET_TYPES)[number])) {
-    return NextResponse.json({ error: "assetType must be video, animation, or image." }, { status: 400 });
+  const parsedBody = retryRequestSchema.safeParse(await request.json().catch(() => null));
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      { error: "Invalid payload.", details: parsedBody.error.flatten() },
+      { status: 400 },
+    );
   }
+  const { moduleId, lessonId, assetType, includeCanceled, limit } = parsedBody.data;
+  const jobIds = parseJobIds(parsedBody.data.jobIds);
 
   const statuses = includeCanceled ? [...RETRYABLE_STATUSES] : (["failed"] as RetryableStatus[]);
 

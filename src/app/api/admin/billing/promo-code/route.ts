@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
-import Stripe from "stripe";
 import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { serverEnv } from "@/lib/config/env";
 import { logAdminAction } from "@/lib/admin/audit";
 import { enforceAdminActionRateLimit } from "@/lib/admin/rate-limit";
+import { createStripeServerClient } from "@/lib/billing/stripe-client";
 
 const requestSchema = z
   .object({
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Rate limit exceeded for promo code creation." }, { status: 429 });
   }
 
-  const stripe = new Stripe(serverEnv.STRIPE_SECRET_KEY);
+  const stripe = createStripeServerClient(serverEnv.STRIPE_SECRET_KEY);
   const coupon = await stripe.coupons.create({
     percent_off: payload.data.percentOff,
     amount_off: payload.data.amountOffUsd ? Math.round(payload.data.amountOffUsd * 100) : undefined,

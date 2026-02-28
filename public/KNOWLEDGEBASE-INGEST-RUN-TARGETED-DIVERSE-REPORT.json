@@ -1,0 +1,151 @@
+{
+  "generatedAt": "2026-02-26T06:13:36.329Z",
+  "options": {
+    "limit": 20,
+    "timeoutMs": 20000,
+    "balanced": true,
+    "allowBinary": false,
+    "queueFile": "public\\KNOWLEDGEBASE-INGESTION-QUEUE-TARGETED-DIVERSE.json"
+  },
+  "totals": {
+    "attempted": 11,
+    "succeeded": 11,
+    "failed": 0,
+    "skippedUnsupported": 0,
+    "savedPdfPendingExtraction": 0
+  },
+  "results": [
+    {
+      "queueId": "mit-ocw-4aaddb14",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-4aaddb14.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=nursing"
+    },
+    {
+      "queueId": "openlearn-4bc98340",
+      "sourceId": "openlearn",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "characters": 7145,
+      "outputPath": "data\\knowledgebase\\raw\\openlearn-4bc98340.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://www.open.edu/openlearn/search-results?query=nursing"
+    },
+    {
+      "queueId": "mit-ocw-061d5e04",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-061d5e04.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=patient%20care"
+    },
+    {
+      "queueId": "openlearn-0ca119ec",
+      "sourceId": "openlearn",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "characters": 7145,
+      "outputPath": "data\\knowledgebase\\raw\\openlearn-0ca119ec.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://www.open.edu/openlearn/search-results?query=leadership"
+    },
+    {
+      "queueId": "mit-ocw-d0727764",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-d0727764.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=clinical%20skills"
+    },
+    {
+      "queueId": "mit-ocw-e1d35248",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-e1d35248.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=health%20assessment"
+    },
+    {
+      "queueId": "mit-ocw-db21c170",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-db21c170.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=project%20management"
+    },
+    {
+      "queueId": "mit-ocw-a97f645c",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-a97f645c.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=pmp"
+    },
+    {
+      "queueId": "mit-ocw-e46bddfc",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-e46bddfc.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=agile"
+    },
+    {
+      "queueId": "mit-ocw-b58ef3b6",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-b58ef3b6.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=scrum"
+    },
+    {
+      "queueId": "mit-ocw-61ff86ec",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-61ff86ec.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=program%20management"
+    }
+  ]
+}

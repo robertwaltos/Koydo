@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-02-26T06:15:40.798Z",
+  "options": {
+    "limit": 50,
+    "engine": "auto",
+    "overwrite": false
+  },
+  "engineAvailability": {
+    "pdftotext": false,
+    "pypdf": true
+  },
+  "totals": {
+    "attempted": 7,
+    "succeeded": 2,
+    "failed": 0,
+    "skippedExisting": 5
+  },
+  "results": [
+    {
+      "queueId": "india-cbse-curriculum-496dbb96",
+      "status": "skipped_existing",
+      "engine": null,
+      "characters": 0,
+      "outputPath": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+      "pdfPath": "data\\knowledgebase\\raw-pdf\\india-cbse-curriculum-496dbb96.pdf",
+      "error": null
+    },
+    {
+      "queueId": "india-cbse-curriculum-969ed67e",
+      "status": "succeeded",
+      "engine": "pypdf",
+      "characters": 6282,
+      "outputPath": "data\\knowledgebase\\raw\\india-cbse-curriculum-969ed67e.md",
+      "pdfPath": "data\\knowledgebase\\raw-pdf\\india-cbse-curriculum-969ed67e.pdf",
+      "error": null
+    },
+    {
+      "queueId": "india-cbse-curriculum-9ce64bc8",
+      "status": "skipped_existing",
+      "engine": null,
+      "characters": 0,
+      "outputPath": "data\\knowledgebase\\raw\\india-cbse-curriculum-9ce64bc8.md",
+      "pdfPath": "data\\knowledgebase\\raw-pdf\\india-cbse-curriculum-9ce64bc8.pdf",
+      "error": null
+    },
+    {
+      "queueId": "india-cbse-curriculum-ba1ca818",
+      "status": "skipped_existing",
+      "engine": null,
+      "characters": 0,
+      "outputPath": "data\\knowledgebase\\raw\\india-cbse-curriculum-ba1ca818.md",
+      "pdfPath": "data\\knowledgebase\\raw-pdf\\india-cbse-curriculum-ba1ca818.pdf",
+      "error": null
+    },
+    {
+      "queueId": "india-cbse-curriculum-d23d9956",
+      "status": "skipped_existing",
+      "engine": null,
+      "characters": 0,
+      "outputPath": "data\\knowledgebase\\raw\\india-cbse-curriculum-d23d9956.md",
+      "pdfPath": "data\\knowledgebase\\raw-pdf\\india-cbse-curriculum-d23d9956.pdf",
+      "error": null
+    },
+    {
+      "queueId": "india-cbse-curriculum-f73f5af2",
+      "status": "skipped_existing",
+      "engine": null,
+      "characters": 0,
+      "outputPath": "data\\knowledgebase\\raw\\india-cbse-curriculum-f73f5af2.md",
+      "pdfPath": "data\\knowledgebase\\raw-pdf\\india-cbse-curriculum-f73f5af2.pdf",
+      "error": null
+    },
+    {
+      "queueId": "india-cbse-curriculum-f8a8ac80",
+      "status": "succeeded",
+      "engine": "pypdf",
+      "characters": 2616,
+      "outputPath": "data\\knowledgebase\\raw\\india-cbse-curriculum-f8a8ac80.md",
+      "pdfPath": "data\\knowledgebase\\raw-pdf\\india-cbse-curriculum-f8a8ac80.pdf",
+      "error": null
+    }
+  ]
+}

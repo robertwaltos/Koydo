@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const updateErrorLogSchema = z
   .object({
@@ -21,10 +22,10 @@ const updateErrorLogSchema = z
 
 export async function PATCH(
   request: Request,
-  { params }: { params: { errorId: string } | Promise<{ errorId: string }> },
+  { params }: { params: Promise<{ errorId: string }> },
 ) {
   try {
-    const resolvedParams = await Promise.resolve(params);
+    const resolvedParams = await params;
     const errorId = resolvedParams.errorId?.trim();
     if (!errorId) {
       return NextResponse.json({ error: "Invalid error id." }, { status: 400 });
@@ -84,7 +85,7 @@ export async function PATCH(
 
     return NextResponse.json({ success: true, row: data });
   } catch (error) {
-    console.error("Unexpected exam error log PATCH error:", error);
+    console.error("Unexpected exam error log PATCH error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

@@ -2,11 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { sanitizeNextPath } from "@/lib/routing/next-path";
 
 const MIN_PARENTAL_CONSENT_AGE = 13;
 
 const requestSchema = z.object({
   birthYear: z.coerce.number().int().min(1900),
+  nextPath: z.string().optional(),
 });
 
 export async function POST(request: NextRequest) {
@@ -22,6 +24,7 @@ export async function POST(request: NextRequest) {
 
   const currentYear = new Date().getFullYear();
   const age = currentYear - parsed.data.birthYear;
+  const safeNextPath = sanitizeNextPath(parsed.data.nextPath);
 
   if (age < 0 || age > 120) {
     return NextResponse.json({ error: "Invalid age." }, { status: 400 });
@@ -58,7 +61,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       age,
       parentalConsentRequired,
-      nextRoute: parentalConsentRequired ? "/auth/parent-consent" : "/dashboard",
+      nextRoute: parentalConsentRequired
+        ? safeNextPath
+          ? `/auth/parent-consent?next=${encodeURIComponent(safeNextPath)}`
+          : "/auth/parent-consent"
+        : safeNextPath ?? "/dashboard",
     });
   } catch (error) {
     return NextResponse.json(

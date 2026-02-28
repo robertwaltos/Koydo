@@ -1,0 +1,156 @@
+{
+  "domains": [
+    {
+      "id": "electricians",
+      "keywords": ["electrician", "electricity", "electrical", "wiring", "power systems", "circuit"]
+    },
+    {
+      "id": "microelectronics",
+      "keywords": ["microelectronics", "semiconductor", "vlsi", "transistor", "integrated circuit", "chip design"]
+    },
+    {
+      "id": "micro-circuits",
+      "keywords": [
+        "micro circuit",
+        "micro-circuit",
+        "circuit design",
+        "circuits and electronics",
+        "analog circuits",
+        "digital circuits",
+        "integrated circuits",
+        "signal integrity",
+        "pcb"
+      ]
+    },
+    {
+      "id": "cpu-gpu-memory-design",
+      "keywords": [
+        "cpu",
+        "gpu",
+        "processor",
+        "memory design",
+        "memory system",
+        "computer architecture",
+        "cache",
+        "microarchitecture"
+      ]
+    },
+    {
+      "id": "coding",
+      "keywords": [
+        "coding",
+        "computer programming",
+        "programming",
+        "software development",
+        "debugging",
+        "algorithm",
+        "data structures"
+      ]
+    },
+    {
+      "id": "ai-workflows",
+      "keywords": [
+        "ai workflow",
+        "prompt engineering",
+        "agent workflow",
+        "automation workflow",
+        "retrieval augmented generation",
+        "evaluation",
+        "human in the loop"
+      ]
+    },
+    {
+      "id": "gardening",
+      "keywords": [
+        "gardening",
+        "horticulture",
+        "soil",
+        "compost",
+        "plant nutrition",
+        "plant disease",
+        "irrigation"
+      ]
+    },
+    {
+      "id": "food-science",
+      "keywords": [
+        "food science",
+        "ingredient chemistry",
+        "maillard reaction",
+        "emulsion",
+        "fermentation",
+        "protein denaturation",
+        "starch gelatinization"
+      ]
+    },
+    {
+      "id": "electrical-engineering",
+      "keywords": ["electrical engineering", "power electronics", "control systems", "electromagnetics"]
+    },
+    {
+      "id": "civil-engineering",
+      "keywords": ["civil engineering", "structural", "geotechnical", "construction", "infrastructure"]
+    },
+    {
+      "id": "plumbing",
+      "keywords": ["plumbing", "pipe", "water systems", "sanitation", "drainage"]
+    },
+    {
+      "id": "hvac",
+      "keywords": ["hvac", "heating", "ventilation", "air conditioning", "refrigeration"]
+    },
+    {
+      "id": "meteorology",
+      "keywords": ["meteorology", "weather", "climate", "atmospheric science"]
+    },
+    {
+      "id": "nursing",
+      "keywords": [
+        "nursing",
+        "patient care",
+        "clinical skills",
+        "clinical care",
+        "health assessment",
+        "public health",
+        "healthcare"
+      ]
+    },
+    {
+      "id": "law",
+      "keywords": ["law", "legal studies", "jurisprudence", "case law", "constitutional law"]
+    },
+    {
+      "id": "medicine",
+      "keywords": ["medicine", "medical", "anatomy", "physiology", "pathology", "clinical medicine"]
+    },
+    {
+      "id": "cybersecurity",
+      "keywords": ["cybersecurity", "security", "infosec", "network security", "threat"]
+    },
+    {
+      "id": "data-science",
+      "keywords": ["data science", "statistics", "data analysis", "machine learning", "predictive modeling"]
+    },
+    {
+      "id": "ai-ml",
+      "keywords": ["artificial intelligence", "ai", "machine learning", "deep learning", "neural network"]
+    },
+    {
+      "id": "project-management",
+      "keywords": [
+        "project management",
+        "program management",
+        "operations management",
+        "leadership",
+        "organizational",
+        "pmp",
+        "agile",
+        "scrum"
+      ]
+    },
+    {
+      "id": "finance",
+      "keywords": ["finance", "accounting", "financial analysis", "bookkeeping", "economics"]
+    }
+  ]
+}

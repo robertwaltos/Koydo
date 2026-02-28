@@ -1,0 +1,48 @@
+APPLE REVIEW TEAM — TESTING NOTES
+====================================
+
+Koydo is an AI-powered study and exam-preparation app. Below are all credentials and guidance needed to test the app fully.
+
+TEST ACCOUNT (Free Tier)
+─────────────────────────
+Email:    review@koydo.app
+Password: Koydo@Review2024
+
+TEST ACCOUNT (Premium — Subscription activated)
+─────────────────────────────────────────────────
+Email:    premium-review@koydo.app
+Password: Koydo@Premium2024
+
+IN-APP PURCHASE TESTING
+────────────────────────
+• Use the Sandbox environment (Xcode / TestFlight) for all IAP testing.
+• Products available:
+  - com.koydo.app.premium.monthly   (Koydo Premium Monthly, $9.99/month)
+  - com.koydo.app.premium.annual    (Koydo Premium Annual, $59.99/year)
+• Restore functionality: Settings → Account → Restore Purchases
+• Premium features unlock immediately on successful purchase.
+
+PUSH NOTIFICATIONS
+───────────────────
+• Grant notification permission when prompted on first launch.
+• Daily study reminders are scheduled locally (no server needed for testing).
+
+DEEP LINKS
+───────────────
+• Deep link format: https://koydo.app/lesson/{id}
+• Associated domain: koydo.app
+
+OFFLINE MODE
+──────────────
+• Navigate to any lesson → tap Download icon → disable Wi-Fi → reopen lesson to test offline playback.
+
+SUBSCRIPTION MANAGEMENT
+─────────────────────────
+• Cancel/manage subscription via iPhone Settings → [Your Name] → Subscriptions → Koydo.
+• Downgrade to free tier is immediate on cancellation.
+
+NOTES
+──────
+• The app does not contain user-generated content open to the public.
+• No social features that allow minors to contact strangers.
+• All content is educational and appropriate for ages 4+.

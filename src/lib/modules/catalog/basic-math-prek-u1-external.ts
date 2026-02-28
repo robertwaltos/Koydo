@@ -33,9 +33,10 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
   "gradeBand": "preK",
   "metadata": {
     "source": "../External_AI_Agents/lesson_platform (1).jsx",
-    "sourceUnitId": "basic_math-prek-u1",
+    "sourceUnitId": "basic-math-prek-u1",
     "sourceUnitIdCanonical": "basic-math-prek-u1",
-    "importedAt": "2026-02-24T03:43:31.752Z"
+    "sourceUnitIdRaw": "basic_math-prek-u1",
+    "importedAt": "2026-02-25T02:03:30.456Z"
   },
   "external": {
     "unitOrder": 11,

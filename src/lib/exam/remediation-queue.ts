@@ -167,7 +167,9 @@ function initializeLessonLookup(learningModules: LearningModule[]) {
   for (const learningModule of learningModules) {
     for (const lesson of learningModule.lessons) {
       const lessonSkillIds = new Set(
-        (lesson.questions ?? []).map((question) => question.skillId).filter((skillId) => skillId.length > 0),
+        (lesson.questions ?? [])
+          .map((question) => question.skillId)
+          .filter((skillId): skillId is string => typeof skillId === "string" && skillId.length > 0),
       );
 
       lessonLookup.set(lesson.id, {

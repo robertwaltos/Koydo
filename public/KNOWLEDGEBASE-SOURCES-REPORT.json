@@ -1,0 +1,198 @@
+{
+  "generatedAt": "2026-02-26T04:25:04.379Z",
+  "totals": {
+    "total": 13,
+    "officialCurriculum": 9,
+    "freeCourseTranscripts": 4,
+    "automationAllowed": 13,
+    "rightsMapped": 13
+  },
+  "byTier": {
+    "green": 12,
+    "yellow": 1
+  },
+  "byCategory": {
+    "official_curriculum": 9,
+    "free_course_transcripts": 4
+  },
+  "byRightsStatus": {
+    "approved": 9,
+    "conditional": 4
+  },
+  "sources": [
+    {
+      "id": "uk-national-curriculum",
+      "name": "UK National Curriculum",
+      "region": "UK",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/government/collections/national-curriculum",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "html",
+      "notes": "Government-published curriculum framework pages.",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "acara-australian-curriculum",
+      "name": "ACARA Australian Curriculum",
+      "region": "Australia",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "html",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "singapore-moe-curriculum",
+      "name": "Singapore MOE Curriculum Planning and Development Division",
+      "region": "Singapore",
+      "category": "official_curriculum",
+      "url": "https://www.moe.gov.sg/education-in-sg/our-programmes/curriculum-planning-development-division",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "html",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "india-ncert-textbooks",
+      "name": "NCERT Textbooks",
+      "region": "India",
+      "category": "official_curriculum",
+      "url": "https://ncert.nic.in/textbook.php",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "pdf",
+      "rightsStatus": "conditional",
+      "ingestionPolicy": "manual_review_required",
+      "requiresManualReview": true
+    },
+    {
+      "id": "india-cbse-curriculum",
+      "name": "CBSE Curriculum",
+      "region": "India",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/curriculum_2025.html",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "pdf",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "new-zealand-curriculum",
+      "name": "New Zealand Curriculum",
+      "region": "New Zealand",
+      "category": "official_curriculum",
+      "url": "https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "html",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "ontario-curriculum",
+      "name": "Ontario Curriculum",
+      "region": "Canada",
+      "category": "official_curriculum",
+      "url": "https://www.dcp.edu.gov.on.ca/en/curriculum",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "html",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "south-africa-caps",
+      "name": "South Africa CAPS",
+      "region": "South Africa",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/Curriculum/CurriculumAssessmentPolicyStatements(CAPS).aspx",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "pdf",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "kenya-kicd",
+      "name": "Kenya Institute of Curriculum Development",
+      "region": "Kenya",
+      "category": "official_curriculum",
+      "url": "https://kicd.ac.ke/curriculum-design/",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "html",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "open-yale-courses",
+      "name": "Open Yale Courses",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "url": "https://oyc.yale.edu/",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "html",
+      "notes": "Transcripts are available for courses.",
+      "rightsStatus": "conditional",
+      "ingestionPolicy": "transcript_only_with_attribution",
+      "requiresManualReview": true
+    },
+    {
+      "id": "nptel-transcripts",
+      "name": "NPTEL Transcript Access",
+      "region": "India / Global",
+      "category": "free_course_transcripts",
+      "url": "https://nptel.ac.in/noc/transcript.php",
+      "automationAllowed": true,
+      "tier": "green",
+      "transcriptFormat": "mixed",
+      "rightsStatus": "conditional",
+      "ingestionPolicy": "transcript_only_with_attribution",
+      "requiresManualReview": true
+    },
+    {
+      "id": "mit-ocw",
+      "name": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/",
+      "automationAllowed": true,
+      "tier": "green",
+      "licenseHint": "CC BY-NC-SA",
+      "transcriptFormat": "mixed",
+      "notes": "Course assets are open licensed; transcript availability varies by course.",
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false
+    },
+    {
+      "id": "openlearn",
+      "name": "OpenLearn",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "url": "https://www.open.edu/openlearn/",
+      "automationAllowed": true,
+      "tier": "yellow",
+      "transcriptFormat": "mixed",
+      "notes": "Transcript availability varies; verify per-course terms before bulk ingestion.",
+      "rightsStatus": "conditional",
+      "ingestionPolicy": "manual_review_required",
+      "requiresManualReview": true
+    }
+  ]
+}

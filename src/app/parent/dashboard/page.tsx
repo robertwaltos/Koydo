@@ -1,65 +1,65 @@
-import { redirect } from "next/navigation";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
-import { SupabaseClient } from "@supabase/supabase-js";
-import { skills } from "@/lib/data/curriculum";
 import Link from "next/link";
-import SoftCard from "@/app/components/ui/soft-card";
-import ProgressChip from "@/app/components/ui/progress-chip";
-import ParentAiInterventionsCard from "./parent-ai-interventions-card";
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
+import { serverEnv } from "@/lib/config/env";
+import {
+  formatSubscriptionDate,
+  getSubscriptionStatusLabel,
+  getSubscriptionStatusTone,
+  requiresPortalManagement,
+} from "@/lib/billing/subscription";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getLanguagePlanById, getScoredAttemptLimitForPlan } from "@/lib/language-learning";
+import { summarizeLanguageProgress } from "@/lib/language-learning/progress-metrics";
+import { formatDate } from "@/lib/i18n/format";
+import {
+  isSupportedLocale,
+  translate,
+  type Locale,
+} from "@/lib/i18n/translations";
+import type { StudentProfile } from "@/lib/profiles/types";
 
 export const dynamic = "force-dynamic";
 
-function toneFromPercent(value: number): "success" | "info" | "warning" {
-  if (value >= 80) return "success";
-  if (value >= 60) return "info";
-  return "warning";
+function formatLastUpdated(
+  value: string | null,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+  locale: Locale,
+) {
+  if (!value) return t("parent_dashboard_no_recent_updates");
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return t("parent_dashboard_no_recent_updates");
+  return formatDate(date, locale, { month: "short", day: "numeric", year: "numeric" });
 }
 
-function toPercent(masteryLevel: number | null | undefined) {
-  return Math.round(Number(masteryLevel ?? 0) * 100);
+function formatCompactDate(
+  value: string | null,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+  locale: Locale,
+) {
+  if (!value) return t("parent_dashboard_no_activity_yet");
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return t("parent_dashboard_no_activity_yet");
+  return formatDate(date, locale, { month: "short", day: "numeric" });
 }
 
-// Helper to find a child associated with the current user (as a parent)
-async function getChildData(supabase: SupabaseClient, parentUserId: string) {
-  const { data: parentProfile, error: parentError } = await supabase
-    .from("user_profiles")
-    .select("parent_email")
-    .eq("user_id", parentUserId)
-    .single();
+function monthKeyFromDate(date: Date) {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  return `${year}-${month}`;
+}
 
-  if (parentError || !parentProfile || !parentProfile.parent_email) {
-    // This assumes the parent's primary email is used as the parent_email contact
-    return { error: "Could not verify parent status." };
-  }
-
-  // Find a child user whose parent_email matches the logged-in user's email
-  const { data: childProfile, error: childError } = await supabase
-    .from("user_profiles")
-    .select("user_id, display_name")
-    .eq("parent_email", parentProfile.parent_email)
-    .neq("user_id", parentUserId) // Ensure it's not the parent themselves
-    .limit(1)
-    .single();
-
-  if (childError || !childProfile) {
-    return { error: "No child found for this parent account." };
-  }
-
-  // Fetch the child's skill mastery data
-  const { data: childSkills, error: skillsError } = await supabase
-    .from("user_skill_mastery")
-    .select("skill_id, mastery_level")
-    .eq("user_id", childProfile.user_id)
-    .order("mastery_level", { ascending: false });
-
-  if (skillsError) {
-    return { error: "Could not fetch child's progress." };
-  }
-
-  return { childProfile, childSkills };
+function isMissingTableError(message: string) {
+  const lower = message.toLowerCase();
+  return lower.includes("could not find the table") || (lower.includes("relation") && lower.includes("does not exist"));
 }
 
 export default async function ParentDashboardPage() {
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get("koydo.locale")?.value ?? "en";
+  const locale: Locale = isSupportedLocale(localeCookie) ? localeCookie : "en";
+  const t = (key: string, vars?: Record<string, string | number>) => translate(locale, key, vars);
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },
@@ -70,187 +70,505 @@ export default async function ParentDashboardPage() {
     redirect("/auth/sign-in");
   }
 
-  const { data: profile } = await supabase
-    .from("user_profiles")
-    .select("is_parent")
-    .eq("user_id", user.id)
-    .maybeSingle();
+  const [profilesResult, subscriptionResult] = await Promise.all([
+    supabase
+      .from("student_profiles")
+      .select("id, display_name, grade_level, age_years, initial_assessment_status, updated_at")
+      .eq("account_id", user.id)
+      .order("created_at", { ascending: true }),
+    supabase
+      .from("subscriptions")
+      .select("status, cancel_at_period_end, current_period_end")
+      .eq("user_id", user.id)
+      .order("updated_at", { ascending: false })
+      .limit(1)
+      .maybeSingle(),
+  ]);
 
-  if (!profile?.is_parent) {
-    return (
-      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
-        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8 text-center">
-          <h1 className="text-2xl font-semibold">Parent Dashboard</h1>
-          <p className="mt-3 text-sm text-rose-700">
-            Parent role is required to view this dashboard.
-          </p>
-        </SoftCard>
-      </main>
-    );
+  const { data: profiles, error: profilesError } = profilesResult;
+  const { data: subscription, error: subscriptionError } = subscriptionResult;
+
+  if (profilesError) {
+    console.error("Error fetching profiles for parent dashboard:", profilesError);
+  }
+  if (subscriptionError) {
+    console.error("Error fetching subscription for parent dashboard:", subscriptionError);
   }
 
-  const { childProfile, childSkills, error } = await getChildData(
-    supabase,
-    user.id
+  const learnerProfiles = (profiles ?? []) as StudentProfile[];
+  const learnerProfileIds = learnerProfiles.map((profile) => profile.id);
+  const currentMonthKey = monthKeyFromDate(new Date());
+
+  const [profileAttemptsResult, profileStateResult, profileEventsResult, profileUsageResult] =
+    learnerProfileIds.length > 0
+      ? await Promise.all([
+          supabase
+            .from("pronunciation_attempts")
+            .select("student_profile_id, grading_mode, overall_score, created_at")
+            .in("student_profile_id", learnerProfileIds)
+            .order("created_at", { ascending: false })
+            .limit(300),
+          supabase
+            .from("gamification_states")
+            .select("student_profile_id, points, level, badges, quests_completed, last_activity_at")
+            .in("student_profile_id", learnerProfileIds),
+          supabase
+            .from("gamification_events")
+            .select("student_profile_id, event_type, created_at")
+            .in("student_profile_id", learnerProfileIds)
+            .order("created_at", { ascending: false })
+            .limit(300),
+          supabase
+            .from("language_usage_tracking")
+            .select("student_profile_id, month_key, plan_tier, scored_attempts")
+            .in("student_profile_id", learnerProfileIds)
+            .eq("month_key", currentMonthKey),
+        ])
+      : [
+          { data: [], error: null },
+          { data: [], error: null },
+          { data: [], error: null },
+          { data: [], error: null },
+        ];
+
+  const languageErrors = [
+    profileAttemptsResult.error,
+    profileStateResult.error,
+    profileEventsResult.error,
+    profileUsageResult.error,
+  ].filter((error): error is NonNullable<typeof profileAttemptsResult.error> => Boolean(error));
+  const languageTablesMissing = languageErrors.some((error) =>
+    isMissingTableError(error.message),
   );
-
-  if (error || !childProfile || !childSkills) {
-    return (
-      <main className="mx-auto flex w-full max-w-5xl flex-col items-center justify-center px-6 py-24">
-        <SoftCard className="w-full max-w-2xl border-rose-200 bg-rose-50 p-8">
-          <h1 className="text-center text-2xl font-semibold">Parent Dashboard</h1>
-          <p className="mt-3 text-center text-sm text-rose-700">
-            {error || "Could not load child data."}
-          </p>
-          <p className="mt-2 text-center text-sm text-zinc-600">
-            Please ensure you are signed in with the email used for parent
-            consent and that your child has started using the app.
-          </p>
-        </SoftCard>
-      </main>
-    );
+  if (!languageTablesMissing) {
+    for (const error of languageErrors) {
+      console.error("Parent dashboard language progress query failed:", error);
+    }
   }
 
-  const skillMap = new Map(skills.map((s) => [s.id, s.name]));
-  const strengths = childSkills.slice(0, 3);
-  const weaknesses = childSkills
-    .filter((skill) => Number(skill.mastery_level ?? 0) < 0.7)
-    .sort((a, b) => Number(a.mastery_level ?? 0) - Number(b.mastery_level ?? 0))
-    .slice(0, 3);
-  const averageMastery =
-    childSkills.length > 0
-      ? Math.round(
-          (childSkills.reduce(
-            (total, skill) => total + Number(skill.mastery_level ?? 0),
-            0,
-          ) /
-            childSkills.length) *
-            100,
-        )
-      : 0;
-  const readySkills = childSkills.filter(
-    (skill) => Number(skill.mastery_level ?? 0) >= 0.8,
+  const attemptsByProfile = new Map<
+    string,
+    { grading_mode: string | null; overall_score: number | string | null; created_at: string | null }[]
+  >();
+  const stateByProfile = new Map<
+    string,
+    {
+      points: number | null;
+      level: number | null;
+      badges: unknown;
+      quests_completed: unknown;
+      last_activity_at: string | null;
+    }
+  >();
+  const latestEventByProfile = new Map<string, { event_type: string | null; created_at: string | null }>();
+  const usageByProfile = new Map<
+    string,
+    { planTier: string; scoredAttemptsUsed: number; scoredAttemptsLimit: number }
+  >();
+
+  if (!languageTablesMissing) {
+    for (const row of profileAttemptsResult.data ?? []) {
+      const profileId = row.student_profile_id;
+      if (!profileId) continue;
+      const rows = attemptsByProfile.get(profileId) ?? [];
+      rows.push({
+        grading_mode: row.grading_mode,
+        overall_score: row.overall_score,
+        created_at: row.created_at,
+      });
+      attemptsByProfile.set(profileId, rows);
+    }
+
+    for (const row of profileStateResult.data ?? []) {
+      if (!row.student_profile_id) continue;
+      stateByProfile.set(row.student_profile_id, {
+        points: row.points,
+        level: row.level,
+        badges: row.badges,
+        quests_completed: row.quests_completed,
+        last_activity_at: row.last_activity_at,
+      });
+    }
+
+    for (const row of profileEventsResult.data ?? []) {
+      if (!row.student_profile_id || latestEventByProfile.has(row.student_profile_id)) continue;
+      latestEventByProfile.set(row.student_profile_id, {
+        event_type: row.event_type,
+        created_at: row.created_at,
+      });
+    }
+
+    for (const row of profileUsageResult.data ?? []) {
+      if (!row.student_profile_id) continue;
+      const planTier = getLanguagePlanById(row.plan_tier)?.id ?? "core_practice";
+      const scoredAttemptsLimit = getScoredAttemptLimitForPlan(planTier);
+      usageByProfile.set(row.student_profile_id, {
+        planTier,
+        scoredAttemptsUsed: Math.max(0, Number(row.scored_attempts ?? 0)),
+        scoredAttemptsLimit,
+      });
+    }
+  }
+
+  const learnerLanguageSummaries = learnerProfiles.map((profile) => {
+    const summary = summarizeLanguageProgress(
+      attemptsByProfile.get(profile.id) ?? [],
+      stateByProfile.get(profile.id) ?? null,
+    );
+    const latestEvent = latestEventByProfile.get(profile.id) ?? null;
+    return {
+      profileId: profile.id,
+      displayName: profile.display_name,
+      summary,
+      latestEvent,
+      usage:
+        usageByProfile.get(profile.id) ?? {
+          planTier: "core_practice",
+          scoredAttemptsUsed: 0,
+          scoredAttemptsLimit: getScoredAttemptLimitForPlan("core_practice"),
+        },
+    };
+  });
+
+  const totalProfiles = learnerProfiles.length;
+  const completedAssessmentCount = learnerProfiles.filter(
+    (profile) => profile.initial_assessment_status === "completed",
   ).length;
+  const pendingAssessmentCount = totalProfiles - completedAssessmentCount;
+  const subscriptionStatus = subscription?.status ?? null;
+  const subscriptionTone = getSubscriptionStatusTone(subscriptionStatus);
+  const subscriptionLabel = getSubscriptionStatusLabel(subscriptionStatus);
+  const periodEndLabel = formatSubscriptionDate(subscription?.current_period_end ?? null, locale);
+  const externalBillingAllowed = serverEnv.BILLING_PROVIDER_MODE !== "app_store_iap";
+  const hasPortalManagedSubscription = requiresPortalManagement(subscriptionStatus);
+  const subscriptionToneClass =
+    subscriptionTone === "good"
+      ? "bg-emerald-100 text-emerald-700"
+      : subscriptionTone === "warn"
+        ? "bg-amber-100 text-amber-700"
+        : subscriptionTone === "bad"
+          ? "bg-rose-100 text-rose-700"
+          : "bg-zinc-100 text-zinc-600";
+  const billingCtaHref = externalBillingAllowed
+    ? hasPortalManagedSubscription
+      ? "/account/settings"
+      : "/billing/language"
+    : "/account/settings";
+  const billingCtaLabel = externalBillingAllowed
+    ? hasPortalManagedSubscription
+      ? t("parent_dashboard_billing_cta_manage")
+      : t("parent_dashboard_billing_cta_choose_plan")
+    : t("parent_dashboard_billing_cta_settings");
 
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 py-12">
-      <SoftCard as="header" className="border-accent/20 bg-(--gradient-hero) p-6">
-        <h1 className="text-3xl font-bold tracking-tight">Parent Dashboard</h1>
-        <p className="mt-2 text-sm text-zinc-700">
-          Viewing progress for{" "}
-          <span className="font-semibold text-zinc-900">
-            {childProfile.display_name ?? "your child"}
-          </span>
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <ProgressChip
-            label="Average Mastery"
-            value={`${averageMastery}%`}
-            tone={toneFromPercent(averageMastery)}
-          />
-          <ProgressChip label="Recent Wins" value={readySkills} tone="success" />
-          <ProgressChip
-            label="Focus Areas"
-            value={weaknesses.length}
-            tone={weaknesses.length === 0 ? "success" : "warning"}
-          />
+    <div className="p-6 md:p-8">
+      {/* ── Page header ──────────────────────────────────────────────────── */}
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-[#697386]">
+            {t("parent_dashboard_header_eyebrow")}
+          </p>
+          <h1 className="mt-1 text-[22px] font-semibold text-[#1a1f36]">
+            {t("parent_dashboard_title")}
+          </h1>
+          <p className="mt-1 text-[13px] text-[#697386]">
+            {t("parent_dashboard_subtitle")}
+          </p>
         </div>
-        <div className="mt-4 flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-2">
           <Link
-            href="/parent/reports"
-            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface px-4 py-2 text-sm font-semibold text-foreground"
+            href="/student/onboarding"
+            className="ui-focus-ring inline-flex items-center justify-center rounded-md bg-[#635bff] px-4 py-2 text-[13px] font-semibold text-white shadow-sm transition hover:bg-[#5a52f0]"
           >
-            View detailed reports
+            {t("parent_dashboard_add_learner")}
           </Link>
           <Link
-            href="/parent/compliance"
-            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface px-4 py-2 text-sm font-semibold text-foreground"
+            href="/who-is-learning"
+            className="ui-focus-ring inline-flex items-center justify-center rounded-md border border-[#e3e8ee] bg-white px-4 py-2 text-[13px] font-semibold text-[#3c4257] shadow-sm transition hover:bg-[#f6f9fc]"
           >
-            Review consent history
+            {t("parent_dashboard_switch_learner")}
           </Link>
         </div>
-      </SoftCard>
+      </div>
 
-      <section className="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <SoftCard as="section" className="border-emerald-200 p-6">
-          <h2 className="text-xl font-bold text-emerald-800">Recent Wins</h2>
-          <p className="mt-1 text-sm text-zinc-600">
-            Your child is excelling in these areas. Great work!
+      {/* ── Stat cards ───────────────────────────────────────────────────── */}
+      <section className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm">
+          <p className="text-[11px] font-medium uppercase tracking-wider text-[#697386]">
+            {t("parent_dashboard_stat_learners")}
           </p>
-          <ul className="mt-4 flex flex-col gap-2">
-            {strengths.map((skill) => (
-              <li
-                key={skill.skill_id}
-                className="rounded-2xl border border-emerald-200 bg-emerald-50 p-3"
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <span className="font-medium text-emerald-900">
-                    {skillMap.get(skill.skill_id) ?? skill.skill_id}
-                  </span>
-                  <ProgressChip
-                    label="Mastery"
-                    value={`${toPercent(skill.mastery_level)}%`}
-                    tone={toneFromPercent(toPercent(skill.mastery_level))}
-                  />
-                </div>
-              </li>
-            ))}
-            {strengths.length === 0 ? (
-              <li className="text-sm text-zinc-500">
-                No mastered skills yet. Keep practicing.
-              </li>
-            ) : null}
-          </ul>
-        </SoftCard>
+          <p className="mt-2 text-[26px] font-semibold leading-none text-[#1a1f36]">{totalProfiles}</p>
+          <p className="mt-2 text-[12px] text-[#697386]">
+            {t("parent_dashboard_stat_learners_desc")}
+          </p>
+        </div>
 
-        <SoftCard as="section" className="border-amber-200 p-6">
-          <h2 className="text-xl font-bold text-amber-800">
-            Opportunities
-          </h2>
-          <p className="mt-1 text-sm text-zinc-600">
-            Here are a few areas to focus on for improvement.
+        <div className="rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm">
+          <p className="text-[11px] font-medium uppercase tracking-wider text-[#697386]">
+            {t("parent_dashboard_stat_assessment_done")}
           </p>
-          <ul className="mt-4 flex flex-col gap-2">
-            {weaknesses.map((skill) => (
-              <li
-                key={skill.skill_id}
-                className="rounded-2xl border border-amber-200 bg-amber-50 p-3"
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <span className="font-medium text-amber-900">
-                    {skillMap.get(skill.skill_id) ?? skill.skill_id}
-                  </span>
-                  <ProgressChip
-                    label="Mastery"
-                    value={`${toPercent(skill.mastery_level)}%`}
-                    tone={toneFromPercent(toPercent(skill.mastery_level))}
-                  />
-                </div>
-              </li>
-            ))}
-            {weaknesses.length === 0 ? (
-              <li className="text-sm text-zinc-500">
-                No areas for improvement found. Amazing.
-              </li>
-            ) : null}
-          </ul>
-        </SoftCard>
+          <p className="mt-2 text-[26px] font-semibold leading-none text-[#0e9f6e]">{completedAssessmentCount}</p>
+          <p className="mt-2 text-[12px] text-[#697386]">
+            {t("parent_dashboard_stat_assessment_done_desc")}
+          </p>
+        </div>
+
+        <div className="rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm">
+          <p className="text-[11px] font-medium uppercase tracking-wider text-[#697386]">
+            {t("parent_dashboard_stat_needs_setup")}
+          </p>
+          <p className="mt-2 text-[26px] font-semibold leading-none text-[#c27803]">{pendingAssessmentCount}</p>
+          <p className="mt-2 text-[12px] text-[#697386]">
+            {t("parent_dashboard_stat_needs_setup_desc")}
+          </p>
+        </div>
+
+        <div className="rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm">
+          <div className="flex items-start justify-between gap-2">
+            <p className="text-[11px] font-medium uppercase tracking-wider text-[#697386]">
+              {t("parent_dashboard_stat_subscription")}
+            </p>
+            <span
+              className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ${subscriptionToneClass}`}
+            >
+              {subscriptionLabel}
+            </span>
+          </div>
+          <p className="mt-2 text-[12px] text-[#697386]">
+            {!externalBillingAllowed
+              ? t("parent_dashboard_subscription_iap_mode")
+              : subscription?.cancel_at_period_end && periodEndLabel
+                ? t("parent_dashboard_subscription_cancels", { date: periodEndLabel })
+                : periodEndLabel
+                  ? t("parent_dashboard_subscription_renews", { date: periodEndLabel })
+                  : t("parent_dashboard_subscription_none")}
+          </p>
+          <Link
+            href={billingCtaHref}
+            className="ui-focus-ring mt-3 inline-flex items-center rounded-md border border-[#e3e8ee] bg-[#f6f9fc] px-3 py-1.5 text-[12px] font-semibold text-[#3c4257] hover:bg-[#edf0f7]"
+          >
+            {billingCtaLabel}
+          </Link>
+        </div>
       </section>
 
-      <ParentAiInterventionsCard />
+      {/* ── Learner Profiles ─────────────────────────────────────────────── */}
+      <section className="mt-6 rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm">
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-[14px] font-semibold text-[#1a1f36]">
+            {t("parent_dashboard_learner_profiles_title")}
+          </h2>
+          <Link
+            href="/parent/reports"
+            className="ui-focus-ring rounded-md border border-[#e3e8ee] bg-[#f6f9fc] px-3 py-1.5 text-[12px] font-semibold text-[#3c4257] hover:bg-[#edf0f7]"
+          >
+            {t("parent_dashboard_reports_button")}
+          </Link>
+        </div>
 
-      <SoftCard as="aside" organicCorners className="border-sky-200 bg-sky-50 p-6">
-        <h2 className="text-xl font-bold text-sky-800">What to do tonight (10 mins)</h2>
-        <p className="mt-2 text-zinc-700">
-          Based on recent progress, try this simple activity: practice{" "}
-          <strong className="font-semibold">
-            {weaknesses.length > 0
-              ? (skillMap.get(weaknesses[0].skill_id) ?? weaknesses[0].skill_id)
-              : "reviewing past lessons"}
-          </strong>{" "}
-          with your child. A little encouragement goes a long way!
-        </p>
-      </SoftCard>
-    </main>
+        {learnerProfiles.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-[#c4cdd8] bg-[#f6f9fc] p-8 text-center">
+            <p className="text-[14px] font-semibold text-[#3c4257]">
+              {t("parent_dashboard_no_learners_title")}
+            </p>
+            <p className="mt-1 text-[13px] text-[#697386]">
+              {t("parent_dashboard_no_learners_desc")}
+            </p>
+            <Link
+              href="/student/onboarding"
+              className="ui-focus-ring mt-4 inline-flex items-center justify-center rounded-md bg-[#1a1f36] px-5 py-2 text-[13px] font-semibold text-white hover:bg-[#2d3654]"
+            >
+              {t("parent_dashboard_start_onboarding")}
+            </Link>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+            {learnerProfiles.map((profile) => {
+              const initial = profile.display_name.trim().charAt(0).toUpperCase() || "L";
+              const statusComplete = profile.initial_assessment_status === "completed";
+              return (
+                <article
+                  key={profile.id}
+                  className="rounded-lg border border-[#e3e8ee] bg-white p-4 transition hover:border-[#c4cdd8] hover:shadow-sm"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-linear-to-br from-emerald-400 to-sky-500 text-base font-bold text-white">
+                        {initial}
+                      </div>
+                      <div>
+                        <h3 className="text-[14px] font-semibold text-[#1a1f36]">
+                          {profile.display_name}
+                        </h3>
+                        <p className="text-[12px] text-[#697386]">
+                          {t("parent_dashboard_grade", {
+                            grade: profile.grade_level ?? t("parent_dashboard_unassigned"),
+                          })}
+                          {profile.age_years
+                            ? ` · ${t("parent_dashboard_age", { age: profile.age_years })}`
+                            : ""}
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ${
+                        statusComplete
+                          ? "bg-[#d1fae5] text-[#065f46]"
+                          : "bg-[#fef3c7] text-[#92400e]"
+                      }`}
+                    >
+                      {statusComplete
+                        ? t("parent_dashboard_status_ready")
+                        : t("parent_dashboard_status_setup_needed")}
+                    </span>
+                  </div>
+
+                  <p className="mt-3 border-t border-[#f4f6f8] pt-3 text-[11px] text-[#697386]">
+                    {t("parent_dashboard_last_update", {
+                      date: formatLastUpdated(profile.updated_at ?? null, t, locale),
+                    })}
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <Link
+                      href="/who-is-learning"
+                      className="ui-focus-ring rounded-md border border-[#e3e8ee] bg-[#f6f9fc] px-3 py-1.5 text-[12px] font-semibold text-[#3c4257] hover:bg-[#edf0f7]"
+                    >
+                      {t("parent_dashboard_launch")}
+                    </Link>
+                    <Link
+                      href={`/parent/reports?student=${profile.id}`}
+                      className="ui-focus-ring rounded-md border border-[#e3e8ee] bg-[#f6f9fc] px-3 py-1.5 text-[12px] font-semibold text-[#3c4257] hover:bg-[#edf0f7]"
+                    >
+                      {t("parent_dashboard_report")}
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        )}
+      </section>
+
+      {/* ── Language Progress ─────────────────────────────────────────────── */}
+      <section className="mt-6 rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm">
+        <div className="mb-4 flex items-center justify-between">
+          <h2 className="text-[14px] font-semibold text-[#1a1f36]">
+            {t("parent_dashboard_language_progress_title")}
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            <Link
+              href="/language/speaking-lab"
+              className="ui-focus-ring rounded-md border border-[#e3e8ee] bg-[#f6f9fc] px-3 py-1.5 text-[12px] font-semibold text-[#3c4257] hover:bg-[#edf0f7]"
+            >
+              {t("parent_dashboard_speaking_lab")}
+            </Link>
+            <Link
+              href="/modules"
+              className="ui-focus-ring rounded-md border border-[#e3e8ee] bg-[#f6f9fc] px-3 py-1.5 text-[12px] font-semibold text-[#3c4257] hover:bg-[#edf0f7]"
+            >
+              {t("parent_dashboard_modules")}
+            </Link>
+          </div>
+        </div>
+
+        {languageTablesMissing ? (
+          <div className="rounded-lg border border-dashed border-[#c4cdd8] bg-[#f6f9fc] p-4 text-[13px] text-[#697386]">
+            {t("parent_dashboard_language_data_pending")}
+          </div>
+        ) : learnerLanguageSummaries.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-[#c4cdd8] bg-[#f6f9fc] p-4 text-[13px] text-[#697386]">
+            {t("parent_dashboard_add_learner_to_track")}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+            {learnerLanguageSummaries.map((row) => {
+              const scoredLimit = row.usage.scoredAttemptsLimit;
+              const scoredUsed = row.usage.scoredAttemptsUsed;
+              const hasScoredAccess = scoredLimit > 0;
+              const scoredRemaining = Math.max(0, scoredLimit - scoredUsed);
+              const usageMode: "graded" | "practice_only" =
+                hasScoredAccess && scoredRemaining > 0 ? "graded" : "practice_only";
+              const usageHint = !hasScoredAccess
+                ? t("parent_dashboard_usage_practice_only_hint")
+                : scoredRemaining === 0
+                  ? t("parent_dashboard_usage_limit_reached")
+                  : t("parent_dashboard_usage_remaining", { count: scoredRemaining });
+
+              return (
+                <article
+                  key={row.profileId}
+                  className="rounded-lg border border-[#e3e8ee] bg-white p-4"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="text-[14px] font-semibold text-[#1a1f36]">
+                        {row.displayName}
+                      </h3>
+                      <p className="mt-0.5 text-[12px] text-[#697386]">
+                        {t("parent_dashboard_last_attempt", {
+                          date: formatCompactDate(row.summary.latestAttemptAt, t, locale),
+                        })}
+                      </p>
+                    </div>
+                    <span className="rounded-full bg-[#e0f2fe] px-2 py-0.5 text-[11px] font-semibold text-[#0369a1]">
+                      {t("parent_dashboard_level_points", {
+                        level: row.summary.level,
+                        points: row.summary.points,
+                      })}
+                    </span>
+                  </div>
+
+                  <div className="mt-3 grid grid-cols-2 gap-2">
+                    {[
+                      {
+                        label: t("parent_dashboard_metric_avg_score"),
+                        value:
+                          row.summary.averageScore !== null
+                            ? `${Math.round(row.summary.averageScore)}%`
+                            : t("parent_dashboard_not_available"),
+                      },
+                      { label: t("parent_dashboard_metric_attempts"), value: String(row.summary.totalAttempts) },
+                      { label: t("parent_dashboard_metric_practice"), value: String(row.summary.practiceOnlyAttempts) },
+                      {
+                        label: t("parent_dashboard_metric_rewards"),
+                        value: `${row.summary.badgesCount}B · ${row.summary.questsCompletedCount}Q`,
+                      },
+                    ].map(({ label, value }) => (
+                      <div
+                        key={label}
+                        className="rounded-lg border border-[#f4f6f8] bg-[#f6f9fc] p-2.5"
+                      >
+                        <p className="text-[10px] uppercase tracking-wider text-[#697386]">{label}</p>
+                        <p className="mt-1 text-[13px] font-semibold text-[#1a1f36]">{value}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="mt-3 text-[11px] text-[#697386]">
+                    {t("parent_dashboard_scored_line", {
+                      used: row.usage.scoredAttemptsUsed,
+                      limit: row.usage.scoredAttemptsLimit,
+                      tier: row.usage.planTier,
+                      hint: usageHint,
+                    })}
+                  </p>
+
+                  {usageMode === "practice_only" && (
+                    <Link
+                      href="/billing/language"
+                      className="ui-focus-ring mt-3 inline-flex items-center rounded-md border border-[#bae6fd] bg-[#e0f2fe] px-3 py-1.5 text-[12px] font-semibold text-[#0369a1] hover:bg-[#bae6fd]"
+                    >
+                      {t("parent_dashboard_upgrade_language_plan")}
+                    </Link>
+                  )}
+                </article>
+              );
+            })}
+          </div>
+        )}
+      </section>
+    </div>
   );
 }
+

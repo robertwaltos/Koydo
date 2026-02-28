@@ -8,12 +8,14 @@ export const Biology101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "1.1.0",
-  version: "1.1.0",
+  moduleVersion: "2.0.0",
+  version: "2.0.0",
   learningObjectives: [
-    "Understand core concepts in Biology",
-    "Apply Ecosystem Thinking strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Describe the structure and function of plant and animal cells",
+    "Explain how body systems work together to maintain homeostasis",
+    "Analyze energy flow and nutrient cycling in ecosystems",
+    "Describe the basic principles of heredity and DNA",
+    "Explain natural selection and adaptation"
   ],
   lessons: [
     {
@@ -21,37 +23,42 @@ export const Biology101Module: LearningModule = {
       title: "Cells and Life Processes",
       type: "video",
       duration: 10,
+      objectives: ["Identify the parts of a cell and their functions", "Compare plant and animal cells"],
       chunks: [
         {
           id: "biology-101-l01-c1",
-          title: "Cells and Life Processes Overview",
-          content: "In this lesson, we focus on cells through the lens of living systems. The goal is to recognize what strong reasoning looks like before solving."
+          title: "The Cell: Building Block of Life",
+          kind: "intro",
+          content: "Every living organism is made of cells. Some organisms like bacteria are a single cell, while humans have roughly 37 trillion cells. The cell is the smallest unit that carries out all life processes: obtaining energy, growing, reproducing, and responding to the environment."
         },
         {
           id: "biology-101-l01-c2",
-          title: "Core Concept",
-          content: "cells and organs work together. Start by naming the main target, then identify the evidence or steps that support it."
+          title: "Inside an Animal Cell",
+          kind: "concept",
+          content: "Key organelles: the nucleus stores DNA and controls the cell. Mitochondria convert food into energy (ATP) through cellular respiration. The cell membrane controls what enters and leaves. Ribosomes build proteins. The endoplasmic reticulum and Golgi apparatus process and ship proteins."
         },
         {
           id: "biology-101-l01-c3",
-          title: "Worked Example",
-          content: "Walk through one guided example: define the goal, apply a strategy for organs, then verify the result with a quick check."
+          title: "Plant Cells Are Different",
+          kind: "concept",
+          content: "Plant cells have everything animal cells have, plus: a rigid cell wall for structural support, chloroplasts that capture sunlight for photosynthesis, and a large central vacuole that stores water and maintains turgor pressure. These extras let plants make their own food and stand upright."
         },
         {
           id: "biology-101-l01-c4",
-          title: "Transfer Prompt",
-          content: "Apply the same process to a new scenario and explain why your approach is valid in one clear sentence."
+          title: "Try It Yourself",
+          kind: "practice",
+          content: "Draw a simple diagram of an animal cell and label the nucleus, mitochondria, cell membrane, and ribosomes. Then add the three extra structures found in plant cells."
         }
       ],
       flashcards: [
-        { id: "biology-101-l01-f1", front: "cells", back: "A central target skill in this module. Name it before solving." },
-        { id: "biology-101-l01-f2", front: "organs", back: "Use this as the method step after defining the goal." },
-        { id: "biology-101-l01-f3", front: "Verification", back: "Check that your result matches the original goal and constraints." },
-        { id: "biology-101-l01-f4", front: "Transfer", back: "Use the same strategy on a new item to confirm true mastery." }
+        { id: "biology-101-l01-f1", front: "What does the nucleus do?", back: "It stores DNA (genetic instructions) and controls cell activities like growth, metabolism, and reproduction." },
+        { id: "biology-101-l01-f2", front: "What are mitochondria?", back: "The 'powerhouses' of the cell. They convert glucose and oxygen into ATP (energy) through cellular respiration." },
+        { id: "biology-101-l01-f3", front: "Name three structures found in plant cells but NOT animal cells.", back: "Cell wall (rigid support), chloroplasts (photosynthesis), and large central vacuole (water storage)." },
+        { id: "biology-101-l01-f4", front: "What does the cell membrane do?", back: "It acts as a selective barrier, controlling which substances enter and leave the cell through selective permeability." }
       ],
       learningAids: [
-        { id: "biology-101-l01-a1", type: "image", title: "Concept Poster", content: "A colorful infographic about cells and organs." },
-        { id: "biology-101-l01-a2", type: "animation", title: "Warm-up Animation", content: "Short animation introducing Biology vocabulary." }
+        { id: "biology-101-l01-a1", type: "image", title: "Cell Comparison Diagram", content: "Side-by-side labeled diagrams of a typical animal cell and plant cell, highlighting shared and unique organelles." },
+        { id: "biology-101-l01-a2", type: "animation", title: "Inside a Cell", content: "3D animation zooming into a cell, showing the nucleus, mitochondria producing ATP, ribosomes building proteins, and the cell membrane regulating transport." }
       ]
     },
     {
@@ -59,37 +66,53 @@ export const Biology101Module: LearningModule = {
       title: "Body Systems Overview",
       type: "interactive",
       duration: 12,
-      metadata: {
-        prompts: [
-          "Identify one core idea about cells from this lesson.",
-          "Explain where organs appears in real life.",
-          "Describe one question you still have about living systems."
-        ]
-      },
+      objectives: ["Name the major body systems and their primary functions", "Explain how systems interact to maintain homeostasis"],
       interactiveActivities: [
         {
           id: "biology-101-l02-ia1",
-          type: "drag_and_drop",
-          title: "Practice Flow Builder",
-          description: "Sort each action into Plan, Execute, or Reflect.",
+          type: "matching_pairs",
+          title: "Match the Body System",
+          description: "Match each body system to its primary function.",
           estimatedMinutes: 8,
           difficultyLevel: "easy",
           data: {
-            targets: [
-              { id: "plan", label: "Plan" },
-              { id: "execute", label: "Execute" },
-              { id: "reflect", label: "Reflect" }
+            left: [
+              { id: "l1", label: "Circulatory system" },
+              { id: "l2", label: "Respiratory system" },
+              { id: "l3", label: "Digestive system" },
+              { id: "l4", label: "Nervous system" }
             ],
-            draggables: [
-              { id: "d1", label: "Set a goal for cells", correctTargetId: "plan" },
-              { id: "d2", label: "Try one strategy for organs", correctTargetId: "execute" },
-              { id: "d3", label: "Record what worked and what to improve", correctTargetId: "reflect" }
+            right: [
+              { id: "r1", label: "Pumps blood to deliver oxygen and nutrients to cells" },
+              { id: "r2", label: "Exchanges oxygen and carbon dioxide with the air" },
+              { id: "r3", label: "Breaks food into nutrients the body can absorb" },
+              { id: "r4", label: "Sends electrical signals to control body actions and thoughts" }
+            ],
+            pairs: [
+              { leftId: "l1", rightId: "r1" },
+              { leftId: "l2", rightId: "r2" },
+              { leftId: "l3", rightId: "r3" },
+              { leftId: "l4", rightId: "r4" }
             ]
           }
         }
       ],
+      chunks: [
+        {
+          id: "biology-101-l02-c1",
+          title: "Systems Working Together",
+          kind: "concept",
+          content: "No body system works alone. When you exercise, the muscular system moves your body, the respiratory system brings in more oxygen, the circulatory system pumps blood faster to deliver that oxygen, and the nervous system coordinates it all. This teamwork keeps your internal environment stable — a state called homeostasis."
+        },
+        {
+          id: "biology-101-l02-c2",
+          title: "Homeostasis in Action",
+          kind: "example",
+          content: "When you are hot, your nervous system detects the temperature rise. It signals blood vessels near the skin to widen (more heat escapes) and sweat glands to produce sweat (evaporation cools you). When you cool down, these responses stop. This negative feedback loop maintains body temperature near 37°C."
+        }
+      ],
       learningAids: [
-        { id: "biology-101-l02-a1", type: "practice", title: "Try It Board", content: "Complete a guided activity on organs and write one reflection." }
+        { id: "biology-101-l02-a1", type: "practice", title: "System Interaction Map", content: "Draw arrows between body systems to show how the respiratory, circulatory, and muscular systems interact during exercise." }
       ]
     },
     {
@@ -100,81 +123,77 @@ export const Biology101Module: LearningModule = {
       questions: [
         {
           id: "biology-101-l03-q1",
-          text: "Which statement best explains cells in Biology?",
-          skillId: "biology-101-skill-core",
+          text: "Which organelle is responsible for producing energy (ATP) in the cell?",
+          skillId: "biology-101-skill-cells",
           options: [
-            { id: "a", text: "It explains cells using evidence from the lesson." },
-            { id: "b", text: "It ignores how cells works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Biology." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Nucleus" },
+            { id: "b", text: "Ribosome" },
+            { id: "c", text: "Mitochondrion" },
+            { id: "d", text: "Cell membrane" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "Mitochondria carry out cellular respiration, converting glucose and oxygen into ATP (energy)."
         },
         {
           id: "biology-101-l03-q2",
-          text: "What is the best first step when analyzing organs?",
-          skillId: "biology-101-skill-process",
+          text: "Which structure is found in plant cells but NOT in animal cells?",
+          skillId: "biology-101-skill-cells",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for organs." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to organs." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Nucleus" },
+            { id: "b", text: "Cell membrane" },
+            { id: "c", text: "Chloroplast" },
+            { id: "d", text: "Ribosome" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "Chloroplasts contain chlorophyll and carry out photosynthesis. They are found only in plant cells (and some protists)."
         },
         {
           id: "biology-101-l03-q3",
-          text: "Which option shows strong reasoning about living systems?",
-          skillId: "biology-101-skill-reasoning",
+          text: "What is homeostasis?",
+          skillId: "biology-101-skill-systems",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to living systems." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "The process of cell division" },
+            { id: "b", text: "The ability to maintain a stable internal environment" },
+            { id: "c", text: "The movement of molecules across a membrane" },
+            { id: "d", text: "The conversion of light energy to chemical energy" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Homeostasis is the body's ability to maintain stable internal conditions (temperature, pH, blood sugar) despite external changes."
         },
         {
           id: "biology-101-l03-q4",
-          text: "Why is spaced review useful for Biology mastery?",
-          skillId: "biology-101-skill-review",
+          text: "Which body system is primarily responsible for breaking down food into nutrients?",
+          skillId: "biology-101-skill-systems",
           options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
+            { id: "a", text: "Circulatory system" },
+            { id: "b", text: "Respiratory system" },
+            { id: "c", text: "Nervous system" },
+            { id: "d", text: "Digestive system" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "d",
+          explanation: "The digestive system breaks food into small nutrient molecules that can be absorbed into the bloodstream."
         }
       ],
       interactiveActivities: [
         {
           id: "biology-101-l03-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Cell Biology",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
+          type: "sorting_buckets",
+          title: "Plant or Animal Cell?",
+          description: "Sort each organelle into the correct category.",
+          estimatedMinutes: 5,
+          difficultyLevel: "easy",
           data: {
-            left: [
-              { id: "l1", label: "Confusion about cells" },
-              { id: "l2", label: "Inconsistent approach to organs" },
-              { id: "l3", label: "Weak transfer of living systems under timing" }
+            buckets: [
+              { id: "both", label: "Both plant and animal cells" },
+              { id: "plant-only", label: "Plant cells only" }
             ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
+            items: [
+              { id: "i1", label: "Nucleus", correctBucketId: "both" },
+              { id: "i2", label: "Cell wall", correctBucketId: "plant-only" },
+              { id: "i3", label: "Mitochondria", correctBucketId: "both" },
+              { id: "i4", label: "Chloroplasts", correctBucketId: "plant-only" },
+              { id: "i5", label: "Cell membrane", correctBucketId: "both" },
+              { id: "i6", label: "Large central vacuole", correctBucketId: "plant-only" }
             ]
           }
         }
@@ -191,7 +210,7 @@ export const Biology101Module: LearningModule = {
         masteryThreshold: 0.75
       },
       learningAids: [
-        { id: "biology-101-l03-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
+        { id: "biology-101-l03-a1", type: "mnemonic", title: "Cell Memory Trick", content: "MR. NICE GUY: Membrane, Ribosomes, Nucleus, Includes all cells; Chloroplasts, Extra wall, Grandiose vacuole, Unique to plants, Yep!" }
       ]
     },
     {
@@ -199,36 +218,41 @@ export const Biology101Module: LearningModule = {
       title: "Ecosystems and Food Webs",
       type: "video",
       duration: 11,
+      objectives: ["Describe the levels of ecological organization", "Trace energy flow through a food chain and food web"],
       chunks: [
         {
           id: "biology-101-l04-c1",
-          title: "Ecosystems and Food Webs Focus",
-          content: "This lesson deepens ecosystems using structured reasoning. We move from concept understanding to applied decisions."
+          title: "What Is an Ecosystem?",
+          kind: "intro",
+          content: "An ecosystem includes all living organisms (biotic factors) and nonliving components (abiotic factors like water, sunlight, soil, temperature) in an area, and how they interact. A pond ecosystem includes fish, algae, insects, water, sunlight, and dissolved oxygen all connected."
         },
         {
           id: "biology-101-l04-c2",
-          title: "Method Steps",
-          content: "Step 1: identify what is being asked. Step 2: choose a strategy aligned to ecosystems. Step 3: justify with evidence."
+          title: "Energy Flow: Producers to Consumers",
+          kind: "concept",
+          content: "Energy enters ecosystems through producers (plants, algae) that capture sunlight via photosynthesis. Primary consumers (herbivores) eat producers. Secondary consumers (carnivores) eat herbivores. Tertiary consumers eat other carnivores. At each level, about 90% of energy is lost as heat, so there is less energy available at higher levels."
         },
         {
           id: "biology-101-l04-c3",
-          title: "Common Mistakes",
-          content: "Common errors include skipping setup, using unrelated assumptions, or failing to verify the final result."
+          title: "Food Chains vs Food Webs",
+          kind: "concept",
+          content: "A food chain is a single pathway: grass → rabbit → fox → eagle. A food web is a network of interconnected food chains showing that most organisms eat more than one thing. Food webs are more realistic because they show the complexity of real ecosystems."
         },
         {
           id: "biology-101-l04-c4",
-          title: "Independent Try",
-          content: "Solve one similar item and compare your process to the lesson sequence."
+          title: "Decomposers Complete the Cycle",
+          kind: "concept",
+          content: "Decomposers (bacteria, fungi) break down dead organisms and waste, returning nutrients to the soil. Without decomposers, nutrients would be locked in dead matter and producers could not grow. Decomposers connect the end of food chains back to the beginning."
         }
       ],
       flashcards: [
-        { id: "biology-101-l04-f1", front: "ecosystems", back: "State the target and pick a strategy before solving." },
-        { id: "biology-101-l04-f2", front: "Step Sequence", back: "Goal -> Strategy -> Evidence -> Check." },
-        { id: "biology-101-l04-f3", front: "Assumption Check", back: "Remove assumptions that are not supported by the prompt." },
-        { id: "biology-101-l04-f4", front: "Process Match", back: "Your explanation should match the steps you actually used." }
+        { id: "biology-101-l04-f1", front: "What is the difference between biotic and abiotic factors?", back: "Biotic = living (plants, animals, bacteria). Abiotic = nonliving (water, sunlight, temperature, soil, air)." },
+        { id: "biology-101-l04-f2", front: "Why is there less energy at higher trophic levels?", back: "About 90% of energy is lost as heat at each level. Only ~10% is passed on. This is the 10% rule." },
+        { id: "biology-101-l04-f3", front: "What role do decomposers play?", back: "They break down dead organisms and waste, recycling nutrients back into the soil for producers to use." },
+        { id: "biology-101-l04-f4", front: "What is a trophic level?", back: "A feeding level in a food chain. Level 1 = producers, Level 2 = primary consumers, Level 3 = secondary consumers, etc." }
       ],
       learningAids: [
-        { id: "biology-101-l04-a1", type: "image", title: "Worked Example Sheet", content: "Step-by-step visuals for ecosystems scenarios." }
+        { id: "biology-101-l04-a1", type: "image", title: "Food Web Diagram", content: "An illustrated food web of a forest ecosystem showing producers (oak, grass), herbivores (rabbit, deer, caterpillar), carnivores (fox, owl, snake), and decomposers (fungi, bacteria)." }
       ]
     },
     {
@@ -236,37 +260,48 @@ export const Biology101Module: LearningModule = {
       title: "Adaptation and Survival",
       type: "interactive",
       duration: 13,
-      metadata: {
-        prompts: [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
-        ]
-      },
+      objectives: ["Define adaptation and give examples", "Explain how adaptations help organisms survive in specific environments"],
       interactiveActivities: [
         {
           id: "biology-101-l05-ia1",
           type: "sorting_buckets",
-          title: "Strategy Sort",
-          description: "Sort study actions into Concept, Process, or Review lanes.",
+          title: "Type of Adaptation",
+          description: "Classify each example as a structural, behavioral, or physiological adaptation.",
           estimatedMinutes: 9,
           difficultyLevel: "medium",
           data: {
             buckets: [
-              { id: "concept", label: "ecosystems Concept" },
-              { id: "process", label: "adaptation Process" },
-              { id: "review", label: "Review Loop" }
+              { id: "structural", label: "Structural (physical body feature)" },
+              { id: "behavioral", label: "Behavioral (actions)" },
+              { id: "physiological", label: "Physiological (internal process)" }
             ],
             items: [
-              { id: "i1", label: "Write one definition in your own words", correctBucketId: "concept" },
-              { id: "i2", label: "Follow the step-by-step method on a new example", correctBucketId: "process" },
-              { id: "i3", label: "Retest the same skill tomorrow", correctBucketId: "review" }
+              { id: "i1", label: "A cactus has thick stems to store water", correctBucketId: "structural" },
+              { id: "i2", label: "Bears hibernate during winter to conserve energy", correctBucketId: "behavioral" },
+              { id: "i3", label: "A camel's kidneys concentrate urine to save water", correctBucketId: "physiological" },
+              { id: "i4", label: "A chameleon changes color to blend with its surroundings", correctBucketId: "physiological" },
+              { id: "i5", label: "Birds migrate south to find warmer climates and food", correctBucketId: "behavioral" },
+              { id: "i6", label: "A polar bear has thick fur and a layer of blubber for insulation", correctBucketId: "structural" }
             ]
           }
         }
       ],
+      chunks: [
+        {
+          id: "biology-101-l05-c1",
+          title: "What Is an Adaptation?",
+          kind: "concept",
+          content: "An adaptation is a trait that helps an organism survive and reproduce in its environment. Adaptations develop over many generations through natural selection. They can be structural (body parts), behavioral (actions), or physiological (internal body processes)."
+        },
+        {
+          id: "biology-101-l05-c2",
+          title: "Environment Shapes Adaptations",
+          kind: "example",
+          content: "Arctic fox: white fur in winter (camouflage), small ears (reduce heat loss), thick tail (warmth while sleeping). Desert fox (fennec): sandy fur (camouflage), huge ears (release excess heat), nocturnal behavior (avoids daytime heat). Same animal family, completely different adaptations driven by different environments."
+        }
+      ],
       learningAids: [
-        { id: "biology-101-l05-a1", type: "animation", title: "Challenge Walkthrough", content: "Animated sequence for solving a ecosystems challenge." }
+        { id: "biology-101-l05-a1", type: "animation", title: "Arctic vs Desert Adaptations", content: "Side-by-side animation comparing an arctic fox and a fennec fox, highlighting how each adaptation matches its environment." }
       ]
     },
     {
@@ -277,81 +312,77 @@ export const Biology101Module: LearningModule = {
       questions: [
         {
           id: "biology-101-l06-q1",
-          text: "Which statement best explains ecosystems in Biology?",
-          skillId: "biology-101-skill-core",
+          text: "In a food chain, what happens to energy as it moves from producers to top predators?",
+          skillId: "biology-101-skill-ecosystems",
           options: [
-            { id: "a", text: "It explains ecosystems using evidence from the lesson." },
-            { id: "b", text: "It ignores how ecosystems works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Biology." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Energy increases at each level" },
+            { id: "b", text: "Energy stays the same at each level" },
+            { id: "c", text: "About 90% of energy is lost as heat at each level" },
+            { id: "d", text: "Energy is created at each level" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "The 10% rule: only about 10% of energy passes from one trophic level to the next. The rest is lost as heat through metabolism."
         },
         {
           id: "biology-101-l06-q2",
-          text: "What is the best first step when analyzing adaptation?",
-          skillId: "biology-101-skill-process",
+          text: "A cactus stores water in its thick stem. What type of adaptation is this?",
+          skillId: "biology-101-skill-adaptation",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for adaptation." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to adaptation." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Behavioral" },
+            { id: "b", text: "Structural" },
+            { id: "c", text: "Physiological" },
+            { id: "d", text: "Ecological" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "A thick stem is a physical body feature — a structural adaptation — that helps the cactus survive in dry environments."
         },
         {
           id: "biology-101-l06-q3",
-          text: "Which option shows strong reasoning about living systems?",
-          skillId: "biology-101-skill-reasoning",
+          text: "Which organism is a decomposer?",
+          skillId: "biology-101-skill-ecosystems",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to living systems." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Eagle" },
+            { id: "b", text: "Grass" },
+            { id: "c", text: "Mushroom" },
+            { id: "d", text: "Rabbit" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "Mushrooms (fungi) are decomposers. They break down dead organic matter and return nutrients to the soil."
         },
         {
           id: "biology-101-l06-q4",
-          text: "Why is spaced review useful for Biology mastery?",
-          skillId: "biology-101-skill-review",
+          text: "Which is an abiotic factor in a forest ecosystem?",
+          skillId: "biology-101-skill-ecosystems",
           options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
+            { id: "a", text: "Oak tree" },
+            { id: "b", text: "Sunlight" },
+            { id: "c", text: "Earthworm" },
+            { id: "d", text: "Bacteria" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Sunlight is nonliving (abiotic). Trees, earthworms, and bacteria are all living (biotic) factors."
         }
       ],
       interactiveActivities: [
         {
           id: "biology-101-l06-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Ecosystem Thinking",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
+          type: "drag_and_drop",
+          title: "Build a Food Chain",
+          description: "Place each organism at the correct trophic level.",
+          estimatedMinutes: 5,
           difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
           data: {
-            left: [
-              { id: "l1", label: "Confusion about ecosystems" },
-              { id: "l2", label: "Inconsistent approach to adaptation" },
-              { id: "l3", label: "Weak transfer of living systems under timing" }
+            targets: [
+              { id: "producer", label: "Producer (Level 1)" },
+              { id: "primary", label: "Primary Consumer (Level 2)" },
+              { id: "secondary", label: "Secondary Consumer (Level 3)" },
+              { id: "tertiary", label: "Tertiary Consumer (Level 4)" }
             ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
+            draggables: [
+              { id: "d1", label: "Grass", correctTargetId: "producer" },
+              { id: "d2", label: "Grasshopper", correctTargetId: "primary" },
+              { id: "d3", label: "Frog", correctTargetId: "secondary" },
+              { id: "d4", label: "Hawk", correctTargetId: "tertiary" }
             ]
           }
         }
@@ -368,7 +399,7 @@ export const Biology101Module: LearningModule = {
         masteryThreshold: 0.75
       },
       learningAids: [
-        { id: "biology-101-l06-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
+        { id: "biology-101-l06-a1", type: "mnemonic", title: "Energy Pyramid", content: "Think of a pyramid: wide at the bottom (lots of producers), narrow at top (few top predators). Energy decreases going up." }
       ]
     },
     {
@@ -376,36 +407,41 @@ export const Biology101Module: LearningModule = {
       title: "Genetics Basics",
       type: "video",
       duration: 12,
+      objectives: ["Describe the structure of DNA", "Explain how traits are inherited from parents to offspring"],
       chunks: [
         {
           id: "biology-101-l07-c1",
-          title: "Genetics Basics Setup",
-          content: "Use adaptation to organize your approach before starting. Planning first improves quality and speed."
+          title: "DNA: The Blueprint of Life",
+          kind: "intro",
+          content: "DNA (deoxyribonucleic acid) is a molecule inside the nucleus that carries genetic instructions. It is shaped like a twisted ladder — the double helix. The 'rungs' are pairs of chemical bases: adenine (A) pairs with thymine (T), and cytosine (C) pairs with guanine (G). The sequence of these bases encodes all your traits."
         },
         {
           id: "biology-101-l07-c2",
-          title: "Decision Rules",
-          content: "When choices compete, use a simple rule: pick the option with strongest evidence and clearest link to the goal."
+          title: "Genes and Chromosomes",
+          kind: "concept",
+          content: "A gene is a segment of DNA that codes for a specific protein (which determines a trait). Genes are organized on chromosomes. Humans have 46 chromosomes (23 pairs). You inherit one set of 23 from each parent, which is why you share traits with both parents but are not identical to either."
         },
         {
           id: "biology-101-l07-c3",
-          title: "Quality Control",
-          content: "Check for three things: accuracy, completeness, and alignment with the original objective."
+          title: "Dominant and Recessive Alleles",
+          kind: "concept",
+          content: "Each gene can have different versions called alleles. If you inherit a dominant allele (B) and a recessive allele (b), the dominant trait shows. The recessive trait only shows if you have two recessive alleles (bb). Example: brown eyes (B) is dominant over blue eyes (b). A Bb person has brown eyes."
         },
         {
           id: "biology-101-l07-c4",
-          title: "Next-Step Plan",
-          content: "Write one action to repeat and one action to improve in your next practice round."
+          title: "Punnett Square Preview",
+          kind: "example",
+          content: "If both parents are Bb (brown eyes, carrying blue), their children could be: BB (brown), Bb (brown), Bb (brown), or bb (blue). That is a 3:1 ratio — 75% chance brown, 25% chance blue. A Punnett square is the grid tool that maps this out."
         }
       ],
       flashcards: [
-        { id: "biology-101-l07-f1", front: "adaptation", back: "Use this as your organizing framework before execution." },
-        { id: "biology-101-l07-f2", front: "Decision Rule", back: "Choose the option with strongest evidence-to-goal alignment." },
-        { id: "biology-101-l07-f3", front: "Quality Control", back: "Accuracy + completeness + objective match." },
-        { id: "biology-101-l07-f4", front: "Iteration", back: "Repeat what works; refine one weak step each cycle." }
+        { id: "biology-101-l07-f1", front: "What does DNA stand for?", back: "Deoxyribonucleic acid. It is the molecule that carries genetic instructions in all living organisms." },
+        { id: "biology-101-l07-f2", front: "What are the base pairing rules for DNA?", back: "Adenine (A) pairs with Thymine (T). Cytosine (C) pairs with Guanine (G). Remember: AT and CG." },
+        { id: "biology-101-l07-f3", front: "What is the difference between a gene and an allele?", back: "A gene is a section of DNA coding for a trait. An allele is a specific version of that gene (e.g., brown eye allele vs blue eye allele)." },
+        { id: "biology-101-l07-f4", front: "When does a recessive trait appear?", back: "Only when an organism has two copies of the recessive allele (homozygous recessive, e.g., bb)." }
       ],
       learningAids: [
-        { id: "biology-101-l07-a1", type: "practice", title: "Project Planner", content: "Template for planning a mini project focused on adaptation." }
+        { id: "biology-101-l07-a1", type: "practice", title: "Punnett Square Practice", content: "Cross Bb × Bb. Draw a 2×2 grid, fill in the alleles, and determine the probability of each genotype and phenotype." }
       ]
     },
     {
@@ -413,31 +449,25 @@ export const Biology101Module: LearningModule = {
       title: "Biology Lab Reflection",
       type: "interactive",
       duration: 10,
-      metadata: {
-        prompts: [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
-        ]
-      },
+      objectives: ["Connect cell biology, ecology, and genetics concepts", "Identify personal areas for deeper study"],
       interactiveActivities: [
         {
           id: "biology-101-l08-ia1",
           type: "matching_pairs",
-          title: "Reflection Match",
-          description: "Match each reflection prompt with the best follow-up action.",
+          title: "Concept Connection",
+          description: "Match each biology concept to the correct example.",
           estimatedMinutes: 7,
           difficultyLevel: "easy",
           data: {
             left: [
-              { id: "l1", label: "I keep missing one skill pattern" },
-              { id: "l2", label: "I rush and make avoidable mistakes" },
-              { id: "l3", label: "I understand in notes but miss in quizzes" }
+              { id: "l1", label: "Photosynthesis" },
+              { id: "l2", label: "Natural selection" },
+              { id: "l3", label: "Homeostasis" }
             ],
             right: [
-              { id: "r1", label: "Do a focused drill on that exact pattern" },
-              { id: "r2", label: "Use a short checklist before submitting answers" },
-              { id: "r3", label: "Repeat the skill in a timed re-check" }
+              { id: "r1", label: "Plants convert CO₂ and water into glucose using sunlight" },
+              { id: "r2", label: "Darker moths survive better on soot-covered trees" },
+              { id: "r3", label: "Shivering to raise body temperature when cold" }
             ],
             pairs: [
               { leftId: "l1", rightId: "r1" },
@@ -447,8 +477,16 @@ export const Biology101Module: LearningModule = {
           }
         }
       ],
+      chunks: [
+        {
+          id: "biology-101-l08-c1",
+          title: "Connecting the Big Ideas",
+          kind: "recap",
+          content: "Biology connects at every level: cells use energy from food (cellular respiration) or sunlight (photosynthesis). Organisms with beneficial adaptations survive better in ecosystems (natural selection). The instructions for those adaptations are encoded in DNA (genetics). Understanding these connections is what makes biology powerful."
+        }
+      ],
       learningAids: [
-        { id: "biology-101-l08-a1", type: "mnemonic", title: "Reflection Cycle", content: "Remember Observe, Adjust, Repeat while practicing." }
+        { id: "biology-101-l08-a1", type: "mnemonic", title: "Biology Big Three", content: "Cells make life possible. Ecosystems organize life. DNA programs life. Everything in biology connects through energy, information, and evolution." }
       ]
     },
     {
@@ -459,81 +497,77 @@ export const Biology101Module: LearningModule = {
       questions: [
         {
           id: "biology-101-l09-q1",
-          text: "Which statement best explains organs in Biology?",
-          skillId: "biology-101-skill-core",
+          text: "In DNA, adenine (A) always pairs with which base?",
+          skillId: "biology-101-skill-genetics",
           options: [
-            { id: "a", text: "It explains organs using evidence from the lesson." },
-            { id: "b", text: "It ignores how organs works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Biology." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Cytosine (C)" },
+            { id: "b", text: "Guanine (G)" },
+            { id: "c", text: "Thymine (T)" },
+            { id: "d", text: "Uracil (U)" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "In DNA, Adenine always pairs with Thymine (A-T), and Cytosine always pairs with Guanine (C-G)."
         },
         {
           id: "biology-101-l09-q2",
-          text: "What is the best first step when analyzing adaptation?",
-          skillId: "biology-101-skill-process",
+          text: "What is the role of chloroplasts?",
+          skillId: "biology-101-skill-cells",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for adaptation." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to adaptation." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Break down food for energy" },
+            { id: "b", text: "Store genetic information" },
+            { id: "c", text: "Capture sunlight to make glucose through photosynthesis" },
+            { id: "d", text: "Build proteins from amino acids" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "Chloroplasts contain chlorophyll, which captures light energy to convert CO₂ and water into glucose (photosynthesis)."
         },
         {
           id: "biology-101-l09-q3",
-          text: "Which option shows strong reasoning about living systems?",
-          skillId: "biology-101-skill-reasoning",
+          text: "If both parents have genotype Bb, what fraction of offspring are expected to show the recessive phenotype?",
+          skillId: "biology-101-skill-genetics",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to living systems." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "0 (none)" },
+            { id: "b", text: "1/4 (25%)" },
+            { id: "c", text: "1/2 (50%)" },
+            { id: "d", text: "3/4 (75%)" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Bb × Bb gives BB, Bb, Bb, bb. Only bb (1 out of 4) shows the recessive phenotype = 25%."
         },
         {
           id: "biology-101-l09-q4",
-          text: "Why is spaced review useful for Biology mastery?",
-          skillId: "biology-101-skill-review",
+          text: "Which best describes the relationship between a food chain and a food web?",
+          skillId: "biology-101-skill-ecosystems",
           options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
+            { id: "a", text: "A food web is a single feeding pathway" },
+            { id: "b", text: "A food chain includes all organisms in an ecosystem" },
+            { id: "c", text: "A food web is made of many interconnected food chains" },
+            { id: "d", text: "Food chains and food webs are the same thing" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "A food web is a network of interconnected food chains showing the complex feeding relationships in an ecosystem."
         }
       ],
       interactiveActivities: [
         {
           id: "biology-101-l09-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Review: Biology Concepts",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
+          type: "sorting_buckets",
+          title: "Levels of Organization",
+          description: "Sort each example into the correct level of biological organization.",
+          estimatedMinutes: 5,
           difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
           data: {
-            left: [
-              { id: "l1", label: "Confusion about organs" },
-              { id: "l2", label: "Inconsistent approach to adaptation" },
-              { id: "l3", label: "Weak transfer of living systems under timing" }
+            buckets: [
+              { id: "cell", label: "Cell level" },
+              { id: "organism", label: "Organism level" },
+              { id: "ecosystem", label: "Ecosystem level" }
             ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
+            items: [
+              { id: "i1", label: "A white blood cell attacking bacteria", correctBucketId: "cell" },
+              { id: "i2", label: "A fox hunting rabbits in a meadow", correctBucketId: "ecosystem" },
+              { id: "i3", label: "A person maintaining body temperature at 37°C", correctBucketId: "organism" },
+              { id: "i4", label: "Mitochondria producing ATP", correctBucketId: "cell" },
+              { id: "i5", label: "Nutrients cycling through soil, plants, and animals", correctBucketId: "ecosystem" }
             ]
           }
         }
@@ -550,7 +584,7 @@ export const Biology101Module: LearningModule = {
         masteryThreshold: 0.75
       },
       learningAids: [
-        { id: "biology-101-l09-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
+        { id: "biology-101-l09-a1", type: "mnemonic", title: "DNA Base Pairs", content: "AT the CG (At the City Gate): Adenine-Thymine, Cytosine-Guanine." }
       ]
     },
     {
@@ -561,81 +595,83 @@ export const Biology101Module: LearningModule = {
       questions: [
         {
           id: "biology-101-l10-q1",
-          text: "Which statement best explains cells in Biology?",
-          skillId: "biology-101-skill-core",
+          text: "A population of beetles includes green and brown individuals. Birds eat green beetles more easily against brown bark. Over generations, what happens?",
+          skillId: "biology-101-skill-adaptation",
           options: [
-            { id: "a", text: "It explains cells using evidence from the lesson." },
-            { id: "b", text: "It ignores how cells works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Biology." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Green beetles become more common" },
+            { id: "b", text: "Brown beetles become more common" },
+            { id: "c", text: "Both colors remain equally common" },
+            { id: "d", text: "All beetles turn brown" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Natural selection: brown beetles survive and reproduce more (camouflage), so the brown allele increases in frequency over generations."
         },
         {
           id: "biology-101-l10-q2",
-          text: "What is the best first step when analyzing ecosystems?",
-          skillId: "biology-101-skill-process",
+          text: "What would happen to an ecosystem if all decomposers were removed?",
+          skillId: "biology-101-skill-ecosystems",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for ecosystems." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to ecosystems." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Nothing would change" },
+            { id: "b", text: "Dead matter would accumulate and nutrients would not be recycled" },
+            { id: "c", text: "Producers would grow faster" },
+            { id: "d", text: "Consumers would become decomposers" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Without decomposers, dead organisms and waste would pile up. Essential nutrients would be locked away, and producers would eventually run out of soil nutrients."
         },
         {
           id: "biology-101-l10-q3",
-          text: "Which option shows strong reasoning about living systems?",
-          skillId: "biology-101-skill-reasoning",
+          text: "Which organelle would you find in BOTH a leaf cell and a muscle cell?",
+          skillId: "biology-101-skill-cells",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to living systems." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Chloroplast" },
+            { id: "b", text: "Cell wall" },
+            { id: "c", text: "Mitochondrion" },
+            { id: "d", text: "Central vacuole" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "Both plant and animal cells have mitochondria for cellular respiration. Chloroplasts, cell walls, and large central vacuoles are plant-only."
         },
         {
           id: "biology-101-l10-q4",
-          text: "Why is spaced review useful for Biology mastery?",
-          skillId: "biology-101-skill-review",
+          text: "How many chromosomes does a human body cell contain?",
+          skillId: "biology-101-skill-genetics",
           options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
+            { id: "a", text: "23" },
+            { id: "b", text: "46" },
+            { id: "c", text: "44" },
+            { id: "d", text: "92" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Human body cells have 46 chromosomes (23 pairs). Sex cells (sperm/egg) have 23 — half the full set."
         }
       ],
       interactiveActivities: [
         {
           id: "biology-101-l10-ia1",
           type: "matching_pairs",
-          title: "Reasoning Match: Mastery: Biology",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
+          title: "Organelle Function Match",
+          description: "Match each organelle to its function.",
+          estimatedMinutes: 5,
           difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
           data: {
             left: [
-              { id: "l1", label: "Confusion about cells" },
-              { id: "l2", label: "Inconsistent approach to ecosystems" },
-              { id: "l3", label: "Weak transfer of living systems under timing" }
+              { id: "l1", label: "Ribosome" },
+              { id: "l2", label: "Golgi apparatus" },
+              { id: "l3", label: "Endoplasmic reticulum" },
+              { id: "l4", label: "Cell membrane" }
             ],
             right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
+              { id: "r1", label: "Builds proteins from amino acids" },
+              { id: "r2", label: "Packages and ships proteins out of the cell" },
+              { id: "r3", label: "Network that transports materials within the cell" },
+              { id: "r4", label: "Controls what enters and exits the cell" }
             ],
             pairs: [
               { leftId: "l1", rightId: "r1" },
               { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
+              { leftId: "l3", rightId: "r3" },
+              { leftId: "l4", rightId: "r4" }
             ]
           }
         }
@@ -645,14 +681,14 @@ export const Biology101Module: LearningModule = {
         questionsPerCheck: 4,
         totalQuestions: 4,
         timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [2, 3, 4] }],
+        difficultyDistribution: { easy: 0, medium: 2, hard: 2 },
         feedbackMode: "after_submit",
         adaptive: false,
         masteryThreshold: 0.75
       },
       learningAids: [
-        { id: "biology-101-l10-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
+        { id: "biology-101-l10-a1", type: "mnemonic", title: "Natural Selection Steps", content: "VISA: Variation exists → Individuals compete → Selection by environment → Adaptation spreads." }
       ]
     },
     {
@@ -660,37 +696,42 @@ export const Biology101Module: LearningModule = {
       title: "Applied Biology Challenge Studio",
       type: "interactive",
       duration: 14,
-      metadata: {
-        prompts: [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using ecosystems.",
-          "Document your transfer plan for the next timed check."
-        ]
-      },
+      objectives: ["Apply knowledge of cells, ecosystems, and genetics to novel scenarios", "Analyze cause-and-effect relationships in biological systems"],
       interactiveActivities: [
         {
           id: "biology-101-l11-ia1",
           type: "sorting_buckets",
-          title: "Transfer Ladder",
-          description: "Sort actions into Diagnose, Fix, and Transfer phases.",
-          estimatedMinutes: 9,
+          title: "Photosynthesis vs Cellular Respiration",
+          description: "Sort each statement into the correct process.",
+          estimatedMinutes: 8,
           difficultyLevel: "medium",
           data: {
             buckets: [
-              { id: "diagnose", label: "Diagnose" },
-              { id: "fix", label: "Fix" },
-              { id: "transfer", label: "Transfer" }
+              { id: "photo", label: "Photosynthesis" },
+              { id: "respiration", label: "Cellular Respiration" },
+              { id: "both", label: "Both processes" }
             ],
             items: [
-              { id: "i1", label: "Tag repeated mistakes in organs", correctBucketId: "diagnose" },
-              { id: "i2", label: "Rework one missed item with full reasoning", correctBucketId: "fix" },
-              { id: "i3", label: "Retest with a timed mini-check on adaptation", correctBucketId: "transfer" }
+              { id: "i1", label: "Uses sunlight as energy source", correctBucketId: "photo" },
+              { id: "i2", label: "Produces ATP for the cell", correctBucketId: "respiration" },
+              { id: "i3", label: "Takes in CO₂ and releases O₂", correctBucketId: "photo" },
+              { id: "i4", label: "Takes in O₂ and releases CO₂", correctBucketId: "respiration" },
+              { id: "i5", label: "Occurs in living cells", correctBucketId: "both" },
+              { id: "i6", label: "Involves chemical energy transformations", correctBucketId: "both" }
             ]
           }
         }
       ],
+      chunks: [
+        {
+          id: "biology-101-l11-c1",
+          title: "Two Sides of the Energy Coin",
+          kind: "concept",
+          content: "Photosynthesis and cellular respiration are complementary. Photosynthesis uses CO₂ + H₂O + sunlight → glucose + O₂. Cellular respiration does the reverse: glucose + O₂ → CO₂ + H₂O + ATP. The oxygen plants release is what animals breathe; the CO₂ animals exhale is what plants absorb. This is a beautiful cycle."
+        }
+      ],
       learningAids: [
-        { id: "biology-101-l11-a1", type: "practice", title: "Correction Loop Card", content: "Use Diagnose, Fix, Transfer for each difficult problem." }
+        { id: "biology-101-l11-a1", type: "practice", title: "Cycle Diagram", content: "Draw a diagram showing the inputs and outputs of photosynthesis and cellular respiration, with arrows showing how the products of one process become the reactants of the other." }
       ]
     },
     {
@@ -701,76 +742,75 @@ export const Biology101Module: LearningModule = {
       questions: [
         {
           id: "biology-101-l12-q1",
-          text: "Which statement best explains cells in Biology?",
-          skillId: "biology-101-skill-core",
+          text: "Which is the correct word equation for photosynthesis?",
+          skillId: "biology-101-skill-cells",
           options: [
-            { id: "a", text: "It explains cells using evidence from the lesson." },
-            { id: "b", text: "It ignores how cells works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Biology." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Glucose + Oxygen → Carbon dioxide + Water + Energy" },
+            { id: "b", text: "Carbon dioxide + Water + Light → Glucose + Oxygen" },
+            { id: "c", text: "Glucose + Water → Carbon dioxide + Oxygen + Energy" },
+            { id: "d", text: "Oxygen + Glucose + Light → Carbon dioxide + Water" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Photosynthesis: CO₂ + H₂O + light energy → C₆H₁₂O₆ (glucose) + O₂."
         },
         {
           id: "biology-101-l12-q2",
-          text: "What is the best first step when analyzing adaptation?",
-          skillId: "biology-101-skill-process",
+          text: "A Punnett square for Bb × bb gives which offspring ratios?",
+          skillId: "biology-101-skill-genetics",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for adaptation." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to adaptation." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "All Bb" },
+            { id: "b", text: "50% Bb, 50% bb" },
+            { id: "c", text: "75% Bb, 25% bb" },
+            { id: "d", text: "25% Bb, 75% bb" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Bb × bb: Bb, Bb, bb, bb → 50% Bb (dominant phenotype), 50% bb (recessive phenotype)."
         },
         {
           id: "biology-101-l12-q3",
-          text: "Which option shows strong reasoning about living systems?",
-          skillId: "biology-101-skill-reasoning",
+          text: "An invasive plant species blocks sunlight from reaching native plants. What is the most likely first effect on the ecosystem?",
+          skillId: "biology-101-skill-ecosystems",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to living systems." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Top predators immediately decline" },
+            { id: "b", text: "Native plant populations decline, reducing food for herbivores" },
+            { id: "c", text: "Decomposers stop functioning" },
+            { id: "d", text: "Water temperature increases" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Blocking sunlight reduces photosynthesis in native plants. As producer populations decline, herbivores that depend on them are affected next (bottom-up cascade)."
         },
         {
           id: "biology-101-l12-q4",
-          text: "Why is spaced review useful for Biology mastery?",
-          skillId: "biology-101-skill-review",
+          text: "Which process converts glucose into usable energy (ATP) in both plant and animal cells?",
+          skillId: "biology-101-skill-cells",
           options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
+            { id: "a", text: "Photosynthesis" },
+            { id: "b", text: "Cellular respiration" },
+            { id: "c", text: "Fermentation only" },
+            { id: "d", text: "Protein synthesis" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Cellular respiration occurs in both plant and animal cells, converting glucose + oxygen into ATP, CO₂, and water."
         }
       ],
       interactiveActivities: [
         {
           id: "biology-101-l12-ia1",
           type: "matching_pairs",
-          title: "Reasoning Match: Biology Mastery Applied Retest",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
+          title: "Vocabulary Precision",
+          description: "Match each biology term to its precise definition.",
+          estimatedMinutes: 5,
           difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
           data: {
             left: [
-              { id: "l1", label: "Confusion about cells" },
-              { id: "l2", label: "Inconsistent approach to adaptation" },
-              { id: "l3", label: "Weak transfer of living systems under timing" }
+              { id: "l1", label: "Gene" },
+              { id: "l2", label: "Allele" },
+              { id: "l3", label: "Chromosome" }
             ],
             right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
+              { id: "r1", label: "A segment of DNA that codes for a specific trait" },
+              { id: "r2", label: "A specific version of a gene (e.g., blue vs brown eye)" },
+              { id: "r3", label: "A long strand of DNA coiled around proteins, carrying many genes" }
             ],
             pairs: [
               { leftId: "l1", rightId: "r1" },
@@ -785,14 +825,14 @@ export const Biology101Module: LearningModule = {
         questionsPerCheck: 4,
         totalQuestions: 4,
         timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [2, 3, 4] }],
+        difficultyDistribution: { easy: 0, medium: 2, hard: 2 },
         feedbackMode: "after_submit",
         adaptive: false,
         masteryThreshold: 0.75
       },
       learningAids: [
-        { id: "biology-101-l12-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
+        { id: "biology-101-l12-a1", type: "mnemonic", title: "Photo vs Respiration", content: "Photo = building (stores energy in glucose). Respiration = burning (releases energy from glucose as ATP)." }
       ]
     },
     {
@@ -800,37 +840,42 @@ export const Biology101Module: LearningModule = {
       title: "Biology Scenario Lab",
       type: "video",
       duration: 12,
+      objectives: ["Apply biology concepts to a real-world conservation scenario", "Evaluate evidence and propose solutions"],
       chunks: [
         {
           id: "biology-101-l13-c1",
-          title: "Scenario Brief",
-          content: "This scenario combines cells, ecosystems, and adaptation in one applied challenge."
+          title: "The Coral Reef Crisis",
+          kind: "intro",
+          content: "Coral reefs support 25% of marine species but are declining worldwide. Rising ocean temperatures cause coral bleaching — corals expel the algae (zooxanthellae) living inside them that provide food and color. Without these algae, corals starve and turn white."
         },
         {
           id: "biology-101-l13-c2",
-          title: "Plan the Approach",
-          content: "Break the scenario into smaller decisions, then assign one strategy to each decision point."
+          title: "Ecosystem Connections",
+          kind: "concept",
+          content: "Coral reefs are like underwater rainforests. Corals are the producers' partners (they host photosynthetic algae). Small fish eat algae, larger fish eat smaller fish, sharks and rays are top predators. If corals die, the entire food web collapses — affecting fisheries, coastal protection, and tourism for millions of people."
         },
         {
           id: "biology-101-l13-c3",
-          title: "Execute and Justify",
-          content: "Apply the plan and explain each move with evidence, not guesses."
+          title: "Adaptation Under Pressure",
+          kind: "example",
+          content: "Some corals in warmer regions already tolerate higher temperatures — a form of adaptation. Scientists are studying whether heat-tolerant coral genes can be introduced to vulnerable populations. This is genetics meeting conservation."
         },
         {
           id: "biology-101-l13-c4",
-          title: "Evaluate Outcome",
-          content: "Compare your result to the target and identify what to keep versus what to adjust."
+          title: "What Can Be Done?",
+          kind: "practice",
+          content: "Consider: reducing CO₂ emissions slows ocean warming. Marine protected areas reduce other stressors. Coral gardening programs regrow damaged reefs. Which approach addresses the root cause? Which treats symptoms? How might they work together?"
         }
       ],
       flashcards: [
-        { id: "biology-101-l13-f1", front: "Scenario Planning", back: "Split a complex task into clear decision points." },
-        { id: "biology-101-l13-f2", front: "Evidence Link", back: "Each step should connect to evidence in the scenario." },
-        { id: "biology-101-l13-f3", front: "Adjustment Loop", back: "Use outcome checks to refine your next attempt." },
-        { id: "biology-101-l13-f4", front: "Applied Mastery", back: "Mastery means transferring the process to a new context." }
+        { id: "biology-101-l13-f1", front: "What is coral bleaching?", back: "When stressed by warm water, corals expel symbiotic algae, losing their color and food source. Prolonged bleaching kills the coral." },
+        { id: "biology-101-l13-f2", front: "Why are coral reefs called 'rainforests of the sea'?", back: "They support enormous biodiversity — about 25% of all marine species — despite covering less than 1% of the ocean floor." },
+        { id: "biology-101-l13-f3", front: "How does genetics help coral conservation?", back: "Scientists study heat-tolerant coral varieties and explore assisted gene flow to help vulnerable reefs survive warming waters." },
+        { id: "biology-101-l13-f4", front: "What is a keystone species?", back: "A species whose removal causes major changes to the ecosystem. Corals are keystone species in reef ecosystems." }
       ],
       learningAids: [
-        { id: "biology-101-l13-a1", type: "image", title: "Scenario Map", content: "A real-world scenario map connecting cells, ecosystems, and adaptation." },
-        { id: "biology-101-l13-a2", type: "practice", title: "Mini Case Prompt", content: "Apply one strategy to a new case and explain your reasoning." }
+        { id: "biology-101-l13-a1", type: "image", title: "Healthy vs Bleached Reef", content: "Comparison photo showing a vibrant, colorful coral reef alongside a bleached, white reef of the same species." },
+        { id: "biology-101-l13-a2", type: "practice", title: "Conservation Proposal", content: "Choose one reef conservation strategy. Explain how it connects to at least two biology concepts (ecosystems, cells, genetics, or adaptation)." }
       ]
     },
     {
@@ -838,127 +883,128 @@ export const Biology101Module: LearningModule = {
       title: "Biology Coaching Clinic",
       type: "interactive",
       duration: 13,
-      metadata: {
-        prompts: [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
-        ]
-      },
+      objectives: ["Identify personal gaps in biology understanding", "Apply targeted review strategies"],
       interactiveActivities: [
         {
           id: "biology-101-l14-ia1",
           type: "matching_pairs",
-          title: "Error to Fix Match",
-          description: "Match each error signal to the highest-impact correction action.",
+          title: "Misconception Buster",
+          description: "Match each common biology misconception to the correct scientific understanding.",
           estimatedMinutes: 8,
           difficultyLevel: "medium",
           data: {
             left: [
-              { id: "l1", label: "Repeated miss on cells setup" },
-              { id: "l2", label: "Losses due to rushed adaptation decisions" },
-              { id: "l3", label: "Correct in notes but weak transfer in new tasks" }
+              { id: "l1", label: "Misconception: Plants get their food from the soil" },
+              { id: "l2", label: "Misconception: Evolution means an individual organism changes" },
+              { id: "l3", label: "Misconception: Dominant alleles are always more common" },
+              { id: "l4", label: "Misconception: Humans are at the 'top' of evolution" }
             ],
             right: [
-              { id: "r1", label: "Rebuild setup steps and retest one parallel item" },
-              { id: "r2", label: "Use checkpoint pacing + verify before submit" },
-              { id: "r3", label: "Pair correction with one timed transfer item" }
+              { id: "r1", label: "Plants make glucose from CO₂ and water using sunlight (photosynthesis)" },
+              { id: "r2", label: "Populations evolve over generations, not individual organisms" },
+              { id: "r3", label: "Dominant/recessive describes expression, not frequency in a population" },
+              { id: "r4", label: "Evolution has no goal or direction; all living species are equally evolved" }
             ],
             pairs: [
               { leftId: "l1", rightId: "r1" },
               { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
+              { leftId: "l3", rightId: "r3" },
+              { leftId: "l4", rightId: "r4" }
             ]
           }
         }
       ],
+      chunks: [
+        {
+          id: "biology-101-l14-c1",
+          title: "Common Biology Mistakes",
+          kind: "recap",
+          content: "The most common misunderstandings: 1) Confusing photosynthesis with respiration. 2) Thinking individual organisms evolve. 3) Mixing up genes, alleles, and chromosomes. 4) Forgetting that plants do cellular respiration too (not just photosynthesis). Identifying which misconception you hold is the fastest path to fixing it."
+        }
+      ],
       learningAids: [
-        { id: "biology-101-l14-a1", type: "mnemonic", title: "Clinic Loop", content: "Diagnose, Correct, Transfer." }
+        { id: "biology-101-l14-a1", type: "mnemonic", title: "Fix Your Gap", content: "Draw two columns: 'What I thought' and 'What is actually true.' Fill in one row for each unit (cells, ecosystems, genetics). This simple exercise clears up the most persistent errors." }
       ]
     },
     {
       id: "biology-101-l15",
-      title: "Biology Mastery Mastery Sprint",
+      title: "Biology Mastery Sprint",
       type: "quiz",
       duration: 10,
       questions: [
         {
           id: "biology-101-l15-q1",
-          text: "Which statement best explains organs in Biology?",
-          skillId: "biology-101-skill-core",
+          text: "Which statement about photosynthesis and cellular respiration is correct?",
+          skillId: "biology-101-skill-cells",
           options: [
-            { id: "a", text: "It explains organs using evidence from the lesson." },
-            { id: "b", text: "It ignores how organs works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Biology." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Only animals perform cellular respiration" },
+            { id: "b", text: "Photosynthesis and respiration are opposite processes that cycle energy and matter" },
+            { id: "c", text: "Photosynthesis releases ATP directly to the cell" },
+            { id: "d", text: "Cellular respiration requires sunlight" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Photosynthesis stores energy in glucose; respiration releases it. Their inputs/outputs are complementary, cycling CO₂, O₂, and glucose."
         },
         {
           id: "biology-101-l15-q2",
-          text: "What is the best first step when analyzing ecosystems?",
-          skillId: "biology-101-skill-process",
+          text: "Peppered moths in England became darker during the Industrial Revolution because soot darkened tree bark. This is an example of:",
+          skillId: "biology-101-skill-adaptation",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for ecosystems." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to ecosystems." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Genetic engineering" },
+            { id: "b", text: "Natural selection" },
+            { id: "c", text: "Artificial selection" },
+            { id: "d", text: "Mutation only" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "b",
+          explanation: "Dark moths were better camouflaged on sooty trees, so predators ate more light-colored moths. The dark allele increased in frequency — natural selection."
         },
         {
           id: "biology-101-l15-q3",
-          text: "Which option shows strong reasoning about living systems?",
-          skillId: "biology-101-skill-reasoning",
+          text: "If removing one species causes the collapse of an entire community, that species is called a:",
+          skillId: "biology-101-skill-ecosystems",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to living systems." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Pioneer species" },
+            { id: "b", text: "Invasive species" },
+            { id: "c", text: "Keystone species" },
+            { id: "d", text: "Indicator species" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "A keystone species has a disproportionately large effect on its ecosystem relative to its abundance. Removing it causes major changes."
         },
         {
           id: "biology-101-l15-q4",
-          text: "Why is spaced review useful for Biology mastery?",
-          skillId: "biology-101-skill-review",
+          text: "A cell needs to produce a specific protein. The correct sequence of information flow is:",
+          skillId: "biology-101-skill-genetics",
           options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
+            { id: "a", text: "Protein → RNA → DNA" },
+            { id: "b", text: "DNA → Protein → RNA" },
+            { id: "c", text: "DNA → RNA → Protein" },
+            { id: "d", text: "RNA → DNA → Protein" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "c",
+          explanation: "The central dogma of biology: DNA is transcribed into RNA, which is translated into protein. DNA → RNA → Protein."
         }
       ],
       interactiveActivities: [
         {
           id: "biology-101-l15-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Biology Mastery Mastery Sprint",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
+          type: "drag_and_drop",
+          title: "Energy Flow Order",
+          description: "Arrange the trophic levels in order of decreasing energy.",
+          estimatedMinutes: 4,
+          difficultyLevel: "easy",
           data: {
-            left: [
-              { id: "l1", label: "Confusion about organs" },
-              { id: "l2", label: "Inconsistent approach to ecosystems" },
-              { id: "l3", label: "Weak transfer of living systems under timing" }
+            targets: [
+              { id: "most", label: "Most Energy" },
+              { id: "second", label: "Second Most" },
+              { id: "third", label: "Third Most" },
+              { id: "least", label: "Least Energy" }
             ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
+            draggables: [
+              { id: "d1", label: "Producers (plants)", correctTargetId: "most" },
+              { id: "d2", label: "Primary consumers (herbivores)", correctTargetId: "second" },
+              { id: "d3", label: "Secondary consumers (small carnivores)", correctTargetId: "third" },
+              { id: "d4", label: "Tertiary consumers (top predators)", correctTargetId: "least" }
             ]
           }
         }
@@ -968,14 +1014,14 @@ export const Biology101Module: LearningModule = {
         questionsPerCheck: 4,
         totalQuestions: 4,
         timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
+        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [2, 3, 4] }],
+        difficultyDistribution: { easy: 0, medium: 2, hard: 2 },
         feedbackMode: "after_submit",
         adaptive: false,
         masteryThreshold: 0.75
       },
       learningAids: [
-        { id: "biology-101-l15-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
+        { id: "biology-101-l15-a1", type: "mnemonic", title: "Central Dogma", content: "DNA makes RNA makes Protein. Think: D → R → P (Don't Ruin Proteins)." }
       ]
     }
   ],

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const metadataValueSchema = z.union([
   z.string(),
@@ -95,7 +96,7 @@ export async function GET(request: Request) {
       rows: rows ?? [],
     });
   } catch (error) {
-    console.error("Unexpected exam error log GET error:", error);
+    console.error("Unexpected exam error log GET error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
@@ -148,7 +149,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, row: data });
   } catch (error) {
-    console.error("Unexpected exam error log POST error:", error);
+    console.error("Unexpected exam error log POST error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

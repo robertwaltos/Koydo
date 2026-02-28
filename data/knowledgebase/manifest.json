@@ -1,0 +1,1522 @@
+{
+  "generatedAt": "2026-02-26T06:15:43.637Z",
+  "options": {
+    "chunkChars": 1400,
+    "overlapChars": 200,
+    "minChunkChars": 220,
+    "maxDocs": 0,
+    "maxDocsPerSource": 0,
+    "maxChunksPerSource": 0
+  },
+  "totals": {
+    "docsIncluded": 122,
+    "chunksCreated": 1911
+  },
+  "docs": [
+    {
+      "doc_id": "acara-australian-curriculum-077ff8f8",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/senior-secondary-curriculum",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-077ff8f8.md",
+      "chars": 3876,
+      "chunk_count": 4,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-0e40a1ba",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/#main-navigation",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-0e40a1ba.md",
+      "chars": 5575,
+      "chunk_count": 5,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-15034bf4",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/etc.clientlibs/acara-common/clientlibs/wcm.core.components.lc-bfb41bf492dfe02dfcf9400dfb8fdad7-lc.min.css",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-15034bf4.md",
+      "chars": 1087,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-162d3d5c",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/resources/stories/curriculum-changes",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-162d3d5c.md",
+      "chars": 39950,
+      "chunk_count": 34,
+      "domain_tags": [
+        "cybersecurity",
+        "data-science",
+        "finance"
+      ]
+    },
+    {
+      "doc_id": "acara-australian-curriculum-1a3c642c",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/content/dam/en/all-websites/logos/ac-favicon.ico",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-1a3c642c.md",
+      "chars": 83460,
+      "chunk_count": 70,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-1eb8e54c",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/resources/stories/changes-to-the-australian-curriculum-review-process",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-1eb8e54c.md",
+      "chars": 9738,
+      "chunk_count": 8,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-2714ff40",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/search",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-2714ff40.md",
+      "chars": 2618,
+      "chunk_count": 2,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-491fed00",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/etc.clientlibs/acara-curriculum/clientlibs/curriculum.header.lc-68c4f11c5679ca81450307cc917f200f-lc.min.css",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-491fed00.md",
+      "chars": 567172,
+      "chunk_count": 473,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-85398513",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/etc.clientlibs/core/wcm/components/commons/site/clientlibs/container.lc-0a6aff292f5cc42142779cde92054524-lc.min.js",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-85398513.md",
+      "chars": 1271,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-9eb48b8c",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://v9.australiancurriculum.edu.au/f-10-curriculum/f-10-curriculum-overview",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-9eb48b8c.md",
+      "chars": 14257,
+      "chunk_count": 12,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-c878aaa8",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/downloads",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-c878aaa8.md",
+      "chars": 4136,
+      "chunk_count": 4,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-cabc4978",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/student-diversity",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-cabc4978.md",
+      "chars": 5584,
+      "chunk_count": 5,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-cadebd74",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/resources",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-cadebd74.md",
+      "chars": 5681,
+      "chunk_count": 5,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-d8b43968",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-d8b43968.md",
+      "chars": 5575,
+      "chunk_count": 5,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-ef5f9b88",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/help/website-support",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-ef5f9b88.md",
+      "chars": 24924,
+      "chunk_count": 21,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-f0ba5df4",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/#main-content",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-f0ba5df4.md",
+      "chars": 5575,
+      "chunk_count": 5,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-f9525acf",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/f-10-curriculum",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-f9525acf.md",
+      "chars": 2627,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-fa12549c",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/help",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-fa12549c.md",
+      "chars": 15196,
+      "chunk_count": 13,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "acara-australian-curriculum-fb29a030",
+      "source_id": "acara-australian-curriculum",
+      "source_name": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.australiancurriculum.edu.au/etc.clientlibs/acara-curriculum/clientlibs/curriculum.footer.lc-a2bb16ef755e9905b592e1a4bd43850a-lc.min.js",
+      "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-fb29a030.md",
+      "chars": 668312,
+      "chunk_count": 557,
+      "domain_tags": [
+        "ai-ml",
+        "project-management",
+        "cpu-gpu-memory-design",
+        "finance",
+        "data-science"
+      ]
+    },
+    {
+      "doc_id": "india-cbse-curriculum-496dbb96",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Curriculum_Sec_2024-25.pdf",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+      "chars": 79429,
+      "chunk_count": 67,
+      "domain_tags": [
+        "ai-ml",
+        "medicine",
+        "data-science",
+        "plumbing",
+        "cybersecurity",
+        "project-management",
+        "finance",
+        "civil-engineering"
+      ]
+    },
+    {
+      "doc_id": "india-cbse-curriculum-782ca4b4",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/curriculum_archive.html",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-782ca4b4.md",
+      "chars": 318,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "india-cbse-curriculum-969ed67e",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bhoti_Sec_2024-25.pdf",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-969ed67e.md",
+      "chars": 6013,
+      "chunk_count": 5,
+      "domain_tags": [
+        "medicine"
+      ]
+    },
+    {
+      "doc_id": "india-cbse-curriculum-9ce64bc8",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Arabic_Sec_2024-25.pdf",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-9ce64bc8.md",
+      "chars": 3927,
+      "chunk_count": 4,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "india-cbse-curriculum-b4e710d0",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/curriculum_2025.html",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-b4e710d0.md",
+      "chars": 2542,
+      "chunk_count": 2,
+      "domain_tags": [
+        "law",
+        "finance"
+      ]
+    },
+    {
+      "doc_id": "india-cbse-curriculum-ba1ca818",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bengali_Sec_2024-25.pdf",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-ba1ca818.md",
+      "chars": 15426,
+      "chunk_count": 13,
+      "domain_tags": [
+        "meteorology"
+      ]
+    },
+    {
+      "doc_id": "india-cbse-curriculum-d23d9956",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bahasa_Melayu_Sec_2024-25.pdf",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-d23d9956.md",
+      "chars": 3083,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "india-cbse-curriculum-f73f5af2",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Assamese_Sec_2024-25.pdf",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-f73f5af2.md",
+      "chars": 8742,
+      "chunk_count": 8,
+      "domain_tags": [
+        "meteorology"
+      ]
+    },
+    {
+      "doc_id": "india-cbse-curriculum-f8a8ac80",
+      "source_id": "india-cbse-curriculum",
+      "source_name": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bhutia_Sec_2024-25.pdf",
+      "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-f8a8ac80.md",
+      "chars": 2386,
+      "chunk_count": 2,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "india-ncert-textbooks-27de02bc",
+      "source_id": "india-ncert-textbooks",
+      "source_name": "NCERT Textbooks",
+      "category": "official_curriculum",
+      "url": "https://ncert.nic.in/dee/bridge-course-package.php?ln=hi",
+      "path": "data\\knowledgebase\\raw\\india-ncert-textbooks-27de02bc.md",
+      "chars": 1102,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "kenya-kicd-4de5bf18",
+      "source_id": "kenya-kicd",
+      "source_name": "Kenya Institute of Curriculum Development",
+      "category": "official_curriculum",
+      "url": "https://kicd.ac.ke/curriculum-reform/curriculum-development-policy/",
+      "path": "data\\knowledgebase\\raw\\kenya-kicd-4de5bf18.md",
+      "chars": 2281,
+      "chunk_count": 2,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "kenya-kicd-55918634",
+      "source_id": "kenya-kicd",
+      "source_name": "Kenya Institute of Curriculum Development",
+      "category": "official_curriculum",
+      "url": "https://kicd.ac.ke/our-services/curriculum-research/",
+      "path": "data\\knowledgebase\\raw\\kenya-kicd-55918634.md",
+      "chars": 2880,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "kenya-kicd-8b9e2af8",
+      "source_id": "kenya-kicd",
+      "source_name": "Kenya Institute of Curriculum Development",
+      "category": "official_curriculum",
+      "url": "https://kicd.ac.ke/cbc-materials/approved-grade-4-cbc-course-materials/",
+      "path": "data\\knowledgebase\\raw\\kenya-kicd-8b9e2af8.md",
+      "chars": 2762,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "kenya-kicd-c63e774c",
+      "source_id": "kenya-kicd",
+      "source_name": "Kenya Institute of Curriculum Development",
+      "category": "official_curriculum",
+      "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/",
+      "path": "data\\knowledgebase\\raw\\kenya-kicd-c63e774c.md",
+      "chars": 2864,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "kenya-kicd-d663ccc0",
+      "source_id": "kenya-kicd",
+      "source_name": "Kenya Institute of Curriculum Development",
+      "category": "official_curriculum",
+      "url": "https://twitter.com/KICDKenya",
+      "path": "data\\knowledgebase\\raw\\kenya-kicd-d663ccc0.md",
+      "chars": 493,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "kenya-kicd-dff3e4fc",
+      "source_id": "kenya-kicd",
+      "source_name": "Kenya Institute of Curriculum Development",
+      "category": "official_curriculum",
+      "url": "https://kicd.ac.ke/curriculum-reform/",
+      "path": "data\\knowledgebase\\raw\\kenya-kicd-dff3e4fc.md",
+      "chars": 3147,
+      "chunk_count": 3,
+      "domain_tags": [
+        "civil-engineering"
+      ]
+    },
+    {
+      "doc_id": "kenya-kicd-fa514b0c",
+      "source_id": "kenya-kicd",
+      "source_name": "Kenya Institute of Curriculum Development",
+      "category": "official_curriculum",
+      "url": "https://kicd.ac.ke/curriculum-reform/basic-education-curriculum-framework/",
+      "path": "data\\knowledgebase\\raw\\kenya-kicd-fa514b0c.md",
+      "chars": 2326,
+      "chunk_count": 2,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-04242a06",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=cpu%20gpu%20memory%20design",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-04242a06.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-061d5e04",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=patient%20care",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-061d5e04.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-07cff25c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=meteorology",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-07cff25c.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-1047b774",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=threat",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-1047b774.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-175714c4",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=plumbing",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-175714c4.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-1abc9f38",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=heating",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-1abc9f38.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-1b87a674",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/assignments/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-1b87a674.md",
+      "chars": 2216,
+      "chunk_count": 2,
+      "domain_tags": [
+        "electricians",
+        "electrical-engineering",
+        "microelectronics",
+        "micro-circuits"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-1e946364",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://mitocw.zendesk.com/hc/en-us",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-1e946364.md",
+      "chars": 598,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-2251419c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/contact",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-2251419c.md",
+      "chars": 1947,
+      "chunk_count": 2,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-27791380",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=ventilation",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-27791380.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-29f276cc",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/4-s67-landscape-experience-seminar-in-land-art-fall-2016/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-29f276cc.md",
+      "chars": 3005,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-2cdf5706",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=weather",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-2cdf5706.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-2d45d4fc",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/res-10-001-making-science-and-engineering-pictures-a-practical-guide-to-presenting-your-work-spring-2016/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-2d45d4fc.md",
+      "chars": 5034,
+      "chunk_count": 5,
+      "domain_tags": [
+        "ai-ml",
+        "medicine"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-2ee5c97c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/download",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-2ee5c97c.md",
+      "chars": 2787,
+      "chunk_count": 3,
+      "domain_tags": [
+        "electricians",
+        "electrical-engineering",
+        "microelectronics",
+        "micro-circuits"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-31e517cc",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=cpu",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-31e517cc.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-3d3e67cc",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/tools/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-3d3e67cc.md",
+      "chars": 2156,
+      "chunk_count": 2,
+      "domain_tags": [
+        "electricians",
+        "electrical-engineering",
+        "microelectronics",
+        "micro-circuits"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-42b5ebd8",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/readings/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
+      "chars": 4879,
+      "chunk_count": 4,
+      "domain_tags": [
+        "electricians",
+        "microelectronics",
+        "electrical-engineering",
+        "micro-circuits",
+        "civil-engineering"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-480b3448",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=climate",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-480b3448.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-4aaddb14",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=nursing",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-4aaddb14.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-61cd4954",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=security",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-61cd4954.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-61ff86ec",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=program%20management",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-61ff86ec.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-652ceef7",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/22-51-quantum-theory-of-radiation-interactions-fall-2012/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-652ceef7.md",
+      "chars": 2795,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-6b79c7f5",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/projects/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-6b79c7f5.md",
+      "chars": 2094,
+      "chunk_count": 2,
+      "domain_tags": [
+        "electricians",
+        "electrical-engineering",
+        "microelectronics",
+        "micro-circuits"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-7471dc18",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/about",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-7471dc18.md",
+      "chars": 11871,
+      "chunk_count": 10,
+      "domain_tags": [
+        "electricians",
+        "electrical-engineering",
+        "meteorology",
+        "cybersecurity",
+        "ai-ml",
+        "finance"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-79b04c31",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
+      "chars": 360729,
+      "chunk_count": 301,
+      "domain_tags": [
+        "ai-ml",
+        "data-science",
+        "medicine",
+        "finance",
+        "project-management",
+        "electricians",
+        "electrical-engineering",
+        "micro-circuits"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-7d5ba658",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=gpu",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-7d5ba658.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-7d895da1",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/exams/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-7d895da1.md",
+      "chars": 1855,
+      "chunk_count": 2,
+      "domain_tags": [
+        "electricians",
+        "electrical-engineering",
+        "microelectronics",
+        "micro-circuits"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-80dd13dc",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=infosec",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-80dd13dc.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-8bd5b9d1",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/lecture-notes/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-8bd5b9d1.md",
+      "chars": 4843,
+      "chunk_count": 4,
+      "domain_tags": [
+        "electricians",
+        "microelectronics",
+        "electrical-engineering",
+        "micro-circuits",
+        "civil-engineering"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-8fc20048",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=drainage",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-8fc20048.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-90bed741",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/21m-s53-chinese-popular-musics-in-dialogue-spring-2014/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-90bed741.md",
+      "chars": 4094,
+      "chunk_count": 4,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-9113eba0",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=pipe",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-9113eba0.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-9c32684c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/1-018j-ecology-i-the-earth-system-fall-2009/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-9c32684c.md",
+      "chars": 2985,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-a013a290",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/7-05-general-biochemistry-spring-2020/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-a013a290.md",
+      "chars": 3273,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-a1b6e5c8",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://giving.mit.edu/give/to/ocw/?utm_source=ocw&amp;utm_medium=homepage_banner&amp;utm_campaign=nextgen_home",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-a1b6e5c8.md",
+      "chars": 1773,
+      "chunk_count": 2,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-a97f645c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=pmp",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-a97f645c.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-b2cf45b8",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=sanitation",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-b2cf45b8.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-b58ef3b6",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=scrum",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-b58ef3b6.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-c4467078",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=memory%20design",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-c4467078.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-cb3359b1",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=semiconductor",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-cb3359b1.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-cca8405c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=cybersecurity",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-cca8405c.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-d0173f18",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=computer%20architecture",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-d0173f18.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-d0727764",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=clinical%20skills",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-d0727764.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-d3c4cf78",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/es-010-chemistry-of-sports-spring-2013/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-d3c4cf78.md",
+      "chars": 2710,
+      "chunk_count": 3,
+      "domain_tags": [
+        "medicine"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-d4a9435c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/calendar/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-d4a9435c.md",
+      "chars": 4645,
+      "chunk_count": 4,
+      "domain_tags": [
+        "electricians",
+        "electrical-engineering",
+        "microelectronics",
+        "micro-circuits",
+        "civil-engineering"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-db21c170",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=project%20management",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-db21c170.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-dbb9b694",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/syllabus/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-dbb9b694.md",
+      "chars": 2837,
+      "chunk_count": 3,
+      "domain_tags": [
+        "electricians",
+        "electrical-engineering",
+        "microelectronics",
+        "micro-circuits"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-e1d35248",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=health%20assessment",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-e1d35248.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-e28e0d8c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=hvac",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-e28e0d8c.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-e46bddfc",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=agile",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-e46bddfc.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-e48f6468",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-e48f6468.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-efda8314",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-efda8314.md",
+      "chars": 2845,
+      "chunk_count": 3,
+      "domain_tags": [
+        "electricians",
+        "micro-circuits",
+        "electrical-engineering",
+        "microelectronics"
+      ]
+    },
+    {
+      "doc_id": "mit-ocw-f2bec33c",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?t=Anatomy&",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-f2bec33c.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-f92652dc",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=microelectronics",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-f92652dc.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "mit-ocw-fc206118",
+      "source_id": "mit-ocw",
+      "source_name": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "url": "https://ocw.mit.edu/search/?q=refrigeration",
+      "path": "data\\knowledgebase\\raw\\mit-ocw-fc206118.md",
+      "chars": 439,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "ontario-curriculum-0deebb65",
+      "source_id": "ontario-curriculum",
+      "source_name": "Ontario Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.dcp.edu.gov.on.ca/en/",
+      "path": "data\\knowledgebase\\raw\\ontario-curriculum-0deebb65.md",
+      "chars": 289,
+      "chunk_count": 1,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "open-yale-courses-116ad81c",
+      "source_id": "open-yale-courses",
+      "source_name": "Open Yale Courses",
+      "category": "free_course_transcripts",
+      "url": "https://oyc.yale.edu/",
+      "path": "data\\knowledgebase\\raw\\open-yale-courses-116ad81c.md",
+      "chars": 3683,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "open-yale-courses-20b2b2a4",
+      "source_id": "open-yale-courses",
+      "source_name": "Open Yale Courses",
+      "category": "free_course_transcripts",
+      "url": "https://oyc.yale.edu/courses",
+      "path": "data\\knowledgebase\\raw\\open-yale-courses-20b2b2a4.md",
+      "chars": 4858,
+      "chunk_count": 4,
+      "domain_tags": [
+        "finance",
+        "law"
+      ]
+    },
+    {
+      "doc_id": "open-yale-courses-216822ec",
+      "source_id": "open-yale-courses",
+      "source_name": "Open Yale Courses",
+      "category": "free_course_transcripts",
+      "url": "http://www.yale.edu/",
+      "path": "data\\knowledgebase\\raw\\open-yale-courses-216822ec.md",
+      "chars": 6171,
+      "chunk_count": 5,
+      "domain_tags": [
+        "medicine",
+        "nursing",
+        "law",
+        "ai-ml",
+        "project-management"
+      ]
+    },
+    {
+      "doc_id": "open-yale-courses-5a7875c0",
+      "source_id": "open-yale-courses",
+      "source_name": "Open Yale Courses",
+      "category": "free_course_transcripts",
+      "url": "https://oyc.yale.edu/terms",
+      "path": "data\\knowledgebase\\raw\\open-yale-courses-5a7875c0.md",
+      "chars": 13590,
+      "chunk_count": 12,
+      "domain_tags": [
+        "law",
+        "cybersecurity"
+      ]
+    },
+    {
+      "doc_id": "open-yale-courses-a76079fc",
+      "source_id": "open-yale-courses",
+      "source_name": "Open Yale Courses",
+      "category": "free_course_transcripts",
+      "url": "https://oyc.yale.edu/about",
+      "path": "data\\knowledgebase\\raw\\open-yale-courses-a76079fc.md",
+      "chars": 7118,
+      "chunk_count": 6,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "open-yale-courses-ee12fd40",
+      "source_id": "open-yale-courses",
+      "source_name": "Open Yale Courses",
+      "category": "free_course_transcripts",
+      "url": "https://oyc.yale.edu/help",
+      "path": "data\\knowledgebase\\raw\\open-yale-courses-ee12fd40.md",
+      "chars": 15721,
+      "chunk_count": 13,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "openlearn-0ca119ec",
+      "source_id": "openlearn",
+      "source_name": "OpenLearn",
+      "category": "free_course_transcripts",
+      "url": "https://www.open.edu/openlearn/search-results?query=leadership",
+      "path": "data\\knowledgebase\\raw\\openlearn-0ca119ec.md",
+      "chars": 2678,
+      "chunk_count": 3,
+      "domain_tags": [
+        "law"
+      ]
+    },
+    {
+      "doc_id": "openlearn-4bc98340",
+      "source_id": "openlearn",
+      "source_name": "OpenLearn",
+      "category": "free_course_transcripts",
+      "url": "https://www.open.edu/openlearn/search-results?query=nursing",
+      "path": "data\\knowledgebase\\raw\\openlearn-4bc98340.md",
+      "chars": 2678,
+      "chunk_count": 3,
+      "domain_tags": [
+        "law"
+      ]
+    },
+    {
+      "doc_id": "south-africa-caps-3b0c83dc",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/AboutUs/DBEStructure.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-3b0c83dc.md",
+      "chars": 5134,
+      "chunk_count": 5,
+      "domain_tags": [
+        "civil-engineering",
+        "finance",
+        "project-management"
+      ]
+    },
+    {
+      "doc_id": "south-africa-caps-4028a5ac",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/AboutUs/ProvincialDepartments.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-4028a5ac.md",
+      "chars": 5336,
+      "chunk_count": 5,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "south-africa-caps-66a4d668",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/Curriculum/NationalCurriculumStatementsGradesR-12.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-66a4d668.md",
+      "chars": 7657,
+      "chunk_count": 7,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "south-africa-caps-6be723fd",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/Curriculum/CurriculumAssessmentPolicyStatements(CAPS).aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-6be723fd.md",
+      "chars": 4645,
+      "chunk_count": 4,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "south-africa-caps-8e38d46c",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/AboutUs/AboutDBE.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-8e38d46c.md",
+      "chars": 5738,
+      "chunk_count": 5,
+      "domain_tags": [
+        "project-management",
+        "civil-engineering",
+        "finance"
+      ]
+    },
+    {
+      "doc_id": "south-africa-caps-92d0b6ec",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/LTSMNationalCatalogue.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-92d0b6ec.md",
+      "chars": 3822,
+      "chunk_count": 4,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "south-africa-caps-982fdbc4",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/Curriculum/NationalCurriculumFrameworkforChildrenfromBirthtoFour.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-982fdbc4.md",
+      "chars": 4133,
+      "chunk_count": 4,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "south-africa-caps-9c69cb38",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/DigitalContent.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-9c69cb38.md",
+      "chars": 4969,
+      "chunk_count": 4,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "south-africa-caps-a9ecde00",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/AboutUs/ContacttheDBE.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-a9ecde00.md",
+      "chars": 5966,
+      "chunk_count": 5,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "south-africa-caps-c65e910c",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM).aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-c65e910c.md",
+      "chars": 3227,
+      "chunk_count": 3,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "south-africa-caps-e8f659d4",
+      "source_id": "south-africa-caps",
+      "source_name": "South Africa CAPS",
+      "category": "official_curriculum",
+      "url": "https://www.education.gov.za/Home.aspx",
+      "path": "data\\knowledgebase\\raw\\south-africa-caps-e8f659d4.md",
+      "chars": 8973,
+      "chunk_count": 8,
+      "domain_tags": []
+    },
+    {
+      "doc_id": "uk-national-curriculum-227afbf4",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-227afbf4.md",
+      "chars": 5363,
+      "chunk_count": 5,
+      "domain_tags": [
+        "data-science",
+        "law",
+        "finance"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-2ba141c5",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/browse/benefits",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-2ba141c5.md",
+      "chars": 4316,
+      "chunk_count": 4,
+      "domain_tags": [
+        "data-science",
+        "law",
+        "hvac"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-4569eac8",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/education/primary-curriculum-key-stage-1",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-4569eac8.md",
+      "chars": 6896,
+      "chunk_count": 6,
+      "domain_tags": [
+        "data-science",
+        "law"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-570101c0",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-framework-for-key-stages-1-to-4",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-570101c0.md",
+      "chars": 5876,
+      "chunk_count": 5,
+      "domain_tags": [
+        "law",
+        "data-science"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-6d3cc6c9",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/browse",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-6d3cc6c9.md",
+      "chars": 4160,
+      "chunk_count": 4,
+      "domain_tags": [
+        "law",
+        "data-science"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-95934fce",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/education/school-curriculum",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-95934fce.md",
+      "chars": 7924,
+      "chunk_count": 7,
+      "domain_tags": [
+        "data-science",
+        "law"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-a2891560",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/government/collections/national-curriculum",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-a2891560.md",
+      "chars": 6473,
+      "chunk_count": 6,
+      "domain_tags": [
+        "data-science",
+        "law"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-ab1f7cc6",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/national-curriculum",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-ab1f7cc6.md",
+      "chars": 5565,
+      "chunk_count": 5,
+      "domain_tags": [
+        "data-science",
+        "law"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-d3d39098",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/help/cookies",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-d3d39098.md",
+      "chars": 5723,
+      "chunk_count": 5,
+      "domain_tags": [
+        "data-science",
+        "law"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-dbcd0ffc",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/browse/justice",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-dbcd0ffc.md",
+      "chars": 3694,
+      "chunk_count": 3,
+      "domain_tags": [
+        "law",
+        "data-science"
+      ]
+    },
+    {
+      "doc_id": "uk-national-curriculum-dc062f90",
+      "source_id": "uk-national-curriculum",
+      "source_name": "UK National Curriculum",
+      "category": "official_curriculum",
+      "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-primary-curriculum",
+      "path": "data\\knowledgebase\\raw\\uk-national-curriculum-dc062f90.md",
+      "chars": 4757,
+      "chunk_count": 4,
+      "domain_tags": [
+        "law",
+        "data-science"
+      ]
+    }
+  ]
+}

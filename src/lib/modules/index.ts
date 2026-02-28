@@ -1,6 +1,7 @@
 import type { LearningModule, Lesson } from "@/lib/modules/types";
 import { moduleRegistrySchema } from "@/lib/modules/schema";
 import { generatedModuleRegistry } from "@/lib/modules/generated/registry";
+import { GENERATED_MEDIA_ASSETS } from "@/lib/media/generated-media-assets";
 
 const parsedRegistry = moduleRegistrySchema.safeParse(generatedModuleRegistry);
 if (!parsedRegistry.success) {
@@ -8,6 +9,42 @@ if (!parsedRegistry.success) {
 }
 
 const moduleRegistry: LearningModule[] = parsedRegistry.data;
+const generatedMediaAssets = GENERATED_MEDIA_ASSETS as Record<
+  string,
+  { url: string; type: string; alt: string }
+>;
+
+// Autonomously inject generated media assets into the curriculum
+if (typeof generatedMediaAssets === "object" && generatedMediaAssets !== null) {
+  for (const mod of moduleRegistry) {
+    if (mod.lessons) {
+      for (const les of mod.lessons) {
+        if (Object.prototype.hasOwnProperty.call(generatedMediaAssets, les.id)) {
+          const asset = generatedMediaAssets[les.id];
+          if (!les.contentTiers) les.contentTiers = {};
+          if (!les.contentTiers.tier1Essential) les.contentTiers.tier1Essential = {};
+          
+          const newAsset = {
+            assetId: "gen-" + les.id,
+            url: asset.url,
+            type: asset.type,
+            purpose: "immersive_hero",
+            altText: { en: asset.alt },
+          };
+          
+          if (asset.type.includes("video")) {
+            if (!les.contentTiers.tier1Essential.videos) les.contentTiers.tier1Essential.videos = [];
+            les.contentTiers.tier1Essential.videos.unshift(newAsset);
+          } else {
+            if (!les.contentTiers.tier1Essential.staticImages) les.contentTiers.tier1Essential.staticImages = [];
+            les.contentTiers.tier1Essential.staticImages.unshift(newAsset);
+          }
+        }
+      }
+    }
+  }
+}
+
 
 function normalizeLookupKey(value: string) {
   try {

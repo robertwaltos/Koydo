@@ -3,1924 +3,431 @@ import type { LearningModule } from "@/lib/modules/types";
 export const SatPrep101Module: LearningModule = {
   id: "sat-prep-101",
   title: "SAT Prep Foundations",
-  description: "Build evidence-based reading, writing, and math fluency for the SAT.",
+  description:
+    "Master the math, reading, and writing skills tested on the SAT. Covers Heart of Algebra, Problem Solving & Data Analysis, Evidence-Based Reading & Writing, and proven test-taking strategies to maximize your score.",
   subject: "Exam Prep",
-  tags: ["exam-prep", "assessment", "advanced"],
+  tags: ["exam-prep", "assessment", "advanced", "curriculum"],
   minAge: 14,
   maxAge: 19,
-  moduleVersion: "1.0.0",
-  version: "1.0.0",
+  moduleVersion: "3.0.0",
+  version: "3.0.0",
   difficultyBand: "advanced",
-  localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],
+  localeSupport: ["en", "es"],
   thumbnail: "/placeholders/lesson-robot.svg",
   learningObjectives: [
-    "Build structured SAT readiness workflows",
-    "Improve speed and accuracy under timed constraints",
-    "Use analytics-based revision loops to close weak areas"
+    "Solve linear equations, inequalities, and systems of equations fluently",
+    "Interpret ratios, percentages, tables, charts, and scatterplots",
+    "Apply evidence-based reading strategies to identify main ideas, inferences, and vocabulary in context",
+    "Recognize and correct grammar, punctuation, and sentence structure errors",
+    "Use process of elimination and pacing strategies to maximize SAT score",
+    "Demonstrate readiness across SAT Math and Evidence-Based Reading & Writing sections"
   ],
-  quizBlueprint: {
-    frequency: "weekly_assessment",
-    questionsPerCheck: 20,
-    totalQuestions: 20,
-    timeLimitMinutes: 25,
-    questionTypes: [{ type: "mcq_single", percentage: 100, pointsEach: 1, bloomsLevels: [1, 2, 3, 4] }],
-    difficultyDistribution: { easy: 6, medium: 10, hard: 4 },
-    feedbackMode: "after_submit",
-    adaptive: false,
-    masteryThreshold: 0.8
-  },
   lessons: [
+    /* ──────────────────────────────────────────────
+       L01  SAT Math — Heart of Algebra  (video)
+    ────────────────────────────────────────────── */
     {
       id: "sat-prep-101-l01",
-      title: "SAT: SAT Structure and Strategy",
+      title: "SAT Math — Heart of Algebra",
       type: "video",
-      duration: 11,
-      learningAids: [
+      duration: 14,
+      objectives: [
+        "Solve linear equations and inequalities in one and two variables",
+        "Translate word problems into algebraic expressions and equations",
+        "Evaluate and interpret functions using proper notation"
+      ],
+      chunks: [
         {
-          "id": "sat-prep-101-l01-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: SAT Structure and Strategy with emphasis on reading within practice set planning."
+          id: "sat-prep-101-l01-c1",
+          title: "Linear Equations and Inequalities",
+          content:
+            "Heart of Algebra is the largest math category on the SAT, making up about one-third of all math questions. A linear equation has the form ax + b = c, where the variable has an exponent of 1. To solve, isolate x by performing inverse operations on both sides. For example, to solve 2x + 5 = 13, subtract 5 from both sides to get 2x = 8, then divide by 2 to get x = 4. Linear inequalities work the same way with one critical rule: when you multiply or divide both sides by a negative number, you must flip the inequality sign. For example, -3x > 12 becomes x < -4 after dividing by -3."
         },
         {
-          "id": "sat-prep-101-l01-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: SAT Structure and Strategy showing writing decisions and strategy log checks."
+          id: "sat-prep-101-l01-c2",
+          title: "Translating Word Problems",
+          content:
+            "The SAT frequently wraps algebra in real-world scenarios. The key is translating English into math. 'Is' means equals (=). 'More than' or 'greater than' means addition (+). 'Less than' means subtraction (-). 'Of' usually means multiplication (×). 'Per' means division (÷). Example: 'A plumber charges $50 for a service call plus $35 per hour' translates to C = 50 + 35h, where C is total cost and h is hours. Systems of equations arise when two conditions must be true simultaneously — set up two equations and solve by substitution or elimination."
+        },
+        {
+          id: "sat-prep-101-l01-c3",
+          title: "Functions and Notation",
+          content:
+            "A function assigns exactly one output to each input. When you see f(x) = 2x + 3, the notation f(x) means 'the output of function f when the input is x.' To evaluate f(4), replace every x with 4: f(4) = 2(4) + 3 = 11. The SAT tests function composition (f(g(x))), interpreting graphs of functions, and understanding domain and range. On a graph, f(x) = 0 is where the curve crosses the x-axis (the zeros or roots). The y-intercept is f(0) — the output when x equals zero."
+        }
+      ],
+      flashcards: [
+        {
+          id: "sat-prep-101-l01-f1",
+          front: "Slope-intercept form",
+          back: "y = mx + b, where m is the slope (rise over run) and b is the y-intercept (where the line crosses the y-axis)"
+        },
+        {
+          id: "sat-prep-101-l01-f2",
+          front: "Systems of equations",
+          back: "Two or more equations with the same variables that must be true simultaneously. Solve by substitution (solve one equation for a variable, plug into the other) or elimination (add/subtract equations to cancel a variable)."
+        },
+        {
+          id: "sat-prep-101-l01-f3",
+          front: "Function notation f(x)",
+          back: "f(x) represents the output of function f for input x. To evaluate, substitute the input value for x in the expression. Example: if f(x) = 3x - 1, then f(5) = 14."
+        },
+        {
+          id: "sat-prep-101-l01-f4",
+          front: "Linear equation",
+          back: "An equation whose graph is a straight line. Standard form: ax + b = c. Slope-intercept form: y = mx + b."
+        },
+        {
+          id: "sat-prep-101-l01-f5",
+          front: "Y-intercept",
+          back: "The point where a line crosses the y-axis (x = 0). In y = mx + b, the y-intercept is b."
         }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L02  SAT Math — Problem Solving & Data Analysis  (video)
+    ────────────────────────────────────────────── */
     {
       id: "sat-prep-101-l02",
-      title: "SAT: Reading Evidence Skills",
-      type: "interactive",
+      title: "SAT Math — Problem Solving & Data Analysis",
+      type: "video",
       duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one reading decision rule in SAT: Reading Evidence Skills.",
-          "Apply it in one passage set and show how it improves evidence and language precision.",
-          "Set one next-step target for writing before your next SAT readiness session."
-        ]
-      },
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l02-ia1",
-          "type": "drag_and_drop",
-          "title": "SAT: Reading Evidence Skills Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Blueprint"
-              },
-              {
-                "id": "execute",
-                "label": "Evidence Solve"
-              },
-              {
-                "id": "reflect",
-                "label": "Error Review"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Preview command words and time checkpoints before each SAT section",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Annotate evidence lines and algebra constraints before locking an answer",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Tag misses by reading, writing, or math pattern in the error log",
-                "correctTargetId": "reflect"
-              }
-            ]
-          }
-        }
+      objectives: [
+        "Solve problems involving ratios, proportions, and percentages",
+        "Read and interpret data from tables, charts, and scatterplots",
+        "Calculate and compare mean, median, and mode"
       ],
-      learningAids: [
+      chunks: [
         {
-          "id": "sat-prep-101-l02-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: Reading Evidence Skills with emphasis on reading within passage set planning."
+          id: "sat-prep-101-l02-c1",
+          title: "Ratios, Proportions, and Percentages",
+          content:
+            "A ratio compares two quantities — if there are 3 cats and 5 dogs, the ratio is 3:5 or 3/5. A proportion states that two ratios are equal: a/b = c/d. Cross-multiply to solve: ad = bc. For percentages, remember that 'percent' means 'per hundred.' To find 15% of 200: multiply 200 × 0.15 = 30. Percentage change = ((new - old) / old) × 100. Example: a price goes from $40 to $50 — the percentage increase is ((50 - 40) / 40) × 100 = 25%. The SAT loves multi-step percentage problems, so always identify the base (the 'of' quantity) carefully."
         },
         {
-          "id": "sat-prep-101-l02-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Reading Evidence Skills showing writing decisions and annotation map checks."
+          id: "sat-prep-101-l02-c2",
+          title: "Reading Tables, Charts, and Scatterplots",
+          content:
+            "The SAT presents data in bar graphs, line graphs, pie charts, two-way tables, and scatterplots. For tables, read row and column headers carefully — many errors come from reading the wrong row. For scatterplots, look at the overall trend: an upward pattern indicates positive correlation (as x increases, y increases), a downward pattern indicates negative correlation, and no pattern means no correlation. A line of best fit approximates the trend. To make predictions, find the x-value on the line and read the corresponding y-value. Always check axis labels and units."
+        },
+        {
+          id: "sat-prep-101-l02-c3",
+          title: "Probability and Statistics Basics",
+          content:
+            "Mean (average) = sum of all values ÷ number of values. Median = the middle value when data is ordered from least to greatest (if there is an even number of values, average the two middle numbers). Mode = the value that appears most often. The SAT tests your ability to choose the right measure: the mean is sensitive to outliers, while the median is resistant. Probability = favorable outcomes ÷ total possible outcomes. Example: if a bag has 4 red and 6 blue marbles, P(red) = 4/10 = 0.4 or 40%. Probabilities always range from 0 (impossible) to 1 (certain)."
+        }
+      ],
+      flashcards: [
+        {
+          id: "sat-prep-101-l02-f1",
+          front: "Percentage change formula",
+          back: "((New Value - Old Value) / Old Value) × 100. A positive result is a percentage increase; negative is a decrease."
+        },
+        {
+          id: "sat-prep-101-l02-f2",
+          front: "Median vs. Mean",
+          back: "Mean is the arithmetic average (sum ÷ count). Median is the middle value in sorted data. Median is preferred when outliers are present because it is not affected by extreme values."
+        },
+        {
+          id: "sat-prep-101-l02-f3",
+          front: "Scatterplot correlation",
+          back: "Positive correlation: points trend upward (both variables increase together). Negative correlation: points trend downward (one increases, the other decreases). No correlation: no visible pattern."
+        },
+        {
+          id: "sat-prep-101-l02-f4",
+          front: "Ratio",
+          back: "A comparison of two quantities. If there are 3 cats and 5 dogs, the ratio is 3:5 or 3/5."
+        },
+        {
+          id: "sat-prep-101-l02-f5",
+          front: "Probability",
+          back: "The chance of an event occurring. P = favorable outcomes \u00f7 total outcomes. Always between 0 (impossible) and 1 (certain)."
         }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L03  SAT Math Checkpoint  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "sat-prep-101-l03",
-      title: "SAT: Writing and Language Rules",
+      title: "SAT Math Checkpoint",
       type: "quiz",
-      duration: 12,
+      duration: 8,
+      objectives: [
+        "Demonstrate mastery of linear equations and algebraic problem solving",
+        "Apply data analysis and percentage skills to SAT-style questions"
+      ],
       questions: [
         {
-          "id": "sat-prep-101-l03-q1",
-          "text": "SAT coaching notes show repeated writing misses in SAT: Writing and Language Rules. What should the learner do before the next passage set?",
-          "skillId": "sat-prep-101-skill-writing-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Jump to harder content before confirming the root cause."
-            },
-            {
-              "id": "b",
-              "text": "Track only final score and ignore process notes."
-            },
-            {
-              "id": "c",
-              "text": "Rebuild the solve workflow on two representative passage set items, then retest with the same constraints."
-            },
-            {
-              "id": "d",
-              "text": "Switch strands even though writing is still the top weakness."
-            }
+          id: "sat-prep-101-l03-q1",
+          text: "If 3x + 7 = 22, what is the value of x?",
+          skillId: "sat-prep-101-skill-math",
+          options: [
+            { id: "a", text: "5" },
+            { id: "b", text: "3" },
+            { id: "c", text: "7" },
+            { id: "d", text: "15" }
           ],
-          "correctOptionId": "c",
-          "hint": "Choose the option that improves process quality, not just volume.",
-          "explanation": "When writing is unstable, workflow repair plus immediate retest creates the fastest reliable gains."
+          correctOptionId: "a",
+          explanation:
+            "Subtract 7 from both sides: 3x = 15. Divide both sides by 3: x = 5."
         },
         {
-          "id": "sat-prep-101-l03-q2",
-          "text": "In SAT: Writing and Language Rules, pace drops late even when early accuracy is strong. Which move best addresses this SAT pattern?",
-          "skillId": "sat-prep-101-skill-reading-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Spend more time on every item to avoid mistakes."
-            },
-            {
-              "id": "b",
-              "text": "Memorize answer keys without tracking timing behavior."
-            },
-            {
-              "id": "c",
-              "text": "Use random breaks with no fixed transition points."
-            },
-            {
-              "id": "d",
-              "text": "Introduce phase checkpoints and a cut-loss rule around high-friction reading items."
-            }
+          id: "sat-prep-101-l03-q2",
+          text: "A survey of 200 students found that 45 prefer soccer, 80 prefer basketball, and the rest prefer baseball. According to the data, what percentage of students prefer baseball?",
+          skillId: "sat-prep-101-skill-math",
+          options: [
+            { id: "a", text: "22.5%" },
+            { id: "b", text: "37.5%" },
+            { id: "c", text: "40%" },
+            { id: "d", text: "62.5%" }
           ],
-          "correctOptionId": "d",
-          "hint": "Look for a solution tied to timing behavior, not memory.",
-          "explanation": "Late-section drift usually comes from unmanaged friction points, not lack of content knowledge."
+          correctOptionId: "b",
+          explanation:
+            "Students who prefer baseball = 200 - 45 - 80 = 75. Percentage = (75 / 200) × 100 = 37.5%."
         },
         {
-          "id": "sat-prep-101-l03-q3",
-          "text": "Which one-week plan best improves algebra transfer for SAT readiness in SAT?",
-          "skillId": "sat-prep-101-skill-algebra-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Alternate mixed-difficulty sets with targeted remediation, then re-test the same algebra objective under timing constraints."
-            },
-            {
-              "id": "b",
-              "text": "Use only untimed warmups and avoid mixed sets."
-            },
-            {
-              "id": "c",
-              "text": "Choose random topics daily without a remediation queue."
-            },
-            {
-              "id": "d",
-              "text": "Delay all review tasks until the final week."
-            }
+          id: "sat-prep-101-l03-q3",
+          text: "A store increases the price of a jacket from $80 to $100. What is the percentage increase?",
+          skillId: "sat-prep-101-skill-math",
+          options: [
+            { id: "a", text: "20%" },
+            { id: "b", text: "25%" },
+            { id: "c", text: "30%" },
+            { id: "d", text: "80%" }
           ],
-          "correctOptionId": "a",
-          "hint": "The strongest plan combines correction and timed transfer.",
-          "explanation": "Transfer improves when correction cycles are followed by fresh timed retrieval of the same algebra target."
+          correctOptionId: "b",
+          explanation:
+            "Percentage increase = ((100 - 80) / 80) × 100 = (20 / 80) × 100 = 25%."        },
+        {
+          id: "sat-prep-101-l03-q4",
+          text: "If y = 2x + 5, what is the value of y when x = 3?",
+          skillId: "sat-prep-101-skill-math",
+          options: [
+            { id: "a", text: "8" },
+            { id: "b", text: "11" },
+            { id: "c", text: "10" },
+            { id: "d", text: "6" }
+          ],
+          correctOptionId: "b",
+          explanation:
+            "Substitute x = 3 into y = 2(3) + 5 = 6 + 5 = 11."
         },
         {
-          "id": "sat-prep-101-l03-q4",
-          "text": "After a SAT: Writing and Language Rules drill, which remediation should be prioritized first for score impact in SAT?",
-          "skillId": "sat-prep-101-skill-timing-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Start with already-mastered tasks to build comfort."
-            },
-            {
-              "id": "b",
-              "text": "Fix repeated timing breakdowns first because they scale across many items in the same run."
-            },
-            {
-              "id": "c",
-              "text": "Rewrite notes without testing changes in a timed set."
-            },
-            {
-              "id": "d",
-              "text": "Ignore pacing because content accuracy matters more."
-            }
+          id: "sat-prep-101-l03-q5",
+          text: "A bag contains 5 red marbles and 15 blue marbles. What is the probability of randomly selecting a red marble?",
+          skillId: "sat-prep-101-skill-math",
+          options: [
+            { id: "a", text: "1/4" },
+            { id: "b", text: "1/3" },
+            { id: "c", text: "3/4" },
+            { id: "d", text: "1/5" }
           ],
-          "correctOptionId": "b",
-          "hint": "Choose the fix with the widest downstream effect.",
-          "explanation": "High-frequency process breakdowns usually produce the largest immediate score delta when corrected first."
-        },
-        {
-          "id": "sat-prep-101-l03-q5",
-          "text": "In SAT Reading and Writing module, evidence-line mismatch appears during SAT: Writing and Language Rules. What is the strongest immediate correction?",
-          "skillId": "sat-prep-101-skill-writing-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore Reading and Writing module diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "c",
-              "text": "Underline claim + cited line before selecting an answer choice."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the option that directly fixes evidence-line mismatch.",
-          "explanation": "Immediate correction inside Reading and Writing module improves transfer to the next timed passage set."
-        },
-        {
-          "id": "sat-prep-101-l03-q6",
-          "text": "During SAT Math module, constraint parsing miss repeats in SAT: Writing and Language Rules. Which plan should be applied before the next retest?",
-          "skillId": "sat-prep-101-skill-reading-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Retake the section with no checkpoint changes."
-            },
-            {
-              "id": "d",
-              "text": "Rewrite variable constraints, then validate with one substitution check. Track outcomes in an evidence-to-equation journal and retest the same pattern."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in evidence-to-equation journal makes the pacing fix visible and repeatable."
-        }
-      ],
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l03-ia1",
-          "type": "matching_pairs",
-          "title": "SAT: Writing and Language Rules Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for evidence and language precision.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
-          ],
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Evidence question missed because support line was not located"
-              },
-              {
-                "id": "l2",
-                "label": "Grammar boundary mistake repeats in writing sets"
-              },
-              {
-                "id": "l3",
-                "label": "Algebra item solved correctly untimed but missed in sprint mode"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Underline claim + best support line before evaluating answer choices"
-              },
-              {
-                "id": "r2",
-                "label": "Run a punctuation boundary checklist before finalizing the sentence"
-              },
-              {
-                "id": "r3",
-                "label": "Practice a 2-step SAT math setup routine with strict time caps"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              }
-            ]
-          }
-        }
+          correctOptionId: "a",
+          explanation:
+            "Probability = favorable outcomes \u00f7 total outcomes = 5/20 = 1/4."        }
       ],
       quizBlueprint: {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 6,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
-        {
-          "id": "sat-prep-101-l03-a1",
-          "type": "image",
-          "title": "Writing Snapshot",
-          "content": "Visual anchor for SAT: Writing and Language Rules with emphasis on writing within passage set planning."
-        },
-        {
-          "id": "sat-prep-101-l03-a2",
-          "type": "animation",
-          "title": "Reading Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Writing and Language Rules showing reading decisions and annotation map checks."
-        }
-      ]
+        totalQuestions: 3,
+        bloomProfile: { remember: 1, apply: 2 }
+      }
     },
+
+    /* ──────────────────────────────────────────────
+       L04  SAT Reading & Writing  (video)
+    ────────────────────────────────────────────── */
     {
       id: "sat-prep-101-l04",
-      title: "SAT: Algebra and Data Essentials",
-      type: "interactive",
+      title: "SAT Reading & Writing",
+      type: "video",
       duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one algebra decision rule in SAT: Algebra and Data Essentials.",
-          "Apply it in one problem set and show how it improves method and accuracy precision.",
-          "Set one next-step target for reading before your next SAT readiness session."
-        ]
-      },
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l04-ia1",
-          "type": "drag_and_drop",
-          "title": "SAT: Algebra and Data Essentials Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Blueprint"
-              },
-              {
-                "id": "execute",
-                "label": "Evidence Solve"
-              },
-              {
-                "id": "reflect",
-                "label": "Error Review"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Preview command words and time checkpoints before each SAT section",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Annotate evidence lines and algebra constraints before locking an answer",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Tag misses by reading, writing, or math pattern in the error log",
-                "correctTargetId": "reflect"
-              }
-            ]
-          }
-        }
+      objectives: [
+        "Identify main ideas, make inferences, and determine vocabulary meaning from context",
+        "Recognize and correct errors in grammar, punctuation, and sentence structure",
+        "Use textual evidence to support answers"
       ],
-      learningAids: [
+      chunks: [
         {
-          "id": "sat-prep-101-l04-a1",
-          "type": "image",
-          "title": "Algebra Snapshot",
-          "content": "Visual anchor for SAT: Algebra and Data Essentials with emphasis on algebra within problem set planning."
+          id: "sat-prep-101-l04-c1",
+          title: "Evidence-Based Reading",
+          content:
+            "The SAT Reading section tests your ability to understand complex passages — not memorize facts. Every correct answer is supported by evidence in the text. For main idea questions, focus on the first and last sentences of each paragraph to identify the author's central argument. Inference questions ask what the passage implies, not what it states directly — look for clues and draw logical conclusions. Vocabulary-in-context questions give you a word and ask which meaning fits. Ignore the definition you know best and re-read the sentence, plugging in each answer choice to see which one preserves the original meaning."
         },
         {
-          "id": "sat-prep-101-l04-a2",
-          "type": "animation",
-          "title": "Reading Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Algebra and Data Essentials showing reading decisions and setup sheet checks."
+          id: "sat-prep-101-l04-c2",
+          title: "Writing Conventions",
+          content:
+            "The SAT Writing section tests standard English conventions. Subject-verb agreement: the verb must match the subject in number — 'The list of items is long' (not 'are'), because the subject is 'list,' not 'items.' Commas separate items in a list, set off introductory phrases, and enclose non-essential information. Semicolons join two independent clauses without a conjunction: 'She studied hard; she earned an A.' Sentence fragments lack a subject or verb — they are always incorrect on the SAT. Run-on sentences join two independent clauses without proper punctuation — fix with a period, semicolon, or comma plus a conjunction."
+        },
+        {
+          id: "sat-prep-101-l04-c3",
+          title: "Command of Evidence",
+          content:
+            "Many SAT questions ask you to identify which part of the passage best supports your previous answer. These 'command of evidence' questions are paired: the first question asks what the passage says or implies, and the second asks you to choose the lines that prove it. Strategy: answer the evidence question first. Read each cited portion and ask which one directly supports a claim. If no answer choice supports your answer to the first question, reconsider your first answer. Always underline or annotate key phrases as you read the passage — this makes finding evidence faster and more accurate."
+        }
+      ],
+      flashcards: [
+        {
+          id: "sat-prep-101-l04-f1",
+          front: "Inference (reading)",
+          back: "A conclusion drawn from evidence in the text that is not explicitly stated. On the SAT, the correct inference is always strongly supported by specific details in the passage."
+        },
+        {
+          id: "sat-prep-101-l04-f2",
+          front: "Subject-verb agreement",
+          back: "The verb must match its subject in number. Watch for tricky cases: prepositional phrases between subject and verb ('The box of chocolates is here'), and inverted sentence order."
+        },
+        {
+          id: "sat-prep-101-l04-f3",
+          front: "Semicolon rule",
+          back: "A semicolon joins two independent clauses (complete sentences) without a coordinating conjunction. Each side of the semicolon must be able to stand alone as a sentence."
         }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L05  SAT Strategy & Time Management  (video)
+    ────────────────────────────────────────────── */
     {
       id: "sat-prep-101-l05",
-      title: "SAT: Advanced Math Problem Solving",
+      title: "SAT Strategy & Time Management",
       type: "video",
-      duration: 11,
-      learningAids: [
+      duration: 12,
+      objectives: [
+        "Understand SAT structure, timing, scoring, and the no-penalty guessing rule",
+        "Develop pacing strategies for each section",
+        "Apply process of elimination to improve accuracy on difficult questions"
+      ],
+      chunks: [
         {
-          "id": "sat-prep-101-l05-a1",
-          "type": "image",
-          "title": "Algebra Snapshot",
-          "content": "Visual anchor for SAT: Advanced Math Problem Solving with emphasis on algebra within problem set planning."
+          id: "sat-prep-101-l05-c1",
+          title: "Test Structure and Scoring",
+          content:
+            "The SAT has two main sections: Evidence-Based Reading and Writing (EBRW) and Math. Each section is scored on a scale of 200 to 800, giving a total score range of 400 to 1600. The Reading and Writing section includes reading comprehension passages and grammar/editing questions. The Math section covers algebra, problem solving, data analysis, and advanced math — a portion allows calculator use and a portion does not. There is no penalty for wrong answers, so you should never leave a question blank. Even a random guess gives you a 25% chance of earning a point."
         },
         {
-          "id": "sat-prep-101-l05-a2",
-          "type": "animation",
-          "title": "Reading Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Advanced Math Problem Solving showing reading decisions and setup sheet checks."
+          id: "sat-prep-101-l05-c2",
+          title: "Pacing Strategies",
+          content:
+            "Time management is critical on the SAT. In the Reading section, you have roughly 13 minutes per passage (5 passages, 65 minutes total). In the Writing section, you have about 9 minutes per passage (4 passages, 35 minutes). In Math, aim for about 75 seconds per question on the no-calculator section and about 85 seconds on the calculator section. Key strategy: do not get stuck. If a question takes more than 90 seconds, mark it, make your best guess, and move on. Return to marked questions if time permits. Easy questions are worth the same as hard ones, so answer all the ones you know first."
+        },
+        {
+          id: "sat-prep-101-l05-c3",
+          title: "Process of Elimination",
+          content:
+            "On multiple-choice questions with four answer choices, random guessing gives you a 25% chance of being correct. But if you can eliminate just one wrong answer, your odds jump to 33%. Eliminate two, and you are at 50%. Strategy: read all four answer choices before selecting one. Cross out answers that are clearly wrong — look for extreme language ('always,' 'never'), answers that contradict the passage, or options that are true but don't answer the specific question asked. On math questions, plug answer choices back into the problem (backsolving) to test which one works."
+        }
+      ],
+      flashcards: [
+        {
+          id: "sat-prep-101-l05-f1",
+          front: "Process of elimination",
+          back: "A test-taking strategy where you remove clearly wrong answers before guessing. Eliminating even one choice increases your odds from 25% to 33%; eliminating two raises it to 50%."
+        },
+        {
+          id: "sat-prep-101-l05-f2",
+          front: "Pacing strategy",
+          back: "Budget roughly 75–90 seconds per question. If a question takes longer, mark it, guess, and move on. Answer all questions you know first — every question is worth the same number of points."
+        },
+        {
+          id: "sat-prep-101-l05-f3",
+          front: "SAT scoring",
+          back: "Each section (EBRW and Math) is scored 200–800, for a total of 400–1600. There is no penalty for wrong answers, so never leave a question blank."
         }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L06  SAT Prep Final Assessment  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "sat-prep-101-l06",
-      title: "SAT: Timing and Pacing Practice",
+      title: "SAT Prep Final Assessment",
       type: "quiz",
-      duration: 12,
+      duration: 10,
+      objectives: [
+        "Apply grammar and editing knowledge to identify correct sentences",
+        "Solve algebra problems under test-like conditions",
+        "Demonstrate understanding of reading comprehension strategies"
+      ],
       questions: [
         {
-          "id": "sat-prep-101-l06-q1",
-          "text": "During SAT: Timing and Pacing Practice, early guesses are causing timing losses. Which intervention should happen first?",
-          "skillId": "sat-prep-101-skill-timing-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Keep the same pace and hope accuracy normalizes later."
-            },
-            {
-              "id": "b",
-              "text": "Use a short verification pass and log decision triggers in a checkpoint log before restarting the drill."
-            },
-            {
-              "id": "c",
-              "text": "Memorize answer patterns instead of checking reasoning."
-            },
-            {
-              "id": "d",
-              "text": "Delay all correction until the weekend review session."
-            }
+          id: "sat-prep-101-l06-q1",
+          text: "Which of the following sentences is punctuated correctly?",
+          skillId: "sat-prep-101-skill-verbal",
+          options: [
+            { id: "a", text: "The experiment failed, the researchers revised their hypothesis." },
+            { id: "b", text: "The experiment failed; the researchers revised their hypothesis." },
+            { id: "c", text: "The experiment failed the researchers revised their hypothesis." },
+            { id: "d", text: "The experiment failed: and the researchers revised their hypothesis." }
           ],
-          "correctOptionId": "b",
-          "hint": "Pick the option that creates immediate corrective feedback.",
-          "explanation": "Quick structured verification catches repeatable process errors before they spread across the next set."
+          correctOptionId: "b",
+          explanation:
+            "A semicolon correctly joins two independent clauses ('The experiment failed' and 'the researchers revised their hypothesis'). Option A is a comma splice. Option C is a run-on. Option D misuses the colon before a conjunction."
         },
         {
-          "id": "sat-prep-101-l06-q2",
-          "text": "A SAT drill on SAT: Timing and Pacing Practice ends with unstable pacing. What should be diagnosed first?",
-          "skillId": "sat-prep-101-skill-reading-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Retake the same drill immediately without analysis."
-            },
-            {
-              "id": "b",
-              "text": "Memorize answer keys without tracking timing behavior."
-            },
-            {
-              "id": "c",
-              "text": "Pinpoint where reading decisions consume extra time, then redesign attempt order with checkpoints."
-            },
-            {
-              "id": "d",
-              "text": "Increase question volume while keeping the same pacing errors."
-            }
+          id: "sat-prep-101-l06-q2",
+          text: "If 2(x - 3) + 4 = 18, what is the value of x?",
+          skillId: "sat-prep-101-skill-math",
+          options: [
+            { id: "a", text: "7" },
+            { id: "b", text: "10" },
+            { id: "c", text: "8" },
+            { id: "d", text: "14" }
           ],
-          "correctOptionId": "c",
-          "hint": "Look for the answer that isolates a measurable timing bottleneck.",
-          "explanation": "Pacing issues usually come from specific reading decision points, not from total question count alone."
+          correctOptionId: "b",
+          explanation:
+            "Distribute: 2x - 6 + 4 = 18. Simplify: 2x - 2 = 18. Add 2: 2x = 20. Divide by 2: x = 10."
         },
         {
-          "id": "sat-prep-101-l06-q3",
-          "text": "Which one-week sprint most improves writing transfer for SAT: Timing and Pacing Practice in SAT?",
-          "skillId": "sat-prep-101-skill-writing-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use only untimed review until confidence feels high."
-            },
-            {
-              "id": "b",
-              "text": "Rotate random topics daily with no retest queue."
-            },
-            {
-              "id": "c",
-              "text": "Delay all error correction until the final day."
-            },
-            {
-              "id": "d",
-              "text": "Run two targeted correction blocks, one mixed timed timed block, and one retest focused on the same writing objective."
-            }
+          id: "sat-prep-101-l06-q3",
+          text: "When answering an SAT reading question that asks 'Which choice provides the best evidence for the answer to the previous question?', what is the most effective strategy?",
+          skillId: "sat-prep-101-skill-verbal",
+          options: [
+            { id: "a", text: "Choose the longest quoted passage because it contains the most detail" },
+            { id: "b", text: "Read the evidence choices first to see which one directly supports a claim, then answer both questions together" },
+            { id: "c", text: "Skip the evidence question and focus only on the first question" },
+            { id: "d", text: "Always pick the first evidence choice that mentions a keyword from the question" }
           ],
-          "correctOptionId": "d",
-          "hint": "Best plans combine remediation and timed validation.",
-          "explanation": "Transfer improves when learners re-encounter corrected skills under realistic constraints."
+          correctOptionId: "b",
+          explanation:
+            "Working the evidence question first is a proven strategy. By reading each cited portion, you can identify which one directly supports a specific claim, then confirm your answer to the paired question. This prevents choosing an answer with no textual support."
         },
         {
-          "id": "sat-prep-101-l06-q4",
-          "text": "In SAT SAT: Timing and Pacing Practice, there are both content misses and pacing slips. What should the learner fix first?",
-          "skillId": "sat-prep-101-skill-algebra-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Prioritize the repeated algebra process issue, then apply the same correction across the next timed block."
-            },
-            {
-              "id": "b",
-              "text": "Tackle the rarest concept gap first for variety."
-            },
-            {
-              "id": "c",
-              "text": "Review only confidence items and skip timing analysis."
-            },
-            {
-              "id": "d",
-              "text": "Change resources without identifying what failed."
-            }
+          id: "sat-prep-101-l06-q4",
+          text: "Which sentence correctly uses subject-verb agreement?",
+          skillId: "sat-prep-101-skill-verbal",
+          options: [
+            { id: "a", text: "The group of students are studying." },
+            { id: "b", text: "The group of students is studying." },
+            { id: "c", text: "The group of students were studying." },
+            { id: "d", text: "The group of students been studying." }
           ],
-          "correctOptionId": "a",
-          "hint": "Look for the answer that addresses recurrence.",
-          "explanation": "Recurring process errors compound quickly, so fixing them first creates cleaner conditions for content correction."
+          correctOptionId: "b",
+          explanation:
+            "The subject is 'group' (singular), not 'students.' A singular subject takes a singular verb: 'is studying.'"
         },
         {
-          "id": "sat-prep-101-l06-q5",
-          "text": "In SAT Reading and Writing module, evidence-line mismatch appears during SAT: Timing and Pacing Practice. What is the strongest immediate correction?",
-          "skillId": "sat-prep-101-skill-timing-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore Reading and Writing module diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Underline claim + cited line before selecting an answer choice."
-            },
-            {
-              "id": "c",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
+          id: "sat-prep-101-l06-q5",
+          text: "If you cannot solve an SAT question within 90 seconds, what should you do?",
+          skillId: "sat-prep-101-skill-verbal",
+          options: [
+            { id: "a", text: "Leave it blank" },
+            { id: "b", text: "Spend as much time as needed" },
+            { id: "c", text: "Mark it, make your best guess, and move on" },
+            { id: "d", text: "Skip all remaining questions" }
           ],
-          "correctOptionId": "b",
-          "hint": "Choose the option that directly fixes evidence-line mismatch.",
-          "explanation": "Immediate correction inside Reading and Writing module improves transfer to the next timed timed block."
-        },
-        {
-          "id": "sat-prep-101-l06-q6",
-          "text": "During SAT Math module, constraint parsing miss repeats in SAT: Timing and Pacing Practice. Which plan should be applied before the next retest?",
-          "skillId": "sat-prep-101-skill-reading-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Rewrite variable constraints, then validate with one substitution check. Track outcomes in an evidence-to-equation journal and retest the same pattern."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in evidence-to-equation journal makes the pacing fix visible and repeatable."
-        }
-      ],
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l06-ia1",
-          "type": "drag_and_drop",
-          "title": "SAT: Timing and Pacing Practice Pace Control Board",
-          "description": "Place each tactic in the right phase to stabilize pacing.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Assign each tactic to Plan, Execute, or Recover.",
-            "Check your placements.",
-            "Apply one tactic in your next timed drill."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Plan"
-              },
-              {
-                "id": "execute",
-                "label": "Execute"
-              },
-              {
-                "id": "recover",
-                "label": "Recover"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Preview command words and time checkpoints before each SAT section",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Annotate evidence lines and algebra constraints before locking an answer",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Tag misses by reading, writing, or math pattern in the error log",
-                "correctTargetId": "recover"
-              }
-            ]
-          }
+          correctOptionId: "c",
+          explanation:
+            "Mark it, guess, and return later if time permits. There is no penalty for wrong answers, so never leave a question blank."
         }
       ],
       quizBlueprint: {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 6,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
-        {
-          "id": "sat-prep-101-l06-a1",
-          "type": "image",
-          "title": "Timing Snapshot",
-          "content": "Visual anchor for SAT: Timing and Pacing Practice with emphasis on timing within timed block planning."
-        },
-        {
-          "id": "sat-prep-101-l06-a2",
-          "type": "animation",
-          "title": "Reading Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Timing and Pacing Practice showing reading decisions and checkpoint log checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l07",
-      title: "SAT: Error Analysis Workshop",
-      type: "video",
-      duration: 11,
-      learningAids: [
-        {
-          "id": "sat-prep-101-l07-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: Error Analysis Workshop with emphasis on reading within review cycle planning."
-        },
-        {
-          "id": "sat-prep-101-l07-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Error Analysis Workshop showing writing decisions and error taxonomy checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l08",
-      title: "SAT: Section Drill: Reading + Writing",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one reading decision rule in SAT: Section Drill: Reading + Writing.",
-          "Apply it in one passage set and show how it improves evidence and language precision.",
-          "Set one next-step target for writing before your next SAT readiness session."
-        ]
-      },
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l08-ia1",
-          "type": "drag_and_drop",
-          "title": "SAT: Section Drill: Reading + Writing Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Blueprint"
-              },
-              {
-                "id": "execute",
-                "label": "Evidence Solve"
-              },
-              {
-                "id": "reflect",
-                "label": "Error Review"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Preview command words and time checkpoints before each SAT section",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Annotate evidence lines and algebra constraints before locking an answer",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Tag misses by reading, writing, or math pattern in the error log",
-                "correctTargetId": "reflect"
-              }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        {
-          "id": "sat-prep-101-l08-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: Section Drill: Reading + Writing with emphasis on reading within passage set planning."
-        },
-        {
-          "id": "sat-prep-101-l08-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Section Drill: Reading + Writing showing writing decisions and annotation map checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l09",
-      title: "SAT: Section Drill: Math",
-      type: "quiz",
-      duration: 12,
-      questions: [
-        {
-          "id": "sat-prep-101-l09-q1",
-          "text": "In SAT: Section Drill: Math, a learner keeps missing algebra items during SAT practice. Which adjustment should happen before the next timed problem set?",
-          "skillId": "sat-prep-101-skill-algebra-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Run a short algebra checkpoint routine and annotate why each miss occurred in a setup sheet before retesting."
-            },
-            {
-              "id": "b",
-              "text": "Skip review and jump directly to harder questions."
-            },
-            {
-              "id": "c",
-              "text": "Track only total score with no error categories."
-            },
-            {
-              "id": "d",
-              "text": "Switch topics even if algebra is still the dominant weakness."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Choose the action that creates a repeatable feedback loop for algebra.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve algebra."
-        },
-        {
-          "id": "sat-prep-101-l09-q2",
-          "text": "A SAT SAT: Section Drill: Math session ends with unstable timing. What should be diagnosed first?",
-          "skillId": "sat-prep-101-skill-reading-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Retake the session immediately without diagnostics."
-            },
-            {
-              "id": "b",
-              "text": "Locate the exact reading decision point where time spikes, then set micro-checkpoints for that phase."
-            },
-            {
-              "id": "c",
-              "text": "Increase total question count and keep the same attempt order."
-            },
-            {
-              "id": "d",
-              "text": "Use one pacing rule for all sections regardless of load."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
-        },
-        {
-          "id": "sat-prep-101-l09-q3",
-          "text": "SAT practice shows correction is happening but not sticking in SAT: Section Drill: Math. What plan fixes this fastest?",
-          "skillId": "sat-prep-101-skill-writing-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Keep reviewing notes and avoid new timed attempts."
-            },
-            {
-              "id": "b",
-              "text": "Increase difficulty only, without targeted rematches."
-            },
-            {
-              "id": "c",
-              "text": "Pair each corrected writing error with a near-transfer item in the next timed block and track it in a setup sheet."
-            },
-            {
-              "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
-        },
-        {
-          "id": "sat-prep-101-l09-q4",
-          "text": "During post-drill review for SAT: Section Drill: Math, which fix should be prioritized first for score impact in SAT?",
-          "skillId": "sat-prep-101-skill-timing-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Polish already-mastered question types first."
-            },
-            {
-              "id": "b",
-              "text": "Ignore pacing and focus only on confidence items."
-            },
-            {
-              "id": "c",
-              "text": "Rewrite notes without validating changes in timed practice."
-            },
-            {
-              "id": "d",
-              "text": "Address repeated timing and pacing errors first because they affect many questions in one run."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
-        },
-        {
-          "id": "sat-prep-101-l09-q5",
-          "text": "In SAT Reading and Writing module, evidence-line mismatch appears during SAT: Section Drill: Math. What is the strongest immediate correction?",
-          "skillId": "sat-prep-101-skill-algebra-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Underline claim + cited line before selecting an answer choice."
-            },
-            {
-              "id": "b",
-              "text": "Ignore Reading and Writing module diagnostics and continue for volume."
-            },
-            {
-              "id": "c",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Choose the option that directly fixes evidence-line mismatch.",
-          "explanation": "Immediate correction inside Reading and Writing module improves transfer to the next timed problem set."
-        },
-        {
-          "id": "sat-prep-101-l09-q6",
-          "text": "During SAT Math module, constraint parsing miss repeats in SAT: Section Drill: Math. Which plan should be applied before the next retest?",
-          "skillId": "sat-prep-101-skill-reading-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Rewrite variable constraints, then validate with one substitution check. Track outcomes in an evidence-to-equation journal and retest the same pattern."
-            },
-            {
-              "id": "c",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in evidence-to-equation journal makes the pacing fix visible and repeatable."
-        }
-      ],
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l09-ia1",
-          "type": "matching_pairs",
-          "title": "SAT: Section Drill: Math Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for method and accuracy precision.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
-          ],
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Evidence question missed because support line was not located"
-              },
-              {
-                "id": "l2",
-                "label": "Grammar boundary mistake repeats in writing sets"
-              },
-              {
-                "id": "l3",
-                "label": "Algebra item solved correctly untimed but missed in sprint mode"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Underline claim + best support line before evaluating answer choices"
-              },
-              {
-                "id": "r2",
-                "label": "Run a punctuation boundary checklist before finalizing the sentence"
-              },
-              {
-                "id": "r3",
-                "label": "Practice a 2-step SAT math setup routine with strict time caps"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 6,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      metadata: {
-        examDrill: "section_drill"
-      },
-      learningAids: [
-        {
-          "id": "sat-prep-101-l09-a1",
-          "type": "image",
-          "title": "Algebra Snapshot",
-          "content": "Visual anchor for SAT: Section Drill: Math with emphasis on algebra within problem set planning."
-        },
-        {
-          "id": "sat-prep-101-l09-a2",
-          "type": "animation",
-          "title": "Reading Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Section Drill: Math showing reading decisions and setup sheet checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l10",
-      title: "SAT: Targeted Reading Remediation",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one reading decision rule in SAT: Targeted Reading Remediation.",
-          "Apply it in one passage set and show how it improves evidence and language precision.",
-          "Set one next-step target for writing before your next SAT readiness session."
-        ]
-      },
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l10-ia1",
-          "type": "drag_and_drop",
-          "title": "SAT: Targeted Reading Remediation Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Blueprint"
-              },
-              {
-                "id": "execute",
-                "label": "Evidence Solve"
-              },
-              {
-                "id": "reflect",
-                "label": "Error Review"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Preview command words and time checkpoints before each SAT section",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Annotate evidence lines and algebra constraints before locking an answer",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Tag misses by reading, writing, or math pattern in the error log",
-                "correctTargetId": "reflect"
-              }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        {
-          "id": "sat-prep-101-l10-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: Targeted Reading Remediation with emphasis on reading within passage set planning."
-        },
-        {
-          "id": "sat-prep-101-l10-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Targeted Reading Remediation showing writing decisions and annotation map checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l11",
-      title: "SAT: Timed Writing Sprint",
-      type: "video",
-      duration: 11,
-      learningAids: [
-        {
-          "id": "sat-prep-101-l11-a1",
-          "type": "image",
-          "title": "Writing Snapshot",
-          "content": "Visual anchor for SAT: Timed Writing Sprint with emphasis on writing within passage set planning."
-        },
-        {
-          "id": "sat-prep-101-l11-a2",
-          "type": "animation",
-          "title": "Reading Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Timed Writing Sprint showing reading decisions and annotation map checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l12",
-      title: "SAT: Mixed-Section Decision Drill",
-      type: "quiz",
-      duration: 12,
-      questions: [
-        {
-          "id": "sat-prep-101-l12-q1",
-          "text": "SAT coaching notes show repeated reading misses in SAT: Mixed-Section Decision Drill. What should the learner do before the next practice set?",
-          "skillId": "sat-prep-101-skill-reading-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Jump to harder content before confirming the root cause."
-            },
-            {
-              "id": "b",
-              "text": "Track only final score and ignore process notes."
-            },
-            {
-              "id": "c",
-              "text": "Switch strands even though reading is still the top weakness."
-            },
-            {
-              "id": "d",
-              "text": "Rebuild the solve workflow on two representative practice set items, then retest with the same constraints."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Choose the option that improves process quality, not just volume.",
-          "explanation": "When reading is unstable, workflow repair plus immediate retest creates the fastest reliable gains."
-        },
-        {
-          "id": "sat-prep-101-l12-q2",
-          "text": "In SAT: Mixed-Section Decision Drill, pace drops late even when early accuracy is strong. Which move best addresses this SAT pattern?",
-          "skillId": "sat-prep-101-skill-writing-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Introduce phase checkpoints and a cut-loss rule around high-friction writing items."
-            },
-            {
-              "id": "b",
-              "text": "Spend more time on every item to avoid mistakes."
-            },
-            {
-              "id": "c",
-              "text": "Memorize answer keys without tracking timing behavior."
-            },
-            {
-              "id": "d",
-              "text": "Use random breaks with no fixed transition points."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Look for a solution tied to timing behavior, not memory.",
-          "explanation": "Late-section drift usually comes from unmanaged friction points, not lack of content knowledge."
-        },
-        {
-          "id": "sat-prep-101-l12-q3",
-          "text": "Which one-week plan best improves algebra transfer for SAT readiness in SAT?",
-          "skillId": "sat-prep-101-skill-algebra-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use only untimed warmups and avoid mixed sets."
-            },
-            {
-              "id": "b",
-              "text": "Alternate mixed-difficulty sets with targeted remediation, then re-test the same algebra objective under timing constraints."
-            },
-            {
-              "id": "c",
-              "text": "Choose random topics daily without a remediation queue."
-            },
-            {
-              "id": "d",
-              "text": "Delay all review tasks until the final week."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "The strongest plan combines correction and timed transfer.",
-          "explanation": "Transfer improves when correction cycles are followed by fresh timed retrieval of the same algebra target."
-        },
-        {
-          "id": "sat-prep-101-l12-q4",
-          "text": "After a SAT: Mixed-Section Decision Drill drill, which remediation should be prioritized first for score impact in SAT?",
-          "skillId": "sat-prep-101-skill-timing-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Start with already-mastered tasks to build comfort."
-            },
-            {
-              "id": "b",
-              "text": "Rewrite notes without testing changes in a timed set."
-            },
-            {
-              "id": "c",
-              "text": "Fix repeated timing breakdowns first because they scale across many items in the same run."
-            },
-            {
-              "id": "d",
-              "text": "Ignore pacing because content accuracy matters more."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the fix with the widest downstream effect.",
-          "explanation": "High-frequency process breakdowns usually produce the largest immediate score delta when corrected first."
-        },
-        {
-          "id": "sat-prep-101-l12-q5",
-          "text": "In SAT Reading and Writing module, evidence-line mismatch appears during SAT: Mixed-Section Decision Drill. What is the strongest immediate correction?",
-          "skillId": "sat-prep-101-skill-reading-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore Reading and Writing module diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "c",
-              "text": "Delay correction until after several unrelated drills."
-            },
-            {
-              "id": "d",
-              "text": "Underline claim + cited line before selecting an answer choice."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Choose the option that directly fixes evidence-line mismatch.",
-          "explanation": "Immediate correction inside Reading and Writing module improves transfer to the next timed practice set."
-        },
-        {
-          "id": "sat-prep-101-l12-q6",
-          "text": "During SAT Math module, constraint parsing miss repeats in SAT: Mixed-Section Decision Drill. Which plan should be applied before the next retest?",
-          "skillId": "sat-prep-101-skill-writing-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Rewrite variable constraints, then validate with one substitution check. Track outcomes in an evidence-to-equation journal and retest the same pattern."
-            },
-            {
-              "id": "b",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "c",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "d",
-              "text": "Retake the section with no checkpoint changes."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in evidence-to-equation journal makes the pacing fix visible and repeatable."
-        }
-      ],
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l12-ia1",
-          "type": "matching_pairs",
-          "title": "SAT: Mixed-Section Decision Drill Correction Alignment",
-          "description": "Align each recurring signal with the strongest correction action for decision quality under constraints.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Align each pair.",
-            "Check your result.",
-            "Apply one correction in the next drill."
-          ],
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Evidence question missed because support line was not located"
-              },
-              {
-                "id": "l2",
-                "label": "Grammar boundary mistake repeats in writing sets"
-              },
-              {
-                "id": "l3",
-                "label": "Algebra item solved correctly untimed but missed in sprint mode"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Underline claim + best support line before evaluating answer choices"
-              },
-              {
-                "id": "r2",
-                "label": "Run a punctuation boundary checklist before finalizing the sentence"
-              },
-              {
-                "id": "r3",
-                "label": "Practice a 2-step SAT math setup routine with strict time caps"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 6,
-        "totalQuestions": 6,
-        "timeLimitMinutes": 12,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 6,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 2,
-          "medium": 3,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      metadata: {
-        examDrill: "lesson_drill"
-      },
-      learningAids: [
-        {
-          "id": "sat-prep-101-l12-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: Mixed-Section Decision Drill with emphasis on reading within practice set planning."
-        },
-        {
-          "id": "sat-prep-101-l12-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Mixed-Section Decision Drill showing writing decisions and strategy log checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l13",
-      title: "SAT: Adaptive Retry and Transfer Check",
-      type: "video",
-      duration: 11,
-      learningAids: [
-        {
-          "id": "sat-prep-101-l13-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: Adaptive Retry and Transfer Check with emphasis on reading within practice set planning."
-        },
-        {
-          "id": "sat-prep-101-l13-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Adaptive Retry and Transfer Check showing writing decisions and strategy log checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l14",
-      title: "SAT: Sat Readiness Stability Checkpoint",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Identify one reading decision rule in SAT: Sat Readiness Stability Checkpoint.",
-          "Apply it in one practice set and show how it improves decision quality under constraints.",
-          "Set one next-step target for writing before your next SAT readiness session."
-        ]
-      },
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l14-ia1",
-          "type": "drag_and_drop",
-          "title": "SAT: Sat Readiness Stability Checkpoint Decision-Phase Mapping",
-          "description": "Map each decision cue to Plan, Execute, or Reflect.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
-          "instructions": [
-            "Assign each decision cue to the best phase.",
-            "Check all mappings.",
-            "Capture one improvement target."
-          ],
-          "data": {
-            "targets": [
-              {
-                "id": "plan",
-                "label": "Blueprint"
-              },
-              {
-                "id": "execute",
-                "label": "Evidence Solve"
-              },
-              {
-                "id": "reflect",
-                "label": "Error Review"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Preview command words and time checkpoints before each SAT section",
-                "correctTargetId": "plan"
-              },
-              {
-                "id": "d2",
-                "label": "Annotate evidence lines and algebra constraints before locking an answer",
-                "correctTargetId": "execute"
-              },
-              {
-                "id": "d3",
-                "label": "Tag misses by reading, writing, or math pattern in the error log",
-                "correctTargetId": "reflect"
-              }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        {
-          "id": "sat-prep-101-l14-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: Sat Readiness Stability Checkpoint with emphasis on reading within practice set planning."
-        },
-        {
-          "id": "sat-prep-101-l14-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Sat Readiness Stability Checkpoint showing writing decisions and strategy log checks."
-        }
-      ]
-    },
-    {
-      id: "sat-prep-101-l15",
-      title: "SAT: Full SAT Mock and Review",
-      type: "quiz",
-      duration: 20,
-      questions: [
-        {
-          "id": "sat-prep-101-l15-q1",
-          "text": "In SAT: Full SAT Mock and Review, a learner keeps missing reading items during SAT practice. Which adjustment should happen before the next timed review cycle?",
-          "skillId": "sat-prep-101-skill-reading-workflow",
-          "options": [
-            {
-              "id": "a",
-              "text": "Skip review and jump directly to harder questions."
-            },
-            {
-              "id": "b",
-              "text": "Track only total score with no error categories."
-            },
-            {
-              "id": "c",
-              "text": "Run a short reading checkpoint routine and annotate why each miss occurred in an error taxonomy before retesting."
-            },
-            {
-              "id": "d",
-              "text": "Switch topics even if reading is still the dominant weakness."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the action that creates a repeatable feedback loop for reading.",
-          "explanation": "Fast targeted feedback plus immediate correction is the most reliable way to improve reading."
-        },
-        {
-          "id": "sat-prep-101-l15-q2",
-          "text": "A SAT SAT: Full SAT Mock and Review session ends with unstable timing. What should be diagnosed first?",
-          "skillId": "sat-prep-101-skill-writing-diagnosis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Retake the session immediately without diagnostics."
-            },
-            {
-              "id": "b",
-              "text": "Increase total question count and keep the same attempt order."
-            },
-            {
-              "id": "c",
-              "text": "Use one pacing rule for all sections regardless of load."
-            },
-            {
-              "id": "d",
-              "text": "Locate the exact writing decision point where time spikes, then set micro-checkpoints for that phase."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Find the answer that isolates a measurable bottleneck.",
-          "explanation": "Pacing stabilizes when the highest-cost decision point is measured and corrected directly."
-        },
-        {
-          "id": "sat-prep-101-l15-q3",
-          "text": "SAT practice shows correction is happening but not sticking in SAT: Full SAT Mock and Review. What plan fixes this fastest?",
-          "skillId": "sat-prep-101-skill-algebra-transfer",
-          "options": [
-            {
-              "id": "a",
-              "text": "Pair each corrected algebra error with a near-transfer item in the next timed block and track it in an error taxonomy."
-            },
-            {
-              "id": "b",
-              "text": "Keep reviewing notes and avoid new timed attempts."
-            },
-            {
-              "id": "c",
-              "text": "Increase difficulty only, without targeted rematches."
-            },
-            {
-              "id": "d",
-              "text": "Rewatch lesson content without logging applied changes."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "The strongest option forces immediate transfer testing.",
-          "explanation": "Correction becomes durable when each fix is tested on a similar item during the next constrained attempt."
-        },
-        {
-          "id": "sat-prep-101-l15-q4",
-          "text": "During post-drill review for SAT: Full SAT Mock and Review, which fix should be prioritized first for score impact in SAT?",
-          "skillId": "sat-prep-101-skill-timing-priority",
-          "options": [
-            {
-              "id": "a",
-              "text": "Polish already-mastered question types first."
-            },
-            {
-              "id": "b",
-              "text": "Address repeated timing and pacing errors first because they affect many questions in one run."
-            },
-            {
-              "id": "c",
-              "text": "Ignore pacing and focus only on confidence items."
-            },
-            {
-              "id": "d",
-              "text": "Rewrite notes without validating changes in timed practice."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Prioritize changes that influence the largest question set.",
-          "explanation": "Highest-impact remediation usually targets repeated timing and process breakdowns before edge-case content gaps."
-        },
-        {
-          "id": "sat-prep-101-l15-q5",
-          "text": "In SAT Reading and Writing module, evidence-line mismatch appears during SAT: Full SAT Mock and Review. What is the strongest immediate correction?",
-          "skillId": "sat-prep-101-skill-reading-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Ignore Reading and Writing module diagnostics and continue for volume."
-            },
-            {
-              "id": "b",
-              "text": "Re-read notes without running a corrected attempt."
-            },
-            {
-              "id": "c",
-              "text": "Underline claim + cited line before selecting an answer choice."
-            },
-            {
-              "id": "d",
-              "text": "Delay correction until after several unrelated drills."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Choose the option that directly fixes evidence-line mismatch.",
-          "explanation": "Immediate correction inside Reading and Writing module improves transfer to the next timed review cycle."
-        },
-        {
-          "id": "sat-prep-101-l15-q6",
-          "text": "During SAT Math module, constraint parsing miss repeats in SAT: Full SAT Mock and Review. Which plan should be applied before the next retest?",
-          "skillId": "sat-prep-101-skill-writing-section-application",
-          "options": [
-            {
-              "id": "a",
-              "text": "Switch to new content before validating the fix."
-            },
-            {
-              "id": "b",
-              "text": "Increase speed without updating process controls."
-            },
-            {
-              "id": "c",
-              "text": "Retake the section with no checkpoint changes."
-            },
-            {
-              "id": "d",
-              "text": "Rewrite variable constraints, then validate with one substitution check. Track outcomes in an evidence-to-equation journal and retest the same pattern."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "Best plans combine targeted correction with measurable tracking.",
-          "explanation": "A logged correction cycle in evidence-to-equation journal makes the pacing fix visible and repeatable."
-        },
-        {
-          "id": "sat-prep-101-l15-q7",
-          "text": "In a full SAT mock, misses appear across multiple strands. What triage order is strongest?",
-          "skillId": "sat-prep-101-skill-mock-triage",
-          "options": [
-            {
-              "id": "a",
-              "text": "Group misses by concept, strategy, and timing first, then sequence fixes by expected score gain."
-            },
-            {
-              "id": "b",
-              "text": "Review only the most recent mistakes."
-            },
-            {
-              "id": "c",
-              "text": "Retake the full mock without a remediation plan."
-            },
-            {
-              "id": "d",
-              "text": "Choose revision topics only by preference."
-            }
-          ],
-          "correctOptionId": "a",
-          "hint": "The right choice creates a stable remediation queue.",
-          "explanation": "Process-level triage finds leverage points that improve many future items."
-        },
-        {
-          "id": "sat-prep-101-l15-q8",
-          "text": "A learner finishes one section early but times out on another in SAT. What is the best pacing fix?",
-          "skillId": "sat-prep-101-skill-section-pacing",
-          "options": [
-            {
-              "id": "a",
-              "text": "Use the same checkpoint target for every section."
-            },
-            {
-              "id": "b",
-              "text": "Set section-specific checkpoints and rehearse transitions so pace remains stable end-to-end."
-            },
-            {
-              "id": "c",
-              "text": "Speed up all sections equally without checking accuracy."
-            },
-            {
-              "id": "d",
-              "text": "Add extra questions without tracking section pace."
-            }
-          ],
-          "correctOptionId": "b",
-          "hint": "Section load differences require section-level pacing plans.",
-          "explanation": "One-size pacing causes uneven performance; section-specific pacing is more reliable."
-        },
-        {
-          "id": "sat-prep-101-l15-q9",
-          "text": "Before submitting a high-stakes SAT section, which quality-control habit is most reliable?",
-          "skillId": "sat-prep-101-skill-quality-control",
-          "options": [
-            {
-              "id": "a",
-              "text": "Change random answers to distribute letters evenly."
-            },
-            {
-              "id": "b",
-              "text": "Skip verification to preserve confidence."
-            },
-            {
-              "id": "c",
-              "text": "Run a brief targeted verification pass on flagged items and known error patterns."
-            },
-            {
-              "id": "d",
-              "text": "Review only the first third of the section."
-            }
-          ],
-          "correctOptionId": "c",
-          "hint": "Targeted verification beats random checking.",
-          "explanation": "Focused verification catches preventable mistakes without excessive time cost."
-        },
-        {
-          "id": "sat-prep-101-l15-q10",
-          "text": "After full-mock review in SAT, which next-step plan yields the best one-week improvement?",
-          "skillId": "sat-prep-101-skill-remediation-loop",
-          "options": [
-            {
-              "id": "a",
-              "text": "Repeat the same mock daily with no targeted fixes."
-            },
-            {
-              "id": "b",
-              "text": "Study only easiest content to boost confidence."
-            },
-            {
-              "id": "c",
-              "text": "Pause all timed practice until every concept feels perfect."
-            },
-            {
-              "id": "d",
-              "text": "Build a remediation sprint with two top weak strands, one pacing drill, and one timed re-check."
-            }
-          ],
-          "correctOptionId": "d",
-          "hint": "The strongest plan includes targeted fixes plus timed validation.",
-          "explanation": "Improvement requires focused remediation and a timed checkpoint to verify transfer."
-        }
-      ],
-      interactiveActivities: [
-        {
-          "id": "sat-prep-101-l15-ia1",
-          "type": "sorting_buckets",
-          "title": "SAT: Full SAT Mock and Review Error Taxonomy Sort",
-          "description": "Sort mock errors into concept, strategy, or timing remediation lanes.",
-          "estimatedMinutes": 10,
-          "difficultyLevel": "adaptive",
-          "instructions": [
-            "Review each error pattern.",
-            "Sort into best remediation lane.",
-            "Use output to plan your next practice sprint."
-          ],
-          "data": {
-            "buckets": [
-              {
-                "id": "concept",
-                "label": "Reading/Writing Concept Gap"
-              },
-              {
-                "id": "strategy",
-                "label": "Math Strategy Gap"
-              },
-              {
-                "id": "timing",
-                "label": "Pacing Gap"
-              }
-            ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "Missed central-idea evidence mapping in two passages",
-                "correctBucketId": "concept"
-              },
-              {
-                "id": "i2",
-                "label": "Chose fastest-looking equation instead of validated model",
-                "correctBucketId": "strategy"
-              },
-              {
-                "id": "i3",
-                "label": "Final math cluster unanswered due late section slowdown",
-                "correctBucketId": "timing"
-              },
-              {
-                "id": "i4",
-                "label": "Correct in review but repeated same pacing error next drill",
-                "correctBucketId": "timing"
-              }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        "frequency": "mock_assessment",
-        "questionsPerCheck": 10,
-        "totalQuestions": 10,
-        "timeLimitMinutes": 24,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 10,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 2,
-          "medium": 5,
-          "hard": 3
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.82
-      },
-      metadata: {
-        examDrill: "full_mock"
-      },
-      learningAids: [
-        {
-          "id": "sat-prep-101-l15-a1",
-          "type": "image",
-          "title": "Reading Snapshot",
-          "content": "Visual anchor for SAT: Full SAT Mock and Review with emphasis on reading within review cycle planning."
-        },
-        {
-          "id": "sat-prep-101-l15-a2",
-          "type": "animation",
-          "title": "Writing Walkthrough",
-          "content": "Stepwise walkthrough for SAT: Full SAT Mock and Review showing writing decisions and error taxonomy checks."
-        }
-      ]
+        totalQuestions: 3,
+        bloomProfile: { apply: 2, analyze: 1 }
+      }
     }
-  ],
+  ]
 };

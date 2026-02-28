@@ -2,981 +2,678 @@ import type { LearningModule } from "@/lib/modules/types";
 
 export const Astronomy101Module: LearningModule = {
   id: "astronomy-101",
-  title: "Astronomy Explorer",
-  description: "Explore stars, planets, galaxies, and observation of the night sky.",
+  title: "Astronomy: Exploring the Universe",
+  description:
+    "Journey through our solar system, study the Sun and Moon, discover stars and constellations, explore galaxies, and learn about space exploration from ancient observers to modern missions.",
   subject: "Astronomy",
-  tags: ["core", "curriculum", "interactive"],
+  tags: ["astronomy", "science", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "1.1.0",
-  version: "1.1.0",
+  moduleVersion: "2.0.0",
+  version: "2.0.0",
   learningObjectives: [
-    "Understand core concepts in Astronomy",
-    "Apply Space Concepts strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Name the eight planets in order from the Sun",
+    "Describe the Sun's structure and importance to life on Earth",
+    "Explain the Moon's phases and its role in tides",
+    "Identify major constellations and understand how stars form",
+    "Compare types of galaxies and locate the Milky Way",
+    "Trace the history of space exploration from Sputnik to Mars rovers"
   ],
   lessons: [
+    /* ──────────────────────────────────────────────
+       L01  Our Solar System  (video)
+    ────────────────────────────────────────────── */
     {
       id: "astronomy-101-l01",
       title: "Our Solar System",
       type: "video",
-      duration: 10,
+      duration: 12,
       chunks: [
         {
           id: "astronomy-101-l01-c1",
-          title: "Our Solar System Overview",
-          content: "In this lesson, we focus on solar system through the lens of space observation. The goal is to recognize what strong reasoning looks like before solving."
+          title: "The Sun and Inner Planets",
+          content:
+            "Our solar system has one star — the Sun — and eight planets. The four inner planets are called rocky planets: Mercury is the closest and has no atmosphere, Venus is the hottest with thick clouds, Earth is the only planet with liquid water, and Mars — the Red Planet — has iron-rust soil and the tallest volcano, Olympus Mons."
         },
         {
           id: "astronomy-101-l01-c2",
-          title: "Core Concept",
-          content: "solar system and stars work together. Start by naming the main target, then identify the evidence or steps that support it."
+          title: "The Outer Planets",
+          content:
+            "Beyond Mars is the asteroid belt, then the gas giants. Jupiter is the largest planet with a Great Red Spot storm. Saturn is famous for its wide, icy rings. Uranus tilts on its side and spins like a rolling ball. Neptune is deep blue with the fastest winds in the solar system."
         },
         {
           id: "astronomy-101-l01-c3",
-          title: "Worked Example",
-          content: "Walk through one guided example: define the goal, apply a strategy for stars, then verify the result with a quick check."
-        },
-        {
-          id: "astronomy-101-l01-c4",
-          title: "Transfer Prompt",
-          content: "Apply the same process to a new scenario and explain why your approach is valid in one clear sentence."
+          title: "Dwarf Planets and Beyond",
+          content:
+            "Pluto was reclassified as a dwarf planet in 2006. Other dwarf planets include Eris and Ceres. The Kuiper Belt beyond Neptune is filled with icy objects, and the Oort Cloud extends trillions of miles from the Sun."
         }
       ],
       flashcards: [
-        { id: "astronomy-101-l01-f1", front: "solar system", back: "A central target skill in this module. Name it before solving." },
-        { id: "astronomy-101-l01-f2", front: "stars", back: "Use this as the method step after defining the goal." },
-        { id: "astronomy-101-l01-f3", front: "Verification", back: "Check that your result matches the original goal and constraints." },
-        { id: "astronomy-101-l01-f4", front: "Transfer", back: "Use the same strategy on a new item to confirm true mastery." }
+        { id: "astronomy-101-l01-f1", front: "The four rocky inner planets in order", back: "Mercury, Venus, Earth, Mars" },
+        { id: "astronomy-101-l01-f2", front: "Planet with the Great Red Spot", back: "Jupiter" },
+        { id: "astronomy-101-l01-f3", front: "Planet famous for its icy rings", back: "Saturn" },
+        { id: "astronomy-101-l01-f4", front: "Why Pluto is no longer a full planet (since 2006)", back: "Reclassified as a dwarf planet" }
       ],
-      learningAids: [
-        { id: "astronomy-101-l01-a1", type: "image", title: "Concept Poster", content: "A colorful infographic about solar system and stars." },
-        { id: "astronomy-101-l01-a2", type: "animation", title: "Warm-up Animation", content: "Short animation introducing Astronomy vocabulary." }
-      ]
-    },
-    {
-      id: "astronomy-101-l02",
-      title: "Stars and Constellations",
-      type: "interactive",
-      duration: 12,
-      metadata: {
-        prompts: [
-          "Identify one core idea about solar system from this lesson.",
-          "Explain where stars appears in real life.",
-          "Describe one question you still have about space observation."
-        ]
-      },
-      interactiveActivities: [
+      questions: [
         {
-          id: "astronomy-101-l02-ia1",
-          type: "drag_and_drop",
-          title: "Practice Flow Builder",
-          description: "Sort each action into Plan, Execute, or Reflect.",
-          estimatedMinutes: 8,
-          difficultyLevel: "easy",
-          data: {
-            targets: [
-              { id: "plan", label: "Plan" },
-              { id: "execute", label: "Execute" },
-              { id: "reflect", label: "Reflect" }
-            ],
-            draggables: [
-              { id: "d1", label: "Set a goal for solar system", correctTargetId: "plan" },
-              { id: "d2", label: "Try one strategy for stars", correctTargetId: "execute" },
-              { id: "d3", label: "Record what worked and what to improve", correctTargetId: "reflect" }
-            ]
-          }
+          id: "astronomy-101-l01-q1",
+          text: "Which planet is closest to the Sun?",
+          options: [
+            { id: "a", text: "Mercury" },
+            { id: "b", text: "Venus" },
+            { id: "c", text: "Earth" },
+            { id: "d", text: "Mars" }
+          ],
+          correctOptionId: "a",
+          explanation: "Mercury orbits nearest to the Sun!"
+        },
+        {
+          id: "astronomy-101-l01-q2",
+          text: "Which planet is the largest in our solar system?",
+          options: [
+            { id: "a", text: "Jupiter" },
+            { id: "b", text: "Saturn" },
+            { id: "c", text: "Neptune" },
+            { id: "d", text: "Earth" }
+          ],
+          correctOptionId: "a",
+          explanation: "Jupiter is the biggest — over 1,300 Earths could fit inside it!"
+        },
+        {
+          id: "astronomy-101-l01-q3",
+          text: "Mars is called the Red Planet because of",
+          options: [
+            { id: "a", text: "Iron-rust colored soil" },
+            { id: "b", text: "Hot lava on the surface" },
+            { id: "c", text: "Red clouds" },
+            { id: "d", text: "The sunset color" }
+          ],
+          correctOptionId: "a",
+          explanation: "Iron oxide (rust) in the soil gives Mars its red color!"
         }
       ],
-      learningAids: [
-        { id: "astronomy-101-l02-a1", type: "practice", title: "Try It Board", content: "Complete a guided activity on stars and write one reflection." }
+      activities: [
+        {
+          id: "astronomy-101-l01-act1",
+          type: "project_builder",
+          title: "Solar system scale model",
+          description: "Use different sized balls or fruits to represent each planet. A basketball for Jupiter, a marble for Mercury. Lay them out in order from the Sun and label each one."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L02  The Sun  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "astronomy-101-l02",
+      title: "The Sun",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "astronomy-101-l02-c1",
+          title: "What the Sun Is",
+          content:
+            "The Sun is a medium-sized star — a giant ball of hot gas made mostly of hydrogen and helium. Nuclear fusion in its core converts hydrogen into helium, releasing enormous energy as light and heat. About 1.3 million Earths could fit inside the Sun."
+        },
+        {
+          id: "astronomy-101-l02-c2",
+          title: "Layers of the Sun",
+          content:
+            "The Sun has layers: the core (where fusion happens), the radiative zone, the convective zone, the photosphere (the visible surface), the chromosphere, and the corona (the outer atmosphere you see during a total eclipse)."
+        },
+        {
+          id: "astronomy-101-l02-c3",
+          title: "Why the Sun Matters",
+          content:
+            "The Sun provides the light and heat Earth needs for life. Plants use sunlight for photosynthesis, which produces oxygen. The Sun also drives weather, ocean currents, and the water cycle. Never look directly at the Sun — it can damage your eyes!"
+        }
+      ],
+      flashcards: [
+        { id: "astronomy-101-l02-f1", front: "Process that powers the Sun", back: "Nuclear fusion" },
+        { id: "astronomy-101-l02-f2", front: "The two main gases in the Sun", back: "Hydrogen and helium" },
+        { id: "astronomy-101-l02-f3", front: "The visible surface of the Sun", back: "Photosphere" },
+        { id: "astronomy-101-l02-f4", front: "Sun's outer atmosphere seen during an eclipse", back: "Corona" }
+      ],
+      questions: [
+        {
+          id: "astronomy-101-l02-q1",
+          text: "What process powers the Sun?",
+          options: [
+            { id: "a", text: "Nuclear fusion" },
+            { id: "b", text: "Burning wood" },
+            { id: "c", text: "Electricity" },
+            { id: "d", text: "Friction" }
+          ],
+          correctOptionId: "a",
+          explanation: "The Sun fuses hydrogen atoms into helium, releasing energy!"
+        },
+        {
+          id: "astronomy-101-l02-q2",
+          text: "The corona is the Sun's",
+          options: [
+            { id: "a", text: "Outer atmosphere" },
+            { id: "b", text: "Core" },
+            { id: "c", text: "Visible surface" },
+            { id: "d", text: "Inner layer" }
+          ],
+          correctOptionId: "a",
+          explanation: "The corona is visible as a glowing halo during a total solar eclipse!"
+        },
+        {
+          id: "astronomy-101-l02-q3",
+          text: "Plants use sunlight for",
+          options: [
+            { id: "a", text: "Photosynthesis" },
+            { id: "b", text: "Gravity" },
+            { id: "c", text: "Friction" },
+            { id: "d", text: "Evaporation" }
+          ],
+          correctOptionId: "a",
+          explanation: "Photosynthesis converts sunlight into food and oxygen!"
+        }
+      ],
+      activities: [
+        {
+          id: "astronomy-101-l02-act1",
+          type: "drawing_canvas",
+          title: "Sun layers diagram",
+          description: "Draw a cross-section of the Sun showing its six layers: core, radiative zone, convective zone, photosphere, chromosphere, and corona. Label and color each layer."
+        }
+      ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L03  Earth's Moon  (video)
+    ────────────────────────────────────────────── */
     {
       id: "astronomy-101-l03",
-      title: "Checkpoint: Sky Basics",
-      type: "quiz",
-      duration: 10,
+      title: "Earth's Moon",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "astronomy-101-l03-c1",
+          title: "Moon Facts",
+          content:
+            "The Moon is Earth's only natural satellite. It is about 238,900 miles away. The Moon has no atmosphere, no wind, and no water. Temperatures range from 260°F in sunlight to −280°F in shadow. Astronaut footprints from 1969 are still there because there is no wind to erase them."
+        },
+        {
+          id: "astronomy-101-l03-c2",
+          title: "Phases of the Moon",
+          content:
+            "The Moon does not produce its own light — it reflects sunlight. As the Moon orbits Earth (about 29.5 days), we see different amounts of the lit side: new moon (dark), waxing crescent, first quarter, waxing gibbous, full moon, waning gibbous, third quarter, waning crescent, then back to new moon."
+        },
+        {
+          id: "astronomy-101-l03-c3",
+          title: "Tides and Eclipses",
+          content:
+            "The Moon's gravity pulls on Earth's oceans, causing tides. High tide happens on the side facing the Moon and on the opposite side. A solar eclipse occurs when the Moon passes between the Sun and Earth. A lunar eclipse happens when Earth's shadow falls on the Moon."
+        }
+      ],
+      flashcards: [
+        { id: "astronomy-101-l03-f1", front: "How long the Moon takes to orbit Earth", back: "About 29.5 days" },
+        { id: "astronomy-101-l03-f2", front: "Moon phase when the entire face is lit", back: "Full moon" },
+        { id: "astronomy-101-l03-f3", front: "What causes ocean tides on Earth", back: "The Moon's gravity" },
+        { id: "astronomy-101-l03-f4", front: "When the Moon blocks the Sun", back: "Solar eclipse" }
+      ],
       questions: [
         {
           id: "astronomy-101-l03-q1",
-          text: "Which statement best explains solar system in Astronomy?",
-          skillId: "astronomy-101-skill-core",
+          text: "Why are astronaut footprints still on the Moon?",
           options: [
-            { id: "a", text: "It explains solar system using evidence from the lesson." },
-            { id: "b", text: "It ignores how solar system works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Astronomy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "No wind or atmosphere to erase them" },
+            { id: "b", text: "They were painted on" },
+            { id: "c", text: "Moon rock is very soft" },
+            { id: "d", text: "Rain washed them deeper" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "With no wind or weather, nothing disturbs the footprints!"
         },
         {
           id: "astronomy-101-l03-q2",
-          text: "What is the best first step when analyzing stars?",
-          skillId: "astronomy-101-skill-process",
+          text: "The Moon produces its own light.",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for stars." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to stars." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "False — it reflects sunlight" },
+            { id: "b", text: "True" },
+            { id: "c", text: "Only during full moon" },
+            { id: "d", text: "Only at night" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Moon shines because it reflects the Sun's light!"
         },
         {
           id: "astronomy-101-l03-q3",
-          text: "Which option shows strong reasoning about space observation?",
-          skillId: "astronomy-101-skill-reasoning",
+          text: "What causes tides on Earth?",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to space observation." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "The Moon's gravitational pull" },
+            { id: "b", text: "Wind" },
+            { id: "c", text: "The Sun's heat" },
+            { id: "d", text: "Earth's rotation alone" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l03-q4",
-          text: "Why is spaced review useful for Astronomy mastery?",
-          skillId: "astronomy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Moon's gravity pulls on Earth's oceans, creating tides!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "astronomy-101-l03-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Sky Basics",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about solar system" },
-              { id: "l2", label: "Inconsistent approach to stars" },
-              { id: "l3", label: "Weak transfer of space observation under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "astronomy-101-l03-act1",
+          type: "drawing_canvas",
+          title: "Moon phase tracker",
+          description: "Over one week, draw the Moon's shape each night. Label the phase (crescent, quarter, gibbous, or full). After a month you will see the full cycle."
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "astronomy-101-l03-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L04  Astronomy Checkpoint  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "astronomy-101-l04",
-      title: "Planets and Orbits",
-      type: "video",
-      duration: 11,
+      title: "Astronomy Checkpoint",
+      type: "quiz",
+      duration: 8,
       chunks: [
         {
           id: "astronomy-101-l04-c1",
-          title: "Planets and Orbits Focus",
-          content: "This lesson deepens galaxies using structured reasoning. We move from concept understanding to applied decisions."
+          title: "Solar System Review",
+          content:
+            "Eight planets orbit the Sun: four rocky inner planets and four gas/ice giants. Jupiter is the largest. Mercury is the closest to the Sun."
         },
         {
           id: "astronomy-101-l04-c2",
-          title: "Method Steps",
-          content: "Step 1: identify what is being asked. Step 2: choose a strategy aligned to galaxies. Step 3: justify with evidence."
+          title: "Sun and Moon Review",
+          content:
+            "The Sun is powered by nuclear fusion. The Moon reflects sunlight, orbits Earth in 29.5 days, and causes tides with its gravity."
         },
         {
           id: "astronomy-101-l04-c3",
-          title: "Common Mistakes",
-          content: "Common errors include skipping setup, using unrelated assumptions, or failing to verify the final result."
-        },
-        {
-          id: "astronomy-101-l04-c4",
-          title: "Independent Try",
-          content: "Solve one similar item and compare your process to the lesson sequence."
+          title: "Keep Looking Up!",
+          content:
+            "You know the planets, the Sun's structure, and how the Moon works. Next you will explore stars, galaxies, and space missions!"
         }
       ],
       flashcards: [
-        { id: "astronomy-101-l04-f1", front: "galaxies", back: "State the target and pick a strategy before solving." },
-        { id: "astronomy-101-l04-f2", front: "Step Sequence", back: "Goal -> Strategy -> Evidence -> Check." },
-        { id: "astronomy-101-l04-f3", front: "Assumption Check", back: "Remove assumptions that are not supported by the prompt." },
-        { id: "astronomy-101-l04-f4", front: "Process Match", back: "Your explanation should match the steps you actually used." }
+        { id: "astronomy-101-l04-f1", front: "Number of planets in our solar system", back: "Eight" },
+        { id: "astronomy-101-l04-f2", front: "The Sun fuses hydrogen into this element", back: "Helium" },
+        { id: "astronomy-101-l04-f3", front: "Moon phase that is completely dark", back: "New moon" },
+        { id: "astronomy-101-l04-f4", front: "Tallest volcano in the solar system (on Mars)", back: "Olympus Mons" }
       ],
-      learningAids: [
-        { id: "astronomy-101-l04-a1", type: "image", title: "Worked Example Sheet", content: "Step-by-step visuals for galaxies scenarios." }
-      ]
-    },
-    {
-      id: "astronomy-101-l05",
-      title: "Galaxies and Scale",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
-        ]
-      },
-      interactiveActivities: [
+      questions: [
         {
-          id: "astronomy-101-l05-ia1",
-          type: "sorting_buckets",
-          title: "Strategy Sort",
-          description: "Sort study actions into Concept, Process, or Review lanes.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "concept", label: "galaxies Concept" },
-              { id: "process", label: "observation methods Process" },
-              { id: "review", label: "Review Loop" }
-            ],
-            items: [
-              { id: "i1", label: "Write one definition in your own words", correctBucketId: "concept" },
-              { id: "i2", label: "Follow the step-by-step method on a new example", correctBucketId: "process" },
-              { id: "i3", label: "Retest the same skill tomorrow", correctBucketId: "review" }
-            ]
-          }
+          id: "astronomy-101-l04-q1",
+          text: "How many planets are in our solar system?",
+          options: [
+            { id: "a", text: "8" },
+            { id: "b", text: "9" },
+            { id: "c", text: "7" },
+            { id: "d", text: "10" }
+          ],
+          correctOptionId: "a",
+          explanation: "Since 2006, there are 8 planets — Pluto is a dwarf planet!"
+        },
+        {
+          id: "astronomy-101-l04-q2",
+          text: "Saturn is famous for its",
+          options: [
+            { id: "a", text: "Rings" },
+            { id: "b", text: "Great Red Spot" },
+            { id: "c", text: "Sideways tilt" },
+            { id: "d", text: "Blue color" }
+          ],
+          correctOptionId: "a",
+          explanation: "Saturn has beautiful rings made of ice and rock!"
+        },
+        {
+          id: "astronomy-101-l04-q3",
+          text: "A solar eclipse happens when",
+          options: [
+            { id: "a", text: "The Moon blocks the Sun" },
+            { id: "b", text: "Earth blocks the Sun" },
+            { id: "c", text: "The Sun turns off" },
+            { id: "d", text: "Stars move in front of the Sun" }
+          ],
+          correctOptionId: "a",
+          explanation: "The Moon passes between the Sun and Earth during a solar eclipse!"
         }
       ],
-      learningAids: [
-        { id: "astronomy-101-l05-a1", type: "animation", title: "Challenge Walkthrough", content: "Animated sequence for solving a galaxies challenge." }
+      activities: [
+        {
+          id: "astronomy-101-l04-act1",
+          type: "drawing_canvas",
+          title: "Solar system poster review",
+          description: "Draw the Sun and all 8 planets in order. Add one fact next to each planet."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L05  Stars and Constellations  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "astronomy-101-l05",
+      title: "Stars and Constellations",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "astronomy-101-l05-c1",
+          title: "What Are Stars?",
+          content:
+            "Stars are giant balls of hot gas that produce light and heat through nuclear fusion. They come in different sizes: red dwarfs are small and cool, yellow dwarfs (like our Sun) are medium, and blue giants are huge and extremely hot. A star's life begins in a nebula — a cloud of gas and dust."
+        },
+        {
+          id: "astronomy-101-l05-c2",
+          title: "Constellations",
+          content:
+            "Constellations are patterns of stars that ancient people connected like dot-to-dot pictures. Orion the Hunter has three stars in a row for his belt. Ursa Major (Great Bear) contains the Big Dipper. The North Star (Polaris) sits at the tip of the Little Dipper and points north."
+        },
+        {
+          id: "astronomy-101-l05-c3",
+          title: "Star Life Cycle",
+          content:
+            "Stars are born in nebulae, burn hydrogen for millions or billions of years, then die. Small stars become white dwarfs. Large stars explode as supernovae and may leave behind a neutron star or black hole. The elements in your body were made inside ancient stars!"
+        }
+      ],
+      flashcards: [
+        { id: "astronomy-101-l05-f1", front: "Cloud of gas and dust where stars are born", back: "Nebula" },
+        { id: "astronomy-101-l05-f2", front: "Constellation with three stars in a belt", back: "Orion" },
+        { id: "astronomy-101-l05-f3", front: "Star that always points north", back: "Polaris (North Star)" },
+        { id: "astronomy-101-l05-f4", front: "Explosive death of a massive star", back: "Supernova" }
+      ],
+      questions: [
+        {
+          id: "astronomy-101-l05-q1",
+          text: "Where are stars born?",
+          options: [
+            { id: "a", text: "In a nebula" },
+            { id: "b", text: "On a planet" },
+            { id: "c", text: "Inside the Sun" },
+            { id: "d", text: "In the ocean" }
+          ],
+          correctOptionId: "a",
+          explanation: "Stars form inside nebulae — clouds of gas and dust!"
+        },
+        {
+          id: "astronomy-101-l05-q2",
+          text: "Which constellation has three stars in a row forming a belt?",
+          options: [
+            { id: "a", text: "Orion" },
+            { id: "b", text: "Ursa Major" },
+            { id: "c", text: "Cassiopeia" },
+            { id: "d", text: "Leo" }
+          ],
+          correctOptionId: "a",
+          explanation: "Orion's Belt is one of the most recognizable patterns in the sky!"
+        },
+        {
+          id: "astronomy-101-l05-q3",
+          text: "When a massive star explodes, it is called a",
+          options: [
+            { id: "a", text: "Supernova" },
+            { id: "b", text: "Solar eclipse" },
+            { id: "c", text: "White dwarf" },
+            { id: "d", text: "Nebula" }
+          ],
+          correctOptionId: "a",
+          explanation: "A supernova is the brilliant explosion of a dying massive star!"
+        }
+      ],
+      activities: [
+        {
+          id: "astronomy-101-l05-act1",
+          type: "drawing_canvas",
+          title: "Constellation creator",
+          description: "On black paper, use a white crayon or chalk to place dots for stars. Connect them into a real constellation (Orion, Big Dipper) or invent your own. Name it and write a short story about it."
+        }
+      ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L06  Galaxies  (video)
+    ────────────────────────────────────────────── */
     {
       id: "astronomy-101-l06",
-      title: "Checkpoint: Space Concepts",
-      type: "quiz",
-      duration: 10,
+      title: "Galaxies",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "astronomy-101-l06-c1",
+          title: "What Is a Galaxy?",
+          content:
+            "A galaxy is a huge collection of stars, gas, dust, and dark matter held together by gravity. Our galaxy, the Milky Way, contains over 200 billion stars. From the side it looks like a flat disk, and from above it has spiral arms."
+        },
+        {
+          id: "astronomy-101-l06-c2",
+          title: "Types of Galaxies",
+          content:
+            "There are three main types of galaxies. Spiral galaxies (like the Milky Way and Andromeda) have curved arms. Elliptical galaxies are smooth, oval-shaped, and contain mostly older stars. Irregular galaxies have no clear shape — the Large Magellanic Cloud is one."
+        },
+        {
+          id: "astronomy-101-l06-c3",
+          title: "The Observable Universe",
+          content:
+            "There are over two trillion galaxies in the observable universe! The Hubble Space Telescope took a famous Deep Field photo showing thousands of galaxies in a tiny spot of sky. Light from the most distant galaxies has traveled over 13 billion years to reach us."
+        }
+      ],
+      flashcards: [
+        { id: "astronomy-101-l06-f1", front: "Our home galaxy", back: "The Milky Way" },
+        { id: "astronomy-101-l06-f2", front: "Galaxy type with curved arms", back: "Spiral galaxy" },
+        { id: "astronomy-101-l06-f3", front: "Nearest large spiral galaxy to the Milky Way", back: "Andromeda" },
+        { id: "astronomy-101-l06-f4", front: "Estimated number of galaxies in the observable universe", back: "Over two trillion" }
+      ],
       questions: [
         {
           id: "astronomy-101-l06-q1",
-          text: "Which statement best explains galaxies in Astronomy?",
-          skillId: "astronomy-101-skill-core",
+          text: "What type of galaxy is the Milky Way?",
           options: [
-            { id: "a", text: "It explains galaxies using evidence from the lesson." },
-            { id: "b", text: "It ignores how galaxies works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Astronomy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Spiral" },
+            { id: "b", text: "Elliptical" },
+            { id: "c", text: "Irregular" },
+            { id: "d", text: "Ring" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Milky Way is a spiral galaxy with curved arms!"
         },
         {
           id: "astronomy-101-l06-q2",
-          text: "What is the best first step when analyzing observation methods?",
-          skillId: "astronomy-101-skill-process",
+          text: "Approximately how many stars are in the Milky Way?",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for observation methods." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to observation methods." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Over 200 billion" },
+            { id: "b", text: "About 1 million" },
+            { id: "c", text: "A few thousand" },
+            { id: "d", text: "Exactly 100" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Milky Way has over 200 billion stars!"
         },
         {
           id: "astronomy-101-l06-q3",
-          text: "Which option shows strong reasoning about space observation?",
-          skillId: "astronomy-101-skill-reasoning",
+          text: "Which telescope took the famous Deep Field photo of galaxies?",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to space observation." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Hubble" },
+            { id: "b", text: "Galileo's telescope" },
+            { id: "c", text: "James Webb (no, it was Hubble first)" },
+            { id: "d", text: "A backyard telescope" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l06-q4",
-          text: "Why is spaced review useful for Astronomy mastery?",
-          skillId: "astronomy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Hubble Space Telescope captured thousands of galaxies in one tiny patch of sky!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "astronomy-101-l06-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Space Concepts",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about galaxies" },
-              { id: "l2", label: "Inconsistent approach to observation methods" },
-              { id: "l3", label: "Weak transfer of space observation under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "astronomy-101-l06-act1",
+          type: "drawing_canvas",
+          title: "Galaxy gallery",
+          description: "Draw three galaxies: one spiral (with arms), one elliptical (smooth oval), and one irregular (random shape). Label each type and add stars with white dots."
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "astronomy-101-l06-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L07  Space Exploration  (video)
+    ────────────────────────────────────────────── */
     {
       id: "astronomy-101-l07",
-      title: "Telescopes and Tools",
+      title: "Space Exploration",
       type: "video",
       duration: 12,
       chunks: [
         {
           id: "astronomy-101-l07-c1",
-          title: "Telescopes and Tools Setup",
-          content: "Use observation methods to organize your approach before starting. Planning first improves quality and speed."
+          title: "The Space Race",
+          content:
+            "In 1957, the Soviet Union launched Sputnik, the first artificial satellite. In 1961, Yuri Gagarin became the first human in space. The U.S. responded with the Apollo program, and on July 20, 1969, Neil Armstrong and Buzz Aldrin walked on the Moon. Armstrong said: 'That's one small step for man, one giant leap for mankind.'"
         },
         {
           id: "astronomy-101-l07-c2",
-          title: "Decision Rules",
-          content: "When choices compete, use a simple rule: pick the option with strongest evidence and clearest link to the goal."
+          title: "Rovers and Probes",
+          content:
+            "NASA's Mars rovers — Spirit, Opportunity, Curiosity, and Perseverance — explore Mars's surface. Voyager 1 and 2, launched in 1977, have left the solar system and carry Golden Records with sounds and images of Earth. The James Webb Space Telescope (launched 2021) captures images from the early universe."
         },
         {
           id: "astronomy-101-l07-c3",
-          title: "Quality Control",
-          content: "Check for three things: accuracy, completeness, and alignment with the original objective."
-        },
-        {
-          id: "astronomy-101-l07-c4",
-          title: "Next-Step Plan",
-          content: "Write one action to repeat and one action to improve in your next practice round."
+          title: "The International Space Station",
+          content:
+            "The ISS is a laboratory orbiting Earth where astronauts from many countries live and work. It orbits at about 17,500 mph and circles Earth every 90 minutes. Astronauts grow plants, study bones and muscles in microgravity, and prepare for future missions to Mars."
         }
       ],
       flashcards: [
-        { id: "astronomy-101-l07-f1", front: "observation methods", back: "Use this as your organizing framework before execution." },
-        { id: "astronomy-101-l07-f2", front: "Decision Rule", back: "Choose the option with strongest evidence-to-goal alignment." },
-        { id: "astronomy-101-l07-f3", front: "Quality Control", back: "Accuracy + completeness + objective match." },
-        { id: "astronomy-101-l07-f4", front: "Iteration", back: "Repeat what works; refine one weak step each cycle." }
+        { id: "astronomy-101-l07-f1", front: "First artificial satellite (1957)", back: "Sputnik" },
+        { id: "astronomy-101-l07-f2", front: "First human to walk on the Moon (1969)", back: "Neil Armstrong" },
+        { id: "astronomy-101-l07-f3", front: "Mars rover launched in 2020", back: "Perseverance" },
+        { id: "astronomy-101-l07-f4", front: "Laboratory orbiting Earth", back: "International Space Station (ISS)" }
       ],
-      learningAids: [
-        { id: "astronomy-101-l07-a1", type: "practice", title: "Project Planner", content: "Template for planning a mini project focused on observation methods." }
+      questions: [
+        {
+          id: "astronomy-101-l07-q1",
+          text: "What was the first artificial satellite launched into space?",
+          options: [
+            { id: "a", text: "Sputnik" },
+            { id: "b", text: "Apollo 11" },
+            { id: "c", text: "Hubble" },
+            { id: "d", text: "ISS" }
+          ],
+          correctOptionId: "a",
+          explanation: "The Soviet Union launched Sputnik in 1957!"
+        },
+        {
+          id: "astronomy-101-l07-q2",
+          text: "Who was the first person to walk on the Moon?",
+          options: [
+            { id: "a", text: "Neil Armstrong" },
+            { id: "b", text: "Yuri Gagarin" },
+            { id: "c", text: "Buzz Aldrin" },
+            { id: "d", text: "John Glenn" }
+          ],
+          correctOptionId: "a",
+          explanation: "Neil Armstrong stepped onto the Moon on July 20, 1969!"
+        },
+        {
+          id: "astronomy-101-l07-q3",
+          text: "The ISS orbits Earth approximately every",
+          options: [
+            { id: "a", text: "90 minutes" },
+            { id: "b", text: "24 hours" },
+            { id: "c", text: "7 days" },
+            { id: "d", text: "1 year" }
+          ],
+          correctOptionId: "a",
+          explanation: "The ISS travels at 17,500 mph and circles Earth every 90 minutes!"
+        }
+      ],
+      activities: [
+        {
+          id: "astronomy-101-l07-act1",
+          type: "project_builder",
+          title: "Space exploration timeline",
+          description: "Create a timeline from 1957 to today. Mark Sputnik (1957), Gagarin (1961), Moon landing (1969), Voyager (1977), ISS (1998), and James Webb (2021). Add a drawing for each event."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L08  Final Astronomy Assessment  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "astronomy-101-l08",
-      title: "Night Sky Activity",
-      type: "interactive",
-      duration: 10,
-      metadata: {
-        prompts: [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "astronomy-101-l08-ia1",
-          type: "matching_pairs",
-          title: "Reflection Match",
-          description: "Match each reflection prompt with the best follow-up action.",
-          estimatedMinutes: 7,
-          difficultyLevel: "easy",
-          data: {
-            left: [
-              { id: "l1", label: "I keep missing one skill pattern" },
-              { id: "l2", label: "I rush and make avoidable mistakes" },
-              { id: "l3", label: "I understand in notes but miss in quizzes" }
-            ],
-            right: [
-              { id: "r1", label: "Do a focused drill on that exact pattern" },
-              { id: "r2", label: "Use a short checklist before submitting answers" },
-              { id: "r3", label: "Repeat the skill in a timed re-check" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "astronomy-101-l08-a1", type: "mnemonic", title: "Reflection Cycle", content: "Remember Observe, Adjust, Repeat while practicing." }
-      ]
-    },
-    {
-      id: "astronomy-101-l09",
-      title: "Review: Astronomy Topics",
+      title: "Final Astronomy Assessment",
       type: "quiz",
       duration: 10,
-      questions: [
-        {
-          id: "astronomy-101-l09-q1",
-          text: "Which statement best explains stars in Astronomy?",
-          skillId: "astronomy-101-skill-core",
-          options: [
-            { id: "a", text: "It explains stars using evidence from the lesson." },
-            { id: "b", text: "It ignores how stars works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Astronomy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l09-q2",
-          text: "What is the best first step when analyzing observation methods?",
-          skillId: "astronomy-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for observation methods." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to observation methods." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l09-q3",
-          text: "Which option shows strong reasoning about space observation?",
-          skillId: "astronomy-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to space observation." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l09-q4",
-          text: "Why is spaced review useful for Astronomy mastery?",
-          skillId: "astronomy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "astronomy-101-l09-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Review: Astronomy Topics",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about stars" },
-              { id: "l2", label: "Inconsistent approach to observation methods" },
-              { id: "l3", label: "Weak transfer of space observation under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "astronomy-101-l09-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "astronomy-101-l10",
-      title: "Mastery: Astronomy",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "astronomy-101-l10-q1",
-          text: "Which statement best explains solar system in Astronomy?",
-          skillId: "astronomy-101-skill-core",
-          options: [
-            { id: "a", text: "It explains solar system using evidence from the lesson." },
-            { id: "b", text: "It ignores how solar system works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Astronomy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l10-q2",
-          text: "What is the best first step when analyzing galaxies?",
-          skillId: "astronomy-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for galaxies." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to galaxies." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l10-q3",
-          text: "Which option shows strong reasoning about space observation?",
-          skillId: "astronomy-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to space observation." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l10-q4",
-          text: "Why is spaced review useful for Astronomy mastery?",
-          skillId: "astronomy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "astronomy-101-l10-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Mastery: Astronomy",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about solar system" },
-              { id: "l2", label: "Inconsistent approach to galaxies" },
-              { id: "l3", label: "Weak transfer of space observation under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "astronomy-101-l10-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "astronomy-101-l11",
-      title: "Applied Astronomy Challenge Studio",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using galaxies.",
-          "Document your transfer plan for the next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "astronomy-101-l11-ia1",
-          type: "sorting_buckets",
-          title: "Transfer Ladder",
-          description: "Sort actions into Diagnose, Fix, and Transfer phases.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "diagnose", label: "Diagnose" },
-              { id: "fix", label: "Fix" },
-              { id: "transfer", label: "Transfer" }
-            ],
-            items: [
-              { id: "i1", label: "Tag repeated mistakes in stars", correctBucketId: "diagnose" },
-              { id: "i2", label: "Rework one missed item with full reasoning", correctBucketId: "fix" },
-              { id: "i3", label: "Retest with a timed mini-check on observation methods", correctBucketId: "transfer" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "astronomy-101-l11-a1", type: "practice", title: "Correction Loop Card", content: "Use Diagnose, Fix, Transfer for each difficult problem." }
-      ]
-    },
-    {
-      id: "astronomy-101-l12",
-      title: "Astronomy Mastery Applied Retest",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "astronomy-101-l12-q1",
-          text: "Which statement best explains solar system in Astronomy?",
-          skillId: "astronomy-101-skill-core",
-          options: [
-            { id: "a", text: "It explains solar system using evidence from the lesson." },
-            { id: "b", text: "It ignores how solar system works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Astronomy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l12-q2",
-          text: "What is the best first step when analyzing observation methods?",
-          skillId: "astronomy-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for observation methods." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to observation methods." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l12-q3",
-          text: "Which option shows strong reasoning about space observation?",
-          skillId: "astronomy-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to space observation." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l12-q4",
-          text: "Why is spaced review useful for Astronomy mastery?",
-          skillId: "astronomy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "astronomy-101-l12-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Astronomy Mastery Applied Retest",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about solar system" },
-              { id: "l2", label: "Inconsistent approach to observation methods" },
-              { id: "l3", label: "Weak transfer of space observation under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "astronomy-101-l12-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "astronomy-101-l13",
-      title: "Astronomy Scenario Lab",
-      type: "video",
-      duration: 12,
       chunks: [
         {
-          id: "astronomy-101-l13-c1",
-          title: "Scenario Brief",
-          content: "This scenario combines solar system, galaxies, and observation methods in one applied challenge."
+          id: "astronomy-101-l08-c1",
+          title: "Solar System and Sun Review",
+          content:
+            "Eight planets orbit the Sun. The Sun is powered by nuclear fusion. Inner planets are rocky; outer planets are gas and ice giants."
         },
         {
-          id: "astronomy-101-l13-c2",
-          title: "Plan the Approach",
-          content: "Break the scenario into smaller decisions, then assign one strategy to each decision point."
+          id: "astronomy-101-l08-c2",
+          title: "Moon, Stars, and Galaxies Review",
+          content:
+            "The Moon reflects sunlight and causes tides. Stars are born in nebulae and may die as supernovae. The Milky Way is a spiral galaxy among trillions."
         },
         {
-          id: "astronomy-101-l13-c3",
-          title: "Execute and Justify",
-          content: "Apply the plan and explain each move with evidence, not guesses."
-        },
-        {
-          id: "astronomy-101-l13-c4",
-          title: "Evaluate Outcome",
-          content: "Compare your result to the target and identify what to keep versus what to adjust."
+          id: "astronomy-101-l08-c3",
+          title: "Space Exploration Review",
+          content:
+            "Sputnik was first in space (1957). Humans walked on the Moon (1969). Rovers explore Mars. The ISS is an orbiting laboratory. Keep exploring!"
         }
       ],
       flashcards: [
-        { id: "astronomy-101-l13-f1", front: "Scenario Planning", back: "Split a complex task into clear decision points." },
-        { id: "astronomy-101-l13-f2", front: "Evidence Link", back: "Each step should connect to evidence in the scenario." },
-        { id: "astronomy-101-l13-f3", front: "Adjustment Loop", back: "Use outcome checks to refine your next attempt." },
-        { id: "astronomy-101-l13-f4", front: "Applied Mastery", back: "Mastery means transferring the process to a new context." }
+        { id: "astronomy-101-l08-f1", front: "Eight planets in order from the Sun", back: "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune" },
+        { id: "astronomy-101-l08-f2", front: "Cloud where stars are born", back: "Nebula" },
+        { id: "astronomy-101-l08-f3", front: "Our galaxy's type", back: "Spiral" },
+        { id: "astronomy-101-l08-f4", front: "First satellite in space", back: "Sputnik (1957)" }
       ],
-      learningAids: [
-        { id: "astronomy-101-l13-a1", type: "image", title: "Scenario Map", content: "A real-world scenario map connecting solar system, galaxies, and observation methods." },
-        { id: "astronomy-101-l13-a2", type: "practice", title: "Mini Case Prompt", content: "Apply one strategy to a new case and explain your reasoning." }
-      ]
-    },
-    {
-      id: "astronomy-101-l14",
-      title: "Astronomy Coaching Clinic",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "astronomy-101-l14-ia1",
-          type: "matching_pairs",
-          title: "Error to Fix Match",
-          description: "Match each error signal to the highest-impact correction action.",
-          estimatedMinutes: 8,
-          difficultyLevel: "medium",
-          data: {
-            left: [
-              { id: "l1", label: "Repeated miss on solar system setup" },
-              { id: "l2", label: "Losses due to rushed observation methods decisions" },
-              { id: "l3", label: "Correct in notes but weak transfer in new tasks" }
-            ],
-            right: [
-              { id: "r1", label: "Rebuild setup steps and retest one parallel item" },
-              { id: "r2", label: "Use checkpoint pacing + verify before submit" },
-              { id: "r3", label: "Pair correction with one timed transfer item" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "astronomy-101-l14-a1", type: "mnemonic", title: "Clinic Loop", content: "Diagnose, Correct, Transfer." }
-      ]
-    },
-    {
-      id: "astronomy-101-l15",
-      title: "Astronomy Mastery Mastery Sprint",
-      type: "quiz",
-      duration: 10,
       questions: [
         {
-          id: "astronomy-101-l15-q1",
-          text: "Which statement best explains stars in Astronomy?",
-          skillId: "astronomy-101-skill-core",
+          id: "astronomy-101-l08-q1",
+          text: "Which planet has the fastest winds in the solar system?",
           options: [
-            { id: "a", text: "It explains stars using evidence from the lesson." },
-            { id: "b", text: "It ignores how stars works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Astronomy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Neptune" },
+            { id: "b", text: "Jupiter" },
+            { id: "c", text: "Saturn" },
+            { id: "d", text: "Earth" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Neptune has wind speeds over 1,200 mph — the fastest of any planet!"
         },
         {
-          id: "astronomy-101-l15-q2",
-          text: "What is the best first step when analyzing galaxies?",
-          skillId: "astronomy-101-skill-process",
+          id: "astronomy-101-l08-q2",
+          text: "Stars produce light and heat through",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for galaxies." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to galaxies." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Nuclear fusion" },
+            { id: "b", text: "Electricity" },
+            { id: "c", text: "Burning coal" },
+            { id: "d", text: "Reflection" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Fusion combines hydrogen into helium, releasing enormous energy!"
         },
         {
-          id: "astronomy-101-l15-q3",
-          text: "Which option shows strong reasoning about space observation?",
-          skillId: "astronomy-101-skill-reasoning",
+          id: "astronomy-101-l08-q3",
+          text: "The Voyager probes carry",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to space observation." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Golden Records with sounds and images of Earth" },
+            { id: "b", text: "Astronauts" },
+            { id: "c", text: "Mars soil samples" },
+            { id: "d", text: "Seeds for planting" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "astronomy-101-l15-q4",
-          text: "Why is spaced review useful for Astronomy mastery?",
-          skillId: "astronomy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Golden Records are a message from humanity to any finder in space!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "astronomy-101-l15-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Astronomy Mastery Mastery Sprint",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about stars" },
-              { id: "l2", label: "Inconsistent approach to galaxies" },
-              { id: "l3", label: "Weak transfer of space observation under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "astronomy-101-l08-act1",
+          type: "project_builder",
+          title: "Astronomy journal",
+          description: "Create a small journal with one page per topic: Solar System, Sun, Moon, Stars, Galaxies, and Space Exploration. Write 2-3 facts and draw a picture on each page. Share it with someone and teach them what you learned!"
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "astronomy-101-l15-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     }
-  ],
+  ]
 };

@@ -14,6 +14,13 @@ const commands = [
   ["node", ["scripts/export-curriculum-state-for-external-agents.mjs"]],
   ["node", ["scripts/telemetry-learning-events-report.mjs"]],
   ["node", ["scripts/media-readiness-report.mjs"]],
+  ["node", ["scripts/knowledgebase-rights-report.mjs", "--write-report"]],
+  ["node", ["scripts/knowledgebase-domain-coverage-report.mjs", "--write-report"]],
+  ["node", ["scripts/knowledgebase-quality-gate.mjs", "--write-report"]],
+  ["node", ["scripts/knowledgebase-backlog-report.mjs", "--write-report", "--min-healthy-docs", "5"]],
+  ["node", ["scripts/knowledgebase-generate-targeted-seeds.mjs", "--write-report"]],
+  ["node", ["scripts/knowledgebase-export-lesson-pack.mjs", "--write-report", "--max-chunks-per-domain", "80", "--min-score", "2"]],
+  ["node", ["scripts/stripe-webhook-health-report.mjs", "--write-report", "--no-fail"]],
   ["node", ["scripts/appstore-compliance-audit.mjs"]],
 ];
 

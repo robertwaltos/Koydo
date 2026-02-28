@@ -4,11 +4,34 @@ import Link from "next/link";
 import { FormEvent, Suspense, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { publicEnv } from "@/lib/config/env";
+import { useI18n } from "@/lib/i18n/provider";
+import { normalizeNextPath } from "@/lib/routing/next-path";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import OAuthButtons from "./oauth-buttons";
 import SoftCard from "@/app/components/ui/soft-card";
 
+function getCallbackErrorMessage(
+  errorCode: string | null,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+) {
+  if (!errorCode) {
+    return null;
+  }
+
+  switch (errorCode) {
+    case "oauth_access_denied":
+      return t("auth_sign_in_error_oauth_access_denied");
+    case "oauth_missing_code":
+    case "oauth_callback_failed":
+    case "oauth_exchange_failed":
+      return t("auth_sign_in_error_oauth_failed");
+    default:
+      return errorCode;
+  }
+}
+
 function SignInPageContent() {
+  const { t } = useI18n();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailOtp, setEmailOtp] = useState("");
@@ -24,7 +47,9 @@ function SignInPageContent() {
   const [phoneOtpSent, setPhoneOtpSent] = useState(false);
   const router = useRouter();
   const searchParams = useSearchParams();
-  const errorFromCallback = searchParams.get("error");
+  const callbackErrorMessage = getCallbackErrorMessage(searchParams.get("error"), t);
+  const isSessionExpired = searchParams.get("expired") === "true" || searchParams.get("message") === "session-expired";
+  const nextPath = normalizeNextPath(searchParams.get("next"));
   const hasSupabaseConfig =
     Boolean(publicEnv.NEXT_PUBLIC_SUPABASE_URL) && Boolean(publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
@@ -32,7 +57,7 @@ function SignInPageContent() {
     event.preventDefault();
     setStatus("");
     if (!hasSupabaseConfig) {
-      setStatus("Sign-in is unavailable until Supabase public environment variables are configured.");
+      setStatus(t("auth_sign_in_status_unavailable"));
       return;
     }
     setIsSubmittingPassword(true);
@@ -49,13 +74,11 @@ function SignInPageContent() {
         return;
       }
 
-      setStatus("Signed in successfully.");
-      router.push("/dashboard");
+      setStatus(t("auth_sign_in_status_success"));
+      router.push(nextPath);
       router.refresh();
     } catch {
-      setStatus(
-        "Unable to sign in. Check environment configuration and try again."
-      );
+      setStatus(t("auth_sign_in_status_unable"));
     } finally {
       setIsSubmittingPassword(false);
     }
@@ -65,17 +88,19 @@ function SignInPageContent() {
     event.preventDefault();
     setOtpStatus("");
     if (!hasSupabaseConfig) {
-      setOtpStatus("Email OTP is unavailable until Supabase public environment variables are configured.");
+      setOtpStatus(t("auth_sign_in_magic_unavailable"));
       return;
     }
     setIsSubmittingEmailOtp(true);
 
     try {
       const supabase = createSupabaseBrowserClient();
+      const callbackUrl = new URL("/auth/callback", location.origin);
+      callbackUrl.searchParams.set("next", nextPath);
       const { error } = await supabase.auth.signInWithOtp({
         email: emailOtp,
         options: {
-          emailRedirectTo: `${location.origin}/auth/callback`,
+          emailRedirectTo: callbackUrl.toString(),
         },
       });
 
@@ -84,9 +109,9 @@ function SignInPageContent() {
         return;
       }
 
-      setOtpStatus("Magic link sent. Check your email to continue.");
+      setOtpStatus(t("auth_sign_in_magic_sent"));
     } catch {
-      setOtpStatus("Unable to send magic link. Check configuration and try again.");
+      setOtpStatus(t("auth_sign_in_magic_unable"));
     } finally {
       setIsSubmittingEmailOtp(false);
     }
@@ -96,7 +121,7 @@ function SignInPageContent() {
     event.preventDefault();
     setPhoneStatus("");
     if (!hasSupabaseConfig) {
-      setPhoneStatus("Phone OTP is unavailable until Supabase public environment variables are configured.");
+      setPhoneStatus(t("auth_sign_in_phone_unavailable"));
       return;
     }
     setIsSendingPhoneOtp(true);
@@ -111,9 +136,9 @@ function SignInPageContent() {
       }
 
       setPhoneOtpSent(true);
-      setPhoneStatus("Verification code sent to your phone.");
+      setPhoneStatus(t("auth_sign_in_phone_sent"));
     } catch {
-      setPhoneStatus("Unable to send SMS code. Check configuration and try again.");
+      setPhoneStatus(t("auth_sign_in_phone_unable_send"));
     } finally {
       setIsSendingPhoneOtp(false);
     }
@@ -123,7 +148,7 @@ function SignInPageContent() {
     event.preventDefault();
     setPhoneStatus("");
     if (!hasSupabaseConfig) {
-      setPhoneStatus("Phone verification is unavailable until Supabase public environment variables are configured.");
+      setPhoneStatus(t("auth_sign_in_phone_verify_unavailable"));
       return;
     }
     setIsVerifyingPhoneOtp(true);
@@ -141,192 +166,258 @@ function SignInPageContent() {
         return;
       }
 
-      setPhoneStatus("Phone verified. Redirecting...");
-      router.push("/dashboard");
+      setPhoneStatus(t("auth_sign_in_phone_verified_redirect"));
+      router.push(nextPath);
       router.refresh();
     } catch {
-      setPhoneStatus("Unable to verify SMS code. Try again.");
+      setPhoneStatus(t("auth_sign_in_phone_unable_verify"));
     } finally {
       setIsVerifyingPhoneOtp(false);
     }
   };
 
   return (
-    <main className="mx-auto max-w-md px-6 py-12">
-      <SoftCard as="section" organicCorners className="bg-[var(--gradient-hero)] p-5">
-        <h1 className="text-2xl font-semibold">Sign In</h1>
-        <p className="mt-3 text-sm text-zinc-600">
-          Use your EduForge account to continue.
-        </p>
-      </SoftCard>
-      {!hasSupabaseConfig ? (
-        <p role="status" className="mt-2 text-xs text-amber-700">
-          Missing `NEXT_PUBLIC_SUPABASE_URL` and/or `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
-        </p>
-      ) : null}
+    <main className="relative min-h-screen overflow-hidden bg-background pb-14">
+      <section className="relative isolate overflow-hidden px-4 pb-20 pt-12 sm:px-6 sm:pb-24 sm:pt-16">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(circle at 20% 25%, rgba(52, 211, 153, 0.24), transparent 46%), radial-gradient(circle at 80% 18%, rgba(99, 102, 241, 0.20), transparent 44%), radial-gradient(circle at 62% 78%, rgba(251, 191, 36, 0.24), transparent 42%), linear-gradient(165deg, #fffdf8 0%, #f3fff9 45%, #f2f7ff 100%)",
+          }}
+          aria-hidden="true"
+        />
+        <div
+          className="auth-orb-drift absolute left-[-4.5rem] top-8 h-44 w-44 rounded-full bg-emerald-300/35 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="auth-orb-drift-delayed absolute right-[-5rem] top-14 h-56 w-56 rounded-full bg-sky-300/30 blur-3xl"
+          aria-hidden="true"
+        />
+        <div
+          className="auth-orb-drift-slow absolute bottom-[-5rem] left-1/2 h-64 w-64 -translate-x-1/2 rounded-full bg-amber-200/30 blur-3xl"
+          aria-hidden="true"
+        />
 
-      <SoftCard as="section" className="mt-6 p-4">
-        <form onSubmit={onPasswordSubmit} className="space-y-4">
-          <div>
-            <label htmlFor="email" className="mb-1 block text-sm font-medium">
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
-              required
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="password"
-              className="mb-1 block text-sm font-medium"
-            >
-              Password
-            </label>
-            <input
-              id="password"
-              type="password"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
-              required
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={isSubmittingPassword || !hasSupabaseConfig}
-            className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
-          >
-            {isSubmittingPassword ? "Signing in..." : "Sign In with Email + Password"}
-          </button>
-
-          {status ? (
-            <p role="status" className="text-sm text-red-600">{status}</p>
-          ) : null}
-        </form>
-      </SoftCard>
-
-      <SoftCard as="section" className="mt-6 space-y-4 p-4">
-        <form onSubmit={onEmailOtpSubmit} className="space-y-4">
-          <h2 className="text-sm font-semibold">Email Magic Link</h2>
-          <div>
-            <label htmlFor="email-otp" className="mb-1 block text-sm font-medium">
-              Email
-            </label>
-            <input
-              id="email-otp"
-              type="email"
-              value={emailOtp}
-              onChange={(event) => setEmailOtp(event.target.value)}
-              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={isSubmittingEmailOtp || !hasSupabaseConfig}
-            className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-medium disabled:opacity-70"
-          >
-            {isSubmittingEmailOtp ? "Sending link..." : "Send Magic Link"}
-          </button>
-          {otpStatus ? <p role="status" className="text-sm text-zinc-700">{otpStatus}</p> : null}
-        </form>
-      </SoftCard>
-
-      <SoftCard as="section" className="mt-6 space-y-4 p-4">
-        <h2 className="text-sm font-semibold">Phone Login (SMS)</h2>
-        <form onSubmit={onSendPhoneOtp} className="space-y-3">
-          <div>
-            <label htmlFor="phone" className="mb-1 block text-sm font-medium">
-              Phone Number
-            </label>
-            <input
-              id="phone"
-              type="tel"
-              value={phone}
-              onChange={(event) => setPhone(event.target.value)}
-              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
-              placeholder="+15551234567"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={isSendingPhoneOtp || !hasSupabaseConfig}
-            className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-medium disabled:opacity-70"
-          >
-            {isSendingPhoneOtp ? "Sending code..." : "Send SMS Code"}
-          </button>
-        </form>
-
-        {phoneOtpSent ? (
-          <form onSubmit={onVerifyPhoneOtp} className="space-y-3">
-            <div>
-              <label htmlFor="phone-token" className="mb-1 block text-sm font-medium">
-                Verification Code
-              </label>
-              <input
-                id="phone-token"
-                type="text"
-                value={phoneToken}
-                onChange={(event) => setPhoneToken(event.target.value)}
-                className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
-                inputMode="numeric"
-                autoComplete="one-time-code"
-                required
-              />
+        <div className="relative mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[1.35fr_0.9fr] lg:gap-10">
+          <div className="space-y-5">
+            <p className="ui-type-eyebrow text-emerald-700">{t("auth_sign_in_hero_eyebrow")}</p>
+            <h1 className="ui-type-hero text-zinc-900">
+              {t("auth_sign_in_hero_title")}
+            </h1>
+            <p className="ui-type-body-lg ui-reading-measure text-zinc-700">
+              {t("auth_sign_in_hero_description")}
+            </p>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              {[
+                { emoji: "🌱", label: t("auth_sign_in_pill_curiosity") },
+                { emoji: "🎧", label: t("auth_sign_in_pill_read_aloud") },
+                { emoji: "🧭", label: t("auth_sign_in_pill_parent_safe") },
+              ].map((pill, index) => (
+                <div
+                  key={pill.label}
+                  className="explore-float rounded-2xl border border-white/80 bg-white/70 px-4 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
+                  <span className="mr-2" aria-hidden="true">
+                    {pill.emoji}
+                  </span>
+                  {pill.label}
+                </div>
+              ))}
             </div>
-            <button
-              type="submit"
-              disabled={isVerifyingPhoneOtp || !hasSupabaseConfig}
-              className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
-            >
-              {isVerifyingPhoneOtp ? "Verifying..." : "Verify SMS Code"}
-            </button>
-          </form>
+          </div>
+
+          <SoftCard as="section" organicCorners className="self-start border-white/75 bg-white/80 p-6 backdrop-blur-sm">
+            <p className="ui-type-heading-lg text-zinc-900">{t("auth_sign_in_adventure_title")}</p>
+            <p className="mt-3 ui-type-body-sm text-zinc-600">
+              {t("auth_sign_in_adventure_description")}
+            </p>
+            <ul className="mt-4 space-y-2 ui-type-body-sm text-zinc-700">
+              <li>{t("auth_sign_in_step_pick_method")}</li>
+              <li>{t("auth_sign_in_step_choose_learner")}</li>
+              <li>{t("auth_sign_in_step_resume_map")}</li>
+            </ul>
+          </SoftCard>
+        </div>
+      </section>
+
+      <section className="relative z-10 mx-auto -mt-12 w-full max-w-6xl space-y-6 px-4 sm:px-6">
+        <SoftCard as="section" className="border-white/80 bg-white/90 p-6 backdrop-blur-sm">
+          <h2 className="ui-type-heading-xl text-zinc-900">{t("auth_sign_in_title")}</h2>
+          <p className="mt-2 ui-type-body-sm text-zinc-600">
+            {t("auth_sign_in_subtitle")}
+          </p>
+          <OAuthButtons layout="grid-2" className="mt-5" nextPath={nextPath} />
+          {!hasSupabaseConfig ? (
+            <p role="status" className="mt-4 text-xs text-amber-700">
+              {t("auth_sign_in_missing_supabase")}
+            </p>
+          ) : null}
+        </SoftCard>
+
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
+          <SoftCard as="section" className="p-5">
+            <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_email_password_title")}</h3>
+            <form onSubmit={onPasswordSubmit} className="mt-4 space-y-4">
+              <div>
+                <label htmlFor="email" className="mb-1 block text-sm font-medium">
+                  {t("auth_sign_in_label_email")}
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  className="ui-focus-ring w-full rounded-xl border border-border bg-surface px-3 py-2 text-sm"
+                  required
+                />
+              </div>
+
+              <div>
+                <label htmlFor="password" className="mb-1 block text-sm font-medium">
+                  {t("auth_sign_in_label_password")}
+                </label>
+                <input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  className="ui-focus-ring w-full rounded-xl border border-border bg-surface px-3 py-2 text-sm"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={isSubmittingPassword || !hasSupabaseConfig}
+                className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white disabled:opacity-70"
+              >
+                {isSubmittingPassword ? t("auth_sign_in_button_signing_in") : t("auth_sign_in_button_continue_email")}
+              </button>
+
+              {status ? <p role="status" className="text-sm text-red-600">{status}</p> : null}
+            </form>
+          </SoftCard>
+
+          <SoftCard as="section" className="p-5">
+            <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_magic_link_title")}</h3>
+            <form onSubmit={onEmailOtpSubmit} className="mt-4 space-y-4">
+              <div>
+                <label htmlFor="email-otp" className="mb-1 block text-sm font-medium">
+                  {t("auth_sign_in_label_email")}
+                </label>
+                <input
+                  id="email-otp"
+                  type="email"
+                  value={emailOtp}
+                  onChange={(event) => setEmailOtp(event.target.value)}
+                  className="ui-focus-ring w-full rounded-xl border border-border bg-surface px-3 py-2 text-sm"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={isSubmittingEmailOtp || !hasSupabaseConfig}
+                className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-semibold disabled:opacity-70"
+              >
+                {isSubmittingEmailOtp ? t("auth_sign_in_magic_link_sending") : t("auth_sign_in_magic_link_send")}
+              </button>
+              {otpStatus ? <p role="status" className="text-sm text-zinc-700">{otpStatus}</p> : null}
+            </form>
+          </SoftCard>
+
+          <SoftCard as="section" className="p-5">
+            <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_phone_title")}</h3>
+            <form onSubmit={onSendPhoneOtp} className="mt-4 space-y-4">
+              <div>
+                <label htmlFor="phone" className="mb-1 block text-sm font-medium">
+                  {t("auth_sign_in_label_phone")}
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  value={phone}
+                  onChange={(event) => setPhone(event.target.value)}
+                className="ui-focus-ring w-full rounded-xl border border-border bg-surface px-3 py-2 text-sm"
+                  placeholder="+15551234567"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={isSendingPhoneOtp || !hasSupabaseConfig}
+                className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-semibold disabled:opacity-70"
+              >
+                {isSendingPhoneOtp ? t("auth_sign_in_phone_sending_code") : t("auth_sign_in_phone_send_code")}
+              </button>
+            </form>
+
+            {phoneOtpSent ? (
+              <form onSubmit={onVerifyPhoneOtp} className="mt-4 space-y-4 border-t border-border/80 pt-4">
+                <div>
+                  <label htmlFor="phone-token" className="mb-1 block text-sm font-medium">
+                    {t("auth_sign_in_label_verification_code")}
+                  </label>
+                  <input
+                    id="phone-token"
+                    type="text"
+                    value={phoneToken}
+                    onChange={(event) => setPhoneToken(event.target.value)}
+                    className="ui-focus-ring w-full rounded-xl border border-border bg-surface px-3 py-2 text-sm"
+                    inputMode="numeric"
+                    autoComplete="one-time-code"
+                    required
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={isVerifyingPhoneOtp || !hasSupabaseConfig}
+                  className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white disabled:opacity-70"
+                >
+                  {isVerifyingPhoneOtp ? t("auth_sign_in_phone_verifying") : t("auth_sign_in_phone_verify")}
+                </button>
+              </form>
+            ) : null}
+
+            {phoneStatus ? <p role="status" className="mt-4 text-sm text-zinc-700">{phoneStatus}</p> : null}
+          </SoftCard>
+        </div>
+
+        {callbackErrorMessage ? (
+          <SoftCard as="section" className="border-red-200 bg-red-50 p-4 text-sm text-red-700">
+            {callbackErrorMessage}
+          </SoftCard>
+        ) : null}
+        {isSessionExpired ? (
+          <SoftCard as="section" className="border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
+            {t("auth_sign_in_session_expired")}
+          </SoftCard>
         ) : null}
 
-        {phoneStatus ? <p role="status" className="text-sm text-zinc-700">{phoneStatus}</p> : null}
-      </SoftCard>
-
-      <div className="relative mt-8">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-border" />
-        </div>
-        <div className="relative flex justify-center text-sm">
-          <span className="bg-surface px-2 text-zinc-500">OR</span>
-        </div>
-      </div>
-
-      <OAuthButtons />
-
-      {errorFromCallback ? <p role="status" className="mt-4 text-sm text-red-600">{errorFromCallback}</p> : null}
-
-      <p className="mt-8 text-center text-sm text-zinc-600">
-        No account yet?{" "}
-        <Link href="/auth/sign-up" className="font-semibold underline">
-          Create one
-        </Link>
-      </p>
+        <p className="pb-2 text-center text-sm text-zinc-600">
+          {t("auth_sign_in_footer_no_account")}{" "}
+          <Link
+            href={`/auth/sign-up?next=${encodeURIComponent(nextPath)}`}
+            className="font-semibold underline decoration-2 underline-offset-2"
+          >
+            {t("auth_sign_in_footer_create_one")}
+          </Link>
+        </p>
+      </section>
     </main>
   );
 }
 
 export default function SignInPage() {
+  const { t } = useI18n();
   return (
     <Suspense
       fallback={
         <main className="mx-auto max-w-md px-6 py-12">
-          <h1 className="text-2xl font-semibold">Sign In</h1>
-          <p className="mt-3 text-sm text-zinc-600">
-            Loading sign-in options...
-          </p>
+          <h1 className="text-2xl font-semibold">{t("auth_sign_in_title")}</h1>
+          <p className="mt-3 text-sm text-zinc-600">{t("auth_sign_in_loading_subtitle")}</p>
         </main>
       }
     >
@@ -334,3 +425,4 @@ export default function SignInPage() {
     </Suspense>
   );
 }
+

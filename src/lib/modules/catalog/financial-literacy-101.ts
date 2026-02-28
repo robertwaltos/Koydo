@@ -3,980 +3,486 @@ import type { LearningModule } from "@/lib/modules/types";
 export const FinancialLiteracy101Module: LearningModule = {
   id: "financial-literacy-101",
   title: "Financial Literacy Basics",
-  description: "Learn saving, budgeting, earning, spending, and responsible money decisions.",
+  description:
+    "Master the foundations of personal finance — from distinguishing needs and wants to understanding compound interest, budgeting, earning, smart spending, and credit. Build the money skills that last a lifetime.",
   subject: "Financial Literacy",
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "1.1.0",
-  version: "1.1.0",
+  moduleVersion: "3.0.0",
+  version: "3.0.0",
+  difficultyBand: "intermediate",
+  localeSupport: ["en", "es"],
   learningObjectives: [
-    "Understand core concepts in Financial Literacy",
-    "Apply Smart Spending strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Distinguish between needs and wants and explain opportunity cost",
+    "Identify different ways people earn income and differentiate gross pay from net pay",
+    "Create a simple budget using the 50/30/20 rule",
+    "Calculate compound interest and apply the Rule of 72",
+    "Compare prices using unit cost and explain why comparison shopping matters",
+    "Define credit score, APR, and describe how responsible credit use is built"
   ],
   lessons: [
+    /* ──────────────────────────────────────────────
+       L01  Needs vs. Wants  (video)
+    ────────────────────────────────────────────── */
     {
       id: "financial-literacy-101-l01",
-      title: "Needs, Wants, and Choices",
+      title: "Needs vs. Wants",
       type: "video",
       duration: 10,
+      objectives: [
+        "Classify everyday purchases as needs or wants",
+        "Explain opportunity cost with a concrete example",
+        "Describe the 24-hour rule for avoiding impulse purchases"
+      ],
       chunks: [
         {
           id: "financial-literacy-101-l01-c1",
-          title: "Needs, Wants, and Choices Overview",
-          content: "In this lesson, we focus on budgeting through the lens of money management. The goal is to recognize what strong reasoning looks like before solving."
+          title: "Needs and Wants",
+          content:
+            "A need is something you must have to survive and stay healthy — food, shelter, clothing, and healthcare are all needs. A want is something you would like to have but can live without — toys, video games, brand-name sneakers, and concert tickets are wants. The key test: 'Could I survive and stay healthy without this?' If yes, it is a want. Understanding this difference is the first step to making smart money decisions, because needs should always be funded before wants."
         },
         {
           id: "financial-literacy-101-l01-c2",
-          title: "Core Concept",
-          content: "budgeting and saving work together. Start by naming the main target, then identify the evidence or steps that support it."
+          title: "Opportunity Cost",
+          content:
+            "Every time you choose to spend money on one thing, you give up the chance to spend it on something else. This trade-off is called opportunity cost. For example, if you have $20 and you buy a toy, the opportunity cost is the book (or anything else) you could have bought with that same $20. Opportunity cost is not just about money — it applies to time too. An hour spent playing video games is an hour you cannot spend reading or earning money. Smart spenders think about what they are giving up before they buy."
         },
         {
           id: "financial-literacy-101-l01-c3",
-          title: "Worked Example",
-          content: "Walk through one guided example: define the goal, apply a strategy for saving, then verify the result with a quick check."
-        },
-        {
-          id: "financial-literacy-101-l01-c4",
-          title: "Transfer Prompt",
-          content: "Apply the same process to a new scenario and explain why your approach is valid in one clear sentence."
+          title: "The 24-Hour Rule",
+          content:
+            "Impulse buying is purchasing something on the spot without thinking it through. The 24-hour rule is a simple strategy to fight impulse buying: when you see something you want, wait 24 hours before buying it. If you still want it the next day and can afford it after covering your needs, go ahead. Many people find that after waiting, they no longer want the item — saving themselves money. This rule is especially powerful for online shopping, where one-click purchases make impulse buying dangerously easy."
         }
       ],
       flashcards: [
-        { id: "financial-literacy-101-l01-f1", front: "budgeting", back: "A central target skill in this module. Name it before solving." },
-        { id: "financial-literacy-101-l01-f2", front: "saving", back: "Use this as the method step after defining the goal." },
-        { id: "financial-literacy-101-l01-f3", front: "Verification", back: "Check that your result matches the original goal and constraints." },
-        { id: "financial-literacy-101-l01-f4", front: "Transfer", back: "Use the same strategy on a new item to confirm true mastery." }
-      ],
-      learningAids: [
-        { id: "financial-literacy-101-l01-a1", type: "image", title: "Concept Poster", content: "A colorful infographic about budgeting and saving." },
-        { id: "financial-literacy-101-l01-a2", type: "animation", title: "Warm-up Animation", content: "Short animation introducing Financial Literacy vocabulary." }
+        {
+          id: "financial-literacy-101-l01-f1",
+          front: "Need",
+          back: "Something you must have to survive and stay healthy, such as food, shelter, clothing, and healthcare."
+        },
+        {
+          id: "financial-literacy-101-l01-f2",
+          front: "Want",
+          back: "Something you would like to have but can live without, such as toys, video games, or brand-name sneakers."
+        },
+        {
+          id: "financial-literacy-101-l01-f3",
+          front: "Opportunity Cost",
+          back: "The value of the next best alternative you give up when you make a choice. Spending $20 on a toy means giving up the $20 book you could have bought."
+        },
+        {
+          id: "financial-literacy-101-l01-f4",
+          front: "24-Hour Rule",
+          back: "Wait 24 hours before buying something you want. If you still want it and can afford it after covering needs, go ahead. Fights impulse buying."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L02  Earning Money  (video)
+    ────────────────────────────────────────────── */
     {
       id: "financial-literacy-101-l02",
-      title: "Budget Planning Basics",
-      type: "interactive",
-      duration: 12,
-      metadata: {
-        prompts: [
-          "Identify one core idea about budgeting from this lesson.",
-          "Explain where saving appears in real life.",
-          "Describe one question you still have about money management."
-        ]
-      },
-      interactiveActivities: [
+      title: "Earning Money",
+      type: "video",
+      duration: 10,
+      objectives: [
+        "List four common ways people earn income",
+        "Explain the difference between gross pay and net pay",
+        "Calculate profit from a simple business scenario"
+      ],
+      chunks: [
         {
-          id: "financial-literacy-101-l02-ia1",
-          type: "drag_and_drop",
-          title: "Practice Flow Builder",
-          description: "Sort each action into Plan, Execute, or Reflect.",
-          estimatedMinutes: 8,
-          difficultyLevel: "easy",
-          data: {
-            targets: [
-              { id: "plan", label: "Plan" },
-              { id: "execute", label: "Execute" },
-              { id: "reflect", label: "Reflect" }
-            ],
-            draggables: [
-              { id: "d1", label: "Set a goal for budgeting", correctTargetId: "plan" },
-              { id: "d2", label: "Try one strategy for saving", correctTargetId: "execute" },
-              { id: "d3", label: "Record what worked and what to improve", correctTargetId: "reflect" }
-            ]
-          }
+          id: "financial-literacy-101-l02-c1",
+          title: "How People Earn Money",
+          content:
+            "There are many ways people earn income. A salary is a fixed amount paid per year, usually split into monthly or biweekly paychecks — a teacher earning $50,000 per year receives about $4,167 per month. Hourly wages pay based on hours worked — a lifeguard earning $12 per hour who works 20 hours earns $240 that week. An allowance is money given regularly by parents, often in exchange for chores. Entrepreneurship means starting your own business to earn money, like mowing lawns, selling crafts, or tutoring classmates."
+        },
+        {
+          id: "financial-literacy-101-l02-c2",
+          title: "Gross Pay vs. Net Pay",
+          content:
+            "Gross pay is the total amount you earn before anything is taken out. Net pay (also called take-home pay) is what you actually receive after deductions. The biggest deduction is taxes — money the government collects to pay for schools, roads, hospitals, and public services. A simple rule of thumb: if you earn $100, about $20 goes to taxes, so your net pay is roughly $80. Other deductions can include health insurance and retirement savings. Always base your budget on net pay, not gross pay, because net pay is the money you actually have to spend."
+        },
+        {
+          id: "financial-literacy-101-l02-c3",
+          title: "Lemonade Stand Economics",
+          content:
+            "Running even a simple business teaches the formula: Revenue - Costs = Profit. Suppose you run a lemonade stand. You spend $10 on lemons, sugar, and cups (these are your costs). You sell 40 cups at $1 each, earning $40 in revenue. Your profit is $40 - $10 = $30. But what if it rains and you only sell 5 cups? Revenue is $5, costs are still $10, so your profit is $5 - $10 = -$5 — a loss. This shows that running a business involves risk, and entrepreneurs must plan for unexpected outcomes."
         }
       ],
-      learningAids: [
-        { id: "financial-literacy-101-l02-a1", type: "practice", title: "Try It Board", content: "Complete a guided activity on saving and write one reflection." }
+      flashcards: [
+        {
+          id: "financial-literacy-101-l02-f1",
+          front: "Income",
+          back: "Money received in exchange for work, selling goods, or from other sources like allowances or investments."
+        },
+        {
+          id: "financial-literacy-101-l02-f2",
+          front: "Gross Pay",
+          back: "The total amount you earn before taxes and other deductions are taken out."
+        },
+        {
+          id: "financial-literacy-101-l02-f3",
+          front: "Net Pay",
+          back: "The amount of money you actually take home after taxes and deductions are subtracted from your gross pay. Also called take-home pay."
+        },
+        {
+          id: "financial-literacy-101-l02-f4",
+          front: "Entrepreneur",
+          back: "A person who starts and runs their own business to earn money. Takes risks but can earn profits."
+        },
+        {
+          id: "financial-literacy-101-l02-f5",
+          front: "Revenue",
+          back: "The total money earned from selling goods or services, before subtracting costs. Revenue - Costs = Profit."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L03  Budgeting Basics  (video)
+    ────────────────────────────────────────────── */
     {
       id: "financial-literacy-101-l03",
-      title: "Checkpoint: Budget Skills",
-      type: "quiz",
-      duration: 10,
-      questions: [
+      title: "Budgeting Basics",
+      type: "video",
+      duration: 12,
+      objectives: [
+        "Explain the 50/30/20 budgeting rule",
+        "Track spending by category for one week",
+        "Build a simple monthly budget from a worked example"
+      ],
+      chunks: [
         {
-          id: "financial-literacy-101-l03-q1",
-          text: "Which statement best explains budgeting in Financial Literacy?",
-          skillId: "financial-literacy-101-skill-core",
-          options: [
-            { id: "a", text: "It explains budgeting using evidence from the lesson." },
-            { id: "b", text: "It ignores how budgeting works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Financial Literacy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
+          id: "financial-literacy-101-l03-c1",
+          title: "The 50/30/20 Rule",
+          content:
+            "The 50/30/20 rule is one of the simplest budgeting frameworks. It says to divide your after-tax income (net pay) into three buckets: 50% goes to needs — rent, groceries, utilities, transportation, and insurance. 30% goes to wants — dining out, entertainment, hobbies, and subscriptions. 20% goes to savings — emergency fund, future goals, and investments. For example, if your monthly net income is $1,000, you would spend up to $500 on needs, $300 on wants, and save at least $200. The beauty of this rule is its simplicity — it works whether you earn $200 or $2,000 a month."
         },
         {
-          id: "financial-literacy-101-l03-q2",
-          text: "What is the best first step when analyzing saving?",
-          skillId: "financial-literacy-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for saving." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to saving." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
+          id: "financial-literacy-101-l03-c2",
+          title: "Tracking Your Spending",
+          content:
+            "Before you can budget well, you need to know where your money actually goes. Try this: for one full week, write down every single purchase — even small ones like a $1.50 snack or a $0.99 app. At the end of the week, sort each purchase into three categories: Need, Want, or Saving. Most people are surprised by how much they spend on small wants that add up. A $3 snack every school day is $15 per week, $60 per month, and $720 per year. Tracking makes invisible spending visible, and visible spending is easier to control."
         },
         {
-          id: "financial-literacy-101-l03-q3",
-          text: "Which option shows strong reasoning about money management?",
-          skillId: "financial-literacy-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to money management." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l03-q4",
-          text: "Why is spaced review useful for Financial Literacy mastery?",
-          skillId: "financial-literacy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          id: "financial-literacy-101-l03-c3",
+          title: "Building a Simple Budget",
+          content:
+            "Let us build a budget together. Suppose you receive a $200 monthly allowance. Using the 50/30/20 rule: $100 (50%) goes to needs — school lunch and supplies. $60 (30%) goes to wants — movies, games, treats with friends. $40 (20%) goes to savings — a savings account for a bigger goal. Now track your actual spending for a month. If you spent $110 on needs, you overspent by $10. You can fix this by bringing lunch from home twice a week to save about $12. A budget is not a punishment — it is a plan that puts you in control of your money instead of wondering where it went."
         }
       ],
-      interactiveActivities: [
+      flashcards: [
         {
-          id: "financial-literacy-101-l03-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Budget Skills",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about budgeting" },
-              { id: "l2", label: "Inconsistent approach to saving" },
-              { id: "l3", label: "Weak transfer of money management under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "financial-literacy-101-l03-f1",
+          front: "Budget",
+          back: "A plan for how you will spend and save your money over a set period of time, usually one month."
+        },
+        {
+          id: "financial-literacy-101-l03-f2",
+          front: "Fixed Expense",
+          back: "A cost that stays the same amount every month, such as rent, a phone bill, or a streaming subscription."
+        },
+        {
+          id: "financial-literacy-101-l03-f3",
+          front: "Variable Expense",
+          back: "A cost that changes from month to month, such as groceries, electricity, or entertainment spending."
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "financial-literacy-101-l03-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L04  Money Basics Checkpoint  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "financial-literacy-101-l04",
-      title: "Saving and Goals",
-      type: "video",
-      duration: 11,
-      chunks: [
+      title: "Money Basics Checkpoint",
+      type: "quiz",
+      duration: 8,
+      objectives: ["Demonstrate understanding of needs vs. wants, earning, and budgeting"],
+      questions: [
         {
-          id: "financial-literacy-101-l04-c1",
-          title: "Saving and Goals Focus",
-          content: "This lesson deepens needs vs wants using structured reasoning. We move from concept understanding to applied decisions."
+          id: "financial-literacy-101-l04-q1",
+          text: "You earn $50 mowing lawns. After tax, you keep about $40. The $10 difference is called:",
+          skillId: "financial-literacy-101-skill-earning",
+          options: [
+            { id: "a", text: "Taxes" },
+            { id: "b", text: "Profit" },
+            { id: "c", text: "Interest" },
+            { id: "d", text: "Savings" }
+          ],
+          correctOptionId: "a",
+          explanation:
+            "Taxes are amounts the government deducts from your earnings to fund public services like schools, roads, and hospitals. The difference between gross pay ($50) and net pay ($40) is the tax withheld."
         },
         {
-          id: "financial-literacy-101-l04-c2",
-          title: "Method Steps",
-          content: "Step 1: identify what is being asked. Step 2: choose a strategy aligned to needs vs wants. Step 3: justify with evidence."
+          id: "financial-literacy-101-l04-q2",
+          text: "Which of the following is a NEED, not a want?",
+          skillId: "financial-literacy-101-skill-needs-wants",
+          options: [
+            { id: "a", text: "A warm winter coat" },
+            { id: "b", text: "The latest video game" },
+            { id: "c", text: "Brand-name sneakers" },
+            { id: "d", text: "A movie ticket" }
+          ],
+          correctOptionId: "a",
+          explanation:
+            "A warm winter coat is a need because clothing that protects you from dangerous cold is essential for survival and health. Video games, brand-name sneakers, and movie tickets are all wants — nice to have but not necessary to stay alive and healthy."
         },
         {
-          id: "financial-literacy-101-l04-c3",
-          title: "Common Mistakes",
-          content: "Common errors include skipping setup, using unrelated assumptions, or failing to verify the final result."
+          id: "financial-literacy-101-l04-q3",
+          text: "The 50/30/20 rule says what percentage of your income should go to savings?",
+          skillId: "financial-literacy-101-skill-budgeting",
+          options: [
+            { id: "a", text: "20%" },
+            { id: "b", text: "50%" },
+            { id: "c", text: "30%" },
+            { id: "d", text: "10%" }
+          ],
+          correctOptionId: "a",
+          explanation:
+            "The 50/30/20 rule allocates 50% to needs, 30% to wants, and 20% to savings. Saving at least 20% of your income helps build an emergency fund and work toward future financial goals."
         },
         {
-          id: "financial-literacy-101-l04-c4",
-          title: "Independent Try",
-          content: "Solve one similar item and compare your process to the lesson sequence."
+          id: "financial-literacy-101-l04-q4",
+          text: "You want to buy a $15 toy but you also need a $15 notebook for school. The notebook you give up to buy the toy is called:",
+          skillId: "financial-literacy-101-skill-needs-wants",
+          options: [
+            { id: "a", text: "Opportunity cost" },
+            { id: "b", text: "Profit" },
+            { id: "c", text: "Interest" },
+            { id: "d", text: "Budget" }
+          ],
+          correctOptionId: "a",
+          explanation:
+            "Opportunity cost is the value of the next best alternative you give up. By buying the toy, you give up the notebook — that\u2019s your opportunity cost."
+        },
+        {
+          id: "financial-literacy-101-l04-q5",
+          text: "Revenue minus costs equals:",
+          skillId: "financial-literacy-101-skill-earning",
+          options: [
+            { id: "a", text: "Profit" },
+            { id: "b", text: "Taxes" },
+            { id: "c", text: "Savings" },
+            { id: "d", text: "Interest" }
+          ],
+          correctOptionId: "a",
+          explanation:
+            "Profit = Revenue - Costs. If you earn $40 selling lemonade and spent $10 on supplies, your profit is $30."
         }
       ],
-      flashcards: [
-        { id: "financial-literacy-101-l04-f1", front: "needs vs wants", back: "State the target and pick a strategy before solving." },
-        { id: "financial-literacy-101-l04-f2", front: "Step Sequence", back: "Goal -> Strategy -> Evidence -> Check." },
-        { id: "financial-literacy-101-l04-f3", front: "Assumption Check", back: "Remove assumptions that are not supported by the prompt." },
-        { id: "financial-literacy-101-l04-f4", front: "Process Match", back: "Your explanation should match the steps you actually used." }
-      ],
-      learningAids: [
-        { id: "financial-literacy-101-l04-a1", type: "image", title: "Worked Example Sheet", content: "Step-by-step visuals for needs vs wants scenarios." }
-      ]
+      quizBlueprint: {
+        totalQuestions: 3,
+        bloomProfile: { remember: 1, understand: 1, apply: 1 }
+      }
     },
+
+    /* ──────────────────────────────────────────────
+       L05  Saving & Compound Interest  (video)
+    ────────────────────────────────────────────── */
     {
       id: "financial-literacy-101-l05",
-      title: "Banking and Interest",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
-        ]
-      },
-      interactiveActivities: [
+      title: "Saving & Compound Interest",
+      type: "video",
+      duration: 12,
+      objectives: [
+        "Explain the 'pay yourself first' savings strategy",
+        "Calculate compound interest over multiple years",
+        "Use the Rule of 72 to estimate how long it takes money to double"
+      ],
+      chunks: [
         {
-          id: "financial-literacy-101-l05-ia1",
-          type: "sorting_buckets",
-          title: "Strategy Sort",
-          description: "Sort study actions into Concept, Process, or Review lanes.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "concept", label: "needs vs wants Concept" },
-              { id: "process", label: "interest Process" },
-              { id: "review", label: "Review Loop" }
-            ],
-            items: [
-              { id: "i1", label: "Write one definition in your own words", correctBucketId: "concept" },
-              { id: "i2", label: "Follow the step-by-step method on a new example", correctBucketId: "process" },
-              { id: "i3", label: "Retest the same skill tomorrow", correctBucketId: "review" }
-            ]
-          }
+          id: "financial-literacy-101-l05-c1",
+          title: "Pay Yourself First",
+          content:
+            "Most people plan to save whatever is left after spending, but there is rarely anything left. The 'pay yourself first' strategy flips this: as soon as you receive money, move your savings portion out before you spend anything. If you get a $100 allowance, immediately put $20 into savings, then budget the remaining $80 for needs and wants. This works because money you cannot see is money you will not miss. Many banks let you set up automatic transfers so saving happens without you even thinking about it. The habit of paying yourself first is the single most powerful wealth-building behavior."
+        },
+        {
+          id: "financial-literacy-101-l05-c2",
+          title: "Compound Interest Explained",
+          content:
+            "Compound interest is interest earned on both your original deposit and on the interest you have already earned — you earn interest on your interest. Here is how it works: deposit $100 in a savings account that pays 5% annual interest. After Year 1, you earn $5 in interest, giving you $105. After Year 2, you earn 5% on $105 (not just the original $100), which is $5.25, giving you $110.25. After Year 3, you earn 5% on $110.25 = $5.51, giving you $115.76. Notice how the interest amount grows each year — $5.00, then $5.25, then $5.51 — even though you never added more money. Over decades, this snowball effect becomes enormous. Albert Einstein reportedly called compound interest the 'eighth wonder of the world.'"
+        },
+        {
+          id: "financial-literacy-101-l05-c3",
+          title: "The Rule of 72",
+          content:
+            "The Rule of 72 is a quick shortcut to estimate how many years it takes for your money to double at a given interest rate. Simply divide 72 by the annual interest rate. At 6% interest: 72 ÷ 6 = 12 years to double. At 8% interest: 72 ÷ 8 = 9 years to double. At 3% interest: 72 ÷ 3 = 24 years to double. This rule also works in reverse to show the danger of debt — a credit card charging 18% interest will double what you owe in just 72 ÷ 18 = 4 years if you never pay it down. The Rule of 72 makes the power (and danger) of compounding easy to see at a glance."
         }
       ],
-      learningAids: [
-        { id: "financial-literacy-101-l05-a1", type: "animation", title: "Challenge Walkthrough", content: "Animated sequence for solving a needs vs wants challenge." }
+      flashcards: [
+        {
+          id: "financial-literacy-101-l05-f1",
+          front: "Compound Interest",
+          back: "Interest calculated on both the initial principal and the accumulated interest from previous periods. Your money grows faster over time because you earn interest on your interest."
+        },
+        {
+          id: "financial-literacy-101-l05-f2",
+          front: "Rule of 72",
+          back: "A quick formula to estimate how many years it takes money to double: divide 72 by the annual interest rate. At 6% interest, money doubles in about 72 ÷ 6 = 12 years."
+        },
+        {
+          id: "financial-literacy-101-l05-f3",
+          front: "Simple vs. Compound Interest",
+          back: "Simple interest is calculated only on the original principal (e.g., $100 × 5% = $5 every year). Compound interest is calculated on the principal plus all previously earned interest, so the amount grows faster each year."        },
+        {
+          id: "financial-literacy-101-l05-f4",
+          front: "Pay Yourself First",
+          back: "A savings strategy where you set aside savings immediately when you receive money, before spending on anything else."
+        },
+        {
+          id: "financial-literacy-101-l05-f5",
+          front: "Savings Account",
+          back: "A bank account that earns interest on your deposited money. Your money grows over time while staying safe."        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L06  Smart Spending & Credit  (video)
+    ────────────────────────────────────────────── */
     {
       id: "financial-literacy-101-l06",
-      title: "Checkpoint: Smart Spending",
-      type: "quiz",
-      duration: 10,
-      questions: [
+      title: "Smart Spending & Credit",
+      type: "video",
+      duration: 12,
+      objectives: [
+        "Compare products using unit price to find the best deal",
+        "Explain how credit cards work including APR and minimum payments",
+        "Describe what a credit score is and how it is built"
+      ],
+      chunks: [
         {
-          id: "financial-literacy-101-l06-q1",
-          text: "Which statement best explains needs vs wants in Financial Literacy?",
-          skillId: "financial-literacy-101-skill-core",
-          options: [
-            { id: "a", text: "It explains needs vs wants using evidence from the lesson." },
-            { id: "b", text: "It ignores how needs vs wants works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Financial Literacy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
+          id: "financial-literacy-101-l06-c1",
+          title: "Comparison Shopping and Unit Price",
+          content:
+            "Smart shoppers do not just look at the sticker price — they calculate the unit price to compare value. Unit price is the cost per single unit of measurement (per ounce, per count, per pound). Example: Store A sells 12 oz of cereal for $3.00 (unit price: $3.00 ÷ 12 = $0.25 per oz). Store B sells 20 oz of the same cereal for $5.00 (unit price: $5.00 ÷ 20 = $0.25 per oz). In this case, the unit price is the same, so buy whichever size is more convenient. But if Store B charged $4.00 for 20 oz, the unit price drops to $0.20 per oz — making it the better deal. Always check at least three stores or options before making a purchase, and watch for sales that genuinely lower the unit price versus sales that just look like a deal."
         },
         {
-          id: "financial-literacy-101-l06-q2",
-          text: "What is the best first step when analyzing interest?",
-          skillId: "financial-literacy-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for interest." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to interest." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
+          id: "financial-literacy-101-l06-c2",
+          title: "Credit Basics",
+          content:
+            "Credit means borrowing money now and promising to pay it back later, usually with interest. A credit card lets you buy things immediately, but if you do not pay the full balance by the due date, the card company charges interest called APR (Annual Percentage Rate), which typically ranges from 15% to 25%. Here is the minimum payment trap: if you owe $1,000 at 20% APR and only make the minimum payment (usually about $25), it will take you over 5 years to pay off and you will pay more than $500 in interest alone — so the $1,000 purchase actually costs you over $1,500. The golden rule of credit cards: pay your full balance every month to avoid interest charges entirely."
         },
         {
-          id: "financial-literacy-101-l06-q3",
-          text: "Which option shows strong reasoning about money management?",
-          skillId: "financial-literacy-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to money management." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l06-q4",
-          text: "Why is spaced review useful for Financial Literacy mastery?",
-          skillId: "financial-literacy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          id: "financial-literacy-101-l06-c3",
+          title: "Credit Score",
+          content:
+            "A credit score is a number between 300 and 850 that represents how trustworthy you are as a borrower. Lenders use it to decide whether to lend you money and what interest rate to charge. A higher score (700+) means lower interest rates and better loan terms. A lower score (below 600) means higher rates or being denied credit altogether. Your credit score is built by five main factors: paying bills on time (35%), keeping credit card balances low (30%), length of credit history (15%), mix of credit types (10%), and new credit applications (10%). The most important thing you can do is pay every bill on time, every single month — payment history is the largest factor in your score."
         }
       ],
-      interactiveActivities: [
+      flashcards: [
         {
-          id: "financial-literacy-101-l06-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Smart Spending",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about needs vs wants" },
-              { id: "l2", label: "Inconsistent approach to interest" },
-              { id: "l3", label: "Weak transfer of money management under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "financial-literacy-101-l06-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
+          id: "financial-literacy-101-l06-f1",
+          front: "Unit Price",
+          back: "The cost per single unit of measurement (per ounce, per item, per pound). Used to compare the true value of different product sizes or brands. Calculated by dividing total price by quantity."
+        },
+        {
+          id: "financial-literacy-101-l06-f2",
+          front: "Credit Score",
+          back: "A number between 300 and 850 that measures your reliability as a borrower. Higher scores (700+) get better interest rates. Built mainly by paying bills on time and keeping credit card balances low."
+        },
+        {
+          id: "financial-literacy-101-l06-f3",
+          front: "APR (Annual Percentage Rate)",
+          back: "The yearly interest rate charged on borrowed money, such as a credit card balance or loan. Credit cards typically charge 15%–25% APR on unpaid balances."        },
+        {
+          id: "financial-literacy-101-l06-f4",
+          front: "Minimum Payment Trap",
+          back: "Paying only the minimum on a credit card means you\u2019ll pay mostly interest. A $1,000 balance at 20% APR with minimum payments takes 5+ years and costs over $500 in interest."
+        },
+        {
+          id: "financial-literacy-101-l06-f5",
+          front: "Debt",
+          back: "Money that you owe to someone else. Debt grows when you don\u2019t pay it off because interest accumulates over time."        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L07  Financial Literacy Final Assessment  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "financial-literacy-101-l07",
-      title: "Income and Work",
-      type: "video",
-      duration: 12,
-      chunks: [
-        {
-          id: "financial-literacy-101-l07-c1",
-          title: "Income and Work Setup",
-          content: "Use interest to organize your approach before starting. Planning first improves quality and speed."
-        },
-        {
-          id: "financial-literacy-101-l07-c2",
-          title: "Decision Rules",
-          content: "When choices compete, use a simple rule: pick the option with strongest evidence and clearest link to the goal."
-        },
-        {
-          id: "financial-literacy-101-l07-c3",
-          title: "Quality Control",
-          content: "Check for three things: accuracy, completeness, and alignment with the original objective."
-        },
-        {
-          id: "financial-literacy-101-l07-c4",
-          title: "Next-Step Plan",
-          content: "Write one action to repeat and one action to improve in your next practice round."
-        }
-      ],
-      flashcards: [
-        { id: "financial-literacy-101-l07-f1", front: "interest", back: "Use this as your organizing framework before execution." },
-        { id: "financial-literacy-101-l07-f2", front: "Decision Rule", back: "Choose the option with strongest evidence-to-goal alignment." },
-        { id: "financial-literacy-101-l07-f3", front: "Quality Control", back: "Accuracy + completeness + objective match." },
-        { id: "financial-literacy-101-l07-f4", front: "Iteration", back: "Repeat what works; refine one weak step each cycle." }
-      ],
-      learningAids: [
-        { id: "financial-literacy-101-l07-a1", type: "practice", title: "Project Planner", content: "Template for planning a mini project focused on interest." }
-      ]
-    },
-    {
-      id: "financial-literacy-101-l08",
-      title: "Money Reflection Activity",
-      type: "interactive",
-      duration: 10,
-      metadata: {
-        prompts: [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "financial-literacy-101-l08-ia1",
-          type: "matching_pairs",
-          title: "Reflection Match",
-          description: "Match each reflection prompt with the best follow-up action.",
-          estimatedMinutes: 7,
-          difficultyLevel: "easy",
-          data: {
-            left: [
-              { id: "l1", label: "I keep missing one skill pattern" },
-              { id: "l2", label: "I rush and make avoidable mistakes" },
-              { id: "l3", label: "I understand in notes but miss in quizzes" }
-            ],
-            right: [
-              { id: "r1", label: "Do a focused drill on that exact pattern" },
-              { id: "r2", label: "Use a short checklist before submitting answers" },
-              { id: "r3", label: "Repeat the skill in a timed re-check" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "financial-literacy-101-l08-a1", type: "mnemonic", title: "Reflection Cycle", content: "Remember Observe, Adjust, Repeat while practicing." }
-      ]
-    },
-    {
-      id: "financial-literacy-101-l09",
-      title: "Review: Finance Habits",
+      title: "Financial Literacy Final Assessment",
       type: "quiz",
       duration: 10,
+      objectives: ["Demonstrate mastery of saving, compound interest, credit, and smart spending"],
       questions: [
         {
-          id: "financial-literacy-101-l09-q1",
-          text: "Which statement best explains saving in Financial Literacy?",
-          skillId: "financial-literacy-101-skill-core",
+          id: "financial-literacy-101-l07-q1",
+          text: "Using the Rule of 72, approximately how many years will it take to double your money at 8% annual interest?",
+          skillId: "financial-literacy-101-skill-compound-interest",
           options: [
-            { id: "a", text: "It explains saving using evidence from the lesson." },
-            { id: "b", text: "It ignores how saving works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Financial Literacy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "9 years" },
+            { id: "b", text: "8 years" },
+            { id: "c", text: "72 years" },
+            { id: "d", text: "12 years" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation:
+            "The Rule of 72 says divide 72 by the interest rate: 72 ÷ 8 = 9 years. This is an approximation — the actual time is about 9.01 years, so the rule is remarkably accurate."
         },
         {
-          id: "financial-literacy-101-l09-q2",
-          text: "What is the best first step when analyzing interest?",
-          skillId: "financial-literacy-101-skill-process",
+          id: "financial-literacy-101-l07-q2",
+          text: "You deposit $200 in a savings account earning 10% compound interest annually. How much will you have after 2 years?",
+          skillId: "financial-literacy-101-skill-compound-interest",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for interest." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to interest." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "$242" },
+            { id: "b", text: "$240" },
+            { id: "c", text: "$220" },
+            { id: "d", text: "$400" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation:
+            "Year 1: $200 × 1.10 = $220. Year 2: $220 × 1.10 = $242. With compound interest you earn $20 in Year 1 and $22 in Year 2 (interest on interest), totaling $242. Simple interest would have given only $240 ($20 each year)."
         },
         {
-          id: "financial-literacy-101-l09-q3",
-          text: "Which option shows strong reasoning about money management?",
-          skillId: "financial-literacy-101-skill-reasoning",
+          id: "financial-literacy-101-l07-q3",
+          text: "Which behavior has the BIGGEST positive impact on your credit score?",
+          skillId: "financial-literacy-101-skill-credit",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to money management." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Paying every bill on time, every month" },
+            { id: "b", text: "Applying for many credit cards at once" },
+            { id: "c", text: "Only making minimum payments" },
+            { id: "d", text: "Closing your oldest credit card" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation:
+            "Payment history accounts for 35% of your credit score — the single largest factor. Paying on time every month builds a strong credit record. Applying for many cards hurts your score, minimum payments lead to debt accumulation, and closing old cards shortens your credit history."        },
+        {
+          id: "financial-literacy-101-l07-q4",
+          text: "Store A sells 10 oz of juice for $2.50 and Store B sells 20 oz for $4.00. Which store has the better deal?",
+          skillId: "financial-literacy-101-skill-credit",
+          options: [
+            { id: "a", text: "Store B ($0.20/oz vs $0.25/oz)" },
+            { id: "b", text: "Store A ($0.25/oz vs $0.20/oz)" },
+            { id: "c", text: "They are the same price" },
+            { id: "d", text: "Cannot determine" }
+          ],
+          correctOptionId: "a",
+          explanation:
+            "Unit price: Store A = $2.50 \u00f7 10 = $0.25/oz. Store B = $4.00 \u00f7 20 = $0.20/oz. Store B has the lower unit price, so it\u2019s the better deal."
         },
         {
-          id: "financial-literacy-101-l09-q4",
-          text: "Why is spaced review useful for Financial Literacy mastery?",
-          skillId: "financial-literacy-101-skill-review",
+          id: "financial-literacy-101-l07-q5",
+          text: "What is the \u201cpay yourself first\u201d strategy?",
+          skillId: "financial-literacy-101-skill-compound-interest",
           options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
+            { id: "a", text: "Set aside savings immediately when you receive money, before spending" },
+            { id: "b", text: "Spend on wants first, then save whatever is left" },
+            { id: "c", text: "Only buy things for yourself" },
+            { id: "d", text: "Never share money with anyone" }
           ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "financial-literacy-101-l09-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Review: Finance Habits",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about saving" },
-              { id: "l2", label: "Inconsistent approach to interest" },
-              { id: "l3", label: "Weak transfer of money management under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
+          correctOptionId: "a",
+          explanation:
+            "Pay yourself first means moving savings out before spending anything. This ensures you always save, rather than hoping money is left over at the end of the month."        }
       ],
       quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "financial-literacy-101-l09-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "financial-literacy-101-l10",
-      title: "Mastery: Financial Literacy",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "financial-literacy-101-l10-q1",
-          text: "Which statement best explains budgeting in Financial Literacy?",
-          skillId: "financial-literacy-101-skill-core",
-          options: [
-            { id: "a", text: "It explains budgeting using evidence from the lesson." },
-            { id: "b", text: "It ignores how budgeting works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Financial Literacy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l10-q2",
-          text: "What is the best first step when analyzing needs vs wants?",
-          skillId: "financial-literacy-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for needs vs wants." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to needs vs wants." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l10-q3",
-          text: "Which option shows strong reasoning about money management?",
-          skillId: "financial-literacy-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to money management." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l10-q4",
-          text: "Why is spaced review useful for Financial Literacy mastery?",
-          skillId: "financial-literacy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "financial-literacy-101-l10-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Mastery: Financial Literacy",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about budgeting" },
-              { id: "l2", label: "Inconsistent approach to needs vs wants" },
-              { id: "l3", label: "Weak transfer of money management under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "financial-literacy-101-l10-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "financial-literacy-101-l11",
-      title: "Applied Financial Literacy Challenge Studio",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using needs vs wants.",
-          "Document your transfer plan for the next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "financial-literacy-101-l11-ia1",
-          type: "sorting_buckets",
-          title: "Transfer Ladder",
-          description: "Sort actions into Diagnose, Fix, and Transfer phases.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "diagnose", label: "Diagnose" },
-              { id: "fix", label: "Fix" },
-              { id: "transfer", label: "Transfer" }
-            ],
-            items: [
-              { id: "i1", label: "Tag repeated mistakes in saving", correctBucketId: "diagnose" },
-              { id: "i2", label: "Rework one missed item with full reasoning", correctBucketId: "fix" },
-              { id: "i3", label: "Retest with a timed mini-check on interest", correctBucketId: "transfer" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "financial-literacy-101-l11-a1", type: "practice", title: "Correction Loop Card", content: "Use Diagnose, Fix, Transfer for each difficult problem." }
-      ]
-    },
-    {
-      id: "financial-literacy-101-l12",
-      title: "Financial Literacy Mastery Applied Retest",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "financial-literacy-101-l12-q1",
-          text: "Which statement best explains budgeting in Financial Literacy?",
-          skillId: "financial-literacy-101-skill-core",
-          options: [
-            { id: "a", text: "It explains budgeting using evidence from the lesson." },
-            { id: "b", text: "It ignores how budgeting works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Financial Literacy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l12-q2",
-          text: "What is the best first step when analyzing interest?",
-          skillId: "financial-literacy-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for interest." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to interest." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l12-q3",
-          text: "Which option shows strong reasoning about money management?",
-          skillId: "financial-literacy-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to money management." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l12-q4",
-          text: "Why is spaced review useful for Financial Literacy mastery?",
-          skillId: "financial-literacy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "financial-literacy-101-l12-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Financial Literacy Mastery Applied Retest",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about budgeting" },
-              { id: "l2", label: "Inconsistent approach to interest" },
-              { id: "l3", label: "Weak transfer of money management under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "financial-literacy-101-l12-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "financial-literacy-101-l13",
-      title: "Financial Literacy Scenario Lab",
-      type: "video",
-      duration: 12,
-      chunks: [
-        {
-          id: "financial-literacy-101-l13-c1",
-          title: "Scenario Brief",
-          content: "This scenario combines budgeting, needs vs wants, and interest in one applied challenge."
-        },
-        {
-          id: "financial-literacy-101-l13-c2",
-          title: "Plan the Approach",
-          content: "Break the scenario into smaller decisions, then assign one strategy to each decision point."
-        },
-        {
-          id: "financial-literacy-101-l13-c3",
-          title: "Execute and Justify",
-          content: "Apply the plan and explain each move with evidence, not guesses."
-        },
-        {
-          id: "financial-literacy-101-l13-c4",
-          title: "Evaluate Outcome",
-          content: "Compare your result to the target and identify what to keep versus what to adjust."
-        }
-      ],
-      flashcards: [
-        { id: "financial-literacy-101-l13-f1", front: "Scenario Planning", back: "Split a complex task into clear decision points." },
-        { id: "financial-literacy-101-l13-f2", front: "Evidence Link", back: "Each step should connect to evidence in the scenario." },
-        { id: "financial-literacy-101-l13-f3", front: "Adjustment Loop", back: "Use outcome checks to refine your next attempt." },
-        { id: "financial-literacy-101-l13-f4", front: "Applied Mastery", back: "Mastery means transferring the process to a new context." }
-      ],
-      learningAids: [
-        { id: "financial-literacy-101-l13-a1", type: "image", title: "Scenario Map", content: "A real-world scenario map connecting budgeting, needs vs wants, and interest." },
-        { id: "financial-literacy-101-l13-a2", type: "practice", title: "Mini Case Prompt", content: "Apply one strategy to a new case and explain your reasoning." }
-      ]
-    },
-    {
-      id: "financial-literacy-101-l14",
-      title: "Financial Literacy Coaching Clinic",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "financial-literacy-101-l14-ia1",
-          type: "matching_pairs",
-          title: "Error to Fix Match",
-          description: "Match each error signal to the highest-impact correction action.",
-          estimatedMinutes: 8,
-          difficultyLevel: "medium",
-          data: {
-            left: [
-              { id: "l1", label: "Repeated miss on budgeting setup" },
-              { id: "l2", label: "Losses due to rushed interest decisions" },
-              { id: "l3", label: "Correct in notes but weak transfer in new tasks" }
-            ],
-            right: [
-              { id: "r1", label: "Rebuild setup steps and retest one parallel item" },
-              { id: "r2", label: "Use checkpoint pacing + verify before submit" },
-              { id: "r3", label: "Pair correction with one timed transfer item" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "financial-literacy-101-l14-a1", type: "mnemonic", title: "Clinic Loop", content: "Diagnose, Correct, Transfer." }
-      ]
-    },
-    {
-      id: "financial-literacy-101-l15",
-      title: "Financial Literacy Mastery Mastery Sprint",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "financial-literacy-101-l15-q1",
-          text: "Which statement best explains saving in Financial Literacy?",
-          skillId: "financial-literacy-101-skill-core",
-          options: [
-            { id: "a", text: "It explains saving using evidence from the lesson." },
-            { id: "b", text: "It ignores how saving works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Financial Literacy." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l15-q2",
-          text: "What is the best first step when analyzing needs vs wants?",
-          skillId: "financial-literacy-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for needs vs wants." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to needs vs wants." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l15-q3",
-          text: "Which option shows strong reasoning about money management?",
-          skillId: "financial-literacy-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to money management." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "financial-literacy-101-l15-q4",
-          text: "Why is spaced review useful for Financial Literacy mastery?",
-          skillId: "financial-literacy-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "financial-literacy-101-l15-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Financial Literacy Mastery Mastery Sprint",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about saving" },
-              { id: "l2", label: "Inconsistent approach to needs vs wants" },
-              { id: "l3", label: "Weak transfer of money management under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "financial-literacy-101-l15-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
+        totalQuestions: 3,
+        bloomProfile: { understand: 1, apply: 2 }
+      }
     }
-  ],
+  ]
 };

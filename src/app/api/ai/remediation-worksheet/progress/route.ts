@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const progressRequestSchema = z.object({
   lessonId: z.string().min(1),
@@ -86,7 +87,7 @@ export async function POST(request: Request) {
       updatedAt: data.updated_at,
     });
   } catch (error) {
-    console.error("Unexpected remediation worksheet progress POST error:", error);
+    console.error("Unexpected remediation worksheet progress POST error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

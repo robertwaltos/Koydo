@@ -1321,7 +1321,7 @@ async function generateLessonContent(subject, gradeLevel, topic) {
 }
 
 async function createLesson(subject, gradeLevel, topic) {
-  const lessonsDir = path.join(process.cwd(), 'eduforge-web', 'src', 'lib', 'data', 'lessons');
+  const lessonsDir = path.join(process.cwd(), 'koydo-web', 'src', 'lib', 'data', 'lessons');
   if (!fs.existsSync(lessonsDir)) {
     fs.mkdirSync(lessonsDir, { recursive: true });
   }

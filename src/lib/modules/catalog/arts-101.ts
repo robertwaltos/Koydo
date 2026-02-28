@@ -3,980 +3,677 @@ import type { LearningModule } from "@/lib/modules/types";
 export const Arts101Module: LearningModule = {
   id: "arts-101",
   title: "Creative Arts Studio",
-  description: "Practice visual arts, music, design, and creative expression across mediums.",
+  description:
+    "Explore the elements of art, color theory, drawing techniques, famous artists, sculpture, and nature art through hands-on projects and real-world examples.",
   subject: "Arts",
-  tags: ["core", "curriculum", "interactive"],
+  tags: ["arts", "creativity", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "1.1.0",
-  version: "1.1.0",
+  moduleVersion: "2.0.0",
+  version: "2.0.0",
   learningObjectives: [
-    "Understand core concepts in Arts",
-    "Apply Creative Process strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Identify the seven elements of art: line, shape, color, texture, space, form, and value",
+    "Understand the color wheel including primary, secondary, complementary, and warm/cool colors",
+    "Apply drawing techniques such as contour, shading, and proportion",
+    "Recognize famous artists and their signature styles",
+    "Create 3D art using clay, paper mâché, and assemblage",
+    "Discover patterns, symmetry, and fractals in nature art"
   ],
   lessons: [
+    /* ──────────────────────────────────────────────
+       L01  Elements of Art  (video)
+    ────────────────────────────────────────────── */
     {
       id: "arts-101-l01",
       title: "Elements of Art",
       type: "video",
-      duration: 10,
+      duration: 12,
       chunks: [
         {
           id: "arts-101-l01-c1",
-          title: "Elements of Art Overview",
-          content: "In this lesson, we focus on color theory through the lens of creative expression. The goal is to recognize what strong reasoning looks like before solving."
+          title: "Line and Shape",
+          content:
+            "Line is the most basic element of art — a mark made by a moving point. Lines can be straight, curved, zigzag, thick, or thin. Shapes are formed when lines connect. Geometric shapes like circles, squares, and triangles have exact measurements. Organic shapes like clouds and leaves are irregular and found in nature."
         },
         {
           id: "arts-101-l01-c2",
-          title: "Core Concept",
-          content: "color theory and composition work together. Start by naming the main target, then identify the evidence or steps that support it."
+          title: "Color, Value, and Texture",
+          content:
+            "Color has three properties: hue (the name — red, blue), value (how light or dark), and intensity (how bright or dull). Texture is how a surface feels or looks like it feels — smooth, rough, bumpy, or soft. You can create texture in a drawing by using dots, lines, or shading. Vincent van Gogh's thick paint strokes created real texture you can feel on the canvas."
         },
         {
           id: "arts-101-l01-c3",
-          title: "Worked Example",
-          content: "Walk through one guided example: define the goal, apply a strategy for composition, then verify the result with a quick check."
-        },
-        {
-          id: "arts-101-l01-c4",
-          title: "Transfer Prompt",
-          content: "Apply the same process to a new scenario and explain why your approach is valid in one clear sentence."
+          title: "Space and Form",
+          content:
+            "Space is the area around, between, and within objects. Positive space is the subject. Negative space is the empty area around it. Form is a 3D shape — a sphere instead of a circle, a cube instead of a square. Artists create the illusion of form on flat paper using shading and perspective."
         }
       ],
       flashcards: [
-        { id: "arts-101-l01-f1", front: "color theory", back: "A central target skill in this module. Name it before solving." },
-        { id: "arts-101-l01-f2", front: "composition", back: "Use this as the method step after defining the goal." },
-        { id: "arts-101-l01-f3", front: "Verification", back: "Check that your result matches the original goal and constraints." },
-        { id: "arts-101-l01-f4", front: "Transfer", back: "Use the same strategy on a new item to confirm true mastery." }
+        { id: "arts-101-l01-f1", front: "A mark made by a moving point", back: "Line" },
+        { id: "arts-101-l01-f2", front: "Area enclosed when lines connect", back: "Shape" },
+        { id: "arts-101-l01-f3", front: "How a surface feels or looks like it feels", back: "Texture" },
+        { id: "arts-101-l01-f4", front: "A 3D shape like a sphere or cube", back: "Form" }
       ],
-      learningAids: [
-        { id: "arts-101-l01-a1", type: "image", title: "Concept Poster", content: "A colorful infographic about color theory and composition." },
-        { id: "arts-101-l01-a2", type: "animation", title: "Warm-up Animation", content: "Short animation introducing Arts vocabulary." }
-      ]
-    },
-    {
-      id: "arts-101-l02",
-      title: "Color and Composition",
-      type: "interactive",
-      duration: 12,
-      metadata: {
-        prompts: [
-          "Identify one core idea about color theory from this lesson.",
-          "Explain where composition appears in real life.",
-          "Describe one question you still have about creative expression."
-        ]
-      },
-      interactiveActivities: [
+      questions: [
         {
-          id: "arts-101-l02-ia1",
-          type: "drag_and_drop",
-          title: "Practice Flow Builder",
-          description: "Sort each action into Plan, Execute, or Reflect.",
-          estimatedMinutes: 8,
-          difficultyLevel: "easy",
-          data: {
-            targets: [
-              { id: "plan", label: "Plan" },
-              { id: "execute", label: "Execute" },
-              { id: "reflect", label: "Reflect" }
-            ],
-            draggables: [
-              { id: "d1", label: "Set a goal for color theory", correctTargetId: "plan" },
-              { id: "d2", label: "Try one strategy for composition", correctTargetId: "execute" },
-              { id: "d3", label: "Record what worked and what to improve", correctTargetId: "reflect" }
-            ]
-          }
+          id: "arts-101-l01-q1",
+          text: "Which element of art describes how a surface feels?",
+          options: [
+            { id: "a", text: "Texture" },
+            { id: "b", text: "Line" },
+            { id: "c", text: "Shape" },
+            { id: "d", text: "Space" }
+          ],
+          correctOptionId: "a",
+          explanation: "Texture is how a surface feels — rough, smooth, bumpy!"
+        },
+        {
+          id: "arts-101-l01-q2",
+          text: "What is the empty area around a subject called?",
+          options: [
+            { id: "a", text: "Negative space" },
+            { id: "b", text: "Positive space" },
+            { id: "c", text: "Texture" },
+            { id: "d", text: "Form" }
+          ],
+          correctOptionId: "a",
+          explanation: "Negative space is the empty area around objects!"
+        },
+        {
+          id: "arts-101-l01-q3",
+          text: "Geometric shapes like circles and squares have",
+          options: [
+            { id: "a", text: "Exact measurements" },
+            { id: "b", text: "Irregular edges" },
+            { id: "c", text: "No lines" },
+            { id: "d", text: "Rough texture" }
+          ],
+          correctOptionId: "a",
+          explanation: "Geometric shapes are precise and measurable!"
         }
       ],
-      learningAids: [
-        { id: "arts-101-l02-a1", type: "practice", title: "Try It Board", content: "Complete a guided activity on composition and write one reflection." }
+      activities: [
+        {
+          id: "arts-101-l01-act1",
+          type: "drawing_canvas",
+          title: "Elements scavenger hunt",
+          description: "Look around your room and find one example each of line, shape, color, texture, space, and form. Draw or photograph each one and label it."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L02  The Color Wheel  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "arts-101-l02",
+      title: "The Color Wheel",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "arts-101-l02-c1",
+          title: "Primary and Secondary Colors",
+          content:
+            "Primary colors are red, yellow, and blue — they cannot be made by mixing other colors. Secondary colors are made by mixing two primaries: red + yellow = orange, yellow + blue = green, blue + red = purple. Sir Isaac Newton created the first color wheel in 1666 by bending the spectrum of light into a circle."
+        },
+        {
+          id: "arts-101-l02-c2",
+          title: "Warm and Cool Colors",
+          content:
+            "Warm colors (red, orange, yellow) remind us of fire and sunlight — they seem to come forward in a painting. Cool colors (blue, green, purple) remind us of water and ice — they seem to recede. Artists use warm and cool colors to create depth and mood in their work."
+        },
+        {
+          id: "arts-101-l02-c3",
+          title: "Complementary Colors",
+          content:
+            "Complementary colors are opposite each other on the color wheel: red and green, blue and orange, yellow and purple. When placed side by side, they make each other look brighter and more vibrant. Claude Monet used complementary colors in his Water Lilies paintings to make the colors glow."
+        }
+      ],
+      flashcards: [
+        { id: "arts-101-l02-f1", front: "Colors that cannot be made by mixing others", back: "Primary colors (red, yellow, blue)" },
+        { id: "arts-101-l02-f2", front: "Red + yellow = ?", back: "Orange" },
+        { id: "arts-101-l02-f3", front: "Colors opposite on the color wheel", back: "Complementary colors" },
+        { id: "arts-101-l02-f4", front: "Colors that remind us of fire and sunlight", back: "Warm colors (red, orange, yellow)" }
+      ],
+      questions: [
+        {
+          id: "arts-101-l02-q1",
+          text: "What do you get when you mix red and yellow?",
+          options: [
+            { id: "a", text: "Orange" },
+            { id: "b", text: "Green" },
+            { id: "c", text: "Purple" },
+            { id: "d", text: "Brown" }
+          ],
+          correctOptionId: "a",
+          explanation: "Red + yellow = orange — a secondary color!"
+        },
+        {
+          id: "arts-101-l02-q2",
+          text: "Which pair are complementary colors?",
+          options: [
+            { id: "a", text: "Red and green" },
+            { id: "b", text: "Red and orange" },
+            { id: "c", text: "Blue and purple" },
+            { id: "d", text: "Yellow and orange" }
+          ],
+          correctOptionId: "a",
+          explanation: "Red and green are opposite on the color wheel!"
+        },
+        {
+          id: "arts-101-l02-q3",
+          text: "Warm colors like red and orange seem to",
+          options: [
+            { id: "a", text: "Come forward in a painting" },
+            { id: "b", text: "Disappear completely" },
+            { id: "c", text: "Turn into cool colors" },
+            { id: "d", text: "Recede into the background" }
+          ],
+          correctOptionId: "a",
+          explanation: "Warm colors pop forward while cool colors recede!"
+        }
+      ],
+      activities: [
+        {
+          id: "arts-101-l02-act1",
+          type: "drawing_canvas",
+          title: "Color wheel painting",
+          description: "Using only red, yellow, and blue paint, mix and paint a full 12-color wheel. Label each slice with its color name and whether it is primary, secondary, or tertiary."
+        }
+      ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L03  Drawing Techniques  (video)
+    ────────────────────────────────────────────── */
     {
       id: "arts-101-l03",
-      title: "Checkpoint: Visual Language",
-      type: "quiz",
-      duration: 10,
+      title: "Drawing Techniques",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "arts-101-l03-c1",
+          title: "Contour Drawing",
+          content:
+            "Contour drawing means drawing the outline and edges of an object without lifting your pencil. It trains your eye to really see what you are drawing. Try blind contour drawing — look only at the object, not at your paper. The famous artist Egon Schiele used bold contour lines in his expressive figure drawings."
+        },
+        {
+          id: "arts-101-l03-c2",
+          title: "Shading and Value",
+          content:
+            "Shading gives flat drawings a 3D look. There are several shading techniques: hatching (parallel lines), cross-hatching (overlapping lines), stippling (dots), and blending (smooth gradients with a pencil or finger). Leonardo da Vinci was a master of sfumato — a soft, smoky shading technique he used on the Mona Lisa."
+        },
+        {
+          id: "arts-101-l03-c3",
+          title: "Proportion",
+          content:
+            "Proportion is the size relationship between parts of a drawing. The average human face follows a pattern: eyes are halfway down the head, the nose is halfway between the eyes and chin, and the mouth is one-third of the way from the nose to the chin. Using these guidelines helps you draw realistic faces."
+        }
+      ],
+      flashcards: [
+        { id: "arts-101-l03-f1", front: "Drawing only the outline and edges of an object", back: "Contour drawing" },
+        { id: "arts-101-l03-f2", front: "Technique using parallel lines to create value", back: "Hatching" },
+        { id: "arts-101-l03-f3", front: "Size relationship between parts of a drawing", back: "Proportion" },
+        { id: "arts-101-l03-f4", front: "Soft, smoky shading technique used by da Vinci", back: "Sfumato" }
+      ],
       questions: [
         {
           id: "arts-101-l03-q1",
-          text: "Which statement best explains color theory in Arts?",
-          skillId: "arts-101-skill-core",
+          text: "What is drawing only the outline and edges of an object called?",
           options: [
-            { id: "a", text: "It explains color theory using evidence from the lesson." },
-            { id: "b", text: "It ignores how color theory works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Contour drawing" },
+            { id: "b", text: "Shading" },
+            { id: "c", text: "Stippling" },
+            { id: "d", text: "Proportion" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Contour drawing captures the outline of objects!"
         },
         {
           id: "arts-101-l03-q2",
-          text: "What is the best first step when analyzing composition?",
-          skillId: "arts-101-skill-process",
+          text: "Shading with tiny dots is called",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for composition." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to composition." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Stippling" },
+            { id: "b", text: "Hatching" },
+            { id: "c", text: "Contour" },
+            { id: "d", text: "Proportion" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Stippling uses many small dots to create value!"
         },
         {
           id: "arts-101-l03-q3",
-          text: "Which option shows strong reasoning about creative expression?",
-          skillId: "arts-101-skill-reasoning",
+          text: "On the average human face, the eyes are located",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to creative expression." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Halfway down the head" },
+            { id: "b", text: "At the top of the head" },
+            { id: "c", text: "One-third down" },
+            { id: "d", text: "Near the chin" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l03-q4",
-          text: "Why is spaced review useful for Arts mastery?",
-          skillId: "arts-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Eyes sit at the midpoint of the head height!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "arts-101-l03-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Visual Language",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about color theory" },
-              { id: "l2", label: "Inconsistent approach to composition" },
-              { id: "l3", label: "Weak transfer of creative expression under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "arts-101-l03-act1",
+          type: "drawing_canvas",
+          title: "Shading sampler",
+          description: "Draw four squares. Fill each with a different shading technique: hatching, cross-hatching, stippling, and blending. Then draw a sphere and shade it with your favorite technique to make it look 3D."
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "arts-101-l03-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L04  Art Checkpoint  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "arts-101-l04",
-      title: "Music and Rhythm",
-      type: "video",
-      duration: 11,
+      title: "Art Checkpoint",
+      type: "quiz",
+      duration: 8,
       chunks: [
         {
           id: "arts-101-l04-c1",
-          title: "Music and Rhythm Focus",
-          content: "This lesson deepens rhythm using structured reasoning. We move from concept understanding to applied decisions."
+          title: "Elements and Color Review",
+          content:
+            "You learned the seven elements of art: line, shape, color, texture, space, form, and value. Primary colors mix to make secondary colors. Complementary colors are opposite on the wheel."
         },
         {
           id: "arts-101-l04-c2",
-          title: "Method Steps",
-          content: "Step 1: identify what is being asked. Step 2: choose a strategy aligned to rhythm. Step 3: justify with evidence."
+          title: "Drawing Techniques Review",
+          content:
+            "Contour drawing captures outlines. Shading (hatching, cross-hatching, stippling, blending) adds depth. Proportion guidelines help draw realistic faces and figures."
         },
         {
           id: "arts-101-l04-c3",
-          title: "Common Mistakes",
-          content: "Common errors include skipping setup, using unrelated assumptions, or failing to verify the final result."
-        },
-        {
-          id: "arts-101-l04-c4",
-          title: "Independent Try",
-          content: "Solve one similar item and compare your process to the lesson sequence."
+          title: "You Are Growing as an Artist!",
+          content:
+            "You now know the building blocks of all visual art. Every painting, drawing, and sculpture uses these same elements and techniques."
         }
       ],
       flashcards: [
-        { id: "arts-101-l04-f1", front: "rhythm", back: "State the target and pick a strategy before solving." },
-        { id: "arts-101-l04-f2", front: "Step Sequence", back: "Goal -> Strategy -> Evidence -> Check." },
-        { id: "arts-101-l04-f3", front: "Assumption Check", back: "Remove assumptions that are not supported by the prompt." },
-        { id: "arts-101-l04-f4", front: "Process Match", back: "Your explanation should match the steps you actually used." }
+        { id: "arts-101-l04-f1", front: "Three primary colors", back: "Red, yellow, blue" },
+        { id: "arts-101-l04-f2", front: "Element that describes how light or dark", back: "Value" },
+        { id: "arts-101-l04-f3", front: "Drawing the outline without lifting your pencil", back: "Contour drawing" },
+        { id: "arts-101-l04-f4", front: "Colors opposite on the color wheel", back: "Complementary colors" }
       ],
-      learningAids: [
-        { id: "arts-101-l04-a1", type: "image", title: "Worked Example Sheet", content: "Step-by-step visuals for rhythm scenarios." }
-      ]
-    },
-    {
-      id: "arts-101-l05",
-      title: "Design Thinking Basics",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
-        ]
-      },
-      interactiveActivities: [
+      questions: [
         {
-          id: "arts-101-l05-ia1",
-          type: "sorting_buckets",
-          title: "Strategy Sort",
-          description: "Sort study actions into Concept, Process, or Review lanes.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "concept", label: "rhythm Concept" },
-              { id: "process", label: "critique Process" },
-              { id: "review", label: "Review Loop" }
-            ],
-            items: [
-              { id: "i1", label: "Write one definition in your own words", correctBucketId: "concept" },
-              { id: "i2", label: "Follow the step-by-step method on a new example", correctBucketId: "process" },
-              { id: "i3", label: "Retest the same skill tomorrow", correctBucketId: "review" }
-            ]
-          }
+          id: "arts-101-l04-q1",
+          text: "Which are the three primary colors?",
+          options: [
+            { id: "a", text: "Red, yellow, blue" },
+            { id: "b", text: "Orange, green, purple" },
+            { id: "c", text: "Red, green, blue" },
+            { id: "d", text: "Black, white, gray" }
+          ],
+          correctOptionId: "a",
+          explanation: "Primary colors cannot be made by mixing others!"
+        },
+        {
+          id: "arts-101-l04-q2",
+          text: "What shading technique uses overlapping sets of lines?",
+          options: [
+            { id: "a", text: "Cross-hatching" },
+            { id: "b", text: "Stippling" },
+            { id: "c", text: "Blending" },
+            { id: "d", text: "Contour" }
+          ],
+          correctOptionId: "a",
+          explanation: "Cross-hatching layers lines in different directions!"
+        },
+        {
+          id: "arts-101-l04-q3",
+          text: "Negative space is",
+          options: [
+            { id: "a", text: "The empty area around a subject" },
+            { id: "b", text: "The main subject of the art" },
+            { id: "c", text: "A type of shading" },
+            { id: "d", text: "A warm color" }
+          ],
+          correctOptionId: "a",
+          explanation: "Negative space is the area surrounding the subject!"
         }
       ],
-      learningAids: [
-        { id: "arts-101-l05-a1", type: "animation", title: "Challenge Walkthrough", content: "Animated sequence for solving a rhythm challenge." }
+      activities: [
+        {
+          id: "arts-101-l04-act1",
+          type: "drawing_canvas",
+          title: "Mini gallery review",
+          description: "Collect your best drawing from each of the first three lessons. Write one sentence about which element or technique you used in each piece."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L05  Famous Artists  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "arts-101-l05",
+      title: "Famous Artists",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "arts-101-l05-c1",
+          title: "Claude Monet — Impressionism",
+          content:
+            "Claude Monet (1840–1926) was a French painter who started the Impressionist movement. He painted outdoors to capture light and color as they changed throughout the day. His Water Lilies series includes over 250 paintings of his garden pond. His brushstrokes are loose and visible, creating a shimmering, dreamlike effect."
+        },
+        {
+          id: "arts-101-l05-c2",
+          title: "Vincent van Gogh — Post-Impressionism",
+          content:
+            "Vincent van Gogh (1853–1890) used thick, swirling brushstrokes called impasto. His painting The Starry Night (1889) shows a night sky full of movement and emotion with bold blues and yellows. During his lifetime he only sold one painting, but today his works sell for tens of millions of dollars."
+        },
+        {
+          id: "arts-101-l05-c3",
+          title: "Frida Kahlo — Self-Portraits",
+          content:
+            "Frida Kahlo (1907–1954) was a Mexican artist known for bold, symbolic self-portraits. Her painting Self-Portrait with Thorn Necklace and Hummingbird uses plants, animals, and bright colors to express pain and strength. She is one of the most recognized artists of the 20th century."
+        }
+      ],
+      flashcards: [
+        { id: "arts-101-l05-f1", front: "Painted Water Lilies with loose brushstrokes", back: "Claude Monet" },
+        { id: "arts-101-l05-f2", front: "Thick paint technique using swirling brushstrokes", back: "Impasto (Van Gogh)" },
+        { id: "arts-101-l05-f3", front: "Mexican artist known for bold self-portraits", back: "Frida Kahlo" },
+        { id: "arts-101-l05-f4", front: "Painting of a swirling night sky from 1889", back: "The Starry Night (Van Gogh)" }
+      ],
+      questions: [
+        {
+          id: "arts-101-l05-q1",
+          text: "Which artist started the Impressionist movement and painted Water Lilies?",
+          options: [
+            { id: "a", text: "Claude Monet" },
+            { id: "b", text: "Vincent van Gogh" },
+            { id: "c", text: "Frida Kahlo" },
+            { id: "d", text: "Pablo Picasso" }
+          ],
+          correctOptionId: "a",
+          explanation: "Monet is the father of Impressionism!"
+        },
+        {
+          id: "arts-101-l05-q2",
+          text: "What technique did Van Gogh use to create thick, textured paint?",
+          options: [
+            { id: "a", text: "Impasto" },
+            { id: "b", text: "Contour" },
+            { id: "c", text: "Stippling" },
+            { id: "d", text: "Blending" }
+          ],
+          correctOptionId: "a",
+          explanation: "Impasto means thick, textured paint applied with bold strokes!"
+        },
+        {
+          id: "arts-101-l05-q3",
+          text: "Frida Kahlo is best known for her",
+          options: [
+            { id: "a", text: "Bold self-portraits" },
+            { id: "b", text: "Water lily paintings" },
+            { id: "c", text: "Sculpture" },
+            { id: "d", text: "Architecture" }
+          ],
+          correctOptionId: "a",
+          explanation: "Kahlo created powerful symbolic self-portraits!"
+        }
+      ],
+      activities: [
+        {
+          id: "arts-101-l05-act1",
+          type: "drawing_canvas",
+          title: "Artist style study",
+          description: "Pick one famous artist from the lesson. Create a short artwork inspired by their style. If you pick Monet, use loose brushstrokes. If Van Gogh, use thick swirls. If Kahlo, create a symbolic self-portrait."
+        }
+      ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L06  Sculpture and 3D Art  (video)
+    ────────────────────────────────────────────── */
     {
       id: "arts-101-l06",
-      title: "Checkpoint: Creative Process",
-      type: "quiz",
-      duration: 10,
+      title: "Sculpture and 3D Art",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "arts-101-l06-c1",
+          title: "Clay Sculpture",
+          content:
+            "Clay can be pinched, rolled, or coiled. Ancient Greek artists made clay vases and figures. Make a simple pinch pot and add textures with a pencil or fork."
+        },
+        {
+          id: "arts-101-l06-c2",
+          title: "Paper Mâché",
+          content:
+            "Paper mâché uses strips of newspaper dipped in glue-water mix over a balloon or cardboard. Auguste Rodin used real models, but you can make a colorful mask or animal that dries hard."
+        },
+        {
+          id: "arts-101-l06-c3",
+          title: "Assemblage",
+          content:
+            "Assemblage is sculpture from found objects. Pablo Picasso glued newspaper, string, and wood in his Still Life with Chair Caning. Collect safe recycled items and build a robot or creature."
+        }
+      ],
+      flashcards: [
+        { id: "arts-101-l06-f1", front: "3D art made by pinching and shaping soft material", back: "Clay sculpture" },
+        { id: "arts-101-l06-f2", front: "Sculpture made from newspaper and glue", back: "Paper mâché" },
+        { id: "arts-101-l06-f3", front: "Art made by gluing found objects together", back: "Assemblage" },
+        { id: "arts-101-l06-f4", front: "Famous for Still Life with Chair Caning assemblage", back: "Pablo Picasso" }
+      ],
       questions: [
         {
           id: "arts-101-l06-q1",
-          text: "Which statement best explains rhythm in Arts?",
-          skillId: "arts-101-skill-core",
+          text: "What sculpture technique uses strips of newspaper and glue?",
           options: [
-            { id: "a", text: "It explains rhythm using evidence from the lesson." },
-            { id: "b", text: "It ignores how rhythm works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Paper mâché" },
+            { id: "b", text: "Clay pinching" },
+            { id: "c", text: "Assemblage" },
+            { id: "d", text: "Contour drawing" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Paper mâché uses wet newspaper strips!"
         },
         {
           id: "arts-101-l06-q2",
-          text: "What is the best first step when analyzing critique?",
-          skillId: "arts-101-skill-process",
+          text: "What 3D art is made by gluing recycled objects?",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for critique." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to critique." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Assemblage" },
+            { id: "b", text: "Paper mâché" },
+            { id: "c", text: "Clay" },
+            { id: "d", text: "Shading" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Assemblage uses found objects!"
         },
         {
           id: "arts-101-l06-q3",
-          text: "Which option shows strong reasoning about creative expression?",
-          skillId: "arts-101-skill-reasoning",
+          text: "Pinch pots and coils are made with",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to creative expression." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Clay" },
+            { id: "b", text: "Newspaper" },
+            { id: "c", text: "Cardboard" },
+            { id: "d", text: "Crayons" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l06-q4",
-          text: "Why is spaced review useful for Arts mastery?",
-          skillId: "arts-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Clay is soft and perfect for pinching!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "arts-101-l06-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Creative Process",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about rhythm" },
-              { id: "l2", label: "Inconsistent approach to critique" },
-              { id: "l3", label: "Weak transfer of creative expression under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "arts-101-l06-act1",
+          type: "project_builder",
+          title: "Recycled robot assemblage",
+          description: "Gather clean cardboard tubes, bottle caps, egg cartons, glue, tape, and markers. Build and decorate a standing robot or creature."
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "arts-101-l06-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L07  Art in Nature  (video)
+    ────────────────────────────────────────────── */
     {
       id: "arts-101-l07",
-      title: "Art History Snapshot",
+      title: "Art in Nature",
       type: "video",
       duration: 12,
       chunks: [
         {
           id: "arts-101-l07-c1",
-          title: "Art History Snapshot Setup",
-          content: "Use critique to organize your approach before starting. Planning first improves quality and speed."
+          title: "Patterns in Nature",
+          content:
+            "Leaves have repeating vein patterns. Sunflowers show spiral patterns. Andy Goldsworthy arranges leaves and stones into temporary nature art that shows perfect patterns."
         },
         {
           id: "arts-101-l07-c2",
-          title: "Decision Rules",
-          content: "When choices compete, use a simple rule: pick the option with strongest evidence and clearest link to the goal."
+          title: "Symmetry",
+          content:
+            "Symmetry means one side mirrors the other — like a butterfly's wings or a snowflake. Look at a real leaf: fold it and see the matching halves. Georgia O'Keeffe painted giant symmetrical flowers."
         },
         {
           id: "arts-101-l07-c3",
-          title: "Quality Control",
-          content: "Check for three things: accuracy, completeness, and alignment with the original objective."
-        },
-        {
-          id: "arts-101-l07-c4",
-          title: "Next-Step Plan",
-          content: "Write one action to repeat and one action to improve in your next practice round."
+          title: "Fractals and Repeating Shapes",
+          content:
+            "Fractals are shapes that repeat smaller and smaller — like the branches of a tree or the spirals in a seashell. Draw a tree and keep making smaller branches — that's a fractal pattern!"
         }
       ],
       flashcards: [
-        { id: "arts-101-l07-f1", front: "critique", back: "Use this as your organizing framework before execution." },
-        { id: "arts-101-l07-f2", front: "Decision Rule", back: "Choose the option with strongest evidence-to-goal alignment." },
-        { id: "arts-101-l07-f3", front: "Quality Control", back: "Accuracy + completeness + objective match." },
-        { id: "arts-101-l07-f4", front: "Iteration", back: "Repeat what works; refine one weak step each cycle." }
+        { id: "arts-101-l07-f1", front: "Repeating shapes that get smaller", back: "Fractals" },
+        { id: "arts-101-l07-f2", front: "One side mirrors the other", back: "Symmetry" },
+        { id: "arts-101-l07-f3", front: "Repeating lines in leaves or petals", back: "Patterns" },
+        { id: "arts-101-l07-f4", front: "Artist who arranges leaves and stones outdoors", back: "Andy Goldsworthy" }
       ],
-      learningAids: [
-        { id: "arts-101-l07-a1", type: "practice", title: "Project Planner", content: "Template for planning a mini project focused on critique." }
+      questions: [
+        {
+          id: "arts-101-l07-q1",
+          text: "When one side of a butterfly's wings matches the other, it has",
+          options: [
+            { id: "a", text: "Symmetry" },
+            { id: "b", text: "Fractals" },
+            { id: "c", text: "Shading" },
+            { id: "d", text: "Contour" }
+          ],
+          correctOptionId: "a",
+          explanation: "Symmetry means mirror halves!"
+        },
+        {
+          id: "arts-101-l07-q2",
+          text: "Repeating smaller and smaller branches in a tree is an example of",
+          options: [
+            { id: "a", text: "Fractals" },
+            { id: "b", text: "Symmetry" },
+            { id: "c", text: "Color wheel" },
+            { id: "d", text: "Proportion" }
+          ],
+          correctOptionId: "a",
+          explanation: "Fractals repeat at smaller scales!"
+        },
+        {
+          id: "arts-101-l07-q3",
+          text: "Repeating vein lines in a leaf create a",
+          options: [
+            { id: "a", text: "Pattern" },
+            { id: "b", text: "Shading" },
+            { id: "c", text: "Contour" },
+            { id: "d", text: "Space" }
+          ],
+          correctOptionId: "a",
+          explanation: "Patterns repeat over and over!"
+        }
+      ],
+      activities: [
+        {
+          id: "arts-101-l07-act1",
+          type: "drawing_canvas",
+          title: "Nature symmetry print",
+          description: "Go outside and collect flat leaves or flowers. Paint one side, fold paper over it, press, and open to see the mirror image. Label it 'Nature Symmetry'."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L08  Final Portfolio Assessment  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "arts-101-l08",
-      title: "Portfolio Reflection",
-      type: "interactive",
-      duration: 10,
-      metadata: {
-        prompts: [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "arts-101-l08-ia1",
-          type: "matching_pairs",
-          title: "Reflection Match",
-          description: "Match each reflection prompt with the best follow-up action.",
-          estimatedMinutes: 7,
-          difficultyLevel: "easy",
-          data: {
-            left: [
-              { id: "l1", label: "I keep missing one skill pattern" },
-              { id: "l2", label: "I rush and make avoidable mistakes" },
-              { id: "l3", label: "I understand in notes but miss in quizzes" }
-            ],
-            right: [
-              { id: "r1", label: "Do a focused drill on that exact pattern" },
-              { id: "r2", label: "Use a short checklist before submitting answers" },
-              { id: "r3", label: "Repeat the skill in a timed re-check" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "arts-101-l08-a1", type: "mnemonic", title: "Reflection Cycle", content: "Remember Observe, Adjust, Repeat while practicing." }
-      ]
-    },
-    {
-      id: "arts-101-l09",
-      title: "Review: Artistic Skills",
+      title: "Final Portfolio Assessment",
       type: "quiz",
       duration: 10,
-      questions: [
-        {
-          id: "arts-101-l09-q1",
-          text: "Which statement best explains composition in Arts?",
-          skillId: "arts-101-skill-core",
-          options: [
-            { id: "a", text: "It explains composition using evidence from the lesson." },
-            { id: "b", text: "It ignores how composition works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l09-q2",
-          text: "What is the best first step when analyzing critique?",
-          skillId: "arts-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for critique." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to critique." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l09-q3",
-          text: "Which option shows strong reasoning about creative expression?",
-          skillId: "arts-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to creative expression." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l09-q4",
-          text: "Why is spaced review useful for Arts mastery?",
-          skillId: "arts-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "arts-101-l09-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Review: Artistic Skills",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about composition" },
-              { id: "l2", label: "Inconsistent approach to critique" },
-              { id: "l3", label: "Weak transfer of creative expression under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "arts-101-l09-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "arts-101-l10",
-      title: "Mastery: Creative Arts",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "arts-101-l10-q1",
-          text: "Which statement best explains color theory in Arts?",
-          skillId: "arts-101-skill-core",
-          options: [
-            { id: "a", text: "It explains color theory using evidence from the lesson." },
-            { id: "b", text: "It ignores how color theory works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l10-q2",
-          text: "What is the best first step when analyzing rhythm?",
-          skillId: "arts-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for rhythm." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to rhythm." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l10-q3",
-          text: "Which option shows strong reasoning about creative expression?",
-          skillId: "arts-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to creative expression." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l10-q4",
-          text: "Why is spaced review useful for Arts mastery?",
-          skillId: "arts-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "arts-101-l10-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Mastery: Creative Arts",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about color theory" },
-              { id: "l2", label: "Inconsistent approach to rhythm" },
-              { id: "l3", label: "Weak transfer of creative expression under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "arts-101-l10-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "arts-101-l11",
-      title: "Applied Arts Challenge Studio",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using rhythm.",
-          "Document your transfer plan for the next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "arts-101-l11-ia1",
-          type: "sorting_buckets",
-          title: "Transfer Ladder",
-          description: "Sort actions into Diagnose, Fix, and Transfer phases.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "diagnose", label: "Diagnose" },
-              { id: "fix", label: "Fix" },
-              { id: "transfer", label: "Transfer" }
-            ],
-            items: [
-              { id: "i1", label: "Tag repeated mistakes in composition", correctBucketId: "diagnose" },
-              { id: "i2", label: "Rework one missed item with full reasoning", correctBucketId: "fix" },
-              { id: "i3", label: "Retest with a timed mini-check on critique", correctBucketId: "transfer" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "arts-101-l11-a1", type: "practice", title: "Correction Loop Card", content: "Use Diagnose, Fix, Transfer for each difficult problem." }
-      ]
-    },
-    {
-      id: "arts-101-l12",
-      title: "Creative Arts Mastery Applied Retest",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "arts-101-l12-q1",
-          text: "Which statement best explains color theory in Arts?",
-          skillId: "arts-101-skill-core",
-          options: [
-            { id: "a", text: "It explains color theory using evidence from the lesson." },
-            { id: "b", text: "It ignores how color theory works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l12-q2",
-          text: "What is the best first step when analyzing critique?",
-          skillId: "arts-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for critique." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to critique." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l12-q3",
-          text: "Which option shows strong reasoning about creative expression?",
-          skillId: "arts-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to creative expression." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l12-q4",
-          text: "Why is spaced review useful for Arts mastery?",
-          skillId: "arts-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "arts-101-l12-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Creative Arts Mastery Applied Retest",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about color theory" },
-              { id: "l2", label: "Inconsistent approach to critique" },
-              { id: "l3", label: "Weak transfer of creative expression under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "arts-101-l12-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "arts-101-l13",
-      title: "Arts Scenario Lab",
-      type: "video",
-      duration: 12,
       chunks: [
         {
-          id: "arts-101-l13-c1",
-          title: "Scenario Brief",
-          content: "This scenario combines color theory, rhythm, and critique in one applied challenge."
+          id: "arts-101-l08-c1",
+          title: "Review All Elements and Techniques",
+          content:
+            "You learned line, shape, color, texture, space, contour, shading, proportion, and how famous artists use them."
         },
         {
-          id: "arts-101-l13-c2",
-          title: "Plan the Approach",
-          content: "Break the scenario into smaller decisions, then assign one strategy to each decision point."
+          id: "arts-101-l08-c2",
+          title: "Review 3D and Nature Art",
+          content:
+            "You created clay, paper mâché or assemblage, and found symmetry and patterns in nature."
         },
         {
-          id: "arts-101-l13-c3",
-          title: "Execute and Justify",
-          content: "Apply the plan and explain each move with evidence, not guesses."
-        },
-        {
-          id: "arts-101-l13-c4",
-          title: "Evaluate Outcome",
-          content: "Compare your result to the target and identify what to keep versus what to adjust."
+          id: "arts-101-l08-c3",
+          title: "Your Artist Statement",
+          content:
+            "Write or tell one sentence about your favorite piece: 'I used shading and complementary colors to make my drawing look 3D and bright.'"
         }
       ],
       flashcards: [
-        { id: "arts-101-l13-f1", front: "Scenario Planning", back: "Split a complex task into clear decision points." },
-        { id: "arts-101-l13-f2", front: "Evidence Link", back: "Each step should connect to evidence in the scenario." },
-        { id: "arts-101-l13-f3", front: "Adjustment Loop", back: "Use outcome checks to refine your next attempt." },
-        { id: "arts-101-l13-f4", front: "Applied Mastery", back: "Mastery means transferring the process to a new context." }
+        { id: "arts-101-l08-f1", front: "Thick paint technique Van Gogh used", back: "Impasto" },
+        { id: "arts-101-l08-f2", front: "Mirror-image balance in nature", back: "Symmetry" },
+        { id: "arts-101-l08-f3", front: "Self-portrait artist with thorn necklace", back: "Frida Kahlo" },
+        { id: "arts-101-l08-f4", front: "Art made from glued found objects", back: "Assemblage" }
       ],
-      learningAids: [
-        { id: "arts-101-l13-a1", type: "image", title: "Scenario Map", content: "A real-world scenario map connecting color theory, rhythm, and critique." },
-        { id: "arts-101-l13-a2", type: "practice", title: "Mini Case Prompt", content: "Apply one strategy to a new case and explain your reasoning." }
-      ]
-    },
-    {
-      id: "arts-101-l14",
-      title: "Arts Coaching Clinic",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "arts-101-l14-ia1",
-          type: "matching_pairs",
-          title: "Error to Fix Match",
-          description: "Match each error signal to the highest-impact correction action.",
-          estimatedMinutes: 8,
-          difficultyLevel: "medium",
-          data: {
-            left: [
-              { id: "l1", label: "Repeated miss on color theory setup" },
-              { id: "l2", label: "Losses due to rushed critique decisions" },
-              { id: "l3", label: "Correct in notes but weak transfer in new tasks" }
-            ],
-            right: [
-              { id: "r1", label: "Rebuild setup steps and retest one parallel item" },
-              { id: "r2", label: "Use checkpoint pacing + verify before submit" },
-              { id: "r3", label: "Pair correction with one timed transfer item" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "arts-101-l14-a1", type: "mnemonic", title: "Clinic Loop", content: "Diagnose, Correct, Transfer." }
-      ]
-    },
-    {
-      id: "arts-101-l15",
-      title: "Creative Arts Mastery Mastery Sprint",
-      type: "quiz",
-      duration: 10,
       questions: [
         {
-          id: "arts-101-l15-q1",
-          text: "Which statement best explains composition in Arts?",
-          skillId: "arts-101-skill-core",
+          id: "arts-101-l08-q1",
+          text: "Which artist painted Water Lilies with loose brushstrokes?",
           options: [
-            { id: "a", text: "It explains composition using evidence from the lesson." },
-            { id: "b", text: "It ignores how composition works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Claude Monet" },
+            { id: "b", text: "Frida Kahlo" },
+            { id: "c", text: "Pablo Picasso" },
+            { id: "d", text: "Andy Goldsworthy" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Claude Monet is the impressionist who painted Water Lilies!"
         },
         {
-          id: "arts-101-l15-q2",
-          text: "What is the best first step when analyzing rhythm?",
-          skillId: "arts-101-skill-process",
+          id: "arts-101-l08-q2",
+          text: "What technique uses thick swirls of paint?",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for rhythm." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to rhythm." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Impasto" },
+            { id: "b", text: "Contour" },
+            { id: "c", text: "Symmetry" },
+            { id: "d", text: "Assemblage" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Impasto is thick, textured paint!"
         },
         {
-          id: "arts-101-l15-q3",
-          text: "Which option shows strong reasoning about creative expression?",
-          skillId: "arts-101-skill-reasoning",
+          id: "arts-101-l08-q3",
+          text: "Art made by gluing recycled objects is called",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to creative expression." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Assemblage" },
+            { id: "b", text: "Impasto" },
+            { id: "c", text: "Contour" },
+            { id: "d", text: "Shading" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "arts-101-l15-q4",
-          text: "Why is spaced review useful for Arts mastery?",
-          skillId: "arts-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Assemblage uses found objects!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "arts-101-l15-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Creative Arts Mastery Mastery Sprint",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about composition" },
-              { id: "l2", label: "Inconsistent approach to rhythm" },
-              { id: "l3", label: "Weak transfer of creative expression under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "arts-101-l08-act1",
+          type: "project_builder",
+          title: "Final portfolio",
+          description: "Collect your best 6 pieces from the whole module (drawing, color wheel, sculpture, nature print, etc.). Add a cover with your name and 'My Arts 101 Portfolio'. Present it to family or teacher and explain one thing you learned from each piece."
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "arts-101-l15-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     }
-  ],
+  ]
 };

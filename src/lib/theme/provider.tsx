@@ -9,14 +9,16 @@ import {
   useState,
 } from "react";
 
-export type ThemeMode = "light" | "system";
-export type ThemeResolved = "light";
+export type ThemeMode = "light" | "dark" | "system";
+export type ThemeResolved = "light" | "dark";
 export type ThemePack = "simple" | "sunrise" | "ocean" | "forest" | "candy" | "space";
 export type MotionPreference = "standard";
 export type ContrastPreference = "standard" | "high";
+export type TypographyDensity = "comfortable" | "compact" | "spacious";
 
-const MODE_STORAGE_KEY = "eduforge.theme.mode";
-const PACK_STORAGE_KEY = "eduforge.theme.pack";
+const MODE_STORAGE_KEY = "koydo.theme.mode";
+const PACK_STORAGE_KEY = "koydo.theme.pack";
+const TYPOGRAPHY_DENSITY_STORAGE_KEY = "koydo.typography.density";
 
 type ThemeContextValue = {
   themeMode: ThemeMode;
@@ -24,8 +26,10 @@ type ThemeContextValue = {
   themePack: ThemePack;
   motionPreference: MotionPreference;
   contrastPreference: ContrastPreference;
+  typographyDensity: TypographyDensity;
   setThemeMode: (value: ThemeMode) => void;
   setThemePack: (value: ThemePack) => void;
+  setTypographyDensity: (value: TypographyDensity) => void;
 };
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
@@ -35,7 +39,7 @@ function getStoredMode(): ThemeMode {
     return "system";
   }
   const stored = window.localStorage.getItem(MODE_STORAGE_KEY);
-  if (stored === "light" || stored === "system") {
+  if (stored === "light" || stored === "dark" || stored === "system") {
     return stored;
   }
   return "system";
@@ -59,12 +63,31 @@ function getStoredPack(): ThemePack {
   return "simple";
 }
 
-function resolveTheme(mode: ThemeMode): ThemeResolved {
-  // Student-facing palette is intentionally light-only for a brighter, child-friendly baseline.
-  if (mode === "light" || mode === "system") {
+function getStoredTypographyDensity(): TypographyDensity {
+  if (typeof window === "undefined") {
+    return "comfortable";
+  }
+  const stored = window.localStorage.getItem(TYPOGRAPHY_DENSITY_STORAGE_KEY);
+  if (stored === "comfortable" || stored === "compact" || stored === "spacious") {
+    return stored;
+  }
+  return "comfortable";
+}
+
+function getSystemTheme(): ThemeResolved {
+  if (typeof window === "undefined") {
     return "light";
   }
-  return "light";
+
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function resolveTheme(mode: ThemeMode, systemTheme: ThemeResolved): ThemeResolved {
+  if (mode === "system") {
+    return systemTheme;
+  }
+
+  return mode;
 }
 
 function resolveMotionDatasetValue() {
@@ -77,7 +100,8 @@ function resolveMotionDatasetValue() {
 function applyTheme(
   theme: ThemeResolved,
   mode: ThemeMode,
-  pack: ThemePack
+  pack: ThemePack,
+  typographyDensity: TypographyDensity
 ) {
   if (typeof document === "undefined") {
     return;
@@ -85,6 +109,7 @@ function applyTheme(
   document.documentElement.dataset.theme = theme;
   document.documentElement.dataset.themeMode = mode;
   document.documentElement.dataset.themePack = pack;
+  document.documentElement.dataset.typographyDensity = typographyDensity;
   document.documentElement.dataset.motion = resolveMotionDatasetValue();
   document.documentElement.dataset.contrast = "standard";
   document.documentElement.style.colorScheme = theme;
@@ -93,9 +118,16 @@ function applyTheme(
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [themeMode, setThemeMode] = useState<ThemeMode>(() => getStoredMode());
   const [themePack, setThemePack] = useState<ThemePack>(() => getStoredPack());
+  const [systemTheme, setSystemTheme] = useState<ThemeResolved>(() => getSystemTheme());
+  const [typographyDensity, setTypographyDensity] = useState<TypographyDensity>(() =>
+    getStoredTypographyDensity(),
+  );
   const motionPreference: MotionPreference = "standard";
   const contrastPreference: ContrastPreference = "standard";
-  const resolvedTheme = useMemo(() => resolveTheme(themeMode), [themeMode]);
+  const resolvedTheme = useMemo(
+    () => resolveTheme(themeMode, systemTheme),
+    [themeMode, systemTheme],
+  );
 
   useEffect(() => {
     let active = true;
@@ -120,6 +152,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
         if (
           payload.preferences.theme_mode === "light"
+          || payload.preferences.theme_mode === "dark"
           || payload.preferences.theme_mode === "system"
         ) {
           setThemeMode(payload.preferences.theme_mode);
@@ -154,8 +187,26 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     window.localStorage.setItem(MODE_STORAGE_KEY, themeMode);
     window.localStorage.setItem(PACK_STORAGE_KEY, themePack);
-    applyTheme(resolveTheme(themeMode), themeMode, themePack);
-  }, [themeMode, themePack]);
+    window.localStorage.setItem(TYPOGRAPHY_DENSITY_STORAGE_KEY, typographyDensity);
+    applyTheme(resolvedTheme, themeMode, themePack, typographyDensity);
+  }, [themeMode, themePack, typographyDensity, resolvedTheme]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const syncSystemTheme = () => {
+      setSystemTheme(mediaQuery.matches ? "dark" : "light");
+    };
+
+    syncSystemTheme();
+    mediaQuery.addEventListener("change", syncSystemTheme);
+    return () => {
+      mediaQuery.removeEventListener("change", syncSystemTheme);
+    };
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -164,7 +215,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const syncMotionPreference = () => {
-      applyTheme(resolveTheme(themeMode), themeMode, themePack);
+      applyTheme(resolvedTheme, themeMode, themePack, typographyDensity);
     };
 
     syncMotionPreference();
@@ -173,7 +224,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return () => {
       mediaQuery.removeEventListener("change", syncMotionPreference);
     };
-  }, [themeMode, themePack]);
+  }, [themeMode, themePack, typographyDensity, resolvedTheme]);
 
   const value = useMemo(
     () => ({
@@ -182,10 +233,19 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       themePack,
       motionPreference,
       contrastPreference,
+      typographyDensity,
       setThemeMode,
       setThemePack,
+      setTypographyDensity,
     }),
-    [themeMode, resolvedTheme, themePack, motionPreference, contrastPreference]
+    [
+      themeMode,
+      resolvedTheme,
+      themePack,
+      motionPreference,
+      contrastPreference,
+      typographyDensity,
+    ],
   );
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

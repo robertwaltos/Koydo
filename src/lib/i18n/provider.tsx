@@ -11,32 +11,50 @@ import {
 import {
   isSupportedLocale,
   Locale,
-  translations,
+  translate,
 } from "@/lib/i18n/translations";
 
-const LOCALE_STORAGE_KEY = "eduforge.locale";
+const LOCALE_STORAGE_KEY = "koydo.locale";
 
 type I18nContextValue = {
   locale: Locale;
   setLocale: (locale: Locale) => void;
-  t: (key: string) => string;
+  t: (key: string, vars?: Record<string, string | number>) => string;
 };
 
 const I18nContext = createContext<I18nContextValue | null>(null);
+
+function getLocaleFromCookie(): Locale | null {
+  if (typeof document === "undefined") {
+    return null;
+  }
+
+  const cookieEntry = document.cookie
+    .split(";")
+    .map((part) => part.trim())
+    .find((part) => part.startsWith(`${LOCALE_STORAGE_KEY}=`));
+
+  if (!cookieEntry) {
+    return null;
+  }
+
+  const value = decodeURIComponent(cookieEntry.slice(`${LOCALE_STORAGE_KEY}=`.length));
+  return isSupportedLocale(value) ? value : null;
+}
 
 function getInitialLocale(): Locale {
   if (typeof window === "undefined") {
     return "en";
   }
 
+  const cookieLocale = getLocaleFromCookie();
+  if (cookieLocale) {
+    return cookieLocale;
+  }
+
   const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY);
   if (stored && isSupportedLocale(stored)) {
     return stored;
-  }
-
-  const browserLocale = navigator.language.split("-")[0]?.toLowerCase() ?? "en";
-  if (isSupportedLocale(browserLocale)) {
-    return browserLocale;
   }
 
   return "en";
@@ -55,6 +73,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     }
 
     window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+    document.cookie = `${LOCALE_STORAGE_KEY}=${locale}; path=/; max-age=31536000; samesite=lax`;
     document.documentElement.lang = locale;
     document.documentElement.dir = localeDirection(locale);
   }, [locale]);
@@ -63,7 +82,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     () => ({
       locale,
       setLocale: setLocaleState,
-      t: (key: string) => translations[locale][key] ?? translations.en[key] ?? key,
+      t: (key: string, vars?: Record<string, string | number>) =>
+        translate(locale, key, vars),
     }),
     [locale]
   );

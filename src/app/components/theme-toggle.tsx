@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme } from "@/lib/theme/provider";
+import { type ThemeMode, useTheme } from "@/lib/theme/provider";
 
 export default function ThemeToggle() {
   const { themeMode, setThemeMode } = useTheme();
@@ -10,11 +10,12 @@ export default function ThemeToggle() {
       <span className="text-zinc-600">Theme</span>
       <select
         value={themeMode}
-        onChange={(event) => setThemeMode(event.target.value as "light" | "system")}
+        onChange={(event) => setThemeMode(event.target.value as ThemeMode)}
         className="ui-focus-ring rounded-full border border-border bg-surface px-3 py-1 text-sm"
       >
         <option value="system">System</option>
         <option value="light">Light</option>
+        <option value="dark">Dark</option>
       </select>
     </label>
   );

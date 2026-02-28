@@ -1,6 +1,30 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+
+const mediaAssetTypeSchema = z.enum(["video", "animation", "image"]);
+const mediaStatusSchema = z.enum(["queued", "running", "completed", "failed", "canceled"]);
+
+const listQuerySchema = z.object({
+  moduleId: z.string().trim().max(120).optional(),
+  lessonId: z.string().trim().max(120).optional(),
+  assetType: mediaAssetTypeSchema.optional(),
+  status: mediaStatusSchema.optional(),
+  promptSource: z.string().trim().max(120).optional(),
+  promptQaStatus: z.string().trim().max(120).optional(),
+  limit: z.coerce.number().int().min(1).max(200).default(100),
+  offset: z.coerce.number().int().min(0).default(0),
+});
+
+const createJobSchema = z.object({
+  moduleId: z.string().trim().max(120).optional(),
+  lessonId: z.string().trim().max(120).optional(),
+  assetType: mediaAssetTypeSchema,
+  provider: z.string().trim().min(1).max(64).default("seedance"),
+  prompt: z.string().trim().min(20).max(4_000),
+  metadata: z.record(z.string(), z.unknown()).optional(),
+});
 
 async function getAdminUserId() {
   const supabase = await createSupabaseServerClient();
@@ -27,23 +51,23 @@ export async function GET(request: Request) {
   }
 
   const { searchParams } = new URL(request.url);
-  const moduleId = searchParams.get("moduleId")?.trim() ?? "";
-  const lessonId = searchParams.get("lessonId")?.trim() ?? "";
-  const assetType = searchParams.get("assetType")?.trim() ?? "";
-  const status = searchParams.get("status")?.trim() ?? "";
-  const promptSource = searchParams.get("promptSource")?.trim() ?? "";
-  const promptQaStatus = searchParams.get("promptQaStatus")?.trim() ?? "";
-  const rawLimit = Number(searchParams.get("limit") ?? "100");
-  const rawOffset = Number(searchParams.get("offset") ?? "0");
-  const limit = Number.isFinite(rawLimit) ? Math.min(200, Math.max(1, rawLimit)) : 100;
-  const offset = Number.isFinite(rawOffset) ? Math.max(0, rawOffset) : 0;
-
-  if (assetType && !["video", "animation", "image"].includes(assetType)) {
-    return NextResponse.json({ error: "assetType must be video, animation, or image." }, { status: 400 });
+  const parsedQuery = listQuerySchema.safeParse({
+    moduleId: searchParams.get("moduleId") ?? undefined,
+    lessonId: searchParams.get("lessonId") ?? undefined,
+    assetType: searchParams.get("assetType") ?? undefined,
+    status: searchParams.get("status") ?? undefined,
+    promptSource: searchParams.get("promptSource") ?? undefined,
+    promptQaStatus: searchParams.get("promptQaStatus") ?? undefined,
+    limit: searchParams.get("limit") ?? undefined,
+    offset: searchParams.get("offset") ?? undefined,
+  });
+  if (!parsedQuery.success) {
+    return NextResponse.json(
+      { error: "Invalid query parameters.", details: parsedQuery.error.flatten() },
+      { status: 400 },
+    );
   }
-  if (status && !["queued", "running", "completed", "failed", "canceled"].includes(status)) {
-    return NextResponse.json({ error: "status must be queued, running, completed, failed, or canceled." }, { status: 400 });
-  }
+  const { moduleId, lessonId, assetType, status, promptSource, promptQaStatus, limit, offset } = parsedQuery.data;
 
   const admin = createSupabaseAdminClient();
   let query = admin
@@ -53,10 +77,10 @@ export async function GET(request: Request) {
       { count: "exact" },
     );
 
-  if (moduleId) {
+  if (moduleId && moduleId.length > 0) {
     query = query.eq("module_id", moduleId);
   }
-  if (lessonId) {
+  if (lessonId && lessonId.length > 0) {
     query = query.eq("lesson_id", lessonId);
   }
   if (assetType) {
@@ -104,27 +128,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Admin access required." }, { status: 403 });
   }
 
-  const body = (await request.json().catch(() => ({}))) as {
-    moduleId?: string;
-    lessonId?: string;
-    assetType?: string;
-    provider?: string;
-    prompt?: string;
-    metadata?: Record<string, unknown>;
-  };
-
-  const assetType = String(body.assetType ?? "").trim();
-  const prompt = String(body.prompt ?? "").trim();
-  const moduleId = body.moduleId ? String(body.moduleId).trim() : "";
-  const lessonId = body.lessonId ? String(body.lessonId).trim() : "";
-  const provider = body.provider ? String(body.provider).trim() : "seedance";
-
-  if (!["video", "animation", "image"].includes(assetType)) {
-    return NextResponse.json({ error: "assetType must be video, animation, or image." }, { status: 400 });
+  const parsedBody = createJobSchema.safeParse(await request.json().catch(() => null));
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      { error: "Invalid payload.", details: parsedBody.error.flatten() },
+      { status: 400 },
+    );
   }
-  if (prompt.length < 20) {
-    return NextResponse.json({ error: "Prompt must be at least 20 characters." }, { status: 400 });
-  }
+  const { moduleId, lessonId, assetType, prompt, provider, metadata } = parsedBody.data;
 
   const admin = createSupabaseAdminClient();
   if (moduleId && lessonId) {
@@ -158,7 +169,7 @@ export async function POST(request: Request) {
       provider,
       prompt,
       status: "queued",
-      metadata: body.metadata ?? {},
+      metadata: metadata ?? {},
     })
     .select("id, status")
     .single();

@@ -1,8 +1,17 @@
 import { ALevelPrep101Module } from "@/lib/modules/catalog/a-level-prep-101";
+import { AccountingFinance101Module } from "@/lib/modules/catalog/accounting-finance-101";
+import { AccountingFinance201Module } from "@/lib/modules/catalog/accounting-finance-201";
+import { AccountingFinance301Module } from "@/lib/modules/catalog/accounting-finance-301";
+import { AccountingFinance401Module } from "@/lib/modules/catalog/accounting-finance-401";
 import { ActPrep101Module } from "@/lib/modules/catalog/act-prep-101";
 import { AdvancedMath201Module } from "@/lib/modules/catalog/advanced-math-201";
 import { AdvancedMath301Module } from "@/lib/modules/catalog/advanced-math-301";
 import { AdvancedMath401Module } from "@/lib/modules/catalog/advanced-math-401";
+import { AiMachineLearning101Module } from "@/lib/modules/catalog/ai-machine-learning-101";
+import { AiMachineLearning201Module } from "@/lib/modules/catalog/ai-machine-learning-201";
+import { AiMachineLearning301Module } from "@/lib/modules/catalog/ai-machine-learning-301";
+import { AiMachineLearning401Module } from "@/lib/modules/catalog/ai-machine-learning-401";
+import { AiWorkflows101Module } from "@/lib/modules/catalog/ai-workflows-101";
 import { ApPrep101Module } from "@/lib/modules/catalog/ap-prep-101";
 import { appleVisionScienceLabModule } from "@/lib/modules/catalog/apple-vision-science-lab";
 import { Arts101Module } from "@/lib/modules/catalog/arts-101";
@@ -26,15 +35,136 @@ import { Biology101Module } from "@/lib/modules/catalog/biology-101";
 import { Biology201Module } from "@/lib/modules/catalog/biology-201";
 import { Biology301Module } from "@/lib/modules/catalog/biology-301";
 import { Biology401Module } from "@/lib/modules/catalog/biology-401";
+import { Biotechnology101Module } from "@/lib/modules/catalog/biotechnology-101";
+import { BusinessAnalytics101Module } from "@/lib/modules/catalog/business-analytics-101";
+import { BusinessAnalytics201Module } from "@/lib/modules/catalog/business-analytics-201";
+import { BusinessAnalytics301Module } from "@/lib/modules/catalog/business-analytics-301";
+import { BusinessAnalytics401Module } from "@/lib/modules/catalog/business-analytics-401";
+import { BusinessEthics101Module } from "@/lib/modules/catalog/business-ethics-101";
+import { BusinessEthics201Module } from "@/lib/modules/catalog/business-ethics-201";
+import { BusinessEthics301Module } from "@/lib/modules/catalog/business-ethics-301";
+import { BusinessEthics401Module } from "@/lib/modules/catalog/business-ethics-401";
 import { Chemistry101Module } from "@/lib/modules/catalog/chemistry-101";
 import { Chemistry201Module } from "@/lib/modules/catalog/chemistry-201";
 import { Chemistry301Module } from "@/lib/modules/catalog/chemistry-301";
 import { Chemistry401Module } from "@/lib/modules/catalog/chemistry-401";
+import { CivilEngineering101Module } from "@/lib/modules/catalog/civil-engineering-101";
+import { CivilEngineering201Module } from "@/lib/modules/catalog/civil-engineering-201";
+import { CivilEngineering301Module } from "@/lib/modules/catalog/civil-engineering-301";
+import { CivilEngineering401Module } from "@/lib/modules/catalog/civil-engineering-401";
+import { CloudComputing101Module } from "@/lib/modules/catalog/cloud-computing-101";
+import { CloudComputing201Module } from "@/lib/modules/catalog/cloud-computing-201";
 import { Coding101Module } from "@/lib/modules/catalog/coding-101";
 import { Coding201Module } from "@/lib/modules/catalog/coding-201";
 import { Coding301Module } from "@/lib/modules/catalog/coding-301";
 import { Coding401Module } from "@/lib/modules/catalog/coding-401";
+import { CpuGpuMemoryDesign101Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-101";
+import { CpuGpuMemoryDesign201Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-201";
+import { CpuGpuMemoryDesign301Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-301";
+import { CpuGpuMemoryDesign401Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-401";
 import { CuetPrep101Module } from "@/lib/modules/catalog/cuet-prep-101";
+import { Cybersecurity101Module } from "@/lib/modules/catalog/cybersecurity-101";
+import { Cybersecurity201Module } from "@/lib/modules/catalog/cybersecurity-201";
+import { Cybersecurity301Module } from "@/lib/modules/catalog/cybersecurity-301";
+import { Cybersecurity401Module } from "@/lib/modules/catalog/cybersecurity-401";
+import { DataScience101Module } from "@/lib/modules/catalog/data-science-101";
+import { DataScience201Module } from "@/lib/modules/catalog/data-science-201";
+import { DataScience301Module } from "@/lib/modules/catalog/data-science-301";
+import { DataScience401Module } from "@/lib/modules/catalog/data-science-401";
+import { DigitalMarketing101Module } from "@/lib/modules/catalog/digital-marketing-101";
+import { Economics101Module } from "@/lib/modules/catalog/economics-101";
+import { Economics201Module } from "@/lib/modules/catalog/economics-201";
+import { Economics301Module } from "@/lib/modules/catalog/economics-301";
+import { Economics401Module } from "@/lib/modules/catalog/economics-401";
+import { ElectricalEngineering101Module } from "@/lib/modules/catalog/electrical-engineering-101";
+import { ElectricalEngineering201Module } from "@/lib/modules/catalog/electrical-engineering-201";
+import { ElectricalEngineering301Module } from "@/lib/modules/catalog/electrical-engineering-301";
+import { ElectricalEngineering401Module } from "@/lib/modules/catalog/electrical-engineering-401";
+import { ElectricianElectricity101Module } from "@/lib/modules/catalog/electrician-electricity-101";
+import { ElectricianElectricity201Module } from "@/lib/modules/catalog/electrician-electricity-201";
+import { ElectricianElectricity301Module } from "@/lib/modules/catalog/electrician-electricity-301";
+import { ElectricianElectricity401Module } from "@/lib/modules/catalog/electrician-electricity-401";
+import { Entrepreneurship101Module } from "@/lib/modules/catalog/entrepreneurship-101";
+import { ACourseInMiraclesDrHelenSchucmanModule } from "@/lib/modules/catalog/epub-generated/a-course-in-miracles-dr-helen-schucman";
+import { AHistoryOfGodThe4000YearQuestOfJudaismChModule } from "@/lib/modules/catalog/epub-generated/a-history-of-god-the-4000-year-quest-of-judaism-ch";
+import { AWhollyDifferentWayOfLivingJidduKrishnamurtModule } from "@/lib/modules/catalog/epub-generated/a-wholly-different-way-of-living-jiddu-krishnamurt";
+import { Access2013ForDummiesLaurieUlrichFullerAndKModule } from "@/lib/modules/catalog/epub-generated/access-2013-for-dummies-laurie-ulrich-fuller-and-k";
+import { AdventuresInRaspberryPiPhilbinCarrieAnneModule } from "@/lib/modules/catalog/epub-generated/adventures-in-raspberry-pi-philbin-carrie-anne";
+import { AmericaBewitchedWitchcraftAfterSalemOwenDaviModule } from "@/lib/modules/catalog/epub-generated/america-bewitched-witchcraft-after-salem-owen-davi";
+import { AnEnvironmentalHistoryOfAncientGreeceAndRomModule } from "@/lib/modules/catalog/epub-generated/an-environmental-history-of-ancient-greece-and-rom";
+import { AnimalOppressionAndHumanViolenceDomesecrationModule } from "@/lib/modules/catalog/epub-generated/animal-oppression-and-human-violence-domesecration";
+import { ApacheSecurityIvanRisticModule } from "@/lib/modules/catalog/epub-generated/apache-security-ivan-ristic";
+import { BashCookbookCarlAlbingModule } from "@/lib/modules/catalog/epub-generated/bash-cookbook-carl-albing";
+import { BatmanAndPhilosophyMarkDWhiteModule } from "@/lib/modules/catalog/epub-generated/batman-and-philosophy-mark-d-white";
+import { BatmanAndPhilosophyTheDarkKnightOfTheSoulModule } from "@/lib/modules/catalog/epub-generated/batman-and-philosophy-the-dark-knight-of-the-soul-";
+import { BeginningLuaProgrammingKurtJungModule } from "@/lib/modules/catalog/epub-generated/beginning-lua-programming-kurt-jung";
+import { BeingTheBestManForDummiesBlissDominicModule } from "@/lib/modules/catalog/epub-generated/being-the-best-man-for-dummies-bliss-dominic";
+import { BonesWouldRainFromTheSkyDeepeningOurRelatiModule } from "@/lib/modules/catalog/epub-generated/bones-would-rain-from-the-sky-deepening-our-relati";
+import { BreathingLessons1989PulitzerPrizeAnneTylerModule } from "@/lib/modules/catalog/epub-generated/breathing-lessons-1989-pulitzer-prize-anne-tyler";
+import { BusinessAnalysisForDummiesKupeKupersmithModule } from "@/lib/modules/catalog/epub-generated/business-analysis-for-dummies-kupe-kupersmith";
+import { CannibalCapitalismMichaelCHillModule } from "@/lib/modules/catalog/epub-generated/cannibal-capitalism-michael-c-hill";
+import { CaseStudiesAndTheoryDevelopmentInTheSocialModule } from "@/lib/modules/catalog/epub-generated/case-studies-and-theory-development-in-the-social-";
+import { ColliderPaulHalpernModule } from "@/lib/modules/catalog/epub-generated/collider-paul-halpern";
+import { CompleteElectronicsSelfTeachingGuideWithProjModule } from "@/lib/modules/catalog/epub-generated/complete-electronics-self-teaching-guide-with-proj";
+import { ConfessionsOfAnEventPlannerCaseStudiesFromModule } from "@/lib/modules/catalog/epub-generated/confessions-of-an-event-planner-case-studies-from-";
+import { CreatingWebSitesBibleDavidACrowderAndrewBaModule } from "@/lib/modules/catalog/epub-generated/creating-web-sites-bible-david-a-crowder-andrew-ba";
+import { DearMrBuffettWhatAnInvestorLearns1269MileModule } from "@/lib/modules/catalog/epub-generated/dear-mr-buffett-what-an-investor-learns-1-269-mile";
+import { DebtFreeUHowIPaidForAnOutstandingCollegeModule } from "@/lib/modules/catalog/epub-generated/debt-free-u-how-i-paid-for-an-outstanding-college-";
+import { DetectDeceitHowToBecomeAHumanLieDetectorIModule } from "@/lib/modules/catalog/epub-generated/detect-deceit-how-to-become-a-human-lie-detector-i";
+import { DreamweaverCcForDummiesJanineWarnerModule } from "@/lib/modules/catalog/epub-generated/dreamweaver-cc-for-dummies-janine-warner";
+import { DriveTheSurprisingTruthAboutWhatMotivatesUsModule } from "@/lib/modules/catalog/epub-generated/drive-the-surprising-truth-about-what-motivates-us";
+import { EssentialSnmp2NdEditionDouglasMauroKevinSchModule } from "@/lib/modules/catalog/epub-generated/essential-snmp-2nd-edition-douglas-mauro-kevin-sch";
+import { EvenFasterWebSitesSteveSoudersModule } from "@/lib/modules/catalog/epub-generated/even-faster-web-sites-steve-souders";
+import { ExcelFormulasAndFunctionsForDummies3RdEditiModule } from "@/lib/modules/catalog/epub-generated/excel-formulas-and-functions-for-dummies-3rd-editi";
+import { ExcelVbaProgrammingForDummies3RdEditionJohnModule } from "@/lib/modules/catalog/epub-generated/excel-vba-programming-for-dummies-3rd-edition-john";
+import { ExploringQuantumMechanicsKoganVladimirGalitskModule } from "@/lib/modules/catalog/epub-generated/exploring-quantum-mechanics-kogan-vladimir-galitsk";
+import { FrankensteinMaryWollstonecraftShelleyModule } from "@/lib/modules/catalog/epub-generated/frankenstein-mary-wollstonecraft-shelley";
+import { FrommerSArizonaAndTheGrandCanyon2011KarlSModule } from "@/lib/modules/catalog/epub-generated/frommer-s-arizona-and-the-grand-canyon-2011-karl-s";
+import { FrommerSIndiaPippaDeBruynModule } from "@/lib/modules/catalog/epub-generated/frommer-s-india-pippa-de-bruyn";
+import { FrommerSSeattle2010KarlSamsonModule } from "@/lib/modules/catalog/epub-generated/frommer-s-seattle-2010-karl-samson";
+import { GulliverSTravelsJonathanSwiftModule } from "@/lib/modules/catalog/epub-generated/gulliver-s-travels-jonathan-swift";
+import { HandbookOfElectricalEngineeringForPractitioneModule } from "@/lib/modules/catalog/epub-generated/handbook-of-electrical-engineering-for-practitione";
+import { HegelElementsOfThePhilosophyOfRightCambridgModule } from "@/lib/modules/catalog/epub-generated/hegel-elements-of-the-philosophy-of-right-cambridg";
+import { HowToEatThePleasuresAndPrinciplesOfGoodFoModule } from "@/lib/modules/catalog/epub-generated/how-to-eat-the-pleasures-and-principles-of-good-fo";
+import { HowToTalkToAnyoneLeilLowndesModule } from "@/lib/modules/catalog/epub-generated/how-to-talk-to-anyone-leil-lowndes";
+import { IRobotShortStoriesIsaacAsimovModule } from "@/lib/modules/catalog/epub-generated/i-robot-short-stories-isaac-asimov";
+import { ItSTheCustomerStupidMichaelAAunModule } from "@/lib/modules/catalog/epub-generated/it-s-the-customer-stupid-michael-a-aun";
+import { JqueryCookbookCodyLindleyModule } from "@/lib/modules/catalog/epub-generated/jquery-cookbook-cody-lindley";
+import { KneadlesslySimpleFabulousFussFreeNoKneadBreModule } from "@/lib/modules/catalog/epub-generated/kneadlessly-simple-fabulous-fuss-free-no-knead-bre";
+import { LifeAheadOnLearningAndTheSearchForMeaningModule } from "@/lib/modules/catalog/epub-generated/life-ahead-on-learning-and-the-search-for-meaning-";
+import { ManFromTheSouthAndOtherStoriesRoaldDahlModule } from "@/lib/modules/catalog/epub-generated/man-from-the-south-and-other-stories-roald-dahl";
+import { MarxismRoutledgeRevivalsThomasSowellModule } from "@/lib/modules/catalog/epub-generated/marxism-routledge-revivals-thomas-sowell";
+import { MentalFlossPresentsInstantKnowledgeWillPearsModule } from "@/lib/modules/catalog/epub-generated/mental-floss-presents-instant-knowledge-will-pears";
+import { MicroreactorsInOrganicChemistryAndCatalysisWModule } from "@/lib/modules/catalog/epub-generated/microreactors-in-organic-chemistry-and-catalysis-w";
+import { NiubiTheRealChineseYouWereNeverTaughtInScModule } from "@/lib/modules/catalog/epub-generated/niubi-the-real-chinese-you-were-never-taught-in-sc";
+import { NotebooksLeonardoDaVinciIrmaAnneRichterTherModule } from "@/lib/modules/catalog/epub-generated/notebooks-leonardo-da-vinci-irma-anne-richter-ther";
+import { NumbersRuleYourWorldTheHiddenInfluenceOfPrModule } from "@/lib/modules/catalog/epub-generated/numbers-rule-your-world-the-hidden-influence-of-pr";
+import { PhenomenologyOfSpiritGWFHegelModule } from "@/lib/modules/catalog/epub-generated/phenomenology-of-spirit-g-w-f-hegel";
+import { PostmodernismOrTheCulturalLogicOfLateCapitaModule } from "@/lib/modules/catalog/epub-generated/postmodernism-or-the-cultural-logic-of-late-capita";
+import { PrescriptionAlternativesHundredsOfSafeNaturalModule } from "@/lib/modules/catalog/epub-generated/prescription-alternatives-hundreds-of-safe-natural";
+import { RaspberryPiProjectsForTheEvilGeniusDonaldNModule } from "@/lib/modules/catalog/epub-generated/raspberry-pi-projects-for-the-evil-genius-donald-n";
+import { RightsOfManThomasPaineMarkPhilpModule } from "@/lib/modules/catalog/epub-generated/rights-of-man-thomas-paine-mark-philp";
+import { SchaumSOutlineOfLatinGrammarAlanFishboneModule } from "@/lib/modules/catalog/epub-generated/schaum-s-outline-of-latin-grammar-alan-fishbone";
+import { SchoolChoiceOrBestSystemsWhatImprovesEducatModule } from "@/lib/modules/catalog/epub-generated/school-choice-or-best-systems-what-improves-educat";
+import { SmugglerNationHowIllicitTradeMadeAmericaAndModule } from "@/lib/modules/catalog/epub-generated/smuggler-nation-how-illicit-trade-made-america-and";
+import { SocialEngineeringTheArtOfHumanHackingChristModule } from "@/lib/modules/catalog/epub-generated/social-engineering-the-art-of-human-hacking-christ";
+import { TheAccidentalTouristAnneTylerJenniferBassettModule } from "@/lib/modules/catalog/epub-generated/the-accidental-tourist-anne-tyler-jennifer-bassett";
+import { TheCompleteSocialMediaCommunityManagerSGuidModule } from "@/lib/modules/catalog/epub-generated/the-complete-social-media-community-manager-s-guid";
+import { TheFederalistPapersAlexanderHamiltonJamesMadModule } from "@/lib/modules/catalog/epub-generated/the-federalist-papers-alexander-hamilton-james-mad";
+import { TheForgottenPresidentsTheirUntoldConstitutionModule } from "@/lib/modules/catalog/epub-generated/the-forgotten-presidents-their-untold-constitution";
+import { TheFourPillarsOfInvestingLessonsForBuildingModule } from "@/lib/modules/catalog/epub-generated/the-four-pillars-of-investing-lessons-for-building";
+import { TheIndianOceanMichaelPearsonModule } from "@/lib/modules/catalog/epub-generated/the-indian-ocean-michael-pearson";
+import { TheLittleBookOfEconomicsHowTheEconomyWorksModule } from "@/lib/modules/catalog/epub-generated/the-little-book-of-economics-how-the-economy-works";
+import { TheOriginalCurseDidTheCubsThrowThe1918WorModule } from "@/lib/modules/catalog/epub-generated/the-original-curse-did-the-cubs-throw-the-1918-wor";
+import { TheOxfordDictionaryOfModernQuotationsTonyAuModule } from "@/lib/modules/catalog/epub-generated/the-oxford-dictionary-of-modern-quotations-tony-au";
+import { ThePleasureInstinctWhyWeCraveAdventureChocoModule } from "@/lib/modules/catalog/epub-generated/the-pleasure-instinct-why-we-crave-adventure-choco";
+import { ThePrinceNiccolMachiavelliPeterEBondanellaModule } from "@/lib/modules/catalog/epub-generated/the-prince-niccol-machiavelli-peter-e-bondanella";
+import { TheSelfishGeneRichardDawkinsModule } from "@/lib/modules/catalog/epub-generated/the-selfish-gene-richard-dawkins";
+import { TheUnlikelyDiscipleASinnerSSemesterAtAmeriModule } from "@/lib/modules/catalog/epub-generated/the-unlikely-disciple-a-sinner-s-semester-at-ameri";
+import { TheWomanInWhiteWilkieCollinsJohnSutherlandModule } from "@/lib/modules/catalog/epub-generated/the-woman-in-white-wilkie-collins-john-sutherland";
+import { TreasureIslandRobertLouisStevensonModule } from "@/lib/modules/catalog/epub-generated/treasure-island-robert-louis-stevenson";
+import { VisionsOfAwakeningSpaceAndTimeDogenAndTheModule } from "@/lib/modules/catalog/epub-generated/visions-of-awakening-space-and-time-dogen-and-the-";
+import { WisdomAsAPracticeMargolisKarenSloterdijkPetModule } from "@/lib/modules/catalog/epub-generated/wisdom-as-a-practice-margolis-karen-sloterdijk-pet";
 import { Farming101Module } from "@/lib/modules/catalog/farming-101";
 import { Farming201Module } from "@/lib/modules/catalog/farming-201";
 import { Farming301Module } from "@/lib/modules/catalog/farming-301";
@@ -42,7 +172,9 @@ import { FinancialLiteracy101Module } from "@/lib/modules/catalog/financial-lite
 import { FinancialLiteracy201Module } from "@/lib/modules/catalog/financial-literacy-201";
 import { FinancialLiteracy301Module } from "@/lib/modules/catalog/financial-literacy-301";
 import { FinancialLiteracy401Module } from "@/lib/modules/catalog/financial-literacy-401";
+import { FoodScience101Module } from "@/lib/modules/catalog/food-science-101";
 import { GaokaoPrep101Module } from "@/lib/modules/catalog/gaokao-prep-101";
+import { Gardening101Module } from "@/lib/modules/catalog/gardening-101";
 import { GcsePrep101Module } from "@/lib/modules/catalog/gcse-prep-101";
 import { GenScience1112U1ExternalModule } from "@/lib/modules/catalog/gen-science-1112-u1-external";
 import { GenScience35U1ExternalModule } from "@/lib/modules/catalog/gen-science-35-u1-external";
@@ -64,8 +196,20 @@ import { Geography401Module } from "@/lib/modules/catalog/geography-401";
 import { HouseholdManagement101Module } from "@/lib/modules/catalog/household-management-101";
 import { HouseholdManagement201Module } from "@/lib/modules/catalog/household-management-201";
 import { HouseholdManagement301Module } from "@/lib/modules/catalog/household-management-301";
+import { HumanResourceManagement101Module } from "@/lib/modules/catalog/human-resource-management-101";
+import { HumanResourceManagement201Module } from "@/lib/modules/catalog/human-resource-management-201";
+import { HumanResourceManagement301Module } from "@/lib/modules/catalog/human-resource-management-301";
+import { HumanResourceManagement401Module } from "@/lib/modules/catalog/human-resource-management-401";
+import { Hvac101Module } from "@/lib/modules/catalog/hvac-101";
+import { Hvac201Module } from "@/lib/modules/catalog/hvac-201";
+import { Hvac301Module } from "@/lib/modules/catalog/hvac-301";
+import { Hvac401Module } from "@/lib/modules/catalog/hvac-401";
 import { IbPrep101Module } from "@/lib/modules/catalog/ib-prep-101";
 import { IeltsPrep101Module } from "@/lib/modules/catalog/ielts-prep-101";
+import { InternationalBusiness101Module } from "@/lib/modules/catalog/international-business-101";
+import { InternationalBusiness201Module } from "@/lib/modules/catalog/international-business-201";
+import { InternationalBusiness301Module } from "@/lib/modules/catalog/international-business-301";
+import { InternationalBusiness401Module } from "@/lib/modules/catalog/international-business-401";
 import { JeeNeetPrep101Module } from "@/lib/modules/catalog/jee-neet-prep-101";
 import { LangArts1112U1ExternalModule } from "@/lib/modules/catalog/lang-arts-1112-u1-external";
 import { LangArts35U1ExternalModule } from "@/lib/modules/catalog/lang-arts-35-u1-external";
@@ -77,11 +221,64 @@ import { LanguageArts101Module } from "@/lib/modules/catalog/language-arts-101";
 import { LanguageArts201Module } from "@/lib/modules/catalog/language-arts-201";
 import { LanguageArts301Module } from "@/lib/modules/catalog/language-arts-301";
 import { LanguageArts401Module } from "@/lib/modules/catalog/language-arts-401";
+import { LawStudies101Module } from "@/lib/modules/catalog/law-studies-101";
+import { LawStudies201Module } from "@/lib/modules/catalog/law-studies-201";
+import { LawStudies301Module } from "@/lib/modules/catalog/law-studies-301";
+import { LawStudies401Module } from "@/lib/modules/catalog/law-studies-401";
+import { Leadership101Module } from "@/lib/modules/catalog/leadership-101";
+import { Leadership201Module } from "@/lib/modules/catalog/leadership-201";
+import { Leadership301Module } from "@/lib/modules/catalog/leadership-301";
+import { Leadership401Module } from "@/lib/modules/catalog/leadership-401";
+import { Linux101Module } from "@/lib/modules/catalog/linux-101";
+import { Macos101Module } from "@/lib/modules/catalog/macos-101";
+import { MarketingManagement101Module } from "@/lib/modules/catalog/marketing-management-101";
+import { MarketingManagement201Module } from "@/lib/modules/catalog/marketing-management-201";
+import { MarketingManagement301Module } from "@/lib/modules/catalog/marketing-management-301";
+import { MarketingManagement401Module } from "@/lib/modules/catalog/marketing-management-401";
 import { math101Module } from "@/lib/modules/catalog/math-101";
+import { Medicine101Module } from "@/lib/modules/catalog/medicine-101";
+import { Medicine201Module } from "@/lib/modules/catalog/medicine-201";
+import { Medicine301Module } from "@/lib/modules/catalog/medicine-301";
+import { Medicine401Module } from "@/lib/modules/catalog/medicine-401";
+import { Meteorology101Module } from "@/lib/modules/catalog/meteorology-101";
+import { Meteorology201Module } from "@/lib/modules/catalog/meteorology-201";
+import { Meteorology301Module } from "@/lib/modules/catalog/meteorology-301";
+import { Meteorology401Module } from "@/lib/modules/catalog/meteorology-401";
+import { MicroCircuits101Module } from "@/lib/modules/catalog/micro-circuits-101";
+import { MicroCircuits201Module } from "@/lib/modules/catalog/micro-circuits-201";
+import { MicroCircuits301Module } from "@/lib/modules/catalog/micro-circuits-301";
+import { Microelectronics101Module } from "@/lib/modules/catalog/microelectronics-101";
+import { Microelectronics201Module } from "@/lib/modules/catalog/microelectronics-201";
+import { Microelectronics301Module } from "@/lib/modules/catalog/microelectronics-301";
+import { Microelectronics401Module } from "@/lib/modules/catalog/microelectronics-401";
+import { MusicHistory101Module } from "@/lib/modules/catalog/music-history-101";
+import { MusicProduction101Module } from "@/lib/modules/catalog/music-production-101";
+import { MusicTheory101Module } from "@/lib/modules/catalog/music-theory-101";
+import { MusicTheory201Module } from "@/lib/modules/catalog/music-theory-201";
+import { MusicTheory301Module } from "@/lib/modules/catalog/music-theory-301";
+import { MusicTheory401Module } from "@/lib/modules/catalog/music-theory-401";
+import { NetworkEngineering101Module } from "@/lib/modules/catalog/network-engineering-101";
+import { NetworkEngineering201Module } from "@/lib/modules/catalog/network-engineering-201";
+import { Nursing101Module } from "@/lib/modules/catalog/nursing-101";
+import { Nursing201Module } from "@/lib/modules/catalog/nursing-201";
+import { Nursing301Module } from "@/lib/modules/catalog/nursing-301";
+import { Nursing401Module } from "@/lib/modules/catalog/nursing-401";
+import { OperationsManagement101Module } from "@/lib/modules/catalog/operations-management-101";
+import { OperationsManagement201Module } from "@/lib/modules/catalog/operations-management-201";
+import { OperationsManagement301Module } from "@/lib/modules/catalog/operations-management-301";
+import { OperationsManagement401Module } from "@/lib/modules/catalog/operations-management-401";
+import { OrganizationalBehavior101Module } from "@/lib/modules/catalog/organizational-behavior-101";
+import { OrganizationalBehavior201Module } from "@/lib/modules/catalog/organizational-behavior-201";
+import { OrganizationalBehavior301Module } from "@/lib/modules/catalog/organizational-behavior-301";
+import { OrganizationalBehavior401Module } from "@/lib/modules/catalog/organizational-behavior-401";
 import { Physics101Module } from "@/lib/modules/catalog/physics-101";
 import { Physics201Module } from "@/lib/modules/catalog/physics-201";
 import { Physics301Module } from "@/lib/modules/catalog/physics-301";
 import { Physics401Module } from "@/lib/modules/catalog/physics-401";
+import { Plumbing101Module } from "@/lib/modules/catalog/plumbing-101";
+import { Plumbing201Module } from "@/lib/modules/catalog/plumbing-201";
+import { Plumbing301Module } from "@/lib/modules/catalog/plumbing-301";
+import { Plumbing401Module } from "@/lib/modules/catalog/plumbing-401";
 import { PreKAdvancedMath101Module } from "@/lib/modules/catalog/pre-k-advanced-math-101";
 import { PreKArts101Module } from "@/lib/modules/catalog/pre-k-arts-101";
 import { PreKAstronomy101Module } from "@/lib/modules/catalog/pre-k-astronomy-101";
@@ -100,7 +297,19 @@ import { PreKPhysics101Module } from "@/lib/modules/catalog/pre-k-physics-101";
 import { PreKSocialStudiesUs101Module } from "@/lib/modules/catalog/pre-k-social-studies-us-101";
 import { PreKSocialStudiesWorld101Module } from "@/lib/modules/catalog/pre-k-social-studies-world-101";
 import { PreKWorldHistory101Module } from "@/lib/modules/catalog/pre-k-world-history-101";
+import { ProjectManagement101Module } from "@/lib/modules/catalog/project-management-101";
+import { ProjectManagement201Module } from "@/lib/modules/catalog/project-management-201";
+import { ProjectManagement301Module } from "@/lib/modules/catalog/project-management-301";
+import { ProjectManagement401Module } from "@/lib/modules/catalog/project-management-401";
 import { Reading101Module } from "@/lib/modules/catalog/reading-101";
+import { RenewableEnergySystems101Module } from "@/lib/modules/catalog/renewable-energy-systems-101";
+import { RenewableEnergySystems201Module } from "@/lib/modules/catalog/renewable-energy-systems-201";
+import { RenewableEnergySystems301Module } from "@/lib/modules/catalog/renewable-energy-systems-301";
+import { RenewableEnergySystems401Module } from "@/lib/modules/catalog/renewable-energy-systems-401";
+import { Robotics101Module } from "@/lib/modules/catalog/robotics-101";
+import { Robotics201Module } from "@/lib/modules/catalog/robotics-201";
+import { Robotics301Module } from "@/lib/modules/catalog/robotics-301";
+import { Robotics401Module } from "@/lib/modules/catalog/robotics-401";
 import { SatPrep101Module } from "@/lib/modules/catalog/sat-prep-101";
 import { science101Module } from "@/lib/modules/catalog/science-101";
 import { SocialStudiesUs101Module } from "@/lib/modules/catalog/social-studies-us-101";
@@ -111,7 +320,18 @@ import { SocialStudiesWorld101Module } from "@/lib/modules/catalog/social-studie
 import { SocialStudiesWorld201Module } from "@/lib/modules/catalog/social-studies-world-201";
 import { SocialStudiesWorld301Module } from "@/lib/modules/catalog/social-studies-world-301";
 import { SocialStudiesWorld401Module } from "@/lib/modules/catalog/social-studies-world-401";
+import { StrategicManagement101Module } from "@/lib/modules/catalog/strategic-management-101";
+import { StrategicManagement201Module } from "@/lib/modules/catalog/strategic-management-201";
+import { StrategicManagement301Module } from "@/lib/modules/catalog/strategic-management-301";
+import { StrategicManagement401Module } from "@/lib/modules/catalog/strategic-management-401";
+import { SupplyChainManagement101Module } from "@/lib/modules/catalog/supply-chain-management-101";
+import { SupplyChainManagement201Module } from "@/lib/modules/catalog/supply-chain-management-201";
+import { SupplyChainManagement301Module } from "@/lib/modules/catalog/supply-chain-management-301";
+import { SupplyChainManagement401Module } from "@/lib/modules/catalog/supply-chain-management-401";
 import { ToeflPrep101Module } from "@/lib/modules/catalog/toefl-prep-101";
+import { UsCivics201Module } from "@/lib/modules/catalog/us-civics-201";
+import { UxDesign101Module } from "@/lib/modules/catalog/ux-design-101";
+import { Windows101Module } from "@/lib/modules/catalog/windows-101";
 import { WorldHistory101Module } from "@/lib/modules/catalog/world-history-101";
 import { WorldHistory201Module } from "@/lib/modules/catalog/world-history-201";
 import { WorldHistory301Module } from "@/lib/modules/catalog/world-history-301";
@@ -120,10 +340,19 @@ import type { LearningModule } from "@/lib/modules/types";
 
 export const generatedModuleRegistry: LearningModule[] = [
   ALevelPrep101Module,
+  AccountingFinance101Module,
+  AccountingFinance201Module,
+  AccountingFinance301Module,
+  AccountingFinance401Module,
   ActPrep101Module,
   AdvancedMath201Module,
   AdvancedMath301Module,
   AdvancedMath401Module,
+  AiMachineLearning101Module,
+  AiMachineLearning201Module,
+  AiMachineLearning301Module,
+  AiMachineLearning401Module,
+  AiWorkflows101Module,
   ApPrep101Module,
   appleVisionScienceLabModule,
   Arts101Module,
@@ -147,15 +376,136 @@ export const generatedModuleRegistry: LearningModule[] = [
   Biology201Module,
   Biology301Module,
   Biology401Module,
+  Biotechnology101Module,
+  BusinessAnalytics101Module,
+  BusinessAnalytics201Module,
+  BusinessAnalytics301Module,
+  BusinessAnalytics401Module,
+  BusinessEthics101Module,
+  BusinessEthics201Module,
+  BusinessEthics301Module,
+  BusinessEthics401Module,
   Chemistry101Module,
   Chemistry201Module,
   Chemistry301Module,
   Chemistry401Module,
+  CivilEngineering101Module,
+  CivilEngineering201Module,
+  CivilEngineering301Module,
+  CivilEngineering401Module,
+  CloudComputing101Module,
+  CloudComputing201Module,
   Coding101Module,
   Coding201Module,
   Coding301Module,
   Coding401Module,
+  CpuGpuMemoryDesign101Module,
+  CpuGpuMemoryDesign201Module,
+  CpuGpuMemoryDesign301Module,
+  CpuGpuMemoryDesign401Module,
   CuetPrep101Module,
+  Cybersecurity101Module,
+  Cybersecurity201Module,
+  Cybersecurity301Module,
+  Cybersecurity401Module,
+  DataScience101Module,
+  DataScience201Module,
+  DataScience301Module,
+  DataScience401Module,
+  DigitalMarketing101Module,
+  Economics101Module,
+  Economics201Module,
+  Economics301Module,
+  Economics401Module,
+  ElectricalEngineering101Module,
+  ElectricalEngineering201Module,
+  ElectricalEngineering301Module,
+  ElectricalEngineering401Module,
+  ElectricianElectricity101Module,
+  ElectricianElectricity201Module,
+  ElectricianElectricity301Module,
+  ElectricianElectricity401Module,
+  Entrepreneurship101Module,
+  ACourseInMiraclesDrHelenSchucmanModule,
+  AHistoryOfGodThe4000YearQuestOfJudaismChModule,
+  AWhollyDifferentWayOfLivingJidduKrishnamurtModule,
+  Access2013ForDummiesLaurieUlrichFullerAndKModule,
+  AdventuresInRaspberryPiPhilbinCarrieAnneModule,
+  AmericaBewitchedWitchcraftAfterSalemOwenDaviModule,
+  AnEnvironmentalHistoryOfAncientGreeceAndRomModule,
+  AnimalOppressionAndHumanViolenceDomesecrationModule,
+  ApacheSecurityIvanRisticModule,
+  BashCookbookCarlAlbingModule,
+  BatmanAndPhilosophyMarkDWhiteModule,
+  BatmanAndPhilosophyTheDarkKnightOfTheSoulModule,
+  BeginningLuaProgrammingKurtJungModule,
+  BeingTheBestManForDummiesBlissDominicModule,
+  BonesWouldRainFromTheSkyDeepeningOurRelatiModule,
+  BreathingLessons1989PulitzerPrizeAnneTylerModule,
+  BusinessAnalysisForDummiesKupeKupersmithModule,
+  CannibalCapitalismMichaelCHillModule,
+  CaseStudiesAndTheoryDevelopmentInTheSocialModule,
+  ColliderPaulHalpernModule,
+  CompleteElectronicsSelfTeachingGuideWithProjModule,
+  ConfessionsOfAnEventPlannerCaseStudiesFromModule,
+  CreatingWebSitesBibleDavidACrowderAndrewBaModule,
+  DearMrBuffettWhatAnInvestorLearns1269MileModule,
+  DebtFreeUHowIPaidForAnOutstandingCollegeModule,
+  DetectDeceitHowToBecomeAHumanLieDetectorIModule,
+  DreamweaverCcForDummiesJanineWarnerModule,
+  DriveTheSurprisingTruthAboutWhatMotivatesUsModule,
+  EssentialSnmp2NdEditionDouglasMauroKevinSchModule,
+  EvenFasterWebSitesSteveSoudersModule,
+  ExcelFormulasAndFunctionsForDummies3RdEditiModule,
+  ExcelVbaProgrammingForDummies3RdEditionJohnModule,
+  ExploringQuantumMechanicsKoganVladimirGalitskModule,
+  FrankensteinMaryWollstonecraftShelleyModule,
+  FrommerSArizonaAndTheGrandCanyon2011KarlSModule,
+  FrommerSIndiaPippaDeBruynModule,
+  FrommerSSeattle2010KarlSamsonModule,
+  GulliverSTravelsJonathanSwiftModule,
+  HandbookOfElectricalEngineeringForPractitioneModule,
+  HegelElementsOfThePhilosophyOfRightCambridgModule,
+  HowToEatThePleasuresAndPrinciplesOfGoodFoModule,
+  HowToTalkToAnyoneLeilLowndesModule,
+  IRobotShortStoriesIsaacAsimovModule,
+  ItSTheCustomerStupidMichaelAAunModule,
+  JqueryCookbookCodyLindleyModule,
+  KneadlesslySimpleFabulousFussFreeNoKneadBreModule,
+  LifeAheadOnLearningAndTheSearchForMeaningModule,
+  ManFromTheSouthAndOtherStoriesRoaldDahlModule,
+  MarxismRoutledgeRevivalsThomasSowellModule,
+  MentalFlossPresentsInstantKnowledgeWillPearsModule,
+  MicroreactorsInOrganicChemistryAndCatalysisWModule,
+  NiubiTheRealChineseYouWereNeverTaughtInScModule,
+  NotebooksLeonardoDaVinciIrmaAnneRichterTherModule,
+  NumbersRuleYourWorldTheHiddenInfluenceOfPrModule,
+  PhenomenologyOfSpiritGWFHegelModule,
+  PostmodernismOrTheCulturalLogicOfLateCapitaModule,
+  PrescriptionAlternativesHundredsOfSafeNaturalModule,
+  RaspberryPiProjectsForTheEvilGeniusDonaldNModule,
+  RightsOfManThomasPaineMarkPhilpModule,
+  SchaumSOutlineOfLatinGrammarAlanFishboneModule,
+  SchoolChoiceOrBestSystemsWhatImprovesEducatModule,
+  SmugglerNationHowIllicitTradeMadeAmericaAndModule,
+  SocialEngineeringTheArtOfHumanHackingChristModule,
+  TheAccidentalTouristAnneTylerJenniferBassettModule,
+  TheCompleteSocialMediaCommunityManagerSGuidModule,
+  TheFederalistPapersAlexanderHamiltonJamesMadModule,
+  TheForgottenPresidentsTheirUntoldConstitutionModule,
+  TheFourPillarsOfInvestingLessonsForBuildingModule,
+  TheIndianOceanMichaelPearsonModule,
+  TheLittleBookOfEconomicsHowTheEconomyWorksModule,
+  TheOriginalCurseDidTheCubsThrowThe1918WorModule,
+  TheOxfordDictionaryOfModernQuotationsTonyAuModule,
+  ThePleasureInstinctWhyWeCraveAdventureChocoModule,
+  ThePrinceNiccolMachiavelliPeterEBondanellaModule,
+  TheSelfishGeneRichardDawkinsModule,
+  TheUnlikelyDiscipleASinnerSSemesterAtAmeriModule,
+  TheWomanInWhiteWilkieCollinsJohnSutherlandModule,
+  TreasureIslandRobertLouisStevensonModule,
+  VisionsOfAwakeningSpaceAndTimeDogenAndTheModule,
+  WisdomAsAPracticeMargolisKarenSloterdijkPetModule,
   Farming101Module,
   Farming201Module,
   Farming301Module,
@@ -163,7 +513,9 @@ export const generatedModuleRegistry: LearningModule[] = [
   FinancialLiteracy201Module,
   FinancialLiteracy301Module,
   FinancialLiteracy401Module,
+  FoodScience101Module,
   GaokaoPrep101Module,
+  Gardening101Module,
   GcsePrep101Module,
   GenScience1112U1ExternalModule,
   GenScience35U1ExternalModule,
@@ -185,8 +537,20 @@ export const generatedModuleRegistry: LearningModule[] = [
   HouseholdManagement101Module,
   HouseholdManagement201Module,
   HouseholdManagement301Module,
+  HumanResourceManagement101Module,
+  HumanResourceManagement201Module,
+  HumanResourceManagement301Module,
+  HumanResourceManagement401Module,
+  Hvac101Module,
+  Hvac201Module,
+  Hvac301Module,
+  Hvac401Module,
   IbPrep101Module,
   IeltsPrep101Module,
+  InternationalBusiness101Module,
+  InternationalBusiness201Module,
+  InternationalBusiness301Module,
+  InternationalBusiness401Module,
   JeeNeetPrep101Module,
   LangArts1112U1ExternalModule,
   LangArts35U1ExternalModule,
@@ -198,11 +562,64 @@ export const generatedModuleRegistry: LearningModule[] = [
   LanguageArts201Module,
   LanguageArts301Module,
   LanguageArts401Module,
+  LawStudies101Module,
+  LawStudies201Module,
+  LawStudies301Module,
+  LawStudies401Module,
+  Leadership101Module,
+  Leadership201Module,
+  Leadership301Module,
+  Leadership401Module,
+  Linux101Module,
+  Macos101Module,
+  MarketingManagement101Module,
+  MarketingManagement201Module,
+  MarketingManagement301Module,
+  MarketingManagement401Module,
   math101Module,
+  Medicine101Module,
+  Medicine201Module,
+  Medicine301Module,
+  Medicine401Module,
+  Meteorology101Module,
+  Meteorology201Module,
+  Meteorology301Module,
+  Meteorology401Module,
+  MicroCircuits101Module,
+  MicroCircuits201Module,
+  MicroCircuits301Module,
+  Microelectronics101Module,
+  Microelectronics201Module,
+  Microelectronics301Module,
+  Microelectronics401Module,
+  MusicHistory101Module,
+  MusicProduction101Module,
+  MusicTheory101Module,
+  MusicTheory201Module,
+  MusicTheory301Module,
+  MusicTheory401Module,
+  NetworkEngineering101Module,
+  NetworkEngineering201Module,
+  Nursing101Module,
+  Nursing201Module,
+  Nursing301Module,
+  Nursing401Module,
+  OperationsManagement101Module,
+  OperationsManagement201Module,
+  OperationsManagement301Module,
+  OperationsManagement401Module,
+  OrganizationalBehavior101Module,
+  OrganizationalBehavior201Module,
+  OrganizationalBehavior301Module,
+  OrganizationalBehavior401Module,
   Physics101Module,
   Physics201Module,
   Physics301Module,
   Physics401Module,
+  Plumbing101Module,
+  Plumbing201Module,
+  Plumbing301Module,
+  Plumbing401Module,
   PreKAdvancedMath101Module,
   PreKArts101Module,
   PreKAstronomy101Module,
@@ -221,7 +638,19 @@ export const generatedModuleRegistry: LearningModule[] = [
   PreKSocialStudiesUs101Module,
   PreKSocialStudiesWorld101Module,
   PreKWorldHistory101Module,
+  ProjectManagement101Module,
+  ProjectManagement201Module,
+  ProjectManagement301Module,
+  ProjectManagement401Module,
   Reading101Module,
+  RenewableEnergySystems101Module,
+  RenewableEnergySystems201Module,
+  RenewableEnergySystems301Module,
+  RenewableEnergySystems401Module,
+  Robotics101Module,
+  Robotics201Module,
+  Robotics301Module,
+  Robotics401Module,
   SatPrep101Module,
   science101Module,
   SocialStudiesUs101Module,
@@ -232,7 +661,18 @@ export const generatedModuleRegistry: LearningModule[] = [
   SocialStudiesWorld201Module,
   SocialStudiesWorld301Module,
   SocialStudiesWorld401Module,
+  StrategicManagement101Module,
+  StrategicManagement201Module,
+  StrategicManagement301Module,
+  StrategicManagement401Module,
+  SupplyChainManagement101Module,
+  SupplyChainManagement201Module,
+  SupplyChainManagement301Module,
+  SupplyChainManagement401Module,
   ToeflPrep101Module,
+  UsCivics201Module,
+  UxDesign101Module,
+  Windows101Module,
   WorldHistory101Module,
   WorldHistory201Module,
   WorldHistory301Module,

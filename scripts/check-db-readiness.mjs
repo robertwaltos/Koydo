@@ -9,9 +9,11 @@ const outMd = path.resolve("public/DB-READINESS-REPORT.md");
 
 const requiredTables = [
   "user_profiles",
+  "student_profiles",
   "user_tokens",
   "parent_consents",
   "subscriptions",
+  "stripe_webhook_events",
   "dsar_requests",
   "user_learning_progress",
   "user_skill_mastery",
@@ -27,12 +29,35 @@ const requiredTables = [
   "admin_alert_notifications",
   "admin_report_jobs",
   "media_generation_jobs",
+  "testing_exams",
+  "testing_question_bank",
+  "user_exam_entitlements",
+  "testing_purchases",
+  "testing_exam_attempts",
+  "testing_attempt_answers",
+  "classroom_entities",
+  "class_enrollments",
+  "class_assignments",
+  "pronunciation_attempts",
+  "gamification_states",
+  "gamification_events",
+  "language_usage_tracking",
+  "pricing_ladders",
+  "exam_unlock_purchases",
+  "transaction_ledger",
+  "reconciliation_queue",
 ];
 
 function parseArgs(argv) {
+  const hasFlag = (flag) => {
+    const plain = flag.replace(/^--/, "");
+    return argv.includes(flag) || argv.includes(plain);
+  };
+
   return {
-    writeReport: argv.includes("--write-report"),
-    noFail: argv.includes("--no-fail"),
+    writeReport: hasFlag("--write-report"),
+    noFail: hasFlag("--no-fail"),
+    json: hasFlag("--json"),
   };
 }
 
@@ -76,7 +101,7 @@ function extractCreateTableSnippet(schemaText, tableName) {
 }
 
 async function checkTable(supabase, tableName) {
-  const { error } = await supabase.from(tableName).select("*", { count: "exact", head: true }).limit(1);
+  const { error } = await supabase.from(tableName).select("*").limit(1);
   if (!error) {
     return { table: tableName, status: "present", detail: "Present" };
   }
@@ -179,17 +204,21 @@ async function main() {
     missingSnippets,
   };
 
-  console.log("EduForge DB readiness check");
-  console.log(`Supabase host: ${report.supabaseHost || "unknown"}`);
-  console.log("");
-  for (const row of checks) {
-    const prefix = row.status === "present" ? "[PASS]" : row.status === "missing" ? "[FAIL]" : "[WARN]";
-    console.log(`${prefix} ${row.table} - ${row.detail}`);
+  if (args.json) {
+    console.log(JSON.stringify(report, null, 2));
+  } else {
+    console.log("Koydo DB readiness check");
+    console.log(`Supabase host: ${report.supabaseHost || "unknown"}`);
+    console.log("");
+    for (const row of checks) {
+      const prefix = row.status === "present" ? "[PASS]" : row.status === "missing" ? "[FAIL]" : "[WARN]";
+      console.log(`${prefix} ${row.table} - ${row.detail}`);
+    }
+    console.log("");
+    console.log(
+      `Summary: ${totals.present} present / ${totals.missing} missing / ${totals.error} error (total ${totals.total})`,
+    );
   }
-  console.log("");
-  console.log(
-    `Summary: ${totals.present} present / ${totals.missing} missing / ${totals.error} error (total ${totals.total})`,
-  );
 
   if (args.writeReport) {
     fs.mkdirSync(path.dirname(outJson), { recursive: true });

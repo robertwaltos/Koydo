@@ -1,0 +1,176 @@
+[
+  {
+    "sourceId": "uk-national-curriculum",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "syllabus",
+      "guidance"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false,
+    "notes": "Government curriculum framework pages can be ingested with provenance and attribution."
+  },
+  {
+    "sourceId": "acara-australian-curriculum",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "syllabus",
+      "guidance"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false,
+    "notes": "Official curriculum publication source."
+  },
+  {
+    "sourceId": "singapore-moe-curriculum",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "syllabus",
+      "guidance"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false,
+    "notes": "MOE curriculum source used for standards alignment."
+  },
+  {
+    "sourceId": "india-ncert-textbooks",
+    "rightsStatus": "conditional",
+    "ingestionPolicy": "manual_review_required",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "textbook_outline"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": true,
+    "notes": "Textbook and PDF ingest requires per-document terms validation before full extraction."
+  },
+  {
+    "sourceId": "india-cbse-curriculum",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "syllabus",
+      "guidance"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false,
+    "notes": "Official board curriculum resources."
+  },
+  {
+    "sourceId": "new-zealand-curriculum",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "syllabus",
+      "guidance"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false
+  },
+  {
+    "sourceId": "ontario-curriculum",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "syllabus",
+      "guidance"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false
+  },
+  {
+    "sourceId": "south-africa-caps",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "syllabus",
+      "guidance"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false
+  },
+  {
+    "sourceId": "kenya-kicd",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "curriculum_framework",
+      "syllabus",
+      "guidance"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false
+  },
+  {
+    "sourceId": "open-yale-courses",
+    "rightsStatus": "conditional",
+    "ingestionPolicy": "transcript_only_with_attribution",
+    "allowedAssetTypes": [
+      "transcript",
+      "subtitle"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": true,
+    "notes": "Transcript-first ingestion allowed after source terms verification."
+  },
+  {
+    "sourceId": "nptel-transcripts",
+    "rightsStatus": "conditional",
+    "ingestionPolicy": "transcript_only_with_attribution",
+    "allowedAssetTypes": [
+      "transcript",
+      "subtitle"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": true,
+    "notes": "Transcript endpoint available; validate per-course terms for downstream reuse."
+  },
+  {
+    "sourceId": "mit-ocw",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "full_text_with_attribution",
+    "allowedAssetTypes": [
+      "transcript",
+      "subtitle",
+      "course_notes",
+      "syllabus"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": false,
+    "notes": "Open licensed course materials with attribution requirements."
+  },
+  {
+    "sourceId": "openlearn",
+    "rightsStatus": "conditional",
+    "ingestionPolicy": "manual_review_required",
+    "allowedAssetTypes": [
+      "transcript",
+      "course_notes"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": true,
+    "notes": "Course-level terms vary; keep under manual legal review."
+  },
+  {
+    "sourceId": "grokipedia",
+    "rightsStatus": "conditional",
+    "ingestionPolicy": "manual_review_required",
+    "allowedAssetTypes": [
+      "course_notes",
+      "transcript"
+    ],
+    "requiresAttribution": true,
+    "requiresManualReview": true,
+    "notes": "Use only page-level educational articles after legal and ToS review."
+  }
+]

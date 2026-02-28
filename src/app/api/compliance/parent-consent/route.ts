@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { serverEnv } from "@/lib/config/env";
+import { sanitizeNextPath } from "@/lib/routing/next-path";
 import {
   createParentConsentVerificationToken,
   hashParentConsentToken,
@@ -14,6 +15,7 @@ const requestSchema = z.object({
   consentMethod: z.enum(["email_verification", "micro_charge", "id_check"]),
   consentVersion: z.string().default("v1"),
   region: z.string().min(2).max(16).optional(),
+  nextPath: z.string().optional(),
 });
 
 export async function POST(request: NextRequest) {
@@ -40,6 +42,7 @@ export async function POST(request: NextRequest) {
     }
 
     const supabase = createSupabaseAdminClient();
+    const safeNextPath = sanitizeNextPath(parsed.data.nextPath);
 
     const { data, error } = await supabase
       .from("parent_consents")
@@ -63,6 +66,7 @@ export async function POST(request: NextRequest) {
         consentRequestId: data.id,
         childUserId: userData.user.id,
         parentEmail: parsed.data.parentEmail,
+        nextPath: safeNextPath ?? undefined,
       },
       serverEnv.PARENT_CONSENT_TOKEN_SECRET,
     );

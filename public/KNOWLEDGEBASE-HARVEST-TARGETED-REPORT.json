@@ -1,0 +1,1057 @@
+{
+  "generatedAt": "2026-02-26T20:06:33.074Z",
+  "domains": [
+    "microelectronics",
+    "micro-circuits",
+    "coding",
+    "ai-workflows",
+    "gardening",
+    "food-science"
+  ],
+  "totals": {
+    "seedAttempted": 42,
+    "seedSucceeded": 41,
+    "seedFailed": 1,
+    "candidateLinks": 95,
+    "candidateLinkMeta": 95
+  },
+  "sources": [
+    {
+      "id": "mit-ocw",
+      "url": "https://ocw.mit.edu/",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "candidateLinks": [
+        "https://ocw.mit.edu/search/?q=microelectronics",
+        "https://ocw.mit.edu/search/?q=semiconductor",
+        "https://ocw.mit.edu/search/?q=integrated%20circuits",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/syllabus/",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/calendar/",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/readings/",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/lecture-notes/",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/assignments/",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/exams/",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/download",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/assignments",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/syllabus/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/calendar/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/readings/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/lecture-notes/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/assignments/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/projects/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/tools/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/exams/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/download",
+        "https://ocw.mit.edu/search/?q=analog%20circuits",
+        "https://ocw.mit.edu/search/?q=digital%20circuits",
+        "https://ocw.mit.edu/search/?q=signal%20integrity",
+        "https://ocw.mit.edu/search/?q=circuits%20and%20electronics",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/syllabus/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/calendar/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/lecture-notes/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/readings/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/labs/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/assignments/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/exams/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/tools/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/video_galleries/video-lectures/",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/download",
+        "https://ocw.mit.edu/search/?q=computer%20programming",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/syllabus/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/instructor-insights/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/readings/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/video_galleries/lecture-videos/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/lecture-slides-code/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-1/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-2/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-3/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-4/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-5/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-7/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-8/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-9/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/assignments/",
+        "https://ocw.mit.edu/search/?t=Algorithms&",
+        "https://ocw.mit.edu/search/?t=Programming&",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/download",
+        "https://ocw.mit.edu/search/?q=food%20science"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://ocw.mit.edu/search/?q=microelectronics",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=microelectronics",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?q=semiconductor",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=semiconductor",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?q=integrated%20circuits",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=integrated%20circuits",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/",
+          "anchorText": "Microelectronic Devices and Circuits",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/syllabus/",
+          "anchorText": "Syllabus",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/calendar/",
+          "anchorText": "Calendar",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/readings/",
+          "anchorText": "Readings",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/lecture-notes/",
+          "anchorText": "Lecture Notes",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/assignments/",
+          "anchorText": "Assignments",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/exams/",
+          "anchorText": "Exams",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/download",
+          "anchorText": "Download Course",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/pages/assignments",
+          "anchorText": "Assignments",
+          "pageTitle": "Microelectronic Devices and Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/",
+          "anchorText": "Analysis and Design of Digital Integrated Circuits",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/syllabus/",
+          "anchorText": "Syllabus",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/calendar/",
+          "anchorText": "Calendar",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/readings/",
+          "anchorText": "Readings",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/lecture-notes/",
+          "anchorText": "Lecture Notes",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/assignments/",
+          "anchorText": "Assignments",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/projects/",
+          "anchorText": "Projects",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/tools/",
+          "anchorText": "Tools",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/exams/",
+          "anchorText": "Exams",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/download",
+          "anchorText": "Download Course",
+          "pageTitle": "Analysis and Design of Digital Integrated Circuits | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "microelectronics"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?q=analog%20circuits",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=analog%20circuits",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?q=digital%20circuits",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=digital%20circuits",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?q=signal%20integrity",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=signal%20integrity",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?q=circuits%20and%20electronics",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=circuits%20and%20electronics",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+          "anchorText": "Circuits and Electronics",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/syllabus/",
+          "anchorText": "Syllabus",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/calendar/",
+          "anchorText": "Calendar",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/lecture-notes/",
+          "anchorText": "Lecture Notes",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/readings/",
+          "anchorText": "Readings",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/labs/",
+          "anchorText": "Labs",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/assignments/",
+          "anchorText": "Assignments",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/exams/",
+          "anchorText": "Exams",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/pages/tools/",
+          "anchorText": "Tools",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/video_galleries/video-lectures/",
+          "anchorText": "Video Lectures",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/download",
+          "anchorText": "Download Course",
+          "pageTitle": "Circuits and Electronics | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "micro-circuits"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?q=computer%20programming",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=computer%20programming",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+          "anchorText": "Introduction to Computer Science and Programming in Python",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/syllabus/",
+          "anchorText": "Syllabus",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/instructor-insights/",
+          "anchorText": "Instructor Insights",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/readings/",
+          "anchorText": "Readings",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/video_galleries/lecture-videos/",
+          "anchorText": "Lecture Videos",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/lecture-slides-code/",
+          "anchorText": "Lecture Slides and Code",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/",
+          "anchorText": "In-Class Questions and Video Solutions",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-1/",
+          "anchorText": "Lecture 1",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-2/",
+          "anchorText": "Lecture 2",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-3/",
+          "anchorText": "Lecture 3",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-4/",
+          "anchorText": "Lecture 4",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-5/",
+          "anchorText": "Lecture 5",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-7/",
+          "anchorText": "Lecture 7",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-8/",
+          "anchorText": "Lecture 8",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/in-class-questions-and-video-solutions/lecture-9/",
+          "anchorText": "Lecture 9",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/pages/assignments/",
+          "anchorText": "Assignments",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?t=Algorithms&",
+          "anchorText": "Algorithms and Data Structures",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?t=Programming&",
+          "anchorText": "Programming Languages",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/download",
+          "anchorText": "Download Course",
+          "pageTitle": "Introduction to Computer Science and Programming in Python | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://ocw.mit.edu/search/?q=food%20science",
+          "anchorText": "seed-url",
+          "pageTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+          "seedUrl": "https://ocw.mit.edu/search/?q=food%20science",
+          "domainHints": [
+            "food-science"
+          ]
+        }
+      ],
+      "domainHints": [
+        "coding",
+        "food-science",
+        "micro-circuits",
+        "microelectronics"
+      ],
+      "seedStats": {
+        "attempted": 20,
+        "succeeded": 20,
+        "failures": []
+      }
+    },
+    {
+      "id": "openlearn",
+      "url": "https://www.open.edu/openlearn/",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "Search | OpenLearn - Open University",
+      "candidateLinks": [
+        "https://www.open.edu/openlearn/search-results?query=programming",
+        "https://www.open.edu/openlearn/local/ocwcontroller/logout.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dprogramming",
+        "https://www.open.edu/openlearn/free-courses/full-catalogue",
+        "https://www.open.edu/openlearn/badged-courses",
+        "https://www.open.edu/openlearn/about-openlearn/try",
+        "https://www.open.edu/openlearn/free-courses/advantages-signing-on-free-course",
+        "https://www.open.edu/openlearn/local/ousaml/loginsaml.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dprogramming",
+        "https://www.open.edu/openlearn/search-results?query=gardening",
+        "https://www.open.edu/openlearn/local/ocwcontroller/logout.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dgardening",
+        "https://www.open.edu/openlearn/local/ousaml/loginsaml.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dgardening",
+        "https://www.open.edu/openlearn/search-results?query=horticulture",
+        "https://www.open.edu/openlearn/local/ocwcontroller/logout.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dhorticulture",
+        "https://www.open.edu/openlearn/local/ousaml/loginsaml.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dhorticulture",
+        "https://www.open.edu/openlearn/search-results?query=soil",
+        "https://www.open.edu/openlearn/local/ocwcontroller/logout.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dsoil",
+        "https://www.open.edu/openlearn/local/ousaml/loginsaml.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dsoil"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://www.open.edu/openlearn/search-results?query=programming",
+          "anchorText": "Skip to main content",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "https://www.open.edu/openlearn/search-results?query=programming",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/local/ocwcontroller/logout.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dprogramming",
+          "anchorText": "Sign out",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/free-courses/full-catalogue",
+          "anchorText": "All our free courses",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "coding",
+            "ai-workflows",
+            "gardening",
+            "food-science"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/badged-courses",
+          "anchorText": "Badged courses",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "coding",
+            "ai-workflows",
+            "gardening",
+            "food-science"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/about-openlearn/try",
+          "anchorText": "Why study a free course on OpenLearn?",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "coding",
+            "ai-workflows",
+            "gardening",
+            "food-science"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/free-courses/advantages-signing-on-free-course",
+          "anchorText": "Advantages of enrolling on a free course",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "coding",
+            "ai-workflows",
+            "gardening",
+            "food-science"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/local/ousaml/loginsaml.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dprogramming",
+          "anchorText": "Create account / Sign in",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/search-results?query=gardening",
+          "anchorText": "Skip to main content",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "https://www.open.edu/openlearn/search-results?query=gardening",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/local/ocwcontroller/logout.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dgardening",
+          "anchorText": "Sign out",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/local/ousaml/loginsaml.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dgardening",
+          "anchorText": "Create account / Sign in",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/search-results?query=horticulture",
+          "anchorText": "Skip to main content",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "https://www.open.edu/openlearn/search-results?query=horticulture",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/local/ocwcontroller/logout.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dhorticulture",
+          "anchorText": "Sign out",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/local/ousaml/loginsaml.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dhorticulture",
+          "anchorText": "Create account / Sign in",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/search-results?query=soil",
+          "anchorText": "Skip to main content",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "https://www.open.edu/openlearn/search-results?query=soil",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/local/ocwcontroller/logout.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dsoil",
+          "anchorText": "Sign out",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://www.open.edu/openlearn/local/ousaml/loginsaml.php?url=https%3A%2F%2Fwww.open.edu%2Fopenlearn%2Fsearch-results%3Fquery%3Dsoil",
+          "anchorText": "Create account / Sign in",
+          "pageTitle": "Search | OpenLearn - Open University",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        }
+      ],
+      "domainHints": [
+        "ai-workflows",
+        "coding",
+        "food-science",
+        "gardening"
+      ],
+      "seedStats": {
+        "attempted": 9,
+        "succeeded": 9,
+        "failures": []
+      }
+    },
+    {
+      "id": "grokipedia",
+      "url": "https://grokipedia.com/",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "Computer programming",
+      "candidateLinks": [
+        "https://grokipedia.com/page/Computer_programming",
+        "https://grokipedia.com/page/Debugging",
+        "https://grokipedia.com/page/Software_development",
+        "https://grokipedia.com/page/Imperative_programming",
+        "https://grokipedia.com/page/Declarative_programming",
+        "https://grokipedia.com/page/Algorithm",
+        "https://grokipedia.com/page/The_Art_of_Computer_Programming",
+        "https://grokipedia.com/page/The_Algorithm",
+        "https://grokipedia.com/page/Prompt_engineering",
+        "https://grokipedia.com/page/Machine_learning",
+        "https://grokipedia.com/page/Gardening",
+        "https://grokipedia.com/page/Soil",
+        "https://grokipedia.com/page/Compost",
+        "https://grokipedia.com/page/Soil_science",
+        "https://grokipedia.com/page/Topsoil",
+        "https://grokipedia.com/page/Plant_nutrition",
+        "https://grokipedia.com/page/Food_science",
+        "https://grokipedia.com/page/Maillard_reaction",
+        "https://grokipedia.com/page/Emulsion",
+        "https://grokipedia.com/page/Fermentation",
+        "https://grokipedia.com/page/Lactic_acid_fermentation"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://grokipedia.com/page/Computer_programming",
+          "anchorText": "Programming Languages",
+          "pageTitle": "Computer programming",
+          "seedUrl": "https://grokipedia.com/page/Computer_programming",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Debugging",
+          "anchorText": "debugging",
+          "pageTitle": "Computer programming",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Software_development",
+          "anchorText": "software development",
+          "pageTitle": "Computer programming",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Imperative_programming",
+          "anchorText": "imperative** programming",
+          "pageTitle": "Computer programming",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Declarative_programming",
+          "anchorText": "declarative** programming",
+          "pageTitle": "Computer programming",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Algorithm",
+          "anchorText": "Applications and Examples",
+          "pageTitle": "Algorithm",
+          "seedUrl": "https://grokipedia.com/page/Algorithm",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/The_Art_of_Computer_Programming",
+          "anchorText": "The Art of Computer Programming",
+          "pageTitle": "Algorithm",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/The_Algorithm",
+          "anchorText": "algorithm",
+          "pageTitle": "Algorithm",
+          "seedUrl": "",
+          "domainHints": [
+            "coding"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Prompt_engineering",
+          "anchorText": "How to Learn Prompt Engineering in 2026",
+          "pageTitle": "Prompt engineering",
+          "seedUrl": "",
+          "domainHints": [
+            "ai-workflows"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Machine_learning",
+          "anchorText": "Evaluation and Validation",
+          "pageTitle": "Machine learning",
+          "seedUrl": "",
+          "domainHints": [
+            "ai-workflows"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Gardening",
+          "anchorText": "Recent Developments and Trends",
+          "pageTitle": "Gardening",
+          "seedUrl": "https://grokipedia.com/page/Gardening",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Soil",
+          "anchorText": "Formation and Pedogenic Processes",
+          "pageTitle": "Gardening",
+          "seedUrl": "https://grokipedia.com/page/Soil",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Compost",
+          "anchorText": "Environmental Impacts",
+          "pageTitle": "Compost",
+          "seedUrl": "https://grokipedia.com/page/Compost",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Soil_science",
+          "anchorText": "Soil Science",
+          "pageTitle": "Soil",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Topsoil",
+          "anchorText": "topsoil",
+          "pageTitle": "Soil",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Plant_nutrition",
+          "anchorText": "plant nutrition",
+          "pageTitle": "Soil",
+          "seedUrl": "",
+          "domainHints": [
+            "gardening"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Food_science",
+          "anchorText": "Food science",
+          "pageTitle": "Food science",
+          "seedUrl": "",
+          "domainHints": [
+            "food-science"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Maillard_reaction",
+          "anchorText": "Maillard reaction",
+          "pageTitle": "Maillard reaction",
+          "seedUrl": "",
+          "domainHints": [
+            "food-science"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Emulsion",
+          "anchorText": "Etymology and Fundamentals",
+          "pageTitle": "Emulsion",
+          "seedUrl": "https://grokipedia.com/page/Emulsion",
+          "domainHints": [
+            "food-science"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Fermentation",
+          "anchorText": "Environmental and Economic Impacts",
+          "pageTitle": "Fermentation",
+          "seedUrl": "https://grokipedia.com/page/Fermentation",
+          "domainHints": [
+            "food-science"
+          ]
+        },
+        {
+          "url": "https://grokipedia.com/page/Lactic_acid_fermentation",
+          "anchorText": "lactic acid fermentation",
+          "pageTitle": "Fermentation",
+          "seedUrl": "",
+          "domainHints": [
+            "food-science"
+          ]
+        }
+      ],
+      "domainHints": [
+        "ai-workflows",
+        "coding",
+        "food-science",
+        "gardening"
+      ],
+      "seedStats": {
+        "attempted": 13,
+        "succeeded": 12,
+        "failures": [
+          {
+            "seedUrl": "https://grokipedia.com/page/Debugging",
+            "status": 500,
+            "error": null
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import ReportsClient from "./reports-client";
 import SoftCard from "@/app/components/ui/soft-card";
 import ProgressChip from "@/app/components/ui/progress-chip";
+import ExplorerMetricsPanel from "./explorer-metrics-panel";
 
 export const dynamic = "force-dynamic";
 const REPORT_TYPES = ["dsar", "support", "audit", "telemetry"] as const;
@@ -70,6 +71,20 @@ type TelemetryWindowSummary = {
   activityInteractions: number;
   completionRate: number;
   interactionDepth: number;
+};
+
+type LanguagePricingTelemetrySummary = {
+  daysWindow: number;
+  pricingViews: number;
+  checkoutViews: number;
+  checkoutStarts: number;
+  successViews: number;
+  planSelectClicks: number;
+  manageSubscriptionClicks: number;
+  pricingToCheckoutViewRate: number;
+  checkoutStartRateFromCheckoutViews: number;
+  checkoutToSuccessViewRate: number;
+  errorMessage: string | null;
 };
 
 export default async function AdminReportsPage() {
@@ -358,6 +373,10 @@ export default async function AdminReportsPage() {
   const telemetryCutoffIso = new Date(
     currentTime.getTime() - telemetryDaysWindow * 24 * 60 * 60 * 1000,
   ).toISOString();
+  const pricingTelemetryDaysWindow = 30;
+  const pricingTelemetryCutoffIso = new Date(
+    currentTime.getTime() - pricingTelemetryDaysWindow * 24 * 60 * 60 * 1000,
+  ).toISOString();
   const uniqueLearnerSampleLimit = 20000;
   const [
     telemetryEvents7dResult,
@@ -368,6 +387,13 @@ export default async function AdminReportsPage() {
     flashcardFlips7dResult,
     activityInteractions7dResult,
     telemetryUniqueUsers7dResult,
+    pricingViews30dResult,
+    checkoutViews30dResult,
+    successViews30dResult,
+    checkoutStarts30dResult,
+    planCheckoutSelect30dResult,
+    checkoutPlanSelect30dResult,
+    manageSubscriptionClick30dResult,
   ] = await Promise.all([
     admin
       .from("learning_events")
@@ -408,6 +434,55 @@ export default async function AdminReportsPage() {
       .select("user_id")
       .gte("event_at", telemetryCutoffIso)
       .limit(uniqueLearnerSampleLimit),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("module_id", "billing")
+      .eq("event_type", "lesson_viewed")
+      .eq("lesson_id", "billing:language")
+      .gte("event_at", pricingTelemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("module_id", "billing")
+      .eq("event_type", "lesson_viewed")
+      .eq("lesson_id", "billing:checkout")
+      .gte("event_at", pricingTelemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("module_id", "billing")
+      .eq("event_type", "lesson_viewed")
+      .eq("lesson_id", "billing:success")
+      .gte("event_at", pricingTelemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("module_id", "billing")
+      .eq("event_type", "activity_interacted")
+      .contains("payload", { action: "checkout_started" })
+      .gte("event_at", pricingTelemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("module_id", "billing")
+      .eq("event_type", "activity_interacted")
+      .contains("payload", { action: "plan_checkout_selected" })
+      .gte("event_at", pricingTelemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("module_id", "billing")
+      .eq("event_type", "activity_interacted")
+      .contains("payload", { action: "checkout_plan_selected" })
+      .gte("event_at", pricingTelemetryCutoffIso),
+    admin
+      .from("learning_events")
+      .select("id", { count: "exact", head: true })
+      .eq("module_id", "billing")
+      .eq("event_type", "activity_interacted")
+      .contains("payload", { action: "checkout_manage_subscription_clicked" })
+      .gte("event_at", pricingTelemetryCutoffIso),
   ]);
 
   const uniqueLearnerSet = new Set(
@@ -447,6 +522,39 @@ export default async function AdminReportsPage() {
     interactionDepth: lessonViews > 0 ? Number((interactionDepthBase / lessonViews).toFixed(3)) : 0,
   };
 
+  const pricingTelemetryErrorMessage =
+    pricingViews30dResult.error?.message ??
+    checkoutViews30dResult.error?.message ??
+    successViews30dResult.error?.message ??
+    checkoutStarts30dResult.error?.message ??
+    planCheckoutSelect30dResult.error?.message ??
+    checkoutPlanSelect30dResult.error?.message ??
+    manageSubscriptionClick30dResult.error?.message ??
+    null;
+  const pricingViews = pricingViews30dResult.count ?? 0;
+  const checkoutViews = checkoutViews30dResult.count ?? 0;
+  const successViews = successViews30dResult.count ?? 0;
+  const checkoutStarts = checkoutStarts30dResult.count ?? 0;
+  const planSelectClicks =
+    (planCheckoutSelect30dResult.count ?? 0) + (checkoutPlanSelect30dResult.count ?? 0);
+  const manageSubscriptionClicks = manageSubscriptionClick30dResult.count ?? 0;
+  const languagePricingTelemetrySummary: LanguagePricingTelemetrySummary = {
+    daysWindow: pricingTelemetryDaysWindow,
+    pricingViews,
+    checkoutViews,
+    checkoutStarts,
+    successViews,
+    planSelectClicks,
+    manageSubscriptionClicks,
+    pricingToCheckoutViewRate:
+      pricingViews > 0 ? Number((checkoutViews / pricingViews).toFixed(3)) : 0,
+    checkoutStartRateFromCheckoutViews:
+      checkoutViews > 0 ? Number((checkoutStarts / checkoutViews).toFixed(3)) : 0,
+    checkoutToSuccessViewRate:
+      checkoutViews > 0 ? Number((successViews / checkoutViews).toFixed(3)) : 0,
+    errorMessage: pricingTelemetryErrorMessage,
+  };
+
   const exportHistory = exportHistoryResult.data ?? [];
   const jobs = jobsResult.data ?? [];
 
@@ -462,6 +570,8 @@ export default async function AdminReportsPage() {
           <ProgressChip label="Stale" value={queueSummary.staleCount} tone={queueSummary.staleCount > 0 ? "warning" : "success"} />
           <ProgressChip label="Failed 24h" value={queueSummary.failed24hCount} tone={queueSummary.failed24hCount >= queueSummary.failure24hThreshold ? "warning" : "neutral"} />
           <ProgressChip label="Events 7d" value={telemetrySummary.totalEvents} tone="neutral" />
+          <ProgressChip label="Pricing Views 30d" value={languagePricingTelemetrySummary.pricingViews} tone="neutral" />
+          <ProgressChip label="Checkout Starts 30d" value={languagePricingTelemetrySummary.checkoutStarts} tone="info" />
         </div>
       </SoftCard>
 
@@ -497,6 +607,22 @@ export default async function AdminReportsPage() {
               className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
             >
               Download Learning Telemetry Report (CSV, 30d)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/explorer?days=30"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Explorer Funnel Snapshot (JSON, 30d)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/language-pricing?days=30"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Language Pricing Funnel (JSON, 30d)
             </a>
           </li>
         </ul>
@@ -554,6 +680,55 @@ export default async function AdminReportsPage() {
           </article>
         </div>
       </SoftCard>
+
+      <SoftCard as="section" className="p-5">
+        <h2 className="text-lg font-semibold">Language Pricing Funnel (Last 30 Days)</h2>
+        <p className="mt-1 text-xs text-zinc-600">
+          Billing module conversion trend based on `learning_events` from pricing, checkout, and success screens.
+        </p>
+        {languagePricingTelemetrySummary.errorMessage ? (
+          <p className="mt-2 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+            Language pricing funnel currently unavailable: {languagePricingTelemetrySummary.errorMessage}
+          </p>
+        ) : null}
+        <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <article className="rounded-md border border-border bg-surface p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Pricing Views</p>
+            <p className="mt-1 text-2xl font-semibold">{languagePricingTelemetrySummary.pricingViews}</p>
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Checkout Views</p>
+            <p className="mt-1 text-2xl font-semibold">{languagePricingTelemetrySummary.checkoutViews}</p>
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Checkout Starts</p>
+            <p className="mt-1 text-2xl font-semibold">{languagePricingTelemetrySummary.checkoutStarts}</p>
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3">
+            <p className="text-xs uppercase tracking-wide text-zinc-500">Success Views</p>
+            <p className="mt-1 text-2xl font-semibold">{languagePricingTelemetrySummary.successViews}</p>
+          </article>
+        </div>
+        <div className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            pricing -&gt; checkout view rate: {languagePricingTelemetrySummary.pricingToCheckoutViewRate}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            checkout view -&gt; start rate: {languagePricingTelemetrySummary.checkoutStartRateFromCheckoutViews}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            checkout view -&gt; success rate: {languagePricingTelemetrySummary.checkoutToSuccessViewRate}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            plan selection clicks: {languagePricingTelemetrySummary.planSelectClicks}
+          </article>
+          <article className="rounded-md border border-border bg-surface p-3 text-xs">
+            manage-subscription clicks: {languagePricingTelemetrySummary.manageSubscriptionClicks}
+          </article>
+        </div>
+      </SoftCard>
+
+      <ExplorerMetricsPanel />
 
       <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Recent Export History</h2>

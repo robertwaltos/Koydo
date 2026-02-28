@@ -33,9 +33,10 @@ export const BasicMathK2U1ExternalModule: LearningModule = {
   "gradeBand": "K2",
   "metadata": {
     "source": "../External_AI_Agents/lesson_platform (1).jsx",
-    "sourceUnitId": "basic_math-k2-u1",
+    "sourceUnitId": "basic-math-k2-u1",
     "sourceUnitIdCanonical": "basic-math-k2-u1",
-    "importedAt": "2026-02-24T03:43:31.753Z"
+    "sourceUnitIdRaw": "basic_math-k2-u1",
+    "importedAt": "2026-02-25T02:03:30.461Z"
   },
   "external": {
     "unitOrder": 12,

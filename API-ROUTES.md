@@ -4,7 +4,7 @@ This project currently exposes 117 API route handlers under `src/app/api`.
 
 ## Enforcement Model
 
-IP-based rate limiting is enforced centrally in [`src/proxy.ts`](/d:/PythonProjects/Koydo/eduforge-web/src/proxy.ts) for all mutating API methods (`POST`, `PUT`, `PATCH`, `DELETE`) using `enforceIpRateLimit`.
+IP-based rate limiting is enforced centrally in `src/proxy.ts` for all mutating API methods (`POST`, `PUT`, `PATCH`, `DELETE`) using `enforceIpRateLimit`.
 
 ## Active Rate Limit Policies
 
@@ -22,3 +22,4 @@ All rate-limited responses return HTTP `429` and include `Retry-After`.
 
 - Read-only routes (`GET`, `HEAD`, `OPTIONS`) are not rate-limited by this middleware layer.
 - `/api/health` remains unthrottled for availability probes.
+

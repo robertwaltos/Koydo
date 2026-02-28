@@ -33,9 +33,10 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
   "gradeBand": "K2",
   "metadata": {
     "source": "../External_AI_Agents/lesson_platform (1).jsx",
-    "sourceUnitId": "lang_arts-k2-u1",
+    "sourceUnitId": "lang-arts-k2-u1",
     "sourceUnitIdCanonical": "lang-arts-k2-u1",
-    "importedAt": "2026-02-24T03:43:31.746Z"
+    "sourceUnitIdRaw": "lang_arts-k2-u1",
+    "importedAt": "2026-02-25T02:03:30.435Z"
   },
   "external": {
     "unitOrder": 6,

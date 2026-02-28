@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
@@ -35,6 +36,13 @@ type PromptPack = {
   generatedAt?: string;
   modules?: PromptModule[];
 };
+
+const queueFromPackRequestSchema = z.object({
+  moduleId: z.string().trim().min(1).optional(),
+  lessonId: z.string().trim().min(1).optional(),
+  assetType: z.enum(["video", "animation", "image", "all"]).optional(),
+  limit: z.coerce.number().int().min(1).max(500).optional(),
+});
 
 function normalizeAssetTypes(input: string | undefined) {
   if (!input || input === "all") return ["video", "animation", "image"] as AssetType[];
@@ -90,17 +98,21 @@ export async function POST(request: Request) {
     return auth.response;
   }
 
-  const body = (await request.json().catch(() => ({}))) as {
-    moduleId?: string;
-    lessonId?: string;
-    assetType?: string;
-    limit?: number;
-  };
+  const parsedBody = queueFromPackRequestSchema.safeParse(
+    await request.json().catch(() => null),
+  );
 
-  const moduleId = typeof body.moduleId === "string" && body.moduleId.trim().length > 0 ? body.moduleId.trim() : "";
-  const lessonId = typeof body.lessonId === "string" && body.lessonId.trim().length > 0 ? body.lessonId.trim() : "";
-  const assetTypes = normalizeAssetTypes(typeof body.assetType === "string" ? body.assetType : undefined);
-  const limit = Math.min(500, Math.max(1, Number(body.limit ?? 100)));
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      { error: "Invalid payload", details: parsedBody.error.flatten() },
+      { status: 400 },
+    );
+  }
+
+  const moduleId = parsedBody.data.moduleId ?? "";
+  const lessonId = parsedBody.data.lessonId ?? "";
+  const assetTypes = normalizeAssetTypes(parsedBody.data.assetType);
+  const limit = parsedBody.data.limit ?? 100;
 
   if (!assetTypes) {
     return NextResponse.json({ error: "Invalid assetType. Use video|animation|image|all." }, { status: 400 });
@@ -210,8 +222,10 @@ export async function POST(request: Request) {
     filters: {
       moduleId: moduleId || null,
       lessonId: lessonId || null,
-      assetType: body.assetType ?? "all",
+      assetType: parsedBody.data.assetType ?? "all",
       limit,
     },
   });
 }
+
+

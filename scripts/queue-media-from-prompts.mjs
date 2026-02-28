@@ -13,6 +13,7 @@ function parseArgs(argv) {
     lessonId: "",
     limit: 200,
     createdBy: "",
+    reviewedOnly: false,
   };
   const positional = [];
 
@@ -24,6 +25,7 @@ function parseArgs(argv) {
     else if (arg === "--lesson") options.lessonId = String(argv[index + 1] ?? "");
     else if (arg === "--limit") options.limit = Number(argv[index + 1] ?? 200);
     else if (arg === "--created-by") options.createdBy = String(argv[index + 1] ?? "");
+    else if (arg === "--reviewed-only") options.reviewedOnly = true;
     else if (!arg.startsWith("--")) positional.push(arg);
   }
 
@@ -49,7 +51,15 @@ function parseEnvFile(filePath) {
     const equalsIndex = trimmed.indexOf("=");
     if (equalsIndex < 0) continue;
     const key = trimmed.slice(0, equalsIndex).trim();
-    const value = trimmed.slice(equalsIndex + 1).trim();
+    let value = trimmed.slice(equalsIndex + 1).trim();
+    // Strip surrounding quotes ("..") or ('..')
+    if (
+      value.length >= 2 &&
+      ((value[0] === '"' && value[value.length - 1] === '"') ||
+        (value[0] === "'" && value[value.length - 1] === "'"))
+    ) {
+      value = value.slice(1, -1);
+    }
     values[key] = value;
   }
 
@@ -125,6 +135,7 @@ function flattenCandidates(promptPack, options) {
       for (const assetType of assetTypes) {
         const promptKey = assetTypeToPromptKey(assetType);
         const promptMeta = resolvePromptMeta(lesson, promptKey);
+        if (options.reviewedOnly && promptMeta.promptQaStatus !== "reviewed") continue;
         candidates.push({
           moduleId: moduleEntry.moduleId,
           lessonId: lesson.lessonId,
@@ -169,26 +180,42 @@ async function resolveCreatedByUserId(supabase, explicitUserId) {
 }
 
 async function fetchExistingKeys(supabase, assetTypes) {
-  const { data, error } = await supabase
-    .from("media_generation_jobs")
-    .select("module_id, lesson_id, asset_type, status")
-    .in("asset_type", assetTypes)
-    .in("status", ["queued", "running", "completed"]);
-
-  if (error) {
-    if (error.message.includes("Could not find the table")) {
-      throw new Error(
-        "Unable to query media_generation_jobs table. Run the latest supabase/schema.sql migrations first.",
-      );
-    }
-    throw new Error(`Unable to query existing media jobs: ${error.message}`);
-  }
-
+  // Cursor-paginated fetch — avoids the 1,000-row default cap that caused
+  // duplicate jobs when the table grew past 1,000 rows per asset type.
   const existing = new Set();
-  for (const row of data ?? []) {
-    if (!row.module_id || !row.lesson_id || !row.asset_type) continue;
-    existing.add(buildKey(row.module_id, row.lesson_id, row.asset_type));
+  let lastId = "00000000-0000-0000-0000-000000000000";
+
+  while (true) {
+    const { data, error } = await supabase
+      .from("media_generation_jobs")
+      .select("id, module_id, lesson_id, asset_type, status")
+      .in("asset_type", assetTypes)
+      .in("status", ["queued", "running", "completed"])
+      .gt("id", lastId)
+      .order("id", { ascending: true })
+      .limit(1000);
+
+    if (error) {
+      if (error.message.includes("Could not find the table")) {
+        throw new Error(
+          "Unable to query media_generation_jobs table. Run the latest supabase/schema.sql migrations first.",
+        );
+      }
+      throw new Error(`Unable to query existing media jobs: ${error.message}`);
+    }
+
+    for (const row of data ?? []) {
+      if (!row.lesson_id || !row.asset_type) continue;
+      // Key on lesson_id + asset_type (module_id may be null for older rows)
+      existing.add(buildKey(row.module_id ?? "", row.lesson_id, row.asset_type));
+      // Also key without module_id so we match regardless of module_id presence
+      existing.add(buildKey("", row.lesson_id, row.asset_type));
+    }
+
+    if (!data || data.length < 1000) break;
+    lastId = data[data.length - 1].id;
   }
+
   return existing;
 }
 
@@ -251,7 +278,9 @@ async function main() {
 
   for (const candidate of candidates) {
     const key = buildKey(candidate.moduleId, candidate.lessonId, candidate.assetType);
-    if (existingKeys.has(key)) {
+    // Also check without moduleId — older rows may have module_id=null
+    const keyNoMod = buildKey("", candidate.lessonId, candidate.assetType);
+    if (existingKeys.has(key) || existingKeys.has(keyNoMod)) {
       duplicates.push(candidate);
       continue;
     }
@@ -285,18 +314,18 @@ async function main() {
     asset_type: candidate.assetType,
     provider: candidate.provider,
     prompt: candidate.prompt,
-      status: "queued",
-      metadata: {
-        source: "LESSON-MEDIA-PROMPT-PACK",
-        queued_at: nowIso,
-        prompt_pack_schema_version: promptPack.schemaVersion ?? null,
-        prompt_pack_generated_at: promptPack.generatedAt ?? null,
-        prompt_key: candidate.promptKey,
-        prompt_source: candidate.promptSource,
-        prompt_version: candidate.promptVersion,
-        prompt_qa_status: candidate.promptQaStatus,
-      },
-    }));
+    status: "queued",
+    metadata: {
+      source: "LESSON-MEDIA-PROMPT-PACK",
+      queued_at: nowIso,
+      prompt_pack_schema_version: promptPack.schemaVersion ?? null,
+      prompt_pack_generated_at: promptPack.generatedAt ?? null,
+      prompt_key: candidate.promptKey,
+      prompt_source: candidate.promptSource,
+      prompt_version: candidate.promptVersion,
+      prompt_qa_status: candidate.promptQaStatus,
+    },
+  }));
 
   await insertRows(supabase, insertRowsPayload);
   console.log(`Inserted ${insertRowsPayload.length} media_generation_jobs row(s).`);

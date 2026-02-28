@@ -402,6 +402,10 @@ export default function Quiz({
   const handleSubmit = async () => {
     if (isAnswered || selectedOptionId === null) return;
 
+    const questionSkillId =
+      typeof currentQuestion.skillId === "string" && currentQuestion.skillId.length > 0
+        ? currentQuestion.skillId
+        : null;
     const isCorrect = selectedOptionId === currentQuestion.correctOptionId;
     if (isCorrect) {
       setScore((prev) => prev + 1);
@@ -422,7 +426,7 @@ export default function Quiz({
       lessonId: lesson.id,
       payload: {
         questionId: currentQuestion.id,
-        skillId: currentQuestion.skillId,
+        skillId: questionSkillId,
         questionIndex: currentQuestionIndex + 1,
         totalQuestions: lesson.questions.length,
         selectedOptionId,
@@ -434,28 +438,30 @@ export default function Quiz({
     });
 
     // Don't wait for the API call to finish to keep the UI snappy
-    fetch("/api/answers", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        skillId: currentQuestion.skillId,
-        isCorrect: isCorrect,
-      }),
-    }).catch((error) => {
-      // In a real app, you might want to handle this error, e.g., by
-      // adding the failed request to an offline queue.
-      // For now, we just log it.
-      console.error("Failed to save answer to server.", error);
-    });
+    if (questionSkillId) {
+      fetch("/api/answers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          skillId: questionSkillId,
+          isCorrect: isCorrect,
+        }),
+      }).catch((error) => {
+        // In a real app, you might want to handle this error, e.g., by
+        // adding the failed request to an offline queue.
+        // For now, we just log it.
+        console.error("Failed to save answer to server.", error);
+      });
+    }
 
     if (!isCorrect) {
       queueExamErrorLog({
         moduleId,
         lessonId: lesson.id,
         questionId: currentQuestion.id,
-        skillId: currentQuestion.skillId,
+        skillId: questionSkillId ?? undefined,
         errorType: "incorrect_answer",
         selectedOptionId,
         correctOptionId: currentQuestion.correctOptionId,

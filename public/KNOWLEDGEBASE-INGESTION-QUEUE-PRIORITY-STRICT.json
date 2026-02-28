@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-02-26T04:14:19.424Z",
+  "filters": {
+    "maxPerSource": 20,
+    "category": "all",
+    "domains": [
+      "electricians",
+      "microelectronics",
+      "micro-circuits",
+      "cpu-gpu-memory-design",
+      "electrical-engineering",
+      "civil-engineering",
+      "plumbing",
+      "hvac",
+      "meteorology",
+      "nursing",
+      "law",
+      "medicine"
+    ],
+    "strictDomains": true,
+    "allowGeneralCurriculumFallback": false,
+    "allowExternalLinks": false,
+    "harvestFile": "public\\KNOWLEDGEBASE-HARVEST-REPORT.json",
+    "includeYellow": false
+  },
+  "totals": {
+    "queued": 0,
+    "sources": 0,
+    "priority": {
+      "high": 0,
+      "medium": 0,
+      "normal": 0
+    },
+    "byLinkType": {},
+    "byDomain": {}
+  },
+  "queue": []
+}

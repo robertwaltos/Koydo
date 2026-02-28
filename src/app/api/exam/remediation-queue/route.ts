@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getAllLearningModules } from "@/lib/modules";
 import { buildAdaptiveRemediationQueue } from "@/lib/exam/remediation-queue";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 function parseLimit(value: string | null, fallback = 15) {
   if (!value) return fallback;
@@ -69,7 +70,7 @@ export async function GET(request: Request) {
       queue: remediation.queue,
     });
   } catch (error) {
-    console.error("Unexpected remediation queue error:", error);
+    console.error("Unexpected remediation queue error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

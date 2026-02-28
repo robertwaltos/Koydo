@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getLessonById } from "@/lib/modules";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 type FollowupPack = {
   summary?: string;
@@ -137,7 +138,7 @@ export async function GET() {
       days,
     });
   } catch (error) {
-    console.error("Unexpected AI weekly study-plan error:", error);
+    console.error("Unexpected AI weekly study-plan error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

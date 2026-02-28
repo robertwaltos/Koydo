@@ -1,0 +1,6049 @@
+{
+  "Arts": [
+    {
+      "title": "Marxism (Routledge Revivals)",
+      "creator": "Thomas Sowell",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001388.epub"
+    },
+    {
+      "title": "Schaum's Outline of Latin Grammar",
+      "creator": "Alan Fishbone",
+      "publisher": "McGraw-Hill",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "General",
+        "Language Arts & Disciplines",
+        "Foreign Language Study"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file020742.epub"
+    },
+    {
+      "title": "The Forgotten Presidents: Their Untold Constitutional Legacy",
+      "creator": "Michael J. Gerhardt",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013632.epub"
+    },
+    {
+      "title": "The Unlikely Disciple: A Sinner's Semester at America's Holiest University",
+      "creator": "Kevin Roose",
+      "publisher": "Grand Central Publishing",
+      "language": "en",
+      "subjects": [
+        "Autobiography",
+        "General",
+        "Biography & Autobiography",
+        "Biography"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008662.epub"
+    },
+    {
+      "title": "The Woman in White",
+      "creator": "Wilkie Collins; John Sutherland",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Fiction - General"
+      ],
+      "academic_score": 79.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008980.epub"
+    },
+    {
+      "title": "Batman and philosophy: the dark knight of the soul",
+      "creator": "Mark D. White; Robert Arp",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Literary Criticism",
+        "Social Science",
+        "Comics & Graphic Novels"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010964.epub"
+    },
+    {
+      "title": "Notebooks",
+      "creator": "Leonardo da Vinci; Irma Anne Richter; Thereza Wells",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "History",
+        "European"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010942.epub"
+    },
+    {
+      "title": "Social Engineering: The Art of Human Hacking",
+      "creator": "Christopher Hadnagy",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Social Science",
+        "Sociology"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005374.epub"
+    },
+    {
+      "title": "The Accidental Tourist",
+      "creator": "Anne Tyler; Jennifer Bassett",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file021626.epub"
+    },
+    {
+      "title": "The Oxford dictionary of modern quotations",
+      "creator": "Tony Augarde",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary Criticism",
+        "Reference",
+        "Dictionaries of quotations",
+        "Dictionaries"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012032.epub"
+    },
+    {
+      "title": "The pleasure instinct: why we crave adventure, chocolate, pheromones, and music",
+      "creator": "Gene Wallenstein",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Psychology",
+        "Family & Relationships",
+        "Social Science"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006783.epub"
+    },
+    {
+      "title": "BitTorrent for Dummies",
+      "creator": "Susannah Gardner; Kris Krug",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Programming",
+        "Internet"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012820.epub"
+    },
+    {
+      "title": "Breathing Lessons (1989 Pulitzer Prize)",
+      "creator": "Anne Tyler",
+      "publisher": "Rebound by Sagebrush",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004507.epub"
+    },
+    {
+      "title": "Collider",
+      "creator": "Paul Halpern",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Mathematics",
+        "Physics",
+        "Physics (General)"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011688.epub"
+    },
+    {
+      "title": "Creating Web sites bible",
+      "creator": "David A. Crowder; Andrew Bailey",
+      "publisher": "Wiley Pub.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Internet",
+        "Computer - Internet"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005710.epub"
+    },
+    {
+      "title": "Dear Mr. Buffett: What an Investor Learns 1,269 Miles From Wall Street",
+      "creator": "Janet M. Tavakoli",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002089.epub"
+    },
+    {
+      "title": "Forrest Gump",
+      "creator": "Winston Groom; Mark Hammer (Narrator)",
+      "publisher": "Borders / Recorded Books Unabridged",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013256.epub"
+    },
+    {
+      "title": "How to Talk to Anyone",
+      "creator": "Leil Lowndes",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Language Arts & Disciplines",
+        "Psychology"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010857.epub"
+    },
+    {
+      "title": "Resurrecting Pompeii",
+      "creator": "Estelle Lazer",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "Europe",
+        "Excavations (Archaeology)"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006667.epub"
+    },
+    {
+      "title": "The Paleo Diet",
+      "creator": "Loren Cordain",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Prehistoric peoples",
+        "Medical"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file023217.epub"
+    },
+    {
+      "title": "Treasure Island",
+      "creator": "Robert Louis Stevenson",
+      "publisher": "Macmillan",
+      "language": "en",
+      "subjects": [
+        "Bilingual Education",
+        "Education",
+        "Study Aids",
+        "Book Notes"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010575.epub"
+    },
+    {
+      "title": "I, Robot: Short Stories",
+      "creator": "Isaac Asimov",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Antiques & Collectibles",
+        "Science Fiction; American",
+        "Language Arts & Disciplines",
+        "Robots"
+      ],
+      "academic_score": 71.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002860.epub"
+    },
+    {
+      "title": "It Was the Best of Sentences, It Was the Worst of Sentences: A Writer's Guide to Crafting Killer Sentences",
+      "creator": "June Casagrande",
+      "publisher": "Random House of Canada",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "Language Arts & Disciplines",
+        "Composition & Creative Writing",
+        "Rhetoric"
+      ],
+      "academic_score": 71.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018814.epub"
+    },
+    {
+      "title": "Junie B. Jones is (almost) a flower girl",
+      "creator": "Barbara Park; Denise Brunkus",
+      "publisher": "Random House",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Reference",
+        "General",
+        "Humorous Stories"
+      ],
+      "academic_score": 71.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004733.epub"
+    },
+    {
+      "title": "A Course in Miracles",
+      "creator": "Dr. Helen Schucman",
+      "publisher": "Foundation for Inner Peace",
+      "language": "en",
+      "subjects": [
+        "New Age movement",
+        "Course in Miracles",
+        "Religion",
+        "Body; Mind & Spirit"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007802.epub"
+    },
+    {
+      "title": "Blood and Rage: A Cultural History of Terrorism",
+      "creator": "Michael Burleigh",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Political Ideologies",
+        "Political Freedom & Security"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000889.epub"
+    },
+    {
+      "title": "Catch Me If You Can",
+      "creator": "Frank W. Abagnale",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Biography & Autobiography",
+        "Swindlers and swindling",
+        "True Crime"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008684.epub"
+    },
+    {
+      "title": "Clean Break",
+      "creator": "Karen Stewart",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007848.epub"
+    },
+    {
+      "title": "Drive: The Surprising Truth About What Motivates Us",
+      "creator": "Daniel H. Pink",
+      "publisher": "Riverhead Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Finance",
+        "Self-Help"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005606.epub"
+    },
+    {
+      "title": "Even Faster Web Sites",
+      "creator": "Steve Souders",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Web / Page Design"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012597.epub"
+    }
+  ],
+  "Biology": [
+    {
+      "title": "The Federalist papers",
+      "creator": "Alexander Hamilton; James Madison; John Jay; Lawrence Goldman",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "General",
+        "United States",
+        "History"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004299.epub"
+    },
+    {
+      "title": "Rights of Man",
+      "creator": "Thomas Paine; Mark Philp",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Political",
+        "General",
+        "United States"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004129.epub"
+    },
+    {
+      "title": "The selfish gene",
+      "creator": "Richard Dawkins",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "SCIENCE",
+        "Mathematics",
+        "Animals",
+        "Life Sciences"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012078.epub"
+    },
+    {
+      "title": "The Selfish Gene",
+      "creator": "Richard Dawkins",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Science"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file023550.epub"
+    },
+    {
+      "title": "Frankenstein",
+      "creator": "Mary Wollstonecraft Shelley",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Science Fiction"
+      ],
+      "academic_score": 78.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010211.epub"
+    },
+    {
+      "title": "Notebooks",
+      "creator": "Leonardo da Vinci; Irma Anne Richter; Thereza Wells",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "History",
+        "European"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010942.epub"
+    },
+    {
+      "title": "The pleasure instinct: why we crave adventure, chocolate, pheromones, and music",
+      "creator": "Gene Wallenstein",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Psychology",
+        "Family & Relationships",
+        "Social Science"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006783.epub"
+    },
+    {
+      "title": "Kneadlessly Simple: Fabulous, Fuss-Free, No-Knead Breads",
+      "creator": "Nancy Baggett",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Cooking",
+        "Wine",
+        "Cookery"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011315.epub"
+    },
+    {
+      "title": "Roald Dahl's Fantastic Mr Fox: a play",
+      "creator": "Roald Dahl; Sally Reid",
+      "publisher": "Puffin",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Juvenile Nonfiction",
+        "Poetry",
+        "Poetry (Children's"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003906.epub"
+    },
+    {
+      "title": "Sophie's World",
+      "creator": "Nancy N. Rue",
+      "publisher": "Zonderkidz",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Juvenile Fiction",
+        "Children's Books"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011319.epub"
+    },
+    {
+      "title": "The Teachings of Don Juan: A Yaqui Way of Knowledge",
+      "creator": "Carlos Castaneda",
+      "publisher": "University of California Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Religion",
+        "Yaqui Indians"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008871.epub"
+    },
+    {
+      "title": "The Zombie Survival Guide: Complete Protection From the Living Dead",
+      "creator": "Max Brooks",
+      "publisher": "Random House Digital, Inc.",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Zombies",
+        "Almanacs",
+        "Parodies"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003187.epub"
+    },
+    {
+      "title": "The Zombie Survival Guide: Complete Protection From the Living Dead",
+      "creator": "Max Brooks",
+      "publisher": "Random House Digital, Inc.",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Zombies",
+        "Almanacs",
+        "Parodies"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007582.epub"
+    },
+    {
+      "title": "Capitalism: The Unknown Ideal",
+      "creator": "Ayn Rand",
+      "publisher": "Signet",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "Political Science",
+        "Social Science"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006993.epub"
+    },
+    {
+      "title": "Catching Fire: How Cooking Made Us Human",
+      "creator": "Richard Wrangham",
+      "publisher": "Basic Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "Technology & Engineering",
+        "Social Science"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012151.epub"
+    },
+    {
+      "title": "Green Smoothie Revolution: The Radical Leap Towards Natural Health",
+      "creator": "Victoria Boutenko",
+      "publisher": "North Atlantic Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Cooking",
+        "Nutrition",
+        "Health & Fitness"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018205.epub"
+    },
+    {
+      "title": "Healthy Sleep Habits, Happy Child",
+      "creator": "Marc Weissbluth; M.D.",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Family & Relationships",
+        "Medical",
+        "Parenting"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003661.epub"
+    },
+    {
+      "title": "Insectopedia",
+      "creator": "Hugh Raffles",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "Science",
+        "General",
+        "Life Sciences"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007177.epub"
+    },
+    {
+      "title": "The American Civil War and the wars of the Industrial Revolution",
+      "creator": "Brian Holden Reid; John Keegan",
+      "publisher": "Cassell",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "World War",
+        "1939-1945"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004935.epub"
+    },
+    {
+      "title": "The Awakening of Intelligence",
+      "creator": "Jiddu Krishnamurti",
+      "publisher": "Harper & Row",
+      "language": "en",
+      "subjects": [
+        "Religion",
+        "Philosophy"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002251.epub"
+    },
+    {
+      "title": "The interpretation of dreams",
+      "creator": "Sigmund Freud; James Strachey",
+      "publisher": "Avon",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Movements",
+        "Psychology",
+        "Self-Help"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012560.epub"
+    },
+    {
+      "title": "The Meaning of Tingo: And Other Extraordinary Words from Around the World",
+      "creator": "Adam Jacot De Boinod",
+      "publisher": "Penguin",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Humor",
+        "Language Arts & Disciplines",
+        "Language"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004184.epub"
+    },
+    {
+      "title": "The origin of species by means of natural selection, or, The preservation of favored races in the struggle for life",
+      "creator": "Charles Darwin",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Criticism",
+        "Literature - Classics",
+        "Philosophy"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005382.epub"
+    },
+    {
+      "title": "The Power of Now: A Guide to Spiritual Enlightenment",
+      "creator": "Eckhart Tolle",
+      "publisher": "",
+      "language": "en",
+      "subjects": [
+        "Self-help & personal development"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006350.epub"
+    },
+    {
+      "title": "The Purpose Driven Life: What on Earth Am I Here For?",
+      "creator": "Rick Warren",
+      "publisher": "Zondervan",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Religion",
+        "Christian Life",
+        "Christianity: General"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012164.epub"
+    },
+    {
+      "title": "The Revolution",
+      "creator": "Ron Paul",
+      "publisher": "Grand Central Publishing",
+      "language": "en",
+      "subjects": [
+        "Autobiography",
+        "Presidential candidates - United States",
+        "USA",
+        "Political"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010138.epub"
+    },
+    {
+      "title": "The Revolution",
+      "creator": "Ron Paul",
+      "publisher": "Grand Central Publishing",
+      "language": "en",
+      "subjects": [
+        "Autobiography",
+        "Political Science",
+        "Political",
+        "General"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012359.epub"
+    },
+    {
+      "title": "What's Wrong with Eating People?: 33 More Perplexing Philosophy Puzzles",
+      "creator": "Peter Cave",
+      "publisher": "Oneworld Publications",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Humor",
+        "English Satire And Humor",
+        "Philosophy"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011736.epub"
+    },
+    {
+      "title": "Why Do Men Have Nipples? Hundreds of Questions You'd Only Ask a Doctor After Your Third Martini",
+      "creator": "Mark Leyner;Billy Goldberg",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Science",
+        "Life Sciences",
+        "Medical"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file009517.epub"
+    },
+    {
+      "title": "You Did What?: Mad Plans and Great Historical Disasters",
+      "creator": "Bill Fawcett; Brian M. Thomsen; Brian Thomsen",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Reference",
+        "Miscellanea",
+        "General"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000161.epub"
+    }
+  ],
+  "Chemistry": [
+    {
+      "title": "Handbook of Electrical Engineering: For Practitioners in the Oil, Gas and Petrochemical Industry",
+      "creator": "Alan L. Sheldrake",
+      "publisher": "John Wiley & Sons Ltd",
+      "language": "en-US",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005201.epub"
+    },
+    {
+      "title": "Handbook of Electrical Engineering: For Practitioners in the Oil, Gas and Petrochemical Industry",
+      "creator": "Alan L. Sheldrake",
+      "publisher": "John Wiley & Sons Ltd",
+      "language": "en-US",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010626.epub"
+    },
+    {
+      "title": "Microreactors in Organic Chemistry and Catalysis",
+      "creator": "Wirth, Thomas",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005263.epub"
+    },
+    {
+      "title": "A Scanner Darkly",
+      "creator": "Philip K. Dick",
+      "publisher": "Vintage",
+      "language": "en",
+      "subjects": [
+        "Psychological",
+        "Science Fiction",
+        "Literary",
+        "Drug Abuse"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003326.epub"
+    },
+    {
+      "title": "The Appeal",
+      "creator": "John Grisham",
+      "publisher": "Random House Digital, Inc.",
+      "language": "en",
+      "subjects": [
+        "Thrillers",
+        "Legal",
+        "Mississippi",
+        "Chemical Industry - Waste Disposal - Environmental Aspects"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002950.epub"
+    },
+    {
+      "title": "The Wilt Alternative",
+      "creator": "Tom Sharpe",
+      "publisher": "Random House",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Humorous",
+        "Modern fiction"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013086.epub"
+    },
+    {
+      "title": "Gonzo Papers 1 - The Great Shark Hunt: Strange Tales From a Strange Time",
+      "creator": "Hunter S. Thompson",
+      "publisher": "Simon & Schuster",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Social Science",
+        "Biography & Autobiography",
+        "Political Science"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002790.epub"
+    },
+    {
+      "title": "The omnivore's dilemma: a natural history of four meals",
+      "creator": "Michael Pollan",
+      "publisher": "Penguin Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "Technology & Engineering",
+        "Social Science"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file009962.epub"
+    },
+    {
+      "title": "The Appeal",
+      "creator": "John Grisham",
+      "publisher": "Random House Publishing Group",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "American Contemporary Fiction - Individual Authors +",
+        "Legal"
+      ],
+      "academic_score": 57.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008098.epub"
+    },
+    {
+      "title": "Doctor Who: The Green Death",
+      "creator": "Malcolm Hulke",
+      "publisher": "Target Books",
+      "language": "en",
+      "subjects": [
+        "Science-Fiction:Doctor Who"
+      ],
+      "academic_score": 56.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file017252.epub"
+    },
+    {
+      "title": "Star Wars: The Final Prophecy",
+      "creator": "J. Gregory Keyes",
+      "publisher": "Del Rey",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Science fiction",
+        "Adventure"
+      ],
+      "academic_score": 56.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file021330.epub"
+    },
+    {
+      "title": "The Capitol Game",
+      "creator": "Brian Haig",
+      "publisher": "Hachette Digital, Inc.",
+      "language": "en",
+      "subjects": [
+        "Suspense",
+        "Action & Adventure",
+        "Thrillers",
+        "Corporations"
+      ],
+      "academic_score": 56.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002428.epub"
+    },
+    {
+      "title": "The Capitol Game",
+      "creator": "Brian Haig",
+      "publisher": "Hachette Digital, Inc.",
+      "language": "en",
+      "subjects": [
+        "Suspense",
+        "Action & Adventure",
+        "Thrillers",
+        "Corporations"
+      ],
+      "academic_score": 56.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007331.epub"
+    },
+    {
+      "title": "Baking Artisan Bread: 10 Expert Formulas for Baking Better Bread at Home",
+      "creator": "Ciril Hitz",
+      "publisher": "Quarry Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Methods",
+        "Cooking",
+        "Baking"
+      ],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file016051.epub"
+    },
+    {
+      "title": "Candle 79 Cookbook",
+      "creator": "Joy Pierson",
+      "publisher": "Ten Speed Press",
+      "language": "en-US",
+      "subjects": [],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003752.epub"
+    },
+    {
+      "title": "Candle 79 Cookbook",
+      "creator": "Joy Pierson",
+      "publisher": "Ten Speed Press",
+      "language": "en-US",
+      "subjects": [],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007928.epub"
+    },
+    {
+      "title": "Candle 79 Cookbook",
+      "creator": "Joy Pierson",
+      "publisher": "Ten Speed Press",
+      "language": "en-US",
+      "subjects": [],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010616.epub"
+    },
+    {
+      "title": "Occult Chemistry / Clairvoyant Observations on the Chemical Elements",
+      "creator": "C. W. Leadbeater",
+      "publisher": "",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010491.epub"
+    },
+    {
+      "title": "Salted: A Manifesto on the World's Most Essential Mineral, With Recipes",
+      "creator": "Mark Bitterman",
+      "publisher": "Ten Speed Press",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "General",
+        "Cooking",
+        "Specific Ingredients"
+      ],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file020710.epub"
+    },
+    {
+      "title": "The Disappearing Spoon: And Other True Tales of Madness, Love, and the History of the World from the Periodic Table of the Elements",
+      "creator": "Sam Kean",
+      "publisher": "Little, Brown and Company",
+      "language": "en",
+      "subjects": [
+        "General",
+        "SCIENCE",
+        "Mathematics",
+        "Popular science"
+      ],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012425.epub"
+    },
+    {
+      "title": "The New Art of Living Green",
+      "creator": "Erica Palmcrantz Aziz",
+      "publisher": "Skyhorse Publishing",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001349.epub"
+    },
+    {
+      "title": "The omnivore's dilemma: a natural history of four meals",
+      "creator": "Michael Pollan",
+      "publisher": "Penguin Books",
+      "language": "en",
+      "subjects": [
+        "Food"
+      ],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002101.epub"
+    },
+    {
+      "title": "As You Desire",
+      "creator": "Connie Brockway",
+      "publisher": "Dell",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Romance",
+        "Love Stories"
+      ],
+      "academic_score": 52.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file009338.epub"
+    },
+    {
+      "title": "Deep Six",
+      "creator": "Clive Cussler",
+      "publisher": "Simon and Schuster",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Juvenile Fiction",
+        "Fiction - Espionage"
+      ],
+      "academic_score": 52.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005457.epub"
+    },
+    {
+      "title": "Deep Six",
+      "creator": "Clive Cussler",
+      "publisher": "Simon and Schuster",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Thrillers",
+        "Suspense"
+      ],
+      "academic_score": 52.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005456.epub"
+    },
+    {
+      "title": "Red Storm Rising",
+      "creator": "Tom Clancy",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Cold War",
+        "Action & Adventure",
+        "FICTION",
+        "suspense"
+      ],
+      "academic_score": 52.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013046.epub"
+    },
+    {
+      "title": "The Final Prophecy (Star Wars: The New Jedi Order, Book 18)",
+      "creator": "Greg Keyes",
+      "publisher": "Del Rey",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Science Fiction",
+        "General",
+        "Science Fiction - General"
+      ],
+      "academic_score": 52.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006962.epub"
+    },
+    {
+      "title": "Animal, Vegetable, Miracle: A Year of Food Life",
+      "creator": "Barbara Kingsolver; Steven L. Hopp; Camille Kingsolver",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Literary",
+        "Biography & Autobiography",
+        "Social Science"
+      ],
+      "academic_score": 51.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file015450.epub"
+    },
+    {
+      "title": "Doctor Who: Dark Progeny",
+      "creator": "Steve Emmerson",
+      "publisher": "Bbc Pubns",
+      "language": "en",
+      "subjects": [
+        "Science-Fiction:Doctor Who"
+      ],
+      "academic_score": 51.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file017138.epub"
+    },
+    {
+      "title": "Doctor Who: Emotional Chemistry",
+      "creator": "Simon A. Forward",
+      "publisher": "BBC Worldwide",
+      "language": "en",
+      "subjects": [
+        "Science-Fiction:Doctor Who"
+      ],
+      "academic_score": 51.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001157.epub"
+    }
+  ],
+  "Computer Science": [
+    {
+      "title": "Social Engineering: The Art of Human Hacking",
+      "creator": "Christopher Hadnagy",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Social Science",
+        "Sociology"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005374.epub"
+    },
+    {
+      "title": "Apache Security",
+      "creator": "Ivan Ristic",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / Security"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002163.epub"
+    },
+    {
+      "title": "Apache Security",
+      "creator": "Ivan Ristic",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / Security"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007118.epub"
+    },
+    {
+      "title": "Apache Security",
+      "creator": "Ivan Ristic",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / Security"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010572.epub"
+    },
+    {
+      "title": "BitTorrent for Dummies",
+      "creator": "Susannah Gardner; Kris Krug",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Programming",
+        "Internet"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012820.epub"
+    },
+    {
+      "title": "Creating Web sites bible",
+      "creator": "David A. Crowder; Andrew Bailey",
+      "publisher": "Wiley Pub.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Internet",
+        "Computer - Internet"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005710.epub"
+    },
+    {
+      "title": "Essential SNMP, 2nd Edition",
+      "creator": "Douglas Mauro; Kevin Schmidt",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Networking / General"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006315.epub"
+    },
+    {
+      "title": "Raspberry Pi Projects for the Evil Genius",
+      "creator": "Donald Norris",
+      "publisher": "McGraw-Hill Education",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001188.epub"
+    },
+    {
+      "title": "bash Cookbook",
+      "creator": "Carl Albing",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Operating Systems / UNIX"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002164.epub"
+    },
+    {
+      "title": "bash Cookbook",
+      "creator": "Carl Albing",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Operating Systems / UNIX"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007119.epub"
+    },
+    {
+      "title": "bash Cookbook",
+      "creator": "Carl Albing",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Operating Systems / UNIX"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010590.epub"
+    },
+    {
+      "title": "Beginning Lua Programming",
+      "creator": "Kurt Jung",
+      "publisher": "Wiley Publishing, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001070.epub"
+    },
+    {
+      "title": "Beginning Lua Programming",
+      "creator": "Kurt Jung",
+      "publisher": "Wiley Publishing, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001071.epub"
+    },
+    {
+      "title": "Even Faster Web Sites",
+      "creator": "Steve Souders",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Web / Page Design"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012597.epub"
+    },
+    {
+      "title": "Excel VBA Programming For Dummies, 3rd Edition",
+      "creator": "John Walkenbach",
+      "publisher": "John Wiley and Sons, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008628.epub"
+    },
+    {
+      "title": "jQuery Cookbook",
+      "creator": "Cody Lindley",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming Languages / JavaScript"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002177.epub"
+    },
+    {
+      "title": "jQuery Cookbook",
+      "creator": "Cody Lindley",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming Languages / JavaScript"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007132.epub"
+    },
+    {
+      "title": "jQuery Cookbook",
+      "creator": "Cody Lindley",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming Languages / JavaScript"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010652.epub"
+    },
+    {
+      "title": "Microsoft® Expression® Web Step by Step",
+      "creator": "Chris Leeds",
+      "publisher": "",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Web / Site Design"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002159.epub"
+    },
+    {
+      "title": "Microsoft® Expression® Web Step by Step",
+      "creator": "Chris Leeds",
+      "publisher": "",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Web / Site Design"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007115.epub"
+    },
+    {
+      "title": "Microsoft® Expression® Web Step by Step",
+      "creator": "Chris Leeds",
+      "publisher": "",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Web / Site Design"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010643.epub"
+    },
+    {
+      "title": "Network Warrior",
+      "creator": "Gary A. Donahue",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Networking / General"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002188.epub"
+    },
+    {
+      "title": "Network Warrior",
+      "creator": "Gary A. Donahue",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Networking / General"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007142.epub"
+    },
+    {
+      "title": "Network Warrior",
+      "creator": "Gary A. Donahue",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Networking / General"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010662.epub"
+    },
+    {
+      "title": "Programming the Raspberry Pi™: Getting Started with Python",
+      "creator": "Simon Monk",
+      "publisher": "McGraw-Hill Companies",
+      "language": "en",
+      "subjects": [
+        "-"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001189.epub"
+    },
+    {
+      "title": "Twitter Wit: Brilliance in 140 Characters Or Less",
+      "creator": "Nick Douglas",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Humor",
+        "Social Science",
+        "Satire And Humor"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011559.epub"
+    },
+    {
+      "title": "Alone Together: Why We Expect More From Technology and Less From Each Other",
+      "creator": "Sherry Turkle",
+      "publisher": "Basic Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Sociology",
+        "Computers"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002110.epub"
+    },
+    {
+      "title": "Apache Cookbook",
+      "creator": "Rich Bowen",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / General"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002162.epub"
+    },
+    {
+      "title": "Apache Cookbook",
+      "creator": "Rich Bowen",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / General"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007117.epub"
+    },
+    {
+      "title": "Apache Cookbook",
+      "creator": "Rich Bowen",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / General"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010584.epub"
+    }
+  ],
+  "Economics & Business": [
+    {
+      "title": "Marxism (Routledge Revivals)",
+      "creator": "Thomas Sowell",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001388.epub"
+    },
+    {
+      "title": "Business Analysis For Dummies",
+      "creator": "Kupe Kupersmith",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010612.epub"
+    },
+    {
+      "title": "Cannibal Capitalism",
+      "creator": "Michael C. Hill",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007846.epub"
+    },
+    {
+      "title": "It's the Customer, Stupid!",
+      "creator": "Michael A Aun",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000127.epub"
+    },
+    {
+      "title": "School choice or best systems: what improves education?",
+      "creator": "Margaret C. Wang; Herbert J. Walberg",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "Philosophy & Social Aspects",
+        "Case studies"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010879.epub"
+    },
+    {
+      "title": "Confessions of an Event Planner: Case Studies From the Real World of Events--How to Handle the Unexpected and How to Be a Master of Discretion",
+      "creator": "Judy Allen",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Planning",
+        "Industries"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010379.epub"
+    },
+    {
+      "title": "The Accidental Tourist",
+      "creator": "Anne Tyler; Jennifer Bassett",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file021626.epub"
+    },
+    {
+      "title": "BitTorrent for Dummies",
+      "creator": "Susannah Gardner; Kris Krug",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Programming",
+        "Internet"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012820.epub"
+    },
+    {
+      "title": "Dear Mr. Buffett: What an Investor Learns 1,269 Miles From Wall Street",
+      "creator": "Janet M. Tavakoli",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002089.epub"
+    },
+    {
+      "title": "How to Talk to Anyone",
+      "creator": "Leil Lowndes",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Language Arts & Disciplines",
+        "Psychology"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010857.epub"
+    },
+    {
+      "title": "Numbers Rule Your World: The Hidden Influence of Probabilities and Statistics on Everything You Do",
+      "creator": "Kaiser Fung",
+      "publisher": "McGraw-Hill",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Social Science",
+        "Mathematics"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008489.epub"
+    },
+    {
+      "title": "The Complete Social Media Community Manager's Guide: Essential Tools and Tactics for Business Success",
+      "creator": "Weintraub, Marty",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010692.epub"
+    },
+    {
+      "title": "The Four Pillars of Investing: Lessons for Building a Winning Portfolio",
+      "creator": "William J. Bernstein",
+      "publisher": "McGraw-Hill Professional",
+      "language": "en",
+      "subjects": [
+        "Business & Economics",
+        "Investments & Securities",
+        "Finance",
+        "Investment Analysis"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002119.epub"
+    },
+    {
+      "title": "The Little Book of Economics: How the Economy Works in the Real World",
+      "creator": "G. Ip; Mohamed El-Erian",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "Business & Economics",
+        "Theory"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002141.epub"
+    },
+    {
+      "title": "A Wholly Different Way of Living",
+      "creator": "Jiddu Krishnamurti",
+      "publisher": "Krishnamurti Foundation",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002270.epub"
+    },
+    {
+      "title": "Debt-Free U: How I Paid for an Outstanding College Education Without Loans, Scholarships, or Mooching Off My Parents",
+      "creator": "Zac Bissonnette; Andrew Tobias",
+      "publisher": "Penguin Group USA",
+      "language": "en",
+      "subjects": [
+        "United States",
+        "General",
+        "Business & Economics",
+        "Investments & Securities"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file017020.epub"
+    },
+    {
+      "title": "Disciplined Entrepreneurship",
+      "creator": "Bill Aulet",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005200.epub"
+    },
+    {
+      "title": "Drive: The Surprising Truth About What Motivates Us",
+      "creator": "Daniel H. Pink",
+      "publisher": "Riverhead Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Finance",
+        "Self-Help"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005606.epub"
+    },
+    {
+      "title": "I.O.U.S.A.",
+      "creator": "Addison Wiggin; Kate Incontrera; Dorianne Perrucci",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "United States",
+        "Business & Economics"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000086.epub"
+    },
+    {
+      "title": "Instant Interviews: 101 Ways to Get the Best Job of Your Life",
+      "creator": "Jeffrey G. Allen",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Employment interviewing",
+        "Resumes"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002146.epub"
+    },
+    {
+      "title": "Microeconomics, 4th Edition",
+      "creator": "David Besanko",
+      "publisher": "John Wiley & Sons, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001989.epub"
+    },
+    {
+      "title": "Money Mischief",
+      "creator": "Milton Friedman",
+      "publisher": "Houghton Mifflin Harcourt",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001230.epub"
+    },
+    {
+      "title": "No Logo",
+      "creator": "Naomi Klein",
+      "publisher": "Vintage Canada",
+      "language": "en",
+      "subjects": [
+        "Brand name products",
+        "Reference",
+        "Marketing",
+        "General"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011325.epub"
+    },
+    {
+      "title": "Organise Your Paperwork",
+      "creator": "MaryAnne Bennie",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005264.epub"
+    },
+    {
+      "title": "Professional Services Marketing: How the Best Firms Build Premier Brands, Thriving Lead Generation Engines, and Cultures of Business Development Success",
+      "creator": "Mike Schultz",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Industries",
+        "Marketing"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001132.epub"
+    },
+    {
+      "title": "Professional Services Marketing: How the Best Firms Build Premier Brands, Thriving Lead Generation Engines, and Cultures of Business Development Success",
+      "creator": "Mike Schultz",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Industries",
+        "Marketing"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001131.epub"
+    },
+    {
+      "title": "Red Capitalism: The Fragile Financial Foundation of China's Extraordinary Rise",
+      "creator": "Carl E. Walter; Fraser J. T. Howie",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "Business & Economics",
+        "Finance",
+        "Economics",
+        "Economic History"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002082.epub"
+    },
+    {
+      "title": "The Devil's Casino: Friendship, Betrayal, and the High Stakes Games Played Inside Lehman Brothers",
+      "creator": "Vicky Ward",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "Investments & Securities",
+        "Banks & Banking",
+        "Business & Economics",
+        "Finance"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004150.epub"
+    },
+    {
+      "title": "The Lean Entrepreneur: How Visionaries Create Products, Innovate with New Ventures, and Disrupt Markets",
+      "creator": "Brant Cooper",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010690.epub"
+    },
+    {
+      "title": "Unleashing the Power of Rubber Bands: Lessons in Non-Linear Leadership",
+      "creator": "Nancy Ortberg",
+      "publisher": "Tyndale House Publishers, Inc.",
+      "language": "en",
+      "subjects": [
+        "Religion",
+        "Christianity",
+        "Finance",
+        "Professional Growth"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003223.epub"
+    }
+  ],
+  "English & Literature": [
+    {
+      "title": "Marxism (Routledge Revivals)",
+      "creator": "Thomas Sowell",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001388.epub"
+    },
+    {
+      "title": "Schaum's Outline of Latin Grammar",
+      "creator": "Alan Fishbone",
+      "publisher": "McGraw-Hill",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "General",
+        "Language Arts & Disciplines",
+        "Foreign Language Study"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file020742.epub"
+    },
+    {
+      "title": "The Federalist papers",
+      "creator": "Alexander Hamilton; James Madison; John Jay; Lawrence Goldman",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "General",
+        "United States",
+        "History"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004299.epub"
+    },
+    {
+      "title": "Principal writings on religion: including Dialogues concerning natural religion and The natural history of religion",
+      "creator": "David Hume; John Charles Addison Gaskin",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Modern",
+        "Religious"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file015217.epub"
+    },
+    {
+      "title": "Rights of Man",
+      "creator": "Thomas Paine; Mark Philp",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Political",
+        "General",
+        "United States"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004129.epub"
+    },
+    {
+      "title": "The Woman in White",
+      "creator": "Wilkie Collins; John Sutherland",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Fiction - General"
+      ],
+      "academic_score": 79.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008980.epub"
+    },
+    {
+      "title": "Frankenstein",
+      "creator": "Mary Wollstonecraft Shelley",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Science Fiction"
+      ],
+      "academic_score": 78.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010211.epub"
+    },
+    {
+      "title": "Gulliver's Travels",
+      "creator": "Jonathan Swift",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fantasy",
+        "Classics",
+        "Action & Adventure",
+        "Satire"
+      ],
+      "academic_score": 77.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002964.epub"
+    },
+    {
+      "title": "Batman and philosophy: the dark knight of the soul",
+      "creator": "Mark D. White; Robert Arp",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Literary Criticism",
+        "Social Science",
+        "Comics & Graphic Novels"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010964.epub"
+    },
+    {
+      "title": "Confessions of an Event Planner: Case Studies From the Real World of Events--How to Handle the Unexpected and How to Be a Master of Discretion",
+      "creator": "Judy Allen",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Planning",
+        "Industries"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010379.epub"
+    },
+    {
+      "title": "Notebooks",
+      "creator": "Leonardo da Vinci; Irma Anne Richter; Thereza Wells",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "History",
+        "European"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010942.epub"
+    },
+    {
+      "title": "The Accidental Tourist",
+      "creator": "Anne Tyler; Jennifer Bassett",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file021626.epub"
+    },
+    {
+      "title": "The Oxford dictionary of modern quotations",
+      "creator": "Tony Augarde",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary Criticism",
+        "Reference",
+        "Dictionaries of quotations",
+        "Dictionaries"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012032.epub"
+    },
+    {
+      "title": "How to Talk to Anyone",
+      "creator": "Leil Lowndes",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Language Arts & Disciplines",
+        "Psychology"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010857.epub"
+    },
+    {
+      "title": "Man From the South and Other Stories",
+      "creator": "Roald Dahl",
+      "publisher": "Pearson Elt",
+      "language": "en",
+      "subjects": [
+        "Biography & Autobiography",
+        "Children's Books"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003402.epub"
+    },
+    {
+      "title": "Visions of Awakening Space and Time: Dogen and the Lotus Sutra",
+      "creator": "Taigen Dan Leighton",
+      "publisher": "Oxford University Press US",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Religion",
+        "Philosophy",
+        "Zen Buddhism"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004093.epub"
+    },
+    {
+      "title": "I, Robot: Short Stories",
+      "creator": "Isaac Asimov",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Antiques & Collectibles",
+        "Science Fiction; American",
+        "Language Arts & Disciplines",
+        "Robots"
+      ],
+      "academic_score": 71.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002860.epub"
+    },
+    {
+      "title": "It Was the Best of Sentences, It Was the Worst of Sentences: A Writer's Guide to Crafting Killer Sentences",
+      "creator": "June Casagrande",
+      "publisher": "Random House of Canada",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "Language Arts & Disciplines",
+        "Composition & Creative Writing",
+        "Rhetoric"
+      ],
+      "academic_score": 71.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018814.epub"
+    },
+    {
+      "title": "Junie B. Jones is (almost) a flower girl",
+      "creator": "Barbara Park; Denise Brunkus",
+      "publisher": "Random House",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Reference",
+        "General",
+        "Humorous Stories"
+      ],
+      "academic_score": 71.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004733.epub"
+    },
+    {
+      "title": "Blood and Rage: A Cultural History of Terrorism",
+      "creator": "Michael Burleigh",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Political Ideologies",
+        "Political Freedom & Security"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000889.epub"
+    },
+    {
+      "title": "Detect Deceit: How to Become a Human Lie Detector in Under 60 Minutes",
+      "creator": "David Craig",
+      "publisher": "Skyhorse Publishing",
+      "language": "en",
+      "subjects": [
+        "Psychology",
+        "Reference",
+        "Cognitive Psychology",
+        "Science"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000016.epub"
+    },
+    {
+      "title": "My Spiritual Journey",
+      "creator": "Dalai Lama; Sofia Stril-Rever",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Biography",
+        "Biography & Autobiography"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005752.epub"
+    },
+    {
+      "title": "Niubi!: The Real Chinese You Were Never Taught in School",
+      "creator": "Eveline Chao; Chris Murphy",
+      "publisher": "Penguin Group USA",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Humor",
+        "China",
+        "Foreign Language Study"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006674.epub"
+    },
+    {
+      "title": "Postmodernism, Or, the Cultural Logic of Late Capitalism",
+      "creator": "Fredric Jameson",
+      "publisher": "Duke University Press",
+      "language": "en",
+      "subjects": [
+        "Film & Video",
+        "Performing Arts",
+        "Modern",
+        "History & Criticism"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000098.epub"
+    },
+    {
+      "title": "You're Not Fooling Anyone When You Take Your Laptop to a Coffee Shop: Scalzi on Writing",
+      "creator": "John Scalzi",
+      "publisher": "Subterranean Press",
+      "language": "en",
+      "subjects": [
+        "Education & Reference",
+        "Writing; Research & Publishing Guides",
+        "writing",
+        "Writing Skills"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010513.epub"
+    },
+    {
+      "title": "You're Not Fooling Anyone When You Take Your Laptop to a Coffee Shop: Scalzi on Writing",
+      "creator": "John Scalzi",
+      "publisher": "Subterranean Press",
+      "language": "en",
+      "subjects": [
+        "Education & Reference",
+        "Writing",
+        "Research & Publishing Guides",
+        "writing"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024904.epub"
+    },
+    {
+      "title": "Louise de la Valliere",
+      "creator": "Alexandre Dumas",
+      "publisher": "Oxford University Press, USA",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Historical",
+        "General",
+        "Historical - General"
+      ],
+      "academic_score": 68.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004321.epub"
+    },
+    {
+      "title": "Strange Case of Dr Jekyll and Mr Hyde and Other Tales",
+      "creator": "Robert Louis Stevenson",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "Fiction - General",
+        "London (England)"
+      ],
+      "academic_score": 68.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012251.epub"
+    },
+    {
+      "title": "The Man in the Iron Mask",
+      "creator": "Alexandre Dumas; David Coward",
+      "publisher": "Oxford University Press, USA",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Fiction - General"
+      ],
+      "academic_score": 68.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004327.epub"
+    },
+    {
+      "title": "Achebe's Things fall apart",
+      "creator": "Ode Ogede",
+      "publisher": "Continuum",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Criticism",
+        "Literary Criticism",
+        "Literature - Classics"
+      ],
+      "academic_score": 67.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011570.epub"
+    }
+  ],
+  "Exam Prep": [
+    {
+      "title": "Business Analysis For Dummies",
+      "creator": "Kupe Kupersmith",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010612.epub"
+    },
+    {
+      "title": "Cannibal Capitalism",
+      "creator": "Michael C. Hill",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007846.epub"
+    },
+    {
+      "title": "It's the Customer, Stupid!",
+      "creator": "Michael A Aun",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000127.epub"
+    },
+    {
+      "title": "Prescription Alternatives: Hundreds of Safe, Natural, Prescription-Free Remedies to Restore and Maintain Your Health",
+      "creator": "Earl Mindell; Virginia Hopkins",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "Health & Fitness",
+        "Medical",
+        "Health",
+        "Fitness"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006345.epub"
+    },
+    {
+      "title": "Principal writings on religion: including Dialogues concerning natural religion and The natural history of religion",
+      "creator": "David Hume; John Charles Addison Gaskin",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Modern",
+        "Religious"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file015217.epub"
+    },
+    {
+      "title": "School choice or best systems: what improves education?",
+      "creator": "Margaret C. Wang; Herbert J. Walberg",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "Philosophy & Social Aspects",
+        "Case studies"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010879.epub"
+    },
+    {
+      "title": "The Original Curse: Did the Cubs Throw the 1918 World Series to Babe Ruth's Red Sox and Incite the Black Sox Scandal?",
+      "creator": "Sean Deveney",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Biography & Autobiography",
+        "United States",
+        "History"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012489.epub"
+    },
+    {
+      "title": "The Original Curse: Did the Cubs Throw the 1918 World Series to Babe Ruth's Red Sox and Incite the Black Sox Scandal?",
+      "creator": "Sean Deveney",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Biography & Autobiography",
+        "United States",
+        "History"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file023192.epub"
+    },
+    {
+      "title": "The Unlikely Disciple: A Sinner's Semester at America's Holiest University",
+      "creator": "Kevin Roose",
+      "publisher": "Grand Central Publishing",
+      "language": "en",
+      "subjects": [
+        "Autobiography",
+        "General",
+        "Biography & Autobiography",
+        "Biography"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008662.epub"
+    },
+    {
+      "title": "The Woman in White",
+      "creator": "Wilkie Collins; John Sutherland",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Fiction - General"
+      ],
+      "academic_score": 79.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008980.epub"
+    },
+    {
+      "title": "Frankenstein",
+      "creator": "Mary Wollstonecraft Shelley",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Science Fiction"
+      ],
+      "academic_score": 78.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010211.epub"
+    },
+    {
+      "title": "Gulliver's Travels",
+      "creator": "Jonathan Swift",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fantasy",
+        "Classics",
+        "Action & Adventure",
+        "Satire"
+      ],
+      "academic_score": 77.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002964.epub"
+    },
+    {
+      "title": "Batman and philosophy: the dark knight of the soul",
+      "creator": "Mark D. White; Robert Arp",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Literary Criticism",
+        "Social Science",
+        "Comics & Graphic Novels"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010964.epub"
+    },
+    {
+      "title": "Notebooks",
+      "creator": "Leonardo da Vinci; Irma Anne Richter; Thereza Wells",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "History",
+        "European"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010942.epub"
+    },
+    {
+      "title": "Social Engineering: The Art of Human Hacking",
+      "creator": "Christopher Hadnagy",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Social Science",
+        "Sociology"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005374.epub"
+    },
+    {
+      "title": "The pleasure instinct: why we crave adventure, chocolate, pheromones, and music",
+      "creator": "Gene Wallenstein",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Psychology",
+        "Family & Relationships",
+        "Social Science"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006783.epub"
+    },
+    {
+      "title": "A History of God: the 4000-year quest of Judaism, Christianity, and Islam",
+      "creator": "Karen Armstrong",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "Reference",
+        "Religion"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001901.epub"
+    },
+    {
+      "title": "America Bewitched: Witchcraft After Salem",
+      "creator": "Owen Davies",
+      "publisher": "OUP Oxford",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Witchcraft & Wicca",
+        "Religion",
+        "History"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013633.epub"
+    },
+    {
+      "title": "An Environmental History of Ancient Greece and Rome (Key Themes in Ancient History)",
+      "creator": "Thommen, Lukas",
+      "publisher": "Cambridge University Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005202.epub"
+    },
+    {
+      "title": "Apache Security",
+      "creator": "Ivan Ristic",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / Security"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002163.epub"
+    },
+    {
+      "title": "Apache Security",
+      "creator": "Ivan Ristic",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / Security"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007118.epub"
+    },
+    {
+      "title": "Apache Security",
+      "creator": "Ivan Ristic",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Internet / Security"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010572.epub"
+    },
+    {
+      "title": "Batman and Philosophy",
+      "creator": "Mark D. White",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Batman (Fictious Character)",
+        "Philosophy"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003165.epub"
+    },
+    {
+      "title": "Batman and Philosophy",
+      "creator": "Mark D. White",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Batman (Fictious Character)",
+        "Philosophy"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007570.epub"
+    },
+    {
+      "title": "BitTorrent for Dummies",
+      "creator": "Susannah Gardner; Kris Krug",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Programming",
+        "Internet"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012820.epub"
+    },
+    {
+      "title": "Creating Web sites bible",
+      "creator": "David A. Crowder; Andrew Bailey",
+      "publisher": "Wiley Pub.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Computers",
+        "Internet",
+        "Computer - Internet"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005710.epub"
+    },
+    {
+      "title": "Dear Mr. Buffett: What an Investor Learns 1,269 Miles From Wall Street",
+      "creator": "Janet M. Tavakoli",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002089.epub"
+    },
+    {
+      "title": "Essential SNMP, 2nd Edition",
+      "creator": "Douglas Mauro; Kevin Schmidt",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Networking / General"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006315.epub"
+    },
+    {
+      "title": "Forrest Gump",
+      "creator": "Winston Groom; Mark Hammer (Narrator)",
+      "publisher": "Borders / Recorded Books Unabridged",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013256.epub"
+    },
+    {
+      "title": "Handbook of Electrical Engineering: For Practitioners in the Oil, Gas and Petrochemical Industry",
+      "creator": "Alan L. Sheldrake",
+      "publisher": "John Wiley & Sons Ltd",
+      "language": "en-US",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005201.epub"
+    }
+  ],
+  "Foreign Languages": [
+    {
+      "title": "Schaum's Outline of Latin Grammar",
+      "creator": "Alan Fishbone",
+      "publisher": "McGraw-Hill",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "General",
+        "Language Arts & Disciplines",
+        "Foreign Language Study"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file020742.epub"
+    },
+    {
+      "title": "Rights of Man",
+      "creator": "Thomas Paine; Mark Philp",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Political",
+        "General",
+        "United States"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004129.epub"
+    },
+    {
+      "title": "The Indian Ocean",
+      "creator": "Michael Pearson",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Asia",
+        "World"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000907.epub"
+    },
+    {
+      "title": "Visions of Awakening Space and Time: Dogen and the Lotus Sutra",
+      "creator": "Taigen Dan Leighton",
+      "publisher": "Oxford University Press US",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Religion",
+        "Philosophy",
+        "Zen Buddhism"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004093.epub"
+    },
+    {
+      "title": "I, Robot: Short Stories",
+      "creator": "Isaac Asimov",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Antiques & Collectibles",
+        "Science Fiction; American",
+        "Language Arts & Disciplines",
+        "Robots"
+      ],
+      "academic_score": 71.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002860.epub"
+    },
+    {
+      "title": "Mental Floss Presents Instant Knowledge",
+      "creator": "Will Pearson",
+      "publisher": "HarperCollins Publishers",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Curiosities & Wonders",
+        "Reference"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013204.epub"
+    },
+    {
+      "title": "Niubi!: The Real Chinese You Were Never Taught in School",
+      "creator": "Eveline Chao; Chris Murphy",
+      "publisher": "Penguin Group USA",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Humor",
+        "China",
+        "Foreign Language Study"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006674.epub"
+    },
+    {
+      "title": "Louise de la Valliere",
+      "creator": "Alexandre Dumas",
+      "publisher": "Oxford University Press, USA",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Historical",
+        "General",
+        "Historical - General"
+      ],
+      "academic_score": 68.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004321.epub"
+    },
+    {
+      "title": "The Man in the Iron Mask",
+      "creator": "Alexandre Dumas; David Coward",
+      "publisher": "Oxford University Press, USA",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Fiction - General"
+      ],
+      "academic_score": 68.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004327.epub"
+    },
+    {
+      "title": "Around the World in 80 Days",
+      "creator": "Jules Verne",
+      "publisher": "Tribeca Books",
+      "language": "en",
+      "subjects": [
+        "Classics",
+        "Travel",
+        "Literary Criticism",
+        "French"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002992.epub"
+    },
+    {
+      "title": "Around the World in 80 Days",
+      "creator": "Jules Verne",
+      "publisher": "Tribeca Books",
+      "language": "en",
+      "subjects": [
+        "Classics",
+        "Travel",
+        "Literary Criticism",
+        "French"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007499.epub"
+    },
+    {
+      "title": "Battle Hymn of the Tiger Mother",
+      "creator": "Amy Chua",
+      "publisher": "Penguin Press HC, The",
+      "language": "en",
+      "subjects": [
+        "Autobiography"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008933.epub"
+    },
+    {
+      "title": "Fire Your Boss",
+      "creator": "Stephen M. Pollan; Mark Levine",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Self-Help",
+        "General",
+        "Human Resources & Personnel Management",
+        "Success"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file017811.epub"
+    },
+    {
+      "title": "The 2012 Story: The Myths, Fallacies, and Truth Behind the Most Intriguing Date in History",
+      "creator": "John Major Jenkins",
+      "publisher": "Penguin Group USA",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "New Age",
+        "Body"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008158.epub"
+    },
+    {
+      "title": "The Age of Innocence",
+      "creator": "Edith Wharton",
+      "publisher": "Icon Health",
+      "language": "en",
+      "subjects": [
+        "German",
+        "Foreign Language Study"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006382.epub"
+    },
+    {
+      "title": "The Harney & Sons Guide to Tea",
+      "creator": "Michael Harney",
+      "publisher": "Penguin Press",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "General",
+        "Cooking",
+        "Tea tasting"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000896.epub"
+    },
+    {
+      "title": "The Marne, 1914: The Opening of World War I and the Battle That Changed the World",
+      "creator": "Holger H. Herwig",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Military",
+        "History",
+        "World War I",
+        "Marne"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007104.epub"
+    },
+    {
+      "title": "The Meaning of Tingo: And Other Extraordinary Words from Around the World",
+      "creator": "Adam Jacot De Boinod",
+      "publisher": "Penguin",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Humor",
+        "Language Arts & Disciplines",
+        "Language"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004184.epub"
+    },
+    {
+      "title": "The White War: Life and Death on the Italian Front 1915-1919",
+      "creator": "Mark Thompson",
+      "publisher": "Basic Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "War",
+        "Military",
+        "History - Military"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011005.epub"
+    },
+    {
+      "title": "Gentlemen prefer blondes",
+      "creator": "Anita Loos",
+      "publisher": "Pearson Education",
+      "language": "en",
+      "subjects": [
+        "Loos",
+        "Anita",
+        "Millionaries",
+        "Humorous stories"
+      ],
+      "academic_score": 62.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004433.epub"
+    },
+    {
+      "title": "Alligator Bayou",
+      "creator": "Donna Jo Napoli",
+      "publisher": "Random House Children's Books",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "United States",
+        "People & Places"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file015328.epub"
+    },
+    {
+      "title": "For love of evil",
+      "creator": "Piers Anthony",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Language Arts & Disciplines",
+        "Language"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011865.epub"
+    },
+    {
+      "title": "Gabriel García Márquez: a life",
+      "creator": "Gerald Martin",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Autobiography",
+        "General",
+        "Biography & Autobiography"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006828.epub"
+    },
+    {
+      "title": "A history of Zionism",
+      "creator": "Walter Laqueur",
+      "publisher": "Tauris Parke Paperbacks",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Jewish",
+        "20th century",
+        "History"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013182.epub"
+    },
+    {
+      "title": "Be Different: Adventures of a Free-Range Aspergian With Practical Advice for Aspergians, Misfits, Families & Teachers",
+      "creator": "John Elder Robison",
+      "publisher": "Crown Archetype",
+      "language": "en",
+      "subjects": [
+        "Self-Help",
+        "General",
+        "Family & Relationships",
+        "Medical"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file016026.epub"
+    },
+    {
+      "title": "Bonhoeffer: Pastor, Martyr, Prophet, Spy: A Righteous Gentile vs. The Third Reich",
+      "creator": "Eric Metaxas",
+      "publisher": "Thomas Nelson Inc",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Literary",
+        "American",
+        "Literary Criticism"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002083.epub"
+    },
+    {
+      "title": "Catherine the Great",
+      "creator": "Simon Dixon",
+      "publisher": "Ecco",
+      "language": "en",
+      "subjects": [
+        "Historical",
+        "General",
+        "Biography & Autobiography",
+        "Women"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012564.epub"
+    },
+    {
+      "title": "Citizen Soldiers: The U.S. Army from the Normandy Beaches to the Buldge to the Surrender of Germany Jun 7, 1994-May 7, 1945",
+      "creator": "Stephen E. Ambrose",
+      "publisher": "Demco Media",
+      "language": "en",
+      "subjects": [
+        "Biography & Autobiography",
+        "United States",
+        "World War",
+        "1939-1945"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008746.epub"
+    },
+    {
+      "title": "Country Driving: A Journey Through China from Farm to Factory",
+      "creator": "Peter Hessler",
+      "publisher": "Harper",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "China",
+        "Travel"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011750.epub"
+    },
+    {
+      "title": "Curse + Berate in 69+ Languages",
+      "creator": "R. V. Branham",
+      "publisher": "Soft Skull Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Foreign Language Study",
+        "Words",
+        "Obscene"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file016788.epub"
+    }
+  ],
+  "General Education": [
+    {
+      "title": "Case Studies and Theory Development in the Social Sciences",
+      "creator": "Alexander L. George; Andrew Bennett",
+      "publisher": "MIT Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Sociology",
+        "Political Science"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002130.epub"
+    },
+    {
+      "title": "Schaum's Outline of Latin Grammar",
+      "creator": "Alan Fishbone",
+      "publisher": "McGraw-Hill",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "General",
+        "Language Arts & Disciplines",
+        "Foreign Language Study"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file020742.epub"
+    },
+    {
+      "title": "School choice or best systems: what improves education?",
+      "creator": "Margaret C. Wang; Herbert J. Walberg",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "Philosophy & Social Aspects",
+        "Case studies"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010879.epub"
+    },
+    {
+      "title": "The Unlikely Disciple: A Sinner's Semester at America's Holiest University",
+      "creator": "Kevin Roose",
+      "publisher": "Grand Central Publishing",
+      "language": "en",
+      "subjects": [
+        "Autobiography",
+        "General",
+        "Biography & Autobiography",
+        "Biography"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008662.epub"
+    },
+    {
+      "title": "A History of God: the 4000-year quest of Judaism, Christianity, and Islam",
+      "creator": "Karen Armstrong",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "Reference",
+        "Religion"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001901.epub"
+    },
+    {
+      "title": "Treasure Island",
+      "creator": "Robert Louis Stevenson",
+      "publisher": "Macmillan",
+      "language": "en",
+      "subjects": [
+        "Bilingual Education",
+        "Education",
+        "Study Aids",
+        "Book Notes"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010575.epub"
+    },
+    {
+      "title": "A Course in Miracles",
+      "creator": "Dr. Helen Schucman",
+      "publisher": "Foundation for Inner Peace",
+      "language": "en",
+      "subjects": [
+        "New Age movement",
+        "Course in Miracles",
+        "Religion",
+        "Body; Mind & Spirit"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007802.epub"
+    },
+    {
+      "title": "Applying the 7 Laws of Spiritual Success",
+      "creator": "S. Hughes",
+      "publisher": "Crusade for World Revival",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Religion",
+        "Christian Life",
+        "Christianity"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012393.epub"
+    },
+    {
+      "title": "Complete Electronics Self-Teaching Guide with Projects",
+      "creator": "Earl Boysen",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010618.epub"
+    },
+    {
+      "title": "Complete Electronics Self-Teaching Guide with Projects",
+      "creator": "Earl Boysen",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010620.epub"
+    },
+    {
+      "title": "Debt-Free U: How I Paid for an Outstanding College Education Without Loans, Scholarships, or Mooching Off My Parents",
+      "creator": "Zac Bissonnette; Andrew Tobias",
+      "publisher": "Penguin Group USA",
+      "language": "en",
+      "subjects": [
+        "United States",
+        "General",
+        "Business & Economics",
+        "Investments & Securities"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file017020.epub"
+    },
+    {
+      "title": "jQuery Cookbook",
+      "creator": "Cody Lindley",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming Languages / JavaScript"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002177.epub"
+    },
+    {
+      "title": "jQuery Cookbook",
+      "creator": "Cody Lindley",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming Languages / JavaScript"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007132.epub"
+    },
+    {
+      "title": "jQuery Cookbook",
+      "creator": "Cody Lindley",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming Languages / JavaScript"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010652.epub"
+    },
+    {
+      "title": "Life Ahead: On Learning and the Search for Meaning",
+      "creator": "Jiddu Krishnamurti",
+      "publisher": "New World Library",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Body; Mind & Spirit",
+        "Self-Help"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002244.epub"
+    },
+    {
+      "title": "Mismatch: Affirmative Action at War With Itself",
+      "creator": "Richard Sander",
+      "publisher": "Basic Books",
+      "language": "en",
+      "subjects": [
+        "Law",
+        "Discrimination"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024902.epub"
+    },
+    {
+      "title": "The death and life of the great American school system: how testing and choice are undermining education",
+      "creator": "Diane Ravitch",
+      "publisher": "Basic Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "Education",
+        "Education & Teaching"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006150.epub"
+    },
+    {
+      "title": "You're Not Fooling Anyone When You Take Your Laptop to a Coffee Shop: Scalzi on Writing",
+      "creator": "John Scalzi",
+      "publisher": "Subterranean Press",
+      "language": "en",
+      "subjects": [
+        "Education & Reference",
+        "Writing; Research & Publishing Guides",
+        "writing",
+        "Writing Skills"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010513.epub"
+    },
+    {
+      "title": "You're Not Fooling Anyone When You Take Your Laptop to a Coffee Shop: Scalzi on Writing",
+      "creator": "John Scalzi",
+      "publisher": "Subterranean Press",
+      "language": "en",
+      "subjects": [
+        "Education & Reference",
+        "Writing",
+        "Research & Publishing Guides",
+        "writing"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024904.epub"
+    },
+    {
+      "title": "Achebe's Things fall apart",
+      "creator": "Ode Ogede",
+      "publisher": "Continuum",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Criticism",
+        "Literary Criticism",
+        "Literature - Classics"
+      ],
+      "academic_score": 67.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011570.epub"
+    },
+    {
+      "title": "Agnes Grey",
+      "creator": "Anne Brontė",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "Biographical",
+        "General"
+      ],
+      "academic_score": 67.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004517.epub"
+    },
+    {
+      "title": "Beginnings of Learning",
+      "creator": "Jiddu Krishnamurti",
+      "publisher": "Orion Media",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Philosophy",
+        "Philosophy & Social Aspects",
+        "Juvenile Nonfiction"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002209.epub"
+    },
+    {
+      "title": "Junie B. Jones Has a Monster Under Her Bed",
+      "creator": "Barbara Park; Denise Brunkus",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Education",
+        "Humorous Stories",
+        "Social Issues"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004731.epub"
+    },
+    {
+      "title": "Junie B. Jones Is a Party Animal",
+      "creator": "Barbara Park; Denise Brunkus",
+      "publisher": "Random House",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Juvenile Fiction",
+        "Business & Economics"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000156.epub"
+    },
+    {
+      "title": "Junie B. Jones Is Not a Crook",
+      "creator": "Barbara Park; Denise Brunkus",
+      "publisher": "Random House",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Juvenile Fiction",
+        "Humorous stories",
+        "Social Issues"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file019010.epub"
+    },
+    {
+      "title": "Peace Is Every Breath: A Practice for Our Busy Lives",
+      "creator": "Thich Nhat Hanh",
+      "publisher": "HarperOne",
+      "language": "en",
+      "subjects": [
+        "Nonfiction",
+        "Religion & Spirituality"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file020146.epub"
+    },
+    {
+      "title": "Roald Dahl's Fantastic Mr Fox: a play",
+      "creator": "Roald Dahl; Sally Reid",
+      "publisher": "Puffin",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Juvenile Nonfiction",
+        "Poetry",
+        "Poetry (Children's"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003906.epub"
+    },
+    {
+      "title": "The Teachings of Don Juan: A Yaqui Way of Knowledge",
+      "creator": "Carlos Castaneda",
+      "publisher": "University of California Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Religion",
+        "Yaqui Indians"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008871.epub"
+    },
+    {
+      "title": "Argentina",
+      "creator": "Danny Palmerlee; Sandra Bao; Gregor Clark",
+      "publisher": "Lonely Planet",
+      "language": "en",
+      "subjects": [
+        "travel:guides"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024848.epub"
+    },
+    {
+      "title": "Denialism: How Irrational Thinking Hinders Scientific Progress, Harms the Planet, and Threatens Our Lives",
+      "creator": "Michael Specter",
+      "publisher": "Penguin Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Education",
+        "Reference",
+        "Philosophy"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011248.epub"
+    }
+  ],
+  "Geography": [
+    {
+      "title": "A Strange Stirring: The Feminine Mystique and American Women at the Dawn of the 1960s",
+      "creator": "Stephanie Coontz",
+      "publisher": "Basic Books",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Social Science",
+        "United States"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001175.epub"
+    },
+    {
+      "title": "Alaska",
+      "creator": "Jim DuFresne; Don Root; Paige Penland",
+      "publisher": "Lonely Planet",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024784.epub"
+    },
+    {
+      "title": "Moby-Duck",
+      "creator": "Donovan Hohn",
+      "publisher": "Penguin Group USA, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file009081.epub"
+    },
+    {
+      "title": "Pinheads and Patriots: Where You Stand in the Age of Obama",
+      "creator": "Bill O'Reilly",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Presidents & Heads of State",
+        "General",
+        "Biography & Autobiography"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004980.epub"
+    },
+    {
+      "title": "The Endurance: Shackleton's Legendary Antarctic Expedition",
+      "creator": "Caroline Alexander",
+      "publisher": "Knopf",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Travel",
+        "Science",
+        "General"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002135.epub"
+    },
+    {
+      "title": "The Oregon Companion: An Historical Gazetteer of the Useful, the Curious, and the Arcane",
+      "creator": "Richard H. Engeman",
+      "publisher": "Timber Press",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Travel",
+        "General",
+        "United States"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024878.epub"
+    },
+    {
+      "title": "Heretics of Dune",
+      "creator": "Frank Herbert",
+      "publisher": "Putnam",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Science Fiction",
+        "Science Fiction - General"
+      ],
+      "academic_score": 56.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006697.epub"
+    },
+    {
+      "title": "National Geographic [Fri, 14 Feb, 2014]",
+      "creator": "calibre",
+      "publisher": "calibre",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010608.epub"
+    },
+    {
+      "title": "Pink Boots and a MacHete: My Journey From NFL Cheerleader to National Geographic Explorer",
+      "creator": "Mireya Mayor; Jane Goodall",
+      "publisher": "National Geographic",
+      "language": "en",
+      "subjects": [
+        "Travel",
+        "Autobiography"
+      ],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024862.epub"
+    },
+    {
+      "title": "Puppyhood: How to Raise the Perfect Dog",
+      "creator": "Cesar Millan",
+      "publisher": "Random House",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Dogs",
+        "Health",
+        "Human-animal communication"
+      ],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005135.epub"
+    },
+    {
+      "title": "The Grey King (Dark 4)",
+      "creator": "Susan Cooper",
+      "publisher": "Thorndike Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file009009.epub"
+    },
+    {
+      "title": "The River at the Centre of the World: A Journey Up the Yangtze, and Back in Chinese Time",
+      "creator": "Simon Winchester",
+      "publisher": "Penguin",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Travel",
+        "General",
+        "Essays & Travelogues"
+      ],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024879.epub"
+    },
+    {
+      "title": "Wicked River: The Mississippi When It Last Ran Wild",
+      "creator": "Lee Sandlin",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Science",
+        "General",
+        "United States"
+      ],
+      "academic_score": 55.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010872.epub"
+    },
+    {
+      "title": "The Two Towers",
+      "creator": "J. R. R. Tolkien",
+      "publisher": "Houghton Mifflin",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Fantasy",
+        "Fiction - Fantasy",
+        "Fantasy fiction"
+      ],
+      "academic_score": 53.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007388.epub"
+    },
+    {
+      "title": "Foucault's Pendulum",
+      "creator": "Umberto Eco; William Weaver",
+      "publisher": "Houghton Mifflin Harcourt",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Science Fiction",
+        "General",
+        "Literary"
+      ],
+      "academic_score": 52.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004139.epub"
+    },
+    {
+      "title": "In Rough Country: Essays and Reviews",
+      "creator": "Joyce Carol Oates",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Criticism",
+        "Literary Collections"
+      ],
+      "academic_score": 51.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018668.epub"
+    },
+    {
+      "title": "Spitting off tall buildings",
+      "creator": "Dan Fante",
+      "publisher": "Canongate U.S.",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Fiction - General"
+      ],
+      "academic_score": 51.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005832.epub"
+    },
+    {
+      "title": "Vampire Forensics: Uncovering the Origins of an Enduring Legend",
+      "creator": "Mark Collins Jenkins",
+      "publisher": "National Geographic",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Social Science",
+        "Vampires",
+        "Europe"
+      ],
+      "academic_score": 51.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003164.epub"
+    },
+    {
+      "title": "Vampire Forensics: Uncovering the Origins of an Enduring Legend",
+      "creator": "Mark Collins Jenkins",
+      "publisher": "National Geographic",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Social Science",
+        "Vampires",
+        "Europe"
+      ],
+      "academic_score": 51.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007240.epub"
+    },
+    {
+      "title": "Atlantis 1 - Opening Atlantis",
+      "creator": "Harry Turtledove",
+      "publisher": "Penguin",
+      "language": "en",
+      "subjects": [
+        "Fantasy",
+        "Science Fiction",
+        "Alternative History",
+        "Atlantis (Legendary Place)"
+      ],
+      "academic_score": 47.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002774.epub"
+    },
+    {
+      "title": "Atlantis 2 - United States of Atlantis",
+      "creator": "Harry Turtledove",
+      "publisher": "Roc",
+      "language": "en",
+      "subjects": [
+        "Fantasy",
+        "Science Fiction",
+        "Alternative History",
+        "Atlantis (Legendary Place)"
+      ],
+      "academic_score": 47.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002775.epub"
+    },
+    {
+      "title": "Atlantis 3 - Liberating Atlantis",
+      "creator": "Harry Turtledove",
+      "publisher": "Penguin",
+      "language": "en",
+      "subjects": [
+        "Fantasy",
+        "Science Fiction",
+        "Alternative History",
+        "Atlantis (Legendary Place)"
+      ],
+      "academic_score": 47.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002776.epub"
+    },
+    {
+      "title": "Steppenwolf",
+      "creator": "Hermann Hesse",
+      "publisher": "Algora Publishing",
+      "language": "en",
+      "subjects": [
+        "Life",
+        "German",
+        "Civilization",
+        "Western"
+      ],
+      "academic_score": 47.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file021151.epub"
+    }
+  ],
+  "History": [
+    {
+      "title": "Case Studies and Theory Development in the Social Sciences",
+      "creator": "Alexander L. George; Andrew Bennett",
+      "publisher": "MIT Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Sociology",
+        "Political Science"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002130.epub"
+    },
+    {
+      "title": "The Federalist papers",
+      "creator": "Alexander Hamilton; James Madison; John Jay; Lawrence Goldman",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "General",
+        "United States",
+        "History"
+      ],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004299.epub"
+    },
+    {
+      "title": "Principal writings on religion: including Dialogues concerning natural religion and The natural history of religion",
+      "creator": "David Hume; John Charles Addison Gaskin",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Modern",
+        "Religious"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file015217.epub"
+    },
+    {
+      "title": "Rights of Man",
+      "creator": "Thomas Paine; Mark Philp",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Political",
+        "General",
+        "United States"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004129.epub"
+    },
+    {
+      "title": "The Forgotten Presidents: Their Untold Constitutional Legacy",
+      "creator": "Michael J. Gerhardt",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013632.epub"
+    },
+    {
+      "title": "The Original Curse: Did the Cubs Throw the 1918 World Series to Babe Ruth's Red Sox and Incite the Black Sox Scandal?",
+      "creator": "Sean Deveney",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Biography & Autobiography",
+        "United States",
+        "History"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012489.epub"
+    },
+    {
+      "title": "The Original Curse: Did the Cubs Throw the 1918 World Series to Babe Ruth's Red Sox and Incite the Black Sox Scandal?",
+      "creator": "Sean Deveney",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Biography & Autobiography",
+        "United States",
+        "History"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file023192.epub"
+    },
+    {
+      "title": "The prince",
+      "creator": "Niccolò Machiavelli; Peter E. Bondanella",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Political",
+        "General",
+        "Europe"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001674.epub"
+    },
+    {
+      "title": "The selfish gene",
+      "creator": "Richard Dawkins",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "SCIENCE",
+        "Mathematics",
+        "Animals",
+        "Life Sciences"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012078.epub"
+    },
+    {
+      "title": "Batman and philosophy: the dark knight of the soul",
+      "creator": "Mark D. White; Robert Arp",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Literary Criticism",
+        "Social Science",
+        "Comics & Graphic Novels"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010964.epub"
+    },
+    {
+      "title": "Notebooks",
+      "creator": "Leonardo da Vinci; Irma Anne Richter; Thereza Wells",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "History",
+        "European"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010942.epub"
+    },
+    {
+      "title": "A History of God: the 4000-year quest of Judaism, Christianity, and Islam",
+      "creator": "Karen Armstrong",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "Reference",
+        "Religion"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001901.epub"
+    },
+    {
+      "title": "America Bewitched: Witchcraft After Salem",
+      "creator": "Owen Davies",
+      "publisher": "OUP Oxford",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Witchcraft & Wicca",
+        "Religion",
+        "History"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013633.epub"
+    },
+    {
+      "title": "An Environmental History of Ancient Greece and Rome (Key Themes in Ancient History)",
+      "creator": "Thommen, Lukas",
+      "publisher": "Cambridge University Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005202.epub"
+    },
+    {
+      "title": "Dear Mr. Buffett: What an Investor Learns 1,269 Miles From Wall Street",
+      "creator": "Janet M. Tavakoli",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002089.epub"
+    },
+    {
+      "title": "Hegel: Elements of the Philosophy of Right (Cambridge Texts in the History of Political Thought)",
+      "creator": "Georg Wilhelm Friedrich Hegel",
+      "publisher": "Cambridge University Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001092.epub"
+    },
+    {
+      "title": "Kneadlessly Simple: Fabulous, Fuss-Free, No-Knead Breads",
+      "creator": "Nancy Baggett",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Cooking",
+        "Wine",
+        "Cookery"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011315.epub"
+    },
+    {
+      "title": "Resurrecting Pompeii",
+      "creator": "Estelle Lazer",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "Europe",
+        "Excavations (Archaeology)"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006667.epub"
+    },
+    {
+      "title": "The Civil War For Dummies",
+      "creator": "Keith D. Dickson",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001325.epub"
+    },
+    {
+      "title": "The Indian Ocean",
+      "creator": "Michael Pearson",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Asia",
+        "World"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000907.epub"
+    },
+    {
+      "title": "Animal Oppression and Human Violence: Domesecration, Capitalism, and Global Conflict",
+      "creator": "Nibert, David A.",
+      "publisher": "Columbia University Press",
+      "language": "en",
+      "subjects": [
+        "NAT039000",
+        "Nature/Animal Rights",
+        "HIS039000",
+        "History/Civilization"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001087.epub"
+    },
+    {
+      "title": "Blood and Rage: A Cultural History of Terrorism",
+      "creator": "Michael Burleigh",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Political Ideologies",
+        "Political Freedom & Security"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000889.epub"
+    },
+    {
+      "title": "Catch Me If You Can",
+      "creator": "Frank W. Abagnale",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Biography & Autobiography",
+        "Swindlers and swindling",
+        "True Crime"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008684.epub"
+    },
+    {
+      "title": "Frommer's 500 Extraordinary Islands",
+      "creator": "Holly Hughes",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010347.epub"
+    },
+    {
+      "title": "Frommer's 500 Extraordinary Islands",
+      "creator": "Holly Hughes",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018507.epub"
+    },
+    {
+      "title": "I.O.U.S.A.",
+      "creator": "Addison Wiggin; Kate Incontrera; Dorianne Perrucci",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "United States",
+        "Business & Economics"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000086.epub"
+    },
+    {
+      "title": "Money Mischief",
+      "creator": "Milton Friedman",
+      "publisher": "Houghton Mifflin Harcourt",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001230.epub"
+    },
+    {
+      "title": "Postmodernism, Or, the Cultural Logic of Late Capitalism",
+      "creator": "Fredric Jameson",
+      "publisher": "Duke University Press",
+      "language": "en",
+      "subjects": [
+        "Film & Video",
+        "Performing Arts",
+        "Modern",
+        "History & Criticism"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000098.epub"
+    },
+    {
+      "title": "Red Capitalism: The Fragile Financial Foundation of China's Extraordinary Rise",
+      "creator": "Carl E. Walter; Fraser J. T. Howie",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "Business & Economics",
+        "Finance",
+        "Economics",
+        "Economic History"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002082.epub"
+    },
+    {
+      "title": "The History of the Decline and Fall of the Roman Empire Vol 1",
+      "creator": "Edward Gibbon",
+      "publisher": "BiblioBazaar",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "Europe",
+        "European history"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006397.epub"
+    }
+  ],
+  "Mathematics": [
+    {
+      "title": "The selfish gene",
+      "creator": "Richard Dawkins",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "SCIENCE",
+        "Mathematics",
+        "Animals",
+        "Life Sciences"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012078.epub"
+    },
+    {
+      "title": "Collider",
+      "creator": "Paul Halpern",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Mathematics",
+        "Physics",
+        "Physics (General)"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011688.epub"
+    },
+    {
+      "title": "Numbers Rule Your World: The Hidden Influence of Probabilities and Statistics on Everything You Do",
+      "creator": "Kaiser Fung",
+      "publisher": "McGraw-Hill",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Social Science",
+        "Mathematics"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008489.epub"
+    },
+    {
+      "title": "Wisdom as a Practice",
+      "creator": "Margolis, Karen, Sloterdijk, Peter",
+      "publisher": "Columbia University Press",
+      "language": "en",
+      "subjects": [
+        "PHI018000",
+        "PHI027000",
+        "Philosophy/Movements/Deconstruction",
+        "Philosophy/Movements/Phenomenology"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000005.epub"
+    },
+    {
+      "title": "Denialism: How Irrational Thinking Hinders Scientific Progress, Harms the Planet, and Threatens Our Lives",
+      "creator": "Michael Specter",
+      "publisher": "Penguin Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Education",
+        "Reference",
+        "Philosophy"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011248.epub"
+    },
+    {
+      "title": "How Math Can Save Your Life",
+      "creator": "JAMES D. STEIN",
+      "publisher": "John Wiley & Sons, Inc.",
+      "language": "en-US",
+      "subjects": [],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010568.epub"
+    },
+    {
+      "title": "The demon-haunted world: science as a candle in the dark",
+      "creator": "Carl Sagan",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Language Arts & Disciplines",
+        "Science"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005091.epub"
+    },
+    {
+      "title": "The God Delusion",
+      "creator": "Richard Dawkins",
+      "publisher": "Houghton Mifflin Co.",
+      "language": "en",
+      "subjects": [
+        "Controversial literature",
+        "Philosophy & Social Aspects",
+        "Science",
+        "Philosophy"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012076.epub"
+    },
+    {
+      "title": "The God Delusion",
+      "creator": "Richard Dawkins",
+      "publisher": "Houghton Mifflin Co.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Religion",
+        "Philosophy",
+        "Philosophy & Social Aspects"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012077.epub"
+    },
+    {
+      "title": "The origin of species by means of natural selection, or, The preservation of favored races in the struggle for life",
+      "creator": "Charles Darwin",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Criticism",
+        "Literature - Classics",
+        "Philosophy"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005382.epub"
+    },
+    {
+      "title": "Alice in Quantumland: An Allegory of Quantum Physics",
+      "creator": "Robert Gilmore",
+      "publisher": "New York : Copernicus, c1995.",
+      "language": "en",
+      "subjects": [
+        "Allegories",
+        "Science",
+        "Computers",
+        "Fiction"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012213.epub"
+    },
+    {
+      "title": "Shadow puppets",
+      "creator": "Orson Scott Card",
+      "publisher": "Macmillan",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Science Fiction",
+        "Fiction - Science Fiction"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003849.epub"
+    },
+    {
+      "title": "The Restaurant at the end of the universe",
+      "creator": "Douglas Adams",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Humorous",
+        "Science Fiction"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006307.epub"
+    },
+    {
+      "title": "A More Perfect Heaven",
+      "creator": "Dava Sobel",
+      "publisher": "Walker Books",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001614.epub"
+    },
+    {
+      "title": "A More Perfect Heaven",
+      "creator": "Dava Sobel",
+      "publisher": "Walker Books",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001716.epub"
+    },
+    {
+      "title": "A More Perfect Heaven",
+      "creator": "Dava Sobel",
+      "publisher": "Walker Books",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010601.epub"
+    },
+    {
+      "title": "A short history of nearly everything",
+      "creator": "Bill Bryson",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Essays",
+        "Philosophy & Social Aspects",
+        "SCIENCE"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001818.epub"
+    },
+    {
+      "title": "A short history of nearly everything",
+      "creator": "Bill Bryson",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Science",
+        "Essays",
+        "Mathematics"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004784.epub"
+    },
+    {
+      "title": "Death By Black Hole",
+      "creator": "Neil deGrasse Tyson",
+      "publisher": "W. W. Norton & Company",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Astronomy",
+        "Science",
+        "Cosmology"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file016976.epub"
+    },
+    {
+      "title": "Death by black hole: and other cosmic quandaries",
+      "creator": "Neil deGrasse Tyson",
+      "publisher": "W. W. Norton & Company",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Essays",
+        "Religion and science",
+        "Religion"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011363.epub"
+    },
+    {
+      "title": "Freakonomics: A Rogue Economist Explores the Hidden Side of Everything",
+      "creator": "Steven D. Levitt",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Social Science",
+        "Popular Culture",
+        "Mathematics",
+        "Business & Economics"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003564.epub"
+    },
+    {
+      "title": "Freakonomics: A Rogue Economist Explores the Hidden Side of Everything",
+      "creator": "Steven D. Levitt",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Social Science",
+        "Popular Culture",
+        "Mathematics",
+        "Business & Economics"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007747.epub"
+    },
+    {
+      "title": "From Eternity to Here",
+      "creator": "Sean Carroll",
+      "publisher": "Penguin Group (USA)",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Mathematics",
+        "Physics (Specific Aspects)",
+        "Physics"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012488.epub"
+    },
+    {
+      "title": "Genius: The Life and Science of Richard Feynman",
+      "creator": "James Gleick",
+      "publisher": "Pantheon Books",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Science",
+        "General",
+        "United States"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007793.epub"
+    },
+    {
+      "title": "Genius: The Life and Science of Richard Feynman",
+      "creator": "James Gleick",
+      "publisher": "Pantheon Books",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "20th century",
+        "General",
+        "United States"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018862.epub"
+    },
+    {
+      "title": "Illustrated Theory of Everything: The Origin and Fate of the Universe",
+      "creator": "Stephen Hawking",
+      "publisher": "Phoenix Books",
+      "language": "en",
+      "subjects": [
+        "Philosophy",
+        "SCIENCE",
+        "Mathematics",
+        "Astrophysics & Space Science"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012610.epub"
+    },
+    {
+      "title": "San Francisco",
+      "creator": "Alison Bing",
+      "publisher": "Lonely Planet Publications",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024856.epub"
+    },
+    {
+      "title": "The botany of desire: a plant's-eye view of the world",
+      "creator": "Michael Pollan",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "SCIENCE",
+        "Mathematics"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file009961.epub"
+    },
+    {
+      "title": "The Day the Universe Changed",
+      "creator": "James Burke",
+      "publisher": "Little, Brown",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Science",
+        "General",
+        "Technology & Engineering"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file022138.epub"
+    },
+    {
+      "title": "The elegant universe: superstrings, hidden dimensions, and the quest for the ultimate theory",
+      "creator": "Brian Greene",
+      "publisher": "W. W. Norton & Company",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Mathematics",
+        "Astronomy",
+        "Science: general issues"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file022275.epub"
+    }
+  ],
+  "Philosophy": [
+    {
+      "title": "Marxism (Routledge Revivals)",
+      "creator": "Thomas Sowell",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 85.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001388.epub"
+    },
+    {
+      "title": "Principal writings on religion: including Dialogues concerning natural religion and The natural history of religion",
+      "creator": "David Hume; John Charles Addison Gaskin",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Modern",
+        "Religious"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file015217.epub"
+    },
+    {
+      "title": "Rights of Man",
+      "creator": "Thomas Paine; Mark Philp",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Political",
+        "General",
+        "United States"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004129.epub"
+    },
+    {
+      "title": "School choice or best systems: what improves education?",
+      "creator": "Margaret C. Wang; Herbert J. Walberg",
+      "publisher": "Routledge",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "Philosophy & Social Aspects",
+        "Case studies"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010879.epub"
+    },
+    {
+      "title": "The prince",
+      "creator": "Niccolò Machiavelli; Peter E. Bondanella",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Political",
+        "General",
+        "Europe"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001674.epub"
+    },
+    {
+      "title": "The Woman in White",
+      "creator": "Wilkie Collins; John Sutherland",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Fiction - General"
+      ],
+      "academic_score": 79.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008980.epub"
+    },
+    {
+      "title": "Batman and philosophy: the dark knight of the soul",
+      "creator": "Mark D. White; Robert Arp",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Literary Criticism",
+        "Social Science",
+        "Comics & Graphic Novels"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010964.epub"
+    },
+    {
+      "title": "Batman and Philosophy",
+      "creator": "Mark D. White",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Batman (Fictious Character)",
+        "Philosophy"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003165.epub"
+    },
+    {
+      "title": "Batman and Philosophy",
+      "creator": "Mark D. White",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Batman (Fictious Character)",
+        "Philosophy"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007570.epub"
+    },
+    {
+      "title": "Hegel: Elements of the Philosophy of Right (Cambridge Texts in the History of Political Thought)",
+      "creator": "Georg Wilhelm Friedrich Hegel",
+      "publisher": "Cambridge University Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001092.epub"
+    },
+    {
+      "title": "Visions of Awakening Space and Time: Dogen and the Lotus Sutra",
+      "creator": "Taigen Dan Leighton",
+      "publisher": "Oxford University Press US",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Religion",
+        "Philosophy",
+        "Zen Buddhism"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004093.epub"
+    },
+    {
+      "title": "Animal Oppression and Human Violence: Domesecration, Capitalism, and Global Conflict",
+      "creator": "Nibert, David A.",
+      "publisher": "Columbia University Press",
+      "language": "en",
+      "subjects": [
+        "NAT039000",
+        "Nature/Animal Rights",
+        "HIS039000",
+        "History/Civilization"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001087.epub"
+    },
+    {
+      "title": "Postmodernism, Or, the Cultural Logic of Late Capitalism",
+      "creator": "Fredric Jameson",
+      "publisher": "Duke University Press",
+      "language": "en",
+      "subjects": [
+        "Film & Video",
+        "Performing Arts",
+        "Modern",
+        "History & Criticism"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000098.epub"
+    },
+    {
+      "title": "Wisdom as a Practice",
+      "creator": "Margolis, Karen, Sloterdijk, Peter",
+      "publisher": "Columbia University Press",
+      "language": "en",
+      "subjects": [
+        "PHI018000",
+        "PHI027000",
+        "Philosophy/Movements/Deconstruction",
+        "Philosophy/Movements/Phenomenology"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000005.epub"
+    },
+    {
+      "title": "Strange Case of Dr Jekyll and Mr Hyde and Other Tales",
+      "creator": "Robert Louis Stevenson",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "Fiction - General",
+        "London (England)"
+      ],
+      "academic_score": 68.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012251.epub"
+    },
+    {
+      "title": "The Idiot",
+      "creator": "Fyodor Dostoyevsky",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "Criticism",
+        "Literature - Classics"
+      ],
+      "academic_score": 67.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006721.epub"
+    },
+    {
+      "title": "To the lighthouse",
+      "creator": "Virginia Woolf",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Lighthouses",
+        "Psychological",
+        "Widowers",
+        "Summer resorts"
+      ],
+      "academic_score": 67.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024120.epub"
+    },
+    {
+      "title": "Beginnings of Learning",
+      "creator": "Jiddu Krishnamurti",
+      "publisher": "Orion Media",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Philosophy",
+        "Philosophy & Social Aspects",
+        "Juvenile Nonfiction"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002209.epub"
+    },
+    {
+      "title": "Junie B. Jones Has a Monster Under Her Bed",
+      "creator": "Barbara Park; Denise Brunkus",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Education",
+        "Humorous Stories",
+        "Social Issues"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004731.epub"
+    },
+    {
+      "title": "Junie B. Jones Is Not a Crook",
+      "creator": "Barbara Park; Denise Brunkus",
+      "publisher": "Random House",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Juvenile Fiction",
+        "Humorous stories",
+        "Social Issues"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file019010.epub"
+    },
+    {
+      "title": "Capitalism: The Unknown Ideal",
+      "creator": "Ayn Rand",
+      "publisher": "Signet",
+      "language": "en",
+      "subjects": [
+        "General",
+        "United States",
+        "Political Science",
+        "Social Science"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006993.epub"
+    },
+    {
+      "title": "Catching the Big Fish: Meditation, Consciousness, and Creativity",
+      "creator": "David Lynch",
+      "publisher": "Penguin Group",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Biography & Autobiography",
+        "Creativity",
+        "Self-Help"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005826.epub"
+    },
+    {
+      "title": "Denialism: How Irrational Thinking Hinders Scientific Progress, Harms the Planet, and Threatens Our Lives",
+      "creator": "Michael Specter",
+      "publisher": "Penguin Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Education",
+        "Reference",
+        "Philosophy"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011248.epub"
+    },
+    {
+      "title": "Don Quixote",
+      "creator": "Miguel de Cervantes",
+      "publisher": "Cosimo, Inc.",
+      "language": "en",
+      "subjects": [
+        "Classics",
+        "Social Science",
+        "Folklore & Mythology"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003222.epub"
+    },
+    {
+      "title": "Good business: leadership, flow, and the making of meaning",
+      "creator": "Mihaly Csikszentmihalyi",
+      "publisher": "Penguin",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Self-actualization (Psychology)",
+        "Psychology",
+        "Industrial & Organizational Psychology"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018173.epub"
+    },
+    {
+      "title": "Hardcore Zen: Punk Rock, Monster Movies & the Truth About Reality",
+      "creator": "Brad Warner",
+      "publisher": "Wisdom Publications",
+      "language": "en",
+      "subjects": [
+        "Philosophy",
+        "General",
+        "United States",
+        "Social Science"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002132.epub"
+    },
+    {
+      "title": "Hiding Man: A Biography of Donald Barthelme",
+      "creator": "Tracy Daugherty",
+      "publisher": "Picador",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Biography & Autobiography",
+        "Literary",
+        "American"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001326.epub"
+    },
+    {
+      "title": "Idiot America: How Stupidity Became a Virtue in the Land of the Free",
+      "creator": "Charles P. Pierce",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Political Science",
+        "Political",
+        "General",
+        "United States"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005204.epub"
+    },
+    {
+      "title": "Introduction to objectivist epistemology",
+      "creator": "Ayn Rand; Leonard Peikoff; Harry Binswanger",
+      "publisher": "New American Library",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Philosophy",
+        "History & Surveys",
+        "Modern"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004680.epub"
+    },
+    {
+      "title": "Introduction to Objectivist Epistemology",
+      "creator": "Ayn Rand",
+      "publisher": "Plume",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Philosophy",
+        "Modern",
+        "History & Surveys"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006990.epub"
+    }
+  ],
+  "Physics": [
+    {
+      "title": "Notebooks",
+      "creator": "Leonardo da Vinci; Irma Anne Richter; Thereza Wells",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "General",
+        "History",
+        "European"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010942.epub"
+    },
+    {
+      "title": "Collider",
+      "creator": "Paul Halpern",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Mathematics",
+        "Physics",
+        "Physics (General)"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011688.epub"
+    },
+    {
+      "title": "Exploring Quantum Mechanics",
+      "creator": "Kogan, Vladimir, Galitski, Victor, Karnakov, Boris",
+      "publisher": "OUP Oxford",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008369.epub"
+    },
+    {
+      "title": "Metaphysics - Aristotle",
+      "creator": "Aristotle",
+      "publisher": "NuVision Publications, LLC",
+      "language": "en",
+      "subjects": [
+        "PHILOSOPHY",
+        "Philosophy : Metaphysics",
+        "General",
+        "History & Surveys - Ancient & Classical"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002569.epub"
+    },
+    {
+      "title": "The 2012 Story: The Myths, Fallacies, and Truth Behind the Most Intriguing Date in History",
+      "creator": "John Major Jenkins",
+      "publisher": "Penguin Group USA",
+      "language": "en",
+      "subjects": [
+        "General",
+        "History",
+        "New Age",
+        "Body"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008158.epub"
+    },
+    {
+      "title": "The demon-haunted world: science as a candle in the dark",
+      "creator": "Carl Sagan",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "History",
+        "General",
+        "Language Arts & Disciplines",
+        "Science"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005091.epub"
+    },
+    {
+      "title": "Alice in Quantumland: An Allegory of Quantum Physics",
+      "creator": "Robert Gilmore",
+      "publisher": "New York : Copernicus, c1995.",
+      "language": "en",
+      "subjects": [
+        "Allegories",
+        "Science",
+        "Computers",
+        "Fiction"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012213.epub"
+    },
+    {
+      "title": "How to Love Wine",
+      "creator": "Eric Asimov",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000970.epub"
+    },
+    {
+      "title": "The Eye of God",
+      "creator": "James Rollins",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002057.epub"
+    },
+    {
+      "title": "The Eye of God",
+      "creator": "James Rollins",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005324.epub"
+    },
+    {
+      "title": "Toward the End of Time",
+      "creator": "John Updike",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "General",
+        "Fiction - General"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008261.epub"
+    },
+    {
+      "title": "Cosmos",
+      "creator": "Carl Sagan",
+      "publisher": "Ballantine Books",
+      "language": "en",
+      "subjects": [
+        "Reference",
+        "Nature",
+        "Science",
+        "Earth Sciences"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file016803.epub"
+    },
+    {
+      "title": "Death By Black Hole",
+      "creator": "Neil deGrasse Tyson",
+      "publisher": "W. W. Norton & Company",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Astronomy",
+        "Science",
+        "Cosmology"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file016976.epub"
+    },
+    {
+      "title": "Death by black hole: and other cosmic quandaries",
+      "creator": "Neil deGrasse Tyson",
+      "publisher": "W. W. Norton & Company",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Essays",
+        "Religion and science",
+        "Religion"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file011363.epub"
+    },
+    {
+      "title": "From Eternity to Here",
+      "creator": "Sean Carroll",
+      "publisher": "Penguin Group (USA)",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Mathematics",
+        "Physics (Specific Aspects)",
+        "Physics"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012488.epub"
+    },
+    {
+      "title": "Genius: The Life and Science of Richard Feynman",
+      "creator": "James Gleick",
+      "publisher": "Pantheon Books",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Science",
+        "General",
+        "United States"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007793.epub"
+    },
+    {
+      "title": "Genius: The Life and Science of Richard Feynman",
+      "creator": "James Gleick",
+      "publisher": "Pantheon Books",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "20th century",
+        "General",
+        "United States"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018862.epub"
+    },
+    {
+      "title": "Illustrated Theory of Everything: The Origin and Fate of the Universe",
+      "creator": "Stephen Hawking",
+      "publisher": "Phoenix Books",
+      "language": "en",
+      "subjects": [
+        "Philosophy",
+        "SCIENCE",
+        "Mathematics",
+        "Astrophysics & Space Science"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012610.epub"
+    },
+    {
+      "title": "iPhone Game Development",
+      "creator": "Paul Zirkle",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming / Games"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002176.epub"
+    },
+    {
+      "title": "iPhone Game Development",
+      "creator": "Paul Zirkle",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming / Games"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007131.epub"
+    },
+    {
+      "title": "iPhone Game Development",
+      "creator": "Paul Zirkle",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Programming / Games"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010651.epub"
+    },
+    {
+      "title": "Kitchen Mysteries: Revealing the Science of Cooking",
+      "creator": "Hervé This; Jody Gladding",
+      "publisher": "Columbia University Press",
+      "language": "en",
+      "subjects": [
+        "History",
+        "Science",
+        "Food",
+        "General"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file019121.epub"
+    },
+    {
+      "title": "Quantum Theory Cannot Hurt You: A Guide to the Universe",
+      "creator": "Marcus Chown",
+      "publisher": "Faber and Faber",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Quantum Theory",
+        "Relativity",
+        "Physics"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000836.epub"
+    },
+    {
+      "title": "Seeing further: the story of science & the Royal Society",
+      "creator": "Bill Bryson",
+      "publisher": "HarperPress",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Life Sciences",
+        "History",
+        "Discoveries in science"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004791.epub"
+    },
+    {
+      "title": "The elegant universe: superstrings, hidden dimensions, and the quest for the ultimate theory",
+      "creator": "Brian Greene",
+      "publisher": "W. W. Norton & Company",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Mathematics",
+        "Astronomy",
+        "Science: general issues"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file022275.epub"
+    },
+    {
+      "title": "The physics of Star Trek",
+      "creator": "Lawrence Maxwell Krauss",
+      "publisher": "Basic Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "SCIENCE",
+        "Mathematics",
+        "Performing Arts"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010793.epub"
+    },
+    {
+      "title": "The theory of almost everything: the Standard Model, the unsung triumph of modern physics",
+      "creator": "Robert Oerter",
+      "publisher": "Pi Press",
+      "language": "en",
+      "subjects": [
+        "SCIENCE",
+        "Mathematics",
+        "Physics",
+        "Standard model (Nuclear physics)"
+      ],
+      "academic_score": 60.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004108.epub"
+    },
+    {
+      "title": "Pale Blue Dot",
+      "creator": "Carl Sagan",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Science",
+        "Outer space",
+        "Reference",
+        "Astronomy"
+      ],
+      "academic_score": 56.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file014575.epub"
+    },
+    {
+      "title": "The elegant universe: superstrings, hidden dimensions, and the quest for the ultimate theory",
+      "creator": "Brian Greene",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "SCIENCE",
+        "Mathematics",
+        "Physics",
+        "Astronomy - Universe"
+      ],
+      "academic_score": 56.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004910.epub"
+    },
+    {
+      "title": "Timeline",
+      "creator": "Michael Crichton",
+      "publisher": "Random House Digital, Inc.",
+      "language": "en",
+      "subjects": [
+        "Suspense",
+        "Science Fiction",
+        "Technological",
+        "Time Travel"
+      ],
+      "academic_score": 56.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003212.epub"
+    }
+  ],
+  "Psychology": [
+    {
+      "title": "The selfish gene",
+      "creator": "Richard Dawkins",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "SCIENCE",
+        "Mathematics",
+        "Animals",
+        "Life Sciences"
+      ],
+      "academic_score": 80.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012078.epub"
+    },
+    {
+      "title": "The pleasure instinct: why we crave adventure, chocolate, pheromones, and music",
+      "creator": "Gene Wallenstein",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Psychology",
+        "Family & Relationships",
+        "Social Science"
+      ],
+      "academic_score": 76.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006783.epub"
+    },
+    {
+      "title": "How to Talk to Anyone",
+      "creator": "Leil Lowndes",
+      "publisher": "McGraw Hill Professional",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Language Arts & Disciplines",
+        "Psychology"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010857.epub"
+    },
+    {
+      "title": "Bones Would Rain from the Sky: Deepening Our Relationships with Dogs",
+      "creator": "Suzanne Clothier",
+      "publisher": "Grand Central Publishing",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Animals",
+        "Human-animal relationships",
+        "Dogs"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012823.epub"
+    },
+    {
+      "title": "Detect Deceit: How to Become a Human Lie Detector in Under 60 Minutes",
+      "creator": "David Craig",
+      "publisher": "Skyhorse Publishing",
+      "language": "en",
+      "subjects": [
+        "Psychology",
+        "Reference",
+        "Cognitive Psychology",
+        "Science"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000016.epub"
+    },
+    {
+      "title": "Drive: The Surprising Truth About What Motivates Us",
+      "creator": "Daniel H. Pink",
+      "publisher": "Riverhead Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Finance",
+        "Self-Help"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005606.epub"
+    },
+    {
+      "title": "Agnes Grey",
+      "creator": "Anne Brontė",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Literary",
+        "Fiction",
+        "Biographical",
+        "General"
+      ],
+      "academic_score": 67.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004517.epub"
+    },
+    {
+      "title": "To the lighthouse",
+      "creator": "Virginia Woolf",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [
+        "Lighthouses",
+        "Psychological",
+        "Widowers",
+        "Summer resorts"
+      ],
+      "academic_score": 67.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024120.epub"
+    },
+    {
+      "title": "Junie B. Jones Has a Monster Under Her Bed",
+      "creator": "Barbara Park; Denise Brunkus",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "Fiction",
+        "Education",
+        "Humorous Stories",
+        "Social Issues"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file004731.epub"
+    },
+    {
+      "title": "The Teachings of Don Juan: A Yaqui Way of Knowledge",
+      "creator": "Carlos Castaneda",
+      "publisher": "University of California Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Religion",
+        "Yaqui Indians"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008871.epub"
+    },
+    {
+      "title": "The Zombie Survival Guide: Complete Protection From the Living Dead",
+      "creator": "Max Brooks",
+      "publisher": "Random House Digital, Inc.",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Zombies",
+        "Almanacs",
+        "Parodies"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003187.epub"
+    },
+    {
+      "title": "The Zombie Survival Guide: Complete Protection From the Living Dead",
+      "creator": "Max Brooks",
+      "publisher": "Random House Digital, Inc.",
+      "language": "en",
+      "subjects": [
+        "Humor",
+        "Zombies",
+        "Almanacs",
+        "Parodies"
+      ],
+      "academic_score": 66.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007582.epub"
+    },
+    {
+      "title": "59 Seconds: Think a Little, Change a Lot",
+      "creator": "Richard Wiseman",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Psychology",
+        "Self-Help",
+        "Personal Growth - General"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012150.epub"
+    },
+    {
+      "title": "Active Meditation: The Western Tradition",
+      "creator": "Robert R. Leichtman; Carl Japikse",
+      "publisher": "Ariel Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Self-Help",
+        "Body",
+        "Mind & Spirit"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012316.epub"
+    },
+    {
+      "title": "Alone Together: Why We Expect More From Technology and Less From Each Other",
+      "creator": "Sherry Turkle",
+      "publisher": "Basic Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Social Science",
+        "Sociology",
+        "Computers"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002110.epub"
+    },
+    {
+      "title": "Fire Your Boss",
+      "creator": "Stephen M. Pollan; Mark Levine",
+      "publisher": "HarperCollins",
+      "language": "en",
+      "subjects": [
+        "Self-Help",
+        "General",
+        "Human Resources & Personnel Management",
+        "Success"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file017811.epub"
+    },
+    {
+      "title": "Good business: leadership, flow, and the making of meaning",
+      "creator": "Mihaly Csikszentmihalyi",
+      "publisher": "Penguin",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Self-actualization (Psychology)",
+        "Psychology",
+        "Industrial & Organizational Psychology"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018173.epub"
+    },
+    {
+      "title": "Green Smoothie Revolution: The Radical Leap Towards Natural Health",
+      "creator": "Victoria Boutenko",
+      "publisher": "North Atlantic Books",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Cooking",
+        "Nutrition",
+        "Health & Fitness"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file018205.epub"
+    },
+    {
+      "title": "Gunn's Golden Rules",
+      "creator": "Tim Gunn",
+      "publisher": "Gallery",
+      "language": "en",
+      "subjects": [
+        "Performing Arts",
+        "Conflict Resolution",
+        "Self-help & personal development",
+        "Clothing and dress - United States"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013005.epub"
+    },
+    {
+      "title": "Linchpin: Are You Indispensable?",
+      "creator": "Seth Godin",
+      "publisher": "Penguin Group USA",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Industrial & Organizational Psychology",
+        "Employee motivation"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file003977.epub"
+    },
+    {
+      "title": "Mind Hacks™: Tips & Tools for Using Your Brain",
+      "creator": "Tom Stafford and Matt Webb",
+      "publisher": "O'Reilly Media",
+      "language": "en",
+      "subjects": [
+        "COMPUTERS / Social Aspects / Human-Computer Interaction"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010589.epub"
+    },
+    {
+      "title": "Office Idiots",
+      "creator": "Kenneth L. Lloyd",
+      "publisher": "Career Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file005215.epub"
+    },
+    {
+      "title": "Seven habits of highly effective people",
+      "creator": "Stephen R. Covey",
+      "publisher": "Free Press",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Business & Economics",
+        "Psychology",
+        "Self-Help"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012774.epub"
+    },
+    {
+      "title": "Starting Your Best Life Now: A Guide for New Adventures and Stages on Your Journey",
+      "creator": "Joel Osteen",
+      "publisher": "FaithWords",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Self-Help",
+        "Self-help & personal development",
+        "Personal Growth"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file007980.epub"
+    },
+    {
+      "title": "The interpretation of dreams",
+      "creator": "Sigmund Freud; James Strachey",
+      "publisher": "Avon",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Movements",
+        "Psychology",
+        "Self-Help"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file012560.epub"
+    },
+    {
+      "title": "The Stardust Lounge: Stories from a Boy's Adolescence",
+      "creator": "Deborah Digges",
+      "publisher": "Random House, Inc.",
+      "language": "en",
+      "subjects": [
+        "General",
+        "Family & Relationships",
+        "Life Stages",
+        "Adolescence"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file006093.epub"
+    },
+    {
+      "title": "The Unseen",
+      "creator": "Alexandra Sokoloff",
+      "publisher": "Macmillan",
+      "language": "en",
+      "subjects": [
+        "Horror",
+        "Ghost",
+        "Suspense",
+        "Psychological"
+      ],
+      "academic_score": 62.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002301.epub"
+    },
+    {
+      "title": "Doctor Who: Psi-Ence Fiction",
+      "creator": "Chris Boucher",
+      "publisher": "BBC Worldwide Americas",
+      "language": "en",
+      "subjects": [
+        "Science-Fiction:Doctor Who"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000199.epub"
+    },
+    {
+      "title": "Happier at Home: Kiss More, Jump More, Abandon a Project, Read Samuel Johnson, and My Other Experiments in the Practice of Everyday Life",
+      "creator": "Gretchen Rubin",
+      "publisher": "Crown Archetype",
+      "language": "en",
+      "subjects": [
+        "Non-Fiction",
+        "Psychology",
+        "Spirituality",
+        "Self Help"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000025.epub"
+    },
+    {
+      "title": "Happier at Home: Kiss More, Jump More, Abandon a Project, Read Samuel Johnson, and My Other Experiments in the Practice of Everyday Life",
+      "creator": "Gretchen Rubin",
+      "publisher": "Crown Archetype",
+      "language": "en",
+      "subjects": [
+        "Non-Fiction",
+        "Psychology",
+        "Spirituality",
+        "Self Help"
+      ],
+      "academic_score": 61.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000962.epub"
+    }
+  ],
+  "Uncategorized": [
+    {
+      "title": "Frommer's Arizona and the Grand Canyon 2011",
+      "creator": "Karl Samson",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010353.epub"
+    },
+    {
+      "title": "Frommer's Arizona and the Grand Canyon 2011",
+      "creator": "Karl Samson",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024787.epub"
+    },
+    {
+      "title": "How to Eat: The Pleasures and Principles of Good Food",
+      "creator": "Nigella Lawson",
+      "publisher": "John Wiley & Sons",
+      "language": "en",
+      "subjects": [
+        "Food",
+        "General",
+        "Cooking",
+        "Cookbooks"
+      ],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000952.epub"
+    },
+    {
+      "title": "Phenomenology of Spirit",
+      "creator": "G. W. F. Hegel",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000097.epub"
+    },
+    {
+      "title": "Phenomenology of Spirit",
+      "creator": "G. W. F. Hegel",
+      "publisher": "Oxford University Press",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010563.epub"
+    },
+    {
+      "title": "Smuggler Nation: How Illicit Trade Made America",
+      "creator": "Andreas, Peter",
+      "publisher": "Oxford University Press, USA",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 75.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010596.epub"
+    },
+    {
+      "title": "Access 2013 For Dummies",
+      "creator": "Laurie Ulrich Fuller and Ken Cook",
+      "publisher": "John Wiley and Sons, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008626.epub"
+    },
+    {
+      "title": "Adventures In Raspberry Pi",
+      "creator": "Philbin, Carrie Anne",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001186.epub"
+    },
+    {
+      "title": "Being The Best Man For Dummies",
+      "creator": "Bliss, Dominic",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001256.epub"
+    },
+    {
+      "title": "Dreamweaver CC For Dummies",
+      "creator": "Janine Warner",
+      "publisher": "John Wiley and Sons, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001616.epub"
+    },
+    {
+      "title": "Excel Formulas and Functions For Dummies, 3rd Edition",
+      "creator": "Ken Bluttman",
+      "publisher": "John Wiley and Sons, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008627.epub"
+    },
+    {
+      "title": "Frommer's India",
+      "creator": "Pippa de Bruyn",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file009079.epub"
+    },
+    {
+      "title": "Frommer's India",
+      "creator": "Pippa de Bruyn",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024818.epub"
+    },
+    {
+      "title": "Frommer's Seattle 2010",
+      "creator": "Karl Samson",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010423.epub"
+    },
+    {
+      "title": "Frommer's Seattle 2010",
+      "creator": "Karl Samson",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file024857.epub"
+    },
+    {
+      "title": "Logging and Log Management",
+      "creator": "Anton Chuvakin",
+      "publisher": "Elsevier Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010583.epub"
+    },
+    {
+      "title": "Never Get a ”Real„ Job",
+      "creator": "Gerber, Scott",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010536.epub"
+    },
+    {
+      "title": "Office 2013 For Dummies",
+      "creator": "Wallace Wang",
+      "publisher": "John Wiley and Sons, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008629.epub"
+    },
+    {
+      "title": "Organise Your Paperwork",
+      "creator": "MaryAnne Bennie",
+      "publisher": "Wiley",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file002027.epub"
+    },
+    {
+      "title": "Paper Money Collapse",
+      "creator": "Schlichter, Detlev S.",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001237.epub"
+    },
+    {
+      "title": "PowerPoint 2013 For Dummies",
+      "creator": "Doug Lowe",
+      "publisher": "John Wiley and Sons, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008630.epub"
+    },
+    {
+      "title": "Sniper: The True Story of Anti-Abortion Killer James Kopp",
+      "creator": "Jon Wells",
+      "publisher": "John Wiley and Sons",
+      "language": "en",
+      "subjects": [
+        "True Crime",
+        "General",
+        "United States",
+        "Social Science"
+      ],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file000635.epub"
+    },
+    {
+      "title": "TCP/IP Illustrated, Volume 1: The Protocols",
+      "creator": "Stevens, W. Richard",
+      "publisher": "Pearson Education (USA)",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010686.epub"
+    },
+    {
+      "title": "TCP/IP Illustrated, Volume 1: The Protocols",
+      "creator": "Stevens, W. Richard; Fall, Kevin R.",
+      "publisher": "Pearson Education (USA)",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file025757.epub"
+    },
+    {
+      "title": "This Beautiful Life",
+      "creator": "Helen Schulman",
+      "publisher": "HarperCollins US",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001380.epub"
+    },
+    {
+      "title": "This Beautiful Life",
+      "creator": "Helen Schulman",
+      "publisher": "HarperCollins US",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file001381.epub"
+    },
+    {
+      "title": "What's the Matter with White People",
+      "creator": "Joan Walsh",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010576.epub"
+    },
+    {
+      "title": "What's the Matter with White People",
+      "creator": "Joan Walsh",
+      "publisher": "John Wiley & Sons, Ltd.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file010582.epub"
+    },
+    {
+      "title": "Windows 8 & Office 2013 For Dummies, Portable Edition",
+      "creator": "Andy Rathbone and Wallace Wang",
+      "publisher": "John Wiley and Sons, Inc.",
+      "language": "en",
+      "subjects": [],
+      "academic_score": 70.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file008631.epub"
+    },
+    {
+      "title": "Before You Take That Pill: Why the Drug Industry May Be Bad for Your Health",
+      "creator": "J. Douglas Bremner",
+      "publisher": "Avery",
+      "language": "en",
+      "subjects": [
+        "Dietary Supplements - Side Effects",
+        "Health & Fitness",
+        "Drugs - Side Effects",
+        "Drugs"
+      ],
+      "academic_score": 65.0,
+      "filepath": "G:\\My Drive\\15_E-BOOKS\\file013616.epub"
+    }
+  ]
+}

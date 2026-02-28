@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="treeTitle treeDesc">
+  <title id="treeTitle">Tree world</title>
+  <desc id="treeDesc">A friendly tree with grass and sky.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a7ecff"/>
+      <stop offset="100%" stop-color="#d9f7ff"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8ee26e"/>
+      <stop offset="100%" stop-color="#5ac34d"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="240" rx="24" fill="url(#sky)"/>
+  <circle cx="58" cy="54" r="22" fill="#ffd95e"/>
+  <ellipse cx="160" cy="208" rx="150" ry="44" fill="url(#ground)"/>
+  <rect x="143" y="110" width="34" height="85" rx="12" fill="#8c5a2b"/>
+  <circle cx="124" cy="102" r="34" fill="#44b95b"/>
+  <circle cx="160" cy="82" r="40" fill="#4ccc63"/>
+  <circle cx="196" cy="106" r="32" fill="#40b858"/>
+  <circle cx="138" cy="76" r="6" fill="#fff2a8"/>
+  <circle cx="174" cy="68" r="6" fill="#fff2a8"/>
+  <circle cx="188" cy="92" r="6" fill="#fff2a8"/>
+</svg>

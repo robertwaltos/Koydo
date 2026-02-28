@@ -446,73 +446,73 @@ export default async function AdminOverviewPage() {
   ];
 
   return (
-    <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-12">
-      <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
-        <h1 className="text-3xl font-semibold tracking-tight">Admin Overview</h1>
-        <p className="mt-2 text-sm text-zinc-700">
-          Operational command center for the current platform state.
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <ProgressChip label="Open Tickets" value={openTickets} tone={openTickets > 0 ? "warning" : "success"} />
-          <ProgressChip label="Media Backlog" value={mediaBacklogCount} tone={mediaBacklogCount >= backlogThreshold ? "warning" : "info"} />
-          <ProgressChip label="Report Backlog" value={reportBacklogCount} tone={reportBacklogCount >= reportBacklogThreshold ? "warning" : "info"} />
-          <ProgressChip label="Tutor Q Today" value={aiTutorUsageSummary.setupRequired ? "n/a" : aiTutorUsageSummary.questionsToday} tone={aiTutorUsageSummary.setupRequired ? "warning" : "info"} />
-          <ProgressChip label="Worksheets Done" value={aiRemediationUsageSummary.setupRequired ? "n/a" : aiRemediationUsageSummary.completedToday} tone={aiRemediationUsageSummary.setupRequired ? "warning" : "success"} />
+    <div className="p-6 md:p-8">
+      {/* ── Page header ──────────────────────────────────────────────────── */}
+      <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h1 className="text-[22px] font-semibold text-[#1a1f36]">Overview</h1>
+          <p className="mt-1 text-[13px] text-[#697386]">
+            Operational command center for the current platform state.
+          </p>
         </div>
-      </SoftCard>
+        <div className="flex flex-wrap gap-1.5">
+          <ProgressChip label="Tickets" value={openTickets} tone={openTickets > 0 ? "warning" : "success"} />
+          <ProgressChip label="Media" value={mediaBacklogCount} tone={mediaBacklogCount >= backlogThreshold ? "warning" : "info"} />
+          <ProgressChip label="Reports" value={reportBacklogCount} tone={reportBacklogCount >= reportBacklogThreshold ? "warning" : "info"} />
+          <ProgressChip label="Tutor Q" value={aiTutorUsageSummary.setupRequired ? "n/a" : aiTutorUsageSummary.questionsToday} tone={aiTutorUsageSummary.setupRequired ? "warning" : "info"} />
+          <ProgressChip label="Worksheets" value={aiRemediationUsageSummary.setupRequired ? "n/a" : aiRemediationUsageSummary.completedToday} tone={aiRemediationUsageSummary.setupRequired ? "warning" : "success"} />
+        </div>
+      </div>
 
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {/* ── Metric grid ──────────────────────────────────────────────────── */}
+      <section
+        className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+        aria-label="Platform metrics"
+      >
         {cards.map((card) => (
           <Link
             key={card.title}
             href={card.href}
-            className="ui-focus-ring ui-soft-card ui-soft-card--interactive block p-5"
+            className="group rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm transition-all hover:border-[#c4cdd8] hover:shadow-md ui-focus-ring"
           >
-            <p className="text-xs uppercase tracking-wide text-zinc-500">{card.title}</p>
-            <p className="mt-2 text-3xl font-bold text-zinc-900">{card.value}</p>
-            <p className="mt-1 text-xs text-zinc-500">{card.subtext}</p>
+            <p className="text-[11px] font-medium uppercase tracking-wider text-[#697386]">
+              {card.title}
+            </p>
+            <p className="mt-2 text-[26px] font-semibold leading-none text-[#1a1f36]">
+              {card.value}
+            </p>
+            <p className="mt-2 text-[12px] text-[#697386] line-clamp-2">{card.subtext}</p>
           </Link>
         ))}
       </section>
 
-      <SoftCard as="section" className="p-5">
-        <h2 className="text-lg font-semibold">Quick Actions</h2>
-        <div className="mt-3 flex flex-wrap gap-2 text-sm">
-          <Link href="/admin/alerts" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            Review Alerts
-          </Link>
-          <Link href="/admin/media" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            Process Media Queue
-          </Link>
-          <Link href="/admin/curriculum" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            Review Curriculum Backlog
-          </Link>
-          <Link href="/api/admin/curriculum/backlog" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            Export Backlog CSV
-          </Link>
-          <Link href="/api/admin/curriculum/backlog?format=json&limit=1000" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            Open Backlog JSON
-          </Link>
-          <Link href="/admin/compliance" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            Review DSAR/Compliance
-          </Link>
-          <Link href="/admin/reports" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            Export Reports
-          </Link>
-          <Link href="/api/admin/ai/tutor-usage" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            View AI Tutor Usage
-          </Link>
-          <Link href="/api/admin/ai/remediation-usage" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            View Worksheet Usage
-          </Link>
-          <Link href="/api/admin/ai/remediation-usage/timeseries?days=14" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            View Worksheet Timeseries
-          </Link>
-          <Link href="/api/admin/ai/remediation-usage/export?days=14" className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-2 font-semibold text-foreground">
-            Export Worksheet Analytics CSV
-          </Link>
+      {/* ── Quick actions ─────────────────────────────────────────────────── */}
+      <section className="mt-6 rounded-xl border border-[#e3e8ee] bg-white p-5">
+        <h2 className="text-[13px] font-semibold text-[#1a1f36]">Quick Actions</h2>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {[
+            { href: "/admin/alerts",                                           label: "Review Alerts" },
+            { href: "/admin/media",                                            label: "Media Queue" },
+            { href: "/admin/curriculum",                                       label: "Curriculum Backlog" },
+            { href: "/api/admin/curriculum/backlog",                           label: "Export Backlog CSV" },
+            { href: "/api/admin/curriculum/backlog?format=json&limit=1000",    label: "Backlog JSON" },
+            { href: "/admin/compliance",                                       label: "DSAR / Compliance" },
+            { href: "/admin/reports",                                          label: "Export Reports" },
+            { href: "/api/admin/ai/tutor-usage",                               label: "AI Tutor Usage" },
+            { href: "/api/admin/ai/remediation-usage",                         label: "Worksheet Usage" },
+            { href: "/api/admin/ai/remediation-usage/timeseries?days=14",      label: "Worksheet Timeseries" },
+            { href: "/api/admin/ai/remediation-usage/export?days=14",          label: "Worksheet Analytics CSV" },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="ui-focus-ring rounded-md border border-[#e3e8ee] bg-white px-3 py-2 text-[13px] font-medium text-[#3c4257] shadow-sm transition hover:border-[#c4cdd8] hover:bg-[#f6f9fc]"
+            >
+              {label}
+            </Link>
+          ))}
         </div>
-      </SoftCard>
-    </main>
+      </section>
+    </div>
   );
 }

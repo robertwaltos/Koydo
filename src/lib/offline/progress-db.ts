@@ -8,18 +8,18 @@ type ProgressRecord = {
   synced: boolean;
 };
 
-interface EduForgeDb extends DBSchema {
+interface KoydoDb extends DBSchema {
   lessonProgress: {
     key: string;
     value: ProgressRecord;
   };
 }
 
-let dbPromise: Promise<IDBPDatabase<EduForgeDb>> | undefined;
+let dbPromise: Promise<IDBPDatabase<KoydoDb>> | undefined;
 
 function getDb() {
   if (!dbPromise) {
-    dbPromise = openDB<EduForgeDb>("eduforge", 1, {
+    dbPromise = openDB<KoydoDb>("koydo", 1, {
       upgrade(database) {
         database.createObjectStore("lessonProgress");
       },

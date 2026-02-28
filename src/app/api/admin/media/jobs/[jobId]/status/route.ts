@@ -1,6 +1,17 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+
+const statusUpdateSchema = z.object({
+  status: z.enum(["queued", "running", "completed", "failed", "canceled"]),
+  outputUrl: z.string().trim().max(2_048).optional(),
+  error: z.string().trim().max(2_000).optional(),
+});
+
+const routeParamsSchema = z.object({
+  jobId: z.string().uuid(),
+});
 
 async function isAdmin() {
   const supabase = await createSupabaseServerClient();
@@ -27,17 +38,23 @@ export async function POST(
     return NextResponse.json({ error: "Admin access required." }, { status: 403 });
   }
 
-  const { jobId } = await context.params;
-  const body = (await request.json().catch(() => ({}))) as {
-    status?: string;
-    outputUrl?: string;
-    error?: string;
-  };
-
-  const nextStatus = String(body.status ?? "").trim();
-  if (!["queued", "running", "completed", "failed", "canceled"].includes(nextStatus)) {
-    return NextResponse.json({ error: "Invalid status." }, { status: 400 });
+  const parsedParams = routeParamsSchema.safeParse(await context.params);
+  if (!parsedParams.success) {
+    return NextResponse.json(
+      { error: "Invalid job id.", details: parsedParams.error.flatten() },
+      { status: 400 },
+    );
   }
+  const { jobId } = parsedParams.data;
+
+  const parsedBody = statusUpdateSchema.safeParse(await request.json().catch(() => null));
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      { error: "Invalid payload.", details: parsedBody.error.flatten() },
+      { status: 400 },
+    );
+  }
+  const nextStatus = parsedBody.data.status;
 
   const payload: {
     status: string;
@@ -48,8 +65,12 @@ export async function POST(
     status: nextStatus,
   };
 
-  if (body.outputUrl !== undefined) payload.output_url = String(body.outputUrl || "").trim() || null;
-  if (body.error !== undefined) payload.error = String(body.error || "").trim() || null;
+  if (parsedBody.data.outputUrl !== undefined) {
+    payload.output_url = parsedBody.data.outputUrl || null;
+  }
+  if (parsedBody.data.error !== undefined) {
+    payload.error = parsedBody.data.error || null;
+  }
   if (nextStatus === "completed" || nextStatus === "failed" || nextStatus === "canceled") {
     payload.completed_at = new Date().toISOString();
   } else {

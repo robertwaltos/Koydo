@@ -4,7 +4,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const preferencePatchSchema = z.object({
   theme_pack: z.enum(["simple", "sunrise", "ocean", "forest", "candy", "space"]).optional(),
-  theme_mode: z.enum(["system", "light"]).optional(),
+  theme_mode: z.enum(["system", "light", "dark"]).optional(),
   motion_pref: z.enum(["standard"]).optional(),
   contrast_pref: z.enum(["standard", "high"]).optional(),
 });

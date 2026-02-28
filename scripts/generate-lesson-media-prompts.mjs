@@ -49,41 +49,87 @@ function loadCatalogModules() {
 }
 
 function buildSeedanceVideoPrompt(learningModule, lesson) {
-  return [
-    `Create a child-safe educational lesson video for subject "${learningModule.subject}" and lesson "${lesson.title}".`,
-    "Target audience: pre-K through grade 12 adaptable, inclusive global classroom representation.",
-    "Visual style: bright pastel palette (red, yellow, blue, green, white), high readability, soft rounded shapes.",
-    "Structure: 3 acts (hook, explained concept, recap) with simple visual storytelling and no on-screen brand logos.",
-    "Camera: gentle motion, medium framing, occasional close-ups on key concept visuals.",
-    "Duration: 35-55 seconds. Aspect: 16:9. FPS: 24.",
-    "Safety constraints: no violence, no fear-based scenes, no stereotypes, no copyrighted characters.",
-    "Accessibility constraints: high contrast objects, slower transitions, clean backgrounds, low visual clutter.",
-    `Core concept focus: ${lesson.title}.`,
-    "End frame: celebratory but calm transition inviting learner to continue to quiz/activity.",
-  ].join(" ");
+  const objectives = (learningModule.learningObjectives ?? []).slice(0, 3);
+  const animAid = (lesson.learningAids ?? []).find((a) => a.type === "animation");
+  const imageAid = (lesson.learningAids ?? []).find((a) => a.type === "image");
+  const aidContent = (animAid ?? imageAid)?.content ?? "";
+  const moduleDesc = learningModule.description ?? "";
+  const minAge = learningModule.minAge ?? 5;
+  const maxAge = learningModule.maxAge ?? 18;
+  const difficulty = learningModule.difficultyBand ?? "intermediate";
+  const durationMins = lesson.duration ?? 10;
+  const lessonType = lesson.type ?? "video";
+
+  const parts = [
+    `Subject: ${learningModule.subject}. Module: "${learningModule.title}". Lesson: "${lesson.title}".`,
+  ];
+  if (moduleDesc) parts.push(`Module context: ${moduleDesc}`);
+  if (objectives.length > 0) parts.push(`Learning objectives: ${objectives.join("; ")}.`);
+  if (aidContent) parts.push(`Visual anchor: ${aidContent}`);
+  parts.push(
+    `Target age ${minAge}-${maxAge} (${difficulty} level). Lesson type: ${lessonType}. Estimated ${durationMins} minutes.`,
+    "Create a child-safe cinematic educational video that DIRECTLY demonstrates the core concept above.",
+    "Structure: three acts — attention-grabbing hook tied to the concept, step-by-step concept demonstration with clear visuals, brief memorable recap.",
+    "Visual style: photorealistic or bright illustrated; high readability; subject-accurate diagrams, objects, or environments; no generic classroom stock footage.",
+    "Camera: gentle purposeful movement, medium framing, close-ups on the key concept object or process.",
+    "Duration: 35-55 seconds. Aspect 16:9. 24fps.",
+    "Safety: no violence, no fear-based scenes, no stereotypes, no copyrighted characters, appropriate for global K-12 classrooms.",
+    "Accessibility: high-contrast objects, unhurried pace, clean uncluttered backgrounds.",
+    "End frame: calm celebratory transition inviting the learner to continue.",
+  );
+  return parts.join(" ");
 }
 
 function buildSeedanceAnimationPrompt(learningModule, lesson) {
-  return [
-    `Generate a short concept animation for "${learningModule.subject}" lesson "${lesson.title}".`,
+  const objectives = (learningModule.learningObjectives ?? []).slice(0, 2);
+  const animAid = (lesson.learningAids ?? []).find((a) => a.type === "animation");
+  const aidTitle = animAid?.title ?? "";
+  const aidContent = animAid?.content ?? "";
+  const minAge = learningModule.minAge ?? 5;
+  const maxAge = learningModule.maxAge ?? 18;
+
+  const parts = [
+    `Short concept animation for ${learningModule.subject} — module "${learningModule.title}", lesson "${lesson.title}".`,
+  ];
+  if (objectives.length > 0) parts.push(`Core concept: ${objectives.join("; ")}.`);
+  if (aidTitle) parts.push(`Animation brief: "${aidTitle}".`);
+  if (aidContent) parts.push(aidContent);
+  parts.push(
+    `Target age ${minAge}-${maxAge}.`,
     "Length: 8-12 seconds, seamless loop.",
-    "Palette: happy pastels only, no dark backgrounds.",
-    "Motion design: one concept transforms step-by-step using arrows/highlights and soft easing.",
-    "No text overlays required; visual metaphor must be understandable for young learners.",
-    "Include one mascot-neutral guiding shape to direct attention.",
-    "Output: classroom-safe, no logos, no copyrighted references, no sensitive content.",
-  ].join(" ");
+    "Palette: lively pastels, no dark backgrounds.",
+    `Motion design: visually walk through the single key step or transformation in "${lesson.title}" using arrows, highlights, and soft easing — NO generic template loops.`,
+    "No text overlays; visual metaphor must be self-explanatory for young learners.",
+    "One neutral guiding shape directs the viewer's eye to the key moment.",
+    "Classroom-safe: no logos, no copyrighted references, no sensitive content.",
+  );
+  return parts.join(" ");
 }
 
 function buildImagePrompt(learningModule, lesson) {
-  return [
-    "Create a child-friendly educational illustration.",
-    `Subject: ${learningModule.subject}. Lesson: ${lesson.title}.`,
-    "Style: clean 2D digital illustration, soft shapes, high readability, low clutter.",
-    "Composition: one central concept visual + two supporting details + neutral background.",
-    "No text overlays, no logos, no copyrighted characters, no sensitive content.",
-    "Aspect ratio: 3:2.",
-  ].join(" ");
+  const objectives = (learningModule.learningObjectives ?? []).slice(0, 2);
+  const imageAid = (lesson.learningAids ?? []).find((a) => a.type === "image");
+  const aidTitle = imageAid?.title ?? "";
+  const aidContent = imageAid?.content ?? "";
+  const minAge = learningModule.minAge ?? 5;
+  const maxAge = learningModule.maxAge ?? 18;
+  const difficulty = learningModule.difficultyBand ?? "intermediate";
+  const moduleDesc = learningModule.description ?? "";
+
+  const parts = [
+    `Educational illustration for ${learningModule.subject} — module "${learningModule.title}", lesson "${lesson.title}".`,
+  ];
+  if (moduleDesc) parts.push(`Module context: ${moduleDesc}`);
+  if (objectives.length > 0) parts.push(`Concepts to visually represent: ${objectives.join("; ")}.`);
+  if (aidTitle) parts.push(`Image brief: "${aidTitle}".`);
+  if (aidContent) parts.push(aidContent);
+  parts.push(
+    `Target age ${minAge}-${maxAge} (${difficulty}).`,
+    "Style: clean digital illustration or photorealistic render; soft shapes; subject-accurate detail; high contrast; minimal clutter.",
+    "Composition: one dominant concept visual directly related to the lesson topic, two supporting context details, neutral clean background.",
+    "No text overlays, no logos, no copyrighted characters, no sensitive content. Aspect 3:2.",
+  );
+  return parts.join(" ");
 }
 
 function buildResearchAgentPrompt(learningModule, lesson) {

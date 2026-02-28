@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import SoftCard from "@/app/components/ui/soft-card";
+import { useI18n } from "@/lib/i18n/provider";
 
 type DsarRequest = {
   id: string;
@@ -25,6 +26,7 @@ export default function PrivacyClient({
   initialRequests: DsarRequest[];
   acceptances: PolicyAcceptance[];
 }) {
+  const { t } = useI18n();
   const [requests, setRequests] = useState(initialRequests);
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -49,14 +51,14 @@ export default function PrivacyClient({
         request?: DsarRequest;
       };
       if (!response.ok || !data.request) {
-        setStatus(data.error ?? "Unable to submit privacy request.");
+        setStatus(data.error ?? t("privacy_client_error_message"));
         return;
       }
       setRequests((previous) => [data.request!, ...previous]);
-      setStatus("Privacy request submitted.");
+      setStatus(t("privacy_client_success_message"));
       event.currentTarget.reset();
     } catch {
-      setStatus("Unable to submit privacy request.");
+      setStatus(t("privacy_client_error_message"));
     } finally {
       setIsSubmitting(false);
     }
@@ -71,22 +73,22 @@ export default function PrivacyClient({
       ) : null}
 
       <SoftCard as="section" className="p-5">
-        <h2 className="text-lg font-semibold">Submit Data Rights Request</h2>
+        <h2 className="text-lg font-semibold">{t("privacy_client_submit_request_title")}</h2>
         <form onSubmit={submitRequest} className="mt-4 grid gap-3">
           <select
             name="requestType"
-            aria-label="Privacy request type"
+            aria-label={t("privacy_client_request_type_label")}
             className="ui-focus-ring w-72 rounded-md border border-border bg-surface px-3 py-2 text-sm"
           >
-            <option value="access">Data access</option>
-            <option value="erasure">Delete my data</option>
-            <option value="rectification">Correct data</option>
-            <option value="portability">Data portability</option>
-            <option value="restriction">Restrict processing</option>
+            <option value="access">{t("privacy_client_request_type_access")}</option>
+            <option value="erasure">{t("privacy_client_request_type_erasure")}</option>
+            <option value="rectification">{t("privacy_client_request_type_rectification")}</option>
+            <option value="portability">{t("privacy_client_request_type_portability")}</option>
+            <option value="restriction">{t("privacy_client_request_type_restriction")}</option>
           </select>
           <textarea
             name="note"
-            placeholder="Optional details for the request"
+            placeholder={t("privacy_client_note_placeholder")}
             className="ui-focus-ring min-h-28 rounded-md border border-border bg-surface px-3 py-2 text-sm"
           />
           <button
@@ -94,47 +96,47 @@ export default function PrivacyClient({
             disabled={isSubmitting}
             className="ui-soft-button ui-focus-ring min-h-11 w-fit rounded-full bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
           >
-            {isSubmitting ? "Submitting..." : "Submit Request"}
+            {isSubmitting ? t("privacy_client_submitting_button") : t("privacy_client_submit_button")}
           </button>
         </form>
       </SoftCard>
 
       <SoftCard as="section" className="p-5">
-        <h2 className="text-lg font-semibold">Policy Acknowledgments</h2>
+        <h2 className="text-lg font-semibold">{t("privacy_client_acknowledgments_title")}</h2>
         <div className="mt-3 space-y-2">
           {acceptances.map((entry) => (
             <article key={entry.id} className="ui-soft-card rounded-md p-3 text-sm">
               <p className="font-medium capitalize">{entry.policy_type}</p>
-              <p className="text-xs text-zinc-500">Version: {entry.policy_version}</p>
+              <p className="text-xs text-zinc-500">{t("privacy_client_acknowledgments_version", { version: entry.policy_version })}</p>
               <p className="text-xs text-zinc-500">
-                Accepted: {new Date(entry.accepted_at).toLocaleString()}
+                {t("privacy_client_acknowledgments_accepted", { date: new Date(entry.accepted_at).toLocaleString() })}
               </p>
             </article>
           ))}
           {acceptances.length === 0 ? (
-            <p className="text-sm text-zinc-500">No policy acknowledgments recorded yet.</p>
+            <p className="text-sm text-zinc-500">{t("privacy_client_acknowledgments_none")}</p>
           ) : null}
         </div>
       </SoftCard>
 
       <SoftCard as="section" className="p-5">
-        <h2 className="text-lg font-semibold">Your Privacy Requests</h2>
+        <h2 className="text-lg font-semibold">{t("privacy_client_your_requests_title")}</h2>
         <div className="mt-3 space-y-2">
           {requests.map((entry) => (
             <article key={entry.id} className="ui-soft-card rounded-md p-3 text-sm">
               <p className="font-medium capitalize">{entry.request_type}</p>
-              <p className="text-xs text-zinc-500">Status: {entry.status}</p>
+              <p className="text-xs text-zinc-500">{t("privacy_client_requests_status", { status: entry.status })}</p>
               <p className="text-xs text-zinc-500">
-                Requested: {new Date(entry.requested_at).toLocaleString()}
+                {t("privacy_client_requests_requested", { date: new Date(entry.requested_at).toLocaleString() })}
               </p>
               {entry.resolved_at ? (
                 <p className="text-xs text-zinc-500">
-                  Resolved: {new Date(entry.resolved_at).toLocaleString()}
+                  {t("privacy_client_requests_resolved", { date: new Date(entry.resolved_at).toLocaleString() })}
                 </p>
               ) : null}
             </article>
           ))}
-          {requests.length === 0 ? <p className="text-sm text-zinc-500">No requests submitted yet.</p> : null}
+          {requests.length === 0 ? <p className="text-sm text-zinc-500">{t("privacy_client_requests_none")}</p> : null}
         </div>
       </SoftCard>
     </div>

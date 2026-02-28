@@ -2,7 +2,10 @@
 
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { publicEnv } from "@/lib/config/env";
+import { sanitizeNextPath } from "@/lib/routing/next-path";
+import { useI18n } from "@/lib/i18n/provider";
 import { Provider } from "@supabase/supabase-js";
+import { useState, type ReactNode } from "react";
 
 function GoogleIcon() {
   return (
@@ -60,67 +63,151 @@ function XIcon() {
   );
 }
 
-export default function OAuthButtons({ intent = "in" }: { intent?: "in" | "up" }) {
-  const actionText = intent === "up" ? "Sign Up" : "Sign In";
+type OAuthButtonsProps = {
+  intent?: "in" | "up";
+  layout?: "stack" | "grid-2";
+  className?: string;
+  nextPath?: string | null;
+};
+
+function joinClasses(...parts: Array<string | undefined | false>) {
+  return parts.filter(Boolean).join(" ");
+}
+
+export default function OAuthButtons({
+  intent = "in",
+  layout = "stack",
+  className,
+  nextPath,
+}: OAuthButtonsProps) {
+  const { t } = useI18n();
+  const buttonLabelKey = intent === "up" ? "auth_oauth_sign_up_with" : "auth_oauth_sign_in_with";
   const hasSupabaseConfig =
     Boolean(publicEnv.NEXT_PUBLIC_SUPABASE_URL) && Boolean(publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY);
+  const [status, setStatus] = useState("");
+  const [activeProvider, setActiveProvider] = useState<Provider | null>(null);
+
+  const providerConfigs: Array<{
+    id: Provider;
+    label: string;
+    icon: ReactNode;
+    enabled: boolean;
+    scopes?: string;
+    queryParams?: Record<string, string>;
+  }> = [
+    {
+      id: "google",
+      label: t("auth_oauth_provider_google"),
+      icon: <GoogleIcon />,
+      enabled: publicEnv.NEXT_PUBLIC_OAUTH_GOOGLE_ENABLED,
+      scopes: "openid email profile",
+      queryParams: { access_type: "offline", prompt: "consent" },
+    },
+    {
+      id: "facebook",
+      label: t("auth_oauth_provider_facebook"),
+      icon: <FacebookIcon />,
+      enabled: publicEnv.NEXT_PUBLIC_OAUTH_FACEBOOK_ENABLED,
+      scopes: "email,public_profile",
+    },
+    {
+      id: "apple",
+      label: t("auth_oauth_provider_apple"),
+      icon: <AppleIcon />,
+      enabled: publicEnv.NEXT_PUBLIC_OAUTH_APPLE_ENABLED,
+      scopes: "name email",
+    },
+    // Supabase uses the "twitter" provider ID for X.
+    {
+      id: "twitter",
+      label: t("auth_oauth_provider_x"),
+      icon: <XIcon />,
+      enabled: publicEnv.NEXT_PUBLIC_OAUTH_X_ENABLED,
+    },
+  ];
+
+  const providers = providerConfigs.filter((provider) => provider.enabled);
+
+  const hasConfiguredProvider = providers.length > 0;
 
   const handleOAuthSignIn = async (provider: Provider) => {
+    if (activeProvider) {
+      return;
+    }
     if (!hasSupabaseConfig) {
+      setStatus(t("auth_oauth_unavailable_supabase"));
+      return;
+    }
+    const providerConfig = providers.find((item) => item.id === provider);
+    if (!providerConfig) {
+      setStatus(t("auth_oauth_provider_not_available"));
       return;
     }
 
+    setStatus("");
+    setActiveProvider(provider);
+
     const supabase = createSupabaseBrowserClient();
-    await supabase.auth.signInWithOAuth({
+    const callbackUrl = new URL("/auth/callback", location.origin);
+    const safeNextPath = sanitizeNextPath(nextPath);
+    if (safeNextPath) {
+      callbackUrl.searchParams.set("next", safeNextPath);
+    }
+
+    const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: `${location.origin}/auth/callback`,
+        redirectTo: callbackUrl.toString(),
+        scopes: providerConfig.scopes,
+        queryParams: providerConfig.queryParams,
       },
     });
+
+    if (error) {
+      setStatus(t("auth_oauth_unable_start"));
+      setActiveProvider(null);
+    }
   };
 
   return (
-    <div className="mt-6 space-y-3">
-      <button
-        onClick={() => handleOAuthSignIn("google")}
-        disabled={!hasSupabaseConfig}
-        title={!hasSupabaseConfig ? "OAuth unavailable until Supabase is configured." : undefined}
-        className="ui-soft-button ui-focus-ring flex min-h-11 w-full items-center justify-center gap-3 rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-medium hover:bg-surface"
-      >
-        <GoogleIcon />
-        {actionText} with Google
-      </button>
-      <button
-        onClick={() => handleOAuthSignIn("facebook")}
-        disabled={!hasSupabaseConfig}
-        title={!hasSupabaseConfig ? "OAuth unavailable until Supabase is configured." : undefined}
-        className="ui-soft-button ui-focus-ring flex min-h-11 w-full items-center justify-center gap-3 rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-medium hover:bg-surface"
-      >
-        <FacebookIcon />
-        {actionText} with Facebook
-      </button>
-      <button
-        onClick={() => handleOAuthSignIn("apple")}
-        disabled={!hasSupabaseConfig}
-        title={!hasSupabaseConfig ? "OAuth unavailable until Supabase is configured." : undefined}
-        className="ui-soft-button ui-focus-ring flex min-h-11 w-full items-center justify-center gap-3 rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-medium hover:bg-surface"
-      >
-        <AppleIcon />
-        {actionText} with Apple
-      </button>
-      <button
-        onClick={() => handleOAuthSignIn("twitter")}
-        disabled={!hasSupabaseConfig}
-        title={!hasSupabaseConfig ? "OAuth unavailable until Supabase is configured." : undefined}
-        className="ui-soft-button ui-focus-ring flex min-h-11 w-full items-center justify-center gap-3 rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-medium hover:bg-surface"
-      >
-        {/* Supabase uses the "twitter" provider ID for X */}
-        <XIcon />
-        {actionText} with X
-      </button>
+    <div
+      className={joinClasses(
+        layout === "grid-2" ? "mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2" : "mt-6 space-y-3",
+        className,
+      )}
+    >
+      {providers.map((provider) => (
+        <button
+          key={provider.id}
+          onClick={() => handleOAuthSignIn(provider.id)}
+          disabled={!hasSupabaseConfig || activeProvider !== null}
+          title={!hasSupabaseConfig ? t("auth_oauth_unavailable_supabase") : undefined}
+          className={joinClasses(
+            "ui-soft-button ui-focus-ring flex min-h-11 w-full items-center gap-3 rounded-full border border-border bg-surface-muted text-sm font-medium hover:bg-surface disabled:opacity-70",
+            layout === "grid-2"
+              ? "justify-start px-4 py-3 sm:justify-center"
+              : "justify-center px-4 py-2",
+          )}
+        >
+          {provider.icon}
+          {activeProvider === provider.id
+            ? t("auth_oauth_starting")
+            : t(buttonLabelKey, { provider: provider.label })}
+        </button>
+      ))}
       {!hasSupabaseConfig ? (
-        <p className="text-xs text-zinc-500">
-          OAuth providers are unavailable until Supabase public keys are configured.
+        <p className={joinClasses("text-xs text-zinc-500", layout === "grid-2" && "sm:col-span-2")}>
+          {t("auth_oauth_unavailable_supabase")}
+        </p>
+      ) : null}
+      {hasSupabaseConfig && !hasConfiguredProvider ? (
+        <p className={joinClasses("text-xs text-zinc-500", layout === "grid-2" && "sm:col-span-2")}>
+          {t("auth_oauth_no_providers_configured")}
+        </p>
+      ) : null}
+      {status ? (
+        <p className={joinClasses("text-xs text-red-600", layout === "grid-2" && "sm:col-span-2")}>
+          {status}
         </p>
       ) : null}
     </div>

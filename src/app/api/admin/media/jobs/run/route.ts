@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+
+const runMediaJobsSchema = z.object({
+  batchSize: z.coerce.number().int().min(1).max(50).default(10),
+  moduleId: z.string().trim().max(120).optional(),
+  lessonId: z.string().trim().max(120).optional(),
+  assetType: z.enum(["video", "animation", "image"]).optional(),
+});
 
 async function assertAdmin() {
   const supabase = await createSupabaseServerClient();
@@ -64,20 +72,14 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Admin access required." }, { status: 403 });
   }
 
-  const body = (await request.json().catch(() => ({}))) as {
-    batchSize?: number;
-    moduleId?: string;
-    lessonId?: string;
-    assetType?: string;
-  };
-  const batchSize = Math.min(50, Math.max(1, Number(body.batchSize ?? 10)));
-  const moduleId = typeof body.moduleId === "string" ? body.moduleId.trim() : "";
-  const lessonId = typeof body.lessonId === "string" ? body.lessonId.trim() : "";
-  const assetType = typeof body.assetType === "string" ? body.assetType.trim() : "";
-
-  if (assetType && !["video", "animation", "image"].includes(assetType)) {
-    return NextResponse.json({ error: "assetType must be video, animation, or image." }, { status: 400 });
+  const parsedBody = runMediaJobsSchema.safeParse(await request.json().catch(() => null));
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      { error: "Invalid payload.", details: parsedBody.error.flatten() },
+      { status: 400 },
+    );
   }
+  const { batchSize, moduleId, lessonId, assetType } = parsedBody.data;
 
   const admin = createSupabaseAdminClient();
   let query = admin

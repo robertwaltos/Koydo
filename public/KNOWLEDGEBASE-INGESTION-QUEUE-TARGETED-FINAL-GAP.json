@@ -1,0 +1,282 @@
+{
+  "generatedAt": "2026-02-26T04:42:48.102Z",
+  "filters": {
+    "maxPerSource": 80,
+    "category": "all",
+    "domains": [
+      "nursing",
+      "cpu-gpu-memory-design"
+    ],
+    "strictDomains": true,
+    "allowGeneralCurriculumFallback": false,
+    "allowExternalLinks": false,
+    "rightsMode": "approved-or-conditional",
+    "rightsFile": "src\\lib\\knowledgebase\\source-rights.json",
+    "harvestFile": "public\\KNOWLEDGEBASE-HARVEST-TARGETED-REPORT.json",
+    "includeYellow": false
+  },
+  "totals": {
+    "queued": 9,
+    "sources": 1,
+    "priority": {
+      "high": 9,
+      "medium": 0,
+      "normal": 0
+    },
+    "byLinkType": {
+      "transcript_html": 9
+    },
+    "byRightsStatus": {
+      "approved": 9
+    },
+    "byDomain": {
+      "nursing": 4,
+      "cpu-gpu-memory-design": 5
+    }
+  },
+  "queue": [
+    {
+      "queueId": "mit-ocw-4aaddb14",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "nursing"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=nursing",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.086Z"
+    },
+    {
+      "queueId": "mit-ocw-061d5e04",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "nursing"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=patient%20care",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.088Z"
+    },
+    {
+      "queueId": "mit-ocw-d0727764",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "nursing"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=clinical%20skills",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.088Z"
+    },
+    {
+      "queueId": "mit-ocw-e1d35248",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "nursing"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=health%20assessment",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.089Z"
+    },
+    {
+      "queueId": "mit-ocw-04242a06",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "cpu-gpu-memory-design"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=cpu%20gpu%20memory%20design",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.089Z"
+    },
+    {
+      "queueId": "mit-ocw-31e517cc",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "cpu-gpu-memory-design"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=cpu",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.089Z"
+    },
+    {
+      "queueId": "mit-ocw-7d5ba658",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "cpu-gpu-memory-design"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=gpu",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.090Z"
+    },
+    {
+      "queueId": "mit-ocw-c4467078",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "cpu-gpu-memory-design"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=memory%20design",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.090Z"
+    },
+    {
+      "queueId": "mit-ocw-d0173f18",
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "region": "Global",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "transcriptFormat": "mixed",
+      "linkType": "transcript_html",
+      "priority": "high",
+      "priorityLevel": 0.5,
+      "domainMatch": true,
+      "domainMatchType": "explicit",
+      "domainTags": [
+        "cpu-gpu-memory-design"
+      ],
+      "contextTitle": "Search | MIT OpenCourseWare | Free Online Course Materials",
+      "contextAnchorText": "seed-url",
+      "rightsStatus": "approved",
+      "rightsPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "status": "queued",
+      "url": "https://ocw.mit.edu/search/?q=computer%20architecture",
+      "discoveredFrom": "https://ocw.mit.edu/",
+      "createdAt": "2026-02-26T04:42:48.090Z"
+    }
+  ]
+}

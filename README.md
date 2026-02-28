@@ -1,6 +1,6 @@
-# EduForge Web Starter
+# Koydo Web Starter
 
-EduForge is a web-first educational platform starter built with Next.js App Router and TypeScript.
+Koydo is a web-first educational platform starter built with Next.js App Router and TypeScript.
 
 ## Included foundation
 
@@ -42,7 +42,32 @@ Optional environment diagnostics:
 
 ```bash
 npm run env:check
+npm run env:check:prod
+npm run env:check:prod:audit
+npm run env:checklist:prod
+npm run env:checklist:prod:no-fail
+npm run preflight:prod-env
+npm run preflight:prod-env:audit
+npm run ops:preflight
+npm run ops:preflight:auto-server
+npm run ops:preflight:require-live-base
+npm run ops:preflight:prod-env
+npm run ops:preflight:prod-env:audit
 ```
+
+- `env:check:prod` treats the current environment as production and exits non-zero on warnings/failures.
+- `env:check:prod:audit` audits `.env.production.audit` (from `vercel env pull`) with the same strict gate via `--source-file`.
+- `env:check` and `env:check:prod` prioritize runtime `process.env` values over `.env` values, fail production-localhost Supabase URLs, and audit critical keys for placeholder-style secrets.
+- `env:checklist:prod` runs strict production env audit against `.env.production.audit` and rewrites `PRODUCTION-ENV-CHECKLIST.md` plus `public/PRODUCTION-ENV-CHECKLIST.json`.
+- `env:checklist:prod:no-fail` writes the same checklist artifacts but exits zero for report generation workflows.
+- `preflight:prod-env` runs full preflight and enforces strict production env checks (`--env-runtime production --strict-env-warn`).
+- `preflight:prod-env:audit` runs full preflight against `.env.production.audit` for production-readiness gating.
+- `ops:preflight` runs env/db/webhook/auth-billing smoke checks with JSON aggregation.
+- `ops:preflight` marks Auth/Billing smoke as `warn` (not `fail`) when the base URL is unreachable.
+- `ops:preflight:auto-server` attempts to start a local Next.js server when localhost is unreachable, then runs Auth/Billing smoke against the started server.
+- `ops:preflight:require-live-base` enforces a reachable base URL for Auth/Billing smoke checks.
+- `ops:preflight:prod-env` runs ops preflight with production env runtime override and strict warning behavior, while skipping auth/billing smoke.
+- `ops:preflight:prod-env:audit` runs ops preflight against `.env.production.audit` with strict warning behavior, while skipping auth/billing smoke.
 
 Database readiness diagnostics (checks required Supabase tables):
 
@@ -119,6 +144,9 @@ Required GitHub secrets/vars for media queue apply mode:
 - `POST /api/images/generate`
 - `GET /api/media/resolve`
 - `GET /api/media/resolve/batch`
+- `POST /api/language/translate`
+- `POST /api/language/pronunciation/grade`
+- `GET/POST /api/language/gamification/state`
 - `POST /api/stripe/checkout`
 - `POST /api/stripe/webhook`
 - `POST /api/compliance/age-gate`
@@ -148,6 +176,7 @@ Required GitHub secrets/vars for media queue apply mode:
 - `GET/POST /api/admin/media/jobs` (GET supports `moduleId`, `lessonId`, `assetType`, `status`, `limit`, `offset` query params)
 - `GET /api/admin/media/jobs/summary`
 - `GET /api/admin/media/prompt-pack`
+- `GET /api/admin/media/catalog` (filters: `group`, `usagePath`, `q`, `limit`, `offset`; returns normalized Grok-manifest assets with `public_url`)
 - `POST /api/admin/media/jobs/run`
 - `POST /api/admin/media/jobs/queue-from-pack`
 - `POST /api/admin/media/jobs/retry`
@@ -475,6 +504,7 @@ Image generation behavior:
 
 - `POST /api/images/generate` checks completed `media_generation_jobs` first.
 - If no completed image exists, it queues an image job and returns a placeholder until processing completes.
+- `GET /api/media/resolve` and `GET /api/media/resolve/batch` now return generated-asset fallbacks when no completed DB job exists (`source: generated_fallback` on single resolve).
 
 AI routes hardening:
 
@@ -577,6 +607,13 @@ This creates (or reuses) a test user and seeds sample records in `user_profiles`
 ## Notes
 
 - Stripe, Supabase, translation, and AI routes are scaffolded for integration and need real keys in `.env.local`.
+- Stripe quick setup (hosted Checkout flow):
+  - Required:
+    - `STRIPE_SECRET_KEY`
+    - `STRIPE_WEBHOOK_SECRET`
+    - one active price via `app_settings.key='stripe_price_id'` (or `STRIPE_PRICE_ID` fallback)
+  - Optional (recommended for future Stripe Elements UI):
+    - `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
 - The token budget utility follows project constraints and can be wired to per-user Supabase tracking tables.
 - Stripe webhook lifecycle now persists subscription state into `subscriptions` using `SUPABASE_SERVICE_ROLE_KEY`.
 - Checkout and parent-consent APIs now derive `userId` from the authenticated Supabase session.

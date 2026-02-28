@@ -33,9 +33,10 @@ export const GenSciencePrekU1ExternalModule: LearningModule = {
   "gradeBand": "preK",
   "metadata": {
     "source": "../External_AI_Agents/lesson_platform (1).jsx",
-    "sourceUnitId": "gen_science-prek-u1",
+    "sourceUnitId": "gen-science-prek-u1",
     "sourceUnitIdCanonical": "gen-science-prek-u1",
-    "importedAt": "2026-02-24T03:43:31.760Z"
+    "sourceUnitIdRaw": "gen_science-prek-u1",
+    "importedAt": "2026-02-25T02:03:30.481Z"
   },
   "external": {
     "unitOrder": 17,

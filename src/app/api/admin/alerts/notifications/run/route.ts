@@ -134,7 +134,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         from: fromEmail,
         to: [row.recipient],
-        subject: `[EduForge Alert] ${alert.severity.toUpperCase()} - ${alert.category}`,
+        subject: `[Koydo Alert] ${alert.severity.toUpperCase()} - ${alert.category}`,
         html: buildEmailHtml(alert),
       }),
     });

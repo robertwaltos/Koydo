@@ -1,0 +1,754 @@
+{
+  "generatedAt": "2026-02-26T06:13:54.144Z",
+  "totals": {
+    "total": 71,
+    "active": 53,
+    "review": 18,
+    "candidateUnused": 0
+  },
+  "scripts": [
+    {
+      "fileName": "appstore-compliance-audit.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:25",
+        "./public/UNUSED-SCRIPTS-REPORT.json:17",
+        "./public/UNUSED-SCRIPTS-REPORT.md:17"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "auto-resolve-exam-errors.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:2010",
+        "./package.json:39",
+        "./public/UNUSED-SCRIPTS-REPORT.json:33",
+        "./public/UNUSED-SCRIPTS-REPORT.md:19"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "autonomous-media-agent.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:44",
+        "./public/UNUSED-SCRIPTS-REPORT.md:20"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "check-db-readiness.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:77",
+        "./public/UNUSED-SCRIPTS-REPORT.json:54",
+        "./public/UNUSED-SCRIPTS-REPORT.md:21",
+        "./README.md:56"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "check-env.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:76",
+        "./public/UNUSED-SCRIPTS-REPORT.json:65",
+        "./public/UNUSED-SCRIPTS-REPORT.md:22"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "check-media-sla-alerts.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:19",
+        "./public/UNUSED-SCRIPTS-REPORT.json:75",
+        "./public/UNUSED-SCRIPTS-REPORT.md:23",
+        "./README.md:100",
+        "./README.md:90"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "check-schema.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:87",
+        "./public/UNUSED-SCRIPTS-REPORT.md:24"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "comfy-client.py",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:103",
+        "./public/UNUSED-SCRIPTS-REPORT.md:26"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "compile-media-assets.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:113",
+        "./public/UNUSED-SCRIPTS-REPORT.md:27",
+        "./src/lib/media/generated-media-assets.ts:1"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "compile-media-prompts.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:123",
+        "./public/UNUSED-SCRIPTS-REPORT.md:28",
+        "./src/lib/media/generated-prompts.ts:1"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "create-admin-alert.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:2009",
+        "./package.json:21",
+        "./public/UNUSED-SCRIPTS-REPORT.json:133",
+        "./public/UNUSED-SCRIPTS-REPORT.md:29"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "create-module.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:10",
+        "./public/UNUSED-SCRIPTS-REPORT.json:144",
+        "./public/UNUSED-SCRIPTS-REPORT.md:30"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "curriculum-backlog-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:29",
+        "./public/UNUSED-SCRIPTS-REPORT.json:154",
+        "./public/UNUSED-SCRIPTS-REPORT.md:31"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "curriculum-coverage-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:26",
+        "./public/UNUSED-SCRIPTS-REPORT.json:164",
+        "./public/UNUSED-SCRIPTS-REPORT.md:32"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "curriculum-expansion-plan.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:28",
+        "./public/UNUSED-SCRIPTS-REPORT.json:174",
+        "./public/UNUSED-SCRIPTS-REPORT.md:33"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "curriculum-quality-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1992",
+        "./package.json:27",
+        "./public/UNUSED-SCRIPTS-REPORT.json:184",
+        "./public/UNUSED-SCRIPTS-REPORT.md:34"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "exam-authoring-backlog-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:2032",
+        "./package.json:37",
+        "./public/UNUSED-SCRIPTS-REPORT.json:195",
+        "./public/UNUSED-SCRIPTS-REPORT.md:35"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "exam-prep-content-quality-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1991",
+        "./package.json:36",
+        "./public/UNUSED-SCRIPTS-REPORT.json:206",
+        "./public/UNUSED-SCRIPTS-REPORT.md:36"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "exam-prep-coverage-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1990",
+        "./package.json:35",
+        "./public/UNUSED-SCRIPTS-REPORT.json:217",
+        "./public/UNUSED-SCRIPTS-REPORT.md:37"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "export-curriculum-state-for-external-agents.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1937",
+        "./package.json:30",
+        "./public/UNUSED-SCRIPTS-REPORT.json:228",
+        "./public/UNUSED-SCRIPTS-REPORT.md:38"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "generate-all-reports.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:2034",
+        "./package.json:42",
+        "./public/UNUSED-SCRIPTS-REPORT.json:239",
+        "./public/UNUSED-SCRIPTS-REPORT.md:39"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "generate-dynamic-lessons.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:250",
+        "./public/UNUSED-SCRIPTS-REPORT.md:40"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "generate-exam-modules.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:2026",
+        "./package.json:7",
+        "./public/UNUSED-SCRIPTS-REPORT.json:260",
+        "./public/UNUSED-SCRIPTS-REPORT.md:41"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "generate-lesson-media-prompts.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1982",
+        "./package.json:40",
+        "./public/UNUSED-SCRIPTS-REPORT.json:271",
+        "./public/UNUSED-SCRIPTS-REPORT.md:42"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "generate-lessons.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:282",
+        "./public/UNUSED-SCRIPTS-REPORT.md:43"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "generate-prek-gap-modules.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:8",
+        "./package.json:9",
+        "./public/UNUSED-SCRIPTS-REPORT.json:292",
+        "./public/UNUSED-SCRIPTS-REPORT.md:44"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "generate-rich-modules.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:303",
+        "./public/UNUSED-SCRIPTS-REPORT.md:45"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "import-external-curriculum.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1840",
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1940",
+        "./package.json:31",
+        "./package.json:32",
+        "./package.json:33",
+        "./package.json:34",
+        "./public/UNUSED-SCRIPTS-REPORT.json:313",
+        "./public/UNUSED-SCRIPTS-REPORT.md:46"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "install-comfyui-flux.ps1",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:328",
+        "./public/UNUSED-SCRIPTS-REPORT.md:47"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "knowledgebase-backlog-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:60",
+        "./package.json:61",
+        "./public/UNUSED-SCRIPTS-REPORT.json:337",
+        "./public/UNUSED-SCRIPTS-REPORT.md:48"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-build-ingestion-queue.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./KNOWLEDGEBASE_SOURCING_PLAN.md:133",
+        "./KNOWLEDGEBASE_SOURCING_PLAN.md:135",
+        "./package.json:49",
+        "./package.json:50",
+        "./package.json:51",
+        "./package.json:52",
+        "./public/UNUSED-SCRIPTS-REPORT.json:346",
+        "./public/UNUSED-SCRIPTS-REPORT.md:49"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-build-manifest.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:66",
+        "./package.json:67",
+        "./public/UNUSED-SCRIPTS-REPORT.json:359",
+        "./public/UNUSED-SCRIPTS-REPORT.md:50"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-domain-coverage-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./KNOWLEDGEBASE_SOURCING_PLAN.md:161",
+        "./package.json:57",
+        "./public/UNUSED-SCRIPTS-REPORT.json:368",
+        "./public/UNUSED-SCRIPTS-REPORT.md:51"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-domain-gate.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:64",
+        "./package.json:65",
+        "./public/UNUSED-SCRIPTS-REPORT.json:377",
+        "./public/UNUSED-SCRIPTS-REPORT.md:52"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-export-lesson-pack.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:68"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-extract-pdf-text.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:56",
+        "./public/UNUSED-SCRIPTS-REPORT.json:386",
+        "./public/UNUSED-SCRIPTS-REPORT.md:53"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-fetch-queue.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:53",
+        "./package.json:54",
+        "./package.json:55",
+        "./public/UNUSED-SCRIPTS-REPORT.json:394",
+        "./public/UNUSED-SCRIPTS-REPORT.md:54"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-generate-targeted-seeds.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:62",
+        "./package.json:63",
+        "./public/UNUSED-SCRIPTS-REPORT.json:404",
+        "./public/UNUSED-SCRIPTS-REPORT.md:55"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-harvest-links.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./KNOWLEDGEBASE_SOURCING_PLAN.md:111",
+        "./package.json:47",
+        "./public/UNUSED-SCRIPTS-REPORT.json:413",
+        "./public/UNUSED-SCRIPTS-REPORT.md:56"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-quality-gate.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:58",
+        "./package.json:59"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:44",
+        "./public/UNUSED-SCRIPTS-REPORT.json:422",
+        "./public/UNUSED-SCRIPTS-REPORT.md:57"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-rights-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:45",
+        "./package.json:46",
+        "./public/UNUSED-SCRIPTS-REPORT.json:430",
+        "./public/UNUSED-SCRIPTS-REPORT.md:58"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-run-pipeline.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:69",
+        "./public/UNUSED-SCRIPTS-REPORT.json:439",
+        "./public/UNUSED-SCRIPTS-REPORT.md:59"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "knowledgebase-targeted-harvest.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:48",
+        "./public/UNUSED-SCRIPTS-REPORT.json:447",
+        "./public/UNUSED-SCRIPTS-REPORT.md:60"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "media-readiness-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:15",
+        "./public/UNUSED-SCRIPTS-REPORT.json:461",
+        "./public/UNUSED-SCRIPTS-REPORT.md:62"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "ops-health.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:73",
+        "./public/UNUSED-SCRIPTS-REPORT.json:471",
+        "./public/UNUSED-SCRIPTS-REPORT.md:63"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "ops-preflight.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:74",
+        "./public/UNUSED-SCRIPTS-REPORT.json:481",
+        "./public/UNUSED-SCRIPTS-REPORT.md:64"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "process-alert-notifications.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:20",
+        "./public/UNUSED-SCRIPTS-REPORT.json:491",
+        "./public/UNUSED-SCRIPTS-REPORT.md:65",
+        "./README.md:101",
+        "./README.md:91"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "process-media-jobs.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1971",
+        "./package.json:24",
+        "./public/UNUSED-SCRIPTS-REPORT.json:509",
+        "./public/UNUSED-SCRIPTS-REPORT.md:67",
+        "./README.md:92"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "process-report-jobs.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1966",
+        "./package.json:22",
+        "./public/UNUSED-SCRIPTS-REPORT.json:521",
+        "./public/UNUSED-SCRIPTS-REPORT.md:68",
+        "./README.md:372",
+        "./README.md:378",
+        "./README.md:97"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "queue-immersive-media.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:541",
+        "./public/UNUSED-SCRIPTS-REPORT.md:70"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "queue-media-from-prompts.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:16",
+        "./public/UNUSED-SCRIPTS-REPORT.json:551",
+        "./public/UNUSED-SCRIPTS-REPORT.md:71",
+        "./README.md:328",
+        "./README.md:87"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "queue-test-comfy-job.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:563",
+        "./public/UNUSED-SCRIPTS-REPORT.md:72"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "report-unused-scripts.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:75",
+        "./public/UNUSED-SCRIPTS-REPORT.json:573",
+        "./public/UNUSED-SCRIPTS-REPORT.md:73"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "requeue-stale-media-jobs.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:18",
+        "./public/UNUSED-SCRIPTS-REPORT.json:583",
+        "./public/UNUSED-SCRIPTS-REPORT.md:74",
+        "./README.md:89"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "requeue-stale-report-jobs.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1966",
+        "./package.json:23",
+        "./public/UNUSED-SCRIPTS-REPORT.json:594",
+        "./public/UNUSED-SCRIPTS-REPORT.md:75",
+        "./README.md:98"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "retry-media-jobs.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:17",
+        "./public/UNUSED-SCRIPTS-REPORT.json:606",
+        "./public/UNUSED-SCRIPTS-REPORT.md:76",
+        "./README.md:88"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "seed-supabase.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:83",
+        "./public/UNUSED-SCRIPTS-REPORT.json:617",
+        "./public/UNUSED-SCRIPTS-REPORT.md:77"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "setup-comfy_linux.sh",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:627",
+        "./public/UNUSED-SCRIPTS-REPORT.md:78"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "setup-media-engine-expansion.sh",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./NEURAL_CINEMA_SETUP_PROMPT.md:58",
+        "./NEURAL_CINEMA_SETUP_PROMPT.md:59",
+        "./public/UNUSED-SCRIPTS-REPORT.json:636",
+        "./public/UNUSED-SCRIPTS-REPORT.md:79"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "smoke-auth-billing.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:71",
+        "./public/UNUSED-SCRIPTS-REPORT.json:647",
+        "./public/UNUSED-SCRIPTS-REPORT.md:80"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "start_and_test_comfy.sh",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:657",
+        "./public/UNUSED-SCRIPTS-REPORT.md:81"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "start-local-ai.ps1",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:666",
+        "./public/UNUSED-SCRIPTS-REPORT.md:82"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "start-media-server.sh",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:675",
+        "./public/UNUSED-SCRIPTS-REPORT.md:83"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "stripe-webhook-health-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:72",
+        "./public/UNUSED-SCRIPTS-REPORT.json:684",
+        "./public/UNUSED-SCRIPTS-REPORT.md:84"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "sync-modules.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:11",
+        "./public/UNUSED-SCRIPTS-REPORT.json:700",
+        "./public/UNUSED-SCRIPTS-REPORT.md:86"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "telemetry-learning-events-report.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./EXTERNAL_AI_AGENTS_IMPLEMENTATION_PLAN.md:1969",
+        "./package.json:38",
+        "./public/UNUSED-SCRIPTS-REPORT.json:710",
+        "./public/UNUSED-SCRIPTS-REPORT.md:87"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "test-media-gen.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:721",
+        "./public/UNUSED-SCRIPTS-REPORT.md:88"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "ui-style-audit.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./NEO_SOFT_MODERN_UI_PLAN.md:125",
+        "./package.json:43",
+        "./public/UNUSED-SCRIPTS-REPORT.json:731",
+        "./public/UNUSED-SCRIPTS-REPORT.md:89"
+      ],
+      "status": "active"
+    },
+    {
+      "fileName": "update-codex.mjs",
+      "packageReferenced": false,
+      "externalReferences": [
+        "./public/UNUSED-SCRIPTS-REPORT.json:742",
+        "./public/UNUSED-SCRIPTS-REPORT.md:90"
+      ],
+      "status": "review"
+    },
+    {
+      "fileName": "validate-curriculum.mjs",
+      "packageReferenced": true,
+      "externalReferences": [
+        "./package.json:13",
+        "./package.json:14",
+        "./public/UNUSED-SCRIPTS-REPORT.json:752",
+        "./public/UNUSED-SCRIPTS-REPORT.md:91"
+      ],
+      "status": "active"
+    }
+  ]
+}

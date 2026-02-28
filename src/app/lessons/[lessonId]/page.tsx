@@ -12,7 +12,7 @@ import ProgressChip from "@/app/components/ui/progress-chip";
 export default function LessonPage({
   params,
 }: {
-  params: { lessonId: string } | Promise<{ lessonId: string }>;
+  params: Promise<{ lessonId: string }>;
 }) {
   return <LessonPageContent params={params} />;
 }
@@ -20,9 +20,9 @@ export default function LessonPage({
 async function LessonPageContent({
   params,
 }: {
-  params: { lessonId: string } | Promise<{ lessonId: string }>;
+  params: Promise<{ lessonId: string }>;
 }) {
-  const resolvedParams = await Promise.resolve(params);
+  const resolvedParams = await params;
   const resolvedLesson = getLessonByLookupKey(resolvedParams.lessonId);
 
   if (!resolvedLesson) {

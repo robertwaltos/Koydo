@@ -32,7 +32,7 @@ alter table public.user_profiles add constraint user_profiles_theme_pack_check
 
 alter table public.user_profiles drop constraint if exists user_profiles_theme_mode_check;
 alter table public.user_profiles add constraint user_profiles_theme_mode_check
-  check (theme_mode in ('system', 'light'));
+  check (theme_mode in ('system', 'light', 'dark'));
 
 alter table public.user_profiles drop constraint if exists user_profiles_motion_pref_check;
 alter table public.user_profiles add constraint user_profiles_motion_pref_check
@@ -88,6 +88,20 @@ create table if not exists public.subscriptions (
   updated_at timestamptz not null default now()
 );
 
+create table if not exists public.stripe_webhook_events (
+  event_id text primary key,
+  event_type text not null,
+  status text not null default 'processing',
+  attempt_count integer not null default 1,
+  event_created_at timestamptz,
+  processed_at timestamptz,
+  last_error text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint stripe_webhook_events_status_check
+    check (status in ('processing', 'processed', 'failed'))
+);
+
 create table if not exists public.dsar_requests (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references auth.users(id) on delete cascade,
@@ -127,10 +141,16 @@ create trigger subscriptions_set_updated_at
 before update on public.subscriptions
 for each row execute function public.set_updated_at();
 
+drop trigger if exists stripe_webhook_events_set_updated_at on public.stripe_webhook_events;
+create trigger stripe_webhook_events_set_updated_at
+before update on public.stripe_webhook_events
+for each row execute function public.set_updated_at();
+
 alter table public.user_profiles enable row level security;
 alter table public.user_tokens enable row level security;
 alter table public.parent_consents enable row level security;
 alter table public.subscriptions enable row level security;
+alter table public.stripe_webhook_events enable row level security;
 alter table public.dsar_requests enable row level security;
 
 drop policy if exists "profiles_select_own" on public.user_profiles;
@@ -953,6 +973,10 @@ create index if not exists idx_media_jobs_lesson_status
 create index if not exists idx_media_jobs_module_status
   on public.media_generation_jobs(module_id, status, created_at desc);
 
+-- Compound index for fast processor polling: WHERE asset_type IN (...) AND status = 'queued'
+create index if not exists idx_media_jobs_asset_type_status
+  on public.media_generation_jobs(asset_type, status);
+
 create index if not exists idx_learning_events_user_lesson_event_at
   on public.learning_events(user_id, lesson_id, event_at desc);
 
@@ -985,3 +1009,58 @@ create index if not exists idx_ai_remediation_worksheets_lesson_updated
 
 create index if not exists idx_ai_remediation_worksheets_completed_at
   on public.ai_remediation_worksheets(completed_at desc);
+
+-- Student Profiles (Family Model)
+create table if not exists public.student_profiles (
+  id uuid primary key default gen_random_uuid(),
+  account_id uuid not null references auth.users(id) on delete cascade,
+  display_name text not null,
+  avatar_url text,
+  age_years integer check (age_years between 3 and 21),
+  grade_level text,
+  path_allowlist text[],
+  featured_module_ids text[],
+  module_assignment_mode text not null default 'guided',
+  
+  -- Assessment & Progress
+  initial_assessment_status text default 'pending', -- 'pending', 'in_progress', 'completed'
+  initial_assessment_data jsonb, -- Stores the Q&A specific to the 5 diagnostic questions
+  ai_skill_level_map jsonb, -- Stores the AI-derived competency map after assessment
+  
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+alter table public.student_profiles
+  add column if not exists age_years integer check (age_years between 3 and 21);
+
+alter table public.student_profiles
+  add column if not exists path_allowlist text[];
+
+alter table public.student_profiles
+  add column if not exists featured_module_ids text[];
+
+alter table public.student_profiles
+  add column if not exists module_assignment_mode text not null default 'guided';
+
+alter table public.student_profiles drop constraint if exists student_profiles_module_assignment_mode_check;
+alter table public.student_profiles add constraint student_profiles_module_assignment_mode_check
+  check (module_assignment_mode in ('guided', 'random'));
+
+-- RLS
+alter table public.student_profiles enable row level security;
+
+drop policy if exists "Users can manage their own student profiles" on public.student_profiles;
+create policy "Users can manage their own student profiles"
+  on public.student_profiles for all
+  using (auth.uid() = account_id)
+  with check (auth.uid() = account_id);
+
+-- Add index for fast lookup of profiles by account
+create index if not exists idx_student_profiles_account
+  on public.student_profiles(account_id);
+
+drop trigger if exists set_student_profiles_updated_at on public.student_profiles;
+create trigger set_student_profiles_updated_at
+  before update on public.student_profiles
+  for each row execute function public.set_updated_at();

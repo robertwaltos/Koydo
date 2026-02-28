@@ -1,4 +1,4 @@
-# EduForge: 1000x Better User Experience Research
+# Koydo: 1000x Better User Experience Research
 
 ## Objective
 Design and ship product improvements that compound learner outcomes, parent trust, and retention far beyond baseline educational apps.

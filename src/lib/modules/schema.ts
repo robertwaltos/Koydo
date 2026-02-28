@@ -12,11 +12,11 @@ export const lessonOptionSchema = z.object({
 export const questionSchema = z.object({
   id: z.string().min(1),
   text: z.string().min(1),
-  skillId: z.string().min(1),
+  skillId: z.string().min(1).optional(),
   options: z.array(lessonOptionSchema).min(2),
   correctOptionId: z.string().min(1),
-  hint: z.string().min(1).optional(),
-  explanation: z.string().min(1).optional(),
+  hint: z.string().optional(),
+  explanation: z.string().optional(),
   imageUrl: z.string().min(1).optional(),
   imageAlt: z.string().min(1).optional(),
 });
@@ -48,7 +48,7 @@ export const flashcardSchema = z.object({
 export const interactiveActivitySchema = z.object({
   id: z.string().min(1),
   type: z.string().min(1),
-  title: z.string().min(1),
+  title: z.string().min(1).optional(),
   description: z.string().min(1).optional(),
   estimatedMinutes: z.number().int().positive().optional(),
   difficultyLevel: z.string().min(1).optional(),
@@ -138,6 +138,7 @@ export const lessonSchema = z.object({
   standardsCodes: z.array(z.string().min(1)).optional(),
   chunks: z.array(lessonChunkSchema).optional(),
   flashcards: z.array(flashcardSchema).optional(),
+  activities: z.array(interactiveActivitySchema).optional(),
   interactiveActivities: z.array(interactiveActivitySchema).optional(),
   quizBlueprint: quizBlueprintSchema.optional(),
   prompts: lessonMediaPromptsSchema.optional(),

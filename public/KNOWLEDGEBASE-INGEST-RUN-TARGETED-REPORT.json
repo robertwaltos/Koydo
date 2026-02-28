@@ -1,0 +1,163 @@
+{
+  "generatedAt": "2026-02-26T04:09:36.159Z",
+  "options": {
+    "limit": 30,
+    "timeoutMs": 20000,
+    "balanced": true,
+    "allowBinary": false,
+    "queueFile": "public\\KNOWLEDGEBASE-INGESTION-QUEUE-TARGETED.json"
+  },
+  "totals": {
+    "attempted": 12,
+    "succeeded": 12,
+    "failed": 0,
+    "skippedUnsupported": 0,
+    "savedPdfPendingExtraction": 0
+  },
+  "results": [
+    {
+      "queueId": "mit-ocw-f92652dc",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-f92652dc.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=microelectronics"
+    },
+    {
+      "queueId": "mit-ocw-cb3359b1",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-cb3359b1.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=semiconductor"
+    },
+    {
+      "queueId": "mit-ocw-dbb9b694",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 3898,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-dbb9b694.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/syllabus/"
+    },
+    {
+      "queueId": "mit-ocw-d4a9435c",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 5804,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-d4a9435c.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/calendar/"
+    },
+    {
+      "queueId": "mit-ocw-42b5ebd8",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 6074,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/readings/"
+    },
+    {
+      "queueId": "mit-ocw-8bd5b9d1",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 6044,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-8bd5b9d1.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/lecture-notes/"
+    },
+    {
+      "queueId": "mit-ocw-1b87a674",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 3237,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-1b87a674.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/assignments/"
+    },
+    {
+      "queueId": "mit-ocw-6b79c7f5",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 3105,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-6b79c7f5.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/projects/"
+    },
+    {
+      "queueId": "mit-ocw-3d3e67cc",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 3186,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-3d3e67cc.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/tools/"
+    },
+    {
+      "queueId": "mit-ocw-7d895da1",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 2870,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-7d895da1.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/pages/exams/"
+    },
+    {
+      "queueId": "mit-ocw-2ee5c97c",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 4609,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-2ee5c97c.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/download"
+    },
+    {
+      "queueId": "mit-ocw-efda8314",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 3787,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-efda8314.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/"
+    }
+  ]
+}

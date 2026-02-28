@@ -28,7 +28,7 @@ export async function sendParentConsentVerificationEmail({
     body: JSON.stringify({
       from: serverEnv.PARENT_CONSENT_FROM_EMAIL,
       to: [toEmail],
-      subject: "EduForge Parent Verification Required",
+      subject: "Koydo Parent Verification Required",
       html: `
         <p>Hello Parent/Guardian,</p>
         <p>Please verify consent for child account <strong>${childUserId}</strong> by opening this link:</p>

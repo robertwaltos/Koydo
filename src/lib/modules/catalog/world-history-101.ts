@@ -2,981 +2,678 @@ import type { LearningModule } from "@/lib/modules/types";
 
 export const WorldHistory101Module: LearningModule = {
   id: "world-history-101",
-  title: "World History Journey",
-  description: "Survey major civilizations, turning points, and global historical connections.",
+  title: "World History: Civilizations Through Time",
+  description:
+    "Travel through time from ancient Mesopotamia and Egypt to Greece, Rome, the medieval world, and the Renaissance. Discover how civilizations rose, innovated, and shaped the modern world.",
   subject: "History Worldwide",
-  tags: ["core", "curriculum", "interactive"],
+  tags: ["history", "social-studies", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "1.1.0",
-  version: "1.1.0",
+  moduleVersion: "2.0.0",
+  version: "2.0.0",
   learningObjectives: [
-    "Understand core concepts in History Worldwide",
-    "Apply Turning Points strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Describe Mesopotamia as the cradle of civilization and its key inventions",
+    "Explain the importance of the Nile to ancient Egypt and its cultural achievements",
+    "Compare Athenian democracy, Greek philosophy, and the Olympic Games",
+    "Analyze the Roman Republic, its engineering, and the fall of Rome",
+    "Identify key features of medieval society including feudalism and the Crusades",
+    "Understand the Renaissance as a rebirth of art, science, and exploration"
   ],
   lessons: [
+    /* ──────────────────────────────────────────────
+       L01  Ancient Mesopotamia  (video)
+    ────────────────────────────────────────────── */
     {
       id: "world-history-101-l01",
-      title: "Ancient Civilizations",
+      title: "Ancient Mesopotamia",
       type: "video",
-      duration: 10,
+      duration: 12,
       chunks: [
         {
           id: "world-history-101-l01-c1",
-          title: "Ancient Civilizations Overview",
-          content: "In this lesson, we focus on civilizations through the lens of historical thinking. The goal is to recognize what strong reasoning looks like before solving."
+          title: "The Cradle of Civilization",
+          content:
+            "Mesopotamia means 'land between the rivers' — the Tigris and Euphrates in modern-day Iraq. Around 3500 BCE, the Sumerians built some of the world's first cities, including Ur and Uruk. They invented the wheel, the plow, and sailed on the first boats."
         },
         {
           id: "world-history-101-l01-c2",
-          title: "Core Concept",
-          content: "civilizations and timeline work together. Start by naming the main target, then identify the evidence or steps that support it."
+          title: "Cuneiform and Writing",
+          content:
+            "The Sumerians invented cuneiform — one of the earliest writing systems. They pressed a wedge-shaped reed into wet clay tablets to record laws, trade deals, and stories. The Epic of Gilgamesh, written in cuneiform, is one of the oldest stories ever recorded."
         },
         {
           id: "world-history-101-l01-c3",
-          title: "Worked Example",
-          content: "Walk through one guided example: define the goal, apply a strategy for timeline, then verify the result with a quick check."
-        },
-        {
-          id: "world-history-101-l01-c4",
-          title: "Transfer Prompt",
-          content: "Apply the same process to a new scenario and explain why your approach is valid in one clear sentence."
+          title: "Hammurabi's Code",
+          content:
+            "King Hammurabi of Babylon created one of the first written law codes around 1754 BCE. It had 282 laws carved on a tall stone pillar for all to see. One famous rule: 'an eye for an eye, a tooth for a tooth.' This idea that laws should be public and fair shaped legal systems for thousands of years."
         }
       ],
       flashcards: [
-        { id: "world-history-101-l01-f1", front: "civilizations", back: "A central target skill in this module. Name it before solving." },
-        { id: "world-history-101-l01-f2", front: "timeline", back: "Use this as the method step after defining the goal." },
-        { id: "world-history-101-l01-f3", front: "Verification", back: "Check that your result matches the original goal and constraints." },
-        { id: "world-history-101-l01-f4", front: "Transfer", back: "Use the same strategy on a new item to confirm true mastery." }
+        { id: "world-history-101-l01-f1", front: "Region between the Tigris and Euphrates rivers", back: "Mesopotamia" },
+        { id: "world-history-101-l01-f2", front: "One of the earliest writing systems using wedge-shaped marks", back: "Cuneiform" },
+        { id: "world-history-101-l01-f3", front: "King who created one of the first written law codes", back: "Hammurabi" },
+        { id: "world-history-101-l01-f4", front: "Oldest known epic story, written in cuneiform", back: "The Epic of Gilgamesh" }
       ],
-      learningAids: [
-        { id: "world-history-101-l01-a1", type: "image", title: "Concept Poster", content: "A colorful infographic about civilizations and timeline." },
-        { id: "world-history-101-l01-a2", type: "animation", title: "Warm-up Animation", content: "Short animation introducing History Worldwide vocabulary." }
-      ]
-    },
-    {
-      id: "world-history-101-l02",
-      title: "Classical Era Connections",
-      type: "interactive",
-      duration: 12,
-      metadata: {
-        prompts: [
-          "Identify one core idea about civilizations from this lesson.",
-          "Explain where timeline appears in real life.",
-          "Describe one question you still have about historical thinking."
-        ]
-      },
-      interactiveActivities: [
+      questions: [
         {
-          id: "world-history-101-l02-ia1",
-          type: "drag_and_drop",
-          title: "Practice Flow Builder",
-          description: "Sort each action into Plan, Execute, or Reflect.",
-          estimatedMinutes: 8,
-          difficultyLevel: "easy",
-          data: {
-            targets: [
-              { id: "plan", label: "Plan" },
-              { id: "execute", label: "Execute" },
-              { id: "reflect", label: "Reflect" }
-            ],
-            draggables: [
-              { id: "d1", label: "Set a goal for civilizations", correctTargetId: "plan" },
-              { id: "d2", label: "Try one strategy for timeline", correctTargetId: "execute" },
-              { id: "d3", label: "Record what worked and what to improve", correctTargetId: "reflect" }
-            ]
-          }
+          id: "world-history-101-l01-q1",
+          text: "Mesopotamia was located between which two rivers?",
+          options: [
+            { id: "a", text: "Tigris and Euphrates" },
+            { id: "b", text: "Nile and Amazon" },
+            { id: "c", text: "Mississippi and Ohio" },
+            { id: "d", text: "Yangtze and Yellow" }
+          ],
+          correctOptionId: "a",
+          explanation: "Mesopotamia means 'land between the rivers' — Tigris and Euphrates!"
+        },
+        {
+          id: "world-history-101-l01-q2",
+          text: "The Sumerians invented which writing system?",
+          options: [
+            { id: "a", text: "Cuneiform" },
+            { id: "b", text: "Hieroglyphics" },
+            { id: "c", text: "The alphabet" },
+            { id: "d", text: "Braille" }
+          ],
+          correctOptionId: "a",
+          explanation: "Cuneiform used wedge-shaped marks pressed into clay!"
+        },
+        {
+          id: "world-history-101-l01-q3",
+          text: "Hammurabi's Code was important because",
+          options: [
+            { id: "a", text: "Laws were written down and made public" },
+            { id: "b", text: "It taught people to read" },
+            { id: "c", text: "It ended all wars" },
+            { id: "d", text: "It invented the wheel" }
+          ],
+          correctOptionId: "a",
+          explanation: "Public, written laws meant fairness and accountability!"
         }
       ],
-      learningAids: [
-        { id: "world-history-101-l02-a1", type: "practice", title: "Try It Board", content: "Complete a guided activity on timeline and write one reflection." }
+      activities: [
+        {
+          id: "world-history-101-l01-act1",
+          type: "project_builder",
+          title: "Clay tablet writing",
+          description: "Flatten a ball of clay or playdough into a tablet. Use a pencil or stick to press wedge-shaped marks like cuneiform. Write your name or a short message. Let it dry and you have your own ancient tablet!"
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L02  Ancient Egypt  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "world-history-101-l02",
+      title: "Ancient Egypt",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "world-history-101-l02-c1",
+          title: "Gift of the Nile",
+          content:
+            "Ancient Egypt grew along the Nile River in northeast Africa. Each year the Nile flooded, leaving rich black soil for farming. The Greek historian Herodotus called Egypt the 'Gift of the Nile' because without the river the land would be desert."
+        },
+        {
+          id: "world-history-101-l02-c2",
+          title: "Pharaohs and Pyramids",
+          content:
+            "Pharaohs were Egypt's god-kings. They built massive pyramids as tombs. The Great Pyramid of Giza — built around 2560 BCE — used over 2 million stone blocks. It was the tallest structure on Earth for nearly 4,000 years. King Tutankhamun's tomb was discovered in 1922 with treasures intact."
+        },
+        {
+          id: "world-history-101-l02-c3",
+          title: "Hieroglyphics and Mummies",
+          content:
+            "Egyptians wrote with hieroglyphics — picture symbols carved on temple walls and written on papyrus. The Rosetta Stone, found in 1799, helped scholars decode hieroglyphics. Egyptians preserved bodies as mummies because they believed in an afterlife where the soul needed its body."
+        }
+      ],
+      flashcards: [
+        { id: "world-history-101-l02-f1", front: "River essential to ancient Egypt's farming", back: "The Nile" },
+        { id: "world-history-101-l02-f2", front: "Egypt's god-kings", back: "Pharaohs" },
+        { id: "world-history-101-l02-f3", front: "Picture writing system of ancient Egypt", back: "Hieroglyphics" },
+        { id: "world-history-101-l02-f4", front: "Stone that helped decode hieroglyphics", back: "Rosetta Stone" }
+      ],
+      questions: [
+        {
+          id: "world-history-101-l02-q1",
+          text: "Egypt was called the 'Gift of the Nile' because",
+          options: [
+            { id: "a", text: "The Nile's floods left rich soil for farming" },
+            { id: "b", text: "The Nile was full of gold" },
+            { id: "c", text: "The Nile had pyramids" },
+            { id: "d", text: "The Nile was in Europe" }
+          ],
+          correctOptionId: "a",
+          explanation: "Annual floods deposited fertile soil along the river banks!"
+        },
+        {
+          id: "world-history-101-l02-q2",
+          text: "The Great Pyramid of Giza used over",
+          options: [
+            { id: "a", text: "2 million stone blocks" },
+            { id: "b", text: "100 bricks" },
+            { id: "c", text: "500 wooden logs" },
+            { id: "d", text: "1,000 metal beams" }
+          ],
+          correctOptionId: "a",
+          explanation: "Over 2 million massive stone blocks were used to build the Great Pyramid!"
+        },
+        {
+          id: "world-history-101-l02-q3",
+          text: "Egyptians made mummies because they believed",
+          options: [
+            { id: "a", text: "The soul needed its body in the afterlife" },
+            { id: "b", text: "Bodies were art" },
+            { id: "c", text: "It was required by law" },
+            { id: "d", text: "It made better fertilizer" }
+          ],
+          correctOptionId: "a",
+          explanation: "Preservation ensured the soul could return to its body!"
+        }
+      ],
+      activities: [
+        {
+          id: "world-history-101-l02-act1",
+          type: "drawing_canvas",
+          title: "Hieroglyphic name card",
+          description: "Look up an Egyptian hieroglyphics chart. Write your name using hieroglyphic symbols on a piece of paper made to look like papyrus (stain it with tea bags). Add a cartouche (oval border) around your name like the pharaohs did."
+        }
+      ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L03  Ancient Greece  (video)
+    ────────────────────────────────────────────── */
     {
       id: "world-history-101-l03",
-      title: "Checkpoint: Early History",
-      type: "quiz",
-      duration: 10,
+      title: "Ancient Greece",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "world-history-101-l03-c1",
+          title: "Democracy in Athens",
+          content:
+            "Athens created the world's first democracy around 508 BCE. Citizens (free adult men) could vote on laws directly. A leader named Cleisthenes introduced reforms. Not everyone could vote — women, enslaved people, and foreigners were excluded. But the idea that people should have a voice in government changed the world forever."
+        },
+        {
+          id: "world-history-101-l03-c2",
+          title: "Greek Philosophy",
+          content:
+            "Greek thinkers asked big questions. Socrates taught by asking questions (the Socratic method). His student Plato wrote about the ideal society in The Republic. Plato's student Aristotle studied science, logic, and politics. These three philosophers shaped Western thought for over 2,000 years."
+        },
+        {
+          id: "world-history-101-l03-c3",
+          title: "Olympics and Culture",
+          content:
+            "The first Olympic Games were held in Olympia in 776 BCE to honor the god Zeus. Athletes competed in running, wrestling, and chariot racing. Greece also gave us theater (tragedy and comedy), the Parthenon temple, and myths about gods like Zeus, Athena, and Poseidon."
+        }
+      ],
+      flashcards: [
+        { id: "world-history-101-l03-f1", front: "First city to practice democracy", back: "Athens (around 508 BCE)" },
+        { id: "world-history-101-l03-f2", front: "Teaching by asking questions", back: "The Socratic method" },
+        { id: "world-history-101-l03-f3", front: "Year the first Olympic Games were held", back: "776 BCE" },
+        { id: "world-history-101-l03-f4", front: "Chain: Socrates taught ___, who taught Aristotle", back: "Plato" }
+      ],
       questions: [
         {
           id: "world-history-101-l03-q1",
-          text: "Which statement best explains civilizations in History Worldwide?",
-          skillId: "world-history-101-skill-core",
+          text: "The first democracy was created in",
           options: [
-            { id: "a", text: "It explains civilizations using evidence from the lesson." },
-            { id: "b", text: "It ignores how civilizations works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside History Worldwide." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Athens" },
+            { id: "b", text: "Rome" },
+            { id: "c", text: "Sparta" },
+            { id: "d", text: "Egypt" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Athens introduced direct democracy around 508 BCE!"
         },
         {
           id: "world-history-101-l03-q2",
-          text: "What is the best first step when analyzing timeline?",
-          skillId: "world-history-101-skill-process",
+          text: "Which philosopher taught by asking questions?",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for timeline." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to timeline." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Socrates" },
+            { id: "b", text: "Plato" },
+            { id: "c", text: "Aristotle" },
+            { id: "d", text: "Homer" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Socratic method is still used in classrooms today!"
         },
         {
           id: "world-history-101-l03-q3",
-          text: "Which option shows strong reasoning about historical thinking?",
-          skillId: "world-history-101-skill-reasoning",
+          text: "The Olympic Games were held to honor",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to historical thinking." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Zeus" },
+            { id: "b", text: "Athena" },
+            { id: "c", text: "Poseidon" },
+            { id: "d", text: "Apollo" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l03-q4",
-          text: "Why is spaced review useful for History Worldwide mastery?",
-          skillId: "world-history-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Olympics honored Zeus, king of the Greek gods!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "world-history-101-l03-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Early History",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about civilizations" },
-              { id: "l2", label: "Inconsistent approach to timeline" },
-              { id: "l3", label: "Weak transfer of historical thinking under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "world-history-101-l03-act1",
+          type: "project_builder",
+          title: "Classroom Olympics",
+          description: "Organize a mini Olympics with 3-4 events: a short race, a standing long jump, a paper airplane throw (javelin), and a balance challenge. Award olive branch crowns to winners, just like ancient Greece!"
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "world-history-101-l03-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L04  Ancient Civilizations Checkpoint  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "world-history-101-l04",
-      title: "Medieval to Early Modern",
-      type: "video",
-      duration: 11,
+      title: "Ancient Civilizations Checkpoint",
+      type: "quiz",
+      duration: 8,
       chunks: [
         {
           id: "world-history-101-l04-c1",
-          title: "Medieval to Early Modern Focus",
-          content: "This lesson deepens cause and effect using structured reasoning. We move from concept understanding to applied decisions."
+          title: "Mesopotamia and Egypt Review",
+          content:
+            "Mesopotamia gave us cuneiform, the wheel, and Hammurabi's law code. Egypt built pyramids, wrote in hieroglyphics, and depended on the Nile."
         },
         {
           id: "world-history-101-l04-c2",
-          title: "Method Steps",
-          content: "Step 1: identify what is being asked. Step 2: choose a strategy aligned to cause and effect. Step 3: justify with evidence."
+          title: "Greece Review",
+          content:
+            "Athens invented democracy. Socrates, Plato, and Aristotle shaped philosophy. The Olympics began in 776 BCE."
         },
         {
           id: "world-history-101-l04-c3",
-          title: "Common Mistakes",
-          content: "Common errors include skipping setup, using unrelated assumptions, or failing to verify the final result."
-        },
-        {
-          id: "world-history-101-l04-c4",
-          title: "Independent Try",
-          content: "Solve one similar item and compare your process to the lesson sequence."
+          title: "Onward Through History!",
+          content:
+            "You have explored three ancient civilizations. Next: the Roman Empire, the medieval world, and the Renaissance!"
         }
       ],
       flashcards: [
-        { id: "world-history-101-l04-f1", front: "cause and effect", back: "State the target and pick a strategy before solving." },
-        { id: "world-history-101-l04-f2", front: "Step Sequence", back: "Goal -> Strategy -> Evidence -> Check." },
-        { id: "world-history-101-l04-f3", front: "Assumption Check", back: "Remove assumptions that are not supported by the prompt." },
-        { id: "world-history-101-l04-f4", front: "Process Match", back: "Your explanation should match the steps you actually used." }
+        { id: "world-history-101-l04-f1", front: "Writing system pressed into clay", back: "Cuneiform" },
+        { id: "world-history-101-l04-f2", front: "Egyptian picture writing", back: "Hieroglyphics" },
+        { id: "world-history-101-l04-f3", front: "Greek word for government by the people", back: "Democracy" },
+        { id: "world-history-101-l04-f4", front: "Hammurabi's famous principle", back: "An eye for an eye" }
       ],
-      learningAids: [
-        { id: "world-history-101-l04-a1", type: "image", title: "Worked Example Sheet", content: "Step-by-step visuals for cause and effect scenarios." }
-      ]
-    },
-    {
-      id: "world-history-101-l05",
-      title: "Revolutions and Change",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
-        ]
-      },
-      interactiveActivities: [
+      questions: [
         {
-          id: "world-history-101-l05-ia1",
-          type: "sorting_buckets",
-          title: "Strategy Sort",
-          description: "Sort study actions into Concept, Process, or Review lanes.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "concept", label: "cause and effect Concept" },
-              { id: "process", label: "primary sources Process" },
-              { id: "review", label: "Review Loop" }
-            ],
-            items: [
-              { id: "i1", label: "Write one definition in your own words", correctBucketId: "concept" },
-              { id: "i2", label: "Follow the step-by-step method on a new example", correctBucketId: "process" },
-              { id: "i3", label: "Retest the same skill tomorrow", correctBucketId: "review" }
-            ]
-          }
+          id: "world-history-101-l04-q1",
+          text: "Cuneiform was written on",
+          options: [
+            { id: "a", text: "Clay tablets" },
+            { id: "b", text: "Paper" },
+            { id: "c", text: "Stone walls" },
+            { id: "d", text: "Bamboo" }
+          ],
+          correctOptionId: "a",
+          explanation: "Sumerians pressed wedge-shaped marks into wet clay!"
+        },
+        {
+          id: "world-history-101-l04-q2",
+          text: "The Rosetta Stone helped scholars decode",
+          options: [
+            { id: "a", text: "Hieroglyphics" },
+            { id: "b", text: "Cuneiform" },
+            { id: "c", text: "Latin" },
+            { id: "d", text: "Greek" }
+          ],
+          correctOptionId: "a",
+          explanation: "The Rosetta Stone had the same text in three scripts, unlocking hieroglyphics!"
+        },
+        {
+          id: "world-history-101-l04-q3",
+          text: "Plato was the student of",
+          options: [
+            { id: "a", text: "Socrates" },
+            { id: "b", text: "Aristotle" },
+            { id: "c", text: "Homer" },
+            { id: "d", text: "Zeus" }
+          ],
+          correctOptionId: "a",
+          explanation: "Socrates taught Plato, who then taught Aristotle!"
         }
       ],
-      learningAids: [
-        { id: "world-history-101-l05-a1", type: "animation", title: "Challenge Walkthrough", content: "Animated sequence for solving a cause and effect challenge." }
+      activities: [
+        {
+          id: "world-history-101-l04-act1",
+          type: "drawing_canvas",
+          title: "Civilization comparison chart",
+          description: "Make a 3-column chart: Mesopotamia, Egypt, Greece. For each, write their river, writing system, famous leader/thinker, and one big invention or idea."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L05  Ancient Rome  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "world-history-101-l05",
+      title: "Ancient Rome",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "world-history-101-l05-c1",
+          title: "The Roman Republic",
+          content:
+            "Rome began as a small city in Italy around 753 BCE. By 509 BCE, Romans overthrew their king and created a republic — a government where elected officials represent the people. The Senate made laws, and two consuls led the government. Rome's republic inspired the United States Constitution."
+        },
+        {
+          id: "world-history-101-l05-c2",
+          title: "Roman Engineering",
+          content:
+            "Romans were master builders. They invented concrete, built aqueducts to carry water for miles, and constructed roads that connected their vast empire — some are still used today! The Colosseum in Rome could seat 50,000 people for gladiator fights and public events."
+        },
+        {
+          id: "world-history-101-l05-c3",
+          title: "Fall of Rome",
+          content:
+            "The Roman Empire grew too large to govern. It split into Western and Eastern halves in 285 CE. The Western Roman Empire fell in 476 CE due to invasions, economic problems, and political instability. The Eastern (Byzantine) Empire lasted nearly 1,000 more years until 1453 CE."
+        }
+      ],
+      flashcards: [
+        { id: "world-history-101-l05-f1", front: "Government where elected officials represent the people", back: "Republic" },
+        { id: "world-history-101-l05-f2", front: "Roman structure that carried water for miles", back: "Aqueduct" },
+        { id: "world-history-101-l05-f3", front: "Arena that seated 50,000 in Rome", back: "Colosseum" },
+        { id: "world-history-101-l05-f4", front: "Year the Western Roman Empire fell", back: "476 CE" }
+      ],
+      questions: [
+        {
+          id: "world-history-101-l05-q1",
+          text: "A republic is a government where",
+          options: [
+            { id: "a", text: "Elected officials represent the people" },
+            { id: "b", text: "A king rules alone" },
+            { id: "c", text: "Everyone votes on every law" },
+            { id: "d", text: "The military is in charge" }
+          ],
+          correctOptionId: "a",
+          explanation: "In a republic, citizens elect representatives to govern!"
+        },
+        {
+          id: "world-history-101-l05-q2",
+          text: "Romans built aqueducts to",
+          options: [
+            { id: "a", text: "Carry water across long distances" },
+            { id: "b", text: "Transport soldiers" },
+            { id: "c", text: "Store grain" },
+            { id: "d", text: "Hold gladiator fights" }
+          ],
+          correctOptionId: "a",
+          explanation: "Aqueducts moved fresh water from mountains to cities!"
+        },
+        {
+          id: "world-history-101-l05-q3",
+          text: "The Western Roman Empire fell in",
+          options: [
+            { id: "a", text: "476 CE" },
+            { id: "b", text: "753 BCE" },
+            { id: "c", text: "1453 CE" },
+            { id: "d", text: "100 CE" }
+          ],
+          correctOptionId: "a",
+          explanation: "476 CE marks the traditional end of the Western Roman Empire!"
+        }
+      ],
+      activities: [
+        {
+          id: "world-history-101-l05-act1",
+          type: "project_builder",
+          title: "Aqueduct model",
+          description: "Build an aqueduct model using cardboard tubes, aluminum foil for the water channel, and blocks or books for arches. Test it by pouring a small amount of water through — does it flow all the way?"
+        }
+      ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L06  The Medieval World  (video)
+    ────────────────────────────────────────────── */
     {
       id: "world-history-101-l06",
-      title: "Checkpoint: Turning Points",
-      type: "quiz",
-      duration: 10,
+      title: "The Medieval World",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "world-history-101-l06-c1",
+          title: "Feudalism",
+          content:
+            "After Rome fell, Europe entered the Middle Ages (roughly 500–1500 CE). Feudalism organized society: kings gave land to lords, lords gave land to knights, and serfs (peasants) farmed the land in exchange for protection. Castles were built as fortresses for defense."
+        },
+        {
+          id: "world-history-101-l06-c2",
+          title: "The Black Death",
+          content:
+            "In 1347, the Black Death (bubonic plague) swept through Europe, killing about one-third of the population — roughly 25 million people. It spread through fleas on rats. The massive death toll changed society: labor became scarce, peasants demanded higher wages, and feudalism began to weaken."
+        },
+        {
+          id: "world-history-101-l06-c3",
+          title: "The Crusades",
+          content:
+            "The Crusades (1096–1291) were a series of religious wars where European Christians tried to reclaim the Holy Land from Muslim rule. Though ultimately unsuccessful militarily, the Crusades increased trade between Europe and Asia, bringing back spices, silk, and new ideas."
+        }
+      ],
+      flashcards: [
+        { id: "world-history-101-l06-f1", front: "Social system: king → lords → knights → serfs", back: "Feudalism" },
+        { id: "world-history-101-l06-f2", front: "Plague that killed one-third of Europe in 1347", back: "The Black Death" },
+        { id: "world-history-101-l06-f3", front: "Religious wars to reclaim the Holy Land (1096–1291)", back: "The Crusades" },
+        { id: "world-history-101-l06-f4", front: "Medieval time period", back: "About 500–1500 CE" }
+      ],
       questions: [
         {
           id: "world-history-101-l06-q1",
-          text: "Which statement best explains cause and effect in History Worldwide?",
-          skillId: "world-history-101-skill-core",
+          text: "In feudalism, who farmed the land?",
           options: [
-            { id: "a", text: "It explains cause and effect using evidence from the lesson." },
-            { id: "b", text: "It ignores how cause and effect works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside History Worldwide." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Serfs (peasants)" },
+            { id: "b", text: "Kings" },
+            { id: "c", text: "Knights" },
+            { id: "d", text: "Merchants" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Serfs worked the land in exchange for protection!"
         },
         {
           id: "world-history-101-l06-q2",
-          text: "What is the best first step when analyzing primary sources?",
-          skillId: "world-history-101-skill-process",
+          text: "The Black Death killed approximately",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for primary sources." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to primary sources." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "One-third of Europe's population" },
+            { id: "b", text: "Only a few hundred people" },
+            { id: "c", text: "Everyone in Europe" },
+            { id: "d", text: "Only kings and queens" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "About 25 million people — roughly one in three Europeans!"
         },
         {
           id: "world-history-101-l06-q3",
-          text: "Which option shows strong reasoning about historical thinking?",
-          skillId: "world-history-101-skill-reasoning",
+          text: "The Crusades increased",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to historical thinking." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Trade between Europe and Asia" },
+            { id: "b", text: "The number of kings" },
+            { id: "c", text: "The size of Rome" },
+            { id: "d", text: "Pyramid building" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l06-q4",
-          text: "Why is spaced review useful for History Worldwide mastery?",
-          skillId: "world-history-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Crusaders brought back spices, silk, and new ideas from Asia!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "world-history-101-l06-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Turning Points",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about cause and effect" },
-              { id: "l2", label: "Inconsistent approach to primary sources" },
-              { id: "l3", label: "Weak transfer of historical thinking under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "world-history-101-l06-act1",
+          type: "drawing_canvas",
+          title: "Feudalism pyramid diagram",
+          description: "Draw a triangle divided into 4 levels. Label from top to bottom: King, Lords, Knights, Serfs. Write one sentence for each level explaining their role. Add drawings of a crown, castle, sword, and plow."
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "world-history-101-l06-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L07  Renaissance and Age of Exploration  (video)
+    ────────────────────────────────────────────── */
     {
       id: "world-history-101-l07",
-      title: "Modern World Developments",
+      title: "Renaissance and Age of Exploration",
       type: "video",
       duration: 12,
       chunks: [
         {
           id: "world-history-101-l07-c1",
-          title: "Modern World Developments Setup",
-          content: "Use primary sources to organize your approach before starting. Planning first improves quality and speed."
+          title: "The Renaissance",
+          content:
+            "The Renaissance ('rebirth') began in Italy around 1400 and spread across Europe. People rediscovered Greek and Roman ideas about art, science, and philosophy. Leonardo da Vinci painted the Mona Lisa and designed flying machines. Michelangelo painted the Sistine Chapel ceiling and sculpted David."
         },
         {
           id: "world-history-101-l07-c2",
-          title: "Decision Rules",
-          content: "When choices compete, use a simple rule: pick the option with strongest evidence and clearest link to the goal."
+          title: "The Printing Press",
+          content:
+            "Around 1440, Johannes Gutenberg invented the printing press with movable type. Before this, books were copied by hand — slow and expensive. The printing press made books affordable and spread knowledge faster than ever. It helped start the Scientific Revolution and the Reformation."
         },
         {
           id: "world-history-101-l07-c3",
-          title: "Quality Control",
-          content: "Check for three things: accuracy, completeness, and alignment with the original objective."
-        },
-        {
-          id: "world-history-101-l07-c4",
-          title: "Next-Step Plan",
-          content: "Write one action to repeat and one action to improve in your next practice round."
+          title: "Age of Exploration",
+          content:
+            "In the 1400s–1600s, European explorers sailed the oceans seeking new trade routes. Christopher Columbus reached the Americas in 1492. Ferdinand Magellan's crew completed the first voyage around the world (1519–1522). These voyages connected continents but also brought disease and colonization to indigenous peoples."
         }
       ],
       flashcards: [
-        { id: "world-history-101-l07-f1", front: "primary sources", back: "Use this as your organizing framework before execution." },
-        { id: "world-history-101-l07-f2", front: "Decision Rule", back: "Choose the option with strongest evidence-to-goal alignment." },
-        { id: "world-history-101-l07-f3", front: "Quality Control", back: "Accuracy + completeness + objective match." },
-        { id: "world-history-101-l07-f4", front: "Iteration", back: "Repeat what works; refine one weak step each cycle." }
+        { id: "world-history-101-l07-f1", front: "Means 'rebirth' — began in Italy around 1400", back: "Renaissance" },
+        { id: "world-history-101-l07-f2", front: "Painted the Mona Lisa and designed flying machines", back: "Leonardo da Vinci" },
+        { id: "world-history-101-l07-f3", front: "Invented the printing press around 1440", back: "Johannes Gutenberg" },
+        { id: "world-history-101-l07-f4", front: "Year Columbus reached the Americas", back: "1492" }
       ],
-      learningAids: [
-        { id: "world-history-101-l07-a1", type: "practice", title: "Project Planner", content: "Template for planning a mini project focused on primary sources." }
+      questions: [
+        {
+          id: "world-history-101-l07-q1",
+          text: "The Renaissance means",
+          options: [
+            { id: "a", text: "Rebirth" },
+            { id: "b", text: "War" },
+            { id: "c", text: "Discovery" },
+            { id: "d", text: "Kingdom" }
+          ],
+          correctOptionId: "a",
+          explanation: "Renaissance literally means 'rebirth' — a rebirth of art, science, and learning!"
+        },
+        {
+          id: "world-history-101-l07-q2",
+          text: "The printing press was important because",
+          options: [
+            { id: "a", text: "It made books affordable and spread knowledge" },
+            { id: "b", text: "It built bridges" },
+            { id: "c", text: "It powered ships" },
+            { id: "d", text: "It created new food" }
+          ],
+          correctOptionId: "a",
+          explanation: "Affordable books meant more people could read and learn!"
+        },
+        {
+          id: "world-history-101-l07-q3",
+          text: "Columbus reached the Americas in",
+          options: [
+            { id: "a", text: "1492" },
+            { id: "b", text: "1776" },
+            { id: "c", text: "1066" },
+            { id: "d", text: "476" }
+          ],
+          correctOptionId: "a",
+          explanation: "In 1492, Columbus sailed from Spain and reached the Caribbean!"
+        }
+      ],
+      activities: [
+        {
+          id: "world-history-101-l07-act1",
+          type: "project_builder",
+          title: "Renaissance inventor notebook",
+          description: "Like Leonardo da Vinci's famous notebooks, create your own. Draw an invention idea with labeled parts. Write a short paragraph explaining how it works. Da Vinci wrote in mirror script — try it for fun!"
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L08  Final World History Assessment  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "world-history-101-l08",
-      title: "Source Analysis Activity",
-      type: "interactive",
-      duration: 10,
-      metadata: {
-        prompts: [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "world-history-101-l08-ia1",
-          type: "matching_pairs",
-          title: "Reflection Match",
-          description: "Match each reflection prompt with the best follow-up action.",
-          estimatedMinutes: 7,
-          difficultyLevel: "easy",
-          data: {
-            left: [
-              { id: "l1", label: "I keep missing one skill pattern" },
-              { id: "l2", label: "I rush and make avoidable mistakes" },
-              { id: "l3", label: "I understand in notes but miss in quizzes" }
-            ],
-            right: [
-              { id: "r1", label: "Do a focused drill on that exact pattern" },
-              { id: "r2", label: "Use a short checklist before submitting answers" },
-              { id: "r3", label: "Repeat the skill in a timed re-check" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "world-history-101-l08-a1", type: "mnemonic", title: "Reflection Cycle", content: "Remember Observe, Adjust, Repeat while practicing." }
-      ]
-    },
-    {
-      id: "world-history-101-l09",
-      title: "Review: Historical Patterns",
+      title: "Final World History Assessment",
       type: "quiz",
       duration: 10,
-      questions: [
-        {
-          id: "world-history-101-l09-q1",
-          text: "Which statement best explains timeline in History Worldwide?",
-          skillId: "world-history-101-skill-core",
-          options: [
-            { id: "a", text: "It explains timeline using evidence from the lesson." },
-            { id: "b", text: "It ignores how timeline works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside History Worldwide." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l09-q2",
-          text: "What is the best first step when analyzing primary sources?",
-          skillId: "world-history-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for primary sources." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to primary sources." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l09-q3",
-          text: "Which option shows strong reasoning about historical thinking?",
-          skillId: "world-history-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to historical thinking." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l09-q4",
-          text: "Why is spaced review useful for History Worldwide mastery?",
-          skillId: "world-history-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "world-history-101-l09-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Review: Historical Patterns",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about timeline" },
-              { id: "l2", label: "Inconsistent approach to primary sources" },
-              { id: "l3", label: "Weak transfer of historical thinking under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "world-history-101-l09-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "world-history-101-l10",
-      title: "Mastery: World History",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "world-history-101-l10-q1",
-          text: "Which statement best explains civilizations in History Worldwide?",
-          skillId: "world-history-101-skill-core",
-          options: [
-            { id: "a", text: "It explains civilizations using evidence from the lesson." },
-            { id: "b", text: "It ignores how civilizations works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside History Worldwide." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l10-q2",
-          text: "What is the best first step when analyzing cause and effect?",
-          skillId: "world-history-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for cause and effect." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to cause and effect." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l10-q3",
-          text: "Which option shows strong reasoning about historical thinking?",
-          skillId: "world-history-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to historical thinking." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l10-q4",
-          text: "Why is spaced review useful for History Worldwide mastery?",
-          skillId: "world-history-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "world-history-101-l10-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Mastery: World History",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about civilizations" },
-              { id: "l2", label: "Inconsistent approach to cause and effect" },
-              { id: "l3", label: "Weak transfer of historical thinking under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "world-history-101-l10-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "world-history-101-l11",
-      title: "Applied History Worldwide Challenge Studio",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using cause and effect.",
-          "Document your transfer plan for the next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "world-history-101-l11-ia1",
-          type: "sorting_buckets",
-          title: "Transfer Ladder",
-          description: "Sort actions into Diagnose, Fix, and Transfer phases.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "diagnose", label: "Diagnose" },
-              { id: "fix", label: "Fix" },
-              { id: "transfer", label: "Transfer" }
-            ],
-            items: [
-              { id: "i1", label: "Tag repeated mistakes in timeline", correctBucketId: "diagnose" },
-              { id: "i2", label: "Rework one missed item with full reasoning", correctBucketId: "fix" },
-              { id: "i3", label: "Retest with a timed mini-check on primary sources", correctBucketId: "transfer" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "world-history-101-l11-a1", type: "practice", title: "Correction Loop Card", content: "Use Diagnose, Fix, Transfer for each difficult problem." }
-      ]
-    },
-    {
-      id: "world-history-101-l12",
-      title: "World History Mastery Applied Retest",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "world-history-101-l12-q1",
-          text: "Which statement best explains civilizations in History Worldwide?",
-          skillId: "world-history-101-skill-core",
-          options: [
-            { id: "a", text: "It explains civilizations using evidence from the lesson." },
-            { id: "b", text: "It ignores how civilizations works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside History Worldwide." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l12-q2",
-          text: "What is the best first step when analyzing primary sources?",
-          skillId: "world-history-101-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for primary sources." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to primary sources." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l12-q3",
-          text: "Which option shows strong reasoning about historical thinking?",
-          skillId: "world-history-101-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to historical thinking." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l12-q4",
-          text: "Why is spaced review useful for History Worldwide mastery?",
-          skillId: "world-history-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "world-history-101-l12-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: World History Mastery Applied Retest",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about civilizations" },
-              { id: "l2", label: "Inconsistent approach to primary sources" },
-              { id: "l3", label: "Weak transfer of historical thinking under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "world-history-101-l12-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "world-history-101-l13",
-      title: "History Worldwide Scenario Lab",
-      type: "video",
-      duration: 12,
       chunks: [
         {
-          id: "world-history-101-l13-c1",
-          title: "Scenario Brief",
-          content: "This scenario combines civilizations, cause and effect, and primary sources in one applied challenge."
+          id: "world-history-101-l08-c1",
+          title: "Ancient Civilizations Review",
+          content:
+            "Mesopotamia invented cuneiform and the Code of Hammurabi. Egypt built pyramids along the Nile. Greece created democracy, philosophy, and the Olympics."
         },
         {
-          id: "world-history-101-l13-c2",
-          title: "Plan the Approach",
-          content: "Break the scenario into smaller decisions, then assign one strategy to each decision point."
+          id: "world-history-101-l08-c2",
+          title: "Rome and Medieval Review",
+          content:
+            "Rome gave us the republic, aqueducts, and concrete. The Middle Ages brought feudalism, the Black Death, and the Crusades."
         },
         {
-          id: "world-history-101-l13-c3",
-          title: "Execute and Justify",
-          content: "Apply the plan and explain each move with evidence, not guesses."
-        },
-        {
-          id: "world-history-101-l13-c4",
-          title: "Evaluate Outcome",
-          content: "Compare your result to the target and identify what to keep versus what to adjust."
+          id: "world-history-101-l08-c3",
+          title: "Renaissance and Exploration Review",
+          content:
+            "The Renaissance revived art and science. Gutenberg's press spread knowledge. Explorers connected the world — but at a great cost to indigenous peoples."
         }
       ],
       flashcards: [
-        { id: "world-history-101-l13-f1", front: "Scenario Planning", back: "Split a complex task into clear decision points." },
-        { id: "world-history-101-l13-f2", front: "Evidence Link", back: "Each step should connect to evidence in the scenario." },
-        { id: "world-history-101-l13-f3", front: "Adjustment Loop", back: "Use outcome checks to refine your next attempt." },
-        { id: "world-history-101-l13-f4", front: "Applied Mastery", back: "Mastery means transferring the process to a new context." }
+        { id: "world-history-101-l08-f1", front: "Land between the Tigris and Euphrates", back: "Mesopotamia" },
+        { id: "world-history-101-l08-f2", front: "Arena seating 50,000 in Rome", back: "Colosseum" },
+        { id: "world-history-101-l08-f3", front: "Social system in the Middle Ages", back: "Feudalism" },
+        { id: "world-history-101-l08-f4", front: "Gutenberg's invention", back: "Printing press" }
       ],
-      learningAids: [
-        { id: "world-history-101-l13-a1", type: "image", title: "Scenario Map", content: "A real-world scenario map connecting civilizations, cause and effect, and primary sources." },
-        { id: "world-history-101-l13-a2", type: "practice", title: "Mini Case Prompt", content: "Apply one strategy to a new case and explain your reasoning." }
-      ]
-    },
-    {
-      id: "world-history-101-l14",
-      title: "History Worldwide Coaching Clinic",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "world-history-101-l14-ia1",
-          type: "matching_pairs",
-          title: "Error to Fix Match",
-          description: "Match each error signal to the highest-impact correction action.",
-          estimatedMinutes: 8,
-          difficultyLevel: "medium",
-          data: {
-            left: [
-              { id: "l1", label: "Repeated miss on civilizations setup" },
-              { id: "l2", label: "Losses due to rushed primary sources decisions" },
-              { id: "l3", label: "Correct in notes but weak transfer in new tasks" }
-            ],
-            right: [
-              { id: "r1", label: "Rebuild setup steps and retest one parallel item" },
-              { id: "r2", label: "Use checkpoint pacing + verify before submit" },
-              { id: "r3", label: "Pair correction with one timed transfer item" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "world-history-101-l14-a1", type: "mnemonic", title: "Clinic Loop", content: "Diagnose, Correct, Transfer." }
-      ]
-    },
-    {
-      id: "world-history-101-l15",
-      title: "World History Mastery Mastery Sprint",
-      type: "quiz",
-      duration: 10,
       questions: [
         {
-          id: "world-history-101-l15-q1",
-          text: "Which statement best explains timeline in History Worldwide?",
-          skillId: "world-history-101-skill-core",
+          id: "world-history-101-l08-q1",
+          text: "The Epic of Gilgamesh was written in",
           options: [
-            { id: "a", text: "It explains timeline using evidence from the lesson." },
-            { id: "b", text: "It ignores how timeline works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside History Worldwide." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Cuneiform" },
+            { id: "b", text: "Hieroglyphics" },
+            { id: "c", text: "Latin" },
+            { id: "d", text: "English" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The oldest known story was written in Sumerian cuneiform!"
         },
         {
-          id: "world-history-101-l15-q2",
-          text: "What is the best first step when analyzing cause and effect?",
-          skillId: "world-history-101-skill-process",
+          id: "world-history-101-l08-q2",
+          text: "The Roman government that inspired the U.S. Constitution was",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for cause and effect." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to cause and effect." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "A republic" },
+            { id: "b", text: "A monarchy" },
+            { id: "c", text: "Feudalism" },
+            { id: "d", text: "Direct democracy" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The Roman Republic's elected Senate inspired America's government!"
         },
         {
-          id: "world-history-101-l15-q3",
-          text: "Which option shows strong reasoning about historical thinking?",
-          skillId: "world-history-101-skill-reasoning",
+          id: "world-history-101-l08-q3",
+          text: "Who painted the Sistine Chapel ceiling?",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to historical thinking." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Michelangelo" },
+            { id: "b", text: "Leonardo da Vinci" },
+            { id: "c", text: "Gutenberg" },
+            { id: "d", text: "Columbus" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "world-history-101-l15-q4",
-          text: "Why is spaced review useful for History Worldwide mastery?",
-          skillId: "world-history-101-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Michelangelo spent 4 years painting the Sistine Chapel ceiling!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "world-history-101-l15-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: World History Mastery Mastery Sprint",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about timeline" },
-              { id: "l2", label: "Inconsistent approach to cause and effect" },
-              { id: "l3", label: "Weak transfer of historical thinking under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "world-history-101-l08-act1",
+          type: "project_builder",
+          title: "History timeline",
+          description: "Create a timeline from 3500 BCE to 1500 CE. Mark at least 8 events: Sumerian writing, Pyramids, Olympics, Roman Republic, Fall of Rome, Crusades, Black Death, Gutenberg's press, Columbus. Add drawings for each!"
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "world-history-101-l15-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     }
-  ],
+  ]
 };

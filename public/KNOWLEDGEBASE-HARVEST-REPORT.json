@@ -1,0 +1,1316 @@
+{
+  "generatedAt": "2026-02-26T06:14:57.139Z",
+  "totals": {
+    "attempted": 13,
+    "succeeded": 8,
+    "failed": 5,
+    "candidateLinks": 193,
+    "candidateLinkMeta": 193
+  },
+  "sources": [
+    {
+      "id": "uk-national-curriculum",
+      "url": "https://www.gov.uk/government/collections/national-curriculum",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "National curriculum - GOV.UK",
+      "candidateLinks": [
+        "https://www.gov.uk/government/collections/national-curriculum",
+        "https://www.gov.uk/education/school-curriculum",
+        "https://www.gov.uk/education/primary-curriculum-key-stage-1",
+        "https://www.gov.uk/national-curriculum",
+        "http://webarchive.nationalarchives.gov.uk/20131202172639/http://www.education.gov.uk/schools/teachingandlearning/curriculum/primary",
+        "http://webarchive.nationalarchives.gov.uk/20131202172639/http://www.education.gov.uk/schools/teachingandlearning/curriculum/secondary",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-framework-for-key-stages-1-to-4",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-primary-curriculum",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-secondary-curriculum",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-english-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-science-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-art-and-design-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-citizenship-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-design-and-technology-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-geography-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-history-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-languages-progammes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-music-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-in-england-physical-education-programmes-of-study",
+        "https://www.gov.uk/government/publications/national-curriculum-video-interviews-for-schools",
+        "https://www.gov.uk/education/primary-curriculum-key-stage-2",
+        "https://www.gov.uk/education/secondary-curriculum-key-stage-3-and-key-stage-4-gcses"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://www.gov.uk/government/collections/national-curriculum",
+          "anchorText": "‐ hide all updates\" data-module=\"ga4-event-tracker\" data-ga4-event='{\"event_name\":\"select_content\",\"type\":\"content history\",\"section\":\"Footer\"}' data-ga4-expandable> + show all updates",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/education/school-curriculum",
+          "anchorText": "School curriculum",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/education/primary-curriculum-key-stage-1",
+          "anchorText": "Primary curriculum, key stage 1",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/national-curriculum",
+          "anchorText": "key stages",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "http://webarchive.nationalarchives.gov.uk/20131202172639/http://www.education.gov.uk/schools/teachingandlearning/curriculum/primary",
+          "anchorText": "primary",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "http://webarchive.nationalarchives.gov.uk/20131202172639/http://www.education.gov.uk/schools/teachingandlearning/curriculum/secondary",
+          "anchorText": "secondary",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-framework-for-key-stages-1-to-4",
+          "anchorText": "National curriculum in England: framework for key stages 1 to 4",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-primary-curriculum",
+          "anchorText": "National curriculum in England: primary curriculum",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-secondary-curriculum",
+          "anchorText": "National curriculum in England: secondary curriculum",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-english-programmes-of-study",
+          "anchorText": "National curriculum in England: English programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-mathematics-programmes-of-study",
+          "anchorText": "National curriculum in England: mathematics programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-science-programmes-of-study",
+          "anchorText": "National curriculum in England: science programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-art-and-design-programmes-of-study",
+          "anchorText": "National curriculum in England: art and design programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-citizenship-programmes-of-study",
+          "anchorText": "National curriculum in England: citizenship programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study",
+          "anchorText": "National curriculum in England: computing programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-design-and-technology-programmes-of-study",
+          "anchorText": "National curriculum in England: design and technology programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-geography-programmes-of-study",
+          "anchorText": "National curriculum in England: geography programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-history-programmes-of-study",
+          "anchorText": "National curriculum in England: history programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-languages-progammes-of-study",
+          "anchorText": "National curriculum in England: languages programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-music-programmes-of-study",
+          "anchorText": "National curriculum in England: music programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-physical-education-programmes-of-study",
+          "anchorText": "National curriculum in England: PE programmes of study",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/government/publications/national-curriculum-video-interviews-for-schools",
+          "anchorText": "National curriculum: video interviews for schools",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/education/primary-curriculum-key-stage-2",
+          "anchorText": "Primary curriculum, key stage 2",
+          "pageTitle": "National curriculum - GOV.UK"
+        },
+        {
+          "url": "https://www.gov.uk/education/secondary-curriculum-key-stage-3-and-key-stage-4-gcses",
+          "anchorText": "Secondary curriculum, key stage 3 and key stage 4 (GCSEs)",
+          "pageTitle": "National curriculum - GOV.UK"
+        }
+      ]
+    },
+    {
+      "id": "acara-australian-curriculum",
+      "url": "https://www.australiancurriculum.edu.au/",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "Home | V9 Australian Curriculum",
+      "candidateLinks": [
+        "https://www.australiancurriculum.edu.au/",
+        "https://www.australiancurriculum.edu.au/f-10-curriculum",
+        "https://www.australiancurriculum.edu.au/senior-secondary-curriculum",
+        "https://www.australiancurriculum.edu.au/student-diversity",
+        "https://www.australiancurriculum.edu.au/resources",
+        "https://www.australiancurriculum.edu.au/downloads",
+        "https://www.australiancurriculum.edu.au/help",
+        "https://www.australiancurriculum.edu.au/search",
+        "https://www.australiancurriculum.edu.au/help/website-support",
+        "https://v9.australiancurriculum.edu.au/f-10-curriculum/f-10-curriculum-overview",
+        "https://www.australiancurriculum.edu.au/resources/stories/changes-to-the-australian-curriculum-review-process",
+        "https://www.australiancurriculum.edu.au/resources/stories/curriculum-changes",
+        "https://www.australiancurriculum.edu.au/resources/stories/mental-health-and-wellbeing-in-the-australian-curriculum",
+        "https://www.australiancurriculum.edu.au/resources/stories",
+        "https://www.australiancurriculum.edu.au/content/acara-curriculum/au/en/f-10-curriculum/f-10-curriculum-overview",
+        "https://www.australiancurriculum.edu.au/help/learning-areas",
+        "https://www.australiancurriculum.edu.au/machine-readable-australian-curriculum",
+        "https://www.australiancurriculum.edu.au/help/f-10-curriculum-overview/version-history",
+        "https://www.australiancurriculum.edu.au/help/contact-us",
+        "https://www.australiancurriculum.edu.au/copyright-and-terms-of-use",
+        "https://au.linkedin.com/company/australian-curriculum-assessment-and-reporting-authority"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://www.australiancurriculum.edu.au/",
+          "anchorText": "Skip to main content",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/f-10-curriculum",
+          "anchorText": "F-10 Curriculum",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/senior-secondary-curriculum",
+          "anchorText": "Senior secondary curriculum",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/student-diversity",
+          "anchorText": "Student diversity",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/resources",
+          "anchorText": "Resources overview",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/downloads",
+          "anchorText": "Curriculum downloads",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/help",
+          "anchorText": "Help and support",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/search",
+          "anchorText": "Search",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/help/website-support",
+          "anchorText": "Explore the Australian Curriculum, Version 9.0",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://v9.australiancurriculum.edu.au/f-10-curriculum/f-10-curriculum-overview",
+          "anchorText": "Three dimensions of the Australian Curriculum",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/resources/stories/changes-to-the-australian-curriculum-review-process",
+          "anchorText": "Changes to the Australian Curriculum review process to support teachers and students",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/resources/stories/curriculum-changes",
+          "anchorText": "What’s changed in the new Australian Curriculum?",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/resources/stories/mental-health-and-wellbeing-in-the-australian-curriculum",
+          "anchorText": "Mental health and wellbeing in the Australian Curriculum",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/resources/stories",
+          "anchorText": "View all the latest",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/content/acara-curriculum/au/en/f-10-curriculum/f-10-curriculum-overview",
+          "anchorText": "F–10 Curriculum overview",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/help/learning-areas",
+          "anchorText": "Learning areas",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/machine-readable-australian-curriculum",
+          "anchorText": "Machine-readable Australian Curriculum",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/help/f-10-curriculum-overview/version-history",
+          "anchorText": "Version history",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/help/contact-us",
+          "anchorText": "Contact us",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://www.australiancurriculum.edu.au/copyright-and-terms-of-use",
+          "anchorText": "Copyright © 2026 ACARA",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        },
+        {
+          "url": "https://au.linkedin.com/company/australian-curriculum-assessment-and-reporting-authority",
+          "anchorText": "LinkedIn",
+          "pageTitle": "Home | V9 Australian Curriculum"
+        }
+      ]
+    },
+    {
+      "id": "singapore-moe-curriculum",
+      "url": "https://www.moe.gov.sg/education-in-sg/our-programmes/curriculum-planning-development-division",
+      "status": 404,
+      "success": false,
+      "error": null,
+      "pageTitle": "",
+      "candidateLinks": [],
+      "candidateLinkMeta": []
+    },
+    {
+      "id": "india-ncert-textbooks",
+      "url": "https://ncert.nic.in/textbook.php",
+      "status": 0,
+      "success": false,
+      "error": "fetch failed",
+      "pageTitle": "",
+      "candidateLinks": [],
+      "candidateLinkMeta": []
+    },
+    {
+      "id": "india-cbse-curriculum",
+      "url": "https://cbseacademic.nic.in/curriculum_2025.html",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus",
+      "candidateLinks": [
+        "https://cbseacademic.nic.in/curriculum_archive.html",
+        "https://cbseacademic.nic.in/curriculum_2025.html",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Curriculum_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Arabic_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Assamese_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bahasa_Melayu_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bengali_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bhoti_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bhutia_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bodo_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/English_LL_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/English_Communicative_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/French_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/German_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Gujarati_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Gurung_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Hindi_A_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Hindi_B_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Japanese_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Kannada_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Kashmiri_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/KOKBOROK_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Lepcha_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Limboo_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Malyalam_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Manipuri_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Marathi_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Mizo_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Nepali_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Odia_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Persian_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Punjabi_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Rai_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Russian_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Sanskrit_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Sanskrit_Communiucative_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Sindhi_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Spanish_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Sherpa_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Tamang_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Tamil_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Tangkhul_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Telugu_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Telugu_Telangana_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Tibetan_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Thai_sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Urdu_Course_A_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Urdu_Course_B_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Maths_Sec_2024-25.pdf",
+        "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Science_Sec_2024-25.pdf"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://cbseacademic.nic.in/curriculum_archive.html",
+          "anchorText": "Archive",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/curriculum_2025.html",
+          "anchorText": "Initial Pages (Please read initial pages before downloading the syllabus)",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Curriculum_Sec_2024-25.pdf",
+          "anchorText": "Introduction to Secondary Curriculum",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Arabic_Sec_2024-25.pdf",
+          "anchorText": "Arabic",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Assamese_Sec_2024-25.pdf",
+          "anchorText": "Assamese",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bahasa_Melayu_Sec_2024-25.pdf",
+          "anchorText": "Bahasa Melayu",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bengali_Sec_2024-25.pdf",
+          "anchorText": "Bengali",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bhoti_Sec_2024-25.pdf",
+          "anchorText": "Bhoti",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bhutia_Sec_2024-25.pdf",
+          "anchorText": "Bhutia",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Bodo_Sec_2024-25.pdf",
+          "anchorText": "Bodo",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/English_LL_2024-25.pdf",
+          "anchorText": "English - Language and Literature",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/English_Communicative_Sec_2024-25.pdf",
+          "anchorText": "English Communicative",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/French_Sec_2024-25.pdf",
+          "anchorText": "French",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/German_Sec_2024-25.pdf",
+          "anchorText": "German",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Gujarati_Sec_2024-25.pdf",
+          "anchorText": "Gujarati",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Gurung_Sec_2024-25.pdf",
+          "anchorText": "Gurung",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Hindi_A_Sec_2024-25.pdf",
+          "anchorText": "Hindi Course-A",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Hindi_B_Sec_2024-25.pdf",
+          "anchorText": "Hindi Course-B",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Japanese_Sec_2024-25.pdf",
+          "anchorText": "Japanese",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Kannada_Sec_2024-25.pdf",
+          "anchorText": "Kannada",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Kashmiri_Sec_2024-25.pdf",
+          "anchorText": "Kashmiri",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/KOKBOROK_Sec_2024-25.pdf",
+          "anchorText": "Kokborok",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Lepcha_Sec_2024-25.pdf",
+          "anchorText": "Lepcha",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Limboo_Sec_2024-25.pdf",
+          "anchorText": "Limboo",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Malyalam_Sec_2024-25.pdf",
+          "anchorText": "Malayalam",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Manipuri_Sec_2024-25.pdf",
+          "anchorText": "Manipuri",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Marathi_Sec_2024-25.pdf",
+          "anchorText": "Marathi",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Mizo_Sec_2024-25.pdf",
+          "anchorText": "Mizo",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Nepali_Sec_2024-25.pdf",
+          "anchorText": "Nepali",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Odia_Sec_2024-25.pdf",
+          "anchorText": "Odia",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Persian_Sec_2024-25.pdf",
+          "anchorText": "Persian",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Punjabi_Sec_2024-25.pdf",
+          "anchorText": "Punjabi",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Rai_Sec_2024-25.pdf",
+          "anchorText": "Rai",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Russian_Sec_2024-25.pdf",
+          "anchorText": "Russian",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Sanskrit_Sec_2024-25.pdf",
+          "anchorText": "Sanskrit",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Sanskrit_Communiucative_Sec_2024-25.pdf",
+          "anchorText": "Sanskrit Communiucative",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Sindhi_Sec_2024-25.pdf",
+          "anchorText": "Sindhi",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Spanish_Sec_2024-25.pdf",
+          "anchorText": "Spanish",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Sherpa_Sec_2024-25.pdf",
+          "anchorText": "Sherpa",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Tamang_Sec_2024-25.pdf",
+          "anchorText": "Tamang",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Tamil_Sec_2024-25.pdf",
+          "anchorText": "Tamil",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Tangkhul_Sec_2024-25.pdf",
+          "anchorText": "Tangkhul",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Telugu_Sec_2024-25.pdf",
+          "anchorText": "Telugu AP",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Telugu_Telangana_Sec_2024-25.pdf",
+          "anchorText": "Telugu Telangana",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Tibetan_Sec_2024-25.pdf",
+          "anchorText": "Tibetan",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Thai_sec_2024-25.pdf",
+          "anchorText": "Thai",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Urdu_Course_A_Sec_2024-25.pdf",
+          "anchorText": "Urdu Course A",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Urdu_Course_B_Sec_2024-25.pdf",
+          "anchorText": "Urdu Course B",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Maths_Sec_2024-25.pdf",
+          "anchorText": "Mathematics",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        },
+        {
+          "url": "https://cbseacademic.nic.in/web_material/CurriculumMain25/Sec/Science_Sec_2024-25.pdf",
+          "anchorText": "Science",
+          "pageTitle": "CBSE | Academics Unit : Curriculum/Syllabus"
+        }
+      ]
+    },
+    {
+      "id": "new-zealand-curriculum",
+      "url": "https://nzcurriculum.tki.org.nz/The-New-Zealand-Curriculum",
+      "status": 403,
+      "success": false,
+      "error": null,
+      "pageTitle": "",
+      "candidateLinks": [],
+      "candidateLinkMeta": []
+    },
+    {
+      "id": "ontario-curriculum",
+      "url": "https://www.dcp.edu.gov.on.ca/en/curriculum",
+      "status": 0,
+      "success": false,
+      "error": "fetch failed",
+      "pageTitle": "",
+      "candidateLinks": [],
+      "candidateLinkMeta": []
+    },
+    {
+      "id": "south-africa-caps",
+      "url": "https://www.education.gov.za/Curriculum/CurriculumAssessmentPolicyStatements(CAPS).aspx",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "Curriculum Assessment Policy Statements",
+      "candidateLinks": [
+        "https://www.education.gov.za/Curriculum/NationalCurriculumStatementsGradesR-12.aspx",
+        "https://www.education.gov.za/Curriculum/NationalCurriculumFrameworkforChildrenfromBirthtoFour.aspx",
+        "https://www.education.gov.za/Curriculum/CurriculumAssessmentPolicyStatements(CAPS).aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM).aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/LTSMNationalCatalogue.aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/DigitalContent.aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/Workbooks.aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/MindtheGapStudyGuides.aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/GradedReadersandBigBookHL.aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/IIALResources.aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/AttheCrossroadsTextbooks.aspx",
+        "https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations.aspx",
+        "https://www.education.gov.za/Curriculum/NationalCirculars.aspx",
+        "https://www.education.gov.za/Curriculum/AnnualNationalAssessments.aspx",
+        "https://www.education.gov.za/Curriculum/SeniorCertificate.aspx",
+        "https://www.education.gov.za/LinkClick.aspx?link=https%3a%2f%2fwww.education.gov.za%2fResources%2fLegislation%2fCallforComments%2fCallforcommentsonthedraftcurriculumandassessmentpolicystatementonTwentySixTechnicalSubjecttobelistedintheNationalCurriculumStatementGradeR-12.aspx&amp;tabid=420&amp;portalid=0&amp;mid=1208",
+        "https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations/tabid/338/Default.aspx",
+        "https://www.education.gov.za/Curriculum/AnnualNationalAssessments(ANA)/tabid/569/Default.aspx",
+        "https://www.education.gov.za/Curriculum/NationalCurriculumStatementsGradesR-12/tabid/419/Default.aspx",
+        "https://www.education.gov.za/Curriculum/CurriculumAssessmentPolicyStatements(CAPS)/tabid/420/Default.aspx",
+        "https://www.education.gov.za/Curriculum/PracticalAssessmentTasks.aspx",
+        "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/tabid/703/Default.aspx"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://www.education.gov.za/Curriculum/NationalCurriculumStatementsGradesR-12.aspx",
+          "anchorText": "National Curriculum Statements Grades R-12",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/NationalCurriculumFrameworkforChildrenfromBirthtoFour.aspx",
+          "anchorText": "National Curriculum Framework for Children from Birth to Four",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/CurriculumAssessmentPolicyStatements(CAPS).aspx",
+          "anchorText": "Curriculum Assessment Policy Statements (CAPS)",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM).aspx",
+          "anchorText": "Learning and Teaching Support Materials (LTSM)",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/LTSMNationalCatalogue.aspx",
+          "anchorText": "LTSM National Catalogue",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/DigitalContent.aspx",
+          "anchorText": "Digital Content",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/Workbooks.aspx",
+          "anchorText": "Workbooks",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/MindtheGapStudyGuides.aspx",
+          "anchorText": "Mind the Gap Study Guides",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/GradedReadersandBigBookHL.aspx",
+          "anchorText": "Graded Readers and Big Book HL",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/IIALResources.aspx",
+          "anchorText": "IIAL Resources",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/AttheCrossroadsTextbooks.aspx",
+          "anchorText": "At the Crossroads Textbooks",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations.aspx",
+          "anchorText": "National Senior Certificate (NSC) Examinations",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/NationalCirculars.aspx",
+          "anchorText": "National Circulars",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/AnnualNationalAssessments.aspx",
+          "anchorText": "Annual National Assessments",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/SeniorCertificate.aspx",
+          "anchorText": "Senior Certificate",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/LinkClick.aspx?link=https%3a%2f%2fwww.education.gov.za%2fResources%2fLegislation%2fCallforComments%2fCallforcommentsonthedraftcurriculumandassessmentpolicystatementonTwentySixTechnicalSubjecttobelistedintheNationalCurriculumStatementGradeR-12.aspx&amp;tabid=420&amp;portalid=0&amp;mid=1208",
+          "anchorText": "Draft CAPS Technical Occupational Subjects",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/NationalSeniorCertificate(NSC)Examinations/tabid/338/Default.aspx",
+          "anchorText": "Grade 12 Past Exam papers",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/AnnualNationalAssessments(ANA)/tabid/569/Default.aspx",
+          "anchorText": "ANA Exemplars",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/NationalCurriculumStatementsGradesR-12/tabid/419/Default.aspx",
+          "anchorText": "Curriculum",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/CurriculumAssessmentPolicyStatements(CAPS)/tabid/420/Default.aspx",
+          "anchorText": "Curriculum Assessment Policy Statements",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/PracticalAssessmentTasks.aspx",
+          "anchorText": "Practical Assessment Tasks",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        },
+        {
+          "url": "https://www.education.gov.za/Curriculum/LearningandTeachingSupportMaterials(LTSM)/tabid/703/Default.aspx",
+          "anchorText": "Learning and Teaching Support Materials",
+          "pageTitle": "Curriculum Assessment Policy Statements"
+        }
+      ]
+    },
+    {
+      "id": "kenya-kicd",
+      "url": "https://kicd.ac.ke/curriculum-design/",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development",
+      "candidateLinks": [
+        "https://kicd.ac.ke/our-services/curriculum-research/",
+        "https://kicd.ac.ke/cbc-materials/approved-grade-4-cbc-course-materials/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/",
+        "https://kicd.ac.ke/curriculum-reform/",
+        "https://kicd.ac.ke/curriculum-reform/basic-education-curriculum-framework/",
+        "https://kicd.ac.ke/curriculum-reform/curriculum-development-policy/",
+        "https://kicd.ac.ke/curriculum-reform/national-curriculum-policy/",
+        "https://kicd.ac.ke/curriculum-reform/need-assessment-reports-for-cbc/",
+        "https://kicd.ac.ke/curriculum-reform/3rd-national-conference-on-curriculum-reforms-report/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/diploma-in-teacher-education/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eleven/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-ten/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-twelve/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/regular-curriculum-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/hi-grade-10/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/hi-grade-8/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/hi-grade-9/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/pi-grade-10/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/pi-grade-8/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/pi-grade-9/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/prevocational-curriculum-designs/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/vi-grade-10/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/vi-grade-8/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/vi-grade-9/",
+        "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/vocational-level-designs/",
+        "https://kicd.ac.ke/cbc-materials/pre-primary/",
+        "http://kicd.ac.ke/",
+        "https://www.kec.ac.ke/"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://kicd.ac.ke/our-services/curriculum-research/",
+          "anchorText": "Curriculum Development &#038; Research",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/approved-grade-4-cbc-course-materials/",
+          "anchorText": "Approved CBC Course Materials",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/",
+          "anchorText": "Curriculum Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/curriculum-reform/",
+          "anchorText": "Curriculum Reform",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/curriculum-reform/basic-education-curriculum-framework/",
+          "anchorText": "Basic Education Curriculum Framework",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/curriculum-reform/curriculum-development-policy/",
+          "anchorText": "Curriculum Reform Policy",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/curriculum-reform/national-curriculum-policy/",
+          "anchorText": "National Curriculum Policy",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/curriculum-reform/need-assessment-reports-for-cbc/",
+          "anchorText": "Needs Assessment Reports for CBC",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/curriculum-reform/3rd-national-conference-on-curriculum-reforms-report/",
+          "anchorText": "3rd National Conference on Curriculum Reform’s Report",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/diploma-in-teacher-education/",
+          "anchorText": "Diploma in Teacher Education",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eight-designs/",
+          "anchorText": "Grade Eight Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-eleven/",
+          "anchorText": "Grade Eleven",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-five-designs/",
+          "anchorText": "Grade Five Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-four-designs/",
+          "anchorText": "Grade Four Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-nine-designs/",
+          "anchorText": "Grade Nine Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-seven-designs/",
+          "anchorText": "Grade Seven Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-six-designs/",
+          "anchorText": "Grade Six Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-ten/",
+          "anchorText": "Grade Ten",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/grade-twelve/",
+          "anchorText": "Grade Twelve",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/regular-curriculum-designs/",
+          "anchorText": "Regular Curriculum Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/",
+          "anchorText": "SNE Curriculum Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/hi-grade-10/",
+          "anchorText": "HI Grade 10",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/hi-grade-8/",
+          "anchorText": "HI Grade 8",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/hi-grade-9/",
+          "anchorText": "HI Grade 9",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/pi-grade-10/",
+          "anchorText": "PI Grade 10",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/pi-grade-8/",
+          "anchorText": "PI Grade 8",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/pi-grade-9/",
+          "anchorText": "PI Grade 9",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/prevocational-curriculum-designs/",
+          "anchorText": "PREVOCATIONAL CURRICULUM DESIGNS",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/vi-grade-10/",
+          "anchorText": "VI Grade 10",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/vi-grade-8/",
+          "anchorText": "VI Grade 8",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/vi-grade-9/",
+          "anchorText": "VI Grade 9",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/curriculum-designs/sne-curriculum-designs/vocational-level-designs/",
+          "anchorText": "VOCATIONAL LEVEL DESIGNS",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://kicd.ac.ke/cbc-materials/pre-primary/",
+          "anchorText": "Pre-Primary Curriculum Designs",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "http://kicd.ac.ke/",
+          "anchorText": "Kenya Institute of Curriculum Development",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        },
+        {
+          "url": "https://www.kec.ac.ke/",
+          "anchorText": "Curriculum Relevant Content",
+          "pageTitle": "Curriculum Designs : Kenya Institute of Curriculum Development"
+        }
+      ]
+    },
+    {
+      "id": "open-yale-courses",
+      "url": "https://oyc.yale.edu/",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "Welcome | Open Yale Courses",
+      "candidateLinks": [
+        "https://oyc.yale.edu/",
+        "https://oyc.yale.edu/courses"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://oyc.yale.edu/",
+          "anchorText": "Open Yale Courses",
+          "pageTitle": "Welcome | Open Yale Courses"
+        },
+        {
+          "url": "https://oyc.yale.edu/courses",
+          "anchorText": "Courses",
+          "pageTitle": "Welcome | Open Yale Courses"
+        }
+      ]
+    },
+    {
+      "id": "nptel-transcripts",
+      "url": "https://nptel.ac.in/noc/transcript.php",
+      "status": 404,
+      "success": false,
+      "error": null,
+      "pageTitle": "",
+      "candidateLinks": [],
+      "candidateLinkMeta": []
+    },
+    {
+      "id": "mit-ocw",
+      "url": "https://ocw.mit.edu/",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "MIT OpenCourseWare | Free Online Course Materials",
+      "candidateLinks": [
+        "https://ocw.mit.edu/courses/res-10-001-making-science-and-engineering-pictures-a-practical-guide-to-presenting-your-work-spring-2016/",
+        "https://ocw.mit.edu/courses/es-010-chemistry-of-sports-spring-2013/",
+        "https://ocw.mit.edu/courses/21m-s53-chinese-popular-musics-in-dialogue-spring-2014/",
+        "https://ocw.mit.edu/courses/22-51-quantum-theory-of-radiation-interactions-fall-2012/",
+        "https://ocw.mit.edu/courses/4-s67-landscape-experience-seminar-in-land-art-fall-2016/",
+        "https://ocw.mit.edu/courses/1-018j-ecology-i-the-earth-system-fall-2009/",
+        "https://ocw.mit.edu/courses/7-05-general-biochemistry-spring-2020/",
+        "https://ocw.mit.edu/courses/11-437-financing-economic-development-fall-2016/",
+        "https://ocw.mit.edu/courses/res-mas-002-day-of-ai-spring-2022/",
+        "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/",
+        "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+        "https://ocw.mit.edu/courses/21h-102-american-history-since-1865-spring-2018/",
+        "https://ocw.mit.edu/courses/hst-953-clinical-data-learning-visualization-and-deployments-fall-2024/",
+        "https://ocw.mit.edu/courses/res-14-004-seven-questions-about-tariffs-that-everyone-should-know-the-answer-to-january-iap-2026/",
+        "https://ocw.mit.edu/courses/6-7960-deep-learning-fall-2024/",
+        "https://ocw.mit.edu/courses/2-008-design-and-manufacturing-ii-spring-2025/",
+        "https://ocw.mit.edu/courses/17-506-ethnic-politics-fall-2024/",
+        "https://ocw.mit.edu/courses/14-41-public-finance-and-public-policy-fall-2024/",
+        "https://ocw.mit.edu/courses/11-013j-american-urban-history-spring-2025/",
+        "https://ocw.mit.edu/courses/15-773-hands-on-deep-learning-spring-2024/",
+        "https://ocw.mit.edu/courses/18-200-principles-of-discrete-applied-mathematics-spring-2024/",
+        "https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024/",
+        "https://ocw.mit.edu/courses/6-c35-interactive-data-visualization-and-society-spring-2025/",
+        "https://ocw.mit.edu/courses/18-156-projection-theory-spring-2025/",
+        "https://ocw.mit.edu/stories/freesia-gaul/",
+        "https://ocw.mit.edu/stories/hinata-yamahara/",
+        "https://ocw.mit.edu/stories/salim-al-hassanieh/",
+        "https://ocw.mit.edu/stories/mostafa-fawzy/",
+        "https://ocw.mit.edu/stories/sangat-tiwari/",
+        "https://ocw.mit.edu/stories/sofiia-lipkevych/",
+        "https://ocw.mit.edu/stories/bernardo-pic%C3%A3o/",
+        "https://ocw.mit.edu/stories/june-odongo/",
+        "https://www.linkedin.com/company/mit-opencourseware",
+        "https://www.linkedin.com/company/mit-opencourseware/"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://ocw.mit.edu/courses/res-10-001-making-science-and-engineering-pictures-a-practical-guide-to-presenting-your-work-spring-2016/",
+          "anchorText": "Making Science and Engineering Pictures: A Practical Guide to Presenting Your Work",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/es-010-chemistry-of-sports-spring-2013/",
+          "anchorText": "Chemistry of Sports",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21m-s53-chinese-popular-musics-in-dialogue-spring-2014/",
+          "anchorText": "Chinese Popular Musics in Dialogue",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/22-51-quantum-theory-of-radiation-interactions-fall-2012/",
+          "anchorText": "Quantum Theory of Radiation Interactions",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/4-s67-landscape-experience-seminar-in-land-art-fall-2016/",
+          "anchorText": "Landscape Experience: Seminar in Land/Art",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/1-018j-ecology-i-the-earth-system-fall-2009/",
+          "anchorText": "Ecology I: The Earth System",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/7-05-general-biochemistry-spring-2020/",
+          "anchorText": "General Biochemistry",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/11-437-financing-economic-development-fall-2016/",
+          "anchorText": "Financing Economic Development",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/res-mas-002-day-of-ai-spring-2022/",
+          "anchorText": "Day of AI",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/7-016-introductory-biology-fall-2018/",
+          "anchorText": "Introductory Biology",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/",
+          "anchorText": "Introduction to Computer Science and Programming in Python",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/21h-102-american-history-since-1865-spring-2018/",
+          "anchorText": "American History Since 1865",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/hst-953-clinical-data-learning-visualization-and-deployments-fall-2024/",
+          "anchorText": "Clinical Data Learning, Visualization, and Deployments",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/res-14-004-seven-questions-about-tariffs-that-everyone-should-know-the-answer-to-january-iap-2026/",
+          "anchorText": "Seven Questions About Tariffs That Everyone Should Know the Answer To",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-7960-deep-learning-fall-2024/",
+          "anchorText": "Deep Learning",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/2-008-design-and-manufacturing-ii-spring-2025/",
+          "anchorText": "Design and Manufacturing II",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/17-506-ethnic-politics-fall-2024/",
+          "anchorText": "Ethnic Politics",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/14-41-public-finance-and-public-policy-fall-2024/",
+          "anchorText": "Public Finance and Public Policy",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/11-013j-american-urban-history-spring-2025/",
+          "anchorText": "American Urban History",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/15-773-hands-on-deep-learning-spring-2024/",
+          "anchorText": "Hands-on Deep Learning",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/18-200-principles-of-discrete-applied-mathematics-spring-2024/",
+          "anchorText": "Principles of Discrete Applied Mathematics",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/18-642-topics-in-mathematics-with-applications-in-finance-fall-2024/",
+          "anchorText": "Topics in Mathematics with Applications in Finance",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/6-c35-interactive-data-visualization-and-society-spring-2025/",
+          "anchorText": "Interactive Data Visualization and Society",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/courses/18-156-projection-theory-spring-2025/",
+          "anchorText": "Projection Theory",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/stories/freesia-gaul/",
+          "anchorText": "Freesia Gaul Independent Learner Australia Nineteen-year-old Freesia Gaul built a VR prototype thanks to MIT OpenCourseWare classes that provided “a solid foundation of knowledge and problem-solving abilities.” Stefanie Koperniak | MIT Open",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/stories/hinata-yamahara/",
+          "anchorText": "Hinata Yamahara High School Student United States High schooler Hinata Yamahara’s interest in urban planning was nurtured by free MIT resources, including OpenCourseWare. Lauren Rebecca Thacker | MIT Open Learning Hinata Yamahara was 10 yea",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/stories/salim-al-hassanieh/",
+          "anchorText": "Salim Al-Hassanieh Educator Syria Retired professor Salim Al-Hassanieh has turned to MIT Open Learning’s OpenCourseWare resources for decades, enriching his research and teaching. Lauren Rebecca Thacker | MIT Open Learning Salim Al-Hassanie",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/stories/mostafa-fawzy/",
+          "anchorText": "Mostafa Fawzy Educator Egypt For physicist Mostafa Fawzy, MIT Open Learning’s OpenCourseWare was a steadfast companion through countless study sessions. Lauren Rebecca Thacker | MIT Open Learning Mostafa Fawzy became interested in physics i",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/stories/sangat-tiwari/",
+          "anchorText": "Sangat Tiwari High School Student Canada High school student Sangat Tiwari found MIT OpenCourseWare at Open Learning in 8th grade and hasn’t looked back. Lauren Rebecca Thacker | MIT Open Learning MIT Open Learning’s OpenCourseWare resource",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/stories/sofiia-lipkevych/",
+          "anchorText": "Sofiia Lipkevych College Student Ukraine Ukrainian students and collaborators provide high-quality translations of MIT OpenCourseWare educational resources. Stefanie Koperniak | MIT Open Learning With war continuing to disrupt education for",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/stories/bernardo-pic%C3%A3o/",
+          "anchorText": "Bernardo Picão Student Portugal MIT OpenCourseWare “changed how I think about teaching and what a university is” Bernardo Picão, a graduate student in physics, has turned to MIT Open Learning’s resources throughout his educational journey. ",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://ocw.mit.edu/stories/june-odongo/",
+          "anchorText": "June Odongo Independent Learner Kenya Entrepreneur creates career pathways with MIT OpenCourseWare June Odongo uses free, online MIT courses to train high-quality candidates, making them job-ready. By Sara Feijo | MIT Open Learning When Jun",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://www.linkedin.com/company/mit-opencourseware",
+          "anchorText": "",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        },
+        {
+          "url": "https://www.linkedin.com/company/mit-opencourseware/",
+          "anchorText": "",
+          "pageTitle": "MIT OpenCourseWare | Free Online Course Materials"
+        }
+      ]
+    },
+    {
+      "id": "openlearn",
+      "url": "https://www.open.edu/openlearn/",
+      "status": 200,
+      "success": true,
+      "error": null,
+      "pageTitle": "The home of free learning from the Open University | OpenLearn - Open University",
+      "candidateLinks": [
+        "https://www.open.ac.uk/courses",
+        "https://www.open.edu/openlearn/free-courses/full-catalogue",
+        "https://www.open.edu/openlearn/badged-courses",
+        "https://www.open.edu/openlearn/about-openlearn/try",
+        "https://www.open.edu/openlearn/free-courses/advantages-signing-on-free-course"
+      ],
+      "candidateLinkMeta": [
+        {
+          "url": "https://www.open.ac.uk/courses",
+          "anchorText": "Study with The Open University",
+          "pageTitle": "The home of free learning from the Open University | OpenLearn - Open University"
+        },
+        {
+          "url": "https://www.open.edu/openlearn/free-courses/full-catalogue",
+          "anchorText": "All our free courses",
+          "pageTitle": "The home of free learning from the Open University | OpenLearn - Open University"
+        },
+        {
+          "url": "https://www.open.edu/openlearn/badged-courses",
+          "anchorText": "Over 400,000 digital badges issued - learn more",
+          "pageTitle": "The home of free learning from the Open University | OpenLearn - Open University"
+        },
+        {
+          "url": "https://www.open.edu/openlearn/about-openlearn/try",
+          "anchorText": "Why study a free course on OpenLearn?",
+          "pageTitle": "The home of free learning from the Open University | OpenLearn - Open University"
+        },
+        {
+          "url": "https://www.open.edu/openlearn/free-courses/advantages-signing-on-free-course",
+          "anchorText": "Advantages of enrolling on a free course",
+          "pageTitle": "The home of free learning from the Open University | OpenLearn - Open University"
+        }
+      ]
+    }
+  ]
+}

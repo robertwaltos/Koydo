@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { resolveGeneratedModuleMedia } from "@/lib/media/media-fallbacks";
 
 const batchResolveSchema = z.object({
   assetType: z.enum(["video", "animation", "image"]).default("image"),
@@ -71,6 +72,36 @@ export async function GET(request: Request) {
     if (resolved[row.module_id]) continue;
     resolved[row.module_id] = row.output_url;
     completedAt[row.module_id] = row.completed_at ?? null;
+  }
+
+  // Regen fallback: for modules still awaiting regeneration, surface the old
+  // output_url archived in metadata.old_output_url so the app stays functional.
+  const missingModuleIds = moduleIds.filter((id) => !resolved[id]);
+  if (missingModuleIds.length > 0) {
+    const { data: regenRows } = await admin
+      .from("media_generation_jobs")
+      .select("module_id, metadata")
+      .eq("asset_type", assetType)
+      .in("status", ["queued", "running"])
+      .in("module_id", missingModuleIds)
+      .not("metadata->>old_output_url", "is", null)
+      .limit(5000);
+
+    for (const row of regenRows ?? []) {
+      if (!row.module_id || resolved[row.module_id]) continue;
+      const oldUrl = (row.metadata as Record<string, unknown>)?.old_output_url;
+      if (typeof oldUrl === "string" && oldUrl.length > 0) {
+        resolved[row.module_id] = oldUrl;
+      }
+    }
+  }
+
+  // Static fallback: use generated module asset placeholder as last resort.
+  for (const moduleId of moduleIds) {
+    if (resolved[moduleId]) continue;
+    const fallback = resolveGeneratedModuleMedia(moduleId, assetType);
+    if (!fallback) continue;
+    resolved[moduleId] = fallback;
   }
 
   return NextResponse.json({

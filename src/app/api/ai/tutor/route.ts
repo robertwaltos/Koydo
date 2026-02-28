@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { serverEnv } from "@/lib/config/env";
 import { getLessonById } from "@/lib/modules";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const MAX_HISTORY_FETCH = 80;
 const DEFAULT_HISTORY_FETCH = 24;
@@ -255,7 +256,7 @@ export async function GET(request: Request) {
       usage,
     });
   } catch (error) {
-    console.error("Unexpected AI tutor history error:", error);
+    console.error("Unexpected AI tutor history error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
@@ -307,7 +308,7 @@ export async function DELETE(request: Request) {
       usage: usageAfter,
     });
   } catch (error) {
-    console.error("Unexpected AI tutor delete error:", error);
+    console.error("Unexpected AI tutor delete error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
@@ -533,7 +534,7 @@ export async function POST(request: Request) {
         if (isMissingTutorTableError(saveError.message)) {
           memoryAvailable = false;
         } else {
-          console.error("Unable to persist AI tutor conversation.", saveError.message);
+          console.error("Unable to persist AI tutor conversation.", toSafeErrorRecord(saveError));
         }
       } else {
         memorySaved = true;
@@ -567,7 +568,7 @@ export async function POST(request: Request) {
       },
     });
   } catch (error) {
-    console.error("Unexpected AI tutor error:", error);
+    console.error("Unexpected AI tutor error:", toSafeErrorRecord(error));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

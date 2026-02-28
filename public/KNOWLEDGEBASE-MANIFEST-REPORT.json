@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-02-26T06:15:43.637Z",
+  "options": {
+    "chunkChars": 1400,
+    "overlapChars": 200,
+    "minChunkChars": 220,
+    "maxDocs": 0,
+    "maxDocsPerSource": 0,
+    "maxChunksPerSource": 0
+  },
+  "totals": {
+    "docsScanned": 123,
+    "docsIncluded": 122,
+    "chunksCreated": 1911,
+    "avgChunkChars": 1354,
+    "bySource": {
+      "acara-australian-curriculum": 1228,
+      "india-cbse-curriculum": 105,
+      "india-ncert-textbooks": 1,
+      "kenya-kicd": 17,
+      "mit-ocw": 402,
+      "ontario-curriculum": 1,
+      "open-yale-courses": 43,
+      "openlearn": 6,
+      "south-africa-caps": 54,
+      "uk-national-curriculum": 54
+    }
+  },
+  "outputs": {
+    "manifestFile": "data\\knowledgebase\\manifest.json",
+    "chunksFile": "data\\knowledgebase\\chunks.jsonl",
+    "reportJson": "public\\KNOWLEDGEBASE-MANIFEST-REPORT.json",
+    "reportMd": "public\\KNOWLEDGEBASE-MANIFEST-REPORT.md"
+  }
+}

@@ -33,9 +33,10 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
   "gradeBand": "preK",
   "metadata": {
     "source": "../External_AI_Agents/lesson_platform (1).jsx",
-    "sourceUnitId": "lang_arts-prek-u1",
+    "sourceUnitId": "lang-arts-prek-u1",
     "sourceUnitIdCanonical": "lang-arts-prek-u1",
-    "importedAt": "2026-02-24T03:43:31.745Z"
+    "sourceUnitIdRaw": "lang_arts-prek-u1",
+    "importedAt": "2026-02-25T02:06:11.933Z"
   },
   "external": {
     "unitOrder": 5,

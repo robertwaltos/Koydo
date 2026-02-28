@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getAllLearningModules } from "@/lib/modules";
 import { buildAdaptiveRemediationQueue } from "@/lib/exam/remediation-queue";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 type MasteryRow = {
   skill_id: string;
@@ -149,7 +150,9 @@ export async function GET() {
           reasons.push("due for spaced review");
         }
 
-        const lessonSkillIds = (lesson.questions ?? []).map((q) => q.skillId);
+        const lessonSkillIds = (lesson.questions ?? [])
+          .map((q) => q.skillId)
+          .filter((skillId): skillId is string => typeof skillId === "string" && skillId.length > 0);
         const weakMatches = lessonSkillIds.filter((skillId) => weakSkills.includes(skillId)).length;
         if (weakMatches > 0) {
           score += weakMatches * 3;
@@ -232,7 +235,7 @@ export async function GET() {
     });
 
   } catch (err) {
-    console.error("Unexpected error in recommendations route:", err);
+    console.error("Unexpected error in recommendations route:", toSafeErrorRecord(err));
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

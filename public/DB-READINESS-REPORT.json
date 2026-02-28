@@ -1,15 +1,20 @@
 {
-  "generatedAt": "2026-02-20T15:56:35.087Z",
+  "generatedAt": "2026-02-27T02:37:15.761Z",
   "supabaseHost": "osnxbuusohdzzcrakavn.supabase.co",
   "totals": {
-    "present": 19,
+    "present": 30,
     "missing": 0,
     "error": 0,
-    "total": 19
+    "total": 30
   },
   "tables": [
     {
       "table": "user_profiles",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "student_profiles",
       "status": "present",
       "detail": "Present"
     },
@@ -25,6 +30,11 @@
     },
     {
       "table": "subscriptions",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "stripe_webhook_events",
       "status": "present",
       "detail": "Present"
     },
@@ -100,6 +110,51 @@
     },
     {
       "table": "media_generation_jobs",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "testing_exams",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "testing_question_bank",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "user_exam_entitlements",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "testing_purchases",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "testing_exam_attempts",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "testing_attempt_answers",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "classroom_entities",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "class_enrollments",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "class_assignments",
       "status": "present",
       "detail": "Present"
     }

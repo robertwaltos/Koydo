@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllLearningModules } from "@/lib/modules";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getOnboardingRedirect } from "@/lib/compliance/onboarding";
 import SignOutButton from "./sign-out-button";
@@ -10,8 +11,12 @@ import AiTutorPanel from "./ai-tutor-panel";
 import AiWeeklyPlanCard from "./ai-weekly-plan-card";
 import AiRemediationWorksheetCard from "./ai-remediation-worksheet-card";
 import ModuleCoverImage from "@/app/components/module-cover-image";
+import { resolveLanguageUsageEntitlement } from "@/lib/language-learning";
 import { toLessonPath } from "@/lib/routing/paths";
 import SoftCard from "@/app/components/ui/soft-card";
+import { summarizeLanguageProgress } from "@/lib/language-learning/progress-metrics";
+import { isSupportedLocale, translate, type Locale } from "@/lib/i18n/translations";
+import { formatDate } from "@/lib/i18n/format";
 
 export const dynamic = "force-dynamic";
 
@@ -23,15 +28,57 @@ function letterGrade(score: number) {
   return "F";
 }
 
-function achievementLevel(score: number) {
-  if (score >= 90) return "Super Star";
-  if (score >= 80) return "Trailblazer";
-  if (score >= 70) return "Rising Star";
-  if (score >= 60) return "Explorer";
-  return "Starter";
+function achievementLevel(
+  score: number,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+) {
+  if (score >= 90) return t("dashboard_achievement_super_star");
+  if (score >= 80) return t("dashboard_achievement_trailblazer");
+  if (score >= 70) return t("dashboard_achievement_rising_star");
+  if (score >= 60) return t("dashboard_achievement_explorer");
+  return t("dashboard_achievement_starter");
+}
+
+function isMissingTableError(message: string) {
+  const lower = message.toLowerCase();
+  return lower.includes("could not find the table") || (lower.includes("relation") && lower.includes("does not exist"));
+}
+
+function formatRelativeDate(
+  value: string | null,
+  locale: Locale,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+) {
+  if (!value) return t("dashboard_no_activity_yet");
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return t("dashboard_no_activity_yet");
+  return formatDate(date, locale, { month: "short", day: "numeric" });
+}
+
+function describeUsageState(
+  reason: "eligible" | "plan_no_scored_access" | "quota_exceeded" | "budget_guardrail" | null,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+) {
+  switch (reason) {
+    case "eligible":
+      return t("dashboard_usage_state_active");
+    case "plan_no_scored_access":
+      return t("dashboard_usage_state_plan_practice_only");
+    case "quota_exceeded":
+      return t("dashboard_usage_state_quota_reached");
+    case "budget_guardrail":
+      return t("dashboard_usage_state_budget_guardrail");
+    default:
+      return t("dashboard_usage_state_awaiting_telemetry");
+  }
 }
 
 export default async function DashboardPage() {
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get("koydo.locale")?.value ?? "en";
+  const locale: Locale = isSupportedLocale(localeCookie) ? localeCookie : "en";
+  const t = (key: string, vars?: Record<string, string | number>) => translate(locale, key, vars);
+
   const learningModules = getAllLearningModules();
   const supabase = await createSupabaseServerClient();
   const { data, error } = await supabase.auth.getUser();
@@ -40,7 +87,15 @@ export default async function DashboardPage() {
     redirect("/auth/sign-in");
   }
 
-  const [profileResult, progressResult, masteryResult, examErrorResult] = await Promise.all([
+  const [
+    profileResult,
+    progressResult,
+    masteryResult,
+    examErrorResult,
+    pronunciationAttemptsResult,
+    gamificationStateResult,
+    gamificationEventsResult,
+  ] = await Promise.all([
     supabase
       .from("user_profiles")
       .select("birth_date, parental_consent_required, parental_consent_status")
@@ -59,6 +114,23 @@ export default async function DashboardPage() {
       .select("id", { head: true, count: "exact" })
       .eq("user_id", data.user.id)
       .eq("resolved", false),
+    supabase
+      .from("pronunciation_attempts")
+      .select("grading_mode, overall_score, created_at")
+      .eq("user_id", data.user.id)
+      .order("created_at", { ascending: false })
+      .limit(100),
+    supabase
+      .from("gamification_states")
+      .select("points, level, badges, quests_completed, last_activity_at")
+      .eq("user_id", data.user.id)
+      .maybeSingle(),
+    supabase
+      .from("gamification_events")
+      .select("event_type, created_at")
+      .eq("user_id", data.user.id)
+      .order("created_at", { ascending: false })
+      .limit(5),
   ]);
 
   const profile = profileResult.data;
@@ -71,6 +143,42 @@ export default async function DashboardPage() {
     redirect(onboardingRedirect);
   }
 
+  let usageEntitlement: Awaited<ReturnType<typeof resolveLanguageUsageEntitlement>> | null =
+    null;
+  let usageEntitlementWarning: string | null = null;
+
+  try {
+    usageEntitlement = await resolveLanguageUsageEntitlement(supabase, {
+      userId: data.user.id,
+    });
+  } catch (error) {
+    if (
+      error instanceof Error &&
+      (isMissingTableError(error.message) ||
+        error.message.toLowerCase().includes("language_usage_tracking"))
+    ) {
+      usageEntitlementWarning = t("dashboard_usage_tracking_pending_migration");
+    } else {
+      usageEntitlementWarning = t("dashboard_usage_tracking_unavailable");
+      console.error("Dashboard usage entitlement query failed:", error);
+    }
+  }
+
+  const languageDataErrors = [
+    pronunciationAttemptsResult.error,
+    gamificationStateResult.error,
+    gamificationEventsResult.error,
+  ].filter((error): error is NonNullable<typeof pronunciationAttemptsResult.error> => Boolean(error));
+  const hasMissingLanguageTables = languageDataErrors.some((error) =>
+    isMissingTableError(error.message),
+  );
+
+  if (!hasMissingLanguageTables) {
+    for (const error of languageDataErrors) {
+      console.error("Dashboard language data query failed:", error);
+    }
+  }
+
   const progressMap = new Map(progressData?.map((p) => [p.lesson_id, p]) ?? []);
   const completedLessons = progressMap.size;
   const averageMasteryRaw =
@@ -79,19 +187,32 @@ export default async function DashboardPage() {
       : 0;
   const averageMasteryPercent = Math.round(averageMasteryRaw * 100);
   const grade = letterGrade(averageMasteryPercent);
-  const level = achievementLevel(averageMasteryPercent);
+  const level = achievementLevel(averageMasteryPercent, t);
   const totalAttempts = masteryData.reduce((acc, row) => acc + Number(row.attempts ?? 0), 0);
   const totalCorrect = masteryData.reduce((acc, row) => acc + Number(row.correct_attempts ?? 0), 0);
   const accuracyPercent = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
   const starsEarned = completedLessons * 3 + Math.floor(averageMasteryPercent / 10);
+  const languageProgress = summarizeLanguageProgress(
+    hasMissingLanguageTables ? [] : pronunciationAttemptsResult.data ?? [],
+    hasMissingLanguageTables ? null : gamificationStateResult.data ?? null,
+  );
+  const languageEvents = hasMissingLanguageTables ? [] : gamificationEventsResult.data ?? [];
+  const usageLimit = usageEntitlement?.scoredAttemptsLimit ?? 0;
+  const usageUsed = usageEntitlement?.scoredAttemptsUsed ?? 0;
+  const usagePercent =
+    usageLimit > 0 ? Math.min(100, Math.round((usageUsed / usageLimit) * 100)) : 0;
+  const usageStateMessage = usageEntitlement
+    ? describeUsageState(usageEntitlement.reason, t)
+    : usageEntitlementWarning ?? t("dashboard_usage_state_awaiting_telemetry");
+  const showUsageUpgradeCta = usageEntitlement?.mode === "practice_only";
 
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12">
       <header className="flex items-start justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-semibold">Learner Dashboard</h1>
+          <h1 className="text-2xl font-semibold">{t("dashboard_title")}</h1>
           <p className="mt-2 text-sm text-zinc-600">
-            Signed in as {data.user.email ?? data.user.id}
+            {t("dashboard_signed_in_as", { user: data.user.email ?? data.user.id })}
           </p>
         </div>
         <SignOutButton />
@@ -100,31 +221,166 @@ export default async function DashboardPage() {
       <section className="flex flex-col gap-8">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
           <SoftCard as="article" className="border-rose-200 bg-rose-50 p-4">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">Achievement Level</p>
+            <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_achievement_level")}</p>
             <p className="mt-2 text-3xl font-bold">{level}</p>
-            <p className="mt-1 text-xs text-zinc-500">Progress band: {grade}</p>
+            <p className="mt-1 text-xs text-zinc-500">{t("dashboard_progress_band", { grade })}</p>
           </SoftCard>
           <SoftCard as="article" className="border-sky-200 bg-sky-50 p-4">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">Mastery Score</p>
+            <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_mastery_score")}</p>
             <p className="mt-2 text-3xl font-bold">{averageMasteryPercent}%</p>
           </SoftCard>
           <SoftCard as="article" className="border-emerald-200 bg-emerald-50 p-4">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">Lessons Completed</p>
+            <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_lessons_completed")}</p>
             <p className="mt-2 text-3xl font-bold">{completedLessons}</p>
           </SoftCard>
           <SoftCard as="article" className="border-amber-200 bg-amber-50 p-4">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">Stars Earned</p>
+            <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_stars_earned")}</p>
             <p className="mt-2 text-3xl font-bold">{starsEarned}</p>
-            <p className="mt-1 text-xs text-zinc-500">Accuracy: {accuracyPercent}%</p>
+            <p className="mt-1 text-xs text-zinc-500">{t("dashboard_accuracy", { percent: accuracyPercent })}</p>
           </SoftCard>
           <SoftCard as="article" className="border-indigo-200 bg-indigo-50 p-4">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">Open Exam Errors</p>
+            <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_open_exam_errors")}</p>
             <p className="mt-2 text-3xl font-bold">{openExamErrors}</p>
             <Link href="/exam-prep/error-log" className="mt-1 inline-block text-xs font-medium text-indigo-700 hover:underline">
-              Review logbook
+              {t("dashboard_review_logbook")}
             </Link>
           </SoftCard>
         </div>
+
+        <SoftCard as="section" className="border-cyan-200 bg-cyan-50/70 p-5">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <h2 className="text-lg font-semibold text-zinc-900">{t("dashboard_language_progress_title")}</h2>
+              <p className="mt-1 text-sm text-zinc-600">
+                {t("dashboard_language_progress_subtitle")}
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Link
+                href="/language/speaking-lab"
+                className="ui-focus-ring inline-flex min-h-10 items-center rounded-full border border-cyan-200 bg-white px-3 py-1.5 text-xs font-semibold text-cyan-700 hover:bg-cyan-100"
+              >
+                {t("dashboard_open_speaking_lab")}
+              </Link>
+              <Link
+                href="/modules"
+                className="ui-focus-ring inline-flex min-h-10 items-center rounded-full border border-cyan-200 bg-white px-3 py-1.5 text-xs font-semibold text-cyan-700 hover:bg-cyan-100"
+              >
+                {t("dashboard_practice_modules")}
+              </Link>
+            </div>
+          </div>
+
+          {hasMissingLanguageTables ? (
+            <div className="mt-4 rounded-2xl border border-dashed border-cyan-300 bg-white/80 p-4 text-sm text-zinc-600">
+              {t("dashboard_language_progress_pending_migration")}
+            </div>
+          ) : (
+            <>
+              <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="rounded-2xl border border-cyan-200 bg-white p-3">
+                  <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_avg_pronunciation")}</p>
+                  <p className="mt-1 text-2xl font-bold text-zinc-900">
+                    {languageProgress.averageScore !== null ? `${Math.round(languageProgress.averageScore)}%` : t("dashboard_not_available_short")}
+                  </p>
+                  <p className="mt-1 text-xs text-zinc-500">
+                    {t("dashboard_graded_attempts", { count: languageProgress.gradedAttempts })}
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-cyan-200 bg-white p-3">
+                  <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_confidence_safe_mode")}</p>
+                  <p className="mt-1 text-2xl font-bold text-zinc-900">{languageProgress.practiceOnlyAttempts}</p>
+                  <p className="mt-1 text-xs text-zinc-500">{t("dashboard_practice_only_attempts")}</p>
+                </div>
+                <div className="rounded-2xl border border-cyan-200 bg-white p-3">
+                  <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_gamification")}</p>
+                  <p className="mt-1 text-2xl font-bold text-zinc-900">
+                    {t("dashboard_level_points", {
+                      level: languageProgress.level,
+                      points: languageProgress.points,
+                    })}
+                  </p>
+                  <p className="mt-1 text-xs text-zinc-500">
+                    {t("dashboard_badges_quests", {
+                      badges: languageProgress.badgesCount,
+                      quests: languageProgress.questsCompletedCount,
+                    })}
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-cyan-200 bg-white p-3">
+                  <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_recent_trend")}</p>
+                  <p className="mt-1 text-2xl font-bold text-zinc-900">
+                    {languageProgress.recentScoreTrendDelta === null
+                      ? t("dashboard_not_available_short")
+                      : `${languageProgress.recentScoreTrendDelta > 0 ? "+" : ""}${languageProgress.recentScoreTrendDelta}`}
+                  </p>
+                  <p className="mt-1 text-xs text-zinc-500">
+                    {t("dashboard_last_attempt", {
+                      date: formatRelativeDate(languageProgress.latestAttemptAt, locale, t),
+                    })}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-3 rounded-2xl border border-cyan-200 bg-white p-3">
+                <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_monthly_scored_usage")}</p>
+                <p className="mt-1 text-lg font-semibold text-zinc-900">
+                  {usageEntitlement
+                    ? `${usageEntitlement.scoredAttemptsUsed}/${usageEntitlement.scoredAttemptsLimit}`
+                    : t("dashboard_not_available_short")}
+                </p>
+                {usageEntitlement ? (
+                  <div className="mt-2 h-2 overflow-hidden rounded-full bg-zinc-100">
+                    <div
+                      className="h-full rounded-full bg-cyan-500"
+                      style={{ width: `${usagePercent}%` }}
+                    />
+                  </div>
+                ) : null}
+                <p className="mt-1 text-xs text-zinc-500">
+                  {usageEntitlement
+                    ? t("dashboard_remaining_month", {
+                        count: usageEntitlement.scoredAttemptsRemaining,
+                        plan: usageEntitlement.planName,
+                      })
+                    : usageEntitlementWarning ?? t("dashboard_usage_state_awaiting_telemetry")}
+                </p>
+                <p className="mt-1 text-xs text-zinc-500">{usageStateMessage}</p>
+                {showUsageUpgradeCta ? (
+                  <Link
+                    href="/billing/language"
+                    className="ui-focus-ring mt-3 inline-flex min-h-10 items-center rounded-full border border-cyan-200 bg-cyan-50 px-3 py-1.5 text-xs font-semibold text-cyan-700 hover:bg-cyan-100"
+                  >
+                    {t("dashboard_upgrade_language_plan")}
+                  </Link>
+                ) : (
+                  <Link
+                    href="/billing/language"
+                    className="ui-focus-ring mt-3 inline-flex min-h-10 items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-xs font-semibold text-zinc-600 hover:bg-zinc-100"
+                  >
+                    {t("dashboard_view_language_plans")}
+                  </Link>
+                )}
+              </div>
+
+              <div className="mt-4 rounded-2xl border border-cyan-200 bg-white p-4">
+                <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_recent_language_events")}</p>
+                {languageEvents.length === 0 ? (
+                  <p className="mt-2 text-sm text-zinc-600">{t("dashboard_no_events_yet")}</p>
+                ) : (
+                  <ul className="mt-2 space-y-1.5 text-sm text-zinc-700">
+                    {languageEvents.map((event, index) => (
+                      <li key={`${event.event_type}-${event.created_at ?? "none"}-${index}`}>
+                        <span className="font-medium">{event.event_type.replaceAll("_", " ")}</span>{" "}
+                        <span className="text-zinc-500">({formatRelativeDate(event.created_at, locale, t)})</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </>
+          )}
+        </SoftCard>
 
         <RecommendedLesson />
         <AiCoachCard />
@@ -132,7 +388,7 @@ export default async function DashboardPage() {
         <AiWeeklyPlanCard />
         <AiTutorPanel />
 
-        <h2 className="mt-4 text-xl font-semibold">Your Learning Path</h2>
+        <h2 className="mt-4 text-xl font-semibold">{t("dashboard_learning_path_title")}</h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {learningModules.map((learningModule) => (
             <SoftCard
@@ -152,7 +408,7 @@ export default async function DashboardPage() {
                 {learningModule.description}
               </p>
               <div className="mt-4 border-t border-violet-100 pt-4">
-                <h4 className="font-semibold">Lessons</h4>
+                <h4 className="font-semibold">{t("dashboard_lessons_heading")}</h4>
                 <ul className="mt-2 flex flex-col gap-1">
                   {learningModule.lessons.map((lesson) => {
                     const isCompleted = progressMap.has(lesson.id);
@@ -169,7 +425,7 @@ export default async function DashboardPage() {
                             {lesson.title}
                           </span>
                           <span className="text-xs text-zinc-500">
-                            {lesson.duration} min
+                            {t("dashboard_minutes_suffix", { duration: lesson.duration })}
                           </span>
                         </Link>
                       </li>

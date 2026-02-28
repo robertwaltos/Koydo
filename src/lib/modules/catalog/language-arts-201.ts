@@ -2,981 +2,678 @@ import type { LearningModule } from "@/lib/modules/types";
 
 export const LanguageArts201Module: LearningModule = {
   id: "language-arts-201",
-  title: "Language Arts Workshop II",
-  description: "Deepen writing craft, reading analysis, argumentation, and revision in longer texts.",
+  title: "Language Arts 201: Writing & Literary Analysis",
+  description:
+    "Master the art of writing and literary analysis. From essay structure and argumentative writing to literary analysis, narrative techniques, poetry, and research skills — become a confident, expressive writer and critical thinker.",
   subject: "Language Arts",
-  tags: ["core", "curriculum", "interactive"],
+  tags: ["language-arts", "writing", "literacy", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "1.1.0",
-  version: "1.1.0",
+  moduleVersion: "3.0.0",
+  version: "3.0.0",
   learningObjectives: [
-    "Understand core concepts in Language Arts",
-    "Apply Evidence-Based Writing strategies through guided practice",
-    "Demonstrate mastery with subject-specific quizzes"
+    "Structure a five-paragraph essay with introduction, body, and conclusion",
+    "Write persuasive argumentative essays with evidence and counterarguments",
+    "Analyze literature for theme, character motivation, symbolism, and author's purpose",
+    "Conduct research using credible sources and proper citations",
+    "Apply narrative techniques such as pacing, dialogue, flashback, and foreshadowing",
+    "Interpret poetry through rhyme scheme, meter, imagery, and figurative language"
   ],
   lessons: [
+    /* ──────────────────────────────────────────────
+       L01  Essay Structure  (video)  — from Grok
+    ────────────────────────────────────────────── */
     {
       id: "language-arts-201-l01",
-      title: "Author's Purpose and Audience",
+      title: "Essay Structure",
       type: "video",
-      duration: 10,
+      duration: 12,
       chunks: [
         {
           id: "language-arts-201-l01-c1",
-          title: "Author's Purpose and Audience Overview",
-          content: "In this lesson, we focus on author's purpose through the lens of reading analysis and writing craft. The goal is to recognize what strong reasoning looks like before solving."
+          title: "Introduction Paragraph",
+          content:
+            "Every great essay starts with an introduction. It grabs the reader's attention with a hook — a question, quote, or surprising fact. Then it narrows the topic with background information and ends with a thesis statement: one sentence that tells the reader your main argument or point."
         },
         {
           id: "language-arts-201-l01-c2",
-          title: "Core Concept",
-          content: "author's purpose and text evidence work together. Start by naming the main target, then identify the evidence or steps that support it."
+          title: "Body Paragraphs",
+          content:
+            "The body is the heart of your essay — usually 3 paragraphs. Each starts with a topic sentence that supports your thesis. Then add evidence (facts, examples, quotes) and explain how that evidence supports your point. End each paragraph with a transition to the next idea. Think of it as a sandwich: topic sentence (bread), evidence (filling), explanation (bread)."
         },
         {
           id: "language-arts-201-l01-c3",
-          title: "Worked Example",
-          content: "Walk through one guided example: define the goal, apply a strategy for text evidence, then verify the result with a quick check."
-        },
-        {
-          id: "language-arts-201-l01-c4",
-          title: "Transfer Prompt",
-          content: "Apply the same process to a new scenario and explain why your approach is valid in one clear sentence."
+          title: "Conclusion",
+          content:
+            "The conclusion wraps up your essay. Restate your thesis in a new way — don't just copy it. Summarize your main points briefly. Then end with a 'so what?' — a final thought that shows why your topic matters or leaves the reader thinking. Never introduce new evidence in the conclusion."
         }
       ],
       flashcards: [
-        { id: "language-arts-201-l01-f1", front: "author's purpose", back: "A central target skill in this module. Name it before solving." },
-        { id: "language-arts-201-l01-f2", front: "text evidence", back: "Use this as the method step after defining the goal." },
-        { id: "language-arts-201-l01-f3", front: "Verification", back: "Check that your result matches the original goal and constraints." },
-        { id: "language-arts-201-l01-f4", front: "Transfer", back: "Use the same strategy on a new item to confirm true mastery." }
+        { id: "language-arts-201-l01-f1", front: "One sentence stating your essay's main argument", back: "Thesis statement" },
+        { id: "language-arts-201-l01-f2", front: "Opening sentence that grabs the reader's attention", back: "Hook" },
+        { id: "language-arts-201-l01-f3", front: "First sentence of a body paragraph that introduces its main idea", back: "Topic sentence" },
+        { id: "language-arts-201-l01-f4", front: "Word or phrase that connects ideas between paragraphs", back: "Transition" }
       ],
-      learningAids: [
-        { id: "language-arts-201-l01-a1", type: "image", title: "Concept Poster", content: "A colorful infographic about author's purpose and text evidence." },
-        { id: "language-arts-201-l01-a2", type: "animation", title: "Warm-up Animation", content: "Short animation introducing Language Arts vocabulary." }
-      ]
-    },
-    {
-      id: "language-arts-201-l02",
-      title: "Evidence Tracking in Complex Texts",
-      type: "interactive",
-      duration: 12,
-      metadata: {
-        prompts: [
-          "Identify one core idea about author's purpose from this lesson.",
-          "Explain where text evidence appears in real life.",
-          "Describe one question you still have about reading analysis and writing craft."
-        ]
-      },
-      interactiveActivities: [
+      questions: [
         {
-          id: "language-arts-201-l02-ia1",
-          type: "drag_and_drop",
-          title: "Practice Flow Builder",
-          description: "Sort each action into Plan, Execute, or Reflect.",
-          estimatedMinutes: 8,
-          difficultyLevel: "easy",
-          data: {
-            targets: [
-              { id: "plan", label: "Plan" },
-              { id: "execute", label: "Execute" },
-              { id: "reflect", label: "Reflect" }
-            ],
-            draggables: [
-              { id: "d1", label: "Set a goal for author's purpose", correctTargetId: "plan" },
-              { id: "d2", label: "Try one strategy for text evidence", correctTargetId: "execute" },
-              { id: "d3", label: "Record what worked and what to improve", correctTargetId: "reflect" }
-            ]
-          }
+          id: "language-arts-201-l01-q1",
+          text: "A thesis statement is",
+          options: [
+            { id: "a", text: "One sentence that states your main argument" },
+            { id: "b", text: "The title of your essay" },
+            { id: "c", text: "A summary of someone else's work" },
+            { id: "d", text: "The last sentence of your essay" }
+          ],
+          correctOptionId: "a",
+          explanation: "The thesis tells the reader exactly what you'll argue!"
+        },
+        {
+          id: "language-arts-201-l01-q2",
+          text: "A good hook might be",
+          options: [
+            { id: "a", text: "A surprising fact or question" },
+            { id: "b", text: "The word 'The'" },
+            { id: "c", text: "A list of vocabulary words" },
+            { id: "d", text: "Your name and date" }
+          ],
+          correctOptionId: "a",
+          explanation: "Hooks grab attention — a question or startling fact works great!"
+        },
+        {
+          id: "language-arts-201-l01-q3",
+          text: "In the conclusion you should NOT",
+          options: [
+            { id: "a", text: "Introduce new evidence" },
+            { id: "b", text: "Restate your thesis" },
+            { id: "c", text: "Summarize main points" },
+            { id: "d", text: "End with a final thought" }
+          ],
+          correctOptionId: "a",
+          explanation: "Conclusions wrap up — new evidence belongs in body paragraphs!"
         }
       ],
-      learningAids: [
-        { id: "language-arts-201-l02-a1", type: "practice", title: "Try It Board", content: "Complete a guided activity on text evidence and write one reflection." }
+      activities: [
+        {
+          id: "language-arts-201-l01-act1",
+          type: "project_builder",
+          title: "Essay outline builder",
+          description: "Choose a topic you care about (a favorite hobby, a school issue, or why a book is great). Write a 1-sentence thesis. Then create an outline: Introduction (hook + thesis), Body 1 (topic sentence + evidence), Body 2, Body 3, Conclusion (restated thesis + so what). You've mapped out a full essay!"
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L02  Argumentative Writing  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "language-arts-201-l02",
+      title: "Argumentative Writing",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "language-arts-201-l02-c1",
+          title: "Claim and Evidence",
+          content:
+            "Argumentative writing persuades the reader. Start with a clear claim — your position on an issue. Then support it with evidence: facts, statistics, expert opinions, and examples. Every argument needs solid proof. Saying 'I think dogs are the best' is an opinion; saying 'Studies show dog owners exercise 30 minutes more daily' is evidence."
+        },
+        {
+          id: "language-arts-201-l02-c2",
+          title: "Counterarguments",
+          content:
+            "Strong argumentative essays address counterarguments — the opposing side's best points. Acknowledge them, then refute them with stronger evidence. This shows you've considered multiple perspectives and makes your argument more convincing. Use phrases like 'Some may argue... however...'"
+        },
+        {
+          id: "language-arts-201-l02-c3",
+          title: "Persuasive Techniques",
+          content:
+            "Three powerful techniques from ancient Greece: Ethos (credibility — citing experts), Pathos (emotion — telling a story that moves people), and Logos (logic — using facts and reasoning). The best arguments combine all three. Use strong verbs, avoid 'I think,' and end with a clear call to action."
+        }
+      ],
+      flashcards: [
+        { id: "language-arts-201-l02-f1", front: "Your position or main argument in argumentative writing", back: "Claim" },
+        { id: "language-arts-201-l02-f2", front: "The opposing side's best points that you address and refute", back: "Counterargument" },
+        { id: "language-arts-201-l02-f3", front: "Persuasion through credibility and expert sources", back: "Ethos" },
+        { id: "language-arts-201-l02-f4", front: "Persuasion through emotion and personal stories", back: "Pathos" }
+      ],
+      questions: [
+        {
+          id: "language-arts-201-l02-q1",
+          text: "What makes an argument stronger than just an opinion?",
+          options: [
+            { id: "a", text: "Supporting evidence like facts and statistics" },
+            { id: "b", text: "Writing in all capital letters" },
+            { id: "c", text: "Using bigger words" },
+            { id: "d", text: "Making it longer" }
+          ],
+          correctOptionId: "a",
+          explanation: "Evidence turns opinions into convincing arguments!"
+        },
+        {
+          id: "language-arts-201-l02-q2",
+          text: "Addressing counterarguments makes your essay",
+          options: [
+            { id: "a", text: "More convincing by showing you considered other views" },
+            { id: "b", text: "Weaker because you agree with the other side" },
+            { id: "c", text: "Longer without adding value" },
+            { id: "d", text: "Confusing for the reader" }
+          ],
+          correctOptionId: "a",
+          explanation: "Considering and refuting opposing views strengthens your position!"
+        },
+        {
+          id: "language-arts-201-l02-q3",
+          text: "Logos means persuading through",
+          options: [
+            { id: "a", text: "Logic and reasoning" },
+            { id: "b", text: "Emotion" },
+            { id: "c", text: "Expert credibility" },
+            { id: "d", text: "Repetition" }
+          ],
+          correctOptionId: "a",
+          explanation: "Logos = logic. Facts, data, and clear reasoning!"
+        }
+      ],
+      activities: [
+        {
+          id: "language-arts-201-l02-act1",
+          type: "project_builder",
+          title: "Persuasion speech",
+          description: "Pick a debatable topic (school uniforms, longer recess, homework limits). Write a 3-paragraph argument: Paragraph 1 = your claim + strongest evidence, Paragraph 2 = counterargument + your refutation, Paragraph 3 = conclusion with call to action. Practice reading it aloud with confidence!"
+        }
+      ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L03  Literary Analysis  (video)  — Grok content
+    ────────────────────────────────────────────── */
     {
       id: "language-arts-201-l03",
-      title: "Checkpoint: Analytical Reading",
-      type: "quiz",
-      duration: 10,
+      title: "Literary Analysis",
+      type: "video",
+      duration: 13,
+      chunks: [
+        {
+          id: "language-arts-201-l03-c1",
+          title: "Theme and Author's Purpose",
+          content:
+            "Literary analysis means reading deeply — beyond the plot — to understand what a text really means. Theme is the central message or lesson the author wants you to take away (e.g., 'courage can come from unexpected places'). Author's purpose falls into three categories: to inform (nonfiction), to persuade (opinion pieces), or to entertain (fiction). Ask yourself: Why did the author write this? What do they want me to think or feel?"
+        },
+        {
+          id: "language-arts-201-l03-c2",
+          title: "Character Motivation and Conflict",
+          content:
+            "Characters drive stories. Motivation is WHY a character acts — their goals, fears, or desires. In 'The Hunger Games,' Katniss volunteers because she loves her sister; that motivation shapes every decision. Conflict is the struggle: person vs. person (hero vs. villain), person vs. self (inner doubt), person vs. society (fighting injustice), or person vs. nature (surviving a storm). Conflict creates tension and reveals character."
+        },
+        {
+          id: "language-arts-201-l03-c3",
+          title: "Symbolism and Figurative Language",
+          content:
+            "Symbolism uses objects, colors, or events to represent bigger ideas. A dove symbolizes peace. A broken mirror might symbolize shattered identity. The green light in 'The Great Gatsby' represents Gatsby's unreachable dream. When analyzing, look for patterns — if an author mentions darkness repeatedly, it likely symbolizes ignorance, fear, or evil. Figurative language (simile, metaphor, personification) adds layers of meaning beyond the literal."
+        }
+      ],
+      flashcards: [
+        { id: "language-arts-201-l03-f1", front: "The central message or lesson of a literary work", back: "Theme" },
+        { id: "language-arts-201-l03-f2", front: "The reason WHY a character acts the way they do", back: "Character motivation" },
+        { id: "language-arts-201-l03-f3", front: "An object or image that represents a bigger idea", back: "Symbol" },
+        { id: "language-arts-201-l03-f4", front: "The four types of literary conflict", back: "Person vs. person, person vs. self, person vs. society, person vs. nature" }
+      ],
       questions: [
         {
           id: "language-arts-201-l03-q1",
-          text: "Which statement best explains author's purpose in Language Arts?",
-          skillId: "language-arts-201-skill-core",
+          text: "Theme is best defined as",
           options: [
-            { id: "a", text: "It explains author's purpose using evidence from the lesson." },
-            { id: "b", text: "It ignores how author's purpose works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Language Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "The central message or lesson of a story" },
+            { id: "b", text: "The main character's name" },
+            { id: "c", text: "The setting of the story" },
+            { id: "d", text: "The number of chapters" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Theme is the deeper meaning — the lesson the author wants readers to understand!"
         },
         {
           id: "language-arts-201-l03-q2",
-          text: "What is the best first step when analyzing text evidence?",
-          skillId: "language-arts-201-skill-process",
+          text: "A character struggling with self-doubt is an example of",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for text evidence." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to text evidence." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Person vs. self conflict" },
+            { id: "b", text: "Person vs. nature conflict" },
+            { id: "c", text: "Person vs. person conflict" },
+            { id: "d", text: "Symbolism" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Internal struggles — fear, doubt, guilt — are person vs. self conflicts!"
         },
         {
           id: "language-arts-201-l03-q3",
-          text: "Which option shows strong reasoning about reading analysis and writing craft?",
-          skillId: "language-arts-201-skill-reasoning",
+          text: "In literary analysis, a dove often symbolizes",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to reading analysis and writing craft." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "Peace" },
+            { id: "b", text: "Anger" },
+            { id: "c", text: "Wealth" },
+            { id: "d", text: "Speed" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l03-q4",
-          text: "Why is spaced review useful for Language Arts mastery?",
-          skillId: "language-arts-201-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The dove is a universal symbol of peace and hope in literature!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "language-arts-201-l03-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Analytical Reading",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about author's purpose" },
-              { id: "l2", label: "Inconsistent approach to text evidence" },
-              { id: "l3", label: "Weak transfer of reading analysis and writing craft under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "language-arts-201-l03-act1",
+          type: "project_builder",
+          title: "Literary analysis paragraph",
+          description: "Choose a book, movie, or story you know well. Write one paragraph analyzing its theme: what is the central message? Use a specific example (a scene, quote, or character action) as evidence. Include at least one mention of symbolism or figurative language."
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "language-arts-201-l03-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L04  Writing Checkpoint  (quiz)  — Grok content
+    ────────────────────────────────────────────── */
     {
       id: "language-arts-201-l04",
-      title: "Claim and Counterclaim Writing",
-      type: "video",
-      duration: 11,
+      title: "Writing Checkpoint",
+      type: "quiz",
+      duration: 8,
       chunks: [
         {
           id: "language-arts-201-l04-c1",
-          title: "Claim and Counterclaim Writing Focus",
-          content: "This lesson deepens argument structure using structured reasoning. We move from concept understanding to applied decisions."
+          title: "Essay Structure Review",
+          content:
+            "A five-paragraph essay has an introduction (hook + thesis), three body paragraphs (topic sentence + evidence + explanation), and a conclusion (restated thesis + so what)."
         },
         {
           id: "language-arts-201-l04-c2",
-          title: "Method Steps",
-          content: "Step 1: identify what is being asked. Step 2: choose a strategy aligned to argument structure. Step 3: justify with evidence."
+          title: "Argumentative Writing Review",
+          content:
+            "Strong arguments use a clear claim, supporting evidence, and address counterarguments. Ethos, pathos, and logos are the three modes of persuasion from ancient Greece."
         },
         {
           id: "language-arts-201-l04-c3",
-          title: "Common Mistakes",
-          content: "Common errors include skipping setup, using unrelated assumptions, or failing to verify the final result."
-        },
-        {
-          id: "language-arts-201-l04-c4",
-          title: "Independent Try",
-          content: "Solve one similar item and compare your process to the lesson sequence."
+          title: "Literary Analysis Review",
+          content:
+            "Literary analysis examines theme (central message), character motivation (why characters act), symbolism (objects representing bigger ideas), and conflict types (person vs. person, self, society, nature)."
         }
       ],
       flashcards: [
-        { id: "language-arts-201-l04-f1", front: "argument structure", back: "State the target and pick a strategy before solving." },
-        { id: "language-arts-201-l04-f2", front: "Step Sequence", back: "Goal -> Strategy -> Evidence -> Check." },
-        { id: "language-arts-201-l04-f3", front: "Assumption Check", back: "Remove assumptions that are not supported by the prompt." },
-        { id: "language-arts-201-l04-f4", front: "Process Match", back: "Your explanation should match the steps you actually used." }
+        { id: "language-arts-201-l04-f1", front: "Three parts of a five-paragraph essay", back: "Introduction, body paragraphs, conclusion" },
+        { id: "language-arts-201-l04-f2", front: "Three modes of persuasion", back: "Ethos (credibility), Pathos (emotion), Logos (logic)" },
+        { id: "language-arts-201-l04-f3", front: "The deeper meaning or central message of a story", back: "Theme" },
+        { id: "language-arts-201-l04-f4", front: "Essay part where you never introduce new evidence", back: "Conclusion" }
       ],
-      learningAids: [
-        { id: "language-arts-201-l04-a1", type: "image", title: "Worked Example Sheet", content: "Step-by-step visuals for argument structure scenarios." }
-      ]
-    },
-    {
-      id: "language-arts-201-l05",
-      title: "Argument Paragraph Studio",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Pick one challenge and outline your approach.",
-          "Test your approach and record the result.",
-          "Revise your approach and explain the change."
-        ]
-      },
-      interactiveActivities: [
+      questions: [
         {
-          id: "language-arts-201-l05-ia1",
-          type: "sorting_buckets",
-          title: "Strategy Sort",
-          description: "Sort study actions into Concept, Process, or Review lanes.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "concept", label: "argument structure Concept" },
-              { id: "process", label: "editing Process" },
-              { id: "review", label: "Review Loop" }
-            ],
-            items: [
-              { id: "i1", label: "Write one definition in your own words", correctBucketId: "concept" },
-              { id: "i2", label: "Follow the step-by-step method on a new example", correctBucketId: "process" },
-              { id: "i3", label: "Retest the same skill tomorrow", correctBucketId: "review" }
-            ]
-          }
+          id: "language-arts-201-l04-q1",
+          text: "A thesis statement belongs in the",
+          options: [
+            { id: "a", text: "Introduction" },
+            { id: "b", text: "Conclusion" },
+            { id: "c", text: "Body paragraph 2" },
+            { id: "d", text: "Title" }
+          ],
+          correctOptionId: "a",
+          explanation: "The thesis appears at the end of the introduction paragraph!"
+        },
+        {
+          id: "language-arts-201-l04-q2",
+          text: "A character fighting against unfair laws is an example of",
+          options: [
+            { id: "a", text: "Person vs. society conflict" },
+            { id: "b", text: "Person vs. nature conflict" },
+            { id: "c", text: "Simile" },
+            { id: "d", text: "A counterargument" }
+          ],
+          correctOptionId: "a",
+          explanation: "Fighting against societal rules or injustice is person vs. society!"
+        },
+        {
+          id: "language-arts-201-l04-q3",
+          text: "Ethos means persuading through",
+          options: [
+            { id: "a", text: "Credibility and expert sources" },
+            { id: "b", text: "Sadness and fear" },
+            { id: "c", text: "Repetition" },
+            { id: "d", text: "Logic and data" }
+          ],
+          correctOptionId: "a",
+          explanation: "Ethos = ethics/credibility. Citing experts builds trust!"
         }
       ],
-      learningAids: [
-        { id: "language-arts-201-l05-a1", type: "animation", title: "Challenge Walkthrough", content: "Animated sequence for solving a argument structure challenge." }
+      activities: [
+        {
+          id: "language-arts-201-l04-act1",
+          type: "sorting_buckets",
+          title: "Conflict type sort",
+          description: "Sort these story scenarios into conflict categories: Person vs. Person, Person vs. Self, Person vs. Society, Person vs. Nature."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L05  Research Skills  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "language-arts-201-l05",
+      title: "Research Skills",
+      type: "video",
+      duration: 12,
+      chunks: [
+        {
+          id: "language-arts-201-l05-c1",
+          title: "Finding Credible Sources",
+          content:
+            "Not all sources are equal. Credible sources include books by experts, academic journals, government websites (.gov), and educational sites (.edu). Be cautious with social media, personal blogs, and Wikipedia (good for background, but verify with primary sources). Check: Who wrote it? When? What's their expertise?"
+        },
+        {
+          id: "language-arts-201-l05-c2",
+          title: "Taking Notes and Avoiding Plagiarism",
+          content:
+            "Plagiarism means copying someone else's words or ideas without credit — it's like stealing. To avoid it: paraphrase (rewrite in your own words), use quotation marks for exact words, and always cite your source. Good note-taking means writing key ideas in YOUR words, not copying sentences."
+        },
+        {
+          id: "language-arts-201-l05-c3",
+          title: "Citations and Works Cited",
+          content:
+            "Citations tell readers where your information came from. In-text citations go right in your essay: (Smith, 2023). A Works Cited page at the end lists every source. Basic format: Author Last Name, First Name. Title. Publisher, Year. Proper citations build credibility and let readers verify your facts."
+        }
+      ],
+      flashcards: [
+        { id: "language-arts-201-l05-f1", front: "Copying someone's words or ideas without credit", back: "Plagiarism" },
+        { id: "language-arts-201-l05-f2", front: "Rewriting information in your own words", back: "Paraphrasing" },
+        { id: "language-arts-201-l05-f3", front: "Reference placed within your essay text, like (Smith, 2023)", back: "In-text citation" },
+        { id: "language-arts-201-l05-f4", front: "Reliable source domain endings", back: ".gov and .edu" }
+      ],
+      questions: [
+        {
+          id: "language-arts-201-l05-q1",
+          text: "Which is the MOST credible source?",
+          options: [
+            { id: "a", text: "A university research study (.edu)" },
+            { id: "b", text: "A random social media post" },
+            { id: "c", text: "An anonymous blog" },
+            { id: "d", text: "A friend's opinion" }
+          ],
+          correctOptionId: "a",
+          explanation: "University research is peer-reviewed and expert-written!"
+        },
+        {
+          id: "language-arts-201-l05-q2",
+          text: "Plagiarism can be avoided by",
+          options: [
+            { id: "a", text: "Paraphrasing and citing sources" },
+            { id: "b", text: "Copying and pasting quickly" },
+            { id: "c", text: "Changing a few words" },
+            { id: "d", text: "Not using any sources" }
+          ],
+          correctOptionId: "a",
+          explanation: "Rewrite in your own words and always give credit!"
+        },
+        {
+          id: "language-arts-201-l05-q3",
+          text: "A Works Cited page lists",
+          options: [
+            { id: "a", text: "All sources used in your essay" },
+            { id: "b", text: "Your favorite books" },
+            { id: "c", text: "Your teacher's name" },
+            { id: "d", text: "The essay's word count" }
+          ],
+          correctOptionId: "a",
+          explanation: "Works Cited gives readers full details for every source!"
+        }
+      ],
+      activities: [
+        {
+          id: "language-arts-201-l05-act1",
+          type: "project_builder",
+          title: "Source scavenger hunt",
+          description: "Pick any topic (dinosaurs, space, a favorite animal). Find 3 sources: one book, one website, and one article or video. For each, write: the title, who created it, when, and whether it's credible (and why). Create a mini Works Cited page."
+        }
+      ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L06  Narrative Techniques  (video)  — Grok content
+    ────────────────────────────────────────────── */
     {
       id: "language-arts-201-l06",
-      title: "Checkpoint: Evidence-Based Writing",
-      type: "quiz",
-      duration: 10,
+      title: "Narrative Techniques",
+      type: "video",
+      duration: 13,
+      chunks: [
+        {
+          id: "language-arts-201-l06-c1",
+          title: "Pacing and Tension",
+          content:
+            "Pacing controls how fast or slow your story feels. Short sentences speed things up: 'He ran. The door slammed. Silence.' Long, flowing sentences slow things down for reflective moments. Action scenes use quick pacing; emotional scenes use slow pacing. Tension is the 'what happens next?' feeling — create it by putting characters in danger, raising stakes, or revealing secrets slowly."
+        },
+        {
+          id: "language-arts-201-l06-c2",
+          title: "Flashback and Foreshadowing",
+          content:
+            "Flashback takes the reader back in time to show an important memory that explains a character's motivation or backstory. In 'The Outsiders,' Ponyboy's flashbacks reveal why he feels like an outsider. Foreshadowing hints at what's coming — 'If only she had checked the weather forecast' tells readers something bad is about to happen. Both techniques add depth and suspense."
+        },
+        {
+          id: "language-arts-201-l06-c3",
+          title: "Point of View and Dialogue",
+          content:
+            "First person ('I walked') puts readers inside the narrator's head — great for emotional stories. Third person limited ('She walked') follows one character's perspective. Third person omniscient ('They all walked') sees everyone's thoughts. Dialogue reveals character: a shy person speaks in short phrases; a confident one in bold statements. Use dialogue tags beyond 'said' — whispered, exclaimed, muttered — and action beats: 'She tapped the table. \"I disagree.\"'"
+        }
+      ],
+      flashcards: [
+        { id: "language-arts-201-l06-f1", front: "Controlling how fast or slow a story feels through sentence length and detail", back: "Pacing" },
+        { id: "language-arts-201-l06-f2", front: "A scene that takes the reader back in time to an earlier event", back: "Flashback" },
+        { id: "language-arts-201-l06-f3", front: "Hints or clues about what will happen later in a story", back: "Foreshadowing" },
+        { id: "language-arts-201-l06-f4", front: "The perspective from which a story is told (first, third limited, third omniscient)", back: "Point of view" }
+      ],
       questions: [
         {
           id: "language-arts-201-l06-q1",
-          text: "Which statement best explains argument structure in Language Arts?",
-          skillId: "language-arts-201-skill-core",
+          text: "Short, choppy sentences in a story create a sense of",
           options: [
-            { id: "a", text: "It explains argument structure using evidence from the lesson." },
-            { id: "b", text: "It ignores how argument structure works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Language Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Fast pacing and urgency" },
+            { id: "b", text: "Slow reflection" },
+            { id: "c", text: "Confusion" },
+            { id: "d", text: "Humor" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Short sentences speed up pacing — great for action and tension!"
         },
         {
           id: "language-arts-201-l06-q2",
-          text: "What is the best first step when analyzing editing?",
-          skillId: "language-arts-201-skill-process",
+          text: "'If only she had checked the weather' is an example of",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for editing." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to editing." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Foreshadowing" },
+            { id: "b", text: "Flashback" },
+            { id: "c", text: "First person point of view" },
+            { id: "d", text: "Alliteration" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "This hints that bad weather is coming — a classic foreshadowing technique!"
         },
         {
           id: "language-arts-201-l06-q3",
-          text: "Which option shows strong reasoning about reading analysis and writing craft?",
-          skillId: "language-arts-201-skill-reasoning",
+          text: "First person point of view uses the pronoun",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to reading analysis and writing craft." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "I" },
+            { id: "b", text: "He/She" },
+            { id: "c", text: "They" },
+            { id: "d", text: "You" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l06-q4",
-          text: "Why is spaced review useful for Language Arts mastery?",
-          skillId: "language-arts-201-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "First person uses 'I' — the narrator is telling their own story!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "language-arts-201-l06-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Checkpoint: Evidence-Based Writing",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about argument structure" },
-              { id: "l2", label: "Inconsistent approach to editing" },
-              { id: "l3", label: "Weak transfer of reading analysis and writing craft under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "language-arts-201-l06-act1",
+          type: "project_builder",
+          title: "Narrative techniques scene",
+          description: "Write a short scene (1 paragraph) using at least TWO narrative techniques: try fast pacing with short sentences, include a flashback or foreshadowing hint, and write it in either first or third person. Then rewrite the same scene from a different point of view. How does the feeling change?"
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "language-arts-201-l06-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L07  Poetry Analysis  (video)  — Grok content
+    ────────────────────────────────────────────── */
     {
       id: "language-arts-201-l07",
-      title: "Style, Tone, and Voice",
+      title: "Poetry Analysis",
       type: "video",
-      duration: 12,
+      duration: 13,
       chunks: [
         {
           id: "language-arts-201-l07-c1",
-          title: "Style, Tone, and Voice Setup",
-          content: "Use editing to organize your approach before starting. Planning first improves quality and speed."
+          title: "Rhyme Scheme and Meter",
+          content:
+            "Rhyme scheme is the pattern of rhyming lines. ABAB means lines 1 and 3 rhyme, lines 2 and 4 rhyme. AABB means consecutive lines rhyme. ABCABC is used in longer poems. Meter is the rhythm created by stressed (strong) and unstressed (weak) syllables. Iambic pentameter — da-DUM da-DUM da-DUM da-DUM da-DUM — has 5 iambs per line and is Shakespeare's signature. 'Shall I comPARE thee TO a SUMmer's DAY?'"
         },
         {
           id: "language-arts-201-l07-c2",
-          title: "Decision Rules",
-          content: "When choices compete, use a simple rule: pick the option with strongest evidence and clearest link to the goal."
+          title: "Imagery and Figurative Language in Poetry",
+          content:
+            "Imagery creates pictures in the reader's mind using sensory details. Robert Frost wrote 'Two roads diverged in a yellow wood' — you can SEE the autumn forest. Poets use simile ('life is like a box of chocolates'), metaphor ('the world is a stage'), personification ('the wind whispered'), hyperbole ('I've told you a million times'), and onomatopoeia ('the bees buzzed'). Look for patterns of imagery — if a poem keeps mentioning darkness, the poet is building a mood."
         },
         {
           id: "language-arts-201-l07-c3",
-          title: "Quality Control",
-          content: "Check for three things: accuracy, completeness, and alignment with the original objective."
-        },
-        {
-          id: "language-arts-201-l07-c4",
-          title: "Next-Step Plan",
-          content: "Write one action to repeat and one action to improve in your next practice round."
+          title: "Types of Poetry and How to Analyze",
+          content:
+            "Haiku: 3 lines (5-7-5 syllables), usually about nature. Sonnet: 14 lines with specific rhyme and a volta (turn). Limerick: 5 funny lines (AABBA). Free verse: no set rules — focuses on meaning and emotion. To analyze a poem: (1) Read it aloud, (2) Identify the rhyme scheme and meter, (3) Find figurative language and imagery, (4) Determine the theme — what is the poet really saying? (5) Consider tone — is it joyful, sad, angry, reflective?"
         }
       ],
       flashcards: [
-        { id: "language-arts-201-l07-f1", front: "editing", back: "Use this as your organizing framework before execution." },
-        { id: "language-arts-201-l07-f2", front: "Decision Rule", back: "Choose the option with strongest evidence-to-goal alignment." },
-        { id: "language-arts-201-l07-f3", front: "Quality Control", back: "Accuracy + completeness + objective match." },
-        { id: "language-arts-201-l07-f4", front: "Iteration", back: "Repeat what works; refine one weak step each cycle." }
+        { id: "language-arts-201-l07-f1", front: "Pattern of rhyming lines in a poem (e.g., ABAB, AABB)", back: "Rhyme scheme" },
+        { id: "language-arts-201-l07-f2", front: "The rhythmic pattern of stressed and unstressed syllables", back: "Meter" },
+        { id: "language-arts-201-l07-f3", front: "Words that imitate the sounds they describe (buzz, crash, sizzle)", back: "Onomatopoeia" },
+        { id: "language-arts-201-l07-f4", front: "The shift or turn in a sonnet, usually around line 9", back: "Volta" }
       ],
-      learningAids: [
-        { id: "language-arts-201-l07-a1", type: "practice", title: "Project Planner", content: "Template for planning a mini project focused on editing." }
+      questions: [
+        {
+          id: "language-arts-201-l07-q1",
+          text: "In an ABAB rhyme scheme, which lines rhyme?",
+          options: [
+            { id: "a", text: "Lines 1 and 3, lines 2 and 4" },
+            { id: "b", text: "Lines 1 and 2, lines 3 and 4" },
+            { id: "c", text: "All four lines" },
+            { id: "d", text: "None of them" }
+          ],
+          correctOptionId: "a",
+          explanation: "ABAB = alternating rhyme: 1-3 match and 2-4 match!"
+        },
+        {
+          id: "language-arts-201-l07-q2",
+          text: "A haiku has how many syllables total?",
+          options: [
+            { id: "a", text: "17 (5-7-5)" },
+            { id: "b", text: "14" },
+            { id: "c", text: "10" },
+            { id: "d", text: "21" }
+          ],
+          correctOptionId: "a",
+          explanation: "Haiku: 5 + 7 + 5 = 17 syllables across 3 lines!"
+        },
+        {
+          id: "language-arts-201-l07-q3",
+          text: "Extreme exaggeration for dramatic effect is called",
+          options: [
+            { id: "a", text: "Hyperbole" },
+            { id: "b", text: "Onomatopoeia" },
+            { id: "c", text: "Alliteration" },
+            { id: "d", text: "Simile" }
+          ],
+          correctOptionId: "a",
+          explanation: "'I've told you a million times!' — that's hyperbole!"
+        }
+      ],
+      activities: [
+        {
+          id: "language-arts-201-l07-act1",
+          type: "project_builder",
+          title: "Poetry analysis and creation",
+          description: "Read a short poem (try Robert Frost's 'The Road Not Taken' or Langston Hughes' 'Dreams'). Identify: the rhyme scheme, at least 2 figurative language devices, and the theme. Then write your own poem — a haiku about nature, a limerick that's funny, or a free verse about something you care about."
+        }
       ]
     },
+
+    /* ──────────────────────────────────────────────
+       L08  Final Language Arts Assessment  (quiz)  — Grok content
+    ────────────────────────────────────────────── */
     {
       id: "language-arts-201-l08",
-      title: "Peer Review Protocols",
-      type: "interactive",
-      duration: 10,
-      metadata: {
-        prompts: [
-          "What did you learn most clearly?",
-          "Where did you struggle and why?",
-          "What is your next improvement target?"
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "language-arts-201-l08-ia1",
-          type: "matching_pairs",
-          title: "Reflection Match",
-          description: "Match each reflection prompt with the best follow-up action.",
-          estimatedMinutes: 7,
-          difficultyLevel: "easy",
-          data: {
-            left: [
-              { id: "l1", label: "I keep missing one skill pattern" },
-              { id: "l2", label: "I rush and make avoidable mistakes" },
-              { id: "l3", label: "I understand in notes but miss in quizzes" }
-            ],
-            right: [
-              { id: "r1", label: "Do a focused drill on that exact pattern" },
-              { id: "r2", label: "Use a short checklist before submitting answers" },
-              { id: "r3", label: "Repeat the skill in a timed re-check" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "language-arts-201-l08-a1", type: "mnemonic", title: "Reflection Cycle", content: "Remember Observe, Adjust, Repeat while practicing." }
-      ]
-    },
-    {
-      id: "language-arts-201-l09",
-      title: "Review: Analysis and Craft",
+      title: "Final Language Arts Assessment",
       type: "quiz",
       duration: 10,
-      questions: [
-        {
-          id: "language-arts-201-l09-q1",
-          text: "Which statement best explains text evidence in Language Arts?",
-          skillId: "language-arts-201-skill-core",
-          options: [
-            { id: "a", text: "It explains text evidence using evidence from the lesson." },
-            { id: "b", text: "It ignores how text evidence works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Language Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l09-q2",
-          text: "What is the best first step when analyzing editing?",
-          skillId: "language-arts-201-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for editing." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to editing." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l09-q3",
-          text: "Which option shows strong reasoning about reading analysis and writing craft?",
-          skillId: "language-arts-201-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to reading analysis and writing craft." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l09-q4",
-          text: "Why is spaced review useful for Language Arts mastery?",
-          skillId: "language-arts-201-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "language-arts-201-l09-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Review: Analysis and Craft",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about text evidence" },
-              { id: "l2", label: "Inconsistent approach to editing" },
-              { id: "l3", label: "Weak transfer of reading analysis and writing craft under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "language-arts-201-l09-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "language-arts-201-l10",
-      title: "Mastery: Language Arts II",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "language-arts-201-l10-q1",
-          text: "Which statement best explains author's purpose in Language Arts?",
-          skillId: "language-arts-201-skill-core",
-          options: [
-            { id: "a", text: "It explains author's purpose using evidence from the lesson." },
-            { id: "b", text: "It ignores how author's purpose works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Language Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l10-q2",
-          text: "What is the best first step when analyzing argument structure?",
-          skillId: "language-arts-201-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for argument structure." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to argument structure." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l10-q3",
-          text: "Which option shows strong reasoning about reading analysis and writing craft?",
-          skillId: "language-arts-201-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to reading analysis and writing craft." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l10-q4",
-          text: "Why is spaced review useful for Language Arts mastery?",
-          skillId: "language-arts-201-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "language-arts-201-l10-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Mastery: Language Arts II",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about author's purpose" },
-              { id: "l2", label: "Inconsistent approach to argument structure" },
-              { id: "l3", label: "Weak transfer of reading analysis and writing craft under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "language-arts-201-l10-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "language-arts-201-l11",
-      title: "Applied Language Arts Challenge Studio",
-      type: "interactive",
-      duration: 14,
-      metadata: {
-        prompts: [
-          "Select one weak pattern from recent quizzes.",
-          "Apply a step-by-step correction using argument structure.",
-          "Document your transfer plan for the next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "language-arts-201-l11-ia1",
-          type: "sorting_buckets",
-          title: "Transfer Ladder",
-          description: "Sort actions into Diagnose, Fix, and Transfer phases.",
-          estimatedMinutes: 9,
-          difficultyLevel: "medium",
-          data: {
-            buckets: [
-              { id: "diagnose", label: "Diagnose" },
-              { id: "fix", label: "Fix" },
-              { id: "transfer", label: "Transfer" }
-            ],
-            items: [
-              { id: "i1", label: "Tag repeated mistakes in text evidence", correctBucketId: "diagnose" },
-              { id: "i2", label: "Rework one missed item with full reasoning", correctBucketId: "fix" },
-              { id: "i3", label: "Retest with a timed mini-check on editing", correctBucketId: "transfer" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "language-arts-201-l11-a1", type: "practice", title: "Correction Loop Card", content: "Use Diagnose, Fix, Transfer for each difficult problem." }
-      ]
-    },
-    {
-      id: "language-arts-201-l12",
-      title: "Language Arts II Mastery Applied Retest",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        {
-          id: "language-arts-201-l12-q1",
-          text: "Which statement best explains author's purpose in Language Arts?",
-          skillId: "language-arts-201-skill-core",
-          options: [
-            { id: "a", text: "It explains author's purpose using evidence from the lesson." },
-            { id: "b", text: "It ignores how author's purpose works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Language Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l12-q2",
-          text: "What is the best first step when analyzing editing?",
-          skillId: "language-arts-201-skill-process",
-          options: [
-            { id: "a", text: "Define the goal and examine evidence for editing." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to editing." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l12-q3",
-          text: "Which option shows strong reasoning about reading analysis and writing craft?",
-          skillId: "language-arts-201-skill-reasoning",
-          options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to reading analysis and writing craft." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
-          ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l12-q4",
-          text: "Why is spaced review useful for Language Arts mastery?",
-          skillId: "language-arts-201-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
-        }
-      ],
-      interactiveActivities: [
-        {
-          id: "language-arts-201-l12-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Language Arts II Mastery Applied Retest",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about author's purpose" },
-              { id: "l2", label: "Inconsistent approach to editing" },
-              { id: "l3", label: "Weak transfer of reading analysis and writing craft under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "language-arts-201-l12-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
-      ]
-    },
-    {
-      id: "language-arts-201-l13",
-      title: "Language Arts Scenario Lab",
-      type: "video",
-      duration: 12,
       chunks: [
         {
-          id: "language-arts-201-l13-c1",
-          title: "Scenario Brief",
-          content: "This scenario combines author's purpose, argument structure, and editing in one applied challenge."
+          id: "language-arts-201-l08-c1",
+          title: "Writing Foundations Review",
+          content:
+            "Essays use thesis statements, topic sentences, and transitions. Arguments need claims, evidence, and counterarguments. Ethos, pathos, and logos are the pillars of persuasion."
         },
         {
-          id: "language-arts-201-l13-c2",
-          title: "Plan the Approach",
-          content: "Break the scenario into smaller decisions, then assign one strategy to each decision point."
+          id: "language-arts-201-l08-c2",
+          title: "Analysis and Research Review",
+          content:
+            "Literary analysis examines theme, character motivation, conflict, and symbolism. Research requires credible sources (.edu, .gov), proper citations, and avoiding plagiarism by paraphrasing and citing."
         },
         {
-          id: "language-arts-201-l13-c3",
-          title: "Execute and Justify",
-          content: "Apply the plan and explain each move with evidence, not guesses."
-        },
-        {
-          id: "language-arts-201-l13-c4",
-          title: "Evaluate Outcome",
-          content: "Compare your result to the target and identify what to keep versus what to adjust."
+          id: "language-arts-201-l08-c3",
+          title: "Narrative and Poetry Review",
+          content:
+            "Narrative techniques include pacing, flashback, foreshadowing, and point of view. Poetry uses rhyme scheme, meter, imagery, and figurative language. A haiku has 5-7-5 syllables; a sonnet has 14 lines with a volta."
         }
       ],
       flashcards: [
-        { id: "language-arts-201-l13-f1", front: "Scenario Planning", back: "Split a complex task into clear decision points." },
-        { id: "language-arts-201-l13-f2", front: "Evidence Link", back: "Each step should connect to evidence in the scenario." },
-        { id: "language-arts-201-l13-f3", front: "Adjustment Loop", back: "Use outcome checks to refine your next attempt." },
-        { id: "language-arts-201-l13-f4", front: "Applied Mastery", back: "Mastery means transferring the process to a new context." }
+        { id: "language-arts-201-l08-f1", front: "Hints or clues about what will happen later in a story", back: "Foreshadowing" },
+        { id: "language-arts-201-l08-f2", front: "Extreme exaggeration for effect", back: "Hyperbole" },
+        { id: "language-arts-201-l08-f3", front: "Copying words/ideas without credit", back: "Plagiarism" },
+        { id: "language-arts-201-l08-f4", front: "The rhythmic pattern of stressed and unstressed syllables in poetry", back: "Meter" }
       ],
-      learningAids: [
-        { id: "language-arts-201-l13-a1", type: "image", title: "Scenario Map", content: "A real-world scenario map connecting author's purpose, argument structure, and editing." },
-        { id: "language-arts-201-l13-a2", type: "practice", title: "Mini Case Prompt", content: "Apply one strategy to a new case and explain your reasoning." }
-      ]
-    },
-    {
-      id: "language-arts-201-l14",
-      title: "Language Arts Coaching Clinic",
-      type: "interactive",
-      duration: 13,
-      metadata: {
-        prompts: [
-          "Identify one repeated error pattern from your recent work.",
-          "Choose the best correction routine for that pattern.",
-          "Write a transfer goal for your next timed check."
-        ]
-      },
-      interactiveActivities: [
-        {
-          id: "language-arts-201-l14-ia1",
-          type: "matching_pairs",
-          title: "Error to Fix Match",
-          description: "Match each error signal to the highest-impact correction action.",
-          estimatedMinutes: 8,
-          difficultyLevel: "medium",
-          data: {
-            left: [
-              { id: "l1", label: "Repeated miss on author's purpose setup" },
-              { id: "l2", label: "Losses due to rushed editing decisions" },
-              { id: "l3", label: "Correct in notes but weak transfer in new tasks" }
-            ],
-            right: [
-              { id: "r1", label: "Rebuild setup steps and retest one parallel item" },
-              { id: "r2", label: "Use checkpoint pacing + verify before submit" },
-              { id: "r3", label: "Pair correction with one timed transfer item" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
-        }
-      ],
-      learningAids: [
-        { id: "language-arts-201-l14-a1", type: "mnemonic", title: "Clinic Loop", content: "Diagnose, Correct, Transfer." }
-      ]
-    },
-    {
-      id: "language-arts-201-l15",
-      title: "Language Arts II Mastery Mastery Sprint",
-      type: "quiz",
-      duration: 10,
       questions: [
         {
-          id: "language-arts-201-l15-q1",
-          text: "Which statement best explains text evidence in Language Arts?",
-          skillId: "language-arts-201-skill-core",
+          id: "language-arts-201-l08-q1",
+          text: "A flashback in a story does what?",
           options: [
-            { id: "a", text: "It explains text evidence using evidence from the lesson." },
-            { id: "b", text: "It ignores how text evidence works in practice." },
-            { id: "c", text: "It focuses on an unrelated topic outside Language Arts." },
-            { id: "d", text: "It repeats terms without showing meaning." }
+            { id: "a", text: "Takes the reader back in time to an earlier event" },
+            { id: "b", text: "Speeds up the pacing" },
+            { id: "c", text: "Introduces a new character" },
+            { id: "d", text: "Ends the story" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Flashbacks reveal backstory and character motivation by showing past events!"
         },
         {
-          id: "language-arts-201-l15-q2",
-          text: "What is the best first step when analyzing argument structure?",
-          skillId: "language-arts-201-skill-process",
+          id: "language-arts-201-l08-q2",
+          text: "'I've told you a million times' is an example of",
           options: [
-            { id: "a", text: "Define the goal and examine evidence for argument structure." },
-            { id: "b", text: "Guess quickly without checking evidence." },
-            { id: "c", text: "Use data unrelated to argument structure." },
-            { id: "d", text: "Skip the context and jump to a conclusion." }
+            { id: "a", text: "Hyperbole" },
+            { id: "b", text: "Onomatopoeia" },
+            { id: "c", text: "Alliteration" },
+            { id: "d", text: "Simile" }
           ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "Extreme exaggeration for effect  — you probably haven't said it a million times!"
         },
         {
-          id: "language-arts-201-l15-q3",
-          text: "Which option shows strong reasoning about reading analysis and writing craft?",
-          skillId: "language-arts-201-skill-reasoning",
+          id: "language-arts-201-l08-q3",
+          text: "The volta in a sonnet is",
           options: [
-            { id: "a", text: "Use examples and verify assumptions step by step." },
-            { id: "b", text: "Ignore important details and edge cases." },
-            { id: "c", text: "Use assumptions unrelated to reading analysis and writing craft." },
-            { id: "d", text: "Change the topic when evidence gets hard." }
+            { id: "a", text: "The shift or turn in thought, usually around line 9" },
+            { id: "b", text: "The title of the poem" },
+            { id: "c", text: "The rhyme scheme" },
+            { id: "d", text: "The final word" }
           ],
-          correctOptionId: "a"
-        },
-        {
-          id: "language-arts-201-l15-q4",
-          text: "Why is spaced review useful for Language Arts mastery?",
-          skillId: "language-arts-201-skill-review",
-          options: [
-            { id: "a", text: "It strengthens memory and transfer over time" },
-            { id: "b", text: "It creates confusion" },
-            { id: "c", text: "It removes key facts" },
-            { id: "d", text: "It has no value" }
-          ],
-          correctOptionId: "a"
+          correctOptionId: "a",
+          explanation: "The volta marks a change in direction — from problem to solution, question to answer!"
         }
       ],
-      interactiveActivities: [
+      activities: [
         {
-          id: "language-arts-201-l15-ia1",
-          type: "matching_pairs",
-          title: "Reasoning Match: Language Arts II Mastery Mastery Sprint",
-          description: "Match each error signal to the strongest correction strategy.",
-          estimatedMinutes: 7,
-          difficultyLevel: "medium",
-          instructions: [
-            "Review each left-side signal.",
-            "Pick the best response on the right.",
-            "Use your matches to plan the next drill."
-          ],
-          data: {
-            left: [
-              { id: "l1", label: "Confusion about text evidence" },
-              { id: "l2", label: "Inconsistent approach to argument structure" },
-              { id: "l3", label: "Weak transfer of reading analysis and writing craft under timing" }
-            ],
-            right: [
-              { id: "r1", label: "Create a one-step concept summary with one worked example" },
-              { id: "r2", label: "Use a checklist before choosing the final answer" },
-              { id: "r3", label: "Retest the same target with a short timed sprint" }
-            ],
-            pairs: [
-              { leftId: "l1", rightId: "r1" },
-              { leftId: "l2", rightId: "r2" },
-              { leftId: "l3", rightId: "r3" }
-            ]
-          }
+          id: "language-arts-201-l08-act1",
+          type: "project_builder",
+          title: "Writer's portfolio",
+          description: "Compile your best work from this module into a writer's portfolio: your essay outline, persuasive speech, literary analysis paragraph, research notes, narrative scene, and poem. Write a 1-paragraph author's note reflecting on what you learned and how your writing improved. Congratulations — you're a real writer and literary critic!"
         }
-      ],
-      quizBlueprint: {
-        frequency: "lesson_assessment",
-        questionsPerCheck: 4,
-        totalQuestions: 4,
-        timeLimitMinutes: 10,
-        questionTypes: [{ type: "mcq_single", count: 4, pointsEach: 1, bloomsLevels: [1, 2, 3] }],
-        difficultyDistribution: { easy: 1, medium: 2, hard: 1 },
-        feedbackMode: "after_submit",
-        adaptive: false,
-        masteryThreshold: 0.75
-      },
-      learningAids: [
-        { id: "language-arts-201-l15-a1", type: "mnemonic", title: "Memory Tip", content: "Use the phrase Plan, Check, Explain for each question." }
       ]
     }
-  ],
+  ]
 };

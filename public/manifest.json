@@ -1,0 +1,26 @@
+{
+  "name": "Koydo — Learn Anything, Any Age, Any Language",
+  "short_name": "Koydo",
+  "description": "Free interactive learning platform for ages 3 to adult. Math, science, coding, and career skills in English and Spanish.",
+  "start_url": "/explore",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "orientation": "any",
+  "categories": ["education", "kids"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

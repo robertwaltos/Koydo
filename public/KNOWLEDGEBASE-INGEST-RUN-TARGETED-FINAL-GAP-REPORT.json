@@ -1,0 +1,127 @@
+{
+  "generatedAt": "2026-02-26T04:42:54.846Z",
+  "options": {
+    "limit": 20,
+    "timeoutMs": 20000,
+    "balanced": true,
+    "allowBinary": false,
+    "queueFile": "public\\KNOWLEDGEBASE-INGESTION-QUEUE-TARGETED-FINAL-GAP.json"
+  },
+  "totals": {
+    "attempted": 9,
+    "succeeded": 9,
+    "failed": 0,
+    "skippedUnsupported": 0,
+    "savedPdfPendingExtraction": 0
+  },
+  "results": [
+    {
+      "queueId": "mit-ocw-4aaddb14",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-4aaddb14.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=nursing"
+    },
+    {
+      "queueId": "mit-ocw-061d5e04",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-061d5e04.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=patient%20care"
+    },
+    {
+      "queueId": "mit-ocw-d0727764",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-d0727764.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=clinical%20skills"
+    },
+    {
+      "queueId": "mit-ocw-e1d35248",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-e1d35248.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=health%20assessment"
+    },
+    {
+      "queueId": "mit-ocw-04242a06",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-04242a06.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=cpu%20gpu%20memory%20design"
+    },
+    {
+      "queueId": "mit-ocw-31e517cc",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-31e517cc.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=cpu"
+    },
+    {
+      "queueId": "mit-ocw-7d5ba658",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-7d5ba658.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=gpu"
+    },
+    {
+      "queueId": "mit-ocw-c4467078",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-c4467078.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=memory%20design"
+    },
+    {
+      "queueId": "mit-ocw-d0173f18",
+      "sourceId": "mit-ocw",
+      "status": "succeeded",
+      "httpStatus": 200,
+      "contentType": "text/html",
+      "characters": 636,
+      "outputPath": "data\\knowledgebase\\raw\\mit-ocw-d0173f18.md",
+      "savedPdfPath": null,
+      "error": null,
+      "url": "https://ocw.mit.edu/search/?q=computer%20architecture"
+    }
+  ]
+}

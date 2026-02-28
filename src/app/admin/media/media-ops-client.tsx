@@ -126,6 +126,37 @@ type StatusFilter = "all" | MediaJob["status"];
 type PromptSourceFilter = "all" | "lesson" | "generated" | "unknown";
 type PromptQaFilter = "all" | "reviewed" | "needs_review" | "approved" | "draft" | "unknown";
 
+type CatalogAsset = {
+  id: string;
+  group: string;
+  file_name: string;
+  usage_path: string;
+  width: number;
+  height: number;
+  prompt: string;
+  negative_prompt: string;
+  public_url: string | null;
+};
+
+type CatalogPaginationState = {
+  totalAssets: number;
+  filteredCount: number;
+  limit: number;
+  offset: number;
+  hasMore: boolean;
+};
+
+type CatalogResponse = {
+  project?: string;
+  totalAssets?: number;
+  filteredCount?: number;
+  limit?: number;
+  offset?: number;
+  hasMore?: boolean;
+  items?: CatalogAsset[];
+  error?: string;
+};
+
 type JobsPaginationState = {
   total: number;
   limit: number;
@@ -306,6 +337,22 @@ export default function MediaOpsClient({
     previousOffset: null,
   });
 
+  const [catalogAssets, setCatalogAssets] = useState<CatalogAsset[]>([]);
+  const [catalogLoading, setCatalogLoading] = useState(false);
+  const [catalogError, setCatalogError] = useState("");
+  const [catalogPagination, setCatalogPagination] = useState<CatalogPaginationState>({
+    totalAssets: 0,
+    filteredCount: 0,
+    limit: 50,
+    offset: 0,
+    hasMore: false,
+  });
+  const [catalogFilterGroup, setCatalogFilterGroup] = useState("");
+  const [catalogFilterUsagePath, setCatalogFilterUsagePath] = useState("");
+  const [catalogFilterSearch, setCatalogFilterSearch] = useState("");
+  const [catalogLimit, setCatalogLimit] = useState(50);
+  const [catalogOffset, setCatalogOffset] = useState(0);
+
   const queuedCount = useMemo(() => jobs.filter((job) => job.status === "queued").length, [jobs]);
   const runningCount = useMemo(() => jobs.filter((job) => job.status === "running").length, [jobs]);
   const completedCount = useMemo(() => jobs.filter((job) => job.status === "completed").length, [jobs]);
@@ -477,9 +524,47 @@ export default function MediaOpsClient({
     }
   }, [packLoading, promptModules.length]);
 
+  const loadCatalog = useCallback(async () => {
+    setCatalogLoading(true);
+    setCatalogError("");
+    try {
+      const params = new URLSearchParams({
+        limit: String(catalogLimit),
+        offset: String(catalogOffset),
+      });
+      if (catalogFilterGroup) params.set("group", catalogFilterGroup);
+      if (catalogFilterUsagePath) params.set("usagePath", catalogFilterUsagePath);
+      if (catalogFilterSearch) params.set("q", catalogFilterSearch);
+      const response = await fetch(`/api/admin/media/catalog?${params.toString()}`, {
+        method: "GET",
+        cache: "no-store",
+      });
+      const payload = (await response.json().catch(() => ({}))) as CatalogResponse;
+      if (!response.ok) {
+        throw new Error(payload.error ?? "Failed to load manifest catalog.");
+      }
+      setCatalogAssets(Array.isArray(payload.items) ? payload.items : []);
+      setCatalogPagination({
+        totalAssets: payload.totalAssets ?? 0,
+        filteredCount: payload.filteredCount ?? 0,
+        limit: payload.limit ?? catalogLimit,
+        offset: payload.offset ?? catalogOffset,
+        hasMore: payload.hasMore ?? false,
+      });
+    } catch (error) {
+      setCatalogError(error instanceof Error ? error.message : "Failed to load manifest catalog.");
+    } finally {
+      setCatalogLoading(false);
+    }
+  }, [catalogFilterGroup, catalogFilterSearch, catalogFilterUsagePath, catalogLimit, catalogOffset]);
+
   useEffect(() => {
     void loadPromptPack();
   }, [loadPromptPack]);
+
+  useEffect(() => {
+    void loadCatalog();
+  }, [loadCatalog]);
 
   useEffect(() => {
     void refreshJobs();
@@ -1185,6 +1270,150 @@ export default function MediaOpsClient({
             </article>
           ))}
           {jobs.length === 0 ? <p className="text-sm text-zinc-500">No media jobs yet.</p> : null}
+        </div>
+      </section>
+
+      <section className="ui-soft-card p-5">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h2 className="text-lg font-semibold">Reviewed Media Catalog</h2>
+            <p className="mt-1 text-xs text-zinc-600">
+              Browse normalized Phase-1 assets from{" "}
+              <code className="rounded bg-zinc-100 px-1 py-0.5 text-[11px]">
+                GROK-IMAGE-MANIFEST-NORMALIZED.json
+              </code>
+              {catalogLoading
+                ? " — loading..."
+                : ` — ${catalogPagination.totalAssets.toLocaleString()} total assets`}
+            </p>
+          </div>
+          <button
+            type="button"
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-sm font-semibold text-foreground disabled:opacity-70"
+            onClick={() => void loadCatalog()}
+            disabled={catalogLoading}
+          >
+            {catalogLoading ? "Loading..." : "Refresh Catalog"}
+          </button>
+        </div>
+
+        <div className="mt-3 grid gap-2 md:grid-cols-4">
+          <input
+            type="text"
+            placeholder="Group (A, B, C…)"
+            value={catalogFilterGroup}
+            maxLength={1}
+            className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm uppercase"
+            onChange={(event) => {
+              setCatalogFilterGroup(event.target.value.toUpperCase().trim());
+              setCatalogOffset(0);
+            }}
+            aria-label="Filter catalog by group"
+          />
+          <input
+            type="text"
+            placeholder="Usage path (/media/images/heroes/)"
+            value={catalogFilterUsagePath}
+            maxLength={120}
+            className="ui-focus-ring rounded-md border border-border bg-surface px-2 py-2 text-sm md:col-span-2"
+            onChange={(event) => {
+              setCatalogFilterUsagePath(event.target.value);
+              setCatalogOffset(0);
+            }}
+            aria-label="Filter catalog by usage path"
+          />
+          <label className="flex items-center gap-2 rounded-md border border-border bg-surface-muted px-2 py-2 text-sm">
+            <span className="text-xs text-zinc-600">Per page</span>
+            <input
+              type="number"
+              min={1}
+              max={200}
+              value={catalogLimit}
+              onChange={(event) => {
+                setCatalogLimit(Math.max(1, Math.min(200, Number(event.target.value) || 1)));
+                setCatalogOffset(0);
+              }}
+              className="ui-focus-ring w-16 rounded border border-border bg-surface px-2 py-1 text-xs"
+            />
+          </label>
+        </div>
+
+        <div className="mt-2">
+          <input
+            type="search"
+            placeholder="Search by ID, filename, prompt text…"
+            value={catalogFilterSearch}
+            maxLength={120}
+            className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            onChange={(event) => {
+              setCatalogFilterSearch(event.target.value);
+              setCatalogOffset(0);
+            }}
+            aria-label="Search catalog assets"
+          />
+        </div>
+
+        {catalogError ? <p className="mt-2 text-sm text-red-700">{catalogError}</p> : null}
+
+        <p className="mt-2 text-xs text-zinc-600">
+          {catalogAssets.length === 0 && !catalogLoading
+            ? `0 results — ${catalogPagination.totalAssets.toLocaleString()} total assets`
+            : `Showing ${catalogPagination.offset + 1}–${catalogPagination.offset + catalogAssets.length} of ${catalogPagination.filteredCount.toLocaleString()} filtered (${catalogPagination.totalAssets.toLocaleString()} total)`}
+        </p>
+
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-xs text-zinc-600">
+          <button
+            type="button"
+            className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 hover:bg-surface disabled:opacity-60"
+            onClick={() => setCatalogOffset(Math.max(0, catalogPagination.offset - catalogPagination.limit))}
+            disabled={catalogLoading || catalogPagination.offset === 0}
+          >
+            Previous
+          </button>
+          <button
+            type="button"
+            className="ui-soft-button ui-focus-ring rounded border border-border bg-surface-muted px-2 py-1 hover:bg-surface disabled:opacity-60"
+            onClick={() => setCatalogOffset(catalogPagination.offset + catalogPagination.limit)}
+            disabled={catalogLoading || !catalogPagination.hasMore}
+          >
+            Next
+          </button>
+        </div>
+
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {catalogAssets.map((asset) => (
+            <article key={asset.id} className="rounded-md border border-border bg-surface p-3 text-xs">
+              <div className="flex flex-wrap items-center gap-1.5 text-[11px]">
+                <span className="rounded bg-zinc-100 px-1.5 py-0.5 font-medium uppercase tracking-wide">
+                  {asset.group}
+                </span>
+                <span className="rounded bg-zinc-100 px-1.5 py-0.5 text-zinc-600">{asset.id}</span>
+                <span className="rounded border border-border bg-surface px-1.5 py-0.5 text-zinc-500">
+                  {asset.width}×{asset.height}
+                </span>
+              </div>
+              <p className="mt-1.5 truncate font-medium text-zinc-900">{asset.file_name}</p>
+              <p className="mt-0.5 truncate text-zinc-500">{asset.usage_path}</p>
+              <p className="mt-1.5 line-clamp-3 text-zinc-700">{asset.prompt}</p>
+              {asset.public_url ? (
+                <a
+                  href={asset.public_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 inline-block text-indigo-700 underline hover:text-indigo-500"
+                >
+                  Preview asset
+                </a>
+              ) : (
+                <span className="mt-2 inline-block text-zinc-400">No preview URL</span>
+              )}
+            </article>
+          ))}
+          {!catalogLoading && catalogAssets.length === 0 ? (
+            <p className="col-span-full text-sm text-zinc-500">
+              No assets match the current filters. Clear filters or click Refresh Catalog.
+            </p>
+          ) : null}
         </div>
       </section>
     </div>

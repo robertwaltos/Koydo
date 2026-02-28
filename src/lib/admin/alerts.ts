@@ -66,7 +66,7 @@ export async function createAdminAlert({
           body: JSON.stringify({
             from: fromEmail,
             to: [recipient],
-            subject: `[EduForge Alert] ${severity.toUpperCase()} - ${category}`,
+            subject: `[Koydo Alert] ${severity.toUpperCase()} - ${category}`,
             html: `<p>${message}</p><pre>${JSON.stringify(metadata, null, 2)}</pre>`,
           }),
         });

@@ -1,37 +1,19 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { type ThemePack, useTheme } from "@/lib/theme/provider";
+import { type ThemeMode, useTheme } from "@/lib/theme/provider";
 
 export default function ThemeControls({ compact = false }: { compact?: boolean }) {
-  const { themeMode, themePack, setThemeMode, setThemePack } = useTheme();
+  const {
+    themeMode,
+    themePack,
+    typographyDensity,
+    setThemeMode,
+    setTypographyDensity,
+  } = useTheme();
   const didMount = useRef(false);
-
-  type ThemeSelectionValue =
-    | "system"
-    | "simple"
-    | "sunrise"
-    | "ocean"
-    | "forest"
-    | "candy"
-    | "space";
-
-  const currentSelection: ThemeSelectionValue = (() => {
-    if (themeMode === "system") {
-      return "system";
-    }
-    return themePack as ThemeSelectionValue;
-  })();
-
-  const applySelection = (value: ThemeSelectionValue) => {
-    if (value === "system") {
-      setThemePack("simple");
-      setThemeMode("system");
-      return;
-    }
-
-    setThemePack(value as ThemePack);
-    setThemeMode("light");
+  const applyThemeMode = (value: ThemeMode) => {
+    setThemeMode(value);
   };
 
   useEffect(() => {
@@ -69,23 +51,37 @@ export default function ThemeControls({ compact = false }: { compact?: boolean }
       <label className="flex items-center gap-1">
         <span className="text-foreground">Theme</span>
         <select
-          value={currentSelection}
-          onChange={(event) => applySelection(event.target.value as ThemeSelectionValue)}
-          className="ui-focus-ring min-h-9 min-w-40 rounded-full border border-border bg-surface px-3 py-1 text-foreground shadow-sm [color-scheme:light]"
+          value={themeMode}
+          onChange={(event) => applyThemeMode(event.target.value as ThemeMode)}
+          className="ui-focus-ring min-h-9 min-w-40 rounded-full border border-border bg-surface px-3 py-1 text-foreground shadow-sm"
         >
           <option value="system">System</option>
-          {!compact ? (
-            <>
-              <option value="simple">Simple</option>
-              <option value="sunrise">Sunrise</option>
-              <option value="ocean">Ocean</option>
-              <option value="forest">Forest</option>
-              <option value="candy">Candy</option>
-              <option value="space">Space</option>
-            </>
-          ) : null}
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
         </select>
       </label>
+      {!compact ? (
+        <label className="flex items-center gap-1">
+          <span className="text-foreground">Type</span>
+          <select
+            value={typographyDensity}
+            onChange={(event) =>
+              setTypographyDensity(
+                event.target.value === "compact"
+                  ? "compact"
+                  : event.target.value === "spacious"
+                    ? "spacious"
+                    : "comfortable",
+              )
+            }
+            className="ui-focus-ring min-h-9 rounded-full border border-border bg-surface px-3 py-1 text-foreground shadow-sm"
+          >
+            <option value="comfortable">Comfortable</option>
+            <option value="compact">Compact</option>
+            <option value="spacious">Spacious</option>
+          </select>
+        </label>
+      ) : null}
     </div>
   );
 }

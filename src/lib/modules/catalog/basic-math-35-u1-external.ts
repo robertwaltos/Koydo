@@ -33,9 +33,10 @@ export const BasicMath35U1ExternalModule: LearningModule = {
   "gradeBand": "35",
   "metadata": {
     "source": "../External_AI_Agents/lesson_platform (1).jsx",
-    "sourceUnitId": "basic_math-35-u1",
+    "sourceUnitId": "basic-math-35-u1",
     "sourceUnitIdCanonical": "basic-math-35-u1",
-    "importedAt": "2026-02-24T03:43:31.747Z"
+    "sourceUnitIdRaw": "basic_math-35-u1",
+    "importedAt": "2026-02-25T02:03:30.439Z"
   },
   "external": {
     "unitOrder": 7,

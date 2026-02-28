@@ -1,10 +1,14 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { sanitizeNextPath } from "@/lib/routing/next-path";
 
 type ConsentMethod = "email_verification" | "micro_charge" | "id_check";
 
 export default function ParentConsentForm() {
+  const searchParams = useSearchParams();
+  const nextPath = sanitizeNextPath(searchParams.get("next"));
   const [parentEmail, setParentEmail] = useState("");
   const [consentMethod, setConsentMethod] = useState<ConsentMethod>("email_verification");
   const [region, setRegion] = useState("US");
@@ -26,6 +30,7 @@ export default function ParentConsentForm() {
           consentMethod,
           consentVersion: "v1",
           region,
+          nextPath,
         }),
       });
 

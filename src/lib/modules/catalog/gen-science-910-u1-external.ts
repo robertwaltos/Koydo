@@ -33,9 +33,10 @@ export const GenScience910U1ExternalModule: LearningModule = {
   "gradeBand": "910",
   "metadata": {
     "source": "../External_AI_Agents/lesson_platform (1).jsx",
-    "sourceUnitId": "gen_science-910-u1",
+    "sourceUnitId": "gen-science-910-u1",
     "sourceUnitIdCanonical": "gen-science-910-u1",
-    "importedAt": "2026-02-24T03:43:31.757Z"
+    "sourceUnitIdRaw": "gen_science-910-u1",
+    "importedAt": "2026-02-25T02:03:30.472Z"
   },
   "external": {
     "unitOrder": 15,

@@ -1,0 +1,94 @@
+{
+  "generatedAt": "2026-02-26T04:33:53.230Z",
+  "options": {
+    "apply": true,
+    "sourceId": "mit-ocw",
+    "maxKeywords": 5,
+    "backlogFile": "public\\KNOWLEDGEBASE-BACKLOG-REPORT.json",
+    "domainFile": "src\\lib\\knowledgebase\\domain-priority.json",
+    "seedsFile": "src\\lib\\knowledgebase\\targeted-seeds.json"
+  },
+  "totals": {
+    "backlogDomains": 9,
+    "alreadySeeded": 2,
+    "added": 7
+  },
+  "addedDomains": [
+    {
+      "domainId": "cpu-gpu-memory-design",
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=cpu%20gpu%20memory%20design",
+        "https://ocw.mit.edu/search/?q=cpu",
+        "https://ocw.mit.edu/search/?q=gpu",
+        "https://ocw.mit.edu/search/?q=memory%20design",
+        "https://ocw.mit.edu/search/?q=computer%20architecture"
+      ]
+    },
+    {
+      "domainId": "plumbing",
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=plumbing",
+        "https://ocw.mit.edu/search/?q=pipe",
+        "https://ocw.mit.edu/search/?q=water%20systems",
+        "https://ocw.mit.edu/search/?q=sanitation",
+        "https://ocw.mit.edu/search/?q=drainage"
+      ]
+    },
+    {
+      "domainId": "hvac",
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=hvac",
+        "https://ocw.mit.edu/search/?q=heating",
+        "https://ocw.mit.edu/search/?q=ventilation",
+        "https://ocw.mit.edu/search/?q=air%20conditioning",
+        "https://ocw.mit.edu/search/?q=refrigeration"
+      ]
+    },
+    {
+      "domainId": "nursing",
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=nursing",
+        "https://ocw.mit.edu/search/?q=patient%20care",
+        "https://ocw.mit.edu/search/?q=clinical%20skills",
+        "https://ocw.mit.edu/search/?q=care%20plan",
+        "https://ocw.mit.edu/search/?q=health%20assessment"
+      ]
+    },
+    {
+      "domainId": "project-management",
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=project%20management",
+        "https://ocw.mit.edu/search/?q=pmp",
+        "https://ocw.mit.edu/search/?q=agile",
+        "https://ocw.mit.edu/search/?q=scrum",
+        "https://ocw.mit.edu/search/?q=program%20management"
+      ]
+    },
+    {
+      "domainId": "meteorology",
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=meteorology",
+        "https://ocw.mit.edu/search/?q=weather",
+        "https://ocw.mit.edu/search/?q=climate",
+        "https://ocw.mit.edu/search/?q=atmospheric%20science"
+      ]
+    },
+    {
+      "domainId": "cybersecurity",
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=cybersecurity",
+        "https://ocw.mit.edu/search/?q=security",
+        "https://ocw.mit.edu/search/?q=infosec",
+        "https://ocw.mit.edu/search/?q=network%20security",
+        "https://ocw.mit.edu/search/?q=threat"
+      ]
+    }
+  ]
+}

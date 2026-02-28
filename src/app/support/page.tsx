@@ -34,6 +34,22 @@ export default async function SupportPage() {
           <ProgressChip label="Open tickets" value={tickets?.length ?? 0} tone="warning" />
         </div>
       </SoftCard>
+      
+      <SoftCard className="p-5 space-y-2">
+        <h2 className="text-lg font-semibold">Contact &amp; FAQ / Contacto y Preguntas Frecuentes</h2>
+        <p className="text-sm text-zinc-700">
+          <strong>Email:</strong> support@koydo.app <br />
+          <strong>Bug Reporting:</strong> Use the form below to report any technical issues. <br />
+          <strong>FAQ:</strong> Subscriptions can be managed directly via your App Store / Google Play account settings.
+          <br /><br />
+          <em>
+          <strong>Correo electrónico:</strong> support@koydo.app <br />
+          <strong>Reporte de errores:</strong> Use el formulario a continuación para reportar cualquier problema técnico. <br />
+          <strong>Preguntas Frecuentes:</strong> Las suscripciones se pueden administrar directamente a través de la configuración de su cuenta de App Store o Google Play.
+          </em>
+        </p>
+      </SoftCard>
+
       <SupportClient initialTickets={tickets ?? []} />
     </main>
   );

@@ -1,0 +1,235 @@
+{
+  "domains": {
+    "microelectronics": {
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=microelectronics",
+        "https://ocw.mit.edu/search/?q=semiconductor",
+        "https://ocw.mit.edu/search/?q=integrated%20circuits",
+        "https://ocw.mit.edu/courses/6-012-microelectronic-devices-and-circuits-fall-2009/",
+        "https://ocw.mit.edu/courses/6-374-analysis-and-design-of-digital-integrated-circuits-fall-2003/"
+      ]
+    },
+    "micro-circuits": {
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=circuits",
+        "https://ocw.mit.edu/search/?q=analog%20circuits",
+        "https://ocw.mit.edu/search/?q=digital%20circuits",
+        "https://ocw.mit.edu/search/?q=signal%20integrity",
+        "https://ocw.mit.edu/search/?q=circuits%20and%20electronics",
+        "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/"
+      ]
+    },
+    "cpu-gpu-memory-design": {
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=cpu%20gpu%20memory%20design",
+        "https://ocw.mit.edu/search/?q=cpu",
+        "https://ocw.mit.edu/search/?q=gpu",
+        "https://ocw.mit.edu/search/?q=memory%20design",
+        "https://ocw.mit.edu/search/?q=computer%20architecture"
+      ]
+    },
+    "coding": {
+      "sources": [
+        {
+          "sourceId": "mit-ocw",
+          "seedUrls": [
+            "https://ocw.mit.edu/search/?q=computer%20programming",
+            "https://ocw.mit.edu/search/?q=introduction%20to%20computer%20science",
+            "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/"
+          ]
+        },
+        {
+          "sourceId": "openlearn",
+          "seedUrls": [
+            "https://www.open.edu/openlearn/search-results?query=programming",
+            "https://www.open.edu/openlearn/search-results?query=python"
+          ]
+        },
+        {
+          "sourceId": "grokipedia",
+          "seedUrls": [
+            "https://grokipedia.com/page/Computer_programming",
+            "https://grokipedia.com/page/Algorithm",
+            "https://grokipedia.com/page/Debugging"
+          ]
+        }
+      ]
+    },
+    "ai-workflows": {
+      "sources": [
+        {
+          "sourceId": "mit-ocw",
+          "seedUrls": [
+            "https://ocw.mit.edu/search/?q=artificial%20intelligence",
+            "https://ocw.mit.edu/search/?q=machine%20learning",
+            "https://ocw.mit.edu/search/?q=natural%20language%20processing"
+          ]
+        },
+        {
+          "sourceId": "openlearn",
+          "seedUrls": [
+            "https://www.open.edu/openlearn/search-results?query=artificial+intelligence",
+            "https://www.open.edu/openlearn/search-results?query=automation"
+          ]
+        },
+        {
+          "sourceId": "grokipedia",
+          "seedUrls": [
+            "https://grokipedia.com/page/Artificial_intelligence",
+            "https://grokipedia.com/page/Prompt_engineering",
+            "https://grokipedia.com/page/Machine_learning"
+          ]
+        }
+      ]
+    },
+    "gardening": {
+      "sources": [
+        {
+          "sourceId": "openlearn",
+          "seedUrls": [
+            "https://www.open.edu/openlearn/search-results?query=gardening",
+            "https://www.open.edu/openlearn/search-results?query=horticulture",
+            "https://www.open.edu/openlearn/search-results?query=soil"
+          ]
+        },
+        {
+          "sourceId": "grokipedia",
+          "seedUrls": [
+            "https://grokipedia.com/page/Gardening",
+            "https://grokipedia.com/page/Compost",
+            "https://grokipedia.com/page/Soil"
+          ]
+        }
+      ]
+    },
+    "food-science": {
+      "sources": [
+        {
+          "sourceId": "mit-ocw",
+          "seedUrls": [
+            "https://ocw.mit.edu/search/?q=food%20science",
+            "https://ocw.mit.edu/search/?q=biochemistry",
+            "https://ocw.mit.edu/search/?q=chemical%20engineering"
+          ]
+        },
+        {
+          "sourceId": "openlearn",
+          "seedUrls": [
+            "https://www.open.edu/openlearn/search-results?query=food+science",
+            "https://www.open.edu/openlearn/search-results?query=nutrition"
+          ]
+        },
+        {
+          "sourceId": "grokipedia",
+          "seedUrls": [
+            "https://grokipedia.com/page/Food_science",
+            "https://grokipedia.com/page/Maillard_reaction",
+            "https://grokipedia.com/page/Emulsion",
+            "https://grokipedia.com/page/Fermentation"
+          ]
+        }
+      ]
+    },
+    "plumbing": {
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=plumbing",
+        "https://ocw.mit.edu/search/?q=pipe",
+        "https://ocw.mit.edu/search/?q=water%20systems",
+        "https://ocw.mit.edu/search/?q=sanitation",
+        "https://ocw.mit.edu/search/?q=drainage"
+      ]
+    },
+    "hvac": {
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=hvac",
+        "https://ocw.mit.edu/search/?q=heating",
+        "https://ocw.mit.edu/search/?q=ventilation",
+        "https://ocw.mit.edu/search/?q=air%20conditioning",
+        "https://ocw.mit.edu/search/?q=refrigeration"
+      ]
+    },
+    "nursing": {
+      "sources": [
+        {
+          "sourceId": "mit-ocw",
+          "seedUrls": [
+            "https://ocw.mit.edu/search/?q=nursing",
+            "https://ocw.mit.edu/search/?q=patient%20care",
+            "https://ocw.mit.edu/search/?q=clinical%20skills",
+            "https://ocw.mit.edu/search/?q=health%20assessment"
+          ]
+        },
+        {
+          "sourceId": "openlearn",
+          "seedUrls": [
+            "https://www.open.edu/openlearn/search-results?query=nursing",
+            "https://www.open.edu/openlearn/search-results?query=patient+care",
+            "https://www.open.edu/openlearn/search-results?query=clinical+skills",
+            "https://www.open.edu/openlearn/search-results?query=health+assessment"
+          ]
+        },
+        {
+          "sourceId": "open-yale-courses",
+          "seedUrls": [
+            "https://oyc.yale.edu/courses",
+            "https://oyc.yale.edu/sociology"
+          ]
+        }
+      ]
+    },
+    "project-management": {
+      "sources": [
+        {
+          "sourceId": "mit-ocw",
+          "seedUrls": [
+            "https://ocw.mit.edu/search/?q=project%20management",
+            "https://ocw.mit.edu/search/?q=pmp",
+            "https://ocw.mit.edu/search/?q=agile",
+            "https://ocw.mit.edu/search/?q=scrum",
+            "https://ocw.mit.edu/search/?q=program%20management"
+          ]
+        },
+        {
+          "sourceId": "openlearn",
+          "seedUrls": [
+            "https://www.open.edu/openlearn/search-results?query=project+management",
+            "https://www.open.edu/openlearn/search-results?query=program+management",
+            "https://www.open.edu/openlearn/search-results?query=operations+management",
+            "https://www.open.edu/openlearn/search-results?query=leadership"
+          ]
+        },
+        {
+          "sourceId": "open-yale-courses",
+          "seedUrls": [
+            "https://oyc.yale.edu/economics",
+            "https://oyc.yale.edu/political-science"
+          ]
+        }
+      ]
+    },
+    "meteorology": {
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=meteorology",
+        "https://ocw.mit.edu/search/?q=weather",
+        "https://ocw.mit.edu/search/?q=climate",
+        "https://ocw.mit.edu/search/?q=atmospheric%20science"
+      ]
+    },
+    "cybersecurity": {
+      "sourceId": "mit-ocw",
+      "seedUrls": [
+        "https://ocw.mit.edu/search/?q=cybersecurity",
+        "https://ocw.mit.edu/search/?q=security",
+        "https://ocw.mit.edu/search/?q=infosec",
+        "https://ocw.mit.edu/search/?q=network%20security",
+        "https://ocw.mit.edu/search/?q=threat"
+      ]
+    }
+  }
+}

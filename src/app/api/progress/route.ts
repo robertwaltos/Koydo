@@ -2,12 +2,22 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { calculateSRS } from "@/lib/srs";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const progressUpdateSchema = z.object({
   lessonId: z.string(),
   // We'll derive a quality score from the percentage
   scorePercentage: z.number().min(0).max(1),
 });
+
+function isMissingAtomicFunctionError(message: string) {
+  const lowered = message.toLowerCase();
+  return (
+    lowered.includes("upsert_user_learning_progress_atomic")
+    || lowered.includes("could not find the function")
+    || lowered.includes("function public.upsert_user_learning_progress_atomic")
+  );
+}
 
 export async function POST(request: Request) {
   try {
@@ -36,7 +46,41 @@ export async function POST(request: Request) {
     // Convert percentage to a 0-5 quality score
     const quality = Math.floor(scorePercentage * 5);
 
-    // 1. Fetch existing progress
+    // Prefer atomic DB-side upsert + recalculation under concurrent writes.
+    const { data: atomicRows, error: atomicError } = await supabase.rpc(
+      "upsert_user_learning_progress_atomic",
+      {
+        p_user_id: user.id,
+        p_lesson_id: lessonId,
+        p_quality: quality,
+      },
+    );
+
+    if (!atomicError) {
+      const row = Array.isArray(atomicRows) ? atomicRows[0] : atomicRows;
+      if (!row) {
+        return NextResponse.json({ error: "Could not save progress" }, { status: 500 });
+      }
+      const atomicInterval = Number(
+        (row as { interval?: number; review_interval?: number | string }).interval
+          ?? (row as { interval?: number; review_interval?: number | string }).review_interval,
+      );
+      return NextResponse.json({
+        success: true,
+        repetitions: Number((row as { repetitions: number }).repetitions),
+        easiness_factor: Number((row as { easiness_factor: number | string }).easiness_factor),
+        interval: atomicInterval,
+        next_review_at: (row as { next_review_at: string }).next_review_at,
+        last_reviewed_at: (row as { last_reviewed_at: string }).last_reviewed_at,
+      });
+    }
+
+    if (!isMissingAtomicFunctionError(atomicError.message)) {
+      console.error("Error upserting user progress atomically:", toSafeErrorRecord(atomicError));
+      return NextResponse.json({ error: "Could not save progress" }, { status: 500 });
+    }
+
+    // Backward-compatible fallback for environments where migration isn't applied yet.
     const { data: existingProgress, error: fetchError } = await supabase
       .from("user_learning_progress")
       .select("repetitions, easiness_factor, interval")
@@ -45,11 +89,10 @@ export async function POST(request: Request) {
       .maybeSingle();
 
     if (fetchError) {
-      console.error("Error fetching user progress:", fetchError);
+      console.error("Error fetching user progress:", toSafeErrorRecord(fetchError));
       return NextResponse.json({ error: "Database error" }, { status: 500 });
     }
 
-    // 2. Calculate new SRS data
     const currentSRSData = existingProgress ?? {
       repetitions: 0,
       easiness_factor: 2.5,
@@ -57,27 +100,29 @@ export async function POST(request: Request) {
     };
     const newSRSData = calculateSRS(quality, currentSRSData);
 
-    // 3. Upsert the new progress
     const { error: upsertError } = await supabase
       .from("user_learning_progress")
-      .upsert({
-        user_id: user.id,
-        lesson_id: lessonId,
-        repetitions: newSRSData.repetitions,
-        easiness_factor: newSRSData.easiness_factor,
-        interval: newSRSData.interval,
-        next_review_at: newSRSData.next_review_at.toISOString(),
-        last_reviewed_at: new Date().toISOString(),
-      });
+      .upsert(
+        {
+          user_id: user.id,
+          lesson_id: lessonId,
+          repetitions: newSRSData.repetitions,
+          easiness_factor: newSRSData.easiness_factor,
+          interval: newSRSData.interval,
+          next_review_at: newSRSData.next_review_at.toISOString(),
+          last_reviewed_at: new Date().toISOString(),
+        },
+        { onConflict: "user_id,lesson_id" },
+      );
 
     if (upsertError) {
-      console.error("Error upserting user progress:", upsertError);
+      console.error("Error upserting user progress (fallback path):", toSafeErrorRecord(upsertError));
       return NextResponse.json({ error: "Could not save progress" }, { status: 500 });
     }
 
     return NextResponse.json({ success: true, ...newSRSData });
   } catch (err) {
-    console.error("Unexpected error in progress route:", err);
+    console.error("Unexpected error in progress route:", toSafeErrorRecord(err));
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }

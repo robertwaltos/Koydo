@@ -40,3 +40,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI-generated media assets (produced at runtime by overnight-media-runner.mjs / process-media-jobs.mjs)
+public/generated-images/
+
+# Backup files
+*.bak*
+
+.vercel
+.env*.local

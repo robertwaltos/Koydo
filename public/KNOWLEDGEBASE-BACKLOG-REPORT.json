@@ -1,0 +1,208 @@
+{
+  "generatedAt": "2026-02-26T06:15:45.144Z",
+  "options": {
+    "minHealthyDocs": 5,
+    "maxActionsPerDomain": 5,
+    "coverageFile": "public\\KNOWLEDGEBASE-DOMAIN-COVERAGE-REPORT.json",
+    "queueFile": "public\\KNOWLEDGEBASE-INGESTION-QUEUE-PRIORITY.json",
+    "harvestFile": "public\\KNOWLEDGEBASE-HARVEST-REPORT.json",
+    "manifestFile": "data\\knowledgebase\\manifest.json"
+  },
+  "totals": {
+    "domains": 17,
+    "healthy": 17,
+    "needsGrowth": 0,
+    "critical": 0,
+    "backlog": 0
+  },
+  "domains": [
+    {
+      "domainId": "electricians",
+      "rank": 1,
+      "docCount": 12,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "microelectronics",
+      "rank": 2,
+      "docCount": 12,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "micro-circuits",
+      "rank": 3,
+      "docCount": 11,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "cpu-gpu-memory-design",
+      "rank": 4,
+      "docCount": 6,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "electrical-engineering",
+      "rank": 5,
+      "docCount": 12,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "civil-engineering",
+      "rank": 6,
+      "docCount": 8,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "plumbing",
+      "rank": 7,
+      "docCount": 5,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "hvac",
+      "rank": 8,
+      "docCount": 5,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "meteorology",
+      "rank": 9,
+      "docCount": 6,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "nursing",
+      "rank": 10,
+      "docCount": 6,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "law",
+      "rank": 11,
+      "docCount": 17,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "medicine",
+      "rank": 12,
+      "docCount": 6,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "cybersecurity",
+      "rank": 13,
+      "docCount": 8,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "data-science",
+      "rank": 14,
+      "docCount": 15,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "ai-ml",
+      "rank": 15,
+      "docCount": 6,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "project-management",
+      "rank": 16,
+      "docCount": 12,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    },
+    {
+      "domainId": "finance",
+      "rank": 17,
+      "docCount": 10,
+      "healthStatus": "healthy",
+      "plan": {
+        "action": "monitor",
+        "summary": "Coverage currently healthy. Keep periodic refresh cadence.",
+        "recommendedItems": []
+      }
+    }
+  ],
+  "backlog": []
+}

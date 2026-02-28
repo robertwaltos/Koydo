@@ -68,7 +68,7 @@ export async function GET() {
   const overallStatus = hasFail ? "degraded" : "ok";
 
   return NextResponse.json({
-    service: "eduforge-api",
+    service: "koydo-api",
     status: overallStatus,
     timestamp: new Date().toISOString(),
     checks,

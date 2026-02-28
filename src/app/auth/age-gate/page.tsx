@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { sanitizeNextPath } from "@/lib/routing/next-path";
 
 export default function AgeGatePage() {
   const currentYear = new Date().getFullYear();
@@ -9,6 +10,8 @@ export default function AgeGatePage() {
   const [status, setStatus] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const nextPath = sanitizeNextPath(searchParams.get("next"));
 
   const years = useMemo(
     () => Array.from({ length: 18 }, (_, index) => `${currentYear - (index + 4)}`),
@@ -29,7 +32,7 @@ export default function AgeGatePage() {
       const response = await fetch("/api/compliance/age-gate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ birthYear: selectedYear }),
+        body: JSON.stringify({ birthYear: selectedYear, nextPath }),
       });
 
       const payload = (await response.json()) as {
@@ -44,10 +47,13 @@ export default function AgeGatePage() {
       }
 
       const resolvedAge = payload.age ?? currentYear - selectedYear;
-      const route =
-        payload.nextRoute === "/auth/parent-consent"
-          ? `${payload.nextRoute}?childAge=${resolvedAge}`
-          : payload.nextRoute;
+      let route = payload.nextRoute;
+
+      if (route.startsWith("/auth/parent-consent")) {
+        const parentConsentUrl = new URL(route, location.origin);
+        parentConsentUrl.searchParams.set("childAge", String(resolvedAge));
+        route = `${parentConsentUrl.pathname}${parentConsentUrl.search}`;
+      }
 
       router.push(route);
     } catch {

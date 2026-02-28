@@ -149,7 +149,7 @@ export function createSimpleTextPdf(params: {
 
   // Metadata object
   const title = escapePdfString(params.title.slice(0, 120));
-  objects.push(`<< /Title (${title}) /Producer (EduForge) >>`);
+  objects.push(`<< /Title (${title}) /Producer (Koydo) >>`);
 
   const infoObjectNumber = objects.length;
 

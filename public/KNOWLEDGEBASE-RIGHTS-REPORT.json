@@ -1,0 +1,276 @@
+{
+  "generatedAt": "2026-02-26T06:14:44.420Z",
+  "totals": {
+    "sources": 13,
+    "approved": 9,
+    "conditional": 4,
+    "blocked": 0,
+    "missing": 0,
+    "automationReady": 9,
+    "manualReviewRequired": 4
+  },
+  "byCategory": {
+    "official_curriculum": {
+      "approved": 8,
+      "conditional": 1,
+      "blocked": 0,
+      "missing": 0
+    },
+    "free_course_transcripts": {
+      "approved": 1,
+      "conditional": 3,
+      "blocked": 0,
+      "missing": 0
+    }
+  },
+  "sources": [
+    {
+      "sourceId": "acara-australian-curriculum",
+      "sourceName": "ACARA Australian Curriculum",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "syllabus",
+        "guidance"
+      ],
+      "notes": "Official curriculum publication source.",
+      "hasPolicyRow": true,
+      "automationReady": true
+    },
+    {
+      "sourceId": "india-cbse-curriculum",
+      "sourceName": "CBSE Curriculum",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "syllabus",
+        "guidance"
+      ],
+      "notes": "Official board curriculum resources.",
+      "hasPolicyRow": true,
+      "automationReady": true
+    },
+    {
+      "sourceId": "india-ncert-textbooks",
+      "sourceName": "NCERT Textbooks",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "conditional",
+      "ingestionPolicy": "manual_review_required",
+      "requiresManualReview": true,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "textbook_outline"
+      ],
+      "notes": "Textbook and PDF ingest requires per-document terms validation before full extraction.",
+      "hasPolicyRow": true,
+      "automationReady": false
+    },
+    {
+      "sourceId": "kenya-kicd",
+      "sourceName": "Kenya Institute of Curriculum Development",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "syllabus",
+        "guidance"
+      ],
+      "notes": "",
+      "hasPolicyRow": true,
+      "automationReady": true
+    },
+    {
+      "sourceId": "mit-ocw",
+      "sourceName": "MIT OpenCourseWare",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "transcript",
+        "subtitle",
+        "course_notes",
+        "syllabus"
+      ],
+      "notes": "Open licensed course materials with attribution requirements.",
+      "hasPolicyRow": true,
+      "automationReady": true
+    },
+    {
+      "sourceId": "new-zealand-curriculum",
+      "sourceName": "New Zealand Curriculum",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "syllabus",
+        "guidance"
+      ],
+      "notes": "",
+      "hasPolicyRow": true,
+      "automationReady": true
+    },
+    {
+      "sourceId": "nptel-transcripts",
+      "sourceName": "NPTEL Transcript Access",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "conditional",
+      "ingestionPolicy": "transcript_only_with_attribution",
+      "requiresManualReview": true,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "transcript",
+        "subtitle"
+      ],
+      "notes": "Transcript endpoint available; validate per-course terms for downstream reuse.",
+      "hasPolicyRow": true,
+      "automationReady": false
+    },
+    {
+      "sourceId": "ontario-curriculum",
+      "sourceName": "Ontario Curriculum",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "syllabus",
+        "guidance"
+      ],
+      "notes": "",
+      "hasPolicyRow": true,
+      "automationReady": true
+    },
+    {
+      "sourceId": "open-yale-courses",
+      "sourceName": "Open Yale Courses",
+      "category": "free_course_transcripts",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "conditional",
+      "ingestionPolicy": "transcript_only_with_attribution",
+      "requiresManualReview": true,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "transcript",
+        "subtitle"
+      ],
+      "notes": "Transcript-first ingestion allowed after source terms verification.",
+      "hasPolicyRow": true,
+      "automationReady": false
+    },
+    {
+      "sourceId": "openlearn",
+      "sourceName": "OpenLearn",
+      "category": "free_course_transcripts",
+      "tier": "yellow",
+      "automationAllowed": true,
+      "rightsStatus": "conditional",
+      "ingestionPolicy": "manual_review_required",
+      "requiresManualReview": true,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "transcript",
+        "course_notes"
+      ],
+      "notes": "Course-level terms vary; keep under manual legal review.",
+      "hasPolicyRow": true,
+      "automationReady": false
+    },
+    {
+      "sourceId": "singapore-moe-curriculum",
+      "sourceName": "Singapore MOE Curriculum Planning and Development Division",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "syllabus",
+        "guidance"
+      ],
+      "notes": "MOE curriculum source used for standards alignment.",
+      "hasPolicyRow": true,
+      "automationReady": true
+    },
+    {
+      "sourceId": "south-africa-caps",
+      "sourceName": "South Africa CAPS",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "syllabus",
+        "guidance"
+      ],
+      "notes": "",
+      "hasPolicyRow": true,
+      "automationReady": true
+    },
+    {
+      "sourceId": "uk-national-curriculum",
+      "sourceName": "UK National Curriculum",
+      "category": "official_curriculum",
+      "tier": "green",
+      "automationAllowed": true,
+      "rightsStatus": "approved",
+      "ingestionPolicy": "full_text_with_attribution",
+      "requiresManualReview": false,
+      "requiresAttribution": true,
+      "allowedAssetTypes": [
+        "curriculum_framework",
+        "syllabus",
+        "guidance"
+      ],
+      "notes": "Government curriculum framework pages can be ingested with provenance and attribution.",
+      "hasPolicyRow": true,
+      "automationReady": true
+    }
+  ],
+  "outputs": {
+    "reportJson": "public\\KNOWLEDGEBASE-RIGHTS-REPORT.json",
+    "reportMd": "public\\KNOWLEDGEBASE-RIGHTS-REPORT.md"
+  }
+}

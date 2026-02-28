@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Koydo</string>
+    <string name="title_activity_main">Koydo</string>
+    <string name="package_name">com.koydo.app</string>
+    <string name="custom_url_scheme">com.koydo.app</string>
+</resources>

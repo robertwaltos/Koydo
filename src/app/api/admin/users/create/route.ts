@@ -3,6 +3,7 @@ import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { logAdminAction } from "@/lib/admin/audit";
+import { sanitizeDisplayName } from "@/lib/security/sanitize-user-text";
 
 const requestSchema = z.object({
   email: z.string().email(),
@@ -23,12 +24,19 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid payload", details: payload.error.flatten() }, { status: 400 });
   }
 
+  const sanitizedDisplayName = payload.data.displayName
+    ? sanitizeDisplayName(payload.data.displayName)
+    : undefined;
+  if (payload.data.displayName && !sanitizedDisplayName) {
+    return NextResponse.json({ error: "Display name must include visible characters." }, { status: 400 });
+  }
+
   const admin = createSupabaseAdminClient();
   const { data, error } = await admin.auth.admin.createUser({
     email: payload.data.email,
     password: payload.data.password,
     email_confirm: true,
-    user_metadata: payload.data.displayName ? { display_name: payload.data.displayName } : undefined,
+    user_metadata: sanitizedDisplayName ? { display_name: sanitizedDisplayName } : undefined,
   });
 
   if (error || !data.user) {
@@ -37,7 +45,7 @@ export async function POST(request: Request) {
 
   const { error: profileError } = await admin.from("user_profiles").upsert({
     user_id: data.user.id,
-    display_name: payload.data.displayName ?? null,
+    display_name: sanitizedDisplayName ?? null,
     is_admin: payload.data.isAdmin ?? false,
     is_parent: payload.data.isParent ?? false,
   });

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240" role="img" aria-labelledby="globeTitle globeDesc">
+  <title id="globeTitle">World people</title>
+  <desc id="globeDesc">A globe with colorful people icons.</desc>
+  <rect width="320" height="240" rx="24" fill="#e9f6ff"/>
+  <circle cx="160" cy="116" r="66" fill="#7fd3ff"/>
+  <path d="M110 106C122 88 146 80 164 90C182 100 208 96 216 76C226 92 224 116 210 130C194 146 170 148 152 140C130 130 116 124 110 106Z" fill="#5dc776"/>
+  <path d="M138 148C146 132 164 128 176 134C188 140 202 138 208 124C214 136 212 150 202 160C186 174 156 174 138 148Z" fill="#4cae62"/>
+  <ellipse cx="160" cy="116" rx="66" ry="22" fill="none" stroke="#a8ecff" stroke-width="4"/>
+  <ellipse cx="160" cy="116" rx="24" ry="66" fill="none" stroke="#a8ecff" stroke-width="4"/>
+  <circle cx="64" cy="190" r="14" fill="#ffb180"/>
+  <rect x="52" y="205" width="24" height="18" rx="8" fill="#ff6f8f"/>
+  <circle cx="256" cy="190" r="14" fill="#ffd47d"/>
+  <rect x="244" y="205" width="24" height="18" rx="8" fill="#73c7ff"/>
+</svg>

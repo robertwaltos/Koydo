@@ -128,7 +128,7 @@ Additional implementation pass:
 
 ## Objective
 
-Blend the best external UI ideas into the current EduForge app by creating a child-friendly design language between:
+Blend the best external UI ideas into the current Koydo app by creating a child-friendly design language between:
 
 - soft neumorphism (tactile, organic, playful depth)
 - clean modern layout (clear hierarchy, readable, fast, accessible)

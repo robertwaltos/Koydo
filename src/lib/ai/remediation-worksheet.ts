@@ -165,7 +165,7 @@ function collectLessonFallbackSkills(lesson: Lesson) {
   return Array.from(
     new Set(
       (lesson.questions ?? [])
-        .map((question) => normalizeSkillLabel(question.skillId))
+        .map((question) => normalizeSkillLabel(question.skillId ?? ""))
         .filter((skill) => skill.length > 0),
     ),
   ).slice(0, 6);

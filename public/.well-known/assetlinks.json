@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.koydo.app",
+      "sha256_cert_fingerprints": [
+        "11:2D:9A:3C:AE:64:83:D5:77:68:3F:98:25:C4:CC:37:94:03:89:A9:53:96:0E:FA:F6:81:9C:0B:FE:7F:AE:09"
+      ]
+    }
+  }
+]

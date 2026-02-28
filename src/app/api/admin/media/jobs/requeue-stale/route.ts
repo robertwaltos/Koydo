@@ -1,24 +1,15 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
-type RequeueRequestBody = {
-  moduleId?: string;
-  lessonId?: string;
-  assetType?: string;
-  limit?: number;
-  maxAgeMinutes?: number;
-};
-
-function normalizeAssetType(value: unknown) {
-  if (typeof value !== "string") return "";
-  const normalized = value.trim().toLowerCase();
-  if (!normalized || normalized === "all") return "";
-  if (normalized === "video" || normalized === "animation" || normalized === "image") {
-    return normalized;
-  }
-  return null;
-}
+const requeueRequestSchema = z.object({
+  moduleId: z.string().trim().max(120).optional(),
+  lessonId: z.string().trim().max(120).optional(),
+  assetType: z.enum(["video", "animation", "image", "all"]).optional(),
+  limit: z.coerce.number().int().min(1).max(500).default(100),
+  maxAgeMinutes: z.coerce.number().int().min(5).max(10_080).default(90),
+});
 
 function scopeKey(row: { module_id: string | null; lesson_id: string | null; asset_type: string | null }) {
   if (!row.module_id || !row.lesson_id || !row.asset_type) return null;
@@ -31,20 +22,17 @@ export async function POST(request: Request) {
     return auth.response;
   }
 
-  const body = (await request.json().catch(() => ({}))) as RequeueRequestBody;
-  const moduleId = typeof body.moduleId === "string" ? body.moduleId.trim() : "";
-  const lessonId = typeof body.lessonId === "string" ? body.lessonId.trim() : "";
-  const assetType = normalizeAssetType(body.assetType);
-  const limit = Number.isFinite(Number(body.limit))
-    ? Math.min(500, Math.max(1, Number(body.limit)))
-    : 100;
-  const maxAgeMinutes = Number.isFinite(Number(body.maxAgeMinutes))
-    ? Math.min(10080, Math.max(5, Number(body.maxAgeMinutes)))
-    : 90;
-
-  if (assetType === null) {
-    return NextResponse.json({ error: "assetType must be video, animation, image, or all." }, { status: 400 });
+  const parsedBody = requeueRequestSchema.safeParse(await request.json().catch(() => null));
+  if (!parsedBody.success) {
+    return NextResponse.json(
+      { error: "Invalid payload.", details: parsedBody.error.flatten() },
+      { status: 400 },
+    );
   }
+  const { moduleId = "", lessonId = "", limit, maxAgeMinutes } = parsedBody.data;
+  const assetType = parsedBody.data.assetType && parsedBody.data.assetType !== "all"
+    ? parsedBody.data.assetType
+    : "";
 
   const staleCutoffIso = new Date(Date.now() - maxAgeMinutes * 60 * 1000).toISOString();
   const admin = createSupabaseAdminClient();
