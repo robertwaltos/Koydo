@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
+import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from "react";
 import { getActiveProfileIdFromBrowser, setActiveProfile as persistActiveProfile, clearActiveProfile as clearPersistedActiveProfile } from "./active-profile";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { type StudentProfile } from "@/lib/profiles/types";
@@ -19,7 +19,7 @@ export const ActiveProfileProvider = ({ children }: { children: React.ReactNode 
   const [profile, setProfile] = useState<StudentProfile | null>(null);
   const [profileId, setProfileId] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const supabase = createSupabaseBrowserClient();
+  const supabase = useMemo(() => createSupabaseBrowserClient(), []);
 
   const fetchProfile = useCallback(async (id: string) => {
     setIsLoading(true);

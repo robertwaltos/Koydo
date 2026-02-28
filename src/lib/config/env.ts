@@ -74,5 +74,15 @@ const normalizedEnv = {
   NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? process.env.EXPO_PUBLIC_SUPABASE_KEY,
 };
 
-export const serverEnv = serverEnvSchema.parse(normalizedEnv);
+// Server env vars are only available in Node.js (Vercel Functions / SSR).
+// Guard against the browser (client bundle) where server-only vars are undefined.
+// Only publicEnv should be used in client components.
+function buildServerEnv() {
+  if (typeof window !== "undefined") {
+    return {} as z.infer<typeof serverEnvSchema>;
+  }
+  return serverEnvSchema.parse(normalizedEnv);
+}
+
+export const serverEnv = buildServerEnv();
 export const publicEnv = publicEnvSchema.parse(normalizedEnv);
