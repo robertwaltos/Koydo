@@ -17,6 +17,7 @@ import SoftCard from "@/app/components/ui/soft-card";
 import { summarizeLanguageProgress } from "@/lib/language-learning/progress-metrics";
 import { isSupportedLocale, translate, type Locale } from "@/lib/i18n/translations";
 import { formatDate } from "@/lib/i18n/format";
+import PageHeader from "@/app/components/page-header";
 
 export const dynamic = "force-dynamic";
 
@@ -207,19 +208,19 @@ export default async function DashboardPage() {
   const showUsageUpgradeCta = usageEntitlement?.mode === "practice_only";
 
   return (
-    <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12">
-      <header className="flex items-start justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-semibold">{t("dashboard_title")}</h1>
-          <p className="mt-2 text-sm text-zinc-600">
-            {t("dashboard_signed_in_as", { user: data.user.email ?? data.user.id })}
-          </p>
-        </div>
-        <SignOutButton />
-      </header>
+    <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12 tablet:max-w-5xl tablet:px-8">
+      <PageHeader
+        breadcrumbs={[
+          { label: "Home", href: "/" },
+          { label: t("dashboard_title") },
+        ]}
+        title={t("dashboard_title")}
+        description={t("dashboard_signed_in_as", { user: data.user.email ?? data.user.id })}
+        actions={<SignOutButton />}
+      />
 
       <section className="flex flex-col gap-8">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           <SoftCard as="article" className="border-rose-200 bg-rose-50 p-4">
             <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_achievement_level")}</p>
             <p className="mt-2 text-3xl font-bold">{level}</p>
@@ -277,7 +278,7 @@ export default async function DashboardPage() {
             </div>
           ) : (
             <>
-              <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
                 <div className="rounded-2xl border border-cyan-200 bg-white p-3">
                   <p className="text-xs uppercase tracking-wide text-zinc-500">{t("dashboard_stat_avg_pronunciation")}</p>
                   <p className="mt-1 text-2xl font-bold text-zinc-900">
@@ -356,7 +357,7 @@ export default async function DashboardPage() {
                 ) : (
                   <Link
                     href="/billing/language"
-                    className="ui-focus-ring mt-3 inline-flex min-h-10 items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-xs font-semibold text-zinc-600 hover:bg-zinc-100"
+                    className="ui-focus-ring mt-3 inline-flex min-h-10 items-center rounded-full border border-zinc-200 bg-surface-muted px-3 py-1.5 text-xs font-semibold text-zinc-600 hover:bg-zinc-100"
                   >
                     {t("dashboard_view_language_plans")}
                   </Link>
@@ -388,54 +389,82 @@ export default async function DashboardPage() {
         <AiWeeklyPlanCard />
         <AiTutorPanel />
 
-        <h2 className="mt-4 text-xl font-semibold">{t("dashboard_learning_path_title")}</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {learningModules.map((learningModule) => (
-            <SoftCard
-              key={learningModule.id}
-              as="article"
-              interactive
-              className="border-violet-200 p-6"
+        {/* ── Continue Learning — compact recent modules ── */}
+        <section>
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="text-xl font-semibold">{t("dashboard_learning_path_title")}</h2>
+            <Link
+              href="/modules"
+              className="ui-focus-ring inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-semibold text-zinc-600 hover:bg-surface-muted"
             >
-              <ModuleCoverImage
-                moduleId={learningModule.id}
-                moduleTitle={learningModule.title}
-                fallbackSrc={learningModule.thumbnail}
-                className="h-32 w-full rounded-lg border border-violet-100 object-cover"
-              />
-              <h3 className="mt-3 text-lg font-bold text-violet-900">{learningModule.title}</h3>
-              <p className="mt-2 text-sm text-zinc-600">
-                {learningModule.description}
-              </p>
-              <div className="mt-4 border-t border-violet-100 pt-4">
-                <h4 className="font-semibold">{t("dashboard_lessons_heading")}</h4>
-                <ul className="mt-2 flex flex-col gap-1">
-                  {learningModule.lessons.map((lesson) => {
-                    const isCompleted = progressMap.has(lesson.id);
-                    return (
-                      <li key={lesson.id}>
-                        <Link
-                          href={toLessonPath(lesson.id)}
-                          className="ui-focus-ring ui-soft-button flex min-h-11 items-center justify-between rounded-2xl border border-violet-100 bg-violet-50 p-2 text-sm hover:bg-violet-100"
-                        >
-                          <span className="flex items-center gap-2">
-                            {isCompleted && (
-                              <span className="text-green-500">✔</span>
-                            )}
-                            {lesson.title}
-                          </span>
-                          <span className="text-xs text-zinc-500">
-                            {t("dashboard_minutes_suffix", { duration: lesson.duration })}
-                          </span>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </SoftCard>
-          ))}
-        </div>
+              {t("dashboard_view_all_modules")} →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {learningModules.slice(0, 6).map((learningModule) => {
+              const moduleLessons = learningModule.lessons;
+              const completedCount = moduleLessons.filter((l) =>
+                progressMap.has(l.id),
+              ).length;
+              const progressPct =
+                moduleLessons.length > 0
+                  ? Math.round((completedCount / moduleLessons.length) * 100)
+                  : 0;
+              const nextLesson = moduleLessons.find(
+                (l) => !progressMap.has(l.id),
+              );
+
+              return (
+                <SoftCard
+                  key={learningModule.id}
+                  as="article"
+                  interactive
+                  className="border-violet-200 p-5"
+                >
+                  <ModuleCoverImage
+                    moduleId={learningModule.id}
+                    moduleTitle={learningModule.title}
+                    fallbackSrc={learningModule.thumbnail}
+                    className="h-28 w-full rounded-xl border border-violet-100 object-cover"
+                  />
+                  <h3 className="mt-3 text-sm font-bold text-violet-900 line-clamp-2">
+                    {learningModule.title}
+                  </h3>
+
+                  {/* Progress bar */}
+                  <div className="mt-2">
+                    <div className="flex items-center justify-between text-[11px] text-zinc-500">
+                      <span>
+                        {completedCount}/{moduleLessons.length} {t("dashboard_lessons_heading").toLowerCase()}
+                      </span>
+                      <span className="font-semibold">{progressPct}%</span>
+                    </div>
+                    <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-violet-100">
+                      <div
+                        className="h-full rounded-full bg-violet-500 transition-all"
+                        style={{ width: `${progressPct}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Next lesson CTA */}
+                  {nextLesson ? (
+                    <Link
+                      href={toLessonPath(nextLesson.id)}
+                      className="ui-focus-ring mt-3 inline-flex w-full min-h-10 items-center justify-center rounded-xl border border-violet-200 bg-violet-50 text-xs font-semibold text-violet-700 hover:bg-violet-100"
+                    >
+                      {t("dashboard_continue_lesson")} →
+                    </Link>
+                  ) : (
+                    <p className="mt-3 text-center text-xs font-semibold text-emerald-600">
+                      ✓ {t("dashboard_module_complete")}
+                    </p>
+                  )}
+                </SoftCard>
+              );
+            })}
+          </div>
+        </section>
       </section>
     </main>
   );

@@ -279,6 +279,36 @@ function main() {
     detail: envSummary.detail,
   });
 
+  const billingMatrixCode = runStep("npm", ["run", "billing:matrix:validate"]);
+  results.push({
+    name: "billing matrix",
+    pass: billingMatrixCode === 0,
+    detail:
+      billingMatrixCode === 0
+        ? "Pricing spec and RevenueCat matrix are aligned."
+        : `Exit code ${billingMatrixCode}.`,
+  });
+
+  const revenueCatBlueprintCode = runStep("npm", ["run", "billing:revenuecat:blueprint:check"]);
+  results.push({
+    name: "rc blueprint drift",
+    pass: revenueCatBlueprintCode === 0,
+    detail:
+      revenueCatBlueprintCode === 0
+        ? "Generated RevenueCat blueprint files are synced to pricing matrix."
+        : `Exit code ${revenueCatBlueprintCode}.`,
+  });
+
+  const apiRateLimitCoverageCode = runStep("npm", ["run", "security:api-rate-limit:check"]);
+  results.push({
+    name: "api abuse guard",
+    pass: apiRateLimitCoverageCode === 0,
+    detail:
+      apiRateLimitCoverageCode === 0
+        ? "High-cost API routes include required rate-limit guards."
+        : `Exit code ${apiRateLimitCoverageCode}.`,
+  });
+
   const consoleLogHits = findConsoleLogOccurrences();
   results.push({
     name: "console.log sweep",

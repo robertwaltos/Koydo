@@ -3,38 +3,52 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Purchases, LOG_LEVEL } from "@revenuecat/purchases-capacitor";
+import { Purchases } from "@revenuecat/purchases-capacitor";
 import { Capacitor } from "@capacitor/core";
-import { getRevenueCatApiKey, RC_ENTITLEMENT_PREMIUM } from "@/lib/billing/revenuecat-config";
+import { initializeRevenueCat } from "@/lib/billing/revenuecat-client";
 import { canUseIAP } from "@/lib/platform/features";
+import {
+  getLanguagePricingSnapshot,
+  type LanguagePlanId,
+} from "@/lib/language-learning/pricing";
+import { hasRevenueCatProEntitlement } from "@/lib/billing/revenuecat-config";
+import {
+  findTypedPackageForLanguagePlanId,
+  formatRevenueCatPackageCadenceLabel,
+} from "@/lib/billing/revenuecat-offerings";
 
 type PlanOption = {
-  id: string;
+  id: LanguagePlanId;
   title: string;
   monthlyEquivalent: string;
   badge?: string;
   description: string;
 };
 
-const PLAN_DISPLAY: PlanOption[] = [
-  {
-    id: "monthly",
-    title: "Monthly",
-    monthlyEquivalent: "Loading...",
-    description: "Billed every month",
-  },
-  {
-    id: "annual",
-    title: "Annual",
-    monthlyEquivalent: "Loading...",
-    badge: "Best Value",
-    description: "Billed once a year",
-  },
+const PAYWALL_PLAN_IDS: LanguagePlanId[] = [
+  "language_plus_conservative",
+  "language_family_conservative",
 ];
+
+const pricingSnapshot = getLanguagePricingSnapshot();
+
+const PLAN_DISPLAY: PlanOption[] = PAYWALL_PLAN_IDS.map((planId) => {
+  const plan = pricingSnapshot.plans.find((candidate) => candidate.id === planId);
+  return {
+    id: planId,
+    title: plan?.name ?? planId,
+    monthlyEquivalent: "Loading...",
+    badge: planId.includes("family") ? "Family" : undefined,
+    description: plan?.billingCadence === "annual" ? "Billed annually" : "Billed monthly",
+  };
+});
+
+const DEFAULT_PLAN_ID: LanguagePlanId =
+  PLAN_DISPLAY[0]?.id ?? "language_plus_conservative";
 
 export default function PaywallPage() {
   const router = useRouter();
-  const [selectedId, setSelectedId] = useState<string>("annual");
+  const [selectedId, setSelectedId] = useState<LanguagePlanId>(DEFAULT_PLAN_ID);
   const [plans, setPlans] = useState<PlanOption[]>(PLAN_DISPLAY);
   const [status, setStatus] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -45,13 +59,11 @@ export default function PaywallPage() {
 
     const init = async () => {
       try {
-        const apiKey = getRevenueCatApiKey();
-        if (!apiKey) {
+        const initialized = await initializeRevenueCat();
+        if (!initialized) {
           setStatus("Billing is not configured on this build.");
           return;
         }
-        await Purchases.setLogLevel({ level: LOG_LEVEL.DEBUG });
-        await Purchases.configure({ apiKey });
 
         const offerings = await Purchases.getOfferings();
         if (!offerings.current) {
@@ -59,24 +71,30 @@ export default function PaywallPage() {
           return;
         }
 
-        const updatedPlans = plans.map((plan) => {
-          const pkg = offerings.current?.availablePackages.find((p) =>
-            plan.id === "annual"
-              ? p.packageType === "ANNUAL"
-              : p.packageType === "MONTHLY",
-          );
-          if (!pkg) return plan;
+        const updatedPlans = PLAN_DISPLAY.map((plan) => {
+          const pkg = findTypedPackageForLanguagePlanId(offerings, plan.id);
+          if (!pkg) {
+            return {
+              ...plan,
+              monthlyEquivalent: "Unavailable",
+              description: "Not available in current offering",
+            };
+          }
           return {
             ...plan,
             monthlyEquivalent: pkg.product.priceString,
-            description:
-              plan.id === "annual"
-                ? `${pkg.product.priceString}/year (billed annually)`
-                : `${pkg.product.priceString}/month`,
+            description: formatRevenueCatPackageCadenceLabel(pkg),
           };
         });
+
         setPlans(updatedPlans);
-        setRcReady(true);
+        const firstAvailablePlan = updatedPlans.find((plan) => plan.monthlyEquivalent !== "Unavailable");
+        if (firstAvailablePlan) {
+          setSelectedId((currentId) =>
+            currentId === firstAvailablePlan.id ? currentId : firstAvailablePlan.id,
+          );
+        }
+        setRcReady(Boolean(firstAvailablePlan));
       } catch (err) {
         console.error("[Paywall] init error", err);
         setStatus("Unable to load pricing. Please try again.");
@@ -84,7 +102,6 @@ export default function PaywallPage() {
     };
 
     void init();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleSubscribe = async () => {
@@ -93,17 +110,13 @@ export default function PaywallPage() {
     setStatus("");
     try {
       const offerings = await Purchases.getOfferings();
-      const pkg = offerings.current?.availablePackages.find((p) =>
-        selectedId === "annual"
-          ? p.packageType === "ANNUAL"
-          : p.packageType === "MONTHLY",
-      );
+      const pkg = findTypedPackageForLanguagePlanId(offerings, selectedId);
       if (!pkg) {
         setStatus("Selected plan not available. Please try again.");
         return;
       }
       const { customerInfo } = await Purchases.purchasePackage({ aPackage: pkg });
-      if (customerInfo.entitlements.active[RC_ENTITLEMENT_PREMIUM]) {
+      if (hasRevenueCatProEntitlement(customerInfo)) {
         router.push("/explore");
       } else {
         setStatus("Purchase completed but entitlement not active yet. Please try restoring.");
@@ -125,7 +138,7 @@ export default function PaywallPage() {
     setStatus("Restoring purchases...");
     try {
       const { customerInfo } = await Purchases.restorePurchases();
-      if (customerInfo.entitlements.active[RC_ENTITLEMENT_PREMIUM]) {
+      if (hasRevenueCatProEntitlement(customerInfo)) {
         router.push("/explore");
       } else {
         setStatus("No active purchases found to restore.");
@@ -172,8 +185,9 @@ export default function PaywallPage() {
           <button
             key={plan.id}
             type="button"
+            disabled={plan.monthlyEquivalent === "Unavailable"}
             onClick={() => setSelectedId(plan.id)}
-            className={`relative w-full rounded-2xl border-2 px-5 py-4 text-left transition-all ${
+            className={`relative w-full rounded-2xl border-2 px-5 py-4 text-left transition-all disabled:cursor-not-allowed disabled:opacity-55 ${
               selectedId === plan.id
                 ? "border-indigo-400 bg-indigo-500/20"
                 : "border-white/20 bg-white/5 hover:border-white/40"

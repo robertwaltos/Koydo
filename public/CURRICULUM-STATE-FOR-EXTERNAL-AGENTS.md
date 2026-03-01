@@ -1,47 +1,84 @@
 # Curriculum State For External AI Agents
 
-Generated: 2026-02-24T04:20:24.800Z
+Generated: 2026-03-01T07:43:42.728Z
 
 ## Current Snapshot
 
-- Modules: 118
-- Lessons: 1654
+- Modules: 259
+- Lessons: 2909
 
 ### Module Coverage By Subject
 
 - Exam Prep: 12
+- Accounting and Finance: 4
 - Advanced Math: 4
-- Science: 6
+- AI & Machine Learning: 1
+- AI and ML: 3
+- AI Workflows: 1
+- Science: 8
 - Arts: 4
 - Astronomy: 4
 - Math: 5
 - Mathematics: 6
 - Biology: 5
+- Biotechnology: 1
+- Business: 44
 - Chemistry: 5
+- Engineering: 7
+- Civil Engineering: 3
+- Computer Science: 3
+- Cloud Computing: 1
 - Coding: 5
+- Computer Architecture: 3
+- Cybersecurity: 4
+- Data Science: 3
+- Digital Marketing: 1
+- Power Systems: 3
+- Trades: 3
+- Electricity: 3
+- Entrepreneurship: 1
 - Farming: 4
 - Financial Literacy: 5
-- General Science: 7
+- Gardening: 1
+- General Science: 6
 - General Relativity: 4
 - Geography: 5
 - Household Management: 4
-- Language Arts: 11
+- HVAC: 3
+- Language Arts: 10
+- Law: 4
+- Operating Systems: 3
+- Medicine: 4
+- Meteorology: 3
+- Circuit Design: 2
+- Microelectronics: 3
+- Music: 6
+- Network Engineering: 1
+- Nursing: 4
+- Philosophy: 1
 - Physics: 5
+- Plumbing: 3
 - Basic Math: 1
+- Reading: 2
 - Social Studies US: 5
 - Social Studies World: 5
 - World History: 1
-- Reading: 1
+- Project Management: 4
+- Psychology: 1
+- Renewable Energy: 3
+- Robotics: 3
+- Social Studies: 1
+- UX Design: 1
 - History Worldwide: 4
 
 ### Module Coverage By Grade Band
 
-- mixed: 80
-- 11-12: 3
+- mixed: 111
+- 11-12: 114
 - 3-5: 3
 - 6-8: 3
 - 9-10: 3
-- preK: 26
+- preK: 25
 
 ## External Source Merge Context
 

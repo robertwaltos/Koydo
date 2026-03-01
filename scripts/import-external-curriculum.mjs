@@ -338,7 +338,7 @@ function extractObjectLiteralForConst(sourceText, constName) {
 
 function evaluateObjectLiteral(objectLiteral, filePath, constName) {
   const context = vm.createContext({ module: { exports: {} }, exports: {} });
-  const script = `module.exports = ${objectLiteral};`;
+  const script = `module.exports = ${String(objectLiteral).replace(/\s+as\s+const\b/g, "")};`;
   new vm.Script(script, { filename: `${filePath}#${constName}` }).runInContext(context);
   return context.module.exports;
 }
@@ -513,6 +513,7 @@ function readCatalogModules() {
     const exportName = exportMatch[1];
     const transformed = source
       .replace(/^import\s+type\s+\{[^}]+\}\s+from\s+"[^"]+";\s*$/gm, "")
+      .replace(/\s+as\s+const\b/g, "")
       .replace(new RegExp(`export const\\s+${exportName}\\s*:\\s*LearningModule\\s*=`, "m"), `const ${exportName} =`)
       .concat(`\nmodule.exports = ${exportName};\n`);
     const context = vm.createContext({ module: { exports: {} }, exports: {} });

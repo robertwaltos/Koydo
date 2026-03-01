@@ -13,6 +13,13 @@
 # testing
 /coverage
 
+# playwright
+/e2e/test-results/
+/e2e/report/
+/playwright-report/
+/blob-report/
+/test-results/
+
 # next.js
 /.next/
 /out/
@@ -46,6 +53,18 @@ public/generated-images/
 
 # Backup files
 *.bak*
+
+# Local accessibility audit output
+a11y-*.txt
+
+# Storybook compiled output
+/storybook-static/
+
+# Debug logs
+debug-storybook.log
+
+# Raw source assets (large originals kept locally)
+public/Grok Assets/
 
 .vercel
 .env*.local

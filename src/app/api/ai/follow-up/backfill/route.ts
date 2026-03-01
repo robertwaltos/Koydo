@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { generateAndStoreFollowupMaterial } from "@/lib/ai/follow-up";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const backfillRequestSchema = z.object({
   limit: z.number().int().min(1).max(20).default(4),
@@ -21,6 +22,17 @@ function isSchemaMissingError(message: string | undefined) {
 
 export async function POST(request: Request) {
   try {
+    const rateLimit = await enforceIpRateLimit(request, "api:ai:follow-up:backfill:post", {
+      max: 8,
+      windowMs: 10 * 60_000,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many backfill requests. Please retry shortly." },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const supabase = await createSupabaseServerClient();
     const {
       data: { user },

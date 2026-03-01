@@ -31,7 +31,7 @@ async function TermsPageContent({
     <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12">
       <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
         <h1 className="text-3xl font-semibold tracking-tight">{t("legal_terms_title")}</h1>
-        <p className="mt-2 text-sm text-zinc-700">
+        <p className="mt-2 text-sm text-foreground">
           {t("legal_terms_subtitle")}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
@@ -43,17 +43,17 @@ async function TermsPageContent({
 
       <SoftCard as="section" className="space-y-3 p-5">
         <h2 className="text-lg font-semibold">{t("legal_terms_section_subscriptions_title")}</h2>
-        <p className="text-sm text-zinc-700">{t("legal_terms_section_subscriptions_body")}</p>
+        <p className="text-sm text-foreground">{t("legal_terms_section_subscriptions_body")}</p>
       </SoftCard>
 
       <SoftCard as="section" className="space-y-3 p-5">
         <h2 className="text-lg font-semibold">{t("legal_terms_section_account_title")}</h2>
-        <p className="text-sm text-zinc-700">{t("legal_terms_section_account_body")}</p>
+        <p className="text-sm text-foreground">{t("legal_terms_section_account_body")}</p>
       </SoftCard>
 
       <SoftCard as="section" className="space-y-3 p-5">
         <h2 className="text-lg font-semibold">{t("legal_terms_section_content_title")}</h2>
-        <p className="text-sm text-zinc-700">{t("legal_terms_section_content_body")}</p>
+        <p className="text-sm text-foreground">{t("legal_terms_section_content_body")}</p>
       </SoftCard>
     </main>
   );

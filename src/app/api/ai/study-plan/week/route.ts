@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getLessonById } from "@/lib/modules";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 type FollowupPack = {
   summary?: string;
@@ -61,8 +62,20 @@ function extractTasksFromPack(pack: FollowupPack | null | undefined) {
   return tasks.slice(0, 8);
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const rateLimit = await enforceIpRateLimit(request, "api:ai:study-plan:week:get", {
+      max: 45,
+      windowMs: 60_000,
+    });
+
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many study-plan requests. Please retry shortly." },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const supabase = await createSupabaseServerClient();
     const {
       data: { user },

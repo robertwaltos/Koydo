@@ -9,10 +9,10 @@ export default function NotFound() {
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center">
       <span className="text-6xl" aria-hidden="true">🔍</span>
-      <h1 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-zinc-100">
+      <h1 className="mt-4 text-2xl font-bold text-zinc-900 dark:text-foreground">
         {t("root_not_found_title")}
       </h1>
-      <p className="mt-2 max-w-md text-sm text-zinc-500 dark:text-zinc-400">
+      <p className="mt-2 max-w-md text-sm text-zinc-500 dark:text-foreground/70">
         {t("root_not_found_message")}
       </p>
       <div className="mt-6 flex gap-3">
@@ -24,7 +24,7 @@ export default function NotFound() {
         </Link>
         <Link
           href="/"
-          className="ui-focus-ring inline-flex items-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-50 dark:border-white/10 dark:bg-slate-900 dark:text-zinc-200"
+          className="ui-focus-ring inline-flex items-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-700 transition-colors hover:bg-surface-muted border-border/40 dark:bg-slate-900 dark:text-foreground/90"
         >
           {t("root_not_found_go_home")}
         </Link>

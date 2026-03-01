@@ -124,7 +124,7 @@ export default function ParentReportsClient() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [t]);
 
   const totals = useMemo(() => {
     if (!payload?.reports?.length) {
@@ -166,7 +166,7 @@ export default function ParentReportsClient() {
           <button
             type="button"
             onClick={() => window.location.reload()}
-            className="ui-focus-ring rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100"
+            className="ui-focus-ring rounded-full border border-zinc-200 bg-surface-muted px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             {t("parent_reports_refresh")}
           </button>
@@ -254,7 +254,7 @@ export default function ParentReportsClient() {
 
 function Metric({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-3">
+    <div className="rounded-xl border border-zinc-200 bg-surface-muted p-3">
       <p className="text-xs uppercase tracking-wide text-zinc-500">{label}</p>
       <p className="mt-1 text-sm font-semibold text-zinc-900">{value}</p>
     </div>

@@ -1,0 +1,265 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#app-main-content"
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - link "Koydo" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e9]
+          - generic [ref=e10]: Koydo
+        - generic [ref=e11]:
+          - button "Search ⌘K" [ref=e12]:
+            - generic [ref=e13]: 🔎
+            - generic [ref=e14]: Search
+            - generic [ref=e15]: ⌘K
+          - link "Sign In" [ref=e16] [cursor=pointer]:
+            - /url: /auth/sign-in
+          - link "Sign Up" [ref=e17] [cursor=pointer]:
+            - /url: /auth/sign-up
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - img "A family walking together on a glowing golden path of learning" [ref=e20]
+        - generic [ref=e24]:
+          - paragraph [ref=e25]: Koydo Explorer
+          - heading "Start with curiosity, not menus." [level=1] [ref=e26]
+          - paragraph [ref=e27]: Tap a picture, hear the prompt, and jump into a lesson - all in one move. Built for curious minds of every age.
+          - generic [ref=e28]:
+            - link "Start Exploring" [ref=e29] [cursor=pointer]:
+              - /url: /explore
+            - button "Choose narrator voice" [ref=e31]:
+              - img [ref=e32]
+              - text: Nova
+      - generic [ref=e36]:
+        - link "Little Explorers" [ref=e37] [cursor=pointer]:
+          - /url: /explore?stage=pre-k
+          - generic [ref=e38]: 🧒
+          - text: Little Explorers
+        - link "First Adventures" [ref=e39] [cursor=pointer]:
+          - /url: /explore?stage=early-elem
+          - generic [ref=e40]: 🌈
+          - text: First Adventures
+        - link "Discovery Lab" [ref=e41] [cursor=pointer]:
+          - /url: /explore?stage=upper-elem
+          - generic [ref=e42]: 🔬
+          - text: Discovery Lab
+        - link "Challenge Zone" [ref=e43] [cursor=pointer]:
+          - /url: /explore?stage=middle
+          - generic [ref=e44]: ⚡
+          - text: Challenge Zone
+        - link "Launchpad" [ref=e45] [cursor=pointer]:
+          - /url: /explore?stage=high
+          - generic [ref=e46]: 🚀
+          - text: Launchpad
+        - link "Mastery Studio" [ref=e47] [cursor=pointer]:
+          - /url: /explore?stage=college
+          - generic [ref=e48]: 🎓
+          - text: Mastery Studio
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - generic [ref=e52]: 📚
+          - generic [ref=e53]: 200+
+          - generic [ref=e54]: Learning Modules
+        - generic [ref=e55]:
+          - generic [ref=e56]: 🎓
+          - generic [ref=e57]: 3–100
+          - generic [ref=e58]: All Ages Welcome
+        - generic [ref=e59]:
+          - generic [ref=e60]: 🌍
+          - generic [ref=e61]: "2"
+          - generic [ref=e62]: Languages
+        - generic [ref=e63]:
+          - generic [ref=e64]: ✨
+          - generic [ref=e65]: 100%
+          - generic [ref=e66]: Free to Start
+      - generic [ref=e67]:
+        - heading "Learning made simple" [level=2] [ref=e68]
+        - paragraph [ref=e69]: Three steps from zero to unstoppable
+        - generic [ref=e70]:
+          - generic [ref=e73]:
+            - generic [ref=e74]: "01"
+            - generic [ref=e75]:
+              - text: 🧭
+              - heading "Pick Your Path" [level=3] [ref=e76]
+              - paragraph [ref=e77]: Choose your age stage and subject — from Pre-K phonics to college calculus. No placement test needed.
+          - generic [ref=e80]:
+            - generic [ref=e81]: "02"
+            - generic [ref=e82]:
+              - text: 🎧
+              - heading "Learn Interactively" [level=3] [ref=e83]
+              - paragraph [ref=e84]: Watch, listen, and do. Every lesson combines video narration, interactive exercises, and instant feedback.
+          - generic [ref=e87]:
+            - generic [ref=e88]: "03"
+            - generic [ref=e89]:
+              - text: 📈
+              - heading "Track Your Progress" [level=3] [ref=e90]
+              - paragraph [ref=e91]: See exactly what you know and what's next. Parents can monitor progress and set goals.
+        - link "Browse all subjects →" [ref=e93] [cursor=pointer]:
+          - /url: /explore
+      - generic [ref=e94]:
+        - heading "Popular Subjects" [level=2] [ref=e95]
+        - paragraph [ref=e96]: Tap a subject to start exploring — interactive modules across every learning area
+        - generic [ref=e98]:
+          - link "🧭 Explore" [ref=e99] [cursor=pointer]:
+            - /url: /explore
+            - generic [ref=e104]: 🧭
+            - generic [ref=e105]: Explore
+          - link "📖 Reading" [ref=e106] [cursor=pointer]:
+            - /url: /modules?subject=Reading
+            - generic [ref=e111]: 📖
+            - generic [ref=e112]: Reading
+          - link "⚛️ Science" [ref=e113] [cursor=pointer]:
+            - /url: /modules?subject=Science
+            - generic [ref=e118]: ⚛️
+            - generic [ref=e119]: Science
+          - link "⏳ History" [ref=e120] [cursor=pointer]:
+            - /url: /modules?subject=History
+            - generic [ref=e125]: ⏳
+            - generic [ref=e126]: History
+          - link "🔢 Math" [ref=e127] [cursor=pointer]:
+            - /url: /modules?subject=Mathematics
+            - generic [ref=e132]: 🔢
+            - generic [ref=e133]: Math
+          - link "💻 Coding" [ref=e134] [cursor=pointer]:
+            - /url: /modules?subject=Computer Science
+            - generic [ref=e139]: 💻
+            - generic [ref=e140]: Coding
+          - link "🏗️ Engineering" [ref=e141] [cursor=pointer]:
+            - /url: /modules?subject=Engineering
+            - generic [ref=e146]: 🏗️
+            - generic [ref=e147]: Engineering
+          - link "💼 Business" [ref=e148] [cursor=pointer]:
+            - /url: /modules?subject=Business
+            - generic [ref=e153]: 💼
+            - generic [ref=e154]: Business
+      - generic [ref=e156]:
+        - generic [ref=e157]:
+          - text: 🎙️
+          - heading "6 AI Voices" [level=3] [ref=e159]
+          - paragraph [ref=e160]: Choose from 6 unique narrator voices. Tap any text to hear it read aloud instantly.
+        - generic [ref=e161]:
+          - text: 🎨
+          - heading "Learn by Doing" [level=3] [ref=e163]
+          - paragraph [ref=e164]: Sort, match, flip cards, and solve quizzes - all with vibrant, tappable visuals.
+        - generic [ref=e165]:
+          - text: 🎓
+          - heading "Pre-K through College" [level=3] [ref=e167]
+          - paragraph [ref=e168]: Six levels of learning - from first shapes and colors to advanced professional skills.
+      - generic [ref=e171]:
+        - paragraph [ref=e172]: Your journey starts here
+        - heading "The path to the stars begins with one lesson." [level=2] [ref=e173]
+        - paragraph [ref=e174]: Free interactive learning for ages 3 to adult — 200+ modules, every subject, every language.
+        - link "Start Exploring Free →" [ref=e175] [cursor=pointer]:
+          - /url: /explore
+      - generic [ref=e176]:
+        - heading "Why Families Choose Koydo" [level=2] [ref=e177]
+        - paragraph [ref=e178]: Built from the ground up to make learning joyful, inclusive, and effective.
+        - generic [ref=e179]:
+          - generic [ref=e180]:
+            - text: 🧠
+            - heading "Adaptive Learning Paths" [level=3] [ref=e182]
+            - paragraph [ref=e183]: Intelligent modules adjust difficulty in real time so every learner stays challenged — never frustrated, never bored.
+          - generic [ref=e184]:
+            - text: 🌍
+            - heading "Learn in Any Language" [level=3] [ref=e186]
+            - paragraph [ref=e187]: Full English and Spanish support with audio narration on every screen — more languages coming soon.
+          - generic [ref=e188]:
+            - text: 📊
+            - heading "Real-Time Progress Tracking" [level=3] [ref=e190]
+            - paragraph [ref=e191]: Parents and educators get detailed dashboards showing skills mastered, time spent, and what to focus on next.
+    - contentinfo [ref=e192]:
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - link "Koydo Koydo" [ref=e195] [cursor=pointer]:
+            - /url: /
+            - img "Koydo" [ref=e197]
+            - generic [ref=e198]: Koydo
+          - paragraph [ref=e199]: Free interactive learning for every age, every language, every dream.
+          - generic [ref=e200]:
+            - link "X / Twitter" [ref=e201] [cursor=pointer]:
+              - /url: https://twitter.com/koydolearn
+              - img [ref=e202]
+            - link "Instagram" [ref=e204] [cursor=pointer]:
+              - /url: https://instagram.com/koydolearn
+              - img [ref=e205]
+            - link "YouTube" [ref=e207] [cursor=pointer]:
+              - /url: https://youtube.com/@koydolearn
+              - img [ref=e208]
+        - generic [ref=e210]:
+          - paragraph [ref=e211]: Platform
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - link "Explore Learning" [ref=e214] [cursor=pointer]:
+                - /url: /explore
+            - listitem [ref=e215]:
+              - link "All Modules" [ref=e216] [cursor=pointer]:
+                - /url: /modules
+            - listitem [ref=e217]:
+              - link "Speaking Lab" [ref=e218] [cursor=pointer]:
+                - /url: /language/speaking-lab
+            - listitem [ref=e219]:
+              - link "Exam Prep" [ref=e220] [cursor=pointer]:
+                - /url: /exam-prep
+            - listitem [ref=e221]:
+              - link "Science Lab" [ref=e222] [cursor=pointer]:
+                - /url: /science-lab
+            - listitem [ref=e223]:
+              - link "Learning Games" [ref=e224] [cursor=pointer]:
+                - /url: /games
+        - generic [ref=e225]:
+          - paragraph [ref=e226]: Learn For
+          - list [ref=e227]:
+            - listitem [ref=e228]:
+              - link "Ages 3–5 (Pre-K)" [ref=e229] [cursor=pointer]:
+                - /url: /explore?stage=pre-k
+            - listitem [ref=e230]:
+              - link "Ages 6–11 (Elementary)" [ref=e231] [cursor=pointer]:
+                - /url: /explore?stage=elementary
+            - listitem [ref=e232]:
+              - link "Ages 12–14 (Middle School)" [ref=e233] [cursor=pointer]:
+                - /url: /explore?stage=middle
+            - listitem [ref=e234]:
+              - link "Ages 15–18 (High School)" [ref=e235] [cursor=pointer]:
+                - /url: /explore?stage=high
+            - listitem [ref=e236]:
+              - link "College & SAT/ACT" [ref=e237] [cursor=pointer]:
+                - /url: /explore?stage=college
+            - listitem [ref=e238]:
+              - link "Adults & Career Skills" [ref=e239] [cursor=pointer]:
+                - /url: /explore?stage=adult
+        - generic [ref=e240]:
+          - paragraph [ref=e241]: Company
+          - list [ref=e242]:
+            - listitem [ref=e243]:
+              - link "Help & Support" [ref=e244] [cursor=pointer]:
+                - /url: /support
+            - listitem [ref=e245]:
+              - link "Privacy Policy" [ref=e246] [cursor=pointer]:
+                - /url: /legal/privacy
+            - listitem [ref=e247]:
+              - link "Terms of Use" [ref=e248] [cursor=pointer]:
+                - /url: /legal/terms
+            - listitem [ref=e249]:
+              - link "Refund Policy" [ref=e250] [cursor=pointer]:
+                - /url: /legal/refunds
+            - listitem [ref=e251]:
+              - link "Create Free Account" [ref=e252] [cursor=pointer]:
+                - /url: /auth/sign-up
+      - generic [ref=e254]:
+        - paragraph [ref=e255]: © 2026 Koydo. Free education for every mind.
+        - generic [ref=e256]:
+          - link "Privacy" [ref=e257] [cursor=pointer]:
+            - /url: /legal/privacy
+          - link "Terms" [ref=e258] [cursor=pointer]:
+            - /url: /legal/terms
+          - link "Refunds" [ref=e259] [cursor=pointer]:
+            - /url: /legal/refunds
+          - link "Support" [ref=e260] [cursor=pointer]:
+            - /url: /support
+  - button "Open Next.js Dev Tools" [ref=e266] [cursor=pointer]:
+    - img [ref=e267]
+  - alert [ref=e270]
+```

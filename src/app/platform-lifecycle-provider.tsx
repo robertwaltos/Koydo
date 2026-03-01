@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { initAppLifecycle } from "@/lib/platform/lifecycle";
 import { initNetworkMonitor } from "@/lib/platform/network-monitor";
+import { initializeRevenueCat } from "@/lib/billing/revenuecat-client";
 
 function redirectToExpiredSignIn() {
   if (typeof window === "undefined") return;
@@ -34,6 +35,9 @@ export default function PlatformLifecycleProvider({ children }: { children: Reac
     let networkCleanup: (() => void) | null = null;
     initNetworkMonitor().then((cleanup) => {
       networkCleanup = cleanup;
+    });
+    initializeRevenueCat().catch((error) => {
+      console.warn("[RevenueCat] Initialization skipped or failed during app bootstrap.", error);
     });
 
     return () => {

@@ -7,6 +7,7 @@ import {
 } from "@/lib/language-learning";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const requestSchema = z.object({
   monthKey: z
@@ -17,6 +18,18 @@ const requestSchema = z.object({
 });
 
 export async function POST(request: Request) {
+  const rateLimit = await enforceIpRateLimit(request, "api:reconciliation:run:post", {
+    max: 6,
+    windowMs: 60 * 60 * 1_000,
+  });
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many reconciliation requests. Please retry later." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const auth = await requireAdminForApi();
   if (!auth.isAuthorized) {
     return auth.response;
@@ -60,7 +73,19 @@ export async function POST(request: Request) {
   }
 }
 
-export async function GET() {
+export async function GET(request: Request) {
+  const rateLimit = await enforceIpRateLimit(request, "api:reconciliation:run:get", {
+    max: 60,
+    windowMs: 60_000,
+  });
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests. Please retry shortly." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const auth = await requireAdminForApi();
   if (!auth.isAuthorized) {
     return auth.response;

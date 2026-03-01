@@ -239,7 +239,7 @@ export default function TestingExamClient({ examId, initialMode }: TestingExamCl
             <ProgressChip label="Progress" value={`${Math.min(currentQuestionIndex + 1, totalQuestions)}/${totalQuestions}`} tone="info" />
             <ProgressChip label="Answered" value={`${answeredCount}/${totalQuestions}`} tone="warning" />
           </div>
-          <p className="rounded-full border border-zinc-300 bg-zinc-50 px-3 py-1 text-sm font-bold text-zinc-800">
+          <p className="rounded-full border border-zinc-300 bg-surface-muted px-3 py-1 text-sm font-bold text-zinc-800">
             {formatSeconds(remainingSeconds)}
           </p>
         </div>
@@ -270,7 +270,7 @@ export default function TestingExamClient({ examId, initialMode }: TestingExamCl
                   className={`ui-focus-ring flex min-h-11 w-full items-start rounded-xl border px-4 py-3 text-left text-sm font-semibold transition-colors ${
                     selected
                       ? "border-emerald-300 bg-emerald-50 text-emerald-900"
-                      : "border-zinc-200 bg-white text-zinc-800 hover:bg-zinc-50"
+                      : "border-zinc-200 bg-white text-zinc-800 hover:bg-surface-muted"
                   }`}
                 >
                   <span className="mr-2 text-zinc-500">{String.fromCharCode(65 + index)}.</span>

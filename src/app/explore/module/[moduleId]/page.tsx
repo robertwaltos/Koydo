@@ -14,7 +14,6 @@ import {
 import { toExploreModulePath } from "@/lib/routing/paths";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import SpeakButton from "../../_components/speak-button";
-import AutoNarrator from "../../_components/auto-narrator";
 import ExplorerViewTracker from "../../_components/explorer-view-tracker";
 import ModuleLessonLink from "../../_components/module-lesson-link";
 import ResumeLessonLink from "../../_components/resume-lesson-link";
@@ -201,9 +200,6 @@ async function ExploreModulePageContent({
 
   return (
     <div className="flex flex-col">
-      <AutoNarrator
-        text={`Welcome to ${learningModule.title}. Tap a lesson to begin.`}
-      />
       <ExplorerViewTracker
         surface="module"
         topicId={displayTopic?.id}

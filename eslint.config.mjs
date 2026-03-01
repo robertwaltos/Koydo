@@ -15,6 +15,7 @@ const eslintConfig = defineConfig([
     "android/**",
     "ios/**",
     "scripts/**",
+    "storybook-static/**",
     "next-env.d.ts",
     "External_AI_Agents/**",
   ]),

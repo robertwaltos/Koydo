@@ -14,6 +14,9 @@ const serverEnvSchema = z.object({
   STRIPE_WEBHOOK_SECRET: z.string().min(1, "STRIPE_WEBHOOK_SECRET is required for billing"),
   STRIPE_PRICE_ID: z.string().optional(),
   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().optional(),
+  NEXT_PUBLIC_REVENUECAT_API_KEY: z.string().optional(),
+  NEXT_PUBLIC_REVENUECAT_APPLE_KEY: z.string().optional(),
+  NEXT_PUBLIC_REVENUECAT_GOOGLE_KEY: z.string().optional(),
   DEEPL_API_KEY: z.string().optional(),
   GOOGLE_TRANSLATE_API_KEY: z.string().optional(),
   LANGUAGE_TRANSLATION_PROVIDER: z
@@ -57,6 +60,19 @@ const serverEnvSchema = z.object({
     .enum(["true", "false"])
     .default("true")
     .transform((value) => value === "true"),
+  // ── TTS (Text-to-Speech) ──
+  TTS_PRIMARY_PROVIDER: z
+    .enum(["openai", "elevenlabs", "browser"])
+    .default("openai"),
+  TTS_FALLBACK_PROVIDER: z
+    .enum(["openai", "elevenlabs", "browser"])
+    .default("elevenlabs"),
+  ELEVENLABS_API_KEY: z.string().optional(),
+  TTS_OPENAI_MODEL: z.string().default("tts-1"),
+  TTS_OPENAI_DEFAULT_VOICE: z.string().default("nova"),
+  TTS_ELEVENLABS_MODEL: z.string().default("eleven_multilingual_v2"),
+  TTS_ELEVENLABS_DEFAULT_VOICE: z.string().default("21m00Tcm4TlvDq8ikWAM"),
+  TTS_CACHE_BUCKET: z.string().default("tts-audio"),
 });
 
 const publicEnvSchema = z.object({
@@ -66,6 +82,9 @@ const publicEnvSchema = z.object({
   NEXT_PUBLIC_MIXPANEL_TOKEN: z.string().optional(),
   NEXT_PUBLIC_BILLING_PROVIDER_MODE: z.enum(["stripe_external", "app_store_iap"]).catch("stripe_external"),
   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().optional(),
+  NEXT_PUBLIC_REVENUECAT_API_KEY: z.string().optional(),
+  NEXT_PUBLIC_REVENUECAT_APPLE_KEY: z.string().optional(),
+  NEXT_PUBLIC_REVENUECAT_GOOGLE_KEY: z.string().optional(),
   NEXT_PUBLIC_OAUTH_GOOGLE_ENABLED: booleanFlagSchema,
   NEXT_PUBLIC_OAUTH_FACEBOOK_ENABLED: booleanFlagSchema,
   NEXT_PUBLIC_OAUTH_APPLE_ENABLED: booleanFlagSchema,

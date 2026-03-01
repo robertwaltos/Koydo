@@ -1,6 +1,6 @@
 
 import { verifyProfileOwnership } from "@/lib/profiles/server-profile";
-import { EducationStage, getAllEducationStages, getEducationStage } from "@/lib/explorer/scenes";
+import { getAllEducationStages, getEducationStage } from "@/lib/explorer/scenes";
 import { ACTIVE_PROFILE_COOKIE_KEY } from "@/lib/profiles/active-profile";
 import StageLinkCard from "./_components/stage-link-card";
 import { Suspense } from "react";
@@ -8,10 +8,11 @@ import { cookies } from "next/headers";
 import type { Metadata } from "next";
 import { isSupportedLocale, type Locale, translate } from "@/lib/i18n/translations";
 import SpeakButton from "./_components/speak-button";
-import AutoNarrator from "./_components/auto-narrator";
+import VoicePicker from "./_components/voice-picker";
 import ExplorerViewTracker from "./_components/explorer-view-tracker";
 import StageModuleGrid from "./_components/stage-module-grid";
 import UpgradeBanner from "./_components/upgrade-banner";
+import ContextualBreadcrumbs from "@/app/components/contextual-breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Explore Learning Levels",
@@ -68,49 +69,42 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
 
   return (
     <div className="flex min-h-[calc(100vh-52px)] flex-col">
-      <AutoNarrator text={t("explore_auto_narration_text")} />
       <ExplorerViewTracker surface="lobby" />
 
-      <header className="relative overflow-hidden px-4 pb-8 pt-10 text-center sm:pb-10 sm:pt-14">
-        {/* ... header content ... */}
+      <header className="relative overflow-hidden px-4 pb-6 pt-8 text-center sm:pb-8 sm:pt-10">
         <div
           className="absolute inset-0 opacity-35"
           style={{
             background: `
               radial-gradient(ellipse at 20% 50%, #a7f3d0 0%, transparent 50%),
               radial-gradient(ellipse at 80% 20%, #c4b5fd 0%, transparent 50%),
-              radial-gradient(ellipse at 50% 80%, #fde68a 0%, transparent 50%),
-              radial-gradient(ellipse at 10% 90%, #bfdbfe 0%, transparent 40%)
+              radial-gradient(ellipse at 50% 80%, #fde68a 0%, transparent 50%)
             `,
           }}
           aria-hidden="true"
         />
 
-        {/* Floating stage badges */}
-        <div className="relative mx-auto mb-5 flex items-center justify-center gap-5" aria-hidden="true">
-          {stages.map((s, i) => (
-            <span
-              key={s.id}
-              className="explore-float text-3xl sm:text-4xl"
-              style={{ animationDelay: `${i * 350}ms` }}
-            >
-              {s.badge}
-            </span>
-          ))}
-        </div>
+        <ContextualBreadcrumbs
+          className="relative mb-3 inline-flex rounded-full border border-zinc-200 bg-white/80 px-3 py-1 backdrop-blur-sm"
+          items={[
+            { label: "Dashboard", href: "/dashboard" },
+            { label: t("explore_hero_title") },
+          ]}
+        />
 
-        <h1 className="explore-copy-heavy ui-type-display-xl relative text-zinc-900">
+        <h1 className="relative text-3xl font-black tracking-tight text-zinc-900 dark:text-foreground sm:text-4xl">
           {t("explore_hero_title")}
         </h1>
-        <p className="explore-copy-heavy ui-type-body-lg relative mt-2 text-zinc-600">
+        <p className="relative mt-2 text-sm text-zinc-600 dark:text-foreground/70">
           {t("explore_hero_subtitle")}
         </p>
 
         <div className="relative mt-3 flex items-center justify-center gap-3">
-          <span className="explore-copy-heavy ui-type-caption inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white/80 px-3 py-1 font-bold text-zinc-600 backdrop-blur-sm">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white/80 px-3 py-1 text-xs font-bold text-zinc-600 backdrop-blur-sm">
             {t("explore_chip_span")}
           </span>
           <SpeakButton text={t("explore_auto_narration_text")} label={t("common_hear_it")} />
+          <VoicePicker />
         </div>
       </header>
 
@@ -118,7 +112,7 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
 
       <section
         aria-label={t("explore_levels_aria")}
-        className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 gap-5 px-4 pb-10 sm:grid-cols-2 sm:gap-6 sm:px-6 lg:grid-cols-3"
+        className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 gap-5 px-4 pb-10 sm:grid-cols-2 sm:gap-6 sm:px-6 md:grid-cols-2 lg:grid-cols-3"
       >
         {stages.map((stage, index) => (
           <StageLinkCard

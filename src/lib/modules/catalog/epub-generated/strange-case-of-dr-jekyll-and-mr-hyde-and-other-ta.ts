@@ -1,500 +1,480 @@
 import type { LearningModule } from "@/lib/modules/types";
 
 // High-quality curriculum module derived from EPUB.
-// Source: G:\My Drive\15_E-BOOKS\file012251.epub
+// Source: G:/My Drive/15_E-BOOKS/file012251.epub
 // Author: Robert Louis Stevenson  |  Subject: Literature/Philosophy
 
 export const StrangeCaseOfDrJekyllAndMrHydeAndOtherTaModule: LearningModule = {
   id: "strange-case-of-dr-jekyll-and-mr-hyde-and-other-ta",
   title: "Strange Case of Dr Jekyll and Mr Hyde and Other Tales",
   description:
-    "A literary and philosophical study of Robert Louis Stevenson's masterwork exploring the duality of human nature. This module analyses the novella's narrative structure, its Victorian social critique, the science of doubling and dissociation, and the ethical questions raised by Jekyll's experiment — alongside selected companion tales that deepen Stevenson's thematic concerns.",
+    "A comprehensive educational module derived from Strange Case of Dr Jekyll and Mr Hyde and Other Tales by Robert Louis Stevenson. This course provides structured video lessons and interactive quizzes exploring the key themes, arguments, and insights of the work.",
   subject: "Literature/Philosophy",
-  tags: ["epub-derived", "curriculum", "interactive", "literature", "philosophy", "victorian", "gothic", "duality"],
+  tags: ["epub-derived", "curriculum", "interactive", "literature", "philosophy"],
   minAge: 18,
   maxAge: 99,
   version: "2.0.0",
   learningObjectives: [
-    "Analyse the narrative structure of Jekyll and Hyde and its use of multiple perspectives",
-    "Explain the theme of duality and the doubling motif in Victorian literature",
-    "Evaluate Stevenson's critique of Victorian respectability and repression",
-    "Assess the scientific and philosophical context of Jekyll's experiment",
-    "Compare Hyde as a literary figure with contemporary theories of the unconscious",
-    "Examine the role of secrecy, silence, and confession in the novella",
-    "Apply close reading skills to key passages and companion tales",
+    "Understand and critically analyze the concepts related to table of contents from the pages of the strange case of dr",
+    "Understand and critically analyze the concepts related to from the pages of the strange case of dr",
+    "Understand and critically analyze the concepts related to published by barnes & noble books 122 fifth avenue new york,",
+    "Understand and critically analyze the concepts related to robert louis stevenson the name robert louis stevenson is sy",
+    "Understand and critically analyze the concepts related to the world of robert louis stevenson and the strange case of",
+    "Understand and critically analyze the concepts related to introduction robert louis stevenson’s novella the strange ca",
+    "Understand and critically analyze the concepts related to story of the door mr",
   ],
   lessons: [
-
     /* ─────────────────────────────────────────────────
-       L01  Narrative Structure and the Art of Concealment
+       L01  Table of Contents From the Pages of The Strange Case of Dr
     ───────────────────────────────────────────────── */
     {
       id: "jh-l01",
-      title: "Narrative Structure and the Art of Concealment",
+      title: "Table of Contents From the Pages of The Strange Case of Dr",
       type: "video",
       duration: 12,
       objectives: [
-        "Describe the novella's multi-perspective narrative structure",
-        "Explain how Stevenson uses delayed revelation to build suspense",
-        "Identify the significance of the final two chapters as confessional documents",
+        "Examine the key ideas and arguments related to table of contents from the pages of the strange case of dr",
+        "Examine the key ideas and arguments related to from the pages of the strange case of dr",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "jh-l01-c1",
-          title: "A Story Told in Fragments",
+          title: "Table of Contents From the Pages of The Strange Case of Dr",
           content:
-            "The Strange Case of Dr Jekyll and Mr Hyde is not narrated in a single continuous voice but assembled from multiple perspectives, each offering a partial view of a mystery that is only fully disclosed in the final two chapters. The first eight chapters are dominated by the point of view of Mr Utterson, Jekyll's lawyer and friend, who investigates the disturbing connection between the respectable Dr Jekyll and the repulsive Mr Hyde. Utterson is a model Victorian gentleman — discreet, loyal, rigidly honourable — and his investigative perspective mirrors the reader's position: both are trying to understand a scandalous relationship that the parties involved refuse to explain. The novella's structural genius lies in Stevenson's decision to withhold the central secret (that Jekyll and Hyde are the same person) until the final confessions, forcing the reader to experience the bafflement and mounting dread that Utterson himself feels. This structure transforms what could have been a straightforward horror story into a sophisticated study of knowledge, secrecy, and the limits of rational investigation.",
+            "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRANCIS VILLON The Suicide Club STORY OF THE YOUNG MAN WITH THE CREAM TARTS STORY OF THE PHYSICIAN AND THE SARATOGA TRUNK THE ADVENTURE OF THE HANSOM CAB Thrawn Janet THRAWN JANET The Body-Snatcher THE BODY-SNA TCHER Markheim MARKHEIM Endnotes Inspired by The Strange Case of Dr. Jekyll and Mr. Hyde and Other Stories Comments Questions For Further Reading",
         },
         {
           id: "jh-l01-c2",
-          title: "Dr Lanyon's Narrative and Dr Jekyll's Statement",
+          title: "From the Pages of The Strange Case of Dr",
           content:
-            "The novella's climax is delivered through two written documents read by Utterson after Jekyll's death. Dr Lanyon's narrative — a letter describing the night Lanyon witnessed Hyde's transformation back into Jekyll — is the first revelation. Lanyon is a conventional man of science whose worldview cannot accommodate what he has seen; the shock literally kills him. His narrative represents the failure of Victorian rationalism to contain the irrational. Jekyll's 'Full Statement of the Case,' the final chapter, then provides the complete explanation: his experiments with a mysterious salt that separated the good and evil components of his personality into distinct physical bodies. Crucially, Jekyll writes his confession as a dying man who has lost the ability to control his transformations. The statement is both explanation and testimony — a scientific notebook and a confession booth — and its tone shifts between clinical detachment and desperate self-justification. Stevenson's structural decision to place this confession last ensures that the reader's understanding reconstructs the entire preceding narrative retroactively, transforming every previous scene.",
+            "From the Pages of The Strange Case of Dr. Jekyll and Mr. Hyde and Other Stories “You must suffer me to go my own dark way. I have brought on myself a punishment and a danger that I cannot name. If I am the chief of sinners, I am the chief of sufferers also. I could not think that this earth contained a place for sufferings and terrors so unmanning.” (from “The Strange Case of Dr. Jekyll and Mr. Hyde,” page 36) All things therefore seemed to point to this; that I was slowly losing hold of my original and better self, and becoming slowly incorporated with my second and worse. (from “The Strange Case of Dr. Jekyll and Mr.",
         },
         {
           id: "jh-l01-c3",
-          title: "The Detective Narrative Inverted",
+          title: "Deeper Analysis: Table of Contents From the Pages of The Strange Case of Dr",
           content:
-            "Jekyll and Hyde is often classified alongside detective fiction — it appeared two years after the first Sherlock Holmes story — but Stevenson inverts the detective formula. In a conventional detection narrative, the investigator (the rational mind) uncovers the truth and restores order. Utterson investigates, but his investigation fails: he never deduces the truth; he receives it passively through documents left for him. The mystery is not solved by reason but disclosed by confession. Furthermore, the truth, once known, does not restore order — it destroys it. The revelation that a respectable gentleman of science was simultaneously a murderer and a moral monster is not a problem that can be fixed by arresting a criminal; it exposes a terrifying truth about human nature itself. Stevenson's inversion suggests that some truths are not amenable to the detective's rational method — that the deepest mysteries of human identity resist orderly investigation and demand, instead, the intimacy and vulnerability of self-disclosure.",
+            "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRANCIS VILLON The Suicide Club STORY OF THE YOUNG MAN WITH THE CREAM TARTS STORY OF THE PHYSICIAN AND THE SARATOGA TRUNK THE ADVENTURE OF THE HANSOM CAB Thrawn Janet THRAWN JANET The Body-Snatcher THE BODY-SNA TCHER Markheim MARKHEIM Endnotes Inspired by The Strange Case of Dr. Jekyll and Mr. Hyde and Other Stories Comments Questions For Further Reading",
         },
       ],
       flashcards: [
         {
           id: "jh-l01-f1",
-          front: "Multi-perspective structure",
+          front: "Table of Contents From the Pages of The Strange Case of Dr",
           back:
-            "The novella is assembled from fragments — Utterson's investigation, Lanyon's letter, Jekyll's confession — each offering a partial view. The full truth is withheld until the final two written documents.",
+            "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRANCIS VILLON The Suicide Club STORY OF THE YOUNG MAN WITH THE CREAM TARTS STORY OF...",
         },
         {
           id: "jh-l01-f2",
-          front: "Utterson as investigator",
+          front: "From the Pages of The Strange Case of Dr",
           back:
-            "Jekyll's lawyer mirrors the reader: a respectable Victorian gentleman trying to rationally investigate a scandalous relationship that resists rational explanation. His investigation ultimately fails — he receives truth via confession, not deduction.",
+            "Hyde,” page 70) “Now you know me as well as I know myself: a fool, but consistent in his folly; and, as I will ask you to believe, neither a whimperer nor a coward.” (from “The Sui...",
         },
         {
           id: "jh-l01-f3",
-          front: "Lanyon's narrative",
+          front: "Key concept: Table of Contents From the Pages of The Strange Case of D",
           back:
-            "Dr Lanyon witnesses Hyde's transformation back into Jekyll and dies from the shock — representing the failure of conventional Victorian rationalism to contain the irrational.",
+            "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRANCIS VILLON The Suicide Club STORY OF THE YOUNG MAN WITH THE CREAM TARTS STORY OF...",
         },
         {
           id: "jh-l01-f4",
-          front: "Inversion of the detective formula",
+          front: "Key concept: From the Pages of The Strange Case of Dr",
           back:
-            "Unlike conventional detective fiction, the truth in Jekyll and Hyde is not discovered through reason but disclosed through confession — and instead of restoring order, the truth reveals a terrifying fact about human nature.",
+            "Hyde,” page 70) “Now you know me as well as I know myself: a fool, but consistent in his folly; and, as I will ask you to believe, neither a whimperer nor a coward.” (from “The Sui...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L02  Duality, Doubling, and the Victorian Self
+       L02  Published by Barnes & Noble Books 122 Fifth Avenue New York,
     ───────────────────────────────────────────────── */
     {
       id: "jh-l02",
-      title: "Duality, Doubling, and the Victorian Self",
+      title: "Published by Barnes & Noble Books 122 Fifth Avenue New York,",
       type: "video",
-      duration: 13,
+      duration: 12,
       objectives: [
-        "Explain the concept of the double (Doppelgänger) in Gothic literature",
-        "Analyse how Jekyll's experiment embodies Victorian anxieties about respectability",
-        "Evaluate the relationship between repression and the emergence of Hyde",
+        "Examine the key ideas and arguments related to published by barnes & noble books 122 fifth avenue new york,",
+        "Examine the key ideas and arguments related to robert louis stevenson the name robert louis stevenson is sy",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "jh-l02-c1",
-          title: "The Doppelgänger Tradition",
+          title: "Published by Barnes & Noble Books 122 Fifth Avenue New York,",
           content:
-            "The figure of the double — the Doppelgänger — is one of the central motifs of Gothic and Romantic literature. From E. T. A. Hoffmann's 'The Sandman' to Dostoevsky's The Double to Poe's 'William Wilson,' the literary double represents the uncanny experience of encountering an Other who is also the Self — a second self that embodies suppressed desires, forbidden impulses, or disowned aspects of identity. Stevenson's Hyde belongs squarely in this tradition but gives it a new scientific and ethical dimension. Unlike earlier doubles, who appear as mysterious external figures, Hyde is deliberately created by Jekyll through pharmacological experimentation. The double is not a supernatural visitation but a technological product — a consequence of the protagonist's own will and agency. This innovation makes Jekyll morally responsible for Hyde in a way that earlier doubled characters are not responsible for their Doppelgängers, transforming the double from a symbol of fate into a symbol of choice and its consequences.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
         {
           id: "jh-l02-c2",
-          title: "Victorian Respectability and Its Discontents",
+          title: "Robert Louis Stevenson The name Robert Louis Stevenson is sy",
           content:
-            "The novella is set in and shaped by the culture of late Victorian London — a society obsessed with respectability, propriety, and the rigid separation of public and private life. Jekyll is a man of impeccable public reputation: a doctor, a philanthropist, a host of elegant dinner parties. But privately he harbours desires that he cannot reconcile with his public identity — desires he describes as 'undignified' rather than criminal, suggesting that the Victorian code of respectability demands not merely moral behaviour but a certain performance of moral seriousness that leaves no room for ordinary human pleasures. Jekyll's experiment is motivated not by a desire for evil but by the impossibility of being both respectable and fully alive within Victorian society. He wants to separate his two natures so that each can express itself without compromising the other. The tragedy is that this separation, far from resolving the conflict, radicalises it: freed from the constraint of respectability, Hyde becomes progressively more violent, while Jekyll becomes progressively more hypocritical, using his public reputation to conceal Hyde's crimes.",
+            "Robert Louis Stevenson The name Robert Louis Stevenson is synonymous with adventure, romance, and the exotic—qualities that characterized the author’s life as well as his fiction. Born in Edinburgh on November 13, 1850, Stevenson contracted in his early years what was probably tuberculosis, a condition that would cause repeated bouts of illness throughout his life. But frequent confinement to the sickbed did not stifle the child’s imagination. The young boy wrote tales based on biblical passages and Scottish history and soon gained a reputation as a storyteller. In 1867 Stevenson enrolled in Edinburgh University. His family expected that he would join the distinguished line of Stevenson engineers; instead he chose to study the law.",
         },
         {
           id: "jh-l02-c3",
-          title: "Repression and the Return of the Repressed",
+          title: "Deeper Analysis: Published by Barnes & Noble Books 122 Fifth Avenue New York,",
           content:
-            "Stevenson's novella anticipates Freud's theory of repression — published over a decade later — with remarkable precision. Jekyll represses his 'lower' impulses in order to maintain his 'higher' identity. But repression does not eliminate the repressed impulses; it merely pushes them underground, where they accumulate energy and eventually return in distorted, violent form. Hyde is the return of Jekyll's repressed self — and crucially, Hyde grows stronger over time. The longer Jekyll denies his other nature, the more powerful and autonomous Hyde becomes, until eventually Hyde erupts spontaneously without the transforming salt. This trajectory embodies a psychological insight that Freud would later formalise: what is denied conscious expression does not disappear but finds indirect, often destructive outlets. The novella suggests that the Victorian project of rigidly separating the self into respectable and disreputable components is not merely difficult but dangerous — that the attempt to achieve moral purity through repression produces a monster worse than the original impulses it was designed to contain.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
       ],
       flashcards: [
         {
           id: "jh-l02-f1",
-          front: "The Doppelgänger tradition",
+          front: "Published by Barnes & Noble Books 122 Fifth Avenue New York,",
           back:
-            "Hyde belongs to the Gothic tradition of the literary double, but Stevenson innovates by making the double a deliberate technological creation — a product of will and choice, not fate or supernatural visitation.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "jh-l02-f2",
-          front: "Victorian respectability and Jekyll's motivation",
+          front: "Robert Louis Stevenson The name Robert Louis Stevenson is sy",
           back:
-            "Jekyll's experiment stems not from a desire for evil but from the impossibility of being both respectable and fully human within Victorian society. He wants to separate his two natures so each can express itself freely.",
+            "But conventional study was, he later claimed, the farthest thing from his mind.",
         },
         {
           id: "jh-l02-f3",
-          front: "Hyde's progressive empowerment",
+          front: "Key concept: Published by Barnes & Noble Books 122 Fifth Avenue New Yo",
           back:
-            "Hyde grows stronger over time as Jekyll's repression intensifies — eventually erupting spontaneously. Stevenson anticipates Freud: denied impulses do not disappear but accumulate energy and return in destructive form.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "jh-l02-f4",
-          front: "Repression produces the monster",
+          front: "Key concept: Robert Louis Stevenson The name Robert Louis Stevenson is",
           back:
-            "The novella argues that rigidly separating the self into respectable and disreputable parts does not achieve moral purity but creates a destructive Other — the attempt at purity generates the very evil it was meant to prevent.",
+            "While in France Stevenson fell in love with Fanny Osbourne, a married American woman ten years his senior.",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L03  Science, Ethics, and the Limits of Knowledge
+       L03  The World of Robert Louis Stevenson and The Strange Case of
     ───────────────────────────────────────────────── */
     {
       id: "jh-l03",
-      title: "Science, Ethics, and the Limits of Knowledge",
+      title: "The World of Robert Louis Stevenson and The Strange Case of",
       type: "video",
       duration: 12,
       objectives: [
-        "Assess Jekyll's experiment as a critique of unregulated scientific ambition",
-        "Analyse the ethical failure at the heart of Jekyll's project",
-        "Connect Stevenson's concerns to contemporary debates about biotechnology and enhancement",
+        "Examine the key ideas and arguments related to the world of robert louis stevenson and the strange case of",
+        "Examine the key ideas and arguments related to introduction robert louis stevenson’s novella the strange ca",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "jh-l03-c1",
-          title: "Jekyll as Promethean Scientist",
+          title: "The World of Robert Louis Stevenson and The Strange Case of",
           content:
-            "Jekyll belongs to a literary lineage of scientists who transgress the boundaries of legitimate knowledge: Victor Frankenstein, Faust, Rappaccini. Like them, he is driven by a conviction that human nature can be improved through technical intervention — and like them, he discovers that the intervention produces consequences he cannot control. Jekyll's specific innovation is pharmacological: a powder that dissolves the bond between the higher and lower elements of personality, allowing each to assume a separate physical form. The scientific details are deliberately vague — Stevenson is writing a moral fable, not science fiction — but the underlying premise is clear: Jekyll treats human identity as a technical problem that can be solved by chemical manipulation. The fundamental error is not that his chemistry fails (it works exactly as intended) but that his ethical reasoning fails: he assumes that separating good from evil in a personality will leave the good intact and merely quarantine the evil. In reality, the separation destroys the moral tension that makes ethical life possible.",
+            "The romantic, often sickly young man delights his professors but takes his formal studies lightly. Instead he fraternizes with the citizens of Ed inburgh and spends time imitating the writing style of Michel de Montaigne, William Hazlitt, and Daniel De foe. 1871 To his father’s dismay, Stevenson leaves his engineering studies to pursue a law degree. He continues to develop his true interest, writing.",
         },
         {
           id: "jh-l03-c2",
-          title: "The Ethical Failure of the Experiment",
+          title: "Introduction Robert Louis Stevenson’s novella The Strange Ca",
           content:
-            "Jekyll's confession reveals a subtle but devastating ethical failure. He does not create Hyde in order to do evil; he creates Hyde in order to do evil without consequences — to enjoy forbidden pleasures while maintaining his respectable identity. The experiment is fundamentally dishonest: it seeks to evade moral responsibility rather than to understand or improve human nature. Jekyll wants the benefits of virtue (reputation, social standing, self-regard) without paying the price of virtue (self-restraint, renunciation of pleasure). This is not scientific hubris in the usual sense — an overestimation of one's power — but a moral failure: the refusal to accept the conditions of ethical selfhood. Human beings are integrated wholes; their capacity for good is inseparable from their capacity for evil. Jekyll's attempt to split this unity does not produce a good man and an evil man but a hypocrite and a monster, each parasitic on the other.",
+            "Hyde was so terrifying that he had to be kept chained in a boxcar on the way to the theater. Though the text of the adaptation, by playwright Thomas Russell Sullivan, would seem dated and melodramatic to modem readers—as does the trick photograph in which Mansfield’s Hyde crouches behind his Jekyll, ready to spring—the actor’s performance brought to life for his contemporaries all the most terrifying aspects of Stevenson’s story. First acted at the Boston Museum on May 9, 1887, as Mansfield’s biographer Paul Wilstach recounts, Jekyll and Hyde had immensely powerful effects on its audience: “Strong men shuddered and women fainted and were carried out of the theatre.... People went away from ‘Dr. Jekyll and Mr. Hyde’ afraid to enter their houses alone.",
         },
         {
           id: "jh-l03-c3",
-          title: "Contemporary Resonances",
+          title: "Deeper Analysis: The World of Robert Louis Stevenson and The Strange Case of",
           content:
-            "Stevenson's fable resonates powerfully with contemporary anxieties about biotechnology, pharmacology, and human enhancement. The desire to modulate personality through chemical intervention — to take a pill that makes you more confident, less anxious, more productive, more sexually responsive — echoes Jekyll's project of technical self-improvement. The ethical questions are strikingly similar: if we can chemically separate our 'productive' from our 'unproductive' selves, should we? What is lost when we treat personality as a set of parameters to be optimised? Stevenson suggests that integrated selfhood — the coexistence of conflicting impulses within a single responsible agent — is not a problem to be solved but a condition of moral maturity. The desire for moral purity through technical intervention is itself a form of moral immaturity: a refusal to accept the ambiguity, conflict, and compromise that constitute genuine ethical life. Jekyll and Hyde remains relevant because the temptation it dramatises — the desire to be good without the discipline of being whole — is a permanent feature of the human condition.",
+            "The romantic, often sickly young man delights his professors but takes his formal studies lightly. Instead he fraternizes with the citizens of Ed inburgh and spends time imitating the writing style of Michel de Montaigne, William Hazlitt, and Daniel De foe. 1871 To his father’s dismay, Stevenson leaves his engineering studies to pursue a law degree. He continues to develop his true interest, writing.",
         },
       ],
       flashcards: [
         {
           id: "jh-l03-f1",
-          front: "Jekyll as Promethean scientist",
+          front: "The World of Robert Louis Stevenson and The Strange Case of",
           back:
-            "Jekyll treats human identity as a technical problem solvable by chemistry. His error is not scientific (the powder works) but ethical: he assumes separating good and evil will quarantine evil, but instead destroys the moral tension that makes ethical life possible.",
+            "The romantic, often sickly young man delights his professors but takes his formal studies lightly.",
         },
         {
           id: "jh-l03-f2",
-          front: "The fundamental dishonesty",
+          front: "Introduction Robert Louis Stevenson’s novella The Strange Ca",
           back:
-            "Jekyll creates Hyde not to do evil but to do evil without consequences — to enjoy forbidden pleasures while maintaining respectability. The experiment evades moral responsibility rather than improving human nature.",
+            "They feared to sleep in darkened rooms.",
         },
         {
           id: "jh-l03-f3",
-          front: "Integrated selfhood",
+          front: "Key concept: The World of Robert Louis Stevenson and The Strange Case",
           back:
-            "Stevenson argues that the coexistence of conflicting impulses within a single agent is not a problem to be solved but a condition of moral maturity. Splitting the self produces a hypocrite and a monster, not virtue.",
+            "The romantic, often sickly young man delights his professors but takes his formal studies lightly.",
         },
         {
           id: "jh-l03-f4",
-          front: "Contemporary biotechnology parallels",
+          front: "Key concept: Introduction Robert Louis Stevenson’s novella The Strange",
           back:
-            "Jekyll's pharmacological self-modification anticipates modern debates about mood drugs, enhancement technologies, and personality optimisation — raising the same question of what is lost when identity is treated as a set of parameters.",
+            "As the two men sat one evening in a darkened room at the Continental Hotel in Philadelphia, Hopper asked Mansfield what he did and how he did it: “ ‘And then and there, only four f...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L04  Checkpoint Quiz: Jekyll and Hyde
+       L04  Checkpoint Quiz 2
     ───────────────────────────────────────────────── */
     {
       id: "jh-l04",
-      title: "Checkpoint Quiz: Jekyll and Hyde",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
       duration: 8,
-      objectives: ["Assess understanding of narrative structure, duality, and ethical themes"],
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "jh-l04-q1",
-          text: "How does Stevenson's narrative structure differ from a conventional detective story?",
+          text: "Which of the following best describes a key idea from the section on Table of Contents From the Pages of The Strange Case of Dr?",
           options: [
-            { id: "a", text: "The investigator solves the mystery through rational deduction and arrests the criminal" },
-            { id: "b", text: "Utterson's investigation fails — the truth is disclosed through confessional documents, and knowledge does not restore order but reveals a terrifying truth" },
-            { id: "c", text: "The story is told entirely through Jekyll's first-person narration" },
-            { id: "d", text: "The mystery has no solution and the case remains permanently open" },
+            { id: "a", text: "Key aspects of published by barnes & noble books 122 fifth avenue new york," },
+            { id: "b", text: "From the Pages of The Strange Case of Dr." },
+            { id: "c", text: "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRAN..." },
+            { id: "d", text: "Robert Louis Stevenson The name Robert Louis Stevenson is synonymous with adventure, romance, and th..." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "c",
           explanation:
-            "Unlike detective fiction, the truth in Jekyll and Hyde arrives through confession (Lanyon's letter, Jekyll's statement), not deduction. And the truth, once known, destroys order rather than restoring it.",
+            "This question relates to Table of Contents From the Pages of The Strange Case of Dr. LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRAN...",
         },
         {
           id: "jh-l04-q2",
-          text: "What motivates Jekyll to create Hyde?",
+          text: "Which of the following best describes a key idea from the section on From the Pages of The Strange Case of Dr?",
           options: [
-            { id: "a", text: "A desire to commit murder and other violent crimes" },
-            { id: "b", text: "Scientific curiosity with no personal motivation" },
-            { id: "c", text: "The desire to enjoy forbidden pleasures without compromising his respectable reputation — to evade moral responsibility" },
-            { id: "d", text: "A medical emergency requiring a radical treatment" },
+            { id: "a", text: "Key aspects of published by barnes & noble books 122 fifth avenue new york," },
+            { id: "b", text: "From the Pages of The Strange Case of Dr." },
+            { id: "c", text: "Robert Louis Stevenson The name Robert Louis Stevenson is synonymous with adventure, romance, and th..." },
+            { id: "d", text: "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRAN..." },
           ],
-          correctOptionId: "c",
+          correctOptionId: "b",
           explanation:
-            "Jekyll does not seek evil itself but freedom from the consequences of indulgence. He wants both the benefits of virtue (reputation) and the pleasures of vice — an evasion of the conditions of ethical selfhood.",
+            "This question relates to From the Pages of The Strange Case of Dr. From the Pages of The Strange Case of Dr.",
         },
         {
           id: "jh-l04-q3",
-          text: "How does the novella anticipate Freud's theory of repression?",
+          text: "Which of the following best describes a key idea from the section on Published by Barnes & Noble Books 122 Fifth Avenue New York,?",
           options: [
-            { id: "a", text: "It argues that all human behaviour is sexually motivated" },
-            { id: "b", text: "Jekyll represses his lower impulses, which do not disappear but accumulate energy and return as the progressively more violent Hyde" },
-            { id: "c", text: "It describes Hyde as Jekyll's childhood trauma made flesh" },
-            { id: "d", text: "It proposes that dreams reveal the repressed self" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "Denied conscious expression, Jekyll's repressed impulses grow stronger and more autonomous in Hyde's form — exactly paralleling Freud's later insight that repressed material returns in distorted, often destructive ways.",
-        },
-        {
-          id: "jh-l04-q4",
-          text: "Why does Dr Lanyon die after witnessing the transformation?",
-          options: [
-            { id: "a", text: "Hyde poisons him during the encounter" },
-            { id: "b", text: "He symbolises the failure of conventional Victorian rationalism to accommodate the irrational — the shock of seeing his worldview shattered kills him" },
-            { id: "c", text: "He catches a disease from Hyde" },
-            { id: "d", text: "He is already terminally ill before the encounter" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "Lanyon dies of psychological shock. As a conventional man of science, his worldview cannot accommodate what he has witnessed. His death represents the collapse of Victorian rational certainty in the face of the irrational.",
-        },
-        {
-          id: "jh-l04-q5",
-          text: "Stevenson's innovation in the Doppelgänger tradition is that Hyde is:",
-          options: [
-            { id: "a", text: "A supernatural spirit sent by God as punishment" },
-            { id: "b", text: "A twin brother separated at birth" },
-            { id: "c", text: "A deliberate technological creation — a product of Jekyll's will and chemical experimentation — making Jekyll morally responsible" },
-            { id: "d", text: "An entirely separate person with no connection to Jekyll" },
+            { id: "a", text: "Robert Louis Stevenson The name Robert Louis Stevenson is synonymous with adventure, romance, and th..." },
+            { id: "b", text: "From the Pages of The Strange Case of Dr." },
+            { id: "c", text: "Key aspects of published by barnes & noble books 122 fifth avenue new york," },
+            { id: "d", text: "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRAN..." },
           ],
           correctOptionId: "c",
           explanation:
-            "Unlike earlier literary doubles (fate-driven or supernatural), Hyde is deliberately created through Jekyll's pharmacological experiment. This makes the double a consequence of choice, not fate — and Jekyll becomes morally accountable.",
+            "This question relates to Published by Barnes & Noble Books 122 Fifth Avenue New York,. Key aspects of published by barnes & noble books 122 fifth avenue new york,",
+        },
+        {
+          id: "jh-l04-q4",
+          text: "Which of the following best describes a key idea from the section on Robert Louis Stevenson The name Robert Louis Stevenson is sy?",
+          options: [
+            { id: "a", text: "Key aspects of published by barnes & noble books 122 fifth avenue new york," },
+            { id: "b", text: "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRAN..." },
+            { id: "c", text: "From the Pages of The Strange Case of Dr." },
+            { id: "d", text: "Robert Louis Stevenson The name Robert Louis Stevenson is synonymous with adventure, romance, and th..." },
+          ],
+          correctOptionId: "d",
+          explanation:
+            "This question relates to Robert Louis Stevenson The name Robert Louis Stevenson is sy. Robert Louis Stevenson The name Robert Louis Stevenson is synonymous with adventure, romance, and th...",
+        },
+        {
+          id: "jh-l04-q5",
+          text: "Which of the following best describes a key idea from the section on The World of Robert Louis Stevenson and The Strange Case of ?",
+          options: [
+            { id: "a", text: "LANYON’S NARRATIVE HENRY JEKYLL’S FULL STATEMENT OF THE CASE A Lodging for the Night A STORY OF FRAN..." },
+            { id: "b", text: "From the Pages of The Strange Case of Dr." },
+            { id: "c", text: "The romantic, often sickly young man delights his professors but takes his formal studies lightly." },
+            { id: "d", text: "Key aspects of published by barnes & noble books 122 fifth avenue new york," },
+          ],
+          correctOptionId: "c",
+          explanation:
+            "This question relates to The World of Robert Louis Stevenson and The Strange Case of . The romantic, often sickly young man delights his professors but takes his formal studies lightly.",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L05  The Companion Tales: Markheim and Olalla
+       L05  STORY OF THE DOOR Mr and SEARCH FOR MR
     ───────────────────────────────────────────────── */
     {
       id: "jh-l05",
-      title: "The Companion Tales: Markheim and Olalla",
+      title: "STORY OF THE DOOR Mr and SEARCH FOR MR",
       type: "video",
       duration: 12,
       objectives: [
-        "Analyse the moral argument at the centre of 'Markheim'",
-        "Explain how 'Olalla' explores hereditary determinism and duality",
-        "Compare the companion tales' treatment of duality with Jekyll and Hyde's",
+        "Examine the key ideas and arguments related to story of the door mr",
+        "Examine the key ideas and arguments related to search for mr",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "jh-l05-c1",
-          title: "Markheim: The Mirror and the Visitor",
+          title: "STORY OF THE DOOR Mr",
           content:
-            "In 'Markheim,' a man enters a dealer's shop on Christmas Day, ostensibly to buy a present but actually to murder the dealer and steal his money. After committing the murder, Markheim is confronted by a mysterious Visitor — a figure who may be his conscience, the Devil, or his own double. The Visitor engages Markheim in a philosophical dialogue about moral identity: is Markheim truly evil, or is he a good man who has committed an evil act? The story builds not on external action but on internal moral argument. Markheim eventually confesses his crime to the dealer's maid, choosing self-destruction over escape. Stevenson uses the encounter with the Visitor to explore the same question that animates Jekyll and Hyde: can a person be divided into good and evil components, or is moral identity an integrated whole? Markheim's final choice — to refuse escape and accept responsibility — suggests that moral unity is reasserted through confession and acceptance, contrasting with Jekyll's fatal attempt to achieve separation through chemistry.",
+            "STORY OF THE DOOR Mr. Utterson the lawyer was a man of a rugged countenance that was never lighted by a smile; cold, scanty and embarrassed in discourse; backward in sentiment; lean, long, dusty, dreary and yet somehow lovable. At friendly meetings, and when the wine was to his taste, something eminently human beaconed from his eye; something indeed which never found its way into his talk, but which spoke not only in these silent symbols of the after-dinner face, but more often and loudly in the acts of his life. He was austere with himself; drank gin when he was alone, to mortify a taste for vintages; and though he enjoyed the theatre, had not crossed the doors of one for twenty years.",
         },
         {
           id: "jh-l05-c2",
-          title: "Olalla: Heredity, Degeneration, and Love",
+          title: "SEARCH FOR MR",
           content:
-            "The novella 'Olalla' takes a different approach to the theme of duality by grounding it in hereditary determinism — the late Victorian anxiety about biological degeneration. A wounded English officer convalesces at a decaying Spanish mansion inhabited by a once-noble family that has degenerated through generations of isolation and inbreeding. The mother is animalistic and half-mad; the son is beautiful but vacuous. Only Olalla, the daughter, has preserved her intelligence and moral sense, though she believes she carries the same biological taint. When the officer falls in love with her, Olalla refuses him, arguing that her heredity makes marriage and reproduction morally irresponsible. The story explores whether character is determined by blood or by will — whether Olalla is condemned by her genes or liberated by her choices. Stevenson's sympathy clearly lies with Olalla's moral independence, but he does not resolve the tension: the story ends ambiguously, with Olalla choosing renunciation rather than risking the transmission of her family's taint to another generation.",
+            "SEARCH FOR MR. HYDE That evening Mr. Utterson came home to his bachelor house in sombre spirits and sat down to dinner without relish. It was his custom of a Sunday, when this meal was over, to sit close by the fire, a volume of some dry divinity on his reading desk, until the clock of the neighbouring church rang out the hour of twelve, when he would go soberly and gratefully to bed. On this night, however, as soon as the cloth was taken away, he took up a candle and went into his business room. There he opened his safe, took from the most private part of it a document endorsed on the envelope as Dr.",
         },
         {
           id: "jh-l05-c3",
-          title: "Connecting the Tales: Duality as Permanent Theme",
+          title: "Deeper Analysis: STORY OF THE DOOR Mr",
           content:
-            "Read together, the three works — Jekyll and Hyde, 'Markheim,' and 'Olalla' — reveal duality as Stevenson's central and most persistent theme. Each approaches the divided self from a different angle: Jekyll and Hyde through chemistry and pharmacology; 'Markheim' through moral philosophy and the examined conscience; 'Olalla' through heredity and biological determinism. In each case, the protagonist faces the question of whether human nature is fundamentally divided and whether the two halves can be reconciled or must be managed through sacrifice. Jekyll's answer (technical separation) leads to catastrophe. Markheim's answer (confession and acceptance) leads to self-destruction but also to moral redemption. Olalla's answer (renunciation) leads to loneliness but perhaps to a kind of dignity. None of the stories offers a comfortable resolution, because Stevenson sees duality not as a problem with a solution but as the permanent condition of moral consciousness — the irreducible tension between what we desire and what we believe we ought to do, between the inherited body and the choosing mind.",
+            "But he had an approved tolerance for others; sometimes wondering, almost with envy, at the high pressure of spirits involved in their misdeeds ; and in any extremity inclined to help rather than to reprove. “I incline to Cain’s heresy,” he used to say quaintly: “I let my brother go to the devil in his own way.” a In this character, it was frequently his fortune to be the last reputable acquaintance and the last good influence in the lives of downgoing men. And to such as these, so long as they came about his chambers, he never marked a shade of change in his demeanour. No doubt the feat was easy to Mr.",
         },
       ],
       flashcards: [
         {
           id: "jh-l05-f1",
-          front: "Markheim's Visitor",
+          front: "STORY OF THE DOOR Mr",
           back:
-            "A mysterious figure (conscience, Devil, or double) who engages Markheim in philosophical dialogue about moral identity after his murder of the dealer. Markheim ultimately confesses, choosing responsibility over escape.",
+            "But he had an approved tolerance for others; sometimes wondering, almost with envy, at the high pressure of spirits involved in their misdeeds ; and in any extremity inclined to he...",
         },
         {
           id: "jh-l05-f2",
-          front: "Olalla's theme of hereditary determinism",
+          front: "SEARCH FOR MR",
           back:
-            "Olalla explores whether character is determined by biological heredity or individual will. Olalla refuses love and reproduction to prevent transmitting her family's degeneration — choosing renunciation as moral responsibility.",
+            "Jekyll’s Will, and sat down with a clouded brow to study its contents.",
         },
         {
           id: "jh-l05-f3",
-          front: "Three approaches to duality",
+          front: "Key concept: STORY OF THE DOOR Mr",
           back:
-            "Jekyll and Hyde: chemical separation (catastrophe). Markheim: confession and acceptance (redemption through destruction). Olalla: renunciation (lonely dignity). None offers comfort — duality is a permanent condition.",
+            "Utterson; for he was undemonstrative at the best, and even his friendship seemed to be founded in a similar catholicity of good-nature.",
         },
         {
           id: "jh-l05-f4",
-          front: "Stevenson's view of duality",
+          front: "Key concept: SEARCH FOR MR",
           back:
-            "Duality is not a problem with a solution but the permanent condition of moral consciousness — the irreducible tension between desire and duty, inherited nature and choosing will.",
+            "Jekyll’s “disappearance or unexplained absence for any period exceeding three calendar months,” the said Edward Hyde should step into the said Henry Jekyll’s shoes without further...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L06  Language, Imagery, and Close Reading
+       L06  DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excellent
     ───────────────────────────────────────────────── */
     {
       id: "jh-l06",
-      title: "Language, Imagery, and Close Reading",
+      title: "DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excellent",
       type: "video",
       duration: 12,
       objectives: [
-        "Analyse Stevenson's use of fog, doors, and enclosed spaces as controlling imagery",
-        "Perform close reading of key passages from the novella",
-        "Connect stylistic choices to the novella's thematic concerns",
+        "Examine the key ideas and arguments related to dr. jekyll was quite at ease a fortnight later, by excellent",
+        "Examine the key ideas and arguments related to the carew murder case nearly a year later, in the month of",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "jh-l06-c1",
-          title: "Fog, Darkness, and the Urban Uncanny",
+          title: "DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excellent",
           content:
-            "Stevenson's London is a city of fog, gas-lamps, and labyrinthine streets — a topography of concealment that mirrors the novella's thematic concern with hidden identity. The fog is not merely atmospheric but symbolic: it obscures boundaries, blurs distinctions between spaces, and transforms familiar streets into alien landscapes. In one famous passage, Utterson makes his way through streets where 'the fog still slept on the wing of the morning' and the city appears in glimpses like a 'district of some city in a nightmare.' The fog represents the epistemological condition of the characters and the reader: crucial information is always partially obscured, identities are uncertain, and the most important truths are hidden behind locked doors and sealed letters. London itself becomes a character — a city whose respectability is a surface that conceals squalor, violence, and secrets, just as Jekyll's professional eminence conceals Hyde's crimes.",
+            "DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excellent good fortune, the doctor gave one of his pleasant dinners to some five or six old cronies, all intelligent, reputable men and all judges of good wine; and Mr. Utterson so contrived that he remained behind after the others had departed. This was no new arrangement, but a thing that had befallen many scores of times. Where Utterson was liked, he was liked well. Hosts loved to detain the dry lawyer, when the light-hearted and loose-tongued had already their foot on the threshold; they liked to sit awhile in his unobtrusive company, practising for solitude, sobering their minds in the man’s rich silence after the expense and strain of gaiety. To this rule, Dr.",
         },
         {
           id: "jh-l06-c2",
-          title: "Doors, Thresholds, and the Architecture of Secrecy",
+          title: "THE CAREW MURDER CASE Nearly a year later, in the month of",
           content:
-            "The novella is structured around doors — physical barriers that separate private from public space and that mark the boundary between respectable and disreputable life. The most important door is the one connecting Jekyll's house to the laboratory by way of the old dissecting-room theatre. Jekyll's house has a handsome front door on a respectable square; the laboratory has a 'sinister block of building' with a blistered, neglected door that opens onto a dingy by-street. These two doors — front and back — correspond to Jekyll's two identities: the respectable front presented to society and the hidden back through which Hyde enters and exits. The dual entrance is both a practical necessity of the plot (it allows Hyde to come and go without detection) and a symbolic enactment of the novella's central theme: that every respectable Victorian gentleman has a back door — a private outlet for the impulses that his public persona suppresses. The architecture of the house is the architecture of the divided self.",
+            "THE CAREW MURDER CASE Nearly a year later, in the month of October, 18—, London was startled by a crime of singular ferocity and rendered all the more notable by the high position of the victim. The details were few and startling. A maid servant living alone in a house not far from the river, had gone up stairs to bed about eleven. Although a fog rolled over the city in the small hours, the early part of the night was cloudless, and the lane, which the maid’s window overlooked, was brilliantly lit by the full moon. It seems she was romantically given, for she sat down upon her box, which stood immediately under the window, and fell into a dream of musing.",
         },
         {
           id: "jh-l06-c3",
-          title: "Close Reading: Jekyll's Full Statement",
+          title: "Deeper Analysis: DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excellent",
           content:
-            "Jekyll's final confession rewards careful stylistic attention. His language oscillates between clinical detachment and emotional extremity: 'I was slowly losing hold of my original and better self, and becoming slowly incorporated with my second and worse.' The passive construction ('I was losing hold,' 'I was becoming incorporated') reveals Jekyll's deepening helplessness — he is no longer the agent of his experiment but its victim. The word 'incorporated' — literally 'taken into the body' — captures the horror of physical possession: Hyde is not merely a costume Jekyll wears but a body that is absorbing his own. Equally telling is Jekyll's persistent refusal to take full responsibility: he consistently refers to Hyde's actions in the third person ('he did this,' 'Hyde was callous'), maintaining the fiction of separation even in confession. This rhetorical strategy reveals that Jekyll's fundamental dishonesty — the desire to enjoy evil without owning it — persists to the very end. The confession that should unite his two selves continues to divide them in language.",
+            "Jekyll was no exception; and as he now sat on the opposite side of the fire—a large, well-made, smooth-faced man of fifty, with something of a slyish cast perhaps, but every mark of capacity and kindness—you could see by his looks that he cherished for Mr. Utterson a sincere and warm affection. “I have been wanting to speak to you, Jekyll,” began the latter. “You know that will of yours?” A close observer might have gathered that the topic was distasteful; but the doctor carried it off gaily. “My poor Utterson,” said he, “you are unfortunate in such a client. I never saw a man so distressed as you were by my will; unless it were that hide-bound pedant, Lanyon, at what he called my scientific heresies.",
         },
       ],
       flashcards: [
         {
           id: "jh-l06-f1",
-          front: "Fog as symbolic imagery",
+          front: "DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excellent",
           back:
-            "London fog obscures boundaries, blurs distinctions, and represents the epistemological condition of characters and reader alike — crucial truths are always partially hidden, reflecting the novella's theme of concealed identity.",
+            "Jekyll was no exception; and as he now sat on the opposite side of the fire—a large, well-made, smooth-faced man of fifty, with something of a slyish cast perhaps, but every mark o...",
         },
         {
           id: "jh-l06-f2",
-          front: "Front door / back door symbolism",
+          front: "THE CAREW MURDER CASE Nearly a year later, in the month of",
           back:
-            "Jekyll's house has a respectable front entrance and a sinister back door to the laboratory — corresponding to his two identities. The architecture of the house enacts the architecture of the divided self.",
+            "Never (she used to say, with streaming tears, when she narrated that experience), never had she felt more at peace with all men or thought more kindly of the world.",
         },
         {
           id: "jh-l06-f3",
-          front: "Passive constructions in Jekyll's confession",
+          front: "Key concept: DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excell",
           back:
-            "Jekyll's language shifts from active to passive ('I was losing hold,' 'becoming incorporated'), revealing his transition from agent of the experiment to its victim — the loss of control that defines his tragedy.",
+            "O, I know he’s a good fellow—you needn’t frown—an excellent fellow, and I always mean to see more of him; but a hide-bound pedant for all that; an ignorant, blatant pedant.",
         },
         {
           id: "jh-l06-f4",
-          front: "Third-person references to Hyde",
+          front: "Key concept: THE CAREW MURDER CASE Nearly a year later, in the month o",
           back:
-            "Even in his final confession, Jekyll refers to Hyde's crimes in the third person — maintaining the fiction of separation and revealing that his fundamental dishonesty (enjoying evil without owning it) persists to the end.",
+            "It did not seem as if the subject of his address were of great importance; indeed, from his pointing, it sometimes appeared as if he were only inquiring his way; but the moon shone...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L07  Final Assessment: Jekyll, Hyde, and the Self
+       L07  Checkpoint Quiz 2
     ───────────────────────────────────────────────── */
     {
       id: "jh-l07",
-      title: "Final Assessment: Jekyll, Hyde, and the Self",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
-      duration: 9,
-      objectives: ["Evaluate comprehensive mastery of the novella's literary and philosophical dimensions"],
+      duration: 8,
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "jh-l07-q1",
-          text: "The dual entrance to Jekyll's house symbolises:",
+          text: "Which of the following best describes a key idea from the section on STORY OF THE DOOR Mr?",
           options: [
-            { id: "a", text: "His wealth and ability to afford two doors" },
-            { id: "b", text: "The separation between his public respectable identity (front door) and his secret disreputable life (back door)" },
-            { id: "c", text: "A fire safety requirement of Victorian architecture" },
-            { id: "d", text: "His plan to escape the police through a second exit" },
+            { id: "a", text: "DR." },
+            { id: "b", text: "SEARCH FOR MR." },
+            { id: "c", text: "STORY OF THE DOOR Mr." },
+            { id: "d", text: "THE CAREW MURDER CASE Nearly a year later, in the month of October, 18—, London was startled by a cr..." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "c",
           explanation:
-            "The handsome front door on the respectable square and the sinister back door to the laboratory correspond to Jekyll's two identities — the architecture of the house enacts the architecture of the divided self.",
+            "This question relates to STORY OF THE DOOR Mr. STORY OF THE DOOR Mr.",
         },
         {
           id: "jh-l07-q2",
-          text: "Stevenson's treatment of the Doppelgänger tradition is innovative because:",
+          text: "Which of the following best describes a key idea from the section on SEARCH FOR MR?",
           options: [
-            { id: "a", text: "Hyde is the first evil character in English literature" },
-            { id: "b", text: "Hyde is a deliberate, pharmacological creation — making Jekyll morally responsible for his double in a way that earlier doubled characters are not" },
-            { id: "c", text: "Hyde and Jekyll are identical in appearance" },
-            { id: "d", text: "The double is presented as purely imaginary" },
+            { id: "a", text: "STORY OF THE DOOR Mr." },
+            { id: "b", text: "DR." },
+            { id: "c", text: "THE CAREW MURDER CASE Nearly a year later, in the month of October, 18—, London was startled by a cr..." },
+            { id: "d", text: "SEARCH FOR MR." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "d",
           explanation:
-            "Unlike supernatural or fateful doubles in earlier literature, Hyde is deliberately created through Jekyll's experiment. This makes the double a consequence of choice and transforms Jekyll from victim of fate to morally accountable agent.",
+            "This question relates to SEARCH FOR MR. SEARCH FOR MR.",
         },
         {
           id: "jh-l07-q3",
-          text: "In 'Olalla,' the titular character refuses love and reproduction because:",
+          text: "Which of the following best describes a key idea from the section on DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excellent?",
           options: [
-            { id: "a", text: "She has taken religious vows of celibacy" },
-            { id: "b", text: "She believes her hereditary taint makes marriage morally irresponsible — she fears transmitting her family's biological degeneration" },
-            { id: "c", text: "She is already married to another person" },
-            { id: "d", text: "The English officer is too poor to support a family" },
+            { id: "a", text: "DR." },
+            { id: "b", text: "THE CAREW MURDER CASE Nearly a year later, in the month of October, 18—, London was startled by a cr..." },
+            { id: "c", text: "STORY OF THE DOOR Mr." },
+            { id: "d", text: "SEARCH FOR MR." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "a",
           explanation:
-            "Olalla's refusal embodies the tension between hereditary determinism and moral choice. She believes her genes condemn her offspring and chooses renunciation as an act of moral responsibility despite her love for the officer.",
+            "This question relates to DR. JEKYLL WAS QUITE AT EASE A fortnight later, by excellent. DR.",
         },
         {
           id: "jh-l07-q4",
-          text: "Jekyll's ethical failure is fundamentally:",
+          text: "Which of the following best describes a key idea from the section on THE CAREW MURDER CASE Nearly a year later, in the month of?",
           options: [
-            { id: "a", text: "That he is a bad scientist whose chemistry is flawed" },
-            { id: "b", text: "That he seeks to enjoy forbidden pleasures without moral consequences — to evade the conditions of integrated ethical selfhood" },
-            { id: "c", text: "That he does not publish his findings for peer review" },
-            { id: "d", text: "That he deliberately sets out to become a serial murderer" },
+            { id: "a", text: "DR." },
+            { id: "b", text: "STORY OF THE DOOR Mr." },
+            { id: "c", text: "SEARCH FOR MR." },
+            { id: "d", text: "THE CAREW MURDER CASE Nearly a year later, in the month of October, 18—, London was startled by a cr..." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "d",
           explanation:
-            "Jekyll's experiment works chemically but fails ethically. He wants the benefits of virtue (reputation) and the pleasures of vice (through Hyde) simultaneously, refusing to accept that human moral identity requires integrated wholeness.",
+            "This question relates to THE CAREW MURDER CASE Nearly a year later, in the month of. THE CAREW MURDER CASE Nearly a year later, in the month of October, 18—, London was startled by a cr...",
         },
         {
           id: "jh-l07-q5",
-          text: "Stevenson's view of duality, across all three works, is that:",
+          text: "Which of the following best describes a key idea from the section on INCIDENT OF THE LETTER It was late in the afternoon, when Mr?",
           options: [
-            { id: "a", text: "Duality can be resolved through scientific progress" },
-            { id: "b", text: "Duality is a permanent condition of moral consciousness — the irreducible tension between conflicting impulses within a single responsible agent" },
-            { id: "c", text: "Good and evil are illusions without real content" },
-            { id: "d", text: "Only religious conversion can unify the divided self" },
+            { id: "a", text: "DR." },
+            { id: "b", text: "SEARCH FOR MR." },
+            { id: "c", text: "INCIDENT OF THE LETTER It was late in the afternoon, when Mr." },
+            { id: "d", text: "STORY OF THE DOOR Mr." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "c",
           explanation:
-            "None of the three stories (Jekyll and Hyde, 'Markheim,' 'Olalla') offers a comfortable resolution. Stevenson presents duality not as a problem with a solution but as the permanent condition of moral consciousness — the tension between desire and duty, body and will.",
-        },
-        {
-          id: "jh-l07-q6",
-          text: "How does Jekyll's language in his final confession reveal his persistent dishonesty?",
-          options: [
-            { id: "a", text: "He writes in a foreign language to hide the truth" },
-            { id: "b", text: "He uses passive constructions and third-person references to Hyde, maintaining the fiction of separation even while confessing — refusing to fully own his actions" },
-            { id: "c", text: "He deliberately lies about the details of the experiment" },
-            { id: "d", text: "He blames everything on Dr Lanyon" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "Jekyll's passive voice ('I was losing hold') shows his loss of agency, while his third-person references to Hyde ('he did this') maintain the separation between identities — revealing that his dishonesty persists even in confession.",
+            "This question relates to INCIDENT OF THE LETTER It was late in the afternoon, when Mr. INCIDENT OF THE LETTER It was late in the afternoon, when Mr.",
         },
       ],
     },

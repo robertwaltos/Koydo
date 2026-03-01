@@ -17,6 +17,8 @@ import { Capacitor } from "@capacitor/core";
 import { Purchases } from "@revenuecat/purchases-capacitor";
 import { canUseStripe, isIOS, isAndroid, canUseIAP } from "@/lib/platform/features";
 import { useI18n } from "@/lib/i18n/provider";
+import { initializeRevenueCat } from "@/lib/billing/revenuecat-client";
+import { hasRevenueCatProEntitlement } from "@/lib/billing/revenuecat-config";
 
 type LearnerPathProfile = {
   id: string;
@@ -114,8 +116,14 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
     setIsSubmitting(true);
     try {
       if (Capacitor.isNativePlatform()) {
+        const initialized = await initializeRevenueCat();
+        if (!initialized) {
+          setBillingStatus(t("billing_checkout_not_configured"));
+          return;
+        }
+
         const { customerInfo } = await Purchases.restorePurchases();
-        const isActive = !!customerInfo.entitlements.active['language_learning_premium'];
+        const isActive = hasRevenueCatProEntitlement(customerInfo);
 
         if (isActive) {
           // Sync the restored subscription to the backend
@@ -340,7 +348,7 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
         </p>
 
         {learnerProfiles.length === 0 ? (
-          <p className="mt-4 rounded-lg border border-zinc-200 bg-zinc-50 p-3 text-sm text-zinc-600">
+          <p className="mt-4 rounded-lg border border-zinc-200 bg-surface-muted p-3 text-sm text-zinc-600">
             {t("account_settings_no_learners")}
           </p>
         ) : (
@@ -350,7 +358,7 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
               const isAllMode = draft === null;
               const selected = new Set(draft ?? allPathIds);
               return (
-                <article key={profile.id} className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+                <article key={profile.id} className="rounded-xl border border-zinc-200 bg-surface-muted p-4">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div>
                       <h3 className="text-sm font-semibold text-zinc-800">

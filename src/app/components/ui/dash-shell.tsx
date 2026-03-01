@@ -17,7 +17,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, type ReactNode } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import LanguageSwitcher from "@/app/components/language-switcher";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -85,7 +85,7 @@ function SidebarContent({
   productSubtitle: string;
 }) {
   return (
-    <div className="flex h-full flex-col bg-[#0a2540]">
+    <div className="flex h-full flex-col bg-[#0a2540] safe-area-top safe-area-left safe-area-bottom">
       {/* ── Logo / branding ── */}
       <div className="flex h-14 shrink-0 items-center gap-3 border-b border-white/8 px-4">
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#635bff] text-[12px] font-bold text-white shadow-inner">
@@ -157,8 +157,16 @@ export default function DashShell({
   productSubtitle,
   userLabel,
 }: DashShellProps) {
+  const pathname = usePathname();
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const avatarLetter = (userLabel ?? "A").charAt(0).toUpperCase();
+  const activeNavItemLabel = useMemo(() => {
+    const allItems = navGroups.flatMap((group) => group.items);
+    const active = allItems.find(
+      (item) => pathname === item.href || pathname.startsWith(`${item.href}/`),
+    );
+    return active?.label ?? productName;
+  }, [navGroups, pathname, productName]);
 
   return (
     <div className="flex h-screen overflow-hidden bg-[#f6f9fc]">
@@ -171,10 +179,10 @@ export default function DashShell({
         />
       )}
 
-      {/* ── Sidebar — fixed 220px on md+, off-canvas on mobile ── */}
+      {/* ── Sidebar — fixed 220px on md+, off-canvas on mobile/small-tablet ── */}
       <aside
         className={[
-          "fixed inset-y-0 left-0 z-30 w-55 transition-transform duration-200 ease-out",
+          "fixed inset-y-0 left-0 z-30 w-55 transition-transform duration-200 ease-out md:w-60",
           sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0",
         ].join(" ")}
         aria-label="Sidebar"
@@ -186,36 +194,42 @@ export default function DashShell({
       </aside>
 
       {/* ── Main column ── */}
-      <div className="flex min-w-0 flex-1 flex-col md:pl-55">
+      <div className="flex min-w-0 flex-1 flex-col md:pl-60">
         {/* ── Top bar ── */}
-        <header className="sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between border-b border-[#e3e8ee] bg-white px-4 md:px-6">
-          {/* Mobile hamburger */}
-          <button
-            type="button"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-md text-[#697386] hover:bg-[#f6f9fc] md:hidden"
-            onClick={() => setSidebarOpen(true)}
-            aria-label="Open navigation"
-          >
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              aria-hidden="true"
+        <header className="safe-area-top sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between border-b border-[#e3e8ee] bg-white px-4 md:px-6">
+          <div className="flex min-w-0 items-center gap-3">
+            {/* Mobile hamburger */}
+            <button
+              type="button"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-md text-[#697386] hover:bg-[#f6f9fc] md:hidden"
+              onClick={() => setSidebarOpen(true)}
+              aria-label="Open navigation"
             >
-              <path
-                d="M2.25 4.5h13.5M2.25 9h13.5M2.25 13.5h13.5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2.25 4.5h13.5M2.25 9h13.5M2.25 13.5h13.5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
 
-          {/* Desktop: product name */}
-          <span className="hidden text-[14px] font-semibold text-[#1a1f36] md:block">
-            {productName}
-          </span>
+            <div className="min-w-0">
+              <span className="hidden text-[14px] font-semibold text-[#1a1f36] md:block">
+                {productName}
+              </span>
+              <p className="truncate text-[12px] font-medium text-[#425a7e] md:text-[11px] md:text-[#697386]">
+                {activeNavItemLabel}
+              </p>
+            </div>
+          </div>
 
           {/* Right: avatar */}
           <div className="flex items-center gap-3">

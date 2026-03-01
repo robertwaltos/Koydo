@@ -16,9 +16,11 @@ Password: <APP_REVIEW_PASSWORD_PREMIUM_FROM_SECRET_MANAGER>
 IN-APP PURCHASE TESTING
 ────────────────────────
 • Use the Sandbox environment (Xcode / TestFlight) for all IAP testing.
-• Products available:
-  - com.koydo.app.premium.monthly   (Koydo Premium Monthly, $9.99/month)
-  - com.koydo.app.premium.annual    (Koydo Premium Annual, $59.99/year)
+• RevenueCat entitlement ID: koydo_pro
+• RevenueCat package identifiers (source of truth):
+  - language_plus_conservative   (Language Plus, baseline $5.99/month)
+  - language_family_conservative (Language Family, baseline $14.99/month)
+• Apple product IDs are mapped to the package identifiers above in RevenueCat Dashboard.
 • Restore functionality: Settings → Account → Restore Purchases
 • Premium features unlock immediately on successful purchase.
 

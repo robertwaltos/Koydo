@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { initMixpanel } from "@/lib/analytics/mixpanel";
+import { isAnalyticsAllowed, getConsentState } from "@/lib/consent/tracking-consent";
 import {
   deleteSyncedProgress,
   getUnsyncedProgress,
@@ -91,10 +92,24 @@ export default function MixpanelProvider({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    initMixpanel();
+  const tryInitAnalytics = useCallback(() => {
+    if (isAnalyticsAllowed()) {
+      initMixpanel();
+    }
+  }, []);
 
-    // Set up background sync for offline progress
+  useEffect(() => {
+    // Only initialize Mixpanel if the user has consented to analytics tracking.
+    // On first visit, consent is undecided and analytics will NOT fire (GDPR default-deny).
+    tryInitAnalytics();
+
+    // Listen for consent updates (e.g., user clicks "Accept All" on banner)
+    const handleConsentUpdate = () => {
+      tryInitAnalytics();
+    };
+    window.addEventListener("koydo:consent-updated", handleConsentUpdate);
+
+    // Set up background sync for offline progress (not gated by analytics consent)
     void syncOfflineProgress();
     const handleOnline = () => {
       void syncOfflineProgress();
@@ -102,9 +117,10 @@ export default function MixpanelProvider({
     window.addEventListener("online", handleOnline);
 
     return () => {
+      window.removeEventListener("koydo:consent-updated", handleConsentUpdate);
       window.removeEventListener("online", handleOnline);
     };
-  }, []);
+  }, [tryInitAnalytics]);
 
   return <>{children}</>;
 }

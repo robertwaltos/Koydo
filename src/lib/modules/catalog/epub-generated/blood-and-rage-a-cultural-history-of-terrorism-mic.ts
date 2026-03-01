@@ -1,441 +1,480 @@
 import type { LearningModule } from "@/lib/modules/types";
 
 // High-quality curriculum module derived from EPUB.
-// Source: G:\My Drive\15_E-BOOKS\file000889.epub
+// Source: G:/My Drive/15_E-BOOKS/file000889.epub
 // Author: Michael Burleigh  |  Subject: History/Politics
 
 export const BloodAndRageACulturalHistoryOfTerrorismMicModule: LearningModule = {
   id: "blood-and-rage-a-cultural-history-of-terrorism-mic",
   title: "Blood and Rage: A Cultural History of Terrorism",
   description:
-    "A sweeping cultural history of terrorism from the nineteenth-century anarchists to the jihadist movements of the twenty-first century. Michael Burleigh examines how terrorists construct their worldviews, how states respond, and how cycles of political violence shape societies — drawing on case studies from Ireland, Russia, Germany, Italy, the Middle East, and the global war on terror.",
+    "A comprehensive educational module derived from Blood and Rage: A Cultural History of Terrorism by Michael Burleigh. This course provides structured video lessons and interactive quizzes exploring the key themes, arguments, and insights of the work.",
   subject: "History/Politics",
-  tags: ["epub-derived", "curriculum", "interactive", "history", "politics", "terrorism", "political-violence", "security-studies"],
+  tags: ["epub-derived", "curriculum", "interactive", "history", "politics"],
   minAge: 18,
   maxAge: 99,
   version: "2.0.0",
   learningObjectives: [
-    "Trace the evolution of terrorism from anarchist 'propaganda of the deed' to modern jihadism",
-    "Analyse the ideological, psychological, and cultural motivations of terrorist movements",
-    "Evaluate state responses to terrorism and their effectiveness",
-    "Compare nationalist, ideological, and religious terrorism across regions",
-    "Assess the role of media and spectacle in terrorist strategy",
-    "Examine the Irish Republican, Red Brigades, ETA, and jihadist movements as case studies",
-    "Apply analytical frameworks to contemporary terrorism and counter-terrorism debates",
+    "Understand and critically analyze the concepts related to contents preface chapter 1 green",
+    "Understand and critically analyze the concepts related to preface t his book’s starting point is the moment when recog",
+    "Understand and critically analyze the concepts related to chapter 1 green",
+    "Understand and critically analyze the concepts related to chapter 2 red",
+    "Understand and critically analyze the concepts related to chapter 3 black",
+    "Understand and critically analyze the concepts related to chapter 4 death in the sun",
+    "Understand and critically analyze the concepts related to chapter 7 small-nation terror i ‘sharp like an axe and quiet",
   ],
   lessons: [
+    /* ─────────────────────────────────────────────────
+       L01  CONTENTS PREFACE CHAPTER 1 Green
+    ───────────────────────────────────────────────── */
     {
       id: "br-l01",
-      title: "Origins: Anarchism and Propaganda of the Deed",
+      title: "CONTENTS PREFACE CHAPTER 1 Green",
       type: "video",
       duration: 12,
       objectives: [
-        "Explain the concept of 'propaganda of the deed'",
-        "Describe the anarchist terrorism of the late nineteenth century",
-        "Analyse the relationship between political ideology and political violence",
+        "Examine the key ideas and arguments related to contents preface chapter 1 green",
+        "Examine the key ideas and arguments related to preface t his book’s starting point is the moment when recog",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "br-l01-c1",
-          title: "The Birth of Modern Terrorism",
+          title: "CONTENTS PREFACE CHAPTER 1 Green",
           content:
-            "Modern terrorism — the systematic use of violence against civilians for political purposes — emerged in the late nineteenth century with the anarchist movement. Anarchists who believed in 'propaganda of the deed' argued that spectacular acts of violence could awaken the masses to the injustice of the political order, trigger popular revolution, and destroy the state. Between 1880 and 1914, anarchist assassins killed a French president (Carnot, 1894), an Austrian empress (Elisabeth, 1898), an Italian king (Umberto I, 1900), and an American president (McKinley, 1901), along with scores of lesser officials and bystanders. The bombs thrown in cafés, theatres, and markets were intended not only to kill their immediate victims but to demonstrate the vulnerability of the state and the determination of the revolutionary movement. Burleigh emphasises that anarchist terrorism was a cultural phenomenon as much as a political one: it drew on Romantic notions of the heroic individual, on Nietzschean ideas of the superman who stands beyond conventional morality, and on the social despair of industrial workers for whom parliamentary politics seemed futile.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
         {
           id: "br-l01-c2",
-          title: "Russian Revolutionary Terrorism",
+          title: "PREFACE T his book’s starting point is the moment when recog",
           content:
-            "Russia produced perhaps the most organised and philosophically sophisticated terrorist movement of the nineteenth century. The Narodnaya Volya (People's Will), active in the 1870s and 1880s, developed a systematic doctrine of political assassination as a tool for destabilising the autocracy and provoking revolutionary change. Their assassination of Tsar Alexander II in 1881 was one of the most spectacular terrorist acts of the century — but it produced the opposite of its intended effect, triggering a repressive backlash that drove the revolutionary movement underground for a generation. The Socialist Revolutionary Party (SR), active in the early twentieth century, continued the tradition with a dedicated 'Combat Organisation' that assassinated government ministers and officials with extraordinary discipline and planning. The Russian case illustrates a recurring pattern in the history of terrorism: violence provokes state repression, which may either crush the movement or radicalise a wider population, depending on the state's skill and restraint. The Russian autocracy's response — indiscriminate repression that punished innocent and guilty alike — eventually validated the revolutionaries' claims about the regime's illegitimacy.",
+            "PREFACE T his book’s starting point is the moment when recognisably modern terrorist organisations emerged in the mid-nineteenth century, dubious precedence being accorded here to the Irish Fenians. We could venture back to the medieval Assassins of Syria or the early modern British Gunpowder Plot, but my knowledge of both has faded with age and I do not regard either as especially helpful in understanding contemporary terrorism. The book’s working assumptions are evident throughout. There are well over a hundred definitions of terrorism and it is possible to aggregate those elements that recur most frequently.",
         },
         {
           id: "br-l01-c3",
-          title: "The Terrorist as Cultural Figure",
+          title: "Deeper Analysis: CONTENTS PREFACE CHAPTER 1 Green",
           content:
-            "Burleigh's distinctive contribution is his emphasis on terrorism as a cultural phenomenon — not merely a tactical choice but a lifestyle, an identity, and a moral universe. Terrorists inhabit a world of heightened significance: every action is charged with political meaning, every relationship is defined by loyalty and betrayal, and the individual actor sees herself as a protagonist in a drama of world-historical importance. This self-dramatisation is not mere vanity — it serves crucial psychological functions, providing meaning, purpose, and belonging that the terrorist's ordinary life may lack. It also serves a strategic function: the terrorist-as-cultural-hero attracts recruits, inspires imitation, and generates the media attention that is essential to the strategy of 'propaganda of the deed.' From the anarchist bombers of the 1890s to the jihadist videographers of the 2000s, terrorists have understood that they are performing for an audience — and that the performance is at least as important as the immediate physical effect of the violence. Understanding terrorism requires understanding this cultural dimension: the narratives, symbols, aesthetics, and emotional satisfactions that make political violence attractive to those who practise it.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
       ],
       flashcards: [
         {
           id: "br-l01-f1",
-          front: "Propaganda of the deed",
-          back: "Anarchist doctrine that spectacular violent acts would awaken the masses, demonstrate state vulnerability, and trigger revolution. Assassinations of heads of state (1880-1914) embodied this strategy.",
+          front: "CONTENTS PREFACE CHAPTER 1 Green",
+          back:
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "br-l01-f2",
-          front: "Narodnaya Volya (People's Will)",
-          back: "Russian terrorist organisation that assassinated Tsar Alexander II (1881). Demonstrated the pattern: terrorism provokes repression, which may crush the movement or validate its claims about the regime's illegitimacy.",
+          front: "PREFACE T his book’s starting point is the moment when recog",
+          back:
+            "Terrorism is a tactic primarily used by non-state actors, who can be an acephalous entity as well as a hierarchical organisation, to create a psychological climate of fear in order...",
         },
         {
           id: "br-l01-f3",
-          front: "Terrorism as cultural phenomenon",
-          back: "Beyond tactics — terrorism provides identity, meaning, purpose, and belonging. The self-dramatisation of the terrorist attracts recruits and generates media attention essential to the propaganda strategy.",
+          front: "Key concept: CONTENTS PREFACE CHAPTER 1 Green",
+          back:
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "br-l01-f4",
-          front: "Performance for an audience",
-          back: "From anarchist bombers to jihadist videographers, terrorists understand they are performing. The theatrical dimension of violence is at least as important as its immediate physical effects.",
+          front: "Key concept: PREFACE T his book’s starting point is the moment when re",
+          back:
+            "State violence is currently on the defensive, as various rabble armies run amok under the guise of Islamic or liberation or people’s revolution or whatever they call themselves.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L02  CHAPTER 1 Green and CHAPTER 2 Red
+    ───────────────────────────────────────────────── */
     {
       id: "br-l02",
-      title: "Nationalist Terrorism: Ireland, ETA, and Palestine",
+      title: "CHAPTER 1 Green and CHAPTER 2 Red",
       type: "video",
-      duration: 13,
+      duration: 12,
       objectives: [
-        "Compare nationalist terrorist movements across different contexts",
-        "Analyse the relationship between political legitimacy and violence",
-        "Evaluate the conditions under which nationalist terrorism achieves or fails to achieve its goals",
+        "Examine the key ideas and arguments related to chapter 1 green",
+        "Examine the key ideas and arguments related to chapter 2 red",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "br-l02-c1",
-          title: "Irish Republicanism: The Longest Campaign",
+          title: "CHAPTER 1 Green",
           content:
-            "The Irish Republican movement represents perhaps the most sustained terrorist campaign in modern history — stretching from the Fenian dynamite campaign of the 1880s through the Easter Rising (1916), the War of Independence (1919-1921), the Civil War, and the Provisional IRA's campaign in Northern Ireland (1969-1998). Burleigh traces how the movement repeatedly regenerated itself, drawing on a deep cultural reservoir of martyrdom, sacrifice, and resistance to British rule. The 1916 Easter Rising was a military failure but a propaganda triumph: the British execution of the rebel leaders transformed them into martyrs and radicalised Irish public opinion. The Provisional IRA's campaign during the Troubles combined guerrilla warfare, urban terrorism (bombings in Belfast, London, and Manchester), and political action (Sinn Féin's electoral politics). The hunger strikes of 1981, in which Bobby Sands and nine other prisoners died, recreated the martyrdom dynamic of 1916 and generated a massive surge of recruitment and support. The Good Friday Agreement (1998) ended the armed campaign, demonstrating that even the most protracted terrorist conflicts can sometimes be resolved through negotiation — but only when both sides calculate that political settlement serves their interests better than continued violence.",
+            "CHAPTER 1 Green: The Fenian Dynamiters I FRIENDS ACROSS THE OCEAN I rish grievances against the British in the nineteenth century were many. The British had garrisoned Ireland with troops, and favoured the industrious Protestant Scots-Irish of the North, because they suspected that its predominantly Roman Catholic inhabitants would rebel with the aid of a foreign foe at the first opportunity. In addition to the Ulster Presbyterians, there was an established, that is privileged, Protestant Church of Ireland, even though most of the population were Catholics. There was a fine Protestant university, Trinity College, Dublin, but none for Catholics.",
         },
         {
           id: "br-l02-c2",
-          title: "ETA and Basque Nationalism",
+          title: "CHAPTER 2 Red",
           content:
-            "ETA (Euskadi Ta Askatasuna — Basque Homeland and Liberty) fought for Basque independence from Spain from 1959 until its final ceasefire in 2011. The movement illustrates several key dynamics of nationalist terrorism. First, it emerged under Franco's dictatorship, when legitimate political channels were closed — validating the argument that terrorism often arises from political exclusion. Second, the transition to democracy in Spain after Franco's death (1975) undermined ETA's rationale without immediately ending its violence: the Basque Country received significant autonomy, but ETA's hardliners rejected anything short of full independence. Third, ETA's campaign demonstrated the 'action-repression spiral': ETA attacks provoked harsh Spanish security responses, which radicalised Basque youth and generated new recruits. But this spiral eventually reversed: as Spanish democracy matured and Basque autonomy deepened, ETA's violence increasingly alienated the very population it claimed to represent. By its final years, ETA was weakened by effective policing, declining public support, and the erosion of its ideological justification.",
+            "CHAPTER 2 Red: Russian Nihilists and Revolutionaries I DOING GOOD A lexis de Tocqueville thought that the most critical time for the pre-revolutionary French monarchy had been when it conceded limited reforms. That assertion held good for late-nineteenth-century tsarist Russia too. Tsar Alexander II, who succeeded to the throne in 1855, embarked on liberalisation measures after the Crimean War had brutally exposed Russian backwardness. His principal reforming measures were the abolition of serfdom in 1861, and the modernisation of provincial government, the law courts and the army. Even the universities, which under his forbidding predecessor Nicholas I resembled socially exclusive reformatories, were opened to students from modest backgrounds who enjoyed a heady period of self-government.",
         },
         {
           id: "br-l02-c3",
-          title: "Palestinian Terrorism and the Spectacle Strategy",
+          title: "Deeper Analysis: CHAPTER 1 Green",
           content:
-            "Palestinian terrorism — from Fatah and the PFLP's international operations in the 1960s and 1970s to Hamas's suicide bombings in the 1990s and 2000s — represents nationalism's fusion with the strategy of global spectacle. The hijacking of aircraft, the Munich Olympics massacre (1972), and suicide bombings in Israeli cities were designed not primarily for military effect but for media impact — to force the world to pay attention to the Palestinian cause and to make the cost of Israeli occupation unacceptable. Burleigh analyses how this strategy partially succeeded (the Palestinian cause became an inescapable issue in international politics) but also generated severe backlash (Israeli military operations, international counterterrorism cooperation, and the stigmatisation of the Palestinian movement). The evolution from secular nationalism (Fatah, PFLP) to religiously motivated violence (Hamas, Palestinian Islamic Jihad) mirrors broader trends in global terrorism: the decline of Marxist and nationalist ideologies and the rise of religious frameworks that provide martyrdom, certainty, and transcendent purpose. Each case study demonstrates Burleigh's central argument: terrorism is shaped by specific historical contexts, but certain patterns — protest, violence, repression, radicalisation — recur across cultures and centuries.",
+            "Ireland was part of a global empire, but was often treated as an offshore agricultural colony where labourers and poorer tenant farmers lived in chronic insecurity at the whim of absentee English landlords. Millions had left for the US (and industrialising Britain) where they adopted radical views that were far in advance of those of most people in Ireland itself. Confronted by virulent strains of American Protestantism, they compensated for discrimination by becoming more aggressively Irish, caricaturing the English as latter-day Normans and sentimentalising the old country with its ancient barrows, bogs, castles and mists.",
         },
       ],
       flashcards: [
         {
           id: "br-l02-f1",
-          front: "Irish Republican martyrdom dynamic",
-          back: "British execution of 1916 Rising leaders created martyrs, radicalising opinion. The 1981 hunger strikes (Bobby Sands) repeated this pattern, generating massive IRA recruitment. Military failure became propaganda triumph.",
+          front: "CHAPTER 1 Green",
+          back:
+            "Ireland was part of a global empire, but was often treated as an offshore agricultural colony where labourers and poorer tenant farmers lived in chronic insecurity at the whim of a...",
         },
         {
           id: "br-l02-f2",
-          front: "ETA and the action-repression spiral",
-          back: "ETA attacks provoked harsh Spanish responses, radicalising Basque youth and generating recruits. The spiral reversed as democracy matured: ETA's violence alienated the population it claimed to represent.",
+          front: "CHAPTER 2 Red",
+          back:
+            "A gentler hand was initially evident too in the Russian regime in partitioned Poland, while disabilities imposed on religious sectarians and Jews were relaxed.",
         },
         {
           id: "br-l02-f3",
-          front: "Palestinian spectacle strategy",
-          back: "Aircraft hijackings, Munich massacre, and suicide bombings designed for media impact — forcing world attention to the Palestinian cause. Partially succeeded in raising awareness but generated severe military and diplomatic backlash.",
+          front: "Key concept: CHAPTER 1 Green",
+          back:
+            "That these were historically authentic was partly due to their being noted, from 1824 onwards, on detailed Ordnance Survey maps, while another British intrusion - the national cens...",
         },
         {
           id: "br-l02-f4",
-          front: "Secular to religious terrorism shift",
-          back: "Palestinian movement evolved from secular nationalism (Fatah, PFLP) to religious violence (Hamas). Mirrors global trend: decline of Marxist/nationalist ideologies, rise of religious frameworks offering martyrdom and transcendent purpose.",
+          front: "Key concept: CHAPTER 2 Red",
+          back:
+            "Similarly, there were no official steps taken to satisfy the desire of many educated young women to do something socially useful, or to attain parity of esteem with their male cont...",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L03  CHAPTER 3 Black and CHAPTER 4 Death in the Sun
+    ───────────────────────────────────────────────── */
     {
       id: "br-l03",
-      title: "Ideological Terrorism and Global Jihad",
+      title: "CHAPTER 3 Black and CHAPTER 4 Death in the Sun",
       type: "video",
-      duration: 13,
+      duration: 12,
       objectives: [
-        "Analyse European ideological terrorism (Red Brigades, Baader-Meinhof)",
-        "Trace the emergence and evolution of jihadist terrorism",
-        "Evaluate counter-terrorism strategies and their unintended consequences",
+        "Examine the key ideas and arguments related to chapter 3 black",
+        "Examine the key ideas and arguments related to chapter 4 death in the sun",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "br-l03-c1",
-          title: "The Red Terror: Left-Wing Terrorism in Europe",
+          title: "CHAPTER 3 Black",
           content:
-            "The 1970s and early 1980s saw a wave of left-wing terrorism across Western Europe: the Red Army Faction (Baader-Meinhof Group) in West Germany, the Red Brigades in Italy, Action Directe in France, and similar groups in Japan (Japanese Red Army) and Latin America. These movements emerged from the radical student protests of 1968 and the disillusionment with parliamentary socialism. They aimed to provoke revolutionary crisis by attacking the 'bourgeois state' — assassinating politicians, judges, industrialists, and NATO officials, kidnapping for ransom, and bombing military and corporate targets. Burleigh analyses these groups as cultural phenomena: their members were predominantly middle-class, university-educated young people who adopted a quasi-religious commitment to revolutionary violence. The Italian Red Brigades' kidnapping and murder of former Prime Minister Aldo Moro (1978) was the most dramatic act — intended to polarise Italian society and trigger a revolutionary crisis, it instead unified public opinion against the terrorists. The European left-wing terrorist movements were effectively defeated by the mid-1980s through a combination of effective policing, targeted intelligence operations, and repentance laws that encouraged captured terrorists to inform on their organisations.",
+            "CHAPTER 3 Black: Anarchists and Terrorism I ‘SHOOT, STAB, BURN, POISON AND BOMB’: THEORISTS OF TERROR A narchists, including some who never touched a stick of dynamite, theorised a violence that Fenians and nihilists practised, although there were more obscure precursors. In organisation and spirit nineteenth-century terrorist groups owed something to organised banditry and the conspiratorial societies of late-eighteenth - and early-nineteenth-century Europe, notably ‘Gracchus’ Babeuf’s ‘Conspiracy of the Equals’ against the bourgeois Directory that ruled France after 9th Thermidor and the execution of Robespierre. This failed attempt to restore the dictatorship of the purest of the pure had some of the salient characteristics of modern terrorism, not least the infatuation with the most sanguinary phase of the French Revolution.",
         },
         {
           id: "br-l03-c2",
-          title: "The Emergence of Global Jihad",
+          title: "CHAPTER 4 Death in the Sun",
           content:
-            "Burleigh traces the emergence of jihadist terrorism through several key developments: the Iranian Revolution (1979), which demonstrated that an Islamist movement could overthrow a Western-aligned government; the Soviet-Afghan War (1979-1989), which created a generation of battle-hardened mujahideen and established the networks that would become al-Qaeda; the theological innovations of Sayyid Qutb, whose writings provided the ideological framework for offensive jihad against both 'apostate' Muslim governments and the 'far enemy' (the United States and its allies); and the failure of nationalist and socialist alternatives in the Muslim world, which left political Islam as the primary vehicle of discontent. Osama bin Laden synthesised these elements into a global strategy: by attacking the United States directly (the embassy bombings of 1998, the USS Cole in 2000, and the 9/11 attacks of 2001), he aimed to provoke a massive American military response that would radicalise the Muslim world, discredit pro-American Muslim governments, and ultimately produce a pan-Islamic caliphate. The strategy was partially successful: the U.S. invasions of Afghanistan and Iraq generated enormous anger in the Muslim world and created new theatres of jihad.",
+            "CHAPTER 4 Death in the Sun: Terror and Decolonisation I HOLY LAND, HOLY WAR A t the time of the 1917 Balfour Declaration, favouring ‘the establishment in Palestine of a National Home for the Jewish People’, land designated by the Roman name of Palestine was part of the Ottoman Empire, with which Britain was at war. The Ottoman Empire, and Kemal Atatürk’s regime that superseded it, had sought to draw closer to European civilisation. One measure of this was how religious minorities were treated within an Islamic tradition that traditionally accorded non-Muslims dhimmitude or submissive status. This was not quite what it sounds. Throughout urban centres, Jews could become members of parliament, hold government posts and, after 1909, be recruited into the military.",
         },
         {
           id: "br-l03-c3",
-          title: "Counter-Terrorism: Effectiveness and Costs",
+          title: "Deeper Analysis: CHAPTER 3 Black",
           content:
-            "Burleigh's analysis of counter-terrorism raises uncomfortable questions about effectiveness and unintended consequences. Successful counter-terrorism, he argues, requires discrimination — distinguishing between active terrorists, their support networks, and innocent populations. When states fail to discriminate — as the Russian autocracy did in the nineteenth century, as the British did in Ireland during the Black and Tan period, and as the United States did in Iraq's Abu Ghraib — they generate precisely the radicalisation that terrorism strategy seeks to provoke. Effective counter-terrorism combines intelligence-led policing and targeted operations with political strategies that address the legitimate grievances exploited by terrorist movements, while isolating the violent fringe from its potential support base. This is extraordinarily difficult to achieve, because counter-terrorism operates under democratic constraints (rule of law, human rights, public accountability) that terrorists deliberately exploit. The 'war on terror' framework, Burleigh suggests, was counterproductive insofar as it framed terrorism as a military problem requiring military solutions — when in reality, most successful counter-terrorism has been achieved through intelligence, policing, and political accommodation rather than conventional warfare.",
+            "The conspirators had faith in the redemptive powers of chaos: ‘May everything return to chaos, and out of chaos may there emerge a new and regenerated world.’ Babeuf and his co-conspirator and biographer Buonarroti pioneered the view that ‘no means are criminal which are employed to obtain a sacred end’. This became a founding commandment of future terrorists, even when they practised something resembling an operational morality. The Italian anarchists Carlo Pisacane, Carlo Cafiero and Errico Malatesta, and more especially the French doctor Paul Brousse, would convert this into the slogan ‘propaganda by the deed’, meaning the mobilising and symbolic power of acts of revolutionary violence.",
         },
       ],
       flashcards: [
         {
           id: "br-l03-f1",
-          front: "European left-wing terrorism defeat",
-          back: "Red Brigades, Baader-Meinhof etc. were defeated by the mid-1980s through effective policing, targeted intelligence, and repentance laws encouraging captured terrorists to inform on their organisations.",
+          front: "CHAPTER 3 Black",
+          back:
+            "The conspirators had faith in the redemptive powers of chaos: ‘May everything return to chaos, and out of chaos may there emerge a new and regenerated world.’ Babeuf and his co-con...",
         },
         {
           id: "br-l03-f2",
-          front: "Four roots of global jihad",
-          back: "Iranian Revolution (1979), Soviet-Afghan War (mujahideen networks), Qutb's ideology (offensive jihad), and failure of secular nationalism in the Muslim world leaving political Islam as the primary vehicle of dissent.",
+          front: "CHAPTER 4 Death in the Sun",
+          back:
+            "Following on from this late and poignant flourishing of Islamic modernism, Atatürk abolished sharia law in 1924, while in Egypt this applied only in the private realm.",
         },
         {
           id: "br-l03-f3",
-          front: "Bin Laden's strategy",
-          back: "Attack the U.S. ('far enemy') to provoke massive military response → radicalise Muslim world → discredit pro-American Muslim governments → create pan-Islamic caliphate. Partially worked: Iraq/Afghanistan invasions generated anger.",
+          front: "Key concept: CHAPTER 3 Black",
+          back:
+            "After an abortive rising in Bologna, Malatesta claimed that ‘the revolution consists more in deeds than words … each time a spontaneous movement of the people erupts … it is the du...",
         },
         {
           id: "br-l03-f4",
-          front: "Effective vs counterproductive counter-terrorism",
-          back: "Effective: intelligence-led policing + targeted operations + addressing legitimate grievances. Counterproductive: indiscriminate repression (Abu Ghraib), framing terrorism as a purely military problem requiring conventional warfare.",
+          front: "Key concept: CHAPTER 4 Death in the Sun",
+          back:
+            "The money they bring in, their intelligence and the diligence which is one of their characteristics will, without doubt, bring new life to the country.’ 1 The Zionists colonised de...",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L04  Checkpoint Quiz 2
+    ───────────────────────────────────────────────── */
     {
       id: "br-l04",
-      title: "Checkpoint Quiz: Cultural History of Terrorism",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
       duration: 8,
-      objectives: ["Assess understanding of terrorist movements, motivations, and counter-terrorism"],
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "br-l04-q1",
-          text: "The anarchist concept of 'propaganda of the deed' held that:",
+          text: "Which of the following best describes a key idea from the section on CONTENTS PREFACE CHAPTER 1 Green?",
           options: [
-            { id: "a", text: "Political pamphlets were more effective than violence" },
-            { id: "b", text: "Spectacular acts of violence could awaken the masses, demonstrate state vulnerability, and trigger revolution" },
-            { id: "c", text: "Only peaceful protest could change society" },
-            { id: "d", text: "The state should use propaganda to maintain order" },
+            { id: "a", text: "PREFACE T his book’s starting point is the moment when recognisably modern terrorist organisations e..." },
+            { id: "b", text: "CHAPTER 1 Green: The Fenian Dynamiters I FRIENDS ACROSS THE OCEAN I rish grievances against the Brit..." },
+            { id: "c", text: "CHAPTER 2 Red: Russian Nihilists and Revolutionaries I DOING GOOD A lexis de Tocqueville thought tha..." },
+            { id: "d", text: "Key aspects of contents preface chapter 1 green" },
           ],
-          correctOptionId: "b",
-          explanation: "Propaganda of the deed was the anarchist doctrine that violence itself was the most powerful form of propaganda — demonstrating the state's vulnerability and inspiring revolutionary action among the masses.",
+          correctOptionId: "d",
+          explanation:
+            "This question relates to CONTENTS PREFACE CHAPTER 1 Green. Key aspects of contents preface chapter 1 green",
         },
         {
           id: "br-l04-q2",
-          text: "The 'action-repression spiral' describes:",
+          text: "Which of the following best describes a key idea from the section on PREFACE T his book’s starting point is the moment when recog?",
           options: [
-            { id: "a", text: "A military manoeuvre used in conventional warfare" },
-            { id: "b", text: "A cycle where terrorist attacks provoke state repression, which radicalises more people and generates new recruits — a pattern that can either sustain or ultimately undermine the terrorist movement" },
-            { id: "c", text: "A diplomatic negotiation technique" },
-            { id: "d", text: "The spiral of inflation during wartime" },
+            { id: "a", text: "PREFACE T his book’s starting point is the moment when recognisably modern terrorist organisations e..." },
+            { id: "b", text: "CHAPTER 2 Red: Russian Nihilists and Revolutionaries I DOING GOOD A lexis de Tocqueville thought tha..." },
+            { id: "c", text: "CHAPTER 1 Green: The Fenian Dynamiters I FRIENDS ACROSS THE OCEAN I rish grievances against the Brit..." },
+            { id: "d", text: "Key aspects of contents preface chapter 1 green" },
           ],
-          correctOptionId: "b",
-          explanation: "ETA and many other movements exploited this spiral: violence → harsh state response → radicalisation → more recruits. The spiral reversed when ETA's violence alienated its potential support base as Spanish democracy matured.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to PREFACE T his book’s starting point is the moment when recog. PREFACE T his book’s starting point is the moment when recognisably modern terrorist organisations e...",
         },
         {
           id: "br-l04-q3",
-          text: "The Red Brigades' kidnapping of Aldo Moro was intended to:",
+          text: "Which of the following best describes a key idea from the section on CHAPTER 1 Green?",
           options: [
-            { id: "a", text: "Negotiate better prison conditions" },
-            { id: "b", text: "Polarise Italian society and trigger a revolutionary crisis — but instead unified public opinion against the terrorists" },
-            { id: "c", text: "Start a war between Italy and Germany" },
-            { id: "d", text: "Secure Moro's release from political office" },
+            { id: "a", text: "Key aspects of contents preface chapter 1 green" },
+            { id: "b", text: "CHAPTER 2 Red: Russian Nihilists and Revolutionaries I DOING GOOD A lexis de Tocqueville thought tha..." },
+            { id: "c", text: "CHAPTER 1 Green: The Fenian Dynamiters I FRIENDS ACROSS THE OCEAN I rish grievances against the Brit..." },
+            { id: "d", text: "PREFACE T his book’s starting point is the moment when recognisably modern terrorist organisations e..." },
           ],
-          correctOptionId: "b",
-          explanation: "The Red Brigades expected the kidnapping/murder to polarise Italy between left and right. Instead, it horrified the public and strengthened the state's resolve against terrorism — a strategic miscalculation.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to CHAPTER 1 Green. CHAPTER 1 Green: The Fenian Dynamiters I FRIENDS ACROSS THE OCEAN I rish grievances against the Brit...",
         },
         {
           id: "br-l04-q4",
-          text: "According to Burleigh, the 'war on terror' framework was counterproductive because:",
+          text: "Which of the following best describes a key idea from the section on CHAPTER 2 Red?",
           options: [
-            { id: "a", text: "It didn't spend enough on military equipment" },
-            { id: "b", text: "It framed terrorism as a military problem requiring military solutions, when most successful counter-terrorism relies on intelligence, policing, and political accommodation" },
-            { id: "c", text: "It focused too much on diplomacy" },
-            { id: "d", text: "It made terrorism too popular in Hollywood films" },
+            { id: "a", text: "CHAPTER 1 Green: The Fenian Dynamiters I FRIENDS ACROSS THE OCEAN I rish grievances against the Brit..." },
+            { id: "b", text: "Key aspects of contents preface chapter 1 green" },
+            { id: "c", text: "PREFACE T his book’s starting point is the moment when recognisably modern terrorist organisations e..." },
+            { id: "d", text: "CHAPTER 2 Red: Russian Nihilists and Revolutionaries I DOING GOOD A lexis de Tocqueville thought tha..." },
           ],
-          correctOptionId: "b",
-          explanation: "Military invasion and conventional warfare in Afghanistan and Iraq generated the very radicalisation bin Laden hoped for. Successful counter-terrorism historically combines intelligence-led policing with addressing legitimate political grievances.",
+          correctOptionId: "d",
+          explanation:
+            "This question relates to CHAPTER 2 Red. CHAPTER 2 Red: Russian Nihilists and Revolutionaries I DOING GOOD A lexis de Tocqueville thought tha...",
         },
         {
           id: "br-l04-q5",
-          text: "Why does Burleigh describe terrorism as fundamentally a 'cultural phenomenon'?",
+          text: "Which of the following best describes a key idea from the section on CHAPTER 3 Black?",
           options: [
-            { id: "a", text: "Because all terrorists are artists" },
-            { id: "b", text: "Because beyond tactical choices, terrorism provides identity, meaning, purpose, and belonging — and relies on narratives, symbols, aesthetics, and emotional satisfactions that make violence attractive" },
-            { id: "c", text: "Because terrorism only occurs in highly cultured societies" },
-            { id: "d", text: "Because terrorists usually have degrees in cultural studies" },
+            { id: "a", text: "CHAPTER 1 Green: The Fenian Dynamiters I FRIENDS ACROSS THE OCEAN I rish grievances against the Brit..." },
+            { id: "b", text: "Key aspects of contents preface chapter 1 green" },
+            { id: "c", text: "PREFACE T his book’s starting point is the moment when recognisably modern terrorist organisations e..." },
+            { id: "d", text: "CHAPTER 3 Black: Anarchists and Terrorism I ‘SHOOT, STAB, BURN, POISON AND BOMB’: THEORISTS OF TERRO..." },
           ],
-          correctOptionId: "b",
-          explanation: "Terrorism is not just a military tactic — it is a lifestyle, identity, and moral universe. Understanding the cultural dimension (narratives, symbols, performance for audience) is essential to understanding why people are drawn to political violence.",
+          correctOptionId: "d",
+          explanation:
+            "This question relates to CHAPTER 3 Black. CHAPTER 3 Black: Anarchists and Terrorism I ‘SHOOT, STAB, BURN, POISON AND BOMB’: THEORISTS OF TERRO...",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L05  CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET
+    ───────────────────────────────────────────────── */
     {
       id: "br-l05",
-      title: "The Psychology and Sociology of Terrorism",
+      title: "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET",
       type: "video",
       duration: 12,
       objectives: [
-        "Analyse the psychological factors that draw individuals into terrorist movements",
-        "Examine the group dynamics and organisational structures of terrorist cells",
-        "Evaluate the role of media and technology in amplifying terrorist impact",
+        "Examine the key ideas and arguments related to chapter 7 small-nation terror i ‘sharp like an axe and quiet",
+        "Examine the key ideas and arguments related to vii targeting america before 9/11 and iraq seeming inevitabi",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "br-l05-c1",
-          title: "Who Becomes a Terrorist?",
+          title: "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET",
           content:
-            "One of Burleigh's key insights is that there is no single 'terrorist personality.' Research consistently shows that most terrorists are not psychopaths, mentally ill, or desperately poor. The Baader-Meinhof Group's members were educated, middle-class Germans; many al-Qaeda operatives held engineering degrees; the 9/11 hijackers included students and professionals. What terrorists share is not a psychological profile but a process of radicalisation: a journey from discontent to ideology to action. This process typically involves several elements: a sense of grievance (personal or collective); exposure to an ideology that explains the grievance and offers a solution through violence; social networks that provide support, validation, and pressure; and a 'moral disengagement' process by which ordinary moral constraints against killing are overridden by ideological justification. Burleigh emphasises that this process is not inevitable — most people who feel grievance and encounter radical ideology do not become terrorists. The tipping point often involves group dynamics: the small, intense, closed cell that develops its own internal logic and reinforces commitment to violence.",
+            "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET LIKE A SNAKE’: ETA T he Basques have inhabited a 22,000-square-kilometre region straddling the Franco-Spanish border which they call Euskal Herria for a very long time. Exactly how long is contentious. Many Basque nationalists claim their presence is aboriginal. There are Basque anthropologists who believe that the Basques are descended from cave-dwelling bipeds that achieved human form without evolutionary contact with anyone else. That the Basque language, Euskera, is autochthonous, meaning that it has no relationship to the Indo-European tongues of the Basques’ European neighbours, further fuels feelings of uniqueness.",
         },
         {
           id: "br-l05-c2",
-          title: "Group Dynamics and the Logic of the Cell",
+          title: "VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabi",
           content:
-            "Terrorist organisations are structured in ways that promote commitment, loyalty, and operational security. The cell structure — small, compartmentalised groups whose members know only their immediate colleagues — protects the organisation against infiltration and defection. But the cell also functions as a social world: members eat together, sleep together, plan together, and develop intense emotional bonds that make defection feel like personal betrayal rather than mere political disengagement. Within the cell, competitive radicalisation can occur — members vie to demonstrate the greatest commitment, pushing the group toward increasingly extreme positions. The group becomes an echo chamber in which dissent is suppressed and violent action becomes normative. Burleigh draws on specific cases to illustrate these dynamics: the Hamburg cell that produced the 9/11 hijackers, where a group of students progressively radicalised each other over several years; the Baader-Meinhof Group, where internal competition and paranoia drove increasingly reckless operations; and the Provisional IRA's 'active service units,' where tight social bonds maintained discipline but also prevented members from questioning the movement's direction.",
+            "VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabilities unravel if one goes back a generation or two. In 1957, a year after US president Eisenhower brutally brought the Anglo-French-Israeli invasion of Suez to a halt, he inaugurated a new building on Washington’s Embassy Row. This was a mosque. It was built after a Palestinian tycoon had attended the funeral of a Turkish diplomat. He had said to the Egyptian ambassador, ‘Isn’t it a shame that the prayer for such a great Muslim is not held in a mosque?’ An Italian architect designed the building, incorporating details recommended by the court architect in Egypt.",
         },
         {
           id: "br-l05-c3",
-          title: "Media, Technology, and Amplification",
+          title: "Deeper Analysis: CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET",
           content:
-            "Terrorism is fundamentally a communication strategy — it uses violence to send a message to an audience far larger than the immediate victims. The relationship between terrorism and media is therefore symbiotic: terrorists need media coverage to amplify their acts, and media organisations are drawn to the drama, spectacle, and emotional intensity of terrorist attacks. The hijacking of aircraft in the 1970s, the Munich Olympics attack, and the 9/11 attacks were all designed as media events — staged for maximum visual impact in the age of television. The internet and social media have transformed this dynamic further: terrorist groups can now produce and distribute their own propaganda (videos, magazines, social media posts) without relying on mainstream media gatekeepers. ISIS's sophisticated media operation — producing high-quality videos, publishing multiple-language propaganda magazines, and maintaining active social media presence — represented the fullest development of terrorism's media strategy. Burleigh argues that understanding this media dimension is essential for counter-terrorism: denying terrorists their 'oxygen of publicity' (as Margaret Thatcher phrased it) is easier said than done, but strategies that reduce amplification without censoring necessary public information can diminish terrorism's strategic impact.",
+            "So does a conviction that they have been victims of Spanish colonialism, a hurt that the Basques compulsively explore like a person using his tongue to probe a disintegrating tooth. 1 The Basques believe in a political version of the fall from original grace, of the loss of historic liberties. The only time the Basque country was a single political entity was when it was encompassed within the kingdom of Navarre. In medieval times Castilian monarchs annexed their territory, granting the Basques unique rights ( fueros). So as to neutralise feuding Basque warlords, the Castilian kings granted noble rights to the inhabitants of two of the Basque provinces, Guipúzcoa and Vizcaya. This meant that the Basques were ‘gentlemen’ entitled to serve in the administration of the incipient Hispanic empire.",
         },
       ],
       flashcards: [
         {
           id: "br-l05-f1",
-          front: "No 'terrorist personality'",
-          back: "Most terrorists are not psychopaths or desperately poor. Many are educated, middle-class professionals. What they share is a radicalisation process: grievance → ideology → social networks → moral disengagement → group pressure.",
+          front: "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET",
+          back:
+            "So does a conviction that they have been victims of Spanish colonialism, a hurt that the Basques compulsively explore like a person using his tongue to probe a disintegrating tooth...",
         },
         {
           id: "br-l05-f2",
-          front: "Cell dynamics and competitive radicalisation",
-          back: "Small compartmentalised cells develop intense bonds making defection feel like betrayal. Members compete to demonstrate commitment, creating an echo chamber that pushes toward increasingly extreme positions.",
+          front: "VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabi",
+          back:
+            "Eisenhower dedicated the building: ‘America would fight with her whole strength for your right to have here your own church and worship according to your own conscience.",
         },
         {
           id: "br-l05-f3",
-          front: "Terrorism as communication strategy",
-          back: "Violence sends a message to an audience far larger than the victims. Terrorism and media are symbiotic: terrorists need coverage for amplification; media is drawn to drama and spectacle.",
+          front: "Key concept: CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QU",
+          back:
+            "They were exempt from military conscription, and enjoyed important regional fiscal privileges.",
         },
         {
           id: "br-l05-f4",
-          front: "Internet's impact on terrorist propaganda",
-          back: "Groups like ISIS produce/distribute their own propaganda (videos, magazines, social media) without mainstream media gatekeepers. Represents the fullest development of terrorism's media strategy.",
+          front: "Key concept: VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevit",
+          back:
+            "In their view, the Jews are inherently malevolent, using the USA, the IMF, the World Bank and the UN for their nefarious purposes.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L06  SELECT BIBLIOGRAPHY The internet is indispensable for inform
+    ───────────────────────────────────────────────── */
     {
       id: "br-l06",
-      title: "Lessons and Contemporary Challenges",
+      title: "SELECT BIBLIOGRAPHY The internet is indispensable for inform",
       type: "video",
       duration: 12,
       objectives: [
-        "Synthesise Burleigh's key arguments about the patterns of political violence",
-        "Apply historical analysis to contemporary terrorism threats",
-        "Evaluate the tensions between security and civil liberties in counter-terrorism",
+        "Examine the key ideas and arguments related to select bibliography the internet is indispensable for inform",
+        "Examine the key ideas and arguments related to index the pagination of this electronic edition does not mat",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "br-l06-c1",
-          title: "Recurring Patterns Across Centuries",
+          title: "SELECT BIBLIOGRAPHY The internet is indispensable for inform",
           content:
-            "Burleigh's cultural history reveals several recurring patterns that transcend specific movements and historical periods. First, terrorism tends to emerge when legitimate channels of political expression are blocked or perceived as blocked — from Tsarist Russia to Franco's Spain to authoritarian Middle Eastern regimes. Second, terrorist movements are sustained more by group dynamics and cultural narratives than by rational cost-benefit calculation: the myths of martyrdom, heroic resistance, and apocalyptic transformation provide emotional fuel that outlasts tactical defeats. Third, state overreaction is often more damaging than the terrorism itself: indiscriminate repression radicalises moderate populations and validates terrorist propaganda. Fourth, terrorism rarely achieves its stated political objectives (overthrowing the state, creating a revolutionary utopia, establishing a caliphate), but it can and does change the political landscape — forcing states to address grievances, reshaping public opinion, and altering the balance of power within and between societies. Understanding these patterns does not predict the future, but it provides a framework for analysing new threats without falling into the trap of treating each terrorist movement as unprecedented.",
+            "SELECT BIBLIOGRAPHY The internet is indispensable for information on the constant mutations of contemporary terrorism. The Washington DC-based website Counter-terrorism.org brings expert perspectives to bear on global terrorist issues, especially the contributions of Douglas Farah, Evan Kohlmann and Walid Phares. It monitors trials as well as police and military counter-measures. Jamestown.org, the Site Institute website and West Point’s Counter-Terrorism Center are all of equal merit, especially since the CTC website has useful documents captured from Al Qaeda in a section entitled the Harmony Project. A commercial site called Stratfor.com also has much information, primarily designed for corporations.",
         },
         {
           id: "br-l06-c2",
-          title: "Contemporary Threats: Beyond Al-Qaeda",
+          title: "INDEX The pagination of this electronic edition does not mat",
           content:
-            "The evolution of terrorism continues beyond the period Burleigh primarily covers. ISIS's attempt to establish an actual territorial state (the 'caliphate' in Iraq and Syria, 2014-2017) represented a new development: a terrorist organisation that controlled territory, administered services, collected taxes, and fielded conventional military forces. Its territorial defeat did not eliminate its ideological appeal — 'inspired' attacks by individuals with minimal organisational connection continue worldwide. Far-right extremism has re-emerged as a significant threat, with attacks like those in Norway (Breivik, 2011), Christchurch (2019), and numerous incidents in the United States motivated by white supremacist, anti-immigrant, and conspiracy-driven ideologies. Lone-actor terrorism — individuals who radicalise online without direct organisational contact — presents unprecedented challenges for intelligence services designed to monitor organisations, not individuals. These developments confirm Burleigh's central argument: the specific forms of terrorism change with historical context, but the underlying dynamics of grievance, ideology, group identity, and state response remain remarkably consistent.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
         {
           id: "br-l06-c3",
-          title: "Security, Liberty, and Democratic Resilience",
+          title: "Deeper Analysis: SELECT BIBLIOGRAPHY The internet is indispensable for inform",
           content:
-            "Perhaps Burleigh's most important contemporary lesson is the tension between security and civil liberties in democratic counter-terrorism. Terrorist groups operating within democratic societies deliberately exploit the openness, legal protections, and freedoms of speech and movement that democracies provide. The temptation for democratic states is to restrict these freedoms in the name of security — expanding surveillance, curtailing due process, restricting immigration, and profiling communities. But these measures, if disproportionate or discriminatory, undermine the very values that distinguish democratic societies from the authoritarian regimes terrorists claim to oppose — and they often generate the alienation and radicalisation that produce new threats. The most resilient democratic response, Burleigh suggests, is one that maintains the rule of law, targets operatives with precision, addresses legitimate political grievances, and refuses to allow terrorist violence to transform the nature of the democratic state. This is enormously difficult — it requires sustained political will, public patience, and institutional discipline — but the historical record suggests that democracies that maintain their liberal values ultimately outlast the terrorist movements that threaten them.",
+            "A Narrative of the Palestinian Struggle (New York 1981) Abuza, Zachary ‘JI’s Moneyman and Top Recruiter: A Profile of Noordin Mohammed Top’ Terrorism Focus (25 July 2006) 3, pp. 1-2 Acharya, Arabinda ‘The Bali Bombings: Impact on Indonesia and Southeast Asia’ Hudson Institute (New York 2006) pp. 1-5 Adair, Johnny Mad Dog (London 2007) Adams, Gerry Falls Memories (Dingle, Co. Kerry 1993) Adams, Gerry An Irish Journal (Dingle, Co. Kerry 2001) Alexander, Martin and Keiger, J. F. V. (eds) France and the Algerian War 1954-62. Strategy, Operations, Diplomacy (London 2002) Algemene Inlichtingen en Veiligheidsdienst (AIVD) Violent Jihad in The Netherlands (The Hague 2006) Allen, Charles God’s Terrorists. The Wahhabi Cult and the Hidden Roots of Modern Jihad (London 2006) Allen, Mark Arabs (London 2006) Anderson, R.",
         },
       ],
       flashcards: [
         {
           id: "br-l06-f1",
-          front: "Four recurring patterns of terrorism",
-          back: "1) Emerges when political channels are blocked. 2) Sustained by group dynamics and cultural narratives, not rational calculation. 3) State overreaction is often worse than the terrorism. 4) Rarely achieves stated goals but reshapes the political landscape.",
+          front: "SELECT BIBLIOGRAPHY The internet is indispensable for inform",
+          back:
+            "A Narrative of the Palestinian Struggle (New York 1981) Abuza, Zachary ‘JI’s Moneyman and Top Recruiter: A Profile of Noordin Mohammed Top’ Terrorism Focus (25 July 2006) 3, pp.",
         },
         {
           id: "br-l06-f2",
-          front: "ISIS as territorial innovation",
-          back: "ISIS was novel in controlling territory, administering services, and fielding conventional forces. Territorial defeat didn't eliminate ideological appeal — 'inspired' lone-actor attacks continue worldwide.",
+          front: "INDEX The pagination of this electronic edition does not mat",
+          back:
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "br-l06-f3",
-          front: "Security vs liberty tension",
-          back: "Terrorists exploit democratic freedoms. The temptation: restrict freedoms for security. The risk: disproportionate measures undermine democratic values and generate alienation that produces new threats.",
+          front: "Key concept: SELECT BIBLIOGRAPHY The internet is indispensable for inf",
+          back:
+            "Democracy and its Discontents 1963-1988 (Oxford 1989) 2 volumes Barrett, J.",
         },
         {
           id: "br-l06-f4",
-          front: "Most resilient democratic response",
-          back: "Maintain rule of law, target operatives with precision, address legitimate grievances, refuse to let terrorism transform the democratic state. Historically, democracies that maintain liberal values outlast terrorist movements.",
+          front: "Key concept: INDEX The pagination of this electronic edition does not",
+          back:
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L07  Checkpoint Quiz 2
+    ───────────────────────────────────────────────── */
     {
       id: "br-l07",
-      title: "Final Assessment: Terrorism and Political Violence",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
-      duration: 9,
-      objectives: ["Evaluate comprehensive understanding of terrorism's cultural history and counter-terrorism"],
+      duration: 8,
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "br-l07-q1",
-          text: "The assassination of Tsar Alexander II by Narodnaya Volya illustrates which pattern?",
+          text: "Which of the following best describes a key idea from the section on CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET?",
           options: [
-            { id: "a", text: "That political assassination always achieves revolutionary goals" },
-            { id: "b", text: "That terrorist violence can provoke repressive state responses which, depending on the state's skill, may either crush the movement or validate its claims about regime illegitimacy" },
-            { id: "c", text: "That terrorism only occurs in democratic societies" },
-            { id: "d", text: "That one assassination ends all resistance" },
+            { id: "a", text: "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET LIKE A SNAKE’: ETA T he Basques have in..." },
+            { id: "b", text: "SELECT BIBLIOGRAPHY The internet is indispensable for information on the constant mutations of conte..." },
+            { id: "c", text: "VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabilities unravel if one goes back a genera..." },
+            { id: "d", text: "Key aspects of index the pagination of this electronic edition does not mat" },
           ],
-          correctOptionId: "b",
-          explanation: "The assassination triggered harsh repression that drove revolutionaries underground — but the autocracy's indiscriminate response eventually validated revolutionary claims about the regime's illegitimacy, contributing to later radicalisation.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET. CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET LIKE A SNAKE’: ETA T he Basques have in...",
         },
         {
           id: "br-l07-q2",
-          text: "Why did the Moro kidnapping fail strategically for the Red Brigades?",
+          text: "Which of the following best describes a key idea from the section on VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabi?",
           options: [
-            { id: "a", text: "Because Moro escaped on his own" },
-            { id: "b", text: "Because it was intended to polarise Italian society but instead unified public opinion against the terrorists and strengthened the state's resolve" },
-            { id: "c", text: "Because no media covered the event" },
-            { id: "d", text: "Because it took place in Germany rather than Italy" },
+            { id: "a", text: "VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabilities unravel if one goes back a genera..." },
+            { id: "b", text: "Key aspects of index the pagination of this electronic edition does not mat" },
+            { id: "c", text: "SELECT BIBLIOGRAPHY The internet is indispensable for information on the constant mutations of conte..." },
+            { id: "d", text: "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET LIKE A SNAKE’: ETA T he Basques have in..." },
           ],
-          correctOptionId: "b",
-          explanation: "The Red Brigades expected polarisation and revolutionary crisis. Instead, the murder of a widely respected former Prime Minister horrified the public and turned Italian society firmly against the radical left.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabi. VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabilities unravel if one goes back a genera...",
         },
         {
           id: "br-l07-q3",
-          text: "Research on terrorist profiles consistently shows that:",
+          text: "Which of the following best describes a key idea from the section on SELECT BIBLIOGRAPHY The internet is indispensable for inform?",
           options: [
-            { id: "a", text: "All terrorists are mentally ill" },
-            { id: "b", text: "There is no single 'terrorist personality' — most are not psychopaths; what they share is a radicalisation process involving grievance, ideology, social networks, and moral disengagement" },
-            { id: "c", text: "Only uneducated people become terrorists" },
-            { id: "d", text: "Poverty is the sole predictor of terrorism" },
+            { id: "a", text: "SELECT BIBLIOGRAPHY The internet is indispensable for information on the constant mutations of conte..." },
+            { id: "b", text: "VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabilities unravel if one goes back a genera..." },
+            { id: "c", text: "Key aspects of index the pagination of this electronic edition does not mat" },
+            { id: "d", text: "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET LIKE A SNAKE’: ETA T he Basques have in..." },
           ],
-          correctOptionId: "b",
-          explanation: "Many terrorists are educated and middle-class (Baader-Meinhof, 9/11 hijackers). Radicalisation is a process, not a personality type — involving grievance, ideological framing, group dynamics, and the overriding of normal moral constraints.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to SELECT BIBLIOGRAPHY The internet is indispensable for inform. SELECT BIBLIOGRAPHY The internet is indispensable for information on the constant mutations of conte...",
         },
         {
           id: "br-l07-q4",
-          text: "Bin Laden's strategy of attacking the United States was designed to:",
+          text: "Which of the following best describes a key idea from the section on INDEX The pagination of this electronic edition does not mat?",
           options: [
-            { id: "a", text: "Win a conventional military victory against the U.S. military" },
-            { id: "b", text: "Provoke a massive American military response that would radicalise the Muslim world and discredit pro-American Muslim governments" },
-            { id: "c", text: "Improve trade relations between the Middle East and America" },
-            { id: "d", text: "Convince the American public to convert to Islam" },
+            { id: "a", text: "Key aspects of index the pagination of this electronic edition does not mat" },
+            { id: "b", text: "SELECT BIBLIOGRAPHY The internet is indispensable for information on the constant mutations of conte..." },
+            { id: "c", text: "VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabilities unravel if one goes back a genera..." },
+            { id: "d", text: "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET LIKE A SNAKE’: ETA T he Basques have in..." },
           ],
-          correctOptionId: "b",
-          explanation: "Bin Laden's strategy targeted the 'far enemy' to provoke overreaction. The U.S. invasions of Afghanistan and Iraq partially validated this calculation by generating anger in the Muslim world and creating new theatres of jihad.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to INDEX The pagination of this electronic edition does not mat. Key aspects of index the pagination of this electronic edition does not mat",
         },
         {
           id: "br-l07-q5",
-          text: "The Good Friday Agreement (1998) demonstrates that:",
+          text: "Which of the following best describes a key idea from the section on ACKNOWLEDGEMENTS I must thank Victoria Barnsley of HarperCol?",
           options: [
-            { id: "a", text: "Terrorist movements can never be defeated" },
-            { id: "b", text: "Even the most protracted terrorist conflicts can be resolved through negotiation when both sides calculate that political settlement serves their interests better than continued violence" },
-            { id: "c", text: "Military force alone ended the Troubles" },
-            { id: "d", text: "Terrorism always achieves its political objectives" },
+            { id: "a", text: "CHAPTER 7 Small-Nation Terror I ‘SHARP LIKE AN AXE AND QUIET LIKE A SNAKE’: ETA T he Basques have in..." },
+            { id: "b", text: "In no particular order I would like to warmly thank General the Lord Guthrie, Britain’s former Chief..." },
+            { id: "c", text: "SELECT BIBLIOGRAPHY The internet is indispensable for information on the constant mutations of conte..." },
+            { id: "d", text: "VII TARGETING AMERICA BEFORE 9/11 AND IRAQ Seeming inevitabilities unravel if one goes back a genera..." },
           ],
           correctOptionId: "b",
-          explanation: "After decades of violence, the IRA and the British government reached a negotiated settlement. The key was mutual exhaustion and recognition that a political process offered more than continued armed struggle.",
-        },
-        {
-          id: "br-l07-q6",
-          text: "Lone-actor terrorism presents an unprecedented challenge because:",
-          options: [
-            { id: "a", text: "Lone actors always cause more casualties than organised groups" },
-            { id: "b", text: "Individuals who radicalise online without organisational contact are nearly invisible to intelligence services designed to monitor organisations and networks" },
-            { id: "c", text: "Lone actors have access to nuclear weapons" },
-            { id: "d", text: "Lone actors are always motivated by left-wing ideology" },
-          ],
-          correctOptionId: "b",
-          explanation: "Intelligence systems built to track organisations, communications, and financial networks struggle with individuals who self-radicalise through online content without joining identifiable groups or using monitored channels.",
+          explanation:
+            "This question relates to ACKNOWLEDGEMENTS I must thank Victoria Barnsley of HarperCol. In no particular order I would like to warmly thank General the Lord Guthrie, Britain’s former Chief...",
         },
       ],
     },

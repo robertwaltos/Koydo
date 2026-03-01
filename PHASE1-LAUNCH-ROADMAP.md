@@ -8,6 +8,9 @@ Owner: Koydo Core Team (Claude Code + Codex + Gemini)
 >
 > **Launch command center**: See `../LAUNCH-COMMAND-CENTER.md` for active lock
 > ownership, execution order, and append-only progress protocol.
+>
+> **Long-term roadmap + backlog**: See `PRODUCT-ROADMAP-12-WEEK.md` and
+> `PRODUCT-BACKLOG-EPICS.md` for post-launch epics, milestones, and KPIs.
 
 ## Status Legend
 - `DONE`: implemented and validated
@@ -356,4 +359,3 @@ Before store submission:
 - [ ] IAP products configured in RevenueCat + store consoles
 - [ ] Privacy policy URL + support URL set in store listings
 - [ ] Billing test plan executed (12 test cases in `BILLING-TEST-PLAN.md`)
-

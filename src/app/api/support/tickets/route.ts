@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const createTicketSchema = z.object({
   subject: z.string().min(3).max(120),
@@ -35,6 +36,17 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const rateLimit = await enforceIpRateLimit(request, "api:support:tickets:post", {
+    max: 12,
+    windowMs: 60 * 60 * 1_000,
+  });
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many support ticket requests. Please retry later." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },

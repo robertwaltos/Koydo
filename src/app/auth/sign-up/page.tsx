@@ -75,8 +75,8 @@ function SignUpPageInner() {
   return (
     <main className="mx-auto max-w-md px-6 py-12">
       <SoftCard as="section" organicCorners className="bg-[var(--gradient-hero)] p-5">
-        <h1 className="text-2xl font-semibold">{t("auth_sign_up_title")}</h1>
-        <p className="mt-3 text-sm text-zinc-600">{t("auth_sign_up_subtitle")}</p>
+        <h1 className="text-2xl font-semibold text-zinc-900 dark:text-foreground">{t("auth_sign_up_title")}</h1>
+        <p className="mt-3 text-sm text-zinc-600 dark:text-foreground/70">{t("auth_sign_up_subtitle")}</p>
       </SoftCard>
 
       <SoftCard as="section" className="mt-6 p-4">
@@ -118,7 +118,7 @@ function SignUpPageInner() {
             {isSubmitting ? t("auth_sign_up_button_creating") : t("auth_sign_up_button_create")}
           </button>
 
-          {status ? <p role="status" className="text-sm text-zinc-600">{status}</p> : null}
+          {status ? <p role="status" className="text-sm text-zinc-600 dark:text-foreground/70">{status}</p> : null}
           {!hasSupabaseConfig ? (
             <p role="status" className="text-xs text-amber-700">
               {t("auth_sign_up_missing_supabase")}
@@ -132,13 +132,13 @@ function SignUpPageInner() {
           <div className="w-full border-t border-border" />
         </div>
         <div className="relative flex justify-center text-sm">
-          <span className="bg-surface px-2 text-zinc-500">{t("auth_sign_up_divider_or")}</span>
+          <span className="bg-surface px-2 text-zinc-500 dark:text-foreground/60">{t("auth_sign_up_divider_or")}</span>
         </div>
       </div>
 
       <OAuthButtons intent="up" nextPath={nextPath} />
 
-      <p className="mt-6 text-sm text-zinc-600">
+      <p className="mt-6 text-sm text-zinc-600 dark:text-foreground/70">
         {t("auth_sign_up_footer_have_account")}{" "}
         <Link
           href={nextPath ? `/auth/sign-in?next=${encodeURIComponent(nextPath)}` : "/auth/sign-in"}

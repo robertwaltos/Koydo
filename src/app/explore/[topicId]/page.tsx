@@ -10,7 +10,6 @@ import { getWorldScene } from "@/lib/explorer/scenes";
 import { getAllLearningModules } from "@/lib/modules";
 import { toExploreLessonPath, toExploreModulePath } from "@/lib/routing/paths";
 import SpeakButton from "../_components/speak-button";
-import AutoNarrator from "../_components/auto-narrator";
 import QuestionBubble from "../_components/question-bubble";
 import WorldPortal from "../_components/world-portal";
 import ExplorerViewTracker from "../_components/explorer-view-tracker";
@@ -154,12 +153,6 @@ async function TopicExplorePageContent({
   return (
     <div className="flex flex-col">
       {/* Auto-narrate world entry */}
-      {scene ? <AutoNarrator text={scene.ambientNarration} /> : null}
-      {focusedChoice ? (
-        <AutoNarrator
-          text={`You chose ${focusedChoice.label}. Let's look, move, build, sing, and pause together.`}
-        />
-      ) : null}
       <ExplorerViewTracker surface="topic" topicId={topic.id} />
 
       {/* ── Hero Scene ── full-viewport scene backdrop with centered illustration */}
@@ -337,7 +330,7 @@ async function TopicExplorePageContent({
                     choiceId={choice.id}
                     choiceLabel={choice.label}
                     href={choiceHref}
-                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
+                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
                   >
                     Choose
                   </PictureChoiceLink>
@@ -451,7 +444,7 @@ async function TopicExplorePageContent({
                 choiceId={focusedChoice.id}
                 choiceLabel={focusedChoice.label}
                 href={focusedAdventureHref}
-                className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
+                className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
               >
                 Start This Adventure
               </PicturePathStartLink>
@@ -506,7 +499,7 @@ async function TopicExplorePageContent({
                     topicId={topic.id}
                     title={movement.title}
                     href={movementHref}
-                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
+                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
                   >
                     Move into Adventure
                   </MovementAdventureLink>
@@ -554,7 +547,7 @@ async function TopicExplorePageContent({
                     topicId={topic.id}
                     title={chant.title}
                     href={chantHref}
-                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
+                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
                   >
                     Sing into Adventure
                   </ChantAdventureLink>
@@ -602,7 +595,7 @@ async function TopicExplorePageContent({
                     topicId={topic.id}
                     title={moment.title}
                     href={calmHref}
-                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
+                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
                   >
                     Calm into Adventure
                   </CalmMomentLink>
@@ -783,7 +776,7 @@ async function TopicExplorePageContent({
                   />
                   <Link
                     href={challengeHref}
-                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
+                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
                   >
                     Build with Adventure
                   </Link>
@@ -809,7 +802,7 @@ async function TopicExplorePageContent({
           <MissionPrepLink
             topicId={topic.id}
             href={`/explore/${topic.id}/mission-prep`}
-            className="ui-focus-ring inline-flex min-h-10 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-xs font-bold text-zinc-900 transition-colors hover:bg-zinc-100 sm:text-sm"
+            className="ui-focus-ring inline-flex min-h-10 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-xs font-bold text-zinc-900 transition-colors hover:bg-zinc-100 sm:text-sm"
           >
             Mission Prep Sheet
           </MissionPrepLink>
@@ -869,7 +862,7 @@ async function TopicExplorePageContent({
                   {mission.materials.map((material) => (
                     <span
                       key={`${mission.title}-${material}`}
-                      className="rounded-full border border-zinc-200 bg-zinc-50 px-2 py-1 text-xs font-semibold text-zinc-600"
+                      className="rounded-full border border-zinc-200 bg-surface-muted px-2 py-1 text-xs font-semibold text-zinc-600"
                     >
                       {material}
                     </span>
@@ -892,7 +885,7 @@ async function TopicExplorePageContent({
                   />
                   <Link
                     href={missionHref}
-                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
+                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-sm font-bold text-zinc-900 transition-colors hover:bg-zinc-100"
                   >
                     Start from Adventure
                   </Link>
@@ -965,7 +958,7 @@ async function TopicExplorePageContent({
               </p>
               <Link
                 href="/modules"
-                className="ui-focus-ring mt-3 inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-zinc-50 px-4 py-2 text-sm font-bold text-zinc-900 hover:bg-zinc-100"
+                className="ui-focus-ring mt-3 inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-surface-muted px-4 py-2 text-sm font-bold text-zinc-900 hover:bg-zinc-100"
               >
                 Open Full Catalog
               </Link>

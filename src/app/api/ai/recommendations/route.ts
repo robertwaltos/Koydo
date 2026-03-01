@@ -3,6 +3,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getAllLearningModules } from "@/lib/modules";
 import { buildAdaptiveRemediationQueue } from "@/lib/exam/remediation-queue";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 type MasteryRow = {
   skill_id: string;
@@ -31,8 +32,20 @@ function isDue(nextReviewAt: string | null | undefined) {
   return Number.isFinite(reviewDate) && reviewDate <= Date.now();
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const rateLimit = await enforceIpRateLimit(request, "api:ai:recommendations:get", {
+      max: 45,
+      windowMs: 60_000,
+    });
+
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many recommendations requests. Please retry shortly." },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const learningModules = getAllLearningModules();
     const supabase = await createSupabaseServerClient();
     const {

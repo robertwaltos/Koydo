@@ -7,6 +7,7 @@ import {
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { getLessonById } from "@/lib/modules";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 function parseDays(input: string | null) {
   const parsed = Number(input ?? "");
@@ -15,6 +16,24 @@ function parseDays(input: string | null) {
 }
 
 export async function GET(request: Request) {
+  const rateLimit = await enforceIpRateLimit(request, "api:admin:ai:remediation-usage:export:get", {
+    max: 30,
+    windowMs: 60_000,
+  });
+
+  if (!rateLimit.allowed) {
+    return new Response(
+      JSON.stringify({ error: "Too many export requests. Please retry shortly." }),
+      {
+        status: 429,
+        headers: {
+          "Content-Type": "application/json",
+          "Retry-After": String(rateLimit.retryAfterSeconds),
+        },
+      },
+    );
+  }
+
   const auth = await requireAdminForApi();
   if (!auth.isAuthorized) {
     return auth.response;

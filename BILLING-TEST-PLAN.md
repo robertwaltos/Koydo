@@ -38,8 +38,8 @@
 |------|----------|-----------|
 | Launch app as free user | — | |
 | Tap a premium-gated lesson | Paywall screen shown with plan options | |
-| Verify plans visible: Monthly + Annual | Both plans visible with prices | |
-| Annual plan shows "Best Value" badge | Badge visible | |
+| Verify plans visible: Language Plus + Language Family | Both plans visible with prices | |
+| Family plan label appears on the family package | Badge/label visible | |
 | "Restore Purchases" link visible | Link visible at bottom | |
 
 ---
@@ -57,14 +57,14 @@
 
 ---
 
-### TC-03: Annual Subscription Purchase (iOS)
+### TC-03: Family Subscription Purchase (iOS)
 | Step | Expected | Pass/Fail |
 |------|----------|-----------|
-| On paywall, tap "Annual" plan | Plan selected | |
+| On paywall, tap "Language Family" plan | Plan selected | |
 | Complete purchase with Sandbox Apple ID | Success confirmation | |
 | Content unlocked | All premium content accessible | |
-| Verify plan in account settings | Shows "Premium Annual" | |
-| Check `subscriptions` table | `plan_id = 'annual'` | |
+| Verify plan in account settings | Shows family tier plan | |
+| Check `subscriptions` table | `plan_id` resolves to the mapped matrix plan ID when configured as package/product ID match; otherwise cadence fallback applies (`monthly`/`annual`) | |
 
 ---
 

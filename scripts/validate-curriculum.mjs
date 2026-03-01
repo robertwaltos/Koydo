@@ -16,6 +16,9 @@ function loadModuleFromFile(filePath) {
   const exportName = exportMatch[1];
   const transformed = source
     .replace(/^import\s+type\s+\{[^}]+\}\s+from\s+"[^"]+";\s*$/gm, "")
+    // Some catalog modules use TS literal assertions (e.g. `type: "x" as const`).
+    // The validator executes transformed source in a plain VM, so strip these.
+    .replace(/\s+as\s+const\b/g, "")
     .replace(
       new RegExp(`export const\\s+${exportName}\\s*:\\s*LearningModule\\s*=`, "m"),
       `const ${exportName} =`,
@@ -208,6 +211,15 @@ function validateModule(moduleEntry, state) {
       pushIssue(issues, "error", `Lesson "${lesson.id}" has unsupported type "${lesson.type}".`);
     } else {
       lessonTypeCounts[lesson.type] += 1;
+      if (
+        lesson.type !== "interactive" &&
+        Array.isArray(lesson.interactiveActivities) &&
+        lesson.interactiveActivities.length > 0
+      ) {
+        // Some modules embed interactive work inside video/quiz lessons.
+        // Count these toward interactive coverage to avoid false negatives.
+        lessonTypeCounts.interactive += 1;
+      }
     }
 
     if (typeof lesson.duration !== "number" || lesson.duration <= 0) {

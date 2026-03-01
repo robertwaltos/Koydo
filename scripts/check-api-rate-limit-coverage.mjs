@@ -1,0 +1,125 @@
+#!/usr/bin/env node
+
+import fs from "node:fs";
+import path from "node:path";
+
+const ROOT = process.cwd();
+
+const ROUTE_GUARDS = [
+  {
+    file: "src/app/api/tts/generate/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:tts:generate:post"],
+  },
+  {
+    file: "src/app/api/images/generate/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:images:generate:post"],
+  },
+  {
+    file: "src/app/api/language/translate/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:language:translate:post"],
+  },
+  {
+    file: "src/app/api/language/pronunciation/grade/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:language:pronunciation:grade:post"],
+  },
+  {
+    file: "src/app/api/ai/follow-up/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:ai:follow-up:post"],
+  },
+  {
+    file: "src/app/api/ai/follow-up/backfill/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:ai:follow-up:backfill:post"],
+  },
+  {
+    file: "src/app/api/ai/analyze/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:ai:analyze:post"],
+  },
+  {
+    file: "src/app/api/ai/remediation-worksheet/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:ai:remediation-worksheet:post"],
+  },
+  {
+    file: "src/app/api/ai/remediation-worksheet/progress/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:ai:remediation-worksheet:progress:post"],
+  },
+  {
+    file: "src/app/api/ai/recommendations/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:ai:recommendations:get"],
+  },
+  {
+    file: "src/app/api/ai/study-plan/week/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:ai:study-plan:week:get"],
+  },
+  {
+    file: "src/app/api/support/tickets/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:support:tickets:post"],
+  },
+  {
+    file: "src/app/api/reconciliation/run/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:reconciliation:run:post"],
+  },
+  {
+    file: "src/app/api/testing/exams/[examId]/start/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:testing:exams:start:post"],
+  },
+  {
+    file: "src/app/api/testing/attempts/[attemptId]/submit/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:testing:attempts:submit:post"],
+  },
+  {
+    file: "src/app/api/admin/ai/remediation-usage/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:admin:ai:remediation-usage:get"],
+  },
+  {
+    file: "src/app/api/admin/ai/remediation-usage/timeseries/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:admin:ai:remediation-usage:timeseries:get"],
+  },
+  {
+    file: "src/app/api/admin/ai/remediation-usage/export/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:admin:ai:remediation-usage:export:get"],
+  },
+  {
+    file: "src/app/api/audiobooks/public-domain/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:audiobooks:public-domain:get"],
+  },
+];
+
+function readFile(relPath) {
+  const fullPath = path.join(ROOT, relPath);
+  if (!fs.existsSync(fullPath)) {
+    return null;
+  }
+  return fs.readFileSync(fullPath, "utf8");
+}
+
+function main() {
+  const failures = [];
+
+  for (const guard of ROUTE_GUARDS) {
+    const content = readFile(guard.file);
+    if (!content) {
+      failures.push(`${guard.file} -> missing file`);
+      continue;
+    }
+
+    const missing = guard.mustInclude.filter((snippet) => !content.includes(snippet));
+    if (missing.length > 0) {
+      failures.push(`${guard.file} -> missing: ${missing.join(", ")}`);
+    }
+  }
+
+  process.stdout.write("API rate-limit coverage check\n");
+  process.stdout.write(`Checked: ${ROUTE_GUARDS.length}\n`);
+
+  if (failures.length > 0) {
+    process.stdout.write(`FAIL: ${failures.length} route(s) missing required guard markers.\n`);
+    for (const failure of failures) {
+      process.stdout.write(` - ${failure}\n`);
+    }
+    process.exit(1);
+  }
+
+  process.stdout.write("PASS: All required high-cost routes include rate-limit guards.\n");
+}
+
+main();

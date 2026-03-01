@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getLanguageProviderStatuses, translateText } from "@/lib/language-learning";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const requestSchema = z.object({
   text: z.string().min(1).max(5_000),
@@ -14,6 +15,18 @@ const requestSchema = z.object({
 });
 
 export async function POST(request: NextRequest) {
+  const rateLimit = await enforceIpRateLimit(request, "api:language:translate:post", {
+    max: 30,
+    windowMs: 60_000,
+  });
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many translation requests. Please retry shortly." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },

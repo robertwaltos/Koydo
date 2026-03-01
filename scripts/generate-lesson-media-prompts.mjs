@@ -19,6 +19,7 @@ function loadModuleFromFile(filePath) {
   const exportName = exportMatch[1];
   const transformed = source
     .replace(/^import\s+type\s+\{[^}]+\}\s+from\s+"[^"]+";\s*$/gm, "")
+    .replace(/\s+as\s+const\b/g, "")
     .replace(
       new RegExp(`export const\\s+${exportName}\\s*:\\s*LearningModule\\s*=`, "m"),
       `const ${exportName} =`,

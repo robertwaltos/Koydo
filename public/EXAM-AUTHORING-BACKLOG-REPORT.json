@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T04:20:23.621Z",
+  "generatedAt": "2026-03-01T07:56:53.518Z",
   "genericPatternSources": [
     "which approach best improves",
     "after a timed .* drill",
@@ -7,14 +7,110 @@
     "what is the strongest pacing strategy"
   ],
   "totals": {
-    "quizLessons": 60,
+    "quizLessons": 54,
     "highPriority": 0,
-    "mediumPriority": 0,
-    "lowPriority": 60,
-    "averageRiskScore": 0
+    "mediumPriority": 1,
+    "lowPriority": 53,
+    "averageRiskScore": 3
   },
   "promptTemplate": "You are contributing production-ready exam-prep lesson content for our Next.js + TypeScript learning platform.\nOutput only JSON using this structure:\n{ moduleId, lessonId, rewrittenQuestions: [{ id, text, skillId, options:[{id,text}], correctOptionId, hint?, explanation? }], interactiveActivities:[...], quizBlueprint:{...}, notes }\nRequirements:\n- Keep existing lessonId and question IDs stable where possible.\n- Make stems and distractors exam-track specific (no generic wording).\n- Include one timed-drill rationale tied to section pacing.\n- Include one remediation interactive activity mapped to top missed skill.\n- Keep content child-safe and culturally neutral.",
   "lessons": [
+    {
+      "moduleId": "sat-prep-101",
+      "moduleTitle": "SAT Prep Foundations",
+      "track": "SAT",
+      "lessonId": "sat-prep-101-l03",
+      "lessonTitle": "SAT Math Checkpoint",
+      "questionCount": 5,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 0,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [],
+      "hasExamDrillTag": false,
+      "timedMinutes": null,
+      "riskScore": 47,
+      "priority": "medium",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam.",
+        "Add at least one typed interactive remediation activity linked to top missed skills.",
+        "Add `metadata.examDrill` tag and align timer to section pacing intent.",
+        "Set `quizBlueprint.timeLimitMinutes` using realistic section pacing."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "moduleTitle": "AP Exam Prep Toolkit",
+      "track": "AP",
+      "lessonId": "ap-prep-101-l04",
+      "lessonTitle": "AP Knowledge Checkpoint",
+      "questionCount": 3,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 33.33,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [],
+      "hasExamDrillTag": false,
+      "timedMinutes": null,
+      "riskScore": 39,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam.",
+        "Add at least one typed interactive remediation activity linked to top missed skills.",
+        "Add `metadata.examDrill` tag and align timer to section pacing intent.",
+        "Set `quizBlueprint.timeLimitMinutes` using realistic section pacing."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "moduleTitle": "AP Exam Prep Toolkit",
+      "track": "AP",
+      "lessonId": "ap-prep-101-l06",
+      "lessonTitle": "AP Prep Final Assessment",
+      "questionCount": 3,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 33.33,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [],
+      "hasExamDrillTag": false,
+      "timedMinutes": null,
+      "riskScore": 39,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam.",
+        "Add at least one typed interactive remediation activity linked to top missed skills.",
+        "Add `metadata.examDrill` tag and align timer to section pacing intent.",
+        "Set `quizBlueprint.timeLimitMinutes` using realistic section pacing."
+      ]
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "moduleTitle": "SAT Prep Foundations",
+      "track": "SAT",
+      "lessonId": "sat-prep-101-l06",
+      "lessonTitle": "SAT Prep Final Assessment",
+      "questionCount": 5,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 40,
+      "genericPhraseHits": 0,
+      "interactiveTypes": [],
+      "hasExamDrillTag": false,
+      "timedMinutes": null,
+      "riskScore": 37,
+      "priority": "low",
+      "rewriteActions": [
+        "Rewrite all quiz stems to be track-specific and scenario-based.",
+        "Replace generic strategy wording with concrete section/task contexts.",
+        "Ensure distractors reflect realistic student misconceptions for this exam.",
+        "Add at least one typed interactive remediation activity linked to top missed skills.",
+        "Add `metadata.examDrill` tag and align timer to section pacing intent.",
+        "Set `quizBlueprint.timeLimitMinutes` using realistic section pacing."
+      ]
+    },
     {
       "moduleId": "a-level-prep-101",
       "moduleTitle": "A-Level Prep Foundations",
@@ -228,121 +324,6 @@
       "track": "ACT",
       "lessonId": "act-prep-101-l15",
       "lessonTitle": "ACT: Full ACT Mock and Review",
-      "questionCount": 10,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "sorting_buckets"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 24,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "ap-prep-101",
-      "moduleTitle": "AP Exam Prep Toolkit",
-      "track": "AP",
-      "lessonId": "ap-prep-101-l03",
-      "lessonTitle": "AP: Free-Response Planning",
-      "questionCount": 6,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "matching_pairs"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 12,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "ap-prep-101",
-      "moduleTitle": "AP Exam Prep Toolkit",
-      "track": "AP",
-      "lessonId": "ap-prep-101-l06",
-      "lessonTitle": "AP: Time Management in FRQ",
-      "questionCount": 6,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "drag_and_drop"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 12,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "ap-prep-101",
-      "moduleTitle": "AP Exam Prep Toolkit",
-      "track": "AP",
-      "lessonId": "ap-prep-101-l09",
-      "lessonTitle": "AP: Practice Set: FRQ",
-      "questionCount": 6,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "sorting_buckets"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 12,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "ap-prep-101",
-      "moduleTitle": "AP Exam Prep Toolkit",
-      "track": "AP",
-      "lessonId": "ap-prep-101-l12",
-      "lessonTitle": "AP: Mixed-Section Decision Drill",
-      "questionCount": 6,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "matching_pairs"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 12,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "ap-prep-101",
-      "moduleTitle": "AP Exam Prep Toolkit",
-      "track": "AP",
-      "lessonId": "ap-prep-101-l15",
-      "lessonTitle": "AP: Mock AP Session and Reflection",
       "questionCount": 10,
       "uniqueQuestionRatio": 100,
       "trackMentionRate": 100,
@@ -1148,121 +1129,6 @@
       "track": "JEE/NEET",
       "lessonId": "jee-neet-prep-101-l15",
       "lessonTitle": "JEE/NEET: Final 60-Day Exam Plan",
-      "questionCount": 10,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "sorting_buckets"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 24,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "sat-prep-101",
-      "moduleTitle": "SAT Prep Foundations",
-      "track": "SAT",
-      "lessonId": "sat-prep-101-l03",
-      "lessonTitle": "SAT: Writing and Language Rules",
-      "questionCount": 6,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "matching_pairs"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 12,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "sat-prep-101",
-      "moduleTitle": "SAT Prep Foundations",
-      "track": "SAT",
-      "lessonId": "sat-prep-101-l06",
-      "lessonTitle": "SAT: Timing and Pacing Practice",
-      "questionCount": 6,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "drag_and_drop"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 12,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "sat-prep-101",
-      "moduleTitle": "SAT Prep Foundations",
-      "track": "SAT",
-      "lessonId": "sat-prep-101-l09",
-      "lessonTitle": "SAT: Section Drill: Math",
-      "questionCount": 6,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "matching_pairs"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 12,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "sat-prep-101",
-      "moduleTitle": "SAT Prep Foundations",
-      "track": "SAT",
-      "lessonId": "sat-prep-101-l12",
-      "lessonTitle": "SAT: Mixed-Section Decision Drill",
-      "questionCount": 6,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "genericPhraseHits": 0,
-      "interactiveTypes": [
-        "matching_pairs"
-      ],
-      "hasExamDrillTag": true,
-      "timedMinutes": 12,
-      "riskScore": 0,
-      "priority": "low",
-      "rewriteActions": [
-        "Rewrite all quiz stems to be track-specific and scenario-based.",
-        "Replace generic strategy wording with concrete section/task contexts.",
-        "Ensure distractors reflect realistic student misconceptions for this exam."
-      ]
-    },
-    {
-      "moduleId": "sat-prep-101",
-      "moduleTitle": "SAT Prep Foundations",
-      "track": "SAT",
-      "lessonId": "sat-prep-101-l15",
-      "lessonTitle": "SAT: Full SAT Mock and Review",
       "questionCount": 10,
       "uniqueQuestionRatio": 100,
       "trackMentionRate": 100,

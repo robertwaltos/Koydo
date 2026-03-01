@@ -376,7 +376,7 @@ export default function StudentOnboardingPage() {
               <div className="flex flex-col-reverse gap-3 pt-2 sm:flex-row sm:items-center sm:justify-between">
                 <Link
                   href="/select-profile"
-                  className="ui-focus-ring inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-200 bg-zinc-50 px-5 py-2 text-sm font-semibold text-zinc-600 transition-colors hover:bg-zinc-100"
+                  className="ui-focus-ring inline-flex min-h-11 items-center justify-center rounded-full border border-zinc-200 bg-surface-muted px-5 py-2 text-sm font-semibold text-zinc-600 transition-colors hover:bg-zinc-100"
                 >
                   {t("common_cancel")}
                 </Link>
@@ -468,7 +468,7 @@ export default function StudentOnboardingPage() {
                 type="button"
                 onClick={() => setCurrentQuestionIndex((prev) => Math.max(0, prev - 1))}
                 disabled={currentQuestionIndex === 0}
-                className="ui-focus-ring rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-semibold text-zinc-600 transition-colors hover:bg-zinc-100 disabled:opacity-40 disabled:hover:bg-zinc-50"
+                className="ui-focus-ring rounded-full border border-zinc-200 bg-surface-muted px-4 py-2 text-sm font-semibold text-zinc-600 transition-colors hover:bg-zinc-100 disabled:opacity-40 disabled:hover:bg-surface-muted"
               >
                 {t("onboarding_previous")}
               </button>

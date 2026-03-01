@@ -5,7 +5,7 @@ import { toModulePath } from "@/lib/routing/paths";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { type ExamRegion, getExamTrackProfileByModuleId } from "@/lib/exam/tracks";
 import SoftCard from "@/app/components/ui/soft-card";
-import ProgressChip from "@/app/components/ui/progress-chip";
+import PageHeader from "@/app/components/page-header";
 
 export const dynamic = "force-dynamic";
 
@@ -27,13 +27,6 @@ function getExamModules() {
         a.track.localeCompare(b.track) ||
         a.title.localeCompare(b.title),
     );
-}
-
-function durationTone(durationMinutes?: number): "neutral" | "info" | "warning" {
-  if (!durationMinutes) return "neutral";
-  if (durationMinutes >= 60) return "warning";
-  if (durationMinutes >= 40) return "info";
-  return "neutral";
 }
 
 export default async function ExamPrepPage() {
@@ -93,96 +86,63 @@ export default async function ExamPrepPage() {
   const uniqueTracks = new Set(examModules.map((module) => module.track));
 
   return (
-    <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-12">
-      <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
-        <p className="text-xs font-semibold uppercase tracking-wide text-zinc-700">
-          Exam Preparation Tracks
-        </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight text-zinc-900">
-          Global Exam Prep Hub
-        </h1>
-        <p className="mt-2 max-w-3xl text-sm text-zinc-700">
-          Structured pathways for major entrance and high-stakes exams. Each track
-          includes guided lessons, interactive practice, quiz checkpoints, and
-          full mock review cycles.
-        </p>
-        <div className="mt-4 grid gap-2 sm:grid-cols-3">
-          <SoftCard as="article" className="border-indigo-200 bg-surface p-3">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">Tracks</p>
-            <p className="mt-1 text-2xl font-semibold text-zinc-900">{uniqueTracks.size}</p>
-          </SoftCard>
-          <SoftCard as="article" className="border-indigo-200 bg-surface p-3">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">Modules</p>
-            <p className="mt-1 text-2xl font-semibold text-zinc-900">{examModules.length}</p>
-          </SoftCard>
-          <SoftCard as="article" className="border-indigo-200 bg-surface p-3">
-            <p className="text-xs uppercase tracking-wide text-zinc-500">Regions</p>
-            <p className="mt-1 text-2xl font-semibold text-zinc-900">{regionCounts.length}</p>
-          </SoftCard>
+    <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-8 sm:py-10">
+      <PageHeader
+        breadcrumbs={[
+          { label: "Dashboard", href: "/dashboard" },
+          { label: "Exam Prep" },
+        ]}
+        eyebrow="Exam Preparation"
+        title="Global Exam Prep Hub"
+        description="Structured pathways for major entrance and high-stakes exams with guided lessons, practice, and mock review cycles."
+        stats={[
+          { label: "tracks", value: uniqueTracks.size },
+          { label: "modules", value: examModules.length },
+          { label: "regions", value: regionCounts.length },
+        ]}
+      >
+        <div className="flex flex-wrap items-center gap-2 pt-1">
+          {regionCounts.map((entry) => (
+            <a
+              key={entry.region}
+              href={`#region-${entry.region.toLowerCase()}`}
+              className="inline-flex items-center rounded-full border border-zinc-200 bg-surface-muted px-2.5 py-0.5 text-[11px] font-semibold text-zinc-600 transition-colors hover:bg-zinc-100"
+            >
+              {entry.region} <span className="ml-1 text-zinc-400">{entry.count}</span>
+            </a>
+          ))}
         </div>
-        <SoftCard className="mt-4 border-indigo-200 bg-surface p-3">
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <div>
-              <p className="text-xs uppercase tracking-wide text-zinc-500">Error Logbook</p>
-              <p className="mt-1 text-sm text-zinc-700">
-                {user
-                  ? `You currently have ${unresolvedErrorCount ?? 0} open exam error log item(s).`
-                  : "Sign in to track and review your exam error logbook."}
+
+        {user && unresolvedErrorCount != null && unresolvedErrorCount > 0 ? (
+          <div className="mt-4 flex items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3">
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-amber-800">
+                {unresolvedErrorCount} open error{unresolvedErrorCount !== 1 ? "s" : ""} to review
               </p>
-              {user && topErrorSkills.length > 0 ? (
-                <div className="mt-2 flex flex-wrap gap-2">
+              {topErrorSkills.length > 0 ? (
+                <div className="mt-1 flex flex-wrap gap-1">
                   {topErrorSkills.map((entry) => (
-                    <ProgressChip
+                    <span
                       key={entry.skillId}
-                      label={entry.skillId}
-                      value={entry.count}
-                      tone="warning"
-                    />
-                  ))}
-                </div>
-              ) : null}
-              {user && topErrorTypes.length > 0 ? (
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {topErrorTypes.map((entry) => (
-                    <ProgressChip
-                      key={entry.errorType}
-                      label={entry.errorType}
-                      value={entry.count}
-                      tone="info"
-                    />
+                      className="rounded-full border border-amber-300 bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-800"
+                    >
+                      {entry.skillId} ({entry.count})
+                    </span>
                   ))}
                 </div>
               ) : null}
             </div>
-            {user ? (
-              <Link
-                href="/exam-prep/error-log"
-                className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground"
-              >
-                Open Error Logbook
-              </Link>
-            ) : (
-              <Link
-                href="/auth/sign-in"
-                className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground"
-              >
-                Sign In
-              </Link>
-            )}
+            <Link
+              href="/exam-prep/error-log"
+              className="ui-focus-ring inline-flex min-h-9 items-center rounded-lg border border-amber-300 bg-white px-3 py-1.5 text-xs font-semibold text-amber-800 hover:bg-amber-50"
+            >
+              Open Logbook →
+            </Link>
           </div>
-        </SoftCard>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {regionCounts.map((entry) => (
-            <ProgressChip
-              key={entry.region}
-              label={entry.region}
-              value={entry.count}
-              tone="neutral"
-            />
-          ))}
-        </div>
-      </SoftCard>
+        ) : null}
+      </PageHeader>
 
+      {/* Region sections */}
       {regions
         .map((region) => ({
           region,
@@ -190,84 +150,61 @@ export default async function ExamPrepPage() {
         }))
         .filter((entry) => entry.modules.length > 0)
         .map((entry) => (
-          <section key={entry.region} className="space-y-3">
+          <section key={entry.region} id={`region-${entry.region.toLowerCase()}`} className="space-y-3">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-zinc-900">{entry.region}</h2>
-              <p className="text-xs text-zinc-500">{entry.modules.length} track(s)</p>
+              <h2 className="text-lg font-bold text-zinc-900">{entry.region}</h2>
+              <span className="text-xs text-zinc-500">{entry.modules.length} track{entry.modules.length !== 1 ? "s" : ""}</span>
             </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {entry.modules.map((module) => (
-                <SoftCard key={module.id} as="article" interactive className="p-5">
+                <SoftCard key={module.id} as="article" interactive className="p-4">
                   <ModuleCoverImage
                     moduleId={module.id}
                     moduleTitle={module.title}
                     fallbackSrc={module.thumbnail}
-                    className="h-36 w-full rounded-xl border border-border object-cover"
+                    className="h-32 w-full rounded-xl border border-border object-cover"
                   />
-                  <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-zinc-700">
+                  <p className="mt-3 text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
                     {module.track}
                   </p>
-                  <h3 className="mt-2 text-lg font-semibold text-zinc-900">{module.title}</h3>
-                  <p className="mt-2 text-sm text-zinc-700">{module.description}</p>
-                  <p className="mt-3 text-xs text-zinc-500">
-                    Lessons: {module.lessons.length} | Ages {module.minAge ?? "?"}-{module.maxAge ?? "?"}
-                  </p>
-                  {module.trackProfile?.scoreScale ? (
-                    <p className="mt-1 text-xs text-zinc-500">
-                      Score Scale: {module.trackProfile.scoreScale}
-                    </p>
-                  ) : null}
-                  {module.trackProfile?.sectionOrder?.length ? (
-                    <div className="mt-3">
-                      <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
-                        Sections
-                      </p>
-                      <div className="mt-1 flex flex-wrap gap-1">
-                        {module.trackProfile.sectionOrder.slice(0, 3).map((section) => (
-                          <span
-                            key={section.id}
-                            className="rounded-full border border-border bg-surface-muted px-2 py-1 text-[10px] font-medium text-zinc-700"
-                            title={section.focus}
-                          >
-                            {section.title}
-                            {section.durationMinutes ? ` (${section.durationMinutes}m)` : ""}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  ) : null}
+                  <h3 className="mt-1 text-base font-bold text-zinc-900 line-clamp-2">{module.title}</h3>
+                  <p className="mt-1 text-sm text-zinc-600 line-clamp-2">{module.description}</p>
+
+                  {/* Metadata row — deduplicated */}
+                  <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                    <span className="rounded-full border border-zinc-200 bg-surface-muted px-2 py-0.5 text-[10px] font-semibold text-zinc-600">
+                      {module.lessons.length} lessons
+                    </span>
+                    <span className="rounded-full border border-zinc-200 bg-surface-muted px-2 py-0.5 text-[10px] font-semibold text-zinc-600">
+                      Ages {module.minAge ?? "?"}–{module.maxAge ?? "?"}
+                    </span>
+                    {module.trackProfile?.scoreScale ? (
+                      <span className="rounded-full border border-zinc-200 bg-surface-muted px-2 py-0.5 text-[10px] font-semibold text-zinc-600">
+                        {module.trackProfile.scoreScale}
+                      </span>
+                    ) : null}
+                  </div>
+
+                  {/* Skill domains (single display, not duplicated) */}
                   {module.trackProfile?.skillDomains?.length ? (
                     <div className="mt-2 flex flex-wrap gap-1">
-                      {module.trackProfile.skillDomains.slice(0, 3).map((domain) => (
+                      {module.trackProfile.skillDomains.slice(0, 4).map((domain) => (
                         <span
                           key={domain}
-                          className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-1 text-[10px] font-medium text-emerald-800"
+                          className="rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-800"
                         >
                           {domain}
                         </span>
                       ))}
                     </div>
                   ) : null}
-                  {module.trackProfile?.sectionOrder?.length ? (
-                    <div className="mt-2 flex flex-wrap gap-1">
-                      {module.trackProfile.sectionOrder
-                        .slice(0, 2)
-                        .map((section) => (
-                          <ProgressChip
-                            key={`${module.id}-${section.id}-prio`}
-                            label={section.title}
-                            value={section.durationMinutes ? `${section.durationMinutes}m` : "planned"}
-                            tone={durationTone(section.durationMinutes)}
-                          />
-                        ))}
-                    </div>
-                  ) : null}
+
                   <div className="mt-4">
                     <Link
                       href={toModulePath(module.id)}
-                      className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center justify-center border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground"
+                      className="ui-focus-ring inline-flex w-full min-h-10 items-center justify-center rounded-xl border border-indigo-200 bg-indigo-50 text-sm font-bold text-indigo-800 transition-colors hover:bg-indigo-100"
                     >
-                      Open Track
+                      Open Track →
                     </Link>
                   </div>
                 </SoftCard>

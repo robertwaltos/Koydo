@@ -1,0 +1,41 @@
+import { test, expect } from "@playwright/test";
+
+/**
+ * Visual regression test — captures a full-page screenshot on every
+ * configured device project.  Run `npx playwright test --update-snapshots`
+ * to create/refresh the baseline images.
+ *
+ * Each page scrolls to bottom to trigger lazy content before capturing.
+ */
+
+const PUBLIC_PAGES = [
+  { name: "landing", path: "/" },
+  { name: "explore", path: "/explore" },
+  { name: "sign-in", path: "/auth/sign-in" },
+  { name: "sign-up", path: "/auth/sign-up" },
+  { name: "privacy", path: "/legal/privacy" },
+  { name: "terms", path: "/legal/terms" },
+  { name: "support", path: "/support" },
+];
+
+for (const { name, path } of PUBLIC_PAGES) {
+  test(`${name} — visual snapshot`, async ({ page }) => {
+    await page.goto(path, { waitUntil: "domcontentloaded" });
+    await page.waitForTimeout(1500);
+
+    // Scroll to bottom to load any lazy content (may fail if page navigates)
+    try {
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+      await page.waitForTimeout(500);
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(300);
+    } catch {
+      // Page may have navigated (e.g. auth redirect), wait and continue
+      await page.waitForTimeout(500);
+    }
+
+    await expect(page).toHaveScreenshot(`${name}.png`, {
+      fullPage: true,
+    });
+  });
+}

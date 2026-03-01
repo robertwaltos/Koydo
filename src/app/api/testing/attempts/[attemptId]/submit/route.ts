@@ -7,6 +7,7 @@ import { hashTestingAnswer } from "@/lib/testing/security";
 import { buildDiagnosis, type DomainScoreSnapshot } from "@/lib/testing/scoring";
 import type { TestingAttemptResultResponse } from "@/lib/testing/types";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const submitSchema = z.object({
   answers: z
@@ -102,6 +103,18 @@ export async function POST(
   request: Request,
   context: { params: Promise<{ attemptId: string }> },
 ) {
+  const rateLimit = await enforceIpRateLimit(request, "api:testing:attempts:submit:post", {
+    max: 30,
+    windowMs: 60_000,
+  });
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many submit requests. Please retry shortly." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const { attemptId } = await context.params;
   const supabase = await createSupabaseServerClient();
   const {
@@ -276,4 +289,3 @@ export async function POST(
   const updatedAttempt = updatedAttemptData as AttemptRow;
   return NextResponse.json(toResultPayload(updatedAttempt, exam, passThreshold));
 }
-

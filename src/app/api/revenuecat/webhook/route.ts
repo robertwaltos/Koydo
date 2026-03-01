@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { toSafeErrorRecord } from '@/lib/logging/safe-error';
 import { serverEnv } from '@/lib/config/env';
 import { enforceIpRateLimit } from '@/lib/security/ip-rate-limit';
+import { resolveRevenueCatPlanIdFromProductId } from '@/lib/billing/revenuecat-matrix';
 
 const shouldDebugWebhook = process.env.NODE_ENV !== 'production';
 const MAX_REVENUECAT_WEBHOOK_PAYLOAD_BYTES = 512_000;
@@ -85,8 +86,10 @@ function buildRevenueCatEventId(event: z.infer<typeof revenueCatEventSchema>, ra
  *  - PRODUCT_CHANGE
  *  - SUBSCRIBER_ALIAS
  *
- * Security: Verify the X-Revenuecat-Signature header using
- * the shared secret set in RevenueCat Dashboard -> Integrations -> Webhooks.
+ * Security:
+ * 1) Prefer Authorization header verification using the shared value
+ *    configured in RevenueCat Dashboard -> Integrations -> Webhooks.
+ * 2) Keep legacy X-Revenuecat-Signature HMAC verification as fallback compatibility.
  */
 
 // Lazy factory — avoid creating admin client at module scope (serverless cold start optimization)
@@ -97,11 +100,49 @@ function getSupabaseAdmin() {
   return createClient(url, key);
 }
 
+function timingSafeEqualText(left: string, right: string): boolean {
+  const leftBuffer = Buffer.from(left, 'utf8');
+  const rightBuffer = Buffer.from(right, 'utf8');
+
+  if (
+    leftBuffer.length === 0
+    || rightBuffer.length === 0
+    || leftBuffer.length !== rightBuffer.length
+  ) {
+    return false;
+  }
+
+  return crypto.timingSafeEqual(leftBuffer, rightBuffer);
+}
+
 /**
- * Verify the webhook signature from RevenueCat.
- * RevenueCat signs requests with HMAC-SHA256 using the webhook secret.
+ * RevenueCat's current webhook auth model supports a shared Authorization header.
+ * Accept exact value match and bearer-token normalized match.
  */
-function verifyRevenueCatSignature(
+function verifyRevenueCatAuthorizationHeader(
+  authorizationHeader: string | null,
+  secret: string
+): boolean {
+  if (!authorizationHeader || !secret) return false;
+
+  const headerRaw = authorizationHeader.trim();
+  const secretRaw = secret.trim();
+  if (!headerRaw || !secretRaw) return false;
+
+  const stripBearerPrefix = (value: string) => value.replace(/^Bearer\s+/i, '').trim();
+  const headerToken = stripBearerPrefix(headerRaw);
+  const secretToken = stripBearerPrefix(secretRaw);
+
+  return (
+    timingSafeEqualText(headerRaw, secretRaw)
+    || timingSafeEqualText(headerToken, secretToken)
+  );
+}
+
+/**
+ * Legacy RevenueCat HMAC signature verification.
+ */
+function verifyRevenueCatHmacSignature(
   payload: string,
   signature: string | null,
   secret: string
@@ -291,7 +332,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Payload too large' }, { status: 413 });
   }
 
-  // Verify signature
+  // Verify webhook authenticity
   const webhookSecret = serverEnv.REVENUECAT_WEBHOOK_SECRET;
   if (!webhookSecret) {
     console.error('[revenuecat/webhook] REVENUECAT_WEBHOOK_SECRET not set');
@@ -301,10 +342,13 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  const authorization = request.headers.get('Authorization');
   const signature = request.headers.get('X-Revenuecat-Signature');
-  if (!verifyRevenueCatSignature(rawBody, signature, webhookSecret)) {
-    console.warn('[revenuecat/webhook] Invalid signature - rejecting request');
-    return NextResponse.json({ error: 'Invalid signature' }, { status: 401 });
+  const hasValidAuthorization = verifyRevenueCatAuthorizationHeader(authorization, webhookSecret);
+  const hasValidLegacySignature = verifyRevenueCatHmacSignature(rawBody, signature, webhookSecret);
+  if (!hasValidAuthorization && !hasValidLegacySignature) {
+    console.warn('[revenuecat/webhook] Invalid webhook authentication - rejecting request');
+    return NextResponse.json({ error: 'Invalid webhook authentication' }, { status: 401 });
   }
 
   let parsedRawBody: unknown;
@@ -366,8 +410,8 @@ export async function POST(request: NextRequest) {
     ? new Date(purchasedAtMs).toISOString()
     : new Date().toISOString();
 
-  // Determine plan_id from productId
-  const planId = productId?.includes('annual') ? 'annual' : 'monthly';
+  // Matrix source of truth: preserve known matrix product IDs as plan_id values.
+  const planId = resolveRevenueCatPlanIdFromProductId(productId);
   const providerSubscriptionId = `revenuecat:${appUserId}`;
   const subscriptionPayload = {
     user_id: appUserId,
@@ -431,5 +475,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-
-

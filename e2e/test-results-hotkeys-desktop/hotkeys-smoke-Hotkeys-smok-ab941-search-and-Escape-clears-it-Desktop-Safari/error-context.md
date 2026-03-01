@@ -1,0 +1,227 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3]:
+      - /url: "#app-main-content"
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - link "Koydo" [ref=e7]:
+          - /url: /
+          - img [ref=e9]
+          - generic [ref=e10]: Koydo
+        - generic [ref=e11]:
+          - button "Search ⌘K" [ref=e12]:
+            - generic [ref=e13]: 🔎
+            - generic [ref=e14]: Search
+            - generic [ref=e15]: ⌘K
+          - link "Sign In" [ref=e16]:
+            - /url: /auth/sign-in
+          - link "Sign Up" [ref=e17]:
+            - /url: /auth/sign-up
+    - main [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e21]:
+            - generic [ref=e22]: Visual Catalog
+            - generic [ref=e23]: 76 Subjects
+          - heading "Learning Modules" [level=1] [ref=e24]
+          - paragraph [ref=e25]: Browse every module with subject-first visuals, then jump into the immersive explore path or open the classic module view.
+          - generic [ref=e26]:
+            - generic [ref=e27]: "Modules: 257"
+            - generic [ref=e28]: ·
+            - generic [ref=e29]: "Lessons: 2670"
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - generic: 🔍
+              - searchbox "Search modules…" [ref=e33]
+            - button "Filters 1" [ref=e34]:
+              - generic [ref=e35]: ⚙️
+              - text: Filters
+              - generic [ref=e36]: "1"
+            - generic [ref=e37]:
+              - combobox [ref=e38]:
+                - 'option "Sort: Name" [selected]'
+                - 'option "Sort: Lessons"'
+                - 'option "Sort: Age"'
+                - 'option "Sort: Difficulty"'
+              - button "↑" [ref=e39]
+          - paragraph [ref=e40]: "Tip: press / to focus search."
+          - generic [ref=e41]:
+            - button "All 257" [ref=e42]
+            - button "AI & Machine Learning1" [ref=e43]: 🧭AI & Machine Learning1
+            - button "AI Workflows1" [ref=e44]: 🧭AI Workflows1
+            - button "Accounting and Finance1" [ref=e45]: 🧭Accounting and Finance1
+            - button "Advanced Math4" [ref=e46]: ➗Advanced Math4
+            - button "Anthropology1" [ref=e47]: 🧭Anthropology1
+            - button "Arts4" [ref=e48]: 🧭Arts4
+            - button "Astronomy5" [ref=e49]: 🧭Astronomy5
+            - button "Astrophysics1" [ref=e50]: 🧭Astrophysics1
+            - button "Basic Math1" [ref=e51]: ➗Basic Math1
+            - button "Biology6" [ref=e52]: 🧭Biology6
+            - button "Biotechnology1" [ref=e53]: 🧭Biotechnology1
+            - button "Business51" [ref=e54]: 🧭Business51
+            - button "Business/Psychology1" [ref=e55]: 🧭Business/Psychology1
+            - button "Business/Self-Development1" [ref=e56]: 🧭Business/Self-Development1
+            - button "Chemistry5" [ref=e57]: 🧭Chemistry5
+            - button "Coding5" [ref=e58]: 💻Coding5
+            - button "Computer Science3" [ref=e59]: 🔬Computer Science3
+            - button "Cybersecurity1" [ref=e60]: 🧭Cybersecurity1
+            - button "Digital Marketing1" [ref=e61]: 🧭Digital Marketing1
+            - button "Economics8" [ref=e62]: 🧭Economics8
+            - button "Economics/China1" [ref=e63]: 🧭Economics/China1
+            - button "Economics/Culture1" [ref=e64]: 🧭Economics/Culture1
+            - button "Engineering7" [ref=e65]: 🧭Engineering7
+            - button "Entrepreneurship1" [ref=e66]: 🧭Entrepreneurship1
+            - button "Exam Prep5" [ref=e67]: 🧭Exam Prep5
+            - button "Farming4" [ref=e68]: 🧭Farming4
+            - button "Financial Literacy5" [ref=e69]: 🧭Financial Literacy5
+            - button "Food Science1" [ref=e70]: 🔬Food Science1
+            - button "Food/Agriculture1" [ref=e71]: 🧭Food/Agriculture1
+            - button "Gardening1" [ref=e72]: 🧭Gardening1
+            - button "General Relativity4" [ref=e73]: 🧭General Relativity4
+            - button "General Science6" [ref=e74]: 🔬General Science6
+            - button "Geography5" [ref=e75]: 🧭Geography5
+            - button "History5" [ref=e76]: 🧭History5
+            - button "History Worldwide4" [ref=e77]: 🧭History Worldwide4
+            - button "History/Adventure1" [ref=e78]: 🧭History/Adventure1
+            - button "History/Archaeology1" [ref=e79]: 🧭History/Archaeology1
+            - button "History/Military1" [ref=e80]: 🧭History/Military1
+            - button "History/Politics1" [ref=e81]: 🧭History/Politics1
+            - button "History/WWI1" [ref=e82]: 🧭History/WWI1
+            - button "History/WWII1" [ref=e83]: 🧭History/WWII1
+            - button "Household Management4" [ref=e84]: 🧭Household Management4
+            - button "Language Arts10" [ref=e85]: 📖Language Arts10
+            - button "Law1" [ref=e86]: 🧭Law1
+            - button "Literature1" [ref=e87]: 🧭Literature1
+            - button "Literature/Philosophy1" [ref=e88]: 🧭Literature/Philosophy1
+            - button "Math5" [ref=e89]: ➗Math5
+            - button "Mathematics7" [ref=e90]: ➗Mathematics7
+            - button "Medicine1" [ref=e91]: 🧭Medicine1
+            - button "Music6" [ref=e92]: 🧭Music6
+            - button "Networking1" [ref=e93]: 🧭Networking1
+            - button "Networking/IT1" [ref=e94]: 🧭Networking/IT1
+            - button "Nursing1" [ref=e95]: 🧭Nursing1
+            - button "Operating Systems2" [ref=e96]: 🧭Operating Systems2
+            - button "Philosophy5" [ref=e97]: 🧭Philosophy5
+            - button "Philosophy/Economics1" [ref=e98]: 🧭Philosophy/Economics1
+            - button "Philosophy/Education1" [ref=e99]: 🧭Philosophy/Education1
+            - button "Physics9" [ref=e100]: 🧭Physics9
+            - button "Physics/Biography1" [ref=e101]: 🧭Physics/Biography1
+            - button "Physics/Cosmology1" [ref=e102]: 🧭Physics/Cosmology1
+            - button "Project Management1" [ref=e103]: 🧭Project Management1
+            - button "Psychology3" [ref=e104]: 🧭Psychology3
+            - button "Reading2" [ref=e105]: 📖Reading2
+            - button "Science10" [ref=e106]: 🔬Science10
+            - button "Science/Critical Thinking2" [ref=e107]: 🔬Science/Critical Thinking2
+            - button "Science/History1" [ref=e108]: 🔬Science/History1
+            - button "Science/Philosophy1" [ref=e109]: 🔬Science/Philosophy1
+            - button "Self-Development1" [ref=e110]: 🧭Self-Development1
+            - button "Social Studies1" [ref=e111]: 🧭Social Studies1
+            - button "Social Studies US5" [ref=e112]: 🧭Social Studies US5
+            - button "Social Studies World5" [ref=e113]: 🧭Social Studies World5
+            - button "Technology1" [ref=e114]: 🧭Technology1
+            - button "Technology/Psychology1" [ref=e115]: 🧭Technology/Psychology1
+            - button "Trades3" [ref=e116]: 🧭Trades3
+            - button "UX Design1" [ref=e117]: 🧭UX Design1
+            - button "World History1" [ref=e118]: 🧭World History1
+          - paragraph [ref=e119]: 0 of 257 modules
+          - generic [ref=e120]:
+            - paragraph [ref=e121]: No modules found
+            - paragraph [ref=e122]: Try adjusting your search or filters
+            - button "Clear all filters" [ref=e123]
+    - contentinfo [ref=e124]:
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - link "Koydo Koydo" [ref=e127]:
+            - /url: /
+            - img "Koydo" [ref=e129]
+            - generic [ref=e130]: Koydo
+          - paragraph [ref=e131]: Free interactive learning for every age, every language, every dream.
+          - generic [ref=e132]:
+            - link "X / Twitter" [ref=e133]:
+              - /url: https://twitter.com/koydolearn
+              - img [ref=e134]
+            - link "Instagram" [ref=e136]:
+              - /url: https://instagram.com/koydolearn
+              - img [ref=e137]
+            - link "YouTube" [ref=e139]:
+              - /url: https://youtube.com/@koydolearn
+              - img [ref=e140]
+        - generic [ref=e142]:
+          - paragraph [ref=e143]: Platform
+          - list [ref=e144]:
+            - listitem [ref=e145]:
+              - link "Explore Learning" [ref=e146]:
+                - /url: /explore
+            - listitem [ref=e147]:
+              - link "All Modules" [ref=e148]:
+                - /url: /modules
+            - listitem [ref=e149]:
+              - link "Speaking Lab" [ref=e150]:
+                - /url: /language/speaking-lab
+            - listitem [ref=e151]:
+              - link "Exam Prep" [ref=e152]:
+                - /url: /exam-prep
+            - listitem [ref=e153]:
+              - link "Science Lab" [ref=e154]:
+                - /url: /science-lab
+            - listitem [ref=e155]:
+              - link "Learning Games" [ref=e156]:
+                - /url: /games
+        - generic [ref=e157]:
+          - paragraph [ref=e158]: Learn For
+          - list [ref=e159]:
+            - listitem [ref=e160]:
+              - link "Ages 3–5 (Pre-K)" [ref=e161]:
+                - /url: /explore?stage=pre-k
+            - listitem [ref=e162]:
+              - link "Ages 6–11 (Elementary)" [ref=e163]:
+                - /url: /explore?stage=elementary
+            - listitem [ref=e164]:
+              - link "Ages 12–14 (Middle School)" [ref=e165]:
+                - /url: /explore?stage=middle
+            - listitem [ref=e166]:
+              - link "Ages 15–18 (High School)" [ref=e167]:
+                - /url: /explore?stage=high
+            - listitem [ref=e168]:
+              - link "College & SAT/ACT" [ref=e169]:
+                - /url: /explore?stage=college
+            - listitem [ref=e170]:
+              - link "Adults & Career Skills" [ref=e171]:
+                - /url: /explore?stage=adult
+        - generic [ref=e172]:
+          - paragraph [ref=e173]: Company
+          - list [ref=e174]:
+            - listitem [ref=e175]:
+              - link "Help & Support" [ref=e176]:
+                - /url: /support
+            - listitem [ref=e177]:
+              - link "Privacy Policy" [ref=e178]:
+                - /url: /legal/privacy
+            - listitem [ref=e179]:
+              - link "Terms of Use" [ref=e180]:
+                - /url: /legal/terms
+            - listitem [ref=e181]:
+              - link "Refund Policy" [ref=e182]:
+                - /url: /legal/refunds
+            - listitem [ref=e183]:
+              - link "Create Free Account" [ref=e184]:
+                - /url: /auth/sign-up
+      - generic [ref=e186]:
+        - paragraph [ref=e187]: © 2026 Koydo. Free education for every mind.
+        - generic [ref=e188]:
+          - link "Privacy" [ref=e189]:
+            - /url: /legal/privacy
+          - link "Terms" [ref=e190]:
+            - /url: /legal/terms
+          - link "Refunds" [ref=e191]:
+            - /url: /legal/refunds
+          - link "Support" [ref=e192]:
+            - /url: /support
+  - button "Open Next.js Dev Tools" [ref=e198] [cursor=pointer]:
+    - img [ref=e199]
+  - alert [ref=e204]
+```

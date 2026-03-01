@@ -102,15 +102,15 @@ export default function SupportClient({ initialTickets }: { initialTickets: Tick
           {tickets.map((ticket) => (
             <article key={ticket.id} className="ui-soft-card rounded-md p-3">
               <p className="font-medium">{ticket.subject}</p>
-              <p className="text-xs text-zinc-500">
+              <p className="text-xs text-zinc-500 dark:text-foreground/60">
                 Status: {ticket.status} | Priority: {ticket.priority}
               </p>
-              <p className="text-xs text-zinc-500">
+              <p className="text-xs text-zinc-500 dark:text-foreground/60">
                 Created: {new Date(ticket.created_at).toLocaleString()}
               </p>
             </article>
           ))}
-          {tickets.length === 0 ? <p className="text-sm text-zinc-500">No tickets created yet.</p> : null}
+          {tickets.length === 0 ? <p className="text-sm text-zinc-500 dark:text-foreground/60">No tickets created yet.</p> : null}
         </div>
       </SoftCard>
     </div>

@@ -26,11 +26,11 @@ export default function ExploreLoading() {
       </header>
 
       {/* Stage card skeletons */}
-      <div className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 gap-5 px-4 pb-10 sm:grid-cols-2 sm:gap-6 sm:px-6 lg:grid-cols-3">
+      <div className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 gap-5 px-4 pb-10 sm:grid-cols-2 sm:gap-6 sm:px-6 md:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 6 }).map((_, i) => (
           <div
             key={i}
-            className="flex min-h-[280px] animate-pulse flex-col items-center justify-center rounded-3xl border-2 border-zinc-100 bg-zinc-50/50 p-5 sm:min-h-[320px]"
+            className="flex min-h-[280px] animate-pulse flex-col items-center justify-center rounded-3xl border-2 border-zinc-100 bg-surface-muted/50 p-5 sm:min-h-[320px]"
             style={{ animationDelay: `${i * 80}ms` }}
           >
             <div className="h-14 w-14 rounded-full bg-zinc-200/50" />

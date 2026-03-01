@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const progressRequestSchema = z.object({
   lessonId: z.string().min(1),
@@ -21,6 +22,17 @@ function isWorksheetSchemaMissingError(message: string | undefined) {
 
 export async function POST(request: Request) {
   try {
+    const rateLimit = await enforceIpRateLimit(request, "api:ai:remediation-worksheet:progress:post", {
+      max: 60,
+      windowMs: 60_000,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many worksheet progress requests. Please retry shortly." },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const supabase = await createSupabaseServerClient();
     const {
       data: { user },

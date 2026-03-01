@@ -1,441 +1,480 @@
 import type { LearningModule } from "@/lib/modules/types";
 
 // High-quality curriculum module derived from EPUB.
-// Source: G:\My Drive\15_E-BOOKS\file002209.epub
+// Source: G:/My Drive/15_E-BOOKS/file002209.epub
 // Author: Jiddu Krishnamurti  |  Subject: Philosophy/Education
 
 export const BeginningsOfLearningJidduKrishnamurtiModule: LearningModule = {
   id: "beginnings-of-learning-jiddu-krishnamurti",
   title: "Beginnings of Learning",
   description:
-    "An exploration of Jiddu Krishnamurti's radical philosophy of education, drawn from his dialogues with teachers and students. This module examines Krishnamurti's critique of conventional schooling, his vision of education as the cultivation of total awareness, and his insights into fear, authority, conditioning, and the nature of genuine learning.",
+    "A comprehensive educational module derived from Beginnings of Learning by Jiddu Krishnamurti. This course provides structured video lessons and interactive quizzes exploring the key themes, arguments, and insights of the work.",
   subject: "Philosophy/Education",
-  tags: ["epub-derived", "curriculum", "interactive", "philosophy", "education", "krishnamurti", "awareness", "conditioning"],
+  tags: ["epub-derived", "curriculum", "interactive", "philosophy", "education"],
   minAge: 18,
   maxAge: 99,
   version: "2.0.0",
   learningObjectives: [
-    "Explain Krishnamurti's critique of conventional education as conditioning",
-    "Analyse the distinction between accumulation of knowledge and genuine learning",
-    "Evaluate Krishnamurti's concept of freedom from authority in education",
-    "Describe the role of self-knowledge in the educational process",
-    "Assess the relationship between fear and learning in Krishnamurti's thought",
-    "Examine Krishnamurti's dialogical method as an educational practice",
-    "Apply Krishnamurti's insights to contemporary debates in education",
+    "Understand and critically analyze the concepts related to quotations",
+    "Understand and critically analyze the concepts related to part one conversations with students and staff at brockwood park",
+    "Understand and critically analyze the concepts related to 8 the sense of beauty",
+    "Understand and critically analyze the concepts related to quotations",
+    "Understand and critically analyze the concepts related to part two conversations with parents and teachers",
+    "Understand and critically analyze the concepts related to 2 you cannot get the whole feeling of a country unless you",
+    "Understand and critically analyze the concepts related to 3 in the early morning before the sun was up there was",
   ],
   lessons: [
+    /* ─────────────────────────────────────────────────
+       L01  QUOTATIONS
+    ───────────────────────────────────────────────── */
     {
       id: "bl-l01",
-      title: "Education as Revolutionary Act",
+      title: "QUOTATIONS",
       type: "video",
       duration: 12,
       objectives: [
-        "Explain why Krishnamurti considers conventional education a form of conditioning",
-        "Distinguish between education for career and education for life",
-        "Describe Krishnamurti's vision of the school as a place of total human development",
+        "Examine the key ideas and arguments related to quotations",
+        "Examine the key ideas and arguments related to part one conversations with students and staff at brockwood park",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "bl-l01-c1",
-          title: "The Failure of Conventional Education",
+          title: "QUOTATIONS",
           content:
-            "Krishnamurti begins from a radical premise: conventional education has failed because it serves the wrong purpose. Schools, as currently constituted, prepare students for careers — they transmit information, develop technical skills, and train pupils to compete successfully in the economic marketplace. But this vocational function, however necessary, addresses only a fraction of what it means to be human. It produces competent professionals who may be psychologically fragile, emotionally immature, and spiritually empty — people who know how to earn a living but not how to live. Krishnamurti argues that genuine education must address the whole human being: not only the intellect but the emotions, the body, the relationships, and the quality of attention that a person brings to every moment of life. Education that neglects these dimensions is not merely incomplete — it is actively harmful, because it trains human beings to be efficient instruments of a social order without ever questioning the values and assumptions on which that order rests.",
+            "PART I: QUOTATIONS The world is that way, deceptive, the deceiving politicians, the money-minded... If you are not properly educated you’ll just slip into it. So what do you think is education? Is it to help you to fit into the mechanism of the present order, or disorder, of things? Or do you think it should be something else? Is our education at Brockwood helping you to be intelligent? I mean by that word to be very sensitive, not to your own desires, to your own demands, but to be sensitive to the world, to what is going on in the world. Surely education is not merely to give you knowledge, but also to give you the capacity to look at the world objectively.",
         },
         {
           id: "bl-l01-c2",
-          title: "Conditioning and the Reproduction of Society",
+          title: "PART ONE Conversations with Students and Staff at Brockwood Park",
           content:
-            "All conventional education, Krishnamurti contends, is fundamentally a process of conditioning — of shaping the mind to conform to the patterns of the existing society. Schools teach children what to think, not how to think; they transmit the beliefs, values, prejudices, and ambitions of the society that funds them. The child enters school as a relatively open, curious being and emerges as a product of national, cultural, and economic conditioning — an Indian, an American, a Catholic, a capitalist — identified with a particular group and trained to compete with other groups. This conditioning is not accidental but structural: the examination system rewards conformity, the curriculum reflects dominant ideologies, and the authority structure of the classroom replicates the hierarchies of the larger society. Krishnamurti is not suggesting that cultural transmission is unnecessary — children need language, history, and skills — but that education that only transmits culture without cultivating the awareness to question it produces conformists, not free human beings.",
+            "PART ONE Conversations with Students and Staff at Brockwood Park 1 Problems of living at Brockwood where there is no authority. Difference between sentiment and affection. The feeling of being ‘at home’. KRISHNAMURTI: Most people work either to avoid punishment or to gain something in the way of possessions, money, fame and so on. So most people work under great pressure. Here at Brockwood there is not that extreme pressure, or any kind of pressure put upon you. Therefore there is a tendency, if I may point out, to slacken, to let go, to become rather empty and lose that vitality that youth generally has—that feeling of urgency, the flame of doing something.",
         },
         {
           id: "bl-l01-c3",
-          title: "A Different Kind of School",
+          title: "Deeper Analysis: QUOTATIONS",
           content:
-            "Krishnamurti founded several schools in India and England (including Brockwood Park in Hampshire and Rishi Valley in Andhra Pradesh) as laboratories for a different kind of education. In these schools, academic excellence is pursued alongside — not instead of — psychological self-understanding. Small group sizes, close teacher-student relationships, engagement with nature, and regular dialogues about the fundamental questions of human existence (What is fear? What is love? What is death? What is the purpose of living?) are integral to the curriculum. The teacher is not an authority who transmits knowledge from above but a fellow learner who investigates life alongside the student. This does not mean the teacher abdicates responsibility — Krishnamurti insists that teachers must be deeply competent in their subjects — but that the hierarchical relationship between knower and ignorant is dissolved in favour of a shared inquiry. The school, in this vision, is the most important institution in society because it is the place where the next generation can break free from the conditioning that perpetuates conflict, competition, and psychological suffering.",
+            "The function of education is to help you to face the world in a totally different intelligent way. When you have that seed, and it is flowering here, then you will keep it going all your life. But if this doesn’t operate, then the world will destroy you. The world makes you what it wants you to be: a cunning animal.",
         },
       ],
       flashcards: [
         {
           id: "bl-l01-f1",
-          front: "Krishnamurti's critique of conventional education",
-          back: "Schools prepare students for careers but neglect the whole human being — emotions, relationships, self-understanding. They produce competent professionals who may be psychologically fragile and spiritually empty.",
+          front: "QUOTATIONS",
+          back:
+            "The function of education is to help you to face the world in a totally different intelligent way.",
         },
         {
           id: "bl-l01-f2",
-          front: "Education as conditioning",
-          back: "Schools shape minds to conform to existing social patterns. The examination system rewards conformity, curricula reflect dominant ideologies, and classroom hierarchies replicate societal power structures.",
+          front: "PART ONE Conversations with Students and Staff at Brockwood Park",
+          back:
+            "All that gradually disappears and you are left here to be responsible to yourself, which is rather difficult.",
         },
         {
           id: "bl-l01-f3",
-          front: "Krishnamurti's alternative schools",
-          back: "Brockwood Park and Rishi Valley pursue academic excellence alongside self-understanding, with small groups, close relationships, nature engagement, and dialogues about fundamental human questions.",
+          front: "Key concept: QUOTATIONS",
+          back:
+            "The function of education is to help you to face the world in a totally different intelligent way.",
         },
         {
           id: "bl-l01-f4",
-          front: "Teacher as fellow learner",
-          back: "The teacher is not an authority transmitting knowledge from above but a competent, engaged co-investigator — dissolving the hierarchical knower/ignorant relationship in favour of shared inquiry.",
+          front: "Key concept: PART ONE Conversations with Students and Staff at Brockwo",
+          back:
+            "Brockwood is supposed to give you—and I hope it does—the terrain, the environment, the atmosphere in which this self-generating energy can go on.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L02  8 The sense of beauty and QUOTATIONS
+    ───────────────────────────────────────────────── */
     {
       id: "bl-l02",
-      title: "Fear, Authority, and Freedom",
+      title: "8 The sense of beauty and QUOTATIONS",
       type: "video",
       duration: 12,
       objectives: [
-        "Analyse Krishnamurti's account of fear as a central obstacle to learning",
-        "Explain the difference between functional authority and psychological authority",
-        "Evaluate Krishnamurti's concept of freedom in the educational context",
+        "Examine the key ideas and arguments related to 8 the sense of beauty",
+        "Examine the key ideas and arguments related to quotations",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "bl-l02-c1",
-          title: "Fear as the Enemy of Learning",
+          title: "8 The sense of beauty",
           content:
-            "Krishnamurti identifies fear as the fundamental obstacle to genuine learning. A mind that is afraid — afraid of failure, of punishment, of disapproval, of the unknown — cannot learn because it is concerned with self-protection rather than with understanding. Fear narrows attention, constricts perception, and locks the mind into known patterns of response. In conventional classrooms, fear is systematically cultivated through examinations, grading, comparison, and competition. The child learns not because she is genuinely curious but because she is afraid of failing — and this fear follows her into adulthood, shaping her relationships, her career choices, and her entire orientation to life. Krishnamurti's observation is not that examinations are unnecessary (he acknowledges that some form of assessment may be needed) but that when fear becomes the primary motivator of learning, the learning itself is corrupted. The student who studies in order to pass an examination retains information temporarily and discards it once the examination is over — she has not learned but merely performed.",
+            "8 The sense of beauty. Questioner: There is something I’d like to discuss. I see that like and dislike are a matter of opinion—as what is ugly and what is beautiful—everyone has their own ideas. If I have no image about things, is there anything beautiful or ugly? KRISHNAMURTI: To like: has that anything to do with affection, with love? Questioner: No. KRISHNAMURTI: Don’t say, no or yes, go into it. And the feeling of beauty, does it come out of an image? Look at it—don’t answer. I see a building created in space, and I say, ‘How beautiful that is.’ Now that expression, ‘How beautiful’, is it born of an image? Or is there no image, but the perception of something which has proportion, depth, quality, workmanship?",
         },
         {
           id: "bl-l02-c2",
-          title: "Authority: Functional and Psychological",
+          title: "QUOTATIONS",
           content:
-            "Krishnamurti draws a crucial distinction between functional authority and psychological authority. Functional authority is the authority of competence: the surgeon who knows how to operate, the engineer who knows how to build a bridge, the teacher who understands mathematics. This kind of authority is legitimate and necessary — it is based on actual knowledge and skill. Psychological authority, by contrast, is the authority that demands obedience, conformity, and submission — the parent who says 'do as I say because I am your parent,' the guru who says 'believe what I tell you because I am enlightened,' the teacher who says 'accept this because I am the teacher.' This kind of authority is destructive because it replaces the student's own inquiry with borrowed conclusions. The student who accepts truth on authority has not discovered truth — she has acquired a belief, which is fundamentally different. Krishnamurti's educational philosophy insists on the elimination of psychological authority while preserving functional competence.",
+            "PART II: QUOTATIONS It is not that there must be an end to seeking, but rather the beginning of learning. Learning is far more important than finding. As long as education is concerned merely with the culture of the outer ... the inner movement with its immense depth will inevitably be for the few and in that there lies great sorrow. Sorrow cannot be solved, cannot be understood when you are running with tremendous energy along the superficial. Unless you solve this through self-knowing you will have revolt after revolt, reforms which need further reformation, and the endless antagonism of man against man will go on.",
         },
         {
           id: "bl-l02-c3",
-          title: "Freedom as the Beginning, Not the Goal",
+          title: "Deeper Analysis: 8 The sense of beauty",
           content:
-            "Freedom, for Krishnamurti, is not the reward of education but its precondition. A mind that is not free — that is burdened by fear, authority, comparison, and ambition — cannot learn because it is not open to the new. It can only rearrange what it already knows within the framework of what it has been conditioned to accept. Genuine learning requires the freedom to question, to doubt, to make mistakes, and to discover for oneself what is true — not as a theoretical possibility but as a lived reality in every moment of the educational process. This does not mean permissiveness or the absence of structure. Krishnamurti is emphatic that freedom is not licence — doing whatever one wants is merely another form of conditioning (the conditioning of desire). Freedom is the quality of attention that arises when the mind is not dominated by fear, ambition, or the desire for approval. It is a disciplined awareness, not an anarchic impulse. The school must create an atmosphere in which this quality of freedom is possible — and this requires teachers who are themselves free, who are investigating their own conditioning alongside their students.",
+            "Questioner: You have an image of what is beautiful or of what you like: you are comparing it with something else. Your conditioning comes in. KRISHNAMURTI: That’s right. Watch it, it is much more complex than that. You see that tree—do you say it is beautiful? Why do you say it is beautiful, who has told you? Or, apart from the images, do you feel from everything a sense of beauty?—not related to trees, buildings, people. You understand?—the sense of beauty—not looking at anything particular. Questioner: If you really look, it doesn’t only happen with trees.",
         },
       ],
       flashcards: [
         {
           id: "bl-l02-f1",
-          front: "Fear as learning obstacle",
-          back: "Fear narrows attention and locks the mind into self-protection. Conventional education systematically cultivates fear through examinations, grading, and competition — corrupting learning into performance.",
+          front: "8 The sense of beauty",
+          back:
+            "Questioner: You have an image of what is beautiful or of what you like: you are comparing it with something else.",
         },
         {
           id: "bl-l02-f2",
-          front: "Functional vs psychological authority",
-          back: "Functional authority (competence-based) is legitimate. Psychological authority (demanding obedience because of status) is destructive — it replaces the student's own inquiry with borrowed conclusions.",
+          front: "QUOTATIONS",
+          back:
+            "The heart of the matter is education, it is the total understanding of man and not an emphasis on one fragment of his life ...",
         },
         {
           id: "bl-l02-f3",
-          front: "Freedom as precondition, not reward",
-          back: "Freedom is not the goal of education but its starting point. A mind not free from fear, authority, and ambition cannot learn — it can only rearrange what it already knows within its conditioning.",
+          front: "Key concept: 8 The sense of beauty",
+          back:
+            "KRISHNAMURTI: You see a building and you say, ‘How beautiful that is.’ Is it because you have compared it with other buildings?—or because it is a famous building by Wren or the An...",
         },
         {
           id: "bl-l02-f4",
-          front: "Freedom is not licence",
-          back: "Krishnamurti distinguishes freedom from permissiveness. Freedom is disciplined awareness — attention free from internal domination — not doing whatever one wants, which is merely conditioning by desire.",
+          front: "Key concept: QUOTATIONS",
+          back:
+            "The heart of the matter is education, it is the total understanding of man and not an emphasis on one fragment of his life ...",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L03  PART TWO Conversations with Parents and Teachers
+    ───────────────────────────────────────────────── */
     {
       id: "bl-l03",
-      title: "Self-Knowledge and the Art of Observation",
+      title: "PART TWO Conversations with Parents and Teachers",
       type: "video",
-      duration: 13,
+      duration: 12,
       objectives: [
-        "Explain why Krishnamurti considers self-knowledge the foundation of all education",
-        "Describe the practice of choiceless awareness as an educational method",
-        "Assess the implications of Krishnamurti's approach for the relationship between teacher and student",
+        "Examine the key ideas and arguments related to part two conversations with parents and teachers",
+        "Examine the key ideas and arguments related to 2 you cannot get the whole feeling of a country unless you",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "bl-l03-c1",
-          title: "Self-Knowledge as Foundation",
+          title: "PART TWO Conversations with Parents and Teachers",
           content:
-            "Krishnamurti's most fundamental educational thesis is that self-knowledge is the beginning and end of all genuine education. By self-knowledge he does not mean introspective analysis — standing apart from oneself and examining one's psychological mechanisms — but a direct, immediate awareness of one's own thoughts, feelings, reactions, and patterns as they occur in the present moment. Why is this fundamental? Because, Krishnamurti argues, we do not perceive the world directly — we perceive it through the filter of our conditioning: our beliefs, fears, desires, prejudices, and accumulated experiences. A person who does not understand her own conditioning inevitably projects it onto everything she encounters — she sees the world not as it is but as her conditioning allows her to see it. Therefore, the most important knowledge is not knowledge of the external world but knowledge of the instrument through which we know the external world: the mind itself. Without self-knowledge, all other knowledge is distorted.",
+            "PART TWO Conversations with Parents and Teachers 1 It is always exciting to go to a new country, especially when you are very young. One feels that very much in this country where there is great physical freedom, where everyone seems to have so much energy, where there is a restless, changing activity that seems to have no end. From coast to coast, except for one or two cities, the great towns are all alike. But the country is vast and extraordinarily beautiful with its great spaces, deserts and long, winding deep rivers. You can find all climates here from the tropics to high, snowy mountains. Overlooking the blue Pacific, in a large room several of us were talking about education.",
         },
         {
           id: "bl-l03-c2",
-          title: "Choiceless Awareness",
+          title: "2 You cannot get the whole feeling of a country unless you",
           content:
-            "The method Krishnamurti proposes for cultivating self-knowledge is what he calls 'choiceless awareness' — the practice of observing one's own mental and emotional processes without judgment, without choice, and without the desire to change them. When you are angry, you observe the anger without condemning it, without justifying it, and without trying to transform it into something else. You simply watch — with full attention, without the division between the observer and the observed. This practice is not a technique to be learned and applied mechanically; it is a quality of attention that arises naturally when the mind is genuinely interested in understanding itself. The key insight is that the usual approach to psychological problems — analyse them, find their causes, devise strategies for change — is itself part of the problem, because it divides the mind into the observer (who judges) and the observed (who is judged), perpetuating conflict. Choiceless awareness dissolves this division: there is only the observing, and in that observing, understanding arises without effort.",
+            "2 You cannot get the whole feeling of a country unless you have lived in it for some time. Yet the people who live there, who spend their days and years and die there, seldom, it seems, have a feeling for the whole of their own country. People in this vast country with so many languages, generally are very secular and provincial. The different class divisions which at one time bound them together through religion, chants and stories, are rapidly going; this unity, this feeling of sacredness of life, of things that are beyond thought is disappearing.",
         },
         {
           id: "bl-l03-c3",
-          title: "The Teacher Who Is Also Learning",
+          title: "Deeper Analysis: PART TWO Conversations with Parents and Teachers",
           content:
-            "If self-knowledge is the foundation of education, then the teacher's relationship to her own conditioning becomes the most important factor in the classroom. Krishnamurti insists that a teacher who is not actively investigating her own prejudices, fears, ambitions, and patterns of reaction cannot help students investigate theirs — she will inevitably transmit her conditioning rather than fostering genuine inquiry. The teacher who is authoritarian will produce students who are either submissive or rebellious (both responses to authority); the teacher who is anxious about results will produce students who are anxious about results. The medium is the message: the quality of the teacher's own awareness is what the student actually 'learns,' regardless of the subject content. This places an enormous demand on teachers — not to be perfect, but to be honest: to acknowledge their own conditioning, to investigate it openly, and to model the quality of self-questioning attention that they hope to cultivate in their students. The classroom becomes a space of mutual investigation, not a stage for the performance of expertise.",
+            "A tall man in a tweed jacket said: ‘My sons and daughters are in revolt. They seem to regard their home as a passage to somewhere else. They have a feeling that they cannot be told anything, that they have all the answers. They dislike any form of authority or what they think is authority. They are naturally against war, not because they have thought a great deal about the causes of war, but because they are against killing other human beings; yet they would approve of war for certain causes. They are strangely violent, not only with us, but they are against the government, against this and that.",
         },
       ],
       flashcards: [
         {
           id: "bl-l03-f1",
-          front: "Self-knowledge as educational foundation",
-          back: "We perceive the world through our conditioning. Without understanding the instrument of knowing (the mind itself), all other knowledge is distorted. Self-knowledge is therefore the beginning of all genuine education.",
+          front: "PART TWO Conversations with Parents and Teachers",
+          back:
+            "A tall man in a tweed jacket said: ‘My sons and daughters are in revolt.",
         },
         {
           id: "bl-l03-f2",
-          front: "Choiceless awareness",
-          back: "Observing one's own mental and emotional processes without judgment, choice, or desire to change them. Dissolves the division between observer and observed, allowing understanding to arise without effort.",
+          front: "2 You cannot get the whole feeling of a country unless you",
+          back:
+            "When you came year after year and spent several months here, you would notice the general decline; you would see in every big town the enormous increase in population; and walking...",
         },
         {
           id: "bl-l03-f3",
-          front: "The medium is the message (education)",
-          back: "The quality of the teacher's own awareness is what students actually learn, regardless of subject content. An authoritarian teacher produces submissive or rebellious students; an anxious teacher produces anxious students.",
+          front: "Key concept: PART TWO Conversations with Parents and Teachers",
+          back:
+            "They say they are against conformity but from what I have seen of them and the friends they bring home they are as conforming in their way as we ever were.",
         },
         {
           id: "bl-l03-f4",
-          front: "Mutual investigation in the classroom",
-          back: "The teacher models self-questioning attention by investigating her own conditioning alongside students — the classroom becomes a space of shared inquiry, not a stage for performing expertise.",
+          front: "Key concept: 2 You cannot get the whole feeling of a country unless yo",
+          back:
+            "The people are concerned with politics—one group against another group—the encroaching poverty, the squalor, the filth, but very few talk about the beauty of the land.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L04  Checkpoint Quiz 2
+    ───────────────────────────────────────────────── */
     {
       id: "bl-l04",
-      title: "Checkpoint Quiz: Krishnamurti's Educational Philosophy",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
       duration: 8,
-      objectives: ["Assess understanding of fear, authority, freedom, and self-knowledge in Krishnamurti's thought"],
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "bl-l04-q1",
-          text: "Why does Krishnamurti argue that fear-based motivation corrupts learning?",
+          text: "Which of the following best describes a key idea from the section on QUOTATIONS?",
           options: [
-            { id: "a", text: "Fear improves memory retention and should be encouraged" },
-            { id: "b", text: "A mind afraid of failure is concerned with self-protection, not understanding — the student performs rather than learns, retaining information temporarily and discarding it after the test" },
-            { id: "c", text: "Fear only affects physical education, not academic subjects" },
-            { id: "d", text: "Fear is beneficial in small doses" },
+            { id: "a", text: "PART ONE Conversations with Students and Staff at Brockwood Park 1 Problems of living at Brockwood w..." },
+            { id: "b", text: "8 The sense of beauty." },
+            { id: "c", text: "PART I: QUOTATIONS The world is that way, deceptive, the deceiving politicians, the money-minded..." },
+            { id: "d", text: "PART II: QUOTATIONS It is not that there must be an end to seeking, but rather the beginning of lear..." },
           ],
-          correctOptionId: "b",
-          explanation: "Fear narrows attention and converts learning into performance. The student who studies to pass an exam has not genuinely learned — she has temporarily memorised information under duress.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to QUOTATIONS. PART I: QUOTATIONS The world is that way, deceptive, the deceiving politicians, the money-minded...",
         },
         {
           id: "bl-l04-q2",
-          text: "What is the difference between functional and psychological authority?",
+          text: "Which of the following best describes a key idea from the section on PART ONE Conversations with Students and Staff at Brockwood Park?",
           options: [
-            { id: "a", text: "Functional authority is based on age; psychological authority is based on knowledge" },
-            { id: "b", text: "Functional authority is the legitimate authority of competence (the surgeon who can operate); psychological authority demands obedience based on status and replaces the student's own inquiry with borrowed conclusions" },
-            { id: "c", text: "They are identical — all authority is psychological" },
-            { id: "d", text: "Functional authority is temporary; psychological authority is permanent" },
+            { id: "a", text: "PART ONE Conversations with Students and Staff at Brockwood Park 1 Problems of living at Brockwood w..." },
+            { id: "b", text: "8 The sense of beauty." },
+            { id: "c", text: "PART II: QUOTATIONS It is not that there must be an end to seeking, but rather the beginning of lear..." },
+            { id: "d", text: "PART I: QUOTATIONS The world is that way, deceptive, the deceiving politicians, the money-minded..." },
           ],
-          correctOptionId: "b",
-          explanation: "Functional authority rests on demonstrable skill. Psychological authority demands submission regardless of competence. Krishnamurti advocates eliminating the latter while preserving the former.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to PART ONE Conversations with Students and Staff at Brockwood Park. PART ONE Conversations with Students and Staff at Brockwood Park 1 Problems of living at Brockwood w...",
         },
         {
           id: "bl-l04-q3",
-          text: "Why does Krishnamurti say freedom is NOT the same as licence?",
+          text: "Which of the following best describes a key idea from the section on 8 The sense of beauty?",
           options: [
-            { id: "a", text: "Because freedom requires a government license" },
-            { id: "b", text: "Because doing whatever one wants is merely another form of conditioning — the conditioning of desire. Freedom is disciplined awareness, not anarchic impulse" },
-            { id: "c", text: "Because only adults can have freedom" },
-            { id: "d", text: "Because freedom must be earned through examination results" },
+            { id: "a", text: "8 The sense of beauty." },
+            { id: "b", text: "PART I: QUOTATIONS The world is that way, deceptive, the deceiving politicians, the money-minded..." },
+            { id: "c", text: "PART II: QUOTATIONS It is not that there must be an end to seeking, but rather the beginning of lear..." },
+            { id: "d", text: "PART ONE Conversations with Students and Staff at Brockwood Park 1 Problems of living at Brockwood w..." },
           ],
-          correctOptionId: "b",
-          explanation: "Permissiveness is not freedom — it is slavery to desire. Genuine freedom is attention free from internal domination by fear, ambition, or the need for approval.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to 8 The sense of beauty. 8 The sense of beauty.",
         },
         {
           id: "bl-l04-q4",
-          text: "Choiceless awareness involves:",
+          text: "Which of the following best describes a key idea from the section on QUOTATIONS?",
           options: [
-            { id: "a", text: "Choosing the most positive thoughts and suppressing negative ones" },
-            { id: "b", text: "Observing one's own mental and emotional processes without judgment, choice, or desire to change them — dissolving the division between observer and observed" },
-            { id: "c", text: "Reaching a state of no thoughts at all" },
-            { id: "d", text: "Analysing one's childhood memories with a therapist" },
+            { id: "a", text: "PART I: QUOTATIONS The world is that way, deceptive, the deceiving politicians, the money-minded..." },
+            { id: "b", text: "8 The sense of beauty." },
+            { id: "c", text: "PART II: QUOTATIONS It is not that there must be an end to seeking, but rather the beginning of lear..." },
+            { id: "d", text: "PART ONE Conversations with Students and Staff at Brockwood Park 1 Problems of living at Brockwood w..." },
           ],
-          correctOptionId: "b",
-          explanation: "Choiceless awareness is non-judgmental observation of one's own processes as they occur. It dissolves the observer/observed split that perpetuates psychological conflict.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to QUOTATIONS. PART II: QUOTATIONS It is not that there must be an end to seeking, but rather the beginning of lear...",
         },
         {
           id: "bl-l04-q5",
-          text: "Why is the teacher's own self-knowledge the most important factor in education?",
+          text: "Which of the following best describes a key idea from the section on PART TWO Conversations with Parents and Teachers?",
           options: [
-            { id: "a", text: "Because students automatically copy the teacher's subject knowledge" },
-            { id: "b", text: "Because the quality of the teacher's own awareness is what students actually learn — a teacher who hasn't investigated her own conditioning will inevitably transmit it rather than fostering genuine inquiry" },
-            { id: "c", text: "Because teachers must pass a self-knowledge examination" },
-            { id: "d", text: "Because students only respect teachers who are emotionally distant" },
+            { id: "a", text: "8 The sense of beauty." },
+            { id: "b", text: "PART TWO Conversations with Parents and Teachers 1 It is always exciting to go to a new country, esp..." },
+            { id: "c", text: "PART I: QUOTATIONS The world is that way, deceptive, the deceiving politicians, the money-minded..." },
+            { id: "d", text: "PART ONE Conversations with Students and Staff at Brockwood Park 1 Problems of living at Brockwood w..." },
           ],
           correctOptionId: "b",
-          explanation: "The medium is the message: the teacher's attitude, fears, and patterns of reaction are absorbed by students regardless of subject content. Only a teacher investigating her own conditioning can model genuine inquiry.",
+          explanation:
+            "This question relates to PART TWO Conversations with Parents and Teachers. PART TWO Conversations with Parents and Teachers 1 It is always exciting to go to a new country, esp...",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L05  3 In the early morning before the sun was up there was
+    ───────────────────────────────────────────────── */
     {
       id: "bl-l05",
-      title: "Thought, Knowledge, and Intelligence",
+      title: "3 In the early morning before the sun was up there was",
       type: "video",
       duration: 12,
       objectives: [
-        "Distinguish between knowledge and intelligence in Krishnamurti's framework",
-        "Analyse Krishnamurti's critique of thought as a limited instrument",
-        "Explain the relationship between knowledge, thought, and psychological suffering",
+        "Examine the key ideas and arguments related to 3 in the early morning before the sun was up there was",
+        "Examine the key ideas and arguments related to 4 it was an old, vast byzantine building which had become a",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "bl-l05-c1",
-          title: "The Limits of Thought",
+          title: "3 In the early morning before the sun was up there was",
           content:
-            "Krishnamurti draws a fundamental distinction between thought and intelligence. Thought is the response of memory — the accumulated store of past experience, knowledge, and conditioning. When you see a snake and recoil, that is thought: memory recognising danger and triggering an appropriate response. Thought is mechanical, repetitive, and rooted in the known. It is indispensable for practical, technical, and scientific purposes — you cannot build a bridge or perform surgery without accumulated knowledge. But thought becomes destructive when it is applied to psychological problems, because these problems are not technical: they cannot be solved by rearranging what one already knows. Fear, jealousy, loneliness, the search for meaning — these arise precisely from the activity of thought itself (from memory, comparison, and projection into the future). Using thought to solve the problems created by thought is like using a knife to sharpen itself. Intelligence, by contrast, is the quality of perception that arises when thought recognises its own limitations and falls silent — not suppressed, but naturally quiet, having seen that it cannot go further.",
+            "3 In the early morning before the sun was up there was a haze over the river. You could dimly see the other bank. It was still rather dark and the trees were shadows against the light sky. The fishing boats were still there: they had been there all night with their little lanterns. Dark and almost motionless, they had been fishing all night and there was not a sound from them. Occasionally of an evening you would hear the fishermen singing but now in the early dawn they were very quiet, tired out and sleepy. The current was carrying them gently along and they would presently return with their catch to their little village on this side of the river further down.",
         },
         {
           id: "bl-l05-c2",
-          title: "Knowledge and the Known",
+          title: "4 It was an old, vast Byzantine building which had become a",
           content:
-            "In the educational context, Krishnamurti's distinction between knowledge and intelligence has radical implications. Schools overwhelmingly emphasise the accumulation of knowledge — the memorisation of facts, formulas, dates, and theories. Knowledge is obviously necessary: you cannot function in the world without it. But knowledge is always about the past — it is the record of what has already been discovered, experienced, and formulated. Education that consists exclusively of knowledge accumulation trains the mind to operate within the known and fosters the illusion that understanding is reached by adding more and more information. But the most important moments of human life — encountering death, falling in love, experiencing beauty, confronting moral dilemmas — cannot be met with accumulated knowledge, because they are new in each instance. They require a quality of fresh perception — intelligence — that can respond to the present moment without the interference of past conditioning. Krishnamurti does not oppose knowledge but insists that it must be accompanied by the awareness that knowledge is always limited and that the truly important things in life lie beyond its reach.",
+            "4 It was an old, vast Byzantine building which had become a mosque. It was immense. Inside they were chanting the Koran and one sat beside a beggar on a carpet under the huge dome. The chanting was magnificent, echoing in the great space. There was no difference here between the beggar and that well-dressed man, apparently well-to-do. There were no women here. The men had their heads bowed, muttering to themselves silently. Light came through the coloured glass and made patterns on the carpet. Outside were many beggars, so many people wanting things; and down there was the blue sea, dividing the East and the West. It was a very ancient temple.",
         },
         {
           id: "bl-l05-c3",
-          title: "Psychological Suffering and Thought",
+          title: "Deeper Analysis: 3 In the early morning before the sun was up there was",
           content:
-            "Krishnamurti's most provocative claim is that psychological suffering — fear, anxiety, loneliness, despair — is generated by thought itself, not by external circumstances. The fear of death, for example, is not produced by death (which has not yet occurred) but by thought's projection of the future — the image of one's own non-existence. Jealousy is not produced by the partner's behaviour but by thought's comparison of what is (the partner talking to someone) with what thought desires (exclusive possession). If education does not address the role of thought in generating suffering, it leaves students helpless before the fundamental challenges of human existence, no matter how technically proficient they become. This is why Krishnamurti insists that self-knowledge — the direct observation of how thought operates in one's own mind — is not a luxury or a spiritual extra but the most essential and practical form of education. A person who understands how her own thinking generates suffering is in a fundamentally different position from one who does not.",
+            "As you watched, the rising sun would light up a few clouds in the sky. They were golden and full of that strange beauty of a morning. The light was spreading, making everything visible; the sun lately rising over the trees caught the few parrots screeching their way to the fields that lay beyond the river. They flew noisily, swiftly—green and red beaked—and they would return in an hour or more to their little holes in the tamarind tree across the garden. As you watched they blended into the green leaves so that you could scarcely see them except for their bright red beaks.",
         },
       ],
       flashcards: [
         {
           id: "bl-l05-f1",
-          front: "Thought vs intelligence (Krishnamurti)",
-          back: "Thought is the mechanical response of memory — useful for technical tasks but destructive when applied to psychological problems it itself creates. Intelligence is fresh perception that arises when thought recognises its own limits.",
+          front: "3 In the early morning before the sun was up there was",
+          back:
+            "As you watched, the rising sun would light up a few clouds in the sky.",
         },
         {
           id: "bl-l05-f2",
-          front: "Knowledge is always about the past",
-          back: "Knowledge records what has been discovered. The most important human experiences — death, love, beauty, moral dilemmas — are new in each instance and require intelligence (fresh perception), not accumulated information.",
+          front: "4 It was an old, vast Byzantine building which had become a",
+          back:
+            "They really couldn’t tell how old it was but they loved to exaggerate the antiquity of their temples.",
         },
         {
           id: "bl-l05-f3",
-          front: "Thought generates psychological suffering",
-          back: "Fear, anxiety, jealousy, and despair are produced not by external circumstances but by thought's projections, comparisons, and images. Understanding this mechanism is the most practical form of education.",
+          front: "Key concept: 3 In the early morning before the sun was up there was",
+          back:
+            "The sun was making a golden path over the water and a train rattled by across the bridge with a hideous noise; but it was the water that held the beauty of the morning.",
         },
         {
           id: "bl-l05-f4",
-          front: "Self-knowledge as practical education",
-          back: "A person who understands how her own thinking generates suffering is in a fundamentally different position from one who does not — making self-observation the most essential (not optional) form of education.",
+          front: "Key concept: 4 It was an old, vast Byzantine building which had become",
+          back:
+            "All the pillars were carved; there was a great sense of space and heavy dignity, and because it was so bright outside in the dazzling sun, here it was cool.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L06  5 Most of us do not seem to give sufficient importance to
+    ───────────────────────────────────────────────── */
     {
       id: "bl-l06",
-      title: "Dialogue, Relationship, and Learning Together",
+      title: "5 Most of us do not seem to give sufficient importance to",
       type: "video",
       duration: 12,
       objectives: [
-        "Describe Krishnamurti's dialogical method and how it differs from debate",
-        "Explain the role of relationship in learning",
-        "Assess the contemporary relevance of Krishnamurti's educational philosophy",
+        "Examine the key ideas and arguments related to 5 most of us do not seem to give sufficient importance to",
+        "Examine the key ideas and arguments related to 6 there is no sequence in meditation",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "bl-l06-c1",
-          title: "Dialogue as Shared Inquiry",
+          title: "5 Most of us do not seem to give sufficient importance to",
           content:
-            "The Beginnings of Learning consists largely of recorded dialogues between Krishnamurti and teachers, students, and parents at his schools. These dialogues are not debates (where each party defends a position) or Socratic questionings (where the questioner already knows the answer). They are genuine shared inquiries in which all participants — including Krishnamurti — explore a question together without knowing the answer in advance. The quality of attention is more important than the conclusion: the participants listen not to refute but to understand, they follow the movement of thought as it unfolds, and they are willing to abandon their positions when the inquiry reveals them to be inadequate. This dialogical method is itself an educational practice: it demonstrates what it means to learn together, to think without motives, and to give complete attention to a question without the anxiety of needing to find a definitive answer. The dialogue does not reach a final answer because Krishnamurti holds that the understanding of truth is not a destination but a continuous process of observation.",
+            "5 Most of us do not seem to give sufficient importance to meditation. For most it is a passing thing in which some kind of experience is expected, some transcendental attainment, a fulfilment after all other attempts at fulfilment have failed. Meditation becomes a self-hypnotic movement in which appear various projections and symbols. But these are a continuity of what has been, perhaps modified or enlarged, but always within the area of some achievement. All this is rather immature and childish without great significance, and without breaking away from the established order—or disorder—of past events. These happenings become extraordinarily significant to a mind that is concerned with its own advancement, improvement and self-determined expectations.",
         },
         {
           id: "bl-l06-c2",
-          title: "Relationship as the Mirror of Self",
+          title: "6 There is no sequence in meditation",
           content:
-            "Krishnamurti insists that self-knowledge cannot be achieved in isolation — it requires relationship. It is in relationship with others — with students, colleagues, family, strangers — that one's conditioning is activated and made visible. In isolation, fear, jealousy, ambition, and aggression remain latent; in relationship, they manifest and can be observed. The classroom, therefore, is not merely a venue for transferring information but a laboratory of relationship in which both teacher and student can observe their own reactions and patterns. When a teacher becomes irritated with a student's question, that irritation is not merely an obstacle to good teaching — it is an opportunity for self-observation. When a student feels competitive with a classmate, that competitiveness is not merely a social problem — it is a window into the student's conditioning. Education, in this framework, is the cultivation of awareness within the field of relationship — learning to see oneself in the mirror of one's interactions with others.",
+            "6 There is no sequence in meditation. There is no continuity for this implies time and space and action within that. Our whole psychological activity is within the field of time and space and from this follows action which is always incomplete. Our mind is conditioned to the acceptance of time and space. From here to there, the chain of this and that, is time-sequence. In this movement action will bring about contradiction and therefore conflict. This is our life. Can action ever be free of time, so that there are neither regrets nor anticipation, the backward and forward looking of action? Seeing is acting. It is not first understanding and then acting, but rather seeing which in itself is action.",
         },
         {
           id: "bl-l06-c3",
-          title: "Contemporary Relevance",
+          title: "Deeper Analysis: 5 Most of us do not seem to give sufficient importance to",
           content:
-            "Krishnamurti's educational philosophy, developed primarily in the 1960s and 1970s, has acquired renewed relevance in the twenty-first century. The crisis of mental health among young people — rising rates of anxiety, depression, self-harm, and suicide — confirms his warning that an education focused exclusively on career preparation while neglecting psychological well-being produces suffering. The epidemic of social media comparison, performance anxiety, and identity fragmentation echoes his analysis of fear, competition, and the search for approval as barriers to genuine learning. His emphasis on self-knowledge, mindful attention, and the cultivation of emotional intelligence anticipates contemporary developments in social-emotional learning (SEL), mindfulness-based education, and contemplative pedagogy. At the same time, Krishnamurti's philosophy challenges these contemporary movements by questioning whether techniques and programmes — however well-intentioned — can cultivate genuine awareness, or whether they merely create new forms of conditioning. His insistence that transformation cannot be programmed but must arise from direct, honest observation of oneself remains profoundly provocative.",
+            "When the mind breaks through all this rubbish, which can only happen with self-knowing, then what happens can never be told to another. Even in the telling things have already changed. It is like describing a storm. It is already over the hills, the valleys, and gone beyond. And so the telling of it becomes something of the past and therefore no longer what is actually taking place. One can describe something accurately—an event—but the very accuracy of it becomes inaccurate when the thing has moved away. The accuracy of memory is a fact but memory is the result of something that has already happened. If the mind is following the flow of a river it has no time for description, nor for memory to gather itself.",
         },
       ],
       flashcards: [
         {
           id: "bl-l06-f1",
-          front: "Krishnamurti's dialogical method",
-          back: "Not debate or Socratic questioning but genuine shared inquiry where all participants explore without knowing the answer. The quality of attention matters more than reaching a conclusion.",
+          front: "5 Most of us do not seem to give sufficient importance to",
+          back:
+            "When the mind breaks through all this rubbish, which can only happen with self-knowing, then what happens can never be told to another.",
         },
         {
           id: "bl-l06-f2",
-          front: "Relationship as mirror of self",
-          back: "Conditioning (fear, jealousy, ambition) becomes visible in relationship. The classroom is a laboratory where teacher and student observe their own reactions — learning to see oneself in one's interactions.",
+          front: "6 There is no sequence in meditation",
+          back:
+            "In this there is no element of time, so the mind is always free.",
         },
         {
           id: "bl-l06-f3",
-          front: "Contemporary relevance of Krishnamurti",
-          back: "Youth mental health crisis, social media comparison, and performance anxiety confirm his warnings. His emphasis on self-knowledge anticipates SEL and mindfulness education, while questioning whether techniques can cultivate genuine awareness.",
+          front: "Key concept: 5 Most of us do not seem to give sufficient importance to",
+          back:
+            "When this kind of meditation is going on a great many things take place which are not the projection of thought.",
         },
         {
           id: "bl-l06-f4",
-          front: "Transformation cannot be programmed",
-          back: "Krishnamurti challenges even well-intentioned mindfulness programmes by arguing that genuine awareness arises from direct, honest self-observation — not from externally imposed techniques, which may create new conditioning.",
+          front: "Key concept: 6 There is no sequence in meditation",
+          back:
+            "This goes on throughout the day and at night sleep is the emptiness of yesterday and therefore the mind touches that which is timeless.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L07  Checkpoint Quiz 2
+    ───────────────────────────────────────────────── */
     {
       id: "bl-l07",
-      title: "Final Assessment: Krishnamurti and Education",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
-      duration: 9,
-      objectives: ["Evaluate comprehensive understanding of Krishnamurti's educational philosophy"],
+      duration: 8,
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "bl-l07-q1",
-          text: "Krishnamurti considers conventional education fundamentally flawed because:",
+          text: "Which of the following best describes a key idea from the section on 3 In the early morning before the sun was up there was?",
           options: [
-            { id: "a", text: "It teaches subjects that are too difficult for children" },
-            { id: "b", text: "It prepares students for careers but neglects psychological well-being, emotional maturity, and self-understanding — producing competent professionals who may suffer deeply" },
-            { id: "c", text: "It does not use enough technology in the classroom" },
-            { id: "d", text: "It gives students too much freedom" },
+            { id: "a", text: "6 There is no sequence in meditation." },
+            { id: "b", text: "4 It was an old, vast Byzantine building which had become a mosque." },
+            { id: "c", text: "5 Most of us do not seem to give sufficient importance to meditation." },
+            { id: "d", text: "3 In the early morning before the sun was up there was a haze over the river." },
           ],
-          correctOptionId: "b",
-          explanation: "Conventional education addresses only the vocational dimension of human life. By neglecting the psychological, emotional, and relational dimensions, it produces people who can earn a living but do not know how to live.",
+          correctOptionId: "d",
+          explanation:
+            "This question relates to 3 In the early morning before the sun was up there was. 3 In the early morning before the sun was up there was a haze over the river.",
         },
         {
           id: "bl-l07-q2",
-          text: "Why does Krishnamurti distinguish thought from intelligence?",
+          text: "Which of the following best describes a key idea from the section on 4 It was an old, vast Byzantine building which had become a?",
           options: [
-            { id: "a", text: "Because thought is useless and should be eliminated" },
-            { id: "b", text: "Because thought is the mechanical response of memory (useful for technical tasks) while intelligence is fresh perception arising when thought recognises its own limitations — psychological problems require intelligence, not more thought" },
-            { id: "c", text: "Because intelligence is measured by IQ tests" },
-            { id: "d", text: "Because thought belongs to the body and intelligence to the soul" },
+            { id: "a", text: "5 Most of us do not seem to give sufficient importance to meditation." },
+            { id: "b", text: "3 In the early morning before the sun was up there was a haze over the river." },
+            { id: "c", text: "4 It was an old, vast Byzantine building which had become a mosque." },
+            { id: "d", text: "6 There is no sequence in meditation." },
           ],
-          correctOptionId: "b",
-          explanation: "Thought draws on the past; intelligence perceives the present freshly. Using thought to solve problems created by thought is circular. Intelligence emerges when thought sees its own limits and naturally falls silent.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to 4 It was an old, vast Byzantine building which had become a. 4 It was an old, vast Byzantine building which had become a mosque.",
         },
         {
           id: "bl-l07-q3",
-          text: "Choiceless awareness differs from ordinary self-analysis in that:",
+          text: "Which of the following best describes a key idea from the section on 5 Most of us do not seem to give sufficient importance to?",
           options: [
-            { id: "a", text: "It is performed only by trained psychologists" },
-            { id: "b", text: "It observes without judging, choosing, or wanting to change — dissolving the division between observer and observed that perpetuates psychological conflict" },
-            { id: "c", text: "It requires no attention at all" },
-            { id: "d", text: "It analyses past memories to find root causes" },
+            { id: "a", text: "4 It was an old, vast Byzantine building which had become a mosque." },
+            { id: "b", text: "3 In the early morning before the sun was up there was a haze over the river." },
+            { id: "c", text: "5 Most of us do not seem to give sufficient importance to meditation." },
+            { id: "d", text: "6 There is no sequence in meditation." },
           ],
-          correctOptionId: "b",
-          explanation: "Ordinary analysis divides the mind into observer (who judges) and observed (who is judged), maintaining conflict. Choiceless awareness dissolves this split: there is only observing, and understanding arises naturally.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to 5 Most of us do not seem to give sufficient importance to. 5 Most of us do not seem to give sufficient importance to meditation.",
         },
         {
           id: "bl-l07-q4",
-          text: "Krishnamurti's dialogical method is NOT:",
+          text: "Which of the following best describes a key idea from the section on 6 There is no sequence in meditation?",
           options: [
-            { id: "a", text: "A genuine shared inquiry where all participants explore without a predetermined answer" },
-            { id: "b", text: "A practice where the quality of attention matters more than reaching conclusions" },
-            { id: "c", text: "A debate where each party defends their position and tries to win the argument" },
-            { id: "d", text: "A process where participants are willing to abandon positions revealed as inadequate" },
+            { id: "a", text: "6 There is no sequence in meditation." },
+            { id: "b", text: "3 In the early morning before the sun was up there was a haze over the river." },
+            { id: "c", text: "5 Most of us do not seem to give sufficient importance to meditation." },
+            { id: "d", text: "4 It was an old, vast Byzantine building which had become a mosque." },
           ],
-          correctOptionId: "c",
-          explanation: "Krishnamurti's dialogues are neither debates (position defence) nor Socratic questioning (the questioner knows the answer). They are open explorations where listening to understand replaces arguing to win.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to 6 There is no sequence in meditation. 6 There is no sequence in meditation.",
         },
         {
           id: "bl-l07-q5",
-          text: "How does Krishnamurti challenge modern mindfulness education programmes?",
+          text: "Which of the following best describes a key idea from the section on 7 You leave the sea behind and go inland?",
           options: [
-            { id: "a", text: "He argues that any meditation practice is harmful" },
-            { id: "b", text: "He questions whether externally imposed techniques can cultivate genuine awareness — they may create new forms of conditioning rather than real transformation" },
-            { id: "c", text: "He believes only traditional religious practices are valid" },
-            { id: "d", text: "He argues that mindfulness is only for adults" },
+            { id: "a", text: "3 In the early morning before the sun was up there was a haze over the river." },
+            { id: "b", text: "7 You leave the sea behind and go inland." },
+            { id: "c", text: "5 Most of us do not seem to give sufficient importance to meditation." },
+            { id: "d", text: "4 It was an old, vast Byzantine building which had become a mosque." },
           ],
           correctOptionId: "b",
-          explanation: "Krishnamurti's provocation is that genuine awareness cannot be programmed. Techniques and programmes, however well-intentioned, may produce a new kind of conformity rather than the direct, honest self-observation that transforms.",
-        },
-        {
-          id: "bl-l07-q6",
-          text: "Why does Krishnamurti insist that self-knowledge requires relationship?",
-          options: [
-            { id: "a", text: "Because people are happier when they have friends" },
-            { id: "b", text: "Because conditioning (fear, jealousy, ambition) remains latent in isolation but manifests in relationship — relationship is the mirror in which one's patterns become visible and can be observed" },
-            { id: "c", text: "Because self-knowledge can only be taught by a guru" },
-            { id: "d", text: "Because studying alone is less efficient than group study" },
-          ],
-          correctOptionId: "b",
-          explanation: "In isolation, psychological patterns stay hidden. In relationship, they activate: irritation, competition, desire for approval become visible. The classroom is a laboratory of relationship where both teacher and student can observe their conditioning.",
+          explanation:
+            "This question relates to 7 You leave the sea behind and go inland. 7 You leave the sea behind and go inland.",
         },
       ],
     },

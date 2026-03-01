@@ -4,7 +4,6 @@ import { useCallback, useEffect, useMemo, useReducer, useRef } from "react";
 import type { GameDifficulty, GameResult, LetterItem } from "@/lib/games/types";
 import { calculateStars } from "@/lib/games/scoring";
 import { hapticSuccess, hapticError, hapticCelebration } from "@/lib/platform/haptics";
-// TODO: import { letterBank } from "@/lib/games/content-banks" once stable
 import { LETTER_BANK, getRandomItems } from "@/lib/games/content-banks";
 
 /* ─── constants ─── */

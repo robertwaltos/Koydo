@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import type { LessonChunk } from "@/lib/modules/types";
-import SpeakButton from "./speak-button";
+import TappableText from "./tappable-text";
 import { usePreReaderMode } from "./pre-reader-mode";
 
 type VisualChunkStepperProps = {
@@ -63,7 +63,7 @@ export default function VisualChunkStepper({
   return (
     <div className="explore-scene-enter flex flex-col items-center gap-5">
       {/* Progress dots — interactive step indicators */}
-      <div className="flex items-center gap-2" role="progressbar" aria-valuenow={currentIndex + 1} aria-valuemax={chunks.length}>
+      <div className="flex items-center gap-2" role="group" aria-label={`Step ${currentIndex + 1} of ${chunks.length}`}>
         {chunks.map((_, i) => (
           <button
             key={i}
@@ -85,7 +85,14 @@ export default function VisualChunkStepper({
       </div>
 
       {/* Progress bar — thicker */}
-      <div className="h-3 w-full max-w-md overflow-hidden rounded-full bg-zinc-100">
+      <div
+        className="h-3 w-full max-w-md overflow-hidden rounded-full bg-zinc-100"
+        role="progressbar"
+        aria-valuenow={currentIndex + 1}
+        aria-valuemin={1}
+        aria-valuemax={chunks.length}
+        aria-label="Lesson progress"
+      >
         <div
           className="h-full rounded-full transition-all duration-500"
           style={{ width: `${progress}%`, backgroundColor: glowColor }}
@@ -134,21 +141,21 @@ export default function VisualChunkStepper({
           {chunk.title}
         </h3>
 
-        {/* Content — large, readable text */}
-        <div className="mt-4 text-base leading-relaxed text-zinc-700 sm:text-lg">
-          {chunk.content.split("\n").map((line, i) => (
-            <p key={i} className={i > 0 ? "mt-3" : ""}>
-              {line}
-            </p>
-          ))}
-        </div>
-
-        {/* Speak button */}
-        <div className="mt-5">
-          <SpeakButton
+        {/* Content — tappable to read on touch, "Hear It" on desktop */}
+        <div className="mt-4">
+          <TappableText
             text={`${chunk.title}. ${chunk.content}`}
-            label={isPreReaderMode ? "🔊" : "Read Aloud"}
-          />
+            className="block"
+            buttonLabel={isPreReaderMode ? "🔊" : "Read Aloud"}
+          >
+            <div className="text-base leading-relaxed text-zinc-700 sm:text-lg">
+              {chunk.content.split("\n").map((line, i) => (
+                <p key={i} className={i > 0 ? "mt-3" : ""}>
+                  {line}
+                </p>
+              ))}
+            </div>
+          </TappableText>
         </div>
       </article>
 

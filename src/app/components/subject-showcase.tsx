@@ -34,7 +34,7 @@ function SubjectCube({ icon, label, href, glowColor, accentClass }: SubjectCubeP
 
       {/* Glass cube */}
       <div
-        className="glass-cube relative flex h-24 w-24 items-center justify-center rounded-2xl border border-white/[0.12] transition-all duration-500 group-hover:border-white/25 group-hover:scale-105 sm:h-28 sm:w-28"
+        className="glass-cube relative flex h-20 w-20 items-center justify-center rounded-2xl border border-white/[0.12] transition-all duration-500 group-hover:border-white/25 group-hover:scale-105 sm:h-24 sm:w-24 md:h-28 md:w-28"
         style={{
           background: `linear-gradient(135deg, rgba(${glowColor}, 0.12) 0%, rgba(255,255,255,0.04) 50%, rgba(${glowColor}, 0.06) 100%)`,
           backdropFilter: "blur(16px)",
@@ -137,7 +137,7 @@ const subjects = [
  */
 export default function SubjectShowcase() {
   return (
-    <div className="grid grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:grid-cols-8">
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-8 lg:grid-cols-8">
       {subjects.map((s) => (
         <SubjectCube key={s.label} {...s} />
       ))}

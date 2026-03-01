@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const imageGenerateSchema = z.object({
   prompt: z.string().min(10, "Prompt must be at least 10 characters long."),
@@ -15,6 +16,17 @@ const imageCache = new Map<string, string>();
 
 export async function POST(request: Request) {
   try {
+    const rateLimit = await enforceIpRateLimit(request, "api:images:generate:post", {
+      max: 12,
+      windowMs: 60_000,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many image generation requests. Please retry shortly." },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const supabase = await createSupabaseServerClient();
     const {
       data: { user },

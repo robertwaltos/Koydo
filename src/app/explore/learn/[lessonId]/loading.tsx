@@ -14,7 +14,7 @@ export default function LessonLoading() {
         {/* Loading text */}
         <div className="flex flex-col items-center gap-2">
           <div className="h-6 w-44 animate-pulse rounded-lg bg-zinc-100" />
-          <div className="h-4 w-32 animate-pulse rounded-lg bg-zinc-50" />
+          <div className="h-4 w-32 animate-pulse rounded-lg bg-surface-muted" />
         </div>
       </div>
     </div>

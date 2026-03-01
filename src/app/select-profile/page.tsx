@@ -202,7 +202,7 @@ function SelectProfilePageInner() {
         role="group"
         aria-label={t("select_profile_group_aria")}
       >
-        <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3">
+        <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-3">
           {profiles.map((profile, i) => {
             const theme = getTheme(i);
             return (

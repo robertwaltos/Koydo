@@ -9,6 +9,11 @@
  */
 
 import { Capacitor } from '@capacitor/core';
+import { initializeRevenueCat } from './revenuecat-client';
+import {
+  getRevenueCatProEntitlement,
+} from './revenuecat-config';
+import { resolveCadenceFromProductId } from './revenuecat-matrix';
 
 // ─── Type Definitions ───────────────────────────────────────────────────────
 
@@ -80,20 +85,23 @@ async function checkPremiumAccessWeb(): Promise<EntitlementResult> {
  */
 async function checkPremiumAccessNative(): Promise<EntitlementResult> {
   try {
+    const initialized = await initializeRevenueCat();
+    if (!initialized) {
+      return checkPremiumAccessWeb();
+    }
+
     // Dynamic import to avoid SSR issues — RevenueCat is only available in native context
     const { Purchases } = await import('@revenuecat/purchases-capacitor');
 
     const { customerInfo } = await Purchases.getCustomerInfo();
 
-    const premiumEntitlement = customerInfo.entitlements.active['premium'];
+    const premiumEntitlement = getRevenueCatProEntitlement(customerInfo);
 
     if (premiumEntitlement) {
       return {
         active: true,
         source: 'revenuecat',
-        plan: premiumEntitlement.productIdentifier?.includes('annual')
-          ? 'annual'
-          : 'monthly',
+        plan: resolveCadenceFromProductId(premiumEntitlement.productIdentifier),
         expiresAt: premiumEntitlement.expirationDate ?? null,
         isInTrial: premiumEntitlement.periodType === 'trial',
       };
@@ -171,9 +179,7 @@ export async function checkPremiumAccessServer(
       active: isActive,
       source: 'supabase',
       plan: isActive
-        ? subscription.plan_id?.includes('annual')
-          ? 'annual'
-          : 'monthly'
+        ? resolveCadenceFromProductId(subscription.plan_id)
         : 'free',
       expiresAt: expiresAt?.toISOString() ?? null,
       isInTrial: subscription.is_in_trial ?? false,

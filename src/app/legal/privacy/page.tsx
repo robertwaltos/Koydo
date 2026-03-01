@@ -31,7 +31,7 @@ async function PrivacyPageContent({
     <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12">
       <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
         <h1 className="text-3xl font-semibold tracking-tight">{t("legal_privacy_title")}</h1>
-        <p className="mt-2 text-sm text-zinc-700">
+        <p className="mt-2 text-sm text-foreground">
           {t("legal_privacy_subtitle")}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
@@ -43,22 +43,37 @@ async function PrivacyPageContent({
 
       <SoftCard as="section" className="space-y-3 p-5">
         <h2 className="text-lg font-semibold">{t("legal_privacy_section_data_title")}</h2>
-        <p className="text-sm text-zinc-700">{t("legal_privacy_section_data_body")}</p>
+        <p className="text-sm text-foreground">{t("legal_privacy_section_data_body")}</p>
       </SoftCard>
 
       <SoftCard as="section" className="space-y-3 p-5">
         <h2 className="text-lg font-semibold">{t("legal_privacy_section_children_title")}</h2>
-        <p className="text-sm text-zinc-700">{t("legal_privacy_section_children_body")}</p>
+        <p className="text-sm text-foreground">{t("legal_privacy_section_children_body")}</p>
       </SoftCard>
 
       <SoftCard as="section" className="space-y-3 p-5">
         <h2 className="text-lg font-semibold">{t("legal_privacy_section_retention_title")}</h2>
-        <p className="text-sm text-zinc-700">{t("legal_privacy_section_retention_body")}</p>
+        <p className="text-sm text-foreground">{t("legal_privacy_section_retention_body")}</p>
       </SoftCard>
 
       <SoftCard as="section" className="space-y-3 p-5">
         <h2 className="text-lg font-semibold">{t("legal_privacy_section_rights_title")}</h2>
-        <p className="text-sm text-zinc-700">{t("legal_privacy_section_rights_body")}</p>
+        <p className="text-sm text-foreground">{t("legal_privacy_section_rights_body")}</p>
+      </SoftCard>
+
+      <SoftCard as="section" className="space-y-3 p-5">
+        <h2 className="text-lg font-semibold">{t("legal_privacy_section_transfers_title")}</h2>
+        <p className="text-sm text-foreground">{t("legal_privacy_section_transfers_body")}</p>
+      </SoftCard>
+
+      <SoftCard as="section" className="space-y-3 p-5">
+        <h2 className="text-lg font-semibold">{t("legal_privacy_section_dpo_title")}</h2>
+        <p className="text-sm text-foreground">{t("legal_privacy_section_dpo_body")}</p>
+      </SoftCard>
+
+      <SoftCard as="section" className="space-y-3 p-5">
+        <h2 className="text-lg font-semibold">{t("legal_privacy_section_cookies_title")}</h2>
+        <p className="text-sm text-foreground">{t("legal_privacy_section_cookies_body")}</p>
       </SoftCard>
     </main>
   );

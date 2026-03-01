@@ -9,10 +9,10 @@ export default function ExploreNotFound() {
   return (
     <div className="flex min-h-[calc(100vh-52px)] flex-col items-center justify-center px-4 text-center">
       <span className="text-5xl" aria-hidden="true">🔍</span>
-      <h1 className="mt-4 text-xl font-bold text-zinc-900 dark:text-zinc-100">
+      <h1 className="mt-4 text-xl font-bold text-zinc-900 dark:text-foreground">
         {t("explore_not_found_title")}
       </h1>
-      <p className="mt-2 max-w-md text-sm text-zinc-500 dark:text-zinc-400">
+      <p className="mt-2 max-w-md text-sm text-zinc-500 dark:text-foreground/70">
         {t("explore_not_found_message")}
       </p>
       <Link

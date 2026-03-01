@@ -28,10 +28,6 @@ function isCorrectOrder(steps: StoryStep[]): boolean {
   return steps.every((s, i) => s.order === i + 1);
 }
 
-function countCorrectPositions(steps: StoryStep[]): number {
-  return steps.filter((s, i) => s.order === i + 1).length;
-}
-
 /* ─── state ─── */
 type State = {
   phase: "ready" | "playing" | "feedback" | "complete";

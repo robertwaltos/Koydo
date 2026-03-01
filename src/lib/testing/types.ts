@@ -26,6 +26,12 @@ export type TestingAttemptStartResponse = {
   attemptType: "sample" | "full";
   timingMinutes: number;
   questions: TestingQuestionPayload[];
+  questionSupply?: {
+    requested: number;
+    delivered: number;
+    onDemandGenerated: number;
+    generationMode: "openai" | "rule_based" | "none";
+  };
 };
 
 export type TestingAttemptSubmission = {

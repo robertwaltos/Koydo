@@ -1,500 +1,480 @@
 import type { LearningModule } from "@/lib/modules/types";
 
 // High-quality curriculum module derived from EPUB.
-// Source: G:\My Drive\15_E-BOOKS\file006990.epub
+// Source: G:/My Drive/15_E-BOOKS/file006990.epub
 // Author: Ayn Rand  |  Subject: Philosophy
 
 export const IntroductionToObjectivistEpistemologyAynRandModule: LearningModule = {
   id: "introduction-to-objectivist-epistemology-ayn-rand",
   title: "Introduction to Objectivist Epistemology",
   description:
-    "A rigorous exploration of Ayn Rand's theory of concepts — her answer to the ancient problem of universals. This module examines how humans form concepts from percepts through a process of measurement omission, how abstractions are built from abstractions, the nature of definitions, and the role of axiomatic concepts in grounding all human knowledge.",
+    "A comprehensive educational module derived from Introduction to Objectivist Epistemology by Ayn Rand. This course provides structured video lessons and interactive quizzes exploring the key themes, arguments, and insights of the work.",
   subject: "Philosophy",
-  tags: ["epub-derived", "curriculum", "interactive", "philosophy", "epistemology", "objectivism", "cognition"],
+  tags: ["epub-derived", "curriculum", "interactive", "philosophy"],
   minAge: 18,
   maxAge: 99,
   version: "2.0.0",
   learningObjectives: [
-    "Explain Rand's theory of concept-formation through measurement omission",
-    "Describe how first-level concepts are formed directly from perceptual data",
-    "Analyse the process of abstraction from abstractions in building higher-order concepts",
-    "Define the role of definitions as condensed identifications of a concept's essential characteristics",
-    "Explain the three axiomatic concepts — existence, identity, and consciousness — and their epistemic function",
-    "Evaluate Rand's solution to the problem of universals in comparison with nominalism, realism, and conceptualism",
-    "Apply Objectivist epistemological principles to the analysis of philosophical arguments",
+    "Understand and critically analyze the concepts related to table of contents title page copyright page foreword chapter",
+    "Understand and critically analyze the concepts related to ayn rand is the author of atlas shrugged , philosophically t",
+    "Understand and critically analyze the concepts related to the ayn rand library vol",
+    "Understand and critically analyze the concepts related to meridian published by the penguin group penguin books usa in",
+    "Understand and critically analyze the concepts related to foreword to the first edition (this work was first published",
+    "Understand and critically analyze the concepts related to 1. cognition and measurement consciousness, as a state of aw",
+    "Understand and critically analyze the concepts related to 2. concept-formation a concept is a mental integration of tw",
   ],
   lessons: [
-
     /* ─────────────────────────────────────────────────
-       L01  The Problem of Universals and Concept-Formation
+       L01  Table of Contents Title Page Copyright Page Foreword Chapter
     ───────────────────────────────────────────────── */
     {
       id: "oe-l01",
-      title: "The Problem of Universals and Concept-Formation",
+      title: "Table of Contents Title Page Copyright Page Foreword Chapter",
       type: "video",
       duration: 12,
       objectives: [
-        "State the traditional problem of universals and the three classical solutions",
-        "Explain why Rand considers the problem crucial for human knowledge",
-        "Introduce concept-formation as Rand's proposed solution",
+        "Examine the key ideas and arguments related to table of contents title page copyright page foreword chapter",
+        "Examine the key ideas and arguments related to ayn rand is the author of atlas shrugged , philosophically t",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "oe-l01-c1",
-          title: "The Problem of Universals",
+          title: "Table of Contents Title Page Copyright Page Foreword Chapter",
           content:
-            "The problem of universals is among the oldest and most consequential in the history of philosophy: what is the relationship between the general concepts we use in thought and language — 'table,' 'dog,' 'justice' — and the particular, concrete things we encounter in reality? Every table is unique in its specific measurements, colour, and material, yet we subsume all tables under a single concept. What makes this legitimate? Three classical answers have dominated Western philosophy. Realism (Plato) holds that universals exist as independent abstract entities — Forms — in a separate metaphysical realm, and particular things participate in or exemplify these Forms. Nominalism holds that universals are merely names — convenient labels we attach to groups of similar things, with no basis in reality beyond our linguistic conventions. Conceptualism (a middle position) holds that universals exist as mental constructs but have some foundation in the similarities among things. Rand argues that all three are inadequate and proposes a fourth solution based on her theory of measurement omission.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
         {
           id: "oe-l01-c2",
-          title: "Why Concepts Matter for Human Survival",
+          title: "AYN RAND is the author of Atlas Shrugged , philosophically t",
           content:
-            "Rand begins with a biological observation: the range of the moment — what a human being can perceive and hold in awareness at any given instant — is severely limited. We can perceive only a handful of concrete objects simultaneously. Yet human survival requires dealing with an effectively unlimited range of entities, properties, and events spread across time. The faculty that bridges this gap is the conceptual faculty — the ability to form abstract categories that integrate an open-ended number of concretes under a single mental unit. Without concepts, we would be confined to the immediate perceptual field, unable to project past experience into the future, unable to form principles, unable to communicate complex knowledge, unable to build technology that depends on chains of inference extending far beyond any single perception. Concept-formation is therefore not a philosophical luxury but the fundamental mechanism of human cognition and, by extension, of human survival. The epistemological question — how do we form valid concepts? — is also a question about life and death.",
+            "He has taught philosophy at Hunter College, Long Island University, and New York University, and lectures on Ayn Rand’s philosophy throughout the country. Dr. Peikoff is the author of The Ominous Parallels : The End of Freedom in America (Meridian), and editor of The Early Ayn Rand (Signet). He lives in South Laguna, California. DR. HARRY BINSWANGER, an associate of Ayn Rand, received his doctorate in philosophy from Columbia University. He has taught philosophy at Hunter College and given courses on Objectivism at the New School for Social Research. Dr. Binswanger is the author of The Biological Basis of Teleological Concepts , and editor of The Ayn Rand Lexicon (Meridian). He lives in New York City.",
         },
         {
           id: "oe-l01-c3",
-          title: "From Percepts to Concepts: The First Step",
+          title: "Deeper Analysis: Table of Contents Title Page Copyright Page Foreword Chapter",
           content:
-            "Rand describes concept-formation as a specific cognitive process with identifiable steps. It begins with perception: the automatic integration of sensory data into percepts — the awareness of entities as distinct things. A child perceives particular objects: this table, that table, this chair. The child notices similarities and differences: the tables are similar to each other in ways that they differ from the chairs. The critical cognitive act is differentiation and integration: the child differentiates tables from other objects (chairs, lamps, dogs) and integrates all observed tables into a single mental unit — the concept 'table.' But what exactly does this integration consist of? What mental operation transforms a finite set of particular observations into an open-ended abstract category that applies to all tables past, present, and future — including tables the child has never seen? Rand's answer is measurement omission: the process of retaining the characteristics of the entities while omitting their specific measurements.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
       ],
       flashcards: [
         {
           id: "oe-l01-f1",
-          front: "The problem of universals",
+          front: "Table of Contents Title Page Copyright Page Foreword Chapter",
           back:
-            "What is the relationship between general concepts (table, justice) and the particular things they designate? The three classical answers are realism (abstract Forms), nominalism (mere names), and conceptualism (mental constructs).",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "oe-l01-f2",
-          front: "Range of the moment",
+          front: "AYN RAND is the author of Atlas Shrugged , philosophically t",
           back:
-            "Rand's term for the limited number of concrete objects a human can perceive and hold in awareness simultaneously — concepts overcome this limitation by integrating unlimited concretes under single mental units.",
+            "He has taught philosophy at Hunter College, Long Island University, and New York University, and lectures on Ayn Rand’s philosophy throughout the country.",
         },
         {
           id: "oe-l01-f3",
-          front: "Differentiation and integration",
+          front: "Key concept: Table of Contents Title Page Copyright Page Foreword Chap",
           back:
-            "The two-step cognitive process underlying concept-formation: distinguishing a group of similar entities from other entities, then uniting that group into a single mental unit (a concept).",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "oe-l01-f4",
-          front: "Measurement omission (preview)",
+          front: "Key concept: AYN RAND is the author of Atlas Shrugged , philosophicall",
           back:
-            "Rand's key insight: concepts are formed by retaining the characteristics of entities while omitting their specific measurements — allowing a finite set of observations to generate an open-ended category.",
+            "He has taught philosophy at Hunter College, Long Island University, and New York University, and lectures on Ayn Rand’s philosophy throughout the country.",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L02  Measurement Omission: The Core Theory
+       L02  THE AYN RAND LIBRARY Vol
     ───────────────────────────────────────────────── */
     {
       id: "oe-l02",
-      title: "Measurement Omission: The Core Theory",
+      title: "THE AYN RAND LIBRARY Vol",
       type: "video",
-      duration: 13,
+      duration: 12,
       objectives: [
-        "Define measurement omission precisely and explain its role in concept-formation",
-        "Distinguish between the characteristics retained and the measurements omitted",
-        "Explain the formula 'the measurements must exist in some quantity, but may exist in any quantity'",
+        "Examine the key ideas and arguments related to the ayn rand library vol",
+        "Examine the key ideas and arguments related to meridian published by the penguin group penguin books usa in",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "oe-l02-c1",
-          title: "What Is Measurement Omission?",
+          title: "THE AYN RAND LIBRARY Vol",
           content:
-            "Measurement omission is the process by which a mind forms a concept from a set of observed particulars. When a child forms the concept 'table,' she retains certain characteristics that all the observed tables share — a flat surface, supported by legs, used for placing objects — while omitting the specific measurements of those characteristics: the exact height, length, width, number of legs, material, and colour of any particular table. The concept 'table' designates all entities that possess the retained characteristics, regardless of their specific measurements. This is not a vague or approximate grouping; it is a precise operation. The measurements must exist in some quantity (every table must have some height), but they may exist in any quantity within the range that permits the entity to function as a table. The concept thus captures an objective relationship among concretes: they share certain characteristics whose measurements differ but whose identity as characteristics is the same. This is Rand's answer to the problem of universals: the universal (the concept) has an objective basis in reality — the shared characteristics — while the particular instances differ only in measurement.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
         {
           id: "oe-l02-c2",
-          title: "The Concept as a Mental Unit",
+          title: "MERIDIAN Published by the Penguin Group Penguin Books USA In",
           content:
-            "Once measurement omission has been performed, the result is a new cognitive unit: the concept, which is thereafter represented in the mind by a word — a perceptual symbol (the sound or written shape of 'table') that stands for the abstract integration. This is the genius of conceptual thought: an unlimited number of concretes are condensed into a single symbol, which can be manipulated in thought as easily as a single percept. A mind that has formed the concept 'table' can think about tables without needing to simultaneously hold in awareness every table it has ever seen. It can apply the concept to new instances never previously encountered: a glass table, a folding table, a Japanese chabudai — as long as the new object possesses the retained characteristics in some measurement. The concept also enables communication: when one person says 'table,' another understands the reference to the same abstract category, even though neither has seen exactly the same set of particular tables. Language, for Rand, is the auditory-visual code that makes conceptual thought socially shareable.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
         {
           id: "oe-l02-c3",
-          title: "Objective Basis and the Rejection of Nominalism",
+          title: "Deeper Analysis: THE AYN RAND LIBRARY Vol",
           content:
-            "Rand's theory of measurement omission provides a middle path that avoids the deficiencies of all three classical positions. Against Platonic realism, Rand denies that universals exist as independent abstract entities in a separate realm — concepts are human cognitive integrations, not Platonic Forms. Against nominalism, she insists that concepts are not arbitrary groupings or mere words — they have an objective basis in the measurable characteristics shared by their referents. Against conceptualism, she specifies the exact cognitive operation (measurement omission) that grounds concepts in perceptual reality, avoiding the vagueness of claiming that concepts 'exist in the mind' without explaining how they got there or what they consist of. The key innovation is the identification of measurement as the bridge between the particular and the universal: particular things differ in their measurements but share measurable characteristics, and the concept captures this specific relationship. Concepts are therefore neither subjective creations imposed on a featureless reality nor reflections of pre-existing abstractions — they are objective cognitive integrations grounded in the measurable nature of existents.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
       ],
       flashcards: [
         {
           id: "oe-l02-f1",
-          front: "Measurement omission defined",
+          front: "THE AYN RAND LIBRARY Vol",
           back:
-            "The cognitive process of retaining the characteristics that entities share while omitting the specific measurements of those characteristics — the measurements must exist in some quantity but may exist in any quantity.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "oe-l02-f2",
-          front: "Concept as a mental unit",
+          front: "MERIDIAN Published by the Penguin Group Penguin Books USA In",
           back:
-            "A concept condenses an unlimited number of concretes into a single cognitive symbol (a word), enabling thought about open-ended categories and communication of abstract ideas between minds.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "oe-l02-f3",
-          front: "Rand vs Platonic realism",
+          front: "Key concept: THE AYN RAND LIBRARY Vol",
           back:
-            "Rand denies that universals exist as independent abstract Forms in a separate realm. Concepts are human cognitive integrations grounded in the measurable characteristics of existents, not reflections of pre-existing abstractions.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "oe-l02-f4",
-          front: "Rand vs nominalism",
+          front: "Key concept: MERIDIAN Published by the Penguin Group Penguin Books USA",
           back:
-            "Concepts are not arbitrary names or mere linguistic conventions. They have an objective basis in the measurable characteristics shared by their referents — the relationship between particular and universal is mediated by measurement.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L03  Abstraction from Abstractions and Definitions
+       L03  Foreword to the First Edition (This work was first published
     ───────────────────────────────────────────────── */
     {
       id: "oe-l03",
-      title: "Abstraction from Abstractions and Definitions",
+      title: "Foreword to the First Edition (This work was first published",
       type: "video",
-      duration: 13,
+      duration: 12,
       objectives: [
-        "Explain how higher-order concepts are formed by abstracting from existing concepts",
-        "Define the role of definitions in Rand's epistemology",
-        "Distinguish between the metaphysical and epistemological aspects of definitions",
+        "Examine the key ideas and arguments related to foreword to the first edition (this work was first published",
+        "Examine the key ideas and arguments related to 1. cognition and measurement consciousness, as a state of aw",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "oe-l03-c1",
-          title: "Building Higher-Order Concepts",
+          title: "Foreword to the First Edition (This work was first published",
           content:
-            "First-level concepts — table, chair, dog, cat — are formed directly from perceptual data by measurement omission. But human cognition does not stop at this level. We form concepts of concepts: 'furniture' integrates tables, chairs, desks, and beds; 'animal' integrates dogs, cats, horses, and fish; 'organism' integrates animals and plants. Each successive level of abstraction applies the same process of measurement omission to the entities designated by lower-level concepts. To form the concept 'furniture,' we treat tables, chairs, and desks as the units, observe their shared characteristic (man-made objects designed for domestic use), and omit the specific measurements that distinguish them (tables have flat eating surfaces, chairs have backs and seats, etc.). The higher concept retains fewer distinguishing characteristics than the lower ones — 'furniture' tells us less about any particular object than 'table' does — but integrates a wider range of existents. This hierarchical structure of concepts is what makes extended chains of reasoning possible: each higher-level concept carries the cognitive content of all the lower levels it subsumes.",
+            "What is the relationship between abstractions and concretes? To what precisely do concepts refer in reality? Do they refer to something real, something that exists—or are they merely inventions of man’s mind, arbitrary constructs or loose approximations that cannot claim to represent knowledge? “All knowledge is in terms of concepts. If these concepts correspond to something that is to be found in reality they are real and man’s knowledge has a foundation in fact; if they do not correspond to anything in reality they are not real and man’s knowledge is of mere figments of his own imagination.” (Edward C.",
         },
         {
           id: "oe-l03-c2",
-          title: "The Nature and Function of Definitions",
+          title: "1. Cognition and Measurement Consciousness, as a state of aw",
           content:
-            "A definition, for Rand, is a statement that identifies the nature of a concept's referents — specifically, it identifies the characteristics that distinguish these referents from all other existents. A definition is not a summary of everything known about a concept's referents; it is a condensed identification of the essential distinguishing characteristic(s). The definition of 'man' as 'a rational animal' identifies the characteristic (rationality) that distinguishes human beings from all other known organisms. A good definition must satisfy two requirements: it must identify a fundamental characteristic — one that explains the greatest number of other known characteristics of the referents — and it must differentiate the referents from all other existents within the same conceptual context. Definitions are neither arbitrary labels nor eternal Platonic essentials; they are contextual identifications that may be expanded or refined as knowledge grows but that are objectively valid within their cognitive context.",
+            "1. Cognition and Measurement Consciousness, as a state of awareness, is not a passive state, but an active process that consists of two essentials: differentiation and integration. Although, chronologically, man’s consciousness develops in three stages: the stage of sensations, the perceptual, the conceptual—epistemologically, the base of all of man’s knowledge is the perceptual stage. Sensations, as such, are not retained in man’s memory, nor is man able to experience a pure isolated sensation. As far as can be ascertained, an infant’s sensory experience is an undifferentiated chaos. Discriminated awareness begins on the level of percepts. A percept is a group of sensations automatically retained and integrated by the brain of a living organism.",
         },
         {
           id: "oe-l03-c3",
-          title: "Contextual Definitions and the Growth of Knowledge",
+          title: "Deeper Analysis: Foreword to the First Edition (This work was first published",
           content:
-            "One of Rand's most important epistemological claims is that definitions are contextual — they are valid within the context of the definer's knowledge and must be revised as knowledge expands. A child might initially define 'man' as 'the being that walks upright and talks.' This definition is valid for the child's cognitive context because it correctly differentiates humans from the only other beings the child knows — dogs, cats, birds. But as the child's knowledge grows to include apes (which walk semi-upright) and parrots (which mimic speech), the definition must be refined to identify a more fundamental distinguishing characteristic: rationality. This does not mean the earlier definition was wrong — it was objectively valid within its context — but it was incomplete. The process of refining definitions reflects the hierarchical, cumulative nature of human knowledge. Each level of definition captures real, objective characteristics; later levels identify deeper, more fundamental characteristics that explain more. This is why Rand calls definitions 'contextual absolutes' — absolute within their context, but subject to expansion.",
+            "Moore, American Pragmatism : Peirce, James, & Dewey, New York: Columbia University Press, 1961, p. 27.) To exemplify the issue as it is usually presented: When we refer to three persons as “men,” what do we designate by that term? The three persons are three individuals who differ in every particular respect and may not possess a single identical characteristic (not even their fingerprints). If you list all their particular characteristics, you will not find one representing “manness.” Where is the “manness” in men? What, in reality, corresponds to the concept “man” in our mind? In the history of philosophy, there are, essentially, four schools of thought on this issue: 1.",
         },
       ],
       flashcards: [
         {
           id: "oe-l03-f1",
-          front: "Abstraction from abstractions",
+          front: "Foreword to the First Edition (This work was first published",
           back:
-            "Higher-order concepts (like 'furniture' or 'organism') are formed by applying measurement omission to the entities designated by lower-level concepts, creating a hierarchical structure enabling extended reasoning.",
+            "Moore, American Pragmatism : Peirce, James, & Dewey, New York: Columbia University Press, 1961, p.",
         },
         {
           id: "oe-l03-f2",
-          front: "Definition (Rand's view)",
+          front: "1. Cognition and Measurement Consciousness, as a state of aw",
           back:
-            "A statement identifying the essential distinguishing characteristic(s) of a concept's referents — the characteristic that explains the greatest number of other known characteristics and differentiates the referents from all other existents.",
+            "It is in the form of percepts that man grasps the evidence of his senses and apprehends reality.",
         },
         {
           id: "oe-l03-f3",
-          front: "Contextual absolutes",
+          front: "Key concept: Foreword to the First Edition (This work was first publis",
           back:
-            "Rand's term for definitions that are objectively valid within their cognitive context but subject to expansion as knowledge grows. Earlier definitions are not wrong — they are incomplete relative to later, more fundamental identifications.",
+            "The “extreme realists” or Platonists, who hold that abstractions exist as real entities or archetypes in another dimension of reality and that the concretes we perceive are merely...",
         },
         {
           id: "oe-l03-f4",
-          front: "Genus and differentia",
+          front: "Key concept: 1. Cognition and Measurement Consciousness, as a state of",
           back:
-            "The traditional structure Rand adopts for definitions: the genus places the concept within a wider category, and the differentia identifies what distinguishes its referents within that category — e.g., 'man' is a 'rational' (differentia) 'animal' (genus).",
+            "But it is implicit in every percept (to perceive a thing is to perceive that it exists) and man grasps it implicitly on the perceptual level—i.e., he grasps the constituents of the...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L04  Checkpoint Quiz: Concepts, Measurement, and Definitions
+       L04  Checkpoint Quiz 2
     ───────────────────────────────────────────────── */
     {
       id: "oe-l04",
-      title: "Checkpoint Quiz: Concepts, Measurement, and Definitions",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
       duration: 8,
-      objectives: ["Assess understanding of measurement omission, concept hierarchy, and definitions"],
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "oe-l04-q1",
-          text: "What does 'measurement omission' mean in Rand's epistemology?",
+          text: "Which of the following best describes a key idea from the section on Table of Contents Title Page Copyright Page Foreword Chapter?",
           options: [
-            { id: "a", text: "Ignoring all characteristics of objects to form arbitrary categories" },
-            { id: "b", text: "Retaining the characteristics entities share while omitting specific measurements — the measurements must exist in some quantity but may exist in any quantity" },
-            { id: "c", text: "Measuring objects precisely and sorting them by exact numerical values" },
-            { id: "d", text: "Perceiving objects without any cognitive processing" },
+            { id: "a", text: "He has taught philosophy at Hunter College, Long Island University, and New York University, and lec..." },
+            { id: "b", text: "Key aspects of meridian published by the penguin group penguin books usa in" },
+            { id: "c", text: "Key aspects of the ayn rand library vol" },
+            { id: "d", text: "Key aspects of table of contents title page copyright page foreword chapter" },
           ],
-          correctOptionId: "b",
+          correctOptionId: "d",
           explanation:
-            "Measurement omission retains the shared characteristics (e.g., having a flat surface, legs) while omitting specific measurements (exact height, width, material). The measurements must exist but may vary across instances.",
+            "This question relates to Table of Contents Title Page Copyright Page Foreword Chapter. Key aspects of table of contents title page copyright page foreword chapter",
         },
         {
           id: "oe-l04-q2",
-          text: "How does Rand's position differ from nominalism?",
+          text: "Which of the following best describes a key idea from the section on AYN RAND is the author of Atlas Shrugged , philosophically t?",
           options: [
-            { id: "a", text: "Rand agrees concepts are just convenient names with no objective basis" },
-            { id: "b", text: "Rand argues concepts have an objective basis in the measurable characteristics shared by their referents — they are not arbitrary linguistic labels" },
-            { id: "c", text: "Rand believes concepts exist as independent Platonic Forms" },
-            { id: "d", text: "There is no significant difference between Rand's view and nominalism" },
+            { id: "a", text: "Key aspects of meridian published by the penguin group penguin books usa in" },
+            { id: "b", text: "He has taught philosophy at Hunter College, Long Island University, and New York University, and lec..." },
+            { id: "c", text: "Key aspects of the ayn rand library vol" },
+            { id: "d", text: "Key aspects of table of contents title page copyright page foreword chapter" },
           ],
           correctOptionId: "b",
           explanation:
-            "Unlike nominalists, Rand holds that concepts are grounded in objective features of reality — the measurable characteristics shared by particular existents. The concept captures a real relationship, not an arbitrary label.",
+            "This question relates to AYN RAND is the author of Atlas Shrugged , philosophically t. He has taught philosophy at Hunter College, Long Island University, and New York University, and lec...",
         },
         {
           id: "oe-l04-q3",
-          text: "What does Rand mean by calling definitions 'contextual absolutes'?",
+          text: "Which of the following best describes a key idea from the section on THE AYN RAND LIBRARY Vol?",
           options: [
-            { id: "a", text: "Definitions are absolutely true and can never be revised" },
-            { id: "b", text: "Definitions are objectively valid within the definer's current knowledge but subject to expansion as knowledge grows" },
-            { id: "c", text: "Definitions are purely subjective and vary from person to person" },
-            { id: "d", text: "Definitions are determined by cultural consensus rather than objective characteristics" },
+            { id: "a", text: "Key aspects of table of contents title page copyright page foreword chapter" },
+            { id: "b", text: "Key aspects of meridian published by the penguin group penguin books usa in" },
+            { id: "c", text: "Key aspects of the ayn rand library vol" },
+            { id: "d", text: "He has taught philosophy at Hunter College, Long Island University, and New York University, and lec..." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "c",
           explanation:
-            "A contextual absolute is valid within the context in which it was formed. As knowledge expands, definitions may be refined to identify more fundamental characteristics, but earlier definitions were not wrong — they were incomplete.",
+            "This question relates to THE AYN RAND LIBRARY Vol. Key aspects of the ayn rand library vol",
         },
         {
           id: "oe-l04-q4",
-          text: "How are higher-order concepts like 'furniture' formed?",
+          text: "Which of the following best describes a key idea from the section on MERIDIAN Published by the Penguin Group Penguin Books USA In?",
           options: [
-            { id: "a", text: "By divine revelation of universal categories" },
-            { id: "b", text: "By applying measurement omission to lower-level concepts — treating tables, chairs, and desks as units and retaining shared characteristics while omitting distinguishing measurements" },
-            { id: "c", text: "By arbitrary social convention without any cognitive process" },
-            { id: "d", text: "By memorising lists of objects that belong to the same category" },
+            { id: "a", text: "He has taught philosophy at Hunter College, Long Island University, and New York University, and lec..." },
+            { id: "b", text: "Key aspects of the ayn rand library vol" },
+            { id: "c", text: "Key aspects of table of contents title page copyright page foreword chapter" },
+            { id: "d", text: "Key aspects of meridian published by the penguin group penguin books usa in" },
           ],
-          correctOptionId: "b",
+          correctOptionId: "d",
           explanation:
-            "Higher-order concepts apply the same process of measurement omission used for first-level concepts, but to the entities designated by existing concepts rather than to direct percepts — building a hierarchical conceptual structure.",
+            "This question relates to MERIDIAN Published by the Penguin Group Penguin Books USA In. Key aspects of meridian published by the penguin group penguin books usa in",
         },
         {
           id: "oe-l04-q5",
-          text: "Why does Rand consider the problem of universals crucial for human survival?",
+          text: "Which of the following best describes a key idea from the section on Foreword to the First Edition (This work was first published?",
           options: [
-            { id: "a", text: "Because correct classification of objects is necessary for passing academic examinations" },
-            { id: "b", text: "Because the conceptual faculty — the ability to form abstract categories from percepts — is the fundamental mechanism of human cognition, enabling thought, communication, and technology" },
-            { id: "c", text: "Because universals determine which actions are morally right" },
-            { id: "d", text: "Because only societies that solve the problem of universals can develop democratic governance" },
+            { id: "a", text: "Key aspects of table of contents title page copyright page foreword chapter" },
+            { id: "b", text: "Key aspects of the ayn rand library vol" },
+            { id: "c", text: "What is the relationship between abstractions and concretes?" },
+            { id: "d", text: "He has taught philosophy at Hunter College, Long Island University, and New York University, and lec..." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "c",
           explanation:
-            "Without concepts, humans would be confined to the immediate perceptual field — unable to project past experience, form principles, communicate complex knowledge, or build technology. The conceptual faculty bridges the gap between limited perception and unlimited cognitive reach.",
+            "This question relates to Foreword to the First Edition (This work was first published. What is the relationship between abstractions and concretes?",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L05  Axiomatic Concepts: Existence, Identity, Consciousness
+       L05  2. Concept-Formation A concept is a mental integration of tw
     ───────────────────────────────────────────────── */
     {
       id: "oe-l05",
-      title: "Axiomatic Concepts: Existence, Identity, Consciousness",
+      title: "2. Concept-Formation A concept is a mental integration of tw",
       type: "video",
       duration: 12,
       objectives: [
-        "Define the three axiomatic concepts and explain why they cannot be analysed further",
-        "Explain the performative self-contradiction involved in denying axiomatic concepts",
-        "Describe how axiomatic concepts function as the foundation of all knowledge",
+        "Examine the key ideas and arguments related to 2. concept-formation a concept is a mental integration of tw",
+        "Examine the key ideas and arguments related to 3. abstraction from abstractions starting from the base of c",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "oe-l05-c1",
-          title: "Existence Exists",
+          title: "2. Concept-Formation A concept is a mental integration of tw",
           content:
-            "Rand identifies three concepts that are implicit in every act of awareness and that cannot be defined in terms of prior concepts because they are presupposed by all other concepts: existence, identity, and consciousness. The axiom 'existence exists' means that something exists, that there is a reality independent of anyone's beliefs, wishes, or feelings about it. This is not a claim that requires proof — any attempt to deny it or demand proof for it would itself presuppose the existence of the denier, the act of denial, and the standard of proof. It is self-evident and self-validating: you cannot coherently assert that nothing exists, because the assertion itself is something. Rand calls this a 'performative self-contradiction' — the content of the denial is refuted by the act of denying. Existence is the widest of all concepts: it includes everything that exists in any form — physical objects, mental states, mathematical relationships, actions. It cannot be broken down into more fundamental components because there is nothing outside existence to which it could be compared.",
+            "2. Concept-Formation A concept is a mental integration of two or more units which are isolated according to a specific characteristic(s) and united by a specific definition. The units involved may be any aspect of reality: entities, attributes, actions, qualities, relationships, etc.; they may be perceptual concretes or other, earlier-formed concepts. The act of isolation involved is a process of abstraction : i.e., a selective mental focus that takes out or separates a certain aspect of reality from all others (e.g., isolates a certain attibute from the entities possessing it, or a certain action from the entities performing it, etc.).",
         },
         {
           id: "oe-l05-c2",
-          title: "Identity: A Is A",
+          title: "3. Abstraction from Abstractions Starting from the base of c",
           content:
-            "The axiom of identity states that to exist is to be something — to have a specific nature, specific attributes, specific characteristics that make a thing what it is and not something else. This is the law of identity: A is A. A table is a table; it is not a dog or an emotion or a number. Everything that exists has identity — determinate characteristics that can in principle be discovered. This axiom is the foundation of all reasoning, because reasoning is the process of identifying the nature of existents and drawing conclusions from those identifications. Without the law of identity, no proposition could be true or false — a thing could be simultaneously itself and not itself, making all inquiry meaningless. Rand also derives the law of causality from the axiom of identity: an entity acts in accordance with its nature. The way things behave is determined by what they are — their identity. Fire burns because of the chemical nature of combustion, not by arbitrary decree. Causality is the law of identity applied to action.",
+            "3. Abstraction from Abstractions Starting from the base of conceptual development—from the concepts that identify perceptual concretes—the process of cognition moves in two interacting directions: toward more extensive and more intensive knowledge, toward wider integrations and more precise differentiations. Following the process and in accordance with cognitive evidence , earlier-formed concepts are integrated into wider ones or subdivided into narrower ones. The role of language (which we shall discuss at length when we discuss definitions) must be mentioned briefly at this point. The process of forming a concept is not complete until its constituent units have been integrated into a single mental unit by means of a specific word. The first concepts a child forms are concepts of perceptual entities; the first words he learns are words designating them.",
         },
         {
           id: "oe-l05-c3",
-          title: "Consciousness as Axiomatic",
+          title: "Deeper Analysis: 2. Concept-Formation A concept is a mental integration of tw",
           content:
-            "The third axiomatic concept is consciousness — the faculty of perceiving that which exists. Consciousness is axiomatic in the same sense as existence and identity: any attempt to deny its existence requires the use of consciousness, creating the same kind of performative self-contradiction. But Rand is careful to specify that consciousness is not an independent metaphysical entity floating free of existence — it is always consciousness of something. There is no awareness without an object of awareness. This is what Rand calls the 'primacy of existence' principle: existence is primary, consciousness is secondary. Consciousness does not create reality; it identifies reality. This principle distinguishes Objectivism from all forms of idealism (which hold that consciousness creates or shapes reality) and from Kantian philosophy (which holds that the mind imposes categories on an unknowable 'thing-in-itself'). For Rand, the relationship between consciousness and existence is identification, not creation — and this relationship is the starting point of all epistemology.",
+            "The uniting involved is not a mere sum, but an integration , i.e., a blending of the units into a single , new mental entity which is used thereafter as a single unit of thought (but which can be broken into its component units whenever required). In order to be used as a single unit, the enormous sum integrated by a concept has to be given the form of a single, specific, perceptual concrete, which will differentiate it from all other concretes and from all other concepts. This is the function performed by language. Language is a code of visual-auditory symbols that serves the psycho-epistemological function of converting concepts into the mental equivalent of concretes. Language is the exclusive domain and tool of concepts.",
         },
       ],
       flashcards: [
         {
           id: "oe-l05-f1",
-          front: "The three axiomatic concepts",
+          front: "2. Concept-Formation A concept is a mental integration of tw",
           back:
-            "Existence, identity, and consciousness — implicit in every act of awareness, presupposed by all other concepts, and undeniable without performative self-contradiction.",
+            "The uniting involved is not a mere sum, but an integration , i.e., a blending of the units into a single , new mental entity which is used thereafter as a single unit of thought (b...",
         },
         {
           id: "oe-l05-f2",
-          front: "Performative self-contradiction",
+          front: "3. Abstraction from Abstractions Starting from the base of c",
           back:
-            "The act of denying an axiom presupposes the truth of what is denied. Asserting 'nothing exists' is itself something that exists; denying consciousness requires consciousness to perform the denial.",
+            "Even though a child does not have to perform the feat of genius performed by some mind or minds in the prehistorical infancy of the human race: the invention of language—every chil...",
         },
         {
           id: "oe-l05-f3",
-          front: "Causality as identity applied to action",
+          front: "Key concept: 2. Concept-Formation A concept is a mental integration of",
           back:
-            "Rand derives causality from identity: an entity acts in accordance with its nature (what it is determines what it does). Fire burns because of its chemical nature, not by arbitrary decree.",
+            "Every word we use (with the exception of proper names) is a symbol that denotes a concept, i.e., that stands for an unlimited number of concretes of a certain kind.",
         },
         {
           id: "oe-l05-f4",
-          front: "Primacy of existence",
+          front: "Key concept: 3. Abstraction from Abstractions Starting from the base o",
           back:
-            "Existence is primary; consciousness identifies reality but does not create it. This distinguishes Objectivism from idealism and Kantianism, which hold that consciousness shapes or constitutes the known world.",
+            "Learning to speak does not consist of memorizing sounds— that is the process by which a parrot learns to “speak.” Learning consists of grasping meanings, i.e., of grasping the refe...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L06  Rand's Solution Applied: Validity, Certainty, and the Arbitrary
+       L06  4. Concepts of Consciousness Consciousness is the faculty of
     ───────────────────────────────────────────────── */
     {
       id: "oe-l06",
-      title: "Rand's Solution Applied: Validity, Certainty, and the Arbitrary",
+      title: "4. Concepts of Consciousness Consciousness is the faculty of",
       type: "video",
       duration: 12,
       objectives: [
-        "Distinguish between the certain, the probable, and the arbitrary in Objectivist epistemology",
-        "Explain the concept of cognitive context and its role in validating knowledge claims",
-        "Apply the theory of measurement omission to evaluate real-world philosophical disputes",
+        "Examine the key ideas and arguments related to 4. concepts of consciousness consciousness is the faculty of",
+        "Examine the key ideas and arguments related to 5. definitions a definition is a statement that identifies t",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "oe-l06-c1",
-          title: "The Certain, the Probable, and the Arbitrary",
+          title: "4. Concepts of Consciousness Consciousness is the faculty of",
           content:
-            "Rand and her associate Leonard Peikoff draw a tripartite distinction among knowledge claims. Certain claims are those validated by the full context of available evidence: 'two plus two equals four,' 'the earth orbits the sun,' 'human beings require food to survive.' These are known to be true, not because they can never conceivably be revised, but because the available evidence supports them conclusively and no counter-evidence exists. Probable claims are those supported by evidence but not yet conclusively established: 'this drug may reduce heart disease,' 'the universe is approximately 13.8 billion years old.' These deserve proportionate confidence. The arbitrary is the category that Rand considers philosophically critical: assertions for which no evidence whatever has been offered. 'There is a green dragon in my garage who turns invisible whenever anyone looks' is an arbitrary assertion. Rand argues that the arbitrary deserves not refutation but dismissal — it is outside the domain of knowledge entirely. You cannot prove a negative, and you are under no obligation to disprove unsupported assertions. The burden of proof always lies with the one making a positive claim.",
+            "4. Concepts of Consciousness Consciousness is the faculty of awareness—the faculty of perceiving that which exists. Awareness is not a passive state, but an active process. On the lower levels of awareness, a complex neurological process is required to enable man to experience a sensation and to integrate sensations into percepts; that process is automatic and non-volitional: man is aware of its results, but not of the process itself. On the higher, conceptual level, the process is psychological, conscious and volitional. In either case, awareness is achieved and maintained by continuous action . Directly or indirectly, every phenomenon of consciousness is derived from one’s awareness of the external world. Some object, i.e., some content, is involved in every state of awareness.",
         },
         {
           id: "oe-l06-c2",
-          title: "Cognitive Context and Conceptual Validity",
+          title: "5. Definitions A definition is a statement that identifies t",
           content:
-            "Every concept is formed within a cognitive context — the sum of everything the concept-former knows at the time of formation. A concept is valid if it represents a genuine integration of existents based on observed similarities and differences, performed by the method of measurement omission. But validity is contextual: a concept that is perfectly valid within a limited context may need to be refined as the context expands. The concept 'fish' once included whales; when biological knowledge advanced sufficiently to reveal that whales are mammals (warm-blooded, air-breathing, live-bearing), the concept was revised. This revision did not invalidate the original concept within its original context — it reflected the growth of knowledge. Rand insists that this contextual view of validity avoids both dogmatism (claiming that current knowledge is final and unrevisable) and scepticism (claiming that because knowledge can be revised, nothing is really known). Knowledge is objective within its context, and the growth of knowledge improves rather than undermines certainty.",
+            "5. Definitions A definition is a statement that identifies the nature of the units subsumed under a concept. It is often said that definitions state the meaning of words. This is true, but it is not exact. A word is merely a visual-auditory symbol used to represent a concept; a word has no meaning other than that of the concept it symbolizes, and the meaning of a concept consists of its units. It is not words, but concepts that man defines—by specifying their referents. The purpose of a definition is to distinguish a concept from all other concepts and thus to keep its units differentiated from all other existents.",
         },
         {
           id: "oe-l06-c3",
-          title: "Applying Measurement Omission to Philosophical Disputes",
+          title: "Deeper Analysis: 4. Concepts of Consciousness Consciousness is the faculty of",
           content:
-            "Rand's theory of measurement omission has implications that extend far beyond technical epistemology. Consider the perennial debate between empiricists and rationalists about the source of knowledge. Empiricists claim knowledge comes from sense experience alone; rationalists claim some knowledge is innate or derived from reason independently of experience. Rand dissolves this dichotomy: concepts are formed from perceptual data (agreeing with empiricists that experience is the starting material) but by a specific rational process — measurement omission and integration — that goes beyond passive sensory reception (agreeing with rationalists that reason actively processes data). The result is neither pure empiricism nor pure rationalism but a theory that grounds conceptual knowledge in perception while acknowledging the active role of the conceptual faculty. Similarly, the ancient dispute between realism and nominalism about universals is resolved: the universal is neither an independent abstract entity nor a mere name, but an objective cognitive integration grounded in measurable characteristics of existents. Rand's contribution is to specify the precise mechanism — measurement omission — by which the mind bridges perception and conception.",
+            "Extrospection is a process of cognition directed outward—a process of apprehending some existent(s) of the external world. Introspection is a process of cognition directed inward—a process of apprehending one’s own psychological actions in regard to some existent(s) of the external world, such actions as thinking, feeling, reminiscing, etc. It is only in relation to the external world that the various actions of a consciousness can be experienced, grasped, defined or communicated. Awareness is awareness of something. A content-less state of consciousness is a contradiction in terms. Two fundamental attributes are involved in every state, aspect or function of man’s consciousness: content and action—the content of awareness, and the action of consciousness in regard to that content.",
         },
       ],
       flashcards: [
         {
           id: "oe-l06-f1",
-          front: "The arbitrary (Objectivist epistemology)",
+          front: "4. Concepts of Consciousness Consciousness is the faculty of",
           back:
-            "Assertions for which no evidence has been offered. Rand holds these deserve dismissal rather than refutation — they are outside the domain of knowledge. The burden of proof lies with the one making a positive claim.",
+            "Extrospection is a process of cognition directed outward—a process of apprehending some existent(s) of the external world.",
         },
         {
           id: "oe-l06-f2",
-          front: "Cognitive context",
+          front: "5. Definitions A definition is a statement that identifies t",
           back:
-            "The sum of everything known at the time a concept or claim is formed. Validity is contextual: concepts may be refined as knowledge grows, but earlier valid concepts were not wrong — they were objectively valid within their context.",
+            "Since the definition of a concept is formulated in terms of other concepts, it enables man, not only to identify and retain a concept, but also to establish the relationships, the...",
         },
         {
           id: "oe-l06-f3",
-          front: "Avoiding dogmatism and scepticism",
+          front: "Key concept: 4. Concepts of Consciousness Consciousness is the faculty",
           back:
-            "Rand's contextual view holds that knowledge is objective within its context and improvable through expansion — avoiding both the claim that current knowledge is final (dogmatism) and that nothing is really known (scepticism).",
+            "These two attributes are the fundamental Conceptual Common Denominator of all concepts pertaining to consciousness.",
         },
         {
           id: "oe-l06-f4",
-          front: "Resolution of empiricism vs rationalism",
+          front: "Key concept: 5. Definitions A definition is a statement that identifie",
           back:
-            "Rand dissolves the dichotomy: concepts are formed from perceptual data (empiricist starting material) but by the active rational process of measurement omission (rationalist cognitive contribution). Neither pure empiricism nor pure rationalism.",
+            "The existential causes of sensations can be described and defined in conceptual terms (e.g., the wavelengths of light and the structure of the human eye, which produce the sensatio...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L07  Final Assessment: Objectivist Epistemology
+       L07  Checkpoint Quiz 2
     ───────────────────────────────────────────────── */
     {
       id: "oe-l07",
-      title: "Final Assessment: Objectivist Epistemology",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
-      duration: 9,
-      objectives: ["Evaluate comprehensive mastery of Rand's theory of concepts and epistemology"],
+      duration: 8,
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "oe-l07-q1",
-          text: "According to Rand, what is the fundamental cognitive act in concept-formation?",
+          text: "Which of the following best describes a key idea from the section on 2. Concept-Formation A concept is a mental integration of tw?",
           options: [
-            { id: "a", text: "Memorising definitions from a dictionary" },
-            { id: "b", text: "Measurement omission — retaining shared characteristics while omitting specific measurements" },
-            { id: "c", text: "Receiving innate ideas from a pre-existing mental structure" },
-            { id: "d", text: "Arbitrarily grouping objects by surface appearance" },
+            { id: "a", text: "2." },
+            { id: "b", text: "4." },
+            { id: "c", text: "3." },
+            { id: "d", text: "5." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "a",
           explanation:
-            "Measurement omission is Rand's core epistemological innovation: the mind retains the characteristics entities share while omitting their specific measurements, creating open-ended categories grounded in objective features of reality.",
+            "This question relates to 2. Concept-Formation A concept is a mental integration of tw. 2.",
         },
         {
           id: "oe-l07-q2",
-          text: "Why does Rand reject Platonic realism about universals?",
+          text: "Which of the following best describes a key idea from the section on 3. Abstraction from Abstractions Starting from the base of c?",
           options: [
-            { id: "a", text: "Because she denies the existence of any abstractions" },
-            { id: "b", text: "Because universals are not independent entities in a separate realm — they are cognitive integrations performed by human minds, grounded in measurable characteristics of existents" },
-            { id: "c", text: "Because Plato's dialogues are historically inaccurate" },
-            { id: "d", text: "Because universals exist only as social conventions" },
+            { id: "a", text: "4." },
+            { id: "b", text: "3." },
+            { id: "c", text: "2." },
+            { id: "d", text: "5." },
           ],
           correctOptionId: "b",
           explanation:
-            "Rand denies that universals exist as independent abstract Forms. Concepts are human cognitive integrations — mental units formed by measurement omission — grounded in the objectively measurable characteristics shared by their referents.",
+            "This question relates to 3. Abstraction from Abstractions Starting from the base of c. 3.",
         },
         {
           id: "oe-l07-q3",
-          text: "What is a 'performative self-contradiction' in relation to the axiom of existence?",
+          text: "Which of the following best describes a key idea from the section on 4. Concepts of Consciousness Consciousness is the faculty of?",
           options: [
-            { id: "a", text: "A logical error in formal proof systems" },
-            { id: "b", text: "The act of denying an axiom presupposes what is denied — asserting 'nothing exists' is itself something that exists" },
-            { id: "c", text: "A mathematical paradox involving infinite sets" },
-            { id: "d", text: "A contradiction between two empirical observations" },
+            { id: "a", text: "5." },
+            { id: "b", text: "4." },
+            { id: "c", text: "2." },
+            { id: "d", text: "3." },
           ],
           correctOptionId: "b",
           explanation:
-            "Denying the axiom of existence is self-refuting: the denial itself is an existent (an assertion, made by an exister, using consciousness). The content of the denial is refuted by the very act of making it.",
+            "This question relates to 4. Concepts of Consciousness Consciousness is the faculty of. 4.",
         },
         {
           id: "oe-l07-q4",
-          text: "How does Rand derive causality from the axiom of identity?",
+          text: "Which of the following best describes a key idea from the section on 5. Definitions A definition is a statement that identifies t?",
           options: [
-            { id: "a", text: "Causality is a separate axiom unrelated to identity" },
-            { id: "b", text: "To exist is to be something specific (identity), and a thing acts in accordance with its nature — causality is identity applied to action" },
-            { id: "c", text: "Causality is proved by repeated experimental observation" },
-            { id: "d", text: "Causality is an arbitrary human convention for predicting events" },
+            { id: "a", text: "4." },
+            { id: "b", text: "5." },
+            { id: "c", text: "3." },
+            { id: "d", text: "2." },
           ],
           correctOptionId: "b",
           explanation:
-            "A is A: everything has a specific nature. How a thing behaves is determined by what it is. Fire burns because of the chemical nature of combustion. Causality is the law of identity applied to the domain of action.",
+            "This question relates to 5. Definitions A definition is a statement that identifies t. 5.",
         },
         {
           id: "oe-l07-q5",
-          text: "What does the 'primacy of existence' principle assert?",
+          text: "Which of the following best describes a key idea from the section on 6. Axiomatic Concepts Axioms are usually considered to be pr?",
           options: [
-            { id: "a", text: "Consciousness creates reality through acts of perception" },
-            { id: "b", text: "Existence is primary and independent; consciousness identifies but does not create reality" },
-            { id: "c", text: "Physical objects are more important than mental states" },
-            { id: "d", text: "Existence began before consciousness evolved, but neither is primary" },
+            { id: "a", text: "2." },
+            { id: "b", text: "3." },
+            { id: "c", text: "4." },
+            { id: "d", text: "6." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "d",
           explanation:
-            "The primacy of existence holds that reality exists independently of consciousness, which identifies but does not create it. This distinguishes Objectivism from idealism and Kantianism, which attribute a constitutive role to the mind.",
-        },
-        {
-          id: "oe-l07-q6",
-          text: "When Rand says definitions are 'contextual absolutes,' she means:",
-          options: [
-            { id: "a", text: "Definitions are absolutely relative — valid for one person but not another" },
-            { id: "b", text: "Definitions are objectively valid within their cognitive context and may be refined as knowledge expands, without the earlier definition being 'wrong'" },
-            { id: "c", text: "Definitions are determined by majority vote within a linguistic community" },
-            { id: "d", text: "Definitions are eternal truths that never change under any circumstances" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "Contextual absolutes are valid within the context in which they were formed. As knowledge grows, definitions may be expanded to identify more fundamental characteristics, but earlier definitions were objectively correct within their original context.",
+            "This question relates to 6. Axiomatic Concepts Axioms are usually considered to be pr. 6.",
         },
       ],
     },

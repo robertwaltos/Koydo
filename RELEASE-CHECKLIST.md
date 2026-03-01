@@ -61,7 +61,7 @@ Use this checklist before every App Store / Google Play submission.
 - [ ] App Preview video uploaded (optional but recommended)
 - [ ] Localizations complete: en-US, es-ES
 - [ ] "Sign in with Apple" compliance verified (if applicable)
-- [ ] IAP products: `com.koydo.app.premium.monthly` + `com.koydo.app.premium.annual` — status **Ready to Submit**
+- [ ] RevenueCat package mapping matches `REVENUECAT-BLUEPRINT.md` (matrix-generated source of truth)
 - [ ] Review Notes filled in (see `store-assets/app-store/en-US/review_notes.txt`)
 - [ ] Test account credentials in Review Notes
 

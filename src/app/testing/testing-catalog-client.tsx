@@ -216,7 +216,7 @@ export default function TestingCatalogClient() {
   }
 
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3">
       {sortedExams.map((exam) => {
         const coverImage = resolveCoverImage(exam);
         const domains = blueprintDomainNames(exam.blueprint);
@@ -272,7 +272,7 @@ export default function TestingCatalogClient() {
                   {domains.map((domain) => (
                     <span
                       key={`${exam.id}-${domain}`}
-                      className="rounded-full border border-zinc-200 bg-zinc-50 px-2 py-1 text-[11px] font-semibold text-zinc-700"
+                      className="rounded-full border border-zinc-200 bg-surface-muted px-2 py-1 text-[11px] font-semibold text-zinc-700"
                     >
                       {domain}
                     </span>

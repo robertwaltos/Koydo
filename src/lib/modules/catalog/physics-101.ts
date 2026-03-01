@@ -6,7 +6,7 @@ export const Physics101Module: LearningModule = {
   description:
     "Study motion, forces, energy, waves, electricity, and simple machines through hands-on activities and real-world examples.",
   subject: "Physics",
-  tags: ["core", "curriculum", "interactive"],
+  tags: ["core", "curriculum", "interactive", "enriched-from-epub"],
   minAge: 7,
   maxAge: 18,
   version: "2.0.0",
@@ -58,13 +58,21 @@ export const Physics101Module: LearningModule = {
           title: "Worked Example",
           content:
             "A cyclist travels 600 meters in 2 minutes. What is her speed? Step 1: Convert 2 minutes to seconds: 2 × 60 = 120 s. Step 2: speed = 600 m ÷ 120 s = 5 m/s. That is about 18 km/h — a comfortable cruising pace on a bicycle."
+        },
+        {
+          id: "physics-101-l01-c5",
+          title: "The Cosmic Speed Limit",
+          content:
+            "Einstein's special relativity revealed that the speed of light (about 300,000 km/s) is the absolute speed limit of the universe. Nothing can travel faster. As Brian Greene explains, our everyday intuition about speed is 'informed by motion that is typically extremely slow compared to the speed of light, and such low speeds obscure the true character of space and time.' As objects approach light speed, time slows down (time dilation) and lengths contract. This means that motion fundamentally changes the nature of space and time themselves — a radical departure from Newton's view of absolute space and time."
         }
       ],
       flashcards: [
         { id: "physics-101-l01-f1", front: "Speed formula", back: "Speed = distance ÷ time (measured in m/s, km/h, or mph)" },
         { id: "physics-101-l01-f2", front: "Distance vs Displacement", back: "Distance = total path length (scalar); Displacement = straight-line start-to-finish with direction (vector)" },
         { id: "physics-101-l01-f3", front: "Velocity", back: "Displacement ÷ time; like speed but includes direction" },
-        { id: "physics-101-l01-f4", front: "Reference point", back: "The object or location you compare against to decide whether something is moving" }
+        { id: "physics-101-l01-f4", front: "Reference point", back: "The object or location you compare against to decide whether something is moving" },
+        { id: "physics-101-l01-f5", front: "What is the cosmic speed limit?", back: "The speed of light (~300,000 km/s or ~3×10⁸ m/s). Einstein's special relativity shows nothing with mass can reach or exceed this speed." },
+        { id: "physics-101-l01-f6", front: "Time dilation (special relativity)", back: "Time passes more slowly for objects moving at speeds close to the speed of light. A clock on a fast-moving spaceship ticks slower than one on Earth." }
       ],
       learningAids: [
         { id: "physics-101-l01-a1", type: "image", title: "Motion Diagram", content: "A diagram showing a runner with distance markers, displacement arrow, and speed calculation." },
@@ -261,13 +269,21 @@ export const Physics101Module: LearningModule = {
           title: "Conservation of Energy",
           content:
             "Energy cannot be created or destroyed — only transformed. When a ball falls from a shelf, PE converts to KE. At the top: all PE, zero KE. At the bottom: all KE, zero PE. Total energy stays the same (ignoring air resistance). A pendulum swings back and forth continuously converting between PE and KE."
+        },
+        {
+          id: "physics-101-l04-c5",
+          title: "E = mc² — Mass as Concentrated Energy",
+          content:
+            "Einstein's famous equation E = mc² reveals that mass and energy are two forms of the same thing. As Marcus Chown notes, 'a cup of coffee weighs more when it is hot than when it is cold' — because thermal energy has mass. The 'c²' factor (speed of light squared) is enormous (~9×10¹⁶), meaning a tiny amount of mass contains a staggering amount of energy. This is why nuclear reactions release millions of times more energy than chemical reactions: they convert a small fraction of nuclear mass directly into energy."
         }
       ],
       flashcards: [
         { id: "physics-101-l04-f1", front: "Work formula", back: "W = F × d (force × distance in the direction of force), measured in joules (J)" },
         { id: "physics-101-l04-f2", front: "Kinetic energy", back: "KE = ½mv² — energy of motion; doubling speed quadruples KE" },
         { id: "physics-101-l04-f3", front: "Gravitational potential energy", back: "PE = mgh (mass × gravity × height); stored energy due to position" },
-        { id: "physics-101-l04-f4", front: "Conservation of energy", back: "Energy is never created or destroyed, only transformed from one form to another" }
+        { id: "physics-101-l04-f4", front: "Conservation of energy", back: "Energy is never created or destroyed, only transformed from one form to another" },
+        { id: "physics-101-l04-f5", front: "E = mc² (mass-energy equivalence)", back: "Energy equals mass times the speed of light squared. A small amount of mass converts to an enormous amount of energy because c² ≈ 9×10¹⁶ m²/s²." },
+        { id: "physics-101-l04-f6", front: "Why do nuclear reactions release so much energy?", back: "Nuclear reactions convert a fraction of the mass of atomic nuclei directly into energy via E = mc². Even a tiny mass loss produces enormous energy because the speed of light squared is so large." }
       ],
       learningAids: [
         { id: "physics-101-l04-a1", type: "animation", title: "Pendulum Energy", content: "Animation showing PE ↔ KE conversion in a swinging pendulum with energy bar graph." }
@@ -466,13 +482,21 @@ export const Physics101Module: LearningModule = {
           title: "Series vs Parallel Circuits",
           content:
             "In a series circuit, components are connected end-to-end — current follows one path. If one bulb burns out, all go dark (like old Christmas lights). In a parallel circuit, components are on separate branches — current splits. If one bulb burns out, the others stay lit (like outlets in your house). Most real wiring uses parallel circuits."
+        },
+        {
+          id: "physics-101-l07-c5",
+          title: "Maxwell's Electromagnetic Unification",
+          content:
+            "In the mid-1800s, James Clerk Maxwell achieved one of physics' greatest triumphs: he unified electricity and magnetism into a single framework — the electromagnetic field. As Brian Greene describes, Maxwell 'succeeded in uniting electricity and magnetism in the framework of the electromagnetic field.' Maxwell showed that light itself is an electromagnetic wave — oscillating electric and magnetic fields traveling through space. This unification inspired Einstein's quest for a unified theory of all forces, a dream that continues today through string theory."
         }
       ],
       flashcards: [
         { id: "physics-101-l07-f1", front: "Ohm's law", back: "V = I × R (Voltage = Current × Resistance)" },
         { id: "physics-101-l07-f2", front: "Current (I)", back: "Flow of electric charge through a conductor, measured in amperes (A)" },
         { id: "physics-101-l07-f3", front: "Series circuit", back: "One path for current; if one component fails, the whole circuit breaks" },
-        { id: "physics-101-l07-f4", front: "Parallel circuit", back: "Multiple paths for current; if one branch fails, others still work" }
+        { id: "physics-101-l07-f4", front: "Parallel circuit", back: "Multiple paths for current; if one branch fails, others still work" },
+        { id: "physics-101-l07-f5", front: "Maxwell's electromagnetic unification", back: "James Clerk Maxwell showed that electricity and magnetism are aspects of a single force — electromagnetism. He proved that light is an electromagnetic wave." },
+        { id: "physics-101-l07-f6", front: "What is an electromagnetic field?", back: "A region of space permeated by electric and magnetic lines of force. Moving charges create magnetic fields; changing magnetic fields create electric fields. Together they propagate as electromagnetic waves (including light)." }
       ],
       learningAids: [
         { id: "physics-101-l07-a1", type: "image", title: "Circuit Diagrams", content: "Side-by-side diagrams of a series circuit and a parallel circuit with labeled components." }
@@ -672,13 +696,22 @@ export const Physics101Module: LearningModule = {
           title: "Lenses",
           content:
             "A convex (converging) lens is thicker in the middle — it focuses light to a point. Used in magnifying glasses and camera lenses. A concave (diverging) lens is thinner in the middle — it spreads light out. Used to correct nearsightedness. Your eye has a natural convex lens that focuses images on the retina."
+        },
+        {
+          id: "physics-101-l10-c5",
+          title: "Wave-Particle Duality: Light's Quantum Nature",
+          content:
+            "At the quantum scale, light behaves as both a wave and a particle (photon). Marcus Chown explains that in the famous double-slit experiment, even single photons create an interference pattern — as if each photon passes through both slits simultaneously. This wave-particle duality is a cornerstone of quantum mechanics. As Chown puts it, atoms can 'be in many different places at once, the equivalent of you being in New York and London at the same time.' This strange behavior only manifests at microscopic scales, which is why we don't notice it in everyday life."
         }
       ],
       flashcards: [
         { id: "physics-101-l10-f1", front: "Law of reflection", back: "Angle of incidence = angle of reflection (measured from the normal line)" },
         { id: "physics-101-l10-f2", front: "Refraction", back: "Bending of light when it passes between materials of different density; light slows in denser media" },
         { id: "physics-101-l10-f3", front: "ROY G. BIV", back: "Red, Orange, Yellow, Green, Blue, Indigo, Violet — colors of the visible spectrum in order of decreasing wavelength" },
-        { id: "physics-101-l10-f4", front: "Convex lens", back: "Thicker in the middle; converges (focuses) light rays; used in magnifying glasses" }
+        { id: "physics-101-l10-f4", front: "Convex lens", back: "Thicker in the middle; converges (focuses) light rays; used in magnifying glasses" },
+        { id: "physics-101-l10-f5", front: "Wave-particle duality", back: "Light (and all quantum particles) exhibits both wave-like behavior (interference, diffraction) and particle-like behavior (photoelectric effect). This dual nature is fundamental to quantum mechanics." },
+        { id: "physics-101-l10-f6", front: "Double-slit experiment", back: "When particles (photons or electrons) pass through two slits, they create an interference pattern on a screen — even when sent one at a time — demonstrating their wave-like nature." },
+        { id: "physics-101-l10-f7", front: "Quantum superposition", back: "A quantum particle can exist in multiple states simultaneously until measured. An atom can be in many places at once — the act of observation 'collapses' it to a single state." }
       ],
       learningAids: [
         { id: "physics-101-l10-a1", type: "image", title: "Prism Spectrum", content: "White light entering a prism and separating into the visible spectrum." },
@@ -879,13 +912,21 @@ export const Physics101Module: LearningModule = {
           title: "Design Decisions",
           content:
             "Trade-offs: a taller first hill gives more energy but uses more track length. A wider loop is easier to complete but less dramatic. Adding a second hill after the loop means you need enough leftover KE. Real roller coaster engineers use computer simulations to optimize these trade-offs before building."
+        },
+        {
+          id: "physics-101-l13-c5",
+          title: "Beyond Classical Physics: Strings and Extra Dimensions",
+          content:
+            "While classical physics explains roller coasters beautifully, at the most fundamental level, nature may work very differently. Brian Greene's string theory proposes that every particle — every electron, quark, and photon — is actually a tiny vibrating string of energy. Different vibration patterns produce different particles, much like different vibrations of a guitar string produce different musical notes. Greene writes that 'the microscopic landscape is suffused with tiny strings whose vibrational patterns orchestrate the evolution of the cosmos.' String theory also requires extra spatial dimensions beyond the three we experience — possibly 10 or 11 total — curled up too small to detect."
         }
       ],
       flashcards: [
         { id: "physics-101-l13-f1", front: "Centripetal force", back: "The inward-directed force that keeps an object moving in a circle; provided by gravity + normal force at the top of a loop" },
         { id: "physics-101-l13-f2", front: "Energy budget", back: "Accounting for how PE converts to KE and is lost to friction at each stage of a system" },
         { id: "physics-101-l13-f3", front: "Loop height rule", back: "Starting height must be at least 2.5× the loop height to ensure the marble completes the loop (with friction)" },
-        { id: "physics-101-l13-f4", front: "Design trade-off", back: "Choosing between competing physics constraints: height vs track length, speed vs safety, energy vs friction losses" }
+        { id: "physics-101-l13-f4", front: "Design trade-off", back: "Choosing between competing physics constraints: height vs track length, speed vs safety, energy vs friction losses" },
+        { id: "physics-101-l13-f5", front: "String theory (basic idea)", back: "All fundamental particles are actually tiny one-dimensional vibrating strings of energy. Different vibrational patterns produce different particles — like different notes from a guitar string." },
+        { id: "physics-101-l13-f6", front: "Extra dimensions in string theory", back: "String theory requires 10 or 11 total dimensions (not just the 3 spatial + 1 time we experience). The extra dimensions may be curled up at scales too small to observe directly." }
       ],
       learningAids: [
         { id: "physics-101-l13-a1", type: "image", title: "Roller Coaster Energy Diagram", content: "Diagram showing PE and KE at each point along a roller coaster: top hill, bottom, loop, second hill, finish." },

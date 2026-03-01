@@ -1,0 +1,125 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#app-main-content"
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - link "Koydo" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img [ref=e9]
+          - generic [ref=e10]: Koydo
+        - generic [ref=e11]:
+          - button "Search ⌘K" [ref=e12]:
+            - generic [ref=e13]: 🔎
+            - generic [ref=e14]: Search
+            - generic [ref=e15]: ⌘K
+          - link "Sign In" [ref=e16] [cursor=pointer]:
+            - /url: /auth/sign-in
+          - link "Sign Up" [ref=e17] [cursor=pointer]:
+            - /url: /auth/sign-up
+    - paragraph [ref=e21]: Loading...
+    - contentinfo [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - link "Koydo Koydo" [ref=e25] [cursor=pointer]:
+            - /url: /
+            - img "Koydo" [ref=e27]
+            - generic [ref=e28]: Koydo
+          - paragraph [ref=e29]: Free interactive learning for every age, every language, every dream.
+          - generic [ref=e30]:
+            - link "X / Twitter" [ref=e31] [cursor=pointer]:
+              - /url: https://twitter.com/koydolearn
+              - img [ref=e32]
+            - link "Instagram" [ref=e34] [cursor=pointer]:
+              - /url: https://instagram.com/koydolearn
+              - img [ref=e35]
+            - link "YouTube" [ref=e37] [cursor=pointer]:
+              - /url: https://youtube.com/@koydolearn
+              - img [ref=e38]
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: Platform
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - link "Explore Learning" [ref=e44] [cursor=pointer]:
+                - /url: /explore
+            - listitem [ref=e45]:
+              - link "All Modules" [ref=e46] [cursor=pointer]:
+                - /url: /modules
+            - listitem [ref=e47]:
+              - link "Speaking Lab" [ref=e48] [cursor=pointer]:
+                - /url: /language/speaking-lab
+            - listitem [ref=e49]:
+              - link "Exam Prep" [ref=e50] [cursor=pointer]:
+                - /url: /exam-prep
+            - listitem [ref=e51]:
+              - link "Science Lab" [ref=e52] [cursor=pointer]:
+                - /url: /science-lab
+            - listitem [ref=e53]:
+              - link "Learning Games" [ref=e54] [cursor=pointer]:
+                - /url: /games
+        - generic [ref=e55]:
+          - paragraph [ref=e56]: Learn For
+          - list [ref=e57]:
+            - listitem [ref=e58]:
+              - link "Ages 3–5 (Pre-K)" [ref=e59] [cursor=pointer]:
+                - /url: /explore?stage=pre-k
+            - listitem [ref=e60]:
+              - link "Ages 6–11 (Elementary)" [ref=e61] [cursor=pointer]:
+                - /url: /explore?stage=elementary
+            - listitem [ref=e62]:
+              - link "Ages 12–14 (Middle School)" [ref=e63] [cursor=pointer]:
+                - /url: /explore?stage=middle
+            - listitem [ref=e64]:
+              - link "Ages 15–18 (High School)" [ref=e65] [cursor=pointer]:
+                - /url: /explore?stage=high
+            - listitem [ref=e66]:
+              - link "College & SAT/ACT" [ref=e67] [cursor=pointer]:
+                - /url: /explore?stage=college
+            - listitem [ref=e68]:
+              - link "Adults & Career Skills" [ref=e69] [cursor=pointer]:
+                - /url: /explore?stage=adult
+        - generic [ref=e70]:
+          - paragraph [ref=e71]: Company
+          - list [ref=e72]:
+            - listitem [ref=e73]:
+              - link "Help & Support" [ref=e74] [cursor=pointer]:
+                - /url: /support
+            - listitem [ref=e75]:
+              - link "Privacy Policy" [ref=e76] [cursor=pointer]:
+                - /url: /legal/privacy
+            - listitem [ref=e77]:
+              - link "Terms of Use" [ref=e78] [cursor=pointer]:
+                - /url: /legal/terms
+            - listitem [ref=e79]:
+              - link "Refund Policy" [ref=e80] [cursor=pointer]:
+                - /url: /legal/refunds
+            - listitem [ref=e81]:
+              - link "Create Free Account" [ref=e82] [cursor=pointer]:
+                - /url: /auth/sign-up
+      - generic [ref=e84]:
+        - paragraph [ref=e85]: © 2026 Koydo. Free education for every mind.
+        - generic [ref=e86]:
+          - link "Privacy" [ref=e87] [cursor=pointer]:
+            - /url: /legal/privacy
+          - link "Terms" [ref=e88] [cursor=pointer]:
+            - /url: /legal/terms
+          - link "Refunds" [ref=e89] [cursor=pointer]:
+            - /url: /legal/refunds
+          - link "Support" [ref=e90] [cursor=pointer]:
+            - /url: /support
+    - dialog "Cookie consent" [ref=e91]:
+      - generic [ref=e92]:
+        - paragraph [ref=e93]:
+          - text: We use cookies and similar technologies for analytics to improve your learning experience. You can accept all or use only necessary cookies.
+          - link "Privacy Policy" [ref=e94] [cursor=pointer]:
+            - /url: /legal/privacy
+        - generic [ref=e95]:
+          - button "Accept All" [ref=e96]
+          - button "Necessary Only" [ref=e97]
+  - button "Open Next.js Dev Tools" [ref=e103] [cursor=pointer]:
+    - img [ref=e104]
+  - alert [ref=e107]
+```

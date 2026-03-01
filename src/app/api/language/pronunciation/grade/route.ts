@@ -11,6 +11,7 @@ import {
   resolvePronunciationGradingMode,
 } from "@/lib/language-learning";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const requestSchema = z.object({
   targetText: z.string().min(1).max(1_000),
@@ -29,6 +30,18 @@ function isMissingTableError(message: string) {
 }
 
 export async function POST(request: NextRequest) {
+  const rateLimit = await enforceIpRateLimit(request, "api:language:pronunciation:grade:post", {
+    max: 20,
+    windowMs: 60_000,
+  });
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many pronunciation grading requests. Please retry shortly." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },

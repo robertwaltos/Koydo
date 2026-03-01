@@ -348,7 +348,7 @@ export default function SpeakingLabClient({ learners }: SpeakingLabClientProps) 
             type="button"
             onClick={() => void loadUsage()}
             disabled={usageBusy}
-            className="ui-focus-ring rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100 disabled:opacity-60"
+            className="ui-focus-ring rounded-full border border-zinc-200 bg-surface-muted px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100 disabled:opacity-60"
           >
             {usageBusy ? "Loading..." : "Refresh Usage"}
           </button>
@@ -382,7 +382,7 @@ export default function SpeakingLabClient({ learners }: SpeakingLabClientProps) 
           </div>
         </div>
 
-        <div className="mt-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-3">
+        <div className="mt-3 rounded-2xl border border-zinc-200 bg-surface-muted p-3">
           <p className="text-sm font-semibold text-zinc-900">
             {usageEntitlement ? usageEntitlement.planName : "No usage entitlement loaded"}
           </p>
@@ -473,7 +473,7 @@ export default function SpeakingLabClient({ learners }: SpeakingLabClientProps) 
               setTranscriptText(translationResult.translatedText);
             }}
             disabled={!translationResult}
-            className="ui-focus-ring rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100 disabled:opacity-60"
+            className="ui-focus-ring rounded-full border border-zinc-200 bg-surface-muted px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100 disabled:opacity-60"
           >
             Use As Target Phrase
           </button>
@@ -482,7 +482,7 @@ export default function SpeakingLabClient({ learners }: SpeakingLabClientProps) 
         <p className="mt-2 text-xs text-zinc-600">{translationStatus}</p>
 
         {translationResult ? (
-          <div className="mt-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-3">
+          <div className="mt-3 rounded-2xl border border-zinc-200 bg-surface-muted p-3">
             <p className="text-xs uppercase tracking-wide text-zinc-500">Translated Text</p>
             <p className="mt-1 text-sm font-medium text-zinc-900">
               {translationResult.translatedText}
@@ -522,7 +522,7 @@ export default function SpeakingLabClient({ learners }: SpeakingLabClientProps) 
             type="button"
             onClick={handleCancelRecording}
             disabled={!isRecording}
-            className="ui-focus-ring rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100 disabled:opacity-60"
+            className="ui-focus-ring rounded-full border border-zinc-200 bg-surface-muted px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100 disabled:opacity-60"
           >
             Cancel
           </button>
@@ -591,7 +591,7 @@ export default function SpeakingLabClient({ learners }: SpeakingLabClientProps) 
               setGradeResult(null);
               setGradeStatus("Reset to defaults.");
             }}
-            className="ui-focus-ring rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100"
+            className="ui-focus-ring rounded-full border border-zinc-200 bg-surface-muted px-4 py-2 text-xs font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Reset
           </button>
@@ -600,7 +600,7 @@ export default function SpeakingLabClient({ learners }: SpeakingLabClientProps) 
         <p className="mt-2 text-xs text-zinc-600">{gradeStatus}</p>
 
         {gradeResult ? (
-          <div className="mt-3 rounded-2xl border border-zinc-200 bg-zinc-50 p-3">
+          <div className="mt-3 rounded-2xl border border-zinc-200 bg-surface-muted p-3">
             <div className="flex flex-wrap items-center gap-2">
               <ProgressChip
                 label="Mode"

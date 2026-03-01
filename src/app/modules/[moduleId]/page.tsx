@@ -5,6 +5,7 @@ import ModuleCoverImage from "@/app/components/module-cover-image";
 import { toLessonPath, toModulePath } from "@/lib/routing/paths";
 import SoftCard from "@/app/components/ui/soft-card";
 import ProgressChip from "@/app/components/ui/progress-chip";
+import PageHeader from "@/app/components/page-header";
 
 export default function ModuleDetailsPage({
   params,
@@ -32,17 +33,20 @@ async function ModuleDetailsPageContent({
 
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12">
-      <header className="space-y-2">
-        <Link href="/modules" className="text-sm text-zinc-700 hover:underline">
-          &larr; Back to modules
-        </Link>
-        <h1 className="text-3xl font-semibold tracking-tight">{learningModule.title}</h1>
-        <p className="text-sm text-zinc-700">{learningModule.description}</p>
+      <PageHeader
+        breadcrumbs={[
+          { label: "Dashboard", href: "/dashboard" },
+          { label: "Modules", href: "/modules" },
+          { label: learningModule.title },
+        ]}
+        title={learningModule.title}
+        description={learningModule.description}
+      >
         <div className="flex flex-wrap items-center gap-2">
           <ProgressChip label="Subject" value={learningModule.subject} tone="info" />
           {learningModule.version ? <ProgressChip label="Version" value={learningModule.version} /> : null}
         </div>
-      </header>
+      </PageHeader>
 
       <SoftCard as="section" className="overflow-hidden border-sky-200 p-3">
         <ModuleCoverImage

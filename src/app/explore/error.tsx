@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { useI18n } from "@/lib/i18n/provider";
 
 export default function ExploreError({
-  error: _error,
   reset,
 }: {
   error: Error & { digest?: string };
@@ -14,10 +13,10 @@ export default function ExploreError({
   return (
     <div className="flex min-h-[calc(100vh-52px)] flex-col items-center justify-center px-4 text-center">
       <span className="text-5xl" aria-hidden="true">😵</span>
-      <h1 className="mt-4 text-xl font-bold text-zinc-900 dark:text-zinc-100">
+      <h1 className="mt-4 text-xl font-bold text-zinc-900 dark:text-foreground">
         {t("explore_error_title")}
       </h1>
-      <p className="mt-2 max-w-md text-sm text-zinc-500 dark:text-zinc-400">
+      <p className="mt-2 max-w-md text-sm text-zinc-500 dark:text-foreground/70">
         {t("explore_error_message_fallback")}
       </p>
       <div className="mt-6 flex gap-3">
@@ -29,7 +28,7 @@ export default function ExploreError({
         </button>
         <Link
           href="/explore"
-          className="ui-focus-ring inline-flex items-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-700 transition-colors hover:bg-zinc-50 dark:border-white/10 dark:bg-slate-900 dark:text-zinc-200"
+          className="ui-focus-ring inline-flex items-center rounded-full border border-zinc-200 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-700 transition-colors hover:bg-surface-muted border-border/40 dark:bg-slate-900 dark:text-foreground/90"
         >
           {t("explore_error_back_to_explore")}
         </Link>

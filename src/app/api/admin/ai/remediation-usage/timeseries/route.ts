@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { loadAiRemediationUsageTimeseries } from "@/lib/admin/ai-remediation-usage";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 function parseDays(input: string | null) {
   const parsed = Number(input ?? "");
@@ -10,6 +12,18 @@ function parseDays(input: string | null) {
 }
 
 export async function GET(request: Request) {
+  const rateLimit = await enforceIpRateLimit(request, "api:admin:ai:remediation-usage:timeseries:get", {
+    max: 120,
+    windowMs: 60_000,
+  });
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests. Please retry shortly." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const auth = await requireAdminForApi();
   if (!auth.isAuthorized) {
     return auth.response;
@@ -25,10 +39,7 @@ export async function GET(request: Request) {
       status: data.setupRequired ? 503 : 200,
     });
   } catch (error) {
-    const message =
-      error instanceof Error
-        ? error.message
-        : "Failed to load remediation worksheet timeseries.";
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error("Failed to load remediation worksheet timeseries.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to load remediation worksheet timeseries." }, { status: 500 });
   }
 }

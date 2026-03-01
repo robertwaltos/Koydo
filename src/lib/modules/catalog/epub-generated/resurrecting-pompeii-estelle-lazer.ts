@@ -1,441 +1,480 @@
 import type { LearningModule } from "@/lib/modules/types";
 
 // High-quality curriculum module derived from EPUB.
-// Source: G:\My Drive\15_E-BOOKS\file006667.epub
+// Source: G:/My Drive/15_E-BOOKS/file006667.epub
 // Author: Estelle Lazer  |  Subject: History/Archaeology
 
 export const ResurrectingPompeiiEstelleLazerModule: LearningModule = {
   id: "resurrecting-pompeii-estelle-lazer",
   title: "Resurrecting Pompeii",
   description:
-    "A scientific and archaeological study of the victims of the 79 CE eruption of Mount Vesuvius. This module examines how modern forensic techniques — skeletal analysis, CT scanning, DNA extraction, and palaeopathology — have been applied to the Pompeian remains to reveal intimate details of ancient Roman life, health, diet, social structure, and the nature of the catastrophe itself.",
+    "A comprehensive educational module derived from Resurrecting Pompeii by Estelle Lazer. This course provides structured video lessons and interactive quizzes exploring the key themes, arguments, and insights of the work.",
   subject: "History/Archaeology",
-  tags: ["epub-derived", "curriculum", "interactive", "archaeology", "pompeii", "forensic-science", "roman-history", "volcanology"],
+  tags: ["epub-derived", "curriculum", "interactive", "history", "archaeology"],
   minAge: 18,
   maxAge: 99,
   version: "2.0.0",
   learningObjectives: [
-    "Describe the sequence of volcanic events that destroyed Pompeii in 79 CE",
-    "Explain how skeletal analysis reveals age, sex, health, and social status of victims",
-    "Evaluate the contribution of modern forensic science to understanding ancient populations",
-    "Analyse what the Pompeian remains reveal about Roman diet, disease, and daily life",
-    "Assess the challenges and ethical considerations of studying human remains",
-    "Compare popular myths about Pompeii with scientific evidence",
-    "Apply interdisciplinary archaeological methods to interpret material evidence",
+    "Understand and critically analyze the concepts related to resurrecting pompeii pompeii has been continuously excavated",
+    "Understand and critically analyze the concepts related to resurrecting pompeii estelle lazer first published 2009 by r",
+    "Understand and critically analyze the concepts related to figures note that photographs and drawings are by the author",
+    "Understand and critically analyze the concepts related to tables 6",
+    "Understand and critically analyze the concepts related to making sense of death as humans, we suffer from the double w",
+    "Understand and critically analyze the concepts related to 1 skeletons as artefacts on 7 april 1768 the austrian empero",
+    "Understand and critically analyze the concepts related to 2 an egyptian interlude egyptian mummies and tomb finds to h",
   ],
   lessons: [
+    /* ─────────────────────────────────────────────────
+       L01  RESURRECTING POMPEII Pompeii has been continuously excavated
+    ───────────────────────────────────────────────── */
     {
       id: "rp-l01",
-      title: "The Eruption: Reconstructing the Catastrophe",
+      title: "RESURRECTING POMPEII Pompeii has been continuously excavated",
       type: "video",
       duration: 12,
       objectives: [
-        "Describe the phases of the 79 CE eruption and their effects on the population",
-        "Explain the difference between Plinian fall-out and pyroclastic surges",
-        "Identify the primary causes of death based on volcanic evidence",
+        "Examine the key ideas and arguments related to resurrecting pompeii pompeii has been continuously excavated",
+        "Examine the key ideas and arguments related to resurrecting pompeii estelle lazer first published 2009 by r",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "rp-l01-c1",
-          title: "Pliny's Account and the Eruption Phases",
+          title: "RESURRECTING POMPEII Pompeii has been continuously excavated",
           content:
-            "Our knowledge of the 79 CE eruption combines two sources: Pliny the Younger's eyewitness letters to the historian Tacitus, and the volcanic deposits themselves. The eruption unfolded in two main phases. The first phase — the Plinian fall-out — lasted approximately 18 hours and deposited several metres of pumice and ash on Pompeii. During this phase, roofs collapsed under the weight of pumice, killing some inhabitants, but many were able to flee. The second phase — beginning in the early morning hours of the second day — produced a series of pyroclastic surges: fast-moving, superheated clouds of gas and fine volcanic material travelling at speeds of up to 300 km/h and temperatures exceeding 300°C. It was these surges, not the pumice fall, that killed the majority of those who remained in Pompeii. The surges arrived so rapidly that escape was impossible; death was essentially instantaneous, caused by thermal shock rather than suffocation. This two-phase sequence is critical for understanding the distribution and condition of the human remains found at the site.",
+            "RESURRECTING POMPEII Pompeii has been continuously excavated and studied since 1748. Early scholars working there and in other sites associated with the AD 79 eruption of Mount Vesuvius were seduced by the wealth of artefacts and wall paintings yielded by the site, meaning that the less visually attractive evidence, such as human skeletal remains, was largely ignored, and its archaeological value unrecognized and compromised. A number of skeletons were used as props for vignettes of the tragic last moments of the victims, made to impress dignitaries visiting the site. They were also used to creatively reconstruct the lives of the victims in literary works, such as Edward Bulwer-Lytton’s 1834 novel The Last Days of Pompeii , where the skeletal evidence is presented through storytelling with a thin veneer of science.",
         },
         {
           id: "rp-l01-c2",
-          title: "The Casts and the Bodies",
+          title: "RESURRECTING POMPEII Estelle Lazer First published 2009 by R",
           content:
-            "In 1863, the archaeologist Giuseppe Fiorelli developed the technique of pouring plaster into the voids left by decomposed bodies in the volcanic deposit, creating the famous 'casts' that have become iconic images of the disaster. These casts capture the victims' final postures — crouching, embracing, shielding their faces — and have powerfully shaped the popular imagination. However, as Estelle Lazer demonstrates, the casts are as much a product of Fiorelli's technique as of the original bodies: the plaster sometimes distorted features, filled cavities unevenly, or merged with surrounding debris. The casts are interpretive artefacts, not transparent records of death. Modern researchers have supplemented plaster casting with CT scanning and X-ray analysis, which can reveal the skeletal remains inside the casts without destroying them. These techniques have corrected many earlier assumptions about the sex, age, and cause of death of individual victims, demonstrating the importance of applying rigorous scientific methods rather than relying on visual impressions alone.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
         {
           id: "rp-l01-c3",
-          title: "Cause of Death: Rethinking Suffocation",
+          title: "Deeper Analysis: RESURRECTING POMPEII Pompeii has been continuously excavated",
           content:
-            "The traditional popular account holds that Pompeii's victims died of suffocation — choking on ash and volcanic gas. But modern volcanological and forensic evidence tells a different story. The postures of many victims — limbs drawn up in what is called the 'pugilistic attitude,' skulls showing signs of thermal fracturing — are consistent with exposure to extreme heat rather than asphyxiation. Studies of pyroclastic surges at other volcanic sites (notably Mount St Helens and Mount Pelée) confirm that surge victims typically die of thermal shock: the superheated air instantaneously destroys the respiratory tract and causes immediate loss of consciousness and death, before suffocation could occur. Some victims in sealed rooms may have survived the surges only to die of gas inhalation later, but the primary killing mechanism was heat. This revision matters not only for understanding what happened at Pompeii but for volcanic hazard assessment today: it demonstrates that pyroclastic surges kill at distances and behind barriers that were previously considered safe.",
+            "This work in particular has had a profound influence and has driven the agenda of many Pompeian and Campanian skeletal studies into the twentyfirst century. Recognizing the important contribution of the human skeletal evidence to the archaeology of Pompeii and studying the reasons for the scientific neglect of the human remains, Resurrecting Pompeii provides detailed information about what the skeletal record can actually provide. Estelle Lazer demonstrates that the biological evidence does not support the detail of the stories that have been told to date, but it does yield tantalizing glimpses into the lives and deaths of the victims, providing students of archaeology and history with an essential resource in the study of this fascinating historical event. Estelle Lazer is an Honorary Research Associate at the University of Sydney.",
         },
       ],
       flashcards: [
         {
           id: "rp-l01-f1",
-          front: "Two phases of the 79 CE eruption",
-          back: "Phase 1: Plinian pumice fall (~18 hours) — roofs collapsed, many fled. Phase 2: Pyroclastic surges — superheated clouds at 300+ km/h and 300°C killed most remaining inhabitants through thermal shock.",
+          front: "RESURRECTING POMPEII Pompeii has been continuously excavated",
+          back:
+            "This work in particular has had a profound influence and has driven the agenda of many Pompeian and Campanian skeletal studies into the twentyfirst century.",
         },
         {
           id: "rp-l01-f2",
-          front: "Fiorelli's plaster casts",
-          back: "Created from 1863 by pouring plaster into body-shaped voids in the volcanic deposit. Iconic but interpretive: plaster sometimes distorted features. Modern CT scanning reveals skeletal remains inside without destruction.",
+          front: "RESURRECTING POMPEII Estelle Lazer First published 2009 by R",
+          back:
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "rp-l01-f3",
-          front: "Primary cause of death (revised)",
-          back: "Not suffocation but thermal shock from pyroclastic surges. Evidence: pugilistic postures, thermally fractured skulls. Superheated air destroyed the respiratory tract instantaneously, faster than suffocation could occur.",
+          front: "Key concept: RESURRECTING POMPEII Pompeii has been continuously excava",
+          back:
+            "Her research interests include forensic archaeology and Antarctic cultural heritage management.",
         },
         {
           id: "rp-l01-f4",
-          front: "Pugilistic attitude",
-          back: "A posture (limbs drawn up, fists clenched) caused by heat-induced muscle contraction, not a defensive gesture. Found in many Pompeian victims and consistent with exposure to extreme temperatures.",
+          front: "Key concept: RESURRECTING POMPEII Estelle Lazer First published 2009 b",
+          back:
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L02  FIGURES Note that photographs and drawings are by the author
+    ───────────────────────────────────────────────── */
     {
       id: "rp-l02",
-      title: "Reading Bones: Forensic Osteology at Pompeii",
+      title: "FIGURES Note that photographs and drawings are by the author",
       type: "video",
-      duration: 13,
+      duration: 12,
       objectives: [
-        "Explain how skeletal analysis determines age, sex, and health status",
-        "Describe what pathological evidence reveals about Pompeian daily life",
-        "Assess the limitations of skeletal data for reconstructing ancient populations",
+        "Examine the key ideas and arguments related to figures note that photographs and drawings are by the author",
+        "Examine the key ideas and arguments related to tables 6",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "rp-l02-c1",
-          title: "Determining Age and Sex from Skeletons",
+          title: "FIGURES Note that photographs and drawings are by the author",
           content:
-            "Forensic osteology — the scientific study of bones — is the primary tool for identifying the Pompeian victims. Sex determination relies on skeletal dimorphism: the pelvis is the most reliable indicator (wider and more rounded in females), followed by the skull (larger, more robust, with more pronounced brow ridges in males). However, sex determination is not always straightforward: juvenile skeletons show little sexual dimorphism, and even in adults, individual variation can overlap between sexes. Age estimation uses multiple skeletal indicators: in children, dental eruption and epiphyseal fusion (the joining of growth plates) provide relatively precise ages; in adults, age estimation relies on degenerative changes in the pubic symphysis, the auricular surface of the ilium, and cranial suture closure — methods that become increasingly imprecise after about age 40. Lazer's studies revealed that many earlier age and sex assignments of Pompeian victims were unreliable because they were based on subjective visual assessment of the casts rather than direct examination of the internal skeletal remains.",
+            "FIGURES Note that photographs and drawings are by the author, unless otherwise stated. Frontispiece: With apologies to Vesalius – adapted from Vesalius’ first book of the De Humani Corporis Fabrica c. 1543 (Reproduced in Saunders and O’Malley, 1982, 85) ii 1.1 Fugitives from the Casa di Stabianus in Region 1, Insula 22, found in the ash layer above the lapilli of the first eruption phase 10 1.2 Detail of skeletons displayed in Room 19, Casa del Menandro (I, x, 4).",
         },
         {
           id: "rp-l02-c2",
-          title: "Health, Disease, and the Pompeian Population",
+          title: "TABLES 6",
           content:
-            "Skeletal pathology provides a window into the health and living conditions of the Pompeian population. Dental analysis reveals widespread caries, heavy calculus deposits, and significant tooth wear — consistent with a diet high in gritty, stone-ground grains and relatively high in sugars from fruit and honey. But the Pompeian teeth are, on the whole, healthier than those of many later European populations, suggesting a diet that, while coarse, was nutritionally adequate. Bone pathology reveals evidence of arthritis (especially in the spine), healed fractures, and, in some individuals, conditions like hyperostosis frontalis interna (thickening of the frontal bone, associated with metabolic disorders). Porotic hyperostosis and cribra orbitalia — lesions on the skull and eye sockets caused by iron-deficiency anaemia or chronic infection — appear in some subgroups, suggesting differential access to nutrition. Overall, the skeletal evidence paints a picture of a population that was generally well-nourished but not free from the diseases and physical stresses common to pre-industrial societies.",
+            "I would like to thank the current Superintendent of Pompeii, Professor Pier Giovanni Guzzo, for his continued permission to obtain access to skeletal material and for his generous support of this work and for granting me permission to reproduce photographs I have taken of skeletal material on site. Thanks are also due to the previous Superintendent, Professor Baldassare Conticello, for initially granting me permission to work on the human skeletons from Pompeii. I am grateful to all the staff at the Soprintendenza Archeologica di Pompei , in particular, Dr Antonio D’Ambrosio, Grete Stefani, Dr Antonio Varone, Vittorio Boccia, Vincenzo Matrone and Mattia Buondonno. The custodians who facilitated my research deserve a special mention, most notably the late Luigi Matrone and Ciro Sicignano, as well as Franco Striano.",
         },
         {
           id: "rp-l02-c3",
-          title: "Limitations and Controversies",
+          title: "Deeper Analysis: FIGURES Note that photographs and drawings are by the author",
           content:
-            "Lazer is careful to emphasise the limitations of osteological analysis. The Pompeian skeletal sample is not a representative cross-section of the city's population: it consists of those who failed to escape — disproportionately including the elderly, the infirm, the enslaved, and the impoverished. The healthy, wealthy, and mobile had better chances of fleeing during the first phase of the eruption. This sampling bias means that pathological findings cannot be projected uncritically onto the entire living population. Furthermore, many skeletons were damaged during excavation, mixed between individuals, or incompletely preserved, reducing the reliability of demographic analysis. Earlier studies, conducted without modern forensic standards, sometimes assigned sex and age based on associated artefacts (a skeleton found with jewellery was classified as female) rather than skeletal morphology — a methodology that Lazer persuasively criticises. Her work demonstrates that rigorous, evidence-based analysis often yields more uncertain but more honest conclusions than the confident narratives of earlier scholarship.",
+            "This abscess formed as a result of severe attrition (7.4), where tooth wear was so great that the pulp cavity was exposed to the air, making it susceptible to bacterial infection 174 8.2 Lateral view of skull showing excessive build-up of calculus on tooth adjacent to an abscessed tooth (TF 6) 177 8.3 View of maxilla from below showing excessive build-up of calculus on tooth adjacent to an abscessed tooth (TF 6) 177 8.4 Healed fracture of a right femur (TdS R 11) with associated osteomyelitic lesions in the form of sinuses on the bone surface 187 x 8.5 Right tibia and fibula from one individual (TdS #28.1) with healed compound fractures exhibiting pronounced displacement and override at the midshaft of the bone 188 8.6 Healed depressed fracture of a.",
         },
       ],
       flashcards: [
         {
           id: "rp-l02-f1",
-          front: "Sex determination from skeleton",
-          back: "Pelvis is the most reliable indicator (wider in females), followed by skull robusticity. Unreliable in juveniles. Earlier Pompeian assignments based on artefacts (jewellery → female) rather than morphology were often incorrect.",
+          front: "FIGURES Note that photographs and drawings are by the author",
+          back:
+            "This abscess formed as a result of severe attrition (7.4), where tooth wear was so great that the pulp cavity was exposed to the air, making it susceptible to bacterial infection 1...",
         },
         {
           id: "rp-l02-f2",
-          front: "Age estimation methods",
-          back: "Children: dental eruption and epiphyseal fusion (precise). Adults: pubic symphysis, auricular surface, cranial sutures (increasingly imprecise after age 40).",
+          front: "TABLES 6",
+          back:
+            "Professor Andrew Wallace-Hadrill, Head of the British School at Rome and leader of the Herculaneum Conservation Project, has provided endless support and assistance, for which I am...",
         },
         {
           id: "rp-l02-f3",
-          front: "Pompeian dental health",
-          back: "Widespread caries and heavy tooth wear (from stone-ground grains), but overall healthier than many later European populations — suggesting a nutritionally adequate if coarse diet.",
+          front: "Key concept: FIGURES Note that photographs and drawings are by the aut",
+          back:
+            "View of the outer table 189 8.7 Inner table of a skull (TdS 199) with a healed depressed fracture 189 8.8 Healing trauma, interpreted as a trephination on the skull of individual (...",
         },
         {
           id: "rp-l02-f4",
-          front: "Sampling bias of Pompeian victims",
-          back: "Those who died were disproportionately elderly, infirm, enslaved, or poor — the healthy and wealthy had better chances of fleeing. Pathological findings cannot be projected uncritically onto the entire living population.",
+          front: "Key concept: TABLES 6",
+          back:
+            "I am very much indebted to the Discipline of Architectural Science in the School of Architecture, Design and Planning for appointing me as an Honorary Research Associate.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L03  Making sense of death As humans, we suffer from the double w
+    ───────────────────────────────────────────────── */
     {
       id: "rp-l03",
-      title: "Beyond Bones: DNA, Diet, and Social Structure",
+      title: "Making sense of death As humans, we suffer from the double w",
       type: "video",
       duration: 12,
       objectives: [
-        "Explain how stable isotope analysis reconstructs ancient diet",
-        "Describe the potential and limitations of ancient DNA analysis at Pompeii",
-        "Assess what the evidence reveals about social stratification in Pompeian society",
+        "Examine the key ideas and arguments related to making sense of death as humans, we suffer from the double w",
+        "Examine the key ideas and arguments related to 1 skeletons as artefacts on 7 april 1768 the austrian empero",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "rp-l03-c1",
-          title: "Stable Isotope Analysis and Ancient Diet",
+          title: "Making sense of death As humans, we suffer from the double w",
           content:
-            "Stable isotope analysis of bone collagen and tooth enamel provides direct evidence of what individuals ate during their lifetimes. Carbon isotopes (δ¹³C) distinguish between marine and terrestrial foods and between C3 plants (wheat, barley) and C4 plants (millet, maize). Nitrogen isotopes (δ¹⁵N) indicate the trophic level — higher values suggest greater consumption of animal protein, particularly fish. Studies of Pompeian remains reveal a diet consistent with classical literary sources: predominantly based on cereals, supplemented with legumes, olive oil, fruit, and significant amounts of marine foods — as expected for a coastal city with an active fishing industry. However, isotopic analysis also reveals variations between individuals, suggesting differential access to high-quality food. Some individuals show nitrogen signatures consistent with a diet very rich in fish protein, while others show signatures more consistent with a predominantly cereal-based diet — potentially reflecting social stratification, with wealthier individuals consuming more diverse and protein-rich diets.",
+            "Making sense of death As humans, we suffer from the double whammy of being both sentient and mortal. We may attempt to defy our chronological age with Botox and plastic surgery, but whatever we do, we will eventually die. Death is a taboo subject in modern Western society and has largely been removed from view. Denial does not change the fact that our ultimate demise is an unavoidable rite of passage. The most common question I overheard from passing tourists during my years of fieldwork in Pompeii was, ‘So where are the dead bodies?’ Perhaps this can be interpreted as a recognition of a need to view one’s fate rather than just a gratuitous act of voyeurism.",
         },
         {
           id: "rp-l03-c2",
-          title: "Ancient DNA: Promise and Challenges",
+          title: "1 SKELETONS AS ARTEFACTS On 7 April 1768 the Austrian Empero",
           content:
-            "The extraction and analysis of ancient DNA (aDNA) from Pompeian remains is a rapidly developing field with enormous potential but significant challenges. The high temperatures of the pyroclastic surges would have degraded DNA considerably, and subsequent contamination from soil bacteria, handling, and excavation further compromises the material. Nevertheless, recent studies have successfully extracted mitochondrial and even nuclear DNA from some Pompeian individuals, revealing information about sex (confirming or correcting osteological assignments), genetic ancestry (suggesting a genetically diverse population with connections across the Mediterranean), and familial relationships between individuals found together. One notable study analysed two individuals found embracing in the House of the Cryptoporticus — traditionally described as mother and daughter but revealed by DNA analysis to be unrelated adult males. This finding dramatically revised the interpretation of the scene and highlighted the danger of imposing modern assumptions on ancient evidence. aDNA analysis is still in its early stages at Pompeii, but it promises to transform our understanding of population origins, mobility, and kinship.",
+            "1 SKELETONS AS ARTEFACTS On 7 April 1768 the Austrian Emperor Joseph II visited Pompeii. To mark the occasion, a house was named in his honour and he was invited to witness the excavation of its contents. As he watched the workmen remove the pumice stones that covered the kitchen on the lower level of the house, a human skeleton was revealed. Perhaps the bones were draped just a little too artistically over several amphorae. Whatever the reason, it was instantly apparent that a deception had been perpetrated and that it was not of the highest order.",
         },
         {
           id: "rp-l03-c3",
-          title: "Social Structure and the Evidence of Death",
+          title: "Deeper Analysis: Making sense of death As humans, we suffer from the double w",
           content:
-            "The distribution of victims within the city and their associated artefacts provide indirect evidence of Pompeii's social structure. Wealthier individuals tend to be found outside the city — they fled early, on foot or in vehicles, carrying valuables — while those who remained include a higher proportion of enslaved people, labourers, and those lacking the resources or social networks to organise escape. The skeletal evidence supports this interpretation: victims found in certain locations show higher rates of pathology consistent with heavy manual labour (osteoarthritis of the spine, enthesopathies at muscle attachment sites), while others show fewer such markers. Associated artefacts — keys, coins, jewellery, surgical instruments — provide contextual information about the victims' identities and occupations, though Lazer cautions against over-interpreting these associations (objects may have been picked up during flight rather than representing their owner's usual possessions). The emerging picture is of a socially stratified society in which the disaster did not affect all groups equally — a finding that resonates with modern studies of how natural disasters disproportionately affect the poor and marginalised.",
+            "The human remains from Pompeii have always been a major attraction for visitors to the site. They have been one of the key factors that separated Pompeii from Herculaneum, which did not have a culture of bodies due to the minimal number of skeletons found there before the 1980s. There are several reasons for the fascination with the remains of individuals who perished in a mass disaster almost two millennia ago. One of the most important is that the event that killed the victims was also responsible for preserving their living context, from the most humble domestic items to substantial, largely intact structures.",
         },
       ],
       flashcards: [
         {
           id: "rp-l03-f1",
-          front: "Stable isotope analysis of diet",
-          back: "Carbon isotopes distinguish marine from terrestrial and C3 from C4 plants. Nitrogen isotopes indicate animal protein intake. Results show Pompeians ate cereals, legumes, olive oil, and significant marine foods — with dietary variation suggesting social stratification.",
+          front: "Making sense of death As humans, we suffer from the double w",
+          back:
+            "The human remains from Pompeii have always been a major attraction for visitors to the site.",
         },
         {
           id: "rp-l03-f2",
-          front: "Ancient DNA challenges at Pompeii",
-          back: "Pyroclastic heat degraded DNA. Contamination from soil, handling, and excavation further compromises material. Despite this, recent studies have extracted mitochondrial and nuclear DNA, revealing ancestry, sex, and kinship.",
+          front: "1 SKELETONS AS ARTEFACTS On 7 April 1768 the Austrian Empero",
+          back:
+            "Joseph II was not impressed.",
         },
         {
           id: "rp-l03-f3",
-          front: "The House of the Cryptoporticus embrace",
-          back: "Two individuals found embracing were traditionally described as mother and daughter. DNA analysis revealed they were unrelated adult males — dramatically revising interpretation and highlighting the danger of imposing modern assumptions.",
+          front: "Key concept: Making sense of death As humans, we suffer from the doubl",
+          back:
+            "As a result, many of the skeletons were disarticulated over time and stored in ancient buildings.",
         },
         {
           id: "rp-l03-f4",
-          front: "Social stratification in disaster deaths",
-          back: "Wealthier residents fled early; those who remained were disproportionately enslaved, labourers, and poor. Skeletal markers of heavy labour confirm the pattern — resonating with modern findings that disasters disproportionately affect the marginalised.",
+          front: "Key concept: 1 SKELETONS AS ARTEFACTS On 7 April 1768 the Austrian Emp",
+          back:
+            "Skeletons were often employed as they provided wonderful props for this kind of entertainment.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L04  Checkpoint Quiz 2
+    ───────────────────────────────────────────────── */
     {
       id: "rp-l04",
-      title: "Checkpoint Quiz: Archaeology of Pompeii",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
       duration: 8,
-      objectives: ["Assess understanding of eruption sequence, forensic methods, and social interpretation"],
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "rp-l04-q1",
-          text: "What was the primary cause of death for most victims who remained in Pompeii?",
+          text: "Which of the following best describes a key idea from the section on RESURRECTING POMPEII Pompeii has been continuously excavated?",
           options: [
-            { id: "a", text: "Drowning in lava" },
-            { id: "b", text: "Thermal shock from pyroclastic surges — superheated clouds that killed instantaneously before suffocation could occur" },
-            { id: "c", text: "Starvation during a prolonged siege" },
-            { id: "d", text: "Poisoning from contaminated water" },
+            { id: "a", text: "RESURRECTING POMPEII Pompeii has been continuously excavated and studied since 1748." },
+            { id: "b", text: "Key aspects of resurrecting pompeii estelle lazer first published 2009 by r" },
+            { id: "c", text: "FIGURES Note that photographs and drawings are by the author, unless otherwise stated." },
+            { id: "d", text: "I would like to thank the current Superintendent of Pompeii, Professor Pier Giovanni Guzzo, for his..." },
           ],
-          correctOptionId: "b",
-          explanation: "Evidence includes pugilistic postures and thermally fractured skulls. Pyroclastic surges delivered superheated air that destroyed the respiratory tract instantly — faster than asphyxiation.",
+          correctOptionId: "a",
+          explanation:
+            "This question relates to RESURRECTING POMPEII Pompeii has been continuously excavated. RESURRECTING POMPEII Pompeii has been continuously excavated and studied since 1748.",
         },
         {
           id: "rp-l04-q2",
-          text: "Why does Lazer criticise earlier sex assignments of Pompeian victims?",
+          text: "Which of the following best describes a key idea from the section on RESURRECTING POMPEII Estelle Lazer First published 2009 by R?",
           options: [
-            { id: "a", text: "Because all earlier scholars were unqualified" },
-            { id: "b", text: "Because sex was often assigned based on associated artefacts (jewellery → female) rather than skeletal morphology — a methodology proven unreliable by modern forensic examination" },
-            { id: "c", text: "Because sex cannot be determined from skeletons at all" },
-            { id: "d", text: "Because all victims were male" },
+            { id: "a", text: "RESURRECTING POMPEII Pompeii has been continuously excavated and studied since 1748." },
+            { id: "b", text: "I would like to thank the current Superintendent of Pompeii, Professor Pier Giovanni Guzzo, for his..." },
+            { id: "c", text: "Key aspects of resurrecting pompeii estelle lazer first published 2009 by r" },
+            { id: "d", text: "FIGURES Note that photographs and drawings are by the author, unless otherwise stated." },
           ],
-          correctOptionId: "b",
-          explanation: "Assigning sex from artefacts (jewellery, rings) rather than pelvic and cranial morphology led to errors. The House of the Cryptoporticus 'mother and daughter' were revealed by DNA to be unrelated males.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to RESURRECTING POMPEII Estelle Lazer First published 2009 by R. Key aspects of resurrecting pompeii estelle lazer first published 2009 by r",
         },
         {
           id: "rp-l04-q3",
-          text: "What does stable nitrogen isotope analysis reveal about Pompeian diet?",
+          text: "Which of the following best describes a key idea from the section on FIGURES Note that photographs and drawings are by the author?",
           options: [
-            { id: "a", text: "That Pompeians ate no animal products" },
-            { id: "b", text: "Higher δ¹⁵N values indicate greater consumption of animal protein, especially fish — with variation between individuals suggesting social stratification in diet quality" },
-            { id: "c", text: "That all Pompeians ate identically" },
-            { id: "d", text: "That Pompeians were malnourished" },
+            { id: "a", text: "I would like to thank the current Superintendent of Pompeii, Professor Pier Giovanni Guzzo, for his..." },
+            { id: "b", text: "RESURRECTING POMPEII Pompeii has been continuously excavated and studied since 1748." },
+            { id: "c", text: "FIGURES Note that photographs and drawings are by the author, unless otherwise stated." },
+            { id: "d", text: "Key aspects of resurrecting pompeii estelle lazer first published 2009 by r" },
           ],
-          correctOptionId: "b",
-          explanation: "Nitrogen isotopes reflect trophic level. Some Pompeians show high fish-protein signatures; others show cereal-dominant diets — consistent with a stratified society where wealthier individuals consumed more diverse, protein-rich food.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to FIGURES Note that photographs and drawings are by the author. FIGURES Note that photographs and drawings are by the author, unless otherwise stated.",
         },
         {
           id: "rp-l04-q4",
-          text: "Why is the Pompeian victim sample NOT representative of the whole living population?",
+          text: "Which of the following best describes a key idea from the section on TABLES 6?",
           options: [
-            { id: "a", text: "Because most Pompeians lived elsewhere" },
-            { id: "b", text: "Because those who died were disproportionately elderly, infirm, enslaved, and poor — the healthy and wealthy fled during the first eruption phase" },
-            { id: "c", text: "Because only children died in the eruption" },
-            { id: "d", text: "Because the eruption destroyed all skeletal remains" },
+            { id: "a", text: "RESURRECTING POMPEII Pompeii has been continuously excavated and studied since 1748." },
+            { id: "b", text: "Key aspects of resurrecting pompeii estelle lazer first published 2009 by r" },
+            { id: "c", text: "FIGURES Note that photographs and drawings are by the author, unless otherwise stated." },
+            { id: "d", text: "I would like to thank the current Superintendent of Pompeii, Professor Pier Giovanni Guzzo, for his..." },
           ],
-          correctOptionId: "b",
-          explanation: "Sampling bias: the sample consists of those unable or unwilling to flee. This over-represents vulnerable groups and under-represents healthy, wealthy, mobile residents who escaped during the pumice fall phase.",
+          correctOptionId: "d",
+          explanation:
+            "This question relates to TABLES 6. I would like to thank the current Superintendent of Pompeii, Professor Pier Giovanni Guzzo, for his...",
         },
         {
           id: "rp-l04-q5",
-          text: "Fiorelli's plaster casts should be treated as:",
+          text: "Which of the following best describes a key idea from the section on Making sense of death As humans, we suffer from the double w?",
           options: [
-            { id: "a", text: "Perfect photographic records of the victims' appearance" },
-            { id: "b", text: "Interpretive artefacts — shaped partly by the casting technique — that require CT scanning to reveal the actual skeletal evidence inside" },
-            { id: "c", text: "Modern sculptures with no scientific value" },
-            { id: "d", text: "Exact replicas of living people" },
+            { id: "a", text: "RESURRECTING POMPEII Pompeii has been continuously excavated and studied since 1748." },
+            { id: "b", text: "FIGURES Note that photographs and drawings are by the author, unless otherwise stated." },
+            { id: "c", text: "Key aspects of resurrecting pompeii estelle lazer first published 2009 by r" },
+            { id: "d", text: "Making sense of death As humans, we suffer from the double whammy of being both sentient and mortal." },
           ],
-          correctOptionId: "b",
-          explanation: "While iconic, the casts are products of Fiorelli's technique as much as of the original bodies. Plaster distorted features and filled cavities unevenly. CT scanning reveals the real skeletal remains inside without destruction.",
+          correctOptionId: "d",
+          explanation:
+            "This question relates to Making sense of death As humans, we suffer from the double w. Making sense of death As humans, we suffer from the double whammy of being both sentient and mortal.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L05  2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To h
+    ───────────────────────────────────────────────── */
     {
       id: "rp-l05",
-      title: "Myths vs Science: Rethinking Pompeii",
+      title: "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To h",
       type: "video",
       duration: 12,
       objectives: [
-        "Identify and correct major popular misconceptions about Pompeii",
-        "Explain how scientific evidence contradicts romanticised narratives",
-        "Assess the importance of evidence-based interpretation in archaeology",
+        "Examine the key ideas and arguments related to 2 an egyptian interlude egyptian mummies and tomb finds to h",
+        "Examine the key ideas and arguments related to 3 an anthropological resource the middle of the nineteenth c",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "rp-l05-c1",
-          title: "The Myth of the Frozen City",
+          title: "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To h",
           content:
-            "One of the most persistent popular myths about Pompeii is that the eruption 'froze' the city in a single moment, perfectly preserving a cross-section of ordinary Roman life. This narrative is appealing but misleading. The eruption lasted approximately 24 hours, during which significant changes occurred: many inhabitants fled, buildings collapsed, the streetscape was progressively buried under metres of pumice. What we excavate is not a snapshot of daily life but a chaotic scene of disaster, flight, and death. Furthermore, the city that was buried was not representative of an 'ordinary' Roman city: Pompeii had suffered a devastating earthquake in 62 CE and was still undergoing major reconstruction at the time of the eruption. Many buildings were damaged, under repair, or had changed function since the earthquake. The archaeological record therefore reflects a city in transition, not a stable, functioning urban centre. Lazer's insistence on this point is part of a broader argument: that romanticised narratives about Pompeii often tell us more about modern desires for a vivid, accessible ancient world than about the actual historical evidence.",
+            "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To highlight the unique position of Pompeii in terms of the way that popular culture has driven research on human remains, a comparison can be made with ancient Egyptian tomb finds. This material provides the closest parallels to Pompeii in terms of remarkable preservation and a long tradition of popular culture, especially evident in film and literature. But the similarity ends with the way in which the material has been dealt with in relation to research and general scientific investigation. Unlike the case in Pompeii, popular culture has not impeded the quality of scientific studies of mummies.",
         },
         {
           id: "rp-l05-c2",
-          title: "The Myth of Family Groups",
+          title: "3 AN ANTHROPOLOGICAL RESOURCE The middle of the nineteenth c",
           content:
-            "Many groups of victims found together have been interpreted as families — parents clutching children, lovers in a final embrace. These identifications are emotionally powerful but often scientifically unfounded. As Lazer demonstrates, the assignment of familial relationships was typically based on spatial proximity and visual impression of the casts, not on skeletal or genetic evidence. The 'mother and daughter' in the House of the Cryptoporticus — revealed by DNA to be unrelated males — is the most dramatic example, but it represents a systemic problem. People found together during a disaster may be family members, but they may also be neighbours, strangers, master and slave, or individuals who simply happened to seek shelter in the same location. Without genetic evidence, familial relationships cannot be assumed from spatial proximity. This caution extends to age and sex assignments: a tall skeleton was often labelled 'male' and a short one 'female,' but human variation makes such assignments unreliable without proper osteological analysis.",
+            "This commission was set up by Ferdinand II under political pressure, as there were serious problems with the management of archaeological sites in the region around Pompeii. Raphaele d’Ambra reported to the Commission later in that year that bones and other finds had been neglected and remained in deposits without any attempt to ensure their preservation. Further, permission had been denied to a French chemist, Jean Pierre Joseph d’Arcet, to conduct research on the human remains. The Commission made 11 proposals to facilitate the reopening and subsequent protection of the archaeological area of Pompeii. One of these proposals was to open a gallery of Pompeian skeletons, which would involve the donation of skulls and other skeletal material to the Royal University of Studies in Naples.",
         },
         {
           id: "rp-l05-c3",
-          title: "Towards Evidence-Based Pompeian Archaeology",
+          title: "Deeper Analysis: 2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To h",
           content:
-            "Lazer's broader methodological argument is that Pompeian studies have suffered from a tension between popular narrative demand (for dramatic, emotionally engaging stories about identifiable individuals) and scientific rigour (which often produces more uncertain, less dramatic conclusions). The pressure to tell compelling stories — for museum displays, documentaries, and tourist guides — has sometimes led to conclusions that outrun the evidence. A skeleton becomes a 'gladiator' because of associated objects that may be coincidental; a pair of victims becomes 'lovers' because of their posture, although the posture may result from pyroclastic heat rather than a deliberate embrace. Lazer argues for a more disciplined approach: one that acknowledges uncertainty, presents multiple interpretations when the evidence is ambiguous, and resists the temptation to convert fragmentary data into confident narratives. This approach may be less emotionally satisfying but it is scientifically honest — and it ultimately produces a richer, more nuanced understanding of the ancient world than romanticised storytelling can achieve.",
+            "In fact, since scientific analysis of Egyptian mummies commenced, it has always been cutting edge and has provided a benchmark for all studies of ancient human remains. Mummies: early contact with the Western world Mummies entered the west as a result of their perceived medicinal qualities. The word mummy is derived from the Persian word mûm , later mûmiyá , which has variously been translated as pitch or bitumen. The belief that this substance possessed medicinal qualities can be traced as far back as the Classical era. Pliny the Elder, for example, recommended the use of pitch or bitumen for gout, leprosy, toothaches and dysentery. Medieval apothecaries expanded the definition, possibly as a result of a mistranslation, to include ‘pitch’ obtained from Egyptian mummies.",
         },
       ],
       flashcards: [
         {
           id: "rp-l05-f1",
-          front: "Myth of the frozen city",
-          back: "Pompeii was NOT preserved as a snapshot of daily life. The eruption lasted 24 hours. Many fled, buildings collapsed, and the city was mid-reconstruction from a 62 CE earthquake — reflecting a city in transition, not stable functioning.",
+          front: "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To h",
+          back:
+            "In fact, since scientific analysis of Egyptian mummies commenced, it has always been cutting edge and has provided a benchmark for all studies of ancient human remains.",
         },
         {
           id: "rp-l05-f2",
-          front: "Myth of family groups",
-          back: "Groups found together are often labelled as families based on visual impression, not evidence. DNA has disproven several such identifications. Without genetic evidence, familial relationships cannot be assumed from spatial proximity.",
+          front: "3 AN ANTHROPOLOGICAL RESOURCE The middle of the nineteenth c",
+          back:
+            "This was the first real acknowledgement that the human skeletal remains were of anthropological significance.",
         },
         {
           id: "rp-l05-f3",
-          front: "Narrative pressure vs scientific rigour",
-          back: "Demand for emotionally compelling stories (for museums, documentaries) has led to conclusions outrunning the evidence. Lazer advocates acknowledging uncertainty and presenting multiple interpretations — less dramatic but scientifically honest.",
+          front: "Key concept: 2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds T",
+          back:
+            "The ‘pitch’ observed on mummies actually was a by-product of the resins used in the embalming process.",
         },
         {
           id: "rp-l05-f4",
-          front: "Evidence-based archaeology principle",
-          back: "Resist converting fragmentary data into confident narratives. Acknowledge uncertainty, present alternatives, and let the evidence speak — producing richer understanding than romanticised storytelling.",
+          front: "Key concept: 3 AN ANTHROPOLOGICAL RESOURCE The middle of the nineteent",
+          back:
+            "It involved the research of Giustiniano Nicolucci, the founder of the Institute of Anthropology of the University of Naples.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L06  4 CONTEXT OF A MASS DISASTER The remains of Pompeii are ofte
+    ───────────────────────────────────────────────── */
     {
       id: "rp-l06",
-      title: "Ethics and the Display of Human Remains",
+      title: "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are ofte",
       type: "video",
       duration: 12,
       objectives: [
-        "Identify the ethical issues raised by excavating, studying, and displaying ancient human remains",
-        "Compare different cultural and professional positions on the treatment of human remains",
-        "Evaluate the balance between scientific knowledge and respect for the dead",
+        "Examine the key ideas and arguments related to 4 context of a mass disaster the remains of pompeii are ofte",
+        "Examine the key ideas and arguments related to 5 thenatureofthe evidence most of the pompeian human skeleta",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "rp-l06-c1",
-          title: "Human Remains as Both Evidence and People",
+          title: "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are ofte",
           content:
-            "The Pompeian casts and skeletal remains occupy a dual status that raises profound ethical questions. On one hand, they are invaluable scientific evidence — data from which we can reconstruct ancient health, diet, social structure, and the experience of volcanic disaster. On the other hand, they are the remains of real human beings who died in terror and agony. The tension between these two statuses — evidence and persons — runs through every aspect of archaeological work at Pompeii: excavation techniques, storage conditions, analytical methods, and public display. Lazer maintains that scientific study of the remains is ethically justified when it serves scholarship and education, but she insists that the remains must always be treated with the dignity due to human beings — not as objects, curiosities, or props for entertainment. This principle is easy to state but difficult to operationalise: at what point does scientific scrutiny cross the line into disrespectful exploitation?",
+            "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are often described as re flection of a frozen moment in time. This is the basis of the so-called ‘Pompeii premise’, which argues that Pompeii is the ideal archaeological site, providing a standard against which all other sites can be measured. The premise is underpinned by the notion that Pompeii was a thriving town that was destroyed quickly and without warning.",
         },
         {
           id: "rp-l06-c2",
-          title: "Public Display: Education and Spectacle",
+          title: "5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeleta",
           content:
-            "Millions of tourists visit Pompeii annually, and many come specifically to see the casts of the victims — the crouching figures, the clasped hands, the expressions of frozen anguish. These displays serve a genuine educational purpose: they make the reality of the disaster viscerally immediate in a way that text and statistics cannot. But they also risk turning human suffering into spectacle — reducing real people's deaths to a tourist attraction, a photo opportunity, an Instagram post. The ethical question is whether such display is educational or exploitative, and the answer may depend less on the displays themselves than on the context in which they are presented: with explanatory information about the eruption and the victims' lives, or merely as dramatic set-pieces without context. Some archaeologists have argued that the most ethical approach is to display the casts with minimal theatricality and maximum contextual information — making the visitor aware that these were real people in real circumstances, not wax figures designed for entertainment.",
+            "5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeletal remains have been stored in two buildings, which date to the original occupation of the site. The tradition of removing skeletons after excavation and storing the co-mingled remains in a building on site, designated as a ‘bone house’, can be traced back, at least, to the second half of the nineteenth century. 1 Nonetheless, some skeletons and a number of casts are still in situ , especially in houses excavated from the time of the directorship of Maiuri and beyond. The environment in which the bones are stored is as romantic as the novels that have served to popularize the site.",
         },
         {
           id: "rp-l06-c3",
-          title: "Broader Debates in the Ethics of Human Remains",
+          title: "Deeper Analysis: 4 CONTEXT OF A MASS DISASTER The remains of Pompeii are ofte",
           content:
-            "The Pompeian case connects to broader debates in the ethics of studying human remains. In many cultures and legal frameworks, the disturbance of human remains requires justification, respectful handling, and eventual reburial. Indigenous communities worldwide have campaigned for the repatriation of ancestral remains held in museum collections — a movement that has achieved significant legal recognition (notably the Native American Graves Protection and Repatriation Act in the US). The Pompeian remains are not subject to repatriation claims (there is no surviving community with a direct cultural connection), but the ethical principles are similar: do the scientific benefits of study outweigh the obligation to respect the dead? Is it acceptable to destructively sample bone for DNA analysis if doing so advances knowledge significantly? How should remains be stored when not under study? Lazer does not provide definitive answers but insists that these questions must be asked — and that any archaeology that treats human remains as mere objects has failed ethically, regardless of its scientific achievements.",
+            "This concept undoubtedly owes its origins to popular perceptions of the site rather than academic research. 1 The idea of Pompeii as a frozen moment can probably be traced back to the early excavations, when, for example, the first skeleton was found with a small collection of coins that appeared to have just been dropped. 2 It was reinforced by subsequent discoveries, including those of 1765, when the Temple of Isis was uncovered.",
         },
       ],
       flashcards: [
         {
           id: "rp-l06-f1",
-          front: "Dual status of Pompeian remains",
-          back: "Both invaluable scientific evidence AND the remains of real human beings who died in terror. The tension between these statuses runs through every aspect of archaeological work — including excavation, analysis, and display.",
+          front: "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are ofte",
+          back:
+            "This concept undoubtedly owes its origins to popular perceptions of the site rather than academic research.",
         },
         {
           id: "rp-l06-f2",
-          front: "Display ethics: education vs spectacle",
-          back: "Pompeian casts make disaster viscerally real (educational), but risk turning suffering into a tourist photo opportunity (exploitative). Context — explanatory information about real lives — is the key ethical differentiator.",
+          front: "5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeleta",
+          back:
+            "The majority of the human skeletons have been stored in an ancient bath building, the Terme del Sarno (VII, ii, 17).",
         },
         {
           id: "rp-l06-f3",
-          front: "Repatriation debates and Pompeii",
-          back: "Indigenous communities have won legal rights to repatriation of ancestral remains. Pompeian remains face no such claims but raise the same ethical question: do scientific benefits outweigh the obligation to respect the dead?",
+          front: "Key concept: 4 CONTEXT OF A MASS DISASTER The remains of Pompeii are o",
+          back:
+            "On the altar were the remains of the last animal sacrifice and in a room to the rear of the sanctuary, a skeleton was found next to a plate full of fish bones, assumed to be this p...",
         },
         {
           id: "rp-l06-f4",
-          front: "Lazer's ethical principle",
-          back: "Scientific study of remains is justified when serving scholarship and education, but remains must always be treated with human dignity — any archaeology treating them as mere objects has failed ethically.",
+          front: "Key concept: 5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skel",
+          back:
+            "The objects deposited in this building are largely unprovenanced but were apparently brought to the baths from all over Pompeii.",
         },
       ],
     },
+    /* ─────────────────────────────────────────────────
+       L07  Checkpoint Quiz 2
+    ───────────────────────────────────────────────── */
     {
       id: "rp-l07",
-      title: "Final Assessment: Resurrecting Pompeii",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
-      duration: 9,
-      objectives: ["Evaluate comprehensive mastery of forensic archaeology, myths, and ethics at Pompeii"],
+      duration: 8,
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "rp-l07-q1",
-          text: "The 'pugilistic attitude' observed in Pompeian victims indicates:",
+          text: "Which of the following best describes a key idea from the section on 2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To h?",
           options: [
-            { id: "a", text: "That victims were fighting each other during the eruption" },
-            { id: "b", text: "Heat-induced muscle contraction from pyroclastic surges — evidence of thermal shock, not a deliberate defensive posture" },
-            { id: "c", text: "That victims were exercising when the eruption began" },
-            { id: "d", text: "That the bodies were posed by excavators" },
+            { id: "a", text: "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are often described as re flection of a frozen m..." },
+            { id: "b", text: "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To highlight the unique position of Pompeii..." },
+            { id: "c", text: "This commission was set up by Ferdinand II under political pressure, as there were serious problems..." },
+            { id: "d", text: "5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeletal remains have been stored in two buildi..." },
           ],
           correctOptionId: "b",
-          explanation: "The pugilistic attitude (drawn-up limbs, clenched fists) results from heat contracting muscles and tendons. It is a key piece of evidence that death resulted from thermal shock rather than suffocation.",
+          explanation:
+            "This question relates to 2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To h. 2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To highlight the unique position of Pompeii...",
         },
         {
           id: "rp-l07-q2",
-          text: "Why is the narrative that Pompeii was 'frozen in time' misleading?",
+          text: "Which of the following best describes a key idea from the section on 3 AN ANTHROPOLOGICAL RESOURCE The middle of the nineteenth c?",
           options: [
-            { id: "a", text: "Because the eruption lasted 24 hours with progressive evacuation and destruction, the city was mid-reconstruction from a prior earthquake, and the site reflects disaster chaos, not ordinary daily life" },
-            { id: "b", text: "Because modern archaeologists have rebuilt the city" },
-            { id: "c", text: "Because Pompeii was already abandoned before the eruption" },
-            { id: "d", text: "Because the eruption happened too slowly to preserve anything" },
+            { id: "a", text: "This commission was set up by Ferdinand II under political pressure, as there were serious problems..." },
+            { id: "b", text: "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To highlight the unique position of Pompeii..." },
+            { id: "c", text: "5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeletal remains have been stored in two buildi..." },
+            { id: "d", text: "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are often described as re flection of a frozen m..." },
           ],
           correctOptionId: "a",
-          explanation: "The 24-hour eruption involved flight, building collapse, and progressive burial. Pompeii was still reconstructing from a 62 CE earthquake. The site shows a transitional, disaster-affected city, not a snapshot of normalcy.",
+          explanation:
+            "This question relates to 3 AN ANTHROPOLOGICAL RESOURCE The middle of the nineteenth c. This commission was set up by Ferdinand II under political pressure, as there were serious problems...",
         },
         {
           id: "rp-l07-q3",
-          text: "What did DNA analysis of the 'mother and daughter' in the House of the Cryptoporticus reveal?",
+          text: "Which of the following best describes a key idea from the section on 4 CONTEXT OF A MASS DISASTER The remains of Pompeii are ofte?",
           options: [
-            { id: "a", text: "They were indeed mother and daughter as originally assumed" },
-            { id: "b", text: "They were unrelated adult males — dramatically revising the interpretation and demonstrating the danger of assigning relationships from visual impression alone" },
-            { id: "c", text: "They were siblings" },
-            { id: "d", text: "Their DNA was too degraded to analyse" },
+            { id: "a", text: "5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeletal remains have been stored in two buildi..." },
+            { id: "b", text: "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To highlight the unique position of Pompeii..." },
+            { id: "c", text: "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are often described as re flection of a frozen m..." },
+            { id: "d", text: "This commission was set up by Ferdinand II under political pressure, as there were serious problems..." },
           ],
-          correctOptionId: "b",
-          explanation: "The 'mother and daughter' identification was based on the cast's visual appearance. DNA proved they were unrelated males — a landmark correction that highlights the need for genetic evidence before assuming familial relationships.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to 4 CONTEXT OF A MASS DISASTER The remains of Pompeii are ofte. 4 CONTEXT OF A MASS DISASTER The remains of Pompeii are often described as re flection of a frozen m...",
         },
         {
           id: "rp-l07-q4",
-          text: "Stable carbon isotopes in Pompeian bone analysis primarily distinguish between:",
+          text: "Which of the following best describes a key idea from the section on 5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeleta?",
           options: [
-            { id: "a", text: "Male and female diets" },
-            { id: "b", text: "Marine and terrestrial food sources, and between C3 plants (wheat, barley) and C4 plants (millet)" },
-            { id: "c", text: "Vegetarian and meat-based diets" },
-            { id: "d", text: "Cooked and raw foods" },
+            { id: "a", text: "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are often described as re flection of a frozen m..." },
+            { id: "b", text: "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To highlight the unique position of Pompeii..." },
+            { id: "c", text: "5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeletal remains have been stored in two buildi..." },
+            { id: "d", text: "This commission was set up by Ferdinand II under political pressure, as there were serious problems..." },
           ],
-          correctOptionId: "b",
-          explanation: "δ¹³C values distinguish marine from terrestrial sources and C3 from C4 plants. Combined with nitrogen isotopes (trophic level), they reconstruct individual dietary patterns and reveal social stratification in food quality.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to 5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeleta. 5 THENATUREOFTHE EVIDENCE Most of the Pompeian human skeletal remains have been stored in two buildi...",
         },
         {
           id: "rp-l07-q5",
-          text: "Lazer's core methodological argument is that Pompeian studies should:",
+          text: "Which of the following best describes a key idea from the section on 6 ATTRIBUTION OF SEX Perhaps the greatest frustration for a ?",
           options: [
-            { id: "a", text: "Prioritise dramatic stories for tourist entertainment" },
-            { id: "b", text: "Acknowledge uncertainty, present multiple interpretations when evidence is ambiguous, and resist converting fragmentary data into confident narratives" },
-            { id: "c", text: "Avoid studying human remains entirely" },
-            { id: "d", text: "Use only Pliny's letters as evidence" },
+            { id: "a", text: "This commission was set up by Ferdinand II under political pressure, as there were serious problems..." },
+            { id: "b", text: "4 CONTEXT OF A MASS DISASTER The remains of Pompeii are often described as re flection of a frozen m..." },
+            { id: "c", text: "6 ATTRIBUTION OF SEX Perhaps the greatest frustration for a number of scholars has been the fact tha..." },
+            { id: "d", text: "2 AN EGYPTIAN INTERLUDE Egyptian mummies and tomb finds To highlight the unique position of Pompeii..." },
           ],
-          correctOptionId: "b",
-          explanation: "Lazer advocates evidence-based interpretation over romanticised storytelling. Acknowledging what we don't know is as important as stating what we do — producing more honest and ultimately richer understanding of the ancient world.",
-        },
-        {
-          id: "rp-l07-q6",
-          text: "The ethical principle governing display of Pompeian remains is:",
-          options: [
-            { id: "a", text: "All human remains should be permanently hidden from public view" },
-            { id: "b", text: "Display is acceptable when it serves education with dignity — presenting remains with contextual information about real lives, not as theatrical set-pieces for entertainment" },
-            { id: "c", text: "Commercial profit justifies any form of display" },
-            { id: "d", text: "Only Italian citizens should be allowed to view the remains" },
-          ],
-          correctOptionId: "b",
-          explanation: "The key ethical differentiator is context: explanatory information about the eruption and victims' lives makes display educational. Without context, display risks reducing human suffering to tourist spectacle.",
+          correctOptionId: "c",
+          explanation:
+            "This question relates to 6 ATTRIBUTION OF SEX Perhaps the greatest frustration for a . 6 ATTRIBUTION OF SEX Perhaps the greatest frustration for a number of scholars has been the fact tha...",
         },
       ],
     },

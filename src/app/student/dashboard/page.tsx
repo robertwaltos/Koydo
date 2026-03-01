@@ -270,6 +270,8 @@ export default function StudentDashboardPage() {
             <div className="flex justify-between h-16 items-center">
                 <div className="flex items-center gap-4">
                     {profile?.avatar_url ? (
+                        // External avatar URLs are user-provided and not guaranteed to be in Next image allowlists.
+                        // eslint-disable-next-line @next/next/no-img-element
                         <img src={profile.avatar_url} alt="Avatar" className="w-10 h-10 rounded-full" />
                     ) : (
                         <span className="text-2xl">🧠</span>

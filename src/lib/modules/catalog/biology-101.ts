@@ -5,7 +5,7 @@ export const Biology101Module: LearningModule = {
   title: "Biology Essentials",
   description: "Discover living systems, cells, ecosystems, and the diversity of life.",
   subject: "Biology",
-  tags: ["core", "curriculum", "interactive"],
+  tags: ["core", "curriculum", "interactive", "enriched-from-epub"],
   minAge: 7,
   maxAge: 18,
   version: "2.0.0",
@@ -297,7 +297,18 @@ export const Biology101Module: LearningModule = {
           title: "Environment Shapes Adaptations",
           kind: "example",
           content: "Arctic fox: white fur in winter (camouflage), small ears (reduce heat loss), thick tail (warmth while sleeping). Desert fox (fennec): sandy fur (camouflage), huge ears (release excess heat), nocturnal behavior (avoids daytime heat). Same animal family, completely different adaptations driven by different environments."
+        },
+        {
+          id: "biology-101-l05-c3",
+          title: "Darwin's Theory of Natural Selection",
+          kind: "concept",
+          content: "Charles Darwin's The Origin of Species (1859) established that species derive from other species by a gradual evolutionary process. Darwin observed that within any population, individuals vary in their traits. Those with traits better suited to their environment are more likely to survive and reproduce — what Darwin called 'survival of the fittest.' Over many generations, beneficial traits become more common in the population, leading to adaptation and, eventually, new species. As Darwin wrote, the theory 'created a lasting storm of controversy' yet 'its acceptance revolutionized the course of science.' Richard Dawkins later extended this insight, arguing that natural selection operates at the level of the gene: organisms are 'survival machines' built by genes to ensure their own replication."
         }
+      ],
+      flashcards: [
+        { id: "biology-101-l05-f1", front: "What is natural selection? (Darwin)", back: "The process by which organisms with traits better suited to their environment survive and reproduce more successfully, causing beneficial traits to become more common over generations. Darwin described it in The Origin of Species (1859)." },
+        { id: "biology-101-l05-f2", front: "What does 'survival of the fittest' actually mean?", back: "Darwin's phrase meaning that organisms best adapted to their environment are more likely to survive and pass on their genes — 'fittest' refers to reproductive success and environmental fit, not physical strength." },
+        { id: "biology-101-l05-f3", front: "What is a 'survival machine'? (Dawkins)", back: "Richard Dawkins's term from The Selfish Gene for any organism. Bodies are vehicles constructed by cooperating genes to navigate the environment, reproduce, and transmit DNA. The organism is disposable; gene copies persist in offspring." }
       ],
       learningAids: [
         { id: "biology-101-l05-a1", type: "animation", title: "Arctic vs Desert Adaptations", content: "Side-by-side animation comparing an arctic fox and a fennec fox, highlighting how each adaptation matches its environment." }
@@ -431,13 +442,22 @@ export const Biology101Module: LearningModule = {
           title: "Punnett Square Preview",
           kind: "example",
           content: "If both parents are Bb (brown eyes, carrying blue), their children could be: BB (brown), Bb (brown), Bb (brown), or bb (blue). That is a 3:1 ratio — 75% chance brown, 25% chance blue. A Punnett square is the grid tool that maps this out."
+        },
+        {
+          id: "biology-101-l07-c5",
+          title: "The Gene's-Eye View of Evolution",
+          kind: "concept",
+          content: "Richard Dawkins, in The Selfish Gene, proposed that genes — not organisms, groups, or species — are the fundamental units of natural selection. A gene is 'selfish' in the sense that its effects tend to increase copies of itself in the next generation — a statistical outcome, not a psychological attribute. Organisms are 'survival machines' that cooperating genes build to propagate themselves. Dawkins uses a rowing-team analogy: genes in a body are like rowers in a boat — selection favours genes that complement each other, explaining why genomes show extraordinary internal cooperation despite being composed of individually 'selfish' replicators."
         }
       ],
       flashcards: [
         { id: "biology-101-l07-f1", front: "What does DNA stand for?", back: "Deoxyribonucleic acid. It is the molecule that carries genetic instructions in all living organisms." },
         { id: "biology-101-l07-f2", front: "What are the base pairing rules for DNA?", back: "Adenine (A) pairs with Thymine (T). Cytosine (C) pairs with Guanine (G). Remember: AT and CG." },
         { id: "biology-101-l07-f3", front: "What is the difference between a gene and an allele?", back: "A gene is a section of DNA coding for a trait. An allele is a specific version of that gene (e.g., brown eye allele vs blue eye allele)." },
-        { id: "biology-101-l07-f4", front: "When does a recessive trait appear?", back: "Only when an organism has two copies of the recessive allele (homozygous recessive, e.g., bb)." }
+        { id: "biology-101-l07-f4", front: "When does a recessive trait appear?", back: "Only when an organism has two copies of the recessive allele (homozygous recessive, e.g., bb)." },
+        { id: "biology-101-l07-f5", front: "What is the gene's-eye view of evolution? (Dawkins)", back: "The idea from The Selfish Gene that genes — not organisms or species — are the fundamental units of natural selection. Organisms are 'survival machines' built by cooperating genes to propagate copies of themselves across generations." },
+        { id: "biology-101-l07-f6", front: "Three properties of a successful replicator (Dawkins)", back: "1) Copying fidelity — accuracy of replication. 2) Fecundity — speed of replication. 3) Longevity — survival time of each copy. These three properties determine which replicators dominate over evolutionary time." },
+        { id: "biology-101-l07-f7", front: "Why do genes cooperate inside an organism? (Dawkins's rowing-team analogy)", back: "Like rowers in a boat, genes succeed when the whole 'crew' (genome) works together. Selection favours genes that complement each other within the shared body, producing the extraordinary internal cooperation that builds complex organisms." }
       ],
       learningAids: [
         { id: "biology-101-l07-a1", type: "practice", title: "Punnett Square Practice", content: "Cross Bb × Bb. Draw a 2×2 grid, fill in the alleles, and determine the probability of each genotype and phenotype." }

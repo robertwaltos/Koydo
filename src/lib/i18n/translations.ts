@@ -79,17 +79,23 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_levels_aria: "Learning levels",
     home_levels_title: "Every Level, One Platform",
     home_stage_aria: "Explore {label} - {gradeRange}, {ageRange}",
-    home_features_hear_title: "Hear Everything",
+    home_features_hear_title: "6 AI Voices",
     home_features_hear_desc:
-      "Every question, word, and instruction can be read aloud with one tap.",
+      "Choose from 6 unique narrator voices. Tap any text to hear it read aloud instantly.",
     home_features_do_title: "Learn by Doing",
     home_features_do_desc:
       "Sort, match, flip cards, and solve quizzes - all with vibrant, tappable visuals.",
     home_features_span_title: "Pre-K through College",
     home_features_span_desc:
       "Six levels of learning - from first shapes and colors to advanced professional skills.",
-    home_parent_links_summary: "Parent & Team Links",
-    home_parent_links_desc: "Dashboards, admin tools, and the full module catalog.",
+    home_why_koydo_title: "Why Families Choose Koydo",
+    home_why_koydo_subtitle: "Built from the ground up to make learning joyful, inclusive, and effective.",
+    home_why_adaptive_title: "Adaptive Learning Paths",
+    home_why_adaptive_desc: "Intelligent modules adjust difficulty in real time so every learner stays challenged — never frustrated, never bored.",
+    home_why_multilingual_title: "Learn in Any Language",
+    home_why_multilingual_desc: "Full English and Spanish support with audio narration on every screen — more languages coming soon.",
+    home_why_progress_title: "Real-Time Progress Tracking",
+    home_why_progress_desc: "Parents and educators get detailed dashboards showing skills mastered, time spent, and what to focus on next.",
 
     explore_auto_narration_text: "Choose your learning level to get started!",
     explore_hero_title: "Start Learning",
@@ -508,10 +514,19 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "Age-gate and parental consent flows are enforced for child safety (COPPA compliance). Parents can request access, correction, or deletion through support.",
     legal_privacy_section_retention_title: "Data Retention and Third Parties",
     legal_privacy_section_retention_body:
-      "Data is kept as long as the account is active. We use trusted third-party services (Supabase, Stripe, RevenueCat) strictly for operations.",
+      "Data is kept as long as the account is active. We use trusted third-party services (Supabase, Stripe, RevenueCat, OpenAI, ElevenLabs) strictly for operations. Lesson text may be sent to OpenAI or ElevenLabs to generate read-aloud audio; no personal data is transmitted in this process.",
     legal_privacy_section_rights_title: "User Rights and Contact",
     legal_privacy_section_rights_body:
       "You have the right to request a Data Subject Access Request (DSAR) or deletion. Contact us at support@koydo.app.",
+    legal_privacy_section_transfers_title: "International Data Transfers",
+    legal_privacy_section_transfers_body:
+      "Your data may be processed outside the European Economic Area (EEA) by our service providers, including Supabase (US), Stripe (US), Mixpanel (US), RevenueCat (US), OpenAI (US), and ElevenLabs (US). Each provider maintains appropriate safeguards including Standard Contractual Clauses (SCCs) approved by the European Commission and participation in the EU-U.S. Data Privacy Framework where applicable. We ensure all international transfers comply with GDPR Article 46 requirements.",
+    legal_privacy_section_dpo_title: "Data Protection Officer",
+    legal_privacy_section_dpo_body:
+      "For questions about data protection or to exercise your rights under GDPR, you may contact our Data Protection Officer at dpo@koydo.app. You also have the right to lodge a complaint with your local supervisory authority.",
+    legal_privacy_section_cookies_title: "Cookies and Tracking Technologies",
+    legal_privacy_section_cookies_body:
+      "We use strictly necessary cookies to maintain session state and user preferences. Analytics cookies (Mixpanel) are only activated with your explicit consent via our cookie banner. You can change your cookie preferences at any time from the consent banner or by clearing your browser storage. On native mobile apps, device identifiers are only accessed after you grant permission through the App Tracking Transparency prompt.",
     legal_terms_title: "Terms of Service",
     legal_terms_subtitle:
       "By using Koydo, users agree to use the service lawfully and in accordance with child safety and educational conduct rules.",
@@ -570,18 +585,23 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_levels_aria: "Niveles de aprendizaje",
     home_levels_title: "Todos los niveles, una plataforma",
     home_stage_aria: "Explorar {label} - {gradeRange}, {ageRange}",
-    home_features_hear_title: "Escucha todo",
+    home_features_hear_title: "6 voces IA",
     home_features_hear_desc:
-      "Cada pregunta, palabra e instrucción se puede leer en voz alta con un toque.",
+      "Elige entre 6 voces narradoras únicas. Toca cualquier texto para escucharlo al instante.",
     home_features_do_title: "Aprende haciendo",
     home_features_do_desc:
       "Ordena, empareja, gira tarjetas y resuelve cuestionarios - todo con visuales vibrantes y táctiles.",
     home_features_span_title: "De Pre-K a universidad",
     home_features_span_desc:
       "Seis niveles de aprendizaje - desde primeras formas y colores hasta habilidades profesionales avanzadas.",
-    home_parent_links_summary: "Enlaces para familias y equipo",
-    home_parent_links_desc:
-      "Paneles, herramientas de administración y el catálogo completo de módulos.",
+    home_why_koydo_title: "Por qué las familias eligen Koydo",
+    home_why_koydo_subtitle: "Diseñado desde cero para hacer el aprendizaje alegre, inclusivo y efectivo.",
+    home_why_adaptive_title: "Rutas de aprendizaje adaptativas",
+    home_why_adaptive_desc: "Los módulos inteligentes ajustan la dificultad en tiempo real para que cada estudiante se mantenga desafiado — sin frustración, sin aburrimiento.",
+    home_why_multilingual_title: "Aprende en cualquier idioma",
+    home_why_multilingual_desc: "Soporte completo en inglés y español con narración de audio en cada pantalla — más idiomas próximamente.",
+    home_why_progress_title: "Seguimiento de progreso en tiempo real",
+    home_why_progress_desc: "Padres y educadores obtienen paneles detallados que muestran habilidades dominadas, tiempo invertido y en qué enfocarse después.",
 
     explore_auto_narration_text: "¡Elige tu nivel de aprendizaje para comenzar!",
     explore_hero_title: "Comenzar a aprender",
@@ -1021,10 +1041,19 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "Los flujos de verificación de edad y consentimiento parental se aplican para la seguridad infantil (cumplimiento COPPA). Los padres pueden solicitar acceso, corrección o eliminación a través de soporte.",
     legal_privacy_section_retention_title: "Retención de datos y terceros",
     legal_privacy_section_retention_body:
-      "Los datos se conservan mientras la cuenta esté activa. Usamos servicios de terceros confiables (Supabase, Stripe, RevenueCat) estrictamente para operaciones.",
+      "Los datos se conservan mientras la cuenta esté activa. Usamos servicios de terceros confiables (Supabase, Stripe, RevenueCat, OpenAI, ElevenLabs) estrictamente para operaciones. El texto de las lecciones puede enviarse a OpenAI o ElevenLabs para generar audio de lectura en voz alta; no se transmiten datos personales en este proceso.",
     legal_privacy_section_rights_title: "Derechos del usuario y contacto",
     legal_privacy_section_rights_body:
       "Tienes derecho a solicitar una solicitud de acceso de datos (DSAR) o eliminación. Contáctanos en support@koydo.app.",
+    legal_privacy_section_transfers_title: "Transferencias internacionales de datos",
+    legal_privacy_section_transfers_body:
+      "Sus datos pueden ser procesados fuera del Espacio Económico Europeo (EEE) por nuestros proveedores de servicios, incluyendo Supabase (EE. UU.), Stripe (EE. UU.), Mixpanel (EE. UU.), RevenueCat (EE. UU.), OpenAI (EE. UU.) y ElevenLabs (EE. UU.). Cada proveedor mantiene salvaguardas apropiadas, incluyendo Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea y participación en el Marco de Privacidad de Datos UE-EE. UU. cuando corresponda. Garantizamos que todas las transferencias internacionales cumplen con los requisitos del artículo 46 del RGPD.",
+    legal_privacy_section_dpo_title: "Delegado de Protección de Datos",
+    legal_privacy_section_dpo_body:
+      "Para preguntas sobre protección de datos o para ejercer sus derechos bajo el RGPD, puede contactar a nuestro Delegado de Protección de Datos en dpo@koydo.app. También tiene derecho a presentar una queja ante su autoridad de supervisión local.",
+    legal_privacy_section_cookies_title: "Cookies y tecnologías de seguimiento",
+    legal_privacy_section_cookies_body:
+      "Utilizamos cookies estrictamente necesarias para mantener el estado de la sesión y las preferencias del usuario. Las cookies de análisis (Mixpanel) solo se activan con su consentimiento explícito a través de nuestro banner de cookies. Puede cambiar sus preferencias de cookies en cualquier momento desde el banner de consentimiento o limpiando el almacenamiento de su navegador. En aplicaciones móviles nativas, los identificadores del dispositivo solo se acceden después de que otorgue permiso a través del aviso de Transparencia de Seguimiento de Aplicaciones.",
     legal_terms_title: "Términos de servicio",
     legal_terms_subtitle:
       "Al usar Koydo, los usuarios aceptan usar el servicio legalmente y de acuerdo con reglas de seguridad infantil y conducta educativa.",
@@ -1372,6 +1401,9 @@ const launchSupplementalTranslations: Record<ActiveLocale, TranslationDictionary
     dashboard_no_activity_yet: "No activity yet",
     dashboard_learning_path_title: "Learning Path",
     dashboard_lessons_heading: "Lessons",
+    dashboard_view_all_modules: "View all modules",
+    dashboard_continue_lesson: "Continue",
+    dashboard_module_complete: "Complete",
     dashboard_minutes_suffix: "{duration} min",
     top_nav_active_learner_grade: "{name} • Grade {grade}",
     top_nav_switch_learner: "Switch Learner",
@@ -1385,6 +1417,7 @@ const launchSupplementalTranslations: Record<ActiveLocale, TranslationDictionary
     top_nav_explore_tooltip: "Explore opens the main chooser for worlds and modules.",
     top_nav_menu: "Menu",
     top_nav_log_out: "Log Out",
+    top_nav_search: "Search",
     top_nav_explore_tools: "Explore Tools",
     top_nav_worlds: "Worlds",
     top_nav_all_modules: "All Modules",
@@ -1583,6 +1616,9 @@ const launchSupplementalTranslations: Record<ActiveLocale, TranslationDictionary
     dashboard_no_activity_yet: "Aún no hay actividad",
     dashboard_learning_path_title: "Ruta de aprendizaje",
     dashboard_lessons_heading: "Lecciones",
+    dashboard_view_all_modules: "Ver todos los módulos",
+    dashboard_continue_lesson: "Continuar",
+    dashboard_module_complete: "Completado",
     dashboard_minutes_suffix: "{duration} min",
     top_nav_active_learner_grade: "{name} • Grado {grade}",
     top_nav_switch_learner: "Cambiar estudiante",
@@ -1597,6 +1633,7 @@ const launchSupplementalTranslations: Record<ActiveLocale, TranslationDictionary
       "Explorar abre el selector principal de mundos y módulos.",
     top_nav_menu: "Menú",
     top_nav_log_out: "Cerrar sesión",
+    top_nav_search: "Buscar",
     top_nav_explore_tools: "Herramientas de exploración",
     top_nav_worlds: "Mundos",
     top_nav_all_modules: "Todos los módulos",

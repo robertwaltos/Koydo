@@ -2,8 +2,9 @@
 
 import { useCallback, useState } from "react";
 import type { Question } from "@/lib/modules/types";
-import SpeakButton from "./speak-button";
+import TappableText from "./tappable-text";
 import { usePreReaderMode } from "./pre-reader-mode";
+import { useTouchDevice } from "./use-touch-device";
 
 type VisualQuizProps = {
   questions: Question[];
@@ -21,6 +22,7 @@ export default function VisualQuiz({
   onComplete,
 }: VisualQuizProps) {
   const { isPreReaderMode } = usePreReaderMode();
+  const isTouch = useTouchDevice();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -86,16 +88,15 @@ export default function VisualQuiz({
         className="explore-card-elevated w-full max-w-2xl rounded-3xl border-2 bg-white/90 p-6 backdrop-blur-sm sm:p-8"
         style={{ borderColor }}
       >
-        <div className="flex items-start justify-between gap-3">
+        <TappableText
+          text={question.text}
+          className="block"
+          buttonLabel={isPreReaderMode ? "🔊" : "Hear It"}
+        >
           <p className="text-xl font-extrabold leading-snug text-zinc-900 sm:text-2xl">
             {question.text}
           </p>
-          <SpeakButton
-            text={question.text}
-            label={isPreReaderMode ? "🔊" : "Hear It"}
-            className="shrink-0 text-xs"
-          />
-        </div>
+        </TappableText>
 
         {/* Options — large tappable buttons with letter badges */}
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -130,21 +131,22 @@ export default function VisualQuiz({
             }
 
             return (
-              <button
+              <div
                 key={option.id}
-                type="button"
-                onClick={() => handleSelect(option.id)}
-                disabled={isAnswered}
-                className={`ui-focus-ring flex min-h-16 items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:cursor-default sm:min-h-18 ${extraClass}`}
+                className={`relative flex min-h-16 items-center gap-3 rounded-2xl border-2 px-4 py-3 transition-all duration-200 sm:min-h-18 ${extraClass}`}
                 style={{
                   borderColor: cardBorder,
                   backgroundColor: cardBg,
                 }}
               >
-                {/* Letter badge */}
-                <span
-                  className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold transition-colors duration-200"
+                {/* Radio circle — this selects the answer */}
+                <button
+                  type="button"
+                  onClick={() => handleSelect(option.id)}
+                  disabled={isAnswered}
+                  className="ui-focus-ring inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-sm font-extrabold transition-colors duration-200 hover:scale-105 active:scale-95 disabled:cursor-default"
                   style={{ backgroundColor: badgeBg, color: badgeColor }}
+                  aria-label={`Select ${OPTION_LETTERS[optIdx]}: ${option.text}`}
                 >
                   {isPreReaderMode && isAnswered
                     ? isOptionCorrect
@@ -153,11 +155,31 @@ export default function VisualQuiz({
                         ? "✗"
                         : OPTION_LETTERS[optIdx]
                     : OPTION_LETTERS[optIdx]}
-                </span>
-                <span className="text-base font-semibold text-zinc-900 sm:text-lg">
-                  {option.text}
-                </span>
-              </button>
+                </button>
+                {/* Text — tappable to read aloud on touch, does NOT select */}
+                {isTouch ? (
+                  <TappableText
+                    text={option.text}
+                    className="flex-1"
+                    desktopButton={false}
+                  >
+                    <span className="text-base font-semibold text-zinc-900 sm:text-lg">
+                      {option.text}
+                    </span>
+                  </TappableText>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => handleSelect(option.id)}
+                    disabled={isAnswered}
+                    className="flex-1 text-left disabled:cursor-default"
+                  >
+                    <span className="text-base font-semibold text-zinc-900 sm:text-lg">
+                      {option.text}
+                    </span>
+                  </button>
+                )}
+              </div>
             );
           })}
         </div>

@@ -183,7 +183,7 @@ function SignInPageContent() {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(circle at 20% 25%, rgba(52, 211, 153, 0.24), transparent 46%), radial-gradient(circle at 80% 18%, rgba(99, 102, 241, 0.20), transparent 44%), radial-gradient(circle at 62% 78%, rgba(251, 191, 36, 0.24), transparent 42%), linear-gradient(165deg, #fffdf8 0%, #f3fff9 45%, #f2f7ff 100%)",
+              "radial-gradient(circle at 20% 25%, rgba(52, 211, 153, 0.24), transparent 46%), radial-gradient(circle at 80% 18%, rgba(99, 102, 241, 0.20), transparent 44%), radial-gradient(circle at 62% 78%, rgba(251, 191, 36, 0.24), transparent 42%), var(--gradient-hero)",
           }}
           aria-hidden="true"
         />
@@ -202,11 +202,11 @@ function SignInPageContent() {
 
         <div className="relative mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[1.35fr_0.9fr] lg:gap-10">
           <div className="space-y-5">
-            <p className="ui-type-eyebrow text-emerald-700">{t("auth_sign_in_hero_eyebrow")}</p>
-            <h1 className="ui-type-hero text-zinc-900">
+            <p className="ui-type-eyebrow text-emerald-700 dark:text-emerald-400">{t("auth_sign_in_hero_eyebrow")}</p>
+            <h1 className="ui-type-hero text-zinc-900 dark:text-foreground">
               {t("auth_sign_in_hero_title")}
             </h1>
-            <p className="ui-type-body-lg ui-reading-measure text-zinc-700">
+            <p className="ui-type-body-lg ui-reading-measure text-zinc-700 dark:text-foreground/85">
               {t("auth_sign_in_hero_description")}
             </p>
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -217,7 +217,7 @@ function SignInPageContent() {
               ].map((pill, index) => (
                 <div
                   key={pill.label}
-                  className="explore-float rounded-2xl border border-white/80 bg-white/70 px-4 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm"
+                  className="explore-float rounded-2xl border border-white/80 bg-white/70 px-4 py-3 text-sm font-semibold text-zinc-700 dark:border-border dark:bg-surface/70 dark:text-foreground/85 shadow-sm backdrop-blur-sm"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
                   <span className="mr-2" aria-hidden="true">
@@ -229,12 +229,12 @@ function SignInPageContent() {
             </div>
           </div>
 
-          <SoftCard as="section" organicCorners className="self-start border-white/75 bg-white/80 p-6 backdrop-blur-sm">
-            <p className="ui-type-heading-lg text-zinc-900">{t("auth_sign_in_adventure_title")}</p>
-            <p className="mt-3 ui-type-body-sm text-zinc-600">
+          <SoftCard as="section" organicCorners className="self-start border-white/75 bg-white/80 p-6 backdrop-blur-sm dark:border-border dark:bg-surface/80">
+            <p className="ui-type-heading-lg text-zinc-900 dark:text-foreground">{t("auth_sign_in_adventure_title")}</p>
+            <p className="mt-3 ui-type-body-sm text-zinc-600 dark:text-foreground/70">
               {t("auth_sign_in_adventure_description")}
             </p>
-            <ul className="mt-4 space-y-2 ui-type-body-sm text-zinc-700">
+            <ul className="mt-4 space-y-2 ui-type-body-sm text-zinc-700 dark:text-foreground/85">
               <li>{t("auth_sign_in_step_pick_method")}</li>
               <li>{t("auth_sign_in_step_choose_learner")}</li>
               <li>{t("auth_sign_in_step_resume_map")}</li>
@@ -244,9 +244,9 @@ function SignInPageContent() {
       </section>
 
       <section className="relative z-10 mx-auto -mt-12 w-full max-w-6xl space-y-6 px-4 sm:px-6">
-        <SoftCard as="section" className="border-white/80 bg-white/90 p-6 backdrop-blur-sm">
-          <h2 className="ui-type-heading-xl text-zinc-900">{t("auth_sign_in_title")}</h2>
-          <p className="mt-2 ui-type-body-sm text-zinc-600">
+        <SoftCard as="section" className="border-white/80 bg-white/90 p-6 backdrop-blur-sm dark:border-border dark:bg-surface/90">
+          <h2 className="ui-type-heading-xl text-zinc-900 dark:text-foreground">{t("auth_sign_in_title")}</h2>
+          <p className="mt-2 ui-type-body-sm text-zinc-600 dark:text-foreground/70">
             {t("auth_sign_in_subtitle")}
           </p>
           <OAuthButtons layout="grid-2" className="mt-5" nextPath={nextPath} />
@@ -259,7 +259,7 @@ function SignInPageContent() {
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
           <SoftCard as="section" className="p-5">
-            <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_email_password_title")}</h3>
+            <h3 className="ui-type-heading-md text-zinc-900 dark:text-foreground">{t("auth_sign_in_email_password_title")}</h3>
             <form onSubmit={onPasswordSubmit} className="mt-4 space-y-4">
               <div>
                 <label htmlFor="email" className="mb-1 block text-sm font-medium">
@@ -297,12 +297,12 @@ function SignInPageContent() {
                 {isSubmittingPassword ? t("auth_sign_in_button_signing_in") : t("auth_sign_in_button_continue_email")}
               </button>
 
-              {status ? <p role="status" className="text-sm text-red-600">{status}</p> : null}
+              {status ? <p role="status" className="text-sm text-red-600 dark:text-red-400">{status}</p> : null}
             </form>
           </SoftCard>
 
           <SoftCard as="section" className="p-5">
-            <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_magic_link_title")}</h3>
+            <h3 className="ui-type-heading-md text-zinc-900 dark:text-foreground">{t("auth_sign_in_magic_link_title")}</h3>
             <form onSubmit={onEmailOtpSubmit} className="mt-4 space-y-4">
               <div>
                 <label htmlFor="email-otp" className="mb-1 block text-sm font-medium">
@@ -324,12 +324,12 @@ function SignInPageContent() {
               >
                 {isSubmittingEmailOtp ? t("auth_sign_in_magic_link_sending") : t("auth_sign_in_magic_link_send")}
               </button>
-              {otpStatus ? <p role="status" className="text-sm text-zinc-700">{otpStatus}</p> : null}
+              {otpStatus ? <p role="status" className="text-sm text-zinc-700 dark:text-foreground/85">{otpStatus}</p> : null}
             </form>
           </SoftCard>
 
           <SoftCard as="section" className="p-5">
-            <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_phone_title")}</h3>
+            <h3 className="ui-type-heading-md text-zinc-900 dark:text-foreground">{t("auth_sign_in_phone_title")}</h3>
             <form onSubmit={onSendPhoneOtp} className="mt-4 space-y-4">
               <div>
                 <label htmlFor="phone" className="mb-1 block text-sm font-medium">
@@ -381,7 +381,7 @@ function SignInPageContent() {
               </form>
             ) : null}
 
-            {phoneStatus ? <p role="status" className="mt-4 text-sm text-zinc-700">{phoneStatus}</p> : null}
+            {phoneStatus ? <p role="status" className="mt-4 text-sm text-zinc-700 dark:text-foreground/85">{phoneStatus}</p> : null}
           </SoftCard>
         </div>
 
@@ -396,7 +396,7 @@ function SignInPageContent() {
           </SoftCard>
         ) : null}
 
-        <p className="pb-2 text-center text-sm text-zinc-600">
+        <p className="pb-2 text-center text-sm text-zinc-600 dark:text-foreground/70">
           {t("auth_sign_in_footer_no_account")}{" "}
           <Link
             href={`/auth/sign-up?next=${encodeURIComponent(nextPath)}`}
@@ -417,7 +417,7 @@ export default function SignInPage() {
       fallback={
         <main className="mx-auto max-w-md px-6 py-12">
           <h1 className="text-2xl font-semibold">{t("auth_sign_in_title")}</h1>
-          <p className="mt-3 text-sm text-zinc-600">{t("auth_sign_in_loading_subtitle")}</p>
+          <p className="mt-3 text-sm text-zinc-600 dark:text-foreground/70">{t("auth_sign_in_loading_subtitle")}</p>
         </main>
       }
     >

@@ -1,500 +1,480 @@
 import type { LearningModule } from "@/lib/modules/types";
 
 // High-quality curriculum module derived from EPUB.
-// Source: G:\My Drive\15_E-BOOKS\file003222.epub
+// Source: G:/My Drive/15_E-BOOKS/file003222.epub
 // Author: Miguel de Cervantes  |  Subject: Literature
 
 export const DonQuixoteMiguelDeCervantesModule: LearningModule = {
   id: "don-quixote-miguel-de-cervantes",
   title: "Don Quixote",
   description:
-    "A comprehensive study of Miguel de Cervantes's Don Quixote — widely regarded as the first modern novel. This module explores the work's revolutionary narrative techniques, its comic and tragic dimensions, the dynamic relationship between Don Quixote and Sancho Panza, and the novel's enduring meditation on the tension between idealism and reality.",
+    "A comprehensive educational module derived from Don Quixote by Miguel de Cervantes. This course provides structured video lessons and interactive quizzes exploring the key themes, arguments, and insights of the work.",
   subject: "Literature",
-  tags: ["epub-derived", "curriculum", "interactive", "literature", "spanish", "novel", "satire", "idealism"],
+  tags: ["epub-derived", "curriculum", "interactive", "literature"],
   minAge: 18,
   maxAge: 99,
   version: "2.0.0",
   learningObjectives: [
-    "Analyse Cervantes's narrative innovations and their influence on the development of the novel",
-    "Explain the dynamic between Don Quixote's idealism and the material world's resistance to it",
-    "Evaluate the evolving relationship between Don Quixote and Sancho Panza",
-    "Assess the metafictional elements of Part II and their significance",
-    "Examine the blend of comedy and tragedy in the novel's treatment of madness",
-    "Compare the novel's themes with broader Renaissance and early modern intellectual currents",
-    "Apply close reading techniques to key episodes of the novel",
+    "Understand and critically analyze the concepts related to don quixote by miguel de cervantes, translated by john ormsb",
+    "Understand and critically analyze the concepts related to translator's preface i",
+    "Understand and critically analyze the concepts related to ii: about cervantes and don quixote four generations had lau",
+    "Understand and critically analyze the concepts related to some commendatory verses urganda the unknown to the book of",
+    "Understand and critically analyze the concepts related to the author's preface idle reader",
+    "Understand and critically analyze the concepts related to dedication of part i to the duke of bejar, marquis of gibral",
+    "Understand and critically analyze the concepts related to chapter i which treats of the character and pursuits of the",
   ],
   lessons: [
-
     /* ─────────────────────────────────────────────────
-       L01  The Birth of the Modern Novel
+       L01  Don Quixote by Miguel de Cervantes, translated by John Ormsb
     ───────────────────────────────────────────────── */
     {
       id: "dq-l01",
-      title: "The Birth of the Modern Novel",
+      title: "Don Quixote by Miguel de Cervantes, translated by John Ormsb",
       type: "video",
       duration: 12,
       objectives: [
-        "Explain why Don Quixote is often called the first modern novel",
-        "Describe Cervantes's satirical relationship with the romances of chivalry",
-        "Identify the key narrative innovations that distinguish the novel from prior prose fiction",
+        "Examine the key ideas and arguments related to don quixote by miguel de cervantes, translated by john ormsb",
+        "Examine the key ideas and arguments related to translator's preface i",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "dq-l01-c1",
-          title: "Cervantes and the Romances of Chivalry",
+          title: "Don Quixote by Miguel de Cervantes, translated by John Ormsb",
           content:
-            "Don Quixote begins as a satire of the romances of chivalry — the hugely popular prose fantasies that dominated sixteenth-century Spanish reading tastes. These romances told stories of heroic knights battling giants, enchanting sorcerers, and rescuing damsels, in a formulaic world where virtue always triumphed and the hero was always rewarded. Cervantes's protagonist, Alonso Quixano, is a minor gentleman who has read so many of these romances that he loses his mind and decides to become a knight-errant himself, renaming himself Don Quixote de la Mancha. He sets out to revive chivalry in a world that has no room for it — a world of innkeepers, barbers, farmers, and windmills. The comedy arises from the collision between his chivalric fantasies and the stubborn materiality of seventeenth-century Spain. But Cervantes's satire quickly transcends its initial target: the novel becomes not merely a parody of bad literature but a profound meditation on the relationship between fiction and reality, imagination and truth, idealism and the resistant world.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
         {
           id: "dq-l01-c2",
-          title: "Narrative Innovation: Realism and Perspectivism",
+          title: "TRANSLATOR'S PREFACE I",
           content:
-            "What makes Don Quixote the first modern novel is not its plot but its method. Previous prose narratives — romances, picaresque tales, pastoral stories — presented a single, authoritative version of events. Cervantes introduces multiple perspectives on the same events: Don Quixote sees a castle; Sancho sees an inn; the innkeeper sees a madman and his servant. None of these perspectives is simply wrong — each is internally coherent — but they cannot all be true simultaneously. This perspectivism forces the reader to become an active interpreter, evaluating competing accounts rather than passively receiving an authoritative narrative. Cervantes also introduces what literary theorists call 'novelistic realism': the detailed representation of everyday life in all its mundane, unglamorous particularity. The novel is populated not by idealised knights and princesses but by goatherds, convicts, prostitutes, Moorish slaves, and provincial priests — the actual inhabitants of early modern Spain, rendered with affectionate, unsentimental precision.",
+            "Shelton had the inestimable advantage of belonging to the same generation as Cervantes; \"Don Quixote\" had to him a vitality that only a contemporary could feel; it cost him no dramatic effort to see things as Cervantes saw them; there is no anachronism in his language; he put the Spanish of Cervantes into the English of Shakespeare. Shakespeare himself most likely knew the book; he may have carried it home with him in his saddle-bags to Stratford on one of his last journeys, and under the mulberry tree at New Place joined hands with a kindred genius in its pages. But it was soon made plain to me that to hope for even a moderate popularity for Shelton was vain.",
         },
         {
           id: "dq-l01-c3",
-          title: "The Novel as Self-Conscious Fiction",
+          title: "Deeper Analysis: Don Quixote by Miguel de Cervantes, translated by John Ormsb",
           content:
-            "Don Quixote is also revolutionary in its self-consciousness about its own fictionality. Cervantes frames the narrative as a translation of an Arabic manuscript by the historian Cide Hamete Benengeli — a fictitious author whose reliability is constantly questioned. The narrator interrupts the story to comment on Benengeli's methods, to note apparent inconsistencies, and to admit gaps in the record. In Part II (published ten years after Part I, in 1615), Cervantes introduces the most radical metafictional device in literary history: Don Quixote and Sancho discover that a book has been published about their adventures in Part I and that they are famous throughout Spain. Characters they meet have already read about them and have expectations about how they should behave. Don Quixote must now contend not only with the real world but with his own literary reputation — a situation that blurs the boundary between fiction and reality in a way that anticipates postmodernism by three and a half centuries.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implications for contemporary understanding.",
         },
       ],
       flashcards: [
         {
           id: "dq-l01-f1",
-          front: "Don Quixote as first modern novel",
+          front: "Don Quixote by Miguel de Cervantes, translated by John Ormsb",
           back:
-            "Distinguished by multiple perspectives on the same events, detailed everyday realism, self-conscious fictionality, and a protagonist who evolves psychologically — innovations that redefined prose narrative.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "dq-l01-f2",
-          front: "Chivalric satire transcended",
+          front: "TRANSLATOR'S PREFACE I",
           back:
-            "Don Quixote begins as parody of romances of chivalry but becomes a meditation on the relationship between fiction and reality, imagination and truth, idealism and the resistant material world.",
+            "His fine old crusted English would, no doubt, be relished by a minority, but it would be only by a minority.",
         },
         {
           id: "dq-l01-f3",
-          front: "Perspectivism in Don Quixote",
+          front: "Key concept: Don Quixote by Miguel de Cervantes, translated by John Or",
           back:
-            "Cervantes presents multiple, internally coherent but incompatible perspectives on events (castle vs inn, giants vs windmills), forcing the reader to evaluate competing accounts rather than passively receive an authoritative narrative.",
+            "This section examines the fundamental concepts and arguments presented by the author, exploring their significance within the broader context of the discipline and their implicatio...",
         },
         {
           id: "dq-l01-f4",
-          front: "Cide Hamete Benengeli",
+          front: "Key concept: TRANSLATOR'S PREFACE I",
           back:
-            "The fictitious Arabic historian whose manuscript Cervantes claims to translate — a device that makes the novel self-conscious about its own fictionality, questioning narrative authority and reliability.",
+            "It is often said that we have no satisfactory translation of \"Don Quixote.\" To those who are familiar with the original, it savours of truism or platitude to say so, for in truth t...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L02  Don Quixote and Sancho Panza: The Great Partnership
+       L02  II: ABOUT CERVANTES AND DON QUIXOTE Four generations had lau
     ───────────────────────────────────────────────── */
     {
       id: "dq-l02",
-      title: "Don Quixote and Sancho Panza: The Great Partnership",
+      title: "II: ABOUT CERVANTES AND DON QUIXOTE Four generations had lau",
       type: "video",
-      duration: 13,
+      duration: 12,
       objectives: [
-        "Analyse the complementary natures of Don Quixote and Sancho",
-        "Trace the mutual influence and gradual transformation of both characters",
-        "Explain the concept of 'Sanchification' and 'Quixotification'",
+        "Examine the key ideas and arguments related to ii: about cervantes and don quixote four generations had lau",
+        "Examine the key ideas and arguments related to some commendatory verses urganda the unknown to the book of",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "dq-l02-c1",
-          title: "Complementary Opposites",
+          title: "II: ABOUT CERVANTES AND DON QUIXOTE Four generations had lau",
           content:
-            "The relationship between Don Quixote and Sancho Panza is one of the great partnerships in world literature — a dialectical pairing of complementary opposites that generates the novel's comedy, pathos, and philosophical depth. Don Quixote is tall, thin, learned, idealistic, and mad; Sancho is short, stout, illiterate, pragmatic, and sane. Don Quixote speaks in the elevated, archaic rhetoric of the chivalric romances; Sancho speaks in proverbs, folk wisdom, and earthy common sense. Don Quixote sees the world through the lens of chivalric fantasy (giants, enchantments, noble ladies); Sancho sees it through the lens of material necessity (food, money, sleep, beatings). Their dialogue — the constant negotiation between idealism and realism — is the engine of the novel. Neither perspective is presented as simply right: Quixote's idealism is noble but delusional; Sancho's realism is sensible but limited. The novel's wisdom lies not in choosing between them but in holding both in creative tension.",
+            "Any floating traditions that may once have existed, transmitted from men who had known him, had long since died out, and of other record there was none; for the sixteenth and seventeenth centuries were incurious as to \"the men of the time,\" a reproach against which the nineteenth has, at any rate, secured itself, if it has produced no Shakespeare or Cervantes. All that Mayans y Siscar, to whom the task was entrusted, or any of those who followed him, Rios, Pellicer, or Navarrete, could do was to eke out the few allusions Cervantes makes to himself in his various prefaces with such pieces of documentary evidence bearing upon his life as they could find.",
         },
         {
           id: "dq-l02-c2",
-          title: "Sanchification and Quixotification",
+          title: "SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of",
           content:
-            "As the novel progresses, Don Quixote and Sancho gradually influence each other in a process that literary scholars call 'Sanchification' (Don Quixote becomes more realistic) and 'Quixotification' (Sancho absorbs his master's idealism). In Part I, Sancho accompanies Don Quixote primarily for the promised reward of an island to govern; by Part II, he has become genuinely devoted to his master and begins to see the world, at least partially, through Quixote's eyes. When Sancho actually receives his governorship (of the 'island' of Barataria — actually a small town), he rules with surprising wisdom, suggesting that Quixote's influence has elevated his character. Meanwhile, Don Quixote in Part II shows increasing moments of lucidity, sadness, and self-awareness. He begins to doubt his mission, question his enchantments, and acknowledge the gap between his fantasies and reality. This mutual transformation is one of the novel's profoundest insights: human relationships change both parties, and the boundary between idealism and realism is more permeable than either character initially believes.",
+            "SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of Don Quixote of la Mancha If to be welcomed by the good, O Book! thou make thy steady aim,No empty chatterer will dareTo question or dispute thy claim.But if perchance thou hast a mindTo win of idiots approbation,Lost labour will be thy reward,Though they'll pretend appreciation. They say a goodly shade he finds Who shelters 'neath a goodly tree;And such a one thy kindly starIn Bejar bath provided thee:A royal tree whose spreading boughsA show of princely fruit display;A tree that bears a noble Duke,The Alexander of his day.Of a Manchegan gentlemanThy purpose is to tell the story,Relating how he lost his witsO'er idle tales of love and glory,Of \"ladies, arms, and cavaliers:\"A new Orlando Furioso-Innamorato, rather—whoWon Dulcinea del Toboso.",
         },
         {
           id: "dq-l02-c3",
-          title: "Dialogue as Philosophical Method",
+          title: "Deeper Analysis: II: ABOUT CERVANTES AND DON QUIXOTE Four generations had lau",
           content:
-            "The conversations between Don Quixote and Sancho function as a form of philosophical dialogue — not unlike the Platonic dialogues in which two interlocutors with different perspectives gradually approach a truth that neither holds individually. But Cervantes's dialogue is richer than Plato's because neither speaker has privileged access to truth: Don Quixote is often wrong in his interpretation of events but profoundly right in his moral convictions; Sancho is often right about facts but limited in his moral vision. Their arguments about whether they are approaching a castle or an inn, whether the barber's basin is Mambrino's golden helmet, whether knight-errantry is a viable career — these debates are simultaneously hilarious and philosophically serious. They enact the permanent human struggle to reconcile how the world is with how we believe it should be. The dialogue form also ensures that neither idealism nor realism ever gets the last word — each is always answerable to the other.",
+            "This, however, has been done by the last-named biographer to such good purpose that he has superseded all predecessors. Thoroughness is the chief characteristic of Navarrete's work. Besides sifting, testing, and methodising with rare patience and judgment what had been previously brought to light, he left, as the saying is, no stone unturned under which anything to illustrate his subject might possibly be found. Navarrete has done all that industry and acumen could do, and it is no fault of his if he has not given us what we want.",
         },
       ],
       flashcards: [
         {
           id: "dq-l02-f1",
-          front: "Quixote and Sancho as complementary opposites",
+          front: "II: ABOUT CERVANTES AND DON QUIXOTE Four generations had lau",
           back:
-            "Tall/short, learned/illiterate, idealistic/pragmatic, mad/sane. Their constant dialogue — the negotiation between idealism and realism — is the engine of the novel. Neither perspective is simply correct.",
+            "This, however, has been done by the last-named biographer to such good purpose that he has superseded all predecessors.",
         },
         {
           id: "dq-l02-f2",
-          front: "Sanchification and Quixotification",
+          front: "SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of",
           back:
-            "As the novel progresses, Quixote becomes more realistic (Sanchification) and Sancho absorbs his master's idealism (Quixotification) — demonstrating that human relationships transform both parties.",
+            "A further counsel bear in mind: If that thy roof be made of glass,It shows small wit to pick up stonesTo pelt the people as they pass.Win the attention of the wise,And give the thi...",
         },
         {
           id: "dq-l02-f3",
-          front: "Sancho's governorship of Barataria",
+          front: "Key concept: II: ABOUT CERVANTES AND DON QUIXOTE Four generations had",
           back:
-            "When Sancho governs his promised 'island' (actually a small town), he rules with surprising wisdom — evidence that Don Quixote's influence has genuinely elevated his character and judgment.",
+            "What Hallam says of Shakespeare may be applied to the almost parallel case of Cervantes: \"It is not the register of his baptism, or the draft of his will, or the orthography of his...",
         },
         {
           id: "dq-l02-f4",
-          front: "Dialogue as philosophical method",
+          front: "Key concept: SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book",
           back:
-            "Quixote-Sancho conversations function like philosophical dialogues: neither speaker has privileged access to truth, and their debates enact the permanent struggle to reconcile how the world is with how we believe it should be.",
+            "AMADIS OF GAUL To Don Quixote of la Mancha SONNET Thou that didst imitate that life of mine When I in lonely sadness on the greatRock Pena Pobre sat disconsolate,In self-imposed pe...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L03  Comedy, Tragedy, and the Meaning of Madness
+       L03  THE AUTHOR'S PREFACE Idle reader
     ───────────────────────────────────────────────── */
     {
       id: "dq-l03",
-      title: "Comedy, Tragedy, and the Meaning of Madness",
+      title: "THE AUTHOR'S PREFACE Idle reader",
       type: "video",
       duration: 12,
       objectives: [
-        "Analyse the shifting tone between comedy and tragedy across the novel",
-        "Evaluate different interpretations of Don Quixote's madness",
-        "Explain the significance of Quixote's deathbed return to sanity",
+        "Examine the key ideas and arguments related to the author's preface idle reader",
+        "Examine the key ideas and arguments related to dedication of part i to the duke of bejar, marquis of gibral",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "dq-l03-c1",
-          title: "The Comedy of Collision",
+          title: "THE AUTHOR'S PREFACE Idle reader",
           content:
-            "Don Quixote is, at its most immediate level, one of the funniest books ever written. The comedy arises from the systematic collision between Don Quixote's chivalric interpretation of the world and the world's stubborn refusal to cooperate. He charges at windmills, believing them to be giants, and is knocked from his horse. He attacks a flock of sheep, convinced it is an enemy army, and is pelted with stones by the shepherds. He liberates a chain of convicted galley slaves, who promptly rob and beat him. Each episode follows the same comic pattern: grandiose illusion → violent contact with reality → absurd explanation (invariably involving malicious enchanters who have transformed things to deceive him). But the comedy is never merely cruel; Cervantes treats his hero with a warmth and respect that prevents the laughter from becoming contemptuous. Don Quixote is ridiculous, but his ridiculousness is inseparable from his nobility — he charges at windmills because he genuinely wants to fight injustice.",
+            "THE AUTHOR'S PREFACE Idle reader: thou mayest believe me without any oath that I would this book, as it is the child of my brain, were the fairest, gayest, and cleverest that could be imagined. But I could not counteract Nature's law that everything shall beget its like; and what, then, could this sterile, illtilled wit of mine beget but the story of a dry, shrivelled, whimsical offspring, full of thoughts of all sorts and such as never came into any other imagination—just what might be begotten in a prison, where every misery is lodged and every doleful sound makes its dwelling?",
         },
         {
           id: "dq-l03-c2",
-          title: "The Tragic Dimension",
+          title: "DEDICATION OF PART I To the Duke of Bejar, Marquis of Gibral",
           content:
-            "Beneath the comedy lies an increasingly tragic undertow, especially in Part II. Don Quixote's adventures become less slapstick and more cruel as other characters — particularly the Duke and Duchess — deliberately stage humiliating spectacles for their own entertainment, exploiting Quixote's delusions rather than merely happening to collide with them. The knight's suffering becomes less comic and more pitiable because he is no longer an agent of his own misadventures but a puppet manipulated by cynical aristocrats. His growing moments of self-doubt — the suspicion that his enchantments may be self-deception, that his Dulcinea may be an ordinary peasant, that his mission may be pointless — are genuinely heartbreaking precisely because they threaten the idealism that makes him who he is. The novel asks whether it is better to be a sane realist in a disenchanted world or a mad idealist whose illusions, however false, give life meaning and purpose. Cervantes does not answer this question; he dramatises its full difficulty.",
+            "DEDICATION OF PART I To the Duke of Bejar, Marquis of Gibraleon, Count of Benalcazar and Banares, Vicecount of the Puebla Dealcocer, Master of the Towns of Capilia, Curiel and Burguillos In belief of the good reception and honours that Your Excellency bestows on all sort of books, as prince so inclined to favor good arts, chiefly those who by their nobleness do not submit to the service and bribery of the vulgar, I have determined bringing to light The Ingenious Gentleman Don Quixote of la Mancha, in shelter of Your Excellency's glamorous name, to whom, with the obeisance I owe to such grandeur, I pray to receive it agreeably under his protection, so that in this shadow, though deprived of that precious ornament of elegance and erudition that clothe.",
         },
         {
           id: "dq-l03-c3",
-          title: "The Deathbed: Recovery and Loss",
+          title: "Deeper Analysis: THE AUTHOR'S PREFACE Idle reader",
           content:
-            "The novel's ending is one of the most debated in literary history. On his deathbed, Don Quixote recovers his sanity: he renounces knight-errantry, abjures the romances of chivalry, and reclaims his birth name, Alonso Quixano the Good. He dies a Christian death, reconciled with reality. This should be a happy ending — the madman returns to reason — but it feels like one of the saddest passages in all of literature. To 'recover' sanity, Don Quixote must renounce everything that made his life meaningful: his quest, his ideals, his identity, his partnership with Sancho. Sancho tears at his beard and begs his master to live and go on adventures, but Quixote refuses. The question the ending poses is whether sanity purchased at the price of all meaning is truly a recovery — or whether Don Quixote dies not because he returns to sanity but because he can no longer sustain the illusion that made him alive. Cervantes leaves the reader suspended between relief (he dies at peace) and grief (he dies diminished), refusing to resolve the tension between idealism and reality that has animated the entire novel.",
+            "Tranquillity, a cheerful retreat, pleasant fields, bright skies, murmuring brooks, peace of mind, these are the things that go far to make even the most barren muses fertile, and bring into the world births that fill it with wonder and delight. Sometimes when a father has an ugly, loutish son, the love he bears him so blindfolds his eyes that he does not see his defects, or, rather, takes them for gifts and charms of mind and body, and talks of them to his friends as wit and grace.",
         },
       ],
       flashcards: [
         {
           id: "dq-l03-f1",
-          front: "The comic pattern of Don Quixote",
+          front: "THE AUTHOR'S PREFACE Idle reader",
           back:
-            "Grandiose chivalric illusion → violent contact with reality → absurd explanation involving malicious enchanters. The comedy is warm and respectful — ridicule is inseparable from nobility.",
+            "Tranquillity, a cheerful retreat, pleasant fields, bright skies, murmuring brooks, peace of mind, these are the things that go far to make even the most barren muses fertile, and b...",
         },
         {
           id: "dq-l03-f2",
-          front: "The Duke and Duchess (Part II)",
+          front: "DEDICATION OF PART I To the Duke of Bejar, Marquis of Gibral",
           back:
-            "Aristocrats who deliberately stage humiliating spectacles to exploit Quixote's delusions for entertainment — transforming him from agent of his own misadventures to puppet, making his suffering more tragic than comic.",
+            "It is my earnest hope that Your Excellency's good counsel in regard to my honourable purpose, will not disdain the littleness of so humble a service.",
         },
         {
           id: "dq-l03-f3",
-          front: "Quixote's deathbed recovery",
+          front: "Key concept: THE AUTHOR'S PREFACE Idle reader",
           back:
-            "Don Quixote recovers sanity, renounces chivalry, and dies as Alonso Quixano. This 'recovery' is also a loss: he surrenders everything that gave his life meaning, and the reader is suspended between relief and grief.",
+            "I, however—for though I pass for the father, I am but the stepfather to \"Don Quixote\"—have no desire to go with the current of custom, or to implore thee, dearest reader, almost wi...",
         },
         {
           id: "dq-l03-f4",
-          front: "The unresolved question of the novel",
+          front: "Key concept: DEDICATION OF PART I To the Duke of Bejar, Marquis of Gib",
           back:
-            "Is it better to be a sane realist in a disenchanted world or a mad idealist whose illusions provide meaning? Cervantes dramatises this question with full difficulty but refuses to answer it.",
+            "It is my earnest hope that Your Excellency's good counsel in regard to my honourable purpose, will not disdain the littleness of so humble a service.",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L04  Checkpoint Quiz: Don Quixote
+       L04  Checkpoint Quiz 2
     ───────────────────────────────────────────────── */
     {
       id: "dq-l04",
-      title: "Checkpoint Quiz: Don Quixote",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
       duration: 8,
-      objectives: ["Assess understanding of narrative techniques, the Quixote-Sancho relationship, and thematic tensions"],
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "dq-l04-q1",
-          text: "What is 'perspectivism' in the context of Don Quixote?",
+          text: "Which of the following best describes a key idea from the section on Don Quixote by Miguel de Cervantes, translated by John Ormsb?",
           options: [
-            { id: "a", text: "The philosophical doctrine that truth does not exist" },
-            { id: "b", text: "Cervantes's technique of presenting multiple, internally coherent but incompatible perspectives on the same events, requiring the reader to evaluate competing accounts" },
-            { id: "c", text: "The use of first-person narration throughout the novel" },
-            { id: "d", text: "A painting technique used in Spanish art of the period" },
+            { id: "a", text: "Shelton had the inestimable advantage of belonging to the same generation as Cervantes; \"Don Quixote..." },
+            { id: "b", text: "Key aspects of don quixote by miguel de cervantes, translated by john ormsb" },
+            { id: "c", text: "SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of Don Quixote of la Mancha If to be welcom..." },
+            { id: "d", text: "Any floating traditions that may once have existed, transmitted from men who had known him, had long..." },
           ],
           correctOptionId: "b",
           explanation:
-            "Don Quixote sees a castle; Sancho sees an inn; the innkeeper sees customers. Each perspective is internally coherent but they cannot all be true simultaneously. The reader must evaluate and interpret rather than passively receive.",
+            "This question relates to Don Quixote by Miguel de Cervantes, translated by John Ormsb. Key aspects of don quixote by miguel de cervantes, translated by john ormsb",
         },
         {
           id: "dq-l04-q2",
-          text: "What does 'Quixotification' refer to?",
+          text: "Which of the following best describes a key idea from the section on TRANSLATOR'S PREFACE I?",
           options: [
-            { id: "a", text: "Don Quixote's descent into deeper madness" },
-            { id: "b", text: "The process by which Sancho gradually absorbs his master's idealism and begins to see the world partially through Quixote's eyes" },
-            { id: "c", text: "The act of reading too many novels" },
-            { id: "d", text: "A medical condition described in the novel" },
+            { id: "a", text: "SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of Don Quixote of la Mancha If to be welcom..." },
+            { id: "b", text: "Shelton had the inestimable advantage of belonging to the same generation as Cervantes; \"Don Quixote..." },
+            { id: "c", text: "Any floating traditions that may once have existed, transmitted from men who had known him, had long..." },
+            { id: "d", text: "Key aspects of don quixote by miguel de cervantes, translated by john ormsb" },
           ],
           correctOptionId: "b",
           explanation:
-            "Quixotification describes Sancho's gradual transformation through his master's influence — becoming more idealistic and imaginative, as shown by his wise governance of Barataria and his genuine devotion to Quixote's mission.",
+            "This question relates to TRANSLATOR'S PREFACE I. Shelton had the inestimable advantage of belonging to the same generation as Cervantes; \"Don Quixote...",
         },
         {
           id: "dq-l04-q3",
-          text: "Why is Don Quixote's deathbed recovery of sanity experienced as tragic rather than happy?",
+          text: "Which of the following best describes a key idea from the section on II: ABOUT CERVANTES AND DON QUIXOTE Four generations had lau?",
           options: [
-            { id: "a", text: "Because he recovers only to discover he is bankrupt" },
-            { id: "b", text: "Because recovering sanity means renouncing everything that gave his life meaning — his quest, his ideals, his identity — leaving him diminished, not restored" },
-            { id: "c", text: "Because his family refuses to forgive him" },
-            { id: "d", text: "Because the priest forces him to destroy all his books" },
+            { id: "a", text: "Shelton had the inestimable advantage of belonging to the same generation as Cervantes; \"Don Quixote..." },
+            { id: "b", text: "Key aspects of don quixote by miguel de cervantes, translated by john ormsb" },
+            { id: "c", text: "Any floating traditions that may once have existed, transmitted from men who had known him, had long..." },
+            { id: "d", text: "SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of Don Quixote of la Mancha If to be welcom..." },
           ],
-          correctOptionId: "b",
+          correctOptionId: "c",
           explanation:
-            "Sanity, in this case, is also a loss. Don Quixote must surrender his chivalric identity, his quest, and his partnership with Sancho. The reader is left suspended between the relief of his peaceful death and grief at the loss of his animating idealism.",
+            "This question relates to II: ABOUT CERVANTES AND DON QUIXOTE Four generations had lau. Any floating traditions that may once have existed, transmitted from men who had known him, had long...",
         },
         {
           id: "dq-l04-q4",
-          text: "The metafictional innovation in Part II is that:",
+          text: "Which of the following best describes a key idea from the section on SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of ?",
           options: [
-            { id: "a", text: "The story switches to verse form" },
-            { id: "b", text: "Don Quixote and Sancho discover that Part I has been published and they are famous — they must contend with their own literary reputations" },
-            { id: "c", text: "A new narrator replaces Cide Hamete Benengeli" },
-            { id: "d", text: "The characters reveal that they are aware they are fictional" },
+            { id: "a", text: "Any floating traditions that may once have existed, transmitted from men who had known him, had long..." },
+            { id: "b", text: "SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of Don Quixote of la Mancha If to be welcom..." },
+            { id: "c", text: "Key aspects of don quixote by miguel de cervantes, translated by john ormsb" },
+            { id: "d", text: "Shelton had the inestimable advantage of belonging to the same generation as Cervantes; \"Don Quixote..." },
           ],
           correctOptionId: "b",
           explanation:
-            "In Part II, characters have already read Part I and have expectations of Quixote and Sancho. This blurs the boundary between fiction and reality — characters must contend not only with the real world but with their own literary existence.",
+            "This question relates to SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of . SOME COMMENDATORY VERSES URGANDA THE UNKNOWN To the book of Don Quixote of la Mancha If to be welcom...",
         },
         {
           id: "dq-l04-q5",
-          text: "Cervantes's treatment of Don Quixote's madness is primarily characterised by:",
+          text: "Which of the following best describes a key idea from the section on THE AUTHOR'S PREFACE Idle reader?",
           options: [
-            { id: "a", text: "Clinical detachment and medical diagnosis" },
-            { id: "b", text: "Warmth and respect — his ridiculousness is inseparable from his nobility, and the comedy never becomes contemptuous" },
-            { id: "c", text: "Fear and horror, treating madness as dangerous" },
-            { id: "d", text: "Complete sympathy, never finding humour in his delusions" },
+            { id: "a", text: "Any floating traditions that may once have existed, transmitted from men who had known him, had long..." },
+            { id: "b", text: "THE AUTHOR'S PREFACE Idle reader: thou mayest believe me without any oath that I would this book, as..." },
+            { id: "c", text: "Shelton had the inestimable advantage of belonging to the same generation as Cervantes; \"Don Quixote..." },
+            { id: "d", text: "Key aspects of don quixote by miguel de cervantes, translated by john ormsb" },
           ],
           correctOptionId: "b",
           explanation:
-            "Cervantes laughs with and at Don Quixote simultaneously. The comedy arises from the collision of idealism with reality, but Quixote's absurdity is always bound up with his genuine desire to fight injustice — preventing the laughter from becoming cruel.",
+            "This question relates to THE AUTHOR'S PREFACE Idle reader. THE AUTHOR'S PREFACE Idle reader: thou mayest believe me without any oath that I would this book, as...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L05  Metafiction and the Novel About Novels
+       L05  CHAPTER I Which treats of the character and pursuits of the
     ───────────────────────────────────────────────── */
     {
       id: "dq-l05",
-      title: "Metafiction and the Novel About Novels",
+      title: "CHAPTER I Which treats of the character and pursuits of the",
       type: "video",
       duration: 12,
       objectives: [
-        "Analyse Part II's self-referential structure and its consequences for characters",
-        "Explain the significance of Avellaneda's spurious sequel in the novel's composition",
-        "Assess how Don Quixote's metafictional strategies anticipate postmodernism",
+        "Examine the key ideas and arguments related to chapter i which treats of the character and pursuits of the",
+        "Examine the key ideas and arguments related to chapter ii which treats of the first sally the ingenious don",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "dq-l05-c1",
-          title: "Part II: Characters Who Have Read Their Own Story",
+          title: "CHAPTER I Which treats of the character and pursuits of the",
           content:
-            "The metafictional structure of Part II is unprecedented in the history of fiction. Between the publication of Part I (1605) and Part II (1615), Don Quixote's fame within the novel's fictional world has spread: the characters he meets have read Part I and recognise him. This creates a new layer of complexity: Don Quixote must now negotiate not only his own delusional interpretation of reality but also other people's interpretation of his delusions. The Duke and Duchess, who have read Part I, deliberately construct elaborate hoaxes to keep Quixote in his chivalric role — they stage 'enchantments,' produce fake damsels in distress, and arrange Sancho's governorship. This means that the 'adventures' in Part II are no longer accidental collisions with reality but deliberate performances staged by an audience that is reading the quixotic script. The distinction between reality and fiction, already blurred in Part I, collapses entirely: the characters are living inside a book whose previous volume they have read.",
+            "CHAPTER I Which treats of the character and pursuits of the famous gentleman Don Quixote of la Mancha In a village of La Mancha, the name of which I have no desire to call to mind, there lived not long since one of those gentlemen that keep a lance in the lance-rack, an old buckler, a lean hack, and a greyhound for coursing. An olla of rather more beef than mutton, a salad on most nights, scraps on Saturdays, lentils on Fridays, and a pigeon or so extra on Sundays, made away with three-quarters of his income. The rest of it went in a doublet of fine cloth and velvet breeches and shoes to match for holidays, while on week-days he made a brave figure in his best homespun.",
         },
         {
           id: "dq-l05-c2",
-          title: "Avellaneda's Spurious Sequel",
+          title: "CHAPTER II Which treats of the first sally the ingenious Don",
           content:
-            "In 1614, while Cervantes was writing Part II, an anonymous writer (known as Avellaneda) published a fraudulent continuation of Don Quixote's adventures. Cervantes was furious and responded with one of the most brilliant literary revenge moves in history: he incorporated Avellaneda's sequel into his own Part II as a plot element. Characters in Cervantes's Part II encounter a copy of Avellaneda's sequel and denounce it as a fraud. Don Quixote himself reads about the 'false Don Quixote' and is outraged that someone has misrepresented him. He deliberately changes his travel itinerary to prove that Avellaneda's version is false — demonstrating that the 'real' Don Quixote is the one in Cervantes's narrative, not the imposter. This extraordinary moment fuses literary criticism, character psychology, and narrative competition into a single plot device. It also raises profound questions about authorial authority: who 'owns' a fictional character? Can Don Quixote exist independently of Cervantes? If a character can contest his own misrepresentation, at what point does he become autonomous?",
+            "CHAPTER II Which treats of the first sally the ingenious Don Quixote made from home These preliminaries settled, he did not care to put off any longer the execution of his design, urged on to it by the thought of all the world was losing by his delay, seeing what wrongs he intended to right, grievances to redress, injustices to repair, abuses to remove, and duties to discharge.",
         },
         {
           id: "dq-l05-c3",
-          title: "Anticipating Postmodernism",
+          title: "Deeper Analysis: CHAPTER I Which treats of the character and pursuits of the",
           content:
-            "Don Quixote's metafictional strategies — characters who read their own stories, an unreliable fictitious historian, the incorporation of a rival sequel as plot material, the blurring of fiction and reality — represent techniques that would not become common in Western literature until the mid-twentieth century. Borges, Calvino, Nabokov, Barth, and other postmodern writers have all acknowledged Don Quixote as their ancestor. But Cervantes's metafiction has a warmth and human density that much postmodernism lacks: the self-referential games never become mere cleverness because they are always grounded in character psychology and emotional truth. The question of whether Don Quixote is real or fictional is not an abstract philosophical puzzle — it is a deeply personal crisis for a character who stakes his entire identity on a narrative he has chosen to live. Cervantes's genius is to make the reader feel the weight of this question rather than merely think about it, to make metafiction not a technique but a profound insight into the human relationship with stories and the fragile, constructed nature of identity itself.",
+            "He had in his house a housekeeper past forty, a niece under twenty, and a lad for the field and market-place, who used to saddle the hack as well as handle the bill-hook. The age of this gentleman of ours was bordering on fifty; he was of a hardy habit, spare, gaunt-featured, a very early riser and a great sportsman. They will have it his surname was Quixada or Quesada (for here there is some difference of opinion among the authors who write on the subject), although from reasonable conjectures it seems plain that he was called Quexana. This, however, is of but little importance to our tale; it will be enough not to stray a hair's breadth from the truth in the telling of it.",
         },
       ],
       flashcards: [
         {
           id: "dq-l05-f1",
-          front: "Part II's metafictional structure",
+          front: "CHAPTER I Which treats of the character and pursuits of the",
           back:
-            "Characters have read Part I and recognise Don Quixote. The Duke and Duchess stage deliberate 'adventures,' transforming accidental collisions with reality into scripted performances — collapsing the fiction/reality boundary.",
+            "He had in his house a housekeeper past forty, a niece under twenty, and a lad for the field and market-place, who used to saddle the hack as well as handle the bill-hook....",
         },
         {
           id: "dq-l05-f2",
-          front: "Avellaneda's spurious sequel",
+          front: "CHAPTER II Which treats of the first sally the ingenious Don",
           back:
-            "Cervantes incorporated a rival author's fraudulent continuation as a plot device: his characters encounter and denounce it, and Quixote changes his itinerary to refute the imposter — a literary revenge move and meditation on authorial ownership.",
+            "So, without giving notice of his intention to anyone, and without anybody seeing him, one morning before the dawning of the day (which was one of the hottest of the month of July)...",
         },
         {
           id: "dq-l05-f3",
-          front: "Don Quixote as postmodern ancestor",
+          front: "Key concept: CHAPTER I Which treats of the character and pursuits of t",
           back:
-            "Cervantes's metafictional techniques — self-referential narrative, unreliable historian, blurred fiction/reality — anticipated postmodernism by 350 years. Borges, Calvino, Nabokov, and Barth all acknowledge this debt.",
+            "You must know, then, that the above-named gentleman whenever he was at leisure (which was mostly all the year round) gave himself up to reading books of chivalry with such ardour a...",
         },
         {
           id: "dq-l05-f4",
-          front: "Metafiction with emotional weight",
+          front: "Key concept: CHAPTER II Which treats of the first sally the ingenious",
           back:
-            "Unlike much postmodernism, Cervantes grounds self-referential games in character psychology and emotional truth — the question of whether Quixote is real is a personal crisis, not an abstract puzzle.",
+            "It occurred to him that he had not been dubbed a knight, and that according to the law of chivalry he neither could nor ought to bear arms against any knight; and that even if he h...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L06  Legacy and Universal Themes
+       L06  CHAPTER III Wherein is related the droll way in which Don Qu
     ───────────────────────────────────────────────── */
     {
       id: "dq-l06",
-      title: "Legacy and Universal Themes",
+      title: "CHAPTER III Wherein is related the droll way in which Don Qu",
       type: "video",
       duration: 12,
       objectives: [
-        "Trace Don Quixote's influence on the development of the European novel",
-        "Explain the concept of 'quixotism' and its cultural significance",
-        "Assess why the novel continues to speak to contemporary readers",
+        "Examine the key ideas and arguments related to chapter iii wherein is related the droll way in which don qu",
+        "Examine the key ideas and arguments related to chapter iv of what happened to our knight when he left the",
+        "Synthesize and compare the themes across the covered material",
       ],
       chunks: [
         {
           id: "dq-l06-c1",
-          title: "The Novel After Cervantes",
+          title: "CHAPTER III Wherein is related the droll way in which Don Qu",
           content:
-            "Don Quixote's influence on the subsequent history of the novel is immeasurable. In England, Fielding's Tom Jones and Sterne's Tristram Shandy are directly modelled on Cervantine techniques: the self-conscious narrator, the picaresque structure, the mixing of comedy and moral seriousness. In France, Flaubert's Madame Bovary — the story of a woman who ruins herself by living according to the romantic novels she has read — is an explicit reworking of the Quixote theme. In Russia, Dostoevsky's The Idiot presents Prince Myshkin as a Christ-like innocent whose goodness is destroyed by contact with the cynical world — a tragic Quixote. In twentieth-century Latin America, Borges and García Márquez both acknowledge Cervantes as the fountainhead of their literary tradition. The novel, as a literary form, is essentially Cervantine: it is the genre that represents the clash between individual consciousness and the external world, between how things seem and how they are, between the stories we tell ourselves and the stubborn facts of existence.",
+            "CHAPTER III Wherein is related the droll way in which Don Quixote had himself dubbed a knight Harassed by this reflection, he made haste with his scanty pothouse supper, and having finished it called the landlord, and shutting himself into the stable with him, fell on his knees before him, saying, \"From this spot I rise not, valiant knight, until your courtesy grants me the boon I seek, one that will redound to your praise and the benefit of the human race.\" The landlord, seeing his guest at his feet and hearing a speech of this kind, stood staring at him in bewilderment, not knowing what to do or say, and entreating him to rise, but all to no purpose until he had agreed to grant the boon demanded of.",
         },
         {
           id: "dq-l06-c2",
-          title: "Quixotism: Idealism as Heroism and Folly",
+          title: "CHAPTER IV Of what happened to our knight when he left the",
           content:
-            "The word 'quixotic' has entered every major European language, meaning impractically idealistic or committed to impossible causes. But the word contains an ambiguity that perfectly reflects the novel: to be quixotic is simultaneously noble and foolish, admirable and absurd. This ambiguity is the heart of Cervantes's achievement. Don Quixote is not simply a buffoon (as the crudest readings suggest) or simply a saint (as the most romantic readings suggest); he is both at once, and the reader's inability to separate the heroism from the folly is precisely the point. The concept of quixotism raises a question that every generation must answer for itself: is it better to see the world as it is and accept its imperfections, or to see the world as it should be and fight for an impossible ideal? Cervantes does not provide a definitive answer because the question has no definitive answer — it is the permanent condition of any creature capable of imagining a better world while living in this one.",
+            "CHAPTER IV Of what happened to our knight when he left the inn Day was dawning when Don Quixote quitted the inn, so happy, so gay, so exhilarated at finding himself now dubbed a knight, that his joy was like to burst his horse-girths. However, recalling the advice of his host as to the requisites he ought to carry with him, especially that referring to money and shirts, he determined to go home and provide himself with all, and also with a squire, for he reckoned upon securing a farm-labourer, a neighbour of his, a poor man with a family, but very well qualified for the office of squire to a knight.",
         },
         {
           id: "dq-l06-c3",
-          title: "Why Don Quixote Endures",
+          title: "Deeper Analysis: CHAPTER III Wherein is related the droll way in which Don Qu",
           content:
-            "Four centuries after its publication, Don Quixote remains the most widely translated book in history after the Bible. Its endurance cannot be explained by historical interest alone — the world of seventeenth-century La Mancha is remote from contemporary experience. The novel endures because its central themes are universal. The tension between idealism and reality, the comedy of human self-deception, the tragedy of losing one's animating illusions, the transformative power of friendship, the constructed nature of identity, the relationship between the stories we read and the lives we live — these are not historical curiosities but permanent features of the human condition. Every reader who has ever imagined a better world while struggling with the actual one is, in some sense, a Don Quixote. Every reader who has ever loved someone whose dreams seem impractical is, in some sense, a Sancho Panza. Cervantes created two characters so fundamentally human that they have become part of the shared vocabulary of civilization, their names synonymous with experiences that transcend any particular time, place, or culture.",
+            "So he told him he was quite right in pursuing the object he had in view, and that such a motive was natural and becoming in cavaliers as distinguished as he seemed and his gallant bearing showed him to be; and that he himself in his younger days had followed the same honourable calling, roaming in quest of adventures in various parts of the world, among others the Curing-grounds of Malaga, the Isles of Riaran, the Precinct of Seville, the Little Market of Segovia, the Olivera of Valencia, the Rondilla of Granada, the Strand of San Lucar, the Colt of Cordova, the Taverns of Toledo, and divers other quarters, where he had proved the nimbleness of his feet and the lightness of his fingers, doing many wrongs, cheating many widows.",
         },
       ],
       flashcards: [
         {
           id: "dq-l06-f1",
-          front: "Don Quixote's literary descendants",
+          front: "CHAPTER III Wherein is related the droll way in which Don Qu",
           back:
-            "Fielding, Sterne, Flaubert (Madame Bovary), Dostoevsky (The Idiot), Borges, García Márquez — the entire novel tradition is essentially Cervantine: representing the clash between individual consciousness and the external world.",
+            "So he told him he was quite right in pursuing the object he had in view, and that such a motive was natural and becoming in cavaliers as distinguished as he seemed and his gallant...",
         },
         {
           id: "dq-l06-f2",
-          front: "Quixotism (the concept)",
+          front: "CHAPTER IV Of what happened to our knight when he left the",
           back:
-            "To be quixotic is simultaneously noble and foolish — the word captures the irreducible ambiguity of the novel. Heroism and folly are inseparable in Quixote, and the reader cannot choose between them.",
+            "With this object he turned his horse's head towards his village, and Rocinante, thus reminded of his old quarters, stepped out so briskly that he hardly seemed to tread the earth....",
         },
         {
           id: "dq-l06-f3",
-          front: "Why Don Quixote endures",
+          front: "Key concept: CHAPTER III Wherein is related the droll way in which Don",
           back:
-            "Its themes are universal: idealism vs reality, self-deception, the tragedy of lost illusions, the power of friendship, identity construction, and the relationship between stories and lived experience.",
+            "He told him, moreover, that in this castle of his there was no chapel in which he could watch his armour, as it had been pulled down in order to be rebuilt, but that in a case of n...",
         },
         {
           id: "dq-l06-f4",
-          front: "Quixote and Sancho as universal figures",
+          front: "Key concept: CHAPTER IV Of what happened to our knight when he left th",
           back:
-            "Every dreamer is a Quixote; every loving realist is a Sancho. Cervantes created characters so fundamentally human that their names transcend time, place, and culture to become part of civilization's shared vocabulary.",
+            "He had gone but a few paces into the wood, when he saw a mare tied to an oak, and tied to another, and stripped from the waist upwards, a youth of about fifteen years of age, from...",
         },
       ],
     },
-
     /* ─────────────────────────────────────────────────
-       L07  Final Assessment: Don Quixote
+       L07  Checkpoint Quiz 2
     ───────────────────────────────────────────────── */
     {
       id: "dq-l07",
-      title: "Final Assessment: Don Quixote",
+      title: "Checkpoint Quiz 2",
       type: "quiz",
-      duration: 9,
-      objectives: ["Evaluate comprehensive mastery of Don Quixote's literary and philosophical dimensions"],
+      duration: 8,
+      objectives: ["Assess understanding of the concepts covered in the preceding lessons"],
       questions: [
         {
           id: "dq-l07-q1",
-          text: "Cervantes's perspectivism in Don Quixote is best described as:",
+          text: "Which of the following best describes a key idea from the section on CHAPTER I Which treats of the character and pursuits of the ?",
           options: [
-            { id: "a", text: "A single authoritative narrator telling the definitive version of events" },
-            { id: "b", text: "Multiple internally coherent but incompatible perspectives on the same events, requiring the reader to actively interpret and evaluate" },
-            { id: "c", text: "A purely visual technique related to painting" },
-            { id: "d", text: "The elimination of all narrative perspective" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "Cervantes presents competing interpretations (castle vs inn, giants vs windmills) that are coherent within each character's framework but incompatible — forcing the reader into active interpretive engagement.",
-        },
-        {
-          id: "dq-l07-q2",
-          text: "The incorporation of Avellaneda's spurious sequel into Part II serves to:",
-          options: [
-            { id: "a", text: "Acknowledge Avellaneda as a superior writer" },
-            { id: "b", text: "Prove that Cervantes's Quixote is the 'real' one, raise questions about authorial ownership, and demonstrate fiction's power to contest its own misrepresentation" },
-            { id: "c", text: "Complete a plotline left unfinished in Part I" },
-            { id: "d", text: "Introduce a new major character" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "Cervantes's Quixote reads about Avellaneda's imposter and changes his route to refute it — asserting his 'reality' over the fake. This raises profound questions about who owns a fictional character and whether characters can become autonomous.",
-        },
-        {
-          id: "dq-l07-q3",
-          text: "Sancho's wise governance of Barataria demonstrates:",
-          options: [
-            { id: "a", text: "That he has been secretly educated throughout the novel" },
-            { id: "b", text: "The process of 'Quixotification' — Sancho has absorbed his master's idealism and wisdom through years of partnership" },
-            { id: "c", text: "That the Duke is a generous patron" },
-            { id: "d", text: "That governance requires no special qualities" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "Sancho's surprisingly wise governance provides concrete evidence that Don Quixote's influence has elevated his character — he has absorbed idealism and judgment through their partnership, demonstrating the transformative power of the relationship.",
-        },
-        {
-          id: "dq-l07-q4",
-          text: "The central ambiguity of 'quixotism' is:",
-          options: [
-            { id: "a", text: "Whether Don Quixote is Spanish or Portuguese" },
-            { id: "b", text: "Whether impractical idealism is noble or foolish — the novel presents it as inseparably both" },
-            { id: "c", text: "Whether the romances of chivalry are historically accurate" },
-            { id: "d", text: "Whether Dulcinea actually exists as a noblewoman" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "To be quixotic is simultaneously admirable and absurd. Cervantes's great achievement is making heroism and folly inseparable in his protagonist — the reader cannot choose between them, and that irreducibility is the novel's deepest insight.",
-        },
-        {
-          id: "dq-l07-q5",
-          text: "Don Quixote's death scene is experienced as tragic because:",
-          options: [
-            { id: "a", text: "He dies from a violent wound suffered in battle" },
-            { id: "b", text: "Recovering sanity requires renouncing everything that gave his life meaning — his quest, identity, and partnership — leaving him diminished rather than restored" },
-            { id: "c", text: "He dies without completing his mission to find the Holy Grail" },
-            { id: "d", text: "His family refuses to attend his deathbed" },
-          ],
-          correctOptionId: "b",
-          explanation:
-            "Sanity is also loss. To become Alonso Quixano again, Don Quixote must surrender the chivalric identity, idealistic quest, and loving partnership with Sancho that constituted everything worth living for — making 'recovery' feel like a kind of death.",
-        },
-        {
-          id: "dq-l07-q6",
-          text: "The novel's question — 'Is it better to be a sane realist or a mad idealist?' — is resolved by:",
-          options: [
-            { id: "a", text: "Clearly arguing that realism is superior" },
-            { id: "b", text: "Clearly arguing that idealism is superior" },
-            { id: "c", text: "Remaining deliberately unresolved — Cervantes presents both perspectives with full force and refuses to choose between them" },
-            { id: "d", text: "Proposing a third alternative that resolves the tension" },
+            { id: "a", text: "CHAPTER III Wherein is related the droll way in which Don Quixote had himself dubbed a knight Harass..." },
+            { id: "b", text: "CHAPTER II Which treats of the first sally the ingenious Don Quixote made from home These preliminar..." },
+            { id: "c", text: "CHAPTER I Which treats of the character and pursuits of the famous gentleman Don Quixote of la Manch..." },
+            { id: "d", text: "CHAPTER IV Of what happened to our knight when he left the inn Day was dawning when Don Quixote quit..." },
           ],
           correctOptionId: "c",
           explanation:
-            "Cervantes dramatises the question with full difficulty without resolving it. Both sane realism (Sancho's perspective) and mad idealism (Quixote's) have their virtues and costs, and the novel's wisdom lies in holding them in permanent, creative tension.",
+            "This question relates to CHAPTER I Which treats of the character and pursuits of the . CHAPTER I Which treats of the character and pursuits of the famous gentleman Don Quixote of la Manch...",
+        },
+        {
+          id: "dq-l07-q2",
+          text: "Which of the following best describes a key idea from the section on CHAPTER II Which treats of the first sally the ingenious Don?",
+          options: [
+            { id: "a", text: "CHAPTER II Which treats of the first sally the ingenious Don Quixote made from home These preliminar..." },
+            { id: "b", text: "CHAPTER IV Of what happened to our knight when he left the inn Day was dawning when Don Quixote quit..." },
+            { id: "c", text: "CHAPTER III Wherein is related the droll way in which Don Quixote had himself dubbed a knight Harass..." },
+            { id: "d", text: "CHAPTER I Which treats of the character and pursuits of the famous gentleman Don Quixote of la Manch..." },
+          ],
+          correctOptionId: "a",
+          explanation:
+            "This question relates to CHAPTER II Which treats of the first sally the ingenious Don. CHAPTER II Which treats of the first sally the ingenious Don Quixote made from home These preliminar...",
+        },
+        {
+          id: "dq-l07-q3",
+          text: "Which of the following best describes a key idea from the section on CHAPTER III Wherein is related the droll way in which Don Qu?",
+          options: [
+            { id: "a", text: "CHAPTER IV Of what happened to our knight when he left the inn Day was dawning when Don Quixote quit..." },
+            { id: "b", text: "CHAPTER II Which treats of the first sally the ingenious Don Quixote made from home These preliminar..." },
+            { id: "c", text: "CHAPTER III Wherein is related the droll way in which Don Quixote had himself dubbed a knight Harass..." },
+            { id: "d", text: "CHAPTER I Which treats of the character and pursuits of the famous gentleman Don Quixote of la Manch..." },
+          ],
+          correctOptionId: "c",
+          explanation:
+            "This question relates to CHAPTER III Wherein is related the droll way in which Don Qu. CHAPTER III Wherein is related the droll way in which Don Quixote had himself dubbed a knight Harass...",
+        },
+        {
+          id: "dq-l07-q4",
+          text: "Which of the following best describes a key idea from the section on CHAPTER IV Of what happened to our knight when he left the?",
+          options: [
+            { id: "a", text: "CHAPTER II Which treats of the first sally the ingenious Don Quixote made from home These preliminar..." },
+            { id: "b", text: "CHAPTER III Wherein is related the droll way in which Don Quixote had himself dubbed a knight Harass..." },
+            { id: "c", text: "CHAPTER IV Of what happened to our knight when he left the inn Day was dawning when Don Quixote quit..." },
+            { id: "d", text: "CHAPTER I Which treats of the character and pursuits of the famous gentleman Don Quixote of la Manch..." },
+          ],
+          correctOptionId: "c",
+          explanation:
+            "This question relates to CHAPTER IV Of what happened to our knight when he left the. CHAPTER IV Of what happened to our knight when he left the inn Day was dawning when Don Quixote quit...",
+        },
+        {
+          id: "dq-l07-q5",
+          text: "Which of the following best describes a key idea from the section on CHAPTER V In which the narrative of our knight's mishap is c?",
+          options: [
+            { id: "a", text: "CHAPTER III Wherein is related the droll way in which Don Quixote had himself dubbed a knight Harass..." },
+            { id: "b", text: "CHAPTER V In which the narrative of our knight's mishap is continued Finding, then, that, in fact he..." },
+            { id: "c", text: "CHAPTER II Which treats of the first sally the ingenious Don Quixote made from home These preliminar..." },
+            { id: "d", text: "CHAPTER I Which treats of the character and pursuits of the famous gentleman Don Quixote of la Manch..." },
+          ],
+          correctOptionId: "b",
+          explanation:
+            "This question relates to CHAPTER V In which the narrative of our knight's mishap is c. CHAPTER V In which the narrative of our knight's mishap is continued Finding, then, that, in fact he...",
         },
       ],
     },

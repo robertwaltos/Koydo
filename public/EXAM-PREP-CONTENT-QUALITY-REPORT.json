@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-02-24T04:20:23.305Z",
+  "generatedAt": "2026-03-01T07:50:10.001Z",
   "genericPhrasePatterns": [
     "which strategy best improves",
     "what should you do after a timed drill",
@@ -15,16 +15,16 @@
   ],
   "totals": {
     "modules": 12,
-    "totalQuestions": 408,
-    "totalQuizLessons": 60,
-    "averageQualityScore": 99.42,
-    "averageUniqueQuestionRatio": 98.28,
-    "averageTrackMentionRate": 100,
+    "totalQuestions": 356,
+    "totalQuizLessons": 54,
+    "averageQualityScore": 92.5,
+    "averageUniqueQuestionRatio": 98.53,
+    "averageTrackMentionRate": 87.78,
     "averageInteractiveSpecificityRate": 100,
     "genericPhraseHits": 0,
     "genericInteractiveHits": 0,
     "highPriorityModules": 0,
-    "mediumPriorityModules": 0
+    "mediumPriorityModules": 2
   },
   "modules": [
     {
@@ -32,23 +32,6 @@
       "title": "A-Level Prep Foundations",
       "track": "A-Level",
       "trackKey": "a-level",
-      "quizLessons": 5,
-      "totalQuestions": 34,
-      "uniqueQuestionRatio": 100,
-      "trackMentionRate": 100,
-      "quizWithInteractiveRate": 100,
-      "interactiveSpecificityRate": 100,
-      "interactiveTypeCount": 3,
-      "genericPhraseHits": 0,
-      "genericInteractiveHits": 0,
-      "qualityScore": 100,
-      "priority": "low"
-    },
-    {
-      "moduleId": "ap-prep-101",
-      "title": "AP Exam Prep Toolkit",
-      "track": "AP",
-      "trackKey": "ap",
       "quizLessons": 5,
       "totalQuestions": 34,
       "uniqueQuestionRatio": 100,
@@ -181,23 +164,6 @@
       "priority": "low"
     },
     {
-      "moduleId": "sat-prep-101",
-      "title": "SAT Prep Foundations",
-      "track": "SAT",
-      "trackKey": "sat",
-      "quizLessons": 5,
-      "totalQuestions": 34,
-      "uniqueQuestionRatio": 97.06,
-      "trackMentionRate": 100,
-      "quizWithInteractiveRate": 100,
-      "interactiveSpecificityRate": 100,
-      "interactiveTypeCount": 3,
-      "genericPhraseHits": 0,
-      "genericInteractiveHits": 0,
-      "qualityScore": 99,
-      "priority": "low"
-    },
-    {
       "moduleId": "toefl-prep-101",
       "title": "TOEFL iBT Prep Foundations",
       "track": "TOEFL",
@@ -230,6 +196,40 @@
       "genericInteractiveHits": 0,
       "qualityScore": 98,
       "priority": "low"
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "title": "AP Exam Prep Toolkit",
+      "track": "AP",
+      "trackKey": "ap",
+      "quizLessons": 2,
+      "totalQuestions": 6,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 33.33,
+      "quizWithInteractiveRate": 0,
+      "interactiveSpecificityRate": 100,
+      "interactiveTypeCount": 1,
+      "genericPhraseHits": 0,
+      "genericInteractiveHits": 0,
+      "qualityScore": 60,
+      "priority": "medium"
+    },
+    {
+      "moduleId": "sat-prep-101",
+      "title": "SAT Prep Foundations",
+      "track": "SAT",
+      "trackKey": "sat",
+      "quizLessons": 2,
+      "totalQuestions": 10,
+      "uniqueQuestionRatio": 100,
+      "trackMentionRate": 20,
+      "quizWithInteractiveRate": 0,
+      "interactiveSpecificityRate": 100,
+      "interactiveTypeCount": 1,
+      "genericPhraseHits": 0,
+      "genericInteractiveHits": 0,
+      "qualityScore": 56,
+      "priority": "medium"
     }
   ]
 }

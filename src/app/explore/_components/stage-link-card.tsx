@@ -113,7 +113,7 @@ export default function StageLinkCard({ stage, index, isRecommended }: StageLink
         {/* Grade + Age chips */}
         <div className="relative mt-3 flex items-center gap-2">
           <span
-            className="rounded-full px-2.5 py-0.5 text-xs font-bold text-zinc-900 dark:text-zinc-100"
+            className="rounded-full px-2.5 py-0.5 text-xs font-bold text-zinc-900 dark:text-foreground"
             style={{
               border: `1.5px solid ${stage.glowColor}`,
               background: `${stage.glowColor}22`,
@@ -121,7 +121,7 @@ export default function StageLinkCard({ stage, index, isRecommended }: StageLink
           >
             {stage.gradeRange}
           </span>
-          <span className="rounded-full border border-zinc-200 bg-white/80 px-2.5 py-0.5 text-xs font-semibold text-zinc-700 backdrop-blur-sm dark:border-white/20 dark:bg-slate-800/60 dark:text-zinc-300">
+          <span className="rounded-full border border-zinc-200 bg-white/80 px-2.5 py-0.5 text-xs font-semibold text-zinc-700 backdrop-blur-sm border-border/65 dark:bg-slate-800/60 dark:text-foreground/80">
             {stage.ageRange}
           </span>
         </div>

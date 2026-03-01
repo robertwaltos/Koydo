@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useState } from "react";
 import type { InteractiveActivity } from "@/lib/modules/types";
-import SpeakButton from "./speak-button";
+import TappableText from "./tappable-text";
 import { usePreReaderMode } from "./pre-reader-mode";
 
 type VisualActivityProps = {
@@ -91,22 +91,24 @@ export default function VisualActivity({
         <h3 className="text-2xl font-extrabold text-zinc-900">
           {activity.title}
         </h3>
-        <p
-          className={`mt-2 text-base text-zinc-700 ${isPreReaderMode ? "sr-only" : ""}`}
-        >
-          {activity.description}
-        </p>
-        {activity.instructions ? (
-          <p
-            className={`mt-3 text-sm text-zinc-600 ${isPreReaderMode ? "sr-only" : ""}`}
-          >
-            {activity.instructions}
-          </p>
-        ) : null}
-        <SpeakButton
+        <TappableText
           text={`${activity.title}. ${activity.description}`}
-          label={isPreReaderMode ? "🔊" : "Read Aloud"}
-        />
+          className="mt-2 block"
+          buttonLabel={isPreReaderMode ? "🔊" : "Read Aloud"}
+        >
+          <p
+            className={`text-base text-zinc-700 ${isPreReaderMode ? "sr-only" : ""}`}
+          >
+            {activity.description}
+          </p>
+          {activity.instructions ? (
+            <p
+              className={`mt-3 text-sm text-zinc-600 ${isPreReaderMode ? "sr-only" : ""}`}
+            >
+              {activity.instructions}
+            </p>
+          ) : null}
+        </TappableText>
       </article>
       <button
         type="button"

@@ -117,7 +117,7 @@ export default async function LanguageBillingPage() {
           <div className="flex flex-wrap gap-2">
             <Link
               href="/dashboard"
-              className="ui-focus-ring inline-flex min-h-10 items-center rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+              className="ui-focus-ring inline-flex min-h-10 items-center rounded-full border border-zinc-200 bg-surface-muted px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
             >
               Back to Dashboard
             </Link>
@@ -173,7 +173,7 @@ export default async function LanguageBillingPage() {
                   {isCurrent ? (
                     <Link
                       href="/account/settings"
-                      className="ui-focus-ring inline-flex min-h-10 items-center rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+                      className="ui-focus-ring inline-flex min-h-10 items-center rounded-full border border-zinc-200 bg-surface-muted px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
                     >
                       Manage in Settings
                     </Link>

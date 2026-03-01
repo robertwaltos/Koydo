@@ -5,6 +5,8 @@ import AppProviders from "./app-providers";
 import OfflineBanner from "./components/offline-banner";
 import TopNav from "./components/top-nav";
 import SiteFooter from "./components/site-footer";
+import GlobalCommandPalette from "./components/global-command-palette";
+import CookieConsentBanner from "./components/cookie-consent-banner";
 
 const nunitoSans = Nunito_Sans({
   variable: "--font-body-sans",
@@ -134,10 +136,16 @@ export default function RootLayout({
         className={`${nunitoSans.variable} ${soraDisplay.variable} ${jetBrainsMono.variable} antialiased`}
       >
         <AppProviders>
+          <a href="#app-main-content" className="app-skip-link">
+            Skip to main content
+          </a>
           <OfflineBanner />
           <TopNav />
+          <GlobalCommandPalette />
+          <div id="app-main-content" tabIndex={-1} />
           {children}
           <SiteFooter />
+          <CookieConsentBanner />
         </AppProviders>
       </body>
     </html>

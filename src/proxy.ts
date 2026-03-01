@@ -116,6 +116,7 @@ function getApiMutationRateLimitPolicy(pathname: string): RateLimitPolicy {
     pathname === "/api/ai/tutor"
     || pathname === "/api/media/generate"
     || pathname === "/api/images/generate"
+    || pathname === "/api/tts/generate"
   ) {
     return { scope: "api:expensive:mutations", max: 40, windowMs: 60_000 };
   }

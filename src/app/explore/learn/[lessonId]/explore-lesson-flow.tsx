@@ -13,7 +13,6 @@ import type {
 import { trackLearningEvent } from "@/lib/analytics/xapi-lite";
 import { saveOfflineProgress, deleteSyncedProgress } from "@/lib/offline/progress-db";
 import SpeakButton from "../../_components/speak-button";
-import AutoNarrator from "../../_components/auto-narrator";
 // Phase 1 (first screen) is static; phases 2–5 are lazy-loaded on demand
 import VisualChunkStepper from "../../_components/visual-chunk-stepper";
 import { usePreReaderMode } from "../../_components/pre-reader-mode";
@@ -226,9 +225,6 @@ export default function ExploreLessonFlow({
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <AuthGuard>
         <div className="flex flex-col">
-          {/* Narrate lesson entry */}
-          <AutoNarrator text={`Let's learn about ${lesson.title}.`} />
-
           {/* Lesson header — compact, themed */}
           <header
             className="explore-scene-enter flex flex-col items-center gap-3 px-4 pb-4 pt-6"

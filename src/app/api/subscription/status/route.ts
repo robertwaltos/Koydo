@@ -1,8 +1,9 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { toSafeErrorRecord } from '@/lib/logging/safe-error';
 import { serverEnv } from '@/lib/config/env';
+import { resolveCadenceFromProductId } from '@/lib/billing/revenuecat-matrix';
 
 /**
  * GET /api/subscription/status
@@ -21,7 +22,7 @@ import { serverEnv } from '@/lib/config/env';
  *   managementUrl: string | null;
  * }
  */
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const cookieStore = await cookies();
 
@@ -103,9 +104,7 @@ export async function GET(request: NextRequest) {
 
     // Normalize plan name
     const plan = isActive
-      ? subscription.plan_id?.includes('annual')
-        ? 'annual'
-        : 'monthly'
+      ? resolveCadenceFromProductId(subscription.plan_id)
       : 'free';
 
     return NextResponse.json({

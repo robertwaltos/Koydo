@@ -382,6 +382,8 @@ function isPlaceholderValue(value) {
     || normalized === "change-me"
     || normalized === "replace-me"
     || normalized === "replace_me"
+    || normalized.startsWith("replace-")
+    || normalized.startsWith("replace_")
     || normalized === "todo"
     || normalized === "tbd"
     || normalized.startsWith("your_")
@@ -400,8 +402,12 @@ function buildPlaceholderSecretAudit({ env, isProduction }) {
     "STRIPE_SECRET_KEY",
     "STRIPE_WEBHOOK_SECRET",
     "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+    "OPENAI_API_KEY",
+    "OPENAI_IMAGE_MODEL",
     "NEXT_PUBLIC_REVENUECAT_APPLE_KEY",
     "NEXT_PUBLIC_REVENUECAT_GOOGLE_KEY",
+    "NEXT_PUBLIC_REVENUECAT_API_KEY",
+    "EXPO_PUBLIC_REVENUECAT_API_KEY",
     "REVENUECAT_WEBHOOK_SECRET",
     "RESEND_API_KEY",
     "PARENT_CONSENT_FROM_EMAIL",
@@ -424,17 +430,38 @@ function buildPlaceholderSecretAudit({ env, isProduction }) {
   };
 }
 
-function buildRevenueCatClientKeysCheck({ appleKey, googleKey, isProduction }) {
+function isTestRevenueCatKey(value) {
+  const normalized = normalizeValue(value).toLowerCase();
+  return normalized.startsWith("test_");
+}
+
+function buildRevenueCatClientKeysCheck({
+  appleKey,
+  googleKey,
+  genericKey,
+  billingModeRaw,
+  isProduction,
+}) {
+  const requiresRevenueCat = billingModeRaw === "app_store_iap";
   const hasAppleKey = Boolean(appleKey);
   const hasGoogleKey = Boolean(googleKey);
+  const hasGenericKey = Boolean(genericKey);
 
   if (hasAppleKey && hasGoogleKey) {
+    if (isProduction && (isTestRevenueCatKey(appleKey) || isTestRevenueCatKey(googleKey))) {
+      return {
+        label: "RevenueCat Client Keys",
+        status: "fail",
+        detail: "Detected test RevenueCat key prefix (test_) in production runtime.",
+      };
+    }
+
     const applePrefixOk = appleKey.startsWith("appl_");
     const googlePrefixOk = googleKey.startsWith("goog_");
     if (!applePrefixOk || !googlePrefixOk) {
       return {
         label: "RevenueCat Client Keys",
-        status: "fail",
+        status: requiresRevenueCat && isProduction ? "fail" : "warn",
         detail: "RevenueCat keys present but one or both prefixes are unexpected (expected appl_/goog_).",
       };
     }
@@ -445,14 +472,38 @@ function buildRevenueCatClientKeysCheck({ appleKey, googleKey, isProduction }) {
     };
   }
 
+  if (hasGenericKey) {
+    if (isProduction && isTestRevenueCatKey(genericKey)) {
+      return {
+        label: "RevenueCat Client Keys",
+        status: "fail",
+        detail: "Detected test RevenueCat key prefix (test_) in production runtime.",
+      };
+    }
+
+    return {
+      label: "RevenueCat Client Keys",
+      status: "pass",
+      detail:
+        "Generic RevenueCat public key is present (NEXT_PUBLIC_REVENUECAT_API_KEY). Platform-specific keys are recommended for production.",
+    };
+  }
+
   return {
     label: "RevenueCat Client Keys",
-    status: isProduction ? "fail" : "warn",
-    detail: "Missing NEXT_PUBLIC_REVENUECAT_APPLE_KEY and/or NEXT_PUBLIC_REVENUECAT_GOOGLE_KEY.",
+    status: requiresRevenueCat && isProduction ? "fail" : "pass",
+    detail: requiresRevenueCat
+      ? "Missing RevenueCat client keys while BILLING_PROVIDER_MODE=app_store_iap."
+      : "Not required (BILLING_PROVIDER_MODE=stripe_external).",
   };
 }
 
-function buildRevenueCatWebhookCheck({ webhookSecret, isProduction }) {
+function buildRevenueCatWebhookCheck({
+  webhookSecret,
+  billingModeRaw,
+  isProduction,
+}) {
+  const requiresRevenueCat = billingModeRaw === "app_store_iap";
   if (webhookSecret) {
     return {
       label: "RevenueCat Webhook Secret",
@@ -463,8 +514,10 @@ function buildRevenueCatWebhookCheck({ webhookSecret, isProduction }) {
 
   return {
     label: "RevenueCat Webhook Secret",
-    status: isProduction ? "fail" : "warn",
-    detail: "Missing REVENUECAT_WEBHOOK_SECRET.",
+    status: requiresRevenueCat && isProduction ? "fail" : "pass",
+    detail: requiresRevenueCat
+      ? "Missing REVENUECAT_WEBHOOK_SECRET while BILLING_PROVIDER_MODE=app_store_iap."
+      : "Not required (BILLING_PROVIDER_MODE=stripe_external).",
   };
 }
 
@@ -560,6 +613,92 @@ function buildEnvSourceCheck({ envFilePath, envFileExists, explicitEnvFile }) {
   };
 }
 
+function extractEmailAddress(input) {
+  const normalized = normalizeValue(input);
+  if (!normalized) return "";
+  const bracketMatch = normalized.match(/<([^>]+)>/);
+  return (bracketMatch?.[1] ?? normalized).trim().toLowerCase();
+}
+
+function isLikelyLocalSimulationEmail(input) {
+  const email = extractEmailAddress(input);
+  if (!email) return false;
+  const atIndex = email.lastIndexOf("@");
+  if (atIndex < 0) return false;
+  const domain = email.slice(atIndex + 1);
+  return domain.endsWith(".local");
+}
+
+function buildParentConsentEmailCheck({
+  resendApiKey,
+  consentFromEmail,
+  parentConsentEmailMode,
+}) {
+  const mode = normalizeValue(parentConsentEmailMode).toLowerCase();
+  const hasResend = Boolean(resendApiKey);
+  const hasSender = Boolean(consentFromEmail);
+  const hasLocalSender = isLikelyLocalSimulationEmail(consentFromEmail);
+
+  if (mode === "disabled" || mode === "off" || mode === "false") {
+    return {
+      label: "Parent Consent Email",
+      status: "pass",
+      detail: "Disabled by PARENT_CONSENT_EMAIL_MODE.",
+    };
+  }
+
+  if (hasResend && hasSender) {
+    return {
+      label: "Parent Consent Email",
+      status: "pass",
+      detail: "Resend + sender configured",
+    };
+  }
+
+  if (
+    mode === "local"
+    || mode === "simulate"
+    || mode === "simulation"
+    || (!hasResend && hasLocalSender)
+  ) {
+    return {
+      label: "Parent Consent Email",
+      status: "pass",
+      detail: "Local simulation mode configured (Resend optional).",
+    };
+  }
+
+  return {
+    label: "Parent Consent Email",
+    status: "warn",
+    detail: "Missing RESEND_API_KEY or PARENT_CONSENT_FROM_EMAIL (falls back to local simulation link)",
+  };
+}
+
+function buildMixpanelCheck({ mixpanel, analyticsEnabled }) {
+  if (mixpanel) {
+    return {
+      label: "Mixpanel Token",
+      status: "pass",
+      detail: "Present",
+    };
+  }
+
+  if (!analyticsEnabled) {
+    return {
+      label: "Mixpanel Token",
+      status: "pass",
+      detail: "Analytics disabled (NEXT_PUBLIC_ANALYTICS_ENABLED is not true).",
+    };
+  }
+
+  return {
+    label: "Mixpanel Token",
+    status: "warn",
+    detail: "Missing while analytics is enabled.",
+  };
+}
+
 function main() {
   const args = parseArgs(process.argv.slice(2));
   const envFilePath = args.envFile
@@ -578,13 +717,24 @@ function main() {
   const stripeSecret = readValue(env, "STRIPE_SECRET_KEY");
   const stripeWebhook = readValue(env, "STRIPE_WEBHOOK_SECRET");
   const stripePublishable = readValue(env, "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY");
+  const revenueCatGenericKey = readValue(
+    env,
+    "NEXT_PUBLIC_REVENUECAT_API_KEY",
+    "EXPO_PUBLIC_REVENUECAT_API_KEY",
+  );
   const revenueCatAppleKey = readValue(env, "NEXT_PUBLIC_REVENUECAT_APPLE_KEY");
   const revenueCatGoogleKey = readValue(env, "NEXT_PUBLIC_REVENUECAT_GOOGLE_KEY");
   const revenueCatWebhookSecret = readValue(env, "REVENUECAT_WEBHOOK_SECRET");
   const resendApiKey = readValue(env, "RESEND_API_KEY");
   const consentFromEmail = readValue(env, "PARENT_CONSENT_FROM_EMAIL");
+  const parentConsentEmailMode = readValue(env, "PARENT_CONSENT_EMAIL_MODE");
   const consentTokenSecret = readValue(env, "PARENT_CONSENT_TOKEN_SECRET");
   const mixpanel = readValue(env, "NEXT_PUBLIC_MIXPANEL_TOKEN");
+  const analyticsEnabled = readValue(
+    env,
+    "NEXT_PUBLIC_ANALYTICS_ENABLED",
+    "NEXT_PUBLIC_MIXPANEL_ENABLED",
+  ).toLowerCase() === "true";
   const debugParentDigest = readValue(env, "DEBUG_PARENT_DIGEST");
   const requireAdminApprovals = readValue(env, "REQUIRE_ADMIN_APPROVALS");
   const runtime = resolveRuntimeEnvironment(env, args.runtime);
@@ -657,6 +807,8 @@ function main() {
 
   checks.push(
     buildRevenueCatClientKeysCheck({
+      billingModeRaw: effectiveBillingMode,
+      genericKey: revenueCatGenericKey,
       appleKey: revenueCatAppleKey,
       googleKey: revenueCatGoogleKey,
       isProduction: runtime.isProduction,
@@ -665,6 +817,7 @@ function main() {
 
   checks.push(
     buildRevenueCatWebhookCheck({
+      billingModeRaw: effectiveBillingMode,
       webhookSecret: revenueCatWebhookSecret,
       isProduction: runtime.isProduction,
     }),
@@ -698,14 +851,13 @@ function main() {
     }),
   );
 
-  checks.push({
-    label: "Parent Consent Email",
-    status: resendApiKey && consentFromEmail ? "pass" : "warn",
-    detail:
-      resendApiKey && consentFromEmail
-        ? "Resend + sender configured"
-        : "Missing RESEND_API_KEY or PARENT_CONSENT_FROM_EMAIL (falls back to local simulation link)",
-  });
+  checks.push(
+    buildParentConsentEmailCheck({
+      resendApiKey,
+      consentFromEmail,
+      parentConsentEmailMode,
+    }),
+  );
 
   checks.push({
     label: "Parent Consent Token Secret",
@@ -716,11 +868,12 @@ function main() {
         : "Missing/short (verification link signing may be weaker or disabled)",
   });
 
-  checks.push({
-    label: "Mixpanel Token",
-    status: mixpanel ? "pass" : "warn",
-    detail: mixpanel ? "Present" : "Missing (analytics disabled)",
-  });
+  checks.push(
+    buildMixpanelCheck({
+      mixpanel,
+      analyticsEnabled,
+    }),
+  );
 
   const totals = summarize(checks);
   const report = {

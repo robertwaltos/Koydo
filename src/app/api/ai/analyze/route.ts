@@ -3,6 +3,7 @@ import { z } from "zod";
 import { checkAiBudget } from "@/lib/ai/token-budget";
 import { serverEnv } from "@/lib/config/env";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const requestSchema = z.object({
   estimatedInputTokens: z.number().int().min(0).default(1200),
@@ -17,6 +18,18 @@ function monthKeyFromDate(date: Date) {
 }
 
 export async function POST(request: NextRequest) {
+  const rateLimit = await enforceIpRateLimit(request, "api:ai:analyze:post", {
+    max: 30,
+    windowMs: 60_000,
+  });
+
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many AI analysis requests. Please retry shortly." },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },

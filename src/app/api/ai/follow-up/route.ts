@@ -7,6 +7,7 @@ import {
 } from "@/lib/ai/follow-up";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const payloadValueSchema = z.union([
   z.string(),
@@ -66,6 +67,17 @@ function mapRecord(record: {
 
 export async function GET(request: Request) {
   try {
+    const rateLimit = await enforceIpRateLimit(request, "api:ai:follow-up:get", {
+      max: 60,
+      windowMs: 60_000,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many requests" },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const supabase = await createSupabaseServerClient();
     const {
       data: { user },
@@ -120,6 +132,17 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    const rateLimit = await enforceIpRateLimit(request, "api:ai:follow-up:post", {
+      max: 10,
+      windowMs: 60_000,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many follow-up generation requests. Please retry shortly." },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const supabase = await createSupabaseServerClient();
     const {
       data: { user },

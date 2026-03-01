@@ -303,7 +303,7 @@ export default function ModulesPreferencesPanel({ modules }: ModulesPreferencesP
         <button
           type="button"
           onClick={() => setSelectedModuleIds(new Set())}
-          className="rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-semibold text-zinc-600 hover:bg-zinc-50"
+          className="rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-semibold text-zinc-600 hover:bg-surface-muted"
         >
           Clear Selection
         </button>
@@ -362,7 +362,7 @@ export default function ModulesPreferencesPanel({ modules }: ModulesPreferencesP
                 className="h-4 w-4 accent-emerald-600"
               />
               <span className="font-medium">{moduleEntry.title}</span>
-              <span className="ml-auto rounded-full border border-zinc-200 bg-zinc-50 px-2 py-0.5 text-[10px] uppercase tracking-wide text-zinc-500">
+              <span className="ml-auto rounded-full border border-zinc-200 bg-surface-muted px-2 py-0.5 text-[10px] uppercase tracking-wide text-zinc-500">
                 {moduleEntry.subject}
               </span>
             </label>

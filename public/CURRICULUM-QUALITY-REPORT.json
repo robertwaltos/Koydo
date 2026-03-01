@@ -1,22 +1,322 @@
 {
-  "generatedAt": "2026-02-24T04:20:22.679Z",
+  "generatedAt": "2026-03-01T07:50:09.489Z",
   "sourceDir": "src/lib/modules/catalog",
   "totals": {
-    "modules": 118,
-    "lessons": 1654,
-    "quizLessons": 633,
-    "interactiveLessons": 543,
-    "videoLessons": 478,
-    "questions": 2609,
-    "learningAidBlocks": 1646,
+    "modules": 259,
+    "lessons": 2915,
+    "quizLessons": 1050,
+    "interactiveLessons": 849,
+    "videoLessons": 1016,
+    "questions": 4270,
+    "learningAidBlocks": 2497,
     "placeholderOptionCount": 0,
     "genericReflectionCount": 0,
-    "averageScore": 100,
+    "averageScore": 99.46,
     "highPriorityModules": 0,
-    "mediumPriorityModules": 0,
-    "lowPriorityModules": 118
+    "mediumPriorityModules": 2,
+    "lowPriorityModules": 257
   },
   "topPriorityModules": [
+    {
+      "moduleId": "gardening-101",
+      "title": "Gardening Foundations",
+      "subject": "Gardening",
+      "file": "src/lib/modules/catalog/gardening-101.ts",
+      "lessonCount": 5,
+      "lessonTypeCounts": {
+        "video": 2,
+        "interactive": 2,
+        "quiz": 1
+      },
+      "questionCount": 3,
+      "learningAidBlocks": 3,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 80,
+      "priority": "medium",
+      "issues": [
+        "Low lesson volume (5) for a full module."
+      ],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "macos-101",
+      "title": "macOS Fundamentals",
+      "subject": "Operating Systems",
+      "file": "src/lib/modules/catalog/macos-101.ts",
+      "lessonCount": 5,
+      "lessonTypeCounts": {
+        "video": 2,
+        "interactive": 2,
+        "quiz": 1
+      },
+      "questionCount": 3,
+      "learningAidBlocks": 3,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 80,
+      "priority": "medium",
+      "issues": [
+        "Low lesson volume (5) for a full module."
+      ],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "arts-101",
+      "title": "Creative Arts Studio",
+      "subject": "Arts",
+      "file": "src/lib/modules/catalog/arts-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "astronomy-101",
+      "title": "Astronomy: Exploring the Universe",
+      "subject": "Astronomy",
+      "file": "src/lib/modules/catalog/astronomy-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "coding-101",
+      "title": "Coding: From Zero to Programmer",
+      "subject": "Coding",
+      "file": "src/lib/modules/catalog/coding-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "geography-101",
+      "title": "Geography: Our Amazing World",
+      "subject": "Geography",
+      "file": "src/lib/modules/catalog/geography-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "language-arts-201",
+      "title": "Language Arts 201: Writing & Literary Analysis",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/language-arts-201.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "pre-k-biology-101",
+      "title": "Pre-K Amazing Animals & Nature",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/pre-k-biology-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "pre-k-general-science-101",
+      "title": "Little Scientists: Exploring Our World",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/pre-k-general-science-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "pre-k-geography-101",
+      "title": "Pre-K My World Around Me",
+      "subject": "Geography",
+      "file": "src/lib/modules/catalog/pre-k-geography-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "us-civics-201",
+      "title": "U.S. Civics: Government & the Constitution",
+      "subject": "Social Studies",
+      "file": "src/lib/modules/catalog/us-civics-201.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "world-history-101",
+      "title": "World History: Civilizations Through Time",
+      "subject": "History Worldwide",
+      "file": "src/lib/modules/catalog/world-history-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
     {
       "moduleId": "a-level-prep-101",
       "title": "A-Level Prep Foundations",
@@ -33,6 +333,98 @@
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 6.8,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "accounting-finance-101",
+      "title": "Accounting & Finance Fundamentals",
+      "subject": "Accounting and Finance",
+      "file": "src/lib/modules/catalog/accounting-finance-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "accounting-finance-201",
+      "title": "Accounting and Finance Practice",
+      "subject": "Accounting and Finance",
+      "file": "src/lib/modules/catalog/accounting-finance-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "accounting-finance-301",
+      "title": "Corporate Finance and Control",
+      "subject": "Accounting and Finance",
+      "file": "src/lib/modules/catalog/accounting-finance-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "accounting-finance-401",
+      "title": "Strategic Finance Leadership",
+      "subject": "Accounting and Finance",
+      "file": "src/lib/modules/catalog/accounting-finance-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -70,15 +462,15 @@
       "file": "src/lib/modules/catalog/advanced-math-201.ts",
       "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 4,
+        "video": 5,
         "interactive": 5,
-        "quiz": 6
+        "quiz": 5
       },
-      "questionCount": 24,
+      "questionCount": 22,
       "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.4,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -133,21 +525,21 @@
       ]
     },
     {
-      "moduleId": "ap-prep-101",
-      "title": "AP Exam Prep Toolkit",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/ap-prep-101.ts",
-      "lessonCount": 15,
+      "moduleId": "ai-machine-learning-101",
+      "title": "AI & Machine Learning Fundamentals",
+      "subject": "AI & Machine Learning",
+      "file": "src/lib/modules/catalog/ai-machine-learning-101.ts",
+      "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       },
-      "questionCount": 34,
-      "learningAidBlocks": 15,
+      "questionCount": 18,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 6.8,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -156,21 +548,113 @@
       ]
     },
     {
-      "moduleId": "arts-101",
-      "title": "Creative Arts Studio",
-      "subject": "Arts",
-      "file": "src/lib/modules/catalog/arts-101.ts",
-      "lessonCount": 15,
+      "moduleId": "ai-machine-learning-201",
+      "title": "Machine Learning Practice",
+      "subject": "AI and ML",
+      "file": "src/lib/modules/catalog/ai-machine-learning-201.ts",
+      "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
+      "questionCount": 12,
+      "learningAidBlocks": 10,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ai-machine-learning-301",
+      "title": "Machine Learning Engineering",
+      "subject": "AI and ML",
+      "file": "src/lib/modules/catalog/ai-machine-learning-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ai-machine-learning-401",
+      "title": "AI Systems and Governance",
+      "subject": "AI and ML",
+      "file": "src/lib/modules/catalog/ai-machine-learning-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ai-workflows-101",
+      "title": "AI Workflows Foundations",
+      "subject": "AI Workflows",
+      "file": "src/lib/modules/catalog/ai-workflows-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 22,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 5.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "title": "AP Exam Prep Toolkit",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/ap-prep-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 6,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -225,470 +709,10 @@
       ]
     },
     {
-      "moduleId": "astronomy-101",
-      "title": "Astronomy Explorer",
-      "subject": "Astronomy",
-      "file": "src/lib/modules/catalog/astronomy-101.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
       "moduleId": "astronomy-201",
       "title": "Astronomy Observation and Models",
       "subject": "Astronomy",
       "file": "src/lib/modules/catalog/astronomy-201.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "astronomy-301",
-      "title": "Astronomy Data Interpretation and Prediction",
-      "subject": "Astronomy",
-      "file": "src/lib/modules/catalog/astronomy-301.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "atar-prep-101",
-      "title": "ATAR Prep Foundations",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/atar-prep-101.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
-      },
-      "questionCount": 34,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 6.8,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-101",
-      "title": "Basic Math Foundations",
-      "subject": "Math",
-      "file": "src/lib/modules/catalog/basic-math-101.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-1112-u1-external",
-      "title": "Calculus: Limits, Derivatives & Integration",
-      "subject": "Mathematics",
-      "file": "src/lib/modules/catalog/basic-math-1112-u1-external.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
-      },
-      "questionCount": 15,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 3,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-201",
-      "title": "Basic Math Applications",
-      "subject": "Math",
-      "file": "src/lib/modules/catalog/basic-math-201.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-301",
-      "title": "Quantitative Reasoning Lab",
-      "subject": "Math",
-      "file": "src/lib/modules/catalog/basic-math-301.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-35-u1-external",
-      "title": "Multiplication, Division & Fractions",
-      "subject": "Mathematics",
-      "file": "src/lib/modules/catalog/basic-math-35-u1-external.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
-      },
-      "questionCount": 15,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 3,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-401",
-      "title": "Math Capstone Reasoning",
-      "subject": "Math",
-      "file": "src/lib/modules/catalog/basic-math-401.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-68-u1-external",
-      "title": "Pre-Algebra: Expressions, Equations & Ratios",
-      "subject": "Mathematics",
-      "file": "src/lib/modules/catalog/basic-math-68-u1-external.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
-      },
-      "questionCount": 15,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 3,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-910-u1-external",
-      "title": "Algebra II: Functions, Systems & Polynomials",
-      "subject": "Mathematics",
-      "file": "src/lib/modules/catalog/basic-math-910-u1-external.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
-      },
-      "questionCount": 15,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 3,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-k2-u1-external",
-      "title": "Addition & Subtraction (0–20)",
-      "subject": "Mathematics",
-      "file": "src/lib/modules/catalog/basic-math-k2-u1-external.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
-      },
-      "questionCount": 15,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 3,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "basic-math-prek-u1-external",
-      "title": "Counting & Numbers 1–10",
-      "subject": "Mathematics",
-      "file": "src/lib/modules/catalog/basic-math-prek-u1-external.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
-      },
-      "questionCount": 15,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 3,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "biology-101",
-      "title": "Biology Essentials",
-      "subject": "Biology",
-      "file": "src/lib/modules/catalog/biology-101.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "biology-201",
-      "title": "Biology Systems and Change",
-      "subject": "Biology",
-      "file": "src/lib/modules/catalog/biology-201.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "biology-301",
-      "title": "Biology Data and Systems",
-      "subject": "Biology",
-      "file": "src/lib/modules/catalog/biology-301.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "biology-401",
-      "title": "Biology Capstone Inquiry",
-      "subject": "Biology",
-      "file": "src/lib/modules/catalog/biology-401.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "chemistry-101",
-      "title": "Chemistry Essentials",
-      "subject": "Chemistry",
-      "file": "src/lib/modules/catalog/chemistry-101.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "chemistry-201",
-      "title": "Chemistry Reactions and Models",
-      "subject": "Chemistry",
-      "file": "src/lib/modules/catalog/chemistry-201.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "chemistry-301",
-      "title": "Chemistry Quantitative Reasoning",
-      "subject": "Chemistry",
-      "file": "src/lib/modules/catalog/chemistry-301.ts",
       "lessonCount": 15,
       "lessonTypeCounts": {
         "video": 4,
@@ -710,6 +734,306 @@
   ],
   "modules": [
     {
+      "moduleId": "gardening-101",
+      "title": "Gardening Foundations",
+      "subject": "Gardening",
+      "file": "src/lib/modules/catalog/gardening-101.ts",
+      "lessonCount": 5,
+      "lessonTypeCounts": {
+        "video": 2,
+        "interactive": 2,
+        "quiz": 1
+      },
+      "questionCount": 3,
+      "learningAidBlocks": 3,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 80,
+      "priority": "medium",
+      "issues": [
+        "Low lesson volume (5) for a full module."
+      ],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "macos-101",
+      "title": "macOS Fundamentals",
+      "subject": "Operating Systems",
+      "file": "src/lib/modules/catalog/macos-101.ts",
+      "lessonCount": 5,
+      "lessonTypeCounts": {
+        "video": 2,
+        "interactive": 2,
+        "quiz": 1
+      },
+      "questionCount": 3,
+      "learningAidBlocks": 3,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 80,
+      "priority": "medium",
+      "issues": [
+        "Low lesson volume (5) for a full module."
+      ],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "arts-101",
+      "title": "Creative Arts Studio",
+      "subject": "Arts",
+      "file": "src/lib/modules/catalog/arts-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "astronomy-101",
+      "title": "Astronomy: Exploring the Universe",
+      "subject": "Astronomy",
+      "file": "src/lib/modules/catalog/astronomy-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "coding-101",
+      "title": "Coding: From Zero to Programmer",
+      "subject": "Coding",
+      "file": "src/lib/modules/catalog/coding-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "geography-101",
+      "title": "Geography: Our Amazing World",
+      "subject": "Geography",
+      "file": "src/lib/modules/catalog/geography-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "language-arts-201",
+      "title": "Language Arts 201: Writing & Literary Analysis",
+      "subject": "Language Arts",
+      "file": "src/lib/modules/catalog/language-arts-201.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "pre-k-biology-101",
+      "title": "Pre-K Amazing Animals & Nature",
+      "subject": "Biology",
+      "file": "src/lib/modules/catalog/pre-k-biology-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "pre-k-general-science-101",
+      "title": "Little Scientists: Exploring Our World",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/pre-k-general-science-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "pre-k-geography-101",
+      "title": "Pre-K My World Around Me",
+      "subject": "Geography",
+      "file": "src/lib/modules/catalog/pre-k-geography-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "us-civics-201",
+      "title": "U.S. Civics: Government & the Constitution",
+      "subject": "Social Studies",
+      "file": "src/lib/modules/catalog/us-civics-201.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
+      "moduleId": "world-history-101",
+      "title": "World History: Civilizations Through Time",
+      "subject": "History Worldwide",
+      "file": "src/lib/modules/catalog/world-history-101.ts",
+      "lessonCount": 8,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 0,
+        "quiz": 2
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 12,
+      "score": 90,
+      "priority": "low",
+      "issues": [
+        "No interactive lessons found."
+      ],
+      "recommendedActions": [
+        "Add at least one interactive lesson with guided prompts or simulation flow."
+      ]
+    },
+    {
       "moduleId": "a-level-prep-101",
       "title": "A-Level Prep Foundations",
       "subject": "Exam Prep",
@@ -725,6 +1049,98 @@
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 6.8,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "accounting-finance-101",
+      "title": "Accounting & Finance Fundamentals",
+      "subject": "Accounting and Finance",
+      "file": "src/lib/modules/catalog/accounting-finance-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "accounting-finance-201",
+      "title": "Accounting and Finance Practice",
+      "subject": "Accounting and Finance",
+      "file": "src/lib/modules/catalog/accounting-finance-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "accounting-finance-301",
+      "title": "Corporate Finance and Control",
+      "subject": "Accounting and Finance",
+      "file": "src/lib/modules/catalog/accounting-finance-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "accounting-finance-401",
+      "title": "Strategic Finance Leadership",
+      "subject": "Accounting and Finance",
+      "file": "src/lib/modules/catalog/accounting-finance-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -762,15 +1178,15 @@
       "file": "src/lib/modules/catalog/advanced-math-201.ts",
       "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 4,
+        "video": 5,
         "interactive": 5,
-        "quiz": 6
+        "quiz": 5
       },
-      "questionCount": 24,
+      "questionCount": 22,
       "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.4,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -825,21 +1241,21 @@
       ]
     },
     {
-      "moduleId": "ap-prep-101",
-      "title": "AP Exam Prep Toolkit",
-      "subject": "Exam Prep",
-      "file": "src/lib/modules/catalog/ap-prep-101.ts",
-      "lessonCount": 15,
+      "moduleId": "ai-machine-learning-101",
+      "title": "AI & Machine Learning Fundamentals",
+      "subject": "AI & Machine Learning",
+      "file": "src/lib/modules/catalog/ai-machine-learning-101.ts",
+      "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       },
-      "questionCount": 34,
-      "learningAidBlocks": 15,
+      "questionCount": 18,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 6.8,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -848,21 +1264,113 @@
       ]
     },
     {
-      "moduleId": "arts-101",
-      "title": "Creative Arts Studio",
-      "subject": "Arts",
-      "file": "src/lib/modules/catalog/arts-101.ts",
-      "lessonCount": 15,
+      "moduleId": "ai-machine-learning-201",
+      "title": "Machine Learning Practice",
+      "subject": "AI and ML",
+      "file": "src/lib/modules/catalog/ai-machine-learning-201.ts",
+      "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
+      "questionCount": 12,
+      "learningAidBlocks": 10,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ai-machine-learning-301",
+      "title": "Machine Learning Engineering",
+      "subject": "AI and ML",
+      "file": "src/lib/modules/catalog/ai-machine-learning-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ai-machine-learning-401",
+      "title": "AI Systems and Governance",
+      "subject": "AI and ML",
+      "file": "src/lib/modules/catalog/ai-machine-learning-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ai-workflows-101",
+      "title": "AI Workflows Foundations",
+      "subject": "AI Workflows",
+      "file": "src/lib/modules/catalog/ai-workflows-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 22,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 5.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "ap-prep-101",
+      "title": "AP Exam Prep Toolkit",
+      "subject": "Exam Prep",
+      "file": "src/lib/modules/catalog/ap-prep-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 6,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -898,29 +1406,6 @@
       "title": "Creative Arts Composition and Curation",
       "subject": "Arts",
       "file": "src/lib/modules/catalog/arts-301.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "astronomy-101",
-      "title": "Astronomy Explorer",
-      "subject": "Astronomy",
-      "file": "src/lib/modules/catalog/astronomy-101.ts",
       "lessonCount": 15,
       "lessonTypeCounts": {
         "video": 4,
@@ -1268,15 +1753,15 @@
       "file": "src/lib/modules/catalog/biology-201.ts",
       "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 4,
+        "video": 5,
         "interactive": 5,
-        "quiz": 6
+        "quiz": 5
       },
-      "questionCount": 24,
+      "questionCount": 21,
       "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.2,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1320,6 +1805,213 @@
       },
       "questionCount": 24,
       "learningAidBlocks": 15,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "biotechnology-101",
+      "title": "Biotechnology Foundations",
+      "subject": "Biotechnology",
+      "file": "src/lib/modules/catalog/biotechnology-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 6,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "business-analytics-101",
+      "title": "Business Analytics Foundations",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/business-analytics-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "business-analytics-201",
+      "title": "Statistical Methods for Business",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/business-analytics-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "business-analytics-301",
+      "title": "Predictive Analytics & Machine Learning for Business",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/business-analytics-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "business-analytics-401",
+      "title": "Advanced Analytics & AI Strategy",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/business-analytics-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "business-ethics-101",
+      "title": "Business Ethics Foundations",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/business-ethics-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "business-ethics-201",
+      "title": "Corporate Governance & Legal Frameworks",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/business-ethics-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "business-ethics-301",
+      "title": "Ethics in Global Business",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/business-ethics-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "business-ethics-401",
+      "title": "Ethical Leadership & Sustainable Business",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/business-ethics-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
@@ -1423,21 +2115,136 @@
       ]
     },
     {
-      "moduleId": "coding-101",
-      "title": "Coding Foundations",
-      "subject": "Coding",
-      "file": "src/lib/modules/catalog/coding-101.ts",
-      "lessonCount": 15,
+      "moduleId": "civil-engineering-101",
+      "title": "Civil Engineering Foundations",
+      "subject": "Engineering",
+      "file": "src/lib/modules/catalog/civil-engineering-101.ts",
+      "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
+      "questionCount": 16,
+      "learningAidBlocks": 10,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "civil-engineering-201",
+      "title": "Civil Engineering II",
+      "subject": "Civil Engineering",
+      "file": "src/lib/modules/catalog/civil-engineering-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "civil-engineering-301",
+      "title": "Civil Engineering III",
+      "subject": "Civil Engineering",
+      "file": "src/lib/modules/catalog/civil-engineering-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "civil-engineering-401",
+      "title": "Civil Engineering IV",
+      "subject": "Civil Engineering",
+      "file": "src/lib/modules/catalog/civil-engineering-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cloud-computing-101",
+      "title": "Cloud Computing Foundations",
+      "subject": "Computer Science",
+      "file": "src/lib/modules/catalog/cloud-computing-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cloud-computing-201",
+      "title": "Cloud Platform Engineering",
+      "subject": "Cloud Computing",
+      "file": "src/lib/modules/catalog/cloud-computing-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1515,6 +2322,98 @@
       ]
     },
     {
+      "moduleId": "cpu-gpu-memory-design-101",
+      "title": "CPU, GPU, and Memory Architecture",
+      "subject": "Engineering",
+      "file": "src/lib/modules/catalog/cpu-gpu-memory-design-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cpu-gpu-memory-design-201",
+      "title": "Computer Architecture II",
+      "subject": "Computer Architecture",
+      "file": "src/lib/modules/catalog/cpu-gpu-memory-design-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cpu-gpu-memory-design-301",
+      "title": "Computer Architecture III",
+      "subject": "Computer Architecture",
+      "file": "src/lib/modules/catalog/cpu-gpu-memory-design-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cpu-gpu-memory-design-401",
+      "title": "Computer Architecture IV",
+      "subject": "Computer Architecture",
+      "file": "src/lib/modules/catalog/cpu-gpu-memory-design-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "cuet-prep-101",
       "title": "CUET Prep Foundations",
       "subject": "Exam Prep",
@@ -1530,6 +2429,512 @@
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 6.8,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cybersecurity-101",
+      "title": "Cybersecurity Fundamentals",
+      "subject": "Cybersecurity",
+      "file": "src/lib/modules/catalog/cybersecurity-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 20,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cybersecurity-201",
+      "title": "Cybersecurity Operations",
+      "subject": "Cybersecurity",
+      "file": "src/lib/modules/catalog/cybersecurity-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cybersecurity-301",
+      "title": "Cybersecurity Engineering",
+      "subject": "Cybersecurity",
+      "file": "src/lib/modules/catalog/cybersecurity-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "cybersecurity-401",
+      "title": "Cybersecurity Leadership",
+      "subject": "Cybersecurity",
+      "file": "src/lib/modules/catalog/cybersecurity-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "data-science-101",
+      "title": "Data Science Foundations",
+      "subject": "Computer Science",
+      "file": "src/lib/modules/catalog/data-science-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "data-science-201",
+      "title": "Data Science Practice",
+      "subject": "Data Science",
+      "file": "src/lib/modules/catalog/data-science-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "data-science-301",
+      "title": "Data Science Modeling",
+      "subject": "Data Science",
+      "file": "src/lib/modules/catalog/data-science-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "data-science-401",
+      "title": "Data Science Systems",
+      "subject": "Data Science",
+      "file": "src/lib/modules/catalog/data-science-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "digital-marketing-101",
+      "title": "Digital Marketing Fundamentals",
+      "subject": "Digital Marketing",
+      "file": "src/lib/modules/catalog/digital-marketing-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "economics-101",
+      "title": "Microeconomics Foundations",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/economics-101.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "economics-201",
+      "title": "Macroeconomics and Policy",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/economics-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "economics-301",
+      "title": "International Economics & Trade",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/economics-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 27,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "economics-401",
+      "title": "Behavioral Economics & Advanced Topics",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/economics-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 27,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "electrical-engineering-101",
+      "title": "Electrical Engineering Foundations",
+      "subject": "Engineering",
+      "file": "src/lib/modules/catalog/electrical-engineering-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "electrical-engineering-201",
+      "title": "Power Systems II",
+      "subject": "Power Systems",
+      "file": "src/lib/modules/catalog/electrical-engineering-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "electrical-engineering-301",
+      "title": "Power Systems III",
+      "subject": "Power Systems",
+      "file": "src/lib/modules/catalog/electrical-engineering-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "electrical-engineering-401",
+      "title": "Power Systems IV",
+      "subject": "Power Systems",
+      "file": "src/lib/modules/catalog/electrical-engineering-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "electrician-electricity-101",
+      "title": "Electrician Fundamentals",
+      "subject": "Trades",
+      "file": "src/lib/modules/catalog/electrician-electricity-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "electrician-electricity-201",
+      "title": "Electricity for Electricians II",
+      "subject": "Electricity",
+      "file": "src/lib/modules/catalog/electrician-electricity-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "electrician-electricity-301",
+      "title": "Electricity for Electricians III",
+      "subject": "Electricity",
+      "file": "src/lib/modules/catalog/electrician-electricity-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "electrician-electricity-401",
+      "title": "Electricity for Electricians IV",
+      "subject": "Electricity",
+      "file": "src/lib/modules/catalog/electrician-electricity-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "entrepreneurship-101",
+      "title": "Entrepreneurship Fundamentals",
+      "subject": "Entrepreneurship",
+      "file": "src/lib/modules/catalog/entrepreneurship-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -1611,17 +3016,17 @@
       "title": "Financial Literacy Basics",
       "subject": "Financial Literacy",
       "file": "src/lib/modules/catalog/financial-literacy-101.ts",
-      "lessonCount": 15,
+      "lessonCount": 8,
       "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
+        "video": 5,
+        "interactive": 1,
+        "quiz": 2
       },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
+      "questionCount": 10,
+      "learningAidBlocks": 4,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2044,29 +3449,6 @@
       ]
     },
     {
-      "moduleId": "geography-101",
-      "title": "Geography and Maps",
-      "subject": "Geography",
-      "file": "src/lib/modules/catalog/geography-101.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
       "moduleId": "geography-201",
       "title": "Geography, Environment, and Data",
       "subject": "Geography",
@@ -2205,6 +3587,190 @@
       ]
     },
     {
+      "moduleId": "human-resource-management-101",
+      "title": "HR Management Fundamentals",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/human-resource-management-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "human-resource-management-201",
+      "title": "Talent Development & Performance",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/human-resource-management-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "human-resource-management-301",
+      "title": "Compensation, Benefits & Employee Relations",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/human-resource-management-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "human-resource-management-401",
+      "title": "Strategic HR & Future of Work",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/human-resource-management-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "hvac-101",
+      "title": "HVAC Fundamentals",
+      "subject": "Trades",
+      "file": "src/lib/modules/catalog/hvac-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "hvac-201",
+      "title": "HVAC Service and Controls",
+      "subject": "HVAC",
+      "file": "src/lib/modules/catalog/hvac-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "hvac-301",
+      "title": "HVAC Advanced Systems",
+      "subject": "HVAC",
+      "file": "src/lib/modules/catalog/hvac-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "hvac-401",
+      "title": "HVAC Master Practice",
+      "subject": "HVAC",
+      "file": "src/lib/modules/catalog/hvac-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "ib-prep-101",
       "title": "IB Diploma Prep Foundations",
       "subject": "Exam Prep",
@@ -2243,6 +3809,98 @@
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 6.8,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "international-business-101",
+      "title": "Foundations of International Business",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/international-business-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "international-business-201",
+      "title": "International Strategy & Market Entry",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/international-business-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "international-business-301",
+      "title": "Global Trade & Finance",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/international-business-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "international-business-401",
+      "title": "Emerging Markets & Geopolitical Strategy",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/international-business-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2435,29 +4093,6 @@
       ]
     },
     {
-      "moduleId": "language-arts-201",
-      "title": "Language Arts Workshop II",
-      "subject": "Language Arts",
-      "file": "src/lib/modules/catalog/language-arts-201.ts",
-      "lessonCount": 15,
-      "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
-      },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
       "moduleId": "language-arts-301",
       "title": "Language Arts Seminar",
       "subject": "Language Arts",
@@ -2504,21 +4139,1148 @@
       ]
     },
     {
-      "moduleId": "math-101",
-      "title": "Introduction to Counting",
-      "subject": "Math",
-      "file": "src/lib/modules/catalog/math-101.ts",
-      "lessonCount": 8,
+      "moduleId": "law-studies-101",
+      "title": "Introduction to Law",
+      "subject": "Law",
+      "file": "src/lib/modules/catalog/law-studies-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 18,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "law-studies-201",
+      "title": "Law Studies II",
+      "subject": "Law",
+      "file": "src/lib/modules/catalog/law-studies-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "law-studies-301",
+      "title": "Law Studies III",
+      "subject": "Law",
+      "file": "src/lib/modules/catalog/law-studies-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "law-studies-401",
+      "title": "Law Studies IV",
+      "subject": "Law",
+      "file": "src/lib/modules/catalog/law-studies-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "leadership-101",
+      "title": "Leadership Foundations",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/leadership-101.ts",
+      "lessonCount": 7,
       "lessonTypeCounts": {
         "video": 3,
         "interactive": 2,
-        "quiz": 3
+        "quiz": 2
       },
-      "questionCount": 13,
-      "learningAidBlocks": 7,
+      "questionCount": 8,
+      "learningAidBlocks": 4,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4.33,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "leadership-201",
+      "title": "Transformational & Adaptive Leadership",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/leadership-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "leadership-301",
+      "title": "Leading Teams & Organizations",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/leadership-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "leadership-401",
+      "title": "Executive Leadership & Systems Thinking",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/leadership-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "linux-101",
+      "title": "Linux Fundamentals",
+      "subject": "Operating Systems",
+      "file": "src/lib/modules/catalog/linux-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 18,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "marketing-management-101",
+      "title": "Marketing Fundamentals",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/marketing-management-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "marketing-management-201",
+      "title": "Brand Strategy & Digital Marketing",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/marketing-management-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 7,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "marketing-management-301",
+      "title": "Marketing Analytics & Consumer Insights",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/marketing-management-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 6,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "marketing-management-401",
+      "title": "Strategic Marketing & Global Markets",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/marketing-management-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 6,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "math-101",
+      "title": "Math Foundations: From PEMDAS to Equations",
+      "subject": "Math",
+      "file": "src/lib/modules/catalog/math-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 18,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "medicine-101",
+      "title": "Medicine Foundations",
+      "subject": "Medicine",
+      "file": "src/lib/modules/catalog/medicine-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "medicine-201",
+      "title": "Medicine Clinical Systems",
+      "subject": "Medicine",
+      "file": "src/lib/modules/catalog/medicine-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "medicine-301",
+      "title": "Medicine III",
+      "subject": "Medicine",
+      "file": "src/lib/modules/catalog/medicine-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "medicine-401",
+      "title": "Medicine IV",
+      "subject": "Medicine",
+      "file": "src/lib/modules/catalog/medicine-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "meteorology-101",
+      "title": "Meteorology Foundations",
+      "subject": "Science",
+      "file": "src/lib/modules/catalog/meteorology-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "meteorology-201",
+      "title": "Meteorology II",
+      "subject": "Meteorology",
+      "file": "src/lib/modules/catalog/meteorology-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "meteorology-301",
+      "title": "Meteorology III",
+      "subject": "Meteorology",
+      "file": "src/lib/modules/catalog/meteorology-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "meteorology-401",
+      "title": "Meteorology IV",
+      "subject": "Meteorology",
+      "file": "src/lib/modules/catalog/meteorology-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "micro-circuits-101",
+      "title": "Micro-Circuits and PCB Design",
+      "subject": "Engineering",
+      "file": "src/lib/modules/catalog/micro-circuits-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "micro-circuits-201",
+      "title": "Circuit Design II",
+      "subject": "Circuit Design",
+      "file": "src/lib/modules/catalog/micro-circuits-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "micro-circuits-301",
+      "title": "Circuit Design III",
+      "subject": "Circuit Design",
+      "file": "src/lib/modules/catalog/micro-circuits-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "microelectronics-101",
+      "title": "Microelectronics and IC Design",
+      "subject": "Engineering",
+      "file": "src/lib/modules/catalog/microelectronics-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "microelectronics-201",
+      "title": "Microelectronics II",
+      "subject": "Microelectronics",
+      "file": "src/lib/modules/catalog/microelectronics-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "microelectronics-301",
+      "title": "Microelectronics III",
+      "subject": "Microelectronics",
+      "file": "src/lib/modules/catalog/microelectronics-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "microelectronics-401",
+      "title": "Microelectronics IV",
+      "subject": "Microelectronics",
+      "file": "src/lib/modules/catalog/microelectronics-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "music-history-101",
+      "title": "Music History: Medieval to Modern",
+      "subject": "Music",
+      "file": "src/lib/modules/catalog/music-history-101.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "music-production-101",
+      "title": "Introduction to Music Production",
+      "subject": "Music",
+      "file": "src/lib/modules/catalog/music-production-101.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "music-theory-101",
+      "title": "Music Theory Foundations",
+      "subject": "Music",
+      "file": "src/lib/modules/catalog/music-theory-101.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 4,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 9,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "music-theory-201",
+      "title": "Intermediate Music Theory",
+      "subject": "Music",
+      "file": "src/lib/modules/catalog/music-theory-201.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "music-theory-301",
+      "title": "Advanced Music Theory",
+      "subject": "Music",
+      "file": "src/lib/modules/catalog/music-theory-301.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "music-theory-401",
+      "title": "Expert Music Theory",
+      "subject": "Music",
+      "file": "src/lib/modules/catalog/music-theory-401.ts",
+      "lessonCount": 15,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 5,
+        "quiz": 6
+      },
+      "questionCount": 24,
+      "learningAidBlocks": 8,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "network-engineering-101",
+      "title": "Network Engineering Foundations",
+      "subject": "Computer Science",
+      "file": "src/lib/modules/catalog/network-engineering-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "network-engineering-201",
+      "title": "Network Engineering Operations",
+      "subject": "Network Engineering",
+      "file": "src/lib/modules/catalog/network-engineering-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "nursing-101",
+      "title": "Nursing Foundations",
+      "subject": "Nursing",
+      "file": "src/lib/modules/catalog/nursing-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "nursing-201",
+      "title": "Nursing Clinical Practice",
+      "subject": "Nursing",
+      "file": "src/lib/modules/catalog/nursing-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "nursing-301",
+      "title": "Nursing Advanced Clinical Practice",
+      "subject": "Nursing",
+      "file": "src/lib/modules/catalog/nursing-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "nursing-401",
+      "title": "Nursing Leadership and Systems",
+      "subject": "Nursing",
+      "file": "src/lib/modules/catalog/nursing-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "operations-management-101",
+      "title": "Operations Management Fundamentals",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/operations-management-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "operations-management-201",
+      "title": "Quality Management & Lean Operations",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/operations-management-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "operations-management-301",
+      "title": "Supply Chain & Inventory Management",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/operations-management-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "operations-management-401",
+      "title": "Operations Strategy & Digital Transformation",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/operations-management-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "organizational-behavior-101",
+      "title": "Foundations of Organizational Behavior",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/organizational-behavior-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "organizational-behavior-201",
+      "title": "Group Dynamics & Team Performance",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/organizational-behavior-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "organizational-behavior-301",
+      "title": "Leadership & Organizational Culture",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/organizational-behavior-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "organizational-behavior-401",
+      "title": "Organizational Design & Change Management",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/organizational-behavior-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "philosophy-101",
+      "title": "Introduction to Philosophy",
+      "subject": "Philosophy",
+      "file": "src/lib/modules/catalog/philosophy-101.ts",
+      "lessonCount": 11,
+      "lessonTypeCounts": {
+        "video": 7,
+        "interactive": 1,
+        "quiz": 3
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 6,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2533,15 +5295,15 @@
       "file": "src/lib/modules/catalog/physics-101.ts",
       "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 4,
+        "video": 5,
         "interactive": 5,
-        "quiz": 6
+        "quiz": 5
       },
-      "questionCount": 24,
+      "questionCount": 22,
       "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.4,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2619,10 +5381,10 @@
       ]
     },
     {
-      "moduleId": "pre-k-advanced-math-101",
-      "title": "Pre-K Math Thinking Adventures",
-      "subject": "Advanced Math",
-      "file": "src/lib/modules/catalog/pre-k-advanced-math-101.ts",
+      "moduleId": "plumbing-101",
+      "title": "Plumbing Fundamentals",
+      "subject": "Trades",
+      "file": "src/lib/modules/catalog/plumbing-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -2630,10 +5392,102 @@
         "quiz": 4
       },
       "questionCount": 16,
-      "learningAidBlocks": 10,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "plumbing-201",
+      "title": "Plumbing Systems and Codes",
+      "subject": "Plumbing",
+      "file": "src/lib/modules/catalog/plumbing-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "plumbing-301",
+      "title": "Plumbing Advanced Systems",
+      "subject": "Plumbing",
+      "file": "src/lib/modules/catalog/plumbing-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "plumbing-401",
+      "title": "Plumbing Master Practice",
+      "subject": "Plumbing",
+      "file": "src/lib/modules/catalog/plumbing-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "pre-k-advanced-math-101",
+      "title": "Pre-K Math Thinking Adventures",
+      "subject": "Advanced Math",
+      "file": "src/lib/modules/catalog/pre-k-advanced-math-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 9,
+      "learningAidBlocks": 9,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2648,15 +5502,15 @@
       "file": "src/lib/modules/catalog/pre-k-arts-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 10,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2666,20 +5520,20 @@
     },
     {
       "moduleId": "pre-k-astronomy-101",
-      "title": "Pre-K Sky and Space Explorers",
+      "title": "Pre-K Sky & Space Explorers",
       "subject": "Astronomy",
       "file": "src/lib/modules/catalog/pre-k-astronomy-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 19,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 9.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2694,38 +5548,15 @@
       "file": "src/lib/modules/catalog/pre-k-basic-math-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 10,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-biology-101",
-      "title": "Pre-K Living Things Club",
-      "subject": "Biology",
-      "file": "src/lib/modules/catalog/pre-k-biology-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2735,20 +5566,20 @@
     },
     {
       "moduleId": "pre-k-chemistry-101",
-      "title": "Pre-K Matter and Mixtures Playlab",
+      "title": "Pre-K Kitchen Science Lab!",
       "subject": "Chemistry",
       "file": "src/lib/modules/catalog/pre-k-chemistry-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 17,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 8.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2758,20 +5589,20 @@
     },
     {
       "moduleId": "pre-k-coding-101",
-      "title": "Pre-K Coding Play Patterns",
+      "title": "Pre-K Coding Adventures",
       "subject": "Coding",
       "file": "src/lib/modules/catalog/pre-k-coding-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 18,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 9,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2786,15 +5617,15 @@
       "file": "src/lib/modules/catalog/pre-k-farming-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
+        "video": 5,
         "interactive": 3,
-        "quiz": 4
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 9,
+      "learningAidBlocks": 9,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2809,15 +5640,15 @@
       "file": "src/lib/modules/catalog/pre-k-financial-literacy-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 9,
+      "learningAidBlocks": 9,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2827,66 +5658,20 @@
     },
     {
       "moduleId": "pre-k-general-relativity-101",
-      "title": "Pre-K Space and Time Wonder Lab",
+      "title": "Pre-K Space, Time & Gravity Explorers",
       "subject": "General Relativity",
       "file": "src/lib/modules/catalog/pre-k-general-relativity-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 9,
+      "learningAidBlocks": 9,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-general-science-101",
-      "title": "Pre-K Science Discovery Lab",
-      "subject": "General Science",
-      "file": "src/lib/modules/catalog/pre-k-general-science-101.ts",
-      "lessonCount": 11,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 5
-      },
-      "questionCount": 19,
-      "learningAidBlocks": 11,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 3.8,
-      "score": 100,
-      "priority": "low",
-      "issues": [],
-      "recommendedActions": [
-        "Maintain current quality and continue periodic review for factual depth and age alignment."
-      ]
-    },
-    {
-      "moduleId": "pre-k-geography-101",
-      "title": "Pre-K Maps and Places Around Us",
-      "subject": "Geography",
-      "file": "src/lib/modules/catalog/pre-k-geography-101.ts",
-      "lessonCount": 10,
-      "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
-      },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
-      "placeholderOptionCount": 0,
-      "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2901,15 +5686,15 @@
       "file": "src/lib/modules/catalog/pre-k-household-management-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
+        "video": 5,
         "interactive": 3,
-        "quiz": 4
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 9,
+      "learningAidBlocks": 9,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2920,19 +5705,19 @@
     {
       "moduleId": "pre-k-language-arts-101",
       "title": "Pre-K Language Arts Explorers",
-      "subject": "Language Arts",
+      "subject": "Reading",
       "file": "src/lib/modules/catalog/pre-k-language-arts-101.ts",
-      "lessonCount": 13,
+      "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 7
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 25,
-      "learningAidBlocks": 13,
+      "questionCount": 10,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 3.57,
+      "averageQuestionsPerQuiz": 5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2942,20 +5727,20 @@
     },
     {
       "moduleId": "pre-k-physics-101",
-      "title": "Pre-K Motion and Force Playground",
+      "title": "Pre-K Push, Pull & Play! Physics Fun",
       "subject": "Physics",
       "file": "src/lib/modules/catalog/pre-k-physics-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 17,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 8.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2970,15 +5755,15 @@
       "file": "src/lib/modules/catalog/pre-k-social-studies-us-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
+        "video": 5,
         "interactive": 3,
-        "quiz": 4
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 9,
+      "learningAidBlocks": 9,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -2993,15 +5778,15 @@
       "file": "src/lib/modules/catalog/pre-k-social-studies-world-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 3,
-        "interactive": 3,
-        "quiz": 4
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
       },
-      "questionCount": 16,
-      "learningAidBlocks": 10,
+      "questionCount": 9,
+      "learningAidBlocks": 9,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -3014,6 +5799,167 @@
       "title": "Pre-K Long Ago Stories",
       "subject": "World History",
       "file": "src/lib/modules/catalog/pre-k-world-history-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 5,
+        "interactive": 3,
+        "quiz": 2
+      },
+      "questionCount": 9,
+      "learningAidBlocks": 9,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "project-management-101",
+      "title": "Project Management Fundamentals",
+      "subject": "Project Management",
+      "file": "src/lib/modules/catalog/project-management-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "project-management-201",
+      "title": "Project Delivery Practice",
+      "subject": "Project Management",
+      "file": "src/lib/modules/catalog/project-management-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "project-management-301",
+      "title": "Program Management",
+      "subject": "Project Management",
+      "file": "src/lib/modules/catalog/project-management-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "project-management-401",
+      "title": "Enterprise Project Leadership",
+      "subject": "Project Management",
+      "file": "src/lib/modules/catalog/project-management-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "psychology-101",
+      "title": "Introduction to Psychology",
+      "subject": "Psychology",
+      "file": "src/lib/modules/catalog/psychology-101.ts",
+      "lessonCount": 11,
+      "lessonTypeCounts": {
+        "video": 7,
+        "interactive": 1,
+        "quiz": 3
+      },
+      "questionCount": 14,
+      "learningAidBlocks": 6,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.67,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "reading-101",
+      "title": "The Alphabet & Early Reading",
+      "subject": "Reading",
+      "file": "src/lib/modules/catalog/reading-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 6,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 10,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "renewable-energy-systems-101",
+      "title": "Renewable Energy Systems",
+      "subject": "Engineering",
+      "file": "src/lib/modules/catalog/renewable-energy-systems-101.ts",
       "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
@@ -3033,21 +5979,159 @@
       ]
     },
     {
-      "moduleId": "reading-101",
-      "title": "The Alphabet",
-      "subject": "Reading",
-      "file": "src/lib/modules/catalog/reading-101.ts",
-      "lessonCount": 8,
+      "moduleId": "renewable-energy-systems-201",
+      "title": "Renewable Energy Engineering",
+      "subject": "Renewable Energy",
+      "file": "src/lib/modules/catalog/renewable-energy-systems-201.ts",
+      "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
-        "interactive": 2,
-        "quiz": 3
+        "interactive": 3,
+        "quiz": 4
       },
-      "questionCount": 13,
-      "learningAidBlocks": 6,
+      "questionCount": 12,
+      "learningAidBlocks": 10,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4.33,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "renewable-energy-systems-301",
+      "title": "Renewable Energy Optimization",
+      "subject": "Renewable Energy",
+      "file": "src/lib/modules/catalog/renewable-energy-systems-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "renewable-energy-systems-401",
+      "title": "Renewable Energy Systems Leadership",
+      "subject": "Renewable Energy",
+      "file": "src/lib/modules/catalog/renewable-energy-systems-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "robotics-101",
+      "title": "Robotics Foundations",
+      "subject": "Engineering",
+      "file": "src/lib/modules/catalog/robotics-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 16,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "robotics-201",
+      "title": "Robotics Integration",
+      "subject": "Robotics",
+      "file": "src/lib/modules/catalog/robotics-201.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "robotics-301",
+      "title": "Robotics Autonomy",
+      "subject": "Robotics",
+      "file": "src/lib/modules/catalog/robotics-301.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "robotics-401",
+      "title": "Robotics Systems Engineering",
+      "subject": "Robotics",
+      "file": "src/lib/modules/catalog/robotics-401.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 12,
+      "learningAidBlocks": 10,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -3060,17 +6144,17 @@
       "title": "SAT Prep Foundations",
       "subject": "Exam Prep",
       "file": "src/lib/modules/catalog/sat-prep-101.ts",
-      "lessonCount": 15,
+      "lessonCount": 7,
       "lessonTypeCounts": {
-        "video": 5,
-        "interactive": 5,
-        "quiz": 5
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
       },
-      "questionCount": 34,
-      "learningAidBlocks": 15,
+      "questionCount": 10,
+      "learningAidBlocks": 4,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 6.8,
+      "averageQuestionsPerQuiz": 5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -3083,17 +6167,17 @@
       "title": "Our Solar System",
       "subject": "Science",
       "file": "src/lib/modules/catalog/science-101.ts",
-      "lessonCount": 8,
+      "lessonCount": 10,
       "lessonTypeCounts": {
         "video": 3,
-        "interactive": 2,
-        "quiz": 3
+        "interactive": 3,
+        "quiz": 4
       },
-      "questionCount": 13,
+      "questionCount": 18,
       "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4.33,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -3131,15 +6215,15 @@
       "file": "src/lib/modules/catalog/social-studies-us-101.ts",
       "lessonCount": 15,
       "lessonTypeCounts": {
-        "video": 4,
+        "video": 5,
         "interactive": 5,
-        "quiz": 6
+        "quiz": 5
       },
-      "questionCount": 24,
+      "questionCount": 22,
       "learningAidBlocks": 15,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
-      "averageQuestionsPerQuiz": 4,
+      "averageQuestionsPerQuiz": 4.4,
       "score": 100,
       "priority": "low",
       "issues": [],
@@ -3309,6 +6393,190 @@
       ]
     },
     {
+      "moduleId": "strategic-management-101",
+      "title": "Foundations of Strategic Management",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/strategic-management-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "strategic-management-201",
+      "title": "Corporate & Business-Level Strategy",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/strategic-management-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 7,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "strategic-management-301",
+      "title": "Dynamic Strategy & Innovation",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/strategic-management-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 7,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "strategic-management-401",
+      "title": "Global Strategy & Strategic Leadership",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/strategic-management-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 2,
+        "quiz": 2
+      },
+      "questionCount": 7,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 3.5,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "supply-chain-management-101",
+      "title": "Supply Chain Fundamentals",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/supply-chain-management-101.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "supply-chain-management-201",
+      "title": "Procurement & Supplier Management",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/supply-chain-management-201.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "supply-chain-management-301",
+      "title": "Logistics & Distribution Strategy",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/supply-chain-management-301.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "supply-chain-management-401",
+      "title": "Digital Supply Chains & Resilience",
+      "subject": "Business",
+      "file": "src/lib/modules/catalog/supply-chain-management-401.ts",
+      "lessonCount": 7,
+      "lessonTypeCounts": {
+        "video": 4,
+        "interactive": 1,
+        "quiz": 2
+      },
+      "questionCount": 8,
+      "learningAidBlocks": 4,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
       "moduleId": "toefl-prep-101",
       "title": "TOEFL iBT Prep Foundations",
       "subject": "Exam Prep",
@@ -3332,21 +6600,44 @@
       ]
     },
     {
-      "moduleId": "world-history-101",
-      "title": "World History Journey",
-      "subject": "History Worldwide",
-      "file": "src/lib/modules/catalog/world-history-101.ts",
-      "lessonCount": 15,
+      "moduleId": "ux-design-101",
+      "title": "UX Design Foundations",
+      "subject": "UX Design",
+      "file": "src/lib/modules/catalog/ux-design-101.ts",
+      "lessonCount": 10,
       "lessonTypeCounts": {
-        "video": 4,
-        "interactive": 5,
-        "quiz": 6
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
       },
-      "questionCount": 24,
-      "learningAidBlocks": 15,
+      "questionCount": 16,
+      "learningAidBlocks": 5,
       "placeholderOptionCount": 0,
       "genericReflectionCount": 0,
       "averageQuestionsPerQuiz": 4,
+      "score": 100,
+      "priority": "low",
+      "issues": [],
+      "recommendedActions": [
+        "Maintain current quality and continue periodic review for factual depth and age alignment."
+      ]
+    },
+    {
+      "moduleId": "windows-101",
+      "title": "Windows Fundamentals",
+      "subject": "Operating Systems",
+      "file": "src/lib/modules/catalog/windows-101.ts",
+      "lessonCount": 10,
+      "lessonTypeCounts": {
+        "video": 3,
+        "interactive": 3,
+        "quiz": 4
+      },
+      "questionCount": 18,
+      "learningAidBlocks": 5,
+      "placeholderOptionCount": 0,
+      "genericReflectionCount": 0,
+      "averageQuestionsPerQuiz": 4.5,
       "score": 100,
       "priority": "low",
       "issues": [],

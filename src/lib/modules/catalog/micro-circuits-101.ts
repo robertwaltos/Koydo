@@ -1,728 +1,975 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-/**
- * Micro-Circuits 101 — v2.0.0 (full rewrite)
- *
- * Circuit design and PCB fundamentals covering passive and active
- * components, circuit analysis, signal conditioning, PCB layout,
- * and prototyping techniques — ages 16+.
- *
- * 10 lessons: 3 video · 3 interactive · 4 quiz
- */
 export const MicroCircuits101Module: LearningModule = {
-  id: "micro-circuits-101",
-  title: "Micro-Circuits and PCB Design",
-  description:
-    "Learn the fundamentals of electronic circuit design, from passive and active components through circuit analysis and signal conditioning to PCB layout, prototyping, and testing with real-world instruments.",
-  subject: "Engineering",
-  tags: ["core", "curriculum", "interactive", "engineering", "circuits"],
-  minAge: 16,
-  maxAge: 99,
-  version: "2.0.0",
-  difficultyBand: "beginner",
-  localeSupport: ["en"],
-  thumbnail: "/placeholders/lesson-robot.svg",
-  learningObjectives: [
+  "id": "micro-circuits-101",
+  "title": "Micro-Circuits and PCB Design",
+  "description": "Learn the fundamentals of electronic circuit design, from passive and active components through circuit analysis and signal conditioning to PCB layout, prototyping, and testing with real-world instruments.",
+  "subject": "Engineering",
+  "tags": [
+    "core",
+    "curriculum",
+    "interactive",
+    "engineering",
+    "circuits"
+  ],
+  "minAge": 16,
+  "maxAge": 99,
+  "version": "2.0.0",
+  "difficultyBand": "beginner",
+  "localeSupport": [
+    "en"
+  ],
+  "thumbnail": "/placeholders/lesson-robot.svg",
+  "learningObjectives": [
     "Identify passive components — resistors, capacitors, and inductors — and interpret their ratings, tolerances, and standard marking systems including resistor color codes",
     "Explain the operating principles of active components including diodes, BJTs, MOSFETs, op-amps, and linear voltage regulators",
     "Apply Thevenin and Norton equivalent circuits, mesh analysis, and nodal analysis to solve DC and low-frequency AC networks",
     "Design and analyze passive filters (low-pass, high-pass, band-pass) and describe amplifier gain, ADC resolution, and DAC reconstruction",
     "Demonstrate proficiency in PCB design workflow including schematic capture, component footprints, trace width calculation, via selection, and ground plane strategy",
     "Use breadboards, multimeters, and oscilloscopes to prototype, debug, and validate electronic circuits before PCB fabrication",
-    "Synthesize component selection, analysis, and layout skills through integrated checkpoint and mastery assessments",
+    "Synthesize component selection, analysis, and layout skills through integrated checkpoint and mastery assessments"
   ],
-  lessons: [
-    /* ──────────────────────────────────────────────
-       L01  Passive Components  (video)
-    ────────────────────────────────────────────── */
+  "lessons": [
     {
-      id: "micro-circuits-101-l01",
-      title: "Passive Components",
-      type: "video",
-      duration: 10,
-      objectives: [
+      "id": "micro-circuits-101-l01",
+      "title": "Passive Components",
+      "type": "video",
+      "duration": 10,
+      "objectives": [
         "Read 4-band and 5-band resistor color codes and calculate resistance values with tolerance",
         "Compare ceramic, electrolytic, and film capacitors by ESR, voltage rating, and application",
-        "Describe inductor behavior in DC and AC circuits and identify common core materials",
+        "Describe inductor behavior in DC and AC circuits and identify common core materials"
       ],
-      chunks: [
+      "chunks": [
         {
-          id: "micro-circuits-101-l01-c1",
-          title: "Resistors: Color Codes and Power Ratings",
-          content:
-            "Resistors oppose current flow and are the most fundamental passive component. Their resistance value is typically marked with color bands: in a 4-band code, the first two bands represent significant digits, the third is the multiplier, and the fourth indicates tolerance (gold = ±5%, silver = ±10%). A 5-band code adds a third significant digit for precision resistors. For example, brown-black-orange-gold reads as 10 × 1,000 = 10 kΩ ±5%. Power rating specifies the maximum energy a resistor can safely dissipate as heat — common through-hole sizes are 1/8 W, 1/4 W, and 1/2 W. Exceeding the power rating causes overheating and eventual failure. SMD resistors use a numeric code (e.g., 472 = 4.7 kΩ) and are rated by package size: 0402, 0603, 0805, and 1206 being the most common.",
+          "id": "micro-circuits-101-l01-c1",
+          "title": "Resistors: Color Codes and Power Ratings",
+          "content": "Resistors oppose current flow and are the most fundamental passive component. Their resistance value is typically marked with color bands: in a 4-band code, the first two bands represent significant digits, the third is the multiplier, and the fourth indicates tolerance (gold = ±5%, silver = ±10%). A 5-band code adds a third significant digit for precision resistors. For example, brown-black-orange-gold reads as 10 × 1,000 = 10 kΩ ±5%. Power rating specifies the maximum energy a resistor can safely dissipate as heat — common through-hole sizes are 1/8 W, 1/4 W, and 1/2 W. Exceeding the power rating causes overheating and eventual failure. SMD resistors use a numeric code (e.g., 472 = 4.7 kΩ) and are rated by package size: 0402, 0603, 0805, and 1206 being the most common."
         },
         {
-          id: "micro-circuits-101-l01-c2",
-          title: "Capacitors: Types and Characteristics",
-          content:
-            "Capacitors store energy in an electric field between two conductive plates separated by a dielectric. Ceramic capacitors (class 1 C0G/NP0 and class 2 X7R/X5R) are small, inexpensive, and ideal for decoupling and high-frequency filtering; however, class 2 types lose capacitance with applied DC voltage. Electrolytic capacitors — aluminum or tantalum — offer high capacitance (1 µF to thousands of µF) but are polarized and have higher equivalent series resistance (ESR), making them suited for power supply bulk filtering. Film capacitors (polyester, polypropylene) have low ESR, excellent stability, and self-healing properties, making them preferred for audio, timing, and snubber circuits. Key specifications include rated voltage (always derate by at least 20%), capacitance tolerance, temperature coefficient, and ESR — the last being critical in switch-mode power supply output filtering.",
+          "id": "micro-circuits-101-l01-c2",
+          "title": "Capacitors: Types and Characteristics",
+          "content": "Capacitors store energy in an electric field between two conductive plates separated by a dielectric. Ceramic capacitors (class 1 C0G/NP0 and class 2 X7R/X5R) are small, inexpensive, and ideal for decoupling and high-frequency filtering; however, class 2 types lose capacitance with applied DC voltage. Electrolytic capacitors — aluminum or tantalum — offer high capacitance (1 µF to thousands of µF) but are polarized and have higher equivalent series resistance (ESR), making them suited for power supply bulk filtering. Film capacitors (polyester, polypropylene) have low ESR, excellent stability, and self-healing properties, making them preferred for audio, timing, and snubber circuits. Key specifications include rated voltage (always derate by at least 20%), capacitance tolerance, temperature coefficient, and ESR — the last being critical in switch-mode power supply output filtering."
         },
         {
-          id: "micro-circuits-101-l01-c3",
-          title: "Inductors and Their Applications",
-          content:
-            "Inductors store energy in a magnetic field generated by current flowing through a coil of wire. Inductance is measured in henries (H) and depends on the number of turns, core material, and coil geometry. In DC circuits, an ideal inductor acts as a short circuit at steady state but opposes sudden changes in current — described by V = L × (dI/dt). In AC circuits, inductive reactance (X_L = 2πfL) increases with frequency, making inductors useful for filtering high-frequency noise. Common core materials include ferrite (high frequency, low loss), powdered iron (moderate frequency, higher saturation), and air core (no saturation, low inductance). Inductors appear in LC filters, switch-mode power supply energy storage (buck/boost converters), impedance matching networks, and EMI suppression chokes. Saturation current — the current at which inductance drops significantly — is a critical selection parameter.",
-        },
+          "id": "micro-circuits-101-l01-c3",
+          "title": "Inductors and Their Applications",
+          "content": "Inductors store energy in a magnetic field generated by current flowing through a coil of wire. Inductance is measured in henries (H) and depends on the number of turns, core material, and coil geometry. In DC circuits, an ideal inductor acts as a short circuit at steady state but opposes sudden changes in current — described by V = L × (dI/dt). In AC circuits, inductive reactance (X_L = 2πfL) increases with frequency, making inductors useful for filtering high-frequency noise. Common core materials include ferrite (high frequency, low loss), powdered iron (moderate frequency, higher saturation), and air core (no saturation, low inductance). Inductors appear in LC filters, switch-mode power supply energy storage (buck/boost converters), impedance matching networks, and EMI suppression chokes. Saturation current — the current at which inductance drops significantly — is a critical selection parameter."
+        }
       ],
-      flashcards: [
+      "flashcards": [
         {
-          id: "micro-circuits-101-l01-f1",
-          front: "How do you read a 4-band resistor with bands brown-black-orange-gold?",
-          back: "Brown (1) Black (0) → 10, Orange multiplier (×1,000) = 10 kΩ, Gold tolerance = ±5%.",
+          "id": "micro-circuits-101-l01-f1",
+          "front": "How do you read a 4-band resistor with bands brown-black-orange-gold?",
+          "back": "Brown (1) Black (0) → 10, Orange multiplier (×1,000) = 10 kΩ, Gold tolerance = ±5%."
         },
         {
-          id: "micro-circuits-101-l01-f2",
-          front: "Why are electrolytic capacitors polarized, and what happens if they are reverse-biased?",
-          back: "Their thin oxide dielectric layer forms only on the anode. Reverse voltage breaks down this layer, causing excessive current, heating, and potentially violent failure.",
+          "id": "micro-circuits-101-l01-f2",
+          "front": "Why are electrolytic capacitors polarized, and what happens if they are reverse-biased?",
+          "back": "Their thin oxide dielectric layer forms only on the anode. Reverse voltage breaks down this layer, causing excessive current, heating, and potentially violent failure."
         },
         {
-          id: "micro-circuits-101-l01-f3",
-          front: "What is ESR (Equivalent Series Resistance) in a capacitor, and why does it matter?",
-          back: "ESR is the effective internal resistance of a capacitor. High ESR causes power dissipation as heat and reduces filtering effectiveness, especially in switch-mode power supply output stages.",
+          "id": "micro-circuits-101-l01-f3",
+          "front": "What is ESR (Equivalent Series Resistance) in a capacitor, and why does it matter?",
+          "back": "ESR is the effective internal resistance of a capacitor. High ESR causes power dissipation as heat and reduces filtering effectiveness, especially in switch-mode power supply output stages."
         },
         {
-          id: "micro-circuits-101-l01-f4",
-          front: "What does inductor saturation current mean?",
-          back: "It is the DC current at which the inductor's core magnetically saturates and its inductance drops significantly (typically by 20–30%), reducing its effectiveness.",
-        },
+          "id": "micro-circuits-101-l01-f4",
+          "front": "What does inductor saturation current mean?",
+          "back": "It is the DC current at which the inductor's core magnetically saturates and its inductance drops significantly (typically by 20–30%), reducing its effectiveness."
+        }
       ],
+      "learningAids": [
+        {
+          "id": "micro-circuits-101-l01-a1",
+          "type": "image",
+          "title": "Concept Card",
+          "content": "Visual summary of the lesson's main concept."
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L02  Active Components  (interactive)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l02",
-      title: "Active Components",
-      type: "interactive",
-      duration: 12,
-      objectives: [
+      "id": "micro-circuits-101-l02",
+      "title": "Active Components",
+      "type": "interactive",
+      "duration": 12,
+      "objectives": [
         "Describe diode types and their forward voltage drops and applications",
         "Compare BJT and MOSFET transistors in terms of drive requirements and switching characteristics",
-        "Explain the function of op-amps and linear voltage regulators such as the LM7805",
+        "Explain the function of op-amps and linear voltage regulators such as the LM7805"
       ],
-      chunks: [
+      "chunks": [
         {
-          id: "micro-circuits-101-l02-c1",
-          title: "Diodes and Transistor Fundamentals",
-          content:
-            "A diode is a two-terminal semiconductor device that conducts current primarily in one direction. Standard silicon diodes have a forward voltage drop of approximately 0.7 V, while Schottky diodes drop only 0.2–0.4 V, making them ideal for high-efficiency rectification and reverse-polarity protection. Zener diodes are designed to conduct in reverse breakdown at a precise voltage, enabling simple voltage regulation and clamping circuits. LEDs emit photons when forward-biased, with forward voltage depending on color (red ~1.8 V, white ~3.2 V). Bipolar junction transistors (BJTs) are current-controlled devices — a small base current (I_B) controls a much larger collector current (I_C) by the relationship I_C = β × I_B, where β (h_FE) typically ranges from 50 to 300. NPN BJTs are more common than PNP in digital and switching applications.",
+          "id": "micro-circuits-101-l02-c1",
+          "title": "Diodes and Transistor Fundamentals",
+          "content": "A diode is a two-terminal semiconductor device that conducts current primarily in one direction. Standard silicon diodes have a forward voltage drop of approximately 0.7 V, while Schottky diodes drop only 0.2–0.4 V, making them ideal for high-efficiency rectification and reverse-polarity protection. Zener diodes are designed to conduct in reverse breakdown at a precise voltage, enabling simple voltage regulation and clamping circuits. LEDs emit photons when forward-biased, with forward voltage depending on color (red ~1.8 V, white ~3.2 V). Bipolar junction transistors (BJTs) are current-controlled devices — a small base current (I_B) controls a much larger collector current (I_C) by the relationship I_C = β × I_B, where β (h_FE) typically ranges from 50 to 300. NPN BJTs are more common than PNP in digital and switching applications."
         },
         {
-          id: "micro-circuits-101-l02-c2",
-          title: "MOSFETs and Switching",
-          content:
-            "Metal-oxide-semiconductor field-effect transistors (MOSFETs) are voltage-controlled devices with extremely high input impedance — the gate draws virtually no DC current. An N-channel enhancement-mode MOSFET turns on when the gate-to-source voltage (V_GS) exceeds the threshold voltage (V_th), typically 1–4 V for logic-level types. The key advantage over BJTs is negligible drive power and very fast switching speeds, making MOSFETs dominant in power electronics and digital logic. R_DS(on) — the drain-to-source resistance when fully on — determines conduction losses; modern power MOSFETs achieve R_DS(on) values below 10 mΩ. P-channel MOSFETs are used for high-side switching. Gate charge (Q_g) and total gate capacitance affect switching speed and driver requirements. When selecting a MOSFET, key parameters are V_DS(max), I_D(max), R_DS(on), V_th, and thermal resistance.",
+          "id": "micro-circuits-101-l02-c2",
+          "title": "MOSFETs and Switching",
+          "content": "Metal-oxide-semiconductor field-effect transistors (MOSFETs) are voltage-controlled devices with extremely high input impedance — the gate draws virtually no DC current. An N-channel enhancement-mode MOSFET turns on when the gate-to-source voltage (V_GS) exceeds the threshold voltage (V_th), typically 1–4 V for logic-level types. The key advantage over BJTs is negligible drive power and very fast switching speeds, making MOSFETs dominant in power electronics and digital logic. R_DS(on) — the drain-to-source resistance when fully on — determines conduction losses; modern power MOSFETs achieve R_DS(on) values below 10 mΩ. P-channel MOSFETs are used for high-side switching. Gate charge (Q_g) and total gate capacitance affect switching speed and driver requirements. When selecting a MOSFET, key parameters are V_DS(max), I_D(max), R_DS(on), V_th, and thermal resistance."
         },
         {
-          id: "micro-circuits-101-l02-c3",
-          title: "Op-Amps and Voltage Regulators",
-          content:
-            "Operational amplifiers (op-amps) are high-gain differential amplifiers used as building blocks for signal conditioning. An ideal op-amp has infinite open-loop gain, infinite input impedance, and zero output impedance. In practice, devices like the LM358 (general-purpose) and OPA2134 (audio-grade) closely approximate this ideal. With negative feedback, op-amps form inverting amplifiers (gain = −R_f/R_in), non-inverting amplifiers (gain = 1 + R_f/R_in), voltage followers (unity gain buffer), summing amplifiers, and active filters. Linear voltage regulators convert a higher input voltage to a stable lower output. The LM7805 provides a fixed 5 V output with a dropout voltage of about 2 V — meaning the input must be at least 7 V. Low-dropout regulators (LDOs) like the AMS1117-3.3 require only a few hundred millivolts of headroom, improving efficiency in battery-powered designs.",
-        },
+          "id": "micro-circuits-101-l02-c3",
+          "title": "Op-Amps and Voltage Regulators",
+          "content": "Operational amplifiers (op-amps) are high-gain differential amplifiers used as building blocks for signal conditioning. An ideal op-amp has infinite open-loop gain, infinite input impedance, and zero output impedance. In practice, devices like the LM358 (general-purpose) and OPA2134 (audio-grade) closely approximate this ideal. With negative feedback, op-amps form inverting amplifiers (gain = −R_f/R_in), non-inverting amplifiers (gain = 1 + R_f/R_in), voltage followers (unity gain buffer), summing amplifiers, and active filters. Linear voltage regulators convert a higher input voltage to a stable lower output. The LM7805 provides a fixed 5 V output with a dropout voltage of about 2 V — meaning the input must be at least 7 V. Low-dropout regulators (LDOs) like the AMS1117-3.3 require only a few hundred millivolts of headroom, improving efficiency in battery-powered designs."
+        }
       ],
-      flashcards: [
+      "flashcards": [
         {
-          id: "micro-circuits-101-l02-f1",
-          front: "What is the typical forward voltage drop of a standard silicon diode versus a Schottky diode?",
-          back: "A standard silicon diode drops about 0.7 V; a Schottky diode drops only 0.2–0.4 V due to its metal–semiconductor junction.",
+          "id": "micro-circuits-101-l02-f1",
+          "front": "What is the typical forward voltage drop of a standard silicon diode versus a Schottky diode?",
+          "back": "A standard silicon diode drops about 0.7 V; a Schottky diode drops only 0.2–0.4 V due to its metal–semiconductor junction."
         },
         {
-          id: "micro-circuits-101-l02-f2",
-          front: "How does a MOSFET differ from a BJT in terms of input drive?",
-          back: "A MOSFET is voltage-controlled (gate draws virtually no DC current), while a BJT is current-controlled (requires continuous base current to stay on).",
+          "id": "micro-circuits-101-l02-f2",
+          "front": "How does a MOSFET differ from a BJT in terms of input drive?",
+          "back": "A MOSFET is voltage-controlled (gate draws virtually no DC current), while a BJT is current-controlled (requires continuous base current to stay on)."
         },
         {
-          id: "micro-circuits-101-l02-f3",
-          front: "What is the gain formula for a non-inverting op-amp configuration?",
-          back: "Gain = 1 + (R_f / R_in), where R_f is the feedback resistor and R_in is the resistor from the inverting input to ground.",
+          "id": "micro-circuits-101-l02-f3",
+          "front": "What is the gain formula for a non-inverting op-amp configuration?",
+          "back": "Gain = 1 + (R_f / R_in), where R_f is the feedback resistor and R_in is the resistor from the inverting input to ground."
         },
         {
-          id: "micro-circuits-101-l02-f4",
-          front: "What is the minimum input voltage for an LM7805 voltage regulator to output stable 5 V?",
-          back: "About 7 V — the LM7805 requires approximately 2 V of dropout headroom above its 5 V output.",
-        },
+          "id": "micro-circuits-101-l02-f4",
+          "front": "What is the minimum input voltage for an LM7805 voltage regulator to output stable 5 V?",
+          "back": "About 7 V — the LM7805 requires approximately 2 V of dropout headroom above its 5 V output."
+        }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
-          id: "micro-circuits-101-l02-a1",
-          type: "sorting_buckets",
-          title: "Passive vs. Active Components",
-          description: "Sort each electronic component into the correct category based on whether it can amplify or control power.",
-          instructions: [
-            "Drag each component into the bucket that best describes its classification.",
+          "id": "micro-circuits-101-l02-a1",
+          "type": "sorting_buckets",
+          "title": "Passive vs. Active Components",
+          "description": "Sort each electronic component into the correct category based on whether it can amplify or control power.",
+          "instructions": [
+            "Drag each component into the bucket that best describes its classification."
           ],
-          buckets: ["Passive Component", "Active Component"],
-          items: [
-            { text: "10 kΩ carbon film resistor", bucket: "Passive Component" },
-            { text: "2N2222 NPN bipolar junction transistor", bucket: "Active Component" },
-            { text: "100 µF aluminum electrolytic capacitor", bucket: "Passive Component" },
-            { text: "IRF540N N-channel power MOSFET", bucket: "Active Component" },
-            { text: "10 mH ferrite-core inductor", bucket: "Passive Component" },
-            { text: "LM358 dual operational amplifier", bucket: "Active Component" },
-            { text: "1N4148 small-signal silicon diode", bucket: "Active Component" },
-            { text: "0.1 µF ceramic decoupling capacitor", bucket: "Passive Component" },
+          "buckets": [
+            "Passive Component",
+            "Active Component"
           ],
-        },
+          "items": [
+            {
+              "text": "10 kΩ carbon film resistor",
+              "bucket": "Passive Component"
+            },
+            {
+              "text": "2N2222 NPN bipolar junction transistor",
+              "bucket": "Active Component"
+            },
+            {
+              "text": "100 µF aluminum electrolytic capacitor",
+              "bucket": "Passive Component"
+            },
+            {
+              "text": "IRF540N N-channel power MOSFET",
+              "bucket": "Active Component"
+            },
+            {
+              "text": "10 mH ferrite-core inductor",
+              "bucket": "Passive Component"
+            },
+            {
+              "text": "LM358 dual operational amplifier",
+              "bucket": "Active Component"
+            },
+            {
+              "text": "1N4148 small-signal silicon diode",
+              "bucket": "Active Component"
+            },
+            {
+              "text": "0.1 µF ceramic decoupling capacitor",
+              "bucket": "Passive Component"
+            }
+          ]
+        }
       ],
+      "learningAids": [
+        {
+          "id": "micro-circuits-101-l02-a1",
+          "type": "practice",
+          "title": "Guided Practice",
+          "content": "Follow the prompt sequence and document your reasoning."
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L03  Components Checkpoint  (quiz)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l03",
-      title: "Components Checkpoint",
-      type: "quiz",
-      duration: 8,
-      quizBlueprint: {
-        totalQuestions: 4,
-        bloomProfile: { remember: 1, understand: 2, apply: 1 },
+      "id": "micro-circuits-101-l03",
+      "title": "Components Checkpoint",
+      "type": "quiz",
+      "duration": 8,
+      "quizBlueprint": {
+        "totalQuestions": 4,
+        "bloomProfile": {
+          "remember": 1,
+          "understand": 2,
+          "apply": 1
+        }
       },
-      questions: [
+      "questions": [
         {
-          id: "micro-circuits-101-l03-q1",
-          text: "A resistor has bands: red, violet, orange, gold. What is its resistance and tolerance?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "27 kΩ ±5%" },
-            { id: "b", text: "2.7 kΩ ±5%" },
-            { id: "c", text: "270 kΩ ±10%" },
-            { id: "d", text: "27 Ω ±5%" },
+          "id": "micro-circuits-101-l03-q1",
+          "text": "A resistor has bands: red, violet, orange, gold. What is its resistance and tolerance?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "27 kΩ ±5%"
+            },
+            {
+              "id": "b",
+              "text": "2.7 kΩ ±5%"
+            },
+            {
+              "id": "c",
+              "text": "270 kΩ ±10%"
+            },
+            {
+              "id": "d",
+              "text": "27 Ω ±5%"
+            }
           ],
-          correctOptionId: "a",
-          explanation:
-            "Red (2) Violet (7) gives 27, the orange multiplier is ×1,000 = 27,000 Ω = 27 kΩ, and gold indicates ±5% tolerance.",
+          "correctOptionId": "a",
+          "explanation": "Red (2) Violet (7) gives 27, the orange multiplier is ×1,000 = 27,000 Ω = 27 kΩ, and gold indicates ±5% tolerance."
         },
         {
-          id: "micro-circuits-101-l03-q2",
-          text: "Which capacitor type is polarized and typically offers the highest capacitance per unit volume?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "Ceramic (X7R)" },
-            { id: "b", text: "Film (polypropylene)" },
-            { id: "c", text: "Aluminum electrolytic" },
-            { id: "d", text: "Mica" },
+          "id": "micro-circuits-101-l03-q2",
+          "text": "Which capacitor type is polarized and typically offers the highest capacitance per unit volume?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Ceramic (X7R)"
+            },
+            {
+              "id": "b",
+              "text": "Film (polypropylene)"
+            },
+            {
+              "id": "c",
+              "text": "Aluminum electrolytic"
+            },
+            {
+              "id": "d",
+              "text": "Mica"
+            }
           ],
-          correctOptionId: "c",
-          explanation:
-            "Aluminum electrolytic capacitors are polarized and use a very thin oxide dielectric, allowing capacitance values from 1 µF to thousands of µF in compact packages.",
+          "correctOptionId": "c",
+          "explanation": "Aluminum electrolytic capacitors are polarized and use a very thin oxide dielectric, allowing capacitance values from 1 µF to thousands of µF in compact packages."
         },
         {
-          id: "micro-circuits-101-l03-q3",
-          text: "What parameter of a MOSFET determines its conduction losses when fully turned on?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "Threshold voltage (V_th)" },
-            { id: "b", text: "Gate charge (Q_g)" },
-            { id: "c", text: "Drain-to-source on-resistance (R_DS(on))" },
-            { id: "d", text: "Maximum gate-to-source voltage (V_GS(max))" },
+          "id": "micro-circuits-101-l03-q3",
+          "text": "What parameter of a MOSFET determines its conduction losses when fully turned on?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Threshold voltage (V_th)"
+            },
+            {
+              "id": "b",
+              "text": "Gate charge (Q_g)"
+            },
+            {
+              "id": "c",
+              "text": "Drain-to-source on-resistance (R_DS(on))"
+            },
+            {
+              "id": "d",
+              "text": "Maximum gate-to-source voltage (V_GS(max))"
+            }
           ],
-          correctOptionId: "c",
-          explanation:
-            "R_DS(on) is the resistance between drain and source when the MOSFET is fully enhanced. Power dissipation during conduction equals I² × R_DS(on), so lower values mean less heat.",
+          "correctOptionId": "c",
+          "explanation": "R_DS(on) is the resistance between drain and source when the MOSFET is fully enhanced. Power dissipation during conduction equals I² × R_DS(on), so lower values mean less heat."
         },
         {
-          id: "micro-circuits-101-l03-q4",
-          text: "An LDO regulator has a dropout voltage of 300 mV and must output 3.3 V. What is the minimum input voltage?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "3.0 V" },
-            { id: "b", text: "3.3 V" },
-            { id: "c", text: "3.6 V" },
-            { id: "d", text: "5.0 V" },
+          "id": "micro-circuits-101-l03-q4",
+          "text": "An LDO regulator has a dropout voltage of 300 mV and must output 3.3 V. What is the minimum input voltage?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "3.0 V"
+            },
+            {
+              "id": "b",
+              "text": "3.3 V"
+            },
+            {
+              "id": "c",
+              "text": "3.6 V"
+            },
+            {
+              "id": "d",
+              "text": "5.0 V"
+            }
           ],
-          correctOptionId: "c",
-          explanation:
-            "The minimum input voltage equals the output voltage plus the dropout voltage: 3.3 V + 0.3 V = 3.6 V. Below this, the regulator cannot maintain regulation.",
-        },
+          "correctOptionId": "c",
+          "explanation": "The minimum input voltage equals the output voltage plus the dropout voltage: 3.3 V + 0.3 V = 3.6 V. Below this, the regulator cannot maintain regulation."
+        }
       ],
+      "learningAids": [
+        {
+          "id": "micro-circuits-101-l03-a1",
+          "type": "mnemonic",
+          "title": "Memory Cue",
+          "content": "Use Plan, Solve, Explain to structure each response."
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L04  Circuit Analysis Techniques  (video)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l04",
-      title: "Circuit Analysis Techniques",
-      type: "video",
-      duration: 10,
-      objectives: [
+      "id": "micro-circuits-101-l04",
+      "title": "Circuit Analysis Techniques",
+      "type": "video",
+      "duration": 10,
+      "objectives": [
         "Derive Thevenin and Norton equivalent circuits for linear networks",
         "Apply mesh (loop) analysis using Kirchhoff's voltage law to solve for unknown currents",
-        "Use nodal analysis with Kirchhoff's current law to determine node voltages",
+        "Use nodal analysis with Kirchhoff's current law to determine node voltages"
       ],
-      chunks: [
+      "chunks": [
         {
-          id: "micro-circuits-101-l04-c1",
-          title: "Thevenin and Norton Equivalents",
-          content:
-            "Any linear two-terminal network of resistors and sources can be replaced by an equivalent circuit: a Thevenin equivalent consisting of a voltage source (V_th) in series with a resistance (R_th), or a Norton equivalent consisting of a current source (I_N) in parallel with a resistance (R_N). V_th is the open-circuit voltage measured across the terminals. R_th (= R_N) is found by deactivating all independent sources (voltage sources shorted, current sources opened) and calculating the equivalent resistance. I_N = V_th / R_th. These equivalents simplify complex circuits when analyzing the effect of a varying load — maximum power transfer occurs when the load resistance equals R_th, delivering P_max = V_th² / (4 × R_th). Thevenin/Norton conversion is used extensively in amplifier output modeling and impedance matching.",
+          "id": "micro-circuits-101-l04-c1",
+          "title": "Thevenin and Norton Equivalents",
+          "content": "Any linear two-terminal network of resistors and sources can be replaced by an equivalent circuit: a Thevenin equivalent consisting of a voltage source (V_th) in series with a resistance (R_th), or a Norton equivalent consisting of a current source (I_N) in parallel with a resistance (R_N). V_th is the open-circuit voltage measured across the terminals. R_th (= R_N) is found by deactivating all independent sources (voltage sources shorted, current sources opened) and calculating the equivalent resistance. I_N = V_th / R_th. These equivalents simplify complex circuits when analyzing the effect of a varying load — maximum power transfer occurs when the load resistance equals R_th, delivering P_max = V_th² / (4 × R_th). Thevenin/Norton conversion is used extensively in amplifier output modeling and impedance matching."
         },
         {
-          id: "micro-circuits-101-l04-c2",
-          title: "Mesh Analysis",
-          content:
-            "Mesh analysis applies Kirchhoff's voltage law (KVL) — the sum of all voltage drops around any closed loop equals zero — to systematically solve planar circuits. Each independent mesh (a loop containing no other loop) is assigned a mesh current, typically flowing clockwise. For each mesh, a KVL equation is written summing the voltage drops across all elements using Ohm's law (V = IR). Shared branches between meshes carry the difference of the two mesh currents. The resulting system of simultaneous linear equations is solved by substitution, elimination, or matrix methods (Cramer's rule). For a circuit with N meshes, N equations are needed. A supermesh is formed when a current source exists on a shared branch — the shared boundary is removed and an additional constraint equation from the current source is added.",
+          "id": "micro-circuits-101-l04-c2",
+          "title": "Mesh Analysis",
+          "content": "Mesh analysis applies Kirchhoff's voltage law (KVL) — the sum of all voltage drops around any closed loop equals zero — to systematically solve planar circuits. Each independent mesh (a loop containing no other loop) is assigned a mesh current, typically flowing clockwise. For each mesh, a KVL equation is written summing the voltage drops across all elements using Ohm's law (V = IR). Shared branches between meshes carry the difference of the two mesh currents. The resulting system of simultaneous linear equations is solved by substitution, elimination, or matrix methods (Cramer's rule). For a circuit with N meshes, N equations are needed. A supermesh is formed when a current source exists on a shared branch — the shared boundary is removed and an additional constraint equation from the current source is added."
         },
         {
-          id: "micro-circuits-101-l04-c3",
-          title: "Nodal Analysis and Superposition",
-          content:
-            "Nodal analysis applies Kirchhoff's current law (KCL) — the sum of all currents entering a node equals zero — at each non-reference node to solve for unknown voltages. One node is designated as the reference (ground, 0 V), and KCL equations are written for the remaining nodes. Each equation expresses branch currents in terms of node voltages using G = 1/R (conductance). When a voltage source connects two non-reference nodes, a supernode is formed: the two nodes are combined into one KCL equation, and the voltage source provides the additional constraint. The superposition theorem states that in a linear circuit with multiple independent sources, the contribution of each source can be found independently (all other sources deactivated), and the total response is the algebraic sum. Superposition is particularly useful for analyzing circuits with mixed AC and DC sources.",
-        },
+          "id": "micro-circuits-101-l04-c3",
+          "title": "Nodal Analysis and Superposition",
+          "content": "Nodal analysis applies Kirchhoff's current law (KCL) — the sum of all currents entering a node equals zero — at each non-reference node to solve for unknown voltages. One node is designated as the reference (ground, 0 V), and KCL equations are written for the remaining nodes. Each equation expresses branch currents in terms of node voltages using G = 1/R (conductance). When a voltage source connects two non-reference nodes, a supernode is formed: the two nodes are combined into one KCL equation, and the voltage source provides the additional constraint. The superposition theorem states that in a linear circuit with multiple independent sources, the contribution of each source can be found independently (all other sources deactivated), and the total response is the algebraic sum. Superposition is particularly useful for analyzing circuits with mixed AC and DC sources."
+        }
       ],
-      flashcards: [
+      "flashcards": [
         {
-          id: "micro-circuits-101-l04-f1",
-          front: "How do you find the Thevenin resistance (R_th) of a linear network?",
-          back: "Deactivate all independent sources — short-circuit voltage sources and open-circuit current sources — then calculate the equivalent resistance seen from the output terminals.",
+          "id": "micro-circuits-101-l04-f1",
+          "front": "How do you find the Thevenin resistance (R_th) of a linear network?",
+          "back": "Deactivate all independent sources — short-circuit voltage sources and open-circuit current sources — then calculate the equivalent resistance seen from the output terminals."
         },
         {
-          id: "micro-circuits-101-l04-f2",
-          front: "What is the maximum power transfer theorem?",
-          back: "Maximum power is delivered to a load when the load resistance equals the source's Thevenin resistance. The maximum power is P = V_th² / (4 × R_th).",
+          "id": "micro-circuits-101-l04-f2",
+          "front": "What is the maximum power transfer theorem?",
+          "back": "Maximum power is delivered to a load when the load resistance equals the source's Thevenin resistance. The maximum power is P = V_th² / (4 × R_th)."
         },
         {
-          id: "micro-circuits-101-l04-f3",
-          front: "When is a supermesh required in mesh analysis?",
-          back: "When a current source exists on a branch shared by two meshes. The two mesh equations are combined into one supermesh equation, and the current source constraint provides the missing equation.",
+          "id": "micro-circuits-101-l04-f3",
+          "front": "When is a supermesh required in mesh analysis?",
+          "back": "When a current source exists on a branch shared by two meshes. The two mesh equations are combined into one supermesh equation, and the current source constraint provides the missing equation."
         },
         {
-          id: "micro-circuits-101-l04-f4",
-          front: "State Kirchhoff's current law (KCL).",
-          back: "The algebraic sum of all currents entering (or leaving) any node in a circuit equals zero — charge is conserved at every junction.",
-        },
+          "id": "micro-circuits-101-l04-f4",
+          "front": "State Kirchhoff's current law (KCL).",
+          "back": "The algebraic sum of all currents entering (or leaving) any node in a circuit equals zero — charge is conserved at every junction."
+        }
       ],
+      "learningAids": [
+        {
+          "id": "micro-circuits-101-l04-a1",
+          "type": "image",
+          "title": "Concept Card",
+          "content": "Visual summary of the lesson's main concept."
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L05  Signal Conditioning  (interactive)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l05",
-      title: "Signal Conditioning",
-      type: "interactive",
-      duration: 12,
-      objectives: [
+      "id": "micro-circuits-101-l05",
+      "title": "Signal Conditioning",
+      "type": "interactive",
+      "duration": 12,
+      "objectives": [
         "Calculate cutoff frequencies for first-order RC low-pass and high-pass filters",
         "Explain inverting and non-inverting amplifier gain and bandwidth trade-offs",
-        "Describe ADC resolution, sampling rate, and the Nyquist criterion",
+        "Describe ADC resolution, sampling rate, and the Nyquist criterion"
       ],
-      chunks: [
+      "chunks": [
         {
-          id: "micro-circuits-101-l05-c1",
-          title: "Passive Filters: Low-Pass, High-Pass, Band-Pass",
-          content:
-            "Passive filters use resistors, capacitors, and inductors to attenuate signals above or below a cutoff frequency. A first-order RC low-pass filter passes frequencies below its cutoff f_c = 1 / (2π × R × C) and attenuates higher frequencies at −20 dB per decade. Swapping the positions of R and C creates a high-pass filter with the same cutoff formula. A band-pass filter combines both, passing only a range of frequencies — in an RLC circuit, the center frequency is f₀ = 1 / (2π × √(LC)) and the bandwidth depends on the quality factor Q = f₀ / BW. Higher Q means a narrower passband and sharper selectivity. Passive filters are simple and reliable but introduce insertion loss and cannot provide gain. For a 1 kΩ resistor and 0.1 µF capacitor, f_c = 1 / (2π × 1000 × 0.0000001) ≈ 1,592 Hz — useful for audio-frequency anti-aliasing.",
+          "id": "micro-circuits-101-l05-c1",
+          "title": "Passive Filters: Low-Pass, High-Pass, Band-Pass",
+          "content": "Passive filters use resistors, capacitors, and inductors to attenuate signals above or below a cutoff frequency. A first-order RC low-pass filter passes frequencies below its cutoff f_c = 1 / (2π × R × C) and attenuates higher frequencies at −20 dB per decade. Swapping the positions of R and C creates a high-pass filter with the same cutoff formula. A band-pass filter combines both, passing only a range of frequencies — in an RLC circuit, the center frequency is f₀ = 1 / (2π × √(LC)) and the bandwidth depends on the quality factor Q = f₀ / BW. Higher Q means a narrower passband and sharper selectivity. Passive filters are simple and reliable but introduce insertion loss and cannot provide gain. For a 1 kΩ resistor and 0.1 µF capacitor, f_c = 1 / (2π × 1000 × 0.0000001) ≈ 1,592 Hz — useful for audio-frequency anti-aliasing."
         },
         {
-          id: "micro-circuits-101-l05-c2",
-          title: "Amplifier Gain and Active Filters",
-          content:
-            "Op-amp-based active filters overcome the limitations of passive filters by providing gain and high input impedance. A Sallen-Key low-pass topology uses two RC stages around a non-inverting op-amp to create a second-order (−40 dB/decade) response. The gain-bandwidth product (GBW) of an op-amp sets a fundamental limit: for a device with GBW = 1 MHz, setting a gain of 100 limits the usable bandwidth to 10 kHz. Choosing between Butterworth (maximally flat passband), Chebyshev (steeper rolloff with passband ripple), and Bessel (maximally flat group delay) response types depends on the application — Butterworth for general filtering, Chebyshev for sharp cutoff requirements, and Bessel for pulse and time-domain applications where phase linearity matters. Instrumentation amplifiers (like the INA128) provide precisely settable differential gain with high common-mode rejection, making them essential for sensor signal conditioning.",
+          "id": "micro-circuits-101-l05-c2",
+          "title": "Amplifier Gain and Active Filters",
+          "content": "Op-amp-based active filters overcome the limitations of passive filters by providing gain and high input impedance. A Sallen-Key low-pass topology uses two RC stages around a non-inverting op-amp to create a second-order (−40 dB/decade) response. The gain-bandwidth product (GBW) of an op-amp sets a fundamental limit: for a device with GBW = 1 MHz, setting a gain of 100 limits the usable bandwidth to 10 kHz. Choosing between Butterworth (maximally flat passband), Chebyshev (steeper rolloff with passband ripple), and Bessel (maximally flat group delay) response types depends on the application — Butterworth for general filtering, Chebyshev for sharp cutoff requirements, and Bessel for pulse and time-domain applications where phase linearity matters. Instrumentation amplifiers (like the INA128) provide precisely settable differential gain with high common-mode rejection, making them essential for sensor signal conditioning."
         },
         {
-          id: "micro-circuits-101-l05-c3",
-          title: "ADC and DAC Basics",
-          content:
-            "Analog-to-digital converters (ADCs) sample a continuous analog signal and quantize it into discrete digital values. Resolution is measured in bits — a 10-bit ADC divides the reference voltage into 2¹⁰ = 1,024 levels. For a 3.3 V reference, each least significant bit (LSB) represents 3.3 / 1024 ≈ 3.22 mV. The Nyquist–Shannon sampling theorem requires the sampling rate to be at least twice the highest signal frequency to avoid aliasing; in practice, an anti-aliasing low-pass filter is placed before the ADC. Common ADC architectures include successive approximation (SAR) for moderate speed and resolution, delta-sigma (ΔΣ) for high resolution at lower speeds, and flash for very high speed at lower resolution. Digital-to-analog converters (DACs) perform the reverse — converting digital codes to analog voltages. DAC output requires a reconstruction filter (low-pass) to smooth the staircase waveform into a continuous signal. Together, ADCs and DACs form the bridge between analog sensor signals and digital processing.",
-        },
+          "id": "micro-circuits-101-l05-c3",
+          "title": "ADC and DAC Basics",
+          "content": "Analog-to-digital converters (ADCs) sample a continuous analog signal and quantize it into discrete digital values. Resolution is measured in bits — a 10-bit ADC divides the reference voltage into 2¹⁰ = 1,024 levels. For a 3.3 V reference, each least significant bit (LSB) represents 3.3 / 1024 ≈ 3.22 mV. The Nyquist–Shannon sampling theorem requires the sampling rate to be at least twice the highest signal frequency to avoid aliasing; in practice, an anti-aliasing low-pass filter is placed before the ADC. Common ADC architectures include successive approximation (SAR) for moderate speed and resolution, delta-sigma (ΔΣ) for high resolution at lower speeds, and flash for very high speed at lower resolution. Digital-to-analog converters (DACs) perform the reverse — converting digital codes to analog voltages. DAC output requires a reconstruction filter (low-pass) to smooth the staircase waveform into a continuous signal. Together, ADCs and DACs form the bridge between analog sensor signals and digital processing."
+        }
       ],
-      flashcards: [
+      "flashcards": [
         {
-          id: "micro-circuits-101-l05-f1",
-          front: "What is the cutoff frequency formula for a first-order RC filter?",
-          back: "f_c = 1 / (2π × R × C). At this frequency, the output is −3 dB (≈70.7%) of the input amplitude.",
+          "id": "micro-circuits-101-l05-f1",
+          "front": "What is the cutoff frequency formula for a first-order RC filter?",
+          "back": "f_c = 1 / (2π × R × C). At this frequency, the output is −3 dB (≈70.7%) of the input amplitude."
         },
         {
-          id: "micro-circuits-101-l05-f2",
-          front: "What does the Nyquist–Shannon sampling theorem state?",
-          back: "The sampling rate must be at least twice the highest frequency component in the signal to accurately reconstruct it without aliasing.",
+          "id": "micro-circuits-101-l05-f2",
+          "front": "What does the Nyquist–Shannon sampling theorem state?",
+          "back": "The sampling rate must be at least twice the highest frequency component in the signal to accurately reconstruct it without aliasing."
         },
         {
-          id: "micro-circuits-101-l05-f3",
-          front: "How many discrete voltage levels can a 12-bit ADC resolve?",
-          back: "2¹² = 4,096 levels.",
+          "id": "micro-circuits-101-l05-f3",
+          "front": "How many discrete voltage levels can a 12-bit ADC resolve?",
+          "back": "2¹² = 4,096 levels."
         },
         {
-          id: "micro-circuits-101-l05-f4",
-          front: "What is the gain-bandwidth product (GBW) trade-off in an op-amp?",
-          back: "GBW is constant for a given op-amp: increasing closed-loop gain proportionally decreases the usable bandwidth. For example, GBW = 1 MHz at gain 10 limits bandwidth to 100 kHz.",
-        },
+          "id": "micro-circuits-101-l05-f4",
+          "front": "What is the gain-bandwidth product (GBW) trade-off in an op-amp?",
+          "back": "GBW is constant for a given op-amp: increasing closed-loop gain proportionally decreases the usable bandwidth. For example, GBW = 1 MHz at gain 10 limits bandwidth to 100 kHz."
+        }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
-          id: "micro-circuits-101-l05-a1",
-          type: "matching_pairs",
-          title: "Filter Types and Characteristics",
-          description: "Match each filter type or concept with its correct description.",
-          instructions: [
-            "Connect each term on the left with its matching definition on the right.",
+          "id": "micro-circuits-101-l05-a1",
+          "type": "matching_pairs",
+          "title": "Filter Types and Characteristics",
+          "description": "Match each filter type or concept with its correct description.",
+          "instructions": [
+            "Connect each term on the left with its matching definition on the right."
           ],
-          pairs: [
-            { left: "Low-pass filter", right: "Passes frequencies below the cutoff and attenuates those above" },
-            { left: "High-pass filter", right: "Passes frequencies above the cutoff and attenuates those below" },
-            { left: "Band-pass filter", right: "Passes a specific range of frequencies and rejects those outside the range" },
-            { left: "Quality factor (Q)", right: "Ratio of center frequency to bandwidth — higher Q means narrower passband" },
-            { left: "Butterworth response", right: "Maximally flat magnitude in the passband with no ripple" },
-            { left: "Anti-aliasing filter", right: "Low-pass filter placed before an ADC to remove frequencies above half the sampling rate" },
-          ],
-        },
+          "pairs": [
+            {
+              "left": "Low-pass filter",
+              "right": "Passes frequencies below the cutoff and attenuates those above"
+            },
+            {
+              "left": "High-pass filter",
+              "right": "Passes frequencies above the cutoff and attenuates those below"
+            },
+            {
+              "left": "Band-pass filter",
+              "right": "Passes a specific range of frequencies and rejects those outside the range"
+            },
+            {
+              "left": "Quality factor (Q)",
+              "right": "Ratio of center frequency to bandwidth — higher Q means narrower passband"
+            },
+            {
+              "left": "Butterworth response",
+              "right": "Maximally flat magnitude in the passband with no ripple"
+            },
+            {
+              "left": "Anti-aliasing filter",
+              "right": "Low-pass filter placed before an ADC to remove frequencies above half the sampling rate"
+            }
+          ]
+        }
       ],
+      "learningAids": [
+        {
+          "id": "micro-circuits-101-l05-a1",
+          "type": "practice",
+          "title": "Guided Practice",
+          "content": "Follow the prompt sequence and document your reasoning."
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L06  Analysis & Signals Checkpoint  (quiz)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l06",
-      title: "Analysis & Signals Checkpoint",
-      type: "quiz",
-      duration: 8,
-      quizBlueprint: {
-        totalQuestions: 4,
-        bloomProfile: { remember: 1, understand: 2, apply: 1 },
+      "id": "micro-circuits-101-l06",
+      "title": "Analysis & Signals Checkpoint",
+      "type": "quiz",
+      "duration": 8,
+      "quizBlueprint": {
+        "totalQuestions": 4,
+        "bloomProfile": {
+          "remember": 1,
+          "understand": 2,
+          "apply": 1
+        }
       },
-      questions: [
+      "questions": [
         {
-          id: "micro-circuits-101-l06-q1",
-          text: "A circuit has Thevenin voltage V_th = 12 V and Thevenin resistance R_th = 4 Ω. What load resistance receives maximum power, and how much power is delivered?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "4 Ω, receiving 9 W" },
-            { id: "b", text: "8 Ω, receiving 4.5 W" },
-            { id: "c", text: "4 Ω, receiving 36 W" },
-            { id: "d", text: "2 Ω, receiving 8 W" },
+          "id": "micro-circuits-101-l06-q1",
+          "text": "A circuit has Thevenin voltage V_th = 12 V and Thevenin resistance R_th = 4 Ω. What load resistance receives maximum power, and how much power is delivered?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "4 Ω, receiving 9 W"
+            },
+            {
+              "id": "b",
+              "text": "8 Ω, receiving 4.5 W"
+            },
+            {
+              "id": "c",
+              "text": "4 Ω, receiving 36 W"
+            },
+            {
+              "id": "d",
+              "text": "2 Ω, receiving 8 W"
+            }
           ],
-          correctOptionId: "a",
-          explanation:
-            "Maximum power transfer occurs when R_load = R_th = 4 Ω. Total current = 12 / (4+4) = 1.5 A. Power in load = 1.5² × 4 = 9 W, or equivalently V_th² / (4 × R_th) = 144 / 16 = 9 W.",
+          "correctOptionId": "a",
+          "explanation": "Maximum power transfer occurs when R_load = R_th = 4 Ω. Total current = 12 / (4+4) = 1.5 A. Power in load = 1.5² × 4 = 9 W, or equivalently V_th² / (4 × R_th) = 144 / 16 = 9 W."
         },
         {
-          id: "micro-circuits-101-l06-q2",
-          text: "What does Kirchhoff's voltage law (KVL) state?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "The total current entering a node equals the total current leaving it" },
-            { id: "b", text: "The algebraic sum of all voltages around any closed loop is zero" },
-            { id: "c", text: "Power dissipated by a resistor equals I²R" },
-            { id: "d", text: "Voltage across a capacitor cannot change instantaneously" },
+          "id": "micro-circuits-101-l06-q2",
+          "text": "What does Kirchhoff's voltage law (KVL) state?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "The total current entering a node equals the total current leaving it"
+            },
+            {
+              "id": "b",
+              "text": "The algebraic sum of all voltages around any closed loop is zero"
+            },
+            {
+              "id": "c",
+              "text": "Power dissipated by a resistor equals I²R"
+            },
+            {
+              "id": "d",
+              "text": "Voltage across a capacitor cannot change instantaneously"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "KVL states that the sum of all voltage rises and drops around any closed loop in a circuit equals zero, reflecting conservation of energy.",
+          "correctOptionId": "b",
+          "explanation": "KVL states that the sum of all voltage rises and drops around any closed loop in a circuit equals zero, reflecting conservation of energy."
         },
         {
-          id: "micro-circuits-101-l06-q3",
-          text: "An RC low-pass filter uses R = 10 kΩ and C = 10 nF. What is the approximate cutoff frequency?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "159 Hz" },
-            { id: "b", text: "1,592 Hz" },
-            { id: "c", text: "15,923 Hz" },
-            { id: "d", text: "159,235 Hz" },
+          "id": "micro-circuits-101-l06-q3",
+          "text": "An RC low-pass filter uses R = 10 kΩ and C = 10 nF. What is the approximate cutoff frequency?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "159 Hz"
+            },
+            {
+              "id": "b",
+              "text": "1,592 Hz"
+            },
+            {
+              "id": "c",
+              "text": "15,923 Hz"
+            },
+            {
+              "id": "d",
+              "text": "159,235 Hz"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "f_c = 1 / (2π × R × C) = 1 / (2π × 10,000 × 10 × 10⁻⁹) = 1 / (6.283 × 10⁻⁴) ≈ 1,592 Hz.",
+          "correctOptionId": "b",
+          "explanation": "f_c = 1 / (2π × R × C) = 1 / (2π × 10,000 × 10 × 10⁻⁹) = 1 / (6.283 × 10⁻⁴) ≈ 1,592 Hz."
         },
         {
-          id: "micro-circuits-101-l06-q4",
-          text: "What is the minimum sampling rate needed to digitize a 20 kHz audio signal without aliasing?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "10 kHz" },
-            { id: "b", text: "20 kHz" },
-            { id: "c", text: "40 kHz" },
-            { id: "d", text: "80 kHz" },
+          "id": "micro-circuits-101-l06-q4",
+          "text": "What is the minimum sampling rate needed to digitize a 20 kHz audio signal without aliasing?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "10 kHz"
+            },
+            {
+              "id": "b",
+              "text": "20 kHz"
+            },
+            {
+              "id": "c",
+              "text": "40 kHz"
+            },
+            {
+              "id": "d",
+              "text": "80 kHz"
+            }
           ],
-          correctOptionId: "c",
-          explanation:
-            "The Nyquist theorem requires sampling at a minimum of twice the highest signal frequency: 2 × 20 kHz = 40 kHz. CD audio uses 44.1 kHz for this reason.",
-        },
-      ],
+          "correctOptionId": "c",
+          "explanation": "The Nyquist theorem requires sampling at a minimum of twice the highest signal frequency: 2 × 20 kHz = 40 kHz. CD audio uses 44.1 kHz for this reason."
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L07  PCB Design Fundamentals  (video)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l07",
-      title: "PCB Design Fundamentals",
-      type: "video",
-      duration: 10,
-      objectives: [
+      "id": "micro-circuits-101-l07",
+      "title": "PCB Design Fundamentals",
+      "type": "video",
+      "duration": 10,
+      "objectives": [
         "Describe the PCB design workflow from schematic capture through manufacturing output files",
         "Calculate trace widths for a given current using IPC-2221 guidelines",
-        "Explain via types, ground planes, and design rule checks",
+        "Explain via types, ground planes, and design rule checks"
       ],
-      chunks: [
+      "chunks": [
         {
-          id: "micro-circuits-101-l07-c1",
-          title: "Schematic Capture and Component Footprints",
-          content:
-            "PCB design begins with schematic capture — drawing the circuit diagram in EDA software such as KiCad, Altium Designer, or Eagle. Each component symbol must correctly map to a physical footprint (land pattern) that defines the copper pads, courtyard, and silkscreen outline on the board. Footprints follow standards like IPC-7351 and must match the manufacturer's recommended dimensions. Common packages include through-hole DIP (dual in-line package), surface-mount SOIC, QFP (quad flat package), QFN (no-lead), and BGA (ball grid array). After schematic completion, an electrical rules check (ERC) verifies connectivity — flagging unconnected pins, shorted nets, and mismatched pin types. A correctly annotated schematic with proper reference designators (R1, C1, U1) and net names is essential before proceeding to the layout phase.",
+          "id": "micro-circuits-101-l07-c1",
+          "title": "Schematic Capture and Component Footprints",
+          "content": "PCB design begins with schematic capture — drawing the circuit diagram in EDA software such as KiCad, Altium Designer, or Eagle. Each component symbol must correctly map to a physical footprint (land pattern) that defines the copper pads, courtyard, and silkscreen outline on the board. Footprints follow standards like IPC-7351 and must match the manufacturer's recommended dimensions. Common packages include through-hole DIP (dual in-line package), surface-mount SOIC, QFP (quad flat package), QFN (no-lead), and BGA (ball grid array). After schematic completion, an electrical rules check (ERC) verifies connectivity — flagging unconnected pins, shorted nets, and mismatched pin types. A correctly annotated schematic with proper reference designators (R1, C1, U1) and net names is essential before proceeding to the layout phase."
         },
         {
-          id: "micro-circuits-101-l07-c2",
-          title: "Trace Width, Vias, and Layer Stackup",
-          content:
-            "Copper traces carry current between components, and their width must be calculated based on current capacity, acceptable temperature rise, and copper thickness. IPC-2221 provides formulas: for a 1 oz/ft² (35 µm) outer-layer trace with a 10 °C temperature rise, approximately 10 mils (0.254 mm) width is needed for 1 A. Higher currents require wider traces or thicker copper (2 oz). Vias connect traces between layers and come in three types: through-hole vias (drill through the entire board), blind vias (connect an outer layer to one or more inner layers), and buried vias (connect only inner layers). A standard two-layer board has a top copper layer, an FR-4 dielectric core (1.6 mm typical), and a bottom copper layer. Four-layer boards add dedicated inner ground and power planes, dramatically reducing EMI and improving signal integrity. The design rules check (DRC) enforces minimum trace width, clearance, via annular ring, and other manufacturing constraints.",
+          "id": "micro-circuits-101-l07-c2",
+          "title": "Trace Width, Vias, and Layer Stackup",
+          "content": "Copper traces carry current between components, and their width must be calculated based on current capacity, acceptable temperature rise, and copper thickness. IPC-2221 provides formulas: for a 1 oz/ft² (35 µm) outer-layer trace with a 10 °C temperature rise, approximately 10 mils (0.254 mm) width is needed for 1 A. Higher currents require wider traces or thicker copper (2 oz). Vias connect traces between layers and come in three types: through-hole vias (drill through the entire board), blind vias (connect an outer layer to one or more inner layers), and buried vias (connect only inner layers). A standard two-layer board has a top copper layer, an FR-4 dielectric core (1.6 mm typical), and a bottom copper layer. Four-layer boards add dedicated inner ground and power planes, dramatically reducing EMI and improving signal integrity. The design rules check (DRC) enforces minimum trace width, clearance, via annular ring, and other manufacturing constraints."
         },
         {
-          id: "micro-circuits-101-l07-c3",
-          title: "Ground Planes and Manufacturing Outputs",
-          content:
-            "A continuous ground plane — an entire copper layer connected to ground — provides a low-impedance return path for all signals, reduces electromagnetic interference (EMI), and improves thermal dissipation. Ground planes should be unbroken beneath sensitive signal traces; splits or slots force return currents to take longer paths, increasing inductance and radiating noise. Decoupling capacitors (typically 100 nF ceramic) should be placed as close as possible to each IC's power pins with short, wide traces to the ground plane via. When the PCB layout is complete, manufacturing outputs are generated: Gerber files (RS-274X format) define each copper layer, solder mask, silkscreen, and board outline; an Excellon drill file specifies hole locations and sizes; and a bill of materials (BOM) paired with a centroid (pick-and-place) file enables automated assembly. A final design review checks for thermal relief on ground pins, proper fiducial markers, and correct board dimensions before ordering fabrication.",
-        },
+          "id": "micro-circuits-101-l07-c3",
+          "title": "Ground Planes and Manufacturing Outputs",
+          "content": "A continuous ground plane — an entire copper layer connected to ground — provides a low-impedance return path for all signals, reduces electromagnetic interference (EMI), and improves thermal dissipation. Ground planes should be unbroken beneath sensitive signal traces; splits or slots force return currents to take longer paths, increasing inductance and radiating noise. Decoupling capacitors (typically 100 nF ceramic) should be placed as close as possible to each IC's power pins with short, wide traces to the ground plane via. When the PCB layout is complete, manufacturing outputs are generated: Gerber files (RS-274X format) define each copper layer, solder mask, silkscreen, and board outline; an Excellon drill file specifies hole locations and sizes; and a bill of materials (BOM) paired with a centroid (pick-and-place) file enables automated assembly. A final design review checks for thermal relief on ground pins, proper fiducial markers, and correct board dimensions before ordering fabrication."
+        }
       ],
-      flashcards: [
+      "flashcards": [
         {
-          id: "micro-circuits-101-l07-f1",
-          front: "What is a component footprint (land pattern) in PCB design?",
-          back: "A footprint defines the physical copper pad layout, courtyard area, and silkscreen outline that a component occupies on the PCB, matching the manufacturer's package dimensions.",
+          "id": "micro-circuits-101-l07-f1",
+          "front": "What is a component footprint (land pattern) in PCB design?",
+          "back": "A footprint defines the physical copper pad layout, courtyard area, and silkscreen outline that a component occupies on the PCB, matching the manufacturer's package dimensions."
         },
         {
-          id: "micro-circuits-101-l07-f2",
-          front: "Name the three types of PCB vias.",
-          back: "Through-hole vias (drill through all layers), blind vias (connect an outer layer to inner layers), and buried vias (connect only inner layers, not visible from outside).",
+          "id": "micro-circuits-101-l07-f2",
+          "front": "Name the three types of PCB vias.",
+          "back": "Through-hole vias (drill through all layers), blind vias (connect an outer layer to inner layers), and buried vias (connect only inner layers, not visible from outside)."
         },
         {
-          id: "micro-circuits-101-l07-f3",
-          front: "Why is an unbroken ground plane important for signal integrity?",
-          back: "It provides a low-impedance return path directly beneath signal traces, minimizing loop area, reducing EMI, and ensuring controlled impedance for high-speed signals.",
+          "id": "micro-circuits-101-l07-f3",
+          "front": "Why is an unbroken ground plane important for signal integrity?",
+          "back": "It provides a low-impedance return path directly beneath signal traces, minimizing loop area, reducing EMI, and ensuring controlled impedance for high-speed signals."
         },
         {
-          id: "micro-circuits-101-l07-f4",
-          front: "What file format is used to define PCB copper layers for manufacturing?",
-          back: "Gerber files (RS-274X format) define each layer — copper, solder mask, silkscreen, and board outline — and are the industry standard for PCB fabrication.",
-        },
-      ],
+          "id": "micro-circuits-101-l07-f4",
+          "front": "What file format is used to define PCB copper layers for manufacturing?",
+          "back": "Gerber files (RS-274X format) define each layer — copper, solder mask, silkscreen, and board outline — and are the industry standard for PCB fabrication."
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L08  Prototyping and Testing  (interactive)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l08",
-      title: "Prototyping and Testing",
-      type: "interactive",
-      duration: 12,
-      objectives: [
+      "id": "micro-circuits-101-l08",
+      "title": "Prototyping and Testing",
+      "type": "interactive",
+      "duration": 12,
+      "objectives": [
         "Build circuits on a solderless breadboard following standard power bus and signal routing practices",
         "Use a digital multimeter to measure voltage, current, resistance, and continuity",
-        "Interpret oscilloscope waveforms to verify signal frequency, amplitude, and timing",
+        "Interpret oscilloscope waveforms to verify signal frequency, amplitude, and timing"
       ],
-      chunks: [
+      "chunks": [
         {
-          id: "micro-circuits-101-l08-c1",
-          title: "Breadboarding Techniques",
-          content:
-            "A solderless breadboard is the fastest way to prototype circuits before committing to a PCB. Standard full-size boards have 830 tie points arranged in rows of five internally connected holes, with two power bus strips running the length of each side. Best practices include: connecting the power supply to both bus strips and bridging them at multiple points for low-impedance power distribution; keeping wire jumps short to reduce parasitic inductance; using color-coded wires (red for V+, black for ground, other colors for signals); placing ICs across the center channel so each pin has its own row; and adding 100 nF decoupling capacitors near IC power pins. Breadboards work well up to about 10 MHz — above that frequency, the parasitic capacitance (~2 pF per row) and lead inductance degrade signal integrity. For higher frequencies, stripboard or dead-bug soldering directly on a copper ground plane is preferred.",
+          "id": "micro-circuits-101-l08-c1",
+          "title": "Breadboarding Techniques",
+          "content": "A solderless breadboard is the fastest way to prototype circuits before committing to a PCB. Standard full-size boards have 830 tie points arranged in rows of five internally connected holes, with two power bus strips running the length of each side. Best practices include: connecting the power supply to both bus strips and bridging them at multiple points for low-impedance power distribution; keeping wire jumps short to reduce parasitic inductance; using color-coded wires (red for V+, black for ground, other colors for signals); placing ICs across the center channel so each pin has its own row; and adding 100 nF decoupling capacitors near IC power pins. Breadboards work well up to about 10 MHz — above that frequency, the parasitic capacitance (~2 pF per row) and lead inductance degrade signal integrity. For higher frequencies, stripboard or dead-bug soldering directly on a copper ground plane is preferred."
         },
         {
-          id: "micro-circuits-101-l08-c2",
-          title: "Multimeter and Continuity Testing",
-          content:
-            "A digital multimeter (DMM) is the most essential test instrument. DC voltage mode measures potential difference — always connect the red probe to the more positive point and the black probe to ground or the reference. AC voltage mode reads the RMS value of alternating signals. DC current mode requires breaking the circuit and placing the meter in series — the ammeter has very low input impedance, so accidentally connecting it across a voltage source will blow the fuse. Resistance mode sends a small test current through the component under test and calculates R = V/I; the component must be unpowered and ideally disconnected from the circuit to avoid parallel paths giving false readings. Continuity mode beeps when resistance is below a threshold (typically <50 Ω), making it invaluable for checking solder joints, cable integrity, and short circuits. Diode mode applies a small forward current and displays the junction voltage drop — about 0.6 V for silicon and 0.2 V for Schottky diodes.",
+          "id": "micro-circuits-101-l08-c2",
+          "title": "Multimeter and Continuity Testing",
+          "content": "A digital multimeter (DMM) is the most essential test instrument. DC voltage mode measures potential difference — always connect the red probe to the more positive point and the black probe to ground or the reference. AC voltage mode reads the RMS value of alternating signals. DC current mode requires breaking the circuit and placing the meter in series — the ammeter has very low input impedance, so accidentally connecting it across a voltage source will blow the fuse. Resistance mode sends a small test current through the component under test and calculates R = V/I; the component must be unpowered and ideally disconnected from the circuit to avoid parallel paths giving false readings. Continuity mode beeps when resistance is below a threshold (typically <50 Ω), making it invaluable for checking solder joints, cable integrity, and short circuits. Diode mode applies a small forward current and displays the junction voltage drop — about 0.6 V for silicon and 0.2 V for Schottky diodes."
         },
         {
-          id: "micro-circuits-101-l08-c3",
-          title: "Oscilloscope Basics and Power Supply Design",
-          content:
-            "An oscilloscope displays voltage versus time, enabling visualization of AC signals, transients, and digital waveforms. Key controls include the vertical scale (volts per division), horizontal scale (time per division), and trigger — which stabilizes repetitive waveforms by starting each sweep at the same point on the signal. Bandwidth specifies the frequency at which the displayed amplitude drops to −3 dB (70.7%); for a 100 MHz square wave, a scope with at least 500 MHz bandwidth is recommended (5× rule) to capture harmonics accurately. Probes should be compensated using the scope's built-in 1 kHz square wave. For powering prototypes, a benchtop linear power supply provides clean, low-noise DC with adjustable voltage and current limiting — an essential safety feature that prevents damage if a short circuit occurs. Setting the current limit to slightly above the expected draw ensures the supply enters constant-current mode before any component is destroyed.",
-        },
+          "id": "micro-circuits-101-l08-c3",
+          "title": "Oscilloscope Basics and Power Supply Design",
+          "content": "An oscilloscope displays voltage versus time, enabling visualization of AC signals, transients, and digital waveforms. Key controls include the vertical scale (volts per division), horizontal scale (time per division), and trigger — which stabilizes repetitive waveforms by starting each sweep at the same point on the signal. Bandwidth specifies the frequency at which the displayed amplitude drops to −3 dB (70.7%); for a 100 MHz square wave, a scope with at least 500 MHz bandwidth is recommended (5× rule) to capture harmonics accurately. Probes should be compensated using the scope's built-in 1 kHz square wave. For powering prototypes, a benchtop linear power supply provides clean, low-noise DC with adjustable voltage and current limiting — an essential safety feature that prevents damage if a short circuit occurs. Setting the current limit to slightly above the expected draw ensures the supply enters constant-current mode before any component is destroyed."
+        }
       ],
-      flashcards: [
+      "flashcards": [
         {
-          id: "micro-circuits-101-l08-f1",
-          front: "Why should you keep jumper wires short on a breadboard?",
-          back: "Short wires minimize parasitic inductance and reduce the antenna effect, which can cause signal ringing, oscillation, and noise pickup — especially at higher frequencies.",
+          "id": "micro-circuits-101-l08-f1",
+          "front": "Why should you keep jumper wires short on a breadboard?",
+          "back": "Short wires minimize parasitic inductance and reduce the antenna effect, which can cause signal ringing, oscillation, and noise pickup — especially at higher frequencies."
         },
         {
-          id: "micro-circuits-101-l08-f2",
-          front: "Why must a multimeter be connected in series to measure current?",
-          back: "An ammeter has very low internal resistance. Connecting it in parallel across a voltage source creates a near short circuit, which can blow the meter's fuse or damage the circuit.",
+          "id": "micro-circuits-101-l08-f2",
+          "front": "Why must a multimeter be connected in series to measure current?",
+          "back": "An ammeter has very low internal resistance. Connecting it in parallel across a voltage source creates a near short circuit, which can blow the meter's fuse or damage the circuit."
         },
         {
-          id: "micro-circuits-101-l08-f3",
-          front: "What is the purpose of the trigger function on an oscilloscope?",
-          back: "The trigger starts each horizontal sweep at the same point on the signal, stabilizing the display so repetitive waveforms appear as a steady, readable trace.",
+          "id": "micro-circuits-101-l08-f3",
+          "front": "What is the purpose of the trigger function on an oscilloscope?",
+          "back": "The trigger starts each horizontal sweep at the same point on the signal, stabilizing the display so repetitive waveforms appear as a steady, readable trace."
         },
         {
-          id: "micro-circuits-101-l08-f4",
-          front: "What is the 5× bandwidth rule for oscilloscopes?",
-          back: "An oscilloscope should have at least 5 times the bandwidth of the highest frequency being measured to accurately display signal shape, especially the harmonics in square waves.",
-        },
+          "id": "micro-circuits-101-l08-f4",
+          "front": "What is the 5× bandwidth rule for oscilloscopes?",
+          "back": "An oscilloscope should have at least 5 times the bandwidth of the highest frequency being measured to accurately display signal shape, especially the harmonics in square waves."
+        }
       ],
-      interactiveActivities: [
+      "interactiveActivities": [
         {
-          id: "micro-circuits-101-l08-a1",
-          type: "sorting_buckets",
-          title: "Test Instrument Capabilities",
-          description: "Sort each measurement task into the instrument best suited to perform it.",
-          instructions: [
-            "Drag each task into the bucket for the instrument most appropriate for that measurement.",
+          "id": "micro-circuits-101-l08-a1",
+          "type": "sorting_buckets",
+          "title": "Test Instrument Capabilities",
+          "description": "Sort each measurement task into the instrument best suited to perform it.",
+          "instructions": [
+            "Drag each task into the bucket for the instrument most appropriate for that measurement."
           ],
-          buckets: ["Digital Multimeter", "Oscilloscope", "Benchtop Power Supply"],
-          items: [
-            { text: "Checking if a solder joint is electrically connected", bucket: "Digital Multimeter" },
-            { text: "Viewing the shape of a 1 MHz PWM signal", bucket: "Oscilloscope" },
-            { text: "Providing adjustable voltage with a 500 mA current limit", bucket: "Benchtop Power Supply" },
-            { text: "Reading the DC resistance of a 4.7 kΩ resistor", bucket: "Digital Multimeter" },
-            { text: "Measuring the rise time of a digital clock edge", bucket: "Oscilloscope" },
-            { text: "Supplying 3.3 V regulated DC to a prototype board", bucket: "Benchtop Power Supply" },
-            { text: "Measuring the RMS voltage of an AC mains outlet", bucket: "Digital Multimeter" },
-            { text: "Checking for voltage ripple on a switching regulator output", bucket: "Oscilloscope" },
+          "buckets": [
+            "Digital Multimeter",
+            "Oscilloscope",
+            "Benchtop Power Supply"
           ],
-        },
-      ],
+          "items": [
+            {
+              "text": "Checking if a solder joint is electrically connected",
+              "bucket": "Digital Multimeter"
+            },
+            {
+              "text": "Viewing the shape of a 1 MHz PWM signal",
+              "bucket": "Oscilloscope"
+            },
+            {
+              "text": "Providing adjustable voltage with a 500 mA current limit",
+              "bucket": "Benchtop Power Supply"
+            },
+            {
+              "text": "Reading the DC resistance of a 4.7 kΩ resistor",
+              "bucket": "Digital Multimeter"
+            },
+            {
+              "text": "Measuring the rise time of a digital clock edge",
+              "bucket": "Oscilloscope"
+            },
+            {
+              "text": "Supplying 3.3 V regulated DC to a prototype board",
+              "bucket": "Benchtop Power Supply"
+            },
+            {
+              "text": "Measuring the RMS voltage of an AC mains outlet",
+              "bucket": "Digital Multimeter"
+            },
+            {
+              "text": "Checking for voltage ripple on a switching regulator output",
+              "bucket": "Oscilloscope"
+            }
+          ]
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L09  PCB & Testing Checkpoint  (quiz)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l09",
-      title: "PCB & Testing Checkpoint",
-      type: "quiz",
-      duration: 8,
-      quizBlueprint: {
-        totalQuestions: 4,
-        bloomProfile: { remember: 1, understand: 2, apply: 1 },
+      "id": "micro-circuits-101-l09",
+      "title": "PCB & Testing Checkpoint",
+      "type": "quiz",
+      "duration": 8,
+      "quizBlueprint": {
+        "totalQuestions": 4,
+        "bloomProfile": {
+          "remember": 1,
+          "understand": 2,
+          "apply": 1
+        }
       },
-      questions: [
+      "questions": [
         {
-          id: "micro-circuits-101-l09-q1",
-          text: "What is the primary purpose of placing a 100 nF ceramic capacitor near each IC's power pins on a PCB?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "To increase the IC's clock speed" },
-            { id: "b", text: "To filter high-frequency switching noise and provide instantaneous current to the IC" },
-            { id: "c", text: "To protect the IC from electrostatic discharge" },
-            { id: "d", text: "To set the operating voltage of the IC" },
+          "id": "micro-circuits-101-l09-q1",
+          "text": "What is the primary purpose of placing a 100 nF ceramic capacitor near each IC's power pins on a PCB?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "To increase the IC's clock speed"
+            },
+            {
+              "id": "b",
+              "text": "To filter high-frequency switching noise and provide instantaneous current to the IC"
+            },
+            {
+              "id": "c",
+              "text": "To protect the IC from electrostatic discharge"
+            },
+            {
+              "id": "d",
+              "text": "To set the operating voltage of the IC"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "Decoupling capacitors act as local charge reservoirs, supplying instantaneous current during fast logic transitions and filtering high-frequency noise that the main power supply traces cannot deliver quickly enough.",
+          "correctOptionId": "b",
+          "explanation": "Decoupling capacitors act as local charge reservoirs, supplying instantaneous current during fast logic transitions and filtering high-frequency noise that the main power supply traces cannot deliver quickly enough."
         },
         {
-          id: "micro-circuits-101-l09-q2",
-          text: "Which file format is the industry standard for defining PCB copper layers, solder mask, and silkscreen for fabrication?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "DXF (AutoCAD Drawing Exchange Format)" },
-            { id: "b", text: "STL (Stereolithography)" },
-            { id: "c", text: "Gerber (RS-274X)" },
-            { id: "d", text: "STEP (Standard for Exchange of Product Data)" },
+          "id": "micro-circuits-101-l09-q2",
+          "text": "Which file format is the industry standard for defining PCB copper layers, solder mask, and silkscreen for fabrication?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "DXF (AutoCAD Drawing Exchange Format)"
+            },
+            {
+              "id": "b",
+              "text": "STL (Stereolithography)"
+            },
+            {
+              "id": "c",
+              "text": "Gerber (RS-274X)"
+            },
+            {
+              "id": "d",
+              "text": "STEP (Standard for Exchange of Product Data)"
+            }
           ],
-          correctOptionId: "c",
-          explanation:
-            "Gerber RS-274X files are the universal standard for PCB fabrication. Each file describes one layer — copper, solder mask, paste stencil, silkscreen, or board outline.",
+          "correctOptionId": "c",
+          "explanation": "Gerber RS-274X files are the universal standard for PCB fabrication. Each file describes one layer — copper, solder mask, paste stencil, silkscreen, or board outline."
         },
         {
-          id: "micro-circuits-101-l09-q3",
-          text: "Why should you avoid splits or slots in a ground plane beneath a high-speed signal trace?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "Splits increase the board's weight" },
-            { id: "b", text: "Splits force return currents to take longer paths, increasing loop area and radiated EMI" },
-            { id: "c", text: "Splits prevent the solder mask from adhering properly" },
-            { id: "d", text: "Splits cause the trace to have higher DC resistance" },
+          "id": "micro-circuits-101-l09-q3",
+          "text": "Why should you avoid splits or slots in a ground plane beneath a high-speed signal trace?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Splits increase the board's weight"
+            },
+            {
+              "id": "b",
+              "text": "Splits force return currents to take longer paths, increasing loop area and radiated EMI"
+            },
+            {
+              "id": "c",
+              "text": "Splits prevent the solder mask from adhering properly"
+            },
+            {
+              "id": "d",
+              "text": "Splits cause the trace to have higher DC resistance"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "Return current on a ground plane flows directly beneath its signal trace. A slot forces the return current around the gap, vastly increasing the current loop area and turning it into an effective antenna for electromagnetic radiation.",
+          "correctOptionId": "b",
+          "explanation": "Return current on a ground plane flows directly beneath its signal trace. A slot forces the return current around the gap, vastly increasing the current loop area and turning it into an effective antenna for electromagnetic radiation."
         },
         {
-          id: "micro-circuits-101-l09-q4",
-          text: "On a breadboard, what is the approximate upper frequency limit for reliable circuit operation?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "100 kHz" },
-            { id: "b", text: "10 MHz" },
-            { id: "c", text: "1 GHz" },
-            { id: "d", text: "100 MHz" },
+          "id": "micro-circuits-101-l09-q4",
+          "text": "On a breadboard, what is the approximate upper frequency limit for reliable circuit operation?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "100 kHz"
+            },
+            {
+              "id": "b",
+              "text": "10 MHz"
+            },
+            {
+              "id": "c",
+              "text": "1 GHz"
+            },
+            {
+              "id": "d",
+              "text": "100 MHz"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "Breadboards introduce parasitic capacitance (~2 pF per row) and lead inductance that degrade signals above roughly 10 MHz. For higher frequencies, soldered prototyping methods are necessary.",
-        },
-      ],
+          "correctOptionId": "b",
+          "explanation": "Breadboards introduce parasitic capacitance (~2 pF per row) and lead inductance that degrade signals above roughly 10 MHz. For higher frequencies, soldered prototyping methods are necessary."
+        }
+      ]
     },
-
-    /* ──────────────────────────────────────────────
-       L10  Mastery Quiz: Micro-Circuits  (quiz)
-    ────────────────────────────────────────────── */
     {
-      id: "micro-circuits-101-l10",
-      title: "Mastery Quiz: Micro-Circuits",
-      type: "quiz",
-      duration: 10,
-      quizBlueprint: {
-        totalQuestions: 4,
-        bloomProfile: { remember: 1, understand: 1, apply: 1, analyze: 1 },
+      "id": "micro-circuits-101-l10",
+      "title": "Mastery Quiz: Micro-Circuits",
+      "type": "quiz",
+      "duration": 10,
+      "quizBlueprint": {
+        "totalQuestions": 4,
+        "bloomProfile": {
+          "remember": 1,
+          "understand": 1,
+          "apply": 1,
+          "analyze": 1
+        }
       },
-      questions: [
+      "questions": [
         {
-          id: "micro-circuits-101-l10-q1",
-          text: "A non-inverting op-amp amplifier has R_f = 47 kΩ and R_in = 10 kΩ. What is the closed-loop voltage gain?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "4.7" },
-            { id: "b", text: "5.7" },
-            { id: "c", text: "−4.7" },
-            { id: "d", text: "47" },
+          "id": "micro-circuits-101-l10-q1",
+          "text": "A non-inverting op-amp amplifier has R_f = 47 kΩ and R_in = 10 kΩ. What is the closed-loop voltage gain?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "4.7"
+            },
+            {
+              "id": "b",
+              "text": "5.7"
+            },
+            {
+              "id": "c",
+              "text": "−4.7"
+            },
+            {
+              "id": "d",
+              "text": "47"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "Non-inverting gain = 1 + R_f / R_in = 1 + 47,000 / 10,000 = 1 + 4.7 = 5.7. The output is in phase with the input (positive gain).",
+          "correctOptionId": "b",
+          "explanation": "Non-inverting gain = 1 + R_f / R_in = 1 + 47,000 / 10,000 = 1 + 4.7 = 5.7. The output is in phase with the input (positive gain)."
         },
         {
-          id: "micro-circuits-101-l10-q2",
-          text: "A 12-bit ADC with a 5 V reference digitizes a sensor signal. What is the voltage resolution (LSB size)?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "4.88 mV" },
-            { id: "b", text: "1.22 mV" },
-            { id: "c", text: "19.53 mV" },
-            { id: "d", text: "0.49 mV" },
+          "id": "micro-circuits-101-l10-q2",
+          "text": "A 12-bit ADC with a 5 V reference digitizes a sensor signal. What is the voltage resolution (LSB size)?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "4.88 mV"
+            },
+            {
+              "id": "b",
+              "text": "1.22 mV"
+            },
+            {
+              "id": "c",
+              "text": "19.53 mV"
+            },
+            {
+              "id": "d",
+              "text": "0.49 mV"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "LSB = V_ref / 2^n = 5 / 4096 ≈ 1.22 mV. Each digital step corresponds to a 1.22 mV change in the analog input.",
+          "correctOptionId": "b",
+          "explanation": "LSB = V_ref / 2^n = 5 / 4096 ≈ 1.22 mV. Each digital step corresponds to a 1.22 mV change in the analog input."
         },
         {
-          id: "micro-circuits-101-l10-q3",
-          text: "For a 4-layer PCB, what is the typical arrangement of the inner layers and why?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "Two signal layers — to route more traces without increasing board size" },
-            { id: "b", text: "A ground plane and a power plane — to reduce EMI, provide low-impedance return paths, and simplify power distribution" },
-            { id: "c", text: "Two solder mask layers — to improve corrosion resistance on both sides" },
-            { id: "d", text: "A ground plane and a silkscreen layer — to improve labeling and shielding" },
+          "id": "micro-circuits-101-l10-q3",
+          "text": "For a 4-layer PCB, what is the typical arrangement of the inner layers and why?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "Two signal layers — to route more traces without increasing board size"
+            },
+            {
+              "id": "b",
+              "text": "A ground plane and a power plane — to reduce EMI, provide low-impedance return paths, and simplify power distribution"
+            },
+            {
+              "id": "c",
+              "text": "Two solder mask layers — to improve corrosion resistance on both sides"
+            },
+            {
+              "id": "d",
+              "text": "A ground plane and a silkscreen layer — to improve labeling and shielding"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "Standard 4-layer stackup places a ground plane and a power plane as the two inner layers. This provides low-impedance return paths for signals, reduces EMI by minimizing loop area, and distributes power uniformly to all components.",
+          "correctOptionId": "b",
+          "explanation": "Standard 4-layer stackup places a ground plane and a power plane as the two inner layers. This provides low-impedance return paths for signals, reduces EMI by minimizing loop area, and distributes power uniformly to all components."
         },
         {
-          id: "micro-circuits-101-l10-q4",
-          text: "A Zener diode is rated at 5.1 V and is connected in reverse bias across a load. A 12 V supply feeds through a 1 kΩ series resistor. What current flows through the Zener diode if the load draws 2 mA?",
-          skillId: "micro-circuits-101-skill-core",
-          options: [
-            { id: "a", text: "6.9 mA" },
-            { id: "b", text: "4.9 mA" },
-            { id: "c", text: "12 mA" },
-            { id: "d", text: "2 mA" },
+          "id": "micro-circuits-101-l10-q4",
+          "text": "A Zener diode is rated at 5.1 V and is connected in reverse bias across a load. A 12 V supply feeds through a 1 kΩ series resistor. What current flows through the Zener diode if the load draws 2 mA?",
+          "skillId": "micro-circuits-101-skill-core",
+          "options": [
+            {
+              "id": "a",
+              "text": "6.9 mA"
+            },
+            {
+              "id": "b",
+              "text": "4.9 mA"
+            },
+            {
+              "id": "c",
+              "text": "12 mA"
+            },
+            {
+              "id": "d",
+              "text": "2 mA"
+            }
           ],
-          correctOptionId: "b",
-          explanation:
-            "Total current through the resistor: I_total = (12 − 5.1) / 1000 = 6.9 mA. The load draws 2 mA, so the Zener carries I_Z = 6.9 − 2 = 4.9 mA, maintaining the 5.1 V regulation.",
-        },
-      ],
-    },
-  ],
+          "correctOptionId": "b",
+          "explanation": "Total current through the resistor: I_total = (12 − 5.1) / 1000 = 6.9 mA. The load draws 2 mA, so the Zener carries I_Z = 6.9 − 2 = 4.9 mA, maintaining the 5.1 V regulation."
+        }
+      ]
+    }
+  ]
 };

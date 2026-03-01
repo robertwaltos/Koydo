@@ -168,9 +168,8 @@ export default function VisualFlashcards({
       {/* Progress dots */}
       <div
         className="flex items-center gap-2"
-        role="progressbar"
-        aria-valuenow={cardIndex + 1}
-        aria-valuemax={deck.length}
+        role="group"
+        aria-label={`Card ${cardIndex + 1} of ${deck.length}`}
       >
         {deck.map((_, i) => (
           <button
@@ -192,7 +191,7 @@ export default function VisualFlashcards({
       </div>
 
       {/* Progress bar — thicker */}
-      <div className="h-3 w-full max-w-md overflow-hidden rounded-full bg-zinc-100">
+      <div className="h-3 w-full max-w-md overflow-hidden rounded-full bg-zinc-100" role="progressbar" aria-valuenow={cardIndex + 1} aria-valuemin={1} aria-valuemax={deck.length} aria-label="Flashcard progress">
         <div
           className="h-full rounded-full transition-all duration-500"
           style={{ width: `${progress}%`, backgroundColor: glowColor }}

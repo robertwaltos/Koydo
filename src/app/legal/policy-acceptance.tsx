@@ -60,20 +60,20 @@ export default function PolicyAcceptance({ policyType }: Props) {
   };
 
   if (isLoading) {
-    return <p className="text-xs text-zinc-500">Checking acceptance status...</p>;
+    return <p className="text-xs text-foreground">Checking acceptance status...</p>;
   }
 
   if (requiresAuth) {
-    return <p className="text-xs text-zinc-500">Sign in to acknowledge this policy version.</p>;
+    return <p className="text-xs text-foreground">Sign in to acknowledge this policy version.</p>;
   }
 
   return (
     <div className="ui-soft-card rounded-md p-3">
-      <p className="text-xs text-zinc-600">
+      <p className="text-xs text-foreground">
         Current version: {version ?? "unknown"}
       </p>
       {accepted ? (
-        <p className="mt-1 text-sm text-emerald-700">You acknowledged this policy.</p>
+        <p className="mt-1 text-sm text-success">You acknowledged this policy.</p>
       ) : (
         <button
           type="button"
@@ -83,7 +83,7 @@ export default function PolicyAcceptance({ policyType }: Props) {
           Acknowledge Policy
         </button>
       )}
-      {status ? <p className="mt-1 text-xs text-zinc-600">{status}</p> : null}
+      {status ? <p className="mt-1 text-xs text-foreground">{status}</p> : null}
     </div>
   );
 }

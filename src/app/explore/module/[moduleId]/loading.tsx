@@ -39,7 +39,7 @@ export default function ModuleLoading() {
               <div className="h-11 w-11 animate-pulse rounded-full bg-zinc-100" />
               <div className="flex flex-1 flex-col gap-1.5">
                 <div className="h-4 w-3/4 animate-pulse rounded bg-zinc-100" />
-                <div className="h-3 w-1/3 animate-pulse rounded bg-zinc-50" />
+                <div className="h-3 w-1/3 animate-pulse rounded bg-surface-muted" />
               </div>
               <div className="h-10 w-16 animate-pulse rounded-full bg-zinc-100" />
             </div>

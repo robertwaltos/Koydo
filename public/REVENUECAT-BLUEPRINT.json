@@ -1,0 +1,136 @@
+{
+  "generatedAt": "2026-03-01T09:58:27.889Z",
+  "source": {
+    "pricingSpecPath": "src/lib/language-learning/pricing-spec.ts",
+    "revenueCatMatrixPath": "src/lib/billing/revenuecat-matrix.ts",
+    "pricingSpecVersion": "2026-02-27-pricing-spec-v1",
+    "launchDefaultPhase": "1",
+    "launchDefaultProfile": "conservative"
+  },
+  "entitlement": {
+    "id": "koydo_pro",
+    "legacyAliases": [
+      "premium_access",
+      "language_learning_premium",
+      "premium"
+    ]
+  },
+  "offerings": [
+    {
+      "id": "default",
+      "displayName": "Default",
+      "packageIdentifiers": [
+        "language_plus_conservative",
+        "language_family_conservative",
+        "language_plus_growth",
+        "language_family_growth",
+        "language_school_annual",
+        "household_all_access_monthly",
+        "household_all_access_annual"
+      ],
+      "launchReadyPackageIdentifiers": [
+        "language_plus_conservative",
+        "language_family_conservative"
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "planId": "language_plus_conservative",
+      "displayName": "Language Plus (Conservative)",
+      "category": "subscription",
+      "billingCadence": "monthly",
+      "status": "active",
+      "availableFromPhase": "1",
+      "baselinePriceUsd": 5.99,
+      "packageIdentifier": "language_plus_conservative",
+      "expectedProductIdentifier": "language_plus_conservative",
+      "launchReady": true,
+      "notes": "Launch default: up to 300 scored attempts/month then practice-only mode."
+    },
+    {
+      "planId": "language_family_conservative",
+      "displayName": "Language Family (Conservative)",
+      "category": "subscription",
+      "billingCadence": "monthly",
+      "status": "active",
+      "availableFromPhase": "1",
+      "baselinePriceUsd": 14.99,
+      "packageIdentifier": "language_family_conservative",
+      "expectedProductIdentifier": "language_family_conservative",
+      "launchReady": true,
+      "notes": "Family plan for up to 4 learners with per-learner scoring caps."
+    },
+    {
+      "planId": "language_plus_growth",
+      "displayName": "Language Plus (Growth)",
+      "category": "subscription",
+      "billingCadence": "monthly",
+      "status": "planned",
+      "availableFromPhase": "1",
+      "baselinePriceUsd": 7.99,
+      "packageIdentifier": "language_plus_growth",
+      "expectedProductIdentifier": "language_plus_growth",
+      "launchReady": false,
+      "notes": "Growth variant for controlled A/B testing post-launch."
+    },
+    {
+      "planId": "language_family_growth",
+      "displayName": "Language Family (Growth)",
+      "category": "subscription",
+      "billingCadence": "monthly",
+      "status": "planned",
+      "availableFromPhase": "1",
+      "baselinePriceUsd": 19.99,
+      "packageIdentifier": "language_family_growth",
+      "expectedProductIdentifier": "language_family_growth",
+      "launchReady": false,
+      "notes": "Family growth variant for revenue-optimized experiments."
+    },
+    {
+      "planId": "language_school_annual",
+      "displayName": "Language School Annual",
+      "category": "subscription",
+      "billingCadence": "annual",
+      "status": "planned",
+      "availableFromPhase": "1",
+      "baselinePriceUsd": 59.88,
+      "packageIdentifier": "language_school_annual",
+      "expectedProductIdentifier": "language_school_annual",
+      "launchReady": false,
+      "notes": "Reference seat pricing at $4.99/seat/month billed annually."
+    },
+    {
+      "planId": "household_all_access_monthly",
+      "displayName": "Household All-Access",
+      "category": "household_pass",
+      "billingCadence": "monthly",
+      "status": "planned",
+      "availableFromPhase": "3",
+      "baselinePriceUsd": 29.99,
+      "packageIdentifier": "household_all_access_monthly",
+      "expectedProductIdentifier": "household_all_access_monthly",
+      "launchReady": false,
+      "notes": "Household pass for cross-generational usage."
+    },
+    {
+      "planId": "household_all_access_annual",
+      "displayName": "Household All-Access (Annual)",
+      "category": "household_pass",
+      "billingCadence": "annual",
+      "status": "planned",
+      "availableFromPhase": "3",
+      "baselinePriceUsd": 149,
+      "packageIdentifier": "household_all_access_annual",
+      "expectedProductIdentifier": "household_all_access_annual",
+      "launchReady": false,
+      "notes": "Annual household pass with retention-first economics."
+    }
+  ],
+  "implementationNotes": [
+    "Use `default` as the current offering in RevenueCat dashboard.",
+    "Set RevenueCat package identifiers to match internal plan IDs exactly.",
+    "For zero-drift mapping, set product identifiers equal to internal plan IDs when creating Store products.",
+    "If Store product IDs must differ, keep RevenueCat package identifier equal to internal plan ID and map package -> product manually in dashboard."
+  ]
+}

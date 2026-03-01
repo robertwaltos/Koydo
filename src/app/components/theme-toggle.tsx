@@ -7,7 +7,7 @@ export default function ThemeToggle() {
 
   return (
     <label className="flex items-center gap-2 text-sm">
-      <span className="text-zinc-600">Theme</span>
+      <span className="text-zinc-600 dark:text-foreground/70">Theme</span>
       <select
         value={themeMode}
         onChange={(event) => setThemeMode(event.target.value as ThemeMode)}

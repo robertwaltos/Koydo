@@ -199,19 +199,19 @@ export default function LanguageExamUnlockOptions({
   }, [refreshOffers]);
 
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+    <div className="rounded-2xl border border-zinc-200 dark:border-border bg-surface-muted p-4">
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div>
-          <h3 className={compact ? "text-sm font-semibold text-zinc-900" : "text-base font-semibold text-zinc-900"}>
+          <h3 className={compact ? "text-sm font-semibold text-zinc-900 dark:text-foreground" : "text-base font-semibold text-zinc-900 dark:text-foreground"}>
             {title}
           </h3>
-          <p className="mt-1 text-xs text-zinc-600">{description}</p>
+          <p className="mt-1 text-xs text-zinc-600 dark:text-foreground/70">{description}</p>
         </div>
         <button
           type="button"
           onClick={() => void refreshOffers()}
           disabled={loading || checkoutLevel !== null}
-          className="ui-focus-ring rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-semibold text-zinc-700 hover:bg-zinc-100 disabled:opacity-60"
+          className="ui-focus-ring rounded-full border border-zinc-200 dark:border-border bg-white dark:bg-surface px-3 py-1.5 text-xs font-semibold text-zinc-700 dark:text-foreground/85 hover:bg-zinc-100 dark:hover:bg-surface/80 disabled:opacity-60"
         >
           {loading ? "Loading..." : "Refresh"}
         </button>
@@ -223,7 +223,7 @@ export default function LanguageExamUnlockOptions({
             const offer = offers[level];
             if (!offer) {
               return (
-                <div key={level} className="rounded-xl border border-zinc-200 bg-white p-3 text-xs text-zinc-500">
+                <div key={level} className="rounded-xl border border-zinc-200 dark:border-border bg-white dark:bg-surface p-3 text-xs text-zinc-500 dark:text-foreground/60">
                   {LEVEL_LABELS[level]} unavailable.
                 </div>
               );
@@ -234,13 +234,13 @@ export default function LanguageExamUnlockOptions({
               offer.entitlement.hasActiveUnlock && offer.entitlement.unlockAttemptsRemaining > 0;
 
             return (
-              <article key={level} className="rounded-xl border border-zinc-200 bg-white p-3">
-                <p className="text-sm font-semibold text-zinc-900">{LEVEL_LABELS[level]}</p>
-                <p className="mt-1 text-xs text-zinc-600">{LEVEL_DESCRIPTIONS[level]}</p>
-                <p className="mt-2 text-lg font-bold text-zinc-900">
+              <article key={level} className="rounded-xl border border-zinc-200 dark:border-border bg-white dark:bg-surface p-3">
+                <p className="text-sm font-semibold text-zinc-900 dark:text-foreground">{LEVEL_LABELS[level]}</p>
+                <p className="mt-1 text-xs text-zinc-600 dark:text-foreground/70">{LEVEL_DESCRIPTIONS[level]}</p>
+                <p className="mt-2 text-lg font-bold text-zinc-900 dark:text-foreground">
                   {formatMoney(offer.quote.priceCents, offer.quote.currency, locale)}
                 </p>
-                <p className="text-xs text-zinc-600">
+                <p className="text-xs text-zinc-600 dark:text-foreground/70">
                   {offer.quote.additionalAttempts} scored attempts
                 </p>
                 {hasActiveUnlock ? (
@@ -261,10 +261,10 @@ export default function LanguageExamUnlockOptions({
           })}
         </div>
       ) : (
-        <p className="mt-3 text-xs text-zinc-600">Unlock offers are not available yet in this environment.</p>
+        <p className="mt-3 text-xs text-zinc-600 dark:text-foreground/70">Unlock offers are not available yet in this environment.</p>
       )}
 
-      <p className="mt-3 text-xs text-zinc-600">{status}</p>
+      <p className="mt-3 text-xs text-zinc-600 dark:text-foreground/70">{status}</p>
     </div>
   );
 }

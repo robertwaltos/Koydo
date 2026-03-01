@@ -14,9 +14,11 @@ import {
 } from "@/lib/analytics/language-billing-events";
 import { useI18n } from "@/lib/i18n/provider";
 import { Capacitor } from "@capacitor/core";
-import { Purchases, LOG_LEVEL } from "@revenuecat/purchases-capacitor";
+import { Purchases } from "@revenuecat/purchases-capacitor";
 import { canUseStripe } from "@/lib/platform/features";
-import { getRevenueCatApiKey } from "@/lib/billing/revenuecat-config";
+import { initializeRevenueCat } from "@/lib/billing/revenuecat-client";
+import { hasRevenueCatProEntitlement } from "@/lib/billing/revenuecat-config";
+import { findTypedPackageForLanguagePlanId } from "@/lib/billing/revenuecat-offerings";
 import AuthGuard from "@/app/components/auth-guard";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "@/app/components/error-fallback";
@@ -75,13 +77,11 @@ export default function BillingCheckoutPage() {
     if (Capacitor.isNativePlatform()) {
       const initRC = async () => {
         try {
-          await Purchases.setLogLevel({ level: LOG_LEVEL.DEBUG });
-          const apiKey = getRevenueCatApiKey();
-          if (!apiKey) {
+          const initialized = await initializeRevenueCat();
+          if (!initialized) {
             setStatus(t("billing_checkout_not_configured"));
             return;
           }
-          await Purchases.configure({ apiKey });
           setRcInitialized(true);
         } catch (error) {
           console.error("RC Init Error", error);
@@ -89,7 +89,7 @@ export default function BillingCheckoutPage() {
       };
       initRC();
     }
-  }, []);
+  }, [t]);
 
   useEffect(() => {
     if (planFromQuery && planFromQuery !== selectedPlanId) {
@@ -169,8 +169,6 @@ export default function BillingCheckoutPage() {
         return;
       }
 
-      // Map Stripe LanguagePlanId to equivalent RevenueCat Package identifier.
-      // E.g., 'language_plus_conservative' to RevenueCat Entitlement -> Package
       const offeringsResult = await Purchases.getOfferings();
       const currentOffering = offeringsResult.current;
       
@@ -179,9 +177,11 @@ export default function BillingCheckoutPage() {
         return;
       }
 
-      // We'll map selecting the plan from RevenueCat based on the ID we have internally
-      // Defaulting to the 'monthly' package if found or trying an exact product ID match
-      const targetPackage = currentOffering.availablePackages.find(p => p.identifier === selectedPlanId || p.product.identifier === selectedPlanId);
+      // Matrix source of truth: package/product identifiers should match internal LanguagePlanId values.
+      const targetPackage = findTypedPackageForLanguagePlanId(
+        { current: currentOffering },
+        selectedPlanId,
+      );
       
       if (!targetPackage) {
         setStatus(t("billing_checkout_iap_plan_not_available", { plan: selectedPlan?.name ?? "" }));
@@ -190,7 +190,7 @@ export default function BillingCheckoutPage() {
 
       const { customerInfo } = await Purchases.purchasePackage({ aPackage: targetPackage });
       
-      if (customerInfo.entitlements.active['language_learning_premium']) {
+      if (hasRevenueCatProEntitlement(customerInfo)) {
         setStatus(t("billing_checkout_iap_success"));
         // We'd push to the success URL or wait for a webhook internally
         router.push("/billing/success");
@@ -247,7 +247,7 @@ export default function BillingCheckoutPage() {
                   className={`ui-focus-ring rounded-xl border px-4 py-3 text-left transition ${
                     isSelected
                       ? "border-cyan-300 bg-cyan-50"
-                      : "border-zinc-200 bg-white hover:border-zinc-300 hover:bg-zinc-50"
+                      : "border-zinc-200 bg-white hover:border-zinc-300 hover:bg-surface-muted"
                   }`}
                 >
                   <p className="text-sm font-semibold text-zinc-900">{plan.name}</p>
@@ -263,7 +263,7 @@ export default function BillingCheckoutPage() {
           </div>
 
           {selectedPlan ? (
-            <div className="ui-soft-card mt-4 rounded-xl border border-zinc-200 bg-zinc-50 p-4 text-sm text-zinc-700">
+            <div className="ui-soft-card mt-4 rounded-xl border border-zinc-200 bg-surface-muted p-4 text-sm text-zinc-700">
               <p className="font-semibold text-zinc-900">{selectedPlan.name}</p>
               <p className="mt-1">{selectedPlan.notes}</p>
             </div>

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-02-24T04:20:22.385Z",
+  "generatedAt": "2026-03-01T07:50:00.209Z",
   "sourceDir": "src/lib/modules/catalog",
   "totals": {
-    "modules": 118,
+    "modules": 259,
     "modulesWithIssues": 0,
     "errors": 0,
     "warnings": 0
@@ -11,6 +11,26 @@
     {
       "moduleId": "a-level-prep-101",
       "fileName": "a-level-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "accounting-finance-101",
+      "fileName": "accounting-finance-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "accounting-finance-201",
+      "fileName": "accounting-finance-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "accounting-finance-301",
+      "fileName": "accounting-finance-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "accounting-finance-401",
+      "fileName": "accounting-finance-401.ts",
       "issues": []
     },
     {
@@ -31,6 +51,31 @@
     {
       "moduleId": "advanced-math-401",
       "fileName": "advanced-math-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ai-machine-learning-101",
+      "fileName": "ai-machine-learning-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ai-machine-learning-201",
+      "fileName": "ai-machine-learning-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ai-machine-learning-301",
+      "fileName": "ai-machine-learning-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ai-machine-learning-401",
+      "fileName": "ai-machine-learning-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ai-workflows-101",
+      "fileName": "ai-workflows-101.ts",
       "issues": []
     },
     {
@@ -149,6 +194,51 @@
       "issues": []
     },
     {
+      "moduleId": "biotechnology-101",
+      "fileName": "biotechnology-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "business-analytics-101",
+      "fileName": "business-analytics-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "business-analytics-201",
+      "fileName": "business-analytics-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "business-analytics-301",
+      "fileName": "business-analytics-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "business-analytics-401",
+      "fileName": "business-analytics-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "business-ethics-101",
+      "fileName": "business-ethics-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "business-ethics-201",
+      "fileName": "business-ethics-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "business-ethics-301",
+      "fileName": "business-ethics-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "business-ethics-401",
+      "fileName": "business-ethics-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "chemistry-101",
       "fileName": "chemistry-101.ts",
       "issues": []
@@ -166,6 +256,36 @@
     {
       "moduleId": "chemistry-401",
       "fileName": "chemistry-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "civil-engineering-101",
+      "fileName": "civil-engineering-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "civil-engineering-201",
+      "fileName": "civil-engineering-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "civil-engineering-301",
+      "fileName": "civil-engineering-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "civil-engineering-401",
+      "fileName": "civil-engineering-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cloud-computing-101",
+      "fileName": "cloud-computing-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cloud-computing-201",
+      "fileName": "cloud-computing-201.ts",
       "issues": []
     },
     {
@@ -189,8 +309,138 @@
       "issues": []
     },
     {
+      "moduleId": "cpu-gpu-memory-design-101",
+      "fileName": "cpu-gpu-memory-design-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cpu-gpu-memory-design-201",
+      "fileName": "cpu-gpu-memory-design-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cpu-gpu-memory-design-301",
+      "fileName": "cpu-gpu-memory-design-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cpu-gpu-memory-design-401",
+      "fileName": "cpu-gpu-memory-design-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "cuet-prep-101",
       "fileName": "cuet-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cybersecurity-101",
+      "fileName": "cybersecurity-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cybersecurity-201",
+      "fileName": "cybersecurity-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cybersecurity-301",
+      "fileName": "cybersecurity-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "cybersecurity-401",
+      "fileName": "cybersecurity-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "data-science-101",
+      "fileName": "data-science-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "data-science-201",
+      "fileName": "data-science-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "data-science-301",
+      "fileName": "data-science-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "data-science-401",
+      "fileName": "data-science-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "digital-marketing-101",
+      "fileName": "digital-marketing-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "economics-101",
+      "fileName": "economics-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "economics-201",
+      "fileName": "economics-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "economics-301",
+      "fileName": "economics-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "economics-401",
+      "fileName": "economics-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "electrical-engineering-101",
+      "fileName": "electrical-engineering-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "electrical-engineering-201",
+      "fileName": "electrical-engineering-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "electrical-engineering-301",
+      "fileName": "electrical-engineering-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "electrical-engineering-401",
+      "fileName": "electrical-engineering-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "electrician-electricity-101",
+      "fileName": "electrician-electricity-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "electrician-electricity-201",
+      "fileName": "electrician-electricity-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "electrician-electricity-301",
+      "fileName": "electrician-electricity-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "electrician-electricity-401",
+      "fileName": "electrician-electricity-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "entrepreneurship-101",
+      "fileName": "entrepreneurship-101.ts",
       "issues": []
     },
     {
@@ -231,6 +481,11 @@
     {
       "moduleId": "gaokao-prep-101",
       "fileName": "gaokao-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "gardening-101",
+      "fileName": "gardening-101.ts",
       "issues": []
     },
     {
@@ -339,6 +594,46 @@
       "issues": []
     },
     {
+      "moduleId": "human-resource-management-101",
+      "fileName": "human-resource-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "human-resource-management-201",
+      "fileName": "human-resource-management-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "human-resource-management-301",
+      "fileName": "human-resource-management-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "human-resource-management-401",
+      "fileName": "human-resource-management-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "hvac-101",
+      "fileName": "hvac-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "hvac-201",
+      "fileName": "hvac-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "hvac-301",
+      "fileName": "hvac-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "hvac-401",
+      "fileName": "hvac-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "ib-prep-101",
       "fileName": "ib-prep-101.ts",
       "issues": []
@@ -346,6 +641,26 @@
     {
       "moduleId": "ielts-prep-101",
       "fileName": "ielts-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "international-business-101",
+      "fileName": "international-business-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "international-business-201",
+      "fileName": "international-business-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "international-business-301",
+      "fileName": "international-business-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "international-business-401",
+      "fileName": "international-business-401.ts",
       "issues": []
     },
     {
@@ -404,8 +719,258 @@
       "issues": []
     },
     {
+      "moduleId": "law-studies-101",
+      "fileName": "law-studies-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "law-studies-201",
+      "fileName": "law-studies-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "law-studies-301",
+      "fileName": "law-studies-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "law-studies-401",
+      "fileName": "law-studies-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "leadership-101",
+      "fileName": "leadership-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "leadership-201",
+      "fileName": "leadership-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "leadership-301",
+      "fileName": "leadership-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "leadership-401",
+      "fileName": "leadership-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "linux-101",
+      "fileName": "linux-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "macos-101",
+      "fileName": "macos-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "marketing-management-101",
+      "fileName": "marketing-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "marketing-management-201",
+      "fileName": "marketing-management-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "marketing-management-301",
+      "fileName": "marketing-management-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "marketing-management-401",
+      "fileName": "marketing-management-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "math-101",
       "fileName": "math-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "medicine-101",
+      "fileName": "medicine-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "medicine-201",
+      "fileName": "medicine-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "medicine-301",
+      "fileName": "medicine-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "medicine-401",
+      "fileName": "medicine-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "meteorology-101",
+      "fileName": "meteorology-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "meteorology-201",
+      "fileName": "meteorology-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "meteorology-301",
+      "fileName": "meteorology-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "meteorology-401",
+      "fileName": "meteorology-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "micro-circuits-101",
+      "fileName": "micro-circuits-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "micro-circuits-201",
+      "fileName": "micro-circuits-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "micro-circuits-301",
+      "fileName": "micro-circuits-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "microelectronics-101",
+      "fileName": "microelectronics-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "microelectronics-201",
+      "fileName": "microelectronics-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "microelectronics-301",
+      "fileName": "microelectronics-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "microelectronics-401",
+      "fileName": "microelectronics-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "music-history-101",
+      "fileName": "music-history-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "music-production-101",
+      "fileName": "music-production-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "music-theory-101",
+      "fileName": "music-theory-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "music-theory-201",
+      "fileName": "music-theory-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "music-theory-301",
+      "fileName": "music-theory-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "music-theory-401",
+      "fileName": "music-theory-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "network-engineering-101",
+      "fileName": "network-engineering-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "network-engineering-201",
+      "fileName": "network-engineering-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "nursing-101",
+      "fileName": "nursing-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "nursing-201",
+      "fileName": "nursing-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "nursing-301",
+      "fileName": "nursing-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "nursing-401",
+      "fileName": "nursing-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "operations-management-101",
+      "fileName": "operations-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "operations-management-201",
+      "fileName": "operations-management-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "operations-management-301",
+      "fileName": "operations-management-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "operations-management-401",
+      "fileName": "operations-management-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "organizational-behavior-101",
+      "fileName": "organizational-behavior-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "organizational-behavior-201",
+      "fileName": "organizational-behavior-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "organizational-behavior-301",
+      "fileName": "organizational-behavior-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "organizational-behavior-401",
+      "fileName": "organizational-behavior-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "philosophy-101",
+      "fileName": "philosophy-101.ts",
       "issues": []
     },
     {
@@ -426,6 +991,26 @@
     {
       "moduleId": "physics-401",
       "fileName": "physics-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "plumbing-101",
+      "fileName": "plumbing-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "plumbing-201",
+      "fileName": "plumbing-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "plumbing-301",
+      "fileName": "plumbing-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "plumbing-401",
+      "fileName": "plumbing-401.ts",
       "issues": []
     },
     {
@@ -519,8 +1104,73 @@
       "issues": []
     },
     {
+      "moduleId": "project-management-101",
+      "fileName": "project-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "project-management-201",
+      "fileName": "project-management-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "project-management-301",
+      "fileName": "project-management-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "project-management-401",
+      "fileName": "project-management-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "psychology-101",
+      "fileName": "psychology-101.ts",
+      "issues": []
+    },
+    {
       "moduleId": "reading-101",
       "fileName": "reading-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "renewable-energy-systems-101",
+      "fileName": "renewable-energy-systems-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "renewable-energy-systems-201",
+      "fileName": "renewable-energy-systems-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "renewable-energy-systems-301",
+      "fileName": "renewable-energy-systems-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "renewable-energy-systems-401",
+      "fileName": "renewable-energy-systems-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "robotics-101",
+      "fileName": "robotics-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "robotics-201",
+      "fileName": "robotics-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "robotics-301",
+      "fileName": "robotics-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "robotics-401",
+      "fileName": "robotics-401.ts",
       "issues": []
     },
     {
@@ -574,8 +1224,63 @@
       "issues": []
     },
     {
+      "moduleId": "strategic-management-101",
+      "fileName": "strategic-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "strategic-management-201",
+      "fileName": "strategic-management-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "strategic-management-301",
+      "fileName": "strategic-management-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "strategic-management-401",
+      "fileName": "strategic-management-401.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "supply-chain-management-101",
+      "fileName": "supply-chain-management-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "supply-chain-management-201",
+      "fileName": "supply-chain-management-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "supply-chain-management-301",
+      "fileName": "supply-chain-management-301.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "supply-chain-management-401",
+      "fileName": "supply-chain-management-401.ts",
+      "issues": []
+    },
+    {
       "moduleId": "toefl-prep-101",
       "fileName": "toefl-prep-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "us-civics-201",
+      "fileName": "us-civics-201.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "ux-design-101",
+      "fileName": "ux-design-101.ts",
+      "issues": []
+    },
+    {
+      "moduleId": "windows-101",
+      "fileName": "windows-101.ts",
       "issues": []
     },
     {

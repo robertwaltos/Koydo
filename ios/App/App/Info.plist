@@ -47,10 +47,12 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>Koydo uses this permission to measure the effectiveness of learning features and improve your experience through analytics.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Koydo needs microphone access for the AI Speaking Tutors to analyze your pronunciation natively.</string>
-	<key>NSCameraUsageDescription</key>
-	<string>Koydo requires camera access to use future AR and interaction modules.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>

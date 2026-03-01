@@ -151,15 +151,21 @@ Key declarations:
 Navigate to: **Features** → **In-App Purchases**
 
 ### Create Products (if not already done)
-| Product ID | Type | Reference Name | Price |
+Use `REVENUECAT-BLUEPRINT.md` as the source of truth for plan/package IDs and baseline pricing.
+
+For launch-ready paid plans, keep RevenueCat package identifiers exactly as:
+
+| Internal Plan ID (RC package identifier) | Type | Baseline Price (USD) | Launch |
 |-----------|------|----------------|-------|
-| `com.koydo.app.premium.monthly` | Auto-Renewable Subscription | Koydo Premium Monthly | $9.99/mo |
-| `com.koydo.app.premium.annual` | Auto-Renewable Subscription | Koydo Premium Annual | $59.99/yr |
+| `language_plus_conservative` | Auto-Renewable Subscription | $5.99/mo | Yes |
+| `language_family_conservative` | Auto-Renewable Subscription | $14.99/mo | Yes |
+
+Store product identifiers can use App Store naming conventions, but map each product to the matching RevenueCat package identifier above.
 
 ### Subscription Group
 - Group Name: **Koydo Premium**
-- Add both products to the group
-- Set annual as the preferred upgrade path
+- Add launch-ready paid products to the group
+- Configure upgrade/downgrade order to match your launch offer hierarchy (individual vs family tiers).
 
 ### Status Check
 - Both products must be **Ready to Submit** or **Approved** before the app can go live
