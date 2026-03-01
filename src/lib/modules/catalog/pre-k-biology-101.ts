@@ -9,7 +9,6 @@ export const PreKBiology101Module: LearningModule = {
   tags: ["pre-k", "curriculum", "interactive"],
   minAge: 3,
   maxAge: 5,
-  moduleVersion: "4.0.0",
   version: "4.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],
@@ -101,7 +100,7 @@ export const PreKBiology101Module: LearningModule = {
           explanation: "Pigs have curly tails and roll in mud!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-biology-l01-act1",
           type: "sorting_buckets",
@@ -189,7 +188,7 @@ export const PreKBiology101Module: LearningModule = {
           explanation: "Rabbits hop with long ears!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-biology-l02-act1",
           type: "matching_pairs",
@@ -277,7 +276,7 @@ export const PreKBiology101Module: LearningModule = {
           explanation: "Monkeys swing with their tails!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-biology-l03-act1",
           type: "sorting_buckets",
@@ -364,7 +363,7 @@ export const PreKBiology101Module: LearningModule = {
           explanation: "Elephants have long trunks!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-biology-l04-act1",
           type: "sorting_buckets",
@@ -452,7 +451,7 @@ export const PreKBiology101Module: LearningModule = {
           explanation: "Flowers make new seeds!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-biology-l05-act1",
           type: "matching_pairs",
@@ -540,7 +539,7 @@ export const PreKBiology101Module: LearningModule = {
           explanation: "Seeds love soft soil!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-biology-l06-act1",
           type: "virtual_manipulative",
@@ -628,7 +627,7 @@ export const PreKBiology101Module: LearningModule = {
           explanation: "Butterflies start as caterpillars!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-biology-l07-act1",
           type: "sorting_buckets",
@@ -716,7 +715,7 @@ export const PreKBiology101Module: LearningModule = {
           explanation: "Butterflies change from caterpillars!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-biology-l08-act1",
           type: "drawing_canvas",

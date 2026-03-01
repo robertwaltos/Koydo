@@ -9,7 +9,6 @@ export const MusicTheory301Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "music"],
   minAge: 13,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Analyze and write chord progressions using Roman numeral notation",
@@ -95,7 +94,7 @@ export const MusicTheory301Module: LearningModule = {
             "In jazz, the ii-V-I is the fundamental building block. In C: Dm-G-C (or Dm7-G7-Cmaj7 with 7th chords). The ii chord sets up tension, V intensifies it, and I resolves it. Jazz standards chain multiple ii-V-Is together, sometimes in different keys. Mastering this progression is the gateway to jazz improvisation and arranging."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-301-l02-a1",
           title: "Match the Pairs",
@@ -262,7 +261,7 @@ export const MusicTheory301Module: LearningModule = {
             "Modes aren't just academic — they're everywhere. 'Oye Como Va' (Santana) is Dorian. 'Wherever I May Roam' (Metallica) uses Phrygian. 'The Simpsons' theme has Lydian flavor. 'Norwegian Wood' (Beatles) is Mixolydian. Film composers use Lydian for wonder and magic, Phrygian for exotic danger, and Dorian for cool sophistication."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-301-l05-a1",
           title: "Sort into Categories",
@@ -432,7 +431,7 @@ export const MusicTheory301Module: LearningModule = {
             "A suspension holds a note from the previous chord into the new chord, creating a clash that resolves downward by step. It's prepared (consonant) → suspended (dissonant) → resolved (consonant). Notated as numbers: 4-3 suspension, 7-6 suspension, 9-8 suspension. An appoggiatura leaps to a dissonant note and resolves by step — it's like a suspension without preparation, creating a dramatic 'lean.'"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-301-l08-a1",
           title: "Sort into Categories",
@@ -631,7 +630,7 @@ export const MusicTheory301Module: LearningModule = {
             "Any diatonic chord (except the diminished vii°) can be preceded by its own secondary dominant. V/ii pulls toward ii, V/IV pulls toward IV, V/vi pulls toward vi. In C major: A7 → Dm is V7/ii → ii. D7 → G is V7/V → V. E7 → Am is V7/vi → vi. Each one introduces a chromatic note that adds color and forward motion."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-301-l11-a1",
           title: "Match the Pairs",
@@ -792,7 +791,7 @@ export const MusicTheory301Module: LearningModule = {
             "Start with a skeleton of chord tones on strong beats, then fill in weak beats with passing tones and neighbor tones. Add a suspension at a cadence for drama. Use an appoggiatura on an important word in vocal music for emotional emphasis. The non-chord tones should serve the melody — don't add them randomly. Each one should either create motion (passing tone), decoration (neighbor), or tension (suspension/appoggiatura)."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-301-l14-a1",
           title: "Drag and Drop",

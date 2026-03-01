@@ -1,17 +1,17 @@
 APPLE REVIEW TEAM — TESTING NOTES
 ====================================
 
-Koydo is an AI-powered study and exam-preparation app. Below are all credentials and guidance needed to test the app fully.
+Koydo is an AI-powered study and exam-preparation app. Credentials below are placeholders; populate from your secret manager at submission time and do not commit real passwords.
 
 TEST ACCOUNT (Free Tier)
 ─────────────────────────
-Email:    review@koydo.app
-Password: Koydo@Review2024
+Email:    <APP_REVIEW_EMAIL_FREE_FROM_SECRET_MANAGER>
+Password: <APP_REVIEW_PASSWORD_FREE_FROM_SECRET_MANAGER>
 
 TEST ACCOUNT (Premium — Subscription activated)
 ─────────────────────────────────────────────────
-Email:    premium-review@koydo.app
-Password: Koydo@Premium2024
+Email:    <APP_REVIEW_EMAIL_PREMIUM_FROM_SECRET_MANAGER>
+Password: <APP_REVIEW_PASSWORD_PREMIUM_FROM_SECRET_MANAGER>
 
 IN-APP PURCHASE TESTING
 ────────────────────────

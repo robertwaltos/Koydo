@@ -9,7 +9,6 @@ export const Geography101Module: LearningModule = {
   tags: ["geography", "social-studies", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Name and locate the seven continents and five oceans",
@@ -92,7 +91,7 @@ export const Geography101Module: LearningModule = {
           explanation: "Pangaea means 'all lands' — it broke apart into today's continents!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "geography-101-l01-act1",
           type: "drag_and_drop",
@@ -174,7 +173,7 @@ export const Geography101Module: LearningModule = {
           explanation: "Stars mark capital cities on most maps!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "geography-101-l02-act1",
           type: "project_builder",
@@ -256,7 +255,7 @@ export const Geography101Module: LearningModule = {
           explanation: "Plains are flat and great for agriculture like the Great Plains!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "geography-101-l03-act1",
           type: "drawing_canvas",
@@ -338,7 +337,7 @@ export const Geography101Module: LearningModule = {
           explanation: "Greenland is the largest island — but not big enough to be a continent!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "geography-101-l04-act1",
           type: "drawing_canvas",
@@ -420,7 +419,7 @@ export const Geography101Module: LearningModule = {
           explanation: "Oceans moderate temperatures — coastal areas are milder!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "geography-101-l05-act1",
           type: "drawing_canvas",
@@ -502,7 +501,7 @@ export const Geography101Module: LearningModule = {
           explanation: "The Nile's annual floods left rich soil for farming!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "geography-101-l06-act1",
           type: "drawing_canvas",
@@ -584,7 +583,7 @@ export const Geography101Module: LearningModule = {
           explanation: "Canberra was chosen as a compromise between Sydney and Melbourne!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "geography-101-l07-act1",
           type: "matching_pairs",
@@ -666,7 +665,7 @@ export const Geography101Module: LearningModule = {
           explanation: "The Amazon River flows through the Amazon Rainforest in South America!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "geography-101-l08-act1",
           type: "project_builder",

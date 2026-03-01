@@ -12,7 +12,6 @@ export const Access2013ForDummiesLaurieUlrichFullerAndKModule: LearningModule = 
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"Access 2013 For Dummies\"",

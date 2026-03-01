@@ -98,12 +98,16 @@ import { BashCookbookCarlAlbingModule } from "@/lib/modules/catalog/epub-generat
 import { BatmanAndPhilosophyMarkDWhiteModule } from "@/lib/modules/catalog/epub-generated/batman-and-philosophy-mark-d-white";
 import { BatmanAndPhilosophyTheDarkKnightOfTheSoulModule } from "@/lib/modules/catalog/epub-generated/batman-and-philosophy-the-dark-knight-of-the-soul-";
 import { BeginningLuaProgrammingKurtJungModule } from "@/lib/modules/catalog/epub-generated/beginning-lua-programming-kurt-jung";
+import { BeginningsOfLearningJidduKrishnamurtiModule } from "@/lib/modules/catalog/epub-generated/beginnings-of-learning-jiddu-krishnamurti";
 import { BeingTheBestManForDummiesBlissDominicModule } from "@/lib/modules/catalog/epub-generated/being-the-best-man-for-dummies-bliss-dominic";
+import { BloodAndRageACulturalHistoryOfTerrorismMicModule } from "@/lib/modules/catalog/epub-generated/blood-and-rage-a-cultural-history-of-terrorism-mic";
 import { BonesWouldRainFromTheSkyDeepeningOurRelatiModule } from "@/lib/modules/catalog/epub-generated/bones-would-rain-from-the-sky-deepening-our-relati";
 import { BreathingLessons1989PulitzerPrizeAnneTylerModule } from "@/lib/modules/catalog/epub-generated/breathing-lessons-1989-pulitzer-prize-anne-tyler";
 import { BusinessAnalysisForDummiesKupeKupersmithModule } from "@/lib/modules/catalog/epub-generated/business-analysis-for-dummies-kupe-kupersmith";
 import { CannibalCapitalismMichaelCHillModule } from "@/lib/modules/catalog/epub-generated/cannibal-capitalism-michael-c-hill";
+import { CapitalismTheUnknownIdealAynRandModule } from "@/lib/modules/catalog/epub-generated/capitalism-the-unknown-ideal-ayn-rand";
 import { CaseStudiesAndTheoryDevelopmentInTheSocialModule } from "@/lib/modules/catalog/epub-generated/case-studies-and-theory-development-in-the-social-";
+import { CitizenSoldiersStephenEAmbroseModule } from "@/lib/modules/catalog/epub-generated/citizen-soldiers-stephen-e-ambrose";
 import { ColliderPaulHalpernModule } from "@/lib/modules/catalog/epub-generated/collider-paul-halpern";
 import { CompleteElectronicsSelfTeachingGuideWithProjModule } from "@/lib/modules/catalog/epub-generated/complete-electronics-self-teaching-guide-with-proj";
 import { ConfessionsOfAnEventPlannerCaseStudiesFromModule } from "@/lib/modules/catalog/epub-generated/confessions-of-an-event-planner-case-studies-from-";
@@ -111,6 +115,7 @@ import { CreatingWebSitesBibleDavidACrowderAndrewBaModule } from "@/lib/modules/
 import { DearMrBuffettWhatAnInvestorLearns1269MileModule } from "@/lib/modules/catalog/epub-generated/dear-mr-buffett-what-an-investor-learns-1-269-mile";
 import { DebtFreeUHowIPaidForAnOutstandingCollegeModule } from "@/lib/modules/catalog/epub-generated/debt-free-u-how-i-paid-for-an-outstanding-college-";
 import { DetectDeceitHowToBecomeAHumanLieDetectorIModule } from "@/lib/modules/catalog/epub-generated/detect-deceit-how-to-become-a-human-lie-detector-i";
+import { DonQuixoteMiguelDeCervantesModule } from "@/lib/modules/catalog/epub-generated/don-quixote-miguel-de-cervantes";
 import { DreamweaverCcForDummiesJanineWarnerModule } from "@/lib/modules/catalog/epub-generated/dreamweaver-cc-for-dummies-janine-warner";
 import { DriveTheSurprisingTruthAboutWhatMotivatesUsModule } from "@/lib/modules/catalog/epub-generated/drive-the-surprising-truth-about-what-motivates-us";
 import { EssentialSnmp2NdEditionDouglasMauroKevinSchModule } from "@/lib/modules/catalog/epub-generated/essential-snmp-2nd-edition-douglas-mauro-kevin-sch";
@@ -128,6 +133,7 @@ import { HegelElementsOfThePhilosophyOfRightCambridgModule } from "@/lib/modules
 import { HowToEatThePleasuresAndPrinciplesOfGoodFoModule } from "@/lib/modules/catalog/epub-generated/how-to-eat-the-pleasures-and-principles-of-good-fo";
 import { HowToTalkToAnyoneLeilLowndesModule } from "@/lib/modules/catalog/epub-generated/how-to-talk-to-anyone-leil-lowndes";
 import { IRobotShortStoriesIsaacAsimovModule } from "@/lib/modules/catalog/epub-generated/i-robot-short-stories-isaac-asimov";
+import { IntroductionToObjectivistEpistemologyAynRandModule } from "@/lib/modules/catalog/epub-generated/introduction-to-objectivist-epistemology-ayn-rand";
 import { ItSTheCustomerStupidMichaelAAunModule } from "@/lib/modules/catalog/epub-generated/it-s-the-customer-stupid-michael-a-aun";
 import { JqueryCookbookCodyLindleyModule } from "@/lib/modules/catalog/epub-generated/jquery-cookbook-cody-lindley";
 import { KneadlesslySimpleFabulousFussFreeNoKneadBreModule } from "@/lib/modules/catalog/epub-generated/kneadlessly-simple-fabulous-fuss-free-no-knead-bre";
@@ -135,6 +141,7 @@ import { LifeAheadOnLearningAndTheSearchForMeaningModule } from "@/lib/modules/c
 import { ManFromTheSouthAndOtherStoriesRoaldDahlModule } from "@/lib/modules/catalog/epub-generated/man-from-the-south-and-other-stories-roald-dahl";
 import { MarxismRoutledgeRevivalsThomasSowellModule } from "@/lib/modules/catalog/epub-generated/marxism-routledge-revivals-thomas-sowell";
 import { MentalFlossPresentsInstantKnowledgeWillPearsModule } from "@/lib/modules/catalog/epub-generated/mental-floss-presents-instant-knowledge-will-pears";
+import { MetaphysicsAristotleModule } from "@/lib/modules/catalog/epub-generated/metaphysics-aristotle";
 import { MicroreactorsInOrganicChemistryAndCatalysisWModule } from "@/lib/modules/catalog/epub-generated/microreactors-in-organic-chemistry-and-catalysis-w";
 import { NiubiTheRealChineseYouWereNeverTaughtInScModule } from "@/lib/modules/catalog/epub-generated/niubi-the-real-chinese-you-were-never-taught-in-sc";
 import { NotebooksLeonardoDaVinciIrmaAnneRichterTherModule } from "@/lib/modules/catalog/epub-generated/notebooks-leonardo-da-vinci-irma-anne-richter-ther";
@@ -142,17 +149,22 @@ import { NumbersRuleYourWorldTheHiddenInfluenceOfPrModule } from "@/lib/modules/
 import { PhenomenologyOfSpiritGWFHegelModule } from "@/lib/modules/catalog/epub-generated/phenomenology-of-spirit-g-w-f-hegel";
 import { PostmodernismOrTheCulturalLogicOfLateCapitaModule } from "@/lib/modules/catalog/epub-generated/postmodernism-or-the-cultural-logic-of-late-capita";
 import { PrescriptionAlternativesHundredsOfSafeNaturalModule } from "@/lib/modules/catalog/epub-generated/prescription-alternatives-hundreds-of-safe-natural";
+import { PrincipalWritingsOnReligionDavidHumeModule } from "@/lib/modules/catalog/epub-generated/principal-writings-on-religion-david-hume";
 import { RaspberryPiProjectsForTheEvilGeniusDonaldNModule } from "@/lib/modules/catalog/epub-generated/raspberry-pi-projects-for-the-evil-genius-donald-n";
+import { ResurrectingPompeiiEstelleLazerModule } from "@/lib/modules/catalog/epub-generated/resurrecting-pompeii-estelle-lazer";
 import { RightsOfManThomasPaineMarkPhilpModule } from "@/lib/modules/catalog/epub-generated/rights-of-man-thomas-paine-mark-philp";
 import { SchaumSOutlineOfLatinGrammarAlanFishboneModule } from "@/lib/modules/catalog/epub-generated/schaum-s-outline-of-latin-grammar-alan-fishbone";
 import { SchoolChoiceOrBestSystemsWhatImprovesEducatModule } from "@/lib/modules/catalog/epub-generated/school-choice-or-best-systems-what-improves-educat";
 import { SmugglerNationHowIllicitTradeMadeAmericaAndModule } from "@/lib/modules/catalog/epub-generated/smuggler-nation-how-illicit-trade-made-america-and";
 import { SocialEngineeringTheArtOfHumanHackingChristModule } from "@/lib/modules/catalog/epub-generated/social-engineering-the-art-of-human-hacking-christ";
+import { StrangeCaseOfDrJekyllAndMrHydeAndOtherTaModule } from "@/lib/modules/catalog/epub-generated/strange-case-of-dr-jekyll-and-mr-hyde-and-other-ta";
 import { TheAccidentalTouristAnneTylerJenniferBassettModule } from "@/lib/modules/catalog/epub-generated/the-accidental-tourist-anne-tyler-jennifer-bassett";
+import { TheCivilWarForDummiesKeithDDicksonModule } from "@/lib/modules/catalog/epub-generated/the-civil-war-for-dummies-keith-d-dickson";
 import { TheCompleteSocialMediaCommunityManagerSGuidModule } from "@/lib/modules/catalog/epub-generated/the-complete-social-media-community-manager-s-guid";
 import { TheFederalistPapersAlexanderHamiltonJamesMadModule } from "@/lib/modules/catalog/epub-generated/the-federalist-papers-alexander-hamilton-james-mad";
 import { TheForgottenPresidentsTheirUntoldConstitutionModule } from "@/lib/modules/catalog/epub-generated/the-forgotten-presidents-their-untold-constitution";
 import { TheFourPillarsOfInvestingLessonsForBuildingModule } from "@/lib/modules/catalog/epub-generated/the-four-pillars-of-investing-lessons-for-building";
+import { TheHistoryOfTheDeclineAndFallOfTheRomanEModule } from "@/lib/modules/catalog/epub-generated/the-history-of-the-decline-and-fall-of-the-roman-e";
 import { TheIndianOceanMichaelPearsonModule } from "@/lib/modules/catalog/epub-generated/the-indian-ocean-michael-pearson";
 import { TheLittleBookOfEconomicsHowTheEconomyWorksModule } from "@/lib/modules/catalog/epub-generated/the-little-book-of-economics-how-the-economy-works";
 import { TheOriginalCurseDidTheCubsThrowThe1918WorModule } from "@/lib/modules/catalog/epub-generated/the-original-curse-did-the-cubs-throw-the-1918-wor";
@@ -439,12 +451,16 @@ export const generatedModuleRegistry: LearningModule[] = [
   BatmanAndPhilosophyMarkDWhiteModule,
   BatmanAndPhilosophyTheDarkKnightOfTheSoulModule,
   BeginningLuaProgrammingKurtJungModule,
+  BeginningsOfLearningJidduKrishnamurtiModule,
   BeingTheBestManForDummiesBlissDominicModule,
+  BloodAndRageACulturalHistoryOfTerrorismMicModule,
   BonesWouldRainFromTheSkyDeepeningOurRelatiModule,
   BreathingLessons1989PulitzerPrizeAnneTylerModule,
   BusinessAnalysisForDummiesKupeKupersmithModule,
   CannibalCapitalismMichaelCHillModule,
+  CapitalismTheUnknownIdealAynRandModule,
   CaseStudiesAndTheoryDevelopmentInTheSocialModule,
+  CitizenSoldiersStephenEAmbroseModule,
   ColliderPaulHalpernModule,
   CompleteElectronicsSelfTeachingGuideWithProjModule,
   ConfessionsOfAnEventPlannerCaseStudiesFromModule,
@@ -452,6 +468,7 @@ export const generatedModuleRegistry: LearningModule[] = [
   DearMrBuffettWhatAnInvestorLearns1269MileModule,
   DebtFreeUHowIPaidForAnOutstandingCollegeModule,
   DetectDeceitHowToBecomeAHumanLieDetectorIModule,
+  DonQuixoteMiguelDeCervantesModule,
   DreamweaverCcForDummiesJanineWarnerModule,
   DriveTheSurprisingTruthAboutWhatMotivatesUsModule,
   EssentialSnmp2NdEditionDouglasMauroKevinSchModule,
@@ -469,6 +486,7 @@ export const generatedModuleRegistry: LearningModule[] = [
   HowToEatThePleasuresAndPrinciplesOfGoodFoModule,
   HowToTalkToAnyoneLeilLowndesModule,
   IRobotShortStoriesIsaacAsimovModule,
+  IntroductionToObjectivistEpistemologyAynRandModule,
   ItSTheCustomerStupidMichaelAAunModule,
   JqueryCookbookCodyLindleyModule,
   KneadlesslySimpleFabulousFussFreeNoKneadBreModule,
@@ -476,6 +494,7 @@ export const generatedModuleRegistry: LearningModule[] = [
   ManFromTheSouthAndOtherStoriesRoaldDahlModule,
   MarxismRoutledgeRevivalsThomasSowellModule,
   MentalFlossPresentsInstantKnowledgeWillPearsModule,
+  MetaphysicsAristotleModule,
   MicroreactorsInOrganicChemistryAndCatalysisWModule,
   NiubiTheRealChineseYouWereNeverTaughtInScModule,
   NotebooksLeonardoDaVinciIrmaAnneRichterTherModule,
@@ -483,17 +502,22 @@ export const generatedModuleRegistry: LearningModule[] = [
   PhenomenologyOfSpiritGWFHegelModule,
   PostmodernismOrTheCulturalLogicOfLateCapitaModule,
   PrescriptionAlternativesHundredsOfSafeNaturalModule,
+  PrincipalWritingsOnReligionDavidHumeModule,
   RaspberryPiProjectsForTheEvilGeniusDonaldNModule,
+  ResurrectingPompeiiEstelleLazerModule,
   RightsOfManThomasPaineMarkPhilpModule,
   SchaumSOutlineOfLatinGrammarAlanFishboneModule,
   SchoolChoiceOrBestSystemsWhatImprovesEducatModule,
   SmugglerNationHowIllicitTradeMadeAmericaAndModule,
   SocialEngineeringTheArtOfHumanHackingChristModule,
+  StrangeCaseOfDrJekyllAndMrHydeAndOtherTaModule,
   TheAccidentalTouristAnneTylerJenniferBassettModule,
+  TheCivilWarForDummiesKeithDDicksonModule,
   TheCompleteSocialMediaCommunityManagerSGuidModule,
   TheFederalistPapersAlexanderHamiltonJamesMadModule,
   TheForgottenPresidentsTheirUntoldConstitutionModule,
   TheFourPillarsOfInvestingLessonsForBuildingModule,
+  TheHistoryOfTheDeclineAndFallOfTheRomanEModule,
   TheIndianOceanMichaelPearsonModule,
   TheLittleBookOfEconomicsHowTheEconomyWorksModule,
   TheOriginalCurseDidTheCubsThrowThe1918WorModule,

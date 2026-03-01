@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const mediaAssetTypeSchema = z.enum(["video", "animation", "image"]);
 const mediaStatusSchema = z.enum(["queued", "running", "completed", "failed", "canceled"]);
@@ -102,7 +103,8 @@ export async function GET(request: Request) {
     .range(offset, offset + limit - 1);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const total = count ?? 0;
@@ -151,7 +153,8 @@ export async function POST(request: Request) {
       .maybeSingle();
 
     if (existingJobError) {
-      return NextResponse.json({ error: existingJobError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(existingJobError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     if (existingJob) {
@@ -175,8 +178,10 @@ export async function POST(request: Request) {
     .single();
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   return NextResponse.json({ job: data });
 }
+

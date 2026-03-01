@@ -1,14 +1,16 @@
 # Koydo EduForge-Web Codebase Review Report
 
-**Date:** 2025-07-22  
+**Date:** 2025-07-22 (Updated: 2025-07-23)  
 **Scope:** `d:\PythonProjects\Koydo\eduforge-web\`  
 **Stack:** Next.js 16.1.6 · React 19.2.3 · TypeScript 5.9.3 · Supabase · Stripe · Capacitor 8.x · Zod 4.3.6
+
+> **Resolution Legend:** ✅ RESOLVED | 🔧 MITIGATED | ⏳ DEFERRED | ❌ OPEN
 
 ---
 
 ## 1. CRITICAL Issues (Blocks Launch)
 
-### C-1  `activities` field silently stripped by Zod — hand-crafted interactive content lost
+### ✅ C-1  `activities` field silently stripped by Zod — hand-crafted interactive content lost
 
 **Files:**
 - `src/lib/modules/schema.ts` (line 141) — `lessonSchema` defines `interactiveActivities` but **NOT** `activities`
@@ -34,7 +36,9 @@ Zod `z.object()` strips properties not listed in the schema. After `safeParse()`
 
 ---
 
-### C-2  In-memory rate limiting is per-instance — ineffective on Vercel/serverless
+### ✅ C-2  In-memory rate limiting is per-instance — ineffective on Vercel/serverless
+
+> **Status:** RESOLVED — Replaced with dual-mode rate limiter: Upstash Redis sliding-window in production (set `UPSTASH_REDIS_REST_URL` + `UPSTASH_REDIS_REST_TOKEN`), graceful fallback to in-memory for dev. Installed `@upstash/ratelimit` + `@upstash/redis`. All 43 call sites updated to async. Env vars added to `serverEnvSchema`.
 
 **File:** `src/lib/security/ip-rate-limit.ts` (entire file, ~92 lines)
 
@@ -46,7 +50,9 @@ Zod `z.object()` strips properties not listed in the schema. After `safeParse()`
 
 ---
 
-### C-3  All critical environment variables are `.optional()` — no startup validation
+### ✅ C-3  All critical environment variables are `.optional()` — no startup validation
+
+> **Status:** RESOLVED — critical vars now have `.min(1)` with descriptive error messages in `env.ts`.
 
 **File:** `src/lib/config/env.ts`
 
@@ -58,7 +64,9 @@ The `serverEnvSchema` marks every key (including `NEXT_PUBLIC_SUPABASE_URL`, `NE
 
 ## 2. HIGH Issues (Should Fix Before Launch)
 
-### H-1  Multiple API routes missing rate limiting
+### ✅ H-1  Multiple API routes missing rate limiting
+
+> **Status:** RESOLVED — Rate limiting added to all 5 unprotected routes: `api/progress` (30/min), `api/answers` (60/min), `api/ai/tutor` (10/min), `api/telemetry/events` (30/min), `api/health` (60/min). All use `enforceIpRateLimit` with Retry-After headers.
 
 | Route | Auth | Zod | Rate Limit |
 |---|---|---|---|
@@ -72,7 +80,9 @@ The AI tutor endpoint is the most expensive — no rate limiting means a comprom
 
 ---
 
-### H-2  Two routes bypass env validation with `process.env!` assertions
+### ✅ H-2  Two routes bypass env validation with `process.env!` assertions
+
+> **Status:** RESOLVED — `subscription/status/route.ts` now uses `serverEnv.NEXT_PUBLIC_APP_URL`. `revenuecat/webhook/route.ts` lazy factory now uses `serverEnv.NEXT_PUBLIC_SUPABASE_URL` / `serverEnv.SUPABASE_SERVICE_ROLE_KEY` and webhook secret via `serverEnv.REVENUECAT_WEBHOOK_SECRET`. `REVENUECAT_WEBHOOK_SECRET` added to env schema.
 
 - **`src/app/api/subscription/status/route.ts`** — uses `process.env.NEXT_PUBLIC_SUPABASE_URL!` directly
 - **`src/app/api/revenuecat/webhook/route.ts`** — creates `supabaseAdmin` at **module scope** using `process.env.NEXT_PUBLIC_SUPABASE_URL!` and `process.env.SUPABASE_SERVICE_ROLE_KEY!`
@@ -83,7 +93,9 @@ The RevenueCat route also creates the admin client at module import time (not la
 
 ---
 
-### H-3  CSP includes `unsafe-eval` and `unsafe-inline`
+### ✅ H-3  CSP includes `unsafe-eval` and `unsafe-inline`
+
+> **Status:** RESOLVED — CSP moved from static `next.config.ts` header to dynamic per-request nonce in `proxy.ts`. Production uses `'nonce-<random>' 'strict-dynamic'` — no `unsafe-eval`, no `unsafe-inline` for scripts. `style-src 'unsafe-inline'` retained (standard for Tailwind). Dev mode keeps `unsafe-eval`/`unsafe-inline` for HMR.
 
 **File:** `next.config.ts` (CSP header definition)
 
@@ -97,7 +109,9 @@ script-src 'self' 'unsafe-eval' 'unsafe-inline' ...
 
 ---
 
-### H-4  ~100+ modules still at v1.0.0 template scaffold quality
+### ✅ H-4  ~100+ modules still at v1.0.0 template scaffold quality
+
+> **Status:** RESOLVED — Auto-draft system implemented. Modules with `version: "1.0.0"` are automatically marked `status: "draft"` at registry init and filtered from `getAllLearningModules()`. Template `localeSupport` also corrected to `["en"]` only.
 
 100+ catalog modules have `version: "1.0.0"` with generic placeholder content. Template-quality modules have these characteristics:
 - Generic quiz questions like *"Which choice best matches the main idea of [Subject]?"*
@@ -128,31 +142,35 @@ script-src 'self' 'unsafe-eval' 'unsafe-inline' ...
 
 ## 3. MEDIUM Issues (Fix Soon After Launch)
 
-### M-1  Duplicate field ambiguity: `activities` vs `interactiveActivities` on `Lesson` type
+### ✅ M-1  Duplicate field ambiguity: `activities` vs `interactiveActivities` on `Lesson` type
+
+> **Status:** RESOLVED — `activities` field removed from `Lesson` type in `types.ts` and `lessonSchema` in `schema.ts`. All 25 catalog modules that used `activities:` bulk-migrated to `interactiveActivities:`. Fallback logic in `lesson-experience.tsx` (line 226–231) removed. Single canonical field `interactiveActivities` now used everywhere.
 
 **File:** `src/lib/modules/types.ts`
 
-The `Lesson` interface defines:
+The `Lesson` interface previously defined:
 ```ts
 activities?: InteractiveActivity[];
 interactiveActivities?: InteractiveActivity[];
 ```
 
-Same type, two field names, only one validated by schema, only one read by renderer. This creates confusion for module authors. After fixing C-1, **deprecate and remove** the `activities` field entirely.
+Same type, two field names, only one validated by schema, only one read by renderer. This created confusion for module authors.
 
 ---
 
-### M-2  Loose index signatures weaken TypeScript safety
+### ✅ M-2  Loose index signatures weaken TypeScript safety
+
+> **Status:** RESOLVED — All 3 `[key: string]: unknown` index signatures removed from `InteractiveActivity`, `QuizBlueprint`, and `Lesson`. Replaced with 5 explicit optional fields on `InteractiveActivity`: `buckets?: string[]`, `items?: (string | { id?: string; text: string; bucket: string })[]`, `pairs?: { id?: string; left: string; right: string }[]`, `prompt?: string`, `zones?: string[]`. Union types used for `items` and `pairs` to accommodate varied usage patterns. `music-history-101.ts` non-standard quiz format converted to standard. Build passes with 0 TypeScript errors.
 
 **File:** `src/lib/modules/types.ts`
 
-Both `Lesson` and `InteractiveActivity` interfaces include `[key: string]: unknown`, which allows any arbitrary property without type checking. This defeats the purpose of strict mode for these core types.
-
-**Fix:** Remove index signatures and use explicit optional fields or a typed `metadata` bag.
+Both `Lesson` and `InteractiveActivity` interfaces previously included `[key: string]: unknown`, which allowed any arbitrary property without type checking.
 
 ---
 
-### M-3  Template modules advertise 10-locale support, only 2 are active
+### ✅ M-3  Template modules advertise 10-locale support, only 2 are active
+
+> **Status:** RESOLVED — Registry init now corrects `localeSupport` to `["en"]` for all v1.0.0 modules.
 
 **File:** `src/lib/i18n/translations.ts`
 
@@ -175,7 +193,9 @@ Multiple `.bak` files (e.g., `accounting-finance-101.ts.bak5`, `arts-101.ts.bak3
 
 ---
 
-### M-5  Eager registry validation at module load — 300+ modules parsed synchronously
+### ✅ M-5  Eager registry validation at module load — 300+ modules parsed synchronously
+
+> **Status:** RESOLVED — Removed runtime `safeParse()` from `index.ts`. TypeScript compile-time type checking provides the same safety without runtime cost.
 
 **File:** `src/lib/modules/index.ts` (line 6)
 
@@ -217,9 +237,11 @@ Next.js conventionally uses `"preserve"` to let its own compiler handle JSX tran
 
 ---
 
-### L-2  Redundant `moduleVersion` + `version` fields on modules
+### ✅ L-2  Redundant `moduleVersion` + `version` fields on modules
 
-Most catalog modules declare both `moduleVersion: "x.x.x"` and `version: "x.x.x"` with identical values. This is redundant and risks them drifting out of sync.
+> **Status:** RESOLVED — `moduleVersion` removed from `LearningModule` type in `types.ts` and `learningModuleSchema` in `schema.ts`. `moduleVersion:` lines bulk-removed from 337 catalog files. Runtime consumer in `topics.ts` updated to use `version` only. Single canonical field `version` now used everywhere.
+
+Most catalog modules previously declared both `moduleVersion: "x.x.x"` and `version: "x.x.x"` with identical values. This was redundant and risked them drifting out of sync.
 
 ---
 

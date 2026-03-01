@@ -8,8 +8,28 @@ import {
   reverseLanguageExamUnlockForRefund,
 } from "@/lib/language-learning";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
+import {
+  centsToFixedCurrencyAmount,
+  TESTING_EXAM_UNLOCK_CURRENCY,
+  TESTING_EXAM_UNLOCK_PRICE_CENTS,
+} from "@/lib/testing/unlock-pricing";
 
 type WebhookClaimResult = "process" | "duplicate" | "untracked";
+
+const MAX_STRIPE_WEBHOOK_PAYLOAD_BYTES = 1_000_000;
+
+function rateLimitExceededResponse(retryAfterSeconds: number) {
+  return NextResponse.json(
+    { error: "Too many webhook requests. Please retry shortly." },
+    {
+      status: 429,
+      headers: {
+        "Retry-After": String(retryAfterSeconds),
+      },
+    },
+  );
+}
 
 function toIsoDate(epochSeconds?: number | null) {
   return epochSeconds ? new Date(epochSeconds * 1000).toISOString() : null;
@@ -22,6 +42,13 @@ function isMissingTableError(message: string) {
 
 function isDuplicateKeyError(code?: string | null) {
   return code === "23505";
+}
+
+function isMissingColumnError(error: unknown, columnName: string) {
+  if (!error || typeof error !== "object") return false;
+  const code = "code" in error ? String((error as { code?: unknown }).code ?? "") : "";
+  const message = "message" in error ? String((error as { message?: unknown }).message ?? "") : "";
+  return code === "42703" || message.toLowerCase().includes(columnName.toLowerCase());
 }
 
 async function upsertSubscriptionFromObject(subscription: Stripe.Subscription) {
@@ -177,7 +204,27 @@ async function handleCheckoutCompleted(event: Stripe.Event, stripe: Stripe) {
     return;
   }
 
+  // Only fulfill entitlements after Stripe marks the checkout as paid.
+  if (session.payment_status !== "paid") {
+    return;
+  }
+
   const metadata = session.metadata ?? {};
+  if (metadata.checkoutType === "gift_membership") {
+    await markGiftMembershipPaid(session);
+    return;
+  }
+
+  if (metadata.checkoutType === "organization_license_purchase") {
+    await markOrganizationLicensePurchasePaid(session);
+    return;
+  }
+
+  if (metadata.checkoutType === "testing_exam_unlock") {
+    await markTestingExamUnlockPaid(session);
+    return;
+  }
+
   if (metadata.checkoutType !== "language_exam_unlock") {
     return;
   }
@@ -200,6 +247,24 @@ async function handleCheckoutCompleted(event: Stripe.Event, stripe: Stripe) {
     throw new Error("Missing payment_intent for language exam unlock checkout session.");
   }
 
+  const expectedPriceCents = Number.parseInt(String(metadata.priceCents ?? ""), 10);
+  if (!Number.isFinite(expectedPriceCents) || expectedPriceCents <= 0) {
+    throw new Error("Missing/invalid priceCents metadata for language exam unlock checkout.");
+  }
+
+  const settledAmountCents = typeof session.amount_total === "number" ? Math.max(0, session.amount_total) : 0;
+  if (settledAmountCents < expectedPriceCents) {
+    throw new Error("Language exam unlock checkout amount below expected minimum.");
+  }
+
+  const expectedCurrency = String(metadata.currency ?? "").trim().toUpperCase();
+  if (expectedCurrency.length === 3) {
+    const settledCurrency = session.currency ? session.currency.toUpperCase() : "";
+    if (settledCurrency !== expectedCurrency) {
+      throw new Error("Unexpected currency for language exam unlock checkout.");
+    }
+  }
+
   const studentProfileIdRaw = metadata.studentProfileId;
   const geoTierRaw = metadata.geoTier;
 
@@ -212,8 +277,7 @@ async function handleCheckoutCompleted(event: Stripe.Event, stripe: Stripe) {
         : undefined,
     level,
     stripePaymentIntentId: paymentIntentId,
-    pricePaidCents:
-      typeof session.amount_total === "number" ? Math.max(1, session.amount_total) : undefined,
+    pricePaidCents: settledAmountCents,
     currency: session.currency ? session.currency.toUpperCase() : undefined,
     provider: "stripe_checkout",
     geoTierOverride:
@@ -229,6 +293,250 @@ async function handleCheckoutCompleted(event: Stripe.Event, stripe: Stripe) {
       checkoutType: metadata.checkoutType,
     },
   });
+}
+
+async function markGiftMembershipPaid(session: Stripe.Checkout.Session) {
+  const metadata = session.metadata ?? {};
+  const giftId = metadata.giftId;
+  if (!giftId) {
+    throw new Error("Missing giftId metadata for gift membership checkout.");
+  }
+
+  const paymentIntentId =
+    typeof session.payment_intent === "string"
+      ? session.payment_intent
+      : session.payment_intent?.id ?? null;
+  const nowIso = new Date().toISOString();
+  const supabase = createSupabaseAdminClient();
+  const { error } = await supabase
+    .from("gifted_memberships")
+    .update({
+      status: "paid",
+      stripe_checkout_session_id: session.id,
+      stripe_payment_intent_id: paymentIntentId,
+      purchased_at: nowIso,
+      metadata: {
+        source: "stripe_webhook",
+        checkoutType: "gift_membership",
+        stripeCheckoutSessionId: session.id,
+      },
+    })
+    .eq("id", giftId)
+    .in("status", ["checkout_created", "paid"]);
+
+  if (error) {
+    throw new Error(error.message);
+  }
+}
+
+async function markOrganizationLicensePurchasePaid(session: Stripe.Checkout.Session) {
+  const metadata = session.metadata ?? {};
+  const purchaseId = metadata.purchaseId;
+  const organizationId = metadata.organizationId;
+
+  if (!purchaseId || !organizationId) {
+    throw new Error("Missing purchase metadata for organization license checkout.");
+  }
+
+  const paymentIntentId =
+    typeof session.payment_intent === "string"
+      ? session.payment_intent
+      : session.payment_intent?.id ?? null;
+  const invoiceId =
+    typeof session.invoice === "string"
+      ? session.invoice
+      : session.invoice?.id ?? null;
+
+  const totalPaid = typeof session.amount_total === "number" ? Math.max(0, session.amount_total) : null;
+  const currency = session.currency ? session.currency.toUpperCase() : "USD";
+  const nowIso = new Date().toISOString();
+
+  const supabase = createSupabaseAdminClient();
+  const { error } = await supabase
+    .from("organization_license_purchases")
+    .update({
+      status: "paid",
+      stripe_checkout_session_id: session.id,
+      stripe_payment_intent_id: paymentIntentId,
+      stripe_invoice_id: invoiceId,
+      purchased_at: nowIso,
+      paid_at: nowIso,
+      ...(typeof totalPaid === "number" ? { total_price_cents: totalPaid } : {}),
+      currency,
+      metadata: {
+        source: "stripe_webhook",
+        checkoutType: "organization_license_purchase",
+        stripeCheckoutSessionId: session.id,
+      },
+    })
+    .eq("id", purchaseId)
+    .eq("organization_id", organizationId)
+    .in("status", ["checkout_created", "paid", "partially_allocated", "fully_allocated"]);
+
+  if (error) {
+    throw new Error(error.message);
+  }
+}
+
+async function markTestingExamUnlockPaid(session: Stripe.Checkout.Session) {
+  const metadata = session.metadata ?? {};
+  const examId = metadata.examId;
+  const userId = metadata.userId ?? session.client_reference_id ?? null;
+
+  if (!examId || !userId || typeof userId !== "string") {
+    throw new Error("Missing examId/userId metadata for testing exam unlock checkout.");
+  }
+
+  const paymentIntentId =
+    typeof session.payment_intent === "string"
+      ? session.payment_intent
+      : session.payment_intent?.id ?? null;
+  if (!paymentIntentId) {
+    throw new Error("Missing payment_intent for testing exam unlock checkout session.");
+  }
+
+  const settledAmountCents = typeof session.amount_total === "number" ? Math.max(0, session.amount_total) : 0;
+  if (settledAmountCents < TESTING_EXAM_UNLOCK_PRICE_CENTS) {
+    throw new Error("Testing exam unlock checkout amount below expected minimum.");
+  }
+
+  const currency = session.currency ? session.currency.toUpperCase() : TESTING_EXAM_UNLOCK_CURRENCY;
+  if (currency !== TESTING_EXAM_UNLOCK_CURRENCY) {
+    throw new Error("Unexpected currency for testing exam unlock checkout.");
+  }
+
+  const nowIso = new Date().toISOString();
+  const supabase = createSupabaseAdminClient();
+
+  const insertWithIdempotency = await supabase
+    .from("testing_purchases")
+    .insert({
+      user_id: userId,
+      exam_id: examId,
+      amount: centsToFixedCurrencyAmount(settledAmountCents),
+      currency,
+      status: "completed",
+      provider: "stripe_checkout",
+      provider_transaction_id: paymentIntentId,
+      idempotency_key: `testing_unlock:${paymentIntentId}`,
+      metadata: {
+        source: "stripe_webhook",
+        checkoutType: "testing_exam_unlock",
+        stripeCheckoutSessionId: session.id,
+      },
+      purchased_at: nowIso,
+    });
+
+  const insertWithoutIdempotency = async () =>
+    supabase
+      .from("testing_purchases")
+      .insert({
+        user_id: userId,
+        exam_id: examId,
+        amount: centsToFixedCurrencyAmount(settledAmountCents),
+        currency,
+        status: "completed",
+        provider: "stripe_checkout",
+        provider_transaction_id: paymentIntentId,
+        metadata: {
+          source: "stripe_webhook",
+          checkoutType: "testing_exam_unlock",
+          stripeCheckoutSessionId: session.id,
+        },
+        purchased_at: nowIso,
+      });
+
+  const purchaseInsertError = insertWithIdempotency.error
+    && isMissingColumnError(insertWithIdempotency.error, "idempotency_key")
+      ? (await insertWithoutIdempotency()).error
+      : insertWithIdempotency.error;
+
+  if (purchaseInsertError && !isDuplicateKeyError(purchaseInsertError.code)) {
+    throw new Error(purchaseInsertError.message);
+  }
+
+  const entitlementWithState = await supabase
+    .from("user_exam_entitlements")
+    .upsert(
+      {
+        user_id: userId,
+        exam_id: examId,
+        entitlement_type: "full",
+        state: "completed",
+        unlocked_at: nowIso,
+      },
+      { onConflict: "user_id,exam_id" },
+    );
+
+  const entitlementWithoutState = async () =>
+    supabase
+      .from("user_exam_entitlements")
+      .upsert(
+        {
+          user_id: userId,
+          exam_id: examId,
+          entitlement_type: "full",
+          unlocked_at: nowIso,
+        },
+        { onConflict: "user_id,exam_id" },
+      );
+
+  const entitlementError = entitlementWithState.error
+    && isMissingColumnError(entitlementWithState.error, "state")
+      ? (await entitlementWithoutState()).error
+      : entitlementWithState.error;
+
+  if (entitlementError) {
+    throw new Error(entitlementError.message);
+  }
+}
+
+async function handleCheckoutAsyncPaymentFailed(event: Stripe.Event) {
+  const session = event.data.object as Stripe.Checkout.Session;
+  const metadata = session.metadata ?? {};
+
+  if (metadata.checkoutType === "gift_membership" && metadata.giftId) {
+    const supabase = createSupabaseAdminClient();
+    const { error } = await supabase
+      .from("gifted_memberships")
+      .update({
+        status: "canceled",
+        metadata: {
+          source: "stripe_webhook",
+          checkoutType: "gift_membership",
+          asyncPaymentFailed: true,
+          stripeCheckoutSessionId: session.id,
+        },
+      })
+      .eq("id", metadata.giftId)
+      .eq("status", "checkout_created");
+
+    if (error) {
+      throw new Error(error.message);
+    }
+    return;
+  }
+
+  if (metadata.checkoutType === "organization_license_purchase" && metadata.purchaseId) {
+    const supabase = createSupabaseAdminClient();
+    const { error } = await supabase
+      .from("organization_license_purchases")
+      .update({
+        status: "canceled",
+        metadata: {
+          source: "stripe_webhook",
+          checkoutType: "organization_license_purchase",
+          asyncPaymentFailed: true,
+          stripeCheckoutSessionId: session.id,
+        },
+      })
+      .eq("id", metadata.purchaseId)
+      .in("status", ["checkout_created", "invoicing"]);
+
+    if (error) {
+      throw new Error(error.message);
+    }
+  }
 }
 
 async function handleChargeRefunded(event: Stripe.Event) {
@@ -282,6 +590,14 @@ async function handleInvoicePaymentFailed(event: Stripe.Event, stripe: Stripe) {
 }
 
 export async function POST(request: NextRequest) {
+  const rateLimit = await enforceIpRateLimit(request, "api:billing:stripe-webhook:route", {
+    max: 500,
+    windowMs: 60_000,
+  });
+  if (!rateLimit.allowed) {
+    return rateLimitExceededResponse(rateLimit.retryAfterSeconds);
+  }
+
   if (!serverEnv.STRIPE_SECRET_KEY || !serverEnv.STRIPE_WEBHOOK_SECRET) {
     return NextResponse.json(
       { error: "Missing Stripe webhook configuration." },
@@ -295,6 +611,9 @@ export async function POST(request: NextRequest) {
   }
 
   const payload = await request.text();
+  if (Buffer.byteLength(payload, "utf8") > MAX_STRIPE_WEBHOOK_PAYLOAD_BYTES) {
+    return NextResponse.json({ error: "Payload too large." }, { status: 413 });
+  }
   const stripe = createStripeServerClient(serverEnv.STRIPE_SECRET_KEY);
 
   let event: Stripe.Event;
@@ -320,7 +639,11 @@ export async function POST(request: NextRequest) {
 
     switch (event.type) {
       case "checkout.session.completed":
+      case "checkout.session.async_payment_succeeded":
         await handleCheckoutCompleted(event, stripe);
+        break;
+      case "checkout.session.async_payment_failed":
+        await handleCheckoutAsyncPaymentFailed(event);
         break;
       case "customer.subscription.created":
       case "customer.subscription.updated":

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const ASSET_TYPES = ["video", "animation", "image"] as const;
 
@@ -44,7 +45,8 @@ export async function GET() {
     ]);
 
   if (settingsError) {
-    return NextResponse.json({ error: settingsError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(settingsError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const settingsMap = new Map((settingsRows ?? []).map((entry) => [entry.key, entry.value]));
@@ -111,7 +113,8 @@ export async function GET() {
     oldestQueuedResult.error;
 
   if (queryError) {
-    return NextResponse.json({ error: queryError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(queryError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const queuedCount = queuedResult.count ?? 0;
@@ -197,7 +200,8 @@ export async function GET() {
     failed24hByAsset.find((entry) => entry.error)?.error;
 
   if (breakdownError) {
-    return NextResponse.json({ error: breakdownError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(breakdownError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const assetBreakdown = Object.fromEntries(

@@ -4,7 +4,9 @@ import { useEffect } from "react";
 
 const AUTH_PATH_PREFIX = "/auth/";
 const API_PATH_PREFIX = "/api/";
-const EXCLUDED_API_PATHS = new Set(["/api/health"]);
+// Paths that legitimately return 401 for unauthenticated users and should not
+// trigger the session-expiry redirect (they are handled gracefully by callers).
+const EXCLUDED_API_PATHS = new Set(["/api/health", "/api/user/preferences"]);
 
 function resolveRequestUrl(input: RequestInfo | URL): URL | null {
   if (typeof window === "undefined") return null;

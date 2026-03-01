@@ -34,17 +34,25 @@ export function LevelProgressBar({
   maxLevel = 20,
   animated = true,
 }: LevelProgressBarProps) {
-  const [displayProgress, setDisplayProgress] = useState(0);
   const targetProgress = getLevelProgress(points, level);
+  const [displayProgress, setDisplayProgress] = useState(() =>
+    animated ? 0 : targetProgress,
+  );
   const isMaxLevel = level >= maxLevel;
   const colorClass = getLevelColor(level);
+  const progressValue = isMaxLevel
+    ? 1
+    : animated
+      ? displayProgress
+      : targetProgress;
 
   useEffect(() => {
     if (!animated) {
-      setDisplayProgress(targetProgress);
       return;
     }
-    const timeout = setTimeout(() => setDisplayProgress(targetProgress), 100);
+    const timeout = setTimeout(() => {
+      setDisplayProgress(targetProgress);
+    }, 100);
     return () => clearTimeout(timeout);
   }, [targetProgress, animated]);
 
@@ -67,7 +75,7 @@ export function LevelProgressBar({
         <div className="h-3 overflow-hidden rounded-full bg-stone-100 shadow-inner">
           <div
             className={`h-full rounded-full bg-gradient-to-r ${colorClass} transition-all duration-700 ease-out`}
-            style={{ width: `${(isMaxLevel ? 1 : displayProgress) * 100}%` }}
+            style={{ width: `${progressValue * 100}%` }}
           />
         </div>
       </div>

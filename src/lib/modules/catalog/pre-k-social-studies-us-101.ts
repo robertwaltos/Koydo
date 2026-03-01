@@ -9,7 +9,6 @@ export const PreKSocialStudiesUs101Module: LearningModule = {
   tags: ["pre-k", "curriculum", "interactive", "community", "helpers", "maps", "citizenship"],
   minAge: 3,
   maxAge: 5,
-  moduleVersion: "4.0.0",
   version: "4.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es", "fr", "de", "hi", "zh"],

@@ -8,7 +8,6 @@ export const ElectricianElectricity301Module: LearningModule = {
   tags: ["curriculum", "interactive"],
   minAge: 17,
   maxAge: 99,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   difficultyBand: "advanced",
   localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],

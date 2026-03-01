@@ -85,7 +85,16 @@ export type InteractiveActivity = {
   instructions?: string[];
   udlEngagement?: string[];
   data?: Record<string, unknown>;
-  [key: string]: unknown;
+  /** Sorting buckets activity: bucket labels */
+  buckets?: string[];
+  /** Sorting/drag-and-drop activity: items to sort (objects for buckets, strings for drag-and-drop) */
+  items?: (string | { id?: string; text: string; bucket: string })[];
+  /** Matching pairs activity: left/right pairs */
+  pairs?: { id?: string; left: string; right: string }[];
+  /** Drag and drop activity: instruction prompt */
+  prompt?: string;
+  /** Drag and drop activity: drop zone labels */
+  zones?: string[];
 };
 
 export type LessonMediaAsset = {
@@ -165,7 +174,7 @@ export type QuizBlueprint = {
   feedbackMode?: string;
   adaptive?: boolean;
   masteryThreshold?: number;
-  [key: string]: unknown;
+  bloomProfile?: Record<string, number>;
 };
 
 export type StandardsMapping = {
@@ -187,7 +196,6 @@ export type Lesson = {
   standardsCodes?: string[];
   chunks?: LessonChunk[];
   flashcards?: Flashcard[];
-  activities?: InteractiveActivity[];
   interactiveActivities?: InteractiveActivity[];
   quizBlueprint?: QuizBlueprint;
   prompts?: LessonMediaPrompts;
@@ -198,7 +206,6 @@ export type Lesson = {
     description?: LocalizedText;
   };
   external?: Record<string, unknown>;
-  [key: string]: unknown;
 };
 
 export type Subject =
@@ -219,7 +226,6 @@ export type LearningModule = {
   minAge?: number;
   maxAge?: number;
   version?: string;
-  moduleVersion?: string;
   difficultyBand?: "beginner" | "intermediate" | "advanced" | (string & {});
   localeSupport?: string[];
   thumbnail?: string;
@@ -228,6 +234,7 @@ export type LearningModule = {
   standardsMappings?: StandardsMapping[];
   quizBlueprint?: QuizBlueprint;
   interactiveActivitiesCatalog?: InteractiveActivity[];
+  status?: "published" | "draft";
   metadata?: Record<string, unknown>;
   external?: Record<string, unknown>;
 };

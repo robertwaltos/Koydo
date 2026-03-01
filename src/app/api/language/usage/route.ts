@@ -5,6 +5,7 @@ import {
   getLanguageRuntimeConfig,
   resolveLanguageUsageEntitlement,
 } from "@/lib/language-learning";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 function isMissingTableError(message: string) {
@@ -54,10 +55,10 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    console.error("Failed to resolve language usage entitlement.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Failed to resolve language usage entitlement.",
-        message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

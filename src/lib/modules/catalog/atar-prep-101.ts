@@ -8,7 +8,6 @@ export const AtarPrep101Module: LearningModule = {
   tags: ["exam-prep", "assessment", "advanced"],
   minAge: 15,
   maxAge: 20,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   difficultyBand: "advanced",
   localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],

@@ -13,7 +13,6 @@ export const CannibalCapitalismMichaelCHillModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive", "political-economy", "capitalism", "economic-policy"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Define 'cannibal capitalism' and distinguish it from productive capitalism",

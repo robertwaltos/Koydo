@@ -9,7 +9,6 @@ export const MusicTheory101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "music"],
   minAge: 7,
   maxAge: 12,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Identify the lines and spaces of the treble and bass clef",

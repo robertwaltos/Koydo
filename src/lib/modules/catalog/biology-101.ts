@@ -8,7 +8,6 @@ export const Biology101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Describe the structure and function of plant and animal cells",

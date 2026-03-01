@@ -77,7 +77,8 @@ export async function PATCH(
       .maybeSingle();
 
     if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
     if (!data) {
       return NextResponse.json({ error: "Error log item not found." }, { status: 404 });
@@ -89,3 +90,4 @@ export async function PATCH(
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
+

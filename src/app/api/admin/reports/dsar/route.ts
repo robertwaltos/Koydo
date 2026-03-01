@@ -2,6 +2,7 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toCsv } from "@/lib/admin/csv";
 import { logReportExport } from "@/lib/admin/report-export";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 export async function GET() {
   const auth = await requireAdminForApi();
@@ -17,7 +18,8 @@ export async function GET() {
     .limit(5000);
 
   if (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
+    console.error("Failed to query DSAR report source rows.", toSafeErrorRecord(error));
+    return new Response(JSON.stringify({ error: "Failed to query DSAR report source rows." }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });

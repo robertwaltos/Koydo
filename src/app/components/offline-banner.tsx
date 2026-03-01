@@ -1,29 +1,37 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n/provider";
 import { useNetworkStatus } from "@/lib/platform/network-monitor";
 
 export default function OfflineBanner() {
   const { t } = useI18n();
   const { isOnline, isLoading } = useNetworkStatus();
-  const [wasOffline, setWasOffline] = useState(false);
   const [showOnlineMessage, setShowOnlineMessage] = useState(false);
+  const wasOfflineRef = useRef(false);
 
   useEffect(() => {
     if (isLoading) return;
 
     if (!isOnline) {
-      setWasOffline(true);
-    } else if (isOnline && wasOffline) {
-      setShowOnlineMessage(true);
-      const timer = setTimeout(() => {
-        setShowOnlineMessage(false);
-        setWasOffline(false);
-      }, 3000);
-      return () => clearTimeout(timer);
+      wasOfflineRef.current = true;
+      return;
     }
-  }, [isOnline, isLoading, wasOffline]);
+
+    if (wasOfflineRef.current) {
+      const showTimer = window.setTimeout(() => {
+        setShowOnlineMessage(true);
+      }, 0);
+      const hideTimer = window.setTimeout(() => {
+        setShowOnlineMessage(false);
+      }, 3000);
+      wasOfflineRef.current = false;
+      return () => {
+        clearTimeout(showTimer);
+        clearTimeout(hideTimer);
+      };
+    }
+  }, [isOnline, isLoading]);
 
   if (isLoading) {
     return null;

@@ -9,7 +9,6 @@ export const MarketingManagement201Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "mba", "marketing", "branding", "digital"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   difficultyBand: "intermediate",
   localeSupport: ["en", "es"],

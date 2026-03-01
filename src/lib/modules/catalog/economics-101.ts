@@ -9,7 +9,6 @@ export const Economics101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "mba", "economics"],
   minAge: 16,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Define economics and the fundamental problem of scarcity",
@@ -95,7 +94,7 @@ export const Economics101Module: LearningModule = {
             "Equilibrium occurs where supply meets demand — the price at which quantity supplied equals quantity demanded. At prices above equilibrium, there's a surplus (excess supply) that pushes prices down. At prices below equilibrium, there's a shortage (excess demand) that pushes prices up. Markets naturally gravitate toward equilibrium through the price mechanism — Adam Smith's 'invisible hand.'"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-101-l02-a1",
           title: "Sort into Categories",
@@ -264,7 +263,7 @@ export const Economics101Module: LearningModule = {
             "A monopoly exists when one firm controls the entire market. It sets prices above competitive levels and produces less, creating deadweight loss (inefficiency). Monopolies arise from barriers to entry: patents, control of resources, government licenses, economies of scale. An oligopoly has a few large firms that watch each other closely. Game theory (the prisoner's dilemma) explains why oligopolists sometimes collude and sometimes compete fiercely."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-101-l05-a1",
           title: "Sort into Categories",
@@ -427,7 +426,7 @@ export const Economics101Module: LearningModule = {
             "For negative externalities: Pigouvian taxes (taxing pollution to internalize the cost), cap-and-trade systems (tradeable pollution permits), or direct regulation. For positive externalities: subsidies (reducing the price to encourage more consumption/production), public provision (government provides the good directly, like public education), or mandates. The Coase theorem suggests that if property rights are clear and transaction costs are low, private bargaining can also solve externalities."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-101-l08-a1",
           title: "Sort into Categories",
@@ -622,7 +621,7 @@ export const Economics101Module: LearningModule = {
             "A firm should shut down (temporarily stop producing) if price falls below average variable cost (AVC). Why not average total cost? Because fixed costs are paid regardless — they're 'sunk.' As long as price covers AVC, each unit sold contributes something toward fixed costs. In the long run, the firm exits the market if price stays below ATC (can't cover all costs)."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-101-l11-a1",
           title: "Match the Pairs",
@@ -781,7 +780,7 @@ export const Economics101Module: LearningModule = {
             "The sunk cost fallacy is continuing an activity because of what you've already invested, rather than based on future benefits and costs. 'I've already watched two hours of this terrible movie, I should finish it.' No — the two hours are gone regardless. Rational decisions are forward-looking: only consider costs and benefits you can still influence. Businesses fall into this trap with failing projects all the time."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-101-l14-a1",
           title: "Sort into Categories",

@@ -4,6 +4,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { serverEnv } from "@/lib/config/env";
 import { getLessonById } from "@/lib/modules";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const MAX_HISTORY_FETCH = 80;
 const DEFAULT_HISTORY_FETCH = 24;
@@ -246,7 +247,8 @@ export async function GET(request: Request) {
           usage,
         });
       }
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     const ordered = (data ?? []).slice().reverse() as TutorConversationRow[];
@@ -297,7 +299,8 @@ export async function DELETE(request: Request) {
           usage: usageBefore,
         });
       }
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     const usageAfter = await getTutorUsage({ supabase, userId: user.id });
@@ -315,6 +318,18 @@ export async function DELETE(request: Request) {
 
 export async function POST(request: Request) {
   try {
+    // AI tutor is the most expensive endpoint — tight rate limit
+    const rateLimit = await enforceIpRateLimit(request, "api:ai:tutor:post", {
+      max: 10,
+      windowMs: 60_000,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many requests" },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const supabase = await createSupabaseServerClient();
     const {
       data: { user },
@@ -370,7 +385,8 @@ export async function POST(request: Request) {
       : await followupQuery;
 
     if (followupError && !isMissingFollowupTableError(followupError.message)) {
-      return NextResponse.json({ error: followupError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(followupError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     followupRow = followupData?.[0] ?? null;
@@ -398,7 +414,8 @@ export async function POST(request: Request) {
       if (isMissingTutorTableError(recentConversationError.message)) {
         memoryAvailable = false;
       } else {
-        return NextResponse.json({ error: recentConversationError.message }, { status: 500 });
+        console.error("Unexpected API error.", toSafeErrorRecord(recentConversationError));
+        return NextResponse.json({ error: "Internal server error." }, { status: 500 });
       }
     } else {
       recentConversationRows = (recentConversationData ?? []) as TutorConversationRow[];
@@ -572,3 +589,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
+

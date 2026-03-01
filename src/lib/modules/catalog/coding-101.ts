@@ -9,7 +9,6 @@ export const Coding101Module: LearningModule = {
   tags: ["coding", "computer-science", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Explain what code is and how computers follow instructions",
@@ -92,7 +91,7 @@ export const Coding101Module: LearningModule = {
           explanation: "Python is a programming language that reads almost like English!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "coding-101-l01-act1",
           type: "project_builder",
@@ -174,7 +173,7 @@ export const Coding101Module: LearningModule = {
           explanation: "player_score is descriptive, uses underscores, and follows Python rules!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "coding-101-l02-act1",
           type: "project_builder",
@@ -256,7 +255,7 @@ export const Coding101Module: LearningModule = {
           explanation: "== compares, = assigns. Important difference!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "coding-101-l03-act1",
           type: "project_builder",
@@ -338,7 +337,7 @@ export const Coding101Module: LearningModule = {
           explanation: "Algorithms plan out the steps before writing code!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "coding-101-l04-act1",
           type: "project_builder",
@@ -420,7 +419,7 @@ export const Coding101Module: LearningModule = {
           explanation: "For loops are ideal when the number of repetitions is known!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "coding-101-l05-act1",
           type: "project_builder",
@@ -502,7 +501,7 @@ export const Coding101Module: LearningModule = {
           explanation: "Write once, call many times — no repetition!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "coding-101-l06-act1",
           type: "project_builder",
@@ -584,7 +583,7 @@ export const Coding101Module: LearningModule = {
           explanation: "Dictionaries pair keys with values, like 'name': 'Alex'!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "coding-101-l07-act1",
           type: "project_builder",
@@ -666,7 +665,7 @@ export const Coding101Module: LearningModule = {
           explanation: "The key 'age' maps to the value 12 in the dictionary!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "coding-101-l08-act1",
           type: "project_builder",

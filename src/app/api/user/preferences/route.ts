@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const preferencePatchSchema = z.object({
@@ -26,7 +27,8 @@ export async function GET() {
     .maybeSingle();
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to load user preferences.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to load user preferences." }, { status: 500 });
   }
 
   return NextResponse.json({
@@ -70,7 +72,8 @@ export async function PATCH(request: Request) {
   );
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to update user preferences.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to update user preferences." }, { status: 500 });
   }
 
   return NextResponse.json({ ok: true });

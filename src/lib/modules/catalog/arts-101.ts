@@ -9,7 +9,6 @@ export const Arts101Module: LearningModule = {
   tags: ["arts", "creativity", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Identify the seven elements of art: line, shape, color, texture, space, form, and value",
@@ -92,7 +91,7 @@ export const Arts101Module: LearningModule = {
           explanation: "Geometric shapes are precise and measurable!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "arts-101-l01-act1",
           type: "drawing_canvas",
@@ -174,7 +173,7 @@ export const Arts101Module: LearningModule = {
           explanation: "Warm colors pop forward while cool colors recede!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "arts-101-l02-act1",
           type: "drawing_canvas",
@@ -256,7 +255,7 @@ export const Arts101Module: LearningModule = {
           explanation: "Eyes sit at the midpoint of the head height!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "arts-101-l03-act1",
           type: "drawing_canvas",
@@ -338,7 +337,7 @@ export const Arts101Module: LearningModule = {
           explanation: "Negative space is the area surrounding the subject!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "arts-101-l04-act1",
           type: "drawing_canvas",
@@ -420,7 +419,7 @@ export const Arts101Module: LearningModule = {
           explanation: "Kahlo created powerful symbolic self-portraits!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "arts-101-l05-act1",
           type: "drawing_canvas",
@@ -502,7 +501,7 @@ export const Arts101Module: LearningModule = {
           explanation: "Clay is soft and perfect for pinching!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "arts-101-l06-act1",
           type: "project_builder",
@@ -584,7 +583,7 @@ export const Arts101Module: LearningModule = {
           explanation: "Patterns repeat over and over!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "arts-101-l07-act1",
           type: "drawing_canvas",
@@ -666,7 +665,7 @@ export const Arts101Module: LearningModule = {
           explanation: "Assemblage uses found objects!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "arts-101-l08-act1",
           type: "project_builder",

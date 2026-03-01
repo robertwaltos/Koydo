@@ -413,11 +413,18 @@ export const shapeBank = SHAPE_BANK.items;
 export const colorMixBank = COLOR_MIXING_BANK.items;
 export const memoryPairBank = MEMORY_MATCH_BANK.items;
 
+function isContentBank<T>(
+  bankOrItems: GameContentBank<T> | readonly T[],
+): bankOrItems is GameContentBank<T> {
+  return !Array.isArray(bankOrItems);
+}
+
 export function getItemsByDifficulty<T extends { difficulty?: string }>(
-  bank: GameContentBank<T>,
+  bankOrItems: GameContentBank<T> | readonly T[],
   difficulty: string,
 ): T[] {
-  return bank.items.filter((item) => item.difficulty === difficulty);
+  const items = isContentBank(bankOrItems) ? bankOrItems.items : bankOrItems;
+  return items.filter((item: T) => item.difficulty === difficulty);
 }
 
 export function getRandomItems<T>(items: readonly T[], count: number): T[] {

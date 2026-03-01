@@ -90,7 +90,8 @@ export async function GET() {
           days: [],
         });
       }
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     const rows = (data ?? []) as FollowupRow[];
@@ -142,3 +143,4 @@ export async function GET() {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
+

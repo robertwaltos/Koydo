@@ -37,17 +37,29 @@ export function RewardToast({
 
   useEffect(() => {
     if (!event) {
-      setVisible(false);
-      return;
+      const resetTimer = setTimeout(() => {
+        setVisible(false);
+      }, 0);
+      return () => clearTimeout(resetTimer);
     }
 
-    setVisible(true);
-    const timer = setTimeout(() => {
+    let dismissTimer: ReturnType<typeof setTimeout> | undefined;
+    const showTimer = setTimeout(() => {
+      setVisible(true);
+    }, 0);
+
+    const hideTimer = setTimeout(() => {
       setVisible(false);
-      setTimeout(onDismiss, 300);
+      dismissTimer = setTimeout(onDismiss, 300);
     }, duration);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+      if (dismissTimer) {
+        clearTimeout(dismissTimer);
+      }
+    };
   }, [event, duration, onDismiss]);
 
   if (!event) return null;

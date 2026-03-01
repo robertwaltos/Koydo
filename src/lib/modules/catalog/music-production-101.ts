@@ -9,7 +9,6 @@ export const MusicProduction101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "music", "technology"],
   minAge: 13,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Navigate a DAW (Digital Audio Workstation) interface and its core features",
@@ -95,7 +94,7 @@ export const MusicProduction101Module: LearningModule = {
             "Use audio for: vocals, acoustic guitar, live drums, field recordings — anything where the unique sound of the performance matters. Use MIDI for: drum beats, synth pads, piano parts, orchestral arrangements — anything where you want flexibility to edit after recording. Most professional productions use both: MIDI for programmed elements, audio for live performances, all mixed together in the DAW."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-production-101-l02-a1",
           title: "Sort into Categories",
@@ -259,7 +258,7 @@ export const MusicProduction101Module: LearningModule = {
             "Once your core beat works, layer additional percussion: shakers, rim shots, tambourine, congas. Keep them subtle — they add texture without competing with the kick-snare-hat foundation. Every 4 or 8 bars, add a fill — a short rhythmic variation that signals a section change. A simple snare roll or a kick pattern break keeps the listener's attention."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-production-101-l05-a1",
           title: "Drag and Drop",
@@ -421,7 +420,7 @@ export const MusicProduction101Module: LearningModule = {
             "Reverb simulates the reflections of sound in a space — from a small room to a cathedral. It adds depth and dimension to a dry recording. Types: plate reverb (bright, smooth — classic for vocals), room reverb (natural, subtle), hall reverb (large, dramatic). Too much reverb makes a mix washy and unclear. Use sends (aux channels) rather than inserting reverb directly on a track — this lets you blend the wet/dry balance."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-production-101-l08-a1",
           title: "Match the Pairs",
@@ -619,7 +618,7 @@ export const MusicProduction101Module: LearningModule = {
             "A synthesizer generates sound from scratch using oscillators and math. A sampler plays back recordings of real instruments (or any sound). When you load a 'realistic piano' plugin, it's usually a sampler playing recordings of a real piano at different velocities and notes. Synths create new sounds; samplers recreate existing ones. Many modern instruments combine both: sampled core + synthesized layers."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-production-101-l11-a1",
           title: "Sort into Categories",
@@ -788,7 +787,7 @@ export const MusicProduction101Module: LearningModule = {
             "To get music on Spotify, Apple Music, and other streaming platforms, you need a distributor (DistroKid, TuneCore, CD Baby, Amuse). They upload your music and metadata (title, artist name, genre, cover art) to all platforms for a small fee. Cover art must be 3000×3000 pixels. Plan your release 2-4 weeks ahead for playlist consideration. Register with a PRO (performance rights organization) to collect royalties."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-production-101-l14-a1",
           title: "Drag and Drop",

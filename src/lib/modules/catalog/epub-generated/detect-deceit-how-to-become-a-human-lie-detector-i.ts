@@ -12,7 +12,6 @@ export const DetectDeceitHowToBecomeAHumanLieDetectorIModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"Detect Deceit: How to Become a Human Lie Detector in Under 60 Minutes\"",

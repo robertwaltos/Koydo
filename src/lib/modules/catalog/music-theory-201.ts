@@ -9,7 +9,6 @@ export const MusicTheory201Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "music"],
   minAge: 10,
   maxAge: 15,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Identify and name all simple intervals from unison to octave",
@@ -95,7 +94,7 @@ export const MusicTheory201Module: LearningModule = {
             "2nds, 3rds, 6ths, and 7ths come in major and minor qualities. A major interval is one half step larger than its minor counterpart. Major 2nd = 2 half steps; minor 2nd = 1 half step. Major 3rd = 4 half steps; minor 3rd = 3 half steps. Major 6th = 9 half steps; minor 6th = 8 half steps. Major 7th = 11 half steps; minor 7th = 10 half steps."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-201-l02-a1",
           title: "Match the Pairs",
@@ -263,7 +262,7 @@ export const MusicTheory201Module: LearningModule = {
             "A shortcut to check triad quality: look at the outer interval (root to 5th). If it's a perfect 5th, the triad is either major or minor — check the bottom 3rd to decide. If the outer interval is an augmented 5th, it's augmented. If it's a diminished 5th, it's diminished. This 'outside-in' method is faster than counting every half step."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-201-l05-a1",
           title: "Sort into Categories",
@@ -433,7 +432,7 @@ export const MusicTheory201Module: LearningModule = {
             "The circle is a musician's Swiss Army knife. Adjacent keys differ by only one sharp or flat — they're closely related and sound natural together. Keys across the circle are distant and create dramatic contrasts. The inner ring shows relative minors. Songwriters use the circle to plan key changes (modulations) and find chords that work together."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-201-l08-a1",
           title: "Match the Pairs",
@@ -630,7 +629,7 @@ export const MusicTheory201Module: LearningModule = {
             "The harmonic minor raises the 7th degree of the natural minor back up, creating a leading tone that 'pulls' toward the tonic. From A: A-B-C-D-E-F-G♯-A. This creates an exotic-sounding gap between the 6th and 7th (an augmented 2nd). The melodic minor smooths that gap: ascending, it raises both the 6th and 7th; descending, it reverts to natural minor. From A ascending: A-B-C-D-E-F♯-G♯-A."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-201-l11-a1",
           title: "Drag and Drop",
@@ -787,7 +786,7 @@ export const MusicTheory201Module: LearningModule = {
             "1) Determine the interval of transposition (e.g., up a major 2nd). 2) Write the new key signature. 3) Move every note up by the same interval, preserving accidentals relative to the new key. Common mistake: forgetting to adjust the key signature, which leads to wrong accidentals. Always write the new key signature first, then transpose note by note."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-201-l14-a1",
           title: "Drag and Drop",

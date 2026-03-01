@@ -4,6 +4,7 @@ import {
   loadAiRemediationTopLessons,
   loadAiRemediationUsageTimeseries,
 } from "@/lib/admin/ai-remediation-usage";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { getLessonById } from "@/lib/modules";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
@@ -126,9 +127,8 @@ export async function GET(request: Request) {
       },
     });
   } catch (error) {
-    const message =
-      error instanceof Error ? error.message : "Failed to export remediation worksheet analytics.";
-    return new Response(JSON.stringify({ error: message }), {
+    console.error("Failed to export remediation worksheet analytics.", toSafeErrorRecord(error));
+    return new Response(JSON.stringify({ error: "Failed to export remediation worksheet analytics." }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });

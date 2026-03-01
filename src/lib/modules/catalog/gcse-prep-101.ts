@@ -8,10 +8,9 @@ export const GcsePrep101Module: LearningModule = {
   tags: ["exam-prep", "assessment", "advanced"],
   minAge: 14,
   maxAge: 18,
-  moduleVersion: "1.0.0",
-  version: "1.0.0",
+  version: "2.0.0",
   difficultyBand: "advanced",
-  localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],
+  localeSupport: ["en"],
   thumbnail: "/placeholders/lesson-robot.svg",
   learningObjectives: [
     "Build structured GCSE readiness workflows",

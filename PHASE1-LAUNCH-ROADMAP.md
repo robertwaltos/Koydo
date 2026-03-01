@@ -103,13 +103,27 @@ Ship the highest-value content experience first: stable media pipeline, reviewed
 | P1-42 | Gemini: RevenueCat + IAP integration | DONE | Gemini | RevenueCat integration with platform-aware API key loading. Billing pages adapted for IAP (Stripe disabled on native). Subscription status API, webhook (HMAC-verified), entitlement check, restore purchases, platform feature flags. |
 | P1-43 | Gemini: Platform services | DONE | Gemini | App lifecycle manager (session refresh, sub-check on resume), network monitor (`useNetworkStatus()` hook), deep linking handler (`/explore`, `/lessons`, `/auth/callback`), push notifications (streak + reminder channels), splash screen. |
 | P1-44 | Gemini: Store metadata + compliance | DONE | Gemini | EN + ES metadata for Google Play + App Store. Screenshot spec, content rating, data safety declarations, store compliance checklist (100%). Submission guides, release checklist, billing test plan, version management, native dev guide. |
-| P1-45 | Gemini: Profile context provider (enhanced) | IN_PROGRESS | Gemini | `ActiveProfileProvider` upgraded to fetch full `student_profiles` data from Supabase (display_name, grade_level, avatar_url, ai_skill_level_map). Exposes `profile` object + `isLoading` state. Next: profile-aware stage recommendation in `/explore`. |
+| P1-45 | Gemini: Profile context provider (enhanced) | DONE | Opus 4.6 | `ActiveProfileProvider` fully functional — fetches `student_profiles` from Supabase (display_name, grade_level, avatar_url, ai_skill_level_map). Profile-aware stage recommendation via `getRecommendedStageId()` in `/explore`. Verified complete. |
 | P1-46 | Codex: Curriculum expansion (67 modules) | DONE | Codex | 67 new domain modules (~670 lessons) across trade, engineering, health, law, and digital careers. Registry now 201 modules. |
 | P1-47 | Codex: Knowledgebase ingestion pipeline | DONE | Codex | Full pipeline: harvest → queue → ingest → PDF extract → manifest. 90 docs, 17 domains, 0 gaps. Domain gate passes all 12 priority domains. |
 | P1-48 | Opus: 7 module content rewrites (v2.0.0) | DONE | Opus 4.6 | language-arts-201, us-civics-201, accounting-finance-101, project-management-101, cybersecurity-101, ai-machine-learning-101, math-101. All gold-standard quality. |
 | P1-49 | Opus: Comprehensive codebase review | DONE | Opus 4.6 | 13 issues found (3 critical, 4 high, 6 medium, 4 low). Report: `CODEBASE-REVIEW-REPORT.md`. |
 | P1-50 | Opus: Critical bug fixes (C-1, C-3, H-2, M-4) | DONE | Opus 4.6 | Zod `activities` field preserved, env vars required, lazy Supabase client, `.bak*` gitignored. Build GREEN. |
 | P1-51 | Opus: 5-agent work assignments | DONE | Opus 4.6 | Comprehensive assignments for Opus, Codex, Gemini, Sonnet, Grok in `V1-LAUNCH-COORDINATION.md`. |
+| P1-52 | Opus: 8 game components (all game types) | DONE | Opus 4.6 | All 8 game types implemented: letter-catcher, word-builder, number-crunch, pattern-train, story-sequencer, memory-match, color-mixer, shape-safari. Full haptics, scoring, accessibility. Barrel-exported from `src/components/games/index.ts`. |
+| P1-53 | Opus: Draft flag + auto-gating for template modules (H-4) | DONE | Opus 4.6 | Added `status?: "published" \| "draft"` to `LearningModule` type + schema. Registry init auto-marks v1.0.0 modules as draft. `getAllLearningModules()` filters drafts — ~166 template modules hidden from users. |
+| P1-54 | Opus: Runtime Zod removal (M-5) | DONE | Opus 4.6 | Removed `safeParse()` from `index.ts` — 338 modules no longer parsed by Zod on every import. TypeScript compile-time checks provide equivalent safety. |
+| P1-55 | Opus: Template localeSupport correction (M-3) | DONE | Opus 4.6 | Registry init now corrects `localeSupport` to `["en"]` for all v1.0.0 draft modules (previously claimed 10 languages). |
+| P1-56 | Opus: QuizBlueprint bloomProfile typing | DONE | Opus 4.6 | Added `bloomProfile?: Record<string, number>` to `QuizBlueprint` type + schema. Legitimate Bloom's taxonomy distribution used by 20+ modules. |
+| P1-57 | Opus: Serverless rate limiting (C-2) | DONE | Opus 4.6 | Replaced in-memory `Map` with `@upstash/ratelimit` + `@upstash/redis` dual-mode limiter. Redis sliding-window in production, in-memory fallback for dev. 43 call sites updated to async. |
+| P1-58 | Opus: Rate limiting on 5 unprotected routes (H-1) | DONE | Opus 4.6 | Added `enforceIpRateLimit` to `api/progress` (30/min), `api/answers` (60/min), `api/ai/tutor` (10/min — most expensive), `api/telemetry/events` (30/min), `api/health` (60/min). |
+| P1-59 | Opus: Env validation bypass fix (H-2) | DONE | Opus 4.6 | RevenueCat webhook now uses `serverEnv` instead of `process.env` direct access. `REVENUECAT_WEBHOOK_SECRET` added to env schema. `subscription/status` uses `serverEnv.NEXT_PUBLIC_APP_URL`. |
+| P1-60 | Opus: Nonce-based CSP (H-3) | DONE | Opus 4.6 | CSP moved from static `next.config.ts` to dynamic per-request nonce in `proxy.ts`. Production: `'nonce-<random>' 'strict-dynamic'` — no `unsafe-eval`, no `unsafe-inline` for scripts. Dev: relaxed for HMR. |
+| P1-61 | Opus: activities→interactiveActivities migration (D-1/M-1) | DONE | Opus 4.6 | Bulk-renamed `activities:` → `interactiveActivities:` across 25 catalog files. Removed `activities` from `Lesson` type, schema, and renderer fallback. Single canonical field. |
+| P1-62 | Opus: moduleVersion removal (D-4/L-2) | DONE | Opus 4.6 | Removed `moduleVersion` from type + schema. Bulk-removed `moduleVersion:` from 337 catalog files. Runtime consumer `topics.ts` updated to use `version` only. |
+| P1-63 | Opus: Index signature removal (D-2/M-2) | DONE | Opus 4.6 | Removed 3 `[key: string]: unknown` from InteractiveActivity, QuizBlueprint, Lesson. Added 5 explicit typed optional fields. Union types for items/pairs. music-history-101 quiz format fixed. 0 TS errors. |
+| P1-64 | Opus: Exam prep modules promoted (E-3) | DONE | Opus 4.6 | IELTS, GCSE, IB prep modules bumped to v2.0.0 (were hidden as drafts despite ~1,940 lines of real content). Locale fixed to ["en"]. Now published. |
+| P1-65 | Opus: 10 module content upgrades batch 2 (E-1) | DONE | Opus 4.6 | medicine-101, nursing-101, law-studies-101, electrical-engineering-101, hvac-101, plumbing-101, meteorology-101, micro-circuits-101, microelectronics-101, cpu-gpu-memory-design-101. All upgraded from ~242-line templates to ~725-line gold-standard modules with real educational content, 10 lessons each (3 video + 3 interactive + 4 quiz), chunks, flashcards, interactive activities, quiz explanations. v2.0.0, published. |
 
 ## Active Execution Plan (Current — Post-Review Sprint)
 
@@ -125,11 +139,17 @@ Ship the highest-value content experience first: stable media pipeline, reviewed
 
 ### Remaining Critical Work
 
-1. **Codex (Track B)**: Redis rate limiting (C-2), CSP cleanup (H-3), unprotected route rate limiting (H-1)
-2. **Sonnet (Track D)**: Type safety cleanup — `activities` deprecation (M-1), index signatures (M-2), draft flag (H-4)
-3. **Opus (Track A)**: Template module upgrades (10 priority modules), game components (5 games)
-4. **Gemini (Track C)**: Game components (3 games), native builds, store submission
-5. **Grok (Track E)**: Content research for 10 more modules, game content banks, exam prep questions
+1. **Codex (Track B)**: Backend + developer portal (active)
+2. **Opus (Track A)**: Template module upgrades (10 priority modules), visual QA
+3. **Grok (Track E)**: Content research for module upgrades, exam prep questions
+
+### Security Hardening — COMPLETE
+
+All 4 previously-open security issues (C-2, H-1, H-2, H-3) are now RESOLVED:
+- C-2: Redis-backed rate limiting (Upstash) replaces in-memory Map
+- H-1: All API routes now rate-limited (AI tutor: 10/min, health: 60/min, etc.)
+- H-2: All routes use validated `serverEnv` — zero `process.env!` bypasses
+- H-3: Nonce-based CSP in production — no `unsafe-eval`, no `unsafe-inline` for scripts
 
 ### Completed (can be removed from active tracking)
 

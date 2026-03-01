@@ -1253,7 +1253,7 @@ function scoreModuleForTopic(moduleEntry: LearningModule, topic: ExplorerTopic) 
   if (typeof moduleEntry.minAge === "number" && moduleEntry.minAge <= 6) score += 3;
   if (typeof moduleEntry.maxAge === "number" && moduleEntry.maxAge <= 8) score += 1;
 
-  const versionToken = String(moduleEntry.moduleVersion ?? moduleEntry.version ?? "");
+  const versionToken = String(moduleEntry.version ?? "");
   if (versionToken.startsWith("2.")) score += 1;
 
   if (moduleEntry.id.startsWith("pre-k-")) score += 2;

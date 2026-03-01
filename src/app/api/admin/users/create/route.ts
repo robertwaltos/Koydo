@@ -4,6 +4,7 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { logAdminAction } from "@/lib/admin/audit";
 import { sanitizeDisplayName } from "@/lib/security/sanitize-user-text";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
   email: z.string().email(),
@@ -40,7 +41,11 @@ export async function POST(request: Request) {
   });
 
   if (error || !data.user) {
-    return NextResponse.json({ error: error?.message ?? "Failed to create user." }, { status: 500 });
+    console.error(
+      "Failed to create admin user via Supabase.",
+      toSafeErrorRecord(error ?? new Error("Supabase admin.createUser returned no user.")),
+    );
+    return NextResponse.json({ error: "Failed to create user." }, { status: 500 });
   }
 
   const { error: profileError } = await admin.from("user_profiles").upsert({
@@ -51,7 +56,8 @@ export async function POST(request: Request) {
   });
 
   if (profileError) {
-    return NextResponse.json({ error: profileError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(profileError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   await logAdminAction({

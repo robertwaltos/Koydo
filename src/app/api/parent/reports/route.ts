@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 function toLetterGrade(score: number) {
   if (score >= 90) return "A";
@@ -43,7 +44,8 @@ export async function GET() {
     .eq("status", "verified");
 
   if (consentError) {
-    return NextResponse.json({ error: consentError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(consentError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const childIds = Array.from(new Set((consents ?? []).map((row) => row.child_user_id)));
@@ -61,13 +63,16 @@ export async function GET() {
   ]);
 
   if (profilesResult.error) {
-    return NextResponse.json({ error: profilesResult.error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(profilesResult.error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (masteryResult.error) {
-    return NextResponse.json({ error: masteryResult.error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(masteryResult.error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (progressResult.error) {
-    return NextResponse.json({ error: progressResult.error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(progressResult.error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const profileMap = new Map((profilesResult.data ?? []).map((row) => [row.user_id, row.display_name]));

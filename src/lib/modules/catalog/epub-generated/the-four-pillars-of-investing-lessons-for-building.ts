@@ -13,7 +13,6 @@ export const TheFourPillarsOfInvestingLessonsForBuildingModule: LearningModule =
   tags: ["epub-derived", "curriculum", "interactive", "investing", "portfolio-theory", "personal-finance"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Explain the relationship between risk and return across asset classes",

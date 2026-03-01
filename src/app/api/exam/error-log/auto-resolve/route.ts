@@ -38,13 +38,16 @@ async function buildEligibleAutoResolveItems(
   ]);
 
   if (errorsResult.error) {
-    return { success: false, error: errorsResult.error.message, eligibleItems: [] };
+    console.error("Failed to query unresolved exam error rows.", toSafeErrorRecord(errorsResult.error));
+    return { success: false, error: "Failed to query unresolved exam error rows.", eligibleItems: [] };
   }
   if (masteryResult.error) {
-    return { success: false, error: masteryResult.error.message, eligibleItems: [] };
+    console.error("Failed to query skill mastery rows for auto-resolve.", toSafeErrorRecord(masteryResult.error));
+    return { success: false, error: "Failed to query skill mastery rows.", eligibleItems: [] };
   }
   if (progressResult.error) {
-    return { success: false, error: progressResult.error.message, eligibleItems: [] };
+    console.error("Failed to query learning progress rows for auto-resolve.", toSafeErrorRecord(progressResult.error));
+    return { success: false, error: "Failed to query learning progress rows.", eligibleItems: [] };
   }
 
   const eligibleItems = buildAutoResolveCandidates({
@@ -139,7 +142,8 @@ export async function POST(request: Request) {
       .select("id,resolved,resolved_at,updated_at");
 
     if (updateError) {
-      return NextResponse.json({ error: updateError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(updateError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     return NextResponse.json({

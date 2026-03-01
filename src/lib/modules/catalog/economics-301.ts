@@ -9,7 +9,6 @@ export const Economics301Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "mba", "economics", "international"],
   minAge: 16,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Apply Ricardian and Heckscher-Ohlin models of comparative advantage",
@@ -95,7 +94,7 @@ export const Economics301Module: LearningModule = {
             "Protectionist arguments include: the infant industry argument (new industries need temporary shelter to reach competitive scale), national security (defense-critical industries), anti-dumping (foreign firms selling below cost to destroy competitors), and saving domestic jobs. Economists generally counter that most protectionism creates more costs than benefits — consumers pay higher prices, protected firms lose incentive to innovate, and retaliation risks trade wars."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-301-l02-a1",
           title: "Classify Trade Policy Instruments",
@@ -262,7 +261,7 @@ export const Economics301Module: LearningModule = {
             "When a currency depreciates (weakens), exports become cheaper to foreign buyers and imports become more expensive for domestic consumers — improving the trade balance (with a lag known as the J-curve). Appreciation has the opposite effect. Firms doing international business face exchange rate risk — an unexpected move can turn a profitable deal into a loss. Hedging with forward contracts, options, or natural hedges (matching revenue and cost currencies) can mitigate this risk."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-301-l05-a1",
           title: "Match Exchange Rate Concepts",
@@ -426,7 +425,7 @@ export const Economics301Module: LearningModule = {
             "GDP per capita captures average income but misses distribution, health, and education. The Human Development Index (HDI) combines life expectancy, education (mean and expected years of schooling), and GNI per capita. Other indicators include the Gini coefficient (income inequality), the Multidimensional Poverty Index (MPI), and the Sustainable Development Goals (SDGs). Institutions — rule of law, property rights, transparent governance — are increasingly seen as the deepest determinant of long-run development."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-301-l08-a1",
           title: "Match Development Concepts",
@@ -622,7 +621,7 @@ export const Economics301Module: LearningModule = {
             "Effective trade policy analysis considers: (1) Direct impact — who gains and loses from the tariff? (2) Magnitude — how large are the gains vs. losses? (3) Concentration — losses may be diffuse (small per consumer) while gains are concentrated (large per producer), creating political pressure asymmetries. (4) Retaliation risk — what are the downstream consequences? (5) Long-term effects — does protection improve competitiveness or create dependency? (6) Alternative policies — could subsidies, worker retraining, or safeguard measures achieve goals with less distortion?"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-301-l11-a1",
           title: "Classify Stakeholder Positions on Steel Tariff",
@@ -783,7 +782,7 @@ export const Economics301Module: LearningModule = {
             "Common mistakes: (1) Confusing absolute and comparative advantage — a country can have absolute advantage in everything but still gains from trade via comparative advantage. (2) Thinking trade deficits are always bad — they may reflect strong investment attractiveness. (3) Believing tariffs 'save' money — they shift costs to consumers and downstream firms. (4) Assuming PPP holds in the short run — it's a long-run tendency with large deviations. (5) Equating currency depreciation with economic weakness — it can be a deliberate policy to boost exports."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-301-l14-a1",
           title: "Match Misconceptions to Corrections",

@@ -62,7 +62,7 @@ function getStripeUserFacingError(error: unknown): { message: string; status: nu
 }
 
 export async function POST(request: Request) {
-  const rateLimit = enforceIpRateLimit(request, "api:billing:language-unlock-checkout", {
+  const rateLimit = await enforceIpRateLimit(request, "api:billing:language-unlock-checkout", {
     max: 25,
     windowMs: 5 * 60 * 1000,
   });
@@ -141,6 +141,7 @@ export async function POST(request: Request) {
     userId: user.id,
     geoTier: quote.geoTier,
     priceCents: String(quote.priceCents),
+    currency: quote.currency.toUpperCase(),
     additionalAttempts: String(quote.additionalAttempts),
     ...(parsed.data.studentProfileId
       ? { studentProfileId: parsed.data.studentProfileId }

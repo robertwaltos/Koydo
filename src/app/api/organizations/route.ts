@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getOrganizationSeatSummary } from "@/lib/organizations/license-summary";
@@ -69,7 +70,7 @@ async function buildUniqueOrganizationSlug(admin: ReturnType<typeof createSupaba
 }
 
 export async function GET(request: Request) {
-  const rateLimit = enforceIpRateLimit(request, "api:organizations:get", {
+  const rateLimit = await enforceIpRateLimit(request, "api:organizations:get", {
     max: 120,
     windowMs: 60_000,
   });
@@ -101,7 +102,8 @@ export async function GET(request: Request) {
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: membershipError.message }, { status: 500 });
+    console.error("Failed to load organization memberships.", toSafeErrorRecord(membershipError));
+    return NextResponse.json({ error: "Failed to load organization memberships." }, { status: 500 });
   }
 
   const activeMemberships = (memberships ?? []) as MembershipRow[];
@@ -123,7 +125,8 @@ export async function GET(request: Request) {
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: organizationsError.message }, { status: 500 });
+    console.error("Failed to load organizations.", toSafeErrorRecord(organizationsError));
+    return NextResponse.json({ error: "Failed to load organizations." }, { status: 500 });
   }
 
   const byOrgRole = new Map(activeMemberships.map((row) => [row.organization_id, row.role]));
@@ -150,7 +153,7 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const rateLimit = enforceIpRateLimit(request, "api:organizations:post", {
+  const rateLimit = await enforceIpRateLimit(request, "api:organizations:post", {
     max: 30,
     windowMs: 60_000,
   });
@@ -199,7 +202,8 @@ export async function POST(request: Request) {
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: organizationError.message }, { status: 500 });
+    console.error("Failed to create organization.", toSafeErrorRecord(organizationError));
+    return NextResponse.json({ error: "Failed to create organization." }, { status: 500 });
   }
 
   const { error: membershipInsertError } = await admin
@@ -213,8 +217,9 @@ export async function POST(request: Request) {
     });
 
   if (membershipInsertError) {
+    console.error("Failed to create owner membership for organization.", toSafeErrorRecord(membershipInsertError));
     return NextResponse.json(
-      { error: membershipInsertError.message },
+      { error: "Failed to assign owner membership." },
       { status: 500 },
     );
   }
@@ -238,4 +243,3 @@ export async function POST(request: Request) {
     },
   });
 }
-

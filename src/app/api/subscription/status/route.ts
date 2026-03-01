@@ -95,7 +95,7 @@ export async function GET(request: NextRequest) {
     // Derive management URL based on provider
     let managementUrl: string | null = null;
     if (subscription.provider === 'stripe') {
-      managementUrl = `${process.env.NEXT_PUBLIC_APP_URL}/settings/billing`;
+      managementUrl = `${serverEnv.NEXT_PUBLIC_APP_URL}/settings/billing`;
     } else if (subscription.provider === 'revenuecat') {
       // RevenueCat management is handled natively via the SDK
       managementUrl = null;

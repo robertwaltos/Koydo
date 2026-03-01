@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
@@ -9,7 +10,7 @@ const requestSchema = z.object({
 });
 
 export async function POST(request: Request) {
-  const rateLimit = enforceIpRateLimit(request, "api:auth:account-delete", {
+  const rateLimit = await enforceIpRateLimit(request, "api:auth:account-delete", {
     max: 3,
     windowMs: 15 * 60 * 1000,
   });
@@ -41,7 +42,8 @@ export async function POST(request: Request) {
   const admin = createSupabaseAdminClient();
   const { error } = await admin.auth.admin.deleteUser(user.id, false);
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to delete account.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to delete account." }, { status: 500 });
   }
 
   const { error: signOutError } = await supabase.auth.signOut();

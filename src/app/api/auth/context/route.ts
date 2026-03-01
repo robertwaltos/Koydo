@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export async function GET() {
@@ -37,10 +38,10 @@ export async function GET() {
       role,
     });
   } catch (error) {
+    console.error("Unable to load auth context.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Unable to load auth context.",
-        details: error instanceof Error ? error.message : "Unknown error",
       },
       { status: 500 }
     );

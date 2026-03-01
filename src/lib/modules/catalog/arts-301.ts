@@ -8,7 +8,6 @@ export const Arts301Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "1.1.0",
   version: "1.1.0",
   learningObjectives: [
     "Understand core concepts in Arts",

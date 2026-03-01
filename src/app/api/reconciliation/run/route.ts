@@ -5,6 +5,7 @@ import {
   isMissingLanguageUnlockTableError,
   runLanguageUnlockReconciliation,
 } from "@/lib/language-learning";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
 const requestSchema = z.object({
@@ -49,10 +50,10 @@ export async function POST(request: Request) {
       );
     }
 
+    console.error("Unexpected reconciliation run error.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Failed to run reconciliation.",
-        message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

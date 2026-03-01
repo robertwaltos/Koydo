@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { policyRegistry, type PolicyType } from "@/lib/compliance/policies";
 
@@ -69,7 +70,8 @@ export async function POST(request: Request) {
   });
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to persist policy acceptance.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to persist policy acceptance." }, { status: 500 });
   }
 
   return NextResponse.json({ success: true, policyType, version });

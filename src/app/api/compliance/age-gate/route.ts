@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { sanitizeNextPath } from "@/lib/routing/next-path";
@@ -52,8 +53,9 @@ export async function POST(request: NextRequest) {
     );
 
     if (profileError) {
+      console.error("Failed to update age-gate profile.", toSafeErrorRecord(profileError));
       return NextResponse.json(
-        { error: "Failed to update age-gate profile", details: profileError.message },
+        { error: "Failed to update age-gate profile" },
         { status: 500 },
       );
     }
@@ -68,10 +70,10 @@ export async function POST(request: NextRequest) {
         : safeNextPath ?? "/dashboard",
     });
   } catch (error) {
+    console.error("Age-gate request failed.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Server configuration error",
-        details: error instanceof Error ? error.message : "Unknown error",
       },
       { status: 500 },
     );

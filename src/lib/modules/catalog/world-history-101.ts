@@ -9,7 +9,6 @@ export const WorldHistory101Module: LearningModule = {
   tags: ["history", "social-studies", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Describe Mesopotamia as the cradle of civilization and its key inventions",
@@ -92,7 +91,7 @@ export const WorldHistory101Module: LearningModule = {
           explanation: "Public, written laws meant fairness and accountability!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "world-history-101-l01-act1",
           type: "project_builder",
@@ -174,7 +173,7 @@ export const WorldHistory101Module: LearningModule = {
           explanation: "Preservation ensured the soul could return to its body!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "world-history-101-l02-act1",
           type: "drawing_canvas",
@@ -256,7 +255,7 @@ export const WorldHistory101Module: LearningModule = {
           explanation: "The Olympics honored Zeus, king of the Greek gods!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "world-history-101-l03-act1",
           type: "project_builder",
@@ -338,7 +337,7 @@ export const WorldHistory101Module: LearningModule = {
           explanation: "Socrates taught Plato, who then taught Aristotle!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "world-history-101-l04-act1",
           type: "drawing_canvas",
@@ -420,7 +419,7 @@ export const WorldHistory101Module: LearningModule = {
           explanation: "476 CE marks the traditional end of the Western Roman Empire!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "world-history-101-l05-act1",
           type: "project_builder",
@@ -502,7 +501,7 @@ export const WorldHistory101Module: LearningModule = {
           explanation: "Crusaders brought back spices, silk, and new ideas from Asia!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "world-history-101-l06-act1",
           type: "drawing_canvas",
@@ -584,7 +583,7 @@ export const WorldHistory101Module: LearningModule = {
           explanation: "In 1492, Columbus sailed from Spain and reached the Caribbean!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "world-history-101-l07-act1",
           type: "project_builder",
@@ -666,7 +665,7 @@ export const WorldHistory101Module: LearningModule = {
           explanation: "Michelangelo spent 4 years painting the Sistine Chapel ceiling!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "world-history-101-l08-act1",
           type: "project_builder",

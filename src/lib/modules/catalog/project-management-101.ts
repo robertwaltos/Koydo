@@ -4,210 +4,592 @@ export const ProjectManagement101Module: LearningModule = {
   id: "project-management-101",
   title: "Project Management Fundamentals",
   description:
-    "Learn to plan, execute, and deliver projects on time and on budget. Master the project lifecycle, scope management, scheduling, risk mitigation, and the differences between Agile and Waterfall methodologies.",
+    "Learn to plan, execute, and deliver projects on time and on budget. Master the project lifecycle, scope management, scheduling with Gantt charts and critical-path analysis, risk mitigation, earned-value tracking, and the differences between Agile and Waterfall methodologies.",
   subject: "Project Management",
-  tags: ["curriculum", "interactive", "business", "leadership"],
+  tags: ["curriculum", "interactive", "business", "leadership", "agile", "pmbok"],
   minAge: 14,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   difficultyBand: "beginner",
-  localeSupport: ["en", "es"],
+  localeSupport: ["en"],
+  thumbnail: "/placeholders/lesson-robot.svg",
   learningObjectives: [
     "Define what a project is and distinguish it from ongoing operations",
-    "Describe the five phases of the project lifecycle",
-    "Create a scope statement and identify scope creep",
-    "Build a project schedule using work breakdown structures and Gantt charts",
-    "Identify, assess, and mitigate project risks",
-    "Compare Agile and Waterfall methodologies and choose the right approach"
+    "Describe the five process groups and ten PMBOK knowledge areas",
+    "Create a scope statement, work breakdown structure, and change-control process",
+    "Build a project schedule using Gantt charts, the critical-path method, and PERT estimates",
+    "Plan resources, estimate costs, and measure performance with earned-value management",
+    "Identify, assess, and respond to project risks using a risk register",
+    "Compare Agile (Scrum, Kanban) and Waterfall approaches and select the right methodology"
   ],
   lessons: [
-    /* ── L01 What Is a Project? ── */
+    /* ──────────────────────────────────────────────
+       L01  What Is Project Management? The PM Life Cycle  (video)
+    ────────────────────────────────────────────── */
     {
       id: "project-management-101-l01",
-      title: "What Is a Project?",
+      title: "What Is Project Management? The PM Life Cycle",
       type: "video",
-      duration: 11,
+      duration: 12,
+      objectives: [
+        "Distinguish a project from ongoing operations using PMI's definition",
+        "Explain the triple constraint and how scope, time, and cost interact",
+        "Outline the five process groups of the project lifecycle"
+      ],
       chunks: [
-        { id: "project-management-101-l01-c1", title: "Projects vs. Operations", content: "A project is a temporary endeavor with a defined beginning and end, undertaken to create a unique product, service, or result. It is NOT ongoing operations (daily work that repeats). Building a new website is a project; maintaining that website daily is operations. Projects have three constraints known as the Triple Constraint: Scope (what), Time (when), and Cost (how much). Change one, and the others are affected." },
-        { id: "project-management-101-l01-c2", title: "The Project Manager Role", content: "A project manager (PM) is responsible for planning, executing, and closing projects. Key responsibilities: define objectives, build the team, create the schedule, manage the budget, communicate with stakeholders, and solve problems. A great PM doesn't need to be the technical expert — they need to be an excellent communicator, organizer, and leader. The PM is the bridge between the team and stakeholders." },
-        { id: "project-management-101-l01-c3", title: "Stakeholders and Success Criteria", content: "Stakeholders are anyone affected by the project: the sponsor (who funds it), the team (who builds it), customers (who use it), and management (who oversees it). Before starting, define success criteria — how will you know the project succeeded? Common criteria include: delivered on time, within budget, meets quality standards, and satisfies stakeholder requirements. Without clear criteria, there's no way to know if you've won." }
+        {
+          id: "project-management-101-l01-c1",
+          title: "Projects vs. Operations",
+          content:
+            "The Project Management Institute (PMI) defines a project as a temporary endeavor undertaken to create a unique product, service, or result. 'Temporary' means every project has a definite beginning and end; 'unique' means the deliverable has never been produced in exactly this way before. By contrast, operations are ongoing, repetitive activities that sustain the business — processing payroll, answering support tickets, or restocking inventory. Building a new e-commerce website is a project; maintaining that website daily is operations. Recognizing the difference matters because projects require dedicated planning, whereas operations rely on standardized procedures."
+        },
+        {
+          id: "project-management-101-l01-c2",
+          title: "The Triple Constraint (Iron Triangle)",
+          content:
+            "Every project is governed by three interdependent constraints: Scope (what work will be done and what deliverables produced), Time (the schedule and deadlines), and Cost (the budget and resources consumed). These form the 'Iron Triangle' — change one side and at least one other must adjust. Add features (scope increase) without extending the deadline, and costs rise (overtime, more staff). Cut the budget without reducing scope, and the timeline stretches. A fourth dimension, Quality, sits at the center: it is the result of balancing the three constraints. The project manager's core job is negotiating trade-offs among scope, time, and cost while protecting quality."
+        },
+        {
+          id: "project-management-101-l01-c3",
+          title: "The Five Process Groups",
+          content:
+            "PMI organizes project work into five process groups that may overlap but follow a general order: (1) Initiating — define the project at a high level, secure authorization via the project charter, and identify stakeholders. (2) Planning — build the roadmap: scope statement, WBS, schedule, budget, risk register, and communication plan. (3) Executing — the team performs the planned work and produces deliverables. (4) Monitoring & Controlling — track progress against the plan, manage changes through change control, and ensure quality. (5) Closing — hand over the final product, document lessons learned, release resources, and celebrate. Planning and monitoring consume the most PM effort across the lifecycle."
+        }
       ],
       flashcards: [
-        { id: "project-management-101-l01-f1", front: "A temporary endeavor to create a unique product, service, or result", back: "Project" },
-        { id: "project-management-101-l01-f2", front: "Scope, Time, and Cost — change one and the others shift", back: "The Triple Constraint (Iron Triangle)" },
-        { id: "project-management-101-l01-f3", front: "Anyone affected by or who can influence the project", back: "Stakeholder" },
-        { id: "project-management-101-l01-f4", front: "Measurable conditions that define project success", back: "Success criteria" }
-      ],
-      questions: [
-        { id: "project-management-101-l01-q1", text: "Which is a project, NOT ongoing operations?", options: [{ id: "a", text: "Building a new mobile app" }, { id: "b", text: "Daily customer support calls" }, { id: "c", text: "Weekly payroll processing" }, { id: "d", text: "Monthly inventory restocking" }], correctOptionId: "a", explanation: "Building a new app has a defined start, end, and unique deliverable — that's a project!" },
-        { id: "project-management-101-l01-q2", text: "The Triple Constraint consists of", options: [{ id: "a", text: "Scope, Time, and Cost" }, { id: "b", text: "People, Process, and Technology" }, { id: "c", text: "Plan, Do, and Check" }, { id: "d", text: "Risk, Quality, and Budget" }], correctOptionId: "a", explanation: "Scope (what), Time (when), Cost (how much) — the three sides of the Iron Triangle!" },
-        { id: "project-management-101-l01-q3", text: "Who is a project stakeholder?", options: [{ id: "a", text: "Anyone affected by or who can influence the project" }, { id: "b", text: "Only the project manager" }, { id: "c", text: "Only the customer" }, { id: "d", text: "Only the development team" }], correctOptionId: "a", explanation: "Stakeholders include sponsors, team members, customers, management — anyone with a stake in the outcome!" }
-      ],
-      activities: [{ id: "project-management-101-l01-act1", type: "sorting_buckets", title: "Project or operations?", description: "Sort: Project (redesign company logo, launch new product, build office) vs. Operations (answer daily emails, monthly invoicing, weekly reports)." }]
+        { id: "project-management-101-l01-f1", front: "Project (PMI definition)", back: "A temporary endeavor undertaken to create a unique product, service, or result" },
+        { id: "project-management-101-l01-f2", front: "Triple Constraint (Iron Triangle)", back: "Scope, Time, and Cost — change one side and at least one other must adjust; Quality sits at the center" },
+        { id: "project-management-101-l01-f3", front: "Five process groups in order", back: "Initiating → Planning → Executing → Monitoring & Controlling → Closing" },
+        { id: "project-management-101-l01-f4", front: "Project Charter", back: "The document that formally authorizes the project, names the PM, states objectives, and estimates budget" }
+      ]
     },
 
-    /* ── L02 The Project Lifecycle ── */
+    /* ──────────────────────────────────────────────
+       L02  Scope Definition & Work Breakdown Structure  (interactive)
+    ────────────────────────────────────────────── */
     {
       id: "project-management-101-l02",
-      title: "The Project Lifecycle",
-      type: "video",
-      duration: 12,
+      title: "Scope Definition & Work Breakdown Structure",
+      type: "interactive",
+      duration: 14,
+      objectives: [
+        "Write a scope statement with deliverables, exclusions, constraints, and acceptance criteria",
+        "Decompose project work into a hierarchical Work Breakdown Structure (WBS)",
+        "Identify scope creep and apply a formal change-control process"
+      ],
       chunks: [
-        { id: "project-management-101-l02-c1", title: "Five Phases Overview", content: "Every project follows five phases: 1) Initiation — define the project, get approval, identify stakeholders; 2) Planning — create the roadmap (scope, schedule, budget, resources); 3) Execution — the team does the work; 4) Monitoring & Controlling — track progress, manage changes, ensure quality; 5) Closing — deliver the final product, document lessons learned, release resources. These phases may overlap, but they always happen in this general order." },
-        { id: "project-management-101-l02-c2", title: "Initiation and the Project Charter", content: "The project charter is the document that formally authorizes the project. It includes: project purpose (why), objectives (what), high-level requirements, key stakeholders, estimated budget, and the project manager's authority. Think of it as the project's birth certificate. Without a charter, the project has no official mandate. The charter is typically approved by the project sponsor — the person providing the funding." },
-        { id: "project-management-101-l02-c3", title: "Planning: The Heart of PM", content: "Planning is where most PM work happens. Key planning documents include: Scope Statement (what's included and excluded), Work Breakdown Structure (WBS — breaking work into manageable pieces), Schedule (timeline with milestones), Budget (cost estimates), Risk Register (potential problems), and Communication Plan (who gets what info, when). A well-planned project is 80% more likely to succeed. 'Failing to plan is planning to fail.'" }
+        {
+          id: "project-management-101-l02-c1",
+          title: "Defining Scope",
+          content:
+            "The scope statement is the contract between the project team and stakeholders — it defines what the project WILL and WILL NOT deliver. A solid scope statement includes: deliverables (tangible outputs such as 'ten-page responsive website'), acceptance criteria (measurable conditions that verify quality, e.g., 'loads in under 2 seconds on 4G'), exclusions (work explicitly outside the project — 'no e-commerce or blog features'), constraints (budget ceiling, regulatory deadlines), and assumptions (conditions taken as true, e.g., 'client will provide logo files by week 2'). The scope statement feeds directly into the Work Breakdown Structure."
+        },
+        {
+          id: "project-management-101-l02-c2",
+          title: "Building a Work Breakdown Structure",
+          content:
+            "A Work Breakdown Structure (WBS) decomposes the total project scope into progressively smaller, manageable pieces. The top level is the project itself; the second level shows major deliverables or phases; each subsequent level breaks work down further until you reach 'work packages' — the smallest units that can be estimated and assigned. A website project WBS might look like: Level 1 — Website Redesign; Level 2 — Design, Development, Testing, Launch; Level 3 under Design — Wireframes, Mockups, Style Guide. The 100 % rule requires that each level captures all work in the parent — nothing more, nothing less. Tools like Microsoft Project, Jira, and Monday.com generate WBS diagrams automatically."
+        },
+        {
+          id: "project-management-101-l02-c3",
+          title: "Scope Creep & Change Control",
+          content:
+            "Scope creep is the uncontrolled expansion of project scope without corresponding adjustments to time, cost, or resources. It often starts innocuously — a stakeholder asks for 'just one small tweak' — and compounds into major overruns. Prevention requires a formal change-control process: (1) Document every change request in writing. (2) Analyze the impact on schedule, budget, quality, and risk. (3) Present options to the Change Control Board (CCB) or project sponsor. (4) If approved, update the project plan, budget, and schedule. (5) Communicate changes to all stakeholders. Saying 'yes' to a new feature without this process is saying 'no' to the original deadline."
+        }
+      ],
+      interactiveActivities: [
+        {
+          id: "project-management-101-l02-a1",
+          title: "In Scope or Out of Scope?",
+          type: "sorting_buckets",
+          buckets: ["In Scope", "Out of Scope"],
+          items: [
+            { text: "Design ten responsive web pages", bucket: "In Scope" },
+            { text: "Build a native mobile app", bucket: "Out of Scope" },
+            { text: "Write SEO meta tags for each page", bucket: "In Scope" },
+            { text: "Redesign the company logo", bucket: "Out of Scope" },
+            { text: "User-acceptance testing with the client", bucket: "In Scope" },
+            { text: "Ongoing monthly content updates after launch", bucket: "Out of Scope" }
+          ]
+        }
       ],
       flashcards: [
-        { id: "project-management-101-l02-f1", front: "The five project phases in order", back: "Initiation → Planning → Execution → Monitoring & Controlling → Closing" },
-        { id: "project-management-101-l02-f2", front: "Document that formally authorizes a project", back: "Project Charter" },
-        { id: "project-management-101-l02-f3", front: "Breaking project work into smaller, manageable pieces", back: "Work Breakdown Structure (WBS)" },
-        { id: "project-management-101-l02-f4", front: "The person who provides funding and formal approval", back: "Project Sponsor" }
-      ],
-      questions: [
-        { id: "project-management-101-l02-q1", text: "Which phase comes immediately after Planning?", options: [{ id: "a", text: "Execution" }, { id: "b", text: "Closing" }, { id: "c", text: "Initiation" }, { id: "d", text: "Monitoring" }], correctOptionId: "a", explanation: "The order is: Initiation → Planning → Execution → Monitoring & Controlling → Closing!" },
-        { id: "project-management-101-l02-q2", text: "The project charter", options: [{ id: "a", text: "Formally authorizes the project and names the PM" }, { id: "b", text: "Lists every task in detail" }, { id: "c", text: "Is created after the project ends" }, { id: "d", text: "Replaces the budget" }], correctOptionId: "a", explanation: "The charter is the project's 'birth certificate' — it gives the PM authority to proceed!" },
-        { id: "project-management-101-l02-q3", text: "A Work Breakdown Structure (WBS) is used to", options: [{ id: "a", text: "Decompose project work into smaller, manageable pieces" }, { id: "b", text: "Fire underperforming team members" }, { id: "c", text: "Calculate taxes" }, { id: "d", text: "Write the final report" }], correctOptionId: "a", explanation: "The WBS breaks the project into bite-sized work packages that can be estimated and assigned!" }
-      ],
-      activities: [{ id: "project-management-101-l02-act1", type: "timeline_builder", title: "Project phase timeline", description: "Arrange the five project phases in correct order: Initiation, Planning, Execution, Monitoring & Controlling, Closing." }]
+        { id: "project-management-101-l02-f1", front: "Scope statement", back: "Document defining deliverables, exclusions, constraints, assumptions, and acceptance criteria for the project" },
+        { id: "project-management-101-l02-f2", front: "Work Breakdown Structure (WBS)", back: "Hierarchical decomposition of total project scope into work packages — follows the 100 % rule so nothing is missed or duplicated" },
+        { id: "project-management-101-l02-f3", front: "Scope creep", back: "Uncontrolled expansion of project scope without adjusting time, cost, or resources — the #1 project killer" },
+        { id: "project-management-101-l02-f4", front: "Change Control Board (CCB)", back: "A group authorized to review, approve, or reject change requests and ensure impacts are evaluated before implementation" }
+      ]
     },
 
-    /* ── L03 Scope Management ── */
+    /* ──────────────────────────────────────────────
+       L03  Scope & Planning Checkpoint  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "project-management-101-l03",
-      title: "Scope Management",
-      type: "video",
-      duration: 12,
-      chunks: [
-        { id: "project-management-101-l03-c1", title: "Defining Scope", content: "Scope defines what the project WILL and WILL NOT include. A scope statement has: project deliverables (what you'll produce), acceptance criteria (how to verify quality), exclusions (what you WON'T do), constraints (limitations like budget/time), and assumptions. Example: A website project's scope might include 'design 10 pages with mobile responsiveness' and exclude 'e-commerce functionality and blog features.'" },
-        { id: "project-management-101-l03-c2", title: "Scope Creep: The Silent Killer", content: "Scope creep is the uncontrolled expansion of project scope without adjusting time, cost, or resources. It happens when stakeholders add 'just one more feature' repeatedly. Example: A client asks for 'a simple logo' → then wants 3 color variations → then a business card → then letterhead → now you're doing a full brand identity! Prevention: use a formal change control process. Every change request must be documented, evaluated for impact, and approved before implementation." },
-        { id: "project-management-101-l03-c3", title: "Change Control Process", content: "When someone requests a scope change: 1) Document the request in writing, 2) Analyze the impact on schedule, budget, and quality, 3) Present options to decision-makers (approve, reject, or defer), 4) If approved, update the project plan, 5) Communicate changes to all stakeholders. A Change Control Board (CCB) may review significant changes. This process ensures changes are intentional, not accidental. Every 'yes' to a new feature is a 'no' to the original timeline." }
-      ],
-      flashcards: [
-        { id: "project-management-101-l03-f1", front: "Uncontrolled expansion of project scope without adjusting time/cost", back: "Scope creep" },
-        { id: "project-management-101-l03-f2", front: "Document that defines what is and is NOT included in the project", back: "Scope statement" },
-        { id: "project-management-101-l03-f3", front: "Formal process for evaluating and approving scope changes", back: "Change control process" },
-        { id: "project-management-101-l03-f4", front: "Group that reviews and approves significant project changes", back: "Change Control Board (CCB)" }
-      ],
-      questions: [
-        { id: "project-management-101-l03-q1", text: "Scope creep is", options: [{ id: "a", text: "Uncontrolled expansion of project work without adjusting constraints" }, { id: "b", text: "A method for reducing project scope" }, { id: "c", text: "A scheduling technique" }, { id: "d", text: "A type of risk analysis" }], correctOptionId: "a", explanation: "Scope creep = adding work without adding time or budget — it's the #1 project killer!" },
-        { id: "project-management-101-l03-q2", text: "The first step in change control is", options: [{ id: "a", text: "Document the change request in writing" }, { id: "b", text: "Immediately implement the change" }, { id: "c", text: "Fire the person who asked" }, { id: "d", text: "Cancel the project" }], correctOptionId: "a", explanation: "Every change starts with documentation — no verbal-only changes allowed!" },
-        { id: "project-management-101-l03-q3", text: "A scope statement should include", options: [{ id: "a", text: "Deliverables, exclusions, constraints, and acceptance criteria" }, { id: "b", text: "Only the project title" }, { id: "c", text: "Team members' salaries" }, { id: "d", text: "The company's mission statement" }], correctOptionId: "a", explanation: "The scope statement defines what you WILL deliver, what you WON'T, and how to verify quality!" }
-      ],
-      activities: [{ id: "project-management-101-l03-act1", type: "sorting_buckets", title: "In scope or out of scope?", description: "For a school event planning project: In Scope (book venue, arrange catering, send invitations) vs. Out of Scope (redesign school mascot, hire DJ for after-party, renovate auditorium)." }]
-    },
-
-    /* ── L04 Project Management Checkpoint ── */
-    {
-      id: "project-management-101-l04",
-      title: "Project Management Checkpoint",
+      title: "Scope & Planning Checkpoint",
       type: "quiz",
       duration: 8,
+      objectives: ["Demonstrate understanding of projects, the triple constraint, scope management, and the WBS"],
       questions: [
-        { id: "project-management-101-l04-q1", text: "The Triple Constraint includes Scope, Time, and", options: [{ id: "a", text: "Cost" }, { id: "b", text: "Quality" }, { id: "c", text: "Risk" }, { id: "d", text: "Communication" }], correctOptionId: "a", explanation: "Scope, Time, Cost — the three sides of the Iron Triangle!" },
-        { id: "project-management-101-l04-q2", text: "Which document formally authorizes a project?", options: [{ id: "a", text: "Project Charter" }, { id: "b", text: "Budget spreadsheet" }, { id: "c", text: "Team roster" }, { id: "d", text: "Risk register" }], correctOptionId: "a", explanation: "The charter is the project's birth certificate — it gives the PM authority to proceed!" },
-        { id: "project-management-101-l04-q3", text: "The best way to prevent scope creep is", options: [{ id: "a", text: "Use a formal change control process" }, { id: "b", text: "Say yes to every request immediately" }, { id: "c", text: "Never talk to stakeholders" }, { id: "d", text: "Skip the planning phase" }], correctOptionId: "a", explanation: "Change control ensures every scope change is documented, evaluated, and formally approved!" }
+        {
+          id: "project-management-101-l03-q1",
+          text: "Which of the following is a project rather than ongoing operations?",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Launching a new product line" },
+            { id: "b", text: "Processing weekly payroll" },
+            { id: "c", text: "Restocking warehouse inventory" },
+            { id: "d", text: "Responding to daily customer emails" }
+          ],
+          correctOptionId: "a",
+          explanation: "A product launch is temporary with a unique deliverable — that's a project. The other options are repetitive operations."
+        },
+        {
+          id: "project-management-101-l03-q2",
+          text: "In the triple constraint, adding scope without extending the deadline will most likely:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Decrease cost" },
+            { id: "b", text: "Increase cost or reduce quality" },
+            { id: "c", text: "Have no effect on the project" },
+            { id: "d", text: "Eliminate risk" }
+          ],
+          correctOptionId: "b",
+          explanation: "The Iron Triangle means changing one constraint forces trade-offs in the others — more scope in the same time costs more or cuts quality."
+        },
+        {
+          id: "project-management-101-l03-q3",
+          text: "The 100 % rule in a WBS means:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Every level must capture all the work of its parent — no more, no less" },
+            { id: "b", text: "The project must be 100 % complete before any testing" },
+            { id: "c", text: "100 % of the budget must be spent" },
+            { id: "d", text: "All team members must work 100 % of the time" }
+          ],
+          correctOptionId: "a",
+          explanation: "The 100 % rule ensures the WBS accounts for all deliverable work without gaps or overlap."
+        },
+        {
+          id: "project-management-101-l03-q4",
+          text: "The first step in a formal change-control process is:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Immediately implement the requested change" },
+            { id: "b", text: "Document the change request in writing" },
+            { id: "c", text: "Cancel the project" },
+            { id: "d", text: "Extend the deadline automatically" }
+          ],
+          correctOptionId: "b",
+          explanation: "Every change must first be documented so its impact on schedule, budget, and quality can be formally evaluated."
+        }
+      ],
+      quizBlueprint: {
+        totalQuestions: 4,
+        bloomProfile: { remember: 2, understand: 2 }
+      }
+    },
+
+    /* ──────────────────────────────────────────────
+       L04  Scheduling — Gantt Charts & Critical Path Method  (video)
+    ────────────────────────────────────────────── */
+    {
+      id: "project-management-101-l04",
+      title: "Scheduling: Gantt Charts and the Critical Path Method",
+      type: "video",
+      duration: 13,
+      objectives: [
+        "Construct a Gantt chart from a WBS with task dependencies",
+        "Calculate the critical path and identify tasks with float",
+        "Apply three-point (PERT) estimation to derive expected durations"
+      ],
+      chunks: [
+        {
+          id: "project-management-101-l04-c1",
+          title: "From WBS to Schedule",
+          content:
+            "Scheduling transforms the WBS into a time-bound plan. For each work package, estimate three things: duration (how long?), resources (who does it?), and dependencies (what must finish first?). PMI defines four dependency types: Finish-to-Start (FS) — Task A must finish before Task B starts (most common, e.g., pour foundation before framing walls); Start-to-Start (SS) — A and B begin simultaneously; Finish-to-Finish (FF) — A and B end together; Start-to-Finish (SF) — rare, used mainly in just-in-time manufacturing. Identifying dependencies correctly prevents scheduling conflicts and reveals the project's critical path."
+        },
+        {
+          id: "project-management-101-l04-c2",
+          title: "Gantt Charts and the Critical Path",
+          content:
+            "A Gantt chart plots tasks as horizontal bars on a timeline, with arrows showing dependencies. It provides an instant visual of what happens when and in what order. The Critical Path Method (CPM) identifies the longest sequence of dependent tasks through the network — this determines the minimum project duration. Any delay on a critical-path task delays the entire project. Tasks NOT on the critical path have 'total float' (or slack) — extra time before they affect the end date. Example: if a five-day task has three days of float, it can slip three days without moving the deadline. Tools like Microsoft Project, Primavera P6, and Jira with timeline views calculate the critical path automatically."
+        },
+        {
+          id: "project-management-101-l04-c3",
+          title: "PERT Estimation and Milestones",
+          content:
+            "Accurate estimates are notoriously difficult. The Program Evaluation and Review Technique (PERT) uses three estimates per task: Optimistic (O — best case), Most Likely (ML), and Pessimistic (P — worst case). The expected duration E = (O + 4×ML + P) ÷ 6, which produces a weighted average biased toward the most likely outcome. Example: O = 3 days, ML = 5 days, P = 13 days → E = (3 + 20 + 13) ÷ 6 = 6 days. Milestones are zero-duration markers on the Gantt chart representing significant checkpoints — 'Design Approved,' 'Beta Launch,' 'Go-Live.' They give stakeholders clear progress indicators without cluttering the schedule with task details."
+        }
       ],
       flashcards: [
-        { id: "project-management-101-l04-f1", front: "Initiation → Planning → Execution → M&C → Closing", back: "The five project management phases" },
-        { id: "project-management-101-l04-f2", front: "The #1 reason projects fail", back: "Poor scope management (scope creep)" },
-        { id: "project-management-101-l04-f3", front: "Scope + Time + Cost", back: "The Triple Constraint / Iron Triangle" },
-        { id: "project-management-101-l04-f4", front: "Failing to plan is...", back: "...planning to fail" }
+        { id: "project-management-101-l04-f1", front: "Gantt chart", back: "A bar chart plotting tasks on a timeline with dependency arrows — the most popular project-schedule visualization" },
+        { id: "project-management-101-l04-f2", front: "Critical Path Method (CPM)", back: "Technique that identifies the longest chain of dependent tasks, determining the minimum project duration — zero float on critical tasks" },
+        { id: "project-management-101-l04-f3", front: "PERT formula", back: "Expected duration = (Optimistic + 4 × Most Likely + Pessimistic) ÷ 6 — a weighted three-point estimate" },
+        { id: "project-management-101-l04-f4", front: "Float (slack)", back: "The amount of time a non-critical task can be delayed without affecting the project end date — critical-path tasks have zero float" }
       ]
     },
 
-    /* ── L05 Scheduling ── */
+    /* ──────────────────────────────────────────────
+       L05  Resource Planning & Budgeting  (interactive)
+    ────────────────────────────────────────────── */
     {
       id: "project-management-101-l05",
-      title: "Scheduling",
-      type: "video",
-      duration: 13,
+      title: "Resource Planning and Budgeting",
+      type: "interactive",
+      duration: 14,
+      objectives: [
+        "Create a resource plan assigning people, equipment, and materials to work packages",
+        "Estimate project costs using analogous, parametric, and bottom-up techniques",
+        "Measure project health with Earned Value Management (EVM) metrics"
+      ],
       chunks: [
-        { id: "project-management-101-l05-c1", title: "Work Breakdown to Schedule", content: "Scheduling starts with the WBS. Take each work package and estimate: How long will it take? (duration), Who will do it? (resource), What must finish before it can start? (dependencies). There are four types of dependencies: Finish-to-Start (A must finish before B starts — most common), Start-to-Start (A and B start together), Finish-to-Finish (A and B end together), and Start-to-Finish (rare)." },
-        { id: "project-management-101-l05-c2", title: "Gantt Charts and Critical Path", content: "A Gantt chart is a bar chart showing tasks on a timeline — each bar represents a task's duration. Dependencies are shown with arrows. The Critical Path is the longest sequence of dependent tasks — it determines the minimum project duration. If any task on the critical path is delayed, the entire project is delayed. Tasks NOT on the critical path have 'float' or 'slack' — they can be delayed without affecting the end date." },
-        { id: "project-management-101-l05-c3", title: "Milestones and Estimation", content: "Milestones are significant checkpoints with zero duration — they mark the completion of a major phase or deliverable (e.g., 'Design Approved' or 'Beta Launch'). For estimation, use three-point estimating: Optimistic (best case), Most Likely, and Pessimistic (worst case). Formula: (O + 4ML + P) ÷ 6 = expected duration. This gives a weighted average that accounts for uncertainty." }
+        {
+          id: "project-management-101-l05-c1",
+          title: "Resource Planning",
+          content:
+            "Resource planning answers: Who and what do we need, when, and for how long? Resources include people (developers, designers, analysts), equipment (servers, testing devices), and materials (licenses, supplies). A Responsibility Assignment Matrix (RAM), often formatted as a RACI chart, clarifies roles: Responsible (does the work), Accountable (owns the outcome — only one person), Consulted (provides input), and Informed (kept in the loop). Over-allocation — assigning one person to too many concurrent tasks — is a common pitfall. Resource leveling smooths workloads by shifting non-critical tasks within their float so no one is overloaded."
+        },
+        {
+          id: "project-management-101-l05-c2",
+          title: "Cost Estimation Techniques",
+          content:
+            "Three primary techniques: (1) Analogous estimation — use the actual cost of a similar past project as a baseline; fast but less accurate. (2) Parametric estimation — apply a statistical relationship: if one web page costs $2,000, ten pages ≈ $20,000. (3) Bottom-up estimation — estimate each work package individually and sum them; the most accurate but most time-consuming. Estimates should include contingency reserves (for known risks) and management reserves (for unknown unknowns). The cost baseline is the approved, time-phased budget against which actual spending is tracked — it does NOT include management reserves."
+        },
+        {
+          id: "project-management-101-l05-c3",
+          title: "Earned Value Management (EVM)",
+          content:
+            "EVM integrates scope, schedule, and cost into three key metrics measured at any point during execution: Planned Value (PV) — the budgeted cost of work scheduled to be done by now. Earned Value (EV) — the budgeted cost of work actually completed. Actual Cost (AC) — the real money spent. From these: Schedule Variance (SV) = EV − PV (negative = behind schedule). Cost Variance (CV) = EV − AC (negative = over budget). Cost Performance Index (CPI) = EV ÷ AC (below 1.0 = over budget). Schedule Performance Index (SPI) = EV ÷ PV (below 1.0 = behind schedule). EVM gives an objective, quantitative health check long before subjective status reports reveal trouble."
+        }
+      ],
+      interactiveActivities: [
+        {
+          id: "project-management-101-l05-a1",
+          title: "RACI Assignment",
+          type: "matching_pairs",
+          pairs: [
+            { left: "Responsible (R)", right: "Person who does the work" },
+            { left: "Accountable (A)", right: "Person who owns the outcome — only one per task" },
+            { left: "Consulted (C)", right: "Subject-matter expert who provides input" },
+            { left: "Informed (I)", right: "Stakeholder kept in the loop on progress" }
+          ]
+        }
       ],
       flashcards: [
-        { id: "project-management-101-l05-f1", front: "A bar chart showing tasks plotted against a timeline", back: "Gantt chart" },
-        { id: "project-management-101-l05-f2", front: "The longest sequence of dependent tasks determining minimum project duration", back: "Critical Path" },
-        { id: "project-management-101-l05-f3", front: "Significant zero-duration checkpoints marking phase completions", back: "Milestones" },
-        { id: "project-management-101-l05-f4", front: "(Optimistic + 4×Most Likely + Pessimistic) ÷ 6", back: "Three-point estimate (PERT formula)" }
-      ],
-      questions: [
-        { id: "project-management-101-l05-q1", text: "If a critical path task is delayed by 3 days, the project end date", options: [{ id: "a", text: "Is delayed by at least 3 days" }, { id: "b", text: "Is not affected" }, { id: "c", text: "Moves earlier by 3 days" }, { id: "d", text: "Stays the same because of float" }], correctOptionId: "a", explanation: "Critical path tasks have zero float — any delay pushes the project end date!" },
-        { id: "project-management-101-l05-q2", text: "A Gantt chart shows", options: [{ id: "a", text: "Tasks as horizontal bars plotted on a timeline" }, { id: "b", text: "Only the project budget" }, { id: "c", text: "Stakeholder contact information" }, { id: "d", text: "Team member salaries" }], correctOptionId: "a", explanation: "Gantt charts are the most popular way to visualize project schedules!" },
-        { id: "project-management-101-l05-q3", text: "Using three-point estimation: O=4, ML=6, P=14. The expected duration is", options: [{ id: "a", text: "7 days" }, { id: "b", text: "6 days" }, { id: "c", text: "8 days" }, { id: "d", text: "14 days" }], correctOptionId: "a", explanation: "(4 + 4×6 + 14) ÷ 6 = (4 + 24 + 14) ÷ 6 = 42 ÷ 6 = 7 days!" }
-      ],
-      activities: [{ id: "project-management-101-l05-act1", type: "timeline_builder", title: "Build a Gantt chart", description: "Arrange tasks for a school play project: Write script (2 weeks) → Auditions (1 week) → Rehearsals (4 weeks) → Build set (3 weeks, can start with rehearsals) → Dress rehearsal (3 days) → Performance night. Identify the critical path." }]
+        { id: "project-management-101-l05-f1", front: "RACI chart", back: "Responsibility Assignment Matrix — Responsible (does work), Accountable (owns outcome), Consulted (gives input), Informed (kept updated)" },
+        { id: "project-management-101-l05-f2", front: "Bottom-up estimation", back: "Estimate each work package individually and sum for total cost — most accurate but most time-consuming technique" },
+        { id: "project-management-101-l05-f3", front: "Earned Value (EV)", back: "The budgeted cost of work actually completed — compared against PV and AC to assess schedule and cost performance" },
+        { id: "project-management-101-l05-f4", front: "Cost Performance Index (CPI)", back: "EV ÷ AC — a CPI below 1.0 means the project is over budget; above 1.0 means under budget" }
+      ]
     },
 
-    /* ── L06 Risk Management ── */
+    /* ──────────────────────────────────────────────
+       L06  Scheduling & Budgeting Checkpoint  (quiz)
+    ────────────────────────────────────────────── */
     {
       id: "project-management-101-l06",
-      title: "Risk Management",
-      type: "video",
-      duration: 12,
-      chunks: [
-        { id: "project-management-101-l06-c1", title: "Identifying Risks", content: "A risk is an uncertain event that, if it occurs, could positively or negatively affect the project. Most people focus on threats (negative risks), but opportunities (positive risks) exist too. Common project risks: key team member leaves, technology doesn't work as expected, requirements change, vendor delivers late, budget gets cut. Use brainstorming, checklists, and expert judgment to identify risks early — the Risk Register documents all identified risks." },
-        { id: "project-management-101-l06-c2", title: "Risk Assessment: Probability × Impact", content: "Assess each risk on two dimensions: Probability (how likely? Low/Medium/High) and Impact (how serious? Low/Medium/High). Create a Risk Matrix: High probability + High impact = critical risk (address immediately). Low probability + Low impact = minor risk (monitor only). Priority Score = Probability × Impact. A risk with 80% chance and $50,000 impact has an Expected Monetary Value (EMV) of $40,000 — this helps prioritize." },
-        { id: "project-management-101-l06-c3", title: "Risk Response Strategies", content: "Four strategies for negative risks (threats): Avoid (eliminate the risk entirely by changing the plan), Mitigate (reduce probability or impact), Transfer (shift to a third party — like insurance), Accept (acknowledge and prepare a contingency plan). For positive risks (opportunities): Exploit (make it happen), Enhance (increase probability), Share (partner with others to capture it), Accept. Always have a contingency plan — Plan B for your most critical risks." }
-      ],
-      flashcards: [
-        { id: "project-management-101-l06-f1", front: "An uncertain event that could affect the project positively or negatively", back: "Risk" },
-        { id: "project-management-101-l06-f2", front: "Probability × Impact", back: "Risk Priority Score / Expected Monetary Value" },
-        { id: "project-management-101-l06-f3", front: "Four threat response strategies", back: "Avoid, Mitigate, Transfer, Accept" },
-        { id: "project-management-101-l06-f4", front: "Document listing all identified risks with probability, impact, and response", back: "Risk Register" }
-      ],
+      title: "Scheduling & Budgeting Checkpoint",
+      type: "quiz",
+      duration: 8,
+      objectives: ["Demonstrate knowledge of scheduling, estimation, and earned-value analysis"],
       questions: [
-        { id: "project-management-101-l06-q1", text: "Buying insurance to cover potential losses is an example of", options: [{ id: "a", text: "Risk transfer" }, { id: "b", text: "Risk avoidance" }, { id: "c", text: "Risk acceptance" }, { id: "d", text: "Risk mitigation" }], correctOptionId: "a", explanation: "Insurance transfers the financial impact to a third party (the insurance company)!" },
-        { id: "project-management-101-l06-q2", text: "A risk with 60% probability and $10,000 impact has an EMV of", options: [{ id: "a", text: "$6,000" }, { id: "b", text: "$10,000" }, { id: "c", text: "$60,000" }, { id: "d", text: "$4,000" }], correctOptionId: "a", explanation: "EMV = 0.60 × $10,000 = $6,000!" },
-        { id: "project-management-101-l06-q3", text: "The Risk Register is", options: [{ id: "a", text: "A document listing all identified risks with their assessments and responses" }, { id: "b", text: "A list of team members" }, { id: "c", text: "The project budget" }, { id: "d", text: "A type of Gantt chart" }], correctOptionId: "a", explanation: "The Risk Register is the central document for tracking all project risks!" }
+        {
+          id: "project-management-101-l06-q1",
+          text: "If a critical-path task is delayed by 5 days, the project end date will:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Not change — critical tasks have float" },
+            { id: "b", text: "Be delayed by at least 5 days" },
+            { id: "c", text: "Move earlier by 5 days" },
+            { id: "d", text: "Remain the same because milestones absorb delays" }
+          ],
+          correctOptionId: "b",
+          explanation: "Critical-path tasks have zero float — any delay directly extends the project end date by the same amount."
+        },
+        {
+          id: "project-management-101-l06-q2",
+          text: "Using PERT: Optimistic = 4 days, Most Likely = 6 days, Pessimistic = 14 days. The expected duration is:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "7 days" },
+            { id: "b", text: "6 days" },
+            { id: "c", text: "8 days" },
+            { id: "d", text: "14 days" }
+          ],
+          correctOptionId: "a",
+          explanation: "E = (4 + 4×6 + 14) ÷ 6 = (4 + 24 + 14) ÷ 6 = 42 ÷ 6 = 7 days."
+        },
+        {
+          id: "project-management-101-l06-q3",
+          text: "A project has EV = $80,000 and AC = $100,000. The Cost Performance Index (CPI) is:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "0.80 — the project is over budget" },
+            { id: "b", text: "1.25 — the project is under budget" },
+            { id: "c", text: "1.00 — the project is on budget" },
+            { id: "d", text: "0.50 — the project should be cancelled" }
+          ],
+          correctOptionId: "a",
+          explanation: "CPI = EV ÷ AC = $80k ÷ $100k = 0.80. Below 1.0 means spending more than the value of work completed — over budget."
+        },
+        {
+          id: "project-management-101-l06-q4",
+          text: "In a RACI chart, only one person per task should be:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Informed" },
+            { id: "b", text: "Consulted" },
+            { id: "c", text: "Accountable" },
+            { id: "d", text: "Responsible" }
+          ],
+          correctOptionId: "c",
+          explanation: "Exactly one person is Accountable per task — they own the outcome. Multiple people can be Responsible, Consulted, or Informed."
+        }
       ],
-      activities: [{ id: "project-management-101-l06-act1", type: "matching_pairs", title: "Risk response strategy", description: "Match the scenario to the strategy: Cancel outdoor event → Avoid, Add backup generator → Mitigate, Buy event insurance → Transfer, Accept rain might happen → Accept." }]
+      quizBlueprint: {
+        totalQuestions: 4,
+        bloomProfile: { remember: 1, understand: 2, apply: 1 }
+      }
     },
 
-    /* ── L07 Agile vs. Waterfall ── */
+    /* ──────────────────────────────────────────────
+       L07  Risk Management & Stakeholder Communication  (video)
+    ────────────────────────────────────────────── */
     {
       id: "project-management-101-l07",
-      title: "Agile vs. Waterfall",
+      title: "Risk Management and Stakeholder Communication",
       type: "video",
       duration: 13,
+      objectives: [
+        "Build a risk register with probability, impact, and response strategies",
+        "Calculate Expected Monetary Value (EMV) to prioritize risks",
+        "Design a stakeholder communication plan using a power/interest grid"
+      ],
       chunks: [
-        { id: "project-management-101-l07-c1", title: "Waterfall Methodology", content: "Waterfall is a sequential, phase-by-phase approach: Requirements → Design → Build → Test → Deploy. Each phase must be completed before the next begins — like water flowing downhill, you don't go back. Best for: well-defined requirements that won't change (construction, manufacturing, regulatory projects). Strengths: clear milestones, predictable timelines, extensive documentation. Weakness: inflexible — if requirements change mid-project, it's expensive and disruptive to go back." },
-        { id: "project-management-101-l07-c2", title: "Agile Methodology", content: "Agile delivers work in short cycles called sprints (usually 2-4 weeks). Each sprint produces a working increment of the product. The team plans, builds, tests, and gets feedback in every sprint — then adapts. Key Agile roles: Product Owner (defines priorities), Scrum Master (removes obstacles), Development Team (builds the product). Best for: software, creative projects, anything with evolving requirements. The Agile Manifesto values: Individuals over processes, Working software over documentation, Customer collaboration over contracts, Responding to change over following a plan." },
-        { id: "project-management-101-l07-c3", title: "Choosing the Right Approach", content: "Choose Waterfall when: requirements are fixed, regulatory compliance requires documentation, the project is well-understood. Choose Agile when: requirements may change, speed to market matters, customer feedback is essential. Hybrid approaches are common: using Waterfall for overall planning but Agile for execution phases. There's no 'best' methodology — only the best fit for your project. The key question: How much uncertainty is there? More uncertainty = Agile. Less uncertainty = Waterfall." }
+        {
+          id: "project-management-101-l07-c1",
+          title: "Identifying and Assessing Risks",
+          content:
+            "A risk is an uncertain event or condition that, if it occurs, has a positive or negative effect on at least one project objective. Risks are identified through brainstorming, expert interviews, SWOT analysis, and historical checklists. Each risk is recorded in the Risk Register with its description, category, probability (High/Medium/Low or numeric 0–1), impact (H/M/L or dollar value), and a risk score = Probability × Impact. A Probability-Impact Matrix visualizes priorities: high-probability, high-impact risks sit in the red zone and demand immediate action. Expected Monetary Value (EMV) = probability × dollar impact — e.g., a 30 % chance of a $50,000 loss = $15,000 EMV, useful for comparing risks and sizing contingency reserves."
+        },
+        {
+          id: "project-management-101-l07-c2",
+          title: "Risk Response Strategies",
+          content:
+            "For threats (negative risks): Avoid — eliminate the risk by changing the plan (e.g., use proven technology instead of experimental). Mitigate — reduce the probability or impact (e.g., add automated tests to catch defects earlier). Transfer — shift the impact to a third party via insurance, warranties, or fixed-price contracts. Accept — acknowledge the risk and create a contingency plan (Plan B). For opportunities (positive risks): Exploit — ensure the opportunity happens. Enhance — increase its probability or impact. Share — partner with another organization to capture the benefit. Accept — welcome it if it occurs. Every identified risk should have an assigned owner and an agreed response."
+        },
+        {
+          id: "project-management-101-l07-c3",
+          title: "Stakeholder Communication",
+          content:
+            "Effective communication is the PM's most important soft skill — PMI estimates project managers spend up to 90 % of their time communicating. A Communication Plan defines: who receives information, what information they need, how it is delivered (email, dashboard, meeting), and how often (daily stand-ups, weekly reports, monthly steering committees). A Power/Interest Grid classifies stakeholders into four quadrants: High Power + High Interest → Manage Closely (executive sponsors); High Power + Low Interest → Keep Satisfied; Low Power + High Interest → Keep Informed; Low Power + Low Interest → Monitor. Tailoring communication to each quadrant prevents information overload for some and under-communication for others."
+        }
       ],
       flashcards: [
-        { id: "project-management-101-l07-f1", front: "Sequential, phase-based methodology where you don't go back", back: "Waterfall" },
-        { id: "project-management-101-l07-f2", front: "Iterative methodology delivering work in short 2-4 week cycles", back: "Agile (Scrum)" },
-        { id: "project-management-101-l07-f3", front: "Short development cycle in Agile (usually 2-4 weeks)", back: "Sprint" },
-        { id: "project-management-101-l07-f4", front: "Agile role that defines priorities and represents the customer", back: "Product Owner" }
-      ],
-      questions: [
-        { id: "project-management-101-l07-q1", text: "Agile delivers work in short cycles called", options: [{ id: "a", text: "Sprints" }, { id: "b", text: "Phases" }, { id: "c", text: "Milestones" }, { id: "d", text: "Charters" }], correctOptionId: "a", explanation: "Sprints are 2-4 week cycles where the team plans, builds, tests, and gets feedback!" },
-        { id: "project-management-101-l07-q2", text: "Waterfall is best for projects with", options: [{ id: "a", text: "Well-defined, fixed requirements" }, { id: "b", text: "Constantly changing requirements" }, { id: "c", text: "No deadlines" }, { id: "d", text: "Only one team member" }], correctOptionId: "a", explanation: "Waterfall works best when you know exactly what you're building from the start!" },
-        { id: "project-management-101-l07-q3", text: "The Scrum Master's primary role is to", options: [{ id: "a", text: "Remove obstacles and facilitate the team's process" }, { id: "b", text: "Write all the code" }, { id: "c", text: "Set the project budget" }, { id: "d", text: "Approve all change requests" }], correctOptionId: "a", explanation: "The Scrum Master is a servant-leader who removes blockers and protects the team!" }
-      ],
-      activities: [{ id: "project-management-101-l07-act1", type: "sorting_buckets", title: "Agile or Waterfall?", description: "Classify: Agile (mobile app with evolving features, startup MVP, game development) vs. Waterfall (bridge construction, FDA drug approval, payroll system migration)." }]
+        { id: "project-management-101-l07-f1", front: "Risk Register", back: "Central document listing every identified risk with its probability, impact, EMV, response strategy, and assigned owner" },
+        { id: "project-management-101-l07-f2", front: "Expected Monetary Value (EMV)", back: "Probability × dollar impact — used to compare risks and size contingency reserves (e.g., 30 % × $50 k = $15 k)" },
+        { id: "project-management-101-l07-f3", front: "Four threat response strategies", back: "Avoid (eliminate), Mitigate (reduce), Transfer (shift to third party), Accept (acknowledge with contingency)" },
+        { id: "project-management-101-l07-f4", front: "Power/Interest Grid", back: "Stakeholder classification tool — High Power + High Interest = Manage Closely; Low Power + Low Interest = Monitor" }
+      ]
     },
 
-    /* ── L08 Project Management Final Assessment ── */
+    /* ──────────────────────────────────────────────
+       L08  Agile, Scrum & Kanban vs. Waterfall  (interactive)
+    ────────────────────────────────────────────── */
     {
       id: "project-management-101-l08",
-      title: "Project Management Final Assessment",
-      type: "quiz",
-      duration: 10,
-      questions: [
-        { id: "project-management-101-l08-q1", text: "A project is different from operations because it is", options: [{ id: "a", text: "Temporary with a unique deliverable" }, { id: "b", text: "Ongoing and repetitive" }, { id: "c", text: "Always under budget" }, { id: "d", text: "Led by a CEO" }], correctOptionId: "a", explanation: "Projects are temporary and produce unique results — operations are ongoing!" },
-        { id: "project-management-101-l08-q2", text: "The critical path determines", options: [{ id: "a", text: "The minimum project duration" }, { id: "b", text: "The maximum budget" }, { id: "c", text: "The number of stakeholders" }, { id: "d", text: "The risk register format" }], correctOptionId: "a", explanation: "The critical path is the longest chain of dependent tasks — it sets the project's end date!" },
-        { id: "project-management-101-l08-q3", text: "An Agile sprint typically lasts", options: [{ id: "a", text: "2-4 weeks" }, { id: "b", text: "6-12 months" }, { id: "c", text: "1 day" }, { id: "d", text: "1 year" }], correctOptionId: "a", explanation: "Sprints are short, focused cycles — usually 2-4 weeks — delivering working increments!" }
+      title: "Agile, Scrum & Kanban vs. Waterfall",
+      type: "interactive",
+      duration: 15,
+      objectives: [
+        "Compare Waterfall's sequential phases with Agile's iterative sprints",
+        "Describe Scrum roles, ceremonies, and artifacts including burndown charts",
+        "Explain Kanban's visual board and Work-In-Progress (WIP) limits"
+      ],
+      chunks: [
+        {
+          id: "project-management-101-l08-c1",
+          title: "Waterfall Methodology",
+          content:
+            "Waterfall follows a strict sequential flow: Requirements → Design → Implementation → Testing → Deployment → Maintenance. Each phase must be completed and signed off before the next begins — like water flowing downhill, you don't go back. Waterfall excels when requirements are well-defined and stable: construction, regulatory compliance, hardware manufacturing. Strengths include clear milestones, predictable timelines, and thorough documentation. The main weakness is inflexibility — if requirements change mid-project, rework is expensive because earlier phases must be revisited. For this reason, Waterfall is less suited to software projects with evolving user needs."
+        },
+        {
+          id: "project-management-101-l08-c2",
+          title: "Scrum Framework",
+          content:
+            "Scrum is the most popular Agile framework. Work is delivered in fixed-length sprints (typically two weeks). Three roles define the team: the Product Owner prioritizes the Product Backlog (ordered list of features), the Scrum Master facilitates the process and removes impediments, and the Development Team self-organizes to deliver a potentially shippable increment each sprint. Five ceremonies structure the rhythm: Sprint Planning (select backlog items for the sprint), Daily Stand-up (15-minute sync — what I did, what I'll do, any blockers), Sprint Review (demo the increment to stakeholders), Sprint Retrospective (reflect on process improvements), and Backlog Refinement (clarify upcoming items). The burndown chart tracks remaining work versus time — a line trending toward zero by sprint end indicates healthy progress."
+        },
+        {
+          id: "project-management-101-l08-c3",
+          title: "Kanban and Choosing the Right Approach",
+          content:
+            "Kanban visualizes work on a board with columns representing stages (To Do → In Progress → Review → Done). The core rule is limiting Work In Progress (WIP) — e.g., only three items may be 'In Progress' at once. When a slot opens, the team pulls the next highest-priority item. WIP limits prevent multitasking overload and expose bottlenecks: if the 'Review' column is always full, the team knows reviews need more capacity. Unlike Scrum, Kanban has no fixed sprints or prescribed roles — it's a continuous flow. Tools like Jira, Trello, and Azure DevOps support both frameworks. Choosing the right approach depends on uncertainty: high uncertainty and evolving requirements favor Agile (Scrum or Kanban); stable, well-understood requirements favor Waterfall. Many organizations use hybrid approaches — Waterfall for planning, Agile for execution."
+        }
+      ],
+      interactiveActivities: [
+        {
+          id: "project-management-101-l08-a1",
+          title: "Agile or Waterfall?",
+          type: "sorting_buckets",
+          buckets: ["Agile (Scrum/Kanban)", "Waterfall"],
+          items: [
+            { text: "Mobile app with evolving user requirements", bucket: "Agile (Scrum/Kanban)" },
+            { text: "Bridge construction with fixed blueprints", bucket: "Waterfall" },
+            { text: "Startup MVP needing rapid iteration", bucket: "Agile (Scrum/Kanban)" },
+            { text: "FDA medical-device approval documentation", bucket: "Waterfall" },
+            { text: "E-commerce site redesign with A/B testing", bucket: "Agile (Scrum/Kanban)" },
+            { text: "Payroll system migration with strict regulations", bucket: "Waterfall" },
+            { text: "Game development with player-feedback loops", bucket: "Agile (Scrum/Kanban)" },
+            { text: "Government infrastructure with fixed contracts", bucket: "Waterfall" }
+          ]
+        }
       ],
       flashcards: [
-        { id: "project-management-101-l08-f1", front: "Scope, Time, Cost", back: "Triple Constraint" },
-        { id: "project-management-101-l08-f2", front: "Avoid, Mitigate, Transfer, Accept", back: "Risk response strategies for threats" },
-        { id: "project-management-101-l08-f3", front: "More uncertainty → Agile; Less uncertainty →", back: "Waterfall" },
-        { id: "project-management-101-l08-f4", front: "The #1 project killer", back: "Scope creep — uncontrolled scope expansion" }
+        { id: "project-management-101-l08-f1", front: "Scrum sprint", back: "A fixed-length iteration (typically 2 weeks) in which the team delivers a potentially shippable product increment" },
+        { id: "project-management-101-l08-f2", front: "Three Scrum roles", back: "Product Owner (prioritizes backlog), Scrum Master (facilitates process, removes blockers), Development Team (self-organizes to build the increment)" },
+        { id: "project-management-101-l08-f3", front: "Kanban WIP limit", back: "A cap on the number of items allowed in a workflow stage — prevents multitasking overload and reveals bottlenecks" },
+        { id: "project-management-101-l08-f4", front: "Burndown chart", back: "Graph tracking remaining work (y-axis) over time (x-axis) during a sprint — a line trending to zero by sprint end shows healthy progress" }
       ]
+    },
+
+    /* ──────────────────────────────────────────────
+       L09  Risk & Methodology Checkpoint  (quiz)
+    ────────────────────────────────────────────── */
+    {
+      id: "project-management-101-l09",
+      title: "Risk & Methodology Checkpoint",
+      type: "quiz",
+      duration: 8,
+      objectives: ["Demonstrate understanding of risk management, Agile, Scrum, Kanban, and Waterfall"],
+      questions: [
+        {
+          id: "project-management-101-l09-q1",
+          text: "Buying insurance to cover a potential project loss is an example of:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Risk avoidance" },
+            { id: "b", text: "Risk mitigation" },
+            { id: "c", text: "Risk transfer" },
+            { id: "d", text: "Risk acceptance" }
+          ],
+          correctOptionId: "c",
+          explanation: "Insurance shifts the financial impact to a third party — the classic example of risk transfer."
+        },
+        {
+          id: "project-management-101-l09-q2",
+          text: "In Scrum, who is responsible for prioritizing the product backlog?",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Scrum Master" },
+            { id: "b", text: "Product Owner" },
+            { id: "c", text: "Development Team collectively" },
+            { id: "d", text: "Project Sponsor" }
+          ],
+          correctOptionId: "b",
+          explanation: "The Product Owner owns the backlog, ordering items by value to ensure the team always works on the highest-priority features."
+        },
+        {
+          id: "project-management-101-l09-q3",
+          text: "Kanban's core mechanism for preventing overload is:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Fixed-length sprints" },
+            { id: "b", text: "Work-In-Progress (WIP) limits" },
+            { id: "c", text: "Daily stand-up meetings" },
+            { id: "d", text: "A project charter" }
+          ],
+          correctOptionId: "b",
+          explanation: "WIP limits cap how many items can be in a column at once, preventing multitasking and surfacing bottlenecks."
+        },
+        {
+          id: "project-management-101-l09-q4",
+          text: "A risk has a 40 % probability and a $25,000 impact. Its EMV is:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "$10,000" },
+            { id: "b", text: "$25,000" },
+            { id: "c", text: "$15,000" },
+            { id: "d", text: "$40,000" }
+          ],
+          correctOptionId: "a",
+          explanation: "EMV = 0.40 × $25,000 = $10,000 — used to compare risks and size reserves."
+        }
+      ],
+      quizBlueprint: {
+        totalQuestions: 4,
+        bloomProfile: { remember: 1, understand: 2, apply: 1 }
+      }
+    },
+
+    /* ──────────────────────────────────────────────
+       L10  Mastery Quiz: Project Management Foundations  (quiz)
+    ────────────────────────────────────────────── */
+    {
+      id: "project-management-101-l10",
+      title: "Mastery Quiz: Project Management Foundations",
+      type: "quiz",
+      duration: 12,
+      objectives: ["Synthesize all project management concepts across the module"],
+      questions: [
+        {
+          id: "project-management-101-l10-q1",
+          text: "A project's Schedule Performance Index (SPI) is 0.85. This means the project is:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "15 % ahead of schedule" },
+            { id: "b", text: "15 % behind schedule" },
+            { id: "c", text: "On schedule" },
+            { id: "d", text: "15 % under budget" }
+          ],
+          correctOptionId: "b",
+          explanation: "SPI = EV ÷ PV. An SPI of 0.85 means only 85 % of planned work is complete — the project is 15 % behind schedule."
+        },
+        {
+          id: "project-management-101-l10-q2",
+          text: "Which Scrum ceremony focuses on process improvement after a sprint?",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Sprint Planning" },
+            { id: "b", text: "Daily Stand-up" },
+            { id: "c", text: "Sprint Review" },
+            { id: "d", text: "Sprint Retrospective" }
+          ],
+          correctOptionId: "d",
+          explanation: "The Retrospective is where the team reflects on what went well, what didn't, and what to improve in the next sprint."
+        },
+        {
+          id: "project-management-101-l10-q3",
+          text: "The formal document authorizing a project and naming the project manager is the:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Scope statement" },
+            { id: "b", text: "Risk register" },
+            { id: "c", text: "Project charter" },
+            { id: "d", text: "Gantt chart" }
+          ],
+          correctOptionId: "c",
+          explanation: "The project charter is the 'birth certificate' of the project — it provides formal authorization and names the PM."
+        },
+        {
+          id: "project-management-101-l10-q4",
+          text: "Waterfall is generally preferred over Agile when:",
+          skillId: "project-management-101-skill-core",
+          options: [
+            { id: "a", text: "Requirements are evolving and feedback loops are critical" },
+            { id: "b", text: "Requirements are well-defined, stable, and regulatory compliance demands documentation" },
+            { id: "c", text: "The team wants to deliver working software every two weeks" },
+            { id: "d", text: "The Product Owner changes priorities each sprint" }
+          ],
+          correctOptionId: "b",
+          explanation: "Waterfall's sequential, documentation-heavy approach excels when requirements are fixed and regulatory traceability is required."
+        }
+      ],
+      quizBlueprint: {
+        totalQuestions: 4,
+        bloomProfile: { remember: 1, understand: 1, apply: 1, analyze: 1 }
+      }
     }
   ]
 };

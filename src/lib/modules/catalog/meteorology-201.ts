@@ -8,7 +8,6 @@ export const Meteorology201Module: LearningModule = {
   tags: ["curriculum", "interactive"],
   minAge: 15,
   maxAge: 99,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   difficultyBand: "intermediate",
   localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],

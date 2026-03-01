@@ -11,6 +11,46 @@ const MUTATING_METHODS = new Set(["POST", "PUT", "PATCH", "DELETE"]);
 const CSRF_EXEMPT_PREFIXES = ["/api/stripe/webhook"];
 const SUPABASE_SESSION_COOKIE_FRAGMENT = "-auth-token";
 
+// ---------------------------------------------------------------------------
+// Nonce-based Content-Security-Policy (H-3 fix)
+// ---------------------------------------------------------------------------
+
+function generateCspNonce(): string {
+  const bytes = new Uint8Array(16);
+  crypto.getRandomValues(bytes);
+  return btoa(String.fromCharCode(...bytes))
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+}
+
+function buildCspHeader(nonce: string): string {
+  const isDev = process.env.NODE_ENV !== "production";
+
+  const scriptSrc = isDev
+    ? `script-src 'self' 'unsafe-eval' 'unsafe-inline' https://js.stripe.com https://cdn.jsdelivr.net`
+    : `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://js.stripe.com https://cdn.jsdelivr.net`;
+
+  return [
+    "default-src 'self'",
+    "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.stripe.com",
+    scriptSrc,
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: blob: https://*.supabase.co https://*.supabase.in https://storage.googleapis.com",
+    "font-src 'self'",
+    "frame-src https://js.stripe.com https://hooks.stripe.com",
+    "worker-src 'self' blob:",
+    "base-uri 'self'",
+    "form-action 'self'",
+  ].join("; ");
+}
+
+function applyCspHeaders(response: NextResponse): void {
+  const nonce = generateCspNonce();
+  response.headers.set("x-nonce", nonce);
+  response.headers.set("Content-Security-Policy", buildCspHeader(nonce));
+}
+
 type RateLimitPolicy = {
   scope: string;
   max: number;
@@ -144,20 +184,22 @@ function buildComplianceRedirect(
 
 export async function proxy(request: NextRequest) {
   if (isCrossSiteMutationRequest(request)) {
-    return NextResponse.json({ error: "CSRF validation failed." }, { status: 403 });
+    const csrfResponse = NextResponse.json({ error: "CSRF validation failed." }, { status: 403 });
+    applyCspHeaders(csrfResponse);
+    return csrfResponse;
   }
 
   const pathname = request.nextUrl.pathname;
   const method = request.method.toUpperCase();
   if (pathname.startsWith("/api/") && MUTATING_METHODS.has(method)) {
     const policy = getApiMutationRateLimitPolicy(pathname);
-    const rateLimit = enforceIpRateLimit(request, policy.scope, {
+    const rateLimit = await enforceIpRateLimit(request, policy.scope, {
       max: policy.max,
       windowMs: policy.windowMs,
     });
 
     if (!rateLimit.allowed) {
-      return NextResponse.json(
+      const rateLimitResponse = NextResponse.json(
         {
           error: "Too many requests. Please try again shortly.",
         },
@@ -168,11 +210,16 @@ export async function proxy(request: NextRequest) {
           },
         },
       );
+      applyCspHeaders(rateLimitResponse);
+      return rateLimitResponse;
     }
   }
 
   // 1. Refresh the auth session.
   const response = await updateSupabaseSession(request);
+
+  // Apply nonce-based CSP headers to every response.
+  applyCspHeaders(response);
 
   if (!publicEnv.NEXT_PUBLIC_SUPABASE_URL || !publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
     return response;

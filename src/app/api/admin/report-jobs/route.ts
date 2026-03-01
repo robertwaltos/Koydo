@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const createSchema = z.object({
   reportType: z.enum(["dsar", "support", "audit", "telemetry"]),
@@ -22,7 +23,8 @@ export async function GET() {
     .limit(300);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   return NextResponse.json({ jobs: data });
@@ -62,8 +64,10 @@ export async function POST(request: Request) {
     .single();
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   return NextResponse.json({ success: true, job: data });
 }
+

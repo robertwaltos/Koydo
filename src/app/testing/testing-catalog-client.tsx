@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import ProgressChip from "@/app/components/ui/progress-chip";
 import SoftCard from "@/app/components/ui/soft-card";
 import { toTestingExamPath } from "@/lib/routing/paths";
@@ -49,10 +50,12 @@ function resolveCoverImage(exam: TestingExamCatalogEntry) {
 }
 
 export default function TestingCatalogClient() {
+  const searchParams = useSearchParams();
   const [exams, setExams] = useState<TestingExamCatalogEntry[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [unlockingExamId, setUnlockingExamId] = useState<string | null>(null);
+  const finalizedCheckoutSessionRef = useRef<string | null>(null);
 
   const loadExams = useCallback(async () => {
     setIsLoading(true);
@@ -79,6 +82,61 @@ export default function TestingCatalogClient() {
     void loadExams();
   }, [loadExams]);
 
+  useEffect(() => {
+    const checkoutState = searchParams.get("checkout");
+    const examId = searchParams.get("examId");
+    const checkoutSessionId = searchParams.get("session_id");
+
+    if (checkoutState !== "success" || !examId || !checkoutSessionId) {
+      return;
+    }
+
+    if (finalizedCheckoutSessionRef.current === checkoutSessionId) {
+      return;
+    }
+    finalizedCheckoutSessionRef.current = checkoutSessionId;
+
+    const finalizeUnlock = async () => {
+      setUnlockingExamId(examId);
+      setError(null);
+      try {
+        const response = await fetch(`/api/testing/exams/${encodeURIComponent(examId)}/unlock`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ stripeCheckoutSessionId: checkoutSessionId }),
+        });
+
+        const payload = await response.json().catch(() => null);
+        if (!response.ok) {
+          setError(payload?.error ?? "Payment completed but unlock finalization failed.");
+          return;
+        }
+
+        setExams((previous) =>
+          previous.map((exam) =>
+            exam.id === examId
+              ? { ...exam, entitlementType: "full", hasFullAccess: true }
+              : exam,
+          ),
+        );
+
+        if (typeof window !== "undefined") {
+          window.history.replaceState({}, "", "/testing");
+        }
+      } catch (finalizeError) {
+        setError(
+          finalizeError instanceof Error
+            ? finalizeError.message
+            : "Payment completed but unlock finalization failed.",
+        );
+      } finally {
+        setUnlockingExamId(null);
+      }
+    };
+
+    void finalizeUnlock();
+  }, [searchParams]);
+
   const sortedExams = useMemo(
     () => [...exams].sort((left, right) => left.name.localeCompare(right.name)),
     [exams],
@@ -88,25 +146,33 @@ export default function TestingCatalogClient() {
     setUnlockingExamId(examId);
     setError(null);
     try {
-      const response = await fetch(`/api/testing/exams/${encodeURIComponent(examId)}/unlock`, {
+      const response = await fetch(`/api/testing/exams/${encodeURIComponent(examId)}/checkout`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: 1.95, currency: "USD" }),
       });
 
       const payload = await response.json().catch(() => null);
+      if (response.status === 409 && payload?.alreadyUnlocked) {
+        setExams((previous) =>
+          previous.map((exam) =>
+            exam.id === examId
+              ? { ...exam, entitlementType: "full", hasFullAccess: true }
+              : exam,
+          ),
+        );
+        return;
+      }
+
       if (!response.ok) {
         setError(payload?.error ?? "Unlock failed.");
         return;
       }
 
-      setExams((previous) =>
-        previous.map((exam) =>
-          exam.id === examId
-            ? { ...exam, entitlementType: "full", hasFullAccess: true }
-            : exam,
-        ),
-      );
+      if (!payload?.checkoutUrl || typeof payload.checkoutUrl !== "string") {
+        setError("Unlock checkout session could not be created.");
+        return;
+      }
+
+      window.location.href = payload.checkoutUrl;
     } catch (unlockError) {
       setError(unlockError instanceof Error ? unlockError.message : "Unlock failed.");
     } finally {

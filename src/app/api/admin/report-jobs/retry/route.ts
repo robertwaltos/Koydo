@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const retrySchema = z.object({
   limit: z.number().int().min(1).max(200).optional(),
@@ -31,7 +32,8 @@ export async function POST(request: Request) {
     .limit(limit);
 
   if (failedJobsError) {
-    return NextResponse.json({ error: failedJobsError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(failedJobsError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (!failedJobs || failedJobs.length === 0) {
     return NextResponse.json({ success: true, retried: 0 });
@@ -52,7 +54,8 @@ export async function POST(request: Request) {
     .eq("status", "failed");
 
   if (retryError) {
-    return NextResponse.json({ error: retryError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(retryError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   return NextResponse.json({ success: true, retried: jobIds.length });

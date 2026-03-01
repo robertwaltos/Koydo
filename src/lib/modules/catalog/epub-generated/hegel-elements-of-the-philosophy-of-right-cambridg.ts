@@ -12,7 +12,6 @@ export const HegelElementsOfThePhilosophyOfRightCambridgModule: LearningModule =
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"Hegel: Elements of the Philosophy of Right (Cambridge Texts in the History of Political Thought)\"",

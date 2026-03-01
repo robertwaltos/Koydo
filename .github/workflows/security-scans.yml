@@ -1,0 +1,102 @@
+name: Security Scans
+
+on:
+  push:
+    branches: ["master", "deploy/**", "release/**"]
+  pull_request:
+    branches: ["master", "deploy/**", "release/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-scans-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  semgrep:
+    name: semgrep
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Semgrep
+        run: python -m pip install --upgrade pip semgrep
+
+      - name: Run Semgrep (changed JS/TS files)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+            mapfile -t changed_files < <(git diff --name-only --diff-filter=ACMR "origin/${{ github.base_ref }}...HEAD" -- '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')
+          elif [[ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]]; then
+            mapfile -t changed_files < <(git diff --name-only --diff-filter=ACMR "${{ github.event.before }}...HEAD" -- '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')
+          else
+            mapfile -t changed_files < <(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')
+          fi
+
+          if [[ ${#changed_files[@]} -eq 0 ]]; then
+            echo "No JS/TS files changed; skipping Semgrep."
+            exit 0
+          fi
+
+          semgrep scan \
+            --config p/owasp-top-ten \
+            --config p/javascript \
+            --error \
+            "${changed_files[@]}"
+
+  detect-secrets:
+    name: detect-secrets
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install detect-secrets
+        run: python -m pip install --upgrade pip detect-secrets
+
+      - name: Run detect-secrets (changed files)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+            mapfile -t changed_files < <(git diff --name-only --diff-filter=ACMR "origin/${{ github.base_ref }}...HEAD")
+          elif [[ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]]; then
+            mapfile -t changed_files < <(git diff --name-only --diff-filter=ACMR "${{ github.event.before }}...HEAD")
+          else
+            mapfile -t changed_files < <(git ls-files)
+          fi
+
+          if [[ ${#changed_files[@]} -eq 0 ]]; then
+            echo "No changed files detected; skipping detect-secrets."
+            exit 0
+          fi
+
+          if [[ -f .secrets.baseline ]]; then
+            printf '%s\0' "${changed_files[@]}" | xargs -0 detect-secrets-hook --baseline .secrets.baseline
+          else
+            printf '%s\0' "${changed_files[@]}" | xargs -0 detect-secrets-hook
+          fi

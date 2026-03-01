@@ -59,7 +59,7 @@ async function getChildDataForDigest(supabase: SupabaseClient, parentId: string)
 
 export async function POST(request: Request) {
   try {
-    const rateLimit = enforceIpRateLimit(request, "api:parent:digest", {
+    const rateLimit = await enforceIpRateLimit(request, "api:parent:digest", {
       max: 20,
       windowMs: 5 * 60 * 1000,
     });

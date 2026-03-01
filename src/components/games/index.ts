@@ -12,3 +12,12 @@ export type { PatternTrainProps } from "./pattern-train";
 
 export { StorySequencer } from "./story-sequencer";
 export type { StorySequencerProps } from "./story-sequencer";
+
+export { MemoryMatch } from "./memory-match";
+export type { MemoryMatchProps } from "./memory-match";
+
+export { ColorMixer } from "./color-mixer";
+export type { ColorMixerProps } from "./color-mixer";
+
+export { ShapeSafari } from "./shape-safari";
+export type { ShapeSafariProps } from "./shape-safari";

@@ -8,7 +8,6 @@ export const Chemistry101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Describe the three states of matter and how particles behave in each",

@@ -12,7 +12,6 @@ export const GenScience68U1ExternalModule: LearningModule = {
   ],
   "minAge": 11,
   "maxAge": 14,
-  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "advanced",
   "localeSupport": [

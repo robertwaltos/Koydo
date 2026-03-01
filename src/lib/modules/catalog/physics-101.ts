@@ -9,7 +9,6 @@ export const Physics101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Describe motion using speed, velocity, and acceleration",

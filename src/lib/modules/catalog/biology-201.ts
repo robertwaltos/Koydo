@@ -8,7 +8,6 @@ export const Biology201Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Explain how positive and negative feedback loops maintain homeostasis",

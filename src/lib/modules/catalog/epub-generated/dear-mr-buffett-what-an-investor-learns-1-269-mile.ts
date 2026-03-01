@@ -13,7 +13,6 @@ export const DearMrBuffettWhatAnInvestorLearns1269MileModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive", "mba", "finance", "investing"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Explain what credit derivatives are and why they matter to investors",

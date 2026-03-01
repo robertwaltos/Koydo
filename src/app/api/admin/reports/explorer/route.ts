@@ -8,6 +8,7 @@ import {
   type RecommendationType,
 } from "@/lib/explorer/recommendations";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 type ExplorerEventRow = {
   user_id: string;
@@ -681,7 +682,8 @@ export async function GET(request: Request) {
     .limit(100000);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const rows = (data ?? []) as ExplorerEventRow[];
@@ -1134,3 +1136,4 @@ export async function GET(request: Request) {
 
   return NextResponse.json(summary);
 }
+

@@ -3,6 +3,7 @@ import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { logAdminAction } from "@/lib/admin/audit";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const acknowledgeSchema = z.object({
   alertId: z.string().uuid(),
@@ -168,10 +169,12 @@ export async function GET() {
   ]);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (settingsError) {
-    return NextResponse.json({ error: settingsError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(settingsError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (queuedSummary.error || failedSummary.error || sentSummary.error) {
     return NextResponse.json(
@@ -225,7 +228,8 @@ export async function POST(request: Request) {
     .eq("id", parsed.data.alertId);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   await logAdminAction({
@@ -281,7 +285,8 @@ export async function PATCH(request: Request) {
   const { error } = await admin.from("app_settings").upsert(rows, { onConflict: "key" });
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   await logAdminAction({
@@ -299,3 +304,4 @@ export async function PATCH(request: Request) {
     reportSettings: parsedReportSettings,
   });
 }
+

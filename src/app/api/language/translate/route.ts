@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getLanguageProviderStatuses, translateText } from "@/lib/language-learning";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
   text: z.string().min(1).max(5_000),
@@ -40,10 +41,10 @@ export async function POST(request: NextRequest) {
     const translation = await translateText(parsed.data);
     return NextResponse.json({ translation });
   } catch (error) {
+    console.error("Translation request failed.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Translation request failed",
-        message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

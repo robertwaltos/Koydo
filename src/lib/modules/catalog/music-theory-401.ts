@@ -9,7 +9,6 @@ export const MusicTheory401Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "music"],
   minAge: 16,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Build and voice 7th, 9th, 11th, and 13th chords",
@@ -95,7 +94,7 @@ export const MusicTheory401Module: LearningModule = {
             "Good voice leading minimizes movement between chords. In a Dm7 → G7 → Cmaj7 progression: the 3rd of Dm7 (F) steps down to the 7th of G7 (F → F is common tone!). The 7th of Dm7 (C) stays as the root transition. The 3rd of G7 (B) resolves up to C (root of Cmaj7). The 7th of G7 (F) resolves down to E (3rd of Cmaj7). This smooth contrary motion is the hallmark of jazz voice leading."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-401-l02-a1",
           title: "Match the Pairs",
@@ -262,7 +261,7 @@ export const MusicTheory401Module: LearningModule = {
             "Second species adds two notes against each cantus note — introducing passing tones on weak beats. Third species has four notes per cantus note — more rhythmic variety and decorative motion. Fourth species uses suspensions (syncopated notes held across the beat). Fifth species (florid) combines all previous species freely. Each species adds a layer of complexity while maintaining the fundamental voice-leading principles."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-401-l05-a1",
           title: "Sort into Categories",
@@ -433,7 +432,7 @@ export const MusicTheory401Module: LearningModule = {
             "Place wider intervals in the bass and closer intervals in the upper voices — this mirrors the natural overtone series and sounds clear. Doubling the root or 5th strengthens stability; doubling the 3rd colors the chord. Avoid doubling the leading tone (it creates parallel octaves when it resolves). In orchestration, octave doubling of the melody adds power without changing the harmony."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-401-l08-a1",
           title: "Drag and Drop",
@@ -625,7 +624,7 @@ export const MusicTheory401Module: LearningModule = {
             "'Rhythm changes' refers to the chord progression of Gershwin's 'I Got Rhythm' — one of the most commonly used jazz progressions. A section: I – vi – ii – V – I – vi – ii – V (in B♭). B section (bridge): III7 – VI7 – II7 – V7 (a cycle of dominant 7ths moving by 4ths). Hundreds of jazz tunes ('Oleo,' 'Anthropology,' 'Cotton Tail') are contrafacts — new melodies written over rhythm changes."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-401-l11-a1",
           title: "Match the Pairs",
@@ -786,7 +785,7 @@ export const MusicTheory401Module: LearningModule = {
             "Start with the melody — it's what listeners remember. Then add the bass line (creating a two-voice counterpoint skeleton). Fill in inner voices using good voice leading. Add non-chord tones for interest. Check for parallel 5ths/octaves. Verify that each instrument stays within its comfortable range. Play through each part individually — each should make melodic sense on its own, not just as part of the harmony."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-theory-401-l14-a1",
           title: "Sort into Categories",

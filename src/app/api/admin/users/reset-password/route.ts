@@ -4,6 +4,7 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { serverEnv } from "@/lib/config/env";
 import { logAdminAction } from "@/lib/admin/audit";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
   email: z.string().email(),
@@ -30,7 +31,8 @@ export async function POST(request: Request) {
   });
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   await logAdminAction({
@@ -44,3 +46,4 @@ export async function POST(request: Request) {
     actionLink: data.properties.action_link,
   });
 }
+

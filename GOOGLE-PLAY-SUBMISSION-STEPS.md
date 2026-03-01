@@ -39,8 +39,9 @@ jarsigner -verify -verbose -certs android/app/build/outputs/bundle/release/app-r
 ## Step 2: Log Into Google Play Console
 
 1. Navigate to: https://play.google.com/console
-2. Select **Koydo** app (or create it if first submission)
-3. Verify account status shows no policy violations
+2. Confirm Developer Account ID: `4781832942850403435`
+3. Select **Koydo** app (or create it if first submission)
+4. Verify account status shows no policy violations
 
 ---
 
@@ -131,8 +132,8 @@ Select: **All or some functionality is restricted** → Add instructions:
 ```
 Login required.
 Test credentials:
-  Email: review@koydo.app
-  Password: Koydo@Review2024
+  Email: <APP_REVIEW_EMAIL_FROM_SECRET_MANAGER>
+  Password: <APP_REVIEW_PASSWORD_FROM_SECRET_MANAGER>
 ```
 
 ---

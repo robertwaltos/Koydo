@@ -12,7 +12,6 @@ export const TheOriginalCurseDidTheCubsThrowThe1918WorModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"The Original Curse: Did the Cubs Throw the 1918 World Series to Babe Ruth's Red Sox and Incite the Black Sox Scandal?\"",

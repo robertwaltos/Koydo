@@ -10,6 +10,7 @@ import {
   type GameType,
 } from "@/lib/games/types";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { buildTrustedInternalApiUrl } from "@/lib/security/internal-origin";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -178,9 +179,10 @@ async function hasCompletedChallenge(
 
   const { data, error } = await query;
   if (error) {
+    console.error("Failed to load daily challenge completion history.", toSafeErrorRecord(error));
     return {
       completed: false,
-      error: error.message,
+      error: "Failed to load daily challenge completion history.",
       tableMissing: isMissingTableError(error.message),
     };
   }
@@ -208,7 +210,7 @@ async function postGamificationEvent(
     metadata?: Record<string, unknown>;
   },
 ) {
-  const url = new URL("/api/language/gamification/state", request.url);
+  const url = buildTrustedInternalApiUrl(request, "/api/language/gamification/state");
   const response = await fetch(url, {
     method: "POST",
     headers: {
@@ -228,7 +230,7 @@ async function postGamificationEvent(
 }
 
 export async function GET(request: NextRequest) {
-  const rateLimit = enforceIpRateLimit(request, "api:games:daily:get", {
+  const rateLimit = await enforceIpRateLimit(request, "api:games:daily:get", {
     max: 120,
     windowMs: 60_000,
   });
@@ -280,7 +282,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         error: "Failed to load daily challenge status.",
-        details: completion.error,
       },
       { status: 500 },
     );
@@ -293,7 +294,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const rateLimit = enforceIpRateLimit(request, "api:games:daily:post", {
+  const rateLimit = await enforceIpRateLimit(request, "api:games:daily:post", {
     max: 45,
     windowMs: 60_000,
   });
@@ -366,7 +367,6 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error: "Unable to verify daily challenge completion.",
-          details: completion.error,
         },
         { status: 500 },
       );
@@ -418,8 +418,7 @@ export async function POST(request: NextRequest) {
     if (!pointsAwardEvent.ok) {
       return NextResponse.json(
         {
-          error: pointsAwardEvent.body.error ?? "Failed to award game points.",
-          details: pointsAwardEvent.body.details ?? null,
+          error: "Failed to award game points.",
         },
         { status: pointsAwardEvent.status },
       );
@@ -442,8 +441,7 @@ export async function POST(request: NextRequest) {
     if (!completionEvent.ok) {
       return NextResponse.json(
         {
-          error: completionEvent.body.error ?? "Failed to complete daily challenge.",
-          details: completionEvent.body.details ?? null,
+          error: "Failed to complete daily challenge.",
         },
         { status: completionEvent.status },
       );

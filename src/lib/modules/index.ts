@@ -1,14 +1,24 @@
 import type { LearningModule, Lesson } from "@/lib/modules/types";
-import { moduleRegistrySchema } from "@/lib/modules/schema";
 import { generatedModuleRegistry } from "@/lib/modules/generated/registry";
 import { GENERATED_MEDIA_ASSETS } from "@/lib/media/generated-media-assets";
 
-const parsedRegistry = moduleRegistrySchema.safeParse(generatedModuleRegistry);
-if (!parsedRegistry.success) {
-  throw new Error(`Invalid module registry: ${parsedRegistry.error.message}`);
+// Registry is already type-checked at compile time (every catalog file
+// is typed as LearningModule). Runtime Zod validation moved to the
+// build-time sync-modules script to avoid parsing 300+ modules on startup.
+const moduleRegistry: LearningModule[] = generatedModuleRegistry;
+
+// Auto-mark template/scaffold modules as draft
+// and fix inflated localeSupport (templates claim 10 locales but only have English)
+for (const mod of moduleRegistry) {
+  if (!mod.status && mod.version === "1.0.0") {
+    mod.status = "draft";
+    // Templates only contain English content
+    if (mod.localeSupport && mod.localeSupport.length > 2) {
+      mod.localeSupport = ["en"];
+    }
+  }
 }
 
-const moduleRegistry: LearningModule[] = parsedRegistry.data;
 const generatedMediaAssets = GENERATED_MEDIA_ASSETS as Record<
   string,
   { url: string; type: string; alt: string }
@@ -63,6 +73,11 @@ function slugify(value: string) {
 }
 
 export function getAllLearningModules() {
+  return moduleRegistry.filter((m) => m.status !== "draft");
+}
+
+/** Returns every module, including drafts – for admin/debug use only */
+export function getAllModulesUnfiltered() {
   return moduleRegistry;
 }
 

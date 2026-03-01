@@ -9,7 +9,6 @@ export const PreKAstronomy101Module: LearningModule = {
   tags: ["pre-k", "curriculum", "interactive"],
   minAge: 3,
   maxAge: 5,
-  moduleVersion: "4.0.0",
   version: "4.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],

@@ -3,11 +3,11 @@ export interface StudentProfile {
   display_name: string;
   grade_level: string | null;
   avatar_url?: string;
-  ai_skill_level_map?: Record<string, any> | null;
+  ai_skill_level_map?: Record<string, unknown> | null;
   account_id?: string;
   age_years?: number | null;
   initial_assessment_status?: string;
-  initial_assessment_data?: any;
+  initial_assessment_data?: unknown;
   created_at?: string;
   updated_at?: string;
   path_allowlist?: string[] | null;

@@ -13,7 +13,6 @@ export const TheFederalistPapersAlexanderHamiltonJamesMadModule: LearningModule 
   tags: ["epub-derived", "curriculum", "interactive", "political-science", "constitution", "federalism"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Explain the historical context and purpose of The Federalist Papers",

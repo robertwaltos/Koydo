@@ -14,6 +14,7 @@ import {
   type GameStars,
 } from "@/lib/games/types";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { buildTrustedInternalApiUrl } from "@/lib/security/internal-origin";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -181,7 +182,7 @@ async function postGamificationEvent(
     metadata?: Record<string, unknown>;
   },
 ) {
-  const url = new URL("/api/language/gamification/state", request.url);
+  const url = buildTrustedInternalApiUrl(request, "/api/language/gamification/state");
   const response = await fetch(url, {
     method: "POST",
     headers: {
@@ -201,7 +202,7 @@ async function postGamificationEvent(
 }
 
 export async function GET(request: NextRequest) {
-  const rateLimit = enforceIpRateLimit(request, "api:games:state:get", {
+  const rateLimit = await enforceIpRateLimit(request, "api:games:state:get", {
     max: 120,
     windowMs: 60_000,
   });
@@ -262,7 +263,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         error: "Failed to load game plays.",
-        details: eventsError.message,
       },
       { status: 500 },
     );
@@ -285,7 +285,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const rateLimit = enforceIpRateLimit(request, "api:games:state:post", {
+  const rateLimit = await enforceIpRateLimit(request, "api:games:state:post", {
     max: 45,
     windowMs: 60_000,
   });
@@ -350,8 +350,7 @@ export async function POST(request: NextRequest) {
     if (!pointsEvent.ok) {
       return NextResponse.json(
         {
-          error: pointsEvent.body.error ?? "Failed to persist game result.",
-          details: pointsEvent.body.details ?? null,
+          error: "Failed to persist game result.",
         },
         { status: pointsEvent.status },
       );

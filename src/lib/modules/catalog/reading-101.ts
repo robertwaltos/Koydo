@@ -18,7 +18,6 @@ export const Reading101Module: LearningModule = {
   tags: ["phonics", "literacy", "interactive", "curriculum"],
   minAge: 4,
   maxAge: 9,
-  moduleVersion: "4.0.0",
   version: "4.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],

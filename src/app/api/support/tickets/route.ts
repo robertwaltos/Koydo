@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const createTicketSchema = z.object({
@@ -26,7 +27,8 @@ export async function GET() {
     .order("created_at", { ascending: false });
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to load support tickets.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to load support tickets." }, { status: 500 });
   }
 
   return NextResponse.json({ tickets: data });
@@ -60,7 +62,8 @@ export async function POST(request: Request) {
     .single();
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to create support ticket.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to create support ticket." }, { status: 500 });
   }
 
   return NextResponse.json({ success: true, ticket: data });

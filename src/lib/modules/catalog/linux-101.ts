@@ -9,7 +9,6 @@ export const Linux101Module: LearningModule = {
   tags: ["curriculum", "technology", "operating-systems"],
   minAge: 12,
   maxAge: 99,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   difficultyBand: "beginner",
   thumbnail: "/placeholders/lesson-robot.svg",

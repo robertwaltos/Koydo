@@ -4,6 +4,7 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { logAdminAction } from "@/lib/admin/audit";
 import { serverEnv } from "@/lib/config/env";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const runNotificationsSchema = z.object({
   limit: z.number().min(1).max(1000).optional(),
@@ -61,7 +62,8 @@ export async function POST(request: Request) {
     .limit(limit);
 
   if (notificationsError) {
-    return NextResponse.json({ error: notificationsError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(notificationsError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const rows = notifications ?? [];
@@ -96,7 +98,8 @@ export async function POST(request: Request) {
     .in("id", uniqueAlertIds);
 
   if (alertsError) {
-    return NextResponse.json({ error: alertsError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(alertsError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const alertMap = new Map((alerts ?? []).map((alert) => [alert.id, alert]));

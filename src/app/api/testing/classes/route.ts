@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { isMissingTestingTableError } from "@/lib/testing/api-utils";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const createClassSchema = z.object({
   name: z.string().min(2).max(120),
@@ -34,7 +35,8 @@ export async function GET() {
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: classesError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(classesError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const classIds = (classes ?? []).map((entry) => entry.id);
@@ -48,7 +50,8 @@ export async function GET() {
     .in("class_id", classIds);
 
   if (enrollmentError) {
-    return NextResponse.json({ error: enrollmentError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(enrollmentError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const countMap = new Map<string, { enrolled: number; consented: number }>();
@@ -113,7 +116,8 @@ export async function POST(request: Request) {
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   return NextResponse.json({
@@ -128,4 +132,5 @@ export async function POST(request: Request) {
     },
   });
 }
+
 

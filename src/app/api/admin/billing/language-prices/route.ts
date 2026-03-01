@@ -5,6 +5,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { logAdminAction } from "@/lib/admin/audit";
 import { enforceAdminActionRateLimit } from "@/lib/admin/rate-limit";
 import type { LanguagePlanId } from "@/lib/language-learning/pricing";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const LANGUAGE_PRICE_PLAN_IDS: LanguagePlanId[] = [
   "language_plus_conservative",
@@ -48,7 +49,8 @@ export async function GET() {
     .maybeSingle();
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const values = sanitizeMap(
@@ -110,7 +112,8 @@ export async function POST(request: Request) {
   );
 
   if (upsertError) {
-    return NextResponse.json({ error: upsertError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(upsertError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   await logAdminAction({
@@ -123,3 +126,4 @@ export async function POST(request: Request) {
 
   return NextResponse.json({ success: true, values });
 }
+

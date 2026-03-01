@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requeueRequestSchema = z.object({
   moduleId: z.string().trim().max(120).optional(),
@@ -52,7 +53,8 @@ export async function POST(request: Request) {
     .limit(limit);
 
   if (staleError) {
-    return NextResponse.json({ error: staleError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(staleError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   if (!staleJobs || staleJobs.length === 0) {
@@ -78,7 +80,8 @@ export async function POST(request: Request) {
 
   const { data: activeRows, error: activeError } = await activeQuery;
   if (activeError) {
-    return NextResponse.json({ error: activeError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(activeError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const activeByScope = new Map<string, number>();

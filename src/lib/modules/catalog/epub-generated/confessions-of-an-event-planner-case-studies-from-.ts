@@ -12,7 +12,6 @@ export const ConfessionsOfAnEventPlannerCaseStudiesFromModule: LearningModule = 
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"Confessions of an Event Planner: Case Studies From the Real World of Events--How to Handle the Unexpected and How to Be a Master of Discretion\"",

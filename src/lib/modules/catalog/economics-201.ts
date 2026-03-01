@@ -9,7 +9,6 @@ export const Economics201Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "mba", "economics"],
   minAge: 16,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Measure economic output using GDP and its components",
@@ -88,7 +87,7 @@ export const Economics201Module: LearningModule = {
             "Inflation erodes purchasing power, hurts savers and fixed-income earners, creates uncertainty for business planning, and distorts price signals. Unemployment wastes human potential, reduces GDP, causes personal hardship, and erodes skills over time. The Phillips curve suggests a short-run trade-off: lower unemployment comes with higher inflation, and vice versa — policymakers must balance both."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-201-l02-a1",
           title: "Sort into Categories",
@@ -240,7 +239,7 @@ export const Economics201Module: LearningModule = {
             "Automatic stabilizers are programs that naturally expand during recessions and contract during booms without new legislation — unemployment insurance, progressive income taxes, food stamps. They smooth the business cycle automatically. Crowding out is the concern that government borrowing raises interest rates, reducing private investment. If the government borrows heavily, it competes with private borrowers for funds, potentially offsetting some stimulus."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-201-l05-a1",
           title: "Match the Pairs",
@@ -391,7 +390,7 @@ export const Economics201Module: LearningModule = {
             "Tariffs (taxes on imports) and quotas (limits on import quantities) protect domestic industries but raise prices for consumers and reduce total welfare. Arguments for protection: infant industry, national security, anti-dumping. Arguments against: higher consumer prices, retaliation, reduced efficiency. Free trade agreements (NAFTA/USMCA, EU single market) reduce barriers and generally increase GDP, but can displace workers in specific industries."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-201-l08-a1",
           title: "Match the Pairs",
@@ -567,7 +566,7 @@ export const Economics201Module: LearningModule = {
             "Financial crises occur when confidence in the financial system collapses. The 2008 crisis: banks made risky mortgage loans, packaged them into complex securities, and when housing prices fell, the securities became worthless. Banks failed, credit froze, and a severe recession followed. Lesson: financial regulation (capital requirements, stress tests, consumer protection) is essential to prevent excessive risk-taking."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-201-l11-a1",
           title: "Match the Pairs",
@@ -710,7 +709,7 @@ export const Economics201Module: LearningModule = {
             "Economic data is full of correlations that aren't causal. Ice cream sales and drowning deaths both rise in summer — but ice cream doesn't cause drowning. Similarly, stock markets may rise with consumer confidence, but confidence doesn't always cause stock gains. Always ask: is there a logical mechanism? Could a third variable explain both? Would an experiment confirm the relationship? This skepticism is essential for policy analysis."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-201-l14-a1",
           title: "Sort into Categories",

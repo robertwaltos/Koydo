@@ -12,7 +12,6 @@ export const AHistoryOfGodThe4000YearQuestOfJudaismChModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"A History of God: the 4000-year quest of Judaism, Christianity, and Islam\"",

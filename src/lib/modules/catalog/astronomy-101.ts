@@ -9,7 +9,6 @@ export const Astronomy101Module: LearningModule = {
   tags: ["astronomy", "science", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Name the eight planets in order from the Sun",
@@ -92,7 +91,7 @@ export const Astronomy101Module: LearningModule = {
           explanation: "Iron oxide (rust) in the soil gives Mars its red color!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "astronomy-101-l01-act1",
           type: "project_builder",
@@ -174,7 +173,7 @@ export const Astronomy101Module: LearningModule = {
           explanation: "Photosynthesis converts sunlight into food and oxygen!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "astronomy-101-l02-act1",
           type: "drawing_canvas",
@@ -256,7 +255,7 @@ export const Astronomy101Module: LearningModule = {
           explanation: "The Moon's gravity pulls on Earth's oceans, creating tides!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "astronomy-101-l03-act1",
           type: "drawing_canvas",
@@ -338,7 +337,7 @@ export const Astronomy101Module: LearningModule = {
           explanation: "The Moon passes between the Sun and Earth during a solar eclipse!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "astronomy-101-l04-act1",
           type: "drawing_canvas",
@@ -420,7 +419,7 @@ export const Astronomy101Module: LearningModule = {
           explanation: "A supernova is the brilliant explosion of a dying massive star!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "astronomy-101-l05-act1",
           type: "drawing_canvas",
@@ -502,7 +501,7 @@ export const Astronomy101Module: LearningModule = {
           explanation: "The Hubble Space Telescope captured thousands of galaxies in one tiny patch of sky!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "astronomy-101-l06-act1",
           type: "drawing_canvas",
@@ -584,7 +583,7 @@ export const Astronomy101Module: LearningModule = {
           explanation: "The ISS travels at 17,500 mph and circles Earth every 90 minutes!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "astronomy-101-l07-act1",
           type: "project_builder",
@@ -666,7 +665,7 @@ export const Astronomy101Module: LearningModule = {
           explanation: "The Golden Records are a message from humanity to any finder in space!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "astronomy-101-l08-act1",
           type: "project_builder",

@@ -9,7 +9,6 @@ export const FinancialLiteracy101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "3.0.0",
   version: "3.0.0",
   difficultyBand: "intermediate",
   localeSupport: ["en", "es"],

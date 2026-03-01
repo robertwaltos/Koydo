@@ -6,6 +6,7 @@ import { isMissingTestingTableError } from "@/lib/testing/api-utils";
 import { hashTestingAnswer } from "@/lib/testing/security";
 import { buildDiagnosis, type DomainScoreSnapshot } from "@/lib/testing/scoring";
 import type { TestingAttemptResultResponse } from "@/lib/testing/types";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const submitSchema = z.object({
   answers: z
@@ -181,7 +182,8 @@ export async function POST(
     .in("id", questionIds);
 
   if (questionError) {
-    return NextResponse.json({ error: questionError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(questionError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const questions = (questionRows ?? []) as QuestionRow[];
@@ -231,7 +233,8 @@ export async function POST(
       .from("testing_attempt_answers")
       .upsert(answerRows, { onConflict: "attempt_id,question_id" });
     if (answersWriteError) {
-      return NextResponse.json({ error: answersWriteError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(answersWriteError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
   }
 

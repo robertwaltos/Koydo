@@ -13,7 +13,11 @@ export function isMissingOrganizationTableError(error: unknown) {
     lowered.includes("organization_license_purchases") ||
     lowered.includes("organization_provisioning_tokens") ||
     lowered.includes("organization_learners") ||
-    lowered.includes("gifted_memberships")
+    lowered.includes("organization_audit_events") ||
+    lowered.includes("gifted_memberships") ||
+    lowered.includes("organization_invites") ||
+    lowered.includes("organization_roster_entries") ||
+    lowered.includes("organization_report_exports") ||
+    lowered.includes("organization_report_jobs")
   );
 }
-

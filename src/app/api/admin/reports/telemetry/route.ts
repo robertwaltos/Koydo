@@ -7,6 +7,7 @@ import {
   buildTelemetrySummary,
   type LearningEventReportRow,
 } from "@/lib/admin/telemetry-report";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 function parseDays(value: string | null) {
   if (!value) return 30;
@@ -34,7 +35,8 @@ export async function GET(request: Request) {
     .limit(200000);
 
   if (error) {
-    return new Response(JSON.stringify({ error: error.message }), {
+    console.error("Failed to query telemetry report source events.", toSafeErrorRecord(error));
+    return new Response(JSON.stringify({ error: "Failed to query telemetry report source events." }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });

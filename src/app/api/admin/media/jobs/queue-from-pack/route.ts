@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 type AssetType = "video" | "animation" | "image";
 type PromptKey = "seedanceVideo" | "seedanceAnimation" | "lessonImage";
@@ -177,7 +178,8 @@ export async function POST(request: Request) {
     .in("asset_type", assetTypes);
 
   if (existingError) {
-    return NextResponse.json({ error: existingError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(existingError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const existingKeys = new Set<string>();
@@ -211,7 +213,8 @@ export async function POST(request: Request) {
   if (insertRows.length > 0) {
     const { error: insertError } = await admin.from("media_generation_jobs").insert(insertRows);
     if (insertError) {
-      return NextResponse.json({ error: insertError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(insertError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
   }
 

@@ -5,6 +5,8 @@ import {
   ORGANIZATION_ROLES,
   type OrganizationRole,
 } from "@/lib/organizations/roles";
+import { isMissingOrganizationTableError } from "@/lib/organizations/errors";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 type OrganizationMembershipRow = {
   id: string;
@@ -27,9 +29,22 @@ export async function requireOrganizationMembership(
     .maybeSingle();
 
   if (error) {
+    if (isMissingOrganizationTableError(error)) {
+      return {
+        ok: false as const,
+        response: NextResponse.json(
+          { error: "Organization tables not migrated yet." },
+          { status: 503 },
+        ),
+      };
+    }
+    console.error("Failed to load organization membership.", toSafeErrorRecord(error));
     return {
       ok: false as const,
-      response: NextResponse.json({ error: error.message }, { status: 500 }),
+      response: NextResponse.json(
+        { error: "Failed to verify organization membership." },
+        { status: 500 },
+      ),
     };
   }
 
@@ -61,4 +76,3 @@ export async function requireOrganizationMembership(
     membership,
   };
 }
-

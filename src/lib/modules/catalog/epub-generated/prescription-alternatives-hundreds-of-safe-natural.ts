@@ -12,7 +12,6 @@ export const PrescriptionAlternativesHundredsOfSafeNaturalModule: LearningModule
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"Prescription Alternatives: Hundreds of Safe, Natural, Prescription-Free Remedies to Restore and Maintain Your Health\"",

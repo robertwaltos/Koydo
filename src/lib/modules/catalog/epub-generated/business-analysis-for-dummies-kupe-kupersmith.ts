@@ -13,7 +13,6 @@ export const BusinessAnalysisForDummiesKupeKupersmithModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive", "mba", "business-analysis", "requirements"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Define business analysis and articulate its value to an organisation",

@@ -46,13 +46,16 @@ export async function GET(request: Request) {
     ]);
 
     if (progressResult.error) {
-      return NextResponse.json({ error: progressResult.error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(progressResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
     if (errorResult.error) {
-      return NextResponse.json({ error: errorResult.error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(errorResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
     if (masteryResult.error) {
-      return NextResponse.json({ error: masteryResult.error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(masteryResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     const remediation = buildAdaptiveRemediationQueue({

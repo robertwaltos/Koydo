@@ -60,7 +60,8 @@ export async function POST(request: Request) {
           { status: 200 },
         );
       }
-      return NextResponse.json({ error: completionError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(completionError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     const uniqueCompleted = Array.from(

@@ -9,7 +9,6 @@ export const math101Module: LearningModule = {
   tags: ["curriculum", "interactive", "foundations", "numbers"],
   minAge: 10,
   maxAge: 14,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],
@@ -44,7 +43,7 @@ export const math101Module: LearningModule = {
         { id: "math-101-l01-q2", text: "In PEMDAS, multiplication and division are", options: [{ id: "a", text: "Equal priority — evaluated left to right" }, { id: "b", text: "Multiplication always first" }, { id: "c", text: "Division always first" }, { id: "d", text: "Done after addition" }], correctOptionId: "a", explanation: "M and D are equal — just go left to right through the expression!" },
         { id: "math-101-l01-q3", text: "What is (4 + 2) × 3?", options: [{ id: "a", text: "18" }, { id: "b", text: "10" }, { id: "c", text: "14" }, { id: "d", text: "9" }], correctOptionId: "a", explanation: "Parentheses first: 4 + 2 = 6. Then multiply: 6 × 3 = 18!" }
       ],
-      activities: [{ id: "math-101-l01-act1", type: "timeline_builder", title: "PEMDAS order", description: "Arrange the steps to evaluate 2 + 3 × (4 - 1)²: Parentheses (4-1=3) → Exponents (3²=9) → Multiply (3×9=27) → Add (2+27=29)." }]
+      interactiveActivities: [{ id: "math-101-l01-act1", type: "timeline_builder", title: "PEMDAS order", description: "Arrange the steps to evaluate 2 + 3 × (4 - 1)²: Parentheses (4-1=3) → Exponents (3²=9) → Multiply (3×9=27) → Add (2+27=29)." }]
     },
 
     /* ── L02 Fractions ── */
@@ -69,7 +68,7 @@ export const math101Module: LearningModule = {
         { id: "math-101-l02-q2", text: "What is 2/3 × 3/4?", options: [{ id: "a", text: "1/2" }, { id: "b", text: "6/7" }, { id: "c", text: "5/12" }, { id: "d", text: "6/12" }], correctOptionId: "a", explanation: "2×3 = 6, 3×4 = 12, so 6/12 = 1/2. Or cross-cancel first!" },
         { id: "math-101-l02-q3", text: "To divide fractions, you", options: [{ id: "a", text: "Keep the first, change ÷ to ×, flip the second" }, { id: "b", text: "Flip both fractions" }, { id: "c", text: "Add the denominators" }, { id: "d", text: "Subtract the numerators" }], correctOptionId: "a", explanation: "Keep-Change-Flip! Dividing by a fraction = multiplying by its reciprocal!" }
       ],
-      activities: [{ id: "math-101-l02-act1", type: "sorting_buckets", title: "Fraction types", description: "Classify: Proper (2/5, 1/3, 4/7), Improper (7/3, 5/4, 9/2), Mixed Number (2⅓, 1½, 3¼)." }]
+      interactiveActivities: [{ id: "math-101-l02-act1", type: "sorting_buckets", title: "Fraction types", description: "Classify: Proper (2/5, 1/3, 4/7), Improper (7/3, 5/4, 9/2), Mixed Number (2⅓, 1½, 3¼)." }]
     },
 
     /* ── L03 Decimals and Percentages ── */
@@ -94,7 +93,7 @@ export const math101Module: LearningModule = {
         { id: "math-101-l03-q2", text: "25% off a $60 item means the sale price is", options: [{ id: "a", text: "$45" }, { id: "b", text: "$35" }, { id: "c", text: "$50" }, { id: "d", text: "$15" }], correctOptionId: "a", explanation: "25% of $60 = $15 discount. $60 - $15 = $45!" },
         { id: "math-101-l03-q3", text: "0.375 as a fraction in simplest form is", options: [{ id: "a", text: "3/8" }, { id: "b", text: "375/100" }, { id: "c", text: "3/4" }, { id: "d", text: "37/100" }], correctOptionId: "a", explanation: "0.375 = 375/1000. Simplify: ÷125 → 3/8!" }
       ],
-      activities: [{ id: "math-101-l03-act1", type: "matching_pairs", title: "Fraction-Decimal-Percent match", description: "Match: 1/2 ↔ 0.5 ↔ 50%, 1/4 ↔ 0.25 ↔ 25%, 3/4 ↔ 0.75 ↔ 75%, 1/5 ↔ 0.2 ↔ 20%, 1/8 ↔ 0.125 ↔ 12.5%." }]
+      interactiveActivities: [{ id: "math-101-l03-act1", type: "matching_pairs", title: "Fraction-Decimal-Percent match", description: "Match: 1/2 ↔ 0.5 ↔ 50%, 1/4 ↔ 0.25 ↔ 25%, 3/4 ↔ 0.75 ↔ 75%, 1/5 ↔ 0.2 ↔ 20%, 1/8 ↔ 0.125 ↔ 12.5%." }]
     },
 
     /* ── L04 Math Checkpoint ── */
@@ -138,7 +137,7 @@ export const math101Module: LearningModule = {
         { id: "math-101-l05-q2", text: "What is 7 - (-3)?", options: [{ id: "a", text: "10" }, { id: "b", text: "4" }, { id: "c", text: "-10" }, { id: "d", text: "-4" }], correctOptionId: "a", explanation: "Subtracting a negative = adding: 7 + 3 = 10!" },
         { id: "math-101-l05-q3", text: "The absolute value of -12 is", options: [{ id: "a", text: "12" }, { id: "b", text: "-12" }, { id: "c", text: "0" }, { id: "d", text: "-1" }], correctOptionId: "a", explanation: "Absolute value = distance from zero = 12!" }
       ],
-      activities: [{ id: "math-101-l05-act1", type: "sorting_buckets", title: "Integer classifier", description: "Classify: Positive (7, 15, 100), Negative (-3, -28, -1), Zero (0). Then order: -8, -3, 0, 4, 9 on number line." }]
+      interactiveActivities: [{ id: "math-101-l05-act1", type: "sorting_buckets", title: "Integer classifier", description: "Classify: Positive (7, 15, 100), Negative (-3, -28, -1), Zero (0). Then order: -8, -3, 0, 4, 9 on number line." }]
     },
 
     /* ── L06 Variables and Expressions ── */
@@ -163,7 +162,7 @@ export const math101Module: LearningModule = {
         { id: "math-101-l06-q2", text: "Evaluate 4x - 1 when x = 5", options: [{ id: "a", text: "19" }, { id: "b", text: "20" }, { id: "c", text: "9" }, { id: "d", text: "15" }], correctOptionId: "a", explanation: "Substitute: 4(5) - 1 = 20 - 1 = 19!" },
         { id: "math-101-l06-q3", text: "Which are like terms?", options: [{ id: "a", text: "3x and 7x" }, { id: "b", text: "3x and 3y" }, { id: "c", text: "x and x²" }, { id: "d", text: "2 and 2x" }], correctOptionId: "a", explanation: "Same variable, same exponent = like terms. 3x and 7x both have x¹!" }
       ],
-      activities: [{ id: "math-101-l06-act1", type: "matching_pairs", title: "English to algebra", description: "Match: 'a number plus 7' → x + 7, 'twice a number' → 2x, '5 less than a number' → x - 5, 'a number divided by 3' → x/3, 'the product of 4 and a number' → 4x." }]
+      interactiveActivities: [{ id: "math-101-l06-act1", type: "matching_pairs", title: "English to algebra", description: "Match: 'a number plus 7' → x + 7, 'twice a number' → 2x, '5 less than a number' → x - 5, 'a number divided by 3' → x/3, 'the product of 4 and a number' → 4x." }]
     },
 
     /* ── L07 One-Step Equations ── */
@@ -188,7 +187,7 @@ export const math101Module: LearningModule = {
         { id: "math-101-l07-q2", text: "Solve: 3x = 21", options: [{ id: "a", text: "x = 7" }, { id: "b", text: "x = 24" }, { id: "c", text: "x = 18" }, { id: "d", text: "x = 63" }], correctOptionId: "a", explanation: "Divide both sides by 3: x = 21 ÷ 3 = 7. Check: 3(7) = 21 ✓!" },
         { id: "math-101-l07-q3", text: "To solve x - 4 = 9, you should", options: [{ id: "a", text: "Add 4 to both sides" }, { id: "b", text: "Subtract 4 from both sides" }, { id: "c", text: "Multiply both sides by 4" }, { id: "d", text: "Divide both sides by 4" }], correctOptionId: "a", explanation: "Inverse of -4 is +4. Add 4 to both sides: x = 9 + 4 = 13!" }
       ],
-      activities: [{ id: "math-101-l07-act1", type: "matching_pairs", title: "Equation solver", description: "Match equations with solutions: x + 3 = 10 → x = 7, 2x = 16 → x = 8, x - 5 = 4 → x = 9, x/4 = 3 → x = 12, x + 12 = 20 → x = 8." }]
+      interactiveActivities: [{ id: "math-101-l07-act1", type: "matching_pairs", title: "Equation solver", description: "Match equations with solutions: x + 3 = 10 → x = 7, 2x = 16 → x = 8, x - 5 = 4 → x = 9, x/4 = 3 → x = 12, x + 12 = 20 → x = 8." }]
     },
 
     /* ── L08 Math Foundations Final Assessment ── */

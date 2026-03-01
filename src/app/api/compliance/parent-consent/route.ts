@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { serverEnv } from "@/lib/config/env";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { sanitizeNextPath } from "@/lib/routing/next-path";
 import {
   createParentConsentVerificationToken,
@@ -58,7 +59,8 @@ export async function POST(request: NextRequest) {
       .single();
 
     if (error) {
-      return NextResponse.json({ error: "Failed to create parent consent request", details: error.message }, { status: 500 });
+      console.error("Failed to create parent consent request.", toSafeErrorRecord(error));
+      return NextResponse.json({ error: "Failed to create parent consent request" }, { status: 500 });
     }
 
     const verificationToken = createParentConsentVerificationToken(
@@ -89,8 +91,9 @@ export async function POST(request: NextRequest) {
       .eq("child_user_id", userData.user.id);
 
     if (evidenceError) {
+      console.error("Failed to persist parent consent verification metadata.", toSafeErrorRecord(evidenceError));
       return NextResponse.json(
-        { error: "Failed to persist consent verification metadata", details: evidenceError.message },
+        { error: "Failed to persist consent verification metadata" },
         { status: 500 },
       );
     }
@@ -128,10 +131,10 @@ export async function POST(request: NextRequest) {
       nextStep: "Send verification workflow to parent and verify before unlocking features.",
     });
   } catch (error) {
+    console.error("Parent consent request failed.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Server configuration error",
-        details: error instanceof Error ? error.message : "Unknown error",
       },
       { status: 500 },
     );

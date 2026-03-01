@@ -2,11 +2,16 @@ import { createHmac } from "crypto";
 import { serverEnv } from "@/lib/config/env";
 
 function getTestingHashSecret() {
-  return (
+  const candidate =
     serverEnv.TESTING_ITEM_HASH_SECRET
     ?? serverEnv.PARENT_CONSENT_TOKEN_SECRET
-    ?? "koydo-testing-dev-secret-change-me"
-  );
+    ?? serverEnv.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!candidate) {
+    throw new Error("Missing testing hash secret configuration.");
+  }
+
+  return candidate;
 }
 
 export function normalizeAnswerValue(value: string) {

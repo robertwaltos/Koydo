@@ -13,7 +13,6 @@ export const HowToTalkToAnyoneLeilLowndesModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive", "mba", "communication", "networking"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Apply the first-impression framework to manage the critical first ten seconds of a new encounter",

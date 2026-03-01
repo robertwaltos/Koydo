@@ -13,7 +13,6 @@ export const ItSTheCustomerStupidMichaelAAunModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive", "mba", "customer-service", "sales"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Quantify the financial consequences of poor customer service using real statistics",

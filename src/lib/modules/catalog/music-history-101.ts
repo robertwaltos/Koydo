@@ -9,7 +9,6 @@ export const MusicHistory101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "music", "history"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Place the major musical periods on a timeline (Medieval, Renaissance, Baroque, Classical, Romantic, 20th Century, Modern)",
@@ -95,7 +94,7 @@ export const MusicHistory101Module: LearningModule = {
             "Martin Luther's Protestant Reformation (1517) transformed church music. Luther believed congregations should sing in their own language, so he wrote hymns (chorales) in German — simple, memorable tunes everyone could sing. The Catholic Counter-Reformation responded by commissioning clearer, more text-intelligible polyphony — Palestrina's masses became the gold standard. Both movements democratized sacred music."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-history-101-l02-a1",
           title: "Match the Pairs",
@@ -128,45 +127,50 @@ export const MusicHistory101Module: LearningModule = {
       objectives: [
         "Demonstrate knowledge of medieval and Renaissance music history"
       ],
-      quizQuestions: [
+      questions: [
         {
           id: "music-history-101-l03-q-1",
-          question: "What is Gregorian chant?",
+          text: "What is Gregorian chant?",
           options: [
-            "Polyphonic organ music from Germany",
-            "Monophonic sacred song sung in Latin",
-            "Renaissance dance music for lute",
-            "A type of medieval folk song"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l03-q-1-opt-0", text: "Polyphonic organ music from Germany" },
+              { id: "music-history-101-l03-q-1-opt-1", text: "Monophonic sacred song sung in Latin" },
+              { id: "music-history-101-l03-q-1-opt-2", text: "Renaissance dance music for lute" },
+              { id: "music-history-101-l03-q-1-opt-3", text: "A type of medieval folk song" }
+            ],
+          correctOptionId: "music-history-101-l03-q-1-opt-1"
         },
         {
           id: "music-history-101-l03-q-2",
-          question: "Who developed the musical staff and solmization (do, re, mi)?",
-          options: ["Pope Gregory I", "Léonin", "Guido d'Arezzo", "Palestrina"],
-          correctIndex: 2
+          text: "Who developed the musical staff and solmization (do, re, mi)?",
+          options: [
+              { id: "music-history-101-l03-q-2-opt-0", text: "Pope Gregory I" },
+              { id: "music-history-101-l03-q-2-opt-1", text: "Léonin" },
+              { id: "music-history-101-l03-q-2-opt-2", text: "Guido d'Arezzo" },
+              { id: "music-history-101-l03-q-2-opt-3", text: "Palestrina" }
+            ],
+          correctOptionId: "music-history-101-l03-q-2-opt-2"
         },
         {
           id: "music-history-101-l03-q-3",
-          question: "'Word painting' in a madrigal means:",
+          text: "'Word painting' in a madrigal means:",
           options: [
-            "Writing lyrics on a painted scroll",
-            "Music that literally depicts the meaning of the text",
-            "Painting portraits of composers",
-            "Using colors to represent different notes"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l03-q-3-opt-0", text: "Writing lyrics on a painted scroll" },
+              { id: "music-history-101-l03-q-3-opt-1", text: "Music that literally depicts the meaning of the text" },
+              { id: "music-history-101-l03-q-3-opt-2", text: "Painting portraits of composers" },
+              { id: "music-history-101-l03-q-3-opt-3", text: "Using colors to represent different notes" }
+            ],
+          correctOptionId: "music-history-101-l03-q-3-opt-1"
         },
         {
           id: "music-history-101-l03-q-4",
-          question: "Martin Luther's chorales were significant because they:",
+          text: "Martin Luther's chorales were significant because they:",
           options: [
-            "Were written in complex Latin polyphony",
-            "Allowed congregations to sing in their own language",
-            "Were only performed by professional choirs",
-            "Eliminated all instruments from church"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l03-q-4-opt-0", text: "Were written in complex Latin polyphony" },
+              { id: "music-history-101-l03-q-4-opt-1", text: "Allowed congregations to sing in their own language" },
+              { id: "music-history-101-l03-q-4-opt-2", text: "Were only performed by professional choirs" },
+              { id: "music-history-101-l03-q-4-opt-3", text: "Eliminated all instruments from church" }
+            ],
+          correctOptionId: "music-history-101-l03-q-4-opt-1"
         }
       ],
       quizBlueprint: {
@@ -249,7 +253,7 @@ export const MusicHistory101Module: LearningModule = {
             "Ludwig van Beethoven (1770–1827) began in the Classical style but exploded its boundaries. His symphonies grew longer, louder, and more emotionally intense. The 'Eroica' (Symphony No. 3) redefined what a symphony could be. His late works — particularly the Ninth Symphony with its choral finale — pointed directly to the Romantic era. Despite progressive deafness, he composed some of the most powerful music ever written."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-history-101-l05-a1",
           title: "Sort into Categories",
@@ -286,35 +290,50 @@ export const MusicHistory101Module: LearningModule = {
       objectives: [
         "Demonstrate knowledge of Baroque and Classical music history"
       ],
-      quizQuestions: [
+      questions: [
         {
           id: "music-history-101-l06-q-1",
-          question: "Who is considered the 'Father of the Symphony'?",
-          options: ["Bach", "Mozart", "Haydn", "Beethoven"],
-          correctIndex: 2
+          text: "Who is considered the 'Father of the Symphony'?",
+          options: [
+              { id: "music-history-101-l06-q-1-opt-0", text: "Bach" },
+              { id: "music-history-101-l06-q-1-opt-1", text: "Mozart" },
+              { id: "music-history-101-l06-q-1-opt-2", text: "Haydn" },
+              { id: "music-history-101-l06-q-1-opt-3", text: "Beethoven" }
+            ],
+          correctOptionId: "music-history-101-l06-q-1-opt-2"
         },
         {
           id: "music-history-101-l06-q-2",
-          question: "Sonata form consists of which three main sections?",
+          text: "Sonata form consists of which three main sections?",
           options: [
-            "Verse, Chorus, Bridge",
-            "Exposition, Development, Recapitulation",
-            "Prelude, Fugue, Coda",
-            "Theme, Variations, Finale"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l06-q-2-opt-0", text: "Verse, Chorus, Bridge" },
+              { id: "music-history-101-l06-q-2-opt-1", text: "Exposition, Development, Recapitulation" },
+              { id: "music-history-101-l06-q-2-opt-2", text: "Prelude, Fugue, Coda" },
+              { id: "music-history-101-l06-q-2-opt-3", text: "Theme, Variations, Finale" }
+            ],
+          correctOptionId: "music-history-101-l06-q-2-opt-1"
         },
         {
           id: "music-history-101-l06-q-3",
-          question: "Which instrument replaced the harpsichord in the Classical period?",
-          options: ["Organ", "Clavichord", "Piano", "Synthesizer"],
-          correctIndex: 2
+          text: "Which instrument replaced the harpsichord in the Classical period?",
+          options: [
+              { id: "music-history-101-l06-q-3-opt-0", text: "Organ" },
+              { id: "music-history-101-l06-q-3-opt-1", text: "Clavichord" },
+              { id: "music-history-101-l06-q-3-opt-2", text: "Piano" },
+              { id: "music-history-101-l06-q-3-opt-3", text: "Synthesizer" }
+            ],
+          correctOptionId: "music-history-101-l06-q-3-opt-2"
         },
         {
           id: "music-history-101-l06-q-4",
-          question: "Vivaldi's 'The Four Seasons' is an example of a Baroque:",
-          options: ["Opera", "Fugue", "Solo concerto", "Mass"],
-          correctIndex: 2
+          text: "Vivaldi's 'The Four Seasons' is an example of a Baroque:",
+          options: [
+              { id: "music-history-101-l06-q-4-opt-0", text: "Opera" },
+              { id: "music-history-101-l06-q-4-opt-1", text: "Fugue" },
+              { id: "music-history-101-l06-q-4-opt-2", text: "Solo concerto" },
+              { id: "music-history-101-l06-q-4-opt-3", text: "Mass" }
+            ],
+          correctOptionId: "music-history-101-l06-q-4-opt-2"
         }
       ],
       quizBlueprint: {
@@ -397,7 +416,7 @@ export const MusicHistory101Module: LearningModule = {
             "Arnold Schoenberg abandoned tonality entirely, developing the 12-tone (serial) system: every piece uses all 12 chromatic notes in a fixed order (tone row), avoiding any sense of key. His student Webern pushed this to extreme brevity and precision. By the 1960s, composers like Steve Reich and Philip Glass reacted against complexity with minimalism — simple repeated patterns that evolve gradually, creating a hypnotic, trance-like effect."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-history-101-l08-a1",
           title: "Sort into Categories",
@@ -432,50 +451,50 @@ export const MusicHistory101Module: LearningModule = {
       objectives: [
         "Demonstrate knowledge of Romantic and 20th-century music history"
       ],
-      quizQuestions: [
+      questions: [
         {
           id: "music-history-101-l09-q-1",
-          question: "Wagner's concept of 'Gesamtkunstwerk' means:",
+          text: "Wagner's concept of 'Gesamtkunstwerk' means:",
           options: [
-            "Absolute music without a program",
-            "A total work of art combining music, drama, poetry, and spectacle",
-            "Music written only for instruments",
-            "A 12-tone compositional technique"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l09-q-1-opt-0", text: "Absolute music without a program" },
+              { id: "music-history-101-l09-q-1-opt-1", text: "A total work of art combining music, drama, poetry, and spectacle" },
+              { id: "music-history-101-l09-q-1-opt-2", text: "Music written only for instruments" },
+              { id: "music-history-101-l09-q-1-opt-3", text: "A 12-tone compositional technique" }
+            ],
+          correctOptionId: "music-history-101-l09-q-1-opt-1"
         },
         {
           id: "music-history-101-l09-q-2",
-          question: "Which work famously caused a riot at its 1913 premiere?",
+          text: "Which work famously caused a riot at its 1913 premiere?",
           options: [
-            "Debussy's 'Prélude à l'après-midi d'un faune'",
-            "Beethoven's Ninth Symphony",
-            "Stravinsky's 'The Rite of Spring'",
-            "Schoenberg's 'Pierrot lunaire'"
-          ],
-          correctIndex: 2
+              { id: "music-history-101-l09-q-2-opt-0", text: "Debussy's 'Prélude à l'après-midi d'un faune'" },
+              { id: "music-history-101-l09-q-2-opt-1", text: "Beethoven's Ninth Symphony" },
+              { id: "music-history-101-l09-q-2-opt-2", text: "Stravinsky's 'The Rite of Spring'" },
+              { id: "music-history-101-l09-q-2-opt-3", text: "Schoenberg's 'Pierrot lunaire'" }
+            ],
+          correctOptionId: "music-history-101-l09-q-2-opt-2"
         },
         {
           id: "music-history-101-l09-q-3",
-          question: "Minimalist music is characterized by:",
+          text: "Minimalist music is characterized by:",
           options: [
-            "Dense counterpoint and complex fugues",
-            "Simple repeated patterns that evolve gradually",
-            "12-tone serial rows",
-            "Massive Romantic orchestras"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l09-q-3-opt-0", text: "Dense counterpoint and complex fugues" },
+              { id: "music-history-101-l09-q-3-opt-1", text: "Simple repeated patterns that evolve gradually" },
+              { id: "music-history-101-l09-q-3-opt-2", text: "12-tone serial rows" },
+              { id: "music-history-101-l09-q-3-opt-3", text: "Massive Romantic orchestras" }
+            ],
+          correctOptionId: "music-history-101-l09-q-3-opt-1"
         },
         {
           id: "music-history-101-l09-q-4",
-          question: "Schoenberg's 12-tone system ensures that:",
+          text: "Schoenberg's 12-tone system ensures that:",
           options: [
-            "Only 7 notes of a major scale are used",
-            "All 12 chromatic notes are used in a fixed order, avoiding tonal center",
-            "Music always resolves to a tonic chord",
-            "Rhythm is the primary structural element"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l09-q-4-opt-0", text: "Only 7 notes of a major scale are used" },
+              { id: "music-history-101-l09-q-4-opt-1", text: "All 12 chromatic notes are used in a fixed order, avoiding tonal center" },
+              { id: "music-history-101-l09-q-4-opt-2", text: "Music always resolves to a tonic chord" },
+              { id: "music-history-101-l09-q-4-opt-3", text: "Rhythm is the primary structural element" }
+            ],
+          correctOptionId: "music-history-101-l09-q-4-opt-1"
         }
       ],
       quizBlueprint: {
@@ -495,35 +514,50 @@ export const MusicHistory101Module: LearningModule = {
       objectives: [
         "Synthesize knowledge across all musical periods"
       ],
-      quizQuestions: [
+      questions: [
         {
           id: "music-history-101-l10-q-1",
-          question: "Place these in chronological order: Baroque, Medieval, Classical, Renaissance",
+          text: "Place these in chronological order: Baroque, Medieval, Classical, Renaissance",
           options: [
-            "Medieval → Renaissance → Baroque → Classical",
-            "Renaissance → Medieval → Classical → Baroque",
-            "Medieval → Baroque → Renaissance → Classical",
-            "Baroque → Medieval → Renaissance → Classical"
-          ],
-          correctIndex: 0
+              { id: "music-history-101-l10-q-1-opt-0", text: "Medieval → Renaissance → Baroque → Classical" },
+              { id: "music-history-101-l10-q-1-opt-1", text: "Renaissance → Medieval → Classical → Baroque" },
+              { id: "music-history-101-l10-q-1-opt-2", text: "Medieval → Baroque → Renaissance → Classical" },
+              { id: "music-history-101-l10-q-1-opt-3", text: "Baroque → Medieval → Renaissance → Classical" }
+            ],
+          correctOptionId: "music-history-101-l10-q-1-opt-0"
         },
         {
           id: "music-history-101-l10-q-2",
-          question: "Which composer bridged the Classical and Romantic periods?",
-          options: ["Haydn", "Mozart", "Beethoven", "Schubert"],
-          correctIndex: 2
+          text: "Which composer bridged the Classical and Romantic periods?",
+          options: [
+              { id: "music-history-101-l10-q-2-opt-0", text: "Haydn" },
+              { id: "music-history-101-l10-q-2-opt-1", text: "Mozart" },
+              { id: "music-history-101-l10-q-2-opt-2", text: "Beethoven" },
+              { id: "music-history-101-l10-q-2-opt-3", text: "Schubert" }
+            ],
+          correctOptionId: "music-history-101-l10-q-2-opt-2"
         },
         {
           id: "music-history-101-l10-q-3",
-          question: "The development of notation (neumes → staff) occurred during which period?",
-          options: ["Renaissance", "Medieval", "Baroque", "Classical"],
-          correctIndex: 1
+          text: "The development of notation (neumes → staff) occurred during which period?",
+          options: [
+              { id: "music-history-101-l10-q-3-opt-0", text: "Renaissance" },
+              { id: "music-history-101-l10-q-3-opt-1", text: "Medieval" },
+              { id: "music-history-101-l10-q-3-opt-2", text: "Baroque" },
+              { id: "music-history-101-l10-q-3-opt-3", text: "Classical" }
+            ],
+          correctOptionId: "music-history-101-l10-q-3-opt-1"
         },
         {
           id: "music-history-101-l10-q-4",
-          question: "Debussy's music is most associated with which style?",
-          options: ["Romanticism", "Serialism", "Impressionism", "Minimalism"],
-          correctIndex: 2
+          text: "Debussy's music is most associated with which style?",
+          options: [
+              { id: "music-history-101-l10-q-4-opt-0", text: "Romanticism" },
+              { id: "music-history-101-l10-q-4-opt-1", text: "Serialism" },
+              { id: "music-history-101-l10-q-4-opt-2", text: "Impressionism" },
+              { id: "music-history-101-l10-q-4-opt-3", text: "Minimalism" }
+            ],
+          correctOptionId: "music-history-101-l10-q-4-opt-2"
         }
       ],
       quizBlueprint: {
@@ -565,7 +599,7 @@ export const MusicHistory101Module: LearningModule = {
             "In the 1950s, rock and roll fused blues, country, and rhythm & blues. Chuck Berry, Little Richard, and Fats Domino created the template. Elvis Presley brought it to a mass white audience. The electric guitar became the signature instrument. The Beatles (1960s) expanded rock into an album-length art form. Rock fractured into subgenres: punk, metal, progressive, alternative — each pushing boundaries."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-history-101-l11-a1",
           title: "Match the Pairs",
@@ -598,40 +632,50 @@ export const MusicHistory101Module: LearningModule = {
       objectives: [
         "Demonstrate comprehensive music history knowledge"
       ],
-      quizQuestions: [
+      questions: [
         {
           id: "music-history-101-l12-q-1",
-          question: "The blues originated primarily from:",
+          text: "The blues originated primarily from:",
           options: [
-            "European classical tradition",
-            "African American communities in the Mississippi Delta",
-            "Asian folk music",
-            "Medieval church chant"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l12-q-1-opt-0", text: "European classical tradition" },
+              { id: "music-history-101-l12-q-1-opt-1", text: "African American communities in the Mississippi Delta" },
+              { id: "music-history-101-l12-q-1-opt-2", text: "Asian folk music" },
+              { id: "music-history-101-l12-q-1-opt-3", text: "Medieval church chant" }
+            ],
+          correctOptionId: "music-history-101-l12-q-1-opt-1"
         },
         {
           id: "music-history-101-l12-q-2",
-          question: "Bach is most famous for which compositional technique?",
-          options: ["Serialism", "Minimalism", "Counterpoint and fugue", "Impressionism"],
-          correctIndex: 2
+          text: "Bach is most famous for which compositional technique?",
+          options: [
+              { id: "music-history-101-l12-q-2-opt-0", text: "Serialism" },
+              { id: "music-history-101-l12-q-2-opt-1", text: "Minimalism" },
+              { id: "music-history-101-l12-q-2-opt-2", text: "Counterpoint and fugue" },
+              { id: "music-history-101-l12-q-2-opt-3", text: "Impressionism" }
+            ],
+          correctOptionId: "music-history-101-l12-q-2-opt-2"
         },
         {
           id: "music-history-101-l12-q-3",
-          question: "The piano replaced the harpsichord because the piano could:",
+          text: "The piano replaced the harpsichord because the piano could:",
           options: [
-            "Play more notes at once",
-            "Play both soft and loud (dynamics)",
-            "Be tuned more easily",
-            "Produce sustained tones"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l12-q-3-opt-0", text: "Play more notes at once" },
+              { id: "music-history-101-l12-q-3-opt-1", text: "Play both soft and loud (dynamics)" },
+              { id: "music-history-101-l12-q-3-opt-2", text: "Be tuned more easily" },
+              { id: "music-history-101-l12-q-3-opt-3", text: "Produce sustained tones" }
+            ],
+          correctOptionId: "music-history-101-l12-q-3-opt-1"
         },
         {
           id: "music-history-101-l12-q-4",
-          question: "Which genre was born in New Orleans around 1900?",
-          options: ["Blues", "Rock and roll", "Jazz", "Country"],
-          correctIndex: 2
+          text: "Which genre was born in New Orleans around 1900?",
+          options: [
+              { id: "music-history-101-l12-q-4-opt-0", text: "Blues" },
+              { id: "music-history-101-l12-q-4-opt-1", text: "Rock and roll" },
+              { id: "music-history-101-l12-q-4-opt-2", text: "Jazz" },
+              { id: "music-history-101-l12-q-4-opt-3", text: "Country" }
+            ],
+          correctOptionId: "music-history-101-l12-q-4-opt-2"
         }
       ],
       quizBlueprint: {
@@ -708,7 +752,7 @@ export const MusicHistory101Module: LearningModule = {
             "Every modern genre has deep roots. Pop melody structure → Classical phrase symmetry. Rock guitar solos → Romantic virtuosity. Jazz improvisation → Baroque ornamentation. Hip-hop sampling → Centuries of composers quoting each other. Film scores → Late Romantic orchestral writing. EDM's electronic sounds → 20th-century avant-garde experimentation. Understanding history helps you hear these connections."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "music-history-101-l14-a1",
           title: "Match the Pairs",
@@ -740,45 +784,50 @@ export const MusicHistory101Module: LearningModule = {
       objectives: [
         "Demonstrate comprehensive mastery of music history"
       ],
-      quizQuestions: [
+      questions: [
         {
           id: "music-history-101-l15-q-1",
-          question: "Hip-hop originated in:",
+          text: "Hip-hop originated in:",
           options: [
-            "Detroit in the 1980s",
-            "The South Bronx in the 1970s",
-            "Los Angeles in the 1990s",
-            "Chicago in the 1960s"
-          ],
-          correctIndex: 1
+              { id: "music-history-101-l15-q-1-opt-0", text: "Detroit in the 1980s" },
+              { id: "music-history-101-l15-q-1-opt-1", text: "The South Bronx in the 1970s" },
+              { id: "music-history-101-l15-q-1-opt-2", text: "Los Angeles in the 1990s" },
+              { id: "music-history-101-l15-q-1-opt-3", text: "Chicago in the 1960s" }
+            ],
+          correctOptionId: "music-history-101-l15-q-1-opt-1"
         },
         {
           id: "music-history-101-l15-q-2",
-          question: "Which technology first allowed music to be recorded and played back?",
-          options: ["Radio", "The phonograph", "The synthesizer", "The internet"],
-          correctIndex: 1
+          text: "Which technology first allowed music to be recorded and played back?",
+          options: [
+              { id: "music-history-101-l15-q-2-opt-0", text: "Radio" },
+              { id: "music-history-101-l15-q-2-opt-1", text: "The phonograph" },
+              { id: "music-history-101-l15-q-2-opt-2", text: "The synthesizer" },
+              { id: "music-history-101-l15-q-2-opt-3", text: "The internet" }
+            ],
+          correctOptionId: "music-history-101-l15-q-2-opt-1"
         },
         {
           id: "music-history-101-l15-q-3",
-          question: "Romantic-era composers drew inspiration from all EXCEPT:",
+          text: "Romantic-era composers drew inspiration from all EXCEPT:",
           options: [
-            "Nationalism and folk music",
-            "Literature and nature",
-            "12-tone serial rows",
-            "Personal emotion and expression"
-          ],
-          correctIndex: 2
+              { id: "music-history-101-l15-q-3-opt-0", text: "Nationalism and folk music" },
+              { id: "music-history-101-l15-q-3-opt-1", text: "Literature and nature" },
+              { id: "music-history-101-l15-q-3-opt-2", text: "12-tone serial rows" },
+              { id: "music-history-101-l15-q-3-opt-3", text: "Personal emotion and expression" }
+            ],
+          correctOptionId: "music-history-101-l15-q-3-opt-2"
         },
         {
           id: "music-history-101-l15-q-4",
-          question: "The connection between film scores and late Romantic music exists because:",
+          text: "The connection between film scores and late Romantic music exists because:",
           options: [
-            "Film composers use the same instruments and emotional orchestral techniques Wagner and Strauss pioneered",
-            "Films are always set in the 19th century",
-            "Romantic composers wrote for silent films",
-            "Film scores use 12-tone technique exclusively"
-          ],
-          correctIndex: 0
+              { id: "music-history-101-l15-q-4-opt-0", text: "Film composers use the same instruments and emotional orchestral techniques Wagner and Strauss pioneered" },
+              { id: "music-history-101-l15-q-4-opt-1", text: "Films are always set in the 19th century" },
+              { id: "music-history-101-l15-q-4-opt-2", text: "Romantic composers wrote for silent films" },
+              { id: "music-history-101-l15-q-4-opt-3", text: "Film scores use 12-tone technique exclusively" }
+            ],
+          correctOptionId: "music-history-101-l15-q-4-opt-0"
         }
       ],
       quizBlueprint: {

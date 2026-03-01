@@ -17,8 +17,8 @@ const ActiveProfileContext = createContext<ActiveProfileContextType | undefined>
 
 export const ActiveProfileProvider = ({ children }: { children: React.ReactNode }) => {
   const [profile, setProfile] = useState<StudentProfile | null>(null);
-  const [profileId, setProfileId] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [profileId, setProfileId] = useState<string | null>(() => getActiveProfileIdFromBrowser());
+  const [isLoading, setIsLoading] = useState(() => profileId !== null);
   const supabase = useMemo(() => createSupabaseBrowserClient(), []);
 
   const fetchProfile = useCallback(async (id: string) => {
@@ -40,14 +40,14 @@ export const ActiveProfileProvider = ({ children }: { children: React.ReactNode 
   }, [supabase]);
 
   useEffect(() => {
-    const id = getActiveProfileIdFromBrowser();
-    setProfileId(id);
-    if (id) {
-      fetchProfile(id);
-    } else {
-      setIsLoading(false);
+    if (!profileId) {
+      return;
     }
-  }, [fetchProfile]);
+    const timer = window.setTimeout(() => {
+      void fetchProfile(profileId);
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [fetchProfile, profileId]);
 
   const handleSetProfile = (newProfile: StudentProfile) => {
     setProfile(newProfile);

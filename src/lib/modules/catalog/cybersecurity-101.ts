@@ -9,7 +9,6 @@ export const Cybersecurity101Module: LearningModule = {
   tags: ["curriculum", "interactive", "technology", "security"],
   minAge: 14,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],
@@ -44,7 +43,7 @@ export const Cybersecurity101Module: LearningModule = {
         { id: "cybersecurity-101-l01-q2", text: "Encryption primarily protects", options: [{ id: "a", text: "Confidentiality" }, { id: "b", text: "Availability" }, { id: "c", text: "Integrity" }, { id: "d", text: "Performance" }], correctOptionId: "a", explanation: "Encryption scrambles data so only authorized keyholders can read it — that's confidentiality!" },
         { id: "cybersecurity-101-l01-q3", text: "A DDoS attack that crashes a website violates", options: [{ id: "a", text: "Availability" }, { id: "b", text: "Confidentiality" }, { id: "c", text: "Integrity" }, { id: "d", text: "Authentication" }], correctOptionId: "a", explanation: "DDoS makes the system unavailable to legitimate users — an availability attack!" }
       ],
-      activities: [{ id: "cybersecurity-101-l01-act1", type: "sorting_buckets", title: "CIA Triad classifier", description: "Sort scenarios: Confidentiality (leaked passwords, unauthorized file access), Integrity (modified records, altered emails), Availability (server crash, ransomware lockout, DDoS attack)." }]
+      interactiveActivities: [{ id: "cybersecurity-101-l01-act1", type: "sorting_buckets", title: "CIA Triad classifier", description: "Sort scenarios: Confidentiality (leaked passwords, unauthorized file access), Integrity (modified records, altered emails), Availability (server crash, ransomware lockout, DDoS attack)." }]
     },
 
     /* ── L02 Common Threats ── */
@@ -69,7 +68,7 @@ export const Cybersecurity101Module: LearningModule = {
         { id: "cybersecurity-101-l02-q2", text: "The WannaCry attack in 2017 was an example of", options: [{ id: "a", text: "Ransomware" }, { id: "b", text: "Phishing" }, { id: "c", text: "Social engineering" }, { id: "d", text: "A firewall" }], correctOptionId: "a", explanation: "WannaCry was ransomware that encrypted files on 200,000+ computers and demanded Bitcoin payment!" },
         { id: "cybersecurity-101-l02-q3", text: "Using HTTPS and VPNs helps prevent", options: [{ id: "a", text: "Man-in-the-Middle attacks" }, { id: "b", text: "Physical theft" }, { id: "c", text: "Power outages" }, { id: "d", text: "Hardware failures" }], correctOptionId: "a", explanation: "HTTPS and VPNs encrypt your connection, making it much harder for attackers to intercept your data!" }
       ],
-      activities: [{ id: "cybersecurity-101-l02-act1", type: "sorting_buckets", title: "Threat identifier", description: "Classify: Phishing (fake bank email, spoofed login page), Malware (virus in attachment, ransomware popup), Social Engineering (phone call pretending to be IT, tailgating into building), Insider Threat (employee copying files before quitting)." }]
+      interactiveActivities: [{ id: "cybersecurity-101-l02-act1", type: "sorting_buckets", title: "Threat identifier", description: "Classify: Phishing (fake bank email, spoofed login page), Malware (virus in attachment, ransomware popup), Social Engineering (phone call pretending to be IT, tailgating into building), Insider Threat (employee copying files before quitting)." }]
     },
 
     /* ── L03 Authentication and Access Control ── */
@@ -94,7 +93,7 @@ export const Cybersecurity101Module: LearningModule = {
         { id: "cybersecurity-101-l03-q2", text: "MFA blocks approximately what percentage of automated attacks?", options: [{ id: "a", text: "99.9%" }, { id: "b", text: "50%" }, { id: "c", text: "75%" }, { id: "d", text: "25%" }], correctOptionId: "a", explanation: "Microsoft research shows MFA blocks 99.9% of automated credential attacks!" },
         { id: "cybersecurity-101-l03-q3", text: "The Principle of Least Privilege means", options: [{ id: "a", text: "Users get only the minimum access needed for their job" }, { id: "b", text: "Everyone gets admin access" }, { id: "c", text: "Passwords should be short" }, { id: "d", text: "No one needs authentication" }], correctOptionId: "a", explanation: "Least privilege minimizes the damage if an account is compromised!" }
       ],
-      activities: [{ id: "cybersecurity-101-l03-act1", type: "matching_pairs", title: "Auth factor matcher", description: "Match: Password → Know, Security key → Have, Iris scan → Are, PIN code → Know, Smartphone app → Have, Fingerprint → Are." }]
+      interactiveActivities: [{ id: "cybersecurity-101-l03-act1", type: "matching_pairs", title: "Auth factor matcher", description: "Match: Password → Know, Security key → Have, Iris scan → Are, PIN code → Know, Smartphone app → Have, Fingerprint → Are." }]
     },
 
     /* ── L04 Cybersecurity Checkpoint ── */
@@ -138,7 +137,7 @@ export const Cybersecurity101Module: LearningModule = {
         { id: "cybersecurity-101-l05-q2", text: "HTTPS protects web traffic using", options: [{ id: "a", text: "TLS encryption" }, { id: "b", text: "WEP protocol" }, { id: "c", text: "Firewall rules" }, { id: "d", text: "Password hashing" }], correctOptionId: "a", explanation: "HTTPS = HTTP + TLS encryption = secure web browsing (look for the lock icon)!" },
         { id: "cybersecurity-101-l05-q3", text: "Which Wi-Fi protocol is broken and should never be used?", options: [{ id: "a", text: "WEP" }, { id: "b", text: "WPA3" }, { id: "c", text: "WPA2" }, { id: "d", text: "HTTPS" }], correctOptionId: "a", explanation: "WEP can be cracked in minutes — WPA2 or WPA3 are the minimum acceptable standards!" }
       ],
-      activities: [{ id: "cybersecurity-101-l05-act1", type: "sorting_buckets", title: "Secure or insecure?", description: "Sort: Secure (WPA3 home Wi-Fi, VPN on public Wi-Fi, HTTPS website) vs. Insecure (WEP encryption, open public Wi-Fi, HTTP website, 'Free Airport WiFi' hotspot)." }]
+      interactiveActivities: [{ id: "cybersecurity-101-l05-act1", type: "sorting_buckets", title: "Secure or insecure?", description: "Sort: Secure (WPA3 home Wi-Fi, VPN on public Wi-Fi, HTTPS website) vs. Insecure (WEP encryption, open public Wi-Fi, HTTP website, 'Free Airport WiFi' hotspot)." }]
     },
 
     /* ── L06 Web Application Security ── */
@@ -163,7 +162,7 @@ export const Cybersecurity101Module: LearningModule = {
         { id: "cybersecurity-101-l06-q2", text: "XSS attacks inject", options: [{ id: "a", text: "Malicious JavaScript into web pages" }, { id: "b", text: "SQL into databases" }, { id: "c", text: "Viruses into emails" }, { id: "d", text: "Worms into networks" }], correctOptionId: "a", explanation: "XSS = Cross-Site Scripting — injecting JavaScript that runs in other users' browsers!" },
         { id: "cybersecurity-101-l06-q3", text: "CSRF tokens help prevent attacks by", options: [{ id: "a", text: "Requiring a unique code with each request to verify it was intentional" }, { id: "b", text: "Encrypting all passwords" }, { id: "c", text: "Blocking all incoming traffic" }, { id: "d", text: "Scanning for malware" }], correctOptionId: "a", explanation: "CSRF tokens ensure requests come from the legitimate user, not a malicious third-party site!" }
       ],
-      activities: [{ id: "cybersecurity-101-l06-act1", type: "matching_pairs", title: "Vulnerability matcher", description: "Match: Malicious SQL in login form → SQL Injection, Script tag in forum comment → XSS, Hidden form submitting to bank → CSRF, Fake email asking for password → Phishing." }]
+      interactiveActivities: [{ id: "cybersecurity-101-l06-act1", type: "matching_pairs", title: "Vulnerability matcher", description: "Match: Malicious SQL in login form → SQL Injection, Script tag in forum comment → XSS, Hidden form submitting to bank → CSRF, Fake email asking for password → Phishing." }]
     },
 
     /* ── L07 Incident Response ── */
@@ -188,7 +187,7 @@ export const Cybersecurity101Module: LearningModule = {
         { id: "cybersecurity-101-l07-q2", text: "When a breach is detected, the first containment step is", options: [{ id: "a", text: "Isolate affected systems from the network" }, { id: "b", text: "Delete all logs" }, { id: "c", text: "Turn off all computers permanently" }, { id: "d", text: "Post about it on social media" }], correctOptionId: "a", explanation: "Isolate first to stop the spread — and NEVER delete logs — they're evidence!" },
         { id: "cybersecurity-101-l07-q3", text: "The post-incident review helps organizations", options: [{ id: "a", text: "Learn from the breach and improve defenses" }, { id: "b", text: "Hide what happened" }, { id: "c", text: "Delete evidence of the attack" }, { id: "d", text: "Blame individual employees" }], correctOptionId: "a", explanation: "Lessons learned turn a breach into an opportunity to strengthen security!" }
       ],
-      activities: [{ id: "cybersecurity-101-l07-act1", type: "timeline_builder", title: "Incident response steps", description: "Arrange in order: Create incident response plan → Detect anomaly via SIEM alert → Analyze severity → Isolate affected systems → Remove malware → Restore from backup → Write incident report → Update security procedures." }]
+      interactiveActivities: [{ id: "cybersecurity-101-l07-act1", type: "timeline_builder", title: "Incident response steps", description: "Arrange in order: Create incident response plan → Detect anomaly via SIEM alert → Analyze severity → Isolate affected systems → Remove malware → Restore from backup → Write incident report → Update security procedures." }]
     },
 
     /* ── L08 Cybersecurity Final Assessment ── */

@@ -2,19 +2,21 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { serverEnv } from "@/lib/config/env";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { sanitizeNextPath } from "@/lib/routing/next-path";
 import {
   hashParentConsentToken,
   verifyParentConsentVerificationToken,
 } from "@/lib/compliance/parent-consent-token";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
+import { timingSafeEqualHexStrings } from "@/lib/security/safe-compare";
 
 const requestSchema = z.object({
   token: z.string().min(8),
 });
 
 export async function POST(request: NextRequest) {
-  const rateLimit = enforceIpRateLimit(request, "api:compliance:parent-consent-verify", {
+  const rateLimit = await enforceIpRateLimit(request, "api:compliance:parent-consent-verify", {
     max: 30,
     windowMs: 5 * 60 * 1000,
   });
@@ -53,7 +55,7 @@ export async function POST(request: NextRequest) {
 
     if (!tokenVerification.valid) {
       return NextResponse.json(
-        { error: `Invalid verification token: ${tokenVerification.reason}` },
+        { error: "Invalid or expired verification token." },
         { status: 400 },
       );
     }
@@ -69,7 +71,7 @@ export async function POST(request: NextRequest) {
 
     if (consentFetchError) {
       return NextResponse.json(
-        { error: "Unable to load consent request", details: consentFetchError.message },
+        { error: "Unable to load consent request." },
         { status: 500 },
       );
     }
@@ -118,7 +120,7 @@ export async function POST(request: NextRequest) {
     }
 
     const presentedTokenHash = hashParentConsentToken(parsed.data.token);
-    if (presentedTokenHash !== expectedTokenHash) {
+    if (!timingSafeEqualHexStrings(presentedTokenHash, expectedTokenHash)) {
       return NextResponse.json(
         { error: "Verification token mismatch." },
         { status: 400 },
@@ -147,7 +149,7 @@ export async function POST(request: NextRequest) {
 
       if (verifyError) {
         return NextResponse.json(
-          { error: "Unable to verify consent request", details: verifyError.message },
+          { error: "Unable to verify consent request." },
           { status: 500 },
         );
       }
@@ -165,7 +167,7 @@ export async function POST(request: NextRequest) {
 
     if (profileError) {
       return NextResponse.json(
-        { error: "Unable to update user profile consent status", details: profileError.message },
+        { error: "Unable to update user profile consent status." },
         { status: 500 },
       );
     }
@@ -176,10 +178,10 @@ export async function POST(request: NextRequest) {
       nextRoute: sanitizeNextPath(tokenVerification.payload.nextPath) ?? "/dashboard",
     });
   } catch (error) {
+    console.error("Parent consent verification failed.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Server configuration error",
-        details: error instanceof Error ? error.message : "Unknown error",
       },
       { status: 500 },
     );

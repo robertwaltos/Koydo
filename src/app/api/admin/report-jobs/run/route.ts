@@ -8,6 +8,7 @@ import {
   buildTelemetrySummary,
   type LearningEventReportRow,
 } from "@/lib/admin/telemetry-report";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 async function buildReportCsv(reportType: string) {
   const admin = createSupabaseAdminClient();
@@ -154,7 +155,8 @@ export async function POST() {
     .limit(10);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (!jobs || jobs.length === 0) {
     return NextResponse.json({ success: true, processed: 0, claimed: 0, skipped: 0 });
@@ -205,3 +207,4 @@ export async function POST() {
 
   return NextResponse.json({ success: true, processed, claimed, skipped });
 }
+

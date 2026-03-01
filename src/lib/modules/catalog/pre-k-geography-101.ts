@@ -9,7 +9,6 @@ export const PreKGeography101Module: LearningModule = {
   tags: ["pre-k", "curriculum", "interactive"],
   minAge: 3,
   maxAge: 5,
-  moduleVersion: "4.0.0",
   version: "4.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],
@@ -101,7 +100,7 @@ export const PreKGeography101Module: LearningModule = {
           explanation: "We brush teeth in the bathroom!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-geography-l01-act1",
           type: "drawing_canvas",
@@ -189,7 +188,7 @@ export const PreKGeography101Module: LearningModule = {
           explanation: "Libraries lend books for free!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-geography-l02-act1",
           type: "matching_pairs",
@@ -277,7 +276,7 @@ export const PreKGeography101Module: LearningModule = {
           explanation: "Rivers flow like snakes!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-geography-l03-act1",
           type: "sorting_buckets",
@@ -364,7 +363,7 @@ export const PreKGeography101Module: LearningModule = {
           explanation: "Oceans are big and salty!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-geography-l04-act1",
           type: "sorting_buckets",
@@ -452,7 +451,7 @@ export const PreKGeography101Module: LearningModule = {
           explanation: "Follow the path on a map!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-geography-l05-act1",
           type: "drawing_canvas",
@@ -540,7 +539,7 @@ export const PreKGeography101Module: LearningModule = {
           explanation: "Bundle up when it is cold!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-geography-l06-act1",
           type: "sorting_buckets",
@@ -628,7 +627,7 @@ export const PreKGeography101Module: LearningModule = {
           explanation: "Antarctica is the coldest!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-geography-l07-act1",
           type: "matching_pairs",
@@ -716,7 +715,7 @@ export const PreKGeography101Module: LearningModule = {
           explanation: "There are seven continents!",
         },
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "prek-geography-l08-act1",
           type: "drawing_canvas",

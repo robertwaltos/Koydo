@@ -9,6 +9,7 @@ import {
   getLanguageRuntimeConfig,
   LANGUAGE_RUNTIME_CONFIG_APP_SETTINGS_KEY,
 } from "@/lib/language-learning";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const runtimeConfigPayloadSchema = z.object({
   phase: z.enum(["1", "2", "3"]).optional(),
@@ -105,7 +106,8 @@ export async function POST(request: Request) {
   );
 
   if (upsertError) {
-    return NextResponse.json({ error: upsertError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(upsertError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   clearLanguageRuntimeConfigCache();

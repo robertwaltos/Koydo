@@ -8,6 +8,7 @@ import {
   getLanguageRuntimeConfig,
   isMissingLanguageUnlockTableError,
 } from "@/lib/language-learning";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const querySchema = z.object({
   level: z.enum(["beginner", "intermediate", "advanced"]),
@@ -84,10 +85,10 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    console.error("Failed to load language exam unlock quote.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Failed to load language exam unlock quote.",
-        message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

@@ -4,6 +4,7 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { logAdminAction } from "@/lib/admin/audit";
 import { enforceAdminActionRateLimit } from "@/lib/admin/rate-limit";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const geoTierSchema = z.enum(["tier_1", "tier_2", "tier_3", "tier_4", "tier_5"]);
 
@@ -73,7 +74,8 @@ export async function GET() {
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   return NextResponse.json({
@@ -138,7 +140,8 @@ export async function POST(request: Request) {
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: upsertError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(upsertError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const { data: refreshedRows, error: readError } = await adminDb
@@ -148,7 +151,8 @@ export async function POST(request: Request) {
     )
     .order("geo_tier", { ascending: true });
   if (readError) {
-    return NextResponse.json({ error: readError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(readError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   await logAdminAction({
@@ -165,3 +169,4 @@ export async function POST(request: Request) {
     rows: serializeRows((refreshedRows ?? []) as LadderRowRecord[]),
   });
 }
+

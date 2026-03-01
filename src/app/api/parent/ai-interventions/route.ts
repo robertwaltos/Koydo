@@ -149,7 +149,8 @@ export async function GET() {
       .maybeSingle();
 
     if (parentProfileError) {
-      return NextResponse.json({ error: parentProfileError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(parentProfileError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     if (!parentProfile?.is_parent || !parentProfile.parent_email) {
@@ -170,7 +171,8 @@ export async function GET() {
       .maybeSingle();
 
     if (childError) {
-      return NextResponse.json({ error: childError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(childError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     if (!childProfile) {
@@ -206,18 +208,21 @@ export async function GET() {
     ]);
 
     if (masteryResult.error) {
-      return NextResponse.json({ error: masteryResult.error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(masteryResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     if (errorsResult.error && !isMissingTableError(errorsResult.error.message, "user_exam_error_logs")) {
-      return NextResponse.json({ error: errorsResult.error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(errorsResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     if (
       followupResult.error &&
       !isMissingTableError(followupResult.error.message, "ai_followup_materials")
     ) {
-      return NextResponse.json({ error: followupResult.error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(followupResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     const weakSkills = ((masteryResult.data ?? []) as MasteryRow[])

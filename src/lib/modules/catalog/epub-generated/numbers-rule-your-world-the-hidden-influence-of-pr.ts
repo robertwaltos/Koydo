@@ -13,7 +13,6 @@ export const NumbersRuleYourWorldTheHiddenInfluenceOfPrModule: LearningModule = 
   tags: ["epub-derived", "curriculum", "interactive", "statistics", "probability", "data-science", "decision-making"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Explain how averaging and queuing theory improve wait times in service systems",

@@ -9,7 +9,6 @@ export const Economics401Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "mba", "economics", "behavioral"],
   minAge: 16,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Identify key cognitive biases and heuristics that violate rational choice assumptions",
@@ -95,7 +94,7 @@ export const Economics401Module: LearningModule = {
             "Status quo bias is the tendency to prefer the current state, even when changing would be objectively better. It explains why default options are so powerful — most people never switch from the pre-set 401(k) allocation. The endowment effect (Thaler) shows people value things more once they own them. In experiments, owners demand roughly twice what buyers are willing to pay for the same mug. Loss aversion amplifies both biases: losing something feels about twice as painful as gaining it feels good."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-401-l02-a1",
           title: "Match Biases to Business Scenarios",
@@ -259,7 +258,7 @@ export const Economics401Module: LearningModule = {
             "UK's Behavioural Insights Team ('Nudge Unit') increased tax collection by telling late payers that most neighbors had already paid (social norms). Auto-enrollment in 401(k) plans in the U.S. boosted retirement savings participation from ~60% to 90% (defaults). Organ donation rates are dramatically higher in opt-out countries (Austria: 99%) vs. opt-in (Germany: 12%). In all cases, no option is removed — the architecture just makes the better choice easier."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-401-l05-a1",
           title: "Classify Interventions: Nudge vs. Not a Nudge",
@@ -426,7 +425,7 @@ export const Economics401Module: LearningModule = {
             "Markets develop mechanisms to overcome information problems. Warranties and guarantees signal quality (adverse selection). Brand reputation aggregates historical performance information. Third-party ratings (credit scores, restaurant reviews) reduce search costs. Screening occurs when the uninformed party designs a menu of options to reveal information — insurance companies offering high-deductible (cheap) and low-deductible (expensive) plans to separate high-risk from low-risk customers."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-401-l08-a1",
           title: "Classify Information Problems",
@@ -632,7 +631,7 @@ export const Economics401Module: LearningModule = {
             "Some markets can't use prices effectively (organ donation, school assignment, medical residencies). Alvin Roth and Lloyd Shapley (Nobel 2012) developed stable matching algorithms. The Deferred Acceptance algorithm (Gale-Shapley) matches residents to hospitals: each round, applicants propose to their top choice; hospitals tentatively accept their best offers and reject others; rejected applicants propose to their next choice. The result is a stable matching — no pair would prefer to break from their assigned match to be together."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-401-l11-a1",
           title: "Match Auction Types to Properties",
@@ -793,7 +792,7 @@ export const Economics401Module: LearningModule = {
             "Common mistakes: (1) Thinking behavioral economics replaces traditional economics — it supplements it; markets still tend toward equilibrium, incentives still matter. (2) Assuming one bias explains everything — behavior is multi-causal. (3) Designing nudges without testing — what works in one context may backfire in another (context dependence). (4) Ignoring that biases can be beneficial — heuristics often produce good-enough decisions quickly. (5) Confusing correlation in behavioral experiments with causation in complex real-world settings."
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "economics-401-l14-a1",
           title: "Match Mistakes to Corrections",

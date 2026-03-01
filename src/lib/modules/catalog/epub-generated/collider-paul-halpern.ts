@@ -13,7 +13,6 @@ export const ColliderPaulHalpernModule: LearningModule = {
   tags: ["epub-derived", "curriculum", "interactive", "physics", "particle-physics", "LHC", "cosmology"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Describe Rutherford's gold foil experiment and its revolutionary implications",

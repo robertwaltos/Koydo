@@ -194,10 +194,10 @@ export async function POST(request: NextRequest) {
       policy,
     });
   } catch (error) {
+    console.error("Pronunciation grading failed.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Pronunciation grading failed",
-        message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

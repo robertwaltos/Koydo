@@ -96,7 +96,7 @@ function getStripeUserFacingError(error: unknown): { message: string; status: nu
 }
 
 export async function POST(request: Request) {
-  const rateLimit = enforceIpRateLimit(request, "api:billing:stripe-checkout", {
+  const rateLimit = await enforceIpRateLimit(request, "api:billing:stripe-checkout", {
     max: 20,
     windowMs: 5 * 60 * 1000,
   });

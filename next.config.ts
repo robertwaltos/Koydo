@@ -10,21 +10,8 @@ const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-  {
-    key: "Content-Security-Policy",
-    value: [
-      "default-src 'self'",
-      // Supabase API + realtime
-      "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.stripe.com",
-      // Next.js HMR in dev
-      "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://js.stripe.com https://cdn.jsdelivr.net",
-      "style-src 'self' 'unsafe-inline'",
-      "img-src 'self' data: blob: https://*.supabase.co https://*.supabase.in https://storage.googleapis.com",
-      "font-src 'self'",
-      "frame-src https://js.stripe.com https://hooks.stripe.com",
-      "worker-src 'self' blob:",
-    ].join("; "),
-  },
+  // CSP is now set dynamically per-request in src/middleware.ts with a
+  // per-request nonce. Do NOT duplicate it here — the middleware header wins.
 ];
 
 const nextConfig: NextConfig = {

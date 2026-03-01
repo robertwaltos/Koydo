@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { isMissingTestingTableError } from "@/lib/testing/api-utils";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 type AttemptRow = {
   user_id: string;
@@ -75,7 +76,8 @@ export async function GET(
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: classroomError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(classroomError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   if (!classroom) {
@@ -98,7 +100,8 @@ export async function GET(
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: enrollmentError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(enrollmentError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const learnerUserIds = (enrollments ?? [])
@@ -131,7 +134,8 @@ export async function GET(
 
   const { data: attemptsData, error: attemptsError } = await attemptsQuery;
   if (attemptsError) {
-    return NextResponse.json({ error: attemptsError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(attemptsError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const attempts = (attemptsData ?? []) as AttemptRow[];

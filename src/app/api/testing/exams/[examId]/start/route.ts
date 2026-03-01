@@ -4,6 +4,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import type { SupportedTestingLanguage, TestingQuestionPayload } from "@/lib/testing/types";
 import { isMissingTestingTableError } from "@/lib/testing/api-utils";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const startAttemptSchema = z.object({
   language: z.enum(["en", "pl"]).optional(),
@@ -148,7 +149,8 @@ export async function POST(
     : withGovernance;
 
   if (bankError) {
-    return NextResponse.json({ error: bankError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(bankError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const targetCount = attemptType === "sample" ? 10 : Math.max(10, exam.question_count || 60);

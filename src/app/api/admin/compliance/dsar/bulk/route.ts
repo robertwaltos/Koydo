@@ -3,6 +3,7 @@ import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { logAdminAction } from "@/lib/admin/audit";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
   requestIds: z.array(z.string().uuid()).min(1).max(200),
@@ -37,7 +38,8 @@ export async function POST(request: Request) {
     .in("id", parsed.data.requestIds);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   await logAdminAction({
@@ -54,3 +56,4 @@ export async function POST(request: Request) {
     updatedCount: parsed.data.requestIds.length,
   });
 }
+

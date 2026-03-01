@@ -1,7 +1,9 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { serverEnv } from "@/lib/config/env";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { getModuleRegistryCount } from "@/lib/modules";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 type HealthCheck = {
   key: string;
@@ -9,7 +11,18 @@ type HealthCheck = {
   detail: string;
 };
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const rateLimit = await enforceIpRateLimit(request, "api:health:get", {
+    max: 60,
+    windowMs: 60_000,
+  });
+  if (!rateLimit.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests" },
+      { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+    );
+  }
+
   const checks: HealthCheck[] = [];
 
   const hasSupabasePublicConfig =
@@ -43,10 +56,11 @@ export async function GET() {
       const admin = createSupabaseAdminClient();
       const { error } = await admin.from("user_profiles").select("user_id", { head: true, count: "exact" }).limit(1);
       if (error) {
+        console.error("[health] Supabase DB probe query failed.", toSafeErrorRecord(error));
         checks.push({
           key: "supabase_db_probe",
           status: "fail",
-          detail: error.message,
+          detail: "Database probe failed.",
         });
       } else {
         checks.push({
@@ -56,10 +70,11 @@ export async function GET() {
         });
       }
     } catch (error) {
+      console.error("[health] Supabase DB probe threw unexpectedly.", toSafeErrorRecord(error));
       checks.push({
         key: "supabase_db_probe",
         status: "fail",
-        detail: error instanceof Error ? error.message : "Unknown probe error.",
+        detail: "Database probe failed.",
       });
     }
   }

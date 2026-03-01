@@ -10,7 +10,7 @@ const requestSchema = z.object({
 });
 
 export async function POST(req: NextRequest) {
-  const rateLimit = enforceIpRateLimit(req, "api:admin:media-generate", {
+  const rateLimit = await enforceIpRateLimit(req, "api:admin:media-generate", {
     max: 30,
     windowMs: 5 * 60 * 1000,
   });

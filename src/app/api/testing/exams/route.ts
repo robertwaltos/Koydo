@@ -3,6 +3,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import type { SupportedTestingLanguage, TestingExamCatalogEntry } from "@/lib/testing/types";
 import { isMissingTestingTableError } from "@/lib/testing/api-utils";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 function resolveLanguage(value: string | null): SupportedTestingLanguage {
   return value === "pl" ? "pl" : "en";
@@ -36,7 +37,8 @@ export async function GET(request: Request) {
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: examsError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(examsError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const { data: entitlements, error: entitlementReadError } = await supabase
@@ -45,7 +47,8 @@ export async function GET(request: Request) {
     .eq("user_id", user.id);
 
   if (entitlementReadError && !isMissingTestingTableError(entitlementReadError)) {
-    return NextResponse.json({ error: entitlementReadError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(entitlementReadError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const entitlementMap = new Map(

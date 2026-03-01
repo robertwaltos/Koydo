@@ -10,6 +10,7 @@ import {
   recordLanguageExamUnlockPurchase,
 } from "@/lib/language-learning";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
   receiptData: z.string().min(32).max(100_000),
@@ -17,8 +18,12 @@ const requestSchema = z.object({
   studentProfileId: z.string().uuid().optional(),
 });
 
+const ENABLE_RECEIPT_PLACEHOLDER =
+  process.env.ENABLE_IAP_RECEIPT_PLACEHOLDER === "1"
+  && process.env.NODE_ENV !== "production";
+
 export async function POST(request: Request) {
-  const rateLimit = enforceIpRateLimit(request, "api:billing:receipt-verify-apple", {
+  const rateLimit = await enforceIpRateLimit(request, "api:billing:receipt-verify-apple", {
     max: 30,
     windowMs: 5 * 60 * 1000,
   });
@@ -29,6 +34,16 @@ export async function POST(request: Request) {
         status: 429,
         headers: { "Retry-After": String(rateLimit.retryAfterSeconds) },
       },
+    );
+  }
+
+  if (!ENABLE_RECEIPT_PLACEHOLDER) {
+    return NextResponse.json(
+      {
+        error:
+          "Apple receipt verification endpoint is not enabled in this environment.",
+      },
+      { status: 501 },
     );
   }
 
@@ -113,10 +128,10 @@ export async function POST(request: Request) {
         { status: 503 },
       );
     }
+    console.error("Apple receipt verification failed.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Apple receipt verification failed.",
-        message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

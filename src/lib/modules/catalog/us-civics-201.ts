@@ -9,7 +9,6 @@ export const UsCivics201Module: LearningModule = {
   tags: ["civics", "government", "history", "curriculum", "interactive"],
   minAge: 12,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   difficultyBand: "intermediate",
   localeSupport: ["en", "es"],
@@ -94,7 +93,7 @@ export const UsCivics201Module: LearningModule = {
           explanation: "Popular sovereignty — the people are the source of government power!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "us-civics-201-l01-act1",
           type: "sorting_buckets",
@@ -176,7 +175,7 @@ export const UsCivics201Module: LearningModule = {
           explanation: "The 10th Amendment reserves unlisted powers to states and citizens!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "us-civics-201-l02-act1",
           type: "matching_pairs",
@@ -258,7 +257,7 @@ export const UsCivics201Module: LearningModule = {
           explanation: "27 amendments total — 10 were the Bill of Rights, 17 came later!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "us-civics-201-l03-act1",
           type: "timeline_builder",
@@ -394,7 +393,7 @@ export const UsCivics201Module: LearningModule = {
           explanation: "The President nominates, and the Senate confirms by majority vote!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "us-civics-201-l05-act1",
           type: "matching_pairs",
@@ -476,7 +475,7 @@ export const UsCivics201Module: LearningModule = {
           explanation: "Gerrymandering manipulates district maps to give one party an unfair advantage!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "us-civics-201-l06-act1",
           type: "timeline_builder",
@@ -558,7 +557,7 @@ export const UsCivics201Module: LearningModule = {
           explanation: "Only the courts can declare laws unconstitutional — citizens participate through voting, attending meetings, and civic engagement!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "us-civics-201-l07-act1",
           type: "sorting_buckets",

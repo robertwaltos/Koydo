@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { isMissingTestingTableError } from "@/lib/testing/api-utils";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const upsertEnrollmentSchema = z.object({
   learnerUserId: z.string().uuid(),
@@ -18,7 +19,14 @@ async function verifyTeacherOwnership(classId: string, teacherUserId: string) {
     .eq("id", classId)
     .maybeSingle();
 
-  if (error) return { ok: false as const, status: 500, error: error.message };
+  if (error) {
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return {
+      ok: false as const,
+      status: 500,
+      error: "Failed to verify classroom ownership.",
+    };
+  }
   if (!data) return { ok: false as const, status: 404, error: "Classroom not found." };
   if (data.teacher_user_id !== teacherUserId) {
     return { ok: false as const, status: 403, error: "Forbidden" };
@@ -60,7 +68,8 @@ export async function GET(
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   return NextResponse.json({
@@ -126,7 +135,8 @@ export async function POST(
         { status: 503 },
       );
     }
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   return NextResponse.json({

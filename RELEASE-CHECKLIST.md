@@ -87,6 +87,7 @@ Use this checklist before every App Store / Google Play submission.
 - [ ] AAB (not APK) generated: `./gradlew bundleRelease`
 
 ### Google Play Console
+- [ ] Developer Account ID verified: `4781832942850403435`
 - [ ] New release created in Internal Testing → Closed Testing → Open Testing → Production (staged rollout)
 - [ ] AAB uploaded and processed
 - [ ] Data Safety form completed (see `store-assets/DATA-SAFETY.md`)

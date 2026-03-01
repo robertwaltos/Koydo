@@ -10,6 +10,7 @@ import {
   recordLanguageExamUnlockPurchase,
 } from "@/lib/language-learning";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
   packageName: z.string().min(3).max(255),
@@ -18,6 +19,10 @@ const requestSchema = z.object({
   level: z.enum(["beginner", "intermediate", "advanced"]).optional(),
   studentProfileId: z.string().uuid().optional(),
 });
+
+const ENABLE_RECEIPT_PLACEHOLDER =
+  process.env.ENABLE_IAP_RECEIPT_PLACEHOLDER === "1"
+  && process.env.NODE_ENV !== "production";
 
 function inferLevelFromProductId(
   productId: string,
@@ -29,7 +34,7 @@ function inferLevelFromProductId(
 }
 
 export async function POST(request: Request) {
-  const rateLimit = enforceIpRateLimit(request, "api:billing:receipt-verify-google", {
+  const rateLimit = await enforceIpRateLimit(request, "api:billing:receipt-verify-google", {
     max: 30,
     windowMs: 5 * 60 * 1000,
   });
@@ -40,6 +45,16 @@ export async function POST(request: Request) {
         status: 429,
         headers: { "Retry-After": String(rateLimit.retryAfterSeconds) },
       },
+    );
+  }
+
+  if (!ENABLE_RECEIPT_PLACEHOLDER) {
+    return NextResponse.json(
+      {
+        error:
+          "Google receipt verification endpoint is not enabled in this environment.",
+      },
+      { status: 501 },
     );
   }
 
@@ -129,10 +144,10 @@ export async function POST(request: Request) {
         { status: 503 },
       );
     }
+    console.error("Google receipt verification failed.", toSafeErrorRecord(error));
     return NextResponse.json(
       {
         error: "Google receipt verification failed.",
-        message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 },
     );

@@ -9,7 +9,6 @@ export const SatPrep101Module: LearningModule = {
   tags: ["exam-prep", "assessment", "advanced", "curriculum"],
   minAge: 14,
   maxAge: 19,
-  moduleVersion: "3.0.0",
   version: "3.0.0",
   difficultyBand: "advanced",
   localeSupport: ["en", "es"],

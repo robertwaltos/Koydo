@@ -3,6 +3,7 @@ import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { resolveGeneratedModuleMedia } from "@/lib/media/media-fallbacks";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const batchResolveSchema = z.object({
   assetType: z.enum(["video", "animation", "image"]).default("image"),
@@ -55,7 +56,8 @@ export async function GET(request: Request) {
     .limit(5000);
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const resolved: Record<string, string | null> = {};
@@ -110,3 +112,4 @@ export async function GET(request: Request) {
     completedAt,
   });
 }
+

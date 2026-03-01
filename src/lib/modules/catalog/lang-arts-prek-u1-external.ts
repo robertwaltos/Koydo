@@ -12,7 +12,6 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
   ],
   "minAge": 3,
   "maxAge": 5,
-  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": [

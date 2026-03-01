@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const requestSchema = z.object({
@@ -25,7 +26,8 @@ export async function GET() {
     .order("requested_at", { ascending: false });
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to load DSAR requests.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to load DSAR requests." }, { status: 500 });
   }
 
   return NextResponse.json({ requests: data });
@@ -60,7 +62,8 @@ export async function POST(request: Request) {
     .single();
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to create DSAR request.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to create DSAR request." }, { status: 500 });
   }
 
   return NextResponse.json({ success: true, request: data });

@@ -9,7 +9,6 @@ export const FoodScience101Module: LearningModule = {
   tags: ["curriculum", "interactive", "science"],
   minAge: 12,
   maxAge: 99,
-  moduleVersion: "1.1.0",
   version: "1.1.0",
   difficultyBand: "beginner",
   thumbnail: "/placeholders/lesson-robot.svg",

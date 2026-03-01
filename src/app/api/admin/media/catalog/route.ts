@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { requireAdminForApi } from "@/lib/admin/auth";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { queryGrokManifestAssets } from "@/lib/media/grok-manifest-catalog";
 
 const catalogQuerySchema = z.object({
@@ -43,8 +44,7 @@ export async function GET(request: Request) {
     const result = await queryGrokManifestAssets(parsed.data);
     return NextResponse.json(result);
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Unable to read manifest catalog.";
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error("Unable to query Grok manifest catalog.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Unable to read manifest catalog." }, { status: 500 });
   }
 }
-

@@ -9,7 +9,6 @@ export const LanguageArts201Module: LearningModule = {
   tags: ["language-arts", "writing", "literacy", "interactive", "curriculum"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "3.0.0",
   version: "3.0.0",
   learningObjectives: [
     "Structure a five-paragraph essay with introduction, body, and conclusion",
@@ -92,7 +91,7 @@ export const LanguageArts201Module: LearningModule = {
           explanation: "Conclusions wrap up — new evidence belongs in body paragraphs!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "language-arts-201-l01-act1",
           type: "project_builder",
@@ -174,7 +173,7 @@ export const LanguageArts201Module: LearningModule = {
           explanation: "Logos = logic. Facts, data, and clear reasoning!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "language-arts-201-l02-act1",
           type: "project_builder",
@@ -256,7 +255,7 @@ export const LanguageArts201Module: LearningModule = {
           explanation: "The dove is a universal symbol of peace and hope in literature!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "language-arts-201-l03-act1",
           type: "project_builder",
@@ -338,7 +337,7 @@ export const LanguageArts201Module: LearningModule = {
           explanation: "Ethos = ethics/credibility. Citing experts builds trust!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "language-arts-201-l04-act1",
           type: "sorting_buckets",
@@ -420,7 +419,7 @@ export const LanguageArts201Module: LearningModule = {
           explanation: "Works Cited gives readers full details for every source!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "language-arts-201-l05-act1",
           type: "project_builder",
@@ -502,7 +501,7 @@ export const LanguageArts201Module: LearningModule = {
           explanation: "First person uses 'I' — the narrator is telling their own story!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "language-arts-201-l06-act1",
           type: "project_builder",
@@ -584,7 +583,7 @@ export const LanguageArts201Module: LearningModule = {
           explanation: "'I've told you a million times!' — that's hyperbole!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "language-arts-201-l07-act1",
           type: "project_builder",
@@ -666,7 +665,7 @@ export const LanguageArts201Module: LearningModule = {
           explanation: "The volta marks a change in direction — from problem to solution, question to answer!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "language-arts-201-l08-act1",
           type: "project_builder",

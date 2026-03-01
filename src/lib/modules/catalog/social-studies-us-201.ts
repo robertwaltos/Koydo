@@ -8,7 +8,6 @@ export const SocialStudiesUs201Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "1.1.0",
   version: "1.1.0",
   learningObjectives: [
     "Understand core concepts in Social Studies US",

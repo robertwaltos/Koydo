@@ -3,14 +3,18 @@ import crypto from 'crypto';
 import { createClient } from '@supabase/supabase-js';
 import { z } from 'zod';
 import { toSafeErrorRecord } from '@/lib/logging/safe-error';
+import { serverEnv } from '@/lib/config/env';
+import { enforceIpRateLimit } from '@/lib/security/ip-rate-limit';
 
 const shouldDebugWebhook = process.env.NODE_ENV !== 'production';
+const MAX_REVENUECAT_WEBHOOK_PAYLOAD_BYTES = 512_000;
 const timestampMsSchema = z.union([
   z.number().int().nonnegative(),
   z.string().regex(/^\d+$/).transform((value) => Number(value)),
 ]);
 
 const revenueCatEventSchema = z.object({
+  id: z.unknown().optional(),
   type: z.string().min(1),
   app_user_id: z.string().min(1),
   product_id: z.string().optional(),
@@ -25,6 +29,41 @@ const revenueCatEventSchema = z.object({
 const revenueCatWebhookSchema = z.object({
   event: revenueCatEventSchema,
 });
+
+type RevenueCatWebhookClaimResult = 'process' | 'duplicate' | 'untracked';
+
+function isMissingTableError(message: string) {
+  const lower = message.toLowerCase();
+  return lower.includes('could not find the table') || (lower.includes('relation') && lower.includes('does not exist'));
+}
+
+function isDuplicateKeyError(code?: string | null) {
+  return code === '23505';
+}
+
+function rateLimitExceededResponse(retryAfterSeconds: number) {
+  return NextResponse.json(
+    { error: 'Too many webhook requests. Please retry shortly.' },
+    {
+      status: 429,
+      headers: {
+        'Retry-After': String(retryAfterSeconds),
+      },
+    },
+  );
+}
+
+function buildRevenueCatEventId(event: z.infer<typeof revenueCatEventSchema>, rawBody: string) {
+  if (typeof event.id === 'string' && event.id.trim().length > 0) {
+    return `rc:${event.id.trim()}`;
+  }
+  if (typeof event.id === 'number' && Number.isFinite(event.id)) {
+    return `rc:${String(event.id)}`;
+  }
+
+  const digest = crypto.createHash('sha256').update(rawBody).digest('hex');
+  return `sha256:${digest}`;
+}
 
 /**
  * POST /api/revenuecat/webhook
@@ -52,8 +91,8 @@ const revenueCatWebhookSchema = z.object({
 
 // Lazy factory — avoid creating admin client at module scope (serverless cold start optimization)
 function getSupabaseAdmin() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const url = serverEnv.NEXT_PUBLIC_SUPABASE_URL;
+  const key = serverEnv.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) throw new Error("Missing SUPABASE env vars for RevenueCat webhook");
   return createClient(url, key);
 }
@@ -92,6 +131,106 @@ function verifyRevenueCatSignature(
   }
 }
 
+async function claimRevenueCatWebhookEvent(
+  eventId: string,
+  eventType: string,
+): Promise<RevenueCatWebhookClaimResult> {
+  const supabase = getSupabaseAdmin();
+  const { data: existing, error: existingError } = await supabase
+    .from('revenuecat_webhook_events')
+    .select('event_id, status, attempt_count')
+    .eq('event_id', eventId)
+    .maybeSingle();
+
+  if (existingError) {
+    if (isMissingTableError(existingError.message)) {
+      return 'untracked';
+    }
+    throw existingError;
+  }
+
+  const now = new Date().toISOString();
+
+  if (!existing) {
+    const { error: insertError } = await supabase
+      .from('revenuecat_webhook_events')
+      .insert({
+        event_id: eventId,
+        event_type: eventType,
+        status: 'processing',
+        attempt_count: 1,
+        updated_at: now,
+      });
+
+    if (!insertError) {
+      return 'process';
+    }
+    if (isMissingTableError(insertError.message)) {
+      return 'untracked';
+    }
+    if (isDuplicateKeyError(insertError.code)) {
+      return 'duplicate';
+    }
+    throw insertError;
+  }
+
+  if (existing.status === 'processed') {
+    return 'duplicate';
+  }
+
+  const nextAttempt = Math.max(1, Number(existing.attempt_count ?? 1) + 1);
+  const { error: updateError } = await supabase
+    .from('revenuecat_webhook_events')
+    .update({
+      event_type: eventType,
+      status: 'processing',
+      attempt_count: nextAttempt,
+      last_error: null,
+      updated_at: now,
+    })
+    .eq('event_id', eventId);
+
+  if (updateError) {
+    if (isMissingTableError(updateError.message)) {
+      return 'untracked';
+    }
+    throw updateError;
+  }
+
+  return 'process';
+}
+
+async function markRevenueCatWebhookEventStatus(
+  eventId: string,
+  status: 'processed' | 'failed',
+  lastError?: string,
+) {
+  const supabase = getSupabaseAdmin();
+  const now = new Date().toISOString();
+  const payload =
+    status === 'processed'
+      ? {
+        status,
+        processed_at: now,
+        updated_at: now,
+        last_error: null,
+      }
+      : {
+        status,
+        updated_at: now,
+        last_error: (lastError ?? 'Unknown webhook processing error').slice(0, 1000),
+      };
+
+  const { error } = await supabase
+    .from('revenuecat_webhook_events')
+    .update(payload)
+    .eq('event_id', eventId);
+
+  if (error && !isMissingTableError(error.message)) {
+    console.error('[revenuecat/webhook] Failed to update webhook tracking status.', toSafeErrorRecord(error));
+  }
+}
+
 function mapEventToStatus(
   event: string
 ): 'active' | 'trialing' | 'cancelled' | 'expired' | 'billing_issue' {
@@ -127,6 +266,19 @@ async function upsertRevenueCatSubscription(
 }
 
 export async function POST(request: NextRequest) {
+  const rateLimit = await enforceIpRateLimit(request, 'api:billing:revenuecat-webhook', {
+    max: 400,
+    windowMs: 60_000,
+  });
+  if (!rateLimit.allowed) {
+    return rateLimitExceededResponse(rateLimit.retryAfterSeconds);
+  }
+
+  const contentType = request.headers.get('content-type')?.toLowerCase() ?? '';
+  if (contentType && !contentType.includes('application/json')) {
+    return NextResponse.json({ error: 'Unsupported content type' }, { status: 415 });
+  }
+
   let rawBody: string;
 
   try {
@@ -135,8 +287,12 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Failed to read body' }, { status: 400 });
   }
 
+  if (Buffer.byteLength(rawBody, 'utf8') > MAX_REVENUECAT_WEBHOOK_PAYLOAD_BYTES) {
+    return NextResponse.json({ error: 'Payload too large' }, { status: 413 });
+  }
+
   // Verify signature
-  const webhookSecret = process.env.REVENUECAT_WEBHOOK_SECRET;
+  const webhookSecret = serverEnv.REVENUECAT_WEBHOOK_SECRET;
   if (!webhookSecret) {
     console.error('[revenuecat/webhook] REVENUECAT_WEBHOOK_SECRET not set');
     return NextResponse.json(
@@ -235,8 +391,20 @@ export async function POST(request: NextRequest) {
     updated_at: new Date().toISOString(),
   };
 
+  const eventId = buildRevenueCatEventId(event, rawBody);
+  let claimResult: RevenueCatWebhookClaimResult = 'untracked';
+
   try {
+    claimResult = await claimRevenueCatWebhookEvent(eventId, eventType);
+    if (claimResult === 'duplicate') {
+      return NextResponse.json({ received: true, duplicate: true }, { status: 200 });
+    }
+
     await upsertRevenueCatSubscription(subscriptionPayload);
+
+    if (claimResult !== 'untracked') {
+      await markRevenueCatWebhookEventStatus(eventId, 'processed');
+    }
 
     if (shouldDebugWebhook) {
       console.debug(
@@ -244,8 +412,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    return NextResponse.json({ received: true }, { status: 200 });
+    return NextResponse.json({ received: true, duplicate: false }, { status: 200 });
   } catch (err) {
+    if (claimResult !== 'untracked') {
+      await markRevenueCatWebhookEventStatus(
+        eventId,
+        'failed',
+        err instanceof Error ? err.message : 'Unknown error',
+      );
+    }
+
     console.error('[revenuecat/webhook] DB upsert error.', toSafeErrorRecord(err));
     // Return 200 to prevent RevenueCat from retrying on our DB errors
     // Log to an error tracking service here if available
@@ -255,6 +431,5 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-
 
 

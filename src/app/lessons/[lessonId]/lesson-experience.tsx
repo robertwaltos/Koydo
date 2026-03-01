@@ -226,10 +226,6 @@ export default function LessonExperience({
     if (Array.isArray(lesson.interactiveActivities) && lesson.interactiveActivities.length > 0) {
       return lesson.interactiveActivities;
     }
-    // Fall back to `activities` field (used by gold-standard modules)
-    if (Array.isArray((lesson as Record<string, unknown>).activities) && ((lesson as Record<string, unknown>).activities as unknown[]).length > 0) {
-      return (lesson as Record<string, unknown>).activities as NonNullable<typeof lesson.interactiveActivities>;
-    }
     return synthesizeInteractiveActivities(lesson, quizQuestions);
   }, [lesson, quizQuestions]);
   const hasTypedInteractiveActivities = typedActivities.length > 0;

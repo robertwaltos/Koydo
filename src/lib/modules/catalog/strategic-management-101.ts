@@ -9,7 +9,6 @@ export const StrategicManagement101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "mba", "strategy"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],

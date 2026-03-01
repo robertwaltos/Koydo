@@ -83,10 +83,12 @@ export async function GET(request: Request) {
     ]);
 
     if (rowsError) {
-      return NextResponse.json({ error: rowsError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(rowsError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
     if (countError) {
-      return NextResponse.json({ error: countError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(countError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     return NextResponse.json({
@@ -144,7 +146,8 @@ export async function POST(request: Request) {
       .single();
 
     if (error) {
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     return NextResponse.json({ success: true, row: data });
@@ -153,3 +156,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
+

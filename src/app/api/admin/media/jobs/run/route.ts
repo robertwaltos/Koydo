@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const runMediaJobsSchema = z.object({
   batchSize: z.coerce.number().int().min(1).max(50).default(10),
@@ -100,7 +101,8 @@ export async function POST(request: Request) {
   const { data: queuedJobs, error: fetchError } = await query.order("created_at", { ascending: true }).limit(batchSize);
 
   if (fetchError) {
-    return NextResponse.json({ error: fetchError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(fetchError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   if (!queuedJobs || queuedJobs.length === 0) {

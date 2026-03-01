@@ -68,7 +68,8 @@ export async function POST(request: Request) {
           { status: 503 },
         );
       }
-      return NextResponse.json({ error: error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     if (!data) {
@@ -91,3 +92,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
+

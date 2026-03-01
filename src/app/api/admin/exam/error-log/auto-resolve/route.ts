@@ -5,6 +5,7 @@ import { enforceAdminActionRateLimit } from "@/lib/admin/rate-limit";
 import { logAdminAction } from "@/lib/admin/audit";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { buildAutoResolveCandidates } from "@/lib/exam/error-auto-resolve";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
   dryRun: z.boolean().optional(),
@@ -113,7 +114,8 @@ export async function POST(request: Request) {
       .limit(Math.min(10000, limitUsers * 120));
 
     if (unresolvedSeedResult.error) {
-      return NextResponse.json({ error: unresolvedSeedResult.error.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(unresolvedSeedResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     const seen = new Set<string>();

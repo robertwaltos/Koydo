@@ -7,6 +7,7 @@ export const requiredDbTables = [
   "parent_consents",
   "subscriptions",
   "stripe_webhook_events",
+  "revenuecat_webhook_events",
   "dsar_requests",
   "user_learning_progress",
   "user_skill_mastery",

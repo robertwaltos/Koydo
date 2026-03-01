@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useMemo, useRef, useState, type MutableRefObject, type RefObject } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useI18n } from "@/lib/i18n/provider";
@@ -388,12 +389,18 @@ export default function TopNav() {
             }`}
             onClick={closeMenus}
           >
-            <span
+            <div
               aria-hidden="true"
-              className="inline-flex size-8 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-sky-500 text-base"
+              className="inline-flex size-8 flex-shrink-0 overflow-hidden rounded-full"
             >
-              ✨
-            </span>
+              <Image
+                src="/logo-koydo.jpg"
+                alt="Koydo logo"
+                width={32}
+                height={32}
+                className="size-full object-cover"
+              />
+            </div>
             <span className="leading-tight">
               <span className={`ui-type-display block text-base font-extrabold tracking-tight ${isHomePage ? "text-white" : "text-zinc-900 dark:text-zinc-100"}`}>
                 Koydo

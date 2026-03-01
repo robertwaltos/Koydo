@@ -8,7 +8,6 @@ export const Biotechnology101Module: LearningModule = {
   tags: ["curriculum", "interactive"],
   minAge: 14,
   maxAge: 99,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es", "fr", "de", "ar", "hi", "zh", "ja", "ko", "ru"],

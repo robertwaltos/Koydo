@@ -24,7 +24,7 @@ async function withStripeTimeout<T>(promise: Promise<T>): Promise<T> {
 }
 
 export async function POST(request: Request) {
-  const rateLimit = enforceIpRateLimit(request, "api:billing:stripe-portal", {
+  const rateLimit = await enforceIpRateLimit(request, "api:billing:stripe-portal", {
     max: 30,
     windowMs: 5 * 60 * 1000,
   });
@@ -70,7 +70,8 @@ export async function POST(request: Request) {
     .maybeSingle();
 
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Failed to load subscription for Stripe portal.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to load subscription details." }, { status: 500 });
   }
 
   const stripe = createStripeServerClient(serverEnv.STRIPE_SECRET_KEY);

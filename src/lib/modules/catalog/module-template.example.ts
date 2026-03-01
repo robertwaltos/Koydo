@@ -8,7 +8,6 @@ export const templateModule: LearningModule = {
   tags: ["starter"],
   minAge: 8,
   maxAge: 12,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],

@@ -9,7 +9,6 @@ export const PreKGeneralScience101Module: LearningModule = {
   tags: ["pre-k", "science", "interactive", "curriculum"],
   minAge: 3,
   maxAge: 5,
-  moduleVersion: "4.0.0",
   version: "4.0.0",
   learningObjectives: [
     "Identify the three states of matter: solid, liquid, and gas",
@@ -92,7 +91,7 @@ export const PreKGeneralScience101Module: LearningModule = {
           explanation: "You feel gas when the wind blows on your face!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "pre-k-general-science-101-l01-act1",
           type: "sorting_game",
@@ -174,7 +173,7 @@ export const PreKGeneralScience101Module: LearningModule = {
           explanation: "Rubbing creates friction, which makes heat!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "pre-k-general-science-101-l02-act1",
           type: "sorting_game",
@@ -256,7 +255,7 @@ export const PreKGeneralScience101Module: LearningModule = {
           explanation: "Wheels roll instead of sliding, reducing friction!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "pre-k-general-science-101-l03-act1",
           type: "project_builder",
@@ -338,7 +337,7 @@ export const PreKGeneralScience101Module: LearningModule = {
           explanation: "A seesaw is a lever with a fulcrum in the middle!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "pre-k-general-science-101-l04-act1",
           type: "drawing_canvas",
@@ -420,7 +419,7 @@ export const PreKGeneralScience101Module: LearningModule = {
           explanation: "Rain, snow, sleet, and hail are all precipitation!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "pre-k-general-science-101-l05-act1",
           type: "project_builder",
@@ -502,7 +501,7 @@ export const PreKGeneralScience101Module: LearningModule = {
           explanation: "Thick fur and blubber keep polar bears warm!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "pre-k-general-science-101-l06-act1",
           type: "matching_pairs",
@@ -584,7 +583,7 @@ export const PreKGeneralScience101Module: LearningModule = {
           explanation: "Sight, hearing, smell, taste, and touch — that's 5!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "pre-k-general-science-101-l07-act1",
           type: "drawing_canvas",
@@ -666,7 +665,7 @@ export const PreKGeneralScience101Module: LearningModule = {
           explanation: "Your brain controls thinking, moving, and feeling!"
         }
       ],
-      activities: [
+      interactiveActivities: [
         {
           id: "pre-k-general-science-101-l08-act1",
           type: "drawing_canvas",

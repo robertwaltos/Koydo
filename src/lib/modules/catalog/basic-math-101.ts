@@ -8,7 +8,6 @@ export const BasicMath101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive"],
   minAge: 7,
   maxAge: 18,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   learningObjectives: [
     "Read and write whole numbers using place value up to thousands",

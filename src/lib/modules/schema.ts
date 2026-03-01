@@ -55,6 +55,14 @@ export const interactiveActivitySchema = z.object({
   instructions: z.array(z.string()).optional(),
   udlEngagement: z.array(z.string()).optional(),
   data: z.record(z.string(), z.unknown()).optional(),
+  buckets: z.array(z.string()).optional(),
+  items: z.array(z.union([
+    z.string(),
+    z.object({ id: z.string().optional(), text: z.string(), bucket: z.string() }),
+  ])).optional(),
+  pairs: z.array(z.object({ id: z.string().optional(), left: z.string(), right: z.string() })).optional(),
+  prompt: z.string().optional(),
+  zones: z.array(z.string()).optional(),
 });
 
 export const lessonMediaAssetSchema = z.object({
@@ -117,6 +125,7 @@ export const quizBlueprintSchema = z.object({
   feedbackMode: z.string().optional(),
   adaptive: z.boolean().optional(),
   masteryThreshold: z.number().min(0).max(1).optional(),
+  bloomProfile: z.record(z.string(), z.number()).optional(),
 });
 
 export const standardsMappingSchema = z.object({
@@ -138,7 +147,6 @@ export const lessonSchema = z.object({
   standardsCodes: z.array(z.string().min(1)).optional(),
   chunks: z.array(lessonChunkSchema).optional(),
   flashcards: z.array(flashcardSchema).optional(),
-  activities: z.array(interactiveActivitySchema).optional(),
   interactiveActivities: z.array(interactiveActivitySchema).optional(),
   quizBlueprint: quizBlueprintSchema.optional(),
   prompts: lessonMediaPromptsSchema.optional(),
@@ -163,7 +171,6 @@ export const learningModuleSchema = z.object({
   minAge: z.number().int().nonnegative().optional(),
   maxAge: z.number().int().nonnegative().optional(),
   version: z.string().optional(),
-  moduleVersion: z.string().optional(),
   difficultyBand: z.string().optional(),
   localeSupport: z.array(z.string()).optional(),
   thumbnail: z.string().optional(),
@@ -172,6 +179,7 @@ export const learningModuleSchema = z.object({
   standardsMappings: z.array(standardsMappingSchema).optional(),
   quizBlueprint: quizBlueprintSchema.optional(),
   interactiveActivitiesCatalog: z.array(interactiveActivitySchema).optional(),
+  status: z.enum(["published", "draft"]).optional(),
   metadata: z.record(z.string(), z.unknown()).optional(),
   external: z.record(z.string(), z.unknown()).optional(),
 });

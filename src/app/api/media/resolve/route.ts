@@ -6,6 +6,7 @@ import {
   resolveGeneratedLessonMedia,
   resolveGeneratedModuleMedia,
 } from "@/lib/media/media-fallbacks";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const mediaResolveSchema = z.object({
   moduleId: z.string().trim().min(1).optional(),
@@ -59,7 +60,8 @@ export async function GET(request: Request) {
 
   const { data, error } = await scopedQuery;
   if (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const row = data?.[0];
@@ -124,3 +126,4 @@ export async function GET(request: Request) {
     source,
   });
 }
+

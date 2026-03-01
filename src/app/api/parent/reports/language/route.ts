@@ -9,6 +9,7 @@ import {
   type PronunciationAttemptSummaryRow,
 } from "@/lib/language-learning/progress-metrics";
 import type { StudentProfile } from "@/lib/profiles/types";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const querySchema = z.object({
   studentProfileId: z.string().uuid().optional(),
@@ -101,7 +102,8 @@ export async function GET(request: NextRequest) {
     .eq("user_id", user.id)
     .maybeSingle();
   if (parentError) {
-    return NextResponse.json({ error: parentError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(parentError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (!parentProfile?.is_parent) {
     return NextResponse.json({ error: "Parent access required." }, { status: 403 });
@@ -118,7 +120,8 @@ export async function GET(request: NextRequest) {
 
   const { data: profileRows, error: profileError } = await profilesQuery;
   if (profileError) {
-    return NextResponse.json({ error: profileError.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(profileError));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   const profiles = (profileRows ?? []) as StudentProfile[];
@@ -156,13 +159,16 @@ export async function GET(request: NextRequest) {
   ]);
 
   if (attemptsResult.error && !isMissingTableError(attemptsResult.error.message)) {
-    return NextResponse.json({ error: attemptsResult.error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(attemptsResult.error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (stateResult.error && !isMissingTableError(stateResult.error.message)) {
-    return NextResponse.json({ error: stateResult.error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(stateResult.error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
   if (usageResult.error && !isMissingTableError(usageResult.error.message)) {
-    return NextResponse.json({ error: usageResult.error.message }, { status: 500 });
+    console.error("Unexpected API error.", toSafeErrorRecord(usageResult.error));
+    return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
   if (attemptsResult.error && isMissingTableError(attemptsResult.error.message)) {

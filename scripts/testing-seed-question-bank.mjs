@@ -271,7 +271,7 @@ async function main() {
   const hashSecret =
     readValue(env, "TESTING_ITEM_HASH_SECRET")
     || readValue(env, "PARENT_CONSENT_TOKEN_SECRET")
-    || "koydo-testing-dev-secret-change-me";
+    || serviceRoleKey;
 
   if (!supabaseUrl || !serviceRoleKey) {
     console.error("Missing NEXT_PUBLIC_SUPABASE_URL/EXPO_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY.");

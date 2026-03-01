@@ -12,7 +12,6 @@ export const TheOxfordDictionaryOfModernQuotationsTonyAuModule: LearningModule =
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"The Oxford dictionary of modern quotations\"",

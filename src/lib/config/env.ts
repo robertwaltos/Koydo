@@ -48,7 +48,11 @@ const serverEnvSchema = z.object({
     .enum(["stripe_external", "app_store_iap"])
     .catch("stripe_external"),
   ADMIN_ALERT_EMAILS: z.string().optional(),
+  ORGANIZATION_REPORT_RUNNER_SECRET: z.string().min(16).optional(),
   TESTING_ITEM_HASH_SECRET: z.string().min(16).optional(),
+  REVENUECAT_WEBHOOK_SECRET: z.string().min(8).optional(),
+  UPSTASH_REDIS_REST_URL: z.string().url().optional(),
+  UPSTASH_REDIS_REST_TOKEN: z.string().min(1).optional(),
   REQUIRE_ADMIN_APPROVALS: z
     .enum(["true", "false"])
     .default("true")

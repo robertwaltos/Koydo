@@ -9,7 +9,6 @@ export const SupplyChainManagement101Module: LearningModule = {
   tags: ["core", "curriculum", "interactive", "mba", "supply-chain"],
   minAge: 18,
   maxAge: 99,
-  moduleVersion: "2.0.0",
   version: "2.0.0",
   difficultyBand: "beginner",
   localeSupport: ["en", "es"],
@@ -153,7 +152,7 @@ export const SupplyChainManagement101Module: LearningModule = {
           id: "supply-chain-management-101-l04-c2",
           title: "Plan, Source, and Make",
           content:
-            "Plan encompasses demand forecasting, supply planning, inventory strategy, and capacity planning — it orchestrates all other processes. Source covers supplier identification, qualification, purchasing, and receiving of materials. Make includes all production activities: manufacturing, assembly, testing, packaging, and quality control. Each process has sub-levels detailing specific workflows, inputs, outputs, and performance attributes."
+            "Plan encompasses demand forecasting, supply planning, inventory strategy, and capacity planning — it orchestrates all other processes. Source covers supplier identification, qualification, purchasing, and receiving of materials. Make includes all production interactiveActivities: manufacturing, assembly, testing, packaging, and quality control. Each process has sub-levels detailing specific workflows, inputs, outputs, and performance attributes."
         },
         {
           id: "supply-chain-management-101-l04-c3",

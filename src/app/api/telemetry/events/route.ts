@@ -5,6 +5,7 @@ import { learningEventTypes } from "@/lib/analytics/learning-events";
 import { generateAndStoreFollowupMaterial } from "@/lib/ai/follow-up";
 import { generateAndStoreRemediationWorksheet } from "@/lib/ai/remediation-worksheet";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const eventTypeSchema = z.enum(learningEventTypes);
 const payloadValueSchema = z.union([
@@ -29,6 +30,17 @@ const telemetryRequestSchema = z.object({
 
 export async function POST(request: Request) {
   try {
+    const rateLimit = await enforceIpRateLimit(request, "api:telemetry:events:post", {
+      max: 30,
+      windowMs: 60_000,
+    });
+    if (!rateLimit.allowed) {
+      return NextResponse.json(
+        { error: "Too many requests" },
+        { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+      );
+    }
+
     const supabase = await createSupabaseServerClient();
     const {
       data: { user },
@@ -60,7 +72,8 @@ export async function POST(request: Request) {
 
     const { error: insertError } = await supabase.from("learning_events").insert(rows);
     if (insertError) {
-      return NextResponse.json({ error: insertError.message }, { status: 500 });
+      console.error("Unexpected API error.", toSafeErrorRecord(insertError));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
     const completedEvents = validation.data.events.filter((event) => event.eventType === "lesson_completed");

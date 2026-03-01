@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { loadAiTutorUsageSummary } from "@/lib/admin/ai-tutor-usage";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 export async function GET() {
   const auth = await requireAdminForApi();
@@ -17,7 +18,7 @@ export async function GET() {
       status: summary.setupRequired ? 503 : 200,
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Failed to load AI tutor usage summary.";
-    return NextResponse.json({ error: message }, { status: 500 });
+    console.error("Failed to load AI tutor usage summary.", toSafeErrorRecord(error));
+    return NextResponse.json({ error: "Failed to load AI tutor usage summary." }, { status: 500 });
   }
 }

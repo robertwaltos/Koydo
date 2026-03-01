@@ -12,7 +12,6 @@ export const BonesWouldRainFromTheSkyDeepeningOurRelatiModule: LearningModule = 
   tags: ["epub-derived", "curriculum", "interactive"],
   minAge: 10,
   maxAge: 18,
-  moduleVersion: "1.0.0",
   version: "1.0.0",
   learningObjectives: [
     "Understand foundational concepts presented in \"Bones Would Rain from the Sky: Deepening Our Relationships with Dogs\"",
