@@ -1,5 +1,28 @@
 # Organization Backend API (Sprint Handoff)
 
+## Codex-1 Handoff Ownership (2026-03-02)
+
+- Owner: `Codex-1`
+- Scope: organization APIs, billing/gifting org flows, org reporting job runner, and associated hardening.
+- Continuity rule: after each completed handoff task, update this table and add a dated note in the relevant roadmap/backlog epic.
+
+### Handoff Status Board
+
+| Workstream | Status | Notes |
+| --- | --- | --- |
+| Core routes | GREEN | Organization create/list, licensing, learners, audit, provisioning, claim flows present |
+| Invites | GREEN | Invite create/list/update and accept flows present |
+| Bulk provisioning | GREEN | SIS import and SCIM user routes present |
+| Reporting | GREEN | Reports, exports, async jobs, and process endpoint present |
+| Billing + gifting | GREEN | Org checkout, gift checkout, gift redeem/list implemented with idempotency support |
+| Runner integration | GREEN | `ORGANIZATION_REPORT_RUNNER_SECRET` + `x-org-report-runner-secret` flow documented and wired |
+
+### Board Summary
+
+- Green: `6/6`
+- In progress: `0/6`
+- Red: `0/6`
+
 ## Core Routes
 
 - `GET /api/organizations`

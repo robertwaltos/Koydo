@@ -1,7 +1,41 @@
 # Koydo 12-Week Product Roadmap
 
-Last Updated: 2026-03-01  
+Last Updated: 2026-03-02  
 Owner: Product + Engineering
+
+## Codex-1 Continuity Contract (2026-03-02)
+
+- Active owner for execution: `Codex-1`
+- Assignment scope: complete all open roadmap + backlog + handoff tasks until all gates below are green.
+- Resume protocol after interruption:
+  1. Review this section first.
+  2. Review `PRODUCT-BACKLOG-EPICS.md` (`Codex-1 Assignment Lock` section).
+  3. Review `ORGANIZATION-BACKEND-API.md` (`Codex-1 Handoff Ownership` section).
+- Update protocol after each completed task:
+  1. Add/update the dated `Status update` on the affected epic in `PRODUCT-BACKLOG-EPICS.md`.
+  2. Update affected handoff status in `ORGANIZATION-BACKEND-API.md` when organization/billing/reporting scope changes.
+  3. Update the 10/10 gate score below.
+
+### 10/10 Green Gate Scoreboard
+
+| Gate | Status | Current evidence snapshot |
+| --- | --- | --- |
+| Required CI + Security checks | GREEN | `validate`, `semgrep`, `detect-secrets`, `dast-zap-baseline`, `dependency-audit-prod` passing on `master` |
+| Production deployment health | GREEN | `koydo.vercel.app` currently points to a Ready production deployment |
+| Curriculum validation | GREEN | Latest validation report shows 0 errors, 0 warnings |
+| Exam prep track coverage | GREEN | Coverage report shows `12/12` tracks, `100%` completion |
+| Organization backend handoff API surface | GREEN | Core/invites/provisioning/reporting routes present and active |
+| Billing hardening and webhook safety | IN_PROGRESS | Stripe + RevenueCat hardening landed; continued verification in progress |
+| Parent/teacher access hardening | IN_PROGRESS | Major role/consent guardrails shipped; roadmap work still open |
+| Store receipt verification (Apple/Google) | RED | `/api/receipt/verify/apple` and `/api/receipt/verify/google` still return `501` placeholder mode |
+| Knowledgebase domain health | IN_PROGRESS | Backlog still lists critical growth areas (`gardening`, `food-science`) |
+| External import + telemetry automation | IN_PROGRESS | External import currently zero-source; telemetry learning-events report is skipped |
+
+### Gate Summary
+
+- Green: `5/10`
+- In progress: `4/10`
+- Red: `1/10`
 
 ## Principles
 

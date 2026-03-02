@@ -8,6 +8,42 @@ Last Updated: 2026-03-02
 - `P1`: next-wave after P0
 - `P2`: long-term platform initiatives
 
+## Codex-1 Assignment Lock (2026-03-02)
+
+- Owner: `Codex-1`
+- Scope: all epics in this backlog, plus roadmap and handoff tasks tracked in:
+  - `PRODUCT-ROADMAP-12-WEEK.md`
+  - `ORGANIZATION-BACKEND-API.md`
+- Completion rule: keep execution until every assigned task is verified green.
+- Continuity rule: after each completed task, append a dated `Status update` under the relevant epic and update this status table.
+
+### Epic Ownership Board
+
+| Epic | Priority | Owner | Current State |
+| --- | --- | --- | --- |
+| E-01 | P0 | Codex-1 | PLANNED |
+| E-02 | P0 | Codex-1 | IN_PROGRESS |
+| E-03 | P0 | Codex-1 | IN_PROGRESS |
+| E-04 | P0 | Codex-1 | IN_PROGRESS |
+| E-05 | P0 | Codex-1 | PLANNED |
+| E-06 | P0 | Codex-1 | IN_PROGRESS |
+| E-07 | P0 | Codex-1 | IN_PROGRESS |
+| E-08 | P0 | Codex-1 | PLANNED |
+| E-09 | P1 | Codex-1 | PLANNED |
+| E-10 | P1 | Codex-1 | PLANNED |
+| E-11 | P1 | Codex-1 | PLANNED |
+| E-12 | P1 | Codex-1 | IN_PROGRESS |
+| E-13 | P1 | Codex-1 | PLANNED |
+| E-14 | P2 | Codex-1 | IN_PROGRESS |
+| E-15 | P1 | Codex-1 | IN_PROGRESS |
+
+### Board Summary
+
+- Green: `0/15`
+- In progress: `8/15`
+- Planned: `7/15`
+- Blocked: `0/15`
+
 ## Epic Backlog
 
 ### E-01 (`P0`) Mastery Graph + Adaptive Pathing
