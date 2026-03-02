@@ -115,11 +115,14 @@ jobs:
         with:
           node-version: 20
           cache: npm
+          cache-dependency-path: eduforge-web/package-lock.json
 
       - name: Install dependencies
+        working-directory: eduforge-web
         run: npm ci
 
       - name: Run full dependency audit
+        working-directory: eduforge-web
         run: npm run security:audit:full
 
   dast-zap-baseline:
@@ -185,6 +188,7 @@ jobs:
             zap_replacer_config="-config replacer.full_list(0).description=vercel-protection-bypass -config replacer.full_list(0).enabled=true -config replacer.full_list(0).matchtype=REQ_HEADER -config replacer.full_list(0).matchstr=x-vercel-protection-bypass -config replacer.full_list(0).replacement=${VERCEL_AUTOMATION_BYPASS_SECRET} -config replacer.full_list(1).description=vercel-set-bypass-cookie -config replacer.full_list(1).enabled=true -config replacer.full_list(1).matchtype=REQ_HEADER -config replacer.full_list(1).matchstr=x-vercel-set-bypass-cookie -config replacer.full_list(1).replacement=true"
 
             docker run --rm \
+              --user root \
               -v "$PWD:/zap/wrk/:rw" \
               ghcr.io/zaproxy/zaproxy:stable \
               zap-baseline.py \
@@ -198,6 +202,7 @@ jobs:
               -x zap-report.xml
           else
             docker run --rm \
+              --user root \
               -v "$PWD:/zap/wrk/:rw" \
               ghcr.io/zaproxy/zaproxy:stable \
               zap-baseline.py \
