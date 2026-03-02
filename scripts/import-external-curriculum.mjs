@@ -22,6 +22,7 @@ function parseArgs(argv) {
     createExternalWhenNoMatch: true,
     syncRegistry: true,
     mergeThreshold: 75,
+    failOnEmptySource: false,
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -38,6 +39,8 @@ function parseArgs(argv) {
     else if (arg === "--sync-registry") options.syncRegistry = true;
     else if (arg === "--no-sync-registry") options.syncRegistry = false;
     else if (arg === "--merge-threshold") options.mergeThreshold = Math.max(0, Math.min(100, Number(argv[index + 1] ?? 75)));
+    else if (arg === "--fail-on-empty-source") options.failOnEmptySource = true;
+    else if (arg === "--no-fail-on-empty-source") options.failOnEmptySource = false;
   }
 
   return options;
@@ -1803,7 +1806,49 @@ function runModulesSync() {
 function main() {
   const options = parseArgs(process.argv.slice(2));
   const sourceFiles = discoverSources(options);
-  if (sourceFiles.length === 0) throw new Error("No source curriculum files found.");
+  if (sourceFiles.length === 0) {
+    const report = {
+      generatedAt: new Date().toISOString(),
+      mode: options.apply ? "apply" : "dry-run",
+      options: {
+        source: path.relative(projectRoot, options.source).replace(/\\/g, "/"),
+        sourceDir: options.sourceDir ? path.relative(projectRoot, options.sourceDir).replace(/\\/g, "/") : "",
+        overwrite: options.overwrite,
+        limit: options.limit,
+        mergeIntoExisting: options.mergeIntoExisting,
+        createExternalWhenNoMatch: options.createExternalWhenNoMatch,
+        syncRegistry: options.syncRegistry,
+        mergeThreshold: options.mergeThreshold,
+      },
+      totals: {
+        sourcesScanned: 0,
+        unitsDiscovered: 0,
+        unitsProcessed: 0,
+        modulesGenerated: 0,
+        filesWritten: 0,
+        filesSkipped: 0,
+        modulesMerged: 0,
+        lessonsMergedAdded: 0,
+        lessonsMergedSkipped: 0,
+        lowConfidenceDeferrals: 0,
+      },
+      sources: [],
+      modules: [],
+    };
+
+    fs.mkdirSync(path.dirname(outReportJson), { recursive: true });
+    fs.writeFileSync(outReportJson, JSON.stringify(report, null, 2));
+    fs.writeFileSync(outReportMd, toMarkdown(report));
+    console.log(`Wrote ${outReportJson}`);
+    console.log(`Wrote ${outReportMd}`);
+
+    if (options.failOnEmptySource) {
+      throw new Error("No source curriculum files found.");
+    }
+
+    console.log("No source curriculum files found. Wrote empty import report and exited successfully.");
+    return;
+  }
 
   const existingModules = readCatalogModules();
   const existingIds = new Set(existingModules.map((entry) => entry.module.id));

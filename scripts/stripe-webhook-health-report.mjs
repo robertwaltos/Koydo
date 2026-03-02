@@ -146,10 +146,50 @@ async function main() {
   const serviceKey = readValue(env, "SUPABASE_SERVICE_ROLE_KEY");
 
   if (!supabaseUrl || !serviceKey) {
-    console.error(
-      "Missing NEXT_PUBLIC_SUPABASE_URL/EXPO_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY. Cannot run webhook health checks.",
-    );
-    process.exitCode = 1;
+    const report = {
+      generatedAt: new Date().toISOString(),
+      windowHours: args.windowHours,
+      staleMinutes: args.staleMinutes,
+      trackingEnabled: false,
+      healthy: false,
+      detail:
+        "Skipped webhook health checks: missing NEXT_PUBLIC_SUPABASE_URL/EXPO_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY.",
+      totals: {
+        received: 0,
+        processed: 0,
+        failed: 0,
+        processing: 0,
+        retries: 0,
+        staleProcessing: 0,
+      },
+      latestProcessedAt: null,
+      recentFailed: [],
+      failedByEventType: [],
+    };
+
+    if (args.json) {
+      console.log(JSON.stringify(report, null, 2));
+    } else {
+      console.log("Stripe webhook health check");
+      console.log(`Window: last ${report.windowHours}h | stale threshold: ${report.staleMinutes}m`);
+      console.log("");
+      console.log("[WARN] Tracking enabled: no");
+      console.log("[WARN] Health: needs attention");
+      console.log(`[WARN] Detail: ${report.detail}`);
+    }
+
+    if (args.writeReport) {
+      fs.mkdirSync(path.dirname(outJson), { recursive: true });
+      fs.writeFileSync(outJson, JSON.stringify(report, null, 2));
+      fs.writeFileSync(outMd, toMarkdown(report));
+      console.log("");
+      console.log(`Wrote ${outJson}`);
+      console.log(`Wrote ${outMd}`);
+    }
+
+    if (!args.noFail) {
+      process.exitCode = 1;
+    }
     return;
   }
 
