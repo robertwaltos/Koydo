@@ -115,14 +115,12 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: eduforge-web/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        working-directory: eduforge-web
         run: npm ci
 
       - name: Run full dependency audit
-        working-directory: eduforge-web
         run: npm run security:audit:full
 
   dast-zap-baseline:
