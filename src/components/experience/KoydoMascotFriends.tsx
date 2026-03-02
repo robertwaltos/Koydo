@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { MascotMood } from "./KoydoMascot";
 
-type FriendId = "pixel" | "spark" | "echo" | "luna" | "terra";
+export type FriendId = "pixel" | "spark" | "echo" | "luna" | "terra";
 
 interface MascotFriendProps {
     id: FriendId;

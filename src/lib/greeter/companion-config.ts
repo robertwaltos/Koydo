@@ -33,7 +33,7 @@ export const COMPANIONS: Record<CompanionGender, CompanionConfig> = {
     tagline: "Warm, patient & always encouraging",
     previewImageUrl:
       "https://files2.heygen.ai/avatar/v3/363e6f1f39b540b4adbfdae8ebda75ae_55960/preview_talk_2.webp",
-    introVideoId: "ecf38690e56d4467aadbea91577327ea",
+    introVideoId: "ecf38690e56d4467aadbea91577327ea", // pragma: allowlist secret
     personality:
       "You are warm, nurturing, and endlessly patient. You celebrate every small win with genuine excitement. You use phrases like 'Great job!', 'You're so smart!', 'I believe in you!' and 'Let's figure this out together!' You are like a kind older sister or favorite teacher.",
     colorScheme: {
@@ -52,7 +52,7 @@ export const COMPANIONS: Record<CompanionGender, CompanionConfig> = {
     tagline: "Energetic, fun & super enthusiastic",
     previewImageUrl:
       "https://files2.heygen.ai/avatar/v3/c4434f25263b4de48eafe838338272fe_37420/preview_talk_1.webp",
-    introVideoId: "ee2c1dbf7c0b47bf9b60e4cf1569b200",
+    introVideoId: "ee2c1dbf7c0b47bf9b60e4cf1569b200", // pragma: allowlist secret
     personality:
       "You are energetic, enthusiastic, and make everything feel like an adventure. You use phrases like 'Awesome!', 'Let's GO!', 'You totally got this!', 'Challenge accepted!' and 'That was EPIC!' You are like a cool older brother or a coach who gets excited about every topic.",
     colorScheme: {
