@@ -64,8 +64,21 @@ src/lib/forge/
 │   ├── generated-media-assets.ts
 │   └── generated-prompts.ts
 │
-└── video/                 ← Video / animation
-    └── seedance-prompts.ts
+├── video/                 ← Video / animation
+│   └── seedance-prompts.ts
+│
+├── media/                 ← Cloud media (HeyGen + Google AI)
+│   ├── heygen-client.ts   ← Avatar instructor videos (HeyGen API v2)
+│   ├── google-ai-client.ts ← Imagen 4 + Veo 3.1
+│   └── avatar-course-map.ts ← Module → avatar/voice assignment
+│
+└── storyforge/            ← StoryForge Cinema — book-to-film pipeline (E-16, planned)
+    ├── scene-decomp.ts    ← LLM scene decomposition (text → cinematic scenes)
+    ├── music-score.ts     ← Mood-tagged ambient score generation
+    └── interactive-layer.ts ← Vocabulary hotspots, branching, comprehension quizzes
+    ├── scene-decomp.ts    ← LLM scene decomposition (text → cinematic scenes)
+    ├── music-score.ts     ← Mood-tagged ambient score generation
+    └── interactive-layer.ts ← Vocabulary hotspots, branching, comprehension quizzes
 ```
 
 ## GPU Scheduler

@@ -36,13 +36,15 @@ Last Updated: 2026-03-02
 | E-13 | P1 | Codex-1 | PLANNED |
 | E-14 | P2 | Codex-1 | IN_PROGRESS |
 | E-15 | P1 | Codex-1 | IN_PROGRESS |
+| E-16 | P1 | Unassigned | PLANNED |
+| E-17 | P2 | Unassigned | PLANNED |
 
 ### Board Summary
 
-- Green: `0/15`
-- In progress: `8/15`
-- Planned: `7/15`
-- Blocked: `0/15`
+- Green: `0/17`
+- In progress: `8/17`
+- Planned: `9/17`
+- Blocked: `0/17`
 
 ## Epic Backlog
 
@@ -352,6 +354,68 @@ Last Updated: 2026-03-02
   - At least 3 established tracks gain 501/601 specialization modules.
   - At least 2 interdisciplinary capstones ship with rubric-backed assessment.
   - Curriculum validation and quality gates remain green after each rollout wave.
+
+### E-16 (`P1`) StoryForge Cinema — Book-to-Film Pipeline
+
+- Scope: convert public-domain literary works into interactive, narrated short films with
+  comprehension checkpoints and optional 360° VR scenes for Tier 3 devices.
+- Source: `future_tech_proposal.md.resolved` — Pillar 6 (StoryForge Cinema)
+- Priority queue (Phase 1 titles):
+  - *The Velveteen Rabbit* — Margery Williams (1922)
+  - *Peter Pan* — J.M. Barrie (1911)
+  - *Alice's Adventures in Wonderland* — Lewis Carroll (1865)
+  - *The Wonderful Wizard of Oz* — L. Frank Baum (1900)
+  - *Aesop's Fables* (micro-films, 1–3 min each)
+- Generation pipeline:
+  1. Text extraction from Project Gutenberg / Open Library (extends `audiobook.text` FORGE capability)
+  2. Scene decomposition via LLM (new FORGE capability: `storyforge.scene-decomp`)
+  3. 8K keyframe generation via Google Imagen 4 / ComfyUI (extends `image.comfyui` + `image.google-imagen`)
+  4. Animated clip generation via Google Veo 3.1 (extends `video.google-veo`)
+  5. Expressive TTS narration per character (extends `audiobook.tts`)
+  6. Music AI ambient score per scene mood (new FORGE capability: `storyforge.music-score`)
+  7. Interactive layer injection (vocabulary hotspots, branching, comprehension quizzes)
+  8. Spatial adaptation for Tier 3 — 360° VR-walkable scenes via `SpatialExperienceHub`
+- Content tiers:
+  - **Tier A**: Children's picture books (2–8 min, 8K)
+  - **Tier B**: Chapter books (15–30 min, 8K, branching paths)
+  - **Tier C**: Classic novels (30–60 min, 4K–8K, chapter nav + context)
+  - **Tier D**: Epic works (60–120 min serialized, 4K–8K, multi-episode)
+- Components already in codebase: `src/lib/storyforge/` (untracked), `src/components/storyforge/` (untracked)
+- Acceptance criteria:
+  - At least 5 Phase 1 titles produced end-to-end (text → narrated interactive film)
+  - Comprehension quiz at chapter/scene boundaries feeds mastery pipeline
+  - Works on Tier 1 (audio + static images) and Tier 3 (full video + 360°)
+  - All content rights verified public domain before production
+
+### E-17 (`P2`) Voyager Zero — Spatial Computing & 8K Ecosystem
+
+- Scope: evolve the Experience Hub into a spatial, device-adaptive, PhD-level immersive
+  learning platform as described in the Voyager Zero 100x initiative.
+- Source: `future_tech_proposal.md.resolved` (Pillars 1–5) + `implementation_plan.md.resolved` (Phases 1–6)
+- Phase status (from implementation_plan.md.resolved):
+  - ✅ Phase 1: WebXR & Spatial Initialization (`SpatialExperienceHub` component exists)
+  - ✅ Phase 2: Advanced Shaders & Particle Engine (`SpatialParticles` — 15k+ particles)
+  - ✅ Phase 3: AI Socratic Tutors (`SocraticTutor` component exists)
+  - ✅ Phase 4: Volumetric 3D Asset Pipeline (`VolumetricModel` component + `useGLTF`)
+  - ✅ Phase 5: Adaptive Device Capability Gateway (`DeviceGatewayProvider` — Tier 0–3)
+  - ⬜ Phase 6: StoryForge Cinema (tracked separately as E-16)
+- Device tier system (already built in `DeviceGatewayProvider`):
+  - **Tier 0 (Minimal)**: Pure HTML/CSS, no canvas
+  - **Tier 1 (Standard)**: 4K + basic animations
+  - **Tier 2 (Enhanced)**: Three.js, reduced particles, LOD volumetric models
+  - **Tier 3 (Immersive)**: 8K textures, 15k+ particles, WebXR, Socratic AI
+- Remaining work:
+  - Wire `DeviceGatewayProvider` into `src/app/experience-hub/page.tsx` as the gating wrapper
+  - Implement real WebXR session probe (`navigator.xr?.isSessionSupported`)
+  - Implement real WebGL2/WebGPU tier classification (GPU memory, `MAX_TEXTURE_SIZE`)
+  - Add `navigator.getBattery()` thermal/battery downscale on mobile
+  - Build "Upgrade Path" animated UI for Tier 0/1 users
+  - Remote streaming fallback detection (Chromecast, AirPlay, DLNA)
+- Acceptance criteria:
+  - All Tier 3 components remain dormant on Tier 0/1 hardware (zero JS loaded)
+  - WebXR sessions launch correctly on Apple Vision Pro / Meta Quest
+  - Tier detection is deterministic and logged for analytics
+  - Upgrade Path UI shown to non-qualifying devices with clear hardware explanation
 
 ## KPI Tracking (Backlog-wide)
 

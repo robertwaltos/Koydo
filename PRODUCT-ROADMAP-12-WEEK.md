@@ -87,6 +87,8 @@ Owner: Product + Engineering
 13. AI quality-eval harness (accuracy/hallucination)  
 14. Rights/provenance compliance pipeline  
 15. Knowledge graph search backbone
+16. StoryForge Cinema — public-domain book-to-film pipeline  
+17. Voyager Zero — spatial computing & 8K ecosystem (Phases 1–5 complete)
 
 ## Long-Term (Post-content priority): In-house RevenueCat-compatible Platform
 
@@ -118,7 +120,90 @@ Owner: Product + Engineering
 5. `Migration`: dual-write/shadow-read with RevenueCat before cutover.
 6. `Standalone packaging`: separate deployable service + tenant onboarding.
 
-## Agent Ownership Update (2026-03-02)
+---
+
+## Long-Term: StoryForge Cinema (`E-16`)
+
+### Initiative
+
+`StoryForge Cinema` — public-domain book-to-film pipeline. Converts literary classics into
+interactive, narrated, comprehension-gated short films. Extends E-06 (Audiobook) beyond
+audio into full cinematic experiences.
+
+### Pipeline
+
+```
+Gutenberg text → Scene decomp (LLM) → Imagen 4 keyframes → Veo 3.1 clips
+    → TTS narration → Music AI score → Interactive layer → 360° VR (Tier 3)
+```
+
+### Phase 1 titles (public domain ✅)
+
+- *The Velveteen Rabbit* (2–8 min, Tier A)
+- *Peter Pan* (2–8 min, Tier A)
+- *Alice’s Adventures in Wonderland* (15–30 min, Tier B)
+- *The Wonderful Wizard of Oz* (15–30 min, Tier B)
+- *Aesop’s Fables* (1–3 min micro-films × 20, Tier A)
+
+### FORGE capabilities required
+
+| Capability | Module | Status |
+|---|---|---|
+| `audiobook.text` | `forge/audiobooks/chapter-text-service.ts` | production ✅ |
+| `audiobook.tts` | `forge/audiobooks/audiobook-tts-service.ts` | production ✅ |
+| `image.google-imagen` | `forge/media/google-ai-client.ts` | ready — needs batch script |
+| `video.google-veo` | `forge/media/google-ai-client.ts` | ready — needs batch script |
+| `storyforge.scene-decomp` | `forge/storyforge/scene-decomp.ts` | **planned** |
+| `storyforge.music-score` | `forge/storyforge/music-score.ts` | **planned** |
+
+### Cost estimate (Phase 1, 5 titles, avg 20 scenes/title)
+
+| Line item | Qty | Unit cost | Total |
+|---|---|---|---|
+| Imagen 4 Fast (1 image/scene) | 100 | $0.02 | **$2** |
+| Veo 3.1 Fast (6 sec/scene) | 100 | $0.60 | **$60** |
+| OpenAI TTS (avg 500 chars/scene) | 100 | ~$0.008 | **$0.80** |
+| LLM scene decomp (gpt-4o-mini) | 100 scenes | ~$0.002 | **$0.20** |
+| **Phase 1 total** | | | **~$63** |
+
+Full 50-title catalog at same rate: **~$630**
+
+---
+
+## Long-Term: Voyager Zero (`E-17`) — Spatial Computing & 8K Ecosystem
+
+### Initiative
+
+Transform the Experience Hub from a 4K web app into a PhD-level, 8K-native Spatial Computing
+Ecosystem. Fully device-gated — all spatial features dormant until hardware passes capability checks.
+
+### Phase completion (from `implementation_plan.md.resolved`)
+
+| Phase | Description | Status |
+|---|---|---|
+| 1 | WebXR & Spatial Initialization (`SpatialExperienceHub`) | ✅ DONE |
+| 2 | Advanced Shaders & Particle Engine (`SpatialParticles`, 15k+) | ✅ DONE |
+| 3 | AI Socratic Tutors (`SocraticTutor`) | ✅ DONE |
+| 4 | Volumetric 3D Asset Pipeline (`VolumetricModel`, `useGLTF`) | ✅ DONE |
+| 5 | Adaptive Device Capability Gateway (`DeviceGatewayProvider`) | ✅ DONE |
+| 6 | StoryForge Cinema (book-to-film) | ⬜ Tracked as E-16 |
+
+### Remaining work before production
+
+1. Wire `DeviceGatewayProvider` into `experience-hub/page.tsx` as the conditional mount wrapper
+2. Replace simulated tier detection with real WebXR probe + GPU memory query
+3. Add `navigator.getBattery()` thermal downscale for mobile
+4. Build "Upgrade Path" animated UI for Tier 0/1 users (shows what’s unlocked on better hardware)
+5. Remote streaming fallback detection (Chromecast, AirPlay, DLNA)
+
+### Device tier gate
+
+| Tier | Condition | Features |
+|---|---|---|
+| 0 — Minimal | No WebGL2, low memory | HTML/CSS only, no canvas |
+| 1 — Standard | WebGL1, < 4GB GPU | 4K + CSS animations |
+| 2 — Enhanced | WebGL2, 4–8GB GPU | Three.js, particles (reduced), LOD models |
+| 3 — Immersive | WebGPU or 8GB+ GPU / XR headset | 8K, 15k+ particles, WebXR, Socratic AI |
 - Owner: Codex agent (this thread)
 - Scope claimed:
   - Full 100-400 completion ownership for established and expansion tracks, including all delivered wave closures.
