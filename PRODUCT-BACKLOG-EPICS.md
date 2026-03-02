@@ -36,8 +36,8 @@ Last Updated: 2026-03-02
 | E-13 | P1 | Codex-1 | PLANNED |
 | E-14 | P2 | Codex-1 | IN_PROGRESS |
 | E-15 | P1 | Codex-1 | IN_PROGRESS |
-| E-16 | P1 | Unassigned | PLANNED |
-| E-17 | P2 | Unassigned | PLANNED |
+| E-16 | P1 | Codex-1 | PLANNED |
+| E-17 | P2 | Codex-1 | PLANNED |
 
 ### Board Summary
 
@@ -45,6 +45,18 @@ Last Updated: 2026-03-02
 - In progress: `8/17`
 - Planned: `9/17`
 - Blocked: `0/17`
+
+### Codex-1 Checkpoint Log
+
+- `2026-03-02`:
+  - Synced to latest `master` while preserving concurrent agent-delivered changes.
+  - Cleared companion feature regressions that were breaking CI/security validation:
+    - exported `FriendId` for `experience-hub` typing usage;
+    - allowlisted non-secret HeyGen `introVideoId` values for detect-secrets;
+    - fixed `DeviceGatewayProvider` WebXR typing (`navigator.xr`) for TypeScript stability.
+  - Verified green release gates on head `0dca89b`:
+    - CI run `22595590199`: success
+    - Security Scans run `22595590145`: success
 
 ## Epic Backlog
 

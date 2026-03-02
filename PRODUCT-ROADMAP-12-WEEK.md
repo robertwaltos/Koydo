@@ -37,6 +37,18 @@ Owner: Product + Engineering
 - In progress: `4/10`
 - Red: `1/10`
 
+### Codex-1 Completion Log
+
+- `2026-03-02`:
+  - Synced to latest `master` while preserving concurrent agent changes.
+  - Fixed companion feature regressions that were breaking CI/Security on upstream commits:
+    - exported `FriendId` for `experience-hub` typing usage;
+    - added detect-secrets allowlist pragmas for non-secret HeyGen `introVideoId` values;
+    - fixed `DeviceGatewayProvider` WebXR typing (`navigator.xr`) for TypeScript build stability.
+  - Verified fresh green checks on head `0dca89b`:
+    - CI run `22595590199`: success
+    - Security Scans run `22595590145`: success
+
 ## Principles
 
 - Pricing matrix and curriculum research remain source of truth.
