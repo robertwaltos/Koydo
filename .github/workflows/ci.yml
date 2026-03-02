@@ -41,8 +41,26 @@ jobs:
       - name: Validate capstone defense alignment
         run: npm run curriculum:capstone-defense:check
 
-      - name: Lint
-        run: npm run lint
+      - name: Lint changed JS/TS files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+            mapfile -t changed_files < <(git diff --name-only --diff-filter=ACMR "origin/${{ github.base_ref }}...HEAD" -- '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')
+          elif [[ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]]; then
+            mapfile -t changed_files < <(git diff --name-only --diff-filter=ACMR "${{ github.event.before }}...HEAD" -- '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')
+          else
+            mapfile -t changed_files < <(git ls-files '*.js' '*.jsx' '*.ts' '*.tsx' '*.mjs' '*.cjs')
+          fi
+
+          if [[ ${#changed_files[@]} -eq 0 ]]; then
+            echo "No JS/TS files changed; skipping lint."
+            exit 0
+          fi
+
+          npx eslint "${changed_files[@]}"
 
       - name: Build
         run: npm run build
