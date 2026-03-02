@@ -102,8 +102,8 @@ jobs:
             printf '%s\0' "${changed_files[@]}" | xargs -0 detect-secrets-hook
           fi
 
-  dependency-audit-full:
-    name: dependency-audit-full
+  dependency-audit-prod:
+    name: dependency-audit-prod
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
