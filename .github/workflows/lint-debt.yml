@@ -36,6 +36,9 @@ jobs:
           set +e
           npx eslint src scripts --ext .js,.jsx,.ts,.tsx,.mjs,.cjs --format json --output-file eslint-full-report.json
           status=$?
+          if [[ ! -f eslint-full-report.json ]]; then
+            echo "[]" > eslint-full-report.json
+          fi
           echo "exit_code=$status" >> "$GITHUB_OUTPUT"
           exit 0
 
