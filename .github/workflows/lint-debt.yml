@@ -1,0 +1,89 @@
+name: Lint Debt
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lint-debt-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  full-repo-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run full-repo lint (non-blocking)
+        id: lint
+        shell: bash
+        run: |
+          set +e
+          npx eslint src scripts --ext .js,.jsx,.ts,.tsx,.mjs,.cjs --format json --output-file eslint-full-report.json
+          status=$?
+          echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Summarize lint debt
+        shell: bash
+        env:
+          LINT_EXIT_CODE: ${{ steps.lint.outputs.exit_code }}
+        run: |
+          node - <<'NODE'
+          const fs = require("node:fs");
+          const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+
+          let errors = 0;
+          let warnings = 0;
+          let filesWithIssues = 0;
+          let reportLoaded = false;
+
+          if (fs.existsSync("eslint-full-report.json")) {
+            reportLoaded = true;
+            const report = JSON.parse(fs.readFileSync("eslint-full-report.json", "utf8"));
+            for (const file of report) {
+              const fileErrors = Number(file.errorCount || 0);
+              const fileWarnings = Number(file.warningCount || 0);
+              errors += fileErrors;
+              warnings += fileWarnings;
+              if (fileErrors > 0 || fileWarnings > 0) filesWithIssues += 1;
+            }
+          }
+
+          const lines = [
+            "## Full-Repo Lint Debt",
+            "",
+            `- ESLint exit code: ${process.env.LINT_EXIT_CODE ?? "unknown"}`,
+            `- Report loaded: ${reportLoaded ? "yes" : "no"}`,
+            `- Files with issues: ${filesWithIssues}`,
+            `- Error count: ${errors}`,
+            `- Warning count: ${warnings}`,
+            "",
+            "This workflow is intentionally non-blocking and tracks legacy lint debt.",
+          ];
+
+          fs.appendFileSync(summaryPath, lines.join("\\n") + "\\n");
+          NODE
+
+      - name: Upload lint debt artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: eslint-full-report
+          path: eslint-full-report.json
+          if-no-files-found: warn
