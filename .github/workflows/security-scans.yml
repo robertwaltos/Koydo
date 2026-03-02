@@ -54,6 +54,7 @@ jobs:
 
           semgrep scan \
             --config p/owasp-top-ten \
+            --config p/typescript \
             --config p/javascript \
             --error \
             "${changed_files[@]}"
@@ -100,3 +101,122 @@ jobs:
           else
             printf '%s\0' "${changed_files[@]}" | xargs -0 detect-secrets-hook
           fi
+
+  dependency-audit-full:
+    name: dependency-audit-full
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run full dependency audit
+        run: npm run security:audit:full
+
+  dast-zap-baseline:
+    name: dast-zap-baseline
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DAST_REQUIRED_BRANCH: ${{ github.base_ref || github.ref_name }}
+      DAST_TARGET_URL: ${{ vars.DAST_TARGET_URL || secrets.DAST_TARGET_URL || '' }}
+      VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET || '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve DAST target URL
+        id: target
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "${DAST_TARGET_URL}" && -f ".env.production.audit" ]]; then
+            candidate_url="$(grep -E '^NEXT_PUBLIC_APP_URL=' .env.production.audit | head -n1 | cut -d '=' -f2- | sed -e 's/^"//' -e 's/"$//')"
+            if [[ -n "${candidate_url}" ]]; then
+              DAST_TARGET_URL="${candidate_url}"
+            fi
+          fi
+
+          if [[ -n "${DAST_TARGET_URL}" ]]; then
+            if [[ "${DAST_TARGET_URL}" != http://* && "${DAST_TARGET_URL}" != https://* ]]; then
+              DAST_TARGET_URL="https://${DAST_TARGET_URL}"
+            fi
+
+            if [[ "${DAST_TARGET_URL}" == https://vercel.com/* || "${DAST_TARGET_URL}" == http://vercel.com/* ]]; then
+              echo "DAST_TARGET_URL must be a deployed app URL (for example *.vercel.app), not a Vercel dashboard URL."
+              exit 1
+            fi
+
+            status_code="$(curl -ksS -o /dev/null -w '%{http_code}' "${DAST_TARGET_URL}")"
+            if [[ "${status_code}" == "401" || "${status_code}" == "403" ]]; then
+              if [[ -z "${VERCEL_AUTOMATION_BYPASS_SECRET}" ]]; then
+                echo "DAST target returned ${status_code}. If this is a protected Vercel deployment, set VERCEL_AUTOMATION_BYPASS_SECRET or use an unprotected URL."
+                exit 1
+              fi
+            fi
+
+            echo "target=${DAST_TARGET_URL}" >> "${GITHUB_OUTPUT}"
+            exit 0
+          fi
+
+          if [[ "${DAST_REQUIRED_BRANCH}" == "master" || "${DAST_REQUIRED_BRANCH}" == release/* || "${DAST_REQUIRED_BRANCH}" == deploy/* ]]; then
+            echo "DAST_TARGET_URL is required for master/release/deploy scans."
+            exit 1
+          fi
+
+          echo "No DAST target configured; skipping for non-release branch ${DAST_REQUIRED_BRANCH}."
+          echo "target=" >> "${GITHUB_OUTPUT}"
+
+      - name: Run OWASP ZAP baseline
+        if: ${{ steps.target.outputs.target != '' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -n "${VERCEL_AUTOMATION_BYPASS_SECRET}" ]]; then
+            zap_replacer_config="-config replacer.full_list(0).description=vercel-protection-bypass -config replacer.full_list(0).enabled=true -config replacer.full_list(0).matchtype=REQ_HEADER -config replacer.full_list(0).matchstr=x-vercel-protection-bypass -config replacer.full_list(0).replacement=${VERCEL_AUTOMATION_BYPASS_SECRET} -config replacer.full_list(1).description=vercel-set-bypass-cookie -config replacer.full_list(1).enabled=true -config replacer.full_list(1).matchtype=REQ_HEADER -config replacer.full_list(1).matchstr=x-vercel-set-bypass-cookie -config replacer.full_list(1).replacement=true"
+
+            docker run --rm \
+              -v "$PWD:/zap/wrk/:rw" \
+              ghcr.io/zaproxy/zaproxy:stable \
+              zap-baseline.py \
+              -t "${{ steps.target.outputs.target }}" \
+              -I \
+              -m 5 \
+              -z "${zap_replacer_config}" \
+              -J zap-report.json \
+              -w zap-report.md \
+              -r zap-report.html \
+              -x zap-report.xml
+          else
+            docker run --rm \
+              -v "$PWD:/zap/wrk/:rw" \
+              ghcr.io/zaproxy/zaproxy:stable \
+              zap-baseline.py \
+              -t "${{ steps.target.outputs.target }}" \
+              -I \
+              -m 5 \
+              -J zap-report.json \
+              -w zap-report.md \
+              -r zap-report.html \
+              -x zap-report.xml
+          fi
+
+      - name: Upload ZAP report artifacts
+        if: ${{ always() && steps.target.outputs.target != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: zap-baseline-report
+          path: |
+            zap-report.json
+            zap-report.md
+            zap-report.html
+            zap-report.xml
