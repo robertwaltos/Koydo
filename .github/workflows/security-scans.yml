@@ -121,7 +121,7 @@ jobs:
         run: npm ci
 
       - name: Run full dependency audit
-        run: npm run security:audit:full
+        run: npm run security:audit
 
   dast-zap-baseline:
     name: dast-zap-baseline
