@@ -1,6 +1,49 @@
-<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="800" fill="#18181B"/>
-  <rect x="140" y="120" width="920" height="560" rx="26" fill="#27272A" stroke="#52525B" stroke-width="8"/>
-  <polygon points="560,300 560,500 730,400" fill="#FAFAFA"/>
-  <text x="600" y="735" text-anchor="middle" fill="#A1A1AA" font-size="44" font-family="Arial, Helvetica, sans-serif">Koydo Video Placeholder</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d1a"/>
+      <stop offset="100%" stop-color="#1a0d2e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1280" height="48" fill="#0a0a14" opacity="0.8"/>
+  <rect x="0" y="48" width="1280" height="2" fill="#7c3aed" opacity="0.4"/>
+  <g fill="#1e1e30">
+    <rect x="8"   y="6"  width="36" height="36" rx="3"/>
+    <rect x="56"  y="6"  width="36" height="36" rx="3"/>
+    <rect x="104" y="6"  width="36" height="36" rx="3"/>
+    <rect x="152" y="6"  width="36" height="36" rx="3"/>
+    <rect x="200" y="6"  width="36" height="36" rx="3"/>
+    <rect x="248" y="6"  width="36" height="36" rx="3"/>
+    <rect x="1040" y="6" width="36" height="36" rx="3"/>
+    <rect x="1088" y="6" width="36" height="36" rx="3"/>
+    <rect x="1136" y="6" width="36" height="36" rx="3"/>
+    <rect x="1184" y="6" width="36" height="36" rx="3"/>
+    <rect x="1232" y="6" width="36" height="36" rx="3"/>
+  </g>
+  <rect x="0" y="670" width="1280" height="50" fill="#0a0a14" opacity="0.8"/>
+  <rect x="0" y="668" width="1280" height="2" fill="#7c3aed" opacity="0.4"/>
+  <g fill="#1e1e30">
+    <rect x="8"    y="677" width="36" height="36" rx="3"/>
+    <rect x="56"   y="677" width="36" height="36" rx="3"/>
+    <rect x="104"  y="677" width="36" height="36" rx="3"/>
+    <rect x="152"  y="677" width="36" height="36" rx="3"/>
+    <rect x="200"  y="677" width="36" height="36" rx="3"/>
+    <rect x="248"  y="677" width="36" height="36" rx="3"/>
+    <rect x="1040" y="677" width="36" height="36" rx="3"/>
+    <rect x="1088" y="677" width="36" height="36" rx="3"/>
+    <rect x="1136" y="677" width="36" height="36" rx="3"/>
+    <rect x="1184" y="677" width="36" height="36" rx="3"/>
+    <rect x="1232" y="677" width="36" height="36" rx="3"/>
+  </g>
+  <circle cx="640" cy="360" r="72" fill="#7c3aed" opacity="0.15"/>
+  <circle cx="640" cy="360" r="60" fill="none" stroke="#7c3aed" stroke-width="2" opacity="0.7"/>
+  <polygon points="628,334 628,386 672,360" fill="#a78bfa" opacity="0.9"/>
+  <text x="640" y="456" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" letter-spacing="6" fill="#a78bfa" opacity="0.8">KOYDO</text>
+  <text x="640" y="484" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#6d6d8a" letter-spacing="2">Video Loading…</text>
 </svg>

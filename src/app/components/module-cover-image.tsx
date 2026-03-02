@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { getModuleThumbnail } from "@/lib/modules/get-module-thumbnail";
 
 type ModuleCoverImageProps = {
   moduleId: string;
@@ -14,7 +15,6 @@ type MediaResolveResponse = {
   error?: string;
 };
 
-const DEFAULT_MODULE_COVER = "/placeholders/lesson-robot.svg";
 const BATCH_SIZE = 30;
 
 const coverCache = new Map<string, string>();
@@ -100,7 +100,10 @@ export default function ModuleCoverImage({
   fallbackSrc,
   className,
 }: ModuleCoverImageProps) {
-  const fallback = useMemo(() => fallbackSrc?.trim() || DEFAULT_MODULE_COVER, [fallbackSrc]);
+  const fallback = useMemo(
+    () => getModuleThumbnail(moduleId, fallbackSrc?.trim() || null),
+    [moduleId, fallbackSrc],
+  );
   const [resolved, setResolved] = useState<{ moduleId: string; src: string } | null>(null);
 
   useEffect(() => {

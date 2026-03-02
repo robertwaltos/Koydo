@@ -36,8 +36,8 @@ export const AVATAR_PERSONAS: Record<string, AvatarPersona> = {
   "prek-math": {
     key: "prek-math",
     description: "Warm, friendly young teacher for Pre-K math — bright classroom background",
-    avatarId: "", // Populated after HeyGen setup
-    voiceId: "", // Populated after HeyGen setup
+    avatarId: "Matteo_standing_office_front",
+    voiceId: "d7bbcdd6964c47bdaae26decade4a933",
     voiceLocale: "en-US",
     voiceSpeed: 0.9, // Slightly slower for young children
     ageAppropriate: "3-5",
@@ -47,8 +47,8 @@ export const AVATAR_PERSONAS: Record<string, AvatarPersona> = {
   "prek-language": {
     key: "prek-language",
     description: "Expressive, encouraging teacher for Pre-K language arts — cozy reading nook background",
-    avatarId: "",
-    voiceId: "",
+    avatarId: "Annie_Lounge_Standing_Front_public",
+    voiceId: "007e1378fc454a9f976db570ba6164a7",
     voiceLocale: "en-US",
     voiceSpeed: 0.85, // Even slower for phonics/letter sounds
     ageAppropriate: "3-5",
@@ -58,8 +58,8 @@ export const AVATAR_PERSONAS: Record<string, AvatarPersona> = {
   "prek-science": {
     key: "prek-science",
     description: "Curious, enthusiastic teacher for Pre-K science — nature/lab background",
-    avatarId: "",
-    voiceId: "",
+    avatarId: "Matteo_standing_office_front",
+    voiceId: "d7bbcdd6964c47bdaae26decade4a933",
     voiceLocale: "en-US",
     voiceSpeed: 0.9,
     ageAppropriate: "3-5",
@@ -69,8 +69,8 @@ export const AVATAR_PERSONAS: Record<string, AvatarPersona> = {
   "prek-social": {
     key: "prek-social",
     description: "Kind, nurturing teacher for Pre-K social studies/history — world map background",
-    avatarId: "",
-    voiceId: "",
+    avatarId: "Annie_Lounge_Standing_Front_public",
+    voiceId: "007e1378fc454a9f976db570ba6164a7",
     voiceLocale: "en-US",
     voiceSpeed: 0.9,
     ageAppropriate: "3-5",
@@ -80,8 +80,8 @@ export const AVATAR_PERSONAS: Record<string, AvatarPersona> = {
   "prek-creative": {
     key: "prek-creative",
     description: "Playful, artistic teacher for Pre-K arts & coding — colorful studio background",
-    avatarId: "",
-    voiceId: "",
+    avatarId: "Annie_Lounge_Standing_Front_public",
+    voiceId: "007e1378fc454a9f976db570ba6164a7",
     voiceLocale: "en-US",
     voiceSpeed: 0.9,
     ageAppropriate: "3-5",
@@ -91,8 +91,8 @@ export const AVATAR_PERSONAS: Record<string, AvatarPersona> = {
   "prek-life-skills": {
     key: "prek-life-skills",
     description: "Gentle, practical teacher for Pre-K life skills — home kitchen/garden background",
-    avatarId: "",
-    voiceId: "",
+    avatarId: "Annie_Lounge_Standing_Front_public",
+    voiceId: "007e1378fc454a9f976db570ba6164a7",
     voiceLocale: "en-US",
     voiceSpeed: 0.9,
     ageAppropriate: "3-5",
@@ -102,8 +102,8 @@ export const AVATAR_PERSONAS: Record<string, AvatarPersona> = {
   "k2-general": {
     key: "k2-general",
     description: "Energetic, clear teacher for K-2 content — elementary classroom background",
-    avatarId: "",
-    voiceId: "",
+    avatarId: "Matteo_standing_office_front",
+    voiceId: "d7bbcdd6964c47bdaae26decade4a933",
     voiceLocale: "en-US",
     voiceSpeed: 0.95,
     ageAppropriate: "5-8",
