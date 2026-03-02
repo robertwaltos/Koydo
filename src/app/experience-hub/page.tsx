@@ -1,86 +1,86 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import MascotHost from "@/components/experience/MascotHost";
 import MascotFriend from "@/components/experience/KoydoMascotFriends";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import AchievementToast from "@/components/experience/AchievementToast";
+import type { FriendId } from "@/components/experience/KoydoMascotFriends";
 import {
     Trophy,
     Sparkles,
-    Users,
-    Flame,
-    Globe,
-    Rocket,
     Compass,
-    Star,
-    Brain,
-    Palette,
-    Atom,
-    ChevronRight
 } from "lucide-react";
-import Link from "next/link";
 import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
 import ProgressOrb from "@/components/experience/ProgressOrb";
 import GalaxyMap from "@/components/experience/GalaxyMap";
-import TrophyRoom from "@/components/experience/TrophyRoom";
 import { useMascot } from "@/components/experience/MascotHost";
+import { SpatialExperienceHub } from "@/components/experience/SpatialExperienceHub";
+import { DeviceGatewayProvider, useDeviceGateway } from "@/components/experience/DeviceGatewayProvider";
 
 /* --- Types --- */
-type DomainProgress = {
-    id: string;
-    name: string;
-    icon: any;
-    color: string;
-    percent: number;
-    mascot: any;
-    link: string;
-};
-
-/* --- Simulated Community Activity --- */
-const COMMUNITY_ACTIVITY = [
-    { id: 1, user: "Leo", action: "crunched 50 numbers!", time: "2m ago", icon: "🔢" },
-    { id: 2, user: "Sora", action: "unlocked 'Space Pioneer'!", time: "5m ago", icon: "🚀" },
-    { id: 3, user: "Maya", action: "started a 7-day streak!", time: "12m ago", icon: "🔥" },
-    { id: 4, user: "Felix", action: "finished 'Caterpillar Lab'", time: "20m ago", icon: "🐛" },
-];
-
 export default function ExperienceHubPage() {
-    const [selectedMascot, setSelectedMascot] = useState<any>("pixel");
+    const [selectedMascot, setSelectedMascot] = useState<FriendId>("pixel");
     const [showToast, setShowToast] = useState(false);
-    const [view, setView] = useState<"galaxy" | "trophies">("galaxy");
 
     return (
-        <MascotHost friendId={selectedMascot} initialMood="happy">
-            <ExperienceHubContent
-                selectedMascot={selectedMascot}
-                setSelectedMascot={setSelectedMascot}
-                showToast={showToast}
-                setShowToast={setShowToast}
-                view={view}
-                setView={setView}
-            />
-        </MascotHost>
+        <DeviceGatewayProvider>
+            <MascotHost friendId={selectedMascot} initialMood="happy">
+                <ExperienceHubContent
+                    selectedMascot={selectedMascot}
+                    setSelectedMascot={setSelectedMascot}
+                    showToast={showToast}
+                    setShowToast={setShowToast}
+                />
+            </MascotHost>
+        </DeviceGatewayProvider>
     );
 }
 
-function ExperienceHubContent({ selectedMascot, setSelectedMascot, showToast, setShowToast, view, setView }: any) {
-    const { friendshipLevel, interactionCount } = useMascot();
+type ExperienceHubContentProps = {
+    selectedMascot: FriendId;
+    setSelectedMascot: (id: FriendId) => void;
+    showToast: boolean;
+    setShowToast: (show: boolean) => void;
+};
 
-    // Domains
-    const domains: DomainProgress[] = [
-        { id: "math", name: "Math", icon: Brain, color: "text-indigo-400", percent: 75, mascot: "spark", link: "/modules?subject=Mathematics" },
-        { id: "reading", "name": "Reading", icon: Flame, color: "text-rose-400", percent: 42, mascot: "echo", link: "/modules?subject=Language" },
-        { id: "science", name: "Science", icon: Atom, color: "text-emerald-400", percent: 90, mascot: "terra", link: "/science-lab" },
-        { id: "art", name: "Art & Fun", icon: Palette, color: "text-amber-400", percent: 55, mascot: "luna", link: "/modules?subject=Creative" },
-    ];
+function ExperienceHubContent({
+    selectedMascot,
+    setSelectedMascot,
+    showToast,
+    setShowToast,
+}: ExperienceHubContentProps) {
+    const { friendshipLevel, interactionCount } = useMascot();
+    const { canSpatial, isReady, tier, capabilities } = useDeviceGateway();
 
     return (
         <main className="min-h-screen bg-background text-foreground selection:bg-indigo-500/30 overflow-x-hidden">
-            {/* Background Atmosphere */}
-            <div className="fixed inset-0 pointer-events-none">
+            {/* Spatial Computing / VR Background — DORMANT until Tier 2+ */}
+            {canSpatial ? (
+                <div className="fixed inset-0 pointer-events-auto z-0 opacity-80 mix-blend-screen mix-blend-plus-lighter">
+                    <SpatialExperienceHub />
+                </div>
+            ) : (
+                /* Graceful Fallback for Tier 0/1 */
+                <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-950 via-indigo-950/50 to-slate-950">
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.15),transparent_50%)]" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(52,211,153,0.1),transparent_50%)]" />
+                    {isReady && tier < 2 && (
+                        <div className="absolute bottom-6 left-6 z-50 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 max-w-xs text-xs text-zinc-400">
+                            <p className="font-bold text-cyan-300 mb-1">✨ Upgrade Available</p>
+                            <p>Your device is running in <strong className="text-white">{capabilities?.tierLabel}</strong> mode. Connect a VR headset or use a more powerful GPU to unlock the full 3D spatial experience.</p>
+                            {capabilities?.canCast && (
+                                <p className="mt-2 text-emerald-300/80">📺 Casting-capable display detected nearby.</p>
+                            )}
+                        </div>
+                    )}
+                </div>
+            )}
+
+            {/* Top UI Overlay Context */}
+            <div className="fixed inset-0 pointer-events-none z-10">
                 <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px]" />
                 <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[150px]" />
                 <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
@@ -212,11 +212,11 @@ function ExperienceHubContent({ selectedMascot, setSelectedMascot, showToast, se
                             {selectedMascot} <span className="text-indigo-400">The Guide</span>
                         </h3>
                         <p className="mt-2 text-sm text-zinc-400 font-medium px-4">
-                            "You're doing amazing! Our bond is growing stronger with every mission we complete together."
+                            &ldquo;You&apos;re doing amazing! Our bond is growing stronger with every mission we complete together.&rdquo;
                         </p>
 
                         <div className="mt-8 flex gap-3 overflow-x-auto pb-2 w-full justify-center">
-                            {["pixel", "echo", "spark", "luna", "terra"].map(mid => (
+                            {(["pixel", "echo", "spark", "luna", "terra"] as FriendId[]).map(mid => (
                                 <button
                                     key={mid}
                                     onClick={() => {
@@ -228,7 +228,7 @@ function ExperienceHubContent({ selectedMascot, setSelectedMascot, showToast, se
                                         : "bg-white/5 border-border/40 hover:bg-white/10"
                                         }`}
                                 >
-                                    <MascotFriend id={mid as any} mood="happy" size="sm" />
+                                    <MascotFriend id={mid} mood="happy" size="sm" />
                                 </button>
                             ))}
                         </div>
