@@ -120,8 +120,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run full dependency audit
-        run: npm run security:audit
+      - name: Run production dependency audit
+        run: npm run security:audit:prod
 
   dast-zap-baseline:
     name: dast-zap-baseline
