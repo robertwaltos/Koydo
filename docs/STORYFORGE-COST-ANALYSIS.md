@@ -64,6 +64,29 @@ flowchart LR
 > For max volume / cost reduction: Self-hosted SD 3.5 (~$0.003/img) using the RTX 4090.  
 > Stability AI SDXL ($0.009) is a strong secondary API option.
 
+### 🎬 Video Generation — Animated Scene Clips
+
+> Used for the `seedanceVideo` / `seedanceAnimation` prompts already in `LESSON-MEDIA-PROMPT-PACK.json`.
+
+| Supplier | Model | $/sec | 5s clip | 10s clip | Quality | URL |
+|----------|-------|------:|--------:|---------:|---------|-----|
+| **ByteDance** | **Seedance 1 Lite** — 480p | $0.018 | **$0.09** | $0.18 | Good | [replicate.com/bytedance/seedance-1-lite](https://replicate.com/bytedance/seedance-1-lite) |
+| **ByteDance** | **Seedance 1 Lite** — 720p | $0.036 | **$0.18** | $0.36 | High | [replicate.com/bytedance/seedance-1-lite](https://replicate.com/bytedance/seedance-1-lite) |
+| **ByteDance** | **Seedance 1 Lite** — 1080p | $0.072 | **$0.36** | $0.72 | High | [replicate.com/bytedance/seedance-1-lite](https://replicate.com/bytedance/seedance-1-lite) |
+| ByteDance | Seedance 1 Pro — 480p | $0.030 | $0.15 | $0.30 | Premium | [replicate.com/bytedance/seedance-1-pro](https://replicate.com/bytedance/seedance-1-pro) |
+| ByteDance | Seedance 1 Pro — 720p | $0.060 | $0.30 | $0.60 | Premium | [replicate.com/bytedance/seedance-1-pro](https://replicate.com/bytedance/seedance-1-pro) |
+| ByteDance | Seedance 1 Pro — 1080p | $0.150 | $0.75 | $1.50 | Premium | [replicate.com/bytedance/seedance-1-pro](https://replicate.com/bytedance/seedance-1-pro) |
+| Google | Veo 3.1 Fast | $0.100 | $0.50 | $1.00 | Premium | [ai.google.dev](https://ai.google.dev/pricing) | ⏸ DEFERRED |
+| Google | Veo 3.1 Standard | $0.200 | $1.00 | $2.00 | Cinematic | [ai.google.dev](https://ai.google.dev/pricing) | ⏸ DEFERRED |
+
+> **⭐ Winner: Seedance 1 Lite @ 720p ($0.036/sec)** — 64% cheaper than Veo 3.1 Fast, supports T2V + I2V, multi-shot narrative coherence, and reference images (1–4) for character consistency across a whole book.
+>
+> **ZERO extra prompt work:** `LESSON-MEDIA-PROMPT-PACK.json` already has `seedanceVideo` and `seedanceAnimation` prompts pre-built on every lesson.
+>
+> **Cost at scale (5s @ 720p):** 207 modules = **\$37.26** · 2,514 lessons = **\$452.52** · via [Replicate API](https://replicate.com/bytedance/seedance-1-lite/api).
+>
+> **Direct ByteDance API (Volcengine):** `doubao-seedance-1-0-pro-250528` — pricing not publicly listed, requires CN billing account.
+
 ### 🗣️ TTS — Narration
 
 | Supplier | Model | Cost / 1M chars | Quality | URL |
@@ -194,6 +217,7 @@ flowchart LR
 | `audiobook.tts` | `forge/audiobooks/audiobook-tts-service.ts` | production ✅ |
 | `image.google-imagen` | `forge/media/google-ai-client.ts` | **ready ✅** — `npm run media:batch:storyforge` |
 | `video.google-veo` | `forge/media/google-ai-client.ts` | ready ✅ — DEFERRED (see cost note) |
+| `video.seedance` | `forge/media/seedance-client.ts` | **planned** — `npm run media:batch:seedance-clips` |
 | `storyforge.scene-decomp` | `forge/storyforge/scene-decomp.ts` | **planned** |
 | `storyforge.tts` | `forge/audiobooks/audiobook-tts-service.ts` | reuse existing ✅ |
 | `storyforge.music-score` | `forge/storyforge/music-score.ts` | **planned** |
@@ -223,3 +247,5 @@ flowchart LR
 | Udio Music AI | [udio.com](https://udio.com) |
 | Suno Music AI | [suno.com](https://suno.com) |
 | ElevenLabs | [elevenlabs.io](https://elevenlabs.io) |
+| ByteDance Seedance (Replicate) | [replicate.com/bytedance/seedance-1-lite](https://replicate.com/bytedance/seedance-1-lite) · [seedance-1-pro](https://replicate.com/bytedance/seedance-1-pro) |
+| ByteDance Volcengine (direct) | [volcengine.com/docs/82379/1366799](https://www.volcengine.com/docs/82379/1366799) |
