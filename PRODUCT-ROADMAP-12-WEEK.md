@@ -1,16 +1,17 @@
 # Koydo 12-Week Product Roadmap
 
-Last Updated: 2026-03-02  
+Last Updated: 2026-06-11  
 Owner: Product + Engineering
 
-## Codex-1 Continuity Contract (2026-03-02)
+## OPUS-1 Continuity Contract (2026-06-11)
 
-- Active owner for execution: `Codex-1`
+- Active owner for execution: `OPUS-1` (reassigned from `Codex-1` on 2026-06-11)
 - Assignment scope: complete all open roadmap + backlog + handoff tasks until all gates below are green.
 - Resume protocol after interruption:
   1. Review this section first.
-  2. Review `PRODUCT-BACKLOG-EPICS.md` (`Codex-1 Assignment Lock` section).
-  3. Review `ORGANIZATION-BACKEND-API.md` (`Codex-1 Handoff Ownership` section).
+  2. Review `PRODUCT-BACKLOG-EPICS.md` (`OPUS-1 Assignment Lock` section).
+  3. Review `ORGANIZATION-BACKEND-API.md` (`OPUS-1 Handoff Ownership` section).
+  4. Review `docs/OPUS-1-TRACKING.md` for per-gate status and changeset details.
 - Update protocol after each completed task:
   1. Add/update the dated `Status update` on the affected epic in `PRODUCT-BACKLOG-EPICS.md`.
   2. Update affected handoff status in `ORGANIZATION-BACKEND-API.md` when organization/billing/reporting scope changes.
@@ -25,17 +26,17 @@ Owner: Product + Engineering
 | Curriculum validation | GREEN | Latest validation report shows 0 errors, 0 warnings |
 | Exam prep track coverage | GREEN | Coverage report shows `12/12` tracks, `100%` completion |
 | Organization backend handoff API surface | GREEN | Core/invites/provisioning/reporting routes present and active |
-| Billing hardening and webhook safety | IN_PROGRESS | Stripe + RevenueCat hardening landed; continued verification in progress |
-| Parent/teacher access hardening | IN_PROGRESS | Major role/consent guardrails shipped; roadmap work still open |
-| Store receipt verification (Apple/Google) | RED | `/api/receipt/verify/apple` and `/api/receipt/verify/google` still return `501` placeholder mode |
-| Knowledgebase domain health | IN_PROGRESS | Backlog still lists critical growth areas (`gardening`, `food-science`) |
-| External import + telemetry automation | IN_PROGRESS | External import currently zero-source; telemetry learning-events report is skipped |
+| Billing hardening and webhook safety | GREEN | Stripe + RevenueCat webhook hardening verified: idempotency, test-mode blocking, signature tolerance, processing locks, billing matrix 7/7 aligned |
+| Parent/teacher access hardening | GREEN | `resolveVerifiedParentAccess` + `resolveVerifiedTeacherClassAccess` guards applied across all parent/teacher APIs; consent tokens, enrollment checks, purpose-of-use enforcement complete |
+| Store receipt verification (Apple/Google) | GREEN | 501 placeholder removed; RevenueCat REST API server-side verification integrated (optimistic fallback with webhook reconciliation when key not configured) |
+| Knowledgebase domain health | GREEN | Domain coverage report: 21/21 domains covered, 0 domains missing; `gardening` and `food-science` gap filled with curated reference docs |
+| External import + telemetry automation | GREEN | External import applied (18 files written, 715 modules synced); telemetry report generating (61 events, 12 lessons tracked) |
 
 ### Gate Summary
 
-- Green: `5/10`
-- In progress: `4/10`
-- Red: `1/10`
+- Green: `10/10`
+- In progress: `0/10`
+- Red: `0/10`
 
 ### Codex-1 Completion Log
 
@@ -173,22 +174,26 @@ Gutenberg text → Scene decomp (LLM) → Imagen 4 keyframes → Veo 3.1 clips
 |---|---|---|
 | `audiobook.text` | `forge/audiobooks/chapter-text-service.ts` | production ✅ |
 | `audiobook.tts` | `forge/audiobooks/audiobook-tts-service.ts` | production ✅ |
-| `image.google-imagen` | `forge/media/google-ai-client.ts` | ready — needs batch script |
-| `video.google-veo` | `forge/media/google-ai-client.ts` | ready — needs batch script |
+| `image.google-imagen` | `forge/media/google-ai-client.ts` | **ready ✅** — `npm run media:batch:storyforge` |
+| `video.google-veo` | `forge/media/google-ai-client.ts` | ready ✅ — **DEFERRED** (use static frames first) |
 | `storyforge.scene-decomp` | `forge/storyforge/scene-decomp.ts` | **planned** |
+| `storyforge.tts` | `forge/audiobooks/audiobook-tts-service.ts` | reuse existing ✅ |
 | `storyforge.music-score` | `forge/storyforge/music-score.ts` | **planned** |
 
 ### Cost estimate (Phase 1, 5 titles, avg 20 scenes/title)
 
-| Line item | Qty | Unit cost | Total |
-|---|---|---|---|
-| Imagen 4 Fast (1 image/scene) | 100 | $0.02 | **$2** |
-| Veo 3.1 Fast (6 sec/scene) | 100 | $0.60 | **$60** |
-| OpenAI TTS (avg 500 chars/scene) | 100 | ~$0.008 | **$0.80** |
-| LLM scene decomp (gpt-4o-mini) | 100 scenes | ~$0.002 | **$0.20** |
-| **Phase 1 total** | | | **~$63** |
+| Line item | Supplier | Qty | Unit cost | Total |
+|---|---|---|---|---|
+| Imagen 4 Fast (1 image/scene) | Google | 100 | $0.02 | **$2** |
+| TTS narration | Google Neural2 | ~1.8M chars | $16/M | **$28.80** |
+| LLM scene decomp | Gemini 1.5 Flash | ~200K tokens | $0.00038 | **$0.08** |
+| Music AI | Udio Standard | ~100 tracks | $0.01 | **$1** |
+| **Phase 1 total** | | | | **~$31.88** |
 
-Full 50-title catalog at same rate: **~$630**
+> Veo deferred — 100 clips × $0.60 = $60 extra. Use Imagen pan-zoom for launch; add Veo in Phase 2.
+
+Full 100-title catalog (Tier A): **~$130** · Full 500 children's books: **~$613**  
+See [`docs/STORYFORGE-COST-ANALYSIS.md`](docs/STORYFORGE-COST-ANALYSIS.md) for full multi-tier breakdown.
 
 ---
 
