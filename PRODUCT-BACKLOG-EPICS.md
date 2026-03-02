@@ -37,13 +37,13 @@ Last Updated: 2026-03-02
 | E-14 | P2 | Codex-1 | IN_PROGRESS |
 | E-15 | P1 | Codex-1 | IN_PROGRESS |
 | E-16 | P1 | Codex-1 | PLANNED |
-| E-17 | P2 | Codex-1 | PLANNED |
+| E-17 | P2 | Codex-1 | IN_PROGRESS |
 
 ### Board Summary
 
 - Green: `0/17`
-- In progress: `8/17`
-- Planned: `9/17`
+- In progress: `9/17`
+- Planned: `8/17`
 - Blocked: `0/17`
 
 ### Codex-1 Checkpoint Log
@@ -417,12 +417,17 @@ Last Updated: 2026-03-02
   - **Tier 2 (Enhanced)**: Three.js, reduced particles, LOD volumetric models
   - **Tier 3 (Immersive)**: 8K textures, 15k+ particles, WebXR, Socratic AI
 - Remaining work:
-  - Wire `DeviceGatewayProvider` into `src/app/experience-hub/page.tsx` as the gating wrapper
-  - Implement real WebXR session probe (`navigator.xr?.isSessionSupported`)
-  - Implement real WebGL2/WebGPU tier classification (GPU memory, `MAX_TEXTURE_SIZE`)
-  - Add `navigator.getBattery()` thermal/battery downscale on mobile
-  - Build "Upgrade Path" animated UI for Tier 0/1 users
-  - Remote streaming fallback detection (Chromecast, AirPlay, DLNA)
+  - Validate runtime behavior on physical Apple Vision Pro / Meta Quest hardware.
+  - Add production analytics sink for device-tier detections (beyond UI-side detection metadata).
+  - Expand remote streaming checks to device-discovery confidence scoring in QA harness.
+- Status update (2026-03-02): `IN_PROGRESS` — experience-hub gating hardening shipped via
+  `src/components/experience/DeviceGatewayProvider.tsx` and
+  `src/app/experience-hub/page.tsx`:
+  - real WebXR mode probing (`immersive-vr`, `immersive-ar`);
+  - WebGL2/WebGPU-backed tier classification (`MAX_TEXTURE_SIZE`, texture unit probes, renderer heuristics);
+  - mobile low-power downscale logic (`navigator.getBattery`, `deviceMemory`, `saveData`);
+  - remote streaming capability detection (Chromecast/AirPlay/DLNA-style probes);
+  - dynamic import gating so `SpatialExperienceHub` remains dormant for Tier 0/1 users.
 - Acceptance criteria:
   - All Tier 3 components remain dormant on Tier 0/1 hardware (zero JS loaded)
   - WebXR sessions launch correctly on Apple Vision Pro / Meta Quest

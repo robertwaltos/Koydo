@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import MascotHost from "@/components/experience/MascotHost";
 import MascotFriend from "@/components/experience/KoydoMascotFriends";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -17,8 +18,12 @@ import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
 import ProgressOrb from "@/components/experience/ProgressOrb";
 import GalaxyMap from "@/components/experience/GalaxyMap";
 import { useMascot } from "@/components/experience/MascotHost";
-import { SpatialExperienceHub } from "@/components/experience/SpatialExperienceHub";
 import { DeviceGatewayProvider, useDeviceGateway } from "@/components/experience/DeviceGatewayProvider";
+
+const SpatialExperienceHub = dynamic(
+    () => import("@/components/experience/SpatialExperienceHub").then((mod) => mod.SpatialExperienceHub),
+    { ssr: false, loading: () => null },
+);
 
 /* --- Types --- */
 export default function ExperienceHubPage() {
@@ -71,8 +76,37 @@ function ExperienceHubContent({
                         <div className="absolute bottom-6 left-6 z-50 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 max-w-xs text-xs text-zinc-400">
                             <p className="font-bold text-cyan-300 mb-1">✨ Upgrade Available</p>
                             <p>Your device is running in <strong className="text-white">{capabilities?.tierLabel}</strong> mode. Connect a VR headset or use a more powerful GPU to unlock the full 3D spatial experience.</p>
-                            {capabilities?.canCast && (
-                                <p className="mt-2 text-emerald-300/80">📺 Casting-capable display detected nearby.</p>
+                            <div className="mt-2 space-y-1">
+                                <p className="text-zinc-300/90">
+                                    GPU profile: Tier {capabilities?.gpuTier ?? 0}
+                                    {capabilities?.hasWebGPU ? " • WebGPU ready" : " • WebGPU unavailable"}
+                                </p>
+                                {capabilities?.lowPowerModeLikely && (
+                                    <p className="text-amber-300/90">🔋 Low-power conditions detected; fidelity auto-scaled down.</p>
+                                )}
+                                {capabilities?.canCast ? (
+                                    <p className="text-emerald-300/80">
+                                        📺 Remote streaming fallback available
+                                        {capabilities?.streamingTargets.chromecast ? " • Chromecast" : ""}
+                                        {capabilities?.streamingTargets.airplay ? " • AirPlay" : ""}
+                                        {capabilities?.streamingTargets.dlna ? " • DLNA" : ""}
+                                    </p>
+                                ) : (
+                                    <p className="text-zinc-500">📺 No remote streaming target detected.</p>
+                                )}
+                            </div>
+                            {capabilities?.upgradePath.length ? (
+                                <ul className="mt-3 space-y-1 text-[11px] text-zinc-300/85">
+                                    {capabilities.upgradePath.slice(0, 3).map((item) => (
+                                        <li key={item} className="flex gap-2">
+                                            <span className="text-cyan-300">•</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            ) : null}
+                            {capabilities?.detectionVersion && (
+                                <p className="mt-2 text-[10px] text-zinc-500">Detection {capabilities.detectionVersion}</p>
                             )}
                         </div>
                     )}

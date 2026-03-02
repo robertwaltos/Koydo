@@ -40,6 +40,16 @@ Owner: Product + Engineering
 ### Codex-1 Completion Log
 
 - `2026-03-02`:
+  - Advanced Voyager Zero `E-17` device-gateway hardening without touching active
+    receipt/knowledgebase in-flight files from other agents.
+  - Upgraded `DeviceGatewayProvider` with real WebXR probing, WebGL2/WebGPU tier
+    classification, mobile low-power downscale (`getBattery`, `deviceMemory`,
+    `saveData`), and remote streaming capability detection.
+  - Updated `experience-hub` gating to lazy-load `SpatialExperienceHub` via dynamic
+    import so Tier 0/1 clients keep immersive JS dormant while showing explicit
+    upgrade-path guidance.
+
+- `2026-03-02`:
   - Synced to latest `master` while preserving concurrent agent changes.
   - Fixed companion feature regressions that were breaking CI/Security on upstream commits:
     - exported `FriendId` for `experience-hub` typing usage;
