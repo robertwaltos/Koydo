@@ -51,8 +51,10 @@ export function DeviceGatewayProvider({ children }: { children: ReactNode }) {
       // Check WebXR support
       if (typeof navigator !== "undefined" && "xr" in navigator) {
         try {
-          const xr = navigator.xr;
-          if (xr) {
+          const xr = (navigator as Navigator & {
+            xr?: { isSessionSupported?: (mode: string) => Promise<boolean> };
+          }).xr;
+          if (xr?.isSessionSupported) {
             const supported = await xr.isSessionSupported("immersive-vr").catch(() => false);
             hasWebXR = supported;
             if (supported) gpuTier = 3;
