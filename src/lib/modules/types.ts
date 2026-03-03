@@ -226,6 +226,8 @@ export type LearningModule = {
   minAge?: number;
   maxAge?: number;
   version?: string;
+  /** Alias for version used by external curriculum imports */
+  moduleVersion?: string;
   difficultyBand?: "beginner" | "intermediate" | "advanced" | (string & {});
   localeSupport?: string[];
   thumbnail?: string;

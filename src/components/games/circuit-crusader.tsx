@@ -1,17 +1,11 @@
 "use client";
 
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-    Cpu,
-    Zap,
     Activity,
     Settings,
-    Power,
-    RotateCcw,
     CheckCircle2,
-    AlertCircle,
-    CircuitBoard,
     Waypoints
 } from "lucide-react";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
@@ -25,17 +19,8 @@ import MascotFriend from "../experience/KoydoMascotFriends";
 
 type GateType = "AND" | "OR" | "NOT" | "BUFFER";
 
-interface CircuitGate {
-    id: string;
-    type: GateType;
-    inputs: number[]; // Indices of values in current state
-    outputValue: boolean;
-}
-
 export default function CircuitCrusader() {
-    const [gameState, setGameState] = useState<"intro" | "playing" | "success">("playing");
     const [inputs, setInputs] = useState<boolean[]>([true, false, true]);
-    const [gateSelection, setGateSelection] = useState<GateType | null>(null);
     const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState(false);
 

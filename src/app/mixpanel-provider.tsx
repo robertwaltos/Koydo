@@ -2,7 +2,7 @@
 
 import { useEffect, useCallback } from "react";
 import { initMixpanel } from "@/lib/analytics/mixpanel";
-import { isAnalyticsAllowed, getConsentState } from "@/lib/consent/tracking-consent";
+import { isAnalyticsAllowed } from "@/lib/consent/tracking-consent";
 import {
   deleteSyncedProgress,
   getUnsyncedProgress,

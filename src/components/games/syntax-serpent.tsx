@@ -2,8 +2,8 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef, useCallback } from "react";
-import { Cpu, Zap, Code, ShieldCheck, RefreshCw, Trophy } from "lucide-react";
-import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { Cpu, Zap, Code, ShieldCheck, RefreshCw } from "lucide-react";
+import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
@@ -72,13 +72,13 @@ export default function SyntaxSerpent() {
         hapticSuccess();
     };
 
-    const endGame = () => {
+    const endGame = useCallback(() => {
         setGameState("GAMEOVER");
         setMood("sad");
         setMessage("Logic loop terminated. Let's try again!");
         hapticError();
         if (score > highScore) setHighScore(score);
-    };
+    }, [score, highScore, setMessage, setMood]);
 
     const moveSnake = useCallback(() => {
         setSnake(prevSnake => {
@@ -124,7 +124,7 @@ export default function SyntaxSerpent() {
 
             return newSnake;
         });
-    }, [nextDirection, nodes, spawnNode]);
+    }, [nextDirection, nodes, spawnNode, endGame, setMessage, setMood]);
 
     useEffect(() => {
         if (gameState === "PLAYING") {

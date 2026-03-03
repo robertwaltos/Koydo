@@ -1,22 +1,14 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Compass,
     Map as MapIcon,
     Search,
-    History,
-    ChevronRight,
-    Star,
     CheckCircle2,
-    AlertCircle,
-    ArrowLeft,
-    Scroll,
-    Globe,
-    Camera
+    Globe
 } from "lucide-react";
-import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
 
@@ -137,7 +129,7 @@ export default function EchosExpedition() {
                 </AnimatePresence>
 
                 {/* Hotspots (Hidden for exploration) */}
-                {QUEST_STEPS.map((step, idx) => (
+                {QUEST_STEPS.map((step) => (
                     foundItems.includes(step.targetId) && (
                         <motion.div
                             key={step.id}

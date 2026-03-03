@@ -12,6 +12,7 @@ export const GenSciencePrekU1ExternalModule: LearningModule = {
   ],
   "minAge": 3,
   "maxAge": 5,
+  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": [
@@ -35,7 +36,7 @@ export const GenSciencePrekU1ExternalModule: LearningModule = {
     "sourceUnitId": "gen-science-prek-u1",
     "sourceUnitIdCanonical": "gen-science-prek-u1",
     "sourceUnitIdRaw": "gen_science-prek-u1",
-    "importedAt": "2026-02-25T02:03:30.481Z"
+    "importedAt": "2026-03-02T20:55:19.853Z"
   },
   "external": {
     "unitOrder": 17,

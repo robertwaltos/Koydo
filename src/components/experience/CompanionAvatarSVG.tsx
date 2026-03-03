@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { CompanionGender } from "@/lib/greeter/companion-config";
+import Image from "next/image";
 
 interface CompanionAvatarSVGProps {
   gender: CompanionGender;
@@ -31,11 +32,12 @@ export default function CompanionAvatarSVG({
 
   if (showImg) {
     return (
-      <img
+      <Image
         src={previewImageUrl}
         alt={gender === "female" ? "Aria" : "Kai"}
         width={size}
         height={size}
+        unoptimized
         className={`rounded-full object-cover ${pulseClass} ${className}`}
         style={{
           width: size,

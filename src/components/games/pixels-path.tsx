@@ -7,10 +7,6 @@ import {
     Lock,
     Unlock,
     Terminal,
-    Network,
-    Cpu,
-    CheckCircle2,
-    AlertTriangle,
     Eye,
     Zap
 } from "lucide-react";

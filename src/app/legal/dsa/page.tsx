@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SoftCard from "@/app/components/ui/soft-card";
 
 export const metadata: Metadata = {
@@ -85,9 +86,9 @@ export default function DsaTransparencyPage() {
           We do not host a marketplace, social forum, or open publishing platform. All educational
           content (lessons, modules, quizzes) is created and curated by Koydo. We reserve the right
           to remove or restrict content that violates our{" "}
-          <a href="/legal/terms" className="text-accent underline hover:no-underline">
+          <Link href="/legal/terms" className="text-accent underline hover:no-underline">
             Terms of Service
-          </a>
+          </Link>
           , including content that is illegal, abusive, or harmful.
         </p>
       </SoftCard>
@@ -100,9 +101,9 @@ export default function DsaTransparencyPage() {
             support@koydo.app
           </a>{" "}
           or via our{" "}
-          <a href="/support" className="text-accent underline hover:no-underline">
+          <Link href="/support" className="text-accent underline hover:no-underline">
             support page
-          </a>
+          </Link>
           . Reports should include a description of the content, its location, and the reason it
           is considered illegal or in violation of our terms. We aim to acknowledge reports within
           72 hours and will take action promptly where appropriate.
@@ -131,13 +132,13 @@ export default function DsaTransparencyPage() {
           and subject preferences. This recommendation is deterministic (not AI-driven profiling)
           and based solely on curriculum mapping. No user profiling for advertising purposes is
           performed. Users can browse all available content via the{" "}
-          <a href="/explore" className="text-accent underline hover:no-underline">
+          <Link href="/explore" className="text-accent underline hover:no-underline">
             Explore
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="/modules" className="text-accent underline hover:no-underline">
+          <Link href="/modules" className="text-accent underline hover:no-underline">
             Modules
-          </a>{" "}
+          </Link>{" "}
           pages without relying on recommendations.
         </p>
       </SoftCard>
@@ -149,9 +150,9 @@ export default function DsaTransparencyPage() {
           creation with a threshold of 13 years (COPPA). For users under 13, verified parental
           consent is required before account activation. Analytics tracking is disabled for all
           users unless they (or their parent/guardian) provide explicit consent. Read more in our{" "}
-          <a href="/legal/privacy" className="text-accent underline hover:no-underline">
+          <Link href="/legal/privacy" className="text-accent underline hover:no-underline">
             Privacy Policy
-          </a>
+          </Link>
           .
         </p>
       </SoftCard>

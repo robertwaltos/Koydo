@@ -12,7 +12,7 @@ import { toSafeErrorRecord } from "@/lib/logging/safe-error";
  *
  * Security: Requires a bearer token matching CRON_SECRET env var.
  */
-export async function POST(request: Request) {
+export async function POST() {
   const headerStore = await headers();
   const authHeader = headerStore.get("authorization") ?? "";
   const cronSecret = process.env.CRON_SECRET;

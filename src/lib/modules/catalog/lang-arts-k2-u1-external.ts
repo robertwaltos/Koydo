@@ -12,6 +12,7 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
   ],
   "minAge": 5,
   "maxAge": 8,
+  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "advanced",
   "localeSupport": [
@@ -35,7 +36,7 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
     "sourceUnitId": "lang-arts-k2-u1",
     "sourceUnitIdCanonical": "lang-arts-k2-u1",
     "sourceUnitIdRaw": "lang_arts-k2-u1",
-    "importedAt": "2026-02-25T02:03:30.435Z"
+    "importedAt": "2026-03-02T20:55:19.801Z"
   },
   "external": {
     "unitOrder": 6,

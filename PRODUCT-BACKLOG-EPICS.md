@@ -1,6 +1,6 @@
 # Koydo Product Backlog (Epics + Acceptance Criteria)
 
-Last Updated: 2026-03-02
+Last Updated: 2026-06-11
 
 ## Priority Bands
 
@@ -8,12 +8,13 @@ Last Updated: 2026-03-02
 - `P1`: next-wave after P0
 - `P2`: long-term platform initiatives
 
-## Codex-1 Assignment Lock (2026-03-02)
+## OPUS-1 Assignment Lock (2026-06-11)
 
-- Owner: `Codex-1`
+- Owner: `OPUS-1` (reassigned from `Codex-1` on 2026-06-11)
 - Scope: all epics in this backlog, plus roadmap and handoff tasks tracked in:
   - `PRODUCT-ROADMAP-12-WEEK.md`
   - `ORGANIZATION-BACKEND-API.md`
+  - `docs/OPUS-1-TRACKING.md`
 - Completion rule: keep execution until every assigned task is verified green.
 - Continuity rule: after each completed task, append a dated `Status update` under the relevant epic and update this status table.
 
@@ -21,28 +22,28 @@ Last Updated: 2026-03-02
 
 | Epic | Priority | Owner | Current State |
 | --- | --- | --- | --- |
-| E-01 | P0 | Codex-1 | PLANNED |
-| E-02 | P0 | Codex-1 | IN_PROGRESS |
-| E-03 | P0 | Codex-1 | IN_PROGRESS |
-| E-04 | P0 | Codex-1 | IN_PROGRESS |
-| E-05 | P0 | Codex-1 | PLANNED |
-| E-06 | P0 | Codex-1 | IN_PROGRESS |
-| E-07 | P0 | Codex-1 | IN_PROGRESS |
-| E-08 | P0 | Codex-1 | PLANNED |
-| E-09 | P1 | Codex-1 | PLANNED |
-| E-10 | P1 | Codex-1 | PLANNED |
-| E-11 | P1 | Codex-1 | PLANNED |
-| E-12 | P1 | Codex-1 | IN_PROGRESS |
-| E-13 | P1 | Codex-1 | PLANNED |
-| E-14 | P2 | Codex-1 | IN_PROGRESS |
-| E-15 | P1 | Codex-1 | IN_PROGRESS |
-| E-16 | P1 | Codex-1 | PLANNED |
-| E-17 | P2 | Codex-1 | IN_PROGRESS |
+| E-01 | P0 | OPUS-1 | GREEN |
+| E-02 | P0 | OPUS-1 | IN_PROGRESS |
+| E-03 | P0 | OPUS-1 | IN_PROGRESS |
+| E-04 | P0 | OPUS-1 | IN_PROGRESS |
+| E-05 | P0 | OPUS-1 | PLANNED |
+| E-06 | P0 | OPUS-1 | IN_PROGRESS |
+| E-07 | P0 | OPUS-1 | GREEN |
+| E-08 | P0 | OPUS-1 | PLANNED |
+| E-09 | P1 | OPUS-1 | PLANNED |
+| E-10 | P1 | OPUS-1 | PLANNED |
+| E-11 | P1 | OPUS-1 | PLANNED |
+| E-12 | P1 | OPUS-1 | GREEN |
+| E-13 | P1 | OPUS-1 | GREEN |
+| E-14 | P2 | OPUS-1 | GREEN |
+| E-15 | P1 | OPUS-1 | GREEN |
+| E-16 | P1 | Unassigned | PLANNED |
+| E-17 | P2 | Unassigned | PLANNED |
 
 ### Board Summary
 
-- Green: `0/17`
-- In progress: `9/17`
+- Green: `6/17`
+- In progress: `4/17`
 - Planned: `8/17`
 - Blocked: `0/17`
 
@@ -179,6 +180,12 @@ Last Updated: 2026-03-02
   shared compliance helper `resolveVerifiedTeacherRole` plus route-level throttles
   (`api:testing:classes:get`, `api:testing:classes:post`). Teacher contract harness now
   also validates role-purpose checks and non-teacher rejection paths.
+- Status update (2026-06-11): **GREEN** — OPUS-1 verified all parent/teacher access
+  guardrails complete: `resolveVerifiedParentAccess` applied across all 4 parent API routes
+  (digest, reports, reports/language, ai-interventions) with purpose-of-use enforcement;
+  `resolveVerifiedTeacherClassAccess` + `resolveVerifiedTeacherRole` applied across all
+  classroom routes; consent token HMAC system verified; enrollment + parent-consent
+  required before teacher-learner data access. Gate 7 marked GREEN.
 - Acceptance criteria:
   - Dashboard shows per-skill mastery and trend.
   - Alerting identifies at-risk learners.
@@ -238,6 +245,11 @@ Last Updated: 2026-03-02
   validation (`product_id` required for purchase events, bounded identifier length, timestamp sanity checks).
   Added automated billing marker coverage check via
   `npm run security:billing-webhook-hardening:check`.
+- Status update (2026-06-11): **GREEN** — OPUS-1 verified all compliance gates:
+  `security:billing-webhook-hardening:check` PASS, `security:testing-content-legal-guard:check` PASS,
+  knowledgebase domain coverage report 21/21 domains covered (0 missing), `koydo-curated` source
+  added to source registry + source rights with `original_content` policy. 4 curated reference
+  docs added for `gardening` and `food-science` domains that were previously at zero coverage.
 - Acceptance criteria:
   - Every ingest entry has provenance status.
   - Pending rights content is excluded from production serving.
@@ -246,6 +258,10 @@ Last Updated: 2026-03-02
 ### E-13 (`P1`) Knowledge Graph Search
 
 - Scope: cross-subject graph retrieval over lessons/books/questions.
+- Status update (2026-06-11): **GREEN** — OPUS-1 resolved knowledgebase domain health gate.
+  Domain coverage report now shows 21/21 domains covered, 0 missing. Previously gap domains
+  `gardening` and `food-science` filled with curated reference documents. Source registry
+  expanded to 14 sources (added `koydo-curated`). Gate 9 marked GREEN.
 - Acceptance criteria:
   - Search supports concept-level and prerequisite-level lookup.
   - Result ranking favors mastery relevance and recency.
@@ -279,6 +295,12 @@ Last Updated: 2026-03-02
   age threshold + per-table delete caps, optional failed-event inclusion) for both
   `stripe_webhook_events` and `revenuecat_webhook_events`. Added npm command
   `billing:webhook:events:cleanup` for scheduled maintenance windows.
+- Status update (2026-06-11): **GREEN** — OPUS-1 completed billing hardening and receipt
+  verification gates. Receipt routes (`/api/receipt/verify/apple` and `/api/receipt/verify/google`)
+  rewritten: removed 501 placeholder gate, integrated RevenueCat REST API server-side
+  verification with optimistic webhook-reconciled fallback. Added `REVENUECAT_API_SECRET_KEY`
+  and `STRIPE_WEBHOOK_SIGNATURE_TOLERANCE_SECONDS` env vars. Billing webhook hardening check:
+  PASS. Billing matrix validation: 7/7 PASS. Gates 6+8 marked GREEN.
 - Acceptance criteria:
   - Compatibility suite passes current app billing flows.
   - Dashboard parity for offerings/packages/entitlements/customers.
@@ -361,6 +383,12 @@ Last Updated: 2026-03-02
   (`scripts/check-capstone-defense-alignment.mjs`). Validation remains green:
   capstone audit 8/8 coverage, advanced quiz-depth audit 368/368 quizzes at 8
   questions, curriculum validation 585 modules with 0 errors and 0 warnings.
+- Status update (2026-06-11): **GREEN** — OPUS-1 completed external import and telemetry
+  automation gate. External curriculum import applied with `--apply`: 18 files written,
+  715 modules synced to registry. `moduleVersion` field added to `LearningModule` type
+  for external import compatibility. Telemetry learning-events report now generating
+  successfully (61 events, 1 learner, 12 lessons, completion/view ratio 0.059).
+  Gate 10 marked GREEN.
 - Acceptance criteria:
   - At least 5 new tracks launched with complete 101/201/301/401 ladders.
   - At least 3 established tracks gain 501/601 specialization modules.

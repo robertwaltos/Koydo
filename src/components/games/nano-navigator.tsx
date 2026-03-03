@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
-import { Activity, ShieldCheck, Info, ChevronRight, Zap, Target, Microscope, Atom, Dna, Waves, Thermometer, Wind } from "lucide-react";
-import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
-import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
+import { useState, useEffect, useCallback } from "react";
+import { Activity, ShieldCheck, Zap, Target, Microscope, Atom, Dna, Waves, Thermometer } from "lucide-react";
+import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 
@@ -48,7 +48,7 @@ export default function NanoNavigator() {
             setMessage("Energy reserves critical. Atomic propulsion failing. 🔋");
             setMood("thinking");
         }
-    }, [gameState, stats.energy]);
+    }, [gameState, stats.energy, setMessage, setMood]);
 
     useEffect(() => {
         const handleKeys = (e: KeyboardEvent) => {

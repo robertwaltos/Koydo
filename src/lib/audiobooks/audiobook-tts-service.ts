@@ -14,7 +14,6 @@
  * individually, then concatenated before caching.
  */
 
-import { serverEnv } from "@/lib/config/env";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { generateTTS } from "@/lib/media/tts-service";
 
@@ -146,7 +145,7 @@ function estimateDurationMs(text: string): number {
 export async function generateAudiobookChapterTTS(
   request: AudiobookTTSRequest,
 ): Promise<AudiobookTTSResult> {
-  const { bookSlug, chapterNumber, language: _lang, voiceId, chapterText } = request;
+  const { bookSlug, chapterNumber, voiceId, chapterText } = request;
   const key = audiobookCacheKey(bookSlug, request.language, voiceId, chapterNumber);
 
   // 1. Check cache

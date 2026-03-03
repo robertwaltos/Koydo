@@ -1,9 +1,8 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
-import { Cpu, Play, Square, RotateCcw, Code, Zap, Settings, Activity, ShieldCheck, ChevronRight, Terminal, Bot } from "lucide-react";
-import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { useState, useCallback } from "react";
+import { Cpu, Play, RotateCcw, Code, Zap, Settings, Activity, ShieldCheck, ChevronRight, Terminal, Bot } from "lucide-react";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
@@ -258,7 +257,6 @@ export default function BotBuilder() {
 
 function CommandButton({ cmd, onClick, disabled }: { cmd: Command, onClick: () => void, disabled?: boolean }) {
     const data = COMMAND_DATA[cmd];
-    const Icon = data.icon;
 
     return (
         <button

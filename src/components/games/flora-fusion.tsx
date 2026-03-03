@@ -1,9 +1,9 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
-import { Leaf, Beaker, Zap, Thermometer, Droplets, Sun, Activity, ShieldCheck, Info, ChevronRight, Sparkles } from "lucide-react";
-import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { useState, useMemo } from "react";
+import { Leaf, Beaker, Zap, Thermometer, Droplets, Sun, Activity, ShieldCheck, Sparkles } from "lucide-react";
+import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
@@ -32,8 +32,8 @@ export default function FloraFusion() {
     const { setMessage, setMood } = useMascot();
     const [gameState, setGameState] = useState<"IDLE" | "LAB" | "SYNTHESIZING" | "SUCCESS">("IDLE");
     const [selectedTraits, setSelectedTraits] = useState<Trait[]>([]);
-    const [plants, setPlants] = useState<Plant[]>([]);
-    const [environment, setEnvironment] = useState({
+    const [, setPlants] = useState<Plant[]>([]);
+    const [environment] = useState({
         temp: 24,
         humidity: 60,
         light: 80

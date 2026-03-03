@@ -12,6 +12,7 @@ export const BasicMathK2U1ExternalModule: LearningModule = {
   ],
   "minAge": 5,
   "maxAge": 8,
+  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "advanced",
   "localeSupport": [
@@ -35,7 +36,7 @@ export const BasicMathK2U1ExternalModule: LearningModule = {
     "sourceUnitId": "basic-math-k2-u1",
     "sourceUnitIdCanonical": "basic-math-k2-u1",
     "sourceUnitIdRaw": "basic_math-k2-u1",
-    "importedAt": "2026-02-25T02:03:30.461Z"
+    "importedAt": "2026-03-02T20:55:19.829Z"
   },
   "external": {
     "unitOrder": 12,

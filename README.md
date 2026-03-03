@@ -101,6 +101,18 @@ Checks on push/PR:
 - `npm run curriculum:capstone-defense:check`
 - `npm run lint`
 - `npm run build`
+- `npx vercel build --token "$VERCEL_TOKEN"` (when `VERCEL_TOKEN`, `VERCEL_ORG_ID`, and `VERCEL_PROJECT_ID` secrets are configured)
+
+Recommended local pre-push parity sequence:
+
+```bash
+npm run modules:check
+npm run curriculum:validate
+npm run curriculum:capstone-defense:check
+npm run lint
+npm run build
+npx vercel build --token "$VERCEL_TOKEN"
+```
 
 Ops workflow output:
 

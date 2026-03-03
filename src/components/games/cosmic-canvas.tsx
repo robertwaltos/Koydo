@@ -6,7 +6,8 @@ import { useMascot } from "@/components/experience/MascotHost";
 import { JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { hapticSelection, hapticSuccess, hapticCelebration } from "@/lib/platform/haptics";
-import { Box, Layers, MousePointer2, Eraser, Share2, Sparkles } from "lucide-react";
+import { Eraser, Share2 } from "lucide-react";
+import Image from "next/image";
 
 /* --- Cosmic Canvas Content --- */
 type BlockType = "glass" | "gold" | "chrome" | "neon";
@@ -34,7 +35,7 @@ export default function CosmicCanvas() {
     useEffect(() => {
         setMessage("Welcome to the Cosmic Canvas. Let's harmonize the spatial frequency of this galaxy! 🌙✨");
         setMood("happy");
-    }, []);
+    }, [setMessage, setMood]);
 
     const handleGridClick = (r: number, c: number) => {
         if (isErasing) {
@@ -80,10 +81,12 @@ export default function CosmicCanvas() {
         <div className="relative min-h-[750px] w-full flex flex-col items-center justify-center p-8 bg-zinc-950 overflow-hidden rounded-[3rem] border-4 border-slate-900 shadow-2xl">
             {/* 4K Zen Background */}
             <div className="absolute inset-0 opacity-50">
-                <img
+                <Image
                     src="/cosmic_canvas_zen_space_bg_1772427760520.png"
                     alt="Zen Space"
-                    className="w-full h-full object-cover scale-110 blur-[1px]"
+                    fill
+                    sizes="100vw"
+                    className="object-cover scale-110 blur-[1px]"
                 />
             </div>
 

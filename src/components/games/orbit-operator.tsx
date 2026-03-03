@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Globe, Satellite, Zap, Target, RefreshCcw, Gauge, Layers, ShieldAlert } from "lucide-react";
-import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { Globe, Satellite, Gauge, ShieldAlert } from "lucide-react";
+import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
@@ -19,6 +19,8 @@ type Body = {
     type: "earth" | "satellite" | "debris";
 };
 
+const EARTH: Body = { x: 50, y: 50, vx: 0, vy: 0, mass: 5000, radius: 10, type: "earth" };
+
 export default function OrbitOperator() {
     const { setMessage, setMood } = useMascot();
     const [satellite, setSatellite] = useState<Body | null>(null);
@@ -27,8 +29,6 @@ export default function OrbitOperator() {
     const [score, setScore] = useState(0);
     const [attempts, setAttempts] = useState(3);
     const containerRef = useRef<HTMLDivElement>(null);
-
-    const earth: Body = { x: 50, y: 50, vx: 0, vy: 0, mass: 5000, radius: 10, type: "earth" };
 
     // Physics constants
     const G = 0.5;
@@ -60,14 +60,7 @@ export default function OrbitOperator() {
 
     const handleMouseMove = (e: React.MouseEvent | React.TouchEvent) => {
         if (!launchVector || gameState !== "IDLE") return;
-        const rect = containerRef.current?.getBoundingClientRect();
-        if (!rect) return;
-
-        const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
-        const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
-
-        const x = ((clientX - rect.left) / rect.width) * 100;
-        const y = ((clientY - rect.top) / rect.height) * 100;
+        void e;
         setLaunchVector({ x: launchVector.x, y: launchVector.y }); // Just to trigger re-render if needed, but we track the 'current' position
     };
 
@@ -110,13 +103,13 @@ export default function OrbitOperator() {
             setSatellite(prev => {
                 if (!prev) return null;
 
-                const dx = earth.x - prev.x;
-                const dy = earth.y - prev.y;
+                const dx = EARTH.x - prev.x;
+                const dy = EARTH.y - prev.y;
                 const distSq = dx * dx + dy * dy;
                 const dist = Math.sqrt(distSq);
 
                 // Collision Check
-                if (dist < earth.radius + prev.radius) {
+                if (dist < EARTH.radius + prev.radius) {
                     setGameState("CRASHED");
                     hapticError();
                     setMessage("Atmospheric reentry failed. The satellite burned up! Try a higher trajectory. 🔥");
@@ -131,7 +124,7 @@ export default function OrbitOperator() {
                 }
 
                 // Gravity
-                const force = (G * earth.mass * prev.mass) / distSq;
+                const force = (G * EARTH.mass * prev.mass) / distSq;
                 const ax = (dx / dist) * force;
                 const ay = (dy / dist) * force;
 

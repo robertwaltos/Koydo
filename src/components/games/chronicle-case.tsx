@@ -8,7 +8,6 @@ import {
     BookOpen,
     Shield,
     CheckCircle2,
-    AlertCircle,
     RotateCcw,
     Zap,
     Map

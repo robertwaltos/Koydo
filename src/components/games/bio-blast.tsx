@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
-import { Shield, Zap, Activity, Heart, Target, ChevronRight, Droplets, Microscope, Crosshair, Thermometer, FlaskConical, AlertTriangle, ShieldAlert, ShieldCheck } from "lucide-react";
-import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
-import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
+import { useState, useEffect, useCallback } from "react";
+import { Shield, Activity, Heart, Droplets, Microscope, Crosshair, Thermometer, FlaskConical, AlertTriangle, ShieldAlert, ShieldCheck } from "lucide-react";
+import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { hapticSelection, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 
@@ -26,7 +26,7 @@ export default function BioBlast() {
     const [immuneHealth, setImmuneHealth] = useState(100);
     const [biomass, setBiomass] = useState(100);
     const [activeCell, setActiveCell] = useState<CellType>("MACROPHAGE");
-    const [wave, setWave] = useState(1);
+    const wave = 1;
 
     const spawnPathogen = useCallback(() => {
         const id = Math.random().toString();

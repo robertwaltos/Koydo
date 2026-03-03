@@ -12,6 +12,7 @@ export const GenScience68U1ExternalModule: LearningModule = {
   ],
   "minAge": 11,
   "maxAge": 14,
+  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "advanced",
   "localeSupport": [
@@ -35,7 +36,7 @@ export const GenScience68U1ExternalModule: LearningModule = {
     "sourceUnitId": "gen-science-68-u1",
     "sourceUnitIdCanonical": "gen-science-68-u1",
     "sourceUnitIdRaw": "gen_science-68-u1",
-    "importedAt": "2026-02-25T02:03:30.468Z"
+    "importedAt": "2026-03-02T20:55:19.837Z"
   },
   "external": {
     "unitOrder": 14,

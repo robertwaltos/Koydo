@@ -3,18 +3,11 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
-import { JUICY_VARIANTS, JUICY_SPRINGS, EXPERIENCE_COLORS } from "@/lib/experience/interaction-primitives";
+import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
-import { hapticSuccess, hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
-import { Flame, Beaker, Hammer, Star } from "lucide-react";
-
-/* --- Fraction Forge Logic --- */
-type Ingot = {
-    target: number; // e.g. 0.75 for 3/4
-    current: number;
-    fractions: number[]; // e.g. [0.25, 0.5, 0.125]
-};
+import { hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
+import { Beaker, Hammer } from "lucide-react";
 
 export default function FractionForge() {
     const { setMood, setMessage } = useMascot();
@@ -28,7 +21,7 @@ export default function FractionForge() {
         setMessage("Welcome to the Fraction Forge! Let's mix some magical alloys! 🔥");
         setMood("happy");
         generateChallenge();
-    }, []);
+    }, [setMessage, setMood]);
 
     const generateChallenge = () => {
         const possibleFractions = [0.25, 0.5, 0.125, 0.33, 0.66];

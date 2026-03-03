@@ -50,7 +50,7 @@ export default function GreeterCompanion() {
   const [introVideoUrl, setIntroVideoUrl] = useState<string | null>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const tts = useTTS({
+  const { speak, stop } = useTTS({
     voice: companionGender === "female" ? "nova" : "echo",
     lessonId: "companion",
   });
@@ -78,12 +78,12 @@ export default function GreeterCompanion() {
   // Speak greeting message when bubble appears
   useEffect(() => {
     if (uiMode === "greeting" && greetingMessage && speakEnabled) {
-      tts.speak(greetingMessage);
+      speak(greetingMessage);
     }
     if (uiMode !== "greeting" && uiMode !== "chat") {
-      tts.stop();
+      stop();
     }
-  }, [uiMode, greetingMessage]);
+  }, [uiMode, greetingMessage, speakEnabled, speak, stop]);
 
   useEffect(() => {
     let mounted = true;
@@ -140,7 +140,7 @@ export default function GreeterCompanion() {
     clearTimers();
     showTimer.current = setTimeout(showGreeting, GREETING_SHOW_DELAY);
     return () => clearTimers();
-  }, [pathname, isAuthenticated, companionGender, isDismissed]);
+  }, [pathname, isAuthenticated, companionGender, isDismissed, uiMode, isExcluded, clearTimers, showGreeting]);
 
   useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: "smooth" }); }, [chatHistory]);
   useEffect(() => { if (uiMode === "chat") setTimeout(() => inputRef.current?.focus(), 100); }, [uiMode]);
@@ -175,12 +175,12 @@ export default function GreeterCompanion() {
   }, [companionGender, showGreeting]);
 
   const handleDismiss = useCallback(() => {
-    tts.stop(); clearTimers(); setUiMode("hidden"); setIsDismissed(true); localStorage.setItem(DISMISSED_KEY, "true");
-  }, [clearTimers, tts]);
+    stop(); clearTimers(); setUiMode("hidden"); setIsDismissed(true); localStorage.setItem(DISMISSED_KEY, "true");
+  }, [clearTimers, stop]);
 
   const handleMinimize = useCallback(() => {
-    tts.stop(); clearTimers(); setUiMode("minimized"); localStorage.setItem(MINIMIZED_KEY, "true");
-  }, [clearTimers, tts]);
+    stop(); clearTimers(); setUiMode("minimized"); localStorage.setItem(MINIMIZED_KEY, "true");
+  }, [clearTimers, stop]);
 
   const handleAvatarClick = useCallback(() => {
     clearTimers();
@@ -209,11 +209,11 @@ export default function GreeterCompanion() {
       const updated: ChatMessage[] = [...newHistory, { role: "assistant", content: reply }];
       setChatHistory(updated);
       localStorage.setItem(COMPANION_CHAT_KEY, JSON.stringify(updated.slice(-20)));
-      if (speakEnabled) tts.speak(reply);
+      if (speakEnabled) speak(reply);
     } catch {
       setChatHistory((h) => [...h, { role: "assistant", content: "Oops! Something went wrong. Try again! 😊" }]);
     } finally { setIsChatLoading(false); }
-  }, [chatInput, isChatLoading, companionGender, chatHistory]);
+  }, [chatInput, isChatLoading, companionGender, chatHistory, speakEnabled, speak]);
 
   if (isExcluded(pathname) || !isAuthenticated) return null;
   const colorScheme = companion?.colorScheme;
@@ -242,7 +242,7 @@ export default function GreeterCompanion() {
                     <p className="text-xs text-zinc-400 truncate">Koydo learning companion</p>
                   </div>
                   <div className="flex gap-1">
-                    <button onClick={() => { tts.stop(); setSpeakEnabled((v) => !v); }} className={`flex h-6 w-6 items-center justify-center rounded-full hover:bg-white/60 ${speakEnabled ? colorScheme?.text : "text-zinc-300"}`} aria-label={speakEnabled ? "Mute voice" : "Unmute voice"} title={speakEnabled ? "Mute" : "Unmute"}>{speakEnabled ? <SpeakerIcon /> : <SpeakerMutedIcon />}</button>
+                    <button onClick={() => { stop(); setSpeakEnabled((v) => !v); }} className={`flex h-6 w-6 items-center justify-center rounded-full hover:bg-white/60 ${speakEnabled ? colorScheme?.text : "text-zinc-300"}`} aria-label={speakEnabled ? "Mute voice" : "Unmute voice"} title={speakEnabled ? "Mute" : "Unmute"}>{speakEnabled ? <SpeakerIcon /> : <SpeakerMutedIcon />}</button>
                     <button onClick={() => { clearTimers(); showGreeting(); }} className="flex h-6 w-6 items-center justify-center rounded-full text-zinc-400 hover:bg-white/60 hover:text-zinc-600" aria-label="Back to greeting"><ChevronDownIcon /></button>
                     <button onClick={handleMinimize} className="flex h-6 w-6 items-center justify-center rounded-full text-zinc-400 hover:bg-white/60 hover:text-zinc-600" aria-label="Minimize"><MinusIcon /></button>
                   </div>
@@ -261,7 +261,7 @@ export default function GreeterCompanion() {
                       <div className={`max-w-[78%] rounded-2xl px-3 py-2 text-xs leading-snug ${msg.role === "user" ? "rounded-br-sm bg-zinc-100 text-zinc-800" : `rounded-bl-sm text-white ${companionGender === "female" ? "bg-violet-500" : "bg-cyan-600"}`}`}>
                         {msg.content}
                         {msg.role === "assistant" && speakEnabled && (
-                          <button onClick={() => tts.speak(msg.content)} className="ml-1.5 inline-flex items-center opacity-60 hover:opacity-100 align-middle" aria-label="Replay message" title="Hear again"><SpeakerSmallIcon /></button>
+                          <button onClick={() => speak(msg.content)} className="ml-1.5 inline-flex items-center opacity-60 hover:opacity-100 align-middle" aria-label="Replay message" title="Hear again"><SpeakerSmallIcon /></button>
                         )}
                       </div>
                     </div>
