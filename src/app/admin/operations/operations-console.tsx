@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 type SupportTicket = {
   id: string;
@@ -1047,7 +1048,25 @@ export default function OperationsConsole({
     useState<LanguagePricingAnalyticsReport | null>(null);
   const [languagePricingReportStatus, setLanguagePricingReportStatus] = useState("");
   const [languagePricingReportBusy, setLanguagePricingReportBusy] = useState(false);
-  const [selectedSectionId, setSelectedSectionId] = useState("system-health");
+
+  // Support direct deep-linking via ?s= URL parameter from the sidebar
+  const searchParams = useSearchParams();
+  const urlSectionParam = searchParams.get("s");
+  const allSectionIds = useMemo(
+    () => CONSOLE_NAV.flatMap((cat) => cat.sections.map((s) => s.id)),
+    [],
+  );
+  const initialSection = urlSectionParam && allSectionIds.includes(urlSectionParam)
+    ? urlSectionParam
+    : "system-health";
+  const [selectedSectionId, setSelectedSectionId] = useState(initialSection);
+
+  // Sync when URL param changes (sidebar click while console is already open)
+  useEffect(() => {
+    if (urlSectionParam && allSectionIds.includes(urlSectionParam)) {
+      setSelectedSectionId(urlSectionParam);
+    }
+  }, [urlSectionParam, allSectionIds]);
 
   const activeTicketCount = useMemo(
     () => tickets.filter((ticket) => ticket.status === "open" || ticket.status === "in_progress").length,

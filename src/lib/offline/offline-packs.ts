@@ -70,8 +70,12 @@ export type OfflinePack = {
 const PACK_VERSION = "1.0.0";
 /** Packs expire after 30 days */
 const PACK_TTL_MS = 30 * 24 * 60 * 60 * 1000;
-/** Max modules per pack to stay under reasonable bundle sizes */
+/** Max modules per pack for standard downloads */
 const MAX_MODULES_PER_PACK = 10;
+/** Max modules for Airplane Mode (≈6 hours of content) */
+const MAX_MODULES_AIRPLANE = 60;
+/** Average lesson duration in minutes for estimation */
+const AVG_LESSON_DURATION_MIN = 12;
 
 // ── Helpers ────────────────────────────────────────────────────────
 
@@ -266,4 +270,144 @@ export function resolveConflicts(
   }
 
   return Array.from(byKey.values());
+}
+
+// ── Airplane Mode ──────────────────────────────────────────────────
+
+export type AirplaneModeEstimate = {
+  totalModules: number;
+  totalLessons: number;
+  estimatedDurationMinutes: number;
+  estimatedSizeBytes: number;
+  /** Human-readable size like "12.4 MB" */
+  estimatedSizeLabel: string;
+  /** Subjects included */
+  subjects: string[];
+};
+
+function formatBytes(bytes: number): string {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  if (bytes < 1024 * 1024 * 1024) return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+  return `${(bytes / (1024 * 1024 * 1024)).toFixed(1)} GB`;
+}
+
+/**
+ * Estimate how much data an Airplane Mode download would require.
+ * Does NOT generate the pack — just calculates the size.
+ */
+export function estimateAirplaneModePack(options?: {
+  subjects?: string[];
+  maxHours?: number;
+}): AirplaneModeEstimate {
+  const targetMinutes = (options?.maxHours ?? 6) * 60;
+  const allModules = getAllLearningModules();
+
+  // Filter by subject if specified
+  let candidates = allModules;
+  if (options?.subjects && options.subjects.length > 0) {
+    const subjectSet = new Set(options.subjects.map((s) => s.toLowerCase()));
+    candidates = allModules.filter((m) =>
+      subjectSet.has(m.subject.toLowerCase()),
+    );
+  }
+
+  // Accumulate modules until we hit target duration
+  let totalDuration = 0;
+  const selected: LearningModule[] = [];
+
+  for (const mod of candidates) {
+    if (totalDuration >= targetMinutes) break;
+    if (selected.length >= MAX_MODULES_AIRPLANE) break;
+
+    const modDuration = mod.lessons.reduce(
+      (sum, l) => sum + (l.duration || AVG_LESSON_DURATION_MIN),
+      0,
+    );
+    selected.push(mod);
+    totalDuration += modDuration;
+  }
+
+  // Estimate size without actually serializing everything
+  let totalLessons = 0;
+  const subjectSet = new Set<string>();
+  for (const mod of selected) {
+    totalLessons += mod.lessons.length;
+    subjectSet.add(mod.subject);
+  }
+
+  // ~2 KB per lesson is a conservative average for JSON content
+  const estimatedBytes = totalLessons * 2048 + selected.length * 512;
+
+  return {
+    totalModules: selected.length,
+    totalLessons,
+    estimatedDurationMinutes: totalDuration,
+    estimatedSizeBytes: estimatedBytes,
+    estimatedSizeLabel: formatBytes(estimatedBytes),
+    subjects: Array.from(subjectSet),
+  };
+}
+
+/**
+ * Generate a full Airplane Mode pack (~6 hours of content).
+ * Similar to generateOfflinePack but with higher limits.
+ */
+export function generateAirplaneModePack(options?: {
+  subjects?: string[];
+  maxHours?: number;
+}): OfflinePack {
+  const targetMinutes = (options?.maxHours ?? 6) * 60;
+  const allModules = getAllLearningModules();
+
+  let candidates = allModules;
+  if (options?.subjects && options.subjects.length > 0) {
+    const subjectSet = new Set(options.subjects.map((s) => s.toLowerCase()));
+    candidates = allModules.filter((m) =>
+      subjectSet.has(m.subject.toLowerCase()),
+    );
+  }
+
+  let totalDuration = 0;
+  const selected: LearningModule[] = [];
+
+  for (const mod of candidates) {
+    if (totalDuration >= targetMinutes) break;
+    if (selected.length >= MAX_MODULES_AIRPLANE) break;
+
+    const modDuration = mod.lessons.reduce(
+      (sum, l) => sum + (l.duration || AVG_LESSON_DURATION_MIN),
+      0,
+    );
+    selected.push(mod);
+    totalDuration += modDuration;
+  }
+
+  const serializedModules = selected.map(serializeModule);
+  const contentStr = JSON.stringify(serializedModules);
+
+  let totalQuestions = 0;
+  let totalFlashcards = 0;
+  for (const mod of serializedModules) {
+    for (const lesson of mod.lessons) {
+      totalQuestions += lesson.questions.length;
+      totalFlashcards += lesson.flashcards.length;
+    }
+  }
+
+  const now = new Date();
+  const manifest: OfflinePackManifest = {
+    packId: `airplane-${fnv1aHash(selected.map((m) => m.id).join(","))}-${now.getTime()}`,
+    version: PACK_VERSION,
+    generatedAt: now.toISOString(),
+    expiresAt: new Date(now.getTime() + PACK_TTL_MS).toISOString(),
+    moduleIds: selected.map((m) => m.id),
+    totalLessons: serializedModules.reduce((sum, m) => sum + m.lessonCount, 0),
+    totalQuestions,
+    totalFlashcards,
+    contentHash: fnv1aHash(contentStr),
+    estimatedSizeBytes: new Blob([contentStr]).size,
+  };
+
+  return { manifest, modules: serializedModules };
 }

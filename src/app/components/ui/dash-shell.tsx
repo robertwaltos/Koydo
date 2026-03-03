@@ -50,14 +50,20 @@ type DashShellProps = {
 
 function SidebarNavLink({ item }: { item: DashNavItem }) {
   const pathname = usePathname();
-  const isActive =
-    pathname === item.href || pathname.startsWith(item.href + "/");
+
+  // Support query-param deep links (e.g. /admin/operations?s=pricing)
+  const [basePath, queryStr] = item.href.split("?");
+  const isActive = queryStr
+    ? typeof window !== "undefined" &&
+      pathname === basePath &&
+      window.location.search === `?${queryStr}`
+    : pathname === item.href || pathname.startsWith(item.href + "/");
 
   return (
     <Link
       href={item.href}
       className={[
-        "group flex items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] font-medium leading-snug transition-colors",
+        "group flex items-center gap-2.5 rounded-lg px-3 py-1.5 text-[13px] font-medium leading-snug transition-colors",
         isActive
           ? "bg-[#bddaf5] text-[#0e2d4e] shadow-sm"
           : "text-[#3a5a7c] hover:bg-[#cfe5f7] hover:text-[#0e2d4e]",
@@ -89,7 +95,7 @@ function SidebarNavGroup({ group }: { group: DashNavGroup }) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between px-3 py-1.5 rounded-md text-[11px] font-semibold uppercase tracking-widest text-[#6b8fae] hover:text-[#3a5a7c] hover:bg-[#d4e9f7] transition-colors"
+        className="flex w-full items-center justify-between px-3 py-1 rounded-md text-[11px] font-semibold uppercase tracking-widest text-[#6b8fae] hover:text-[#3a5a7c] hover:bg-[#d4e9f7] transition-colors"
         aria-expanded={open}
       >
         <span>{group.label}</span>
@@ -112,7 +118,7 @@ function SidebarNavGroup({ group }: { group: DashNavGroup }) {
       </button>
 
       {open && (
-        <div className="mt-0.5 space-y-0.5 pl-1 pb-1">
+        <div className="mt-0.5 space-y-px pl-1 pb-0.5">
           {group.items.map((item) => (
             <SidebarNavLink key={item.href} item={item} />
           ))}
@@ -156,7 +162,7 @@ function SidebarContent({
 
       {/* ── Navigation ── */}
       <nav
-        className="flex-1 overflow-y-auto py-3 px-2 space-y-2"
+        className="flex-1 overflow-y-auto py-2 px-2 space-y-1"
         aria-label="Dashboard navigation"
       >
         {navGroups.map((group) => (
@@ -233,7 +239,7 @@ export default function DashShell({
       {/* ── Sidebar — fixed 240px on md+, off-canvas on mobile ── */}
       <aside
         className={[
-          "fixed inset-y-0 left-0 z-30 w-56 transition-transform duration-200 ease-out md:w-60",
+          "fixed inset-y-0 left-0 z-30 w-64 transition-transform duration-200 ease-out md:w-72",
           sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0",
         ].join(" ")}
         aria-label="Sidebar"
@@ -245,7 +251,7 @@ export default function DashShell({
       </aside>
 
       {/* ── Main column ── */}
-      <div className="flex min-w-0 flex-1 flex-col md:pl-60">
+      <div className="flex min-w-0 flex-1 flex-col md:pl-72">
         {/* ── Top bar ── */}
         <header
           className="safe-area-top sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between px-4 md:px-6"

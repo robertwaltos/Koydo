@@ -5,33 +5,72 @@ import DashShell, { type DashNavGroup } from "@/app/components/ui/dash-shell";
 
 const ADMIN_NAV: DashNavGroup[] = [
   {
+    label: "Dashboard",
+    items: [
+      { href: "/admin/overview",    label: "Overview",          icon: "◉" },
+      { href: "/admin/alerts",      label: "Alerts",            icon: "⚡" },
+    ],
+  },
+  {
     label: "Operations",
     items: [
-      { href: "/admin/overview",    label: "Overview",       icon: "◉" },
-      { href: "/admin/alerts",      label: "Alerts",         icon: "⚡" },
-      { href: "/admin/operations",  label: "Console",        icon: "⚙" },
-      { href: "/admin/settings",    label: "Settings",       icon: "⛭" },
+      { href: "/admin/operations",                label: "Console",             icon: "⚙" },
+      { href: "/admin/operations?s=system-health", label: "System Health",       icon: "♥" },
+      { href: "/admin/operations?s=support-queue", label: "Support Queue",       icon: "✉" },
+      { href: "/admin/operations?s=exam-maintenance", label: "Exam Maintenance", icon: "✎" },
     ],
   },
   {
-    label: "Content",
+    label: "User Management",
     items: [
-      { href: "/admin/media",       label: "Media Pipeline", icon: "▶" },
-      { href: "/admin/curriculum",  label: "Curriculum",     icon: "≡" },
+      { href: "/admin/operations?s=create-account",  label: "Create Account",    icon: "➕" },
+      { href: "/admin/operations?s=role-management",  label: "Role Management",   icon: "🔑" },
+      { href: "/admin/provisioning",                  label: "Admin Provisioning",icon: "📧" },
+      { href: "/admin/operations?s=approvals",        label: "Approvals",         icon: "✓" },
+      { href: "/admin/operations?s=account-recovery", label: "Account Recovery",  icon: "🔓" },
+      { href: "/admin/operations?s=account-reset",    label: "Reset / Deletion",  icon: "⌫" },
     ],
   },
   {
-    label: "Compliance & Finance",
+    label: "Content & Media",
     items: [
-      { href: "/admin/compliance",  label: "Compliance",     icon: "◎" },
-      { href: "/admin/costs",       label: "Costs",          icon: "$" },
-      { href: "/admin/audit",       label: "Audit Log",      icon: "☰" },
+      { href: "/admin/media",       label: "Media Pipeline",    icon: "▶" },
+      { href: "/admin/curriculum",  label: "Curriculum",        icon: "≡" },
     ],
   },
   {
-    label: "Insights",
+    label: "Finance & Billing",
     items: [
-      { href: "/admin/reports",     label: "Reports",        icon: "↗" },
+      { href: "/admin/costs",                          label: "Costs & Budget",    icon: "$" },
+      { href: "/admin/operations?s=pricing",           label: "Pricing Config",    icon: "💰" },
+      { href: "/admin/operations?s=refunds",           label: "Refunds",           icon: "↩" },
+      { href: "/admin/operations?s=promotions",        label: "Promotions",        icon: "🏷" },
+      { href: "/admin/operations?s=lang-price-map",    label: "Language Prices",   icon: "🌐" },
+      { href: "/admin/operations?s=lang-runtime",      label: "Language Config",   icon: "⚡" },
+      { href: "/admin/operations?s=lang-pricing-ladders", label: "Unlock Pricing", icon: "🪜" },
+      { href: "/admin/operations?s=lang-reconciliation", label: "Reconciliation",  icon: "⚖" },
+    ],
+  },
+  {
+    label: "Compliance & Legal",
+    items: [
+      { href: "/admin/compliance",  label: "Compliance Center", icon: "◎" },
+      { href: "/admin/audit",       label: "Audit Log",         icon: "☰" },
+    ],
+  },
+  {
+    label: "System Config",
+    items: [
+      { href: "/admin/settings",                            label: "Settings",       icon: "⛭" },
+      { href: "/admin/operations?s=env-checks",             label: "Environment",    icon: "🖥" },
+      { href: "/admin/operations?s=db-status",              label: "Database",       icon: "🗄" },
+      { href: "/admin/operations?s=stripe-webhooks",        label: "Webhooks",       icon: "🔌" },
+    ],
+  },
+  {
+    label: "Intelligence",
+    items: [
+      { href: "/admin/reports",     label: "Reports & Analytics", icon: "↗" },
     ],
   },
 ];
@@ -49,7 +88,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
 
   const { data: profile } = await supabase
     .from("user_profiles")
-    .select("is_admin")
+    .select("is_admin, admin_access_level")
     .eq("user_id", user.id)
     .maybeSingle();
 
@@ -58,11 +97,16 @@ export default async function AdminLayout({ children }: { children: ReactNode })
     redirect("/dashboard");
   }
 
+  const accessLevel = (profile.admin_access_level as string | null) ?? "full_access";
+  const productSubtitle = accessLevel === "read_only"
+    ? "View Only Access"
+    : "Developer Tools";
+
   return (
     <DashShell
       navGroups={ADMIN_NAV}
       productName="Admin Console"
-      productSubtitle="Developer Tools"
+      productSubtitle={productSubtitle}
       userLabel={user.email ?? "Admin"}
     >
       {children}
