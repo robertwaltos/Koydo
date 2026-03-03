@@ -6,6 +6,7 @@ import { generateAndStoreFollowupMaterial } from "@/lib/ai/follow-up";
 import { generateAndStoreRemediationWorksheet } from "@/lib/ai/remediation-worksheet";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
+import { checkDailyActivityCap } from "@/lib/limits/daily-activity";
 
 const eventTypeSchema = z.enum(learningEventTypes);
 const payloadValueSchema = z.union([
@@ -57,6 +58,18 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { error: "Invalid request body", details: validation.error.issues },
         { status: 400 },
+      );
+    }
+
+    // ── Daily activity cap ──
+    const activityCap = await checkDailyActivityCap(user.id, validation.data.events.length);
+    if (!activityCap.allowed) {
+      return NextResponse.json(
+        {
+          error: "Daily activity limit reached. Great job today — come back tomorrow!",
+          activityCap,
+        },
+        { status: 429 },
       );
     }
 

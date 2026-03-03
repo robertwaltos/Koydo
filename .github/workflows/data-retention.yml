@@ -1,0 +1,48 @@
+name: Data Retention
+
+on:
+  schedule:
+    # 1st of every month at 03:00 UTC
+    - cron: "0 3 1 * *"
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Actually delete rows (false = dry-run)"
+        required: false
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+
+jobs:
+  retention:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co' }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_ANON_KEY || secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-anon-key' }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY || '' }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY || '' }}
+      ADMIN_ALERT_FROM_EMAIL: ${{ vars.ADMIN_ALERT_FROM_EMAIL || secrets.ADMIN_ALERT_FROM_EMAIL || '' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run data retention
+        run: |
+          APPLY_FLAG=""
+          if [ "${{ inputs.apply || 'true' }}" = "true" ]; then
+            APPLY_FLAG="--apply"
+          fi
+          node scripts/data-retention.mjs $APPLY_FLAG --verbose

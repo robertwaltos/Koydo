@@ -10,6 +10,7 @@ const ADMIN_NAV: DashNavGroup[] = [
       { href: "/admin/overview",    label: "Overview",       icon: "◉" },
       { href: "/admin/alerts",      label: "Alerts",         icon: "⚡" },
       { href: "/admin/operations",  label: "Console",        icon: "⚙" },
+      { href: "/admin/settings",    label: "Settings",       icon: "⛭" },
     ],
   },
   {

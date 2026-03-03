@@ -7,17 +7,19 @@ const PARENT_NAV: DashNavGroup[] = [
   {
     label: "Family",
     items: [
-      { href: "/parent/dashboard",   label: "Dashboard",       icon: "⌂" },
-      { href: "/parent/reports",     label: "Progress Reports", icon: "↗" },
+      { href: "/parent/dashboard",       label: "Dashboard",        icon: "⌂" },
+      { href: "/parent/reports",         label: "Progress Reports", icon: "↗" },
+      { href: "/parent/devices",         label: "Devices",          icon: "📱" },
     ],
   },
   {
     label: "Account",
     items: [
-      { href: "/parent/compliance",  label: "Privacy & Data",  icon: "◎" },
-      { href: "/account/settings",   label: "Account Settings", icon: "⚙" },
-      { href: "/billing/language",   label: "Billing",          icon: "$" },
-      { href: "/parent/support",     label: "Support",          icon: "✉" },
+      { href: "/parent/notifications",   label: "Notifications",    icon: "🔔" },
+      { href: "/parent/compliance",      label: "Privacy & Data",   icon: "◎" },
+      { href: "/account/settings",       label: "Account Settings", icon: "⚙" },
+      { href: "/billing/language",       label: "Billing",          icon: "$" },
+      { href: "/parent/support",         label: "Support",          icon: "✉" },
     ],
   },
 ];

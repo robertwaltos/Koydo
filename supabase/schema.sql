@@ -1064,3 +1064,230 @@ drop trigger if exists set_student_profiles_updated_at on public.student_profile
 create trigger set_student_profiles_updated_at
   before update on public.student_profiles
   for each row execute function public.set_updated_at();
+
+-- ════════════════════════════════════════════════════════════════════════════
+-- CONFIGURABLE LIMITS: Per-user setting overrides
+-- ════════════════════════════════════════════════════════════════════════════
+
+create table if not exists public.user_setting_overrides (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  setting_key text not null,
+  value jsonb not null,
+  reason text,
+  set_by uuid references auth.users(id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique (user_id, setting_key)
+);
+
+alter table public.user_setting_overrides enable row level security;
+
+drop trigger if exists user_setting_overrides_set_updated_at on public.user_setting_overrides;
+create trigger user_setting_overrides_set_updated_at
+  before update on public.user_setting_overrides
+  for each row execute function public.set_updated_at();
+
+create index if not exists idx_user_setting_overrides_user_key
+  on public.user_setting_overrides(user_id, setting_key);
+
+-- ════════════════════════════════════════════════════════════════════════════
+-- DATA RETENTION: Run log for automated retention jobs
+-- ════════════════════════════════════════════════════════════════════════════
+
+create table if not exists public.data_retention_runs (
+  id uuid primary key default gen_random_uuid(),
+  run_type text not null default 'scheduled',
+  status text not null default 'running',
+  started_at timestamptz not null default now(),
+  completed_at timestamptz,
+  rows_deleted jsonb not null default '{}'::jsonb,
+  error text,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  constraint data_retention_runs_status_check
+    check (status in ('running', 'completed', 'failed')),
+  constraint data_retention_runs_run_type_check
+    check (run_type in ('scheduled', 'manual', 'dsar'))
+);
+
+alter table public.data_retention_runs enable row level security;
+
+create index if not exists idx_data_retention_runs_status_started
+  on public.data_retention_runs(status, started_at desc);
+
+-- ════════════════════════════════════════════════════════════════════════════
+-- BETA TESTERS & SPECIAL ACCESS: Access grants system
+-- ════════════════════════════════════════════════════════════════════════════
+
+create table if not exists public.access_grants (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  grant_type text not null,
+  label text,
+  is_active boolean not null default true,
+  granted_by uuid references auth.users(id) on delete set null,
+  revoked_by uuid references auth.users(id) on delete set null,
+  revoked_at timestamptz,
+  expires_at timestamptz,
+  metadata jsonb not null default '{}'::jsonb,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint access_grants_grant_type_check
+    check (grant_type in ('beta_tester', 'teacher', 'school', 'influencer', 'press', 'investor', 'employee')),
+  unique (user_id, grant_type)
+);
+
+alter table public.access_grants enable row level security;
+
+drop trigger if exists access_grants_set_updated_at on public.access_grants;
+create trigger access_grants_set_updated_at
+  before update on public.access_grants
+  for each row execute function public.set_updated_at();
+
+create index if not exists idx_access_grants_user_type_active
+  on public.access_grants(user_id, grant_type, is_active);
+
+create index if not exists idx_access_grants_type_active
+  on public.access_grants(grant_type, is_active);
+
+-- Soft-delete support for user_profiles (data retention)
+alter table public.user_profiles add column if not exists deleted_at timestamptz;
+
+-- AI moderation log for auditing flagged content
+create table if not exists public.ai_moderation_log (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  channel text not null,
+  input_text text not null,
+  flagged boolean not null default false,
+  categories jsonb not null default '{}'::jsonb,
+  provider text not null default 'openai',
+  action_taken text not null default 'none',
+  created_at timestamptz not null default now(),
+  constraint ai_moderation_log_channel_check
+    check (channel in ('companion', 'tutor', 'chat')),
+  constraint ai_moderation_log_action_check
+    check (action_taken in ('none', 'blocked', 'warned', 'flagged_for_review'))
+);
+
+alter table public.ai_moderation_log enable row level security;
+
+create index if not exists idx_ai_moderation_log_user_created
+  on public.ai_moderation_log(user_id, created_at desc);
+
+create index if not exists idx_ai_moderation_log_flagged_created
+  on public.ai_moderation_log(flagged, created_at desc);
+
+-- ═══════════════════════════════════════════════════════════════════════════
+-- PARENT PORTAL: Linked Devices, Notifications, Notification Preferences
+-- ═══════════════════════════════════════════════════════════════════════════
+
+-- Linked devices for cross-device parent notifications & QR pairing
+create table if not exists public.linked_devices (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  device_name text not null default 'Unknown Device',
+  device_type text not null default 'web',
+  device_token text,              -- push notification token (FCM / APNs)
+  user_agent text,                -- browser/app user-agent for display
+  linked_via text not null default 'manual',
+  link_code text unique,          -- 6-char code for QR/manual pairing
+  link_code_expires_at timestamptz,
+  is_active boolean not null default true,
+  last_seen_at timestamptz default now(),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint linked_devices_type_check
+    check (device_type in ('web', 'ios', 'android', 'tablet', 'desktop')),
+  constraint linked_devices_linked_via_check
+    check (linked_via in ('qr', 'email', 'manual', 'auto'))
+);
+
+alter table public.linked_devices enable row level security;
+
+drop policy if exists "Users can manage their own devices" on public.linked_devices;
+create policy "Users can manage their own devices"
+  on public.linked_devices for all
+  using (auth.uid() = user_id)
+  with check (auth.uid() = user_id);
+
+drop trigger if exists set_linked_devices_updated_at on public.linked_devices;
+create trigger set_linked_devices_updated_at
+  before update on public.linked_devices
+  for each row execute function public.set_updated_at();
+
+create index if not exists idx_linked_devices_user_active
+  on public.linked_devices(user_id, is_active);
+
+create index if not exists idx_linked_devices_link_code
+  on public.linked_devices(link_code) where link_code is not null;
+
+-- Parent notifications (in-app notification feed)
+create table if not exists public.parent_notifications (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references auth.users(id) on delete cascade,
+  type text not null,
+  title text not null,
+  body text,
+  metadata jsonb not null default '{}'::jsonb,
+  child_profile_id uuid references public.student_profiles(id) on delete set null,
+  is_read boolean not null default false,
+  read_at timestamptz,
+  created_at timestamptz not null default now(),
+  constraint parent_notifications_type_check
+    check (type in (
+      'achievement', 'milestone', 'safety_alert', 'weekly_digest',
+      'daily_summary', 'device_linked', 'streak_milestone', 'session_complete',
+      'assessment_ready', 'low_activity', 'new_content'
+    ))
+);
+
+alter table public.parent_notifications enable row level security;
+
+drop policy if exists "Users can read their own notifications" on public.parent_notifications;
+create policy "Users can read their own notifications"
+  on public.parent_notifications for select
+  using (auth.uid() = user_id);
+
+drop policy if exists "Users can update their own notifications" on public.parent_notifications;
+create policy "Users can update their own notifications"
+  on public.parent_notifications for update
+  using (auth.uid() = user_id)
+  with check (auth.uid() = user_id);
+
+create index if not exists idx_parent_notifications_user_read_created
+  on public.parent_notifications(user_id, is_read, created_at desc);
+
+create index if not exists idx_parent_notifications_user_created
+  on public.parent_notifications(user_id, created_at desc);
+
+-- Parent notification preferences
+create table if not exists public.parent_notification_preferences (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  notify_achievements boolean not null default true,
+  notify_milestones boolean not null default true,
+  notify_safety_alerts boolean not null default true,
+  notify_session_complete boolean not null default false,
+  weekly_digest boolean not null default true,
+  daily_summary boolean not null default false,
+  push_enabled boolean not null default true,
+  email_enabled boolean not null default true,
+  quiet_hours_start time,       -- e.g. '22:00'
+  quiet_hours_end time,         -- e.g. '07:00'
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.parent_notification_preferences enable row level security;
+
+drop policy if exists "Users can manage their own notification preferences" on public.parent_notification_preferences;
+create policy "Users can manage their own notification preferences"
+  on public.parent_notification_preferences for all
+  using (auth.uid() = user_id)
+  with check (auth.uid() = user_id);
+
+drop trigger if exists set_parent_notification_prefs_updated_at on public.parent_notification_preferences;
+create trigger set_parent_notification_prefs_updated_at
+  before update on public.parent_notification_preferences
+  for each row execute function public.set_updated_at();

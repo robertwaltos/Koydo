@@ -5,6 +5,14 @@ import { serverEnv } from "@/lib/config/env";
 import { getLessonById } from "@/lib/modules";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
+import { checkTutorDailyLimit, type AiUsageResult } from "@/lib/limits/ai-limits";
+import { moderateContent } from "@/lib/ai/moderation";
+import {
+  runGroundingPipeline,
+  runPostResponseChecks,
+  type Citation,
+  type GroundingContext,
+} from "@/lib/ai/tutor-grounding";
 
 const MAX_HISTORY_FETCH = 80;
 const DEFAULT_HISTORY_FETCH = 24;
@@ -38,6 +46,7 @@ type TutorConversationRow = {
   created_at: string;
 };
 
+/** @deprecated — use AiUsageResult from @/lib/limits/ai-limits */
 type TutorUsage = {
   dailyLimit: number;
   usedToday: number;
@@ -45,6 +54,16 @@ type TutorUsage = {
   usageTracked: boolean;
   limitReached: boolean;
 };
+
+function mapUsageToLegacy(result: AiUsageResult): TutorUsage {
+  return {
+    dailyLimit: result.limit,
+    usedToday: result.used,
+    remainingToday: result.remaining,
+    usageTracked: true,
+    limitReached: !result.allowed,
+  };
+}
 
 function isMissingTableError(params: { message: string | undefined; table: string }) {
   const { message, table } = params;
@@ -151,61 +170,12 @@ function clampHistoryLimit(value: string | null) {
   return Math.min(MAX_HISTORY_FETCH, Math.max(1, Math.round(parsed)));
 }
 
-function getTutorDailyLimit() {
-  return Math.max(0, Number(serverEnv.AI_TUTOR_DAILY_LIMIT ?? 0));
-}
-
-function buildUntrackedTutorUsage(dailyLimit: number): TutorUsage {
-  return {
-    dailyLimit,
-    usedToday: 0,
-    remainingToday: dailyLimit > 0 ? dailyLimit : 0,
-    usageTracked: false,
-    limitReached: false,
-  };
-}
-
-function getStartOfUtcDayIso() {
-  const now = new Date();
-  const start = new Date(
-    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0, 0),
-  );
-  return start.toISOString();
-}
-
-async function getTutorUsage(params: {
-  supabase: Awaited<ReturnType<typeof createSupabaseServerClient>>;
-  userId: string;
-}): Promise<TutorUsage> {
-  const dailyLimit = getTutorDailyLimit();
-  if (dailyLimit <= 0) {
-    return buildUntrackedTutorUsage(dailyLimit);
-  }
-
-  const { count, error } = await params.supabase
-    .from("ai_tutor_conversations")
-    .select("id", { count: "exact", head: true })
-    .eq("user_id", params.userId)
-    .eq("role", "user")
-    .gte("created_at", getStartOfUtcDayIso());
-
-  if (error) {
-    if (isMissingTutorTableError(error.message)) {
-      return buildUntrackedTutorUsage(dailyLimit);
-    }
-    throw new Error(error.message);
-  }
-
-  const usedToday = Math.max(0, Number(count ?? 0));
-  const remainingToday = Math.max(0, dailyLimit - usedToday);
-
-  return {
-    dailyLimit,
-    usedToday,
-    remainingToday,
-    usageTracked: true,
-    limitReached: usedToday >= dailyLimit,
-  };
+async function getTutorUsageLegacy(
+  userId: string,
+  supabase: Awaited<ReturnType<typeof createSupabaseServerClient>>,
+): Promise<TutorUsage> {
+  const result = await checkTutorDailyLimit(userId, supabase);
+  return mapUsageToLegacy(result);
 }
 
 export async function GET(request: Request) {
@@ -219,7 +189,7 @@ export async function GET(request: Request) {
     if (authError || !user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
-    const usage = await getTutorUsage({ supabase, userId: user.id });
+    const usage = await getTutorUsageLegacy(user.id, supabase);
 
     const url = new URL(request.url);
     const lessonId = url.searchParams.get("lessonId")?.trim() ?? "";
@@ -274,7 +244,7 @@ export async function DELETE(request: Request) {
     if (authError || !user) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
-    const usageBefore = await getTutorUsage({ supabase, userId: user.id });
+    const usageBefore = await getTutorUsageLegacy(user.id, supabase);
 
     const url = new URL(request.url);
     const lessonId = url.searchParams.get("lessonId")?.trim() ?? "";
@@ -303,7 +273,7 @@ export async function DELETE(request: Request) {
       return NextResponse.json({ error: "Internal server error." }, { status: 500 });
     }
 
-    const usageAfter = await getTutorUsage({ supabase, userId: user.id });
+    const usageAfter = await getTutorUsageLegacy(user.id, supabase);
 
     return NextResponse.json({
       deleted: Number(count ?? 0),
@@ -351,15 +321,35 @@ export async function POST(request: Request) {
 
     const question = normalizeMessage(validation.data.question);
     const requestedLessonId = validation.data.lessonId?.trim() ?? "";
-    const usage = await getTutorUsage({ supabase, userId: user.id });
+    const usageResult = await checkTutorDailyLimit(user.id, supabase);
+    const usage = mapUsageToLegacy(usageResult);
 
-    if (usage.usageTracked && usage.limitReached) {
+    if (!usageResult.allowed) {
       return NextResponse.json(
         {
           error: "Daily AI tutor limit reached. Please continue tomorrow.",
           usage,
         },
         { status: 429 },
+      );
+    }
+
+    // ── Content moderation ──
+    const moderation = await moderateContent(question, user.id, "tutor");
+    if (moderation.flagged) {
+      return NextResponse.json(
+        {
+          answer: "I can only help with your learning topics! Try rephrasing your question about the lesson.",
+          source: "rule_based" as const,
+          model: null,
+          warning: null,
+          memoryAvailable: true,
+          memorySaved: false,
+          moderated: true,
+          usage,
+          context: { lessonId: null, lessonTitle: null, moduleTitle: null, focusSkills: [] },
+        },
+        { status: 200 },
       );
     }
 
@@ -447,8 +437,31 @@ export async function POST(request: Request) {
     let answer = baselineAnswer;
     let source: "openai" | "rule_based" = "rule_based";
     let warning: string | null = null;
+    let citations: Citation[] = [];
+    let confidenceScore: number | null = null;
+    let groundingUsed = false;
+    let contradictionDetected = false;
+
+    // ── Grounding pipeline ──
+    let groundingContext: GroundingContext | null = null;
+    let groundedSystemPrompt: string | null = null;
+
+    if (lessonLookup) {
+      const grounding = runGroundingPipeline({
+        lesson: lessonLookup.lesson,
+        learningModule: lessonLookup.learningModule,
+        question,
+      });
+      groundingContext = grounding.context;
+      groundedSystemPrompt = grounding.systemPrompt;
+      confidenceScore = grounding.confidence.score;
+      groundingUsed = grounding.context.sources.length > 0;
+    }
 
     if (serverEnv.OPENAI_API_KEY) {
+      const systemContent = groundedSystemPrompt
+        ?? "You are a concise, child-friendly teaching assistant. Give practical, step-by-step help and keep answers under 180 words.";
+
       const openAiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -457,13 +470,12 @@ export async function POST(request: Request) {
         },
         body: JSON.stringify({
           model: serverEnv.OPENAI_FOLLOWUP_MODEL,
-          temperature: 0.4,
+          temperature: groundingUsed ? 0.25 : 0.4,
           max_tokens: 420,
           messages: [
             {
               role: "system",
-              content:
-                "You are a concise, child-friendly teaching assistant. Give practical, step-by-step help and keep answers under 180 words.",
+              content: systemContent,
             },
             {
               role: "user",
@@ -490,7 +502,7 @@ export async function POST(request: Request) {
                   })),
                 baselineAnswer,
                 format: {
-                  required: "plain text",
+                  required: "plain text with [SRC:sourceId] citations after factual claims",
                   include: ["brief answer", "3 concrete steps", "one self-check question"],
                 },
               }),
@@ -511,7 +523,17 @@ export async function POST(request: Request) {
           typeof modelAnswer === "string" && modelAnswer.trim().length > 0
             ? modelAnswer.trim()
             : baselineAnswer;
-        answer = normalizedAnswer;
+
+        // ── Post-response grounding checks ──
+        if (groundingContext && groundingContext.sources.length > 0) {
+          const postChecks = runPostResponseChecks(normalizedAnswer, groundingContext.sources);
+          answer = postChecks.finalAnswer;
+          citations = postChecks.citations;
+          contradictionDetected = postChecks.wasFiltered;
+        } else {
+          answer = normalizedAnswer;
+        }
+
         source = "openai";
       }
     }
@@ -543,6 +565,17 @@ export async function POST(request: Request) {
           metadata: {
             requested_via: "api/ai/tutor",
             warning: warning ?? null,
+            grounding: groundingUsed
+              ? {
+                  confidence_score: confidenceScore,
+                  citation_count: citations.length,
+                  contradiction_detected: contradictionDetected,
+                  source_count: groundingContext?.sources.length ?? 0,
+                }
+              : null,
+            citations: citations.length > 0
+              ? citations.map((c) => ({ id: c.sourceId, kind: c.kind, title: c.title }))
+              : null,
           },
         },
       ]);
@@ -577,6 +610,19 @@ export async function POST(request: Request) {
       memoryAvailable,
       memorySaved,
       usage: responseUsage,
+      grounding: {
+        used: groundingUsed,
+        confidenceScore,
+        citationCount: citations.length,
+        contradictionDetected,
+        sourceCount: groundingContext?.sources.length ?? 0,
+      },
+      citations: citations.map((c) => ({
+        sourceId: c.sourceId,
+        kind: c.kind,
+        title: c.title,
+        snippet: c.snippet,
+      })),
       context: {
         lessonId: lessonLookup?.lesson.id ?? null,
         lessonTitle: lessonLookup?.lesson.title ?? null,

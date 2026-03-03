@@ -1,34 +1,25 @@
 /**
- * Centralised asset path constants for Koydo brand images.
- *
- * HOW TO SWAP AN IMAGE:
- *   Option A (no code change) — replace the file in /public/ with the same name.
- *   Option B (change path)    — update the constant below; TypeScript will
- *                               surface every usage across the codebase.
- *
- * All files live in /public/ so Next.js <Image> can serve them optimised.
+ * Centralised asset path constants — semantic names only.
+ * Files: /public/hero-home.png, bg-lower-page.jpg, bg-auth-page.jpg, hero-auth-card.jpg, logo-koydo.jpg
  */
 export const ASSETS = {
-  /** Full-width cinematic hero on the home page (children learning under a tree) */
-  heroHome: "/generated-images/hero-light-03.png",
+  /** Full-viewport hero on the home / landing page (children learning under a tree, 677 KB) */
+  heroHome: "/hero-home.png",
 
-  /** Daytime landscape background for the bottom CTA banner */
-  bgBottom: "/generated-images/bg-day-v1.jpg",
+  /** Persistent background behind all lower-page sections (daytime landscape, 2.4 MB) */
+  bgBottom: "/bg-lower-page.jpg",
 
-  /** Brand logo — used in top-nav and any other branded surfaces */
+  /** Brand logo — top-nav and branded surfaces */
   logo: "/logo-koydo.jpg",
 
-  /** Scenic background used on sign-in / sign-up pages */
-  bgAuth: "/generated-images/hero-light-02.jpg",
+  /** Full-page background on sign-in / sign-up (dreamy landscape, 2.4 MB) */
+  bgAuth: "/bg-auth-page.jpg",
 
-  /** Hero image shown on the sign-in page */
-  heroSignIn: "/generated-images/hero-light-07-v3.jpg",
+  /** Inset hero card on sign-in page (bridge-of-books, 261 KB) */
+  heroSignIn: "/hero-auth-card.jpg",
 
-  /** Hero image shown on the sign-up page */
-  heroSignUp: "/generated-images/hero-light-07-v3.jpg",
-
-  /** @deprecated — old dark space hero. Kept for reference. */
-  heroFamily: "/hero-family.jpg",
+  /** Inset hero card on sign-up page (bridge-of-books, 261 KB) */
+  heroSignUp: "/hero-auth-card.jpg",
 } as const;
 
 export type AssetKey = keyof typeof ASSETS;

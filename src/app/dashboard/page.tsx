@@ -6,6 +6,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getOnboardingRedirect } from "@/lib/compliance/onboarding";
 import SignOutButton from "./sign-out-button";
 import RecommendedLesson from "./recommended-lesson";
+import AdaptiveNextLessons from "./adaptive-next-lessons";
 import AiCoachCard from "./ai-coach-card";
 import AiTutorPanel from "./ai-tutor-panel";
 import AiWeeklyPlanCard from "./ai-weekly-plan-card";
@@ -399,6 +400,7 @@ export default async function DashboardPage() {
         </SoftCard>
 
         <RecommendedLesson />
+        <AdaptiveNextLessons />
         <AiCoachCard />
         <AiRemediationWorksheetCard />
         <AiWeeklyPlanCard />

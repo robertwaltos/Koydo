@@ -30,6 +30,21 @@ type TutorUsage = {
   limitReached: boolean;
 };
 
+type TutorCitation = {
+  sourceId: string;
+  kind: "chunk" | "flashcard" | "question" | "objective" | "aid" | "description";
+  title: string;
+  snippet: string;
+};
+
+type TutorGrounding = {
+  used: boolean;
+  confidenceScore: number | null;
+  citationCount: number;
+  contradictionDetected: boolean;
+  sourceCount: number;
+};
+
 type TutorResponse = {
   answer?: string;
   source?: "openai" | "rule_based";
@@ -38,6 +53,8 @@ type TutorResponse = {
   memoryAvailable?: boolean;
   memorySaved?: boolean;
   usage?: TutorUsage;
+  grounding?: TutorGrounding;
+  citations?: TutorCitation[];
   context?: {
     lessonId?: string | null;
     lessonTitle?: string | null;
@@ -76,6 +93,8 @@ export default function AiTutorPanel() {
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadingHistory, setIsLoadingHistory] = useState(true);
   const [isClearingHistory, setIsClearingHistory] = useState(false);
+  const [latestCitations, setLatestCitations] = useState<TutorCitation[]>([]);
+  const [latestGrounding, setLatestGrounding] = useState<TutorGrounding | null>(null);
 
   const canSubmit = question.trim().length >= 3 && !isLoading;
 
@@ -188,6 +207,8 @@ export default function AiTutorPanel() {
       setWarning(payload.warning ?? null);
       setMemoryAvailable(payload.memoryAvailable !== false);
       setUsage(payload.usage ?? null);
+      setLatestCitations(Array.isArray(payload.citations) ? payload.citations : []);
+      setLatestGrounding(payload.grounding ?? null);
 
       const lessonTitle = payload.context?.lessonTitle ?? null;
       const moduleTitle = payload.context?.moduleTitle ?? null;
@@ -322,6 +343,52 @@ export default function AiTutorPanel() {
         <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-teal-800">
           Context: {contextTitle}
         </p>
+      ) : null}
+
+      {latestGrounding?.used ? (
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          <ProgressChip
+            label="Grounded"
+            value={latestGrounding.sourceCount > 0 ? `${latestGrounding.sourceCount} sources` : "No"}
+            tone={latestGrounding.sourceCount > 0 ? "success" : "neutral"}
+          />
+          {latestGrounding.confidenceScore !== null ? (
+            <ProgressChip
+              label="Confidence"
+              value={`${Math.round(latestGrounding.confidenceScore * 100)}%`}
+              tone={latestGrounding.confidenceScore >= 0.5 ? "success" : latestGrounding.confidenceScore >= 0.25 ? "warning" : "warning"}
+            />
+          ) : null}
+          {latestGrounding.contradictionDetected ? (
+            <ProgressChip label="Check" value="Review needed" tone="warning" />
+          ) : null}
+        </div>
+      ) : null}
+
+      {latestCitations.length > 0 ? (
+        <details className="mt-2">
+          <summary className="cursor-pointer text-xs font-semibold text-teal-700 hover:text-teal-900">
+            {latestCitations.length} source{latestCitations.length !== 1 ? "s" : ""} cited
+          </summary>
+          <div className="mt-1 space-y-1">
+            {latestCitations.map((citation, index) => (
+              <div
+                key={citation.sourceId}
+                className="rounded-xl border border-teal-100 bg-teal-50/50 px-3 py-2"
+              >
+                <p className="text-xs font-semibold text-teal-800">
+                  [{index + 1}] {citation.title}
+                  <span className="ml-2 rounded-md bg-teal-100 px-1.5 py-0.5 text-[10px] font-medium uppercase text-teal-600">
+                    {citation.kind}
+                  </span>
+                </p>
+                <p className="mt-0.5 text-xs text-zinc-600 line-clamp-2">
+                  {citation.snippet}
+                </p>
+              </div>
+            ))}
+          </div>
+        </details>
       ) : null}
 
       <SoftCard className="mt-3 max-h-96 overflow-y-auto border-teal-200 bg-white p-3">
