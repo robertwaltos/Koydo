@@ -117,8 +117,30 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ══════════════════════════════════════════════════════════
+           LOWER PAGE — bg-day-v1.jpg runs continuously behind
+           all sections from here to the bottom of the page.
+           Glass cards and content float on top of it.
+      ══════════════════════════════════════════════════════════ */}
+      <div className="relative overflow-hidden">
+        {/* Persistent background image for entire lower section */}
+        <Image
+          src={ASSETS.bgBottom}
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+          aria-hidden="true"
+          quality={85}
+        />
+        {/* Soft white wash — keeps all text legible while the image shows through */}
+        <div className="absolute inset-0 bg-white/35 pointer-events-none" aria-hidden="true" />
+
+        {/* All lower-page content sits above the background */}
+        <div className="relative z-10">
+
       {/* ── Education stage navigation strip ── */}
-      <div className="relative border-y border-zinc-200/60 bg-white/70 backdrop-blur-sm">
+      <div className="relative border-y border-white/40 bg-white/60 backdrop-blur-sm">
         <div
           className="mx-auto flex max-w-7xl items-center gap-3 overflow-x-auto px-4 py-4"
           style={{ scrollbarWidth: "none" }}
@@ -400,27 +422,9 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ── Bottom banner ── */}
-      <section className="relative min-h-105 overflow-hidden">
-        <Image
-          src={ASSETS.bgBottom}
-          alt=""
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        {/* overlay: soft white wash so text stays readable */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: [
-              "linear-gradient(to bottom, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.45) 40%, rgba(255,255,255,0.65) 100%)",
-              "linear-gradient(to right, rgba(255,255,255,0.5) 0%, transparent 50%, rgba(255,255,255,0.5) 100%)",
-            ].join(", "),
-          }}
-          aria-hidden="true"
-        />
-        <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-4 py-24 text-center">
+      {/* ── Bottom banner ── (image comes from the shared wrapper above) */}
+      <section className="relative">
+        <div className="mx-auto flex max-w-3xl flex-col items-center justify-center px-4 py-24 text-center">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-600">
             Your journey starts here
           </p>
@@ -560,6 +564,9 @@ export default async function Home() {
           ))}
         </div>
       </section>
+
+        </div> {/* end relative z-10 content wrapper */}
+      </div> {/* end bg-day-v1.jpg lower section wrapper */}
     </div>
   );
 }
