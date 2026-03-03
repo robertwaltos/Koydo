@@ -195,6 +195,23 @@ function SignUpPageInner() {
                 {t("auth_sign_up_footer_sign_in")}
               </Link>
             </p>
+
+            {/* Trust badges — subtle social proof */}
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-zinc-100 pt-5">
+              {[
+                { icon: "🛡️", text: "COPPA\u00A0Compliant" },
+                { icon: "🚫", text: "Zero\u00A0Ads" },
+                { icon: "✨", text: "100%\u00A0Free" },
+              ].map((badge) => (
+                <span
+                  key={badge.text}
+                  className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-zinc-400"
+                >
+                  <span aria-hidden="true">{badge.icon}</span>
+                  {badge.text}
+                </span>
+              ))}
+            </div>
           </SoftCard>
 
         </div>

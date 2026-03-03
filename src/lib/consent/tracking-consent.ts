@@ -57,8 +57,21 @@ export function setConsentState(analytics: boolean): ConsentState {
   return state;
 }
 
-/** Returns true if analytics tracking is currently permitted. */
-export function isAnalyticsAllowed(): boolean {
+/**
+ * Returns true if analytics tracking is currently permitted.
+ *
+ * COPPA override: If the user is a child account (under 13), analytics
+ * tracking is ALWAYS denied regardless of the consent banner state.
+ * Under COPPA, a child clicking "Accept All" must not enable persistent
+ * identifier tracking — only verified parental consent can authorize it.
+ *
+ * @param isChildAccount — pass true if the current user is under 13.
+ *   When called without this parameter, falls back to consent banner state only.
+ */
+export function isAnalyticsAllowed(isChildAccount?: boolean): boolean {
+  // COPPA: children cannot consent to analytics themselves
+  if (isChildAccount === true) return false;
+
   const state = getConsentState();
   if (!state.decided) return false; // Default to deny until explicit consent
   return state.analytics;

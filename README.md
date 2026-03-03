@@ -1,18 +1,35 @@
-# Koydo Web Starter
+# Koydo — The Learning Platform
 
-Koydo is a web-first educational platform starter built with Next.js App Router and TypeScript.
+Koydo is a cross-platform educational platform built with Next.js App Router, TypeScript, Supabase, and Capacitor (iOS/Android).
+
+> **706 modules · 88 tracks · 46 games · 117 API endpoints · $5.99/mo**
+
+## Documentation
+
+All project documentation is consolidated in [`docs/executive/`](docs/executive/README.md):
+
+| Document | Description |
+|----------|-------------|
+| [01 — Technology Overview](docs/executive/01-TECHNOLOGY-OVERVIEW.md) | Architecture, stack, APIs, security, performance |
+| [02 — Pricing & Revenue](docs/executive/02-PRICING-AND-REVENUE.md) | Tiers, SKUs, RevenueCat, Stripe, billing |
+| [03 — Apple App Store](docs/executive/03-APPLE-APP-STORE.md) | iOS submission, TestFlight, privacy labels |
+| [04 — Google Play Store](docs/executive/04-GOOGLE-PLAY-STORE.md) | Android submission, data safety, Play Console |
+| [05 — Web Application](docs/executive/05-WEB-APPLICATION.md) | Web capabilities, Stripe billing, deployment |
+| [06 — Educational Content](docs/executive/06-EDUCATIONAL-CONTENT.md) | Curriculum, pipeline, media, audiobooks |
+| [07 — Infrastructure & Costs](docs/executive/07-INFRASTRUCTURE-AND-COSTS.md) | Hosting, FORGE engine, cost analysis |
+| [08 — Roadmap & Projections](docs/executive/08-ROADMAP-AND-PROJECTIONS.md) | Launch plan, KPIs, growth vectors |
 
 ## Included foundation
 
-- Next.js + TypeScript + Tailwind starter app
+- Next.js + TypeScript + Tailwind app with App Router
 - Supabase client/server helpers (`@supabase/ssr`)
 - Stripe checkout and webhook route scaffolding
+- RevenueCat native IAP integration (iOS/Android)
 - AI token budget logic with hard-cap fallback support
 - Offline progress storage helper (IndexedDB via `idb`)
 - Mixpanel event helper for lesson tracking
-- Media placeholders in `public/placeholders/`
-- AI prompt catalog in `public/AI-MEDIA-PROMPTS.md`
-- External AI research prompt pack in `public/AI-RESEARCH-AGENT-PROMPTS.md`
+- FORGE media generation engine (`src/lib/forge/`)
+- Capacitor native wrapper for iOS and Android
 
 ## Quick start
 
@@ -603,7 +620,7 @@ This creates (or reuses) a test user and seeds sample records in `user_profiles`
 - `src/lib/supabase/server.ts`
 - `src/lib/offline/progress-db.ts`
 - `src/lib/analytics/mixpanel.ts`
-- `public/AI-MEDIA-PROMPTS.md`
+- `src/lib/forge/` (FORGE media generation engine)
 
 ## Notes
 
