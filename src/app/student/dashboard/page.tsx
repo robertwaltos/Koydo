@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
@@ -12,11 +12,6 @@ import { getAllLearningModules } from "@/lib/modules";
 import { type StudentProfile } from "@/lib/profiles/types";
 import { generateCurriculumModules } from "@/app/actions/student-curriculum";
 import { WorldSelector } from "@/components/explorer/WorldSelector";
-import { LessonPlayer } from "@/components/explorer/LessonPlayer"; 
-
-type GeneratedCurriculumModule = Awaited<
-  ReturnType<typeof generateCurriculumModules>
->["modules"][number];
 
 function normalizePathAllowlist(value: unknown): string[] | null {
   if (!Array.isArray(value)) return null;
@@ -55,11 +50,10 @@ export default function StudentDashboardPage() {
   const [profile, setProfile] = useState<StudentProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [isSynthesizing, setIsSynthesizing] = useState(false);
-  
+  const synthesizingRef = useRef(false);
+
   const [selectedWorldId, setSelectedWorldId] = useState<string | null>(null);
   const [selectedWorldLabel, setSelectedWorldLabel] = useState<string | null>(null);
-  const [modules, setModules] = useState<GeneratedCurriculumModule[]>([]);
-  const [activeModuleIndex, setActiveModuleIndex] = useState<number | null>(null);
   const [progress, setProgress] = useState<{
     completedLessons: number;
     totalLessons: number;
@@ -231,27 +225,47 @@ export default function StudentDashboardPage() {
     const selected = candidatePaths[hash % candidatePaths.length] ?? candidatePaths[0];
 
     if (!selected) return;
-    setSelectedWorldId(selected.id);
-    setSelectedWorldLabel(selected.label);
+    // In random mode, auto-generate immediately so learners don't need to
+    // interact with the selector at all.
+    void handleWorldSelected(selected.id, selected.label);
   }, [
     interestPathIds,
     profile,
     selectedWorldId,
   ]);
 
-  const initiateSynthesis = async () => {
-    if (!profile) return;
-    setIsSynthesizing(true);
-    try {
-      // Pass the selected world to the AI action
-      const { modules } = await generateCurriculumModules(profile.id, selectedWorldId || undefined);
-      setModules(modules);
-    } catch (error) {
-      console.error("Failed to synthesize curriculum:", error);
-    } finally {
-      setIsSynthesizing(false);
-    }
-  };
+  /**
+   * Triggered when a learner taps a world card or when random mode
+   * auto-selects a world. Immediately starts generation and navigates
+   * to the resulting curriculum page — no extra button tap required.
+   */
+  const handleWorldSelected = useCallback(
+    async (worldId: string, worldLabel: string) => {
+      if (!profile || synthesizingRef.current) return;
+      synthesizingRef.current = true;
+      setIsSynthesizing(true);
+      setSelectedWorldId(worldId);
+      setSelectedWorldLabel(worldLabel);
+      try {
+        const result = await generateCurriculumModules(profile.id, worldId);
+        if (result.sessionId) {
+          // Navigate to the dedicated curriculum page — no page reload.
+          router.push(`/student/curriculum/${result.sessionId}`);
+        } else {
+          // DB save failed (offline / permission issue): show inline fallback.
+          // eslint-disable-next-line no-console
+          console.warn("Curriculum session could not be saved; falling back to inline view.");
+          synthesizingRef.current = false;
+          setIsSynthesizing(false);
+        }
+      } catch (error) {
+        console.error("Failed to synthesize curriculum:", error);
+        synthesizingRef.current = false;
+        setIsSynthesizing(false);
+      }
+    },
+    [profile, router],
+  );
 
   if (loading) {
     return (
@@ -300,30 +314,34 @@ export default function StudentDashboardPage() {
       {/* Interface Wrapper */}
       <main className="py-12 px-4 max-w-6xl mx-auto min-h-screen">
         
-        {/* Active Lesson Player Overlay */}
-        {activeModuleIndex !== null && modules[activeModuleIndex] && (
-           <div className="fixed inset-0 z-50 bg-stone-900/90 backdrop-blur flex items-center justify-center p-4 animate-in fade-in duration-300">
-              <div className="w-full max-w-5xl">
-                 <button 
-                   onClick={() => setActiveModuleIndex(null)}
-                   className="absolute top-4 right-4 text-white/50 hover:text-white"
-                 >
-                   ESC
-                 </button>
-                 <LessonPlayer 
-                   module={modules[activeModuleIndex]} 
-                   onComplete={() => setActiveModuleIndex(null)} 
-                 />
+        {/* Full-screen generation loading overlay */}
+        {isSynthesizing && (
+          <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-stone-900/90 backdrop-blur animate-in fade-in duration-300">
+            <div className="flex flex-col items-center gap-6 text-center px-6">
+              <div className="relative">
+                <div className="w-20 h-20 rounded-full border-4 border-teal-200/30 border-t-teal-400 animate-spin" />
+                <span className="absolute inset-0 flex items-center justify-center text-3xl">
+                  {selectedWorldLabel ? "🌟" : "✨"}
+                </span>
               </div>
-           </div>
+              <div>
+                <p className="text-white font-extrabold text-xl tracking-tight">
+                  Building{selectedWorldLabel ? ` your ${selectedWorldLabel} path` : " your path"}…
+                </p>
+                <p className="mt-2 text-white/60 text-sm">
+                  Personalising modules for you
+                </p>
+              </div>
+            </div>
+          </div>
         )}
 
-        {/* Intro / Welcome */}
-        {!modules.length && (
+        {/* Intro / Welcome — shown while learner is picking a path */}
+        {!isSynthesizing && (
             <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
                 <h2 className="text-3xl font-bold mb-4">Welcome back, {profile.display_name}.</h2>
                 <p className="text-stone-600 max-w-xl mx-auto">
-                Choose a path that matches your level and goals.
+                Tap a path below to begin — your modules are generated in seconds.
                 </p>
             </div>
         )}
@@ -352,128 +370,42 @@ export default function StudentDashboardPage() {
           </section>
         )}
 
-        {/* World Selector & Synthesis Control */}
-        {!modules.length && (
-            <div className="animate-in zoom-in-95 duration-500 space-y-8">
-                <section className="rounded-2xl border border-teal-200 bg-white p-5 shadow-sm">
-                  <h3 className="text-lg font-semibold text-stone-800">
-                    Recommended Next Step
-                  </h3>
-                  <p className="mt-2 text-sm text-stone-600">
-                    Core curriculum paths are shown first for this learner&apos;s age and baseline. Additional topics are listed below.
-                  </p>
-                  {profile.module_assignment_mode === "random" ? (
-                    <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-teal-700">
-                      Random additional module mode enabled
-                    </p>
-                  ) : null}
-                  <div className="mt-4">
-                    <Link
-                      href="/modules"
-                      className="inline-flex min-h-10 items-center rounded-full border border-teal-300 bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-800 transition-colors hover:bg-teal-100"
-                    >
-                      Additional Paths
-                    </Link>
-                  </div>
-                </section>
+        {/* Path selector — shown when not currently generating */}
+        {!isSynthesizing && (
+          <div className="animate-in zoom-in-95 duration-500 space-y-8">
+            <section className="rounded-2xl border border-teal-200 bg-white p-5 shadow-sm">
+              <h3 className="text-lg font-semibold text-stone-800">
+                Recommended Next Step
+              </h3>
+              <p className="mt-2 text-sm text-stone-600">
+                Tap a path below — your personalised modules will be ready instantly.
+              </p>
+              {profile.module_assignment_mode === "random" ? (
+                <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-teal-700">
+                  Daily path auto-selected for you
+                </p>
+              ) : null}
+              <div className="mt-4">
+                <Link
+                  href="/modules"
+                  className="inline-flex min-h-10 items-center rounded-full border border-teal-300 bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-800 transition-colors hover:bg-teal-100"
+                >
+                  Browse All Paths
+                </Link>
+              </div>
+            </section>
 
-                <WorldSelector 
-                  selectedWorldId={selectedWorldId || undefined}
-                  learner_age_years={profile.age_years}
-                  learnerGradeLevel={profile.grade_level}
-                  allowedPathIds={profile.path_allowlist}
-                  interestPathIds={interestPathIds}
-                  onSelectWorld={(worldId, worldLabel) => {
-                    setSelectedWorldId(worldId);
-                    setSelectedWorldLabel(worldLabel);
-                  }}
-                />
-
-                <div className="flex justify-center pt-8 border-t border-stone-200/50">
-                    <button 
-                      onClick={initiateSynthesis}
-                      disabled={!selectedWorldId || isSynthesizing}
-                      className={`
-                        group relative flex items-center gap-3 px-10 py-5 rounded-full font-bold text-lg shadow-xl transition-all
-                        ${selectedWorldId && !isSynthesizing
-                            ? 'bg-teal-600 text-white hover:bg-teal-500 hover:scale-105 hover:shadow-teal-200'
-                            : 'bg-stone-200 text-stone-400 cursor-not-allowed'}
-                      `}
-                    >
-                        {isSynthesizing ? (
-                           <>
-                             <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                             <span>Building your curriculum...</span>
-                           </>
-                        ) : (
-                           <>
-                             <span>Generate {selectedWorldLabel || "Curriculum"}</span>
-                             <span className="group-hover:translate-x-1 transition-transform">→</span>
-                           </>
-                        )}
-                    </button>
-                </div>
-            </div>
-        )}
-
-        {/* Generated Modules List */}
-        {modules.length > 0 && (
-            <div className="animate-in fade-in slide-in-from-bottom-8 duration-500">
-                <div className="flex justify-between items-end border-b border-stone-200 pb-6 mb-8">
-                    <div>
-                        <h2 className="text-3xl font-bold text-stone-800">Your Learning Path</h2>
-                        <p className="text-stone-500 mt-2">
-                           Tailored for {profile.display_name} in <span className="font-bold text-teal-600">{selectedWorldLabel || selectedWorldId}</span>.
-                        </p>
-                    </div>
-                    <button 
-                        onClick={() => {
-                          setModules([]);
-                          setActiveModuleIndex(null);
-                          setSelectedWorldId(null);
-                          setSelectedWorldLabel(null);
-                        }}
-                        className="text-stone-400 hover:text-stone-600 font-bold text-sm"
-                    >
-                        START OVER
-                    </button>
-                </div>
-
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                    {modules.map((mod, i) => (
-                        <div 
-                          key={i} 
-                          onClick={() => setActiveModuleIndex(i)}
-                          className="bg-white p-6 rounded-2xl shadow-sm border border-stone-200 hover:border-teal-300 hover:shadow-lg hover:-translate-y-1 transition-all cursor-pointer group flex flex-col h-full"
-                        >
-                            <div className="mb-4 flex justify-between items-start">
-                                <span className="text-5xl filter drop-shadow-sm">{mod.icon}</span>
-                                {mod.media?.introVideoId && (
-                                    <span className="text-[10px] font-mono bg-stone-100 text-stone-500 px-2 py-1 rounded border border-stone-200">
-                                        MEDIA READY
-                                    </span>
-                                )}
-                            </div>
-                            
-                            <h3 className="text-xl font-bold text-stone-800 mb-2 group-hover:text-teal-700 transition-colors">
-                                {mod.title}
-                            </h3>
-                            <p className="text-stone-600 text-sm leading-relaxed mb-6 flex-1">
-                                {mod.desc}
-                            </p>
-                            
-                            <div className="pt-4 border-t border-stone-100 flex justify-between items-center mt-auto">
-                                <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">
-                                   {mod.media?.animationStyle || "Module"}
-                                </span>
-                                <span className="w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center text-teal-600 group-hover:bg-teal-600 group-hover:text-white transition-colors">
-                                   ▶
-                                </span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <WorldSelector
+              selectedWorldId={selectedWorldId || undefined}
+              learner_age_years={profile.age_years}
+              learnerGradeLevel={profile.grade_level}
+              allowedPathIds={profile.path_allowlist}
+              interestPathIds={interestPathIds}
+              onSelectWorld={(worldId, worldLabel) => {
+                void handleWorldSelected(worldId, worldLabel);
+              }}
+            />
+          </div>
         )}
       </main>
 

@@ -25,6 +25,69 @@ const CurriculumModuleSchema = z.object({
 
 type CurriculumModule = z.infer<typeof CurriculumModuleSchema>;
 
+/* -------------------------------------------------------------------------- */
+/*                         DB session helpers                                 */
+/* -------------------------------------------------------------------------- */
+
+/**
+ * Attempt to find a previously-generated session for this world from a
+ * *different* account. Returns one at random from the last 20 to add variety.
+ * Returns null if nothing is found or the DB lookup fails.
+ */
+async function findCachedSession(
+  supabase: Awaited<ReturnType<typeof createSupabaseServerClient>>,
+  worldId: string,
+  excludeAccountId: string,
+): Promise<{ id: string; modules: unknown[] } | null> {
+  try {
+    const { data } = await supabase
+      .from("generated_module_sessions")
+      .select("id, modules")
+      .eq("world_id", worldId)
+      .neq("account_id", excludeAccountId)
+      .order("created_at", { ascending: false })
+      .limit(20);
+
+    if (!data || data.length === 0) return null;
+    const picked = data[Math.floor(Math.random() * data.length)]!;
+    return { id: picked.id as string, modules: picked.modules as unknown[] };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Persist the newly-generated modules to the shared pool.
+ * Returns the session UUID or null on failure.
+ */
+async function saveGeneratedSession(
+  supabase: Awaited<ReturnType<typeof createSupabaseServerClient>>,
+  opts: {
+    accountId: string;
+    profileId: string;
+    worldId: string;
+    modules: CurriculumModule[];
+    source: "ai" | "mock";
+  },
+): Promise<string | null> {
+  try {
+    const { data } = await supabase
+      .from("generated_module_sessions")
+      .insert({
+        account_id: opts.accountId,
+        profile_id: opts.profileId,
+        world_id: opts.worldId,
+        modules: opts.modules,
+        source: opts.source,
+      })
+      .select("id")
+      .single();
+    return (data as { id: string } | null)?.id ?? null;
+  } catch {
+    return null;
+  }
+}
+
 function toTitleCase(value: string) {
   return value
     .split("-")
@@ -107,7 +170,7 @@ function createDomainMockModules(pathId: string): CurriculumModule[] {
 export async function generateCurriculumModules(
   profileId: string,
   worldId?: string
-): Promise<{ modules: CurriculumModule[]; source: "ai" | "mock" }> {
+): Promise<{ modules: CurriculumModule[]; sessionId: string | null; source: "ai" | "mock" | "cached" }> {
   /* Only authenticated users can call this */
   const supabase = await createSupabaseServerClient();
   const { data: { user }, error: authError } = await supabase.auth.getUser();
@@ -116,6 +179,20 @@ export async function generateCurriculumModules(
     redirect("/auth/sign-in");
   }
 
+  const safeWorldId = worldId ?? "general";
+
+  /* ── Step 1: Check the shared module pool for content from other accounts ──
+     This avoids costly AI generation and gives learners fresh perspectives
+     by serving modules previously generated for a different family/account. */
+  const cached = await findCachedSession(supabase, safeWorldId, user.id);
+  if (cached) {
+    const parsed = z.array(CurriculumModuleSchema).safeParse(cached.modules);
+    if (parsed.success && parsed.data.length > 0) {
+      return { modules: parsed.data, sessionId: cached.id, source: "cached" };
+    }
+  }
+
+  /* ── Step 2: Fetch learner profile for personalisation ── */
   let profile: {
     grade_level: string | null;
     initial_assessment_data: unknown;
@@ -125,7 +202,6 @@ export async function generateCurriculumModules(
   };
 
   try {
-    /* Fetch Profile Data for Context */
     const { data: fetchedProfile, error } = await supabase
       .from("student_profiles")
       .select("grade_level, initial_assessment_data, age_years, display_name, path_allowlist")
@@ -134,79 +210,100 @@ export async function generateCurriculumModules(
       .single();
 
     if (error || !fetchedProfile) {
-      return { modules: createDomainMockModules(worldId ?? "math-core"), source: "mock" };
+      const mods = createDomainMockModules(safeWorldId);
+      const sessionId = await saveGeneratedSession(supabase, {
+        accountId: user.id,
+        profileId,
+        worldId: safeWorldId,
+        modules: mods,
+        source: "mock",
+      });
+      return { modules: mods, sessionId, source: "mock" };
     }
     profile = fetchedProfile;
   } catch (err) {
     console.error("Profile lookup error in generateCurriculumModules.", toSafeErrorRecord(err));
-    return { modules: createDomainMockModules(worldId ?? "math-core"), source: "mock" };
+    const mods = createDomainMockModules(safeWorldId);
+    const sessionId = await saveGeneratedSession(supabase, {
+      accountId: user.id,
+      profileId,
+      worldId: safeWorldId,
+      modules: mods,
+      source: "mock",
+    });
+    return { modules: mods, sessionId, source: "mock" };
   }
 
   const pathAllowlist = normalizePathAllowlist(profile.path_allowlist);
   if (worldId && pathAllowlist && !pathAllowlist.includes(worldId)) {
     const safeFallbackPath = pathAllowlist[0] ?? "math-core";
-    return { modules: createDomainMockModules(safeFallbackPath), source: "mock" };
+    const mods = createDomainMockModules(safeFallbackPath);
+    const sessionId = await saveGeneratedSession(supabase, {
+      accountId: user.id,
+      profileId,
+      worldId: safeFallbackPath,
+      modules: mods,
+      source: "mock",
+    });
+    return { modules: mods, sessionId, source: "mock" };
   }
 
-  // Fallback / Mock logic for distinct world
-  const mockModulesByPath: Record<string, CurriculumModule[]> = {
-    tree: [
-      { 
-        title: "Photosynthesis", 
-        desc: "Learn how plants eat sunlight.", 
-        icon: "🌿",
-        media: { introVideoId: "VIDEO_TREE_INTRO_01", animationStyle: "nature_soft" }
-      },
-      { 
-        title: "Root Systems", 
-        desc: "Explore under the ground.", 
-        icon: "🌱",
-        media: { introVideoId: "VIDEO_TREE_GROWTH_01", animationStyle: "nature_soft" }
-      }
-    ],
-    ocean: [
-      { 
-        title: "Coral Reefs", 
-        desc: "Discover underwater cities.", 
-        icon: "🐠",
-        media: { introVideoId: "VIDEO_OCEAN_INTRO_01", animationStyle: "ocean_flow" }
-      }
-    ],
-    space: [
-      { 
-        title: "Gravity", 
-        desc: "Why do things fall?", 
-        icon: "🪐",
-         media: { introVideoId: "VIDEO_SPACE_INTRO_01", animationStyle: "space_float" }
-      }
-    ]
+  /* ── Helper: save modules to DB and return ── */
+  const saveAndReturn = async (
+    mods: CurriculumModule[],
+    source: "ai" | "mock",
+  ) => {
+    const sessionId = await saveGeneratedSession(supabase, {
+      accountId: user.id,
+      profileId,
+      worldId: safeWorldId,
+      modules: mods,
+      source,
+    });
+    return { modules: mods, sessionId, source };
   };
 
-  // If no API key, return specific mock based on grade or world
+  // Fallback / Mock logic for distinct worlds (no API key path)
+  const mockModulesByPath: Record<string, CurriculumModule[]> = {
+    tree: [
+      { title: "Photosynthesis", desc: "Learn how plants eat sunlight.", icon: "🌿", media: { introVideoId: "VIDEO_TREE_INTRO_01", animationStyle: "nature_soft" } },
+      { title: "Root Systems", desc: "Explore under the ground.", icon: "🌱", media: { introVideoId: "VIDEO_TREE_GROWTH_01", animationStyle: "nature_soft" } },
+    ],
+    ocean: [
+      { title: "Coral Reefs", desc: "Discover underwater cities.", icon: "🐠", media: { introVideoId: "VIDEO_OCEAN_INTRO_01", animationStyle: "ocean_flow" } },
+    ],
+    space: [
+      { title: "Gravity", desc: "Why do things fall?", icon: "🪐", media: { introVideoId: "VIDEO_SPACE_INTRO_01", animationStyle: "space_float" } },
+    ],
+  };
+
   if (!serverEnv.OPENAI_API_KEY) {
-     if (worldId) {
-        return { modules: mockModulesByPath[worldId] ?? createDomainMockModules(worldId), source: "mock" };
-     }
-     
-     const isYoung = ["K", "1", "2"].includes(profile.grade_level || "");
-     return {
-       modules: isYoung ? [
-         { title: "Number Safari", desc: "Count animals in the jungle.", icon: "🦁" },
-         { title: "Shape Detectives", desc: "Find triangles and squares.", icon: "🔍" },
-         { title: "Color Magic", desc: "Mixing colors to make new ones.", icon: "🎨" }
-       ] : [
-         { title: "Quantum Logic", desc: "Understanding 0 and 1 simultaneously.", icon: "⚛️" },
-         { title: "Cyber-Civics", desc: "Ethics in the digital frontier.", icon: "🌐" },
-         { title: "Bio-Engineering", desc: "Designing plant DNA.", icon: "🧬" }
-       ],
-       source: "mock"
-     };
+    if (worldId) {
+      return saveAndReturn(
+        mockModulesByPath[worldId] ?? createDomainMockModules(worldId),
+        "mock",
+      );
+    }
+    const isYoung = ["K", "1", "2"].includes(profile.grade_level || "");
+    return saveAndReturn(
+      isYoung
+        ? [
+            { title: "Number Safari", desc: "Count animals in the jungle.", icon: "🦁" },
+            { title: "Shape Detectives", desc: "Find triangles and squares.", icon: "🔍" },
+            { title: "Color Magic", desc: "Mixing colors to make new ones.", icon: "🎨" },
+          ]
+        : [
+            { title: "Quantum Logic", desc: "Understanding 0 and 1 simultaneously.", icon: "⚛️" },
+            { title: "Cyber-Civics", desc: "Ethics in the digital frontier.", icon: "🌐" },
+            { title: "Bio-Engineering", desc: "Designing plant DNA.", icon: "🧬" },
+          ],
+      "mock",
+    );
   }
 
+  /* ── Step 3: AI generation ── */
   try {
     const assessmentSummary = JSON.stringify(profile.initial_assessment_data || {});
-    
-    // Filter available prompts for the selected world to guide the AI
     const relevantPrompts = Object.values(MEDIA_PROMPTS)
       .filter(p => !worldId || p.id.toLowerCase().includes(worldId.toLowerCase()))
       .map(p => `- ${p.id} (${p.category})`)
@@ -263,34 +360,61 @@ export async function generateCurriculumModules(
       }),
     });
 
-    if (!response.ok) {
-      throw new Error(`OpenAI API error: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`OpenAI API error: ${response.status}`);
 
     const data = await response.json();
     const content = data.choices[0]?.message?.content;
     const parsed = JSON.parse(content);
-    
-    // Validate schema
     const result = z.object({ modules: z.array(CurriculumModuleSchema) }).safeParse(parsed);
 
     if (result.success && result.data.modules.length > 0) {
-      return { modules: result.data.modules, source: "ai" };
-    } else {
-      throw new Error("Invalid AI format");
+      return saveAndReturn(result.data.modules, "ai");
     }
+    throw new Error("Invalid AI format");
 
   } catch (error) {
     console.error("Failed to generate curriculum.", toSafeErrorRecord(error));
-    // Return fallback
-    return {
-       modules: [
-         { title: "Logic Gates", desc: "Introduction to boolean reasoning.", icon: "🚪" },
-         { title: "Pattern recognition", desc: "finding hidden sequences.", icon: "👀" },
-         { title: "Creative Writing", desc: "Storytelling with AI.", icon: "✍️" }
-       ],
-       source: "mock"
-    };
+    return saveAndReturn(
+      [
+        { title: "Logic Gates", desc: "Introduction to boolean reasoning.", icon: "🚪" },
+        { title: "Pattern Recognition", desc: "Finding hidden sequences.", icon: "👀" },
+        { title: "Creative Writing", desc: "Storytelling with AI.", icon: "✍️" },
+      ],
+      "mock",
+    );
   }
 }
+
+/* ── Public helper: fetch a session from the DB by ID ──────────────────── */
+export async function getCurriculumSession(sessionId: string): Promise<{
+  id: string;
+  world_id: string;
+  modules: CurriculumModule[];
+  source: string;
+  created_at: string;
+} | null> {
+  const supabase = await createSupabaseServerClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return null;
+
+  const { data } = await supabase
+    .from("generated_module_sessions")
+    .select("id, world_id, modules, source, created_at")
+    .eq("id", sessionId)
+    .single();
+
+  if (!data) return null;
+
+  const parsedModules = z.array(CurriculumModuleSchema).safeParse(data.modules);
+  return {
+    id: data.id as string,
+    world_id: data.world_id as string,
+    modules: parsedModules.success ? parsedModules.data : [],
+    source: data.source as string,
+    created_at: data.created_at as string,
+  };
+}
+
+/* Re-export the type for consumers */
+export type { CurriculumModule };
 
