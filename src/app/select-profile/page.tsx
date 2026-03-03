@@ -94,13 +94,17 @@ function SelectProfilePageInner() {
     const fetchProfiles = async () => {
       setFetchError(null);
       try {
+        // Use getSession() (reads local storage — no network round-trip) rather
+        // than getUser() (validates JWT server-side) to avoid a serial network
+        // call before the profiles query can start.
         const {
-          data: { user },
-          error: userError,
-        } = await supabase.auth.getUser();
-        if (userError) {
-          console.error("Error fetching user for profile selection:", formatSupabaseError(userError));
+          data: { session },
+          error: sessionError,
+        } = await supabase.auth.getSession();
+        if (sessionError) {
+          console.error("Error fetching session for profile selection:", formatSupabaseError(sessionError));
         }
+        const user = session?.user ?? null;
         if (!user) {
           router.push("/auth/sign-in");
           return;

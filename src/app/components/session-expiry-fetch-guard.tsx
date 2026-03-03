@@ -12,8 +12,15 @@ const EXCLUDED_API_PATHS = new Set([
   "/api/telemetry/events",
 ]);
 // Public page paths where a 401 from an API call should never redirect to sign-in.
-// Example: the landing page loads locale/preferences even for visitors.
-const PUBLIC_PAGE_PATHS = new Set(["/", "/explore", "/modules"]);
+// Includes: landing page (visitor), and auth-flow pages that fire API calls
+// (ExperienceProvider, TopNav) before the server-side session is fully warm.
+const PUBLIC_PAGE_PATHS = new Set([
+  "/",
+  "/explore",
+  "/modules",
+  "/who-is-learning",
+  "/select-profile",
+]);
 
 function resolveRequestUrl(input: RequestInfo | URL): URL | null {
   if (typeof window === "undefined") return null;
