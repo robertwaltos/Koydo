@@ -201,7 +201,8 @@ function SignUpPageInner() {
               {[
                 { icon: "🛡️", text: "COPPA\u00A0Compliant" },
                 { icon: "🚫", text: "Zero\u00A0Ads" },
-                { icon: "✨", text: "100%\u00A0Free" },
+                { icon: "🔒", text: "No\u00A0Tracking" },
+                { icon: "✨", text: "Free\u00A0to\u00A0Start" },
               ].map((badge) => (
                 <span
                   key={badge.text}

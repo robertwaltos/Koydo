@@ -111,13 +111,23 @@ Set in App Store Connect under `App Information → Age Rating`.
 
 ## COPPA Compliance Note
 
-Koydo collects account email and learning progress data. Per COPPA (Children's Online Privacy Protection Act):
+Koydo explicitly serves learners ages 3 and up, including children under 13. Per COPPA (Children's Online Privacy Protection Act):
 
-- Users under 13 require verifiable parental consent.
-- Koydo does not knowingly collect personal information from children under 13 without parental consent.
-- Parent consent flow should be implemented before targeting under-13 users.
-- Current marketing targets 13+ (middle/high school through adult learners).
+- Users under 13 require verifiable parental consent before account creation.
+- Koydo does not knowingly collect personal information from children under 13 without verifiable parental consent.
+- **Parent consent flow is implemented** — age-gate middleware detects under-13 users and triggers the parental consent flow before any data collection.
+- Parent consent can be revoked at any time via the parent dashboard or the `/api/compliance/parent-consent/revoke` endpoint, which triggers automatic data erasure.
+- The app contains zero advertising, zero cross-app tracking, and never sells user data.
+- Marketing targets all ages (Pre-K through adult learners, ages 3+).
 - Privacy Policy URL: https://koydo.app/privacy
+
+### Google Play Families Policy
+
+Because Koydo explicitly targets children under 13:
+- The app **must be enrolled in the Google Play Families Program** (Designed for Families).
+- The app must comply with the Families Self-Certified Ads SDK Program requirements (Koydo has **zero ads**, so this is satisfied by default).
+- Teacher Approved badge should be applied for (optional but recommended).
+- Target age group in Play Console: **Ages 5 and under, Ages 6-8, Ages 9-12, Ages 13+** (all checked — the app is for everyone).
 
 ---
 

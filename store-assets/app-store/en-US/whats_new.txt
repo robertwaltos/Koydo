@@ -1,10 +1,12 @@
 Welcome to Koydo! 🎉
 
-• AI-powered personalized learning paths for any subject
-• Adaptive quiz engine with instant explanations
-• Exam Prep Mode — timed mock tests & score predictions
-• Spaced repetition flashcards for long-term retention
-• Offline study — learn without Wi-Fi
-• Progress dashboard with XP, streaks & mastery levels
-• Community discussion boards
-• Free tier + Koydo Premium for unlimited access
+• 850+ learning modules from Pre-K to college and beyond
+• 600K+ interactive practice questions with instant feedback
+• Content from NASA, OpenStax, Smithsonian, NIH & more
+• Narrated interactive lessons — choose your voice
+• Parent Dashboard — monitor progress, set goals, manage profiles
+• COPPA compliant — children's privacy protected by design
+• Zero ads, zero tracking, zero data selling — ever
+• Offline study — download lessons, learn anywhere
+• Progress tracking with XP, streaks & mastery badges
+• Free tier + Koydo Individual ($5.99/mo) & Family ($14.99/mo) plans

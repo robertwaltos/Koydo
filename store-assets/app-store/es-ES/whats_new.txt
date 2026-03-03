@@ -1,10 +1,12 @@
 ¡Bienvenido a Koydo! 🎉
 
-• Rutas de aprendizaje personalizadas con IA para cualquier materia
-• Motor de cuestionarios adaptativo con explicaciones instantáneas
-• Modo Preparación para Exámenes — pruebas cronometradas y predicciones de puntaje
-• Tarjetas de repetición espaciada para retención a largo plazo
-• Estudio sin conexión — aprende sin Wi-Fi
-• Panel de progreso con XP, rachas y niveles de dominio
-• Foros de discusión comunitarios
-• Nivel gratuito + Koydo Premium para acceso ilimitado
+• 850+ módulos de aprendizaje desde preescolar hasta la universidad
+• 600K+ preguntas de práctica interactivas con retroalimentación instantánea
+• Contenido de NASA, OpenStax, Smithsonian, NIH y más
+• Lecciones interactivas narradas — elige tu voz
+• Panel para padres — supervisa el progreso, establece metas
+• Cumplimiento COPPA — privacidad infantil protegida por diseño
+• Cero anuncios, cero rastreo, nunca vendemos tus datos
+• Estudio sin conexión — descarga lecciones, aprende en cualquier lugar
+• Seguimiento de progreso con XP, rachas e insignias de dominio
+• Plan gratuito + Koydo Individual ($5,99/mes) y Familiar ($14,99/mes)

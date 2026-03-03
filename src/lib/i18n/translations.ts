@@ -99,6 +99,65 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_why_progress_title: "Real-Time Progress Tracking",
     home_why_progress_desc: "Parents and educators get detailed dashboards showing skills mastered, time spent, and what to focus on next.",
 
+    // ── Section 2: Social proof stats ──
+    home_stat_modules: "Learning Modules",
+    home_stat_questions: "Practice Questions",
+    home_stat_languages: "Languages",
+    home_stat_free: "Free to Start",
+
+    // ── Section 4: How It Works ──
+    home_how_title: "Learning made simple",
+    home_how_subtitle: "Three steps from zero to unstoppable",
+    home_how_step1_title: "Pick Your Path",
+    home_how_step1_desc: "Choose your age stage and subject — from Pre-K phonics to college calculus.",
+    home_how_step2_title: "Learn Interactively",
+    home_how_step2_desc: "Every lesson combines narration, interactive exercises, and instant feedback.",
+    home_how_step3_title: "Track & Grow",
+    home_how_step3_desc: "See what you know and what's next. Parents can monitor progress and set goals.",
+
+    // ── Section 5: Explore Subjects ──
+    home_subjects_title: "Explore Every Subject",
+    home_subjects_subtitle: "Tap a subject to start learning — interactive modules at every level",
+    home_subjects_math: "Math",
+    home_subjects_science: "Science",
+    home_subjects_reading: "Reading",
+    home_subjects_coding: "Coding",
+    home_subjects_history: "History",
+    home_subjects_engineering: "Engineering",
+    home_subjects_medicine: "Medicine",
+    home_subjects_business: "Business",
+    home_subjects_browse_all: "Browse all subjects →",
+
+    // ── Section 6: Content Sources ──
+    home_sources_eyebrow: "Trusted Sources",
+    home_sources_title: "Powered by world-class content",
+    home_sources_subtitle: "Every lesson draws from peer-reviewed, government-authoritative, and community-proven open educational resources.",
+    home_sources_stat_math: "Math problems with solutions",
+    home_sources_stat_medical: "Medical MCQs",
+    home_sources_stat_code: "Programming languages",
+    home_sources_stat_visual: "Visual learning assets",
+
+    // ── Section 7: Trust & Safety ──
+    home_trust_eyebrow: "For Parents & Educators",
+    home_trust_title: "Built for families. Trusted by educators.",
+    home_trust_subtitle: "Safe, private, and genuinely educational — with full parent visibility and control.",
+    home_trust_coppa: "COPPA Compliant",
+    home_trust_coppa_desc: "Children's privacy protected by design",
+    home_trust_ads: "Zero Ads — Ever",
+    home_trust_ads_desc: "No advertising, no tracking, no data selling",
+    home_trust_parent: "Parent Dashboard",
+    home_trust_parent_desc: "See progress, set goals, manage profiles",
+    home_trust_educator: "Educator Reviewed",
+    home_trust_educator_desc: "Aligned to grade-level learning standards",
+
+    // ── Section 8: Final CTA ──
+    home_cta_title_prefix: "Every great learner ",
+    home_cta_title_highlight: "starts with one lesson.",
+    home_cta_body: "Free interactive learning for ages 3 to adult — 850+ modules, every subject, every language.",
+    home_cta_explore: "Start Exploring Free →",
+    home_cta_parent: "Parent Dashboard →",
+    home_cta_questions: "Questions?",
+
     explore_auto_narration_text: "Choose your learning level to get started!",
     explore_hero_title: "Start Learning",
     explore_hero_subtitle:
@@ -606,6 +665,65 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_why_multilingual_desc: "Soporte completo en inglés y español con narración de audio en cada pantalla — más idiomas próximamente.",
     home_why_progress_title: "Seguimiento de progreso en tiempo real",
     home_why_progress_desc: "Padres y educadores obtienen paneles detallados que muestran habilidades dominadas, tiempo invertido y en qué enfocarse después.",
+
+    // ── Section 2: Social proof stats ──
+    home_stat_modules: "Módulos de aprendizaje",
+    home_stat_questions: "Preguntas de práctica",
+    home_stat_languages: "Idiomas",
+    home_stat_free: "Gratis para empezar",
+
+    // ── Section 4: How It Works ──
+    home_how_title: "Aprender es fácil",
+    home_how_subtitle: "Tres pasos de cero a imparable",
+    home_how_step1_title: "Elige tu camino",
+    home_how_step1_desc: "Elige tu etapa y materia — desde fonética preescolar hasta cálculo universitario.",
+    home_how_step2_title: "Aprende interactivamente",
+    home_how_step2_desc: "Cada lección combina narración, ejercicios interactivos y retroalimentación instantánea.",
+    home_how_step3_title: "Sigue y crece",
+    home_how_step3_desc: "Mira lo que sabes y lo que viene. Los padres pueden monitorear el progreso y establecer metas.",
+
+    // ── Section 5: Explore Subjects ──
+    home_subjects_title: "Explora cada materia",
+    home_subjects_subtitle: "Toca una materia para empezar — módulos interactivos en cada nivel",
+    home_subjects_math: "Matemáticas",
+    home_subjects_science: "Ciencias",
+    home_subjects_reading: "Lectura",
+    home_subjects_coding: "Programación",
+    home_subjects_history: "Historia",
+    home_subjects_engineering: "Ingeniería",
+    home_subjects_medicine: "Medicina",
+    home_subjects_business: "Negocios",
+    home_subjects_browse_all: "Ver todas las materias →",
+
+    // ── Section 6: Content Sources ──
+    home_sources_eyebrow: "Fuentes confiables",
+    home_sources_title: "Impulsado por contenido de clase mundial",
+    home_sources_subtitle: "Cada lección se basa en recursos educativos abiertos revisados por expertos, autorizados por gobiernos y probados por la comunidad.",
+    home_sources_stat_math: "Problemas de matemáticas con soluciones",
+    home_sources_stat_medical: "Preguntas médicas tipo examen",
+    home_sources_stat_code: "Lenguajes de programación",
+    home_sources_stat_visual: "Recursos visuales de aprendizaje",
+
+    // ── Section 7: Trust & Safety ──
+    home_trust_eyebrow: "Para padres y educadores",
+    home_trust_title: "Hecho para familias. Confiado por educadores.",
+    home_trust_subtitle: "Seguro, privado y genuinamente educativo — con visibilidad y control total para los padres.",
+    home_trust_coppa: "Compatible con COPPA",
+    home_trust_coppa_desc: "Privacidad infantil protegida por diseño",
+    home_trust_ads: "Cero anuncios — Siempre",
+    home_trust_ads_desc: "Sin publicidad, sin rastreo, sin venta de datos",
+    home_trust_parent: "Panel de padres",
+    home_trust_parent_desc: "Ve el progreso, establece metas, gestiona perfiles",
+    home_trust_educator: "Revisado por educadores",
+    home_trust_educator_desc: "Alineado con estándares de aprendizaje por grado",
+
+    // ── Section 8: Final CTA ──
+    home_cta_title_prefix: "Todo gran estudiante ",
+    home_cta_title_highlight: "comienza con una lección.",
+    home_cta_body: "Aprendizaje interactivo gratuito para edades de 3 a adulto — 850+ módulos, cada materia, cada idioma.",
+    home_cta_explore: "Empieza a explorar gratis →",
+    home_cta_parent: "Panel de padres →",
+    home_cta_questions: "¿Preguntas?",
 
     explore_auto_narration_text: "¡Elige tu nivel de aprendizaje para comenzar!",
     explore_hero_title: "Comenzar a aprender",

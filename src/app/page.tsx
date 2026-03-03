@@ -26,14 +26,14 @@ export const metadata: Metadata = {
 
 /* ── Subject grid data ── */
 const SUBJECTS = [
-  { icon: "🔢", label: "Math",        href: "/modules?subject=Mathematics",      color: "#f59e0b" },
-  { icon: "⚛️", label: "Science",     href: "/modules?subject=Science",          color: "#10b981" },
-  { icon: "📖", label: "Reading",     href: "/modules?subject=Reading",          color: "#f97316" },
-  { icon: "💻", label: "Coding",      href: "/modules?subject=Computer Science", color: "#6366f1" },
-  { icon: "⏳", label: "History",     href: "/modules?subject=History",          color: "#a855f7" },
-  { icon: "🏗️", label: "Engineering", href: "/modules?subject=Engineering",      color: "#ef4444" },
-  { icon: "🩺", label: "Medicine",    href: "/modules?subject=Medicine",         color: "#14b8a6" },
-  { icon: "💼", label: "Business",    href: "/modules?subject=Business",         color: "#0ea5e9" },
+  { icon: "🔢", i18nKey: "home_subjects_math",        href: "/modules?subject=Mathematics",      color: "#f59e0b" },
+  { icon: "⚛️", i18nKey: "home_subjects_science",     href: "/modules?subject=Science",          color: "#10b981" },
+  { icon: "📖", i18nKey: "home_subjects_reading",     href: "/modules?subject=Reading",          color: "#f97316" },
+  { icon: "💻", i18nKey: "home_subjects_coding",      href: "/modules?subject=Computer Science", color: "#6366f1" },
+  { icon: "⏳", i18nKey: "home_subjects_history",     href: "/modules?subject=History",          color: "#a855f7" },
+  { icon: "🏗️", i18nKey: "home_subjects_engineering", href: "/modules?subject=Engineering",      color: "#ef4444" },
+  { icon: "🩺", i18nKey: "home_subjects_medicine",    href: "/modules?subject=Medicine",         color: "#14b8a6" },
+  { icon: "💼", i18nKey: "home_subjects_business",    href: "/modules?subject=Business",         color: "#0ea5e9" },
 ] as const;
 
 export default async function Home() {
@@ -143,10 +143,10 @@ export default async function Home() {
           <section className="landing-section border-y border-white/40 bg-white/60 backdrop-blur-sm">
             <div className="mx-auto grid max-w-5xl grid-cols-2 gap-y-6 px-4 py-10 sm:grid-cols-4 sm:py-12">
               {[
-                { value: "850+",  label: "Learning Modules",  icon: "📚" },
-                { value: "600K+", label: "Practice Questions", icon: "✍️" },
-                { value: "4+",    label: "Languages",          icon: "🌍" },
-                { value: "100%",  label: "Free to Start",      icon: "✨" },
+                { value: "850+",  label: t("home_stat_modules"),   icon: "📚" },
+                { value: "600K+", label: t("home_stat_questions"), icon: "✍️" },
+                { value: "4+",    label: t("home_stat_languages"), icon: "🌍" },
+                { value: "100%",  label: t("home_stat_free"),      icon: "✨" },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col items-center gap-1 text-center">
                   <span className="text-2xl" aria-hidden="true">{stat.icon}</span>
@@ -189,10 +189,10 @@ export default async function Home() {
               className="text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
               style={{ fontFamily: "var(--font-display-sans)" }}
             >
-              Learning made simple
+              {t("home_how_title")}
             </h2>
             <p className="mx-auto mt-2 max-w-md text-center text-sm text-zinc-500">
-              Three steps from zero to unstoppable
+              {t("home_how_subtitle")}
             </p>
 
             <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
@@ -200,20 +200,20 @@ export default async function Home() {
                 {
                   step: "01",
                   icon: "🧭",
-                  title: "Pick Your Path",
-                  desc: "Choose your age stage and subject — from Pre-K phonics to college calculus.",
+                  title: t("home_how_step1_title"),
+                  desc: t("home_how_step1_desc"),
                 },
                 {
                   step: "02",
                   icon: "🎧",
-                  title: "Learn Interactively",
-                  desc: "Every lesson combines narration, interactive exercises, and instant feedback.",
+                  title: t("home_how_step2_title"),
+                  desc: t("home_how_step2_desc"),
                 },
                 {
                   step: "03",
                   icon: "📈",
-                  title: "Track & Grow",
-                  desc: "See what you know and what's next. Parents can monitor progress and set goals.",
+                  title: t("home_how_step3_title"),
+                  desc: t("home_how_step3_desc"),
                 },
               ].map((card, i) => (
                 <div
@@ -240,16 +240,16 @@ export default async function Home() {
               className="text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
               style={{ fontFamily: "var(--font-display-sans)" }}
             >
-              Explore Every Subject
+              {t("home_subjects_title")}
             </h2>
             <p className="mx-auto mt-2 max-w-md text-center text-sm text-zinc-500">
-              Tap a subject to start learning — interactive modules at every level
+              {t("home_subjects_subtitle")}
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-5">
               {SUBJECTS.map((s) => (
                 <Link
-                  key={s.label}
+                  key={s.i18nKey}
                   href={s.href}
                   className="landing-card group flex flex-col items-center gap-3 rounded-2xl border border-white/60 bg-white/70 px-4 py-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:bg-white/90 hover:shadow-md"
                 >
@@ -259,7 +259,7 @@ export default async function Home() {
                   >
                     {s.icon}
                   </span>
-                  <span className="text-sm font-bold text-zinc-800">{s.label}</span>
+                  <span className="text-sm font-bold text-zinc-800">{t(s.i18nKey)}</span>
                 </Link>
               ))}
             </div>
@@ -269,7 +269,7 @@ export default async function Home() {
                 href="/explore"
                 className="inline-flex min-h-12 items-center rounded-full border border-zinc-200/80 bg-white/80 px-7 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-50 hover:text-emerald-700"
               >
-                Browse all subjects →
+                {t("home_subjects_browse_all")}
               </Link>
             </div>
           </section>
@@ -278,16 +278,16 @@ export default async function Home() {
           <section className="landing-section mx-auto max-w-5xl px-4 pb-16 sm:pb-20">
             <div className="rounded-2xl border border-white/60 bg-white/70 p-6 shadow-sm backdrop-blur-md sm:p-8">
               <p className="text-center text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-600">
-                Trusted Sources
+                {t("home_sources_eyebrow")}
               </p>
               <h2
                 className="mt-3 text-center text-xl font-black tracking-tight text-zinc-900 sm:text-2xl"
                 style={{ fontFamily: "var(--font-display-sans)" }}
               >
-                Powered by world-class content
+                {t("home_sources_title")}
               </h2>
               <p className="mx-auto mt-2 max-w-lg text-center text-sm text-zinc-500">
-                Every lesson draws from peer-reviewed, government-authoritative, and community-proven open educational resources.
+                {t("home_sources_subtitle")}
               </p>
 
               <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-semibold text-zinc-500">
@@ -307,10 +307,10 @@ export default async function Home() {
 
               <div className="mx-auto mt-8 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4">
                 {[
-                  { value: "121K", label: "Math problems with solutions" },
-                  { value: "320K", label: "Medical MCQs" },
-                  { value: "30+",  label: "Programming languages" },
-                  { value: "50K+", label: "Visual learning assets" },
+                  { value: "121K", label: t("home_sources_stat_math") },
+                  { value: "320K", label: t("home_sources_stat_medical") },
+                  { value: "30+",  label: t("home_sources_stat_code") },
+                  { value: "50K+", label: t("home_sources_stat_visual") },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center">
                     <span
@@ -329,24 +329,24 @@ export default async function Home() {
           {/* ── SECTION 7 — TRUST & SAFETY ── */}
           <section className="landing-section mx-auto max-w-5xl px-4 pb-16 sm:pb-20">
             <p className="text-center text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-600">
-              For Parents & Educators
+              {t("home_trust_eyebrow")}
             </p>
             <h2
               className="mt-3 text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
               style={{ fontFamily: "var(--font-display-sans)" }}
             >
-              Built for families. Trusted by educators.
+              {t("home_trust_title")}
             </h2>
             <p className="mx-auto mt-2 max-w-lg text-center text-sm text-zinc-500">
-              Safe, private, and genuinely educational — with full parent visibility and control.
+              {t("home_trust_subtitle")}
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
               {[
-                { icon: "🛡️", title: "COPPA Compliant",   desc: "Children's privacy protected by design" },
-                { icon: "🚫", title: "Zero Ads",          desc: "No advertising or third-party tracking" },
-                { icon: "👁️", title: "Parent Dashboard",   desc: "See progress, set goals, manage profiles" },
-                { icon: "🎓", title: "Educator Reviewed", desc: "Aligned to grade-level learning standards" },
+                { icon: "🛡️", title: t("home_trust_coppa"),    desc: t("home_trust_coppa_desc") },
+                { icon: "🚫", title: t("home_trust_ads"),      desc: t("home_trust_ads_desc") },
+                { icon: "👁️", title: t("home_trust_parent"),    desc: t("home_trust_parent_desc") },
+                { icon: "🎓", title: t("home_trust_educator"), desc: t("home_trust_educator_desc") },
               ].map((item) => (
                 <div
                   key={item.title}
@@ -367,18 +367,18 @@ export default async function Home() {
                 className="text-3xl font-black leading-tight tracking-tight text-zinc-900 sm:text-4xl md:text-5xl"
                 style={{ fontFamily: "var(--font-display-sans)" }}
               >
-                Every great learner{" "}
+                {t("home_cta_title_prefix")}
                 <span
                   className="bg-clip-text text-transparent"
                   style={{
                     backgroundImage: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
                   }}
                 >
-                  starts with one lesson.
+                  {t("home_cta_title_highlight")}
                 </span>
               </h2>
               <p className="mt-5 max-w-[44ch] text-base leading-relaxed text-zinc-600">
-                Free interactive learning for ages 3 to adult — 850+ modules, every subject, every language.
+                {t("home_cta_body")}
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <Link
@@ -388,17 +388,17 @@ export default async function Home() {
                     background: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
                   }}
                 >
-                  Start Exploring Free →
+                  {t("home_cta_explore")}
                 </Link>
                 <Link
                   href="/parent/dashboard"
                   className="inline-flex min-h-14 items-center rounded-full border border-emerald-500/30 bg-emerald-50/80 px-8 py-3.5 text-sm font-semibold text-emerald-700 backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-100"
                 >
-                  Parent Dashboard →
+                  {t("home_cta_parent")}
                 </Link>
               </div>
               <p className="mt-6 text-sm text-zinc-400">
-                Questions?{" "}
+                {t("home_cta_questions")}{" "}
                 <a href="mailto:support@koydo.app" className="text-emerald-600 hover:underline">
                   support@koydo.app
                 </a>

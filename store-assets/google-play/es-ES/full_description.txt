@@ -1,35 +1,53 @@
-Koydo es la plataforma de aprendizaje todo-en-uno impulsada por IA, diseñada para estudiantes, profesionales y personas que desean aprender de manera más inteligente.
+Koydo es la plataforma de aprendizaje interactivo para todas las edades (desde 3 años hasta adultos) — 850+ módulos de aprendizaje, 600K+ preguntas de práctica y 4+ idiomas, todo basado en recursos educativos abiertos de clase mundial.
+
+CERO ANUNCIOS · CERO RASTREO · TUS DATOS SON TUYOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Koydo nunca mostrará publicidad, nunca te rastreará entre aplicaciones y nunca venderá tus datos a nadie. Ganamos dinero con suscripciones premium opcionales — no explotando los datos de tu familia.
 
 FUNCIONES PRINCIPALES
 ━━━━━━━━━━━━━━━━━━━━━
-✦ LECCIONES PERSONALIZADAS — Contenido adaptativo que se ajusta a tu ritmo y vacíos de conocimiento para maximizar la retención.
+✦ 850+ MÓDULOS DE APRENDIZAJE — Desde fonética preescolar hasta cálculo universitario, preparación para exámenes médicos y fundamentos empresariales. Cada materia, cada nivel.
 
-✦ MOTOR DE CUESTIONARIOS IA — Practica con cuestionarios autogenerados e ilimitados adaptados a tus áreas débiles. Obtén explicaciones instantáneas.
+✦ 600.000+ PREGUNTAS DE PRÁCTICA — Ejercicios interactivos con retroalimentación instantánea en matemáticas, ciencias, medicina, programación, historia, ingeniería, lectura y negocios.
 
-✦ MODO PREPARACIÓN PARA EXÁMENES — Preparación completa con exámenes simulados cronometrados y predicciones de puntaje.
+✦ FUENTES DE CONTENIDO DE CLASE MUNDIAL — Lecciones basadas en NASA, OpenStax, Smithsonian, NIH / PubMedQA, datasets del MIT, Exercism, el Met Museum y OSHA.
 
-✦ PANEL DE PROGRESO — Analíticas en tiempo real: velocidad de aprendizaje, racha, puntos XP y niveles de dominio por tema.
+✦ LECCIONES INTERACTIVAS CON NARRACIÓN — Cada lección combina narración, ejercicios interactivos y retroalimentación instantánea. Elige tu voz preferida.
 
-✦ ESTUDIO SIN CONEXIÓN — Descarga lecciones y cuestionarios para estudiar en cualquier lugar sin internet.
+✦ PANEL PARA PADRES — Los padres pueden supervisar el progreso, establecer metas y gestionar perfiles infantiles. Diseñado para familias con total visibilidad y control.
 
-✦ REPETICIÓN ESPACIADA — Sistema de tarjetas inteligente que programa repasos en el momento óptimo para fijar el conocimiento a largo plazo.
+✦ CUMPLIMIENTO COPPA — La privacidad infantil está protegida de forma nativa. Sin recolección de datos de menores sin consentimiento parental.
 
-✦ BIBLIOTECA MULTIMATERIAS — Miles de lecciones en Matemáticas, Ciencias, Lengua, Historia, Programación, Negocios y más.
+✦ REVISADO POR EDUCADORES — Todo el contenido alineado con estándares de aprendizaje por nivel. Sin material generado aleatoriamente por IA.
 
-✦ FOROS DE DISCUSIÓN — Comunidad de preguntas y respuestas para que nunca te quedes atascado en un concepto.
+✦ ESTUDIO SIN CONEXIÓN — Descarga lecciones para aprender en cualquier lugar sin internet.
+
+✦ SEGUIMIENTO DE PROGRESO — Puntos XP, rachas diarias, insignias de dominio y un panel detallado mostrando exactamente dónde te encuentras.
+
+✦ 4+ IDIOMAS — Estudia en inglés, español y más. Soporte multilingüe completo con contenido localizado.
+
+PROFUNDIDAD DEL CONTENIDO
+━━━━━━━━━━━━━━━━━━━━━━━━
+• 121K+ problemas de matemáticas con soluciones detalladas
+• 320K+ preguntas tipo test médicas para preparación de exámenes
+• 30+ lenguajes de programación con ejercicios
+• 50K+ recursos de aprendizaje visual
 
 IDEAL PARA
 ━━━━━━━━━━
-• Estudiantes de secundaria y universidad
-• Candidatos a certificaciones profesionales
-• Aprendices de por vida que amplían sus habilidades
-• Docentes y tutores que buscan contenido listo para usar
+• Preescolares aprendiendo fonética y números (3-5 años)
+• Estudiantes de primaria desarrollando habilidades fundamentales (6-10 años)
+• Estudiantes de secundaria y bachillerato (11-17 años)
+• Universitarios y estudiantes adultos
+• Profesionales de medicina, ingeniería y negocios
+• Padres que desean aprendizaje seguro y sin publicidad para sus hijos
+• Educadores buscando contenido alineado con estándares
 
 OPCIONES DE SUSCRIPCIÓN
 ━━━━━━━━━━━━━━━━━━━━━━━
-• Gratuito: Acceso a lecciones básicas y cuestionarios limitados
-• Koydo Premium (Mensual): Acceso ilimitado a todo el contenido, tutoría IA y modo sin conexión
-• Koydo Premium (Anual): Mejor precio — ahorra un 40% vs mensual
+• Gratuito: Lecciones básicas y práctica en todos los niveles
+• Koydo Individual: $5,99/mes o $49,99/año (ahorra 30%)
+• Koydo Familiar (hasta 6 perfiles): $14,99/mes o $119,99/año (ahorra 33%)
 
 Las suscripciones se renuevan automáticamente. Cancela cuando quieras en la configuración de Google Play.
 

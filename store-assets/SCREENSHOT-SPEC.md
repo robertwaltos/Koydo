@@ -1,5 +1,5 @@
 # Koydo — Screenshot Specification
-**Version 1.0** | For App Store & Google Play Submission
+**Version 2.0** | For App Store & Google Play Submission
 
 ---
 
@@ -32,71 +32,73 @@
 
 ## Screenshot Shots — 8 Phone Screens
 
-### Shot 1 — Hero / Value Prop
-- **Scene**: Home dashboard with "Good morning! Ready to study?" greeting
-- **Key UI**: User avatar, today's focus subject, streak counter (🔥 12), XP bar
-- **Overlay text**: "Study Smarter Every Day"
-- **Background**: Gradient hero (brand purple → indigo)
+### Shot 1 — Hero / Landing
+- **Scene**: Landing page hero — watercolor sunrise treehouse with golden path
+- **Key UI**: Koydo logo, hero tagline, "Start Exploring Free" CTA button, voice picker
+- **Overlay text**: "850+ Modules. Zero Ads. Free to Start."
+- **Background**: Warm watercolor hero image (hero-home.png)
 
-### Shot 2 — AI Lesson In Progress
-- **Scene**: Lesson page mid-lesson with progress bar at 40%
-- **Key UI**: Lesson content area, chapter nav, "Continue" CTA
-- **Overlay text**: "Personalized Lessons That Adapt to You"
-- **Background**: Clean white card layout
+### Shot 2 — Explore Subjects
+- **Scene**: Subject grid with emoji cards — Math, Science, Reading, Coding, History, Engineering, Medicine, Business
+- **Key UI**: Age-stage navigation pills, subject emoji cards, "Browse all subjects" link
+- **Overlay text**: "Every Subject, Every Age"
+- **Background**: Soft watercolor pattern (bg-lower-page.png)
 
-### Shot 3 — Quiz Engine
-- **Scene**: Multiple-choice quiz with one answer selected (correct — green highlight)
-- **Key UI**: Question text, 4 answer options, explanation panel popped up
-- **Overlay text**: "AI Quizzes. Instant Explanations."
-- **Background**: Surface level 1 background
+### Shot 3 — Interactive Lesson
+- **Scene**: Lesson page mid-lesson with narration controls, progress bar, interactive exercise
+- **Key UI**: Lesson content, voice/narration controls, progress indicator, chapter nav
+- **Overlay text**: "Narrated Interactive Lessons"
+- **Background**: Clean white neumorphic card layout
 
-### Shot 4 — Exam Prep Mode
-- **Scene**: Timed mock exam in progress — timer visible (12:34 remaining), question 7 of 25
-- **Key UI**: Timer badge, question navigator dots, answer options
-- **Overlay text**: "Nail Your Exams. Score Predictions Included."
-- **Background**: Exam mode (slightly darker theme)
+### Shot 4 — Quiz / Practice
+- **Scene**: Multiple-choice question with one answer selected (correct — emerald green highlight)
+- **Key UI**: Question text, 4 answer options, instant feedback explanation panel
+- **Overlay text**: "600K+ Questions. Instant Feedback."
+- **Background**: Soft neumorphic surface
 
-### Shot 5 — Spaced Repetition Flashcards
-- **Scene**: Flashcard flip animation (card showing "front" with Spanish word)
-- **Key UI**: Card, "Know it" / "Still learning" buttons, "Due today: 12" badge
-- **Overlay text**: "Flashcards That Actually Stick"
-- **Background**: Soft gradient card background
+### Shot 5 — Content Sources
+- **Scene**: Content sources card — NASA, OpenStax, Smithsonian, NIH, MIT, Exercism logos/labels
+- **Key UI**: Trust anchors grid, content stats (121K math problems, 320K medical MCQs, 30+ languages)
+- **Overlay text**: "Powered by World-Class Sources"
+- **Background**: Frosted glass card on watercolor bg
 
 ### Shot 6 — Progress Dashboard
-- **Scene**: Progress screen with weekly bar chart, streak 🔥, XP level ring
-- **Key UI**: Weekly bar chart, "Mastered Topics: 24", streak badge, XP progress arc
+- **Scene**: Progress screen with XP ring, streak counter, mastery badges, weekly activity chart
+- **Key UI**: XP progress arc, streak badge 🔥, weekly bar chart, mastered topics count
 - **Overlay text**: "Track Every Step of Your Journey"
 - **Background**: Dashboard surface
 
-### Shot 7 — Offline Mode
-- **Scene**: Lesson list with ✅ downloaded badges on 3 lessons + airplane mode banner
-- **Key UI**: Download icons, "Available Offline" green badges, top offline mode banner
-- **Overlay text**: "Study Anywhere. No Wi-Fi Needed."
-- **Background**: Lessons list page
+### Shot 7 — Parent Dashboard
+- **Scene**: Parent dashboard showing child profiles, progress summaries, goal settings
+- **Key UI**: Child profile cards, progress bars per subject, "Set Goals" button
+- **Overlay text**: "Built for Families. Full Visibility."
+- **Background**: Clean neumorphic surface
 
-### Shot 8 — Premium Paywall / Unlock Screen
-- **Scene**: Premium plan selection (Monthly vs Annual, Annual highlighted as "Best Value")
-- **Key UI**: Plan cards, feature checklist, "Start Free Trial" CTA, "Restore Purchases" link
-- **Overlay text**: "Go Premium. Unlock Everything."
-- **Background**: Brand gradient background
+### Shot 8 — Trust & Safety
+- **Scene**: Trust & Safety section — COPPA badge, Zero Ads badge, No Tracking badge, Educator Reviewed
+- **Key UI**: 4 trust cards with icons, privacy commitments, pricing cards (Individual $5.99/mo, Family $14.99/mo)
+- **Overlay text**: "COPPA Compliant. Zero Ads. Your Data Is Yours."
+- **Background**: Soft watercolor bg with frosted cards
 
 ---
 
 ## Tablet Screenshot Shots — 4 iPad Screens
 
-### Tablet Shot 1 — Split View Dashboard
-- **Scene**: iPad landscape — left-side nav + right-side lesson content visible simultaneously
-- **Note**: Showcase two-column adaptive layout
+### Tablet Shot 1 — Landing Hero (Landscape)
+- **Scene**: Full landing page hero in landscape — watercolor treehouse, tagline, CTA
+- **Note**: Showcase the cinematic hero at full width
 
-### Tablet Shot 2 — AI Quiz (Landscape)
-- **Scene**: Quiz in landscape mode, answer options in 2-column grid layout
-- **Note**: Tablet-optimized quiz UX
+### Tablet Shot 2 — Subject Grid (Landscape)
+- **Scene**: Subject grid + age-stage pills in landscape — all 8 subjects visible in 4-col grid
+- **Note**: Tablet-optimized responsive layout
 
-### Tablet Shot 3 — Progress Dashboard (Landscape)
-- **Scene**: Full analytics dashboard in landscape — charts, stats, XP arc all visible
+### Tablet Shot 3 — Interactive Lesson (Landscape)
+- **Scene**: Lesson in landscape mode — wider content area, narration controls visible
+- **Note**: Showcase tablet reading experience
 
-### Tablet Shot 4 — Flashcard Study (Portrait)
-- **Scene**: Full-screen flashcard on iPad, larger card with study session progress bar
+### Tablet Shot 4 — Progress Dashboard (Portrait)
+- **Scene**: Full dashboard in portrait — XP ring, streak, charts all visible
+- **Note**: Showcase data-rich dashboard
 
 ---
 
@@ -116,13 +118,18 @@ Examples:
 
 ## Brand / Style Guidelines
 
-- **Primary color**: `#6C47FF` (Koydo Purple)
-- **Secondary**: `#3B82F6` (Blue)
-- **Font**: System font (SF Pro / Roboto) — bold for overlays
-- **Overlay text position**: Top 25% of screen with semi-transparent backing pill
+- **Background**: `#fffdf6` (warm white)
+- **Foreground**: `#2f2942` (deep charcoal)
+- **Accent**: `#c2185b` (brand pink)
+- **Primary gradient**: Emerald `#059669 → #10b981 → #34d399`
+- **Card style**: Neumorphic soft UI — `bg-white/70 border-white/60 backdrop-blur-md`
+- **Display font**: Sora (--font-display-sans)
+- **Body font**: Nunito Sans (--font-body-sans)
+- **Overlay text position**: Top 20% of screen with semi-transparent white backing pill
 - **Status bar**: Show clean time (9:41 AM) + full signal/battery
-- **Device frame**: Use device frames for App Store (Apple frames for iOS, Pixel frame for Android)
+- **Device frame**: Apple device frames for iOS, Pixel frame for Android
 - **Corner radius**: 44px for phone frames, 30px for tablet frames
+- **No dark mode** in screenshots — use light theme only
 
 ---
 
@@ -137,7 +144,7 @@ All 8 phone shots + 4 tablet shots must be produced in:
 
 ## Tools / Pipeline
 
-- **Design**: Figma (Koydo Marketing Kit)
+- **Design**: Figma or direct Playwright screenshots from live app
 - **Framing**: AppMockUp Studio or Previewed.app
 - **Export**: PNG, no compression, sRGB color profile
 - **Delivery folder**: `store-assets/screenshots/{platform}/{locale}/`

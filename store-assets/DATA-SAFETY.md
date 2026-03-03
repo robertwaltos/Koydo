@@ -70,7 +70,7 @@ Complete at: `Google Play Console → App Content → Data safety`
 | Supabase (self-hosted) | Account + learning data | App backend / data storage |
 | Crash analytics provider | Crash logs, device info | Bug diagnosis |
 
-*No data is sold to third parties. No data is used for advertising.*
+*No data is sold to third parties. No data is used for advertising. Koydo contains zero advertisements.*
 
 ---
 
@@ -78,7 +78,10 @@ Complete at: `Google Play Console → App Content → Data safety`
 - ✅ Data encrypted in transit (HTTPS/TLS 1.2+)
 - ✅ Data encrypted at rest (Supabase AES-256)
 - ✅ Users can request data deletion
-- ✅ Committed to Google Play Families Policy (no targeting of children under 13)
+- ✅ Enrolled in Google Play Families Program (app targets ages 3+ with COPPA compliance)
+- ✅ Zero advertisements — app contains no ads SDK
+- ✅ Zero cross-app tracking — no ATT, no IDFA, no GAID for tracking
+- ✅ No data is sold to any party, ever
 - ✅ No collection of sensitive device permissions beyond what is declared
 
 ---

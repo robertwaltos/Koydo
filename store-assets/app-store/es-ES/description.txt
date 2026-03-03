@@ -1,27 +1,33 @@
-Koydo es la plataforma de aprendizaje con IA que se adapta a TI — haciendo cada sesión de estudio más inteligente, rápida y efectiva.
+Koydo es la plataforma de aprendizaje interactivo para todas las edades (desde 3 años hasta adultos) — 850+ módulos, 600K+ preguntas de práctica y 4+ idiomas, todo basado en recursos educativos abiertos de clase mundial.
 
-MOTOR DE APRENDIZAJE PERSONALIZADO
-Koydo analiza tus fortalezas y brechas para construir un camino de aprendizaje personalizado. No más cursos genéricos — cada lección está diseñada para acelerar tu progreso.
+CERO ANUNCIOS. CERO RASTREO. TUS DATOS SON TUYOS.
+Koydo nunca mostrará publicidad, nunca te rastreará entre aplicaciones y nunca venderá tus datos a nadie. Punto.
 
-CUESTIONARIOS CON IA
-Genera cuestionarios ilimitados sobre cualquier tema en segundos. Obtén explicaciones claras e instantáneas para cada respuesta.
+850+ MÓDULOS DE APRENDIZAJE
+Desde fonética preescolar hasta cálculo universitario, preparación para exámenes médicos y fundamentos empresariales — cada materia en cada nivel. Contenido basado en NASA, OpenStax, Smithsonian, NIH, MIT, Exercism, el Met Museum y más.
 
-MODO PREPARACIÓN PARA EXÁMENES
-Supera tu próximo examen con pruebas simuladas cronometradas, bancos de preguntas y predicciones de puntaje. Compatible con exámenes académicos, certificaciones y pruebas estandarizadas.
+600.000+ PREGUNTAS DE PRÁCTICA
+Ejercicios interactivos con retroalimentación instantánea en matemáticas (121K+ problemas), ciencias, medicina (320K+ preguntas), programación (30+ lenguajes), historia, ingeniería, lectura y negocios.
 
-TARJETAS DE REPETICIÓN ESPACIADA
-Nuestro algoritmo de revisión inteligente programa tus sesiones de tarjetas en el momento perfecto para maximizar la retención a largo plazo.
+LECCIONES INTERACTIVAS CON NARRACIÓN
+Cada lección combina narración, ejercicios interactivos y retroalimentación instantánea. Elige tu voz preferida y aprende a tu propio ritmo.
+
+PANEL PARA PADRES Y CUMPLIMIENTO COPPA
+Diseñado para familias. Los padres pueden supervisar el progreso, establecer metas y gestionar perfiles infantiles. La privacidad de los niños está protegida de forma nativa bajo COPPA.
+
+REVISADO POR EDUCADORES
+Todo el contenido está alineado con los estándares de aprendizaje por nivel — sin contenido generado aleatoriamente por IA.
 
 SIN CONEXIÓN
-Descarga lecciones completas y estudia sin Wi-Fi. Ideal para viajes o zonas sin conexión.
+Descarga lecciones y estudia sin Wi-Fi. Ideal para viajes o zonas sin conexión.
 
-PROGRESO Y RACHAS
+SEGUIMIENTO DE PROGRESO
 Mantente motivado con puntos XP, rachas diarias, insignias de dominio y un panel detallado de progreso.
 
 PLANES DE SUSCRIPCIÓN
-• Gratuito: Lecciones básicas + cuestionarios diarios limitados
-• Premium Mensual: Todo ilimitado
-• Premium Anual: Mejor precio, ahorra 40%
+• Gratuito: Lecciones básicas y práctica en todos los niveles
+• Koydo Individual: $5,99/mes o $49,99/año (ahorra 30%)
+• Koydo Familiar (hasta 6 perfiles): $14,99/mes o $119,99/año (ahorra 33%)
 
 Suscripción de renovación automática. Cancela en Ajustes de iPhone → Suscripciones.
 

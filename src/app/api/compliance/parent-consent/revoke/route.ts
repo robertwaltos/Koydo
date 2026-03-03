@@ -17,7 +17,7 @@ import { z } from "zod";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
-import { enforceIpRateLimit } from "@/lib/security/rate-limit";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const revokeSchema = z.object({
   childUserId: z.string().uuid(),

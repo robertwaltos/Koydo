@@ -1,41 +1,53 @@
-Koydo is the all-in-one AI-powered learning platform designed for students, professionals, and lifelong learners who want to study smarter — not harder.
+Koydo is the interactive learning platform for ages 3 to adult — 850+ learning modules, 600K+ practice questions, and 4+ languages, all sourced from world-class open educational resources.
+
+ZERO ADS · ZERO TRACKING · YOUR DATA IS YOURS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Koydo will never show advertisements, never track you across apps, and never sell your data to anyone. We make money through optional premium subscriptions — not by exploiting your family's data.
 
 KEY FEATURES
 ━━━━━━━━━━━━
-✦ PERSONALIZED LESSONS — Adaptive content that adjusts to your learning pace and knowledge gaps. Every lesson is crafted to maximize retention.
+✦ 850+ LEARNING MODULES — From Pre-K phonics to college calculus, medical board prep to business fundamentals. Every subject, every level.
 
-✦ AI QUIZ ENGINE — Practice with unlimited auto-generated quizzes tailored to your weak areas. Get instant explanations for every answer.
+✦ 600,000+ PRACTICE QUESTIONS — Interactive exercises with instant feedback across math, science, medicine, coding, history, engineering, reading, and business.
 
-✦ EXAM PREP MODE — Comprehensive preparation for standardized tests, certifications, and academic exams with timed mock tests and score predictions.
+✦ WORLD-CLASS CONTENT SOURCES — Lessons built from NASA, OpenStax, Smithsonian, NIH / PubMedQA, MIT datasets, Exercism, the Met Museum, and OSHA.
 
-✦ PROGRESS DASHBOARD — Real-time analytics showing your learning velocity, streak, XP points, and mastery levels across all topics.
+✦ INTERACTIVE NARRATED LESSONS — Every lesson combines narration, interactive exercises, and instant feedback. Choose your preferred voice.
 
-✦ OFFLINE STUDY — Download lessons and quizzes for uninterrupted study anywhere, no internet required.
+✦ PARENT DASHBOARD — Parents can monitor progress, set goals, and manage child profiles. Built for families with full visibility and control.
 
-✦ SPACED REPETITION — Smart flashcard system that schedules reviews at the optimal moment to lock knowledge into long-term memory.
+✦ COPPA COMPLIANT — Children's privacy is protected by design. No data collection from minors without parental consent.
 
-✦ MULTI-SUBJECT LIBRARY — Thousands of lessons across Math, Science, Language Arts, History, Coding, Business, and more.
+✦ EDUCATOR REVIEWED — All content aligned to grade-level learning standards. No random AI-generated material.
 
-✦ DISCUSSION BOARDS — Community-powered Q&A so you never get stuck on a concept alone.
+✦ OFFLINE STUDY — Download lessons for uninterrupted learning anywhere, no internet required.
+
+✦ PROGRESS TRACKING — XP points, daily streaks, mastery badges, and a detailed dashboard showing exactly where you stand.
+
+✦ 4+ LANGUAGES — Study in English, Spanish, and more. Full multi-language support with localized content.
+
+CONTENT DEPTH
+━━━━━━━━━━━━━
+• 121K+ math problems with worked solutions
+• 320K+ medical MCQs for board preparation
+• 30+ programming languages with exercises
+• 50K+ visual learning assets
 
 PERFECT FOR
 ━━━━━━━━━━━━
-• High school and college students
-• Professional certification candidates (PMP, CFA, USMLE, Bar Exam, and more)
-• Lifelong learners expanding their skills
-• Teachers and tutors seeking ready-made content
-
-WHY STUDENTS LOVE KOYDO
-━━━━━━━━━━━━━━━━━━━━━━━━━━━
-"I improved my SAT score by 180 points using Koydo's adaptive practice tests." — Verified User
-"The spaced repetition flashcards finally made vocabulary stick for my Spanish class." — Verified User
-"I passed my PMP exam on the first try. Koydo's exam simulations were spot on." — Verified User
+• Preschoolers learning phonics and numbers (ages 3-5)
+• Elementary students building core skills (ages 6-10)
+• Middle and high school students (ages 11-17)
+• College students and adult learners
+• Medical, engineering, and business professionals
+• Parents who want ad-free, safe learning for their kids
+• Educators seeking standards-aligned content
 
 SUBSCRIPTION OPTIONS
 ━━━━━━━━━━━━━━━━━━━━
-• Free Tier: Access core lessons and limited quizzes
-• Koydo Premium (Monthly): Unlimited access to all content, AI tutoring, and offline mode
-• Koydo Premium (Annual): Best value — save 40% vs monthly
+• Free Tier: Core lessons and practice at every level
+• Koydo Individual: $5.99/month or $49.99/year (save 30%)
+• Koydo Family (up to 6 profiles): $14.99/month or $119.99/year (save 33%)
 
 Subscriptions auto-renew. Cancel anytime in Google Play Settings.
 

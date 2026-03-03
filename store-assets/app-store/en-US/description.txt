@@ -1,33 +1,33 @@
-Koydo is the AI-powered learning platform that adapts to YOU — making every study session smarter, faster, and more effective.
+Koydo is the interactive learning platform for ages 3 to adult — 850+ learning modules, 600K+ practice questions, and 4+ languages, all powered by world-class open educational resources.
 
-PERSONALIZED LEARNING ENGINE
-Koydo analyzes your strengths and gaps to build a custom learning path. No more one-size-fits-all courses — every lesson is tailored to accelerate your growth.
+ZERO ADS. ZERO TRACKING. YOUR DATA IS YOURS.
+Koydo will never show advertisements, never track you across apps, and never sell your data to anyone. Period.
 
-AI QUIZ & PRACTICE
-Generate unlimited quizzes on any topic in seconds. Get instant, clear explanations for every answer so you truly learn, not just memorize.
+850+ LEARNING MODULES
+From Pre-K phonics to college calculus, medical board prep to business fundamentals — every subject at every level. Content is sourced from NASA, OpenStax, Smithsonian, NIH, MIT, Exercism, the Met Museum, and more.
 
-EXAM PREP MODE
-Ace your next exam with timed mock tests, question banks, and score predictions. Supports academic exams, professional certifications, and standardized tests.
+600,000+ PRACTICE QUESTIONS
+Interactive exercises with instant feedback across math (121K+ problems), science, medicine (320K+ MCQs), coding (30+ languages), history, engineering, reading, and business.
 
-SPACED REPETITION FLASHCARDS
-Our smart review algorithm schedules your flashcard sessions at the perfect moment — just before you'd forget — to maximize long-term retention.
+INTERACTIVE NARRATED LESSONS
+Every lesson combines narration, interactive exercises, and instant feedback. Choose your preferred voice and learn at your own pace.
+
+PARENT DASHBOARD & COPPA COMPLIANT
+Built for families. Parents can monitor progress, set goals, and manage child profiles. Children's privacy is protected by design under COPPA.
+
+EDUCATOR REVIEWED
+All content is aligned to grade-level learning standards and reviewed by educators — no random AI-generated junk.
 
 OFFLINE-READY
-Download entire lesson sets and study without Wi-Fi. Perfect for commutes, travel, or areas with spotty connections.
+Download lessons and study without Wi-Fi. Perfect for commutes, travel, or spotty connections.
 
-PROGRESS & STREAKS
-Stay motivated with XP points, daily learning streaks, mastery badges, and a detailed progress dashboard that shows exactly how far you've come.
-
-VAST CONTENT LIBRARY
-Thousands of lessons across Mathematics, Science, Language Arts, History, Programming, Business, Languages, and more — with new content added weekly.
-
-COMMUNITY Q&A
-Get answers from peers and educators in topic-specific discussion boards. Learning is better together.
+PROGRESS TRACKING
+Stay motivated with XP points, daily streaks, mastery badges, and a detailed progress dashboard.
 
 SUBSCRIPTION PLANS
-• Free: Core lessons + limited daily quizzes
-• Premium Monthly: Unlimited everything — all lessons, AI tutoring, offline mode, advanced analytics
-• Premium Annual: Best value, save 40%
+• Free: Core lessons and practice at every level
+• Koydo Individual: $5.99/month or $49.99/year (save 30%)
+• Koydo Family (up to 6 profiles): $14.99/month or $119.99/year (save 33%)
 
 Auto-renewable subscription. Cancel anytime in iPhone Settings → Subscriptions.
 
