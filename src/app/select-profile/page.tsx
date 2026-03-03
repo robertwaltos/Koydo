@@ -94,9 +94,9 @@ function SelectProfilePageInner() {
     const fetchProfiles = async () => {
       setFetchError(null);
       try {
-        // Use getSession() (reads local storage — no network round-trip) rather
-        // than getUser() (validates JWT server-side) to avoid a serial network
-        // call before the profiles query can start.
+        // Use getSession() first (reads local storage — no network round-trip).
+        // If it returns null (e.g. token refresh race), fall back to getUser()
+        // to avoid a false redirect-to-sign-in that would cause a loading loop.
         const {
           data: { session },
           error: sessionError,
@@ -104,7 +104,14 @@ function SelectProfilePageInner() {
         if (sessionError) {
           console.error("Error fetching session for profile selection:", formatSupabaseError(sessionError));
         }
-        const user = session?.user ?? null;
+        let user = session?.user ?? null;
+
+        if (!user) {
+          // Fallback: validate via network (covers post-OAuth / token-refresh races)
+          const { data: { user: networkUser } } = await supabase.auth.getUser();
+          user = networkUser;
+        }
+
         if (!user) {
           router.push("/auth/sign-in");
           return;

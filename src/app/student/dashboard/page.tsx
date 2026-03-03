@@ -92,7 +92,9 @@ export default function StudentDashboardPage() {
         id: string;
         display_name: string;
         grade_level: string | null;
-        age_years: number | null;
+        // age_years is optional — the column may not exist in older DB schemas.
+        // All fallback queries omit it so they never error on a missing column.
+        age_years?: number | null;
         avatar_url?: string;
         path_allowlist?: unknown;
         featured_module_ids?: unknown;
@@ -102,7 +104,7 @@ export default function StudentDashboardPage() {
         id: row.id,
         display_name: row.display_name,
         grade_level: row.grade_level,
-        age_years: row.age_years,
+        age_years: row.age_years ?? null,
         avatar_url: row.avatar_url,
         path_allowlist: normalizePathAllowlist(row.path_allowlist),
         featured_module_ids: normalizePathAllowlist(row.featured_module_ids),
@@ -120,9 +122,12 @@ export default function StudentDashboardPage() {
         setProfile(normalizeProfile(primaryQuery.data));
         setLoading(false);
       } else if (isMissingProfileColumn(primaryQuery.error)) {
+        // Secondary: drop newer optional columns but keep the safe core set.
+        // age_years is intentionally OMITTED here so this query succeeds even
+        // if that column hasn't been migrated yet in the user's DB.
         const secondaryQuery = await supabase
           .from("student_profiles")
-          .select("id, display_name, grade_level, age_years, avatar_url, path_allowlist, ai_skill_level_map")
+          .select("id, display_name, grade_level, avatar_url, path_allowlist, ai_skill_level_map")
           .eq("id", profileId)
           .single();
 
@@ -130,9 +135,11 @@ export default function StudentDashboardPage() {
           setProfile(normalizeProfile(secondaryQuery.data));
           setLoading(false);
         } else {
+            // Absolute minimum — guaranteed stable columns only.
+            // Do NOT include age_years to avoid 42703 loop on older schemas.
             const fallbackQuery = await supabase
             .from("student_profiles")
-            .select("id, display_name, grade_level, age_years, avatar_url")
+            .select("id, display_name, grade_level, avatar_url")
             .eq("id", profileId)
             .single();
 
