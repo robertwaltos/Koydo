@@ -57,6 +57,41 @@ export default function AirplaneModeCard() {
         </span>
       </div>
 
+      {/* Daily quota indicator */}
+      {airplane.dailyQuota && (
+        <div className="mb-4 rounded-xl border border-slate-100 bg-slate-50 p-3">
+          <div className="mb-1.5 flex items-center justify-between text-xs text-slate-500">
+            <span>Daily allowance</span>
+            <span>
+              {airplane.dailyQuota.downloadsRemaining}/{airplane.dailyQuota.maxDownloadsPerDay} downloads
+              {" · "}
+              {airplane.dailyQuota.hoursRemaining}h/{airplane.dailyQuota.maxHoursPerDay}h remaining
+            </span>
+          </div>
+          <div className="h-1.5 overflow-hidden rounded-full bg-slate-200">
+            <div
+              className={`h-full rounded-full transition-all ${
+                airplane.dailyQuota.hoursRemaining <= 0
+                  ? "bg-red-400"
+                  : airplane.dailyQuota.hoursRemaining <= 3
+                    ? "bg-amber-400"
+                    : "bg-emerald-400"
+              }`}
+              style={{
+                width: `${Math.round(
+                  (airplane.dailyQuota.hoursUsed / airplane.dailyQuota.maxHoursPerDay) * 100,
+                )}%`,
+              }}
+            />
+          </div>
+          {airplane.isDailyLimitReached && (
+            <p className="mt-1.5 text-xs font-medium text-red-600">
+              Daily limit reached — resets at midnight UTC.
+            </p>
+          )}
+        </div>
+      )}
+
       {/* Premium required notice */}
       {airplane.isPremiumRequired && (
         <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-4">
@@ -145,12 +180,14 @@ export default function AirplaneModeCard() {
 
           <button
             onClick={() => airplane.requestEstimate({ maxHours })}
-            disabled={!airplane.isOnline}
+            disabled={!airplane.isOnline || airplane.isDailyLimitReached}
             className="w-full rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {airplane.isOnline
-              ? "✈️ Prepare for Offline"
-              : "📡 Go online to download"}
+            {!airplane.isOnline
+              ? "📡 Go online to download"
+              : airplane.isDailyLimitReached
+                ? "Daily limit reached"
+                : "✈️ Prepare for Offline"}
           </button>
 
           <p className="text-center text-xs text-slate-400">
@@ -225,12 +262,14 @@ export default function AirplaneModeCard() {
           <p className="text-sm font-medium text-red-700">
             {airplane.errorMessage}
           </p>
-          <button
-            onClick={() => airplane.requestEstimate({ maxHours })}
-            className="mt-2 text-sm font-medium text-red-600 underline"
-          >
-            Try again
-          </button>
+          {!airplane.isDailyLimitReached && (
+            <button
+              onClick={() => airplane.requestEstimate({ maxHours })}
+              className="mt-2 text-sm font-medium text-red-600 underline"
+            >
+              Try again
+            </button>
+          )}
         </div>
       )}
     </div>

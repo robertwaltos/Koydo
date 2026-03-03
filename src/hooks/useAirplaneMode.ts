@@ -35,6 +35,15 @@ export type DownloadPhase =
   | "complete"
   | "error";
 
+export type DailyQuota = {
+  downloadsUsed: number;
+  downloadsRemaining: number;
+  hoursUsed: number;
+  hoursRemaining: number;
+  maxDownloadsPerDay: number;
+  maxHoursPerDay: number;
+};
+
 export type AirplaneModeHook = {
   /** Current airplane mode state from IDB */
   state: AirplaneState | null;
@@ -48,10 +57,14 @@ export type AirplaneModeHook = {
   errorMessage: string | null;
   /** Size estimate (populated during estimating/confirming phases) */
   estimate: AirplaneModeEstimate | null;
+  /** Daily download quota remaining */
+  dailyQuota: DailyQuota | null;
   /** Whether device is currently online */
   isOnline: boolean;
   /** Whether premium is required but not active */
   isPremiumRequired: boolean;
+  /** Whether daily quota is exhausted */
+  isDailyLimitReached: boolean;
   /** Start the estimation process */
   requestEstimate: (options?: { subjects?: string[]; maxHours?: number }) => Promise<void>;
   /** Confirm and begin downloading (after parent sees data warning) */
@@ -76,6 +89,10 @@ export function useAirplaneMode(): AirplaneModeHook {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [estimate, setEstimate] = useState<AirplaneModeEstimate | null>(null);
   const [isPremiumRequired, setIsPremiumRequired] = useState(false);
+  const [dailyQuota, setDailyQuota] = useState<DailyQuota | null>(null);
+  const isDailyLimitReached =
+    dailyQuota !== null &&
+    (dailyQuota.downloadsRemaining <= 0 || dailyQuota.hoursRemaining <= 0);
 
   // Load initial state from IDB
   const refresh = useCallback(async () => {
@@ -138,8 +155,9 @@ export function useAirplaneMode(): AirplaneModeHook {
 
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-        const data: AirplaneModeEstimate = await res.json();
-        setEstimate(data);
+        const data = await res.json();
+        setEstimate(data as AirplaneModeEstimate);
+        if (data.dailyQuota) setDailyQuota(data.dailyQuota as DailyQuota);
         setPhase("confirming");
       } catch (err) {
         setPhase("error");
@@ -179,6 +197,16 @@ export function useAirplaneMode(): AirplaneModeHook {
           setIsPremiumRequired(true);
           setPhase("error");
           setErrorMessage("Airplane Mode requires a paid plan.");
+          return;
+        }
+
+        if (res.status === 429) {
+          const errData = await res.json();
+          if (errData.dailyQuota) setDailyQuota(errData.dailyQuota as DailyQuota);
+          setPhase("error");
+          setErrorMessage(
+            errData.error ?? "Daily download limit reached. Try again tomorrow.",
+          );
           return;
         }
 
@@ -289,8 +317,10 @@ export function useAirplaneMode(): AirplaneModeHook {
     progress,
     errorMessage,
     estimate,
+    dailyQuota,
     isOnline,
     isPremiumRequired,
+    isDailyLimitReached,
     requestEstimate,
     confirmDownload,
     cancelDownload,
