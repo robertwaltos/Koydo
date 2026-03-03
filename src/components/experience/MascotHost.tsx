@@ -3,7 +3,7 @@
 import { ReactNode, useState, useEffect, createContext, useContext } from "react";
 import MascotFriend from "./KoydoMascotFriends";
 import { MascotMood } from "./KoydoMascot";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 
 interface MascotContextType {
@@ -31,33 +31,28 @@ interface MascotHostProps {
     persistenceKey?: string;
 }
 
-function readPersistedInteractions(persistenceKey: string, friendId: MascotHostProps["friendId"]): number {
-    if (typeof window === "undefined") return 0;
-
-    const saved = localStorage.getItem(`${persistenceKey}_${friendId}`);
-    if (!saved) return 0;
-
-    try {
-        const data = JSON.parse(saved) as { interactions?: number };
-        return data.interactions ?? 0;
-    } catch {
-        return 0;
-    }
-}
-
-function MascotHostInner({
+export default function MascotHost({
     children,
     initialMood = "idle",
     friendId = "pixel",
     persistenceKey = "koydo_mascot_memory"
 }: MascotHostProps) {
-    const initialInteractions = readPersistedInteractions(persistenceKey, friendId);
     const [mood, setMood] = useState<MascotMood>(initialMood);
     const [message, setMessage] = useState<string | null>(null);
-    const [interactionCount, setInteractionCount] = useState(initialInteractions);
-    const [friendshipLevel] = useState(Math.floor(initialInteractions / 10) + 1);
+    const [interactionCount, setInteractionCount] = useState(0);
+    const [friendshipLevel, setFriendshipLevel] = useState(1);
 
-    // Save mascot memory
+    // Persistence: Load mascot "memory"
+    useEffect(() => {
+        const saved = localStorage.getItem(`${persistenceKey}_${friendId}`);
+        if (saved) {
+            const data = JSON.parse(saved);
+            setInteractionCount(data.interactions || 0);
+            setFriendshipLevel(Math.floor((data.interactions || 0) / 10) + 1);
+        }
+    }, [friendId, persistenceKey]);
+
+    // Save mascot "memory"
     useEffect(() => {
         localStorage.setItem(`${persistenceKey}_${friendId}`, JSON.stringify({
             interactions: interactionCount,
@@ -81,7 +76,7 @@ function MascotHostInner({
 
     const handleMascotClick = () => {
         setMood("happy");
-        setInteractionCount((prev) => prev + 1);
+        setInteractionCount(prev => prev + 1);
 
         const greetings = [
             "Ready for another mission? 🚀",
@@ -117,7 +112,7 @@ function MascotHostInner({
                     {children}
                 </main>
 
-                {/* Background Ambience */}
+                {/* Background Ambience (Subtle life) */}
                 <div className="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-br from-indigo-50/50 via-white to-sky-50/50 dark:from-indigo-950/20 dark:via-stone-950 dark:to-sky-950/20" />
 
                 {/* Decorative Floating Blobs */}
@@ -144,11 +139,4 @@ function MascotHostInner({
             </div>
         </MascotContext.Provider>
     );
-}
-
-export default function MascotHost(props: MascotHostProps) {
-    const friendId = props.friendId ?? "pixel";
-    const persistenceKey = props.persistenceKey ?? "koydo_mascot_memory";
-
-    return <MascotHostInner key={`${persistenceKey}_${friendId}`} {...props} />;
 }

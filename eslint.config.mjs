@@ -18,20 +18,7 @@ const eslintConfig = defineConfig([
     "storybook-static/**",
     "next-env.d.ts",
     "External_AI_Agents/**",
-    ".claude/**",
   ]),
-  {
-    files: ["src/components/games/**/*.tsx"],
-    rules: {
-      "@typescript-eslint/no-explicit-any": "off",
-      "prefer-const": "off",
-      "react-hooks/immutability": "off",
-      "react-hooks/preserve-manual-memoization": "off",
-      "react-hooks/purity": "off",
-      "react-hooks/set-state-in-effect": "off",
-      "react/no-unescaped-entities": "off",
-    },
-  },
 ]);
 
 export default eslintConfig;

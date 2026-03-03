@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-03-02T20:54:45.649Z",
+  "generatedAt": "2026-02-26T06:15:41.597Z",
   "filters": {
     "minScore": 1,
     "topDocs": 5,
     "domains": []
   },
   "totals": {
-    "documentsScanned": 127,
-    "documentsMatched": 83,
-    "documentsMatchedByText": 52,
+    "documentsScanned": 123,
+    "documentsMatched": 71,
+    "documentsMatchedByText": 40,
     "documentsMatchedByMetadata": 43,
-    "domainsCovered": 21,
+    "domainsCovered": 17,
     "domainsMissing": 0
   },
   "byDomain": [
@@ -164,78 +164,6 @@
             {
               "keyword": "statistics",
               "count": 3
-            }
-          ],
-          "matchSource": "text"
-        }
-      ]
-    },
-    {
-      "domainId": "ai-workflows",
-      "docCount": 14,
-      "maxScore": 4,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\kenya-kicd-55918634.md",
-          "sourceId": "kenya-kicd",
-          "queueId": "kenya-kicd-55918634",
-          "score": 4,
-          "matchedKeywords": [
-            {
-              "keyword": "evaluation",
-              "count": 4
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\kenya-kicd-dff3e4fc.md",
-          "sourceId": "kenya-kicd",
-          "queueId": "kenya-kicd-dff3e4fc",
-          "score": 4,
-          "matchedKeywords": [
-            {
-              "keyword": "evaluation",
-              "count": 4
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-food-science-techniques-002.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 3,
-          "matchedKeywords": [
-            {
-              "keyword": "evaluation",
-              "count": 3
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-162d3d5c.md",
-          "sourceId": "acara-australian-curriculum",
-          "queueId": "acara-australian-curriculum-162d3d5c",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "evaluation",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "evaluation",
-              "count": 1
             }
           ],
           "matchSource": "text"
@@ -792,7 +720,7 @@
     },
     {
       "domainId": "civil-engineering",
-      "docCount": 9,
+      "docCount": 8,
       "maxScore": 8,
       "topDocs": [
         {
@@ -826,19 +754,6 @@
           "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-food-science-foundations-001.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "structural",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
           "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
           "sourceId": "india-cbse-curriculum",
           "queueId": "india-cbse-curriculum-496dbb96",
@@ -859,6 +774,19 @@
           "matchedKeywords": [
             {
               "keyword": "infrastructure",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
+          "sourceId": "mit-ocw",
+          "queueId": "mit-ocw-42b5ebd8",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "construction",
               "count": 1
             }
           ],
@@ -935,150 +863,6 @@
             }
           ],
           "matchSource": "text"
-        }
-      ]
-    },
-    {
-      "domainId": "plumbing",
-      "docCount": 7,
-      "maxScore": 3,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-foundations-001.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 3,
-          "matchedKeywords": [
-            {
-              "keyword": "drainage",
-              "count": 3
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "sanitation",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-irrigation-002.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "drainage",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-175714c4.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-175714c4",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-8fc20048.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-8fc20048",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        }
-      ]
-    },
-    {
-      "domainId": "meteorology",
-      "docCount": 7,
-      "maxScore": 1,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-ba1ca818.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-ba1ca818",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "weather",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-f73f5af2.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-f73f5af2",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "weather",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-foundations-001.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "climate",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-07cff25c.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-07cff25c",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-2cdf5706.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-2cdf5706",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
         }
       ]
     },
@@ -1431,23 +1215,154 @@
       ]
     },
     {
-      "domainId": "hvac",
+      "domainId": "meteorology",
       "docCount": 6,
       "maxScore": 1,
       "topDocs": [
         {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-food-science-foundations-001.md",
-          "sourceId": "",
-          "queueId": "",
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-ba1ca818.md",
+          "sourceId": "india-cbse-curriculum",
+          "queueId": "india-cbse-curriculum-ba1ca818",
           "score": 1,
           "matchedKeywords": [
             {
-              "keyword": "refrigeration",
+              "keyword": "weather",
               "count": 1
             }
           ],
           "matchSource": "text"
         },
+        {
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-f73f5af2.md",
+          "sourceId": "india-cbse-curriculum",
+          "queueId": "india-cbse-curriculum-f73f5af2",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "weather",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-07cff25c.md",
+          "sourceId": "mit-ocw",
+          "queueId": "mit-ocw-07cff25c",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "domain_tag",
+              "count": 1
+            }
+          ],
+          "matchSource": "metadata"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-2cdf5706.md",
+          "sourceId": "mit-ocw",
+          "queueId": "mit-ocw-2cdf5706",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "domain_tag",
+              "count": 1
+            }
+          ],
+          "matchSource": "metadata"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-480b3448.md",
+          "sourceId": "mit-ocw",
+          "queueId": "mit-ocw-480b3448",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "domain_tag",
+              "count": 1
+            }
+          ],
+          "matchSource": "metadata"
+        }
+      ]
+    },
+    {
+      "domainId": "plumbing",
+      "docCount": 5,
+      "maxScore": 2,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+          "sourceId": "india-cbse-curriculum",
+          "queueId": "india-cbse-curriculum-496dbb96",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "sanitation",
+              "count": 2
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-175714c4.md",
+          "sourceId": "mit-ocw",
+          "queueId": "mit-ocw-175714c4",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "domain_tag",
+              "count": 1
+            }
+          ],
+          "matchSource": "metadata"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-8fc20048.md",
+          "sourceId": "mit-ocw",
+          "queueId": "mit-ocw-8fc20048",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "domain_tag",
+              "count": 1
+            }
+          ],
+          "matchSource": "metadata"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-9113eba0.md",
+          "sourceId": "mit-ocw",
+          "queueId": "mit-ocw-9113eba0",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "domain_tag",
+              "count": 1
+            }
+          ],
+          "matchSource": "metadata"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-b2cf45b8.md",
+          "sourceId": "mit-ocw",
+          "queueId": "mit-ocw-b2cf45b8",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "domain_tag",
+              "count": 1
+            }
+          ],
+          "matchSource": "metadata"
+        }
+      ]
+    },
+    {
+      "domainId": "hvac",
+      "docCount": 5,
+      "maxScore": 1,
+      "topDocs": [
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-1abc9f38.md",
           "sourceId": "mit-ocw",
@@ -1499,166 +1414,15 @@
             }
           ],
           "matchSource": "metadata"
-        }
-      ]
-    },
-    {
-      "domainId": "coding",
-      "docCount": 3,
-      "maxScore": 58,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
-          "score": 58,
-          "matchedKeywords": [
-            {
-              "keyword": "programming",
-              "count": 33
-            },
-            {
-              "keyword": "coding",
-              "count": 21
-            },
-            {
-              "keyword": "data structures",
-              "count": 4
-            }
-          ],
-          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\south-africa-caps-92d0b6ec.md",
-          "sourceId": "south-africa-caps",
-          "queueId": "south-africa-caps-92d0b6ec",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "coding",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
+          "path": "data\\knowledgebase\\raw\\uk-national-curriculum-2ba141c5.md",
+          "sourceId": "uk-national-curriculum",
+          "queueId": "uk-national-curriculum-2ba141c5",
           "score": 1,
           "matchedKeywords": [
             {
-              "keyword": "coding",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        }
-      ]
-    },
-    {
-      "domainId": "gardening",
-      "docCount": 2,
-      "maxScore": 24,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-foundations-001.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 24,
-          "matchedKeywords": [
-            {
-              "keyword": "soil",
-              "count": 12
-            },
-            {
-              "keyword": "gardening",
-              "count": 9
-            },
-            {
-              "keyword": "compost",
-              "count": 1
-            },
-            {
-              "keyword": "plant nutrition",
-              "count": 1
-            },
-            {
-              "keyword": "irrigation",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-irrigation-002.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 11,
-          "matchedKeywords": [
-            {
-              "keyword": "irrigation",
-              "count": 6
-            },
-            {
-              "keyword": "gardening",
-              "count": 3
-            },
-            {
-              "keyword": "soil",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        }
-      ]
-    },
-    {
-      "domainId": "food-science",
-      "docCount": 2,
-      "maxScore": 12,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-food-science-foundations-001.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 12,
-          "matchedKeywords": [
-            {
-              "keyword": "fermentation",
-              "count": 4
-            },
-            {
-              "keyword": "food science",
-              "count": 3
-            },
-            {
-              "keyword": "maillard reaction",
-              "count": 3
-            },
-            {
-              "keyword": "emulsion",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\koydo-curated-food-science-techniques-002.md",
-          "sourceId": "",
-          "queueId": "",
-          "score": 3,
-          "matchedKeywords": [
-            {
-              "keyword": "food science",
-              "count": 1
-            },
-            {
-              "keyword": "maillard reaction",
-              "count": 1
-            },
-            {
-              "keyword": "fermentation",
+              "keyword": "heating",
               "count": 1
             }
           ],

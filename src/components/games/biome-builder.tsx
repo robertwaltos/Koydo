@@ -1,12 +1,15 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
-import { CloudRain, Wind, TreePine, Bird, Thermometer, Activity, Info } from "lucide-react";
-import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { Sun, CloudRain, Wind, TreePine, Bird, Waves, Thermometer, ShieldCheck, Activity, Info } from "lucide-react";
+import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+
+/* --- Ecosystem Types --- */
+type Entity = "PLANNER" | "CONSUMER" | "DECOMPOSER";
 
 export default function BiomeBuilder() {
     const { setMessage, setMood } = useMascot();

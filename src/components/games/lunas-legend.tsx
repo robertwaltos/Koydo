@@ -1,12 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     BookOpen,
+    PenTool,
+    Sparkles,
     ChevronRight,
     Star,
     Music,
+    Palette,
+    Lightbulb,
+    Mic,
+    Heart
 } from "lucide-react";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";

@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Flame } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface JuicyStreakProps {
     count: number;
@@ -13,6 +14,16 @@ interface JuicyStreakProps {
  * Includes "Juicy" physics-based feedback and celebratory particles.
  */
 export default function JuicyStreak({ count, className = "" }: JuicyStreakProps) {
+    const [isHot, setIsHot] = useState(false);
+
+    useEffect(() => {
+        if (count > 0) {
+            setIsHot(true);
+            const timer = setTimeout(() => setIsHot(false), 500);
+            return () => clearTimeout(timer);
+        }
+    }, [count]);
+
     if (count <= 0) return null;
 
     const getIntensity = () => {
@@ -29,9 +40,8 @@ export default function JuicyStreak({ count, className = "" }: JuicyStreakProps)
                     scale: 1,
                     opacity: 1,
                     rotate: 0,
-                    y: [0, -10, 0]
+                    y: isHot ? -10 : 0
                 }}
-                transition={{ duration: 0.5 }}
                 exit={{ scale: 0, opacity: 0 }}
                 className={`flex items-center gap-2 rounded-full border-2 bg-white px-4 py-2 shadow-lg dark:bg-stone-900 ${getIntensity()} ${className}`}
                 style={{
@@ -67,27 +77,23 @@ export default function JuicyStreak({ count, className = "" }: JuicyStreakProps)
                 </div>
 
                 {/* Celebration Particles */}
-                <motion.div
-                    key={`particles-${count}`}
-                    className="absolute inset-0 overflow-visible pointer-events-none"
-                    initial={{ opacity: 1 }}
-                    animate={{ opacity: 0 }}
-                    transition={{ duration: 0.5 }}
-                >
+                {isHot && (
+                    <div className="absolute inset-0 overflow-visible pointer-events-none">
                         {[...Array(6)].map((_, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ x: 0, y: 0, scale: 1 }}
                                 animate={{
                                     x: (i - 2.5) * 20,
-                                    y: -40 - ((i * 13 + count * 7) % 40),
+                                    y: -40 - Math.random() * 40,
                                     scale: 0,
-                                    rotate: (i * 77 + count * 23) % 360
+                                    rotate: Math.random() * 360
                                 }}
                                 className="absolute left-1/2 top-1/2 h-2 w-2 rounded-full bg-orange-400"
                             />
                         ))}
-                    </motion.div>
+                    </div>
+                )}
             </motion.div>
         </AnimatePresence>
     );

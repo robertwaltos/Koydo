@@ -1,9 +1,9 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
-import { Zap, Sun, Wind, Activity, Leaf, Trash2 } from "lucide-react";
-import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { Zap, Sun, Wind, Battery, Activity, ShieldCheck, Thermometer, Info, ChevronRight, Leaf, Trash2, CloudRain } from "lucide-react";
+import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";

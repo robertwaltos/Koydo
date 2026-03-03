@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
-import { JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
+import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
+import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import { hapticSuccess, hapticSelection, hapticCelebration } from "@/lib/platform/haptics";
 import { Cpu, Terminal, Square, Circle, Triangle } from "lucide-react";
-import Image from "next/image";
 
 /* --- Logical Link Content --- */
 type Gate = {
@@ -49,7 +49,7 @@ export default function LogicalLink() {
         initializeGrid();
         setMessage("Welcome to Logical Link. Match synchronous gates to stabilize the digital core! 🤖🔌");
         setMood("happy");
-    }, [setMessage, setMood]);
+    }, []);
 
     const handleTileClick = (r: number, c: number) => {
         void hapticSelection();
@@ -109,12 +109,10 @@ export default function LogicalLink() {
         <div className="relative min-h-[700px] w-full flex flex-col items-center justify-center p-8 bg-black overflow-hidden rounded-[3rem] border-4 border-slate-900 shadow-2xl">
             {/* 4K Background */}
             <div className="absolute inset-0 opacity-40">
-                <Image
+                <img
                     src="/cyber_logic_matching_bg_1772427624067.png"
                     alt="Cyber Logic"
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                 />
             </div>
 

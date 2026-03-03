@@ -3,12 +3,12 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
-import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { JUICY_VARIANTS, EXPERIENCE_COLORS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import JuicyConfetti from "@/components/experience/JuicyConfetti";
 import { hapticSuccess, hapticError, hapticCelebration } from "@/lib/platform/haptics";
-import { Brain, Zap } from "lucide-react";
+import { Activity, Brain, Zap } from "lucide-react";
 
 /* --- Types --- */
 type Node = {
@@ -27,6 +27,13 @@ export default function NeuralNavigator() {
     const [level, setLevel] = useState(1);
     const [streak, setStreak] = useState(0);
 
+    // Initial message from Terra
+    useEffect(() => {
+        setMessage("Welcome to the Neural Lab! Let's map some synapses. 🧠");
+        setMood("happy");
+        generateNodes();
+    }, []);
+
     const generateNodes = useCallback(() => {
         const newNodes: Node[] = [];
         const nodeCount = 5 + Math.floor(level / 2);
@@ -40,13 +47,6 @@ export default function NeuralNavigator() {
         }
         setNodes(newNodes);
     }, [level]);
-
-    // Initial message from Terra
-    useEffect(() => {
-        setMessage("Welcome to the Neural Lab! Let's map some synapses. 🧠");
-        setMood("happy");
-        generateNodes();
-    }, [generateNodes, setMessage, setMood]);
 
     const startRound = () => {
         const newSequence: number[] = [];

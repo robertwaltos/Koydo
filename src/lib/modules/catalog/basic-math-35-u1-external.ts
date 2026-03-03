@@ -12,7 +12,6 @@ export const BasicMath35U1ExternalModule: LearningModule = {
   ],
   "minAge": 8,
   "maxAge": 11,
-  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "advanced",
   "localeSupport": [
@@ -36,7 +35,7 @@ export const BasicMath35U1ExternalModule: LearningModule = {
     "sourceUnitId": "basic-math-35-u1",
     "sourceUnitIdCanonical": "basic-math-35-u1",
     "sourceUnitIdRaw": "basic_math-35-u1",
-    "importedAt": "2026-03-02T20:55:19.806Z"
+    "importedAt": "2026-02-25T02:03:30.439Z"
   },
   "external": {
     "unitOrder": 7,

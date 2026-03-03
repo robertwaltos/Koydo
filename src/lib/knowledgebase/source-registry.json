@@ -145,16 +145,5 @@
     "tier": "yellow",
     "transcriptFormat": "html",
     "notes": "Use page-level ingestion with attribution and manual rights review."
-  },
-  {
-    "id": "koydo-curated",
-    "name": "Koydo Curated Reference",
-    "region": "Global",
-    "category": "curated_reference",
-    "url": "internal://koydo-curated",
-    "automationAllowed": true,
-    "tier": "green",
-    "transcriptFormat": "markdown",
-    "notes": "Original educational reference material authored by the Koydo editorial team. No external licensing constraints."
   }
 ]

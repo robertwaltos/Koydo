@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { Trophy, Star, Zap } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { hapticCelebration } from "@/lib/platform/haptics";
 
 interface AchievementToastProps {
@@ -25,6 +25,8 @@ export default function AchievementToast({
     type = "achievement",
     onClose,
 }: AchievementToastProps) {
+    const [internalParticles, setInternalParticles] = useState<number[]>([]);
+
     useEffect(() => {
         if (show) {
             void hapticCelebration();
@@ -107,8 +109,8 @@ export default function AchievementToast({
                                         initial={{ scale: 0, x: "50%", y: "50%" }}
                                         animate={{
                                             scale: [0, 1, 0],
-                                            x: [`${30 + i * 8}%`, `${10 + i * 14}%`],
-                                            y: [`${30 + (i % 3) * 18}%`, `${15 + (i % 2) * 52}%`],
+                                            x: [`${50 + (Math.random() - 0.5) * 40}%`, `${50 + (Math.random() - 0.5) * 80}%`],
+                                            y: [`${50 + (Math.random() - 0.5) * 40}%`, `${50 + (Math.random() - 0.5) * 80}%`],
                                         }}
                                         transition={{ duration: 1, repeat: Infinity, delay: i * 0.5 }}
                                         className={`absolute w-2 h-2 rounded-full bg-gradient-to-r ${current.color}`}

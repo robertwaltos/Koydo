@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
+import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
-import { hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
-import { Moon } from "lucide-react";
+import { hapticSuccess, hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
+import { Moon, Star, Palette, RefreshCw } from "lucide-react";
 
 export default function ArtisticAlgorithms() {
     const { setMood, setMessage } = useMascot();
@@ -18,7 +20,7 @@ export default function ArtisticAlgorithms() {
     useEffect(() => {
         setMessage("Welcome to the Stellar Canvas. Let's paint with the mathematics of the moon! 🌙✨");
         setMood("happy");
-    }, [setMessage, setMood]);
+    }, []);
 
     // Drawing Logic
     useEffect(() => {

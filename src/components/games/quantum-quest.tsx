@@ -1,10 +1,10 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
-import { Atom, Zap, Maximize, Target, Cpu, Layers } from "lucide-react";
-import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
-import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
+import { motion, AnimatePresence, useDragControls } from "framer-motion";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { Atom, Zap, Maximize, Target, RefreshCcw, ShieldAlert, Cpu, Layers } from "lucide-react";
+import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 
@@ -48,7 +48,7 @@ export default function QuantumQuest() {
         setMessage("Quantum stability critical. Deploy particles to balance the gravity wells! ⚛️");
     }, [setMessage, setMood]);
 
-    const deployParticle = (type: QuantumParticle["type"]) => {
+    const deployParticle = (type: QuantumParticle["type"], x: number, y: number) => {
         if (energyLevel <= 0 || gameState !== "PLAYING") return;
 
         const charges = { electron: -1, photon: 0, quark: 1 };
@@ -244,7 +244,7 @@ export default function QuantumQuest() {
                 <div className="mt-8 flex gap-6">
                     <div className="flex flex-col items-center gap-2">
                         <PhysicalButton
-                            onClick={() => deployParticle('quark')}
+                            onClick={() => deployParticle('quark', 50, 80)}
                             className="w-24 h-24 rounded-3xl bg-sky-500/10 border border-sky-500/30 text-sky-400 hover:bg-sky-500/20"
                         >
                             <Cpu className="w-8 h-8" />
@@ -254,7 +254,7 @@ export default function QuantumQuest() {
 
                     <div className="flex flex-col items-center gap-2">
                         <PhysicalButton
-                            onClick={() => deployParticle('photon')}
+                            onClick={() => deployParticle('photon', 50, 80)}
                             className="w-24 h-24 rounded-3xl bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500/20"
                         >
                             <Zap className="w-8 h-8" />
@@ -264,7 +264,7 @@ export default function QuantumQuest() {
 
                     <div className="flex flex-col items-center gap-2">
                         <PhysicalButton
-                            onClick={() => deployParticle('electron')}
+                            onClick={() => deployParticle('electron', 50, 80)}
                             className="w-24 h-24 rounded-3xl bg-rose-500/10 border border-rose-500/30 text-rose-400 hover:bg-rose-500/20"
                         >
                             <Maximize className="w-8 h-8" />

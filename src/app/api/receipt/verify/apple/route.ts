@@ -10,7 +10,6 @@ import {
   recordLanguageExamUnlockPurchase,
 } from "@/lib/language-learning";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
-import { serverEnv } from "@/lib/config/env";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
@@ -19,62 +18,10 @@ const requestSchema = z.object({
   studentProfileId: z.string().uuid().optional(),
 });
 
-/* ── RevenueCat server-side subscriber lookup ── */
+const ENABLE_RECEIPT_PLACEHOLDER =
+  process.env.ENABLE_IAP_RECEIPT_PLACEHOLDER === "1"
+  && process.env.NODE_ENV !== "production";
 
-type VerificationResult =
-  | { verified: true; mode: "revenuecat" | "optimistic" }
-  | { verified: false; reason: string };
-
-async function verifyViaRevenueCat(userId: string): Promise<VerificationResult> {
-  const apiKey = serverEnv.REVENUECAT_API_SECRET_KEY;
-  if (!apiKey) {
-    // No REST key configured — fall back to optimistic mode.
-    // The RevenueCat webhook will reconcile the purchase state.
-    return { verified: true, mode: "optimistic" };
-  }
-
-  try {
-    const res = await fetch(
-      `https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(userId)}`,
-      {
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-        },
-      },
-    );
-
-    if (!res.ok) {
-      // RevenueCat may return 404 for new users — treat as optimistic
-      if (res.status === 404) {
-        return { verified: true, mode: "optimistic" };
-      }
-      return { verified: false, reason: `RevenueCat returned ${res.status}` };
-    }
-
-    const data = await res.json();
-    const entitlements = data?.subscriber?.entitlements ?? {};
-    const hasActive = Object.values(entitlements).some(
-      (e: unknown) =>
-        typeof e === "object" &&
-        e !== null &&
-        "expires_date" in e &&
-        (e as { expires_date: string | null }).expires_date === null ||
-        new Date((e as { expires_date: string }).expires_date) > new Date(),
-    );
-
-    // Even if they don't have an active subscription entitlement,
-    // a one-time purchase (exam unlock) won't appear as an entitlement.
-    // Accept the purchase — the receipt data hash provides dedup.
-    return { verified: true, mode: hasActive ? "revenuecat" : "optimistic" };
-  } catch (err) {
-    console.error("[receipt/apple] RevenueCat lookup failed:", toSafeErrorRecord(err));
-    // Network error — fall back to optimistic to avoid blocking the user
-    return { verified: true, mode: "optimistic" };
-  }
-}
-
-// rate-limit:api:billing:receipt-verify-apple
 export async function POST(request: Request) {
   const rateLimit = await enforceIpRateLimit(request, "api:billing:receipt-verify-apple", {
     max: 30,
@@ -87,6 +34,16 @@ export async function POST(request: Request) {
         status: 429,
         headers: { "Retry-After": String(rateLimit.retryAfterSeconds) },
       },
+    );
+  }
+
+  if (!ENABLE_RECEIPT_PLACEHOLDER) {
+    return NextResponse.json(
+      {
+        error:
+          "Apple receipt verification endpoint is not enabled in this environment.",
+      },
+      { status: 501 },
     );
   }
 
@@ -124,15 +81,7 @@ export async function POST(request: Request) {
     }
   }
 
-  /* ── Server-side verification via RevenueCat ── */
-  const verification = await verifyViaRevenueCat(user.id);
-  if (!verification.verified) {
-    return NextResponse.json(
-      { error: "Receipt verification rejected", reason: verification.reason },
-      { status: 403 },
-    );
-  }
-
+  // Placeholder verification flow: normalize into same purchase path.
   const receiptHash = createHash("sha256")
     .update(`apple:${payload.data.receiptData}:${user.id}:${payload.data.level}`)
     .digest("hex");
@@ -154,7 +103,7 @@ export async function POST(request: Request) {
       currency: quote.currency,
       provider: "apple",
       metadata: {
-        receiptVerification: verification.mode,
+        receiptVerification: "placeholder",
         receiptHashPrefix: receiptHash.slice(0, 16),
       },
     });
@@ -166,7 +115,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      verificationMode: verification.mode,
+      verificationMode: "placeholder_not_live",
       provider: "apple",
       eventId: providerTxId,
       purchase,
@@ -179,9 +128,11 @@ export async function POST(request: Request) {
         { status: 503 },
       );
     }
-    console.error("[receipt/apple] verification failed:", toSafeErrorRecord(error));
+    console.error("Apple receipt verification failed.", toSafeErrorRecord(error));
     return NextResponse.json(
-      { error: "Apple receipt verification failed." },
+      {
+        error: "Apple receipt verification failed.",
+      },
       { status: 500 },
     );
   }

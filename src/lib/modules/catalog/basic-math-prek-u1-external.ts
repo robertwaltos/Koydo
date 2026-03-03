@@ -12,7 +12,6 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
   ],
   "minAge": 3,
   "maxAge": 5,
-  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": [
@@ -36,7 +35,7 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
     "sourceUnitId": "basic-math-prek-u1",
     "sourceUnitIdCanonical": "basic-math-prek-u1",
     "sourceUnitIdRaw": "basic_math-prek-u1",
-    "importedAt": "2026-03-02T20:55:19.825Z"
+    "importedAt": "2026-02-25T02:03:30.456Z"
   },
   "external": {
     "unitOrder": 11,

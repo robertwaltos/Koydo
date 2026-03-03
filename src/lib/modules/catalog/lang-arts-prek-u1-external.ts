@@ -12,7 +12,6 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
   ],
   "minAge": 3,
   "maxAge": 5,
-  "moduleVersion": "external-1.0.0",
   "version": "external-1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": [
@@ -36,7 +35,7 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
     "sourceUnitId": "lang-arts-prek-u1",
     "sourceUnitIdCanonical": "lang-arts-prek-u1",
     "sourceUnitIdRaw": "lang_arts-prek-u1",
-    "importedAt": "2026-03-02T20:55:19.797Z"
+    "importedAt": "2026-02-25T02:06:11.933Z"
   },
   "external": {
     "unitOrder": 5,

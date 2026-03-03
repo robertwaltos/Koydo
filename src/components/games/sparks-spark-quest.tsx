@@ -7,8 +7,12 @@ import {
     Building2,
     Construction,
     Calculator,
+    Activity,
     Battery,
+    ArrowRight,
+    CheckCircle2,
     Lightbulb,
+    Cpu
 } from "lucide-react";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";

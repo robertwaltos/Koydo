@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
+import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
+import JuicyStreak from "@/components/experience/JuicyStreak";
 import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
 import { ShieldCheck, Users, Globe, Cpu } from "lucide-react";
 
@@ -60,7 +62,7 @@ export default function EthicalEngine() {
     const { setMood, setMessage } = useMascot();
     const [scenarioIdx, setScenarioIdx] = useState(0);
     const [stats, setStats] = useState({ morale: 50, resources: 50, logic: 50 });
-    const [, setHistory] = useState<string[]>([]);
+    const [history, setHistory] = useState<string[]>([]);
     const [showResult, setShowResult] = useState(false);
 
     const currentScenario = SCENARIOS[scenarioIdx];
@@ -68,7 +70,7 @@ export default function EthicalEngine() {
     useEffect(() => {
         setMessage("Welcome to the Ethical Engine. Let's calculate the optimal path for humanity. 🤖💻");
         setMood("idle");
-    }, [setMessage, setMood]);
+    }, []);
 
     const handleChoice = (choiceIdx: number) => {
         const choice = currentScenario.choices[choiceIdx];

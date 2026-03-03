@@ -1,25 +1,24 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import MascotFriend from "./KoydoMascotFriends";
 import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
-import { Brain, Flame, Atom, Palette, Cpu, Rocket, ShieldCheck, Beaker, Zap, Box, Search, ChevronRight, Code, Leaf, TrendingUp, Globe, TreePine, Music, Mountain, Bot, Wind, History as HistoryIcon, Microscope, Navigation, Grid3X3, ShieldAlert, Scale, Compass, Construction, Lock, BookOpen, CircuitBoard } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { Brain, Flame, Atom, Palette, Cpu, Rocket, ShieldCheck, Beaker, Zap, Box, Search, ChevronRight, Code, Leaf, TrendingUp, Globe, TreePine, Music, Mountain, Bot, Wind, History as HistoryIcon, Microscope, Navigation, Grid3X3, ShieldAlert, Scale, Compass, Building2, Construction, Lock, BookOpen, CircuitBoard } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 interface PlanetNode {
     id: string;
     name: string;
-    icon: LucideIcon;
+    icon: any;
     color: string;
     accent: string;
     x: number;
     y: number;
     mascot: "pixel" | "spark" | "echo" | "luna" | "terra";
     progress: number;
-    games: { id: string; title: string; icon: LucideIcon }[];
+    games: { id: string; title: string; icon: any }[];
 }
 
 const PLANETS: PlanetNode[] = [
@@ -223,10 +222,8 @@ export default function GalaxyMap() {
                         {/* The Planet Visual */}
                         <div className={`relative w-24 h-24 rounded-full shadow-2xl overflow-hidden cursor-pointer group-hover:ring-4 ring-white/20 transition-all`}>
                             {planet.id === "math" ? (
-                                <Image
+                                <img
                                     src="/assets/experience/math-planet.png"
-                                    fill
-                                    sizes="96px"
                                     className="w-full h-full object-cover"
                                     alt={planet.name}
                                 />

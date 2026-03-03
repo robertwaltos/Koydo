@@ -10,7 +10,6 @@ import {
   recordLanguageExamUnlockPurchase,
 } from "@/lib/language-learning";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
-import { serverEnv } from "@/lib/config/env";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z.object({
@@ -21,55 +20,9 @@ const requestSchema = z.object({
   studentProfileId: z.string().uuid().optional(),
 });
 
-/* ── RevenueCat server-side subscriber lookup ── */
-
-type VerificationResult =
-  | { verified: true; mode: "revenuecat" | "optimistic" }
-  | { verified: false; reason: string };
-
-async function verifyViaRevenueCat(userId: string): Promise<VerificationResult> {
-  const apiKey = serverEnv.REVENUECAT_API_SECRET_KEY;
-  if (!apiKey) {
-    // No REST key configured — fall back to optimistic mode.
-    // The RevenueCat webhook will reconcile the purchase state.
-    return { verified: true, mode: "optimistic" };
-  }
-
-  try {
-    const res = await fetch(
-      `https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(userId)}`,
-      {
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-        },
-      },
-    );
-
-    if (!res.ok) {
-      if (res.status === 404) {
-        return { verified: true, mode: "optimistic" };
-      }
-      return { verified: false, reason: `RevenueCat returned ${res.status}` };
-    }
-
-    const data = await res.json();
-    const entitlements = data?.subscriber?.entitlements ?? {};
-    const hasActive = Object.values(entitlements).some(
-      (e: unknown) =>
-        typeof e === "object" &&
-        e !== null &&
-        "expires_date" in e &&
-        (e as { expires_date: string | null }).expires_date === null ||
-        new Date((e as { expires_date: string }).expires_date) > new Date(),
-    );
-
-    return { verified: true, mode: hasActive ? "revenuecat" : "optimistic" };
-  } catch (err) {
-    console.error("[receipt/google] RevenueCat lookup failed:", toSafeErrorRecord(err));
-    return { verified: true, mode: "optimistic" };
-  }
-}
+const ENABLE_RECEIPT_PLACEHOLDER =
+  process.env.ENABLE_IAP_RECEIPT_PLACEHOLDER === "1"
+  && process.env.NODE_ENV !== "production";
 
 function inferLevelFromProductId(
   productId: string,
@@ -80,7 +33,6 @@ function inferLevelFromProductId(
   return "beginner";
 }
 
-// rate-limit:api:billing:receipt-verify-google
 export async function POST(request: Request) {
   const rateLimit = await enforceIpRateLimit(request, "api:billing:receipt-verify-google", {
     max: 30,
@@ -93,6 +45,16 @@ export async function POST(request: Request) {
         status: 429,
         headers: { "Retry-After": String(rateLimit.retryAfterSeconds) },
       },
+    );
+  }
+
+  if (!ENABLE_RECEIPT_PLACEHOLDER) {
+    return NextResponse.json(
+      {
+        error:
+          "Google receipt verification endpoint is not enabled in this environment.",
+      },
+      { status: 501 },
     );
   }
 
@@ -130,16 +92,8 @@ export async function POST(request: Request) {
     }
   }
 
-  /* ── Server-side verification via RevenueCat ── */
-  const verification = await verifyViaRevenueCat(user.id);
-  if (!verification.verified) {
-    return NextResponse.json(
-      { error: "Receipt verification rejected", reason: verification.reason },
-      { status: 403 },
-    );
-  }
-
   const level = payload.data.level ?? inferLevelFromProductId(payload.data.productId);
+  // Placeholder verification flow: normalize into same purchase path.
   const receiptHash = createHash("sha256")
     .update(
       `google:${payload.data.packageName}:${payload.data.productId}:${payload.data.purchaseToken}:${user.id}:${level}`,
@@ -163,7 +117,7 @@ export async function POST(request: Request) {
       currency: quote.currency,
       provider: "google",
       metadata: {
-        receiptVerification: verification.mode,
+        receiptVerification: "placeholder",
         packageName: payload.data.packageName,
         productId: payload.data.productId,
         receiptHashPrefix: receiptHash.slice(0, 16),
@@ -177,7 +131,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      verificationMode: verification.mode,
+      verificationMode: "placeholder_not_live",
       provider: "google",
       eventId: providerTxId,
       purchase,
@@ -190,9 +144,11 @@ export async function POST(request: Request) {
         { status: 503 },
       );
     }
-    console.error("[receipt/google] verification failed:", toSafeErrorRecord(error));
+    console.error("Google receipt verification failed.", toSafeErrorRecord(error));
     return NextResponse.json(
-      { error: "Google receipt verification failed." },
+      {
+        error: "Google receipt verification failed.",
+      },
       { status: 500 },
     );
   }

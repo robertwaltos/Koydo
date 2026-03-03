@@ -1,39 +1,35 @@
 # Knowledgebase Domain Coverage Report
 
-Generated: 2026-03-02T20:54:45.649Z
+Generated: 2026-02-26T06:15:41.597Z
 
 ## Summary
 
-- Documents scanned: 127
-- Documents with domain matches: 83
-- Documents matched by text: 52
+- Documents scanned: 123
+- Documents with domain matches: 71
+- Documents matched by text: 40
 - Documents matched by metadata tags: 43
-- Domains with at least one document: 21
+- Domains with at least one document: 17
 - Domains with no documents yet: 0
 
 ## Domain Counts
 
 - law: 17 docs (max score 5)
 - data-science: 15 docs (max score 100)
-- ai-workflows: 14 docs (max score 4)
 - project-management: 12 docs (max score 32)
 - electricians: 12 docs (max score 28)
 - electrical-engineering: 12 docs (max score 16)
 - microelectronics: 12 docs (max score 2)
 - micro-circuits: 11 docs (max score 12)
 - finance: 10 docs (max score 40)
-- civil-engineering: 9 docs (max score 8)
+- civil-engineering: 8 docs (max score 8)
 - cybersecurity: 8 docs (max score 4)
-- plumbing: 7 docs (max score 3)
-- meteorology: 7 docs (max score 1)
 - ai-ml: 6 docs (max score 128)
 - medicine: 6 docs (max score 96)
 - cpu-gpu-memory-design: 6 docs (max score 6)
 - nursing: 6 docs (max score 2)
-- hvac: 6 docs (max score 1)
-- coding: 3 docs (max score 58)
-- gardening: 2 docs (max score 24)
-- food-science: 2 docs (max score 12)
+- meteorology: 6 docs (max score 1)
+- plumbing: 5 docs (max score 2)
+- hvac: 5 docs (max score 1)
 
 ## Missing Domains
 
@@ -56,14 +52,6 @@ Generated: 2026-03-02T20:54:45.649Z
 - data\knowledgebase\raw\uk-national-curriculum-4569eac8.md (score=9, source=uk-national-curriculum, evidence=text)
 - data\knowledgebase\raw\uk-national-curriculum-227afbf4.md (score=5, source=uk-national-curriculum, evidence=text)
 - data\knowledgebase\raw\acara-australian-curriculum-fb29a030.md (score=3, source=acara-australian-curriculum, evidence=text)
-
-### ai-workflows
-
-- data\knowledgebase\raw\kenya-kicd-55918634.md (score=4, source=kenya-kicd, evidence=text)
-- data\knowledgebase\raw\kenya-kicd-dff3e4fc.md (score=4, source=kenya-kicd, evidence=text)
-- data\knowledgebase\raw\koydo-curated-food-science-techniques-002.md (score=3, source=unknown, evidence=text)
-- data\knowledgebase\raw\acara-australian-curriculum-162d3d5c.md (score=2, source=acara-australian-curriculum, evidence=text)
-- data\knowledgebase\raw\india-cbse-curriculum-496dbb96.md (score=1, source=india-cbse-curriculum, evidence=text)
 
 ### project-management
 
@@ -117,9 +105,9 @@ Generated: 2026-03-02T20:54:45.649Z
 
 - data\knowledgebase\raw\mit-ocw-79b04c31.md (score=8, source=mit-ocw, evidence=text)
 - data\knowledgebase\raw\south-africa-caps-3b0c83dc.md (score=3, source=south-africa-caps, evidence=text)
-- data\knowledgebase\raw\koydo-curated-food-science-foundations-001.md (score=2, source=unknown, evidence=text)
 - data\knowledgebase\raw\india-cbse-curriculum-496dbb96.md (score=1, source=india-cbse-curriculum, evidence=text)
 - data\knowledgebase\raw\kenya-kicd-dff3e4fc.md (score=1, source=kenya-kicd, evidence=text)
+- data\knowledgebase\raw\mit-ocw-42b5ebd8.md (score=1, source=mit-ocw, evidence=text)
 
 ### cybersecurity
 
@@ -128,22 +116,6 @@ Generated: 2026-03-02T20:54:45.649Z
 - data\knowledgebase\raw\mit-ocw-1047b774.md (score=1, source=mit-ocw, evidence=metadata)
 - data\knowledgebase\raw\mit-ocw-61cd4954.md (score=1, source=mit-ocw, evidence=metadata)
 - data\knowledgebase\raw\mit-ocw-7471dc18.md (score=1, source=mit-ocw, evidence=text)
-
-### plumbing
-
-- data\knowledgebase\raw\koydo-curated-gardening-foundations-001.md (score=3, source=unknown, evidence=text)
-- data\knowledgebase\raw\india-cbse-curriculum-496dbb96.md (score=2, source=india-cbse-curriculum, evidence=text)
-- data\knowledgebase\raw\koydo-curated-gardening-irrigation-002.md (score=1, source=unknown, evidence=text)
-- data\knowledgebase\raw\mit-ocw-175714c4.md (score=1, source=mit-ocw, evidence=metadata)
-- data\knowledgebase\raw\mit-ocw-8fc20048.md (score=1, source=mit-ocw, evidence=metadata)
-
-### meteorology
-
-- data\knowledgebase\raw\india-cbse-curriculum-ba1ca818.md (score=1, source=india-cbse-curriculum, evidence=text)
-- data\knowledgebase\raw\india-cbse-curriculum-f73f5af2.md (score=1, source=india-cbse-curriculum, evidence=text)
-- data\knowledgebase\raw\koydo-curated-gardening-foundations-001.md (score=1, source=unknown, evidence=text)
-- data\knowledgebase\raw\mit-ocw-07cff25c.md (score=1, source=mit-ocw, evidence=metadata)
-- data\knowledgebase\raw\mit-ocw-2cdf5706.md (score=1, source=mit-ocw, evidence=metadata)
 
 ### ai-ml
 
@@ -177,26 +149,26 @@ Generated: 2026-03-02T20:54:45.649Z
 - data\knowledgebase\raw\mit-ocw-d0727764.md (score=1, source=mit-ocw, evidence=metadata)
 - data\knowledgebase\raw\mit-ocw-e1d35248.md (score=1, source=mit-ocw, evidence=metadata)
 
+### meteorology
+
+- data\knowledgebase\raw\india-cbse-curriculum-ba1ca818.md (score=1, source=india-cbse-curriculum, evidence=text)
+- data\knowledgebase\raw\india-cbse-curriculum-f73f5af2.md (score=1, source=india-cbse-curriculum, evidence=text)
+- data\knowledgebase\raw\mit-ocw-07cff25c.md (score=1, source=mit-ocw, evidence=metadata)
+- data\knowledgebase\raw\mit-ocw-2cdf5706.md (score=1, source=mit-ocw, evidence=metadata)
+- data\knowledgebase\raw\mit-ocw-480b3448.md (score=1, source=mit-ocw, evidence=metadata)
+
+### plumbing
+
+- data\knowledgebase\raw\india-cbse-curriculum-496dbb96.md (score=2, source=india-cbse-curriculum, evidence=text)
+- data\knowledgebase\raw\mit-ocw-175714c4.md (score=1, source=mit-ocw, evidence=metadata)
+- data\knowledgebase\raw\mit-ocw-8fc20048.md (score=1, source=mit-ocw, evidence=metadata)
+- data\knowledgebase\raw\mit-ocw-9113eba0.md (score=1, source=mit-ocw, evidence=metadata)
+- data\knowledgebase\raw\mit-ocw-b2cf45b8.md (score=1, source=mit-ocw, evidence=metadata)
+
 ### hvac
 
-- data\knowledgebase\raw\koydo-curated-food-science-foundations-001.md (score=1, source=unknown, evidence=text)
 - data\knowledgebase\raw\mit-ocw-1abc9f38.md (score=1, source=mit-ocw, evidence=metadata)
 - data\knowledgebase\raw\mit-ocw-27791380.md (score=1, source=mit-ocw, evidence=metadata)
 - data\knowledgebase\raw\mit-ocw-e28e0d8c.md (score=1, source=mit-ocw, evidence=metadata)
 - data\knowledgebase\raw\mit-ocw-fc206118.md (score=1, source=mit-ocw, evidence=metadata)
-
-### coding
-
-- data\knowledgebase\raw\mit-ocw-79b04c31.md (score=58, source=mit-ocw, evidence=text)
-- data\knowledgebase\raw\south-africa-caps-92d0b6ec.md (score=2, source=south-africa-caps, evidence=text)
-- data\knowledgebase\raw\india-cbse-curriculum-496dbb96.md (score=1, source=india-cbse-curriculum, evidence=text)
-
-### gardening
-
-- data\knowledgebase\raw\koydo-curated-gardening-foundations-001.md (score=24, source=unknown, evidence=text)
-- data\knowledgebase\raw\koydo-curated-gardening-irrigation-002.md (score=11, source=unknown, evidence=text)
-
-### food-science
-
-- data\knowledgebase\raw\koydo-curated-food-science-foundations-001.md (score=12, source=unknown, evidence=text)
-- data\knowledgebase\raw\koydo-curated-food-science-techniques-002.md (score=3, source=unknown, evidence=text)
+- data\knowledgebase\raw\uk-national-curriculum-2ba141c5.md (score=1, source=uk-national-curriculum, evidence=text)

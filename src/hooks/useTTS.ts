@@ -91,7 +91,7 @@ export function useTTS({ voice = "nova", lessonId }: UseTTSOptions = {}): TTSCon
         audio.onended = () => { audioRef.current = null; setIsPlaying(false); };
         audio.onerror = () => { audioRef.current = null; setIsPlaying(false); };
         await audio.play();
-      } catch {
+      } catch (_err) {
         // Silent fallback to browser TTS on any error
         setIsPlaying(false);
         try {

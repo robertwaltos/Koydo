@@ -9,7 +9,7 @@ import JuicyConfetti from "@/components/experience/JuicyConfetti";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import MascotFriend from "@/components/experience/KoydoMascotFriends";
 import { useState } from "react";
-import { Trophy, Rocket, Zap, Flame, Bell, Star } from "lucide-react";
+import { Sparkles, Trophy, Rocket, Heart, Zap, Music, Palette, Leaf, Flame, Bell, Star } from "lucide-react";
 
 type FriendId = "pixel" | "spark" | "echo" | "luna" | "terra";
 
@@ -162,7 +162,7 @@ export default function ExperiencePlayground() {
                         <div className="p-12 rounded-[3.5rem] bg-white dark:bg-stone-900 shadow-2xl border-2 border-stone-50 dark:border-stone-800 mt-8">
                             <h3 className="text-3xl font-black mb-6">World Integration</h3>
                             <p className="max-w-2xl mx-auto text-stone-600 dark:text-stone-400 text-lg leading-relaxed">
-                                In 2026, the mascot isn&apos;t just a static SVG. It&apos;s a **context-aware companion**.
+                                In 2026, the mascot isn't just a static SVG. It's a **context-aware companion**.
                                 Taking a math lesson? **Spark** flies in. Working on art? **Luna** appears to guide your creativity.
                             </p>
                         </div>

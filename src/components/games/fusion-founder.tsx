@@ -1,11 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Zap,
     Atom,
-    Shield
+    Activity,
+    Shield,
+    Thermometer,
+    Settings,
+    Gauge,
+    Flame
 } from "lucide-react";
 import { hapticSuccess, hapticSelection, hapticWarning } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
@@ -17,6 +22,7 @@ import MascotFriend from "../experience/KoydoMascotFriends";
  */
 
 export default function FusionFounder() {
+    const [gameState, setGameState] = useState<"playing" | "success">("playing");
     const [containment, setContainment] = useState(50);
     const [temperature, setTemperature] = useState(100);
     const [isSuccess, setIsSuccess] = useState(false);

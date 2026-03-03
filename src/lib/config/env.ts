@@ -54,8 +54,6 @@ const serverEnvSchema = z.object({
   ORGANIZATION_REPORT_RUNNER_SECRET: z.string().min(16).optional(),
   TESTING_ITEM_HASH_SECRET: z.string().min(16).optional(),
   REVENUECAT_WEBHOOK_SECRET: z.string().min(8).optional(),
-  REVENUECAT_API_SECRET_KEY: z.string().min(8).optional(),
-  STRIPE_WEBHOOK_SIGNATURE_TOLERANCE_SECONDS: z.coerce.number().int().min(0).default(300),
   UPSTASH_REDIS_REST_URL: z.string().url().optional(),
   UPSTASH_REDIS_REST_TOKEN: z.string().min(1).optional(),
   REQUIRE_ADMIN_APPROVALS: z

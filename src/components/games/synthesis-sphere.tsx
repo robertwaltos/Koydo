@@ -3,13 +3,12 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
-import { JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
+import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import JuicyConfetti from "@/components/experience/JuicyConfetti";
 import { hapticSuccess, hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
-import { Atom, Zap, Thermometer } from "lucide-react";
-import Image from "next/image";
+import { Beaker, Atom, Zap, Thermometer } from "lucide-react";
 
 /* --- Synthesis Sphere Content --- */
 type Element = {
@@ -36,6 +35,13 @@ export default function SynthesisSphere() {
     const [streak, setStreak] = useState(0);
     const [showConfetti, setShowConfetti] = useState(false);
 
+    useEffect(() => {
+        setMessage("Welcome to the Synthesis Sphere. Merge elements to discover the secrets of the universe! 🔬✨");
+        setMood("happy");
+        spawnElement();
+        spawnElement();
+    }, []);
+
     const spawnElement = useCallback(() => {
         setGrid(prev => {
             const emptyIndices = prev.map((val, idx) => val === null ? idx : null).filter(val => val !== null) as number[];
@@ -53,14 +59,7 @@ export default function SynthesisSphere() {
         });
     }, []);
 
-    useEffect(() => {
-        setMessage("Welcome to the Synthesis Sphere. Merge elements to discover the secrets of the universe! 🔬✨");
-        setMood("happy");
-        spawnElement();
-        spawnElement();
-    }, [setMessage, setMood, spawnElement]);
-
-    const move = useCallback((direction: "up" | "down" | "left" | "right") => {
+    const move = (direction: "up" | "down" | "left" | "right") => {
         let moved = false;
         let newScore = score;
         let mergedThisTurn = false;
@@ -148,7 +147,7 @@ export default function SynthesisSphere() {
                 setStreak(0);
             }
         }
-    }, [score, spawnElement, setMood, setMessage]);
+    };
 
     // Keyboard listeners
     useEffect(() => {
@@ -160,18 +159,16 @@ export default function SynthesisSphere() {
         };
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [move]);
+    }, [grid]);
 
     return (
         <div className="relative min-h-[700px] w-full flex flex-col items-center justify-center p-8 bg-black overflow-hidden rounded-[3rem] border-4 border-slate-800 shadow-2xl">
             {/* 4K Background Image */}
             <div className="absolute inset-0 opacity-40">
-                <Image
+                <img
                     src="/neural_synthesis_lab_bg_1772427420316.png"
                     alt="Synthesis Lab"
-                    fill
-                    sizes="100vw"
-                    className="object-cover blur-sm"
+                    className="w-full h-full object-cover blur-sm"
                 />
             </div>
 

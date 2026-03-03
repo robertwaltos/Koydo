@@ -1,9 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState, useEffect, useMemo } from "react";
-import { TrendingUp, Activity, BarChart3, ArrowUpRight, ArrowDownRight, Briefcase } from "lucide-react";
-import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { TrendingUp, TrendingDown, DollarSign, Activity, BarChart3, PieChart, ArrowUpRight, ArrowDownRight, Briefcase } from "lucide-react";
+import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
@@ -31,6 +31,7 @@ export default function MarketMaker() {
         { symbol: "TECH", name: "Quantum Core", price: 250, history: [250], volatility: 0.4, trend: -0.05 },
         { symbol: "BIO", name: "Genetix Ltd", price: 50, history: [50], volatility: 0.1, trend: 0.02 }
     ]);
+    const [day, setDay] = useState(1);
     const [gameState, setGameState] = useState<"IDLE" | "TRADING" | "CLOSED">("IDLE");
 
     // Market Simulation Loop

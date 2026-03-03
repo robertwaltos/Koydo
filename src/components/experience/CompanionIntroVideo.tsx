@@ -122,7 +122,7 @@ export default function CompanionIntroVideo({ gender, videoUrl, onClose }: Props
               gender === "female" ? "bg-violet-500" : "bg-cyan-500"
             }`}
           >
-            Let&apos;s go →
+            Let's go →
           </button>
         </div>
       </motion.div>

@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
-import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
+import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
-import { hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
+import { hapticSuccess, hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
 import { Rocket, Satellite, BookOpen, Search } from "lucide-react";
 
 /* --- Vocabulary Voyager Content --- */
@@ -48,7 +49,7 @@ export default function VocabularyVoyager() {
     useEffect(() => {
         setMessage("Greetings, Captain! Our engines need semantic fuel. Let's decode these nebulae! 🚀");
         setMood("happy");
-    }, [setMessage, setMood]);
+    }, []);
 
     const handleAnswer = (choice: string) => {
         if (gameState !== "briefing") return;

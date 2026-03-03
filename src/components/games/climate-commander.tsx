@@ -3,8 +3,17 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+    Thermometer,
+    CloudRain,
+    Sun,
+    Wind,
     Globe,
+    Leaf,
+    ArrowUp,
+    ArrowDown,
     Activity,
+    Factory,
+    Waves
 } from "lucide-react";
 import { hapticSuccess, hapticSelection, hapticWarning } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";

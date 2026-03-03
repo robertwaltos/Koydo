@@ -1,14 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+    TreePine,
     Leaf,
     Camera,
     Database,
     CheckCircle2,
-    Info
+    Info,
+    ArrowRight,
+    Search,
+    Wind,
+    Droplets
 } from "lucide-react";
+import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
 
@@ -128,7 +134,7 @@ export default function TerrasTrek() {
                 </AnimatePresence>
 
                 {/* Logged Markers */}
-                {SURVEY_POINTS.map((point) => (
+                {SURVEY_POINTS.map((point, idx) => (
                     loggedPoints.includes(point.id) && (
                         <motion.div
                             key={point.id}

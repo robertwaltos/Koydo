@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { Search, History, Hammer, Brush, Box, Globe } from "lucide-react";
-import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
-import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { Search, Map, ShieldCheck, Info, ChevronRight, Zap, Target, History, Hammer, Brush, Box, Globe } from "lucide-react";
+import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MascotHost from "@/components/experience/MascotHost";
 import {
@@ -64,26 +64,14 @@ import {
 } from "@/components/games";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { Sparkles, Brain, Flame, Rocket, ArrowLeft, Palette, ShieldCheck, Beaker, Zap, Cpu, Box, Search, Leaf, Atom, TrendingUp, Globe, TreePine, Music, Mountain, Bot, Wind, History as HistoryIcon, Microscope, Navigation, Grid3X3, Scale, Compass, Construction, Lock, BookOpen, CircuitBoard, Orbit, Dna, Languages, Clock, Binary, Heart, FlaskConical, Camera, Waves } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 type GameId = "neural" | "fraction" | "vocabulary" | "artistic" | "ethical" | "synthesis" | "velocity" | "logic" | "canvas" | "chronicle" | "syntax" | "genetic" | "quantum" | "market" | "orbit" | "cipher" | "biome" | "rhythm" | "tectonic" | "flora" | "bot" | "eco" | "aero" | "histo" | "nano" | "quantum-quirk" | "star-steer" | "logic-labyrinth" | "bio-blast" | "ethos-engine" | "echo-expedition" | "terra-trek" | "spark-quest" | "pixel-path" | "luna-legend" | "circuit-crusader" | "gravity-goliath" | "protein-painter" | "linguist-lookout" | "fusion-founder" | "stellar-state" | "neural-net" | "climate-commander" | "history-hacker" | "nano-nexus" | "mars-colony" | "quantum-supremacy" | "synthetic-architect" | "global-harmony" | "evolution-prime" | "word-woods" | "story-smith" | "alphabet-airship" | "sentence-safari" | "rhyme-river" | "count-constellations" | "fraction-factory";
 
-interface GameGalleryItem {
-    id: GameId;
-    title: string;
-    mascot: "pixel" | "spark" | "echo" | "luna" | "terra";
-    description: string;
-    icon: LucideIcon;
-    color: string;
-    bg: string;
-    border: string;
-}
-
 export default function NextGenGameGallery() {
     const [activeGame, setActiveGame] = useState<GameId | null>(null);
 
-    const games: GameGalleryItem[] = [
+    const games = [
         {
             id: "neural",
             title: "Neural Navigator",
@@ -763,11 +751,11 @@ export default function NextGenGameGallery() {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: idx * 0.05 }}
                                         className={`relative group h-full p-8 rounded-[3rem] border-2 ${game.bg} ${game.border} backdrop-blur-xl overflow-hidden cursor-pointer hover:border-white/30 transition-all`}
-                                        onClick={() => setActiveGame(game.id)}
+                                        onClick={() => setActiveGame(game.id as any)}
                                     >
                                         <div className="relative z-10 flex flex-col items-center text-center space-y-6">
                                             <div className={`p-6 rounded-3xl ${game.bg} border-2 ${game.border}`}>
-                                                <game.icon className={`${game.color} w-16 h-16`} />
+                                                {React.createElement(game.icon as any, { className: `${game.color} w-16 h-16` })}
                                             </div>
                                             <div>
                                                 <h3 className="text-3xl font-black text-white italic">{game.title}</h3>

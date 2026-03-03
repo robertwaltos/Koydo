@@ -1,13 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
-import { JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
+import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
-import { hapticSelection, hapticError } from "@/lib/platform/haptics";
-import { ArrowUp, ArrowDown, Activity, FastForward } from "lucide-react";
-import Image from "next/image";
+import JuicyStreak from "@/components/experience/JuicyStreak";
+import { hapticSelection, hapticError, hapticSuccess } from "@/lib/platform/haptics";
+import { Zap, ArrowUp, ArrowDown, Activity, FastForward } from "lucide-react";
 
 /* --- Velocity Vector Content --- */
 type Obstacle = {
@@ -33,9 +33,9 @@ export default function VelocityVector() {
     useEffect(() => {
         setMessage("Welcome to the Velocity Vector. Pilot the probe using the power of physics! 🚀⚡");
         setMood("happy");
-    }, [setMessage, setMood]);
+    }, []);
 
-    const spawnObstacle = useCallback(() => {
+    const spawnObstacle = () => {
         const newObstacle: Obstacle = {
             id: Math.random(),
             x: 110,
@@ -45,12 +45,14 @@ export default function VelocityVector() {
             type: ["ice", "metal", "energy"][Math.floor(Math.random() * 3)] as any
         };
         setObstacles(prev => [...prev, newObstacle]);
-    }, []);
+    };
 
-    const update = useCallback((time: number) => {
+    const update = (time: number) => {
         if (gameState !== "playing") return;
 
         if (previousTimeRef.current !== undefined) {
+            const deltaTime = time - previousTimeRef.current;
+
             setObstacles(prev => {
                 const moved = prev.map(o => ({ ...o, x: o.x - 0.5 - (velocity * 0.05) }));
                 const filtered = moved.filter(o => o.x > -20);
@@ -77,7 +79,7 @@ export default function VelocityVector() {
         }
         previousTimeRef.current = time;
         requestRef.current = requestAnimationFrame(update);
-    }, [gameState, positionY, velocity, setMood, setMessage, spawnObstacle]);
+    };
 
     useEffect(() => {
         if (gameState === "playing") {
@@ -86,7 +88,7 @@ export default function VelocityVector() {
             if (requestRef.current) cancelAnimationFrame(requestRef.current);
         }
         return () => { if (requestRef.current) cancelAnimationFrame(requestRef.current); };
-    }, [gameState, update]);
+    }, [gameState, positionY, velocity]);
 
     const startGame = () => {
         setScore(0);
@@ -108,12 +110,10 @@ export default function VelocityVector() {
         <div className="relative min-h-[600px] w-full flex flex-col items-center justify-center p-8 bg-zinc-950 overflow-hidden rounded-[3rem] border-4 border-slate-900 shadow-2xl">
             {/* 4K Background Image */}
             <div className="absolute inset-0 opacity-40">
-                <Image
+                <img
                     src="/neon_velocity_track_bg_1772427504324.png"
                     alt="Velocity Track"
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                 />
             </div>
 

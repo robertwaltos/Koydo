@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { Dna, Leaf, RefreshCw, Trophy } from "lucide-react";
-import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
+import { useState, useEffect, useCallback } from "react";
+import { Sprout, TestTube, Dna, Leaf, RefreshCw, Trophy, Heart, Sparkles } from "lucide-react";
+import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 

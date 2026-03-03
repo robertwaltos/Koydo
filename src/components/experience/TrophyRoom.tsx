@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Trophy, Award, ShieldAlert } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { Star, Trophy, Award, Crown, ShieldAlert } from "lucide-react";
 import { JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection } from "@/lib/platform/haptics";
 
@@ -11,7 +10,7 @@ interface TrophyItem {
     title: string;
     description: string;
     rarity: "common" | "rare" | "epic" | "legendary";
-    icon: LucideIcon;
+    icon: any;
     date: string;
 }
 
