@@ -9,8 +9,8 @@
  * All files live in /public/ so Next.js <Image> can serve them optimised.
  */
 export const ASSETS = {
-  /** Full-width daytime hero on the home page */
-  heroHome: "/generated-images/bg-day-v1.jpg",
+  /** Full-width cinematic hero on the home page (children learning under a tree) */
+  heroHome: "/generated-images/hero-light-03.png",
 
   /** Daytime landscape background for the bottom CTA banner */
   bgBottom: "/generated-images/bg-day-v1.jpg",

@@ -52,6 +52,7 @@ next-env.d.ts
 # Large raw-generation folder is excluded, but specific production assets used
 # by the live site are whitelisted below so Vercel receives them.
 public/generated-images/
+!public/generated-images/hero-light-03.png
 !public/generated-images/bg-day-v1.jpg
 !public/generated-images/hero-light-02.jpg
 !public/generated-images/hero-light-07-v3.jpg

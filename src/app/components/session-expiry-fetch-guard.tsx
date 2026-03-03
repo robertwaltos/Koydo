@@ -11,6 +11,9 @@ const EXCLUDED_API_PATHS = new Set([
   "/api/user/preferences",
   "/api/telemetry/events",
 ]);
+// Public page paths where a 401 from an API call should never redirect to sign-in.
+// Example: the landing page loads locale/preferences even for visitors.
+const PUBLIC_PAGE_PATHS = new Set(["/", "/explore", "/modules"]);
 
 function resolveRequestUrl(input: RequestInfo | URL): URL | null {
   if (typeof window === "undefined") return null;
@@ -38,7 +41,12 @@ export default function SessionExpiryFetchGuard() {
     window.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
       const response = await originalFetch(input, init);
 
-      if (isRedirecting || window.location.pathname.startsWith(AUTH_PATH_PREFIX)) {
+      const currentPath = window.location.pathname;
+      if (
+        isRedirecting ||
+        currentPath.startsWith(AUTH_PATH_PREFIX) ||
+        PUBLIC_PAGE_PATHS.has(currentPath)
+      ) {
         return response;
       }
 

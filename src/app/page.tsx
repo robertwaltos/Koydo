@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { getAllEducationStages } from "@/lib/explorer/scenes";
 import {
@@ -11,6 +12,7 @@ import {
 import SubjectShowcase from "@/app/components/subject-showcase";
 import { ASSETS } from "@/lib/config/assets";
 import VoicePicker from "@/app/explore/_components/voice-picker";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
   title: "Koydo — Learn Anything, Any Age, Any Language",
@@ -24,6 +26,16 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
+  // Logged-in users skip the landing page and go straight to their dashboard.
+  // Unauthenticated visitors always see the public landing page — no redirect.
+  try {
+    const supabase = await createSupabaseServerClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) redirect("/dashboard");
+  } catch {
+    // Supabase env not configured or network error — show landing page anyway.
+  }
+
   const cookieStore = await cookies();
   const localeCookie = cookieStore.get("koydo.locale")?.value ?? "en";
   const locale: Locale = isSupportedLocale(localeCookie) ? localeCookie : "en";
