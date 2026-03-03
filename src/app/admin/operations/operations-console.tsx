@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
 
@@ -275,17 +275,193 @@ const EMPTY_LANGUAGE_PRICE_MAP: LanguagePriceMap = {
   language_school_annual: "",
 };
 
+// ── Console section navigation definition ────────────────────────────────────
+
+type ConsoleSectionDef = { id: string; title: string; description: string; tip?: string };
+type ConsoleCategoryDef = { id: string; label: string; icon: string; sections: ConsoleSectionDef[] };
+
+const CONSOLE_NAV: ConsoleCategoryDef[] = [
+  {
+    id: "system", label: "System Status", icon: "⬡",
+    sections: [
+      { id: "system-health", title: "System Health",
+        description: "An all-in-one view of your platform health. Use this first whenever something seems broken — it combines environment, database, and payment checks in a single summary.",
+        tip: "Green = everything working. Yellow = warnings that may limit some features. Red = a blocking problem needing urgent attention. Click 'Refresh All' to get the latest status." },
+      { id: "env-checks", title: "Environment Checks",
+        description: "Verifies that all required configuration values (such as API keys and connection strings) are correctly set on the server. Missing settings quietly disable features.",
+        tip: "'Warn' means the feature still runs in a reduced mode. 'Fail' means the feature is completely off until the setting is added. A developer can add these in the .env file and redeploy." },
+      { id: "db-status", title: "Database Status",
+        description: "Checks that the database has all the tables the platform needs. A missing table usually means a database update needs to be applied.",
+        tip: "If tables are missing, ask your developer to run 'npx supabase db push'. This applies any pending database structure updates without affecting existing data." },
+      { id: "stripe-webhooks", title: "Payment Webhooks",
+        description: "Monitors whether payment notifications from Stripe are arriving and being processed correctly. This ensures subscriptions, upgrades, and cancellations take effect promptly.",
+        tip: "Failed events mean a billing action may not have reached the user's account. Use 'Mark Stale as Failed' to clean up stuck events, then replay from the Stripe Dashboard if needed." },
+    ],
+  },
+  {
+    id: "users", label: "User Management", icon: "◎",
+    sections: [
+      { id: "create-account", title: "Create Account",
+        description: "Manually create a new user account — useful for setting up admin access, test accounts, or assisting a parent who cannot complete registration on their own.",
+        tip: "Only grant Admin access if this person truly needs to manage platform settings. Granting admin to the wrong person gives full access to this console." },
+      { id: "approvals", title: "Approvals",
+        description: "Some sensitive actions (like deleting a user or issuing a refund) require a pre-approved request. Create and approve the request here, then use its ID when performing the action.",
+        tip: "The approval ID links the action to the approval record. Always create and approve the request before attempting the action — otherwise it will be blocked by the system." },
+      { id: "role-management", title: "Role Management",
+        description: "Change what a user is allowed to do: grant or remove admin access and parent-portal access for any existing account.",
+        tip: "Type UPDATE_ROLES exactly in the confirmation box to prevent accidental changes. Be careful not to remove your own admin access — you would be locked out of this console." },
+      { id: "account-recovery", title: "Account Recovery",
+        description: "Generate a secure password-reset link for a user who is locked out of their account. The link will appear in the result — copy and send it to the user by email.",
+        tip: "The link is single-use and expires quickly. If the user misses it, simply generate a new one here at any time." },
+      { id: "account-reset", title: "Account Reset / Deletion",
+        description: "Reset a learner's progress data, or permanently delete an account. These actions cannot be undone — always verify the correct user ID before proceeding.",
+        tip: "Soft delete hides the account but keeps data for compliance reporting. Hard delete permanently removes everything. For a GDPR erasure request, use hard delete alongside a DSAR record in the Compliance section." },
+    ],
+  },
+  {
+    id: "exam", label: "Exam Operations", icon: "✎",
+    sections: [
+      { id: "exam-maintenance", title: "Exam Maintenance",
+        description: "Automatically find and fix common errors in learners' exam records — such as inconsistent scores or stale attempt data. Always run a Dry Run first to review what would change.",
+        tip: "The Dry Run shows you exactly what would be affected without changing anything. Only click 'Run Apply' once you are satisfied with the dry run results." },
+    ],
+  },
+  {
+    id: "finance", label: "Finance & Billing", icon: "$",
+    sections: [
+      { id: "refunds", title: "Refunds",
+        description: "Issue a partial or full refund for a payment. You need the Stripe payment ID (starts with 'pi_') and a pre-approved refund request ID.",
+        tip: "Leave the amount blank for a full refund. Enter the amount in cents for a partial refund (999 = $9.99). You must create and approve a refund request before using this form." },
+      { id: "promotions", title: "Promotions & Sales",
+        description: "Create discount codes or limited-time sales events. Promo codes are entered by learners at checkout; sales events apply discounts automatically within a date range.",
+        tip: "A promo code is reusable and can be shared publicly. A sales event applies automatically during a set time window — ideal for seasonal promotions." },
+      { id: "pricing", title: "Base Product Pricing",
+        description: "Create a new Stripe price for an existing product. Use this when you need to update the subscription price for a plan.",
+        tip: "Creating a new price does not change existing subscribers — only new checkouts will use it. Tick 'Make this the default checkout price' so all new sign-ups use the updated amount." },
+      { id: "lang-price-map", title: "Language Price Map",
+        description: "Maps each subscription plan to its Stripe Price ID. This controls which Stripe prices are charged when learners subscribe to language learning plans.",
+        tip: "Stripe Price IDs always start with 'price_'. Find them in your Stripe Dashboard under Products. After updating, verify by running a test checkout session." },
+      { id: "lang-runtime", title: "Language Runtime Config",
+        description: "Controls live settings for the language feature — pricing phase, free practice attempts, and default regional pricing tier — without requiring a code deployment.",
+        tip: "Phase 1 is introductory pricing. Phase 2 and 3 progressively increase prices as the feature matures. The geo tier default sets the pricing region shown when a user's location cannot be detected." },
+      { id: "lang-pricing-ladders", title: "Unlock Pricing Ladders",
+        description: "Sets the one-time cost to unlock individual exam levels (Beginner, Intermediate, Advanced) by geographic region. All prices are entered in cents.",
+        tip: "The 5 tiers reflect global purchasing-power differences — Tier 1 is highest (e.g. USA/EU) and Tier 5 is lowest. Enter prices in cents (e.g. 999 = $9.99)." },
+      { id: "lang-reconciliation", title: "Unlock Reconciliation",
+        description: "Checks for and repairs discrepancies between what learners paid for and what their accounts show as unlocked. Runs automatically monthly but can be triggered manually.",
+        tip: "If a learner reports paying for an exam level but not having access, run this reconciliation. 'Drift' means records were out of sync. 'Auto-fixed' means they were corrected automatically." },
+    ],
+  },
+  {
+    id: "support-cat", label: "Support Queue", icon: "✉",
+    sections: [
+      { id: "support-queue", title: "Support Queue",
+        description: "View and manage support tickets submitted by parents or learners. Update each ticket's status as you work through the requests.",
+        tip: "Set tickets to 'In Progress' while investigating and 'Resolved' once the issue is fixed. Closed tickets are archived and no longer shown to the original submitter." },
+    ],
+  },
+];
+
+// ── Info tooltip ──────────────────────────────────────────────────────────────
+
+function InfoTip({ tip }: { tip: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <span className="relative ml-1.5 inline-block align-middle">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="inline-flex h-[18px] w-[18px] items-center justify-center rounded-full bg-blue-100 text-[10px] font-bold text-blue-700 hover:bg-blue-200 transition-colors"
+        aria-label="More information"
+      >
+        ?
+      </button>
+      {open && (
+        <>
+          <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} aria-hidden="true" />
+          <div className="absolute left-0 top-6 z-50 w-72 rounded-xl border border-blue-200 bg-white p-3 text-xs leading-relaxed text-slate-600 shadow-xl">
+            {tip}
+            <button type="button" onClick={() => setOpen(false)} className="mt-2 block text-[10px] text-slate-400 hover:text-slate-600">Close</button>
+          </div>
+        </>
+      )}
+    </span>
+  );
+}
+
+// ── Console secondary nav category ───────────────────────────────────────────
+
+function ConsoleNavCategory({
+  category, selectedId, onSelect, badges,
+}: {
+  category: ConsoleCategoryDef;
+  selectedId: string;
+  onSelect: (id: string) => void;
+  badges: Record<string, number>;
+}) {
+  const hasActive = category.sections.some((s) => s.id === selectedId);
+  const [open, setOpen] = useState(hasActive);
+  return (
+    <div className="mb-1">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="flex w-full items-center justify-between rounded-md px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500 hover:bg-slate-100 hover:text-slate-700 transition-colors"
+        aria-expanded={open}
+      >
+        <span className="flex items-center gap-1.5"><span aria-hidden="true">{category.icon}</span>{category.label}</span>
+        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true" className={`shrink-0 transition-transform duration-150 ${open ? "rotate-180" : ""}`}>
+          <path d="M1 2.5 4 5.5 7 2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </button>
+      {open && (
+        <div className="mt-0.5 space-y-0.5 pl-1 pb-1">
+          {category.sections.map((section) => {
+            const isActive = section.id === selectedId;
+            const badge = badges[section.id] ?? 0;
+            return (
+              <button
+                key={section.id}
+                type="button"
+                onClick={() => onSelect(section.id)}
+                className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-[12px] font-medium transition-colors ${
+                  isActive ? "bg-blue-100 text-blue-900" : "text-slate-600 hover:bg-slate-100 hover:text-slate-800"
+                }`}
+              >
+                <span className="truncate">{section.title}</span>
+                {badge > 0 && (
+                  <span className="ml-1.5 flex h-3.5 min-w-3.5 items-center justify-center rounded-full bg-amber-400 px-1 text-[9px] font-bold text-white">{badge}</span>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Section card ──────────────────────────────────────────────────────────────
+
 function Section({
   title,
+  description,
+  tip,
   children,
 }: {
   title: string;
+  description?: string;
+  tip?: string;
   children: React.ReactNode;
 }) {
   return (
-    <section className="ui-soft-card p-5">
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <div className="mt-4">{children}</div>
+    <section className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="mb-1 flex items-center">
+        <h2 className="text-[15px] font-semibold text-slate-800">{title}</h2>
+        {tip && <InfoTip tip={tip} />}
+      </div>
+      {description && <p className="mb-4 text-sm leading-relaxed text-slate-500">{description}</p>}
+      <div>{children}</div>
     </section>
   );
 }
@@ -871,6 +1047,7 @@ export default function OperationsConsole({
     useState<LanguagePricingAnalyticsReport | null>(null);
   const [languagePricingReportStatus, setLanguagePricingReportStatus] = useState("");
   const [languagePricingReportBusy, setLanguagePricingReportBusy] = useState(false);
+  const [selectedSectionId, setSelectedSectionId] = useState("system-health");
 
   const activeTicketCount = useMemo(
     () => tickets.filter((ticket) => ticket.status === "open" || ticket.status === "in_progress").length,
@@ -1660,17 +1837,37 @@ export default function OperationsConsole({
   ]);
 
   return (
-    <div className="space-y-6">
-      <div className="ui-soft-card rounded-2xl border border-indigo-300 bg-indigo-50 px-4 py-3 text-sm text-indigo-900">
-        Active support tickets: {activeTicketCount}
-      </div>
-      {status ? (
-        <div className="rounded-2xl border border-border bg-surface-muted px-4 py-3 text-sm">
-          {status}
-        </div>
-      ) : null}
+    <div className="flex h-full min-h-0" style={{ colorScheme: "light" }}>
+      {/* ── Secondary console navigation ── */}
+      <aside className="w-52 shrink-0 overflow-y-auto border-r border-slate-200 bg-slate-50 py-3 px-2">
+        {CONSOLE_NAV.map((cat) => (
+          <ConsoleNavCategory
+            key={cat.id}
+            category={cat}
+            selectedId={selectedSectionId}
+            onSelect={setSelectedSectionId}
+            badges={{
+              "support-queue": activeTicketCount,
+              "exam-maintenance": openExamMaintenanceAlerts + unacknowledgedRunSummaries,
+              "env-checks": envReadinessIssues.length,
+              "db-status": dbReadinessIssues.length,
+              "stripe-webhooks": hasStripeWebhookIssues ? 1 : 0,
+            }}
+          />
+        ))}
+      </aside>
 
-      <Section title="System Health">
+      {/* ── Content area ── */}
+      <div className="flex-1 overflow-y-auto">
+        <div className="mx-auto max-w-4xl p-6 space-y-4">
+          {status ? (
+            <div className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 shadow-sm">
+              {status}
+            </div>
+          ) : null}
+
+          {selectedSectionId === "system-health" && (<Section title="System Health" description="An all-in-one view of your platform health. Use this first whenever something seems broken — it combines environment, database, and payment checks in a single summary." tip="Green = everything working. Yellow = warnings that may limit some features. Red = a blocking problem needing urgent attention. Click 'Refresh All' to get the latest status.">
+
         <div
           className={`mb-3 rounded-md border px-3 py-2 text-sm ${
             systemBlockingIssues > 0
@@ -1771,8 +1968,9 @@ export default function OperationsConsole({
           </div>
         )}
       </Section>
+      )}
 
-      <Section title="Environment Readiness">
+      {selectedSectionId === "env-checks" && (<Section title="Environment Readiness" description="Verifies that all required configuration values (such as API keys and connection strings) are correctly set on the server. Missing settings quietly disable features." tip="Warn means the feature still runs in a reduced mode. Fail means the feature is completely off until the setting is added. A developer can add these in the .env file and redeploy.">
         <div
           className={`mb-3 rounded-md border px-3 py-2 text-sm ${
             envReadiness.totals.fail > 0
@@ -1845,8 +2043,9 @@ export default function OperationsConsole({
           </div>
         )}
       </Section>
+      )}
 
-      <Section title="Stripe Webhook Health">
+      {selectedSectionId === "stripe-webhooks" && (<Section title="Stripe Webhook Health" description="Monitors whether payment notifications from Stripe are arriving and being processed correctly. This ensures subscriptions, upgrades, and cancellations take effect promptly." tip="Failed events mean a billing action may not have reached the user account. Use Mark Stale as Failed to clean up stuck events, then replay from the Stripe Dashboard if needed.">
         <div
           className={`mb-3 rounded-md border px-3 py-2 text-sm ${
             hasStripeWebhookIssues
@@ -1947,8 +2146,9 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      )}
 
-      <Section title="Database Readiness">
+      {selectedSectionId === "db-status" && (<Section title="Database Readiness" description="Checks that the database has all the tables the platform needs. A missing table usually means a database update needs to be applied." tip="If tables are missing, ask your developer to run 'npx supabase db push'. This applies any pending database structure updates without affecting existing data.">
         <div
           className={`mb-3 rounded-md border px-3 py-2 text-sm ${
             dbReadiness.healthy
@@ -2017,8 +2217,9 @@ export default function OperationsConsole({
           </div>
         )}
       </Section>
+      )}
 
-      <Section title="Create Account">
+      {selectedSectionId === "create-account" && (<Section title="Create Account" description="Manually create a new user account — useful for setting up admin access, test accounts, or assisting a parent who cannot complete registration on their own." tip="Only grant Admin access if this person truly needs to manage platform settings. Granting admin to the wrong person gives full access to this console.">
         <form onSubmit={handleCreateUser} className="grid gap-3 md:grid-cols-2">
           <input name="email" type="email" placeholder="email@example.com" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <input name="password" type="password" placeholder="Temporary password" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
@@ -2034,8 +2235,9 @@ export default function OperationsConsole({
           <button type="submit" className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm text-white">Create User</button>
         </form>
       </Section>
+      )}
 
-      <Section title="Approvals">
+      {selectedSectionId === "approvals" && (<Section title="Approvals" description="Some sensitive actions (like deleting a user or issuing a refund) require a pre-approved request first. Create and approve the request here, then use its ID when performing the action." tip="The approval ID links the action to the approval record. Always create and approve the request before attempting the action — otherwise it will be blocked by the system.">
         {approvalStatus ? <p className="mb-3 text-sm text-zinc-600">{approvalStatus}</p> : null}
         <form onSubmit={handleCreateApprovalRequest} className="mb-4 grid gap-3 md:grid-cols-2">
           <select name="actionType" aria-label="Approval action type" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
@@ -2066,11 +2268,13 @@ export default function OperationsConsole({
           </button>
         </form>
       </Section>
+      )}
 
-      <Section title="Exam Maintenance">
-        <div className="mb-3 rounded-md border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-900">
-          Open exam-maintenance failure alerts: {openExamMaintenanceAlerts} | unacknowledged run summaries:{" "}
-          {unacknowledgedRunSummaries}
+      {selectedSectionId === "exam-maintenance" && (<Section title="Exam Maintenance" description="Automatically find and fix common errors in learners' exam records — such as inconsistent scores or stale attempt data. Always run a Dry Run first to review what would change." tip="The Dry Run shows exactly what would be affected without changing anything. Only click Run Apply once you are satisfied with the dry run results.">
+        <div className={`mb-3 rounded-md border px-3 py-2 text-sm ${openExamMaintenanceAlerts === 0 && unacknowledgedRunSummaries === 0 ? "border-emerald-300 bg-emerald-50 text-emerald-900" : "border-amber-300 bg-amber-50 text-amber-900"}`}>
+          {openExamMaintenanceAlerts === 0 && unacknowledgedRunSummaries === 0
+            ? "No open alerts and no unacknowledged run summaries — everything looks clean."
+            : `Open exam-maintenance failure alerts: ${openExamMaintenanceAlerts} | unacknowledged run summaries: ${unacknowledgedRunSummaries}`}
         </div>
         {examMaintenanceStatus ? (
           <p className="mb-3 text-sm text-zinc-700">{examMaintenanceStatus}</p>
@@ -2286,8 +2490,9 @@ export default function OperationsConsole({
           )}
         </div>
       </Section>
+      )}
 
-      <Section title="Role Management">
+      {selectedSectionId === "role-management" && (<Section title="Role Management" description="Change what a user is allowed to do: grant or remove admin access and parent-portal access for any existing account." tip="Type UPDATE_ROLES exactly in the confirmation box to prevent accidental changes. Be careful not to remove your own admin access.">
         <form onSubmit={handleUpdateRoles} className="grid gap-3 md:grid-cols-2">
           <input name="userId" placeholder="User UUID" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2" required />
           <label className="flex items-center gap-2 text-sm">
@@ -2309,15 +2514,17 @@ export default function OperationsConsole({
           </button>
         </form>
       </Section>
+      )}
 
-      <Section title="Account Recovery">
+      {selectedSectionId === "account-recovery" && (<Section title="Account Recovery" description="Generate a secure password-reset link for a user who is locked out of their account. The link will appear in the result — copy and send it to the user by email." tip="The link is single-use and expires quickly. If the user misses it, simply generate a new one here at any time.">
         <form onSubmit={handleResetPassword} className="flex flex-wrap gap-3">
           <input name="email" type="email" placeholder="User email" className="min-w-80 ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Generate Password Reset Link</button>
         </form>
       </Section>
+      )}
 
-      <Section title="Account Reset / Deletion">
+      {selectedSectionId === "account-reset" && (<Section title="Account Reset / Deletion" description="Reset a learner's progress data, or permanently delete an account. These actions cannot be undone — always verify the correct user ID before proceeding." tip="Soft delete hides the account but keeps data for compliance reporting. Hard delete permanently removes everything. For a GDPR erasure request, use hard delete alongside a DSAR record in Compliance.">
         <form onSubmit={handleResetProgress} className="mb-4 flex flex-wrap gap-3">
           <input name="userId" placeholder="User UUID" className="min-w-80 ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <select name="scope" aria-label="Reset scope" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
@@ -2354,8 +2561,9 @@ export default function OperationsConsole({
           <button type="submit" className="ui-soft-button ui-focus-ring rounded-md bg-red-600 px-4 py-2 text-sm text-white">Delete User</button>
         </form>
       </Section>
+      )}
 
-      <Section title="Refunds">
+      {selectedSectionId === "refunds" && (<Section title="Refunds" description="Issue a partial or full refund for a payment. You need the Stripe payment ID (starts with pi_) and a pre-approved refund request ID." tip="Leave the amount blank for a full refund. Enter the amount in cents for a partial refund (999 = 9.99). You must create and approve a refund request before using this form.">
         <form onSubmit={handleRefund} className="grid gap-3 md:grid-cols-3">
           <input name="paymentIntentId" placeholder="pi_..." className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2" required />
           <input name="amountCents" type="number" min={0} placeholder="Amount cents (optional)" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" />
@@ -2379,8 +2587,9 @@ export default function OperationsConsole({
           <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Process Refund</button>
         </form>
       </Section>
+      )}
 
-      <Section title="Promotions and Sales">
+      {selectedSectionId === "promotions" && (<Section title="Promotions and Sales" description="Create discount codes or limited-time sales events. Promo codes are entered by learners at checkout; sales events apply discounts automatically within a date range." tip="A promo code is reusable and can be shared publicly. A sales event applies automatically during a set time window — ideal for seasonal promotions.">
         <form onSubmit={handlePromoCode} className="mb-4 grid gap-3 md:grid-cols-3">
           <input name="code" placeholder="PROMO2026" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <input name="percentOff" type="number" min={1} max={100} placeholder="Percent off" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
@@ -2400,8 +2609,9 @@ export default function OperationsConsole({
           <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm md:col-span-4">Create Sales Event</button>
         </form>
       </Section>
+      )}
 
-      <Section title="Pricing">
+      {selectedSectionId === "pricing" && (<Section title="Pricing" description="Create a new Stripe price for an existing product. Use this when you need to update the subscription price for a plan." tip="Creating a new price does not change existing subscribers — only new checkouts will use it. Tick Make this the default checkout price so all new sign-ups use the updated amount.">
         <form onSubmit={handleSetPrice} className="grid gap-3 md:grid-cols-3">
           <input name="productId" placeholder="prod_..." className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <input name="monthlyPriceUsd" type="number" step="0.01" min={0.01} placeholder="Monthly USD" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
@@ -2425,8 +2635,9 @@ export default function OperationsConsole({
           <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Create Price</button>
         </form>
       </Section>
+      )}
 
-      <Section title="Language Price Map">
+      {selectedSectionId === "lang-price-map" && (<Section title="Language Price Map" description="Maps each subscription plan to its Stripe Price ID. This controls which Stripe prices are charged when learners subscribe to language learning plans." tip="Stripe Price IDs always start with price_. Find them in your Stripe Dashboard under Products. After updating, verify by running a test checkout session.">
         <p className="mb-3 text-sm text-zinc-600">
           Configure per-plan Stripe Price IDs used by language checkout (`stripe_language_price_ids` in
           `app_settings`).
@@ -2539,8 +2750,9 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      )}
 
-      <Section title="Language Runtime Config">
+      {selectedSectionId === "lang-runtime" && (<Section title="Language Runtime Config" description="Controls live settings for the language feature — pricing phase, free practice attempts, and default regional pricing tier — without requiring a code deployment." tip="Phase 1 is introductory pricing. Phase 2 and 3 progressively increase prices as the feature matures. The geo tier default sets the pricing region shown when a user location cannot be detected.">
         <p className="mb-3 text-sm text-zinc-600">
           Control phase/profile/cap defaults in runtime (`language_pricing_runtime` in
           `app_settings`) without redeploying.
@@ -2687,8 +2899,9 @@ export default function OperationsConsole({
           <p className="mt-2 text-sm text-zinc-700">{languageRuntimeStatus}</p>
         ) : null}
       </Section>
+      )}
 
-      <Section title="Language Unlock Pricing Ladders">
+      {selectedSectionId === "lang-pricing-ladders" && (<Section title="Language Unlock Pricing Ladders" description="Sets the one-time cost to unlock individual exam levels (Beginner, Intermediate, Advanced) by geographic region. All prices are entered in cents." tip="The 5 tiers reflect global purchasing-power differences — Tier 1 is highest (e.g. USA/EU) and Tier 5 is lowest. Enter prices in cents (999 = 9.99).">
         <p className="mb-3 text-sm text-zinc-600">
           Manage geo-tier one-time exam unlock pricing (stored in `pricing_ladders`).
         </p>
@@ -2809,8 +3022,9 @@ export default function OperationsConsole({
           <p className="mt-3 text-sm text-zinc-700">{languageUnlockPricingStatus}</p>
         ) : null}
       </Section>
+      )}
 
-      <Section title="Language Unlock Reconciliation">
+      {selectedSectionId === "lang-reconciliation" && (<Section title="Language Unlock Reconciliation" description="Checks for and repairs discrepancies between what learners paid for and what their accounts show as unlocked. Runs automatically monthly but can be triggered manually." tip="If a learner reports paying for an exam level but not having access, run this reconciliation. Drift means records were out of sync. Auto-fixed means they were corrected automatically.">
         <p className="mb-3 text-sm text-zinc-600">
           Run ledger-to-usage reconciliation for exam unlock attempts and queue unresolved drift.
         </p>
@@ -2889,8 +3103,9 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      )}
 
-      <Section title="Support Queue">
+      {selectedSectionId === "support-queue" && (<Section title="Support Queue" description="View and manage support tickets submitted by parents or learners. Update each ticket status as you work through the requests." tip="Set tickets to In Progress while investigating and Resolved once the issue is fixed. Closed tickets are archived and no longer shown to the original submitter.">
         <div className="space-y-3">
           {tickets.map((ticket) => (
             <div key={ticket.id} className="rounded-2xl border border-border p-3">
@@ -2926,6 +3141,9 @@ export default function OperationsConsole({
           {tickets.length === 0 ? <p className="text-sm text-zinc-500">No support tickets in queue.</p> : null}
         </div>
       </Section>
+      )}
+        </div>
+      </div>
     </div>
   );
 }

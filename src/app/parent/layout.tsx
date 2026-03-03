@@ -17,6 +17,7 @@ const PARENT_NAV: DashNavGroup[] = [
       { href: "/parent/compliance",  label: "Privacy & Data",  icon: "◎" },
       { href: "/account/settings",   label: "Account Settings", icon: "⚙" },
       { href: "/billing/language",   label: "Billing",          icon: "$" },
+      { href: "/parent/support",     label: "Support",          icon: "✉" },
     ],
   },
 ];

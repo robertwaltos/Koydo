@@ -37,6 +37,7 @@ export const requiredDbTables = [
   "exam_unlock_purchases",
   "transaction_ledger",
   "reconciliation_queue",
+  "generated_module_sessions",
 ] as const;
 
 export type DbReadinessStatus = "present" | "missing" | "error";

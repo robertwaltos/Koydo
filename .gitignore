@@ -74,3 +74,4 @@ public/Grok Assets/
 
 .vercel
 .env*.local
+.claude/

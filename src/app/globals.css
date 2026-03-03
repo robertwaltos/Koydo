@@ -1400,3 +1400,12 @@ samp {
 [data-platform="web"] .native-only {
   display: none !important;
 }
+
+/* ── Admin / backend: raise minimum input height by ~5px ──
+   Smallest text inputs in admin consoles use py-1 (4px) which
+   can feel tight. This floor ensures comfortable click targets. */
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="submit"]):not([type="button"]),
+select,
+textarea {
+  min-height: 32px;
+}

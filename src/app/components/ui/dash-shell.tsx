@@ -1,17 +1,17 @@
-"use client";
+﻿"use client";
 
 /**
- * DashShell — Stripe-inspired dashboard layout shell.
+ * DashShell — Light-mode dashboard layout shell.
  * Used by /admin and /parent route layouts.
  *
  * Structure:
  *   ┌──────────────────────────────────────────────────────┐
- *   │ Sidebar (220px, dark #0a2540)  │  Top bar (#fff)     │
- *   │  Logo                          │  Page title / user  │
- *   │  Nav groups                    ├─────────── ─────────│
- *   │   ● Section label              │  Page content       │
- *   │     › Nav item                 │  bg: #f6f9fc        │
- *   │  Footer: ← Student View        │  overflow-y scroll  │
+ *   │ Sidebar (240px, soft light-blue)  │ Top bar (#fff)   │
+ *   │  Logo                             │ Page title/user  │
+ *   │  Nav groups (collapsible)         ├──────────────────│
+ *   │   ▾ Section label                 │  Page content    │
+ *   │     › Nav item                    │  bg: #f6f9fc     │
+ *   │  Footer: ← Student View           │  overflow-y scroll│
  *   └──────────────────────────────────────────────────────┘
  */
 
@@ -50,7 +50,6 @@ type DashShellProps = {
 
 function SidebarNavLink({ item }: { item: DashNavItem }) {
   const pathname = usePathname();
-  // Match exact or child paths, but not sibling paths that share a prefix.
   const isActive =
     pathname === item.href || pathname.startsWith(item.href + "/");
 
@@ -58,14 +57,14 @@ function SidebarNavLink({ item }: { item: DashNavItem }) {
     <Link
       href={item.href}
       className={[
-        "group flex items-center gap-2.5 rounded-md px-3 py-1.75 text-[13px] font-medium leading-snug transition-colors",
+        "group flex items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] font-medium leading-snug transition-colors",
         isActive
-          ? "bg-white/12 text-white"
-          : "text-[#8792a2] hover:bg-white/6 hover:text-white",
+          ? "bg-[#bddaf5] text-[#0e2d4e] shadow-sm"
+          : "text-[#3a5a7c] hover:bg-[#cfe5f7] hover:text-[#0e2d4e]",
       ].join(" ")}
     >
       <span
-        className="w-4 shrink-0 text-center text-[15px] leading-none"
+        className="w-4 shrink-0 text-center text-[14px] leading-none"
         aria-hidden="true"
       >
         {item.icon}
@@ -75,7 +74,55 @@ function SidebarNavLink({ item }: { item: DashNavItem }) {
   );
 }
 
-// ── Sidebar content (static inner) ───────────────────────────────────────────
+// ── Sidebar group (collapsible) ────────────────────────────────────────────────
+
+function SidebarNavGroup({ group }: { group: DashNavGroup }) {
+  const pathname = usePathname();
+  // Auto-open the group that contains the active page
+  const hasActive = group.items.some(
+    (item) => pathname === item.href || pathname.startsWith(item.href + "/"),
+  );
+  const [open, setOpen] = useState(hasActive);
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className="flex w-full items-center justify-between px-3 py-1.5 rounded-md text-[11px] font-semibold uppercase tracking-widest text-[#6b8fae] hover:text-[#3a5a7c] hover:bg-[#d4e9f7] transition-colors"
+        aria-expanded={open}
+      >
+        <span>{group.label}</span>
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 10 10"
+          fill="none"
+          aria-hidden="true"
+          className={`shrink-0 transition-transform duration-150 ${open ? "rotate-180" : "rotate-0"}`}
+        >
+          <path
+            d="M1.5 3.5 5 7l3.5-3.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      {open && (
+        <div className="mt-0.5 space-y-0.5 pl-1 pb-1">
+          {group.items.map((item) => (
+            <SidebarNavLink key={item.href} item={item} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Sidebar content ────────────────────────────────────────────────────────────
 
 function SidebarContent({
   navGroups,
@@ -85,17 +132,23 @@ function SidebarContent({
   productSubtitle: string;
 }) {
   return (
-    <div className="flex h-full flex-col bg-[#0a2540] safe-area-top safe-area-left safe-area-bottom">
+    <div
+      className="flex h-full flex-col safe-area-top safe-area-left safe-area-bottom"
+      style={{ background: "#e4f0fa", borderRight: "1px solid #c1d9ee" }}
+    >
       {/* ── Logo / branding ── */}
-      <div className="flex h-14 shrink-0 items-center gap-3 border-b border-white/8 px-4">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#635bff] text-[12px] font-bold text-white shadow-inner">
+      <div
+        className="flex h-14 shrink-0 items-center gap-3 px-4"
+        style={{ borderBottom: "1px solid #c1d9ee" }}
+      >
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#635bff] text-[12px] font-bold text-white shadow-sm">
           K
         </div>
         <div className="min-w-0">
-          <p className="truncate text-[13px] font-semibold leading-tight text-white">
+          <p className="truncate text-[13px] font-semibold leading-tight text-[#0e2d4e]">
             Koydo
           </p>
-          <p className="truncate text-[11px] leading-tight text-[#8792a2]">
+          <p className="truncate text-[11px] leading-tight text-[#6b8fae]">
             {productSubtitle}
           </p>
         </div>
@@ -103,28 +156,22 @@ function SidebarContent({
 
       {/* ── Navigation ── */}
       <nav
-        className="flex-1 overflow-y-auto py-3 px-2 space-y-4"
+        className="flex-1 overflow-y-auto py-3 px-2 space-y-2"
         aria-label="Dashboard navigation"
       >
         {navGroups.map((group) => (
-          <div key={group.label}>
-            <p className="mb-1.5 px-3 text-[10px] font-semibold uppercase tracking-widest text-[#4f566b]">
-              {group.label}
-            </p>
-            <div className="space-y-px">
-              {group.items.map((item) => (
-                <SidebarNavLink key={item.href} item={item} />
-              ))}
-            </div>
-          </div>
+          <SidebarNavGroup key={group.label} group={group} />
         ))}
       </nav>
 
       {/* ── Footer ── */}
-      <div className="shrink-0 border-t border-white/8 px-4 py-3">
+      <div
+        className="shrink-0 px-4 py-3"
+        style={{ borderTop: "1px solid #c1d9ee" }}
+      >
         <Link
           href="/dashboard"
-          className="flex items-center gap-2 text-[12px] text-[#4f566b] transition-colors hover:text-[#8792a2]"
+          className="flex items-center gap-2 text-[12px] text-[#6b8fae] transition-colors hover:text-[#3a5a7c]"
         >
           <svg
             width="12"
@@ -169,20 +216,24 @@ export default function DashShell({
   }, [navGroups, pathname, productName]);
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#f6f9fc]">
+    // Force light color scheme for the entire dashboard shell
+    <div
+      className="flex h-screen overflow-hidden bg-[#f6f9fc]"
+      style={{ colorScheme: "light" }}
+    >
       {/* ── Mobile backdrop ── */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 z-20 bg-black/40 md:hidden"
+          className="fixed inset-0 z-20 bg-black/30 md:hidden"
           onClick={() => setSidebarOpen(false)}
           aria-hidden="true"
         />
       )}
 
-      {/* ── Sidebar — fixed 220px on md+, off-canvas on mobile/small-tablet ── */}
+      {/* ── Sidebar — fixed 240px on md+, off-canvas on mobile ── */}
       <aside
         className={[
-          "fixed inset-y-0 left-0 z-30 w-55 transition-transform duration-200 ease-out md:w-60",
+          "fixed inset-y-0 left-0 z-30 w-56 transition-transform duration-200 ease-out md:w-60",
           sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0",
         ].join(" ")}
         aria-label="Sidebar"
@@ -196,12 +247,15 @@ export default function DashShell({
       {/* ── Main column ── */}
       <div className="flex min-w-0 flex-1 flex-col md:pl-60">
         {/* ── Top bar ── */}
-        <header className="safe-area-top sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between border-b border-[#e3e8ee] bg-white px-4 md:px-6">
+        <header
+          className="safe-area-top sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between px-4 md:px-6"
+          style={{ borderBottom: "1px solid #dde6f0", background: "#ffffff" }}
+        >
           <div className="flex min-w-0 items-center gap-3">
             {/* Mobile hamburger */}
             <button
               type="button"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-md text-[#697386] hover:bg-[#f6f9fc] md:hidden"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-md text-[#6b8fae] hover:bg-[#e4f0fa] md:hidden transition-colors"
               onClick={() => setSidebarOpen(true)}
               aria-label="Open navigation"
             >
@@ -222,25 +276,25 @@ export default function DashShell({
             </button>
 
             <div className="min-w-0">
-              <span className="hidden text-[14px] font-semibold text-[#1a1f36] md:block">
+              <span className="hidden text-[14px] font-semibold text-[#0e2d4e] md:block">
                 {productName}
               </span>
-              <p className="truncate text-[12px] font-medium text-[#425a7e] md:text-[11px] md:text-[#697386]">
+              <p className="truncate text-[12px] font-medium text-[#4a7a9e] md:text-[11px]">
                 {activeNavItemLabel}
               </p>
             </div>
           </div>
 
-          {/* Right: avatar */}
+          {/* Right: language switcher + user avatar */}
           <div className="flex items-center gap-3">
             <LanguageSwitcher compact />
             {userLabel && (
-              <span className="hidden text-[12px] text-[#697386] md:block truncate max-w-55">
+              <span className="hidden text-[12px] text-[#6b8fae] md:block truncate max-w-48">
                 {userLabel}
               </span>
             )}
             <div
-              className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#e3e8ee] text-[11px] font-bold text-[#425a7e]"
+              className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#bddaf5] text-[11px] font-bold text-[#0e2d4e]"
               title={userLabel}
               aria-hidden="true"
             >
