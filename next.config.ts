@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+const enableOptimizePackageImports = process.env.NEXT_OPTIMIZE_PACKAGE_IMPORTS === "1";
 
 const securityHeaders = [
   { key: "X-DNS-Prefetch-Control", value: "on" },
@@ -18,8 +19,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   distDir: process.env.NEXT_DIST_DIR || ".next",
 
-  // Skip TypeScript checking during Vercel builds — verified locally before deploy
+  // Skip TypeScript and ESLint checks during Vercel builds — verified in CI/local scripts.
   typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
 
   turbopack: {
     // Force Turbopack to resolve modules from the app directory even when
@@ -32,19 +34,18 @@ const nextConfig: NextConfig = {
 
   // Strip console.log in production; keep console.error/warn for diagnostics
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production"
-      ? { exclude: ["error", "warn"] }
-      : false,
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? { exclude: ["error", "warn"] }
+        : false,
   },
 
-  // Reduce client-side JS by tree-shaking these large packages at build time
-  experimental: {
-    optimizePackageImports: [
-      "@supabase/supabase-js",
-      "@supabase/ssr",
-      "date-fns",
-    ],
-  },
+  // Optional build-time optimization; disable by default to reduce memory pressure on hosted builders.
+  experimental: enableOptimizePackageImports
+    ? {
+        optimizePackageImports: ["@supabase/supabase-js", "@supabase/ssr", "date-fns"],
+      }
+    : undefined,
 
   images: {
     // Allow Supabase Storage CDN images
