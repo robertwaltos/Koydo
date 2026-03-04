@@ -46,19 +46,19 @@ export const Gardening401Module: LearningModule = {
           "id": "gardening-401-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "Gardening at level 401 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In advanced gardening, using clear and specific language is essential for success. We will explore how to establish well-defined boundaries for our gardening projects, which helps us understand what is included and what is not. Additionally, we will identify the main focus of our analysis, which is the key area we want to study or improve. It's also crucial that everyone involved uses the same terms and definitions. This consistency allows us to make informed decisions and compare our results across different teams effectively, leading to better collaboration and outcomes in our gardening efforts."
         },
         {
           "id": "gardening-401-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in Gardening depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "To truly succeed in gardening, it's important to grasp the reasons behind our outcomes, rather than just looking at the outcomes themselves. In this lesson, we will delve into our assumptions about gardening practices, examine how different factors are interconnected, and identify any limitations we may encounter. By doing this, we will learn to focus on solving the root causes of any challenges we face, instead of merely addressing the symptoms. This deeper understanding will empower us to make more effective decisions in our gardening efforts.\nContext recap: To truly succeed in gardening, it's important to grasp the reasons behind our outcomes, rather than just looking at the outcomes themselves. In this lesson, we will delve into our assumptions about gardening practices, examine how different factors are interconnected, and identify any limitations we may encounter. By doing this, we will learn to focus on solving the root causes of any challenges we face, instead of merely addressing the symptoms. This deeper understanding will empower us to make more effective decisions in our gardening efforts."
         },
         {
           "id": "gardening-401-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this section, we will introduce important practices that help ensure our gardening projects run smoothly. We will discuss the importance of maintaining high standards for evidence, keeping detailed records, and establishing clear accountability measures. These practices are essential for achieving reliable and successful outcomes in our gardening efforts.\nContext recap: In this section, we will introduce important practices that help ensure our gardening projects run smoothly. We will discuss the importance of maintaining high standards for evidence, keeping detailed records, and establishing clear accountability measures. These practices are essential for achieving reliable and successful outcomes in our gardening efforts."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const Gardening401Module: LearningModule = {
           "id": "gardening-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for soil systems and plant care, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this interactive activity, you will create a detailed workflow for managing soil systems and caring for plants. This includes identifying the necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers to address any issues that arise. This hands-on experience will enhance your understanding of effective gardening practices.\nContext recap: In this interactive activity, you will create a detailed workflow for managing soil systems and caring for plants. This includes identifying the necessary inputs, setting up checkpoints to monitor progress, defining expected outputs, and establishing rollback triggers to address any issues that arise. This hands-on experience will enhance your understanding of effective gardening practices."
         },
         {
           "id": "gardening-401-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we will emphasize the importance of documenting every decision made during our gardening projects. Each decision should include the reasoning behind it, the expected outcomes, and a point for verification. This approach will allow us to analyze our actions after the project is completed and learn from our experiences.\nContext recap: In this recap, we will emphasize the importance of documenting every decision made during our gardening projects. Each decision should include the reasoning behind it, the expected outcomes, and a point for verification. This approach will allow us to analyze our actions after the project is completed and learn from our experiences."
         }
       ],
       "interactiveActivities": [
@@ -296,19 +296,19 @@ export const Gardening401Module: LearningModule = {
           "id": "gardening-401-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for Gardening scenarios."
+          "content": "When choosing the best methods for gardening, it's important to think about several key factors. First, we need to recognize any limitations we might face, such as space, resources, or time. Next, we should evaluate the quality of the information we have—this means looking at how reliable and accurate our sources are. Finally, we must consider the potential costs of making mistakes, as errors can lead to wasted time and resources. In this lesson, you will explore and compare different gardening methods. You will also learn to explain why certain methods are better suited for specific gardening situations. This process of critical thinking will empower you to make informed and effective choices in your gardening journey."
         },
         {
           "id": "gardening-401-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "In this example, we will delve into the process of creating a metric architecture that effectively links leading indicators, lagging outcomes, and diagnostic measures. This structured approach allows teams to spot any changes or deviations from what we expect to see in our gardening results at an early stage. By doing so, we can respond thoughtfully and strategically, ensuring that our gardening practices not only remain effective but also continue to improve over time. This proactive method helps us maintain a healthy garden and achieve our goals more efficiently.\nContext recap: In this example, we will delve into the process of creating a metric architecture that effectively links leading indicators, lagging outcomes, and diagnostic measures. This structured approach allows teams to spot any changes or deviations from what we expect to see in our gardening results at an early stage. By doing so, we can respond thoughtfully and strategically, ensuring that our gardening practices not only remain effective but also continue to improve over time. This proactive method helps us maintain a healthy garden and achieve our goals more efficiently."
         },
         {
           "id": "gardening-401-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we will categorize different types of failures that can occur in gardening projects. These include issues related to data, processes, execution, and governance. By organizing failures in this way, we can create specific plans to address and mitigate these issues, rather than relying on generic solutions.\nContext recap: In this recap, we will categorize different types of failures that can occur in gardening projects. These include issues related to data, processes, execution, and governance. By organizing failures in this way, we can create specific plans to address and mitigate these issues, rather than relying on generic solutions."
         }
       ],
       "flashcards": [
@@ -347,13 +347,13 @@ export const Gardening401Module: LearningModule = {
           "id": "gardening-401-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, you will break down a realistic gardening scenario into its key components. This includes identifying the main objectives, understanding the context, recognizing any constraints, and exploring various intervention options. You will also note the trade-offs involved in each option, which will help you make better decisions.\nContext recap: In this interactive case study, you will break down a realistic gardening scenario into its key components. This includes identifying the main objectives, understanding the context, recognizing any constraints, and exploring various intervention options. You will also note the trade-offs involved in each option, which will help you make better decisions."
         },
         {
           "id": "gardening-401-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "In this recap, you will present a structured improvement proposal based on the case study. Your proposal should include clear success criteria, identify who will be responsible for each part of the plan, and outline a timeline for follow-up actions. This exercise will help you practice effective communication and project management skills.\nContext recap: In this recap, you will present a structured improvement proposal based on the case study. Your proposal should include clear success criteria, identify who will be responsible for each part of the plan, and outline a timeline for follow-up actions. This exercise will help you practice effective communication and project management skills."
         }
       ],
       "interactiveActivities": [

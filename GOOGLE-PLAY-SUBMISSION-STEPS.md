@@ -1,6 +1,20 @@
 # Koydo — Google Play Submission Steps
 
-**Purpose**: Step-by-step guide for a dry-run and live submission to Google Play.
+**Purpose**: Step-by-step guide for internal testing and production submission to Google Play.
+**Last verified**: 2026-03-04
+
+Official references:
+- Prepare app for review: https://support.google.com/googleplay/android-developer/answer/9859455
+- App access policy details: https://support.google.com/googleplay/android-developer/answer/15748846
+- Data safety form: https://support.google.com/googleplay/android-developer/answer/10787469
+- Target audience and content: https://support.google.com/googleplay/android-developer/answer/9898842
+- Families policy: https://support.google.com/googleplay/android-developer/answer/9285070
+- Target API requirements: https://developer.android.com/google/play/requirements/target-sdk
+- Android App Bundles: https://developer.android.com/guide/app-bundle
+- Store listing graphic requirements: https://support.google.com/googleplay/android-developer/answer/1078870
+- Content ratings: https://support.google.com/googleplay/android-developer/answer/9859655
+
+For launch gating + anti-stall controls, also use: `GOOGLE_PLAY_LAUNCH_PATH.md`.
 
 ---
 
@@ -8,10 +22,12 @@
 
 Before starting:
 - [ ] `RELEASE-CHECKLIST.md` fully completed
-- [ ] AAB built via `./gradlew bundleRelease` — verify no errors
-- [ ] Release keystore available (NOT the debug keystore)
+- [ ] AAB built via `./gradlew bundleRelease` with no errors
+- [ ] Release keystore available (not debug keystore)
 - [ ] Google Play Console access as **Release Manager** or **Owner**
 - [ ] All store assets prepared (see `store-assets/google-play/`)
+- [ ] Android versioning verified from repo:
+  - `android/variables.gradle`: `minSdkVersion = 24`, `targetSdkVersion = 36`, `compileSdkVersion = 36`
 
 ---
 
@@ -27,122 +43,130 @@ cd android
 
 ### Verify the AAB
 ```bash
-# Check bundle size (should be < 150 MB)
+# Check output
 ls -lh android/app/build/outputs/bundle/release/app-release.aab
 
 # Verify signing (replace with your keystore details)
 jarsigner -verify -verbose -certs android/app/build/outputs/bundle/release/app-release.aab
 ```
 
+Notes:
+- Do not use a hardcoded `<150MB` pass/fail rule.
+- If your delivered app would exceed Play size constraints, use Play Asset Delivery / Play Feature Delivery per official App Bundle docs.
+
 ---
 
 ## Step 2: Log Into Google Play Console
 
 1. Navigate to: https://play.google.com/console
-2. Confirm Developer Account ID: `4781832942850403435`
+2. Confirm the correct developer account
 3. Select **Koydo** app (or create it if first submission)
-4. Verify account status shows no policy violations
+4. Verify account status has no active policy blocks
 
 ---
 
 ## Step 3: Create a New Release
 
-### For Internal Testing (first submission)
-1. Left sidebar → **Testing** → **Internal testing**
+### Internal testing (recommended first)
+1. Left sidebar -> **Testing** -> **Internal testing**
 2. Click **Create new release**
 3. Upload `app-release.aab`
-4. Fill in **Release name**: `v1.0.0 (1)` (matches versionName / versionCode)
+4. Set **Release name** to match `versionName/versionCode`
 5. Add **Release notes** from `store-assets/google-play/en-US/changelogs/1.txt`
-6. Click **Save** → **Review release**
+6. Click **Save** -> **Review release**
 
-### For Production
-1. Left sidebar → **Production**
+### Production rollout
+1. Left sidebar -> **Production**
 2. Click **Create new release**
-3. Upload the same AAB (or promote from Internal Testing)
-4. Set **Rollout percentage**: 20% for first submission (staged rollout)
+3. Upload the approved AAB (or promote from test track)
+4. Use staged rollout (for example 20% initial)
 5. Add release notes
-6. Click **Save** → **Review release**
+6. Click **Save** -> **Review release**
 
 ---
 
 ## Step 4: Complete Store Listing
 
-Navigate to: **Grow** → **Store presence** → **Main store listing**
+Navigate to: **Grow** -> **Store presence** -> **Main store listing**
 
 ### App Details
-- [ ] **App name**: `Koydo – Learn & Study Smarter` (from `store-assets/google-play/en-US/title.txt`)
-- [ ] **Short description**: from `store-assets/google-play/en-US/short_description.txt`
-- [ ] **Full description**: from `store-assets/google-play/en-US/full_description.txt`
+- [ ] **App name** from `store-assets/google-play/en-US/title.txt`
+- [ ] **Short description** from `store-assets/google-play/en-US/short_description.txt`
+- [ ] **Full description** from `store-assets/google-play/en-US/full_description.txt`
 
 ### Graphics
-- [ ] App icon: 512 × 512 PNG (from `store-assets/placeholders/icon-512.png` or production build)
-- [ ] Feature graphic: 1024 × 500 PNG
-- [ ] Phone screenshots: at least 2 (from `store-assets/screenshots/google-play/en-US/phone/`)
-- [ ] 7-inch tablet screenshots (optional)
-- [ ] 10-inch tablet screenshots (optional)
+- [ ] App icon: 512x512 PNG
+- [ ] Feature graphic: 1024x500 PNG
+- [ ] Phone screenshots: provide required minimum count
+- [ ] 7-inch / 10-inch tablet screenshots where required by your listing strategy
+
+Always validate against Google’s live asset rules before submitting.
 
 ### Translations
 - [ ] Add `es-ES` store listing from `store-assets/google-play/es-ES/`
-- [ ] Add `es-419` (optional, falls back to es-ES)
+- [ ] Add additional locales as needed
 
 ---
 
 ## Step 5: Content Rating (IARC)
 
-Navigate to: **Policy** → **App content** → **Content rating**
+Navigate to: **Policy** -> **App content** -> **Content rating**
 
-1. Click **Start questionnaire**
-2. Category: **Education**
-3. Answer per `store-assets/CONTENT-RATING-ANSWERS.md`
-4. Submit — expected result: **Everyone (E)**
+1. Start IARC questionnaire
+2. Use `store-assets/CONTENT-RATING-ANSWERS.md` as draft guidance
+3. Submit final answers based on current app behavior
+
+Do not assume an exact rating result in advance. Rating depends on questionnaire responses and policy interpretation.
 
 ---
 
 ## Step 6: Data Safety
 
-Navigate to: **Policy** → **App content** → **Data safety**
+Navigate to: **Policy** -> **App content** -> **Data safety**
 
-1. Complete form per `store-assets/DATA-SAFETY.md`
-2. Data types to declare:
-   - Email address (collected, required, account management)
-   - User IDs (collected, required, app functionality)
-   - Purchase history (collected, required, app functionality)
-   - App interactions (collected, required, analytics)
-   - Crash logs (collected, required, app functionality)
-3. Confirm data encrypted in transit: **Yes**
-4. Allow users to request deletion: **Yes**
-5. Save and submit
+1. Start from:
+   - `store-assets/DATA-SAFETY.md`
+   - `docs/google-play-data-safety.md`
+2. Reconcile with production behavior before submit:
+   - release build SDKs
+   - enabled features/flags
+   - server endpoints used by mobile clients
+3. Confirm:
+   - encrypted in transit
+   - account/data deletion path
+   - data collected vs shared classifications
+
+Important Google definition: data is considered "collected" when transmitted off-device from app to developer/third party.
 
 ---
 
 ## Step 7: Target Audience & Content
 
-Navigate to: **Policy** → **App content** → **Target audience and content**
+Navigate to: **Policy** -> **App content** -> **Target audience and content**
 
-- **Primary target age group**: 13-17, 18-24 (or 18+ to avoid COPPA triggers)
-- App does NOT primarily target children: ✅
+- Select only age groups that truly match your app users.
+- Do not select an older audience just to avoid additional policy obligations.
+- If the app targets children, comply with Families policy requirements.
 
 ---
 
 ## Step 8: App Access
 
-Navigate to: **Policy** → **App content** → **App access**
+Navigate to: **Policy** -> **App content** -> **App access**
 
-Select: **All or some functionality is restricted** → Add instructions:
-```
-Login required.
-Test credentials:
-  Email: <APP_REVIEW_EMAIL_FROM_SECRET_MANAGER>
-  Password: <APP_REVIEW_PASSWORD_FROM_SECRET_MANAGER>
-```
+If any functionality is gated by login, payment, org enrollment, region, or invite code:
+- [ ] Provide complete reviewer steps
+- [ ] Provide working credentials (no expiration)
+- [ ] Keep credentials active at all times while app is reviewed
+- [ ] Remove geofence/IP/device restrictions for reviewer path
 
 ---
 
 ## Step 9: Review and Submit
 
-1. Left sidebar → **Publishing overview**
-2. Review all warnings/errors — resolve all before submitting
-3. Click **Send for review** (for Production) or **Rollout to internal testing** (for testing tracks)
+1. Left sidebar -> **Publishing overview**
+2. Resolve all blocking policy warnings/errors
+3. Submit for review (production) or roll out to testing track
 
 ---
 
@@ -152,19 +176,18 @@ Test credentials:
 |----------|--------|
 | 0–24 hours | Check for policy rejection emails |
 | 1–7 days | Monitor review status in Play Console |
-| After approval | Monitor Crash-free sessions rate (target: >99.5%) |
-| After approval | Monitor ANR rate (target: <0.47%) |
-| 48 hours in | Check RevenueCat for purchase event flow |
-| 1 week | Review user ratings and respond to early reviews |
+| After approval | Monitor crash-free users and ANR metrics |
+| 48 hours in | Validate purchase/webhook flows |
+| 1 week | Review ratings and policy messages |
 
 ---
 
-## Common Rejection Reasons & Fixes
+## Common Rejection Risks (and how to prevent)
 
-| Rejection | Fix |
-|-----------|-----|
-| Policy: Billing | Ensure subscription pricing is accurate in store listing |
-| Data Safety mismatch | Re-audit `DATA-SAFETY.md` and update form |
-| Metadata keyword stuffing | Review `full_description.txt` — remove repetitive keywords |
-| Missing privacy policy | Verify `https://koydo.app/privacy` is live |
-| App crashes on launch | Test on lowest supported API level (API 26) |
+| Risk | Prevention |
+|------|------------|
+| Data Safety mismatch | Re-audit declarations from production behavior before submit |
+| Incomplete app access instructions | Provide persistent, tested reviewer credentials and exact steps |
+| Misleading target audience declaration | Choose only real audience groups; align with Families obligations if applicable |
+| Broken metadata | Ensure listing claims/screenshots reflect what reviewers can actually use |
+| Policy or API-level non-compliance | Keep target API compliant with current Play requirements |

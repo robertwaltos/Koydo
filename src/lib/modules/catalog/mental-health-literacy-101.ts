@@ -46,19 +46,19 @@ export const MentalHealthLiteracy101Module: LearningModule = {
           "id": "mental-health-literacy-101-l01-c1",
           "kind": "concept",
           "title": "Scope and Vocabulary",
-          "content": "This lesson establishes shared vocabulary for Mental Health Literacy and clarifies the scope boundaries for mental health foundations and early risk signal recognition."
+          "content": "In this lesson, we will work together to build a common language that helps us talk about Mental Health Literacy. This means we will define key terms and concepts that are essential for understanding mental health. We will also outline the important areas we will focus on, such as learning the basics of mental health and identifying early signs that someone might be facing challenges. By establishing this shared vocabulary, we can communicate more effectively about mental health topics, ensuring that everyone understands and feels included in the conversation. This is a crucial step in promoting awareness and support for mental health issues among our peers."
         },
         {
           "id": "mental-health-literacy-101-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning",
-          "content": "Learners map causal relationships, assumptions, and constraints before intervention design."
+          "content": "In this part of the lesson, learners will explore how to identify and understand the relationships between different factors that can affect mental health. This includes examining our assumptions and recognizing any limitations we might face before we design any interventions. By mapping these causal relationships, we can create more effective strategies to support mental health.\nContext recap: In this part of the lesson, learners will explore how to identify and understand the relationships between different factors that can affect mental health. This includes examining our assumptions and recognizing any limitations we might face before we design any interventions. By mapping these causal relationships, we can create more effective strategies to support mental health."
         },
         {
           "id": "mental-health-literacy-101-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "Claims are anchored to measurable indicators, confidence ranges, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of grounding our claims in solid evidence. This means that any statements we make should be supported by measurable indicators, which help us understand how confident we can be in our conclusions. We will also discuss the importance of having regular review checkpoints to ensure that our information remains accurate and reliable.\nContext recap: In this recap, we will emphasize the importance of grounding our claims in solid evidence. This means that any statements we make should be supported by measurable indicators, which help us understand how confident we can be in our conclusions. We will also discuss the importance of having regular review checkpoints to ensure that our information remains accurate and reliable."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const MentalHealthLiteracy101Module: LearningModule = {
           "id": "mental-health-literacy-101-l02-c1",
           "kind": "practice",
           "title": "Workflow Build",
-          "content": "Learners build a workflow with owner mapping, control gates, and measurable outcomes."
+          "content": "In this interactive activity, learners will work together to create a workflow. This involves mapping out who is responsible for different tasks, setting up control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help learners understand how to structure their efforts effectively.\nContext recap: In this interactive activity, learners will work together to create a workflow. This involves mapping out who is responsible for different tasks, setting up control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help learners understand how to structure their efforts effectively."
         },
         {
           "id": "mental-health-literacy-101-l02-c2",
           "kind": "recap",
           "title": "Readiness and Rollback",
-          "content": "Systems are stress-tested for failure scenarios and rollback decision thresholds."
+          "content": "In this recap, we will discuss how to prepare our systems for unexpected challenges. This includes stress-testing our plans to see how they hold up under pressure and determining the thresholds for making rollback decisions if things don’t go as planned. Understanding these concepts will help learners develop more resilient strategies.\nContext recap: In this recap, we will discuss how to prepare our systems for unexpected challenges. This includes stress-testing our plans to see how they hold up under pressure and determining the thresholds for making rollback decisions if things don’t go as planned. Understanding these concepts will help learners develop more resilient strategies."
         }
       ],
       "interactiveActivities": [
@@ -267,19 +267,19 @@ export const MentalHealthLiteracy101Module: LearningModule = {
           "id": "mental-health-literacy-101-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: a school-community network building early support pathways while protecting safety, dignity, and confidentiality. Learners identify competing objectives and system risks."
+          "content": "In this case study, we will focus on a school-community network that is working to create early support pathways for students while ensuring their safety, dignity, and confidentiality. Learners will identify the different objectives that may compete with each other and the risks that the system might face. This will help them understand the complexities involved in supporting mental health in a community setting.\nContext recap: In this case study, we will focus on a school-community network that is working to create early support pathways for students while ensuring their safety, dignity, and confidentiality. Learners will identify the different objectives that may compete with each other and the risks that the system might face. This will help them understand the complexities involved in supporting mental health in a community setting."
         },
         {
           "id": "mental-health-literacy-101-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are scored across effectiveness, feasibility, risk, and stakeholder impact."
+          "content": "In this section, we will introduce a tradeoff matrix where different options are evaluated based on their effectiveness, feasibility, potential risks, and the impact they have on stakeholders. This scoring system will help learners make informed decisions when considering various approaches to mental health interventions.\nContext recap: In this section, we will introduce a tradeoff matrix where different options are evaluated based on their effectiveness, feasibility, potential risks, and the impact they have on stakeholders. This scoring system will help learners make informed decisions when considering various approaches to mental health interventions."
         },
         {
           "id": "mental-health-literacy-101-l04-c3",
           "kind": "recap",
           "title": "Recovery Design",
-          "content": "Failure patterns are converted into safeguards and response playbooks."
+          "content": "In this recap, we will discuss how to turn patterns of failure into proactive safeguards and response plans. By analyzing what went wrong in previous scenarios, learners will learn how to create playbooks that outline steps to take in case of similar issues in the future, enhancing their preparedness.\nContext recap: In this recap, we will discuss how to turn patterns of failure into proactive safeguards and response plans. By analyzing what went wrong in previous scenarios, learners will learn how to create playbooks that outline steps to take in case of similar issues in the future, enhancing their preparedness."
         }
       ],
       "flashcards": [
@@ -318,13 +318,13 @@ export const MentalHealthLiteracy101Module: LearningModule = {
           "id": "mental-health-literacy-101-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners run multiple intervention scenarios under uncertainty and compare outcomes."
+          "content": "In this interactive simulation, learners will have the opportunity to run various intervention scenarios while facing uncertainty. They will compare the outcomes of these different approaches to understand which strategies work best in supporting mental health. This practical experience will deepen their understanding of real-world applications.\nContext recap: In this interactive simulation, learners will have the opportunity to run various intervention scenarios while facing uncertainty. They will compare the outcomes of these different approaches to understand which strategies work best in supporting mental health. This practical experience will deepen their understanding of real-world applications."
         },
         {
           "id": "mental-health-literacy-101-l05-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "Each run is evaluated for target attainment, side effects, and governance compliance."
+          "content": "In this debriefing session, we will evaluate each simulation run by looking at how well we achieved our targets, any side effects that occurred, and whether we followed governance guidelines. This reflection will help learners understand the importance of accountability and continuous improvement in mental health interventions.\nContext recap: In this debriefing session, we will evaluate each simulation run by looking at how well we achieved our targets, any side effects that occurred, and whether we followed governance guidelines. This reflection will help learners understand the importance of accountability and continuous improvement in mental health interventions."
         }
       ],
       "interactiveActivities": [
@@ -475,19 +475,19 @@ export const MentalHealthLiteracy101Module: LearningModule = {
           "id": "mental-health-literacy-101-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact",
-          "content": "Learners map benefit and burden distribution across stakeholder groups."
+          "content": "In this lesson, learners will explore how to map out the benefits and burdens that different stakeholder groups experience. By understanding how various decisions impact different people, learners will gain insight into the complexities of mental health governance and the importance of considering diverse perspectives.\nContext recap: In this lesson, learners will explore how to map out the benefits and burdens that different stakeholder groups experience. By understanding how various decisions impact different people, learners will gain insight into the complexities of mental health governance and the importance of considering diverse perspectives."
         },
         {
           "id": "mental-health-literacy-101-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will discuss the concept of accountability architecture. This includes understanding how decisions are tracked, the rights of individuals to review those decisions, and the obligations to address any issues that arise. Learning about these structures will help learners appreciate the importance of transparency and responsibility in mental health governance.\nContext recap: In this section, we will discuss the concept of accountability architecture. This includes understanding how decisions are tracked, the rights of individuals to review those decisions, and the obligations to address any issues that arise. Learning about these structures will help learners appreciate the importance of transparency and responsibility in mental health governance."
         },
         {
           "id": "mental-health-literacy-101-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution",
-          "content": "A final checklist balances performance, risk control, and ethical impact."
+          "content": "To ensure responsible execution of mental health initiatives, it is important to use a final checklist. This checklist should help balance how well the initiative performs, manage any risks involved, and consider the ethical impact on individuals and communities. By doing this, we can make informed decisions that positively affect mental health.\nContext recap: To ensure responsible execution of mental health initiatives, it is important to use a final checklist. This checklist should help balance how well the initiative performs, manage any risks involved, and consider the ethical impact on individuals and communities. By doing this, we can make informed decisions that positively affect mental health."
         }
       ],
       "flashcards": [
@@ -526,13 +526,13 @@ export const MentalHealthLiteracy101Module: LearningModule = {
           "id": "mental-health-literacy-101-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft objective, constraints, metrics, and governance triggers."
+          "content": "In this activity, learners will work on creating a Capstone Charter. This involves drafting clear objectives that outline what they hope to achieve, identifying any constraints that may limit their project, establishing metrics to measure success, and determining governance triggers that will guide their decision-making process. This structured approach helps ensure that their projects are well-planned and effective.\nContext recap: In this activity, learners will work on creating a Capstone Charter. This involves drafting clear objectives that outline what they hope to achieve, identifying any constraints that may limit their project, establishing metrics to measure success, and determining governance triggers that will guide their decision-making process. This structured approach helps ensure that their projects are well-planned and effective."
         },
         {
           "id": "mental-health-literacy-101-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare to defend decisions against technical and governance critiques."
+          "content": "As part of their preparation, learners will get ready to defend their decisions regarding their projects. This means they will practice explaining their choices and how they align with technical standards and governance rules. By preparing for critiques, they will build confidence and improve their ability to communicate their ideas effectively.\nContext recap: As part of their preparation, learners will get ready to defend their decisions regarding their projects. This means they will practice explaining their choices and how they align with technical standards and governance rules. By preparing for critiques, they will build confidence and improve their ability to communicate their ideas effectively."
         }
       ],
       "interactiveActivities": [

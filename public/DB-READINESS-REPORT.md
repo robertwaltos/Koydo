@@ -1,15 +1,9 @@
 # Database Readiness Report
 
-Generated: 2026-02-27T02:37:15.761Z
+Generated: 2026-03-04T00:41:27.274Z
 Supabase host: osnxbuusohdzzcrakavn.supabase.co
 
-## Summary
-
-- Present tables: 30
-- Missing tables: 0
-- Check errors: 0
-
-## Table Status
+Summary: 77 present / 0 missing / 0 error (total 77)
 
 | Table | Status | Detail |
 | --- | --- | --- |
@@ -43,3 +37,50 @@ Supabase host: osnxbuusohdzzcrakavn.supabase.co
 | classroom_entities | present | Present |
 | class_enrollments | present | Present |
 | class_assignments | present | Present |
+| pronunciation_attempts | present | Present |
+| gamification_states | present | Present |
+| gamification_events | present | Present |
+| language_usage_tracking | present | Present |
+| pricing_ladders | present | Present |
+| exam_unlock_purchases | present | Present |
+| transaction_ledger | present | Present |
+| reconciliation_queue | present | Present |
+| business_chart_of_accounts | present | Present |
+| business_gl_transactions | present | Present |
+| owner_tax_profiles | present | Present |
+| investor_classes | present | Present |
+| investors | present | Present |
+| investor_bank_accounts | present | Present |
+| investor_holdings | present | Present |
+| dividend_declarations | present | Present |
+| dividend_payments | present | Present |
+| investor_report_dispatches | present | Present |
+| bank_audit_runs | present | Present |
+| bank_audit_findings | present | Present |
+| investor_portal_access | present | Present |
+| bank_connections | present | Present |
+| bank_statement_imports | present | Present |
+| bank_statement_lines | present | Present |
+| bank_reconciliation_runs | present | Present |
+| bank_reconciliation_items | present | Present |
+| service_integrations_registry | present | Present |
+| service_integration_usage_daily | present | Present |
+| service_billing_records | present | Present |
+| service_billing_reconciliation_runs | present | Present |
+| service_billing_reconciliation_items | present | Present |
+| finance_analytics_snapshots | present | Present |
+| owner_security_factors | present | Present |
+| owner_security_challenges | present | Present |
+| owner_step_up_sessions | present | Present |
+| owner_security_events | present | Present |
+| parent_security_factors | present | Present |
+| parent_account_change_challenges | present | Present |
+| module_baseline_snapshots | present | Present |
+| owner_factory_reset_runs | present | Present |
+| owner_transfer_playbooks | present | Present |
+| compliance_evidence_artifacts | present | Present |
+| compliance_audit_runs | present | Present |
+| compliance_audit_findings | present | Present |
+| content_moderation_jobs | present | Present |
+| content_moderation_votes | present | Present |
+| content_moderation_actions | present | Present |

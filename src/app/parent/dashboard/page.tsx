@@ -8,6 +8,7 @@ import {
   getSubscriptionStatusTone,
   requiresPortalManagement,
 } from "@/lib/billing/subscription";
+import { isPremiumSubscriptionActive } from "@/lib/billing/premium-access";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getLanguagePlanById, getScoredAttemptLimitForPlan } from "@/lib/language-learning";
 import { summarizeLanguageProgress } from "@/lib/language-learning/progress-metrics";
@@ -18,6 +19,7 @@ import {
   type Locale,
 } from "@/lib/i18n/translations";
 import type { StudentProfile } from "@/lib/profiles/types";
+import { loadSupportRuntimeConfig } from "@/lib/support/config";
 
 export const dynamic = "force-dynamic";
 
@@ -96,6 +98,7 @@ export default async function ParentDashboardPage() {
   }
 
   const learnerProfiles = (profiles ?? []) as StudentProfile[];
+  const supportConfig = await loadSupportRuntimeConfig();
   const learnerProfileIds = learnerProfiles.map((profile) => profile.id);
   const currentMonthKey = monthKeyFromDate(new Date());
 
@@ -259,6 +262,10 @@ export default async function ParentDashboardPage() {
       ? t("parent_dashboard_billing_cta_manage")
       : t("parent_dashboard_billing_cta_choose_plan")
     : t("parent_dashboard_billing_cta_settings");
+  const hasPaidParentPortalSla = isPremiumSubscriptionActive({
+    status: subscription?.status ?? null,
+    current_period_end: subscription?.current_period_end ?? null,
+  });
 
   return (
     <div className="p-6 md:p-8">
@@ -351,6 +358,32 @@ export default async function ParentDashboardPage() {
           </Link>
         </div>
       </section>
+
+      {hasPaidParentPortalSla ? (
+        <section className="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-4 shadow-sm">
+          <p className="text-[12px] font-semibold uppercase tracking-wider text-emerald-800">
+            Paid Parent Support Priority Queue
+          </p>
+          <p className="mt-1 text-[13px] text-emerald-900">
+            Best-effort first response target: about {supportConfig.parentPortalPaidSlaHours} hours after ticket
+            submission (not a strict SLA guarantee). Emergency contact: {supportConfig.emergencyPhone}.
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Link
+              href="/support"
+              className="ui-focus-ring rounded-md border border-emerald-300 bg-white px-3 py-1.5 text-[12px] font-semibold text-emerald-800 hover:bg-emerald-100"
+            >
+              Open Support
+            </Link>
+            <a
+              href={`mailto:${supportConfig.supportEmail}`}
+              className="ui-focus-ring rounded-md border border-emerald-300 bg-white px-3 py-1.5 text-[12px] font-semibold text-emerald-800 hover:bg-emerald-100"
+            >
+              Email Support
+            </a>
+          </div>
+        </section>
+      ) : null}
 
       {/* ── Learner Profiles ─────────────────────────────────────────────── */}
       <section className="mt-6 rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm">

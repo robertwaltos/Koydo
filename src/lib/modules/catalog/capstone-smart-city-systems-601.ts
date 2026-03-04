@@ -23,7 +23,7 @@ export const CapstoneSmartCitySystems601Module: LearningModule = {
     "Design defensible solutions for cross-agency governance under real constraints",
     "Evaluate interventions in resilience investment strategy with measurable tradeoff analysis",
     "Operationalize risk and ethics review through accountable governance design",
-    "Lead evidence-backed decision defense for executive decision defense scenarios",
+    "Lead evidence-backed decision defense for executive decision defense scenarios with explicit data analysis evidence",
     "Integrate technical, policy, and stakeholder perspectives into one execution model",
     "Produce capstone artifacts that withstand expert cross-examination"
   ],
@@ -46,19 +46,19 @@ export const CapstoneSmartCitySystems601Module: LearningModule = {
           "id": "capstone-smart-city-systems-601-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "The capstone frames a citywide digital modernization board deciding governance, financing, and phased rollout strategy under crisis scenarios. Learners define objectives, constraints, and stakeholder exposures."
+          "content": "In this capstone project, we are focusing on how a city can modernize its digital systems. A special board will be making important decisions about how to manage this modernization, including how to fund it and how to implement it step by step, especially during challenging situations. As learners, you will work to identify the goals of this project, understand the limitations we might face, and recognize the different groups of people who will be affected by these changes.\nContext recap: In this capstone project, we are focusing on how a city can modernize its digital systems. A special board will be making important decisions about how to manage this modernization, including how to fund it and how to implement it step by step, especially during challenging situations. As learners, you will work to identify the goals of this project, understand the limitations we might face, and recognize the different groups of people who will be affected by these changes."
         },
         {
           "id": "capstone-smart-city-systems-601-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "Boundary design distinguishes what is controllable, what is uncertain, and what requires policy escalation."
+          "content": "When we talk about decision boundaries, we are looking at how to clearly define what aspects of the project we can control, what parts are uncertain, and which issues may need higher-level policy decisions. This helps us understand where we have power to make changes and where we might need to seek additional guidance or support.\nContext recap: When we talk about decision boundaries, we are looking at how to clearly define what aspects of the project we can control, what parts are uncertain, and which issues may need higher-level policy decisions. This helps us understand where we have power to make changes and where we might need to seek additional guidance or support."
         },
         {
           "id": "capstone-smart-city-systems-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All capstone claims must map to measurable indicators and explicit uncertainty notes."
+          "content": "It is essential that all claims made during the capstone project are backed by measurable indicators. This means we need to have clear ways to assess our progress and understand any uncertainties that may arise. By mapping our claims to specific indicators, we ensure that our findings are credible and can be evaluated effectively.\nContext recap: It is essential that all claims made during the capstone project are backed by measurable indicators. This means we need to have clear ways to assess our progress and understand any uncertainties that may arise. By mapping our claims to specific indicators, we ensure that our findings are credible and can be evaluated effectively."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const CapstoneSmartCitySystems601Module: LearningModule = {
           "id": "capstone-smart-city-systems-601-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "Learners build an integrated intervention plan across technical, policy, and stakeholder dimensions."
+          "content": "In this interactive lab, you will create a comprehensive intervention plan that takes into account various aspects such as technical solutions, policy considerations, and the perspectives of different stakeholders. This plan will help ensure that all elements work together harmoniously to achieve our goals.\nContext recap: In this interactive lab, you will create a comprehensive intervention plan that takes into account various aspects such as technical solutions, policy considerations, and the perspectives of different stakeholders. This plan will help ensure that all elements work together harmoniously to achieve our goals."
         },
         {
           "id": "capstone-smart-city-systems-601-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "The plan includes control thresholds, rollback criteria, and accountability checkpoints."
+          "content": "Your intervention plan should also include specific control gates. These are important thresholds that help us monitor progress, criteria for rolling back decisions if necessary, and checkpoints for accountability. This ensures that we stay on track and can make adjustments when needed.\nContext recap: Your intervention plan should also include specific control gates. These are important thresholds that help us monitor progress, criteria for rolling back decisions if necessary, and checkpoints for accountability. This ensures that we stay on track and can make adjustments when needed."
         }
       ],
       "interactiveActivities": [
@@ -367,13 +367,13 @@ export const CapstoneSmartCitySystems601Module: LearningModule = {
           "id": "capstone-smart-city-systems-601-l04-c1",
           "kind": "practice",
           "title": "Simulation Run",
-          "content": "Learners run multiple interventions under uncertainty and compare outcomes."
+          "content": "As part of this simulation exercise, you will run several different interventions while considering various uncertainties. After each simulation, you will compare the outcomes to see which strategies worked best and why. This hands-on experience will help you understand the complexities involved in decision-making.\nContext recap: As part of this simulation exercise, you will run several different interventions while considering various uncertainties. After each simulation, you will compare the outcomes to see which strategies worked best and why. This hands-on experience will help you understand the complexities involved in decision-making."
         },
         {
           "id": "capstone-smart-city-systems-601-l04-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "Each run is debriefed for objective attainment, side effects, and governance compliance through explicit data analysis that feeds an implementation artifact."
+          "content": "Once we finish running our simulations, we will come together for a debriefing session. This is an important time for us to reflect on our experiences. We will carefully assess how effectively we met our goals and objectives. Additionally, we will talk about any surprising outcomes or side effects that occurred during the simulations. It’s also crucial for us to confirm that all our actions followed the necessary governance standards. To do this, we will analyze the data we collected throughout the simulations. This analysis will help us create a comprehensive final implementation document that summarizes our findings and recommendations."
         }
       ],
       "interactiveActivities": [
@@ -624,13 +624,13 @@ export const CapstoneSmartCitySystems601Module: LearningModule = {
           "id": "capstone-smart-city-systems-601-l06-c1",
           "kind": "practice",
           "title": "Defense Preparation",
-          "content": "Learners assemble a decision brief with claims, evidence, uncertainty ranges, and one implementation artifact mapped to rubric criteria."
+          "content": "As you get ready for the defense panel, your task is to create a comprehensive decision brief. This important document will showcase your main claims, backed by solid evidence. You will also need to identify and discuss the ranges of uncertainty related to your claims. Additionally, include one implementation artifact that directly corresponds to the criteria specified in the rubric. This preparation will ensure that you can present your ideas in a clear, organized, and impactful manner, making it easier for your audience to understand your perspective and the significance of your work."
         },
         {
           "id": "capstone-smart-city-systems-601-l06-c2",
           "kind": "recap",
           "title": "Panel Response Strategy",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques in a structured policy debate using the scoring rubric."
+          "content": "As part of your preparation, you will also practice responding to potential critiques from technical experts, governance representatives, and stakeholders. This will take place in a structured policy debate format, where you will use the scoring rubric to guide your responses. This practice will help you feel more confident during the actual defense.\nContext recap: As part of your preparation, you will also practice responding to potential critiques from technical experts, governance representatives, and stakeholders. This will take place in a structured policy debate format, where you will use the scoring rubric to guide your responses. This practice will help you feel more confident during the actual defense."
         }
       ],
       "interactiveActivities": [

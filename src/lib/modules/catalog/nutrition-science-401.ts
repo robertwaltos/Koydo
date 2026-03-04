@@ -47,19 +47,19 @@ export const NutritionScience401Module: LearningModule = {
           "id": "nutrition-science-401-l01-c1",
           "kind": "concept",
           "title": "Scope and Vocabulary",
-          "content": "This lesson establishes shared vocabulary for Nutrition Science and clarifies the scope boundaries for metabolic foundations and dietary pattern analysis."
+          "content": "In this lesson, we will establish a common vocabulary that is essential for understanding Nutrition Science. We will also clarify the boundaries of our study, focusing on the fundamental aspects of metabolism and how we analyze different dietary patterns. This shared language will help us communicate effectively as we explore the science of nutrition.\nContext recap: In this lesson, we will establish a common vocabulary that is essential for understanding Nutrition Science. We will also clarify the boundaries of our study, focusing on the fundamental aspects of metabolism and how we analyze different dietary patterns. This shared language will help us communicate effectively as we explore the science of nutrition."
         },
         {
           "id": "nutrition-science-401-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning",
-          "content": "Learners map causal relationships, assumptions, and constraints before intervention design."
+          "content": "In this section, learners will engage in mapping out causal relationships, which means understanding how different factors influence one another. We will also examine the assumptions we make and the constraints we face before designing any interventions. This process is crucial for creating effective solutions in nutrition science.\nContext recap: In this section, learners will engage in mapping out causal relationships, which means understanding how different factors influence one another. We will also examine the assumptions we make and the constraints we face before designing any interventions. This process is crucial for creating effective solutions in nutrition science."
         },
         {
           "id": "nutrition-science-401-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "Claims are anchored to measurable indicators, confidence ranges, and review checkpoints."
+          "content": "In our exploration of evidence standards, we will learn how to anchor our claims to measurable indicators. This means we will look at specific data points that support our conclusions. Additionally, we will discuss confidence ranges and review checkpoints that help us ensure our findings are reliable and valid.\nContext recap: In our exploration of evidence standards, we will learn how to anchor our claims to measurable indicators. This means we will look at specific data points that support our conclusions. Additionally, we will discuss confidence ranges and review checkpoints that help us ensure our findings are reliable and valid."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const NutritionScience401Module: LearningModule = {
           "id": "nutrition-science-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Build",
-          "content": "Learners build a workflow with owner mapping, control gates, and measurable outcomes."
+          "content": "In this interactive lab, learners will have the opportunity to build a workflow. This involves mapping out who is responsible for different tasks, setting up control gates to monitor progress, and defining measurable outcomes that will help us assess the effectiveness of our nutrition initiatives.\nContext recap: In this interactive lab, learners will have the opportunity to build a workflow. This involves mapping out who is responsible for different tasks, setting up control gates to monitor progress, and defining measurable outcomes that will help us assess the effectiveness of our nutrition initiatives."
         },
         {
           "id": "nutrition-science-401-l02-c2",
           "kind": "recap",
           "title": "Readiness and Rollback",
-          "content": "Systems are stress-tested for failure scenarios and rollback decision thresholds."
+          "content": "In this recap, we will stress-test our systems by examining potential failure scenarios. This means we will look at what could go wrong and establish rollback decision thresholds, which are guidelines for when to revert to a previous state if things do not go as planned. This is an important step in ensuring the reliability of our nutrition programs.\nContext recap: In this recap, we will stress-test our systems by examining potential failure scenarios. This means we will look at what could go wrong and establish rollback decision thresholds, which are guidelines for when to revert to a previous state if things do not go as planned. This is an important step in ensuring the reliability of our nutrition programs."
         }
       ],
       "interactiveActivities": [
@@ -268,19 +268,19 @@ export const NutritionScience401Module: LearningModule = {
           "id": "nutrition-science-401-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: a community nutrition initiative balancing clinical outcomes, cultural fit, and food-access constraints. Learners identify competing objectives and system risks."
+          "content": "In this case analysis, we will explore a community nutrition initiative that strives to find a balance between achieving positive clinical outcomes, respecting cultural preferences, and addressing challenges related to food access. As learners, you will have the opportunity to identify various competing objectives and the potential risks that may arise within the system. This exploration will deepen our understanding of the complexities involved in implementing effective nutrition programs in real-world settings, highlighting the importance of considering multiple factors when designing health initiatives.\nContext recap: In this case analysis, we will explore a community nutrition initiative that strives to find a balance between achieving positive clinical outcomes, respecting cultural preferences, and addressing challenges related to food access. As learners, you will have the opportunity to identify various competing objectives and the potential risks that may arise within the system. This exploration will deepen our understanding of the complexities involved in implementing effective nutrition programs in real-world settings, highlighting the importance of considering multiple factors when designing health initiatives."
         },
         {
           "id": "nutrition-science-401-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are scored across effectiveness, feasibility, risk, and stakeholder impact."
+          "content": "In this section, we will introduce a tradeoff matrix, where different options will be scored based on their effectiveness, feasibility, risk, and impact on stakeholders. This scoring system will help us evaluate which options are the best choices for our nutrition initiatives.\nContext recap: In this section, we will introduce a tradeoff matrix, where different options will be scored based on their effectiveness, feasibility, risk, and impact on stakeholders. This scoring system will help us evaluate which options are the best choices for our nutrition initiatives.\nContext recap: In this section, we will introduce a tradeoff matrix, where different options will be scored based on their effectiveness, feasibility, risk, and impact on stakeholders. This scoring system will help us evaluate which options are the best choices for our nutrition initiatives. Context recap: In this section, we will introduce a tradeoff matrix, where different options will be scored based on their effectiveness, feasibility, risk, and impact on stakeholders. This scoring system will help us evaluate which options are the best choices for our nutrition initiatives."
         },
         {
           "id": "nutrition-science-401-l04-c3",
           "kind": "recap",
           "title": "Recovery Design",
-          "content": "Failure patterns are converted into safeguards and response playbooks."
+          "content": "In our recap, we will discuss how we can turn patterns of failure into safeguards and response playbooks. This means creating strategies that help us respond effectively when things do not go as planned, ensuring that we can learn from our mistakes and improve our nutrition programs.\nContext recap: In our recap, we will discuss how we can turn patterns of failure into safeguards and response playbooks. This means creating strategies that help us respond effectively when things do not go as planned, ensuring that we can learn from our mistakes and improve our nutrition programs."
         }
       ],
       "flashcards": [
@@ -319,13 +319,13 @@ export const NutritionScience401Module: LearningModule = {
           "id": "nutrition-science-401-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners run multiple intervention scenarios under uncertainty and compare outcomes."
+          "content": "In this interactive simulation, learners will run multiple intervention scenarios while dealing with uncertainty. This means we will explore different approaches to nutrition interventions and compare the outcomes of each scenario to understand what works best.\nContext recap: In this interactive simulation, learners will run multiple intervention scenarios while dealing with uncertainty. This means we will explore different approaches to nutrition interventions and compare the outcomes of each scenario to understand what works best.\nWhy this matters: Scenario Simulation helps learners in Health Science connect ideas from Nutrition Science Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "nutrition-science-401-l05-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "Each run is evaluated for target attainment, side effects, and governance compliance."
+          "content": "During the debrief, we will evaluate each run of our simulation based on target attainment, side effects, and compliance with governance standards. This evaluation will help us understand the effectiveness of our interventions and ensure that we are meeting our goals responsibly.\nContext recap: During the debrief, we will evaluate each run of our simulation based on target attainment, side effects, and compliance with governance standards. This evaluation will help us understand the effectiveness of our interventions and ensure that we are meeting our goals responsibly.\nContext recap: During the debrief, we will evaluate each run of our simulation based on target attainment, side effects, and compliance with governance standards. This evaluation will help us understand the effectiveness of our interventions and ensure that we are meeting our goals responsibly. Context recap: During the debrief, we will evaluate each run of our simulation based on target attainment, side effects, and compliance with governance standards. This evaluation will help us understand the effectiveness of our interventions and ensure that we are meeting our goals responsibly."
         }
       ],
       "interactiveActivities": [
@@ -476,19 +476,19 @@ export const NutritionScience401Module: LearningModule = {
           "id": "nutrition-science-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact",
-          "content": "Learners map benefit and burden distribution across stakeholder groups."
+          "content": "In this section, learners will map out how benefits and burdens are distributed among different stakeholder groups. This means we will analyze who gains and who may be negatively impacted by our nutrition initiatives, which is crucial for ensuring fairness and equity.\nContext recap: In this section, learners will map out how benefits and burdens are distributed among different stakeholder groups. This means we will analyze who gains and who may be negatively impacted by our nutrition initiatives, which is crucial for ensuring fairness and equity.\nContext recap: In this section, learners will map out how benefits and burdens are distributed among different stakeholder groups. This means we will analyze who gains and who may be negatively impacted by our nutrition initiatives, which is crucial for ensuring fairness and equity. Context recap: In this section, learners will map out how benefits and burdens are distributed among different stakeholder groups. This means we will analyze who gains and who may be negatively impacted by our nutrition initiatives, which is crucial for ensuring fairness and equity."
         },
         {
           "id": "nutrition-science-401-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this lesson, we will explore the concept of accountability architecture. This involves integrating decision traceability, review rights, and remediation obligations into our processes. Understanding these elements is essential for maintaining transparency and responsibility in our nutrition programs.\nContext recap: In this lesson, we will explore the concept of accountability architecture. This involves integrating decision traceability, review rights, and remediation obligations into our processes. Understanding these elements is essential for maintaining transparency and responsibility in our nutrition programs.\nContext recap: In this lesson, we will explore the concept of accountability architecture. This involves integrating decision traceability, review rights, and remediation obligations into our processes. Understanding these elements is essential for maintaining transparency and responsibility in our nutrition programs. Context recap: In this lesson, we will explore the concept of accountability architecture.\nWhy this matters: Accountability Architecture helps learners in Health Science connect ideas from Nutrition Science Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "nutrition-science-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution",
-          "content": "A final checklist balances performance, risk control, and ethical impact."
+          "content": "To ensure that our projects are successful and ethical, we create a final checklist. This checklist helps us balance how well we perform our tasks, manage any risks that might come up, and consider the ethical impact of our actions. By using this checklist, we can make informed decisions that benefit everyone involved.\nContext recap: To ensure that our projects are successful and ethical, we create a final checklist. This checklist helps us balance how well we perform our tasks, manage any risks that might come up, and consider the ethical impact of our actions. By using this checklist, we can make informed decisions that benefit everyone involved."
         }
       ],
       "flashcards": [
@@ -527,13 +527,13 @@ export const NutritionScience401Module: LearningModule = {
           "id": "nutrition-science-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft objective, constraints, metrics, and governance triggers."
+          "content": "In this activity, learners will work together to create a Capstone Charter. This important document will outline the objectives we want to achieve, the constraints we need to consider, the metrics we will use to measure our success, and the governance triggers that will guide our decisions throughout the project. This process encourages critical thinking and collaboration.\nContext recap: In this activity, learners will work together to create a Capstone Charter. This important document will outline the objectives we want to achieve, the constraints we need to consider, the metrics we will use to measure our success, and the governance triggers that will guide our decisions throughout the project. This process encourages critical thinking and collaboration."
         },
         {
           "id": "nutrition-science-401-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare to defend decisions against technical and governance critiques."
+          "content": "As part of our preparation, learners will get ready to defend their decisions regarding the project. This means they will practice explaining their choices and how they align with technical standards and governance rules. By doing this, they will build confidence in their reasoning and learn to respond to critiques effectively.\nContext recap: As part of our preparation, learners will get ready to defend their decisions regarding the project. This means they will practice explaining their choices and how they align with technical standards and governance rules. By doing this, they will build confidence in their reasoning and learn to respond to critiques effectively."
         }
       ],
       "interactiveActivities": [

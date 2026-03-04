@@ -46,19 +46,19 @@ export const Gardening301Module: LearningModule = {
           "id": "gardening-301-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "Gardening at level 301 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In Gardening 301, using clear and specific language is essential for effective communication. We will explore how to establish well-defined boundaries for our gardening projects, which helps everyone understand the limits and goals of our work. Additionally, we will identify the main focus of our analysis, ensuring that we know exactly what we are studying or improving. Finally, we will learn the importance of using consistent terminology throughout our discussions. By doing this, we can make decisions that are easily compared and understood by all team members, fostering collaboration and clarity in our gardening efforts."
         },
         {
           "id": "gardening-301-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in Gardening depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "To achieve success in Gardening, it is essential to grasp the underlying reasons for various outcomes, rather than merely focusing on the results themselves. In this lesson, we will delve into our assumptions about gardening practices, examine how different factors are interconnected, and identify any limitations or challenges we may encounter. By doing so, we will be better equipped to develop effective solutions that tackle the root problems, rather than just addressing the surface issues. This deeper understanding will empower us to make informed decisions and improve our gardening strategies."
         },
         {
           "id": "gardening-301-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this section, we will introduce important practices that ensure our gardening projects are carried out reliably. We will discuss the importance of maintaining high standards of evidence, keeping detailed records, and having clear accountability measures in place. These practices are essential for achieving consistent and trustworthy results.\nContext recap: In this section, we will introduce important practices that ensure our gardening projects are carried out reliably. We will discuss the importance of maintaining high standards of evidence, keeping detailed records, and having clear accountability measures in place. These practices are essential for achieving consistent and trustworthy results."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const Gardening301Module: LearningModule = {
           "id": "gardening-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for soil systems and plant care, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this engaging interactive lab, you will get the chance to design a comprehensive workflow for effectively managing soil systems and nurturing plants. You will start by identifying the essential inputs, such as nutrients and water, that your plants need to thrive. Next, you will establish key checkpoints to monitor the health and growth of your plants throughout the process. After that, you will define the expected outputs, which could include healthy plants or successful harvests. Finally, you will set up rollback triggers, which are important steps to take if any problems arise, ensuring that you can quickly address any issues and keep your plants healthy. This hands-on experience will help you understand the importance of each component in the gardening workflow and how they work together to support plant care."
         },
         {
           "id": "gardening-301-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we will emphasize the importance of logging every decision made during our gardening projects. Each decision should include the reasoning behind it, the expected outcome, and a point for verification. This will help us analyze our decisions after the project is completed and learn from our experiences.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during our gardening projects. Each decision should include the reasoning behind it, the expected outcome, and a point for verification. This will help us analyze our decisions after the project is completed and learn from our experiences."
         }
       ],
       "interactiveActivities": [
@@ -296,19 +296,19 @@ export const Gardening301Module: LearningModule = {
           "id": "gardening-301-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for Gardening scenarios."
+          "content": "When choosing the best methods for gardening, it’s important to think about several key factors. First, we need to recognize any limitations we might face, such as the space we have or the types of plants we want to grow. Next, we should evaluate the quality of the information we have; this means checking if the advice we find is reliable and based on good research. Finally, we must consider the potential cost of making mistakes, which can include wasted time, money, or resources. In this lesson, you will have the opportunity to compare different gardening methods and explain why some approaches work better than others in specific situations. This will help you make informed decisions in your gardening projects and improve your overall success as a gardener."
         },
         {
           "id": "gardening-301-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "A well-organized metric architecture is like a roadmap for gardening success. It connects leading indicators, which are signs that show how well things are going, with lagging outcomes, which are the results we see after some time. Additionally, it includes diagnostic measures, which help us understand why things might not be going as planned. By using this structure, teams can spot any problems early on, allowing them to respond thoughtfully and effectively to keep their gardening projects on track.\nContext recap: A well-organized metric architecture is like a roadmap for gardening success. It connects leading indicators, which are signs that show how well things are going, with lagging outcomes, which are the results we see after some time. Additionally, it includes diagnostic measures, which help us understand why things might not be going as planned. By using this structure, teams can spot any problems early on, allowing them to respond thoughtfully and effectively to keep their gardening projects on track."
         },
         {
           "id": "gardening-301-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we will categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific plans to address each type of issue rather than using a one-size-fits-all approach.\nContext recap: In this recap, we will categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific plans to address each type of issue rather than using a one-size-fits-all approach."
         }
       ],
       "flashcards": [
@@ -347,13 +347,13 @@ export const Gardening301Module: LearningModule = {
           "id": "gardening-301-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, you will break down a realistic gardening scenario into its key components: the main objective, the context in which it occurs, any constraints we need to consider, and the different options for intervention. Be sure to include notes on the trade-offs involved with each option.\nContext recap: In this interactive case study, you will break down a realistic gardening scenario into its key components: the main objective, the context in which it occurs, any constraints we need to consider, and the different options for intervention. Be sure to include notes on the trade-offs involved with each option."
         },
         {
           "id": "gardening-301-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "In this recap, you will present a staged improvement proposal for the gardening system you analyzed. Your proposal should include clear criteria for success, identify who will be responsible for each part of the plan, and outline a timeline for follow-up actions to ensure everything stays on track.\nContext recap: In this recap, you will present a staged improvement proposal for the gardening system you analyzed. Your proposal should include clear criteria for success, identify who will be responsible for each part of the plan, and outline a timeline for follow-up actions to ensure everything stays on track."
         }
       ],
       "interactiveActivities": [

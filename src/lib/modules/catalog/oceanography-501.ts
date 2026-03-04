@@ -47,19 +47,19 @@ export const Oceanography501Module: LearningModule = {
           "id": "oceanography-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Oceanography, with focus on ocean system diagnostics and marine risk forecasting."
+          "content": "In this lesson, we will delve into the advanced scope boundaries of Oceanography. We will focus on understanding how to diagnose ocean systems, which involves studying various factors that affect the health and behavior of our oceans. Additionally, we will learn about marine risk forecasting, which helps us predict potential challenges and dangers that may arise in marine environments. This knowledge is essential for effectively managing and protecting our oceans, ensuring they remain healthy for future generations.\nContext recap: In this lesson, we will delve into the advanced scope boundaries of Oceanography. We will focus on understanding how to diagnose ocean systems, which involves studying various factors that affect the health and behavior of our oceans. Additionally, we will learn about marine risk forecasting, which helps us predict potential challenges and dangers that may arise in marine environments. This knowledge is essential for effectively managing and protecting our oceans, ensuring they remain healthy for future generations.\nContext recap: In this lesson, we will delve into the advanced scope boundaries of Oceanography. We will focus on understanding how to diagnose ocean systems, which involves studying various factors that affect the health and behavior of our oceans. Additionally, we will learn about marine risk forecasting, which helps us predict potential challenges and dangers that may arise in marine environments. This knowledge is essential for effectively managing and protecting our oceans, ensuring they remain healthy for future generations.\nWhy this matters: Scope and Boundary Design helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "oceanography-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in ocean systems. They will also identify uncertainty ranges and system dependencies. This foundational work is essential for planning effective interventions in oceanography.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in ocean systems. They will also identify uncertainty ranges and system dependencies. This foundational work is essential for planning effective interventions in oceanography.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in ocean systems. They will also identify uncertainty ranges and system dependencies. This foundational work is essential for planning effective interventions in oceanography. Context recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in ocean systems."
         },
         {
           "id": "oceanography-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims made in oceanographic studies are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to validate our findings and ensure accuracy in our research.\nContext recap: It is important to ensure that all claims made in oceanographic studies are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to validate our findings and ensure accuracy in our research.\nContext recap: It is important to ensure that all claims made in oceanographic studies are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to validate our findings and ensure accuracy in our research. Context recap: It is important to ensure that all claims made in oceanographic studies are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to validate our findings and ensure accuracy in our research."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Oceanography501Module: LearningModule = {
           "id": "oceanography-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will design specialized workflows that are tailored to oceanographic research. They will also conduct stress tests on these workflows by simulating adverse scenarios to ensure they can withstand challenges and remain effective.\nContext recap: In this interactive practice, learners will design specialized workflows that are tailored to oceanographic research. They will also conduct stress tests on these workflows by simulating adverse scenarios to ensure they can withstand challenges and remain effective.\nWhy this matters: Method Design and Stress Test helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "oceanography-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "This recap focuses on the architecture of control gates within workflows. These workflows will include important elements such as checkpoints, rollback criteria, and threshold-based escalation processes to ensure that any issues can be addressed promptly and effectively.\nContext recap: This recap focuses on the architecture of control gates within workflows. These workflows will include important elements such as checkpoints, rollback criteria, and threshold-based escalation processes to ensure that any issues can be addressed promptly and effectively.\nContext recap: This recap focuses on the architecture of control gates within workflows. These workflows will include important elements such as checkpoints, rollback criteria, and threshold-based escalation processes to ensure that any issues can be addressed promptly and effectively. Context recap: This recap focuses on the architecture of control gates within workflows. These workflows will include important elements such as checkpoints, rollback criteria, and threshold-based escalation processes to ensure that any issues can be addressed promptly and effectively."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Oceanography501Module: LearningModule = {
           "id": "oceanography-501-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a coastal governance council balancing fisheries viability, warming trends, and disaster resilience. Learners map constraints, risk classes, and governance boundaries."
+          "content": "In this engaging case study, we will explore the important work of a coastal governance council. This council is tasked with the critical responsibility of ensuring that local fisheries remain viable while also addressing the challenges brought about by warming ocean temperatures and the necessity for disaster resilience. As part of this learning experience, students will actively participate by mapping out various constraints, identifying different classes of risk, and understanding the governance boundaries that play a significant role in decision-making within this complex context. This will help learners appreciate the intricate balance required to manage coastal resources effectively.\nContext recap: In this engaging case study, we will explore the important work of a coastal governance council. This council is tasked with the critical responsibility of ensuring that local fisheries remain viable while also addressing the challenges brought about by warming ocean temperatures and the necessity for disaster resilience. As part of this learning experience, students will actively participate by mapping out various constraints, identifying different classes of risk, and understanding the governance boundaries that play a significant role in decision-making within this complex context. This will help learners appreciate the intricate balance required to manage coastal resources effectively.\nContext recap: In this engaging case study, we will explore the important work of a coastal governance council. This council is tasked with the critical responsibility of ensuring that local fisheries remain viable while also addressing the challenges brought about by warming ocean temperatures and the necessity for disaster resilience. As part of this learning experience, students will actively participate by mapping out various constraints, identifying different classes of risk, and understanding the governance boundaries that play a significant role in decision-making within this complex context. This will help learners appreciate the intricate balance required to manage coastal resources effectively.\nWhy this matters: Case Context and Stakes helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "oceanography-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Alternatives are scored across effectiveness, feasibility, risk, equity, and implementation cost."
+          "content": "In this lesson, we will create a tradeoff matrix to evaluate different alternatives. Each alternative will be scored based on its effectiveness, feasibility, associated risks, equity considerations, and implementation costs. This systematic approach helps in making informed decisions.\nContext recap: In this lesson, we will create a tradeoff matrix to evaluate different alternatives. Each alternative will be scored based on its effectiveness, feasibility, associated risks, equity considerations, and implementation costs. This systematic approach helps in making informed decisions.\nContext recap: In this lesson, we will create a tradeoff matrix to evaluate different alternatives. Each alternative will be scored based on its effectiveness, feasibility, associated risks, equity considerations, and implementation costs. This systematic approach helps in making informed decisions. Context recap: In this lesson, we will create a tradeoff matrix to evaluate different alternatives.\nWhy this matters: Tradeoff Matrix helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "oceanography-501-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are mapped to remediation actions and measurable recovery triggers."
+          "content": "In this recap, we will discuss how to map failure signatures to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help us assess the effectiveness of our recovery strategies in oceanographic contexts.\nContext recap: In this recap, we will discuss how to map failure signatures to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help us assess the effectiveness of our recovery strategies in oceanographic contexts.\nWhy this matters: Recovery and Adaptation Design helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -419,13 +419,13 @@ export const Oceanography501Module: LearningModule = {
           "id": "oceanography-501-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners configure interventions, constraints, and escalation logic for high-stakes tests."
+          "content": "In this interactive practice, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience is vital for understanding how to manage complex scenarios in oceanography effectively.\nContext recap: In this interactive practice, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience is vital for understanding how to manage complex scenarios in oceanography effectively.\nWhy this matters: Scenario Simulation helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "oceanography-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Outcomes are reviewed for gains, side effects, and governance compliance gaps."
+          "content": "In this recap, we will review the outcomes of our interventions, focusing on the gains achieved, any side effects observed, and gaps in governance compliance. This reflective process is essential for continuous improvement in oceanographic practices.\nContext recap: In this recap, we will review the outcomes of our interventions, focusing on the gains achieved, any side effects observed, and gaps in governance compliance. This reflective process is essential for continuous improvement in oceanographic practices.\nWhy this matters: Debrief and Adaptation helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -676,19 +676,19 @@ export const Oceanography501Module: LearningModule = {
           "id": "oceanography-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from decisions made in ocean governance.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from decisions made in ocean governance.\nWhy this matters: Stakeholder Impact Distribution helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "oceanography-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "This section focuses on the architecture of accountability within decision-making processes. It is important to ensure that there is traceability of decisions, rights to review them, and obligations for remediation when necessary. This framework helps maintain transparency and responsibility.\nContext recap: This section focuses on the architecture of accountability within decision-making processes. It is important to ensure that there is traceability of decisions, rights to review them, and obligations for remediation when necessary. This framework helps maintain transparency and responsibility.\nContext recap: This section focuses on the architecture of accountability within decision-making processes. It is important to ensure that there is traceability of decisions, rights to review them, and obligations for remediation when necessary. This framework helps maintain transparency and responsibility. Context recap: This section focuses on the architecture of accountability within decision-making processes.\nWhy this matters: Accountability Architecture helps learners in Earth Science connect ideas from Oceanography Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "oceanography-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "As you wrap up your learning, it's important to consider a checklist that connects various important aspects. This checklist includes evaluating the outcomes of your work, understanding ethical considerations, ensuring compliance with relevant policies, and fostering resilience in your plans. These elements are crucial for responsible leadership in oceanography.\nContext recap: As you wrap up your learning, it's important to consider a checklist that connects various important aspects. This checklist includes evaluating the outcomes of your work, understanding ethical considerations, ensuring compliance with relevant policies, and fostering resilience in your plans. These elements are crucial for responsible leadership in oceanography."
         }
       ],
       "flashcards": [
@@ -727,13 +727,13 @@ export const Oceanography501Module: LearningModule = {
           "id": "oceanography-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive session, you will work on assembling a comprehensive brief. This brief should include clear claims supported by evidence, outline the bounds of uncertainty related to your findings, and propose pathways for remediation. This exercise will help you develop critical thinking and communication skills essential for presenting your ideas effectively.\nContext recap: In this interactive session, you will work on assembling a comprehensive brief. This brief should include clear claims supported by evidence, outline the bounds of uncertainty related to your findings, and propose pathways for remediation. This exercise will help you develop critical thinking and communication skills essential for presenting your ideas effectively."
         },
         {
           "id": "oceanography-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal, you will practice responding to various critiques that may arise from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of stakeholders. This practice is vital for building your confidence and ensuring you can articulate your ideas clearly and effectively in front of an audience.\nContext recap: During this rehearsal, you will practice responding to various critiques that may arise from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of stakeholders. This practice is vital for building your confidence and ensuring you can articulate your ideas clearly and effectively in front of an audience."
         }
       ],
       "interactiveActivities": [

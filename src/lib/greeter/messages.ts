@@ -74,6 +74,51 @@ const DEFAULT_MESSAGES = [
   "I'm your learning buddy — always here for you! 🌟",
 ];
 
+const LANDING_MESSAGES = [
+  "Hi! I'm here to help you learn anything, at any age!",
+];
+
+/**
+ * Maps a pathname to a route slug used for static greeting audio filenames.
+ * Slugs match those in scripts/generate-greeting-audio.mjs.
+ */
+export function getRouteSlug(pathname: string): string {
+  if (pathname === "/") return "landing";
+  if (/^\/dashboard/.test(pathname)) return "dashboard";
+  if (/^\/lessons/.test(pathname)) return "lessons";
+  if (/^\/explore|^\/catalog/.test(pathname)) return "explore";
+  if (/^\/experience-hub/.test(pathname)) return "experience-hub";
+  if (/^\/profile/.test(pathname)) return "profile";
+  if (/^\/exams|^\/test/.test(pathname)) return "exams";
+  if (/^\/audiobooks/.test(pathname)) return "audiobooks";
+  return "default";
+}
+
+/**
+ * Returns the number of pre-recorded greeting variants for a given route slug.
+ * Must stay in sync with scripts/generate-greeting-audio.mjs.
+ */
+export function getRouteMessageCount(slug: string): number {
+  for (const { pattern, messages } of PATH_MESSAGES) {
+    const slugForPattern = getRouteSlugFromPattern(pattern);
+    if (slugForPattern === slug) return messages.length;
+  }
+  if (slug === "landing") return LANDING_MESSAGES.length;
+  return DEFAULT_MESSAGES.length;
+}
+
+function getRouteSlugFromPattern(pattern: RegExp | string): string {
+  const s = typeof pattern === "string" ? pattern : pattern.source;
+  if (s.includes("dashboard")) return "dashboard";
+  if (s.includes("lessons")) return "lessons";
+  if (s.includes("explore")) return "explore";
+  if (s.includes("experience-hub")) return "experience-hub";
+  if (s.includes("profile")) return "profile";
+  if (s.includes("exams")) return "exams";
+  if (s.includes("audiobooks")) return "audiobooks";
+  return "default";
+}
+
 function pickMessage(messages: string[], seed: number): string {
   return messages[seed % messages.length]!;
 }

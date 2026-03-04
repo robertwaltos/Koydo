@@ -24,7 +24,7 @@ export type VeoModel =
   | "veo-3.1-generate-preview"     // Standard
   | "veo-3.1-fast-generate-preview"; // Fast (lower cost)
 
-export type AspectRatio = "1:1" | "3:4" | "4:3" | "9:16" | "16:9" | "3:2";
+export type AspectRatio = "1:1" | "3:4" | "4:3" | "9:16" | "16:9";
 export type VeoAspectRatio = "16:9" | "9:16";
 export type VeoResolution = "720p" | "1080p" | "4k";
 
@@ -124,7 +124,7 @@ async function googleFetch<T>(
 /**
  * Generate an image using Google Imagen 4.
  *
- * For lesson illustrations: use aspect 3:2, standard model.
+ * For lesson illustrations: use aspect 4:3, standard model.
  * For thumbnails: use aspect 16:9, fast model.
  *
  * @returns Base64-encoded PNG image(s)
@@ -138,7 +138,7 @@ export async function generateImage(
     instances: [{ prompt: req.prompt }],
     parameters: {
       sampleCount: req.numberOfImages ?? 1,
-      aspectRatio: req.aspectRatio ?? "3:2",
+      aspectRatio: req.aspectRatio ?? "4:3",
       ...(req.negativePrompt ? { negativePrompt: req.negativePrompt } : {}),
       personGeneration: req.personGeneration ?? "allow_all",
       outputOptions: { mimeType: "image/png" },
@@ -303,7 +303,7 @@ export function buildLessonImagePrompt(
     `Style: ${style}.`,
     `Composition: one dominant concept visual, two supporting details, neutral background.`,
     safety,
-    `Aspect ratio 3:2.`,
+    `Aspect ratio 4:3.`,
   ].join(" ");
 }
 

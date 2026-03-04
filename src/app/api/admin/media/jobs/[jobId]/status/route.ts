@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
@@ -14,29 +14,13 @@ const routeParamsSchema = z.object({
   jobId: z.string().uuid(),
 });
 
-async function isAdmin() {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.getUser();
-  if (authError || !user) return false;
-
-  const { data: profile } = await supabase
-    .from("user_profiles")
-    .select("is_admin")
-    .eq("user_id", user.id)
-    .maybeSingle();
-  return Boolean(profile?.is_admin);
-}
-
 export async function POST(
   request: Request,
   context: { params: Promise<{ jobId: string }> },
 ) {
-  const admin = await isAdmin();
-  if (!admin) {
-    return NextResponse.json({ error: "Admin access required." }, { status: 403 });
+  const auth = await requireAdminForApi();
+  if (!auth.isAuthorized) {
+    return auth.response;
   }
 
   const parsedParams = routeParamsSchema.safeParse(await context.params);

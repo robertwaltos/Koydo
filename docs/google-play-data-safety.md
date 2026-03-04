@@ -1,98 +1,86 @@
-# Google Play Data Safety Declaration
+# Google Play Data Safety Declaration Worksheet
 
 **App ID:** `com.koydo.app`
-**Last Updated:** 2026-03-02
+**Last Updated:** 2026-03-04
 
-This document describes the data collected and shared by Koydo, for use when completing the Google Play Console Data Safety form.
+Official sources:
+- Data Safety: https://support.google.com/googleplay/android-developer/answer/10787469
+- Target audience/content: https://support.google.com/googleplay/android-developer/answer/9898842
+- Families policy: https://support.google.com/googleplay/android-developer/answer/9285070
 
----
-
-## Data Collection Summary
-
-### 1. Personal Information
-
-| Data Type | Collected | Shared | Purpose | Optional |
-|-----------|-----------|--------|---------|----------|
-| Email address | Yes | No | Account authentication, support tickets | No |
-| Name / Display name | Yes | No | User profile, learner profiles | No |
-| Phone number | Yes (optional) | No | Phone OTP authentication | Yes |
-
-### 2. Financial Information
-
-| Data Type | Collected | Shared | Purpose | Optional |
-|-----------|-----------|--------|---------|----------|
-| Purchase history | Yes | Yes (Stripe, RevenueCat) | Subscription management, billing | No (for paid users) |
-| Payment info | No (handled by Stripe/RevenueCat) | N/A | N/A | N/A |
-
-### 3. App Activity
-
-| Data Type | Collected | Shared | Purpose | Optional |
-|-----------|-----------|--------|---------|----------|
-| Page views / interactions | Yes (with consent) | Yes (Mixpanel, with consent) | Analytics, product improvement | Yes |
-| In-app search history | No | No | N/A | N/A |
-| Learning progress | Yes | No | Educational progress tracking | No |
-
-### 4. App Info and Performance
-
-| Data Type | Collected | Shared | Purpose | Optional |
-|-----------|-----------|--------|---------|----------|
-| Crash logs | Yes | No | Debugging, stability | No |
-| Diagnostics | Yes | No | Performance monitoring | No |
-
-### 5. Device or Other IDs
-
-| Data Type | Collected | Shared | Purpose | Optional |
-|-----------|-----------|--------|---------|----------|
-| Device identifiers | Yes (with ATT consent on iOS) | Yes (Mixpanel, with consent) | Analytics | Yes |
-| Advertising ID | No | No | N/A | N/A |
+This worksheet is for release managers. Fill every row from the shipping production configuration.
 
 ---
 
-## Data Handling Practices
+## 1) Baseline Answers
 
-### Encryption
-- All data is encrypted in transit (HTTPS/TLS 1.3)
-- Data at rest is encrypted by Supabase (AES-256)
+| Console Question | Current Expected Answer | Notes |
+|---|---|---|
+| Does your app collect or share required user data types? | Yes | Account + usage + subscription flows collect data |
+| Is all collected data encrypted in transit? | Yes | HTTPS/TLS only |
+| Can users request deletion? | Yes | In-app deletion + public deletion URL |
 
-### Data Deletion
-- Users can request account deletion from Settings → Danger Zone
-- Account deletion includes a 30-day grace period before permanent erasure
-- Users can also submit DSAR erasure requests via the Privacy Center
-- Deletion removes: auth credentials, student profiles, learning progress, support tickets, subscription metadata
-
-### Data Retention
-- Active account data is retained while the account exists
-- Deleted accounts enter a 30-day soft-delete period, then are permanently erased
-- Analytics data (Mixpanel) follows Mixpanel's retention policy (controlled via consent)
-
-### Children's Privacy (COPPA / GDPR-K)
-- Age-gate enforced during onboarding (threshold: 13 years)
-- Users under 13 require verified parental consent before accessing the platform
-- Parent consent flow uses HMAC-signed email verification tokens
-- Parents can request data access, correction, or deletion via support
+Deletion URL for Play form:
+- `https://koydo.app/account-deletion`
+- `https://koydo.app/data-deletion`
 
 ---
 
-## Third-Party SDKs / Services
+## 2) Data-Type Decision Table (Fill Before Submission)
 
-| Service | Purpose | Data Accessed | Privacy Policy |
-|---------|---------|---------------|----------------|
-| Supabase | Auth, database, storage | Email, profile, progress | https://supabase.com/privacy |
-| Stripe | Web billing | Purchase history | https://stripe.com/privacy |
-| RevenueCat | Native IAP | Purchase history, device ID | https://www.revenuecat.com/privacy |
-| Mixpanel | Analytics (consent-gated) | Page views, events, device ID | https://mixpanel.com/legal/privacy-policy |
-| OpenAI | Lesson audio generation | Lesson text only (no PII) | https://openai.com/privacy |
-| ElevenLabs | TTS audio generation | Lesson text only (no PII) | https://elevenlabs.io/privacy |
+| Data Type | Collects? | Shared? | Required/Optional | Purpose | Evidence Source |
+|---|---|---|---|---|---|
+| Email address | Fill | Fill | Fill | Auth/account support | Auth/signup flows |
+| User IDs | Fill | Fill | Fill | Core functionality | Account/session flows |
+| Name / display name | Fill | Fill | Fill | Profile functionality | Profile tables/forms |
+| Phone number | Fill | Fill | Fill | OTP login (if enabled) | Sign-in phone flow |
+| Purchase history | Fill | Fill | Fill | Subscription management | Billing/revenue flows |
+| App interactions | Fill | Fill | Fill | Learning progression/analytics | Telemetry endpoints |
+| User-generated content | Fill | Fill | Fill | Social/support/learning inputs | Social/support/pronunciation records |
+| Device identifiers / push token | Fill | Fill | Fill | Notifications | Push token persistence |
+| Diagnostics/crash data | Fill | Fill | Fill | Stability/operations | Only if app-integrated SDKs/processors collect this |
+
+Rule: if transmitted off-device, it is collected for Data Safety purposes.
 
 ---
 
-## Play Console Form Answers
+## 3) Processor Matrix (Release-Dependent)
 
-Use these answers when filling in the Google Play Console Data Safety form:
+Mark each provider `Enabled` or `Disabled` for this release.
 
-1. **Does your app collect or share any of the required user data types?** → Yes
-2. **Is all of the user data collected by your app encrypted in transit?** → Yes
-3. **Do you provide a way for users to request that their data is deleted?** → Yes
-4. **Does your app collect any data types not listed?** → No
-5. **Is your app a game?** → No
-6. **Does your app target children or has it been reviewed for child safety?** → Yes (COPPA-compliant, age-gated)
+| Provider | Enabled? | Data Categories Potentially Affected |
+|---|---|---|
+| Supabase | Fill | Auth/profile/progress/events |
+| RevenueCat | Fill | Purchases/subscription metadata |
+| Stripe | Fill | Billing metadata |
+| Mixpanel | Fill | Analytics/device identifiers |
+| DeepL | Fill | Translation input text |
+| Google Translation | Fill | Translation input text |
+| Licensed pronunciation API | Fill | Pronunciation text + metadata |
+| OpenAI | Fill | AI feature text payloads |
+| ElevenLabs | Fill | TTS text payloads |
+
+If `Disabled`, do not include in final Data Safety declaration for that release.
+
+---
+
+## 4) Audience & Families Cross-Check
+
+Before submission:
+- [ ] Selected audience reflects actual users, not policy-avoidance choices
+- [ ] If children are in scope, Families policy obligations are implemented
+- [ ] Listing copy and app behavior are consistent with audience selection
+
+---
+
+## 5) Final Release Gate
+
+- [ ] Data Safety answers match production build behavior exactly
+- [ ] Privacy policy text matches declared collection/sharing
+- [ ] Reviewer can access deletion flow and key gated features
+- [ ] Internal reviewer signs off checklist date + release version
+
+Record sign-off:
+- Release version: `________`
+- Reviewer: `________`
+- Date (UTC): `________`

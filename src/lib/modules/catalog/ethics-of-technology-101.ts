@@ -46,19 +46,19 @@ export const EthicsOfTechnology101Module: LearningModule = {
           "id": "ethics-of-technology-101-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "This lesson defines operational language, scope boundaries, and how normative frameworks and sociotechnical harms connect in real systems."
+          "content": "In this lesson, we will explore important concepts related to technology ethics. We will define what we mean by operational language, which helps us communicate clearly about technology. We will also discuss the boundaries of our discussions, known as scope boundaries, and how these relate to normative frameworks. Additionally, we will examine how sociotechnical harms can arise in real-world systems, helping us understand the ethical implications of technology use.\nContext recap: In this lesson, we will explore important concepts related to technology ethics. We will define what we mean by operational language, which helps us communicate clearly about technology. We will also discuss the boundaries of our discussions, known as scope boundaries, and how these relate to normative frameworks. Additionally, we will examine how sociotechnical harms can arise in real-world systems, helping us understand the ethical implications of technology use."
         },
         {
           "id": "ethics-of-technology-101-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning Under Constraints",
-          "content": "Learners model cause-effect pathways and identify failure-prone assumptions before selecting interventions."
+          "content": "In this part of the lesson, learners will engage in modeling cause-and-effect pathways. This means we will look at how different actions can lead to specific outcomes. We will also identify assumptions that might lead to failures in our reasoning. By doing this, learners will be better prepared to select effective interventions that can help address the issues we identify.\nContext recap: In this part of the lesson, learners will engage in modeling cause-and-effect pathways. This means we will look at how different actions can lead to specific outcomes. We will also identify assumptions that might lead to failures in our reasoning. By doing this, learners will be better prepared to select effective interventions that can help address the issues we identify."
         },
         {
           "id": "ethics-of-technology-101-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All claims in this module must map to observable indicators, uncertainty bounds, and review checkpoints."
+          "content": "Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have evidence that we can see or measure. We will also discuss the importance of understanding uncertainty bounds, which help us know the limits of our knowledge. Finally, we will establish review checkpoints to ensure that our findings are accurate and reliable.\nContext recap: Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have evidence that we can see or measure. We will also discuss the importance of understanding uncertainty bounds, which help us know the limits of our knowledge. Finally, we will establish review checkpoints to ensure that our findings are accurate and reliable."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const EthicsOfTechnology101Module: LearningModule = {
           "id": "ethics-of-technology-101-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners design a workflow emphasizing foundational vocabulary, core mechanism mapping, and basic scenario analysis, then test resilience against uncertainty."
+          "content": "In this interactive lab, learners will have the opportunity to design a workflow. This will involve using foundational vocabulary to communicate effectively, mapping out core mechanisms to understand how things work, and conducting basic scenario analyses to predict outcomes. After creating their workflows, learners will test their designs to see how resilient they are when faced with uncertainty.\nContext recap: In this interactive lab, learners will have the opportunity to design a workflow. This will involve using foundational vocabulary to communicate effectively, mapping out core mechanisms to understand how things work, and conducting basic scenario analyses to predict outcomes. After creating their workflows, learners will test their designs to see how resilient they are when faced with uncertainty."
         },
         {
           "id": "ethics-of-technology-101-l02-c2",
           "kind": "recap",
           "title": "Readiness and Control Gates",
-          "content": "Operational readiness requires owner mapping, control gates, and post-decision verification hooks."
+          "content": "To ensure that our operations are ready to go, we need to focus on several key elements. This includes mapping out who is responsible for what, which we call owner mapping. We will also establish control gates, which are checkpoints that help us monitor progress. Finally, we will create post-decision verification hooks to confirm that our decisions are effective and appropriate.\nContext recap: To ensure that our operations are ready to go, we need to focus on several key elements. This includes mapping out who is responsible for what, which we call owner mapping. We will also establish control gates, which are checkpoints that help us monitor progress. Finally, we will create post-decision verification hooks to confirm that our decisions are effective and appropriate."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const EthicsOfTechnology101Module: LearningModule = {
           "id": "ethics-of-technology-101-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a technology rollout with major convenience gains but emerging fairness, privacy, and autonomy risks. Learners map decision stakes and identify non-obvious risks."
+          "content": "In this case analysis, we will explore a new technology that is being introduced, which offers users a lot of convenience and makes tasks easier. However, it is important to think about the potential problems that could arise, especially concerning fairness, privacy, and the freedom of individuals to make their own choices. As part of this lesson, learners will create a map that outlines the important factors involved in making decisions about this technology. They will also identify risks that might not be obvious at first glance. This exercise will encourage critical thinking about how technology affects our lives and the responsibilities that come with it."
         },
         {
           "id": "ethics-of-technology-101-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix Construction",
-          "content": "Interventions are compared across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will construct a tradeoff matrix to compare different interventions. This matrix will help us evaluate each option based on several important criteria, including effectiveness, reliability, equity, and how feasible it is to implement. By analyzing these factors, learners will gain a clearer understanding of the trade-offs involved in making ethical decisions about technology.\nContext recap: In this section, we will construct a tradeoff matrix to compare different interventions. This matrix will help us evaluate each option based on several important criteria, including effectiveness, reliability, equity, and how feasible it is to implement. By analyzing these factors, learners will gain a clearer understanding of the trade-offs involved in making ethical decisions about technology."
         },
         {
           "id": "ethics-of-technology-101-l04-c3",
           "kind": "recap",
           "title": "Failure Lessons and Recovery",
-          "content": "The lesson converts failure signatures into safeguards, response playbooks, and monitoring updates."
+          "content": "In this recap, we will focus on how to learn from failures. We will convert what we call failure signatures—patterns that indicate where things went wrong—into actionable safeguards. Additionally, we will create response playbooks that outline steps to take in case of failure and establish monitoring updates to keep track of our progress and ensure we are learning from our experiences.\nContext recap: In this recap, we will focus on how to learn from failures. We will convert what we call failure signatures—patterns that indicate where things went wrong—into actionable safeguards. Additionally, we will create response playbooks that outline steps to take in case of failure and establish monitoring updates to keep track of our progress and ensure we are learning from our experiences."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const EthicsOfTechnology101Module: LearningModule = {
           "id": "ethics-of-technology-101-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation Setup",
-          "content": "Learners configure interventions, define uncertainty parameters, and set measurable success thresholds."
+          "content": "In this interactive practice session, learners will configure various interventions. This means they will set up different strategies to address the issues we have discussed. They will also define uncertainty parameters, which help us understand the limits of our predictions, and establish measurable success thresholds to determine whether our interventions are effective.\nContext recap: In this interactive practice session, learners will configure various interventions. This means they will set up different strategies to address the issues we have discussed. They will also define uncertainty parameters, which help us understand the limits of our predictions, and establish measurable success thresholds to determine whether our interventions are effective."
         },
         {
           "id": "ethics-of-technology-101-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After each run, results are reviewed for expected gains, side effects, and governance compliance."
+          "content": "After each simulation run, we will conduct a debriefing session. During this time, we will review the results to see if we achieved the expected gains. We will also look for any side effects that may have occurred and check for compliance with governance standards. This process will help us learn from our experiences and improve future interventions.\nContext recap: After each simulation run, we will conduct a debriefing session. During this time, we will review the results to see if we achieved the expected gains. We will also look for any side effects that may have occurred and check for compliance with governance standards. This process will help us learn from our experiences and improve future interventions."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const EthicsOfTechnology101Module: LearningModule = {
           "id": "ethics-of-technology-101-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "This lesson identifies impact distribution, especially where benefits and burdens diverge across groups."
+          "content": "In this lesson, we will focus on mapping the impacts of technology on different stakeholders. This means we will identify how benefits and burdens are distributed among various groups. Understanding where these impacts diverge is crucial for ensuring that technology is used ethically and fairly, as it helps us recognize who may be disadvantaged or advantaged by certain technological decisions.\nContext recap: In this lesson, we will focus on mapping the impacts of technology on different stakeholders. This means we will identify how benefits and burdens are distributed among various groups. Understanding where these impacts diverge is crucial for ensuring that technology is used ethically and fairly, as it helps us recognize who may be disadvantaged or advantaged by certain technological decisions."
         },
         {
           "id": "ethics-of-technology-101-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability requires clear decision traceability, review rights, and remediation standards."
+          "content": "In this section, we will discuss the importance of accountability in technology use. This requires us to have clear decision traceability, which means we can track how decisions were made. We will also explore the rights of individuals to review decisions that affect them and establish standards for remediation, ensuring that there are processes in place to address any issues that arise.\nContext recap: In this section, we will discuss the importance of accountability in technology use. This requires us to have clear decision traceability, which means we can track how decisions were made. We will also explore the rights of individuals to review decisions that affect them and establish standards for remediation, ensuring that there are processes in place to address any issues that arise."
         },
         {
           "id": "ethics-of-technology-101-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist combines policy, ethics, technical reliability, and stakeholder trust criteria."
+          "content": "To ensure responsible use of technology, we can create a final checklist. This checklist will include important elements such as policies that guide our actions, ethical considerations that reflect our values, the reliability of the technology we use, and the trust we build with everyone involved. By combining these criteria, we can make better decisions that benefit all stakeholders.\nContext recap: To ensure responsible use of technology, we can create a final checklist. This checklist will include important elements such as policies that guide our actions, ethical considerations that reflect our values, the reliability of the technology we use, and the trust we build with everyone involved. By combining these criteria, we can make better decisions that benefit all stakeholders."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const EthicsOfTechnology101Module: LearningModule = {
           "id": "ethics-of-technology-101-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter Drafting",
-          "content": "Learners draft capstone scope, constraints, metrics, and governance checkpoints in one decision charter."
+          "content": "In this activity, you will have the opportunity to draft a charter for your capstone project. This charter will outline the scope of your project, the constraints you might face, the metrics you will use to measure success, and the governance checkpoints that will help keep your project on track. This is an important step in planning your project effectively.\nContext recap: In this activity, you will have the opportunity to draft a charter for your capstone project. This charter will outline the scope of your project, the constraints you might face, the metrics you will use to measure success, and the governance checkpoints that will help keep your project on track. This is an important step in planning your project effectively."
         },
         {
           "id": "ethics-of-technology-101-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Final preparation focuses on evidence-backed justification and robust response to critical review."
+          "content": "As we prepare for the final presentation of our projects, it is crucial to focus on gathering strong evidence to support our ideas. This preparation will help us respond effectively to any critical feedback we might receive. By being ready to justify our decisions and defend our work, we can demonstrate the thoughtfulness and rigor behind our projects.\nContext recap: As we prepare for the final presentation of our projects, it is crucial to focus on gathering strong evidence to support our ideas. This preparation will help us respond effectively to any critical feedback we might receive. By being ready to justify our decisions and defend our work, we can demonstrate the thoughtfulness and rigor behind our projects."
         }
       ],
       "interactiveActivities": [

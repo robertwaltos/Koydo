@@ -47,19 +47,19 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Microelectronics, with focus on microelectronics systems diagnostics and microelectronics operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of scope within the fascinating field of Microelectronics. Our focus will be on two key areas: first, we will learn how to effectively diagnose microelectronics systems, which involves identifying issues and ensuring they function correctly. Second, we will explore how to design operations and execution plans that are not only efficient but also reliable. Gaining this foundational knowledge is crucial for anyone aspiring to excel in the dynamic world of microelectronics, as it lays the groundwork for future innovations and problem-solving in the industry."
         },
         {
           "id": "microelectronics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how various system components depend on one another. This preparation is crucial before planning any interventions, as it helps ensure that decisions are well-informed and effective.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how various system components depend on one another. This preparation is crucial before planning any interventions, as it helps ensure that decisions are well-informed and effective."
         },
         {
           "id": "microelectronics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in our analyses must be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our findings are valid and reliable. This practice helps maintain the integrity of our work and supports sound decision-making.\nContext recap: In our recap, we emphasize that all claims made in our analyses must be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our findings are valid and reliable. This practice helps maintain the integrity of our work and supports sound decision-making."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their specific needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice is vital for understanding how to create robust systems that can withstand challenges.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their specific needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on practice is vital for understanding how to create robust systems that can withstand challenges."
         },
         {
           "id": "microelectronics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap of the lab, we highlight the importance of integrating checkpoints into workflows. These checkpoints help ensure that processes can be reviewed and adjusted as necessary. Additionally, we will discuss rollback criteria and how to implement threshold-based escalation to manage any issues that arise effectively.\nContext recap: In our recap of the lab, we highlight the importance of integrating checkpoints into workflows. These checkpoints help ensure that processes can be reviewed and adjusted as necessary. Additionally, we will discuss rollback criteria and how to implement threshold-based escalation to manage any issues that arise effectively."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in microelectronics systems diagnostics and microelectronics impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that presents competing constraints within microelectronics systems diagnostics. We will analyze the impacts and trade-offs involved in various decisions. Understanding these dynamics is crucial for making informed choices that balance different factors effectively.\nContext recap: In this lesson, we will frame a case that presents competing constraints within microelectronics systems diagnostics. We will analyze the impacts and trade-offs involved in various decisions. Understanding these dynamics is crucial for making informed choices that balance different factors effectively."
         },
         {
           "id": "microelectronics-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and the importance of considering multiple perspectives.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and the importance of considering multiple perspectives."
         },
         {
           "id": "microelectronics-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will discuss the structure of a decision memo. Each recommendation made should include key elements such as assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well thought out and prepared for potential challenges.\nContext recap: In our recap, we will discuss the structure of a decision memo. Each recommendation made should include key elements such as assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well thought out and prepared for potential challenges."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience is essential for understanding how to manage complex systems effectively while adhering to necessary regulations and standards.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience is essential for understanding how to manage complex systems effectively while adhering to necessary regulations and standards.\nWhy this matters: Live Scenario Controls helps learners in Microelectronics connect ideas from Microelectronics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "microelectronics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will focus on the design of effective responses that can adapt to changing conditions. It is important that these responses update control gates without losing traceability or accountability. This ensures that all actions taken are transparent and can be reviewed if necessary.\nContext recap: In our recap, we will focus on the design of effective responses that can adapt to changing conditions. It is important that these responses update control gates without losing traceability or accountability. This ensures that all actions taken are transparent and can be reviewed if necessary."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is crucial for recognizing the broader impact of decisions made in microelectronics.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is crucial for recognizing the broader impact of decisions made in microelectronics.\nWhy this matters: Stakeholder Impact Distribution helps learners in Microelectronics connect ideas from Microelectronics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "microelectronics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decisions can be traced, the rights of individuals to review those decisions, and the obligations to remediate any issues that arise. Integrating these elements is essential for fostering trust and responsibility in microelectronics governance.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decisions can be traced, the rights of individuals to review those decisions, and the obligations to remediate any issues that arise. Integrating these elements is essential for fostering trust and responsibility in microelectronics governance."
         },
         {
           "id": "microelectronics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "As we conclude our discussion on responsible leadership in microelectronics, it's important to remember a checklist that connects various important aspects. This checklist includes outcomes we aim for, ethical considerations we must uphold, compliance with policies that guide our actions, and the resilience we need to adapt to challenges. Keeping these elements in mind will help us lead responsibly in the field.\nContext recap: As we conclude our discussion on responsible leadership in microelectronics, it's important to remember a checklist that connects various important aspects. This checklist includes outcomes we aim for, ethical considerations we must uphold, compliance with policies that guide our actions, and the resilience we need to adapt to challenges. Keeping these elements in mind will help us lead responsibly in the field."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Microelectronics601Module: LearningModule = {
           "id": "microelectronics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence that backs up those claims, clear boundaries of uncertainty, and pathways for remediation if issues arise. This exercise will help you practice critical thinking and effective communication skills that are essential in the field of microelectronics.\nContext recap: In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence that backs up those claims, clear boundaries of uncertainty, and pathways for remediation if issues arise. This exercise will help you practice critical thinking and effective communication skills that are essential in the field of microelectronics."
         },
         {
           "id": "microelectronics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal session, learners will practice responding to various critiques that may come from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of stakeholders. This practice will prepare you to confidently defend your ideas and solutions in front of an audience, enhancing your public speaking and critical thinking abilities.\nContext recap: During this rehearsal session, learners will practice responding to various critiques that may come from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of stakeholders. This practice will prepare you to confidently defend your ideas and solutions in front of an audience, enhancing your public speaking and critical thinking abilities."
         }
       ],
       "interactiveActivities": [

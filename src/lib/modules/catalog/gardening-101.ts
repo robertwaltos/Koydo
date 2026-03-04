@@ -30,17 +30,17 @@ export const Gardening101Module: LearningModule = {
         {
           "id": "gardening-101-l01-c1",
           "title": "What Healthy Soil Does",
-          "content": "Healthy soil holds water and nutrients while still allowing air to reach plant roots."
+          "content": "Healthy soil is like a superhero for plants! It not only holds onto water and nutrients that plants need to grow strong, but it also allows air to reach the roots. This balance is essential because roots need oxygen to breathe, just like we do. When soil is healthy, plants can thrive and produce beautiful flowers and delicious fruits and vegetables.\nContext recap: Healthy soil is like a superhero for plants! It not only holds onto water and nutrients that plants need to grow strong, but it also allows air to reach the roots. This balance is essential because roots need oxygen to breathe, just like we do. When soil is healthy, plants can thrive and produce beautiful flowers and delicious fruits and vegetables."
         },
         {
           "id": "gardening-101-l01-c2",
           "title": "Soil Structure",
-          "content": "Sand, silt, clay, and organic matter each change drainage and nutrient availability."
+          "content": "The structure of soil is made up of different materials, including sand, silt, clay, and organic matter. Each of these components plays a special role in how well the soil can drain water and provide nutrients to plants. For example, sandy soil drains quickly but may not hold nutrients well, while clay soil can hold nutrients but might not drain as easily. Understanding these differences helps us create the best environment for our plants to grow.\nContext recap: The structure of soil is made up of different materials, including sand, silt, clay, and organic matter. Each of these components plays a special role in how well the soil can drain water and provide nutrients to plants. For example, sandy soil drains quickly but may not hold nutrients well, while clay soil can hold nutrients but might not drain as easily. Understanding these differences helps us create the best environment for our plants to grow."
         },
         {
           "id": "gardening-101-l01-c3",
           "title": "Root Zone Basics",
-          "content": "Root depth and root spread determine watering depth and spacing decisions."
+          "content": "The root zone is the area in the soil where plant roots grow. The depth and spread of these roots are very important because they help determine how deep we need to water our plants and how far apart we should plant them. If roots are deep and wide, they can access more water and nutrients, which helps the plant stay healthy and strong. Knowing about root zones helps us make better choices in our gardening.\nContext recap: The root zone is the area in the soil where plant roots grow. The depth and spread of these roots are very important because they help determine how deep we need to water our plants and how far apart we should plant them. If roots are deep and wide, they can access more water and nutrients, which helps the plant stay healthy and strong. Knowing about root zones helps us make better choices in our gardening."
         }
       ],
       "flashcards": [
@@ -221,17 +221,17 @@ export const Gardening101Module: LearningModule = {
         {
           "id": "gardening-101-l04-c1",
           "title": "Planting Windows",
-          "content": "Use local frost dates and temperature ranges to choose planting windows."
+          "content": "When planning our garden, it's important to know the local frost dates and temperature ranges. These factors help us determine the best times to plant our seeds. By understanding when the last frost occurs in spring and the first frost in fall, we can create planting windows that give our plants the best chance to grow without being harmed by cold weather.\nContext recap: When planning our garden, it's important to know the local frost dates and temperature ranges. These factors help us determine the best times to plant our seeds. By understanding when the last frost occurs in spring and the first frost in fall, we can create planting windows that give our plants the best chance to grow without being harmed by cold weather."
         },
         {
           "id": "gardening-101-l04-c2",
           "title": "Rotation Strategy",
-          "content": "Rotate plant families to reduce soil nutrient depletion and disease carryover."
+          "content": "Using a rotation strategy means changing the types of plants we grow in specific areas of our garden each season. This practice helps to prevent the soil from losing important nutrients and reduces the risk of diseases that can affect plants. By rotating plant families, we can keep our garden healthy and productive year after year.\nContext recap: Using a rotation strategy means changing the types of plants we grow in specific areas of our garden each season. This practice helps to prevent the soil from losing important nutrients and reduces the risk of diseases that can affect plants. By rotating plant families, we can keep our garden healthy and productive year after year."
         },
         {
           "id": "gardening-101-l04-c3",
           "title": "Low-Waste Garden System",
-          "content": "Mulch, compost, and rain capture create a more resilient and sustainable system."
+          "content": "Creating a low-waste garden system is a fantastic way to be environmentally friendly! We can use mulch to keep the soil moist, compost to enrich the soil with nutrients, and capture rainwater to water our plants. These practices not only help our garden thrive but also make it more resilient and sustainable, which is great for our planet.\nContext recap: Creating a low-waste garden system is a fantastic way to be environmentally friendly! We can use mulch to keep the soil moist, compost to enrich the soil with nutrients, and capture rainwater to water our plants. These practices not only help our garden thrive but also make it more resilient and sustainable, which is great for our planet."
         }
       ]
     },

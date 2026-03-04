@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Globe, Mountain, Waves, Flame, Activity, ShieldCheck, Thermometer, Info, ChevronRight, Zap } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Geology Types --- */
 type Plate = {
@@ -28,6 +29,9 @@ export default function TectonicTrek() {
         elevation: 10,
         volcanic: 0
     });
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const updateSimulation = useCallback(() => {
         if (gameState !== "SIMULATING") return;
@@ -81,6 +85,26 @@ export default function TectonicTrek() {
             }, 3000);
         }
     }, [stats.tension, setMood, setMessage]);
+
+    useEffect(() => {
+        const stabilized = gameState === "SIMULATING" && stats.elevation >= 20 && stats.tension < 40;
+        if (!stabilized || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "tectonic",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, Math.round(stats.elevation)),
+            score: Math.round(100 - stats.tension),
+            maxScore: 100,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, stats.elevation, stats.tension]);
 
     const movePlate = (id: string, vx: number) => {
         setPlates(prev => prev.map(p => p.id === id ? { ...p, vector: { ...p.vector, x: vx } } : p));

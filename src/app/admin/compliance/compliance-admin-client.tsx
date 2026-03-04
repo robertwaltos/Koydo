@@ -24,10 +24,40 @@ type DbReadinessResult = {
   tables: DbReadinessRow[];
 };
 
+type ComplianceAuditRun = {
+  id: string;
+  status: string;
+  score: number;
+  target_score: number;
+  checks_total: number;
+  checks_pass: number;
+  checks_warn: number;
+  checks_fail: number;
+  evidence_artifact_id: string | null;
+  completed_at: string | null;
+  error: string | null;
+  created_at: string;
+};
+
+type ComplianceAuditFinding = {
+  id: string;
+  pass_name: string;
+  finding_key: string;
+  severity: "pass" | "warn" | "fail";
+  title: string;
+  detail: string;
+  remediation: string | null;
+  created_at: string;
+};
+
 export default function ComplianceAdminClient({
   initialDsarRequests,
+  initialAuditRun,
+  initialAuditFindings,
 }: {
   initialDsarRequests: DsarRow[];
+  initialAuditRun: ComplianceAuditRun | null;
+  initialAuditFindings: ComplianceAuditFinding[];
 }) {
   const [rows, setRows] = useState(initialDsarRequests);
   const [status, setStatus] = useState("");
@@ -36,6 +66,9 @@ export default function ComplianceAdminClient({
   const [bulkConfirm, setBulkConfirm] = useState("");
   const [dbCheck, setDbCheck] = useState<DbReadinessResult | null>(null);
   const [dbCheckLoading, setDbCheckLoading] = useState(false);
+  const [auditRun, setAuditRun] = useState<ComplianceAuditRun | null>(initialAuditRun);
+  const [auditFindings, setAuditFindings] = useState<ComplianceAuditFinding[]>(initialAuditFindings);
+  const [auditLoading, setAuditLoading] = useState(false);
 
   const updateStatus = async (requestId: string, nextStatus: DsarRow["status"]) => {
     setStatus("");
@@ -153,6 +186,64 @@ export default function ComplianceAdminClient({
     }
   };
 
+  const runTriplePassAudit = async () => {
+    setAuditLoading(true);
+    setStatus("");
+    try {
+      const response = await fetch("/api/admin/compliance/triple-pass/run", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({}),
+      });
+      const payload = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        run?: {
+          runId?: string;
+          score?: number;
+          targetScore?: number;
+          checksTotal?: number;
+          checksPass?: number;
+          checksWarn?: number;
+          checksFail?: number;
+          evidenceArtifactId?: string | null;
+          findings?: ComplianceAuditFinding[];
+        };
+      };
+      if (!response.ok || !payload.run) {
+        setStatus(payload.error ?? "Unable to run triple-pass compliance audit.");
+        return;
+      }
+
+      setAuditRun({
+        id: payload.run.runId ?? initialAuditRun?.id ?? `audit-${Date.now()}`,
+        status: "completed",
+        score: Number(payload.run.score ?? 0),
+        target_score: Number(payload.run.targetScore ?? 10),
+        checks_total: Number(payload.run.checksTotal ?? 0),
+        checks_pass: Number(payload.run.checksPass ?? 0),
+        checks_warn: Number(payload.run.checksWarn ?? 0),
+        checks_fail: Number(payload.run.checksFail ?? 0),
+        evidence_artifact_id: payload.run.evidenceArtifactId ?? null,
+        completed_at: new Date().toISOString(),
+        error: null,
+        created_at: new Date().toISOString(),
+      });
+      const refresh = await fetch("/api/admin/compliance/triple-pass", { method: "GET" });
+      const refreshPayload = (await refresh.json().catch(() => ({}))) as {
+        run?: ComplianceAuditRun & { findings?: ComplianceAuditFinding[] };
+      };
+      if (refreshPayload.run) {
+        setAuditRun(refreshPayload.run);
+        setAuditFindings(refreshPayload.run.findings ?? []);
+      }
+      setStatus("Triple-pass compliance audit completed.");
+    } catch {
+      setStatus("Unable to run triple-pass compliance audit.");
+    } finally {
+      setAuditLoading(false);
+    }
+  };
+
   return (
     <section className="ui-soft-card p-5">
       <h2 className="text-lg font-semibold">DSAR Queue</h2>
@@ -161,6 +252,48 @@ export default function ComplianceAdminClient({
           {status}
         </p>
       ) : null}
+      <div className="mt-3 rounded-2xl border border-border p-3">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <p className="text-sm font-medium">Triple-Pass Compliance Automation Audit</p>
+          <button
+            type="button"
+            onClick={runTriplePassAudit}
+            disabled={auditLoading}
+            className="ui-focus-ring ui-soft-button inline-flex min-h-11 items-center border border-border bg-surface-muted px-3 py-1 text-xs font-semibold text-foreground"
+          >
+            {auditLoading ? "Running..." : "Run Triple Pass"}
+          </button>
+        </div>
+        {auditRun ? (
+          <div className="mt-2 text-xs text-zinc-600">
+            <p>
+              Score {Number(auditRun.score).toFixed(2)}/10 (target {Number(auditRun.target_score).toFixed(2)}) | pass{" "}
+              {auditRun.checks_pass} | warn {auditRun.checks_warn} | fail {auditRun.checks_fail}
+            </p>
+            <p>
+              Status: {auditRun.status}
+              {auditRun.completed_at ? ` | Completed ${new Date(auditRun.completed_at).toLocaleString()}` : ""}
+              {auditRun.evidence_artifact_id ? ` | Evidence ${auditRun.evidence_artifact_id}` : ""}
+            </p>
+            {auditRun.error ? <p className="text-rose-700">Error: {auditRun.error}</p> : null}
+            <div className="mt-2 max-h-44 overflow-auto rounded-2xl border border-border p-2">
+              {auditFindings.length > 0 ? (
+                auditFindings.map((finding) => (
+                  <p key={finding.id} className="mb-1">
+                    [{finding.severity.toUpperCase()}] {finding.pass_name} :: {finding.title}
+                  </p>
+                ))
+              ) : (
+                <p>No findings available.</p>
+              )}
+            </div>
+          </div>
+        ) : (
+          <p className="mt-2 text-xs text-zinc-600">
+            No triple-pass run yet. Run it to generate a compliance scorecard and evidence artifact.
+          </p>
+        )}
+      </div>
       <div className="mt-3 rounded-2xl border border-border p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
           <p className="text-sm font-medium">Live DB Readiness Check</p>

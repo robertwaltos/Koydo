@@ -11,7 +11,9 @@ const requestSchema = z.object({
   password: z.string().min(8),
   displayName: z.string().min(1).max(80).optional(),
   isAdmin: z.boolean().optional(),
+  isOwner: z.boolean().optional(),
   isParent: z.boolean().optional(),
+  dataMode: z.enum(["live", "beta"]).optional(),
 });
 
 export async function POST(request: Request) {
@@ -33,6 +35,10 @@ export async function POST(request: Request) {
   }
 
   const admin = createSupabaseAdminClient();
+  const isOwner = payload.data.isOwner ?? false;
+  const isAdmin = (payload.data.isAdmin ?? false) || isOwner;
+  const dataMode = payload.data.dataMode ?? "live";
+
   const { data, error } = await admin.auth.admin.createUser({
     email: payload.data.email,
     password: payload.data.password,
@@ -51,8 +57,10 @@ export async function POST(request: Request) {
   const { error: profileError } = await admin.from("user_profiles").upsert({
     user_id: data.user.id,
     display_name: sanitizedDisplayName ?? null,
-    is_admin: payload.data.isAdmin ?? false,
+    is_admin: isAdmin,
+    is_owner: isOwner,
     is_parent: payload.data.isParent ?? false,
+    data_mode: dataMode,
   });
 
   if (profileError) {
@@ -66,8 +74,10 @@ export async function POST(request: Request) {
     targetUserId: data.user.id,
     metadata: {
       email: payload.data.email,
-      isAdmin: payload.data.isAdmin ?? false,
+      isAdmin,
+      isOwner,
       isParent: payload.data.isParent ?? false,
+      dataMode,
     },
   });
 

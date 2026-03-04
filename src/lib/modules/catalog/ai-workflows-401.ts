@@ -46,19 +46,19 @@ export const AiWorkflows401Module: LearningModule = {
           "id": "ai-workflows-401-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "AI Workflows at level 401 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In the advanced study of AI Workflows, it is essential to use clear and precise language. This means we need to carefully define the boundaries of our work, identify the specific unit we are analyzing, and ensure that everyone uses the same terms. By doing this, we can make sure that decisions made by different teams can be compared fairly and accurately. This clarity helps everyone understand their roles and responsibilities better, leading to more effective collaboration.\nContext recap: In the advanced study of AI Workflows, it is essential to use clear and precise language. This means we need to carefully define the boundaries of our work, identify the specific unit we are analyzing, and ensure that everyone uses the same terms. By doing this, we can make sure that decisions made by different teams can be compared fairly and accurately. This clarity helps everyone understand their roles and responsibilities better, leading to more effective collaboration."
         },
         {
           "id": "ai-workflows-401-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in AI Workflows depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "To excel in AI Workflows, it is crucial to understand not just the results we see, but also the reasons behind them. This lesson focuses on mapping out our assumptions, recognizing dependencies, and identifying any constraints we might face. By doing so, we can ensure that our interventions are aimed at addressing the root causes of issues, rather than just treating the symptoms. This deeper understanding will help us create more effective solutions and improve our overall performance.\nContext recap: To excel in AI Workflows, it is crucial to understand not just the results we see, but also the reasons behind them. This lesson focuses on mapping out our assumptions, recognizing dependencies, and identifying any constraints we might face. By doing so, we can ensure that our interventions are aimed at addressing the root causes of issues, rather than just treating the symptoms. This deeper understanding will help us create more effective solutions and improve our overall performance."
         },
         {
           "id": "ai-workflows-401-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this section, we introduce important practices that are essential for executing AI workflows reliably. These include maintaining high standards for evidence, keeping detailed logs of our activities, and establishing clear accountability loops. These practices are not optional; they are fundamental to ensuring that our work is trustworthy and that we can learn from our experiences. By adhering to these standards, we can improve our processes and outcomes over time.\nContext recap: In this section, we introduce important practices that are essential for executing AI workflows reliably. These include maintaining high standards for evidence, keeping detailed logs of our activities, and establishing clear accountability loops. These practices are not optional; they are fundamental to ensuring that our work is trustworthy and that we can learn from our experiences. By adhering to these standards, we can improve our processes and outcomes over time."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const AiWorkflows401Module: LearningModule = {
           "id": "ai-workflows-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for prompt design and retrieval pipelines, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this interactive lab, learners will have the opportunity to construct a complete workflow for designing prompts and managing retrieval pipelines. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to revert changes if needed. This hands-on experience will help learners understand the components of a workflow and how they interact with one another.\nContext recap: In this interactive lab, learners will have the opportunity to construct a complete workflow for designing prompts and managing retrieval pipelines. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to revert changes if needed. This hands-on experience will help learners understand the components of a workflow and how they interact with one another."
         },
         {
           "id": "ai-workflows-401-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we emphasize the importance of decision logging in our workflows. Every decision made during the process should be accompanied by a clear rationale, an expected effect, and a verification point. This practice allows us to conduct thorough analyses after the workflow has run, helping us to understand what worked well and what could be improved. By documenting our decisions in this way, we can enhance our learning and make better choices in the future.\nContext recap: In this recap, we emphasize the importance of decision logging in our workflows. Every decision made during the process should be accompanied by a clear rationale, an expected effect, and a verification point. This practice allows us to conduct thorough analyses after the workflow has run, helping us to understand what worked well and what could be improved. By documenting our decisions in this way, we can enhance our learning and make better choices in the future."
         }
       ],
       "interactiveActivities": [
@@ -296,19 +296,19 @@ export const AiWorkflows401Module: LearningModule = {
           "id": "ai-workflows-401-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for AI Workflows scenarios."
+          "content": "When selecting methods for AI workflows, it is important to consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, learners will compare different alternatives and justify why certain methods are better suited for specific AI workflow scenarios. This critical thinking exercise will help learners develop the skills needed to make informed decisions in real-world applications.\nContext recap: When selecting methods for AI workflows, it is important to consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, learners will compare different alternatives and justify why certain methods are better suited for specific AI workflow scenarios. This critical thinking exercise will help learners develop the skills needed to make informed decisions in real-world applications."
         },
         {
           "id": "ai-workflows-401-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "A well-structured metric architecture is vital for monitoring the performance of AI workflows. This architecture connects leading indicators, which predict future performance, with lagging outcomes, which reflect past results, and diagnostic measures that help us understand the reasons behind those results. By establishing this framework, teams can detect any deviations from expected performance early on and respond in a thoughtful and deliberate manner, ensuring continuous improvement.\nContext recap: A well-structured metric architecture is vital for monitoring the performance of AI workflows. This architecture connects leading indicators, which predict future performance, with lagging outcomes, which reflect past results, and diagnostic measures that help us understand the reasons behind those results. By establishing this framework, teams can detect any deviations from expected performance early on and respond in a thoughtful and deliberate manner, ensuring continuous improvement."
         },
         {
           "id": "ai-workflows-401-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we categorize failures into four main groups: data-related failures, process failures, execution failures, and governance failures. By organizing failures in this way, we can create specific plans to address each type, rather than applying generic solutions. This targeted approach allows us to effectively mitigate issues and improve the overall reliability of our AI workflows.\nContext recap: In this recap, we categorize failures into four main groups: data-related failures, process failures, execution failures, and governance failures. By organizing failures in this way, we can create specific plans to address each type, rather than applying generic solutions. This targeted approach allows us to effectively mitigate issues and improve the overall reliability of our AI workflows."
         }
       ],
       "flashcards": [
@@ -347,13 +347,13 @@ export const AiWorkflows401Module: LearningModule = {
           "id": "ai-workflows-401-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, learners will break down a realistic scenario into its key components: the objective, the context in which it occurs, the constraints that limit options, and the various intervention strategies available. Each component will be examined closely, and learners will take notes on the trade-offs involved in each option. This exercise will enhance critical thinking and problem-solving skills as learners navigate complex situations.\nContext recap: In this interactive case study, learners will break down a realistic scenario into its key components: the objective, the context in which it occurs, the constraints that limit options, and the various intervention strategies available. Each component will be examined closely, and learners will take notes on the trade-offs involved in each option. This exercise will enhance critical thinking and problem-solving skills as learners navigate complex situations."
         },
         {
           "id": "ai-workflows-401-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "In this recap, learners will present a structured improvement proposal based on their analysis of the case. This proposal will include clear success criteria to measure effectiveness, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. By delivering this proposal, learners will practice articulating their ideas and ensuring that their recommendations are actionable and well thought out.\nContext recap: In this recap, learners will present a structured improvement proposal based on their analysis of the case. This proposal will include clear success criteria to measure effectiveness, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. By delivering this proposal, learners will practice articulating their ideas and ensuring that their recommendations are actionable and well thought out."
         }
       ],
       "interactiveActivities": [

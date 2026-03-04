@@ -22,6 +22,10 @@ import JuicyStreak from "@/components/experience/JuicyStreak";
 import JuicyConfetti from "@/components/experience/JuicyConfetti";
 import { hapticSuccess, hapticError, hapticSelection } from "@/lib/platform/haptics";
 import { useMascot } from "@/components/experience/MascotHost";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 // 4K Noir Color Palette
 const NOIR_COLORS = {
@@ -33,6 +37,10 @@ const NOIR_COLORS = {
     dim: "text-slate-500",
     bright: "text-white"
 };
+
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
 
 interface Clue {
     id: string;
@@ -72,34 +80,46 @@ export default function ChronicleCase() {
     const { setMessage, setMood } = useMascot();
     const [gameState, setGameState] = useState<"briefing" | "investigation" | "deduction" | "solved">("briefing");
     const [currentCaseIndex, setCurrentCaseIndex] = useState(0);
-    const [clues, setClues] = useState<Clue[]>([]);
+    const [clues, setClues] = useState<Clue[]>(() =>
+        (HISTORICAL_CASES[0]?.clues ?? []).map((clue) => ({ ...clue })),
+    );
     const [foundCount, setFoundCount] = useState(0);
     const [timeline, setTimeline] = useState<Clue[]>([]);
     const [showConfetti, setShowConfetti] = useState(false);
     const [searchPos, setSearchPos] = useState({ x: 50, y: 50 });
     const containerRef = useRef<HTMLDivElement>(null);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+
+    const resetRunTracking = () => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+    };
 
     const currentCase = HISTORICAL_CASES[currentCaseIndex];
 
-    useEffect(() => {
-        setClues(currentCase.clues.map(c => ({ ...c })) as Clue[]);
-    }, [currentCaseIndex, currentCase.clues]);
-
     const startInvestigation = () => {
+        setClues(currentCase.clues.map((clue) => ({ ...clue })));
+        setFoundCount(0);
+        setTimeline([]);
+        resetRunTracking();
         setGameState("investigation");
         setMessage(`Attention, Investigator. We need to recover ${currentCase.clues.length} temporal fragments from ${currentCase.era}. Search the area carefully.`);
         setMood("thinking");
         hapticSelection();
     };
 
-    const handleSearch = (e: React.MouseEvent | React.TouchEvent) => {
+    const handleSearch = (e: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>) => {
         if (gameState !== "investigation") return;
 
         const rect = containerRef.current?.getBoundingClientRect();
         if (!rect) return;
 
-        const clientX = (e as any).touches ? (e as any).touches[0].clientX : (e as React.MouseEvent).clientX;
-        const clientY = (e as any).touches ? (e as any).touches[0].clientY : (e as React.MouseEvent).clientY;
+        const isTouchEvent = "touches" in e;
+        const clientX = isTouchEvent ? e.touches[0]?.clientX ?? 0 : e.clientX;
+        const clientY = isTouchEvent ? e.touches[0]?.clientY ?? 0 : e.clientY;
 
         const x = ((clientX - rect.left) / rect.width) * 100;
         const y = ((clientY - rect.top) / rect.height) * 100;
@@ -111,6 +131,7 @@ export default function ChronicleCase() {
             if (!clue.found) {
                 const dist = Math.sqrt(Math.pow(x - clue.x, 2) + Math.pow(y - clue.y, 2));
                 if (dist < 8) { // Hit threshold
+                    interactionCountRef.current += 1;
                     const updatedClues = [...clues];
                     updatedClues[idx].found = true;
                     setClues(updatedClues);
@@ -131,6 +152,7 @@ export default function ChronicleCase() {
 
     const addToTimeline = (clue: Clue) => {
         if (timeline.find(c => c.id === clue.id)) return;
+        interactionCountRef.current += 1;
         setTimeline([...timeline, clue]);
         hapticSelection();
     };
@@ -147,6 +169,16 @@ export default function ChronicleCase() {
             hapticSuccess();
             setMessage("Timeline stabilized. History is preserved thanks to your keen eye.");
             setMood("cheering");
+            emitLegacyGameComplete({
+                sessionId: sessionIdRef.current,
+                gameId: "chronicle",
+                elapsedMs: getElapsedMs(runStartedAtRef.current),
+                interactions: Math.max(1, interactionCountRef.current),
+                score: foundCount * 400 + timeline.length * 300,
+                maxScore: 3600,
+                source: "component",
+                occurredAt: new Date().toISOString(),
+            });
         } else {
             hapticError();
             setMessage("The timeline is fragmented. Reorder the artifacts chronologically.");
@@ -359,10 +391,15 @@ export default function ChronicleCase() {
                                 <PhysicalButton
                                     onClick={() => {
                                         setGameState("briefing");
-                                        setCurrentCaseIndex((currentCaseIndex + 1) % HISTORICAL_CASES.length);
+                                        setCurrentCaseIndex((previousCaseIndex) => {
+                                            const nextCaseIndex = (previousCaseIndex + 1) % HISTORICAL_CASES.length;
+                                            setClues(HISTORICAL_CASES[nextCaseIndex].clues.map((clue) => ({ ...clue })));
+                                            return nextCaseIndex;
+                                        });
                                         setTimeline([]);
                                         setFoundCount(0);
                                         setShowConfetti(false);
+                                        resetRunTracking();
                                     }}
                                     className="bg-emerald-500 text-black h-16 px-12 text-xl"
                                 >

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Shield,
@@ -16,6 +16,10 @@ import {
 } from "lucide-react";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /**
  * PIXEL'S PATH - Phase 9 (Explorer Batch)
@@ -63,17 +67,26 @@ const PROTOCOL_STEPS: ProtocolNode[] = [
     }
 ];
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
 export default function PixelsPath() {
     const [stepIndex, setStepIndex] = useState(0);
     const [securedNodes, setSecuredNodes] = useState<string[]>([]);
     const [userInput, setUserInput] = useState("");
     const [isComplete, setIsComplete] = useState(false);
     const [error, setError] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(getTimestampMs());
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
 
     const currentStep = PROTOCOL_STEPS[stepIndex];
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        interactionCountRef.current += 1;
         const input = userInput.trim().toUpperCase();
 
         if (input === currentStep.answer) {
@@ -93,6 +106,19 @@ export default function PixelsPath() {
         if (stepIndex < PROTOCOL_STEPS.length - 1) {
             setStepIndex(prev => prev + 1);
         } else {
+            if (!completionEmittedRef.current) {
+                completionEmittedRef.current = true;
+                emitLegacyGameComplete({
+                    sessionId: sessionIdRef.current,
+                    gameId: "pixel-path",
+                    elapsedMs: getElapsedMs(runStartedAtRef.current),
+                    interactions: Math.max(1, interactionCountRef.current),
+                    score: (stepIndex + 1) * 500,
+                    maxScore: 2000,
+                    source: "component",
+                    occurredAt: new Date().toISOString(),
+                });
+            }
             setIsComplete(true);
         }
     }, [stepIndex, currentStep.id]);

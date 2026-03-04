@@ -65,22 +65,22 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-1-chunk-1",
           "title": "What is the Main Idea?",
-          "content": "The main idea is the MOST IMPORTANT point of a paragraph or text. It's what the whole passage is mostly about. Think of it as the 'umbrella' — the big idea that covers all the smaller details beneath it."
+          "content": "The main idea is the most important point in a paragraph or text. It tells us what the entire passage is mainly about. You can think of it like an umbrella that covers all the smaller details underneath it. When you find the main idea, you understand the big picture of what the author wants to share with you. It's like the heart of the text, giving you a clear understanding of its purpose. Identifying the main idea helps you focus on what really matters in the writing, making it easier to remember and discuss. Remember, every good story or article has a main idea that ties everything together, so keep an eye out for it as you read!"
         },
         {
           "id": "lang-arts-35-u1-1-chunk-2",
           "title": "Finding the Main Idea",
-          "content": "3-Step Strategy:\n1. Read the WHOLE paragraph\n2. Ask: 'What does ALMOST EVERY sentence talk about?'\n3. The answer is your main idea!\n\nTip: The main idea is often (but not always) the FIRST sentence — called a topic sentence."
+          "content": "Finding the main idea of a paragraph can be made easier by following a simple three-step strategy! First, take your time to read the entire paragraph from start to finish. This will help you understand the overall message. Next, think about what almost every sentence in the paragraph is discussing. You can ask yourself, 'What is the main topic that connects all these sentences?' Finally, the answer to that question is your main idea! It's a good tip to remember that the main idea is often found in the first sentence, which is known as the topic sentence. However, sometimes it might be located elsewhere in the paragraph, so be sure to keep an open mind as you read and explore the text! This approach will help you become a better reader and understand what you are reading more deeply."
         },
         {
           "id": "lang-arts-35-u1-1-chunk-3",
           "title": "Supporting Details",
-          "content": "Supporting details are FACTS, EXAMPLES, or REASONS that prove or explain the main idea.\n\nMain Idea: Dogs make great pets.\nDetails: Dogs are loyal. ✓ They help people with disabilities. ✓ Dogs can be trained. ✓\n\nEach detail supports the umbrella above it!"
+          "content": "Supporting details are important pieces of information that help us understand and believe the main idea. Think of the main idea as the big umbrella that covers everything. For example, if the main idea is 'Dogs make great pets,' we can look for supporting details that explain why this is true. Some supporting details could be: 'Dogs are loyal companions who always stick by your side,' 'They can help people with disabilities by providing assistance and support,' and 'Dogs can be trained to follow commands, which makes them easier to care for.' Each of these details adds strength to the main idea, just like the smaller parts of an umbrella are held up by the main structure above. By using supporting details, we can paint a clearer picture of why something is true or important."
         },
         {
           "id": "lang-arts-35-u1-1-chunk-4",
           "title": "Main Idea vs. Topic",
-          "content": "Topic = The subject (what it's about in a word or phrase)\nMain Idea = What the author says ABOUT the topic (a complete thought)\n\nTopic: 'Dolphins'\nMain Idea: 'Dolphins are intelligent animals that communicate in complex ways.'\n\nSee the difference? The main idea is a SENTENCE, not just a word."
+          "content": "Understanding the difference between a topic and a main idea is a key skill in reading comprehension. Let's break it down! The topic is the subject of the text, and you can usually sum it up in just one word or a short phrase. For instance, if we take the topic 'Dolphins,' we are simply naming what the text is about. However, the main idea goes a step further. It tells us what the author wants to convey about that topic, and it is expressed as a complete thought or sentence. For example, if the topic is 'Dolphins,' the main idea could be 'Dolphins are intelligent animals that communicate in complex ways.' This example illustrates that the main idea is more than just a word; it is a full sentence that provides deeper insight into the topic. Recognizing this difference will help you understand and summarize texts more effectively!"
         }
       ],
       "flashcards": [
@@ -206,22 +206,22 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-2-chunk-1",
           "title": "Why Text Structure Matters",
-          "content": "Authors organize information in specific patterns. Recognizing the STRUCTURE helps you understand and remember what you read. There are 5 main text structures in nonfiction writing."
+          "content": "Authors use different patterns to organize information in their writing. This organization is important because it helps readers like you understand and remember what you read much better! When you recognize the structure of a text, it can make your reading experience smoother and more enjoyable. In nonfiction writing, there are five main text structures that authors often use. By learning about these structures, you can boost your reading comprehension skills and make connections between different ideas more easily. Understanding how information is organized will help you become a more effective reader and thinker!"
         },
         {
           "id": "lang-arts-35-u1-2-chunk-2",
           "title": "Structure 1: Chronological Order",
-          "content": "Events are told in TIME ORDER — first to last.\nSignal Words: first, then, next, after, finally, in 1492, before, last\n\nExample: A biography of Martin Luther King Jr. told from his childhood to his legacy."
+          "content": "The first structure we will explore is called Chronological Order. This means that events are presented in the exact order they occur, starting from the very first event and moving all the way to the last one. To help you recognize this structure, you can look for special words known as signal words. These words include 'first,' 'then,' 'next,' 'after,' and 'finally.' They guide you through the sequence of events. For instance, if you read a biography about Martin Luther King Jr., it might start with his childhood, then move on to important moments in his life, and finish with his lasting legacy. This way, you can understand how his experiences shaped who he became over time."
         },
         {
           "id": "lang-arts-35-u1-2-chunk-3",
           "title": "Structure 2: Compare & Contrast",
-          "content": "Shows how things are SIMILAR and DIFFERENT.\nSignal Words: both, however, similarly, on the other hand, unlike, in contrast, also, yet\n\nExample: Comparing frogs and toads — both are amphibians BUT frogs live near water while toads are drier-adapted."
+          "content": "The second structure we will explore is called Compare and Contrast. This structure helps us understand how two or more things are alike and how they are different. When you are reading or writing, you can look for special words that signal comparisons. These words include 'both,' 'however,' 'similarly,' 'on the other hand,' and 'unlike.' For example, let’s compare frogs and toads. Both frogs and toads are types of amphibians, which means they can live both in water and on land. However, frogs usually prefer to live near water, where they can find food and stay moist. On the other hand, toads are often found in drier areas and have adaptations that help them survive in those environments. By using the Compare and Contrast structure, we can better understand the unique characteristics of each creature while also recognizing their similarities."
         },
         {
           "id": "lang-arts-35-u1-2-chunk-4",
           "title": "Structure 3: Cause & Effect | Structure 4: Problem & Solution",
-          "content": "CAUSE & EFFECT: One event causes another.\nSignal Words: because, as a result, therefore, so, since, leads to, causes\n\nPROBLEM & SOLUTION: A problem is stated, then a solution is given.\nSignal Words: problem, solution, as a result, one answer is, this led to\n\nStructure 5: DESCRIPTION: Describes a topic with characteristics, examples, and details."
+          "content": "The third text structure we will explore is called Cause and Effect. In this structure, one event leads to another event happening. For example, if it rains, the ground gets wet. You can spot this structure by looking for special words called signal words. Some of these signal words include 'because,' which shows the reason something happened, 'as a result,' which indicates the outcome of an event, and 'therefore,' which connects the cause to its effect.\nNext, we have the Problem and Solution structure. In this type of writing, a problem is introduced, and then a solution is provided to address that problem. For instance, if a school has too many students and not enough desks, the problem is the lack of desks, and the solution might be to buy more desks or create a new classroom. You can find signal words like 'problem,' 'solution,' and 'this led to' that help you identify this structure.\nFinally, the fifth structure is Description. This structure gives detailed information about a topic, including its characteristics, examples, and other important details. For example, if we describe a dog, we might talk about its fur, size, and behavior to help the reader understand what a dog is like. Using these structures can help you organize your writing and make it clearer for your readers."
         }
       ],
       "flashcards": [
@@ -453,13 +453,13 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-quiz-chunk-intro",
           "title": "Reading Comprehension & Writing Supplemental Check Overview",
-          "content": "Reinforce core Language Arts concepts in Reading Comprehension & Writing.",
+          "content": "This quiz is designed to help you reinforce the core concepts you have learned in Language Arts, specifically focusing on Reading Comprehension and Writing. By taking this quiz, you will have the opportunity to review important ideas and test your understanding of the material.\nContext recap: This quiz is designed to help you reinforce the core concepts you have learned in Language Arts, specifically focusing on Reading Comprehension and Writing. By taking this quiz, you will have the opportunity to review important ideas and test your understanding of the material.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-quiz-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "To wrap up our lesson, take a moment to summarize one key idea that you learned today. Additionally, think about one next step you can take to further your understanding of Reading Comprehension and Writing. This reflection will help you solidify your knowledge and plan for your learning journey ahead.\nContext recap: To wrap up our lesson, take a moment to summarize one key idea that you learned today. Additionally, think about one next step you can take to further your understanding of Reading Comprehension and Writing. This reflection will help you solidify your knowledge and plan for your learning journey ahead.",
           "kind": "recap"
         }
       ],
@@ -512,25 +512,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-04-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "In this section, you will read a prompt carefully. After reading, highlight the key words and lines that provide evidence. This will help you focus on the main ideas and important details as you prepare to respond to the prompt.\nContext recap: In this section, you will read a prompt carefully. After reading, highlight the key words and lines that provide evidence. This will help you focus on the main ideas and important details as you prepare to respond to the prompt.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-04-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now it's time for some guided practice! You will annotate a short passage, which means you will make notes and highlight important parts. After that, summarize the main idea of the passage in your own words. This exercise will help you practice your reading comprehension skills and reinforce what you've learned.\nContext recap: Now it's time for some guided practice! You will annotate a short passage, which means you will make notes and highlight important parts. After that, summarize the main idea of the passage in your own words. This exercise will help you practice your reading comprehension skills and reinforce what you've learned.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-04-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "As you work on your paragraph structure, be on the lookout for a common mistake that many students make. This mistake can affect how clearly your ideas are presented. Once you identify this error, think about how you can fix it by using specific examples or evidence from your writing. This will help make your paragraph stronger and more convincing.\nContext recap: As you work on your paragraph structure, be on the lookout for a common mistake that many students make. This mistake can affect how clearly your ideas are presented. Once you identify this error, think about how you can fix it by using specific examples or evidence from your writing. This will help make your paragraph stronger and more convincing.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-04-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's take a moment to quickly review what we learned about paragraph structure. Remember, a well-structured paragraph has a clear main idea and supporting details. After this review, think about one specific area where you can improve your paragraph writing. Setting a clear goal will help you focus on making your writing even better!\nContext recap: Let's take a moment to quickly review what we learned about paragraph structure. Remember, a well-structured paragraph has a clear main idea and supporting details. After this review, think about one specific area where you can improve your paragraph writing. Setting a clear goal will help you focus on making your writing even better!",
           "kind": "recap"
         }
       ],
@@ -646,25 +646,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-05-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this section, we will focus on creating an evidence-based response. Start by making one clear claim about the text you are discussing. Then, support your claim with specific details from the text. This approach will help you build a strong argument and show that you understand the material.\nContext recap: In this section, we will focus on creating an evidence-based response. Start by making one clear claim about the text you are discussing. Then, support your claim with specific details from the text. This approach will help you build a strong argument and show that you understand the material.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-05-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time for some guided practice! Choose one sentence from your writing that you think could be clearer or more impactful. Rewrite that sentence to improve its precision and tone. This exercise will help you learn how to express your ideas more effectively.\nContext recap: Now it's time for some guided practice! Choose one sentence from your writing that you think could be clearer or more impactful. Rewrite that sentence to improve its precision and tone. This exercise will help you learn how to express your ideas more effectively.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-05-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As you apply what you've learned about evidence-based responses, keep an eye out for a common mistake that can occur. Identifying this error is important because it can weaken your argument. Once you spot it, think about how you can correct it using evidence from your text. This will strengthen your response.\nContext recap: As you apply what you've learned about evidence-based responses, keep an eye out for a common mistake that can occur. Identifying this error is important because it can weaken your argument. Once you spot it, think about how you can correct it using evidence from your text. This will strengthen your response.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-05-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's quickly review what we've learned about evidence-based responses. Remember, it's important to support your claims with evidence from the text. After this recap, think about one specific area where you can improve your writing. Setting a clear improvement target will help you enhance your skills.\nContext recap: Let's quickly review what we've learned about evidence-based responses. Remember, it's important to support your claims with evidence from the text. After this recap, think about one specific area where you can improve your writing. Setting a clear improvement target will help you enhance your skills.",
           "kind": "recap"
         }
       ],
@@ -886,25 +886,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-06-chunk-intro",
           "title": "Close Reading Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "As you prepare for your close reading, remember to revise your work for clarity. This means checking your grammar and ensuring that your ideas flow smoothly from one to the next. Good transitions will help your reader follow your thoughts more easily.\nContext recap: As you prepare for your close reading, remember to revise your work for clarity. This means checking your grammar and ensuring that your ideas flow smoothly from one to the next. Good transitions will help your reader follow your thoughts more easily.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-06-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "For this guided practice, try to build a short paragraph that includes a claim, supporting evidence, and an explanation. This exercise will help you practice organizing your thoughts clearly and effectively, which is an important skill in writing.\nContext recap: For this guided practice, try to build a short paragraph that includes a claim, supporting evidence, and an explanation. This exercise will help you practice organizing your thoughts clearly and effectively, which is an important skill in writing.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-06-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying close reading, then correct it with evidence.",
+          "content": "While you are working on your close reading, be aware of a common error that can happen. Recognizing this mistake is crucial because it can affect how well you understand the text. Once you identify it, think about how you can correct it using evidence from the reading. This will help improve your comprehension.\nContext recap: While you are working on your close reading, be aware of a common error that can happen. Recognizing this mistake is crucial because it can affect how well you understand the text. Once you identify it, think about how you can correct it using evidence from the reading. This will help improve your comprehension.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-06-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review close reading, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we've learned about close reading. Remember, this skill helps you understand texts more deeply. After this recap, think about one specific area where you can improve your close reading skills. Setting a clear target will guide your practice.\nContext recap: Let's take a moment to review what we've learned about close reading. Remember, this skill helps you understand texts more deeply. After this recap, think about one specific area where you can improve your close reading skills. Setting a clear target will guide your practice.",
           "kind": "recap"
         }
       ],
@@ -967,25 +967,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-07-chunk-intro",
           "title": "Vocabulary In Context Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "As you begin your work on vocabulary in context, start by carefully reading the prompt. After that, highlight the key words and important lines that provide evidence. This will help you focus on the most important parts of the text as you analyze its meaning.\nContext recap: As you begin your work on vocabulary in context, start by carefully reading the prompt. After that, highlight the key words and important lines that provide evidence. This will help you focus on the most important parts of the text as you analyze its meaning.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-07-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "For this practice activity, choose a short passage to annotate. As you read, take notes on the main idea and any important details. Summarizing the main idea will help you understand the text better and improve your comprehension skills.\nContext recap: For this practice activity, choose a short passage to annotate. As you read, take notes on the main idea and any important details. Summarizing the main idea will help you understand the text better and improve your comprehension skills.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-07-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying vocabulary in context, then correct it with evidence.",
+          "content": "As you work on using vocabulary in context, be on the lookout for a common mistake that many people make. This mistake often happens when the meaning of a word is misunderstood in a sentence. To improve your understanding, try to find evidence from the text that supports the correct usage of the word. This will help you learn how to apply vocabulary more accurately in your writing.\nContext recap: As you work on using vocabulary in context, be on the lookout for a common mistake that many people make. This mistake often happens when the meaning of a word is misunderstood in a sentence. To improve your understanding, try to find evidence from the text that supports the correct usage of the word. This will help you learn how to apply vocabulary more accurately in your writing.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-07-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review vocabulary in context, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about using vocabulary in context. Think about the different ways words can change meaning depending on how they are used in sentences. After this review, set a specific goal for yourself to improve your vocabulary skills. This could be learning a new word each week or practicing using words in different contexts.\nContext recap: Let's take a moment to review what we learned about using vocabulary in context. Think about the different ways words can change meaning depending on how they are used in sentences. After this review, set a specific goal for yourself to improve your vocabulary skills. This could be learning a new word each week or practicing using words in different contexts.",
           "kind": "recap"
         }
       ],
@@ -1101,25 +1101,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-08-chunk-intro",
           "title": "Sentence Revision Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this section, we will focus on revising sentences to make them clearer and more effective. Start by making one strong claim in your sentence. Then, support that claim with details from the text you are working with. This approach will help you create more persuasive and well-structured sentences.\nContext recap: In this section, we will focus on revising sentences to make them clearer and more effective. Start by making one strong claim in your sentence. Then, support that claim with details from the text you are working with. This approach will help you create more persuasive and well-structured sentences.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-08-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time for some hands-on practice! Choose one sentence that you think could be improved. Your task is to rewrite this sentence to enhance its precision and tone. Think about the words you use and how they can better convey your message. This exercise will help you become a more effective writer.\nContext recap: Now it's time for some hands-on practice! Choose one sentence that you think could be improved. Your task is to rewrite this sentence to enhance its precision and tone. Think about the words you use and how they can better convey your message.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-08-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying sentence revision, then correct it with evidence.",
+          "content": "As you revise your sentences, keep an eye out for a common mistake that can occur during this process. Many writers forget to check if their revisions maintain the original meaning or if they introduce new errors. After identifying this mistake, use evidence from your text to correct it. This will strengthen your writing skills.\nContext recap: As you revise your sentences, keep an eye out for a common mistake that can occur during this process. Many writers forget to check if their revisions maintain the original meaning or if they introduce new errors. After identifying this mistake, use evidence from your text to correct it. This will strengthen your writing skills.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-08-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review sentence revision, then set one clear improvement target.",
+          "content": "Let's quickly recap what we learned about sentence revision. Remember to focus on clarity and the overall tone of your writing. After this recap, think about one specific area where you can improve your sentence revision skills. Setting a clear target will help you grow as a writer.\nContext recap: Let's quickly recap what we learned about sentence revision. Remember to focus on clarity and the overall tone of your writing. After this recap, think about one specific area where you can improve your sentence revision skills. Setting a clear target will help you grow as a writer.",
           "kind": "recap"
         }
       ],
@@ -1341,25 +1341,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-09-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "In this section, we will explore how to revise paragraphs for better clarity, grammar, and flow. It's important to ensure that your ideas connect smoothly and that your writing is easy to understand. Focus on how each sentence relates to the next, making sure your thoughts are organized and clear.\nContext recap: In this section, we will explore how to revise paragraphs for better clarity, grammar, and flow. It's important to ensure that your ideas connect smoothly and that your writing is easy to understand. Focus on how each sentence relates to the next, making sure your thoughts are organized and clear.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-09-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Now, let's practice building a short paragraph! Your task is to create a paragraph that includes a clear claim, supporting evidence, and an explanation of how the evidence relates to your claim. This structure will help you present your ideas in a logical and persuasive way.\nContext recap: Now, let's practice building a short paragraph! Your task is to create a paragraph that includes a clear claim, supporting evidence, and an explanation of how the evidence relates to your claim. This structure will help you present your ideas in a logical and persuasive way.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-09-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "While working on your paragraph structure, be aware of a common error that can happen. Sometimes, writers forget to connect their ideas clearly, which can confuse readers. After identifying this issue, use evidence from your writing to make corrections. This practice will enhance your writing skills.\nContext recap: While working on your paragraph structure, be aware of a common error that can happen. Sometimes, writers forget to connect their ideas clearly, which can confuse readers. After identifying this issue, use evidence from your writing to make corrections. This practice will enhance your writing skills.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-09-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's review what we learned about paragraph structure. Remember to focus on how your ideas flow together and how to make your writing clear. After this review, think about one specific goal you can set to improve your paragraph writing skills. This will help you become a more effective communicator.\nContext recap: Let's review what we learned about paragraph structure. Remember to focus on how your ideas flow together and how to make your writing clear. After this review, think about one specific goal you can set to improve your paragraph writing skills. This will help you become a more effective communicator.",
           "kind": "recap"
         }
       ],
@@ -1422,25 +1422,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-10-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "In this section, we will learn how to respond to prompts using evidence from texts. Start by carefully reading the prompt and highlighting the key words that stand out. Then, look for lines in the text that provide evidence to support your response. This method will help you create strong and well-supported answers.\nContext recap: In this section, we will learn how to respond to prompts using evidence from texts. Start by carefully reading the prompt and highlighting the key words that stand out. Then, look for lines in the text that provide evidence to support your response. This method will help you create strong and well-supported answers.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-10-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now it's time for some practice! Choose a short passage and annotate it by highlighting important points and ideas. After that, summarize the main idea of the passage in your own words. This exercise will help you understand the text better and improve your ability to communicate your thoughts.\nContext recap: Now it's time for some practice! Choose a short passage and annotate it by highlighting important points and ideas. After that, summarize the main idea of the passage in your own words. This exercise will help you understand the text better and improve your ability to communicate your thoughts.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-10-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As you work on your evidence-based responses, be on the lookout for a common mistake that many students make. This error often involves not fully supporting your claims with the right evidence from the text. Take a moment to identify this mistake in your work, and then think about how you can correct it by adding specific evidence that strengthens your argument. Remember, using clear examples from the text is key to making your response stronger!\nContext recap: As you work on your evidence-based responses, be on the lookout for a common mistake that many students make. This error often involves not fully supporting your claims with the right evidence from the text. Take a moment to identify this mistake in your work, and then think about how you can correct it by adding specific evidence that strengthens your argument. Remember, using clear examples from the text is key to making your response stronger!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-10-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's take a moment to quickly review what we learned about evidence-based responses. It's important to remember how to use evidence from the text to support your ideas. After this review, think about one specific area where you can improve your writing. Setting a clear goal for improvement will help you focus on becoming a better writer in your next assignment!\nContext recap: Let's take a moment to quickly review what we learned about evidence-based responses. It's important to remember how to use evidence from the text to support your ideas. After this review, think about one specific area where you can improve your writing. Setting a clear goal for improvement will help you focus on becoming a better writer in your next assignment!",
           "kind": "recap"
         }
       ],
@@ -1556,25 +1556,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-11-chunk-intro",
           "title": "Close Reading Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this section, we will explore the concept of close reading. When you read a text, it's important to make a clear claim about what you think it means. After making your claim, you should support it with specific details from the text. This means looking for quotes or examples that back up your idea. Close reading helps you understand the text better and allows you to express your thoughts more clearly!\nContext recap: In this section, we will explore the concept of close reading. When you read a text, it's important to make a clear claim about what you think it means. After making your claim, you should support it with specific details from the text. This means looking for quotes or examples that back up your idea.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-11-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time for some guided practice! Choose one sentence from your writing and think about how you can make it clearer and more precise. This means you might want to change some words or rearrange the sentence to improve its tone. The goal is to make sure your message is easy to understand and sounds just right for your audience. Give it a try!\nContext recap: Now it's time for some guided practice! Choose one sentence from your writing and think about how you can make it clearer and more precise. This means you might want to change some words or rearrange the sentence to improve its tone. The goal is to make sure your message is easy to understand and sounds just right for your audience.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-11-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying close reading, then correct it with evidence.",
+          "content": "As you practice close reading, keep an eye out for a common mistake that can happen. Sometimes, students forget to connect their ideas back to the text. When you notice this in your work, take a moment to correct it by adding evidence from the text that supports your thoughts. This will help make your analysis stronger and more convincing!\nContext recap: As you practice close reading, keep an eye out for a common mistake that can happen. Sometimes, students forget to connect their ideas back to the text. When you notice this in your work, take a moment to correct it by adding evidence from the text that supports your thoughts. This will help make your analysis stronger and more convincing!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-11-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review close reading, then set one clear improvement target.",
+          "content": "Let's quickly recap what we've learned about close reading. Remember, it's all about understanding the text deeply and making connections to your ideas. After this recap, think about one specific area where you can improve your close reading skills. Setting a clear goal will help you focus on becoming a better reader and writer!\nContext recap: Let's quickly recap what we've learned about close reading. Remember, it's all about understanding the text deeply and making connections to your ideas. After this recap, think about one specific area where you can improve your close reading skills. Setting a clear goal will help you focus on becoming a better reader and writer!",
           "kind": "recap"
         }
       ],
@@ -1796,25 +1796,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-12-chunk-intro",
           "title": "Vocabulary In Context Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "As we begin our quiz on vocabulary in context, remember to revise your work carefully. This means checking for clarity, making sure your grammar is correct, and ensuring that your ideas flow smoothly from one to the next. Taking the time to revise will help your writing shine and make it easier for others to understand your thoughts!\nContext recap: As we begin our quiz on vocabulary in context, remember to revise your work carefully. This means checking for clarity, making sure your grammar is correct, and ensuring that your ideas flow smoothly from one to the next. Taking the time to revise will help your writing shine and make it easier for others to understand your thoughts!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-12-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "For this guided practice, your task is to create a short paragraph. In this paragraph, make sure to include a clear claim, some evidence to support that claim, and an explanation of how the evidence connects to your idea. This exercise will help you practice organizing your thoughts and presenting them in a way that is easy for others to follow!\nContext recap: For this guided practice, your task is to create a short paragraph. In this paragraph, make sure to include a clear claim, some evidence to support that claim, and an explanation of how the evidence connects to your idea. This exercise will help you practice organizing your thoughts and presenting them in a way that is easy for others to follow!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-12-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying vocabulary in context, then correct it with evidence.",
+          "content": "As you work on applying vocabulary in context, be aware of a common mistake that can occur. Sometimes, students may not use the right words or phrases that fit well with the text. If you notice this in your writing, take a moment to correct it by finding the right vocabulary that matches the context. This will help your writing become clearer and more effective!\nContext recap: As you work on applying vocabulary in context, be aware of a common mistake that can occur. Sometimes, students may not use the right words or phrases that fit well with the text. If you notice this in your writing, take a moment to correct it by finding the right vocabulary that matches the context. This will help your writing become clearer and more effective!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-12-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review vocabulary in context, then set one clear improvement target.",
+          "content": "Let's quickly review what we've learned about using vocabulary in context. It's important to understand how words fit into the sentences and the overall message. After this review, think about one specific area where you can improve your vocabulary skills. Setting a clear goal will help you become a more confident writer!\nContext recap: Let's quickly review what we've learned about using vocabulary in context. It's important to understand how words fit into the sentences and the overall message. After this review, think about one specific area where you can improve your vocabulary skills. Setting a clear goal will help you become a more confident writer!",
           "kind": "recap"
         }
       ],
@@ -1877,25 +1877,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-13-chunk-intro",
           "title": "Sentence Revision Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "In this section, we will focus on the important skill of sentence revision. Start by reading the prompt carefully, and then highlight the key words and lines from the text that provide evidence for your ideas. This will help you identify the most important parts of the text that you can use to strengthen your writing. Remember, good revision makes your writing clearer and more impactful!\nContext recap: In this section, we will focus on the important skill of sentence revision. Start by reading the prompt carefully, and then highlight the key words and lines from the text that provide evidence for your ideas. This will help you identify the most important parts of the text that you can use to strengthen your writing. Remember, good revision makes your writing clearer and more impactful!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-13-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now it's time for some guided practice! Choose a short passage and annotate it by making notes in the margins or highlighting important points. After that, summarize the main idea of the passage in your own words. This practice will help you understand the text better and improve your ability to communicate your thoughts clearly!\nContext recap: Now it's time for some guided practice! Choose a short passage and annotate it by making notes in the margins or highlighting important points. After that, summarize the main idea of the passage in your own words. This practice will help you understand the text better and improve your ability to communicate your thoughts clearly!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-13-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying sentence revision, then correct it with evidence.",
+          "content": "As you practice revising sentences, be on the lookout for a common mistake that many people make. Once you spot this error, take a moment to think about how you can correct it. Use specific examples from the text to support your revision and make your sentence clearer and more effective.\nContext recap: As you practice revising sentences, be on the lookout for a common mistake that many people make. Once you spot this error, take a moment to think about how you can correct it. Use specific examples from the text to support your revision and make your sentence clearer and more effective.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-13-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review sentence revision, then set one clear improvement target.",
+          "content": "Let's take a moment to quickly review what we learned about revising sentences. After that, think about one specific area where you can make an improvement in your writing. Setting a clear goal will help you focus on enhancing your skills.\nContext recap: Let's take a moment to quickly review what we learned about revising sentences. After that, think about one specific area where you can make an improvement in your writing. Setting a clear goal will help you focus on enhancing your skills.",
           "kind": "recap"
         }
       ],
@@ -2011,25 +2011,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-14-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "When writing a paragraph, it's important to start with a clear main idea or claim. This claim should be supported by details from the text that help explain and strengthen your point. Remember, a strong paragraph has a clear focus and uses evidence to back it up.\nContext recap: When writing a paragraph, it's important to start with a clear main idea or claim. This claim should be supported by details from the text that help explain and strengthen your point. Remember, a strong paragraph has a clear focus and uses evidence to back it up.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-14-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time to practice! Choose one sentence that you think could be improved. Your task is to rewrite this sentence so that it is more precise and has the right tone for your audience. Think about the words you use and how they can make your message clearer.\nContext recap: Now it's time to practice! Choose one sentence that you think could be improved. Your task is to rewrite this sentence so that it is more precise and has the right tone for your audience. Think about the words you use and how they can make your message clearer.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-14-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "As you work on structuring your paragraphs, keep an eye out for a common mistake that can happen. Once you identify this error, think about how you can fix it using evidence from your writing. This will help ensure that your paragraph is well-organized and effective.\nContext recap: As you work on structuring your paragraphs, keep an eye out for a common mistake that can happen. Once you identify this error, think about how you can fix it using evidence from your writing. This will help ensure that your paragraph is well-organized and effective.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-14-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about paragraph structure. After this recap, think about one specific area where you can improve your writing. Setting a clear target will help you focus on making your paragraphs stronger.\nContext recap: Let's quickly review what we learned about paragraph structure. After this recap, think about one specific area where you can improve your writing. Setting a clear target will help you focus on making your paragraphs stronger.\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Reading Comprehension & Writing to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -2251,25 +2251,25 @@ export const LangArts35U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-35-u1-external-supp-seq-15-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "When you are writing an evidence-based response, it's important to revise your work for clarity. Make sure your grammar is correct and that your ideas flow smoothly from one to the next. This will help your reader understand your points better.\nContext recap: When you are writing an evidence-based response, it's important to revise your work for clarity. Make sure your grammar is correct and that your ideas flow smoothly from one to the next. This will help your reader understand your points better.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-15-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "For this practice activity, try to build a short paragraph that includes a clear claim, supporting evidence, and an explanation of how the evidence relates to your claim. This structure will help you present your ideas in a logical and persuasive way.\nContext recap: For this practice activity, try to build a short paragraph that includes a clear claim, supporting evidence, and an explanation of how the evidence relates to your claim. This structure will help you present your ideas in a logical and persuasive way.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-15-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As you create your evidence-based response, be aware of a common mistake that can occur. Once you notice this error, think about how you can correct it by using evidence from your writing. This will help strengthen your argument and make it more convincing.\nContext recap: As you create your evidence-based response, be aware of a common mistake that can occur. Once you notice this error, think about how you can correct it by using evidence from your writing. This will help strengthen your argument and make it more convincing.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-35-u1-external-supp-seq-15-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about writing evidence-based responses. After this review, think about one specific area where you can improve your writing. Setting a clear improvement target will help you become a better writer.\nContext recap: Let's take a moment to review what we learned about writing evidence-based responses. After this review, think about one specific area where you can improve your writing. Setting a clear improvement target will help you become a better writer.",
           "kind": "recap"
         }
       ],

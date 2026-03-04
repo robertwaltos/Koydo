@@ -1,5 +1,6 @@
 import { createHash } from "crypto";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { storeComplianceEvidenceArtifact } from "@/lib/compliance/evidence-vault";
 
 type ReportExportLogInput = {
   adminUserId: string;
@@ -38,6 +39,25 @@ export async function logReportExport({
 
   if (error) {
     throw new Error(error.message);
+  }
+
+  try {
+    await storeComplianceEvidenceArtifact(
+      {
+        artifactType: "report_export",
+        createdBy: adminUserId,
+        storagePath: `reports/${reportType}/${data.id}.csv`,
+        content: csvContent,
+        metadata: {
+          reportType,
+          rowCount,
+          exportId: data.id,
+        },
+      },
+      admin,
+    );
+  } catch (evidenceError) {
+    console.error("Failed to store compliance evidence artifact for report export.", evidenceError);
   }
 
   return { exportId: data.id as string, checksum };

@@ -9,9 +9,18 @@ export const SUPPORTED_LOCALES = [
   "ja",
   "ko",
   "ru",
+  "pl",
 ] as const;
 
-export const ACTIVE_LOCALES = ["en", "es"] as const;
+/**
+ * Launch languages — full functionality enabled.
+ * All other SUPPORTED_LOCALES are prepared but locked in the UI.
+ */
+export const LAUNCH_LOCALES = ["en", "es", "zh", "pl"] as const;
+
+export const ACTIVE_LOCALES = LAUNCH_LOCALES;
+
+export type LaunchLocale = (typeof LAUNCH_LOCALES)[number];
 
 export type ActiveLocale = (typeof ACTIVE_LOCALES)[number];
 
@@ -31,6 +40,7 @@ export const localeLabels: Record<Locale, string> = {
   ja: "日本語",
   ko: "한국어",
   ru: "Русский",
+  pl: "Polski",
 };
 
 export const translations: Record<Locale, TranslationDictionary> = {
@@ -528,7 +538,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "For questions about data protection or to exercise your rights under GDPR, you may contact our Data Protection Officer at dpo@koydo.app. You also have the right to lodge a complaint with your local supervisory authority.",
     legal_privacy_section_cookies_title: "Cookies and Tracking Technologies",
     legal_privacy_section_cookies_body:
-      "We use strictly necessary cookies to maintain session state and user preferences. Analytics cookies (Mixpanel) are only activated with your explicit consent via our cookie banner. You can change your cookie preferences at any time from the consent banner or by clearing your browser storage. On native mobile apps, device identifiers are only accessed after you grant permission through the App Tracking Transparency prompt.",
+      "We use strictly necessary cookies to maintain session state and user preferences. Analytics cookies (Mixpanel) are only activated with your explicit consent via our cookie banner. You can change your cookie preferences at any time from the consent banner or by clearing your browser storage. On native mobile builds, web analytics tracking is disabled in this release.",
     legal_terms_title: "Terms of Service",
     legal_terms_subtitle:
       "By using Koydo, users agree to use the service lawfully and in accordance with child safety and educational conduct rules.",
@@ -1057,7 +1067,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "Para preguntas sobre protección de datos o para ejercer sus derechos bajo el RGPD, puede contactar a nuestro Delegado de Protección de Datos en dpo@koydo.app. También tiene derecho a presentar una queja ante su autoridad de supervisión local.",
     legal_privacy_section_cookies_title: "Cookies y tecnologías de seguimiento",
     legal_privacy_section_cookies_body:
-      "Utilizamos cookies estrictamente necesarias para mantener el estado de la sesión y las preferencias del usuario. Las cookies de análisis (Mixpanel) solo se activan con su consentimiento explícito a través de nuestro banner de cookies. Puede cambiar sus preferencias de cookies en cualquier momento desde el banner de consentimiento o limpiando el almacenamiento de su navegador. En aplicaciones móviles nativas, los identificadores del dispositivo solo se acceden después de que otorgue permiso a través del aviso de Transparencia de Seguimiento de Aplicaciones.",
+      "Utilizamos cookies estrictamente necesarias para mantener el estado de la sesión y las preferencias del usuario. Las cookies de análisis (Mixpanel) solo se activan con su consentimiento explícito a través de nuestro banner de cookies. Puede cambiar sus preferencias de cookies en cualquier momento desde el banner de consentimiento o limpiando el almacenamiento de su navegador. En compilaciones móviles nativas, el seguimiento analítico web está deshabilitado en esta versión.",
     legal_terms_title: "Términos de servicio",
     legal_terms_subtitle:
       "Al usar Koydo, los usuarios aceptan usar el servicio legalmente y de acuerdo con reglas de seguridad infantil y conducta educativa.",
@@ -1105,7 +1115,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "Pour toute question relative à la protection des données ou pour exercer vos droits en vertu du RGPD, vous pouvez contacter notre Délégué à la protection des données à dpo@koydo.app. Vous avez également le droit de déposer une plainte auprès de votre autorité de contrôle locale.",
     legal_privacy_section_cookies_title: "Cookies et technologies de suivi",
     legal_privacy_section_cookies_body:
-      "Nous utilisons des cookies strictement nécessaires pour maintenir l'état de la session et les préférences utilisateur. Les cookies d'analyse (Mixpanel) ne sont activés qu'avec votre consentement explicite via notre bannière de cookies. Vous pouvez modifier vos préférences de cookies à tout moment depuis la bannière de consentement ou en effaçant le stockage de votre navigateur. Sur les applications mobiles natives, les identifiants d'appareil ne sont consultés qu'après votre autorisation via l'invite App Tracking Transparency.",
+      "Nous utilisons des cookies strictement nécessaires pour maintenir l'état de la session et les préférences utilisateur. Les cookies d'analyse (Mixpanel) ne sont activés qu'avec votre consentement explicite via notre bannière de cookies. Vous pouvez modifier vos préférences de cookies à tout moment depuis la bannière de consentement ou en effaçant le stockage de votre navigateur. Sur les builds mobiles natives, le suivi analytique web est désactivé dans cette version.",
   },
   de: {
     nav_home: "Start",
@@ -1295,6 +1305,33 @@ export const translations: Record<Locale, TranslationDictionary> = {
     language_label: "Язык",
     offline_banner: "Вы офлайн. Кэшированный контент доступен.",
     online_banner: "Вы снова онлайн. Синхронизация возобновлена.",
+  },
+  pl: {
+    nav_home: "Strona główna",
+    nav_dashboard: "Panel",
+    nav_parent_dashboard: "Panel rodzica",
+    nav_parent_reports: "Raporty rodzica",
+    nav_parent_compliance: "Zgodność rodzicielska",
+    nav_explore: "Odkrywaj",
+    nav_modules: "Moduły",
+    nav_exam_prep: "Przygotowanie do egzaminu",
+    nav_science_lab: "Laboratorium naukowe",
+    nav_support: "Pomoc",
+    nav_privacy_center: "Centrum prywatności",
+    nav_account: "Konto",
+    nav_audit: "Audyt",
+    nav_compliance: "Zgodność",
+    nav_owner_ops: "Operacje",
+    nav_admin_overview: "Przegląd administratora",
+    nav_curriculum: "Program nauczania",
+    nav_media_ops: "Operacje mediów",
+    nav_reports: "Raporty",
+    nav_alerts: "Powiadomienia",
+    nav_sign_in: "Zaloguj się",
+    nav_sign_up: "Zarejestruj się",
+    language_label: "Język",
+    offline_banner: "Jesteś offline. Dostępna jest zawartość z pamięci podręcznej.",
+    online_banner: "Jesteś z powrotem online. Synchronizacja wznowiona.",
   },
 };
 
@@ -1730,10 +1767,14 @@ const launchSupplementalTranslations: Record<ActiveLocale, TranslationDictionary
     games_daily_complete: "Completado hoy",
     games_daily_bonus: "Bono diario: +{points} pts",
   },
+  zh: {},
+  pl: {},
 };
 
 Object.assign(translations.en, launchSupplementalTranslations.en);
 Object.assign(translations.es, launchSupplementalTranslations.es);
+Object.assign(translations.zh, launchSupplementalTranslations.zh);
+Object.assign(translations.pl, launchSupplementalTranslations.pl);
 
 export function isSupportedLocale(value: string): value is Locale {
   return (ACTIVE_LOCALES as readonly string[]).includes(value);

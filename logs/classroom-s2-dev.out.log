@@ -1,0 +1,39 @@
+
+> koydo-web@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+- Environments: .env.local, .env
+- Experiments (use with caution):
+  · optimizePackageImports
+
+✓ Starting...
+✓ Ready in 4.1s
+○ Compiling / ...
+ GET / 200 in 190ms (compile: 8ms, proxy.ts: 7ms, render: 175ms)
+ GET /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 401 in 13.9s (compile: 13.8s, proxy.ts: 9ms, render: 47ms)
+ GET /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 200 in 934ms (compile: 26ms, proxy.ts: 390ms, render: 518ms)
+ PATCH /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 400 in 608ms (compile: 8ms, proxy.ts: 201ms, render: 399ms)
+ PATCH /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 200 in 770ms (compile: 8ms, proxy.ts: 248ms, render: 515ms)
+ PATCH /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 200 in 605ms (compile: 9ms, proxy.ts: 197ms, render: 398ms)
+ PATCH /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 200 in 619ms (compile: 6ms, proxy.ts: 194ms, render: 419ms)
+ PATCH /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 200 in 605ms (compile: 6ms, proxy.ts: 201ms, render: 397ms)
+ PATCH /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 200 in 621ms (compile: 7ms, proxy.ts: 196ms, render: 418ms)
+ PATCH /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 200 in 655ms (compile: 8ms, proxy.ts: 202ms, render: 445ms)
+ POST /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/quick-review 200 in 1434ms (compile: 1030ms, proxy.ts: 199ms, render: 205ms)
+ POST /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/quick-review 200 in 617ms (compile: 19ms, proxy.ts: 193ms, render: 405ms)
+ GET /api/testing/classes/318d8200-35bc-42b6-91a8-1a13cdd35eba/session 200 in 658ms (compile: 14ms, proxy.ts: 232ms, render: 413ms)
+ POST /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/lms/google-classroom/assignments 200 in 2.3s (compile: 1865ms, proxy.ts: 198ms, render: 196ms)
+ POST /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/lms/google-classroom/assignments 200 in 637ms (compile: 15ms, proxy.ts: 184ms, render: 437ms)
+ GET /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/session 200 in 514ms (compile: 22ms, proxy.ts: 163ms, render: 328ms)
+ POST /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/quick-review 200 in 520ms (compile: 14ms, proxy.ts: 161ms, render: 345ms)
+ PATCH /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/quick-review/run 200 in 1764ms (compile: 1276ms, proxy.ts: 160ms, render: 328ms)
+ PATCH /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/quick-review/run 200 in 514ms (compile: 18ms, proxy.ts: 156ms, render: 341ms)
+ PATCH /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/quick-review/run 200 in 530ms (compile: 6ms, proxy.ts: 179ms, render: 346ms)
+ PATCH /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/quick-review/run 200 in 488ms (compile: 17ms, proxy.ts: 162ms, render: 309ms)
+ POST /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/ingestion/preview 200 in 1545ms (compile: 1204ms, proxy.ts: 165ms, render: 176ms)
+ POST /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/ingestion/preview 200 in 511ms (compile: 17ms, proxy.ts: 159ms, render: 336ms)
+ GET /api/testing/classes/3f9f4272-e7bc-40a6-bdb0-b1bdcd2aa56c/session 200 in 553ms (compile: 7ms, proxy.ts: 154ms, render: 392ms)
+[?25h

@@ -1,127 +1,210 @@
 "use client";
 
 import Link from "next/link";
-import { type GameType } from "@/lib/games/types";
-
-type GameCard = {
-  id: GameType;
-  title: string;
-  description: string;
-  icon: string;
-  color: string;
-  ageRange: string;
-  category: "literacy" | "math" | "logic" | "creative";
-};
-
-const GAME_CATALOG: GameCard[] = [
-  {
-    id: "letter-catcher",
-    title: "Letter Catcher",
-    description: "Catch falling letters and match them to their sounds!",
-    icon: "🔤",
-    color: "from-sky-400 to-blue-500",
-    ageRange: "Ages 3–6",
-    category: "literacy",
-  },
-  {
-    id: "word-builder",
-    title: "Word Builder",
-    description: "Build words by dragging letters into place!",
-    icon: "📝",
-    color: "from-emerald-400 to-teal-500",
-    ageRange: "Ages 4–7",
-    category: "literacy",
-  },
-  {
-    id: "number-crunch",
-    title: "Number Crunch",
-    description: "Solve math problems before time runs out!",
-    icon: "🧮",
-    color: "from-amber-400 to-orange-500",
-    ageRange: "Ages 4–8",
-    category: "math",
-  },
-  {
-    id: "pattern-train",
-    title: "Pattern Train",
-    description: "Find the missing piece in each pattern!",
-    icon: "🚂",
-    color: "from-violet-400 to-purple-500",
-    ageRange: "Ages 3–7",
-    category: "logic",
-  },
-  {
-    id: "story-sequencer",
-    title: "Story Sequencer",
-    description: "Put story scenes in the right order!",
-    icon: "📖",
-    color: "from-rose-400 to-pink-500",
-    ageRange: "Ages 4–8",
-    category: "literacy",
-  },
-  {
-    id: "memory-match",
-    title: "Memory Match",
-    description: "Flip cards and find matching pairs!",
-    icon: "🃏",
-    color: "from-cyan-400 to-sky-500",
-    ageRange: "Ages 3–8",
-    category: "logic",
-  },
-  {
-    id: "color-mixer",
-    title: "Color Mixer",
-    description: "Mix colors together and discover new ones!",
-    icon: "🎨",
-    color: "from-fuchsia-400 to-pink-500",
-    ageRange: "Ages 3–7",
-    category: "creative",
-  },
-  {
-    id: "shape-safari",
-    title: "Shape Safari",
-    description: "Find shapes hiding in the real world!",
-    icon: "🔷",
-    color: "from-lime-400 to-green-500",
-    ageRange: "Ages 3–7",
-    category: "math",
-  },
-];
+import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { DailyChallengeCard } from "@/components/gamification";
+import { GAME_CATALOG, type GameCategory } from "@/lib/games/catalog";
+import type { GameDifficulty, GameType } from "@/lib/games/types";
 
 const CATEGORY_META: Record<
   string,
   { label: string; icon: string }
 > = {
   all: { label: "All Games", icon: "🎮" },
+  arcade: { label: "Arcade", icon: "🚀" },
+  adventure: { label: "Adventure", icon: "🧭" },
   literacy: { label: "Literacy", icon: "📚" },
   math: { label: "Math", icon: "🔢" },
   logic: { label: "Logic", icon: "🧩" },
   creative: { label: "Creative", icon: "🎨" },
+  science: { label: "Science", icon: "🧪" },
 };
 
-import { useState } from "react";
+type LearnerProfile = {
+  id: string;
+  displayName: string;
+  ageYears: number | null;
+};
+
+type DailyChallenge = {
+  id: string;
+  title: string;
+  description: string;
+  gameType: GameType;
+  difficulty: GameDifficulty;
+  rewardPoints: number;
+};
 
 export default function GamesHubPage() {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [learnerAge, setLearnerAge] = useState<number>(10);
+  const [profiles, setProfiles] = useState<LearnerProfile[]>([]);
+  const [selectedProfileId, setSelectedProfileId] = useState<string>("");
+  const [dailyChallenge, setDailyChallenge] = useState<DailyChallenge | null>(null);
+  const [dailyCompleted, setDailyCompleted] = useState(false);
+  const [dailyStatus, setDailyStatus] = useState<string>("");
+  const [isDailyLoading, setIsDailyLoading] = useState<boolean>(true);
 
-  const filtered =
-    activeCategory === "all"
-      ? GAME_CATALOG
-      : GAME_CATALOG.filter((g) => g.category === activeCategory);
+  const filtered = useMemo(
+    () => (
+      activeCategory === "all"
+        ? GAME_CATALOG
+        : GAME_CATALOG.filter((g) => g.category === (activeCategory as GameCategory))
+    ),
+    [activeCategory],
+  );
+
+  useEffect(() => {
+    let active = true;
+    const loadProfiles = async () => {
+      const response = await fetch("/api/games/profiles", { cache: "no-store" });
+      const payload = (await response.json().catch(() => ({}))) as {
+        profiles?: LearnerProfile[];
+      };
+      if (!active || !response.ok || !Array.isArray(payload.profiles)) return;
+
+      setProfiles(payload.profiles);
+      const preferred = payload.profiles[0] ?? null;
+      if (!preferred) return;
+      setSelectedProfileId(preferred.id);
+      if (typeof preferred.ageYears === "number") {
+        setLearnerAge(preferred.ageYears);
+      }
+    };
+
+    void loadProfiles();
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    let active = true;
+    const loadDailyChallenge = async () => {
+      if (!selectedProfileId) {
+        setIsDailyLoading(false);
+        setDailyChallenge(null);
+        setDailyCompleted(false);
+        setDailyStatus("Select a learner profile to load daily challenge.");
+        return;
+      }
+
+      setIsDailyLoading(true);
+      setDailyStatus("");
+      const params = new URLSearchParams({
+        studentProfileId: selectedProfileId,
+      });
+      const response = await fetch(`/api/games/daily-challenge?${params.toString()}`, {
+        cache: "no-store",
+      });
+      const payload = (await response.json().catch(() => ({}))) as {
+        challenge?: DailyChallenge;
+        completed?: boolean;
+        error?: string;
+      };
+      if (!active) return;
+
+      if (!response.ok) {
+        setDailyChallenge(null);
+        setDailyCompleted(false);
+        setDailyStatus(payload.error ?? "Could not load daily challenge.");
+        setIsDailyLoading(false);
+        return;
+      }
+
+      setDailyChallenge(payload.challenge ?? null);
+      setDailyCompleted(Boolean(payload.completed));
+      setDailyStatus("");
+      setIsDailyLoading(false);
+    };
+
+    void loadDailyChallenge();
+    return () => {
+      active = false;
+    };
+  }, [selectedProfileId]);
+
+  const playDailyChallenge = () => {
+    if (!dailyChallenge || !selectedProfileId) return;
+    const params = new URLSearchParams({
+      difficulty: dailyChallenge.difficulty,
+      daily: "1",
+      studentProfileId: selectedProfileId,
+    });
+    router.push(`/games/${dailyChallenge.gameType}?${params.toString()}`);
+  };
 
   return (
     <main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-10">
-      {/* Header */}
       <header className="mb-6">
         <h1 className="text-3xl font-black tracking-tight text-stone-800">
           Game Zone
         </h1>
         <p className="mt-1 text-sm text-stone-500">
-          Pick a game and start learning through play!
+          {GAME_CATALOG.length} games live: core learning titles + Gemini legacy missions + immersive 4K-ready arcade experiences.
         </p>
       </header>
 
-      {/* Category tabs */}
+      <section className="mb-6 rounded-2xl border border-stone-200 bg-white p-4">
+        {isDailyLoading ? (
+          <p className="text-sm text-stone-500">Loading today&apos;s challenge...</p>
+        ) : (
+          <DailyChallengeCard
+            challenge={dailyChallenge}
+            completed={dailyCompleted}
+            onPlay={dailyCompleted ? undefined : playDailyChallenge}
+          />
+        )}
+        {dailyStatus ? (
+          <p className="mt-2 text-xs text-stone-500">{dailyStatus}</p>
+        ) : null}
+      </section>
+
+      <div className="mb-4 rounded-2xl border border-stone-200 bg-white p-3">
+        <div className="mb-3 grid gap-2 sm:grid-cols-2">
+          <label className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+            Learner profile
+            <select
+              value={selectedProfileId}
+              onChange={(event) => {
+                const nextProfileId = event.target.value;
+                setSelectedProfileId(nextProfileId);
+                const profile = profiles.find((entry) => entry.id === nextProfileId);
+                if (profile && typeof profile.ageYears === "number") {
+                  setLearnerAge(profile.ageYears);
+                }
+              }}
+              className="mt-1 w-full rounded-xl border border-stone-200 px-3 py-2 text-sm font-medium text-stone-700"
+            >
+              {profiles.length === 0 ? <option value="">No learner profiles found</option> : null}
+              {profiles.map((profile) => (
+                <option key={profile.id} value={profile.id}>
+                  {profile.displayName} {typeof profile.ageYears === "number" ? `(Age ${profile.ageYears})` : "(Age n/a)"}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <label className="flex items-center justify-between gap-4 text-xs font-semibold uppercase tracking-wide text-stone-500">
+          Learner age filter
+          <span className="rounded-full bg-stone-100 px-2 py-1 text-stone-700">Age {learnerAge}</span>
+        </label>
+        <input
+          type="range"
+          min={3}
+          max={17}
+          value={learnerAge}
+          onChange={(event) => setLearnerAge(Number(event.target.value))}
+          className="mt-2 w-full"
+        />
+        <p className="mt-1 text-[11px] text-stone-500">
+          Games outside this age range are age-locked and require guardian unlock on entry.
+        </p>
+      </div>
+
       <div
         className="mb-6 flex items-center gap-2 overflow-x-auto pb-1"
         style={{ scrollbarWidth: "none" }}
@@ -152,7 +235,6 @@ export default function GamesHubPage() {
         ))}
       </div>
 
-      {/* Game grid */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {filtered.map((game) => (
           <Link
@@ -176,11 +258,24 @@ export default function GamesHubPage() {
               </p>
               <div className="mt-2 flex items-center justify-between">
                 <span className="text-[10px] font-semibold text-stone-400">
-                  {game.ageRange}
+                  Ages {game.ageMin}-{game.ageMax}
                 </span>
                 <span className="rounded-full border border-stone-200 bg-stone-50 px-2 py-0.5 text-[10px] font-semibold capitalize text-stone-500">
                   {game.category}
                 </span>
+              </div>
+              <div className="mt-2 flex items-center justify-between text-[10px]">
+                <span className="rounded-full bg-stone-100 px-2 py-0.5 font-semibold text-stone-600">
+                  {game.mode === "core" ? "Scored Core Game" : game.mode === "legacy" ? "Gemini Legacy Game" : "Immersive Arcade"}
+                </span>
+                <span className="rounded-full bg-stone-100 px-2 py-0.5 font-semibold text-stone-600">
+                  {game.mechanic}
+                </span>
+                {learnerAge < game.ageMin || learnerAge > game.ageMax ? (
+                  <span className="rounded-full bg-amber-100 px-2 py-0.5 font-semibold text-amber-700">
+                    Age-Locked
+                  </span>
+                ) : null}
               </div>
             </div>
           </Link>

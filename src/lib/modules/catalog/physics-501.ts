@@ -47,19 +47,19 @@ export const Physics501Module: LearningModule = {
           "id": "physics-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Physics, with focus on physics systems diagnostics and physics operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of physics, which are essential for understanding complex physical systems. We will focus on how to effectively diagnose these systems, identifying any issues or inefficiencies that may arise. Additionally, we will learn how to design operations and execution strategies that enhance our ability to analyze and improve various physics-related processes. By the end of this lesson, you will have a clearer understanding of how to apply these concepts in real-world scenarios, making your study of physics even more impactful.\nContext recap: In this lesson, we will delve into the advanced boundaries of physics, which are essential for understanding complex physical systems. We will focus on how to effectively diagnose these systems, identifying any issues or inefficiencies that may arise. Additionally, we will learn how to design operations and execution strategies that enhance our ability to analyze and improve various physics-related processes. By the end of this lesson, you will have a clearer understanding of how to apply these concepts in real-world scenarios, making your study of physics even more impactful.\nContext recap: In this lesson, we will delve into the advanced boundaries of physics, which are essential for understanding complex physical systems. We will focus on how to effectively diagnose these systems, identifying any issues or inefficiencies that may arise. Additionally, we will learn how to design operations and execution strategies that enhance our ability to analyze and improve various physics-related processes. By the end of this lesson, you will have a clearer understanding of how to apply these concepts in real-world scenarios, making your study of physics even more impactful.\nWhy this matters: Scope and Boundary Design helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "physics-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how different systems depend on each other. This foundational knowledge is crucial for planning effective interventions in physics.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how different systems depend on each other. This foundational knowledge is crucial for planning effective interventions in physics."
         },
         {
           "id": "physics-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize that all claims made during our studies must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid.\nContext recap: In our recap, we will emphasize that all claims made during our studies must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid.\nContext recap: In our recap, we will emphasize that all claims made during our studies must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid. Context recap: In our recap, we will emphasize that all claims made during our studies must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Physics501Module: LearningModule = {
           "id": "physics-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. They will then put these workflows to the test by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is essential for understanding real-world applications.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. They will then put these workflows to the test by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is essential for understanding real-world applications."
         },
         {
           "id": "physics-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows should include important elements like checkpoints, rollback criteria, and escalation thresholds. These components are vital for ensuring that processes can be adjusted and improved as needed.\nContext recap: In our recap, we will discuss how workflows should include important elements like checkpoints, rollback criteria, and escalation thresholds. These components are vital for ensuring that processes can be adjusted and improved as needed.\nWhy this matters: Control Gate Architecture helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Physics501Module: LearningModule = {
           "id": "physics-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in physics systems diagnostics and physics impact and tradeoff analysis."
+          "content": "In this lesson, we will explore the various competing constraints that can arise in the diagnostics of physics systems. By examining different scenarios, we will analyze the impacts and trade-offs that come with each choice. This will enhance our understanding of the complexities involved in making informed decisions within the field of physics.\nContext recap: In this lesson, we will explore the various competing constraints that can arise in the diagnostics of physics systems. By examining different scenarios, we will analyze the impacts and trade-offs that come with each choice. This will enhance our understanding of the complexities involved in making informed decisions within the field of physics."
         },
         {
           "id": "physics-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions in their future work.\nContext recap: During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions in their future work.\nWhy this matters: Tradeoff Framing helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "physics-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made must include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be revisited if necessary.\nContext recap: In our recap, we will highlight that each recommendation made must include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be revisited if necessary.\nWhy this matters: Decision Memo Pattern helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Physics501Module: LearningModule = {
           "id": "physics-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance with governance constraints. This experience will teach them how to manage competing priorities effectively.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance with governance constraints. This experience will teach them how to manage competing priorities effectively.\nWhy this matters: Live Scenario Controls helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance with governance constraints. This experience will teach them how to manage competing priorities effectively. Context recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance with governance constraints. This experience will teach them how to manage competing priorities effectively.\nWhy this matters: Live Scenario Controls helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "physics-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses should be designed to update control gates while maintaining traceability and accountability. This ensures that all actions taken can be tracked and justified.\nContext recap: In our recap, we will discuss how effective responses should be designed to update control gates while maintaining traceability and accountability. This ensures that all actions taken can be tracked and justified.\nWhy this matters: Adaptive Response Design helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Physics501Module: LearningModule = {
           "id": "physics-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for assessing the broader impact of physics-related decisions.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for assessing the broader impact of physics-related decisions.\nWhy this matters: Stakeholder Impact Distribution helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "physics-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into the decision-making process. This knowledge is essential for responsible governance.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into the decision-making process. This knowledge is essential for responsible governance.\nWhy this matters: Accountability Architecture helps learners in Physics connect ideas from Physics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "physics-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will review a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and emphasizes the importance of resilience in leadership. This checklist will help you understand how these elements work together to create responsible leadership in the field of physics.\nContext recap: At the end of our lesson, we will review a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and emphasizes the importance of resilience in leadership. This checklist will help you understand how these elements work together to create responsible leadership in the field of physics."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Physics501Module: LearningModule = {
           "id": "physics-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive session, you will work on assembling a detailed defense brief. This brief will include your main claims, supporting evidence, the bounds of uncertainty related to your findings, and suggested pathways for remediation if issues arise. This exercise will help you practice articulating your ideas clearly and effectively.\nContext recap: In this interactive session, you will work on assembling a detailed defense brief. This brief will include your main claims, supporting evidence, the bounds of uncertainty related to your findings, and suggested pathways for remediation if issues arise. This exercise will help you practice articulating your ideas clearly and effectively."
         },
         {
           "id": "physics-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this recap session, you will have the opportunity to rehearse your responses to various critiques that may come from technical experts, governance representatives, and stakeholders. This practice will prepare you to confidently address questions and feedback, ensuring you can communicate your ideas effectively during your defense.\nContext recap: During this recap session, you will have the opportunity to rehearse your responses to various critiques that may come from technical experts, governance representatives, and stakeholders. This practice will prepare you to confidently address questions and feedback, ensuring you can communicate your ideas effectively during your defense."
         }
       ],
       "interactiveActivities": [

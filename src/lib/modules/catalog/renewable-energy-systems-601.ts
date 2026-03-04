@@ -47,19 +47,19 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Renewable Energy Systems, with focus on renewable energy systems diagnostics and renewable energy operations and execution design."
+          "content": "In this lesson, we will explore the advanced scope boundaries of Renewable Energy Systems. We will focus on understanding how to diagnose renewable energy systems effectively and how to design operations and execution plans that ensure these systems function optimally. By the end of this lesson, you will have a clearer picture of how to set the limits and expectations for renewable energy projects, which is crucial for their success.\nContext recap: In this lesson, we will explore the advanced scope boundaries of Renewable Energy Systems. We will focus on understanding how to diagnose renewable energy systems effectively and how to design operations and execution plans that ensure these systems function optimally. By the end of this lesson, you will have a clearer picture of how to set the limits and expectations for renewable energy projects, which is crucial for their success."
         },
         {
           "id": "renewable-energy-systems-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in renewable energy systems. Additionally, we will explore uncertainty ranges and how these can affect our planning. Understanding system dependencies is also vital, as it helps us prepare for potential challenges before we implement any interventions. This foundational knowledge will empower you to make informed decisions in your future projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in renewable energy systems. Additionally, we will explore uncertainty ranges and how these can affect our planning. Understanding system dependencies is also vital, as it helps us prepare for potential challenges before we implement any interventions. This foundational knowledge will empower you to make informed decisions in your future projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in renewable energy systems. Additionally, we will explore uncertainty ranges and how these can affect our planning. Understanding system dependencies is also vital, as it helps us prepare for potential challenges before we implement any interventions. This foundational knowledge will empower you to make informed decisions in your future projects.\nWhy this matters: Causal and Uncertainty Modeling helps learners in Renewable Energy connect ideas from Renewable Energy Systems Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "renewable-energy-systems-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of ensuring that all claims made in our analyses are supported by measurable indicators. This means that we will establish confidence bounds and set up review checkpoints to verify our findings. By doing so, we can ensure that our conclusions are reliable and that we are making decisions based on solid evidence, which is essential for the credibility of our work.\nContext recap: In this recap, we will emphasize the importance of ensuring that all claims made in our analyses are supported by measurable indicators. This means that we will establish confidence bounds and set up review checkpoints to verify our findings. By doing so, we can ensure that our conclusions are reliable and that we are making decisions based on solid evidence, which is essential for the credibility of our work."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to renewable energy systems. You will also stress-test these workflows by putting them through various challenging scenarios. This hands-on experience will help you understand how to create robust systems that can withstand unexpected situations, ensuring that your designs are both effective and resilient.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to renewable energy systems. You will also stress-test these workflows by putting them through various challenging scenarios. This hands-on experience will help you understand how to create robust systems that can withstand unexpected situations, ensuring that your designs are both effective and resilient."
         },
         {
           "id": "renewable-energy-systems-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss the importance of integrating control gates into our workflows. These control gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. By incorporating these elements, we can ensure that our workflows are not only efficient but also safe and accountable, allowing for better management of renewable energy projects.\nContext recap: In this recap, we will discuss the importance of integrating control gates into our workflows. These control gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. By incorporating these elements, we can ensure that our workflows are not only efficient but also safe and accountable, allowing for better management of renewable energy projects."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in renewable energy systems diagnostics and renewable energy impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in renewable energy systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about renewable energy projects. Understanding these competing factors is crucial for developing effective strategies that balance various needs and priorities in the field of renewable energy.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in renewable energy systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about renewable energy projects. Understanding these competing factors is crucial for developing effective strategies that balance various needs and priorities in the field of renewable energy."
         },
         {
           "id": "renewable-energy-systems-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them in renewable energy decision-making. We will evaluate these options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand the trade-offs involved and guide you in making well-rounded decisions that consider all stakeholders.\nContext recap: In this practice session, learners will compare different options available to them in renewable energy decision-making. We will evaluate these options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand the trade-offs involved and guide you in making well-rounded decisions that consider all stakeholders."
         },
         {
           "id": "renewable-energy-systems-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will outline the essential components of a decision memo. Each recommendation you make should include the underlying assumptions, the evidence that supports your claims, the controls for managing risks, and fallback plans in case things do not go as expected. This structured approach will enhance the clarity and effectiveness of your decision-making process.\nContext recap: In this recap, we will outline the essential components of a decision memo. Each recommendation you make should include the underlying assumptions, the evidence that supports your claims, the controls for managing risks, and fallback plans in case things do not go as expected. This structured approach will enhance the clarity and effectiveness of your decision-making process."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. You will need to balance performance objectives with governance constraints, ensuring that all actions taken are in line with established guidelines. This experience will help you develop the skills necessary to navigate complex situations in renewable energy management effectively.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. You will need to balance performance objectives with governance constraints, ensuring that all actions taken are in line with established guidelines. This experience will help you develop the skills necessary to navigate complex situations in renewable energy management effectively."
         },
         {
           "id": "renewable-energy-systems-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss the design of effective responses to challenges that may arise during renewable energy operations. It is crucial that these responses can update control gates while maintaining traceability and accountability. This means that every action taken can be tracked and justified, which is vital for ensuring transparency and trust in renewable energy systems.\nContext recap: In this recap, we will discuss the design of effective responses to challenges that may arise during renewable energy operations. It is crucial that these responses can update control gates while maintaining traceability and accountability. This means that every action taken can be tracked and justified, which is vital for ensuring transparency and trust in renewable energy systems."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholders involved in renewable energy projects. This includes identifying the benefits, burdens, and any delayed effects that may arise. Understanding these dynamics is essential for ensuring that all voices are heard and that the impacts of decisions are fairly distributed.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholders involved in renewable energy projects. This includes identifying the benefits, burdens, and any delayed effects that may arise. Understanding these dynamics is essential for ensuring that all voices are heard and that the impacts of decisions are fairly distributed."
         },
         {
           "id": "renewable-energy-systems-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this lesson, we will focus on the architecture of accountability within renewable energy governance. This includes ensuring that there is clear traceability of decisions made, rights for review, and obligations for remediation when necessary. By integrating these elements, we can create a more responsible and transparent decision-making process that fosters trust among all stakeholders.\nContext recap: In this lesson, we will focus on the architecture of accountability within renewable energy governance. This includes ensuring that there is clear traceability of decisions made, rights for review, and obligations for remediation when necessary. By integrating these elements, we can create a more responsible and transparent decision-making process that fosters trust among all stakeholders."
         },
         {
           "id": "renewable-energy-systems-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "To ensure responsible leadership in renewable energy, it is important to use a comprehensive checklist. This checklist should connect important outcomes, ethical considerations, compliance with policies, and the ability to adapt and be resilient in changing situations. By following this checklist, leaders can make informed decisions that positively impact the community and environment.\nContext recap: To ensure responsible leadership in renewable energy, it is important to use a comprehensive checklist. This checklist should connect important outcomes, ethical considerations, compliance with policies, and the ability to adapt and be resilient in changing situations. By following this checklist, leaders can make informed decisions that positively impact the community and environment."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const RenewableEnergySystems601Module: LearningModule = {
           "id": "renewable-energy-systems-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, evidence that backs up those claims, an understanding of the uncertainties involved, and potential pathways for remediation. This process helps learners develop critical thinking and communication skills that are essential for presenting their ideas effectively.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, evidence that backs up those claims, an understanding of the uncertainties involved, and potential pathways for remediation. This process helps learners develop critical thinking and communication skills that are essential for presenting their ideas effectively."
         },
         {
           "id": "renewable-energy-systems-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in renewable energy systems. This rehearsal is a valuable opportunity for learners to refine their arguments and improve their ability to engage with different perspectives.\nContext recap: During the Expert Panel Rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in renewable energy systems. This rehearsal is a valuable opportunity for learners to refine their arguments and improve their ability to engage with different perspectives."
         }
       ],
       "interactiveActivities": [

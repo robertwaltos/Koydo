@@ -64,7 +64,7 @@ function SubjectCube({ icon, label, href, glowColor, accentClass }: SubjectCubeP
       </div>
 
       {/* Label */}
-      <span className="text-xs font-semibold tracking-wide text-slate-300 transition-colors duration-300 group-hover:text-white sm:text-sm">
+      <span className="text-xs font-semibold tracking-wide text-slate-700 transition-colors duration-300 group-hover:text-slate-900 sm:text-sm">
         {label}
       </span>
     </Link>

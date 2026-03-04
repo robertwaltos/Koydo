@@ -1,0 +1,12 @@
+
+> koydo-web@0.1.0 experience:device-gateway:confidence:contract:test
+> node scripts/test-device-gateway-confidence-contract.mjs
+
+PASS: streaming target counting is deterministic.
+PASS: Vision Pro profile confidence stays high and deterministic.
+PASS: Quest profile meets high-confidence threshold.
+PASS: baseline laptop profile remains medium confidence.
+PASS: low-power mobile profile confidence degrades below baseline.
+PASS: tier-0 profile remains low confidence.
+PASS: DeviceGatewayProvider wires confidence values into telemetry/state.
+PASS: device gateway confidence contract.

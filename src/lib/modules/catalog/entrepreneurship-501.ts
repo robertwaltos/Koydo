@@ -46,19 +46,19 @@ export const Entrepreneurship501Module: LearningModule = {
           "id": "entrepreneurship-501-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for Entrepreneurship, framing how venture hypothesis testing and capital strategy interact across complex systems."
+          "content": "In this lesson, we will dive deep into the advanced boundaries of entrepreneurship. We will examine how testing our business ideas, known as venture hypothesis testing, plays a vital role in shaping our strategies for securing funding. Additionally, we will explore how these elements interact within complex systems, such as markets and consumer behavior. By understanding these relationships, you will be better equipped to make informed and strategic decisions throughout your entrepreneurial journey. This knowledge is essential for navigating the challenges and opportunities that arise in the world of business."
         },
         {
           "id": "entrepreneurship-501-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "Learners model causal pathways, uncertainty ranges, and hidden assumptions before intervention design."
+          "content": "In this section, learners will practice modeling the pathways that lead to different outcomes, considering the uncertainties and hidden assumptions that may affect their decisions. This preparation is essential before designing any interventions or strategies to improve their business ideas.\nContext recap: In this section, learners will practice modeling the pathways that lead to different outcomes, considering the uncertainties and hidden assumptions that may affect their decisions. This preparation is essential before designing any interventions or strategies to improve their business ideas."
         },
         {
           "id": "entrepreneurship-501-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "All advanced claims are tied to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all advanced claims made in entrepreneurship are supported by measurable indicators. This means we will look at confidence levels and set up review checkpoints to validate our findings. This rigorous approach helps us build trust in our business strategies.\nContext recap: It is important to ensure that all advanced claims made in entrepreneurship are supported by measurable indicators. This means we will look at confidence levels and set up review checkpoints to validate our findings. This rigorous approach helps us build trust in our business strategies."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const Entrepreneurship501Module: LearningModule = {
           "id": "entrepreneurship-501-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "Learners build a specialist workflow emphasizing specialist method execution, cross-domain integration, and high-stakes scenario performance, then test it against adversarial or edge-case conditions."
+          "content": "In this engaging interactive lab, learners will have the opportunity to design a comprehensive workflow that showcases the execution of specialized methods. They will draw upon knowledge from various fields to create a well-rounded approach and practice their skills in high-pressure situations. Once they have developed their workflows, they will put them to the test by simulating challenging conditions. This will help them ensure that their workflows are not only effective but also resilient in the face of adversity. Through this process, learners will gain valuable insights into the importance of adaptability and problem-solving in entrepreneurship."
         },
         {
           "id": "entrepreneurship-501-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "Robust specialist workflows require control gates, rollback criteria, and accountability checkpoints."
+          "content": "To create strong workflows, it is essential to include control gates, criteria for rolling back decisions, and accountability checkpoints. These elements help ensure that the process remains on track and that any failures can be addressed promptly and effectively.\nContext recap: To create strong workflows, it is essential to include control gates, criteria for rolling back decisions, and accountability checkpoints. These elements help ensure that the process remains on track and that any failures can be addressed promptly and effectively."
         }
       ],
       "interactiveActivities": [
@@ -396,19 +396,19 @@ export const Entrepreneurship501Module: LearningModule = {
           "id": "entrepreneurship-501-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "Case focus: a scaling venture facing product-market-fit signals, capital constraints, and execution bottlenecks. Learners map strategic objectives, failure risks, and governance constraints before action."
+          "content": "In this engaging case study, we will explore a dynamic and growing business that is encountering several important challenges. These challenges include finding the right fit for their product in the market, dealing with limited funding options, and overcoming obstacles in executing their plans effectively. As learners, you will have the opportunity to carefully map out the strategic objectives that the business aims to achieve. Additionally, you will identify the potential risks that could lead to failure and examine the governance constraints that might influence the decisions made by the business leaders before they take any significant action. This analysis will help you understand the complexities of running a successful venture and the importance of strategic planning in entrepreneurship."
         },
         {
           "id": "entrepreneurship-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "Options are scored across effectiveness, reliability, equity, feasibility, and long-term maintainability."
+          "content": "In this section, we will learn how to evaluate different options using a tradeoff matrix. Each option will be scored based on its effectiveness, reliability, fairness, feasibility, and long-term sustainability. This scoring helps us make informed decisions about which strategies to pursue.\nContext recap: In this section, we will learn how to evaluate different options using a tradeoff matrix. Each option will be scored based on its effectiveness, reliability, fairness, feasibility, and long-term sustainability. This scoring helps us make informed decisions about which strategies to pursue."
         },
         {
           "id": "entrepreneurship-501-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are translated into safeguards, response playbooks, and measurable adaptation loops."
+          "content": "When we encounter failures, it is important to translate those experiences into actionable safeguards. This includes creating response playbooks and measurable adaptation loops that help us learn from our mistakes and improve our strategies moving forward.\nContext recap: When we encounter failures, it is important to translate those experiences into actionable safeguards. This includes creating response playbooks and measurable adaptation loops that help us learn from our mistakes and improve our strategies moving forward.\nWhy this matters: Recovery and Adaptation Design helps learners in Business connect ideas from Entrepreneurship Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -447,13 +447,13 @@ export const Entrepreneurship501Module: LearningModule = {
           "id": "entrepreneurship-501-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "Learners configure simulation assumptions, thresholds, and intervention pathways under high-stakes conditions."
+          "content": "In this practice session, learners will set up simulation assumptions, establish thresholds, and outline intervention pathways while navigating high-stakes scenarios. This hands-on experience will help them understand how to respond effectively in real-world situations.\nContext recap: In this practice session, learners will set up simulation assumptions, establish thresholds, and outline intervention pathways while navigating high-stakes scenarios. This hands-on experience will help them understand how to respond effectively in real-world situations.\nWhy this matters: Scenario Modeling helps learners in Business connect ideas from Entrepreneurship Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "entrepreneurship-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each run, teams review target attainment, side effects, and governance compliance gaps."
+          "content": "After each simulation run, teams will come together to review their performance. They will assess whether they met their targets, identify any unintended side effects, and discuss any gaps in governance compliance. This debriefing process is crucial for continuous improvement.\nContext recap: After each simulation run, teams will come together to review their performance. They will assess whether they met their targets, identify any unintended side effects, and discuss any gaps in governance compliance. This debriefing process is crucial for continuous improvement."
         }
       ],
       "interactiveActivities": [
@@ -728,19 +728,19 @@ export const Entrepreneurship501Module: LearningModule = {
           "id": "entrepreneurship-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners evaluate how outcomes are distributed across stakeholders, including delayed and indirect effects."
+          "content": "In this lesson, learners will evaluate how the outcomes of their business decisions affect various stakeholders. This includes considering both immediate and delayed effects, as well as any indirect consequences that may arise from their actions.\nContext recap: In this lesson, learners will evaluate how the outcomes of their business decisions affect various stakeholders. This includes considering both immediate and delayed effects, as well as any indirect consequences that may arise from their actions.\nWhy this matters: Stakeholder Impact Distribution helps learners in Business connect ideas from Entrepreneurship Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "entrepreneurship-501-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "Accountability is implemented through traceability standards, review rights, and remediation obligations."
+          "content": "Designing an accountability system is essential for ensuring that everyone involved in the business is responsible for their actions. This includes establishing standards for traceability, rights to review decisions, and obligations for remediation when issues arise.\nContext recap: Designing an accountability system is essential for ensuring that everyone involved in the business is responsible for their actions. This includes establishing standards for traceability, rights to review decisions, and obligations for remediation when issues arise.\nWhy this matters: Accountability System Design helps learners in Business connect ideas from Entrepreneurship Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "entrepreneurship-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A leadership checklist links strategy, ethics, policy, and operational controls into one review artifact."
+          "content": "A responsible leadership checklist is an important tool that helps leaders connect their strategies with ethical practices, policies, and operational controls. This checklist serves as a comprehensive guide to ensure that all aspects of leadership are reviewed and aligned, promoting accountability and integrity in decision-making.\nContext recap: A responsible leadership checklist is an important tool that helps leaders connect their strategies with ethical practices, policies, and operational controls. This checklist serves as a comprehensive guide to ensure that all aspects of leadership are reviewed and aligned, promoting accountability and integrity in decision-making."
         }
       ],
       "flashcards": [
@@ -779,13 +779,13 @@ export const Entrepreneurship501Module: LearningModule = {
           "id": "entrepreneurship-501-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "Learners assemble a capstone charter with objectives, constraints, metrics, governance controls, and evidence plan."
+          "content": "In this activity, learners will create a detailed capstone charter. This charter will outline the key objectives they aim to achieve, the constraints they might face, the metrics they will use to measure success, the governance controls that will guide their project, and a plan for gathering evidence to support their work. This comprehensive approach helps ensure that all important elements are considered.\nContext recap: In this activity, learners will create a detailed capstone charter. This charter will outline the key objectives they aim to achieve, the constraints they might face, the metrics they will use to measure success, the governance controls that will guide their project, and a plan for gathering evidence to support their work. This comprehensive approach helps ensure that all important elements are considered."
         },
         {
           "id": "entrepreneurship-501-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "The final practice round trains learners to defend decisions against technical, governance, and stakeholder critiques."
+          "content": "During the final practice round, learners will engage in a defense rehearsal. This session is designed to prepare them to confidently defend their decisions against various critiques. They will practice responding to questions related to technical aspects, governance issues, and stakeholder concerns, helping them build strong communication and critical thinking skills.\nContext recap: During the final practice round, learners will engage in a defense rehearsal. This session is designed to prepare them to confidently defend their decisions against various critiques. They will practice responding to questions related to technical aspects, governance issues, and stakeholder concerns, helping them build strong communication and critical thinking skills."
         }
       ],
       "interactiveActivities": [

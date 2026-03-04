@@ -1,47 +1,81 @@
-# Google Play Store Listing
+# Google Play Store Listing Draft
 
-## App details
-**App Title:** Koydo — Learn Pre-K to College (max 30: "Koydo — Pre-K to College") *Note: exactly 27 characters*
-**Short Description (EN):** Master languages & subjects from Pre-K to College with AI-powered lessons.
-**Short Description (ES):** Domina idiomas y materias desde Pre-K hasta la universidad con lecciones de IA.
+**Last reviewed**: 2026-03-04
+
+Use this as copy draft only. Final listing values must match:
+- current app behavior
+- Data Safety answers
+- target audience/Families declarations
+
+Official references:
+- Store listing policy: https://support.google.com/googleplay/android-developer/answer/9859455
+- Preview assets requirements: https://support.google.com/googleplay/android-developer/answer/1078870
+- Target audience/content: https://support.google.com/googleplay/android-developer/answer/9898842
+
+---
+
+## App Details (Draft)
+
+**App Title:** Koydo - Learn & Study Smarter
+
+**Short Description (EN):**
+AI-powered study app with lessons, quizzes, and exam prep.
+
+**Short Description (ES):**
+App de estudio con IA con lecciones, cuestionarios y preparación de exámenes.
+
+---
 
 ## Full Description (EN)
-Koydo revolutionizes education by providing personalized, AI-driven learning journeys tailored to your stage in life—from early childhood (Pre-K) all the way through College preparation. Our platform adapts to your unique learning style, offering a comprehensive curriculum that covers essential subjects, advanced topics, and immersive language learning. 
 
-Whether you're looking to master a new language with high-fidelity AI tutors, practice real-world dialogues, or dive into complex academic modules, Koydo equips you with the tools to succeed. 
+Koydo is an AI-powered learning app built to help learners study with structure and confidence.
 
-**Features:**
-- **6 Education Stages:** A progressive curriculum catering to Pre-K, Elementary, Middle School, High School, College, and Lifelong Learners.
-- **Free & Premium Tiers:** Access a robust free tier of foundational modules, or unlock our Premium tier for advanced skill trees, deeper analytics, and unlimited AI speaking labs.
-- **Interactive Lessons:** Engage with dynamic scenarios, real-time grammar feedback, and interactive flashcards.
-- **Parental Controls:** Carefully designed for younger learners with COPPA-compliant parent gates, ensuring a secure and focused learning environment.
-- **High-Fidelity AI Tutors:** Practice pronunciation and conversation with native-speaker accuracy across dozens of dialects.
+Key capabilities include:
+- Guided lessons and practice flows
+- Adaptive quiz and review loops
+- Exam-prep experiences with progress tracking
+- Optional premium features for expanded access
+- Account and progress sync across sessions
 
-Join a community of modern learners taking advantage of instant feedback loops and spaced repetition flashcards. Forge your future with Koydo!
+Subscription details, pricing terms, and cancellation controls are shown in-app and in store billing surfaces.
+
+Privacy Policy: https://koydo.app/privacy
+Terms of Service: https://koydo.app/terms
+
+---
 
 ## Full Description (ES)
-Koydo revoluciona la educación al proporcionar viajes de aprendizaje personalizados e impulsados por IA, adaptados a tu etapa de vida: desde la primera infancia (Pre-K) hasta la preparación universitaria. Nuestra plataforma se adapta a tu estilo de aprendizaje único, ofreciendo un plan de estudios integral que abarca materias esenciales, temas avanzados y un aprendizaje de idiomas inmersivo.
 
-Ya sea que busques dominar un nuevo idioma con tutores de IA de alta fidelidad, practicar diálogos del mundo real o sumergirte en módulos académicos complejos, Koydo te equipa con las herramientas para triunfar.
+Koydo es una app de aprendizaje con IA diseñada para ayudarte a estudiar con estructura y confianza.
 
-**Características:**
-- **6 Etapas Educativas:** Un plan de estudios progresivo que atiende a Pre-K, Primaria, Secundaria, Preparatoria, Universidad y Aprendices de por vida.
-- **Niveles Gratuito y Premium:** Accede a un sólido nivel gratuito de módulos fundamentales, o desbloquea nuestro nivel Premium para árboles de habilidades avanzados, análisis profundos y laboratorios de conversación de IA ilimitados.
-- **Lecciones Interactivas:** Participa en escenarios dinámicos, retroalimentación gramatical en tiempo real y tarjetas de memoria interactivas.
-- **Controles Parentales:** Cuidadosamente diseñado para estudiantes más jóvenes con controles de seguridad que cumplen con COPPA, garantizando un entorno de aprendizaje seguro y enfocado.
-- **Tutores de IA de Alta Fidelidad:** Practica la pronunciación y la conversación con precisión de hablante nativo en docenas de dialectos.
+Funciones principales:
+- Lecciones guiadas y práctica
+- Cuestionarios adaptativos y repasos
+- Preparación de exámenes con seguimiento del progreso
+- Funciones premium opcionales
+- Sincronización de cuenta y progreso
 
-¡Forja tu futuro con Koydo!
+La información de precios, renovación y cancelación se muestra en la app y en las pantallas de facturación.
 
-## Graphics & Media Requirements
-- **Feature Graphic Spec:** 1024w x 500h (JPEG or 24-bit PNG, no alpha). Should prominently feature the Koydo logo centered on a vibrant, educational-themed backdrop.
-- **Screenshots Requirement:**
-  - Phone (16:9 aspect ratio): Minimum 4 screenshots.
-  - Tablet (16:10 aspect ratio): Minimum 4 screenshots (7-inch and 10-inch specs).
-  - *Content ideas:* Welcome/Profile selection, AI Speech Tutor interface, Skill Tree/Stage progression, Premium Checkout screen, Dark mode UI.
+Política de privacidad: https://koydo.app/privacy
+Términos de servicio: https://koydo.app/terms
 
-## Store Settings
-- **Content Rating:** Education, no UGC, COPPA-compliant for under-13 with active parent gate. Age rating: 3+ / Everyone.
-- **Privacy Policy URL:** https://koydo.app/legal/privacy
-- **Category:** Education
-- **Target Audience:** "Everyone" (Includes children under 13, triggers family policy & parental controls).
+---
+
+## Graphics & Media
+
+- App icon: 512x512 PNG
+- Feature graphic: 1024x500 PNG
+- Phone screenshots: per current Play requirement
+- Tablet screenshots: include as needed
+
+Do not ship placeholder assets.
+
+---
+
+## Policy-Sensitive Fields (Set Per Release)
+
+- **Content Rating:** Complete IARC questionnaire from current feature set
+- **Target Audience:** Select only actual target groups
+- **Families Policy:** Required if child-directed audience/features apply
+- **App Access:** Provide stable reviewer credentials if any content is gated

@@ -1,20 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
 import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import { hapticSuccess, hapticSelection, hapticCelebration } from "@/lib/platform/haptics";
-import { Cpu, Terminal, Square, Circle, Triangle } from "lucide-react";
+import { Cpu, Terminal, Square, Circle, Triangle, type LucideIcon } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Logical Link Content --- */
 type Gate = {
     id: number;
     type: "AND" | "OR" | "NOT" | "XOR" | "NAND";
     color: string;
-    icon: any;
+    icon: LucideIcon;
 };
 
 const GATE_TYPES: Omit<Gate, "id">[] = [
@@ -25,33 +29,49 @@ const GATE_TYPES: Omit<Gate, "id">[] = [
     { type: "NAND", color: "bg-emerald-500", icon: Terminal },
 ];
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
+const createGrid = (): Gate[][] => {
+    const newGrid: Gate[][] = [];
+    for (let rowIndex = 0; rowIndex < 6; rowIndex += 1) {
+        newGrid[rowIndex] = [];
+        for (let columnIndex = 0; columnIndex < 6; columnIndex += 1) {
+            newGrid[rowIndex][columnIndex] = {
+                id: Math.random(),
+                ...GATE_TYPES[Math.floor(Math.random() * GATE_TYPES.length)],
+            };
+        }
+    }
+    return newGrid;
+};
+
 export default function LogicalLink() {
     const { setMood, setMessage } = useMascot();
-    const [grid, setGrid] = useState<Gate[][]>([]);
+    const [grid, setGrid] = useState<Gate[][]>(() => createGrid());
     const [score, setScore] = useState(0);
     const [streak, setStreak] = useState(0);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
 
-    const initializeGrid = () => {
-        const newGrid: Gate[][] = [];
-        for (let r = 0; r < 6; r++) {
-            newGrid[r] = [];
-            for (let c = 0; c < 6; c++) {
-                newGrid[r][c] = {
-                    id: Math.random(),
-                    ...GATE_TYPES[Math.floor(Math.random() * GATE_TYPES.length)]
-                };
-            }
-        }
-        setGrid(newGrid);
-    };
-
-    useEffect(() => {
-        initializeGrid();
-        setMessage("Welcome to Logical Link. Match synchronous gates to stabilize the digital core! 🤖🔌");
-        setMood("happy");
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        completionEmittedRef.current = false;
     }, []);
 
+    useEffect(() => {
+        setMessage("Welcome to Logical Link. Match synchronous gates to stabilize the digital core! 🤖🔌");
+        setMood("happy");
+        resetRunTracking();
+    }, [resetRunTracking, setMessage, setMood]);
+
     const handleTileClick = (r: number, c: number) => {
+        interactionCountRef.current += 1;
         void hapticSelection();
         const type = grid[r][c].type;
 
@@ -82,9 +102,11 @@ export default function LogicalLink() {
 
         if (connected.length >= 3) {
             // Match found!
+            const nextScore = score + connected.length * 10;
+            const nextStreak = streak + 1;
             void hapticSuccess();
-            setScore(prev => prev + connected.length * 10);
-            setStreak(prev => prev + 1);
+            setScore(nextScore);
+            setStreak(nextStreak);
 
             setGrid(prev => {
                 const newGrid = prev.map(row => [...row]);
@@ -96,6 +118,21 @@ export default function LogicalLink() {
                 });
                 return newGrid;
             });
+
+            if (nextStreak >= 4 && nextStreak % 4 === 0 && !completionEmittedRef.current) {
+                completionEmittedRef.current = true;
+                emitLegacyGameComplete({
+                    sessionId: sessionIdRef.current,
+                    gameId: "logic",
+                    elapsedMs: getElapsedMs(runStartedAtRef.current),
+                    interactions: Math.max(1, interactionCountRef.current),
+                    score: nextScore,
+                    maxScore: 3600,
+                    source: "component",
+                    occurredAt: new Date().toISOString(),
+                });
+                resetRunTracking();
+            }
 
             if (connected.length >= 5) {
                 void hapticCelebration();

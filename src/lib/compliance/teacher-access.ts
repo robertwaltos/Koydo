@@ -7,6 +7,12 @@ export const TEACHER_ACCESS_PURPOSES = [
   "testing_class_analytics",
   "testing_class_assignments",
   "testing_class_enrollments",
+  "testing_class_session",
+  "testing_class_quick_review",
+  "testing_class_google_classroom",
+  "testing_class_ingestion_preview",
+  "testing_class_grade_passback",
+  "testing_class_telemetry",
 ] as const;
 
 export type TeacherAccessPurpose = (typeof TEACHER_ACCESS_PURPOSES)[number];
@@ -211,3 +217,5 @@ export async function resolveVerifiedTeacherClassAccess(input: {
     parentConsentVerified: hasParentConsent,
   };
 }
+
+

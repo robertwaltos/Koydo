@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-03-04T00:42:37.253Z",
+  "overallGreen": true,
+  "score": 10,
+  "targetScore": 10,
+  "passes": [
+    {
+      "name": "policy_store_readiness",
+      "status": "pass",
+      "detail": "App Store checks: pass=12, warn=0, fail=0."
+    },
+    {
+      "name": "security_data_controls",
+      "status": "pass",
+      "detail": "DB checks: present=77, missing=0, error=0."
+    },
+    {
+      "name": "automation_monitoring",
+      "status": "pass",
+      "detail": "Type integrity errors: 0."
+    }
+  ]
+}

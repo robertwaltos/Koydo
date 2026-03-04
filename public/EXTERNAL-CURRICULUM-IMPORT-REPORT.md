@@ -1,16 +1,16 @@
 # External Curriculum Import Report
 
-Generated: 2026-02-25T02:06:17.621Z
-Mode: apply
-Sources scanned: 5
+Generated: 2026-03-02T22:38:17.532Z
+Mode: dry-run
+Sources scanned: 0
 
 ## Summary
 
-- Units discovered: 19
-- Units processed: 19
-- Modules generated: 19
+- Units discovered: 0
+- Units processed: 0
+- Modules generated: 0
 - Files written: 0
-- Files skipped: 19
+- Files skipped: 0
 - Existing modules merged: 0
 - Lessons merged into existing modules: 0
 - Duplicate lessons skipped during merge: 0
@@ -18,22 +18,4 @@ Sources scanned: 5
 
 ## Modules
 
-- lang-arts-35-u1-external -> lang-arts-35-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- lang-arts-68-u1-external -> lang-arts-68-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- lang-arts-910-u1-external -> lang-arts-910-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- lang-arts-1112-u1-external -> lang-arts-1112-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- lang-arts-prek-u1-external -> lang-arts-prek-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- lang-arts-k2-u1-external -> lang-arts-k2-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- basic-math-35-u1-external -> basic-math-35-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- basic-math-68-u1-external -> basic-math-68-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- basic-math-910-u1-external -> basic-math-910-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- basic-math-1112-u1-external -> basic-math-1112-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- basic-math-prek-u1-external -> basic-math-prek-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- basic-math-k2-u1-external -> basic-math-k2-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- gen-science-35-u1-external -> gen-science-35-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- gen-science-68-u1-external -> gen-science-68-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- gen-science-910-u1-external -> gen-science-910-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- gen-science-1112-u1-external -> gen-science-1112-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- gen-science-prek-u1-external -> gen-science-prek-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- gen-science-k2-u1-external -> gen-science-k2-u1-external.ts (skipped_existing_external_no_changes; score 100/75)
-- lang-arts-prek-u1 -> lang-arts-prek-u1-external.ts (skipped_duplicate_source_unit; lessons +0, skipped 0)
+- None

@@ -47,19 +47,19 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Psychology, with focus on psychology systems diagnostics and psychology operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of psychology, which are essential for understanding the field at a deeper level. We will focus on how to effectively diagnose psychological systems, which involves identifying the underlying issues that may affect individuals or groups. Additionally, we will learn about designing operations that can be executed successfully, ensuring that our psychological interventions are practical and impactful. By grasping these concepts, we will be better equipped to apply psychological principles in various real-world settings, enhancing our ability to support others in their mental health journeys.\nContext recap: In this lesson, we will delve into the advanced boundaries of psychology, which are essential for understanding the field at a deeper level. We will focus on how to effectively diagnose psychological systems, which involves identifying the underlying issues that may affect individuals or groups. Additionally, we will learn about designing operations that can be executed successfully, ensuring that our psychological interventions are practical and impactful. By grasping these concepts, we will be better equipped to apply psychological principles in various real-world settings, enhancing our ability to support others in their mental health journeys.\nContext recap: In this lesson, we will delve into the advanced boundaries of psychology, which are essential for understanding the field at a deeper level. We will focus on how to effectively diagnose psychological systems, which involves identifying the underlying issues that may affect individuals or groups. Additionally, we will learn about designing operations that can be executed successfully, ensuring that our psychological interventions are practical and impactful. By grasping these concepts, we will be better equipped to apply psychological principles in various real-world settings, enhancing our ability to support others in their mental health journeys.\nWhy this matters: Scope and Boundary Design helps learners in Psychology connect ideas from Psychology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "psychology-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. We will also look at uncertainty ranges, which help us understand the limits of our knowledge, and system dependencies, which show how different parts of a system rely on one another. This foundational work is essential before planning any interventions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. We will also look at uncertainty ranges, which help us understand the limits of our knowledge, and system dependencies, which show how different parts of a system rely on one another. This foundational work is essential before planning any interventions."
         },
         {
           "id": "psychology-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds, which help us understand how certain we are about our findings, and set up review checkpoints to evaluate our progress. This process ensures that our conclusions are based on solid evidence.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds, which help us understand how certain we are about our findings, and set up review checkpoints to evaluate our progress. This process ensures that our conclusions are based on solid evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will be tested under challenging scenarios to see how they hold up. This stress-testing process is crucial for identifying potential weaknesses and ensuring that our methods are robust and effective.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. These workflows will be tested under challenging scenarios to see how they hold up. This stress-testing process is crucial for identifying potential weaknesses and ensuring that our methods are robust and effective."
         },
         {
           "id": "psychology-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows can be designed to include important checkpoints. These checkpoints help us monitor progress, establish rollback criteria to revert to previous states if necessary, and set up threshold-based escalation procedures to address issues as they arise. This architecture is vital for maintaining control over our processes.\nContext recap: In this recap, we will discuss how workflows can be designed to include important checkpoints. These checkpoints help us monitor progress, establish rollback criteria to revert to previous states if necessary, and set up threshold-based escalation procedures to address issues as they arise. This architecture is vital for maintaining control over our processes."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in psychology systems diagnostics and psychology impact and tradeoff analysis."
+          "content": "In this lesson, we will frame cases that highlight the competing constraints in psychology systems diagnostics. We will analyze the impact of different psychological interventions and the trade-offs involved. This understanding will help us make informed decisions when faced with complex situations.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints in psychology systems diagnostics. We will analyze the impact of different psychological interventions and the trade-offs involved. This understanding will help us make informed decisions when faced with complex situations.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints in psychology systems diagnostics. We will analyze the impact of different psychological interventions and the trade-offs involved. This understanding will help us make informed decisions when faced with complex situations. Context recap: In this lesson, we will frame cases that highlight the competing constraints in psychology systems diagnostics.\nWhy this matters: Scenario Architecture helps learners in Psychology connect ideas from Psychology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "psychology-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "Learners will engage in comparing various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This practice will help us understand how different choices can affect stakeholders and the overall effectiveness of psychological interventions.\nContext recap: Learners will engage in comparing various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This practice will help us understand how different choices can affect stakeholders and the overall effectiveness of psychological interventions.\nContext recap: Learners will engage in comparing various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This practice will help us understand how different choices can affect stakeholders and the overall effectiveness of psychological interventions. Context recap: Learners will engage in comparing various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This practice will help us understand how different choices can affect stakeholders and the overall effectiveness of psychological interventions."
         },
         {
           "id": "psychology-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any unforeseen circumstances.\nContext recap: In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any unforeseen circumstances.\nContext recap: In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any unforeseen circumstances. Context recap: In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any unforeseen circumstances."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "During this interactive session, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help them understand the complexities involved in managing psychological scenarios effectively.\nContext recap: During this interactive session, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will help them understand the complexities involved in managing psychological scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Psychology connect ideas from Psychology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "psychology-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss how effective responses to challenges should update control gates while maintaining traceability and accountability. This means that we need to keep track of our decisions and ensure that we can refer back to them when necessary.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates while maintaining traceability and accountability. This means that we need to keep track of our decisions and ensure that we can refer back to them when necessary.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates while maintaining traceability and accountability. This means that we need to keep track of our decisions and ensure that we can refer back to them when necessary. Context recap: In this recap, we will discuss how effective responses to challenges should update control gates while maintaining traceability and accountability. This means that we need to keep track of our decisions and ensure that we can refer back to them when necessary."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how various decisions impact different people and communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how various decisions impact different people and communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Psychology connect ideas from Psychology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "psychology-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decisions can be traced back, the rights of individuals to review these decisions, and the obligations we have to address any issues that arise. This framework is essential for ensuring ethical practices in psychology.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decisions can be traced back, the rights of individuals to review these decisions, and the obligations we have to address any issues that arise. This framework is essential for ensuring ethical practices in psychology."
         },
         {
           "id": "psychology-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our discussion, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our leadership practices. This checklist serves as a guide to help us reflect on our responsibilities as leaders.\nContext recap: At the end of our discussion, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our leadership practices. This checklist serves as a guide to help us reflect on our responsibilities as leaders."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Psychology601Module: LearningModule = {
           "id": "psychology-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills."
         },
         {
           "id": "psychology-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to questions and feedback from an expert panel. They will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal is essential for building confidence and improving their ability to articulate their ideas effectively.\nContext recap: During this session, learners will practice their responses to questions and feedback from an expert panel. They will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal is essential for building confidence and improving their ability to articulate their ideas effectively."
         }
       ],
       "interactiveActivities": [

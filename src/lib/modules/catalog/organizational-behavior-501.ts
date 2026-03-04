@@ -47,19 +47,19 @@ export const OrganizationalBehavior501Module: LearningModule = {
           "id": "organizational-behavior-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Organizational Behavior, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will dive deep into the advanced concepts of scope boundaries within the field of Organizational Behavior. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations that improve how a business executes its plans. Grasping these boundaries is essential for developing efficient business strategies that can adapt to various challenges and opportunities in the ever-changing business environment.\nContext recap: In this lesson, we will dive deep into the advanced concepts of scope boundaries within the field of Organizational Behavior. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations that improve how a business executes its plans. Grasping these boundaries is essential for developing efficient business strategies that can adapt to various challenges and opportunities in the ever-changing business environment.\nContext recap: In this lesson, we will dive deep into the advanced concepts of scope boundaries within the field of Organizational Behavior. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations that improve how a business executes its plans. Grasping these boundaries is essential for developing efficient business strategies that can adapt to various challenges and opportunities in the ever-changing business environment.\nWhy this matters: Scope and Boundary Design helps learners in Business connect ideas from Organizational Behavior Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "organizational-behavior-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This foundational knowledge is essential for planning effective interventions that can address potential issues before they arise.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This foundational knowledge is essential for planning effective interventions that can address potential issues before they arise."
         },
         {
           "id": "organizational-behavior-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in our analyses must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be validated through evidence.\nContext recap: In our recap, we emphasize that all claims made in our analyses must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be validated through evidence.\nContext recap: In our recap, we emphasize that all claims made in our analyses must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be validated through evidence. Context recap: In our recap, we emphasize that all claims made in our analyses must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be validated through evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const OrganizationalBehavior501Module: LearningModule = {
           "id": "organizational-behavior-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, which will help them understand how to improve processes under challenging conditions.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, which will help them understand how to improve processes under challenging conditions.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, which will help them understand how to improve processes under challenging conditions. Context recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, which will help them understand how to improve processes under challenging conditions."
         },
         {
           "id": "organizational-behavior-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss the importance of integrating control gates within workflows. These gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds to ensure that processes remain on track and can adapt to changes effectively.\nContext recap: In this recap, we will discuss the importance of integrating control gates within workflows. These gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds to ensure that processes remain on track and can adapt to changes effectively.\nContext recap: In this recap, we will discuss the importance of integrating control gates within workflows. These gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds to ensure that processes remain on track and can adapt to changes effectively. Context recap: In this recap, we will discuss the importance of integrating control gates within workflows. These gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds to ensure that processes remain on track and can adapt to changes effectively."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const OrganizationalBehavior501Module: LearningModule = {
           "id": "organizational-behavior-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "This lesson focuses on the architecture of scenarios, which frame the competing constraints that arise in business systems diagnostics. We will analyze the impacts and trade-offs involved in decision-making processes, helping learners understand the complexities of balancing different business needs.\nContext recap: This lesson focuses on the architecture of scenarios, which frame the competing constraints that arise in business systems diagnostics. We will analyze the impacts and trade-offs involved in decision-making processes, helping learners understand the complexities of balancing different business needs.\nContext recap: This lesson focuses on the architecture of scenarios, which frame the competing constraints that arise in business systems diagnostics. We will analyze the impacts and trade-offs involved in decision-making processes, helping learners understand the complexities of balancing different business needs. Context recap: This lesson focuses on the architecture of scenarios, which frame the competing constraints that arise in business systems diagnostics. We will analyze the impacts and trade-offs involved in decision-making processes, helping learners understand the complexities of balancing different business needs."
         },
         {
           "id": "organizational-behavior-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that consider multiple factors and their implications.\nContext recap: In this practice session, learners will compare various options based on important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that consider multiple factors and their implications.\nWhy this matters: Tradeoff Framing helps learners in Business connect ideas from Organizational Behavior Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "organizational-behavior-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made in our analyses should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be adjusted if necessary.\nContext recap: In our recap, we will highlight that each recommendation made in our analyses should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be adjusted if necessary.\nContext recap: In our recap, we will highlight that each recommendation made in our analyses should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be adjusted if necessary. Context recap: In our recap, we will highlight that each recommendation made in our analyses should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be adjusted if necessary."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const OrganizationalBehavior501Module: LearningModule = {
           "id": "organizational-behavior-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while balancing the need for performance with governance constraints. This experience will help them understand how to manage competing priorities effectively in real-time situations.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing the need for performance with governance constraints. This experience will help them understand how to manage competing priorities effectively in real-time situations.\nWhy this matters: Live Scenario Controls helps learners in Business connect ideas from Organizational Behavior Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "organizational-behavior-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed later for effectiveness.\nContext recap: In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed later for effectiveness.\nWhy this matters: Adaptive Response Design helps learners in Business connect ideas from Organizational Behavior Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const OrganizationalBehavior501Module: LearningModule = {
           "id": "organizational-behavior-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how decisions impact various individuals and organizations involved.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how decisions impact various individuals and organizations involved.\nWhy this matters: Stakeholder Impact Distribution helps learners in Business connect ideas from Organizational Behavior Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "organizational-behavior-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability, which includes ensuring that decision-making processes are traceable. This means integrating review rights and obligations for remediation, so everyone involved understands their responsibilities.\nContext recap: In this section, we will explore the architecture of accountability, which includes ensuring that decision-making processes are traceable. This means integrating review rights and obligations for remediation, so everyone involved understands their responsibilities.\nWhy this matters: Accountability Architecture helps learners in Business connect ideas from Organizational Behavior Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "organizational-behavior-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "This checklist serves as a helpful guide that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and promotes resilience within organizations. It encourages leaders to reflect on their responsibilities and the impact of their decisions.\nContext recap: This checklist serves as a helpful guide that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and promotes resilience within organizations. It encourages leaders to reflect on their responsibilities and the impact of their decisions.\nContext recap: This checklist serves as a helpful guide that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and promotes resilience within organizations. It encourages leaders to reflect on their responsibilities and the impact of their decisions. Context recap: This checklist serves as a helpful guide that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and promotes resilience within organizations. It encourages leaders to reflect on their responsibilities and the impact of their decisions."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const OrganizationalBehavior501Module: LearningModule = {
           "id": "organizational-behavior-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and suggested pathways for addressing any issues that may arise. This exercise helps develop critical thinking and problem-solving skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and suggested pathways for addressing any issues that may arise. This exercise helps develop critical thinking and problem-solving skills."
         },
         {
           "id": "organizational-behavior-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and stakeholder perspectives. This preparation is essential for building confidence and ensuring that they can effectively communicate their ideas and defend their positions.\nContext recap: During this rehearsal, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and stakeholder perspectives. This preparation is essential for building confidence and ensuring that they can effectively communicate their ideas and defend their positions."
         }
       ],
       "interactiveActivities": [

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     BookOpen,
@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /**
  * LUNA'S LEGEND - Phase 9 (Explorer Batch)
@@ -78,8 +79,30 @@ export default function LunasLegend() {
     const [isComplete, setIsComplete] = useState(false);
     const [impactText, setImpactText] = useState("");
     const [showImpact, setShowImpact] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const currentStep = STORY_STEPS[stepIndex];
+
+    useEffect(() => {
+        if (!isComplete || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "luna-legend",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, completedSteps.length),
+            score: completedSteps.length,
+            maxScore: STORY_STEPS.length,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [isComplete, completedSteps.length]);
 
     const handleOptionSelect = (option: typeof currentStep.options[0]) => {
         setImpactText(option.impact);

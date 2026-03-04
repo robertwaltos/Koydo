@@ -12,7 +12,7 @@ import {
  * Positioned fixed at the bottom of the viewport.
  * Two actions: "Accept All" (analytics + necessary) and "Necessary Only".
  *
- * On native iOS builds the banner is hidden — ATT handles consent there.
+ * On native Capacitor builds the banner is hidden because web analytics is disabled.
  */
 export default function CookieConsentBanner() {
   const [visible, setVisible] = useState(false);

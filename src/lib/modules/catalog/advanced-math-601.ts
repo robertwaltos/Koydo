@@ -47,19 +47,19 @@ export const AdvancedMath601Module: LearningModule = {
           "id": "advanced-math-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Advanced Math, with focus on advanced math systems diagnostics and advanced math operations and execution design."
+          "content": "In this lesson, we will delve into the fascinating concept of advanced scope boundaries within the realm of Advanced Math. Our primary focus will be on learning how to diagnose complex mathematical systems effectively. We will also explore how to design operations and execution strategies that are not only efficient but also innovative. By understanding these concepts, you will gain insight into the intricate relationships and frameworks that underpin advanced mathematical practices, enhancing your ability to tackle challenging problems with confidence and creativity.\nContext recap: In this lesson, we will delve into the fascinating concept of advanced scope boundaries within the realm of Advanced Math. Our primary focus will be on learning how to diagnose complex mathematical systems effectively. We will also explore how to design operations and execution strategies that are not only efficient but also innovative. By understanding these concepts, you will gain insight into the intricate relationships and frameworks that underpin advanced mathematical practices, enhancing your ability to tackle challenging problems with confidence and creativity."
         },
         {
           "id": "advanced-math-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, identifying ranges of uncertainty, and understanding the dependencies within systems. This foundational knowledge is crucial before planning any interventions, as it allows you to visualize how different elements interact and influence one another.\nContext recap: In this section, learners will engage in mapping out causal pathways, identifying ranges of uncertainty, and understanding the dependencies within systems. This foundational knowledge is crucial before planning any interventions, as it allows you to visualize how different elements interact and influence one another."
         },
         {
           "id": "advanced-math-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This includes establishing confidence bounds and setting up review checkpoints to ensure that our findings are reliable and can be validated through evidence.\nContext recap: In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This includes establishing confidence bounds and setting up review checkpoints to ensure that our findings are reliable and can be validated through evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const AdvancedMath601Module: LearningModule = {
           "id": "advanced-math-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. Additionally, they will conduct stress tests on these workflows by simulating adverse scenarios to ensure their robustness and effectiveness under pressure.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. Additionally, they will conduct stress tests on these workflows by simulating adverse scenarios to ensure their robustness and effectiveness under pressure."
         },
         {
           "id": "advanced-math-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows can be enhanced by integrating various checkpoints, rollback criteria, and threshold-based escalation processes. This architecture is essential for maintaining control and ensuring that any issues can be addressed promptly.\nContext recap: In our recap, we will discuss how workflows can be enhanced by integrating various checkpoints, rollback criteria, and threshold-based escalation processes. This architecture is essential for maintaining control and ensuring that any issues can be addressed promptly."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const AdvancedMath601Module: LearningModule = {
           "id": "advanced-math-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in advanced math systems diagnostics and advanced math impact and tradeoff analysis."
+          "content": "In this lesson, we will explore various scenarios that illustrate the competing constraints found in advanced math systems diagnostics. We will also take a closer look at how to analyze the impacts and trade-offs involved in these scenarios. This understanding will equip you with the skills needed to navigate complex decision-making situations effectively, ensuring you can make informed choices in advanced mathematical contexts.\nContext recap: In this lesson, we will explore various scenarios that illustrate the competing constraints found in advanced math systems diagnostics. We will also take a closer look at how to analyze the impacts and trade-offs involved in these scenarios. This understanding will equip you with the skills needed to navigate complex decision-making situations effectively, ensuring you can make informed choices in advanced mathematical contexts."
         },
         {
           "id": "advanced-math-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis is vital for making informed decisions that consider multiple perspectives.\nContext recap: In this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis is vital for making informed decisions that consider multiple perspectives.\nWhy this matters: Tradeoff Framing helps learners in Advanced Math connect ideas from Advanced Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "advanced-math-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and prepared for potential challenges.\nContext recap: In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and prepared for potential challenges.\nWhy this matters: Decision Memo Pattern helps learners in Advanced Math connect ideas from Advanced Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const AdvancedMath601Module: LearningModule = {
           "id": "advanced-math-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance with governance constraints. This exercise will help you understand the importance of maintaining oversight while striving for optimal outcomes.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance with governance constraints. This exercise will help you understand the importance of maintaining oversight while striving for optimal outcomes.\nWhy this matters: Live Scenario Controls helps learners in Advanced Math connect ideas from Advanced Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "advanced-math-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses can be designed to update control gates while ensuring that traceability and accountability are not compromised. This is crucial for maintaining integrity in decision-making processes.\nContext recap: In our recap, we will discuss how effective responses can be designed to update control gates while ensuring that traceability and accountability are not compromised. This is crucial for maintaining integrity in decision-making processes.\nWhy this matters: Adaptive Response Design helps learners in Advanced Math connect ideas from Advanced Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const AdvancedMath601Module: LearningModule = {
           "id": "advanced-math-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for assessing the broader impact of decisions made in advanced math contexts.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for assessing the broader impact of decisions made in advanced math contexts.\nWhy this matters: Stakeholder Impact Distribution helps learners in Advanced Math connect ideas from Advanced Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "advanced-math-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture, which includes elements such as decision traceability, review rights, and obligations for remediation. Integrating these components is vital for ensuring responsible governance in advanced math applications.\nContext recap: In this section, we will explore the concept of accountability architecture, which includes elements such as decision traceability, review rights, and obligations for remediation. Integrating these components is vital for ensuring responsible governance in advanced math applications.\nWhy this matters: Accountability Architecture helps learners in Advanced Math connect ideas from Advanced Math Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "advanced-math-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "To ensure effective leadership in advanced math, it is important to have a final checklist that connects various important elements. This checklist should include outcomes that we aim to achieve, ethical considerations that guide our decisions, compliance with relevant policies, and strategies for building resilience in our approaches. By using this checklist, we can better navigate the complexities of governance and public impact in our work.\nContext recap: To ensure effective leadership in advanced math, it is important to have a final checklist that connects various important elements. This checklist should include outcomes that we aim to achieve, ethical considerations that guide our decisions, compliance with relevant policies, and strategies for building resilience in our approaches. By using this checklist, we can better navigate the complexities of governance and public impact in our work."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const AdvancedMath601Module: LearningModule = {
           "id": "advanced-math-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive session, learners will work together to create a comprehensive defense brief. This brief will include well-supported claims, evidence to back those claims, clear boundaries of uncertainty, and pathways for remediation in case of challenges. This exercise helps learners practice critical thinking and effective communication, which are essential skills in advanced math and research.\nContext recap: In this interactive session, learners will work together to create a comprehensive defense brief. This brief will include well-supported claims, evidence to back those claims, clear boundaries of uncertainty, and pathways for remediation in case of challenges. This exercise helps learners practice critical thinking and effective communication, which are essential skills in advanced math and research."
         },
         {
           "id": "advanced-math-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During the Expert Panel Rehearsal, learners will have the opportunity to practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in the outcomes of their work. This rehearsal is crucial for building confidence and ensuring that learners are well-prepared to defend their ideas and findings in front of an audience.\nContext recap: During the Expert Panel Rehearsal, learners will have the opportunity to practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in the outcomes of their work. This rehearsal is crucial for building confidence and ensuring that learners are well-prepared to defend their ideas and findings in front of an audience."
         }
       ],
       "interactiveActivities": [

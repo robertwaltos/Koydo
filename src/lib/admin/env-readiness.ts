@@ -121,7 +121,33 @@ export function runEnvReadinessChecks(): EnvReadinessReport {
   const consentFromEmail = readEnvValue("PARENT_CONSENT_FROM_EMAIL");
   const consentTokenSecret = readEnvValue("PARENT_CONSENT_TOKEN_SECRET");
   const mixpanel = readEnvValue("NEXT_PUBLIC_MIXPANEL_TOKEN");
+  const ownerSecurityEncryption = readEnvValue("OWNER_SECURITY_ENCRYPTION_KEY");
+  const ownerFactoryResetHash = readEnvValue("OWNER_FACTORY_RESET_PASSWORD_HASH");
+  const ownerTransferHash = readEnvValue("OWNER_TRANSFER_PASSWORD_HASH");
+  const yubicoClientId = readEnvValue("YUBICO_CLIENT_ID");
+  const yubicoSecret = readEnvValue("YUBICO_SECRET_KEY");
+  const supportEmail = readEnvValue("SUPPORT_EMAIL");
+  const supportEmergencyPhone = readEnvValue("SUPPORT_EMERGENCY_PHONE");
+  const parentSlaHoursRaw = readEnvValue("PARENT_PORTAL_PAID_RESPONSE_SLA_HOURS");
+  const complianceEvidenceProvider = readEnvValue("COMPLIANCE_EVIDENCE_STORAGE_PROVIDER");
+  const openaiApiKey = readEnvValue("OPENAI_API_KEY");
+  const grokApiKey = readEnvValue("GROK_API_KEY");
+  const anthropicApiKey = readEnvValue("ANTHROPIC_API_KEY");
+  const geminiApiKey = readEnvValue("GEMINI_API_KEY");
+  const moderationMinModelsRaw = readEnvValue("MODERATION_CONSENSUS_MIN_MODELS");
+  const twilioAccountSid = readEnvValue("TWILIO_ACCOUNT_SID");
+  const twilioAuthToken = readEnvValue("TWILIO_AUTH_TOKEN");
+  const twilioFromNumber = readEnvValue("TWILIO_FROM_NUMBER");
+  const parentSecurityEncryption = readEnvValue("PARENT_SECURITY_ENCRYPTION_KEY");
   const runtime = resolveRuntimeEnvironment();
+  const parentSlaHours = Number(parentSlaHoursRaw);
+  const moderationMinModels = Number(moderationMinModelsRaw);
+  const configuredModerationModels = [
+    openaiApiKey,
+    grokApiKey,
+    anthropicApiKey,
+    geminiApiKey,
+  ].filter((value) => Boolean(value)).length;
 
   const checks: EnvReadinessCheck[] = [
     {
@@ -177,6 +203,112 @@ export function runEnvReadinessChecks(): EnvReadinessReport {
       label: "Mixpanel Token",
       status: mixpanel ? "pass" : "warn",
       detail: mixpanel ? "Present" : "Missing (analytics disabled)",
+    },
+    {
+      id: "owner_security_encryption_key",
+      label: "Owner Security Encryption Key",
+      status: ownerSecurityEncryption.length >= 16 ? "pass" : "warn",
+      detail:
+        ownerSecurityEncryption.length >= 16
+          ? "Configured"
+          : "Missing/short (owner TOTP provisioning and secret encryption disabled)",
+    },
+    {
+      id: "parent_security_encryption_key",
+      label: "Parent Security Encryption Key",
+      status:
+        parentSecurityEncryption.length >= 16 || ownerSecurityEncryption.length >= 16
+          ? "pass"
+          : "warn",
+      detail:
+        parentSecurityEncryption.length >= 16
+          ? "Configured"
+          : ownerSecurityEncryption.length >= 16
+            ? "Using OWNER_SECURITY_ENCRYPTION_KEY fallback"
+            : "Missing/short (parent authenticator factor encryption disabled)",
+    },
+    {
+      id: "owner_factory_reset_password_hash",
+      label: "Owner Factory Reset Password Hash",
+      status: ownerFactoryResetHash ? "pass" : "warn",
+      detail:
+        ownerFactoryResetHash
+          ? "Configured"
+          : "Missing (factory reset endpoint remains locked)",
+    },
+    {
+      id: "owner_transfer_password_hash",
+      label: "Owner Transfer Password Hash",
+      status: ownerTransferHash || ownerFactoryResetHash ? "pass" : "warn",
+      detail:
+        ownerTransferHash || ownerFactoryResetHash
+          ? "Configured (explicit or factory-reset fallback)"
+          : "Missing (ownership transfer execution endpoint remains locked)",
+    },
+    {
+      id: "owner_yubikey_config",
+      label: "Owner YubiKey Config",
+      status: yubicoClientId ? (yubicoSecret ? "pass" : "warn") : "warn",
+      detail:
+        yubicoClientId
+          ? yubicoSecret
+            ? "YubiKey OTP verification + response signature validation configured"
+            : "Client ID configured without YUBICO_SECRET_KEY (verification works without signed-response validation)"
+          : "Missing YUBICO_CLIENT_ID (YubiKey OTP factor unavailable)",
+    },
+    {
+      id: "support_email",
+      label: "Support Contact Email",
+      status: supportEmail ? "pass" : "warn",
+      detail: supportEmail || "Missing SUPPORT_EMAIL (falls back to app defaults).",
+    },
+    {
+      id: "support_emergency_phone",
+      label: "Emergency Support Phone",
+      status: supportEmergencyPhone.replace(/[^0-9]/g, "").length >= 7 ? "pass" : "warn",
+      detail:
+        supportEmergencyPhone.replace(/[^0-9]/g, "").length >= 7
+          ? supportEmergencyPhone
+          : "Missing/invalid SUPPORT_EMERGENCY_PHONE.",
+    },
+    {
+      id: "parent_portal_paid_response_sla_hours",
+      label: "Parent Paid SLA Hours",
+      status: Number.isFinite(parentSlaHours) && parentSlaHours >= 1 && parentSlaHours <= 168 ? "pass" : "warn",
+      detail:
+        Number.isFinite(parentSlaHours) && parentSlaHours >= 1 && parentSlaHours <= 168
+          ? `${Math.trunc(parentSlaHours)} hour(s)`
+          : "Missing/invalid PARENT_PORTAL_PAID_RESPONSE_SLA_HOURS (expected 1-168).",
+    },
+    {
+      id: "compliance_evidence_storage_provider",
+      label: "Compliance Evidence Storage Provider",
+      status: ["supabase_storage", "google_vault_export", "external_archive", "inline"].includes(complianceEvidenceProvider)
+        ? "pass"
+        : "warn",
+      detail: complianceEvidenceProvider || "Missing COMPLIANCE_EVIDENCE_STORAGE_PROVIDER.",
+    },
+    {
+      id: "moderation_model_quorum",
+      label: "Moderation Model Quorum",
+      status:
+        configuredModerationModels >= (Number.isFinite(moderationMinModels) ? Math.max(2, Math.min(4, Math.trunc(moderationMinModels))) : 2)
+          ? "pass"
+          : runtime.isProduction
+            ? "fail"
+            : "warn",
+      detail:
+        `Configured ${configuredModerationModels} model key(s): OpenAI, Grok, Claude, Gemini.`
+        + " Consensus requires at least MODERATION_CONSENSUS_MIN_MODELS.",
+    },
+    {
+      id: "sms_delivery_provider",
+      label: "SMS Delivery Provider",
+      status: twilioAccountSid && twilioAuthToken && twilioFromNumber ? "pass" : "warn",
+      detail:
+        twilioAccountSid && twilioAuthToken && twilioFromNumber
+          ? "Twilio SMS delivery is configured."
+          : "Missing TWILIO_ACCOUNT_SID/TWILIO_AUTH_TOKEN/TWILIO_FROM_NUMBER (SMS challenge falls back to simulation).",
     },
   ];
 

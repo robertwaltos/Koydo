@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Compass,
@@ -19,6 +19,7 @@ import {
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /**
  * ECHO'S EXPEDITION - Phase 9 (Explorer Batch)
@@ -73,8 +74,30 @@ export default function EchosExpedition() {
     const [showHint, setShowHint] = useState(false);
     const [scannerPos, setScannerPos] = useState({ x: 0, y: 0 });
     const [isScanning, setIsScanning] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const currentStep = QUEST_STEPS[stepIndex];
+
+    useEffect(() => {
+        if (!isComplete || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "echo-expedition",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, foundItems.length),
+            score: foundItems.length,
+            maxScore: QUEST_STEPS.length,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [isComplete, foundItems.length]);
 
     const handleInteract = (e: React.MouseEvent | React.TouchEvent) => {
         if (isComplete) return;

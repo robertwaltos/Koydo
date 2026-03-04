@@ -1,154 +1,90 @@
-# Koydo — Data Safety & Privacy Nutrition Labels
-**For Google Play Data Safety Section + Apple App Privacy Labels**
+# Koydo — Data Safety & App Privacy Source of Truth
+
+**Purpose**: canonical prep document for:
+- Google Play Data Safety form
+- Apple App Privacy (Nutrition Labels)
+
+**Last verified**: 2026-03-04
+
+Use this with:
+- `docs/google-play-data-safety.md`
+- `store-assets/google-play/DATA-SAFETY-DECLARATIONS.md`
+
+Important: submit declarations from the exact production build configuration. Do not submit stale values from old releases.
 
 ---
 
-## Section 1: Google Play Data Safety
+## 1) Data Handling Baseline (Observed in Repo)
 
-Complete at: `Google Play Console → App Content → Data safety`
-
----
-
-### 1.1 Does your app collect or share any of the required user data types?
-**Yes**
-
----
-
-### 1.2 Is all of the app's data encrypted in transit?
-**Yes** — All data is transmitted over HTTPS/TLS 1.2+
-
----
-
-### 1.3 Do you provide a way for users to request that their data is deleted?
-**Yes** — Users can delete their account and all associated data via:
-`Settings → Account → Delete Account`
+| Data Type | Observed in Codebase | Likely Declaration Impact |
+|---|---|---|
+| Email address | Yes (auth/signup) | Personal info / Contact info |
+| User ID / account identifiers | Yes | Identifiers / User ID |
+| Display/profile name | Yes | Personal info |
+| Phone number | Optional flow present | Personal info (optional) |
+| Purchase/subscription history | Yes | Financial / Purchases |
+| Learning interactions/events | Yes | App activity / Usage data |
+| User-generated text (cohort/challenge/support/transcript fields) | Yes | User content / App activity |
+| Device push token | Yes (native push setup) | Device IDs / Identifiers |
+| Microphone access | Yes (iOS usage description + speaking lab recorder) | Permission disclosure; no default raw-audio upload path observed |
+| Raw location data | No location permission observed | Typically not declared |
+| Camera data | No camera permission observed | Typically not declared |
 
 ---
 
-### 1.4 Data Types Collected
+## 2) Third-Party Processors Matrix
 
-#### Personal Info
-| Data Type | Collected | Shared | Required / Optional | Purpose |
-|-----------|-----------|--------|---------------------|---------|
-| Name | No | No | — | — |
-| Email address | **Yes** | No | Required | Account creation, login, password reset |
-| User IDs | **Yes** | No | Required | App functionality |
-| Other personal info | No | No | — | — |
+Always evaluate processors from the release environment, not only package dependencies.
 
-#### Financial Info
-| Data Type | Collected | Shared | Required / Optional | Purpose |
-|-----------|-----------|--------|---------------------|---------|
-| Purchase history | **Yes** | No | Required | Subscription management |
-| Credit/debit card or other payment info | No | No | — | Handled by Google Play billing |
-
-#### App Activity
-| Data Type | Collected | Shared | Required / Optional | Purpose |
-|-----------|-----------|--------|---------------------|---------|
-| App interactions | **Yes** | No | Required | Personalization, analytics |
-| In-app search history | **Yes** | No | Optional | Personalization |
-| Installed apps | No | No | — | — |
-| Other user-generated content | **Yes** | No | Optional | Discussion board Q&A posts |
-
-#### App Performance
-| Data Type | Collected | Shared | Required / Optional | Purpose |
-|-----------|-----------|--------|---------------------|---------|
-| Crash logs | **Yes** | No | Required | Bug fixes |
-| Diagnostics | **Yes** | No | Required | Performance improvement |
-
-#### Device or other IDs
-| Data Type | Collected | Shared | Required / Optional | Purpose |
-|-----------|-----------|--------|---------------------|---------|
-| Device or other IDs (push token) | **Yes** | No | Required | Push notifications |
+| Processor / Service | Observed | Typical Data Scope | Release Condition |
+|---|---|---|---|
+| Supabase | Yes | Auth/profile/progress/events/push token storage | Always on |
+| RevenueCat | Yes | Subscription status and purchase metadata (native) | Native billing paths |
+| Stripe | Yes | Web billing events/checkout metadata | Web/external billing mode |
+| Mixpanel | Yes | Analytics events/device identifiers | Consent-gated; native disabled by runtime gate |
+| DeepL | Optional | User-provided translation text | If `DEEPL_API_KEY` present and selected |
+| Google Translation API | Optional | User-provided translation text | If `GOOGLE_TRANSLATE_API_KEY` present and selected |
+| Licensed pronunciation endpoint | Optional | Target/transcript text, confidence, duration metadata | If endpoint configured |
+| OpenAI | Optional | Lesson/text processing for AI features | If OpenAI-backed services enabled |
+| ElevenLabs | Optional | Lesson text for TTS generation | If ElevenLabs TTS enabled |
 
 ---
 
-### 1.5 Data Sharing with Third Parties
+## 3) Google Play Data Safety Rules to Apply
 
-| Third Party | Data Shared | Purpose |
-|-------------|-------------|---------|
-| RevenueCat | User ID, purchase receipts | Subscription management |
-| Supabase (self-hosted) | Account + learning data | App backend / data storage |
-| Crash analytics provider | Crash logs, device info | Bug diagnosis |
+Official reference: https://support.google.com/googleplay/android-developer/answer/10787469
 
-*No data is sold to third parties. No data is used for advertising.*
+Key rule reminders:
+- Data is considered **collected** when it is transmitted off-device.
+- "Shared" classification depends on Google’s definitions and service-provider handling; evaluate each processor role carefully.
+- Deletion request path must be accurate for real users.
 
----
-
-### 1.6 Security Practices
-- ✅ Data encrypted in transit (HTTPS/TLS 1.2+)
-- ✅ Data encrypted at rest (Supabase AES-256)
-- ✅ Users can request data deletion
-- ✅ Committed to Google Play Families Policy (no targeting of children under 13)
-- ✅ No collection of sensitive device permissions beyond what is declared
+Required deletion endpoints for store forms:
+- `https://koydo.app/account-deletion`
+- `https://koydo.app/data-deletion`
 
 ---
 
-## Section 2: Apple App Privacy (Nutrition Labels)
+## 4) Apple App Privacy Rules to Apply
 
-Set in App Store Connect under `App Privacy`.
+Official reference: https://developer.apple.com/help/app-store-connect/manage-app-privacy/overview-of-app-privacy-details
 
----
-
-### 2.1 Privacy Nutrition Label Summary
-
-**Data Used to Track You**: None
-
-**Data Linked to You**:
-| Category | Data Type | Purpose |
-|----------|-----------|---------|
-| Contact Info | Email Address | Account, App Functionality |
-| Identifiers | User ID | App Functionality |
-| Purchases | Purchase History | App Functionality (subscription) |
-| Usage Data | App Interactions | Analytics, App Functionality |
-| Diagnostics | Crash Data | App Functionality |
-
-**Data Not Linked to You**:
-| Category | Data Type | Purpose |
-|----------|-----------|---------|
-| Diagnostics | Performance Data | App Functionality |
+Key rule reminders:
+- Declare data collected by your app and integrated SDKs.
+- Mark whether data is linked to user identity.
+- Mark whether data is used for tracking across apps/sites.
+- If third-party sign-in is offered, ensure Sign in with Apple parity compliance (App Review Guideline 4.8).
 
 ---
 
-### 2.2 Tracking (ATT — App Tracking Transparency)
-- **Does the app track users?**: **No**
-- **Tracking definition**: Koydo does NOT use data from this app to track users across other companies' apps or websites.
-- **ATT prompt**: Not required (no cross-app tracking)
-- **SKAdNetwork**: Not used (no advertising campaigns)
+## 5) Pre-Submit Verification Checklist (Required)
 
----
+Before any store submission:
+- [ ] Confirm release environment variables and enabled providers
+- [ ] Confirm mobile build feature flags (analytics, social, language providers, push)
+- [ ] Reconcile declarations across Apple + Google docs
+- [ ] Confirm privacy policy text matches actual data flows
+- [ ] Confirm account deletion path works from production
+- [ ] Confirm no placeholders remain in reviewer instructions
 
-### 2.3 Privacy Policy URL
-https://koydo.app/privacy
-
----
-
-### 2.4 Data Retention Policy
-| Data Type | Retention Period |
-|-----------|-----------------|
-| Account data (email, user ID) | Until account deletion |
-| Learning progress & quiz history | Until account deletion |
-| Purchase receipts | 7 years (financial compliance) |
-| Crash logs | 90 days |
-| Push notification tokens | Until unsubscribed or token refreshed |
-
----
-
-### 2.5 Third-Party SDKs & Their Data Practices
-
-| SDK | Version | Data Collected | Purpose |
-|-----|---------|----------------|---------|
-| RevenueCat iOS SDK | ~5.x | User ID, receipt data | Subscription management |
-| Capacitor Push Notifications | ~7.x | Push token | Notifications |
-| Supabase JS | ~2.x | Auth tokens | Authentication |
-
-*All SDKs listed comply with Apple's App Store privacy requirements.*
-
----
-
-## Section 3: Privacy Policy Requirements Checklist
-
-- [ ] Privacy Policy is publicly accessible at https://koydo.app/privacy
-- [ ] Privacy Policy covers: data collected, how it's used, third parties, user rights, contact info
-- [ ] Privacy Policy complies with CCPA (California), GDPR (EU), COPPA (under-13)
-- [ ] Privacy Policy link shown in: app onboarding, Settings, App Store listing, Google Play listing
-- [ ] Last updated date visible on privacy policy page
+If any item changes, update this document and `docs/google-play-data-safety.md` before submission.

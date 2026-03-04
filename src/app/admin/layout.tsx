@@ -23,6 +23,8 @@ const ADMIN_NAV: DashNavGroup[] = [
     label: "Compliance & Finance",
     items: [
       { href: "/admin/compliance",  label: "Compliance",     icon: "◎" },
+      { href: "/admin/finance",     label: "Finance",        icon: "¤" },
+      { href: "/admin/partners",    label: "Partners",       icon: "∞" },
       { href: "/admin/costs",       label: "Costs",          icon: "$" },
       { href: "/admin/audit",       label: "Audit Log",      icon: "☰" },
     ],

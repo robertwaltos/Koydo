@@ -10,7 +10,10 @@ import { ActiveProfileProvider } from "@/lib/profiles/active-profile-context";
 import SessionExpiryFetchGuard from "./components/session-expiry-fetch-guard";
 import PlatformLifecycleProvider from "./platform-lifecycle-provider";
 import PlatformClassProvider from "./components/platform-class-provider";
+import OfflineRuntimeProvider from "./components/offline-runtime-provider";
 import { ExperienceProvider } from "@/lib/gamification/experience-context";
+import { CompanionPreferencesProvider } from "@/lib/greeter/companion-preferences";
+import GreeterCompanion from "@/components/experience/GreeterCompanion";
 
 export default function AppProviders({ children }: { children: ReactNode }) {
   return (
@@ -21,13 +24,20 @@ export default function AppProviders({ children }: { children: ReactNode }) {
           <VoicePreferenceProvider>
           <ThemeProvider>
             <I18nProvider>
-              <SessionExpiryFetchGuard />
-              {/* ExperienceProvider renders global celebration overlays
-                  (JuicyConfetti, AchievementToast) and exposes useExperience()
-                  to the entire tree. Owns: src/lib/gamification/ */}
-              <ExperienceProvider>
-                <MixpanelProvider>{children}</MixpanelProvider>
-              </ExperienceProvider>
+              <OfflineRuntimeProvider>
+                <SessionExpiryFetchGuard />
+                {/* ExperienceProvider renders global celebration overlays
+                    (JuicyConfetti, AchievementToast) and exposes useExperience()
+                    to the entire tree. Owns: src/lib/gamification/ */}
+                <ExperienceProvider>
+                  <CompanionPreferencesProvider>
+                  <MixpanelProvider>
+                    {children}
+                    <GreeterCompanion />
+                  </MixpanelProvider>
+                  </CompanionPreferencesProvider>
+                </ExperienceProvider>
+              </OfflineRuntimeProvider>
             </I18nProvider>
           </ThemeProvider>
           </VoicePreferenceProvider>

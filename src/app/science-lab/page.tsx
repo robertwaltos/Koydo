@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AppleVisionLab from "./apple-vision-lab";
+import ComingSoonBanner from "@/app/components/coming-soon-banner";
+import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
 
 export const metadata: Metadata = {
   title: "Science Lab — Koydo",
@@ -83,6 +85,8 @@ const FEATURES = [
 ] as const;
 
 export default function ScienceLabPage() {
+  const immersiveSciencePending = isLaunchFeaturePending("science-lab-immersive");
+
   return (
     <main className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-12">
       {/* Background glow */}
@@ -195,21 +199,33 @@ export default function ScienceLabPage() {
           </div>
         </section>
 
-        {/* Coming soon: XR */}
+        {/* Immersive XR is launch-gated */}
         <section className="mb-8">
-          <div className="mb-4 flex items-center gap-2">
-            <h2 className="text-xl font-bold text-zinc-900 dark:text-foreground">
-              Immersive Science — Coming Soon
-            </h2>
-            <span className="rounded-full border border-violet-200 bg-violet-50 px-2.5 py-0.5 text-[11px] font-bold text-violet-700 dark:border-violet-800/50 dark:bg-violet-900/20 dark:text-violet-300">
-              XR Preview
-            </span>
-          </div>
-          <p className="mb-5 max-w-prose text-sm text-zinc-600 dark:text-foreground/70">
-            We&apos;re building immersive AR science experiences for Apple Vision Pro and compatible
-            devices. Check if your device is ready below.
-          </p>
-          <AppleVisionLab />
+          {immersiveSciencePending ? (
+            <ComingSoonBanner
+              title="New Experience"
+              description="More exciting features coming soon. Stay tuned!"
+              primaryHref="/modules?subject=Science"
+              primaryLabel="Use science modules now"
+              secondaryHref="/support"
+              secondaryLabel="Request beta access"
+            />
+          ) : (
+            <>
+              <div className="mb-4 flex items-center gap-2">
+                <h2 className="text-xl font-bold text-zinc-900 dark:text-foreground">
+                  Immersive Science
+                </h2>
+                <span className="rounded-full border border-violet-200 bg-violet-50 px-2.5 py-0.5 text-[11px] font-bold text-violet-700 dark:border-violet-800/50 dark:bg-violet-900/20 dark:text-violet-300">
+                  XR
+                </span>
+              </div>
+              <p className="mb-5 max-w-prose text-sm text-zinc-600 dark:text-foreground/70">
+                Explore immersive AR science experiences for Apple Vision Pro and compatible devices.
+              </p>
+              <AppleVisionLab />
+            </>
+          )}
         </section>
       </div>
     </main>

@@ -435,7 +435,7 @@ async function generateOpenAiPack(input: {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${serverEnv.OPENAI_API_KEY}`,
+        Authorization: `Bearer ${serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -768,7 +768,7 @@ export async function generateAndStoreFollowupMaterial(
   let generationError: string | null = null;
 
   const allowOpenAi = Boolean(params.allowOpenAi ?? true);
-  if (allowOpenAi && serverEnv.OPENAI_API_KEY) {
+  if (allowOpenAi && (serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY)) {
     try {
       const openAiPack = await generateOpenAiPack({
         lesson,

@@ -25,7 +25,7 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
     "Apply rigorous communication methods for civic trust reconstruction",
     "Build accountable execution systems for democratic resilience governance",
     "Integrate technical, policy, economic, and civic perspectives into one decision framework",
-    "Defend recommendations under expert cross-examination with evidence and uncertainty bounds"
+    "Defend recommendations under expert cross-examination with explicit data analysis, evidence, and uncertainty bounds"
   ],
   "lessons": [
     {
@@ -46,19 +46,19 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "Case frame: an election-cycle information crisis where manipulated narratives affect turnout, trust, and institutional legitimacy. Learners define objectives, constraints, and stakeholder exposure."
+          "content": "In this lesson, we will explore a significant issue that arises during election cycles: the spread of misleading information. This problem can lead to confusion among voters, affecting their trust in the electoral process and the institutions that govern it. As learners, you will work together to identify your goals, understand the limitations you might face, and recognize the different groups involved in this situation. By defining these elements, you will gain a clearer understanding of the challenges at hand and how they impact democracy.\nContext recap: In this lesson, we will explore a significant issue that arises during election cycles: the spread of misleading information. This problem can lead to confusion among voters, affecting their trust in the electoral process and the institutions that govern it. As learners, you will work together to identify your goals, understand the limitations you might face, and recognize the different groups involved in this situation. By defining these elements, you will gain a clearer understanding of the challenges at hand and how they impact democracy."
         },
         {
           "id": "capstone-media-and-democracy-501-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "Boundaries distinguish controllable variables, uncertain factors, and escalation-required decisions."
+          "content": "In this section, we will discuss the importance of setting clear boundaries when making decisions. These boundaries help us identify what factors we can control, what remains uncertain, and when we need to escalate our decisions to others. By understanding these distinctions, you will be better equipped to navigate complex situations and make informed choices that can positively influence outcomes.\nContext recap: In this section, we will discuss the importance of setting clear boundaries when making decisions. These boundaries help us identify what factors we can control, what remains uncertain, and when we need to escalate our decisions to others. By understanding these distinctions, you will be better equipped to navigate complex situations and make informed choices that can positively influence outcomes."
         },
         {
           "id": "capstone-media-and-democracy-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All claims must map to measurable indicators, uncertainty ranges, and accountability checkpoints."
+          "content": "It is essential that all claims we make are supported by measurable evidence. This means that we need to establish clear indicators that can be tracked, understand the ranges of uncertainty involved, and set up accountability checkpoints. By adhering to these standards, we ensure that our arguments are credible and can withstand scrutiny, which is vital in discussions about democracy and media.\nContext recap: It is essential that all claims we make are supported by measurable evidence. This means that we need to establish clear indicators that can be tracked, understand the ranges of uncertainty involved, and set up accountability checkpoints. By adhering to these standards, we ensure that our arguments are credible and can withstand scrutiny, which is vital in discussions about democracy and media."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "Learners build cross-domain interventions linking technical, policy, and stakeholder dimensions."
+          "content": "In this interactive lab, you will have the opportunity to create solutions that connect various fields such as technology, policy, and the perspectives of different stakeholders. This integration is crucial because it allows us to address complex problems from multiple angles, ensuring that our interventions are comprehensive and effective. You will collaborate with your peers to brainstorm and develop these cross-domain solutions.\nContext recap: In this interactive lab, you will have the opportunity to create solutions that connect various fields such as technology, policy, and the perspectives of different stakeholders. This integration is crucial because it allows us to address complex problems from multiple angles, ensuring that our interventions are comprehensive and effective. You will collaborate with your peers to brainstorm and develop these cross-domain solutions."
         },
         {
           "id": "capstone-media-and-democracy-501-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "Plans include checkpoints, rollback criteria, and accountability ownership."
+          "content": "As you develop your plans, it is important to include specific checkpoints and criteria for when to reassess your strategies. These control gates will help you monitor progress and ensure that everyone involved is accountable for their roles. By establishing these guidelines, you can create a more structured approach to your projects, which will enhance their effectiveness and reliability.\nContext recap: As you develop your plans, it is important to include specific checkpoints and criteria for when to reassess your strategies. These control gates will help you monitor progress and ensure that everyone involved is accountable for their roles. By establishing these guidelines, you can create a more structured approach to your projects, which will enhance their effectiveness and reliability."
         }
       ],
       "interactiveActivities": [
@@ -367,13 +367,13 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l04-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners run intervention scenarios under uncertainty and compare outcomes with predefined metrics."
+          "content": "In this practice session, you will simulate different intervention scenarios while considering various uncertainties. This hands-on experience will allow you to test your ideas and compare the outcomes against predefined metrics. By engaging in these simulations, you will gain valuable insights into how your decisions can impact real-world situations and learn to adapt your strategies accordingly.\nContext recap: In this practice session, you will simulate different intervention scenarios while considering various uncertainties. This hands-on experience will allow you to test your ideas and compare the outcomes against predefined metrics. By engaging in these simulations, you will gain valuable insights into how your decisions can impact real-world situations and learn to adapt your strategies accordingly."
         },
         {
           "id": "capstone-media-and-democracy-501-l04-c2",
           "kind": "recap",
           "title": "Debrief and Correction",
-          "content": "Each simulation run is reviewed for gains, side effects, and governance compliance gaps through explicit data analysis that feeds an implementation artifact."
+          "content": "After each simulation, it is crucial to conduct a thorough review of what happened. You will analyze the results to identify any improvements, unintended consequences, and areas where governance may not have been followed. This debriefing process will involve looking at explicit data to inform your future actions and create a detailed implementation plan that addresses any gaps identified during the simulations.\nContext recap: After each simulation, it is crucial to conduct a thorough review of what happened. You will analyze the results to identify any improvements, unintended consequences, and areas where governance may not have been followed. This debriefing process will involve looking at explicit data to inform your future actions and create a detailed implementation plan that addresses any gaps identified during the simulations."
         }
       ],
       "interactiveActivities": [
@@ -624,13 +624,13 @@ export const CapstoneMediaAndDemocracy501Module: LearningModule = {
           "id": "capstone-media-and-democracy-501-l06-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble claims, evidence, uncertainty ranges, remediation pathways, and one implementation artifact mapped to rubric criteria in one defense brief."
+          "content": "In this activity, you will compile a comprehensive defense brief that includes your claims, supporting evidence, ranges of uncertainty, potential solutions, and one implementation artifact. This document will be structured according to specific rubric criteria, ensuring that you present your ideas clearly and effectively. This exercise will help you practice organizing your thoughts and arguments in a coherent manner.\nContext recap: In this activity, you will compile a comprehensive defense brief that includes your claims, supporting evidence, ranges of uncertainty, potential solutions, and one implementation artifact. This document will be structured according to specific rubric criteria, ensuring that you present your ideas clearly and effectively. This exercise will help you practice organizing your thoughts and arguments in a coherent manner."
         },
         {
           "id": "capstone-media-and-democracy-501-l06-c2",
           "kind": "recap",
           "title": "Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, policy, and stakeholder critiques in a structured policy debate using the scoring rubric."
+          "content": "During this rehearsal, you will practice responding to critiques related to technical aspects, policy implications, and stakeholder perspectives. This structured policy debate will allow you to refine your arguments and improve your ability to communicate effectively. Using the scoring rubric, you will receive feedback that will help you enhance your performance and prepare for the actual defense panel.\nContext recap: During this rehearsal, you will practice responding to critiques related to technical aspects, policy implications, and stakeholder perspectives. This structured policy debate will allow you to refine your arguments and improve your ability to communicate effectively. Using the scoring rubric, you will receive feedback that will help you enhance your performance and prepare for the actual defense panel."
         }
       ],
       "interactiveActivities": [

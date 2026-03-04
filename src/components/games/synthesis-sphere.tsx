@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
 import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
@@ -8,7 +8,11 @@ import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import JuicyConfetti from "@/components/experience/JuicyConfetti";
 import { hapticSuccess, hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
-import { Beaker, Atom, Zap, Thermometer } from "lucide-react";
+import { Beaker, Atom, Zap, Thermometer, type LucideIcon } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Synthesis Sphere Content --- */
 type Element = {
@@ -28,19 +32,38 @@ const ELEMENTS: Record<number, Omit<Element, "id">> = {
     5: { level: 5, name: "Boron", symbol: "B", color: "bg-indigo-400", glow: "shadow-[0_0_40px_rgba(129,140,248,1.0)]" },
 };
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
+const createInitialGrid = (): (Element | null)[] => {
+    const nextGrid: (Element | null)[] = Array(16).fill(null);
+    for (let count = 0; count < 2; count += 1) {
+        const emptyIndices = nextGrid
+            .map((entry, index) => (entry === null ? index : null))
+            .filter((entry): entry is number => entry !== null);
+        if (emptyIndices.length === 0) {
+            break;
+        }
+        const randomIndex = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
+        nextGrid[randomIndex] = {
+            id: Math.random(),
+            ...ELEMENTS[1],
+        };
+    }
+    return nextGrid;
+};
+
 export default function SynthesisSphere() {
     const { setMood, setMessage } = useMascot();
-    const [grid, setGrid] = useState<(Element | null)[]>(Array(16).fill(null));
+    const [grid, setGrid] = useState<(Element | null)[]>(() => createInitialGrid());
     const [score, setScore] = useState(0);
     const [streak, setStreak] = useState(0);
     const [showConfetti, setShowConfetti] = useState(false);
-
-    useEffect(() => {
-        setMessage("Welcome to the Synthesis Sphere. Merge elements to discover the secrets of the universe! 🔬✨");
-        setMood("happy");
-        spawnElement();
-        spawnElement();
-    }, []);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const nextCompletionScoreRef = useRef<number>(300);
 
     const spawnElement = useCallback(() => {
         setGrid(prev => {
@@ -59,7 +82,21 @@ export default function SynthesisSphere() {
         });
     }, []);
 
+    const resetRunTracking = useCallback((nextCompletionScore = 300) => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        nextCompletionScoreRef.current = nextCompletionScore;
+    }, []);
+
+    useEffect(() => {
+        setMessage("Welcome to the Synthesis Sphere. Merge elements to discover the secrets of the universe! 🔬✨");
+        setMood("happy");
+        resetRunTracking();
+    }, [resetRunTracking, setMessage, setMood]);
+
     const move = (direction: "up" | "down" | "left" | "right") => {
+        interactionCountRef.current += 1;
         let moved = false;
         let newScore = score;
         let mergedThisTurn = false;
@@ -100,7 +137,7 @@ export default function SynthesisSphere() {
             // Horizontal Movement
             if (direction === "left" || direction === "right") {
                 for (let r = 0; r < 4; r++) {
-                    let row = [newGrid[getIndex(r, 0)], newGrid[getIndex(r, 1)], newGrid[getIndex(r, 2)], newGrid[getIndex(r, 3)]];
+                    const row = [newGrid[getIndex(r, 0)], newGrid[getIndex(r, 1)], newGrid[getIndex(r, 2)], newGrid[getIndex(r, 3)]];
                     if (direction === "right") row.reverse();
                     const processed = processLine(row);
                     if (direction === "right") processed.reverse();
@@ -114,7 +151,7 @@ export default function SynthesisSphere() {
             // Vertical Movement
             else {
                 for (let c = 0; c < 4; c++) {
-                    let col = [newGrid[getIndex(0, c)], newGrid[getIndex(1, c)], newGrid[getIndex(2, c)], newGrid[getIndex(3, c)]];
+                    const col = [newGrid[getIndex(0, c)], newGrid[getIndex(1, c)], newGrid[getIndex(2, c)], newGrid[getIndex(3, c)]];
                     if (direction === "down") col.reverse();
                     const processed = processLine(col);
                     if (direction === "down") processed.reverse();
@@ -136,6 +173,19 @@ export default function SynthesisSphere() {
             if (mergedThisTurn) {
                 setStreak(prev => prev + 1);
                 void hapticSuccess();
+                if (newScore >= nextCompletionScoreRef.current) {
+                    emitLegacyGameComplete({
+                        sessionId: sessionIdRef.current,
+                        gameId: "synthesis",
+                        elapsedMs: getElapsedMs(runStartedAtRef.current),
+                        interactions: Math.max(1, interactionCountRef.current),
+                        score: newScore,
+                        maxScore: 3600,
+                        source: "component",
+                        occurredAt: new Date().toISOString(),
+                    });
+                    resetRunTracking(newScore + 300);
+                }
                 if (newScore % 100 === 0) {
                     setShowConfetti(true);
                     setTimeout(() => setShowConfetti(false), 2000);
@@ -241,7 +291,7 @@ export default function SynthesisSphere() {
     );
 }
 
-function ControlIcon({ icon: Icon, label, value, color }: { icon: any, label: string, value: string, color: string }) {
+function ControlIcon({ icon: Icon, label, value, color }: { icon: LucideIcon, label: string, value: string, color: string }) {
     return (
         <div className="flex items-center gap-3 bg-white/5 border border-white/5 px-4 py-2 rounded-2xl backdrop-blur-md">
             <Icon className={`${color} w-5 h-5`} />

@@ -47,19 +47,19 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Philosophy, with focus on humanities systems diagnostics and humanities operations and execution design."
+          "content": "In this lesson, we will explore the advanced boundaries of philosophy. We will focus on understanding how to analyze and diagnose systems within the humanities. This includes examining how we can design and execute operations effectively in various contexts. By defining these boundaries, we can better understand the complexities of philosophical inquiry and its applications in real-world scenarios.\nContext recap: In this lesson, we will explore the advanced boundaries of philosophy. We will focus on understanding how to analyze and diagnose systems within the humanities. This includes examining how we can design and execute operations effectively in various contexts. By defining these boundaries, we can better understand the complexities of philosophical inquiry and its applications in real-world scenarios.\nContext recap: In this lesson, we will explore the advanced boundaries of philosophy. We will focus on understanding how to analyze and diagnose systems within the humanities. This includes examining how we can design and execute operations effectively in various contexts. By defining these boundaries, we can better understand the complexities of philosophical inquiry and its applications in real-world scenarios.\nWhy this matters: Scope and Boundary Design helps learners in Humanities connect ideas from Philosophy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "philosophy-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions in philosophical research and practice, allowing learners to anticipate potential outcomes and challenges.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions in philosophical research and practice, allowing learners to anticipate potential outcomes and challenges."
         },
         {
           "id": "philosophy-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in philosophical discussions should be linked to measurable indicators. This means that learners will learn to establish confidence bounds and set up review checkpoints to ensure that their arguments are well-supported and credible. This practice helps in maintaining the integrity of philosophical inquiry and encourages critical thinking.\nContext recap: In our recap, we emphasize that all claims made in philosophical discussions should be linked to measurable indicators. This means that learners will learn to establish confidence bounds and set up review checkpoints to ensure that their arguments are well-supported and credible. This practice helps in maintaining the integrity of philosophical inquiry and encourages critical thinking."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of philosophical methods. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to adapt their methods under pressure and improve their problem-solving skills.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of philosophical methods. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to adapt their methods under pressure and improve their problem-solving skills."
         },
         {
           "id": "philosophy-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation thresholds. This means that learners will understand how to create systems that can respond effectively to challenges, ensuring that they can maintain control and make informed decisions throughout their philosophical inquiries.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation thresholds. This means that learners will understand how to create systems that can respond effectively to challenges, ensuring that they can maintain control and make informed decisions throughout their philosophical inquiries."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in humanities systems diagnostics and humanities impact and tradeoff analysis."
+          "content": "In this lesson, we will frame cases that highlight the competing constraints found in humanities systems diagnostics. We will analyze the impacts and trade-offs involved in various philosophical scenarios. This will help learners appreciate the complexity of decision-making in the humanities and understand how different factors can influence outcomes.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints found in humanities systems diagnostics. We will analyze the impacts and trade-offs involved in various philosophical scenarios. This will help learners appreciate the complexity of decision-making in the humanities and understand how different factors can influence outcomes."
         },
         {
           "id": "philosophy-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This exercise will encourage critical thinking and help learners understand the multifaceted nature of decision-making in philosophy, as they weigh the pros and cons of each option.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This exercise will encourage critical thinking and help learners understand the multifaceted nature of decision-making in philosophy, as they weigh the pros and cons of each option."
         },
         {
           "id": "philosophy-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach will help learners articulate their thoughts clearly and ensure that their decisions are well-informed and accountable.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation should include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach will help learners articulate their thoughts clearly and ensure that their decisions are well-informed and accountable."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand the balance required in managing complex philosophical scenarios, where they must navigate various limitations while striving for optimal outcomes.\nContext recap: In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand the balance required in managing complex philosophical scenarios, where they must navigate various limitations while striving for optimal outcomes.\nContext recap: In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand the balance required in managing complex philosophical scenarios, where they must navigate various limitations while striving for optimal outcomes. Context recap: In this interactive practice, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand the balance required in managing complex philosophical scenarios, where they must navigate various limitations while striving for optimal outcomes."
         },
         {
           "id": "philosophy-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses can be designed to update control gates without losing traceability or accountability. This means that learners will learn the importance of maintaining clear records and ensuring that their actions can be tracked, which is vital in philosophical research and practice.\nContext recap: In our recap, we will discuss how effective responses can be designed to update control gates without losing traceability or accountability. This means that learners will learn the importance of maintaining clear records and ensuring that their actions can be tracked, which is vital in philosophical research and practice."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This exercise will help them understand the broader implications of philosophical decisions and how they can impact various communities, fostering a sense of responsibility and ethical consideration.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This exercise will help them understand the broader implications of philosophical decisions and how they can impact various communities, fostering a sense of responsibility and ethical consideration."
         },
         {
           "id": "philosophy-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into philosophical practices. By grasping these concepts, learners will appreciate the importance of transparency and responsibility in their philosophical endeavors.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into philosophical practices. By grasping these concepts, learners will appreciate the importance of transparency and responsibility in their philosophical endeavors."
         },
         {
           "id": "philosophy-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will review a comprehensive checklist that connects important outcomes with ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will help ensure that leaders are responsible and effective in their roles.\nContext recap: At the end of our lesson, we will review a comprehensive checklist that connects important outcomes with ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will help ensure that leaders are responsible and effective in their roles."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Philosophy601Module: LearningModule = {
           "id": "philosophy-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, students will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the limits of uncertainty, and suggested pathways for addressing any issues that may arise. This exercise is designed to enhance critical thinking and collaborative skills.\nContext recap: In this interactive activity, students will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the limits of uncertainty, and suggested pathways for addressing any issues that may arise. This exercise is designed to enhance critical thinking and collaborative skills."
         },
         {
           "id": "philosophy-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will help build confidence and improve their ability to communicate effectively.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will help build confidence and improve their ability to communicate effectively."
         }
       ],
       "interactiveActivities": [

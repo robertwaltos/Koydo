@@ -43,17 +43,17 @@ export const PreKBiology101Module: LearningModule = {
         {
           "id": "prek-biology-l01-c1",
           "title": "Cows and Pigs",
-          "content": "A cow says 'moo' and gives us yummy milk for cereal 🐮. A pig says 'oink' and loves rolling in mud puddles to stay cool on hot days — their tails are curly like a spring!"
+          "content": "Did you know that cows are amazing animals? When a cow says 'moo', it’s not just making a sound; it’s telling us it’s happy! 🐮 Cows give us delicious milk that we can pour over our cereal in the morning. Isn’t that yummy? And what about pigs? When a pig says 'oink', it’s having a great time! Pigs love to roll around in mud puddles, especially on hot days, because it helps them stay cool. Plus, their tails are curly like a spring, which makes them even more fun to watch!\nContext recap: Did you know that cows are amazing animals? When a cow says 'moo', it’s not just making a sound; it’s telling us it’s happy! 🐮 Cows give us delicious milk that we can pour over our cereal in the morning. Isn’t that yummy?\nWhy this matters: Cows and Pigs helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l01-c2",
           "title": "Chickens and Horses",
-          "content": "A chicken says 'cluck' and lays a brand-new egg every single day! 🐔 A horse says 'neigh' and can run super fast like the wind, and they even sleep standing up on their four long legs!"
+          "content": "Chickens are such fascinating birds! When a chicken makes a sound like 'cluck', it’s telling us that it’s ready to lay a brand-new egg every single day! 🐔 Isn’t that exciting? Chickens are important on the farm because they give us eggs that we can eat! Now, let’s talk about horses. When a horse says 'neigh', it’s like they’re having a little chat with us! Horses are amazing because they can run super fast, almost like the wind blowing through the trees! And here’s something really cool: horses can even sleep while standing up on their long, strong legs! They are such unique animals and play a big role on the farm, helping us in many ways. Isn’t nature wonderful?\nContext recap: Chickens are such fascinating birds! When a chicken makes a sound like 'cluck', it’s telling us that it’s ready to lay a brand-new egg every single day! 🐔 Isn’t that exciting? Chickens are important on the farm because they give us eggs that we can eat!\nWhy this matters: Chickens and Horses helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "prek-biology-l01-c3",
           "title": "Sheep",
-          "content": "A sheep says 'baa' and has super fluffy wool that keeps them warm. We use their wool to make cozy sweaters and socks! 🐑"
+          "content": "Sheep are fluffy and fun animals! When a sheep says 'baa', it’s like they are sharing their happiness with us. 🐑 They have super soft and fluffy wool that keeps them warm and cozy, just like a big, warm blanket! We can use their wool to make all sorts of warm clothes, like cozy sweaters and soft socks, which help us stay warm too! Isn’t it amazing how animals like sheep help us in so many ways? They are not just cute; they also provide us with things we need to stay comfortable! Let's remember to be kind to all animals because they are our friends in nature.\nContext recap: Sheep are fluffy and fun animals! When a sheep says 'baa', it’s like they are sharing their happiness with us. 🐑 They have super soft and fluffy wool that keeps them warm and cozy, just like a big, warm blanket! We can use their wool to make all sorts of warm clothes, like cozy sweaters and soft socks, which help us stay warm too!\nWhy this matters: Sheep helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         }
       ],
       "flashcards": [
@@ -183,17 +183,17 @@ export const PreKBiology101Module: LearningModule = {
         {
           "id": "prek-biology-l02-c1",
           "title": "Dogs and Cats",
-          "content": "A dog says 'woof' and wags its tail when happy. A cat says 'meow' and purrs like a tiny motor when you pet it softly 🐱."
+          "content": "Dogs are such friendly pets! When a dog says 'woof', it’s like they’re saying hello! And when they wag their tails, it means they are really happy to see you! 🐶 On the other hand, cats say 'meow' and they have a special way of showing they love you too. When you pet a cat softly, it purrs like a tiny motor, which means it’s very content and happy!\nContext recap: Dogs are such friendly pets! When a dog says 'woof', it’s like they’re saying hello! And when they wag their tails, it means they are really happy to see you! 🐶 On the other hand, cats say 'meow' and they have a special way of showing they love you too."
         },
         {
           "id": "prek-biology-l02-c2",
           "title": "Fish and Hamsters",
-          "content": "Fish swim in circles and have no legs — they breathe underwater with gills! 🐟 A hamster stuffs food in its cheeks like little balloons and runs on a wheel all night."
+          "content": "Fish are truly amazing animals! They glide gracefully through the water, swimming in circles, and they don’t have legs like we do. Instead, they use special parts called gills to breathe underwater. Isn’t that cool? 🐟 Now, let’s talk about hamsters! These adorable little creatures are so much fun to watch. They love to fill their cheeks with food, making them look like they have tiny balloons! And guess what? Hamsters are very active at night. They enjoy running on their wheels, which helps them stay healthy and happy! Isn’t it wonderful how different animals have their own special ways of living?\nContext recap: Fish are truly amazing animals! They glide gracefully through the water, swimming in circles, and they don’t have legs like we do. Instead, they use special parts called gills to breathe underwater. Isn’t that cool?\nWhy this matters: Fish and Hamsters helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "prek-biology-l02-c3",
           "title": "Rabbits",
-          "content": "A rabbit hops on big back legs and has super long ears to hear everything. They love munching crunchy carrots! 🐰"
+          "content": "Rabbits are such adorable animals! Did you know that when a rabbit hops, it uses its strong and big back legs to bounce around? This helps them move quickly and play! They also have super long ears that are very special because they help them hear all the sounds around them, even the tiniest ones! 🐰 And guess what? Rabbits absolutely love to munch on crunchy carrots, which are one of their favorite snacks! Carrots are not only tasty for them, but they are also good for their health. Isn't that fun to know?\nContext recap: Rabbits are such adorable animals! Did you know that when a rabbit hops, it uses its strong and big back legs to bounce around? This helps them move quickly and play! They also have super long ears that are very special because they help them hear all the sounds around them, even the tiniest ones!\nWhy this matters: Rabbits helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         }
       ],
       "flashcards": [
@@ -323,17 +323,17 @@ export const PreKBiology101Module: LearningModule = {
         {
           "id": "prek-biology-l03-c1",
           "title": "Lion and Elephant",
-          "content": "A lion roars so loud it can be heard 5 miles away — he is the king of the jungle! 🦁 An elephant uses its long trunk like a hose to drink 2 whole buckets of water at once."
+          "content": "Lions are often called the kings of the jungle because they are strong and powerful! When a lion roars, it makes a sound so loud that it can be heard from 5 miles away! Isn’t that amazing? 🦁 Lions use their roars to communicate with other lions and to show they are in charge. Now, let’s talk about elephants! Elephants are the largest land animals, and they have a special tool called a trunk. They can use their long trunks like a hose to drink water. Did you know that an elephant can drink up to 2 whole buckets of water at once? That’s a lot of water to stay healthy and strong! Elephants are also very smart and social animals, often living in groups called herds. Isn’t nature fascinating?\nContext recap: Lions are often called the kings of the jungle because they are strong and powerful! When a lion roars, it makes a sound so loud that it can be heard from 5 miles away! Isn’t that amazing? 🦁 Lions use their roars to communicate with other lions and to show they are in charge.\nWhy this matters: Lion and Elephant helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "prek-biology-l03-c2",
           "title": "Bear and Giraffe",
-          "content": "A bear can smell food from 18 miles away and sleeps all winter! 🐻 A giraffe has a tongue 18 inches long — longer than your whole arm — to grab leaves from tall trees!"
+          "content": "Bears are truly amazing creatures! Did you know that they have a super strong sense of smell? They can sniff out food from as far away as 18 miles! That’s like being able to smell your favorite snack from really, really far away! 🐻 Bears also have a special way of resting during the cold winter months. They sleep for a long time, which is called hibernation. This helps them save energy until spring comes back! Now, let’s talk about giraffes! These tall animals have incredibly long tongues that can stretch up to 18 inches! That’s even longer than your whole arm! Their long tongues help them reach and grab delicious leaves from the very tops of trees, where other animals can’t reach. Isn’t nature fascinating?\nContext recap: Bears are truly amazing creatures! Did you know that they have a super strong sense of smell? They can sniff out food from as far away as 18 miles! That’s like being able to smell your favorite snack from really, really far away!\nWhy this matters: Bear and Giraffe helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "prek-biology-l03-c3",
           "title": "Monkey",
-          "content": "Monkeys swing from tree to tree with their tails and love eating bananas. They have fingerprints just like you! 🐵"
+          "content": "Monkeys are playful and fun animals! They love to swing from tree to tree using their long tails, which help them balance as they move around. One of their favorite snacks is bananas, which they enjoy munching on! 🐵 Did you know that monkeys have fingerprints just like you? This makes them unique and special, just like every person! Learning about monkeys can help us understand how amazing nature is and how different animals live in their habitats.\nContext recap: Monkeys are playful and fun animals! They love to swing from tree to tree using their long tails, which help them balance as they move around. One of their favorite snacks is bananas, which they enjoy munching on! 🐵 Did you know that monkeys have fingerprints just like you?\nWhy this matters: Monkey helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         }
       ],
       "flashcards": [
@@ -462,17 +462,17 @@ export const PreKBiology101Module: LearningModule = {
         {
           "id": "prek-biology-l04-c1",
           "title": "Farm Animals Review",
-          "content": "Cows moo and give milk, pigs oink and roll in mud, chickens lay eggs every day!"
+          "content": "Let’s have some fun reviewing what we learned about our friendly farm animals! Did you know that cows say 'moo' and they give us yummy milk that we can drink? Pigs are so funny; they say 'oink' and they love to roll around in the mud to keep cool on hot days! And don’t forget about chickens! They lay fresh eggs every single day! Can you remember these fun facts about our farm friends? Let’s share what we know!\nContext recap: Let’s have some fun reviewing what we learned about our friendly farm animals! Did you know that cows say 'moo' and they give us yummy milk that we can drink? Pigs are so funny; they say 'oink' and they love to roll around in the mud to keep cool on hot days! And don’t forget about chickens!"
         },
         {
           "id": "prek-biology-l04-c2",
           "title": "Pet Animals Review",
-          "content": "Dogs wag tails, cats purr, fish swim, hamsters run on wheels, rabbits hop with big ears."
+          "content": "Now let’s think about our pet animals! Dogs wag their tails when they are happy, and they say 'woof'. Cats purr when you pet them gently, and they say 'meow'. Fish swim around in their tanks, hamsters run on their wheels, and rabbits hop around with their big ears. Can you remember all these fun things about our pets?\nContext recap: Now let’s think about our pet animals! Dogs wag their tails when they are happy, and they say 'woof'. Cats purr when you pet them gently, and they say 'meow'. Fish swim around in their tanks, hamsters run on their wheels, and rabbits hop around with their big ears."
         },
         {
           "id": "prek-biology-l04-c3",
           "title": "Wild Animals Review",
-          "content": "Lions roar, elephants spray water, giraffes have long tongues, monkeys swing from trees!"
+          "content": "Finally, let’s talk about wild animals! Lions roar loudly, and elephants spray water with their trunks. Giraffes have super long tongues to reach leaves high up in trees, and monkeys swing from branch to branch. Can you recall these exciting facts about wild animals?\nContext recap: Finally, let’s talk about wild animals! Lions roar loudly, and elephants spray water with their trunks. Giraffes have super long tongues to reach leaves high up in trees, and monkeys swing from branch to branch. Can you recall these exciting facts about wild animals?\nContext recap: Finally, let’s talk about wild animals! Lions roar loudly, and elephants spray water with their trunks. Giraffes have super long tongues to reach leaves high up in trees, and monkeys swing from branch to branch. Can you recall these exciting facts about wild animals?\nWhy this matters: Wild Animals Review helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         }
       ],
       "flashcards": [
@@ -602,17 +602,17 @@ export const PreKBiology101Module: LearningModule = {
         {
           "id": "prek-biology-l05-c1",
           "title": "Roots and Stem",
-          "content": "Roots are like tiny straws that drink water from the dirt and hold the plant tight so it doesn't fall over. The stem is like a tall drinking straw that carries water up to the leaves!"
+          "content": "Roots are like little straws that help plants drink water from the soil. They are very important because they hold the plant firmly in place, making sure it doesn't tip over or get blown away by the wind. Imagine if you were standing on a windy day without holding onto anything! The roots keep the plant safe and secure in the ground. Now, let's talk about the stem! The stem is like a tall straw that carries water all the way up to the leaves. This water is super important because it helps the leaves stay green and healthy. Just like we need water to stay strong and play, plants need water too! So, roots and stems work together to help plants grow big and strong!\nContext recap: Roots are like little straws that help plants drink water from the soil. They are very important because they hold the plant firmly in place, making sure it doesn't tip over or get blown away by the wind. Imagine if you were standing on a windy day without holding onto anything! The roots keep the plant safe and secure in the ground.\nWhy this matters: Roots and Stem helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l05-c2",
           "title": "Leaves",
-          "content": "Leaves are the plant's kitchen — they use sunlight to make food for the whole plant. They turn green because they love the sun so much! 🌿"
+          "content": "Leaves are like the kitchen of the plant! Just like how we cook food to eat, leaves use sunlight to make yummy food for the whole plant. They are very special because they can turn green! This green color shows that they are soaking up the sun's warm rays. When leaves catch sunlight, they help the plant grow big and strong by making the food it needs. So, every time you see a green leaf, remember it's busy cooking up something wonderful for the plant! 🌿\nContext recap: Leaves are like the kitchen of the plant! Just like how we cook food to eat, leaves use sunlight to make yummy food for the whole plant. They are very special because they can turn green! This green color shows that they are soaking up the sun's warm rays.\nWhy this matters: Leaves helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l05-c3",
           "title": "Flowers",
-          "content": "Flowers are the prettiest part and smell sweet to call bees for a visit. After the flower, a seed grows so a new baby plant can be born! 🌸"
+          "content": "Flowers are the most colorful and beautiful parts of plants! They come in many shapes and sizes, and they often smell sweet to attract bees and other helpful insects. Bees love visiting flowers because they collect nectar, which they use to make honey. After the flower blooms and is visited by bees, it can create seeds. These seeds are very special because they can grow into new baby plants, helping to continue the cycle of life! Isn't it amazing how flowers help plants grow? 🌸\nContext recap: Flowers are the most colorful and beautiful parts of plants! They come in many shapes and sizes, and they often smell sweet to attract bees and other helpful insects. Bees love visiting flowers because they collect nectar, which they use to make honey. After the flower blooms and is visited by bees, it can create seeds.\nWhy this matters: Flowers helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         }
       ],
       "flashcards": [
@@ -734,17 +734,17 @@ export const PreKBiology101Module: LearningModule = {
         {
           "id": "prek-biology-l06-c1",
           "title": "Soil and Water",
-          "content": "Seeds love soft soil like a cozy bed and water like a big drink. Without water the seed stays asleep!"
+          "content": "Seeds are like little babies that need a cozy place to sleep and grow. They love to snuggle into soft, fluffy soil, just like how we feel warm and comfy in our beds! But that's not all they need. Seeds also require a nice, big drink of water to help them wake up and start growing. If a seed doesn't get enough water, it will stay asleep and won't be able to grow into a beautiful plant. So remember, just like we need food and water to grow strong, seeds need their special care too!\nContext recap: Seeds are like little babies that need a cozy place to sleep and grow. They love to snuggle into soft, fluffy soil, just like how we feel warm and comfy in our beds! But that's not all they need. Seeds also require a nice, big drink of water to help them wake up and start growing.\nWhy this matters: Soil and Water helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l06-c2",
           "title": "Sunlight",
-          "content": "Seeds need sunshine to wake up and grow tall. Put your seed jar in a sunny window and watch the little green sprout say hello!"
+          "content": "Sunshine is like magic for seeds! It helps them wake up from their sleepy state and start to grow tall and strong. When you put your seed jar in a sunny window, the warm rays of the sun will help the seeds feel happy. Soon, you will see a tiny green sprout poking out of the soil, reaching up to say hello to the sun! 🌞 Watching this little sprout grow is so exciting, and it shows us how important sunlight is for all plants. So, let’s give our seeds the sunshine they need to grow big and healthy!\nContext recap: Sunshine is like magic for seeds! It helps them wake up from their sleepy state and start to grow tall and strong. When you put your seed jar in a sunny window, the warm rays of the sun will help the seeds feel happy. Soon, you will see a tiny green sprout poking out of the soil, reaching up to say hello to the sun!\nWhy this matters: Sunlight helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l06-c3",
           "title": "Watching It Grow",
-          "content": "First a tiny white root pops out, then a green stem shoots up, then leaves open like tiny umbrellas. In a few days you have a baby plant!"
+          "content": "When a seed begins its journey to grow, it first sends out a tiny white root. This root digs deep into the soil, searching for water and nutrients to help it grow strong. Next, a bright green stem pushes up through the ground, reaching for the warm sunlight. Shortly after, little leaves unfurl, spreading out like tiny umbrellas to catch the sunshine. In just a few days, you will have a small baby plant that you can watch grow and take care of! Isn’t it amazing how something so small can become a beautiful plant? Let's explore how we can help our plants grow healthy and strong!\nContext recap: When a seed begins its journey to grow, it first sends out a tiny white root. This root digs deep into the soil, searching for water and nutrients to help it grow strong. Next, a bright green stem pushes up through the ground, reaching for the warm sunlight. Shortly after, little leaves unfurl, spreading out like tiny umbrellas to catch the sunshine.\nWhy this matters: Watching It Grow helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         }
       ],
       "flashcards": [
@@ -866,17 +866,17 @@ export const PreKBiology101Module: LearningModule = {
         {
           "id": "prek-biology-l07-c1",
           "title": "Ants and Bees",
-          "content": "Ants are tiny but super strong — one ant can carry 50 times its own weight! Bees buzz and make sweet honey in their hive. 🐝"
+          "content": "Ants are fascinating little creatures! Even though they are tiny, they are super strong! Imagine being able to lift something that is 50 times heavier than you! That's what ants can do! They work together in big groups called colonies, helping each other find food and build their homes. Now, let’s talk about bees! These busy bugs buzz around collecting nectar from flowers. They use this nectar to make sweet honey in their hives. Honey is not only tasty but also very special! 🐝\nContext recap: Ants are fascinating little creatures! Even though they are tiny, they are super strong! Imagine being able to lift something that is 50 times heavier than you! That's what ants can do!\nWhy this matters: Ants and Bees helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l07-c2",
           "title": "Butterflies",
-          "content": "A butterfly starts as a tiny egg, becomes a hungry caterpillar, then sleeps in a chrysalis and wakes up with beautiful wings! 🦋"
+          "content": "The journey of a butterfly is truly amazing! It all begins when a butterfly lays a tiny egg on a leaf. After a little while, the egg hatches, and out comes a hungry caterpillar! This caterpillar loves to munch on green leaves to grow big and strong. Once it has eaten enough, it finds a safe place and wraps itself in a cozy chrysalis. Inside this special shell, the caterpillar takes a long nap. When it wakes up, it has transformed into a beautiful butterfly with colorful wings, ready to flutter and fly around! 🦋\nContext recap: The journey of a butterfly is truly amazing! It all begins when a butterfly lays a tiny egg on a leaf. After a little while, the egg hatches, and out comes a hungry caterpillar! This caterpillar loves to munch on green leaves to grow big and strong.\nWhy this matters: Butterflies helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l07-c3",
           "title": "Ladybugs",
-          "content": "Ladybugs are red with black spots and eat tiny bad bugs that hurt plants. They are like little garden heroes! 🐞"
+          "content": "Ladybugs are fascinating little insects that are bright red with black spots. These charming creatures play an important role in our gardens by munching on tiny bugs that can hurt our plants. By doing this, they help keep our gardens healthy and beautiful. We can think of ladybugs as tiny heroes, working hard to protect the plants we love and enjoy! So next time you see a ladybug, remember how special they are for our gardens! 🐞\nContext recap: Ladybugs are fascinating little insects that are bright red with black spots. These charming creatures play an important role in our gardens by munching on tiny bugs that can hurt our plants. By doing this, they help keep our gardens healthy and beautiful. We can think of ladybugs as tiny heroes, working hard to protect the plants we love and enjoy!"
         }
       ],
       "flashcards": [
@@ -998,17 +998,17 @@ export const PreKBiology101Module: LearningModule = {
         {
           "id": "prek-biology-l08-c1",
           "title": "All About Animals",
-          "content": "Farm, pet, and wild animals make different sounds and do amazing things. You know so many now!"
+          "content": "Did you know that animals can be found in many places? Some animals live on farms, like cows and chickens, while others are our beloved pets, like dogs and cats. Then there are wild animals, like lions and elephants, that roam free in nature! Each of these animals makes special sounds, like a cow mooing or a dog barking, and they all do amazing things that help them survive. You have learned so much about these wonderful creatures, and now it's time to share your exciting knowledge with your friends and family! What is your favorite animal and what sound does it make?\nContext recap: Did you know that animals can be found in many places? Some animals live on farms, like cows and chickens, while others are our beloved pets, like dogs and cats. Then there are wild animals, like lions and elephants, that roam free in nature! Each of these animals makes special sounds, like a cow mooing or a dog barking, and they all do amazing things that help them survive.\nWhy this matters: All About Animals helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l08-c2",
           "title": "Plants and Growing",
-          "content": "Plants have roots, stems, leaves, and flowers. Seeds need soil, water, and sunlight to grow into new plants."
+          "content": "Plants are amazing living things that come in many shapes and sizes! They have different parts that help them grow and stay healthy. The roots are like little anchors that hold the plant in the ground and drink up water from the soil. The stem is like a strong tower that supports the plant and carries nutrients to the leaves. The leaves are like tiny kitchens where the plant makes its food using sunlight. Finally, flowers are the beautiful parts that can turn into seeds. To grow into new plants, seeds need soft, rich soil, lots of water, and bright sunlight. Each part of the plant works together to help it grow big and strong!\nContext recap: Plants are amazing living things that come in many shapes and sizes! They have different parts that help them grow and stay healthy. The roots are like little anchors that hold the plant in the ground and drink up water from the soil. The stem is like a strong tower that supports the plant and carries nutrients to the leaves.\nWhy this matters: Plants and Growing helps learners in Biology connect ideas from Pre-K Amazing Animals & Nature to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "prek-biology-l08-c3",
           "title": "Insects",
-          "content": "Insects are tiny but do big jobs — ants carry heavy things, bees make honey, butterflies change shape!"
+          "content": "Insects may be small, but they have very important jobs in our world! For example, ants are super strong and can carry things that are much heavier than themselves. Bees are busy little workers that gather nectar from flowers to make delicious honey for us to enjoy. And then we have butterflies, which go through incredible changes, starting as caterpillars and transforming into beautiful, colorful butterflies! Each type of insect plays a special role in nature, helping plants grow and keeping our environment healthy and happy.\nContext recap: Insects may be small, but they have very important jobs in our world! For example, ants are super strong and can carry things that are much heavier than themselves. Bees are busy little workers that gather nectar from flowers to make delicious honey for us to enjoy. And then we have butterflies, which go through incredible changes, starting as caterpillars and transforming into beautiful, colorful butterflies!"
         }
       ],
       "flashcards": [

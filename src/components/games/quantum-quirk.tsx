@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Zap, Cpu, Activity, ShieldCheck, Info, ChevronRight, Target, Atom, Sparkles, Binary, Layers, RotateCcw } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Quantum Logic Types --- */
 type QubitState = "0" | "1" | "SUPERPOSITION" | "ENTANGLED";
@@ -26,6 +27,28 @@ export default function QuantumQuirk() {
         { id: "Q1", state: "0" }
     ]);
     const [history, setHistory] = useState<string[]>([]);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
+
+    useEffect(() => {
+        if (gameState !== "SUCCESS" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "quantum-quirk",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, history.length),
+            score: history.length,
+            maxScore: 10,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, history.length]);
 
     const applyGate = (gate: QuantumGate, targetId: string) => {
         if (gameState !== "SOLVING") return;

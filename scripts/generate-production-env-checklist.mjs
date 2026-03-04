@@ -5,6 +5,7 @@ import { spawnSync } from "node:child_process";
 function parseArgs(argv) {
   const args = {
     sourceFile: ".env.production.audit",
+    sourceFileExplicit: false,
     outFile: "PRODUCTION-ENV-CHECKLIST.md",
     outJson: "",
     runtime: "production",
@@ -34,7 +35,10 @@ function parseArgs(argv) {
 
     if (arg === "--source-file" || arg.startsWith("--source-file=")) {
       const parsed = parseOptionValue(arg, i);
-      if (parsed.value) args.sourceFile = parsed.value;
+      if (parsed.value) {
+        args.sourceFile = parsed.value;
+        args.sourceFileExplicit = true;
+      }
       if (parsed.consumedNext) i += 1;
       continue;
     }
@@ -71,7 +75,7 @@ function escapeCell(value) {
     .trim();
 }
 
-function toMarkdown({ envReport, command, commandExitCode, sourceFile, runtime }) {
+function toMarkdown({ envReport, command, commandExitCode, sourceFile, runtime, sourceFallbackNote }) {
   const checks = Array.isArray(envReport.checks) ? envReport.checks : [];
   const totals = envReport.totals ?? { pass: 0, warn: 0, fail: 0, total: 0 };
   const failures = checks.filter((check) => check.status === "fail");
@@ -83,6 +87,9 @@ function toMarkdown({ envReport, command, commandExitCode, sourceFile, runtime }
   lines.push(`Generated: ${envReport.generatedAt ?? new Date().toISOString()}`);
   lines.push(`Runtime: ${runtime}`);
   lines.push(`Source file: ${sourceFile}`);
+  if (sourceFallbackNote) {
+    lines.push(`Source fallback: ${sourceFallbackNote}`);
+  }
   lines.push(`Command: \`${command}\``);
   lines.push(`Command exit code: ${commandExitCode}`);
   lines.push("");
@@ -167,11 +174,57 @@ function ensureParentDir(filePath) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
 }
 
+
+function sleepSync(ms) {
+  const start = Date.now();
+  while (Date.now() - start < ms) {
+    // Intentional short blocking delay for transient file lock retries.
+  }
+}
+
+function isTransientWriteError(error) {
+  const code = error && typeof error === "object" ? error.code : "";
+  return code === "EPERM" || code === "EACCES" || code === "EBUSY" || code === "UNKNOWN";
+}
+
+function writeFileSyncWithRetry(filePath, contents, options = "utf8") {
+  const maxAttempts = 4;
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      fs.writeFileSync(filePath, contents, options);
+      return;
+    } catch (error) {
+      lastError = error;
+      if (!isTransientWriteError(error) || attempt >= maxAttempts) {
+        throw error;
+      }
+      sleepSync(150 * attempt);
+    }
+  }
+
+  if (lastError) {
+    throw lastError;
+  }
+}
 function main() {
   const args = parseArgs(process.argv.slice(2));
   const outFilePath = path.resolve(process.cwd(), args.outFile);
   const outJsonPath = args.outJson ? path.resolve(process.cwd(), args.outJson) : "";
-  const sourceFilePath = args.sourceFile;
+  const defaultSourcePath = ".env.production.audit";
+  const templateSourcePath = ".env.production.audit.example";
+  let sourceFilePath = args.sourceFile || defaultSourcePath;
+  let sourceFallbackNote = "";
+
+  if (!args.sourceFileExplicit) {
+    const resolvedSource = path.resolve(process.cwd(), sourceFilePath);
+    const resolvedTemplate = path.resolve(process.cwd(), templateSourcePath);
+    if (!fs.existsSync(resolvedSource) && fs.existsSync(resolvedTemplate)) {
+      sourceFilePath = templateSourcePath;
+      sourceFallbackNote = `${defaultSourcePath} was not found; used ${templateSourcePath}.`;
+    }
+  }
 
   const checkResult = runCheckEnv({
     sourceFile: sourceFilePath,
@@ -198,10 +251,11 @@ function main() {
     commandExitCode: checkResult.exitCode,
     sourceFile: sourceFilePath,
     runtime: args.runtime,
+    sourceFallbackNote,
   });
 
   ensureParentDir(outFilePath);
-  fs.writeFileSync(outFilePath, markdown);
+  writeFileSyncWithRetry(outFilePath, markdown);
   console.log(`Wrote ${outFilePath}`);
 
   if (outJsonPath) {
@@ -210,11 +264,12 @@ function main() {
       command: checkResult.command,
       commandExitCode: checkResult.exitCode,
       sourceFile: sourceFilePath,
+      sourceFallbackNote,
       runtime: args.runtime,
       envReport: checkResult.envReport,
     };
     ensureParentDir(outJsonPath);
-    fs.writeFileSync(outJsonPath, JSON.stringify(jsonReport, null, 2));
+    writeFileSyncWithRetry(outJsonPath, JSON.stringify(jsonReport, null, 2));
     console.log(`Wrote ${outJsonPath}`);
   }
 

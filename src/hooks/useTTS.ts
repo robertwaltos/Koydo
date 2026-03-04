@@ -7,6 +7,8 @@ interface UseTTSOptions {
   voice?: string;
   /** Optional lesson scoping for analytics */
   lessonId?: string;
+  /** When true, never fall back to browser SpeechSynthesis on error */
+  disableBrowserFallback?: boolean;
 }
 
 interface TTSControls {
@@ -26,7 +28,7 @@ interface TTSControls {
  *   tts.speak("Hello!");
  *   tts.stop();
  */
-export function useTTS({ voice = "nova", lessonId }: UseTTSOptions = {}): TTSControls {
+export function useTTS({ voice = "nova", lessonId, disableBrowserFallback = false }: UseTTSOptions = {}): TTSControls {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const synthRef = useRef<SpeechSynthesisUtterance | null>(null);
@@ -67,8 +69,8 @@ export function useTTS({ voice = "nova", lessonId }: UseTTSOptions = {}): TTSCon
         const data = await res.json() as { audioUrl?: string; fallback?: string; error?: string };
 
         if (data.fallback === "browser") {
-          // Browser SpeechSynthesis fallback
-          if (typeof window !== "undefined" && window.speechSynthesis) {
+          // Browser SpeechSynthesis fallback (disabled for companion interactions)
+          if (!disableBrowserFallback && typeof window !== "undefined" && window.speechSynthesis) {
             const utter = new SpeechSynthesisUtterance(text);
             utter.rate = 0.95;
             utter.pitch = 1.0;
@@ -92,8 +94,9 @@ export function useTTS({ voice = "nova", lessonId }: UseTTSOptions = {}): TTSCon
         audio.onerror = () => { audioRef.current = null; setIsPlaying(false); };
         await audio.play();
       } catch (_err) {
-        // Silent fallback to browser TTS on any error
+        // Silent fallback to browser TTS on any error (unless disabled)
         setIsPlaying(false);
+        if (disableBrowserFallback) return;
         try {
           if (typeof window !== "undefined" && window.speechSynthesis) {
             const utter = new SpeechSynthesisUtterance(text);
@@ -106,7 +109,7 @@ export function useTTS({ voice = "nova", lessonId }: UseTTSOptions = {}): TTSCon
         } catch { /* ignore */ }
       }
     },
-    [voice, lessonId, stop],
+    [voice, lessonId, disableBrowserFallback, stop],
   );
 
   return { speak, stop, isPlaying };

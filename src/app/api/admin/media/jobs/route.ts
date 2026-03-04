@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
@@ -27,28 +27,10 @@ const createJobSchema = z.object({
   metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
-async function getAdminUserId() {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.getUser();
-  if (authError || !user) return null;
-
-  const { data: profile } = await supabase
-    .from("user_profiles")
-    .select("is_admin")
-    .eq("user_id", user.id)
-    .maybeSingle();
-
-  if (!profile?.is_admin) return null;
-  return user.id;
-}
-
 export async function GET(request: Request) {
-  const adminUserId = await getAdminUserId();
-  if (!adminUserId) {
-    return NextResponse.json({ error: "Admin access required." }, { status: 403 });
+  const auth = await requireAdminForApi();
+  if (!auth.isAuthorized) {
+    return auth.response;
   }
 
   const { searchParams } = new URL(request.url);
@@ -125,9 +107,9 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const adminUserId = await getAdminUserId();
-  if (!adminUserId) {
-    return NextResponse.json({ error: "Admin access required." }, { status: 403 });
+  const auth = await requireAdminForApi();
+  if (!auth.isAuthorized) {
+    return auth.response;
   }
 
   const parsedBody = createJobSchema.safeParse(await request.json().catch(() => null));
@@ -165,7 +147,7 @@ export async function POST(request: Request) {
   const { data, error } = await admin
     .from("media_generation_jobs")
     .insert({
-      created_by: adminUserId,
+      created_by: auth.userId,
       module_id: moduleId || null,
       lesson_id: lessonId || null,
       asset_type: assetType,

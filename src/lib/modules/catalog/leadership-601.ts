@@ -47,19 +47,19 @@ export const Leadership601Module: LearningModule = {
           "id": "leadership-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Leadership, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will dive into the important idea of advanced scope boundaries in leadership. We will learn how to effectively diagnose business systems, which means figuring out what is working well and what needs improvement. Additionally, we will discuss how to design business operations that help teams execute their tasks more efficiently. By concentrating on these key areas, we can create a clearer and more effective framework for leading teams and organizations to success. This understanding will empower you to make informed decisions and guide your team towards achieving their goals."
         },
         {
           "id": "leadership-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in business scenarios.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in business scenarios."
         },
         {
           "id": "leadership-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made during our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be validated through evidence.\nContext recap: In our recap, we emphasize that all claims made during our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be validated through evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Leadership601Module: LearningModule = {
           "id": "leadership-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This exercise will help develop critical thinking and problem-solving skills.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This exercise will help develop critical thinking and problem-solving skills."
         },
         {
           "id": "leadership-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. This architecture ensures that processes are robust and can adapt to changing circumstances.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. This architecture ensures that processes are robust and can adapt to changing circumstances."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Leadership601Module: LearningModule = {
           "id": "leadership-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "This lesson focuses on scenario architecture, which frames the competing constraints that arise in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs involved, helping learners understand the complexities of decision-making in leadership roles.\nContext recap: This lesson focuses on scenario architecture, which frames the competing constraints that arise in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs involved, helping learners understand the complexities of decision-making in leadership roles."
         },
         {
           "id": "leadership-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them, considering factors such as safety, reliability, cost, equity, and governance. This comparative analysis will enhance their ability to make informed decisions that balance multiple dimensions.\nContext recap: In this practice session, learners will compare different options available to them, considering factors such as safety, reliability, cost, equity, and governance. This comparative analysis will enhance their ability to make informed decisions that balance multiple dimensions.\nWhy this matters: Tradeoff Framing helps learners in Business connect ideas from Leadership Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "leadership-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made. This structured approach ensures that decisions are well-supported and prepared for potential challenges.\nContext recap: In our recap, we will highlight the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made. This structured approach ensures that decisions are well-supported and prepared for potential challenges.\nWhy this matters: Decision Memo Pattern helps learners in Business connect ideas from Leadership Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Leadership601Module: LearningModule = {
           "id": "leadership-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will take charge of operating scenario controls. They will learn how to balance performance outcomes with governance constraints, which is essential for effective leadership and decision-making in dynamic environments.\nContext recap: In this interactive practice, learners will take charge of operating scenario controls. They will learn how to balance performance outcomes with governance constraints, which is essential for effective leadership and decision-making in dynamic environments.\nWhy this matters: Live Scenario Controls helps learners in Business connect ideas from Leadership Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "leadership-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to challenges can be designed to update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins.\nContext recap: In our recap, we will discuss how effective responses to challenges can be designed to update control gates while maintaining traceability and accountability. This ensures that all actions taken are transparent and can be tracked back to their origins."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Leadership601Module: LearningModule = {
           "id": "leadership-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for leaders to ensure that their decisions positively impact all parties involved.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for leaders to ensure that their decisions positively impact all parties involved.\nWhy this matters: Stakeholder Impact Distribution helps learners in Business connect ideas from Leadership Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "leadership-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability, which includes the integration of decision traceability, review rights, and obligations for remediation. This framework is vital for ensuring that leaders are held accountable for their decisions and actions.\nContext recap: In this section, we will explore the architecture of accountability, which includes the integration of decision traceability, review rights, and obligations for remediation. This framework is vital for ensuring that leaders are held accountable for their decisions and actions."
         },
         {
           "id": "leadership-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensuring that all policies are followed and that we build resilience in our leadership practices. This checklist will help you reflect on how to be a responsible leader.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensuring that all policies are followed and that we build resilience in our leadership practices. This checklist will help you reflect on how to be a responsible leader."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Leadership601Module: LearningModule = {
           "id": "leadership-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will work on creating a detailed brief. This brief will include your claims, supporting evidence, the limits of uncertainty in your arguments, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this interactive activity, you will work on creating a detailed brief. This brief will include your claims, supporting evidence, the limits of uncertainty in your arguments, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly."
         },
         {
           "id": "leadership-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will have the opportunity to practice your responses to questions and critiques from an expert panel. You will focus on addressing technical issues, governance challenges, and concerns from stakeholders. This rehearsal will prepare you to confidently defend your ideas and proposals.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and critiques from an expert panel. You will focus on addressing technical issues, governance challenges, and concerns from stakeholders. This rehearsal will prepare you to confidently defend your ideas and proposals."
         }
       ],
       "interactiveActivities": [

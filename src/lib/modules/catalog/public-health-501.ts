@@ -47,19 +47,19 @@ export const PublicHealth501Module: LearningModule = {
           "id": "public-health-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Public Health, with focus on population risk modeling and intervention architecture."
+          "content": "In this lesson, we will explore the advanced boundaries of Public Health. We will focus on understanding how to assess risks within populations and how to design effective interventions that can help improve health outcomes. This involves looking at various factors that influence health and how we can create strategies to address them.\nContext recap: In this lesson, we will explore the advanced boundaries of Public Health. We will focus on understanding how to assess risks within populations and how to design effective interventions that can help improve health outcomes. This involves looking at various factors that influence health and how we can create strategies to address them."
         },
         {
           "id": "public-health-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that lead to health outcomes. We will also examine uncertainty ranges, which help us understand the limits of our knowledge, and identify system dependencies that can affect our planning for interventions. This foundational knowledge is crucial before we begin to design our health strategies.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that lead to health outcomes. We will also examine uncertainty ranges, which help us understand the limits of our knowledge, and identify system dependencies that can affect our planning for interventions. This foundational knowledge is crucial before we begin to design our health strategies."
         },
         {
           "id": "public-health-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize that all claims made in public health must be supported by measurable indicators. This means we need to have clear evidence that can be tracked and assessed. Additionally, we will discuss the importance of confidence bounds and review checkpoints to ensure that our findings are reliable and valid.\nContext recap: In our recap, we will emphasize that all claims made in public health must be supported by measurable indicators. This means we need to have clear evidence that can be tracked and assessed. Additionally, we will discuss the importance of confidence bounds and review checkpoints to ensure that our findings are reliable and valid."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const PublicHealth501Module: LearningModule = {
           "id": "public-health-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows that are essential for public health initiatives. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well their designs hold up under pressure. This hands-on experience is vital for understanding the complexities of public health work.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows that are essential for public health initiatives. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well their designs hold up under pressure. This hands-on experience is vital for understanding the complexities of public health work."
         },
         {
           "id": "public-health-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will highlight how effective workflows should include control gates. These gates serve as checkpoints that help monitor progress, establish rollback criteria for when things do not go as planned, and set threshold-based escalation procedures to ensure that any issues are addressed promptly and effectively.\nContext recap: In our recap, we will highlight how effective workflows should include control gates. These gates serve as checkpoints that help monitor progress, establish rollback criteria for when things do not go as planned, and set threshold-based escalation procedures to ensure that any issues are addressed promptly and effectively."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const PublicHealth501Module: LearningModule = {
           "id": "public-health-501-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a city health taskforce coordinating prevention, communication, and resource allocation under outbreak uncertainty. Learners map constraints, risk classes, and governance boundaries."
+          "content": "In this case study, we will focus on a city health taskforce that is responsible for coordinating prevention efforts, communication strategies, and resource allocation during times of outbreak uncertainty. Learners will work on mapping out the constraints they face, identifying different classes of risk, and understanding the governance boundaries that guide their actions. This real-world context will help them apply their knowledge effectively.\nContext recap: In this case study, we will focus on a city health taskforce that is responsible for coordinating prevention efforts, communication strategies, and resource allocation during times of outbreak uncertainty. Learners will work on mapping out the constraints they face, identifying different classes of risk, and understanding the governance boundaries that guide their actions. This real-world context will help them apply their knowledge effectively."
         },
         {
           "id": "public-health-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Alternatives are scored across effectiveness, feasibility, risk, equity, and implementation cost."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. Here, alternatives for public health interventions will be evaluated based on several criteria, including their effectiveness, feasibility, associated risks, equity considerations, and implementation costs. This scoring system will help learners make informed decisions about which strategies to pursue.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Here, alternatives for public health interventions will be evaluated based on several criteria, including their effectiveness, feasibility, associated risks, equity considerations, and implementation costs. This scoring system will help learners make informed decisions about which strategies to pursue."
         },
         {
           "id": "public-health-501-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are mapped to remediation actions and measurable recovery triggers."
+          "content": "In our recap, we will discuss how to map failure signatures to appropriate remediation actions. This involves identifying specific triggers that indicate when recovery efforts should be initiated. By establishing measurable recovery triggers, learners will be better equipped to adapt their strategies in response to challenges.\nContext recap: In our recap, we will discuss how to map failure signatures to appropriate remediation actions. This involves identifying specific triggers that indicate when recovery efforts should be initiated. By establishing measurable recovery triggers, learners will be better equipped to adapt their strategies in response to challenges."
         }
       ],
       "flashcards": [
@@ -419,13 +419,13 @@ export const PublicHealth501Module: LearningModule = {
           "id": "public-health-501-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners configure interventions, constraints, and escalation logic for high-stakes tests."
+          "content": "During this interactive practice, learners will configure various interventions, set constraints, and develop escalation logic for high-stakes testing scenarios. This exercise will allow them to apply their knowledge in a simulated environment, preparing them for real-world public health challenges.\nContext recap: During this interactive practice, learners will configure various interventions, set constraints, and develop escalation logic for high-stakes testing scenarios. This exercise will allow them to apply their knowledge in a simulated environment, preparing them for real-world public health challenges.\nContext recap: During this interactive practice, learners will configure various interventions, set constraints, and develop escalation logic for high-stakes testing scenarios. This exercise will allow them to apply their knowledge in a simulated environment, preparing them for real-world public health challenges. Context recap: During this interactive practice, learners will configure various interventions, set constraints, and develop escalation logic for high-stakes testing scenarios. This exercise will allow them to apply their knowledge in a simulated environment, preparing them for real-world public health challenges."
         },
         {
           "id": "public-health-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Outcomes are reviewed for gains, side effects, and governance compliance gaps."
+          "content": "In our recap, we will review the outcomes of the interventions implemented during the simulation. Learners will analyze the gains achieved, any side effects that occurred, and identify gaps in governance compliance. This reflective process is crucial for continuous improvement in public health practices.\nContext recap: In our recap, we will review the outcomes of the interventions implemented during the simulation. Learners will analyze the gains achieved, any side effects that occurred, and identify gaps in governance compliance. This reflective process is crucial for continuous improvement in public health practices."
         }
       ],
       "interactiveActivities": [
@@ -676,19 +676,19 @@ export const PublicHealth501Module: LearningModule = {
           "id": "public-health-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this section, learners will explore how to map the distribution of impacts among various stakeholders. This includes identifying the benefits and burdens that different groups may experience, as well as any delayed effects that may arise from public health decisions. Understanding these dynamics is essential for equitable health outcomes.\nContext recap: In this section, learners will explore how to map the distribution of impacts among various stakeholders. This includes identifying the benefits and burdens that different groups may experience, as well as any delayed effects that may arise from public health decisions. Understanding these dynamics is essential for equitable health outcomes."
         },
         {
           "id": "public-health-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this segment, we will discuss the architecture of accountability within public health governance. This includes ensuring that decision-making processes are traceable, that stakeholders have rights to review decisions, and that there are clear obligations for remediation when necessary. Establishing these principles is vital for maintaining trust and integrity in public health initiatives.\nContext recap: In this segment, we will discuss the architecture of accountability within public health governance. This includes ensuring that decision-making processes are traceable, that stakeholders have rights to review decisions, and that there are clear obligations for remediation when necessary. Establishing these principles is vital for maintaining trust and integrity in public health initiatives."
         },
         {
           "id": "public-health-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes to ethical considerations, ensures that we are following policies correctly, and highlights the importance of resilience in leadership. This checklist serves as a guide for responsible leadership in public health.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes to ethical considerations, ensures that we are following policies correctly, and highlights the importance of resilience in leadership. This checklist serves as a guide for responsible leadership in public health."
         }
       ],
       "flashcards": [
@@ -727,13 +727,13 @@ export const PublicHealth501Module: LearningModule = {
           "id": "public-health-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and proposed pathways for remediation. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and proposed pathways for remediation. This exercise helps develop critical thinking and communication skills."
         },
         {
           "id": "public-health-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may arise from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is essential for building confidence and preparing for real-world discussions.\nContext recap: During this session, learners will practice their responses to various critiques that may arise from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is essential for building confidence and preparing for real-world discussions."
         }
       ],
       "interactiveActivities": [

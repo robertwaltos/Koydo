@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-02-26T06:15:41.597Z",
+  "generatedAt": "2026-03-02T22:37:46.133Z",
   "filters": {
     "minScore": 1,
     "topDocs": 5,
     "domains": []
   },
   "totals": {
-    "documentsScanned": 123,
-    "documentsMatched": 71,
-    "documentsMatchedByText": 40,
-    "documentsMatchedByMetadata": 43,
-    "domainsCovered": 17,
+    "documentsScanned": 127,
+    "documentsMatched": 84,
+    "documentsMatchedByText": 84,
+    "documentsMatchedByMetadata": 0,
+    "domainsCovered": 21,
     "domainsMissing": 0
   },
   "byDomain": [
@@ -21,8 +21,8 @@
       "topDocs": [
         {
           "path": "data\\knowledgebase\\raw\\open-yale-courses-5a7875c0.md",
-          "sourceId": "open-yale-courses",
-          "queueId": "open-yale-courses-5a7875c0",
+          "sourceId": "",
+          "queueId": "",
           "score": 5,
           "matchedKeywords": [
             {
@@ -34,8 +34,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\uk-national-curriculum-dbcd0ffc.md",
-          "sourceId": "uk-national-curriculum",
-          "queueId": "uk-national-curriculum-dbcd0ffc",
+          "sourceId": "",
+          "queueId": "",
           "score": 5,
           "matchedKeywords": [
             {
@@ -47,8 +47,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\uk-national-curriculum-dc062f90.md",
-          "sourceId": "uk-national-curriculum",
-          "queueId": "uk-national-curriculum-dc062f90",
+          "sourceId": "",
+          "queueId": "",
           "score": 4,
           "matchedKeywords": [
             {
@@ -60,8 +60,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\uk-national-curriculum-227afbf4.md",
-          "sourceId": "uk-national-curriculum",
-          "queueId": "uk-national-curriculum-227afbf4",
+          "sourceId": "",
+          "queueId": "",
           "score": 3,
           "matchedKeywords": [
             {
@@ -73,8 +73,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\uk-national-curriculum-570101c0.md",
-          "sourceId": "uk-national-curriculum",
-          "queueId": "uk-national-curriculum-570101c0",
+          "sourceId": "",
+          "queueId": "",
           "score": 3,
           "matchedKeywords": [
             {
@@ -93,8 +93,8 @@
       "topDocs": [
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
+          "sourceId": "",
+          "queueId": "",
           "score": 100,
           "matchedKeywords": [
             {
@@ -118,8 +118,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\uk-national-curriculum-95934fce.md",
-          "sourceId": "uk-national-curriculum",
-          "queueId": "uk-national-curriculum-95934fce",
+          "sourceId": "",
+          "queueId": "",
           "score": 13,
           "matchedKeywords": [
             {
@@ -131,8 +131,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\uk-national-curriculum-4569eac8.md",
-          "sourceId": "uk-national-curriculum",
-          "queueId": "uk-national-curriculum-4569eac8",
+          "sourceId": "",
+          "queueId": "",
           "score": 9,
           "matchedKeywords": [
             {
@@ -144,8 +144,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\uk-national-curriculum-227afbf4.md",
-          "sourceId": "uk-national-curriculum",
-          "queueId": "uk-national-curriculum-227afbf4",
+          "sourceId": "",
+          "queueId": "",
           "score": 5,
           "matchedKeywords": [
             {
@@ -157,8 +157,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-fb29a030.md",
-          "sourceId": "acara-australian-curriculum",
-          "queueId": "acara-australian-curriculum-fb29a030",
+          "sourceId": "",
+          "queueId": "",
           "score": 3,
           "matchedKeywords": [
             {
@@ -171,14 +171,522 @@
       ]
     },
     {
-      "domainId": "project-management",
+      "domainId": "ai-workflows",
+      "docCount": 14,
+      "maxScore": 4,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\kenya-kicd-55918634.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 4,
+          "matchedKeywords": [
+            {
+              "keyword": "evaluation",
+              "count": 4
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\kenya-kicd-dff3e4fc.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 4,
+          "matchedKeywords": [
+            {
+              "keyword": "evaluation",
+              "count": 4
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-162d3d5c.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "evaluation",
+              "count": 2
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "evaluation",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\kenya-kicd-4de5bf18.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "evaluation",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "electricians",
       "docCount": 12,
+      "maxScore": 28,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 28,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical",
+              "count": 24
+            },
+            {
+              "keyword": "electricity",
+              "count": 4
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-efda8314.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 12,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical",
+              "count": 6
+            },
+            {
+              "keyword": "circuit",
+              "count": 6
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 7,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical",
+              "count": 6
+            },
+            {
+              "keyword": "circuit",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-8bd5b9d1.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 7,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical",
+              "count": 6
+            },
+            {
+              "keyword": "circuit",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-d4a9435c.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 7,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical",
+              "count": 6
+            },
+            {
+              "keyword": "circuit",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "electrical-engineering",
+      "docCount": 12,
+      "maxScore": 16,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 16,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical engineering",
+              "count": 16
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-1b87a674.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 5,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical engineering",
+              "count": 5
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-2ee5c97c.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 5,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical engineering",
+              "count": 5
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-3d3e67cc.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 5,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical engineering",
+              "count": 5
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 5,
+          "matchedKeywords": [
+            {
+              "keyword": "electrical engineering",
+              "count": 5
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "microelectronics",
+      "docCount": 12,
+      "maxScore": 3,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 3,
+          "matchedKeywords": [
+            {
+              "keyword": "microelectronics",
+              "count": 1
+            },
+            {
+              "keyword": "vlsi",
+              "count": 1
+            },
+            {
+              "keyword": "transistor",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-8bd5b9d1.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 3,
+          "matchedKeywords": [
+            {
+              "keyword": "microelectronics",
+              "count": 1
+            },
+            {
+              "keyword": "vlsi",
+              "count": 1
+            },
+            {
+              "keyword": "transistor",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-d4a9435c.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 3,
+          "matchedKeywords": [
+            {
+              "keyword": "microelectronics",
+              "count": 1
+            },
+            {
+              "keyword": "vlsi",
+              "count": 1
+            },
+            {
+              "keyword": "transistor",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-cb3359b1.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "microelectronics",
+              "count": 1
+            },
+            {
+              "keyword": "semiconductor",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-efda8314.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "microelectronics",
+              "count": 1
+            },
+            {
+              "keyword": "integrated circuit",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "finance",
+      "docCount": 11,
+      "maxScore": 40,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 40,
+          "matchedKeywords": [
+            {
+              "keyword": "economics",
+              "count": 24
+            },
+            {
+              "keyword": "finance",
+              "count": 16
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-fb29a030.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 6,
+          "matchedKeywords": [
+            {
+              "keyword": "finance",
+              "count": 3
+            },
+            {
+              "keyword": "economics",
+              "count": 3
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\open-yale-courses-20b2b2a4.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 4,
+          "matchedKeywords": [
+            {
+              "keyword": "economics",
+              "count": 4
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-162d3d5c.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "economics",
+              "count": 2
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "finance",
+              "count": 1
+            },
+            {
+              "keyword": "economics",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "micro-circuits",
+      "docCount": 11,
+      "maxScore": 12,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 12,
+          "matchedKeywords": [
+            {
+              "keyword": "circuits and electronics",
+              "count": 12
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-efda8314.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 5,
+          "matchedKeywords": [
+            {
+              "keyword": "integrated circuits",
+              "count": 3
+            },
+            {
+              "keyword": "circuit design",
+              "count": 2
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 4,
+          "matchedKeywords": [
+            {
+              "keyword": "integrated circuits",
+              "count": 3
+            },
+            {
+              "keyword": "digital circuits",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-8bd5b9d1.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 4,
+          "matchedKeywords": [
+            {
+              "keyword": "integrated circuits",
+              "count": 3
+            },
+            {
+              "keyword": "digital circuits",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-dbb9b694.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 4,
+          "matchedKeywords": [
+            {
+              "keyword": "integrated circuits",
+              "count": 4
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "project-management",
+      "docCount": 10,
       "maxScore": 32,
       "topDocs": [
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
+          "sourceId": "",
+          "queueId": "",
           "score": 32,
           "matchedKeywords": [
             {
@@ -206,8 +714,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-fb29a030.md",
-          "sourceId": "acara-australian-curriculum",
-          "queueId": "acara-australian-curriculum-fb29a030",
+          "sourceId": "",
+          "queueId": "",
           "score": 7,
           "matchedKeywords": [
             {
@@ -219,8 +727,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
+          "sourceId": "",
+          "queueId": "",
           "score": 2,
           "matchedKeywords": [
             {
@@ -232,8 +740,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\south-africa-caps-8e38d46c.md",
-          "sourceId": "south-africa-caps",
-          "queueId": "south-africa-caps-8e38d46c",
+          "sourceId": "",
+          "queueId": "",
           "score": 2,
           "matchedKeywords": [
             {
@@ -244,621 +752,13 @@
           "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-61ff86ec.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-61ff86ec",
+          "path": "data\\knowledgebase\\raw\\mit-ocw-a97f645c.md",
+          "sourceId": "",
+          "queueId": "",
           "score": 1,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        }
-      ]
-    },
-    {
-      "domainId": "electricians",
-      "docCount": 12,
-      "maxScore": 28,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
-          "score": 28,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical",
-              "count": 24
-            },
-            {
-              "keyword": "electricity",
-              "count": 4
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-efda8314.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-efda8314",
-          "score": 11,
-          "matchedKeywords": [
-            {
-              "keyword": "circuit",
-              "count": 6
-            },
-            {
-              "keyword": "electrical",
-              "count": 5
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-42b5ebd8",
-          "score": 6,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical",
-              "count": 5
-            },
-            {
-              "keyword": "circuit",
-              "count": 1
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-8bd5b9d1.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-8bd5b9d1",
-          "score": 6,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical",
-              "count": 5
-            },
-            {
-              "keyword": "circuit",
-              "count": 1
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-d4a9435c.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-d4a9435c",
-          "score": 6,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical",
-              "count": 5
-            },
-            {
-              "keyword": "circuit",
-              "count": 1
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        }
-      ]
-    },
-    {
-      "domainId": "electrical-engineering",
-      "docCount": 12,
-      "maxScore": 16,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
-          "score": 16,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical engineering",
-              "count": 16
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-1b87a674.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-1b87a674",
-          "score": 5,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical engineering",
-              "count": 5
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-2ee5c97c.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-2ee5c97c",
-          "score": 5,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical engineering",
-              "count": 5
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-3d3e67cc.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-3d3e67cc",
-          "score": 5,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical engineering",
-              "count": 5
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-42b5ebd8",
-          "score": 5,
-          "matchedKeywords": [
-            {
-              "keyword": "electrical engineering",
-              "count": 5
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        }
-      ]
-    },
-    {
-      "domainId": "microelectronics",
-      "docCount": 12,
-      "maxScore": 2,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-42b5ebd8",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "vlsi",
-              "count": 1
-            },
-            {
-              "keyword": "transistor",
-              "count": 1
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-8bd5b9d1.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-8bd5b9d1",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "vlsi",
-              "count": 1
-            },
-            {
-              "keyword": "transistor",
-              "count": 1
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-d4a9435c.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-d4a9435c",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "vlsi",
-              "count": 1
-            },
-            {
-              "keyword": "transistor",
-              "count": 1
-            },
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "text+metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-1b87a674.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-1b87a674",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-2ee5c97c.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-2ee5c97c",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        }
-      ]
-    },
-    {
-      "domainId": "micro-circuits",
-      "docCount": 11,
-      "maxScore": 12,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
-          "score": 12,
-          "matchedKeywords": [
-            {
-              "keyword": "circuits and electronics",
-              "count": 12
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-efda8314.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-efda8314",
-          "score": 5,
-          "matchedKeywords": [
-            {
-              "keyword": "integrated circuits",
-              "count": 3
-            },
-            {
-              "keyword": "circuit design",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-42b5ebd8",
-          "score": 4,
-          "matchedKeywords": [
-            {
-              "keyword": "integrated circuits",
-              "count": 3
-            },
-            {
-              "keyword": "digital circuits",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-8bd5b9d1.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-8bd5b9d1",
-          "score": 4,
-          "matchedKeywords": [
-            {
-              "keyword": "integrated circuits",
-              "count": 3
-            },
-            {
-              "keyword": "digital circuits",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-dbb9b694.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-dbb9b694",
-          "score": 4,
-          "matchedKeywords": [
-            {
-              "keyword": "integrated circuits",
-              "count": 4
-            }
-          ],
-          "matchSource": "text"
-        }
-      ]
-    },
-    {
-      "domainId": "finance",
-      "docCount": 10,
-      "maxScore": 40,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
-          "score": 40,
-          "matchedKeywords": [
-            {
-              "keyword": "economics",
-              "count": 24
-            },
-            {
-              "keyword": "finance",
-              "count": 16
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-fb29a030.md",
-          "sourceId": "acara-australian-curriculum",
-          "queueId": "acara-australian-curriculum-fb29a030",
-          "score": 6,
-          "matchedKeywords": [
-            {
-              "keyword": "finance",
-              "count": 3
-            },
-            {
-              "keyword": "economics",
-              "count": 3
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\open-yale-courses-20b2b2a4.md",
-          "sourceId": "open-yale-courses",
-          "queueId": "open-yale-courses-20b2b2a4",
-          "score": 4,
-          "matchedKeywords": [
-            {
-              "keyword": "economics",
-              "count": 4
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-162d3d5c.md",
-          "sourceId": "acara-australian-curriculum",
-          "queueId": "acara-australian-curriculum-162d3d5c",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "economics",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "finance",
-              "count": 1
-            },
-            {
-              "keyword": "economics",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        }
-      ]
-    },
-    {
-      "domainId": "civil-engineering",
-      "docCount": 8,
-      "maxScore": 8,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
-          "score": 8,
-          "matchedKeywords": [
-            {
-              "keyword": "construction",
-              "count": 4
-            },
-            {
-              "keyword": "infrastructure",
-              "count": 4
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\south-africa-caps-3b0c83dc.md",
-          "sourceId": "south-africa-caps",
-          "queueId": "south-africa-caps-3b0c83dc",
-          "score": 3,
-          "matchedKeywords": [
-            {
-              "keyword": "infrastructure",
-              "count": 3
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "infrastructure",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\kenya-kicd-dff3e4fc.md",
-          "sourceId": "kenya-kicd",
-          "queueId": "kenya-kicd-dff3e4fc",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "infrastructure",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-42b5ebd8",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "construction",
-              "count": 1
-            }
-          ],
-          "matchSource": "text"
-        }
-      ]
-    },
-    {
-      "domainId": "cybersecurity",
-      "docCount": 8,
-      "maxScore": 4,
-      "topDocs": [
-        {
-          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-162d3d5c.md",
-          "sourceId": "acara-australian-curriculum",
-          "queueId": "acara-australian-curriculum-162d3d5c",
-          "score": 4,
-          "matchedKeywords": [
-            {
-              "keyword": "security",
-              "count": 4
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
-          "score": 2,
-          "matchedKeywords": [
-            {
-              "keyword": "security",
-              "count": 2
-            }
-          ],
-          "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-1047b774.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-1047b774",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-61cd4954.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-61cd4954",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-7471dc18.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-7471dc18",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "security",
+              "keyword": "pmp",
               "count": 1
             }
           ],
@@ -868,13 +768,13 @@
     },
     {
       "domainId": "ai-ml",
-      "docCount": 6,
+      "docCount": 9,
       "maxScore": 128,
       "topDocs": [
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
+          "sourceId": "",
+          "queueId": "",
           "score": 128,
           "matchedKeywords": [
             {
@@ -902,8 +802,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-fb29a030.md",
-          "sourceId": "acara-australian-curriculum",
-          "queueId": "acara-australian-curriculum-fb29a030",
+          "sourceId": "",
+          "queueId": "",
           "score": 19,
           "matchedKeywords": [
             {
@@ -919,9 +819,9 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
-          "score": 4,
+          "sourceId": "",
+          "queueId": "",
+          "score": 5,
           "matchedKeywords": [
             {
               "keyword": "artificial intelligence",
@@ -929,15 +829,15 @@
             },
             {
               "keyword": "ai",
-              "count": 1
+              "count": 2
             }
           ],
           "matchSource": "text"
         },
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-2d45d4fc.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-2d45d4fc",
+          "sourceId": "",
+          "queueId": "",
           "score": 4,
           "matchedKeywords": [
             {
@@ -952,13 +852,173 @@
           "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-7471dc18.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-7471dc18",
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-9ce64bc8.md",
+          "sourceId": "",
+          "queueId": "",
           "score": 1,
           "matchedKeywords": [
             {
-              "keyword": "artificial intelligence",
+              "keyword": "ai",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "civil-engineering",
+      "docCount": 8,
+      "maxScore": 8,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 8,
+          "matchedKeywords": [
+            {
+              "keyword": "construction",
+              "count": 4
+            },
+            {
+              "keyword": "infrastructure",
+              "count": 4
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\south-africa-caps-3b0c83dc.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 3,
+          "matchedKeywords": [
+            {
+              "keyword": "infrastructure",
+              "count": 3
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "infrastructure",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\kenya-kicd-dff3e4fc.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "infrastructure",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-42b5ebd8.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "construction",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "cybersecurity",
+      "docCount": 8,
+      "maxScore": 4,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-162d3d5c.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 4,
+          "matchedKeywords": [
+            {
+              "keyword": "security",
+              "count": 4
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "security",
+              "count": 2
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-1047b774.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "cybersecurity",
+              "count": 1
+            },
+            {
+              "keyword": "threat",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-61cd4954.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "cybersecurity",
+              "count": 1
+            },
+            {
+              "keyword": "security",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-80dd13dc.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "cybersecurity",
+              "count": 1
+            },
+            {
+              "keyword": "infosec",
               "count": 1
             }
           ],
@@ -968,13 +1028,13 @@
     },
     {
       "domainId": "medicine",
-      "docCount": 6,
+      "docCount": 7,
       "maxScore": 96,
       "topDocs": [
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-79b04c31",
+          "sourceId": "",
+          "queueId": "",
           "score": 96,
           "matchedKeywords": [
             {
@@ -1002,8 +1062,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-d3c4cf78.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-d3c4cf78",
+          "sourceId": "",
+          "queueId": "",
           "score": 6,
           "matchedKeywords": [
             {
@@ -1023,8 +1083,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
+          "sourceId": "",
+          "queueId": "",
           "score": 3,
           "matchedKeywords": [
             {
@@ -1040,8 +1100,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\open-yale-courses-216822ec.md",
-          "sourceId": "open-yale-courses",
-          "queueId": "open-yale-courses-216822ec",
+          "sourceId": "",
+          "queueId": "",
           "score": 3,
           "matchedKeywords": [
             {
@@ -1057,13 +1117,97 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-2d45d4fc.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-2d45d4fc",
+          "sourceId": "",
+          "queueId": "",
           "score": 2,
           "matchedKeywords": [
             {
               "keyword": "medicine",
               "count": 2
+            }
+          ],
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "hvac",
+      "docCount": 7,
+      "maxScore": 2,
+      "topDocs": [
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-1abc9f38.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "hvac",
+              "count": 1
+            },
+            {
+              "keyword": "heating",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-27791380.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "hvac",
+              "count": 1
+            },
+            {
+              "keyword": "ventilation",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-e28e0d8c.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "hvac",
+              "count": 2
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-fc206118.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "hvac",
+              "count": 1
+            },
+            {
+              "keyword": "refrigeration",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\koydo-curated-food-science-foundations-001.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 1,
+          "matchedKeywords": [
+            {
+              "keyword": "refrigeration",
+              "count": 1
             }
           ],
           "matchSource": "text"
@@ -1077,8 +1221,8 @@
       "topDocs": [
         {
           "path": "data\\knowledgebase\\raw\\acara-australian-curriculum-fb29a030.md",
-          "sourceId": "acara-australian-curriculum",
-          "queueId": "acara-australian-curriculum-fb29a030",
+          "sourceId": "",
+          "queueId": "",
           "score": 6,
           "matchedKeywords": [
             {
@@ -1090,139 +1234,210 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-04242a06.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-04242a06",
-          "score": 1,
+          "sourceId": "",
+          "queueId": "",
+          "score": 3,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "cpu",
+              "count": 2
+            },
+            {
+              "keyword": "gpu",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-31e517cc.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-31e517cc",
-          "score": 1,
+          "sourceId": "",
+          "queueId": "",
+          "score": 3,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "cpu",
+              "count": 2
+            },
+            {
+              "keyword": "gpu",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-7d5ba658.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-7d5ba658",
-          "score": 1,
+          "sourceId": "",
+          "queueId": "",
+          "score": 3,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "gpu",
+              "count": 2
+            },
+            {
+              "keyword": "cpu",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
           "path": "data\\knowledgebase\\raw\\mit-ocw-c4467078.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-c4467078",
-          "score": 1,
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "cpu",
+              "count": 1
+            },
+            {
+              "keyword": "gpu",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         }
       ]
     },
     {
-      "domainId": "nursing",
+      "domainId": "plumbing",
       "docCount": 6,
       "maxScore": 2,
       "topDocs": [
         {
-          "path": "data\\knowledgebase\\raw\\open-yale-courses-216822ec.md",
-          "sourceId": "open-yale-courses",
-          "queueId": "open-yale-courses-216822ec",
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+          "sourceId": "",
+          "queueId": "",
           "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "nursing",
+              "keyword": "sanitation",
               "count": 2
             }
           ],
           "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-061d5e04.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-061d5e04",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-foundations-001.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
-              "count": 1
+              "keyword": "drainage",
+              "count": 2
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-4aaddb14.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-4aaddb14",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\mit-ocw-175714c4.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
-              "count": 1
+              "keyword": "plumbing",
+              "count": 2
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-d0727764.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-d0727764",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\mit-ocw-8fc20048.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "plumbing",
+              "count": 1
+            },
+            {
+              "keyword": "drainage",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-e1d35248.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-e1d35248",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\mit-ocw-9113eba0.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "plumbing",
+              "count": 1
+            },
+            {
+              "keyword": "pipe",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         }
       ]
     },
     {
       "domainId": "meteorology",
       "docCount": 6,
-      "maxScore": 1,
+      "maxScore": 2,
       "topDocs": [
         {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-07cff25c.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "meteorology",
+              "count": 2
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-2cdf5706.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "meteorology",
+              "count": 1
+            },
+            {
+              "keyword": "weather",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\mit-ocw-480b3448.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "meteorology",
+              "count": 1
+            },
+            {
+              "keyword": "climate",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
           "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-ba1ca818.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-ba1ca818",
+          "sourceId": "",
+          "queueId": "",
           "score": 1,
           "matchedKeywords": [
             {
@@ -1234,8 +1449,8 @@
         },
         {
           "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-f73f5af2.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-f73f5af2",
+          "sourceId": "",
+          "queueId": "",
           "score": 1,
           "matchedKeywords": [
             {
@@ -1244,185 +1459,247 @@
             }
           ],
           "matchSource": "text"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-07cff25c.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-07cff25c",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-2cdf5706.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-2cdf5706",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
-        },
-        {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-480b3448.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-480b3448",
-          "score": 1,
-          "matchedKeywords": [
-            {
-              "keyword": "domain_tag",
-              "count": 1
-            }
-          ],
-          "matchSource": "metadata"
         }
       ]
     },
     {
-      "domainId": "plumbing",
-      "docCount": 5,
+      "domainId": "nursing",
+      "docCount": 6,
       "maxScore": 2,
       "topDocs": [
         {
-          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
-          "sourceId": "india-cbse-curriculum",
-          "queueId": "india-cbse-curriculum-496dbb96",
+          "path": "data\\knowledgebase\\raw\\mit-ocw-4aaddb14.md",
+          "sourceId": "",
+          "queueId": "",
           "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "sanitation",
+              "keyword": "nursing",
               "count": 2
             }
           ],
           "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-175714c4.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-175714c4",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\open-yale-courses-216822ec.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
-              "count": 1
+              "keyword": "nursing",
+              "count": 2
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-8fc20048.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-8fc20048",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\openlearn-4bc98340.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
-              "count": 1
+              "keyword": "nursing",
+              "count": 2
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-9113eba0.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-9113eba0",
+          "path": "data\\knowledgebase\\raw\\mit-ocw-061d5e04.md",
+          "sourceId": "",
+          "queueId": "",
           "score": 1,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "nursing",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-b2cf45b8.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-b2cf45b8",
+          "path": "data\\knowledgebase\\raw\\mit-ocw-d0727764.md",
+          "sourceId": "",
+          "queueId": "",
           "score": 1,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "nursing",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         }
       ]
     },
     {
-      "domainId": "hvac",
-      "docCount": 5,
-      "maxScore": 1,
+      "domainId": "coding",
+      "docCount": 3,
+      "maxScore": 58,
       "topDocs": [
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-1abc9f38.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-1abc9f38",
+          "path": "data\\knowledgebase\\raw\\mit-ocw-79b04c31.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 58,
+          "matchedKeywords": [
+            {
+              "keyword": "programming",
+              "count": 33
+            },
+            {
+              "keyword": "coding",
+              "count": 21
+            },
+            {
+              "keyword": "data structures",
+              "count": 4
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\south-africa-caps-92d0b6ec.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
+          "matchedKeywords": [
+            {
+              "keyword": "coding",
+              "count": 2
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\india-cbse-curriculum-496dbb96.md",
+          "sourceId": "",
+          "queueId": "",
           "score": 1,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "coding",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
-        },
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "food-science",
+      "docCount": 3,
+      "maxScore": 10,
+      "topDocs": [
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-27791380.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-27791380",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\koydo-curated-food-science-foundations-001.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 10,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "fermentation",
+              "count": 6
+            },
+            {
+              "keyword": "emulsion",
+              "count": 2
+            },
+            {
+              "keyword": "food science",
+              "count": 1
+            },
+            {
+              "keyword": "maillard reaction",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-e28e0d8c.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-e28e0d8c",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\koydo-curated-food-science-techniques-002.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 2,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "food science",
+              "count": 1
+            },
+            {
+              "keyword": "maillard reaction",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
+          "matchSource": "text"
         },
         {
-          "path": "data\\knowledgebase\\raw\\mit-ocw-fc206118.md",
-          "sourceId": "mit-ocw",
-          "queueId": "mit-ocw-fc206118",
+          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-foundations-001.md",
+          "sourceId": "",
+          "queueId": "",
           "score": 1,
           "matchedKeywords": [
             {
-              "keyword": "domain_tag",
+              "keyword": "emulsion",
               "count": 1
             }
           ],
-          "matchSource": "metadata"
-        },
+          "matchSource": "text"
+        }
+      ]
+    },
+    {
+      "domainId": "gardening",
+      "docCount": 2,
+      "maxScore": 21,
+      "topDocs": [
         {
-          "path": "data\\knowledgebase\\raw\\uk-national-curriculum-2ba141c5.md",
-          "sourceId": "uk-national-curriculum",
-          "queueId": "uk-national-curriculum-2ba141c5",
-          "score": 1,
+          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-foundations-001.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 21,
           "matchedKeywords": [
             {
-              "keyword": "heating",
+              "keyword": "soil",
+              "count": 15
+            },
+            {
+              "keyword": "gardening",
+              "count": 3
+            },
+            {
+              "keyword": "compost",
+              "count": 1
+            },
+            {
+              "keyword": "plant nutrition",
+              "count": 1
+            },
+            {
+              "keyword": "irrigation",
+              "count": 1
+            }
+          ],
+          "matchSource": "text"
+        },
+        {
+          "path": "data\\knowledgebase\\raw\\koydo-curated-gardening-irrigation-002.md",
+          "sourceId": "",
+          "queueId": "",
+          "score": 7,
+          "matchedKeywords": [
+            {
+              "keyword": "irrigation",
+              "count": 4
+            },
+            {
+              "keyword": "gardening",
+              "count": 2
+            },
+            {
+              "keyword": "soil",
               "count": 1
             }
           ],

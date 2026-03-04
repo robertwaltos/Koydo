@@ -1,6 +1,13 @@
 # Koydo — App Store Submission Steps (TestFlight & Production)
 
 **Purpose**: Step-by-step guide for TestFlight distribution and App Store submission.
+**Last verified**: 2026-03-04
+
+Official references:
+- Apple App Store Review Guidelines: https://developer.apple.com/app-store/review/guidelines/
+- Apple upload builds guide: https://developer.apple.com/help/app-store-connect/manage-builds/upload-builds/
+- Apple screenshot specifications (live): https://developer.apple.com/help/app-store-connect/reference/screenshot-specifications
+- Apple App Privacy details: https://developer.apple.com/help/app-store-connect/manage-app-privacy/overview-of-app-privacy-details
 
 ---
 
@@ -11,13 +18,14 @@
 - [ ] Apple Distribution certificate + App Store provisioning profile installed
 - [ ] App Store Connect access as **Admin** or **App Manager**
 - [ ] All store assets prepared (see `store-assets/app-store/`)
+- [ ] iOS deployment target confirmed from code: `ios/App/App.xcodeproj/project.pbxproj` = `15.0`
 
 ---
 
 ## Step 1: Prepare the Xcode Build
 
 ### Update Version and Build Number
-In Xcode → Koydo target → General:
+In Xcode -> Koydo target -> General:
 - **Version**: `1.0.0` (semantic version shown to users)
 - **Build**: `1` (increment for every upload; unique per version)
 
@@ -33,14 +41,14 @@ agvtool new-version -all 1
 - Capacitor adds icons automatically if `@capacitor/assets` is configured
 
 ### Verify Signing
-- Xcode → Signing & Capabilities tab
+- Xcode -> Signing & Capabilities tab
 - Team: Select your Apple Developer team
 - Signing Certificate: **Apple Distribution**
 - Provisioning Profile: **App Store Distribution** (auto-managed recommended)
 
 ### Archive Build
-```
-Xcode Menu → Product → Archive
+```text
+Xcode Menu -> Product -> Archive
 ```
 
 ---
@@ -48,51 +56,46 @@ Xcode Menu → Product → Archive
 ## Step 2: Upload to App Store Connect
 
 ### Via Xcode Organizer (recommended)
-1. Window → Organizer → Archives
+1. Window -> Organizer -> Archives
 2. Select the latest Koydo archive
 3. Click **Distribute App**
-4. Choose: **App Store Connect** → **Upload**
-5. Follow prompts → click **Upload**
+4. Choose: **App Store Connect** -> **Upload**
+5. Follow prompts -> click **Upload**
 
-### Via Command Line (CI/CD)
-```bash
-xcrun altool --upload-app \
-  --type ios \
-  --file "path/to/Koydo.ipa" \
-  --username "your@apple-id.com" \
-  --password "@keychain:AC_PASSWORD"
-```
+### Other supported upload paths
+- **Transporter app**
+- **`xcrun altool`** (Apple still documents this path for uploads)
 
-Or with `xcrun notarytool` for newer toolchains.
+Use `notarytool` only for notarization workflows, not for App Store iOS binary uploads.
 
 ---
 
 ## Step 3: TestFlight Internal Testing
 
 ### Wait for Processing
-- Processing takes 10–30 minutes after upload
-- Check App Store Connect → **TestFlight** tab
+- Processing usually takes 10–30 minutes after upload
+- Check App Store Connect -> **TestFlight** tab
 
 ### Add Internal Testers
-1. App Store Connect → TestFlight → **Internal Testing**
-2. Click **+** → Add testers by email
+1. App Store Connect -> TestFlight -> **Internal Testing**
+2. Click **+** -> Add testers by email
 3. Testers receive a TestFlight invite email
 4. They install the TestFlight app and accept the invite
 
 ### Test the Build
-- [ ] App launches without crash on iOS 14.0 (minimum supported)
-- [ ] App launches on latest iOS (17.x)
+- [ ] App launches without crash on iOS 15.0 (minimum supported)
+- [ ] App launches on latest iOS release
 - [ ] Login flow works end-to-end
 - [ ] Premium purchase flow (Sandbox)
 - [ ] Push notifications received
-- [ ] Universal Links open correctly
+- [ ] Universal links open correctly
 - [ ] Offline lesson download and playback
 
 ---
 
 ## Step 4: Create App Store Version in App Store Connect
 
-Navigate to: https://appstoreconnect.apple.com → **My Apps** → **Koydo**
+Navigate to: https://appstoreconnect.apple.com -> **My Apps** -> **Koydo**
 
 ### App Information (one-time setup)
 - [ ] **Name**: Koydo: Learn & Study Smarter
@@ -101,12 +104,12 @@ Navigate to: https://appstoreconnect.apple.com → **My Apps** → **Koydo**
 - [ ] **SKU**: KOYDO-001
 - [ ] **Primary Language**: English (U.S.)
 - [ ] **Category**: Education (Primary), Reference (Secondary)
-- [ ] **Content Rights**: Does not contain third-party content
-- [ ] **Age Rating**: 4+ (set via questionnaire)
+- [ ] **Content Rights**: accurately declared
+- [ ] **Age Rating**: complete Apple questionnaire from actual app behavior
 - [ ] **Privacy Policy URL**: https://koydo.app/privacy
 
 ### Version Information
-Navigate to: **iOS App** → **1.0** (create new version)
+Navigate to: **iOS App** -> **1.0** (create new version)
 
 - [ ] **What's New in This Version**: from `store-assets/app-store/en-US/whats_new.txt`
 - [ ] **Description**: from `store-assets/app-store/en-US/description.txt`
@@ -119,38 +122,35 @@ Navigate to: **iOS App** → **1.0** (create new version)
 
 ## Step 5: Upload Screenshots
 
-Navigate to: **Version** → **App Previews and Screenshots**
+Navigate to: **Version** -> **App Previews and Screenshots**
 
-### Required Device Sizes
-- [ ] **6.9" iPhone** (iPhone 16 Pro Max): 1320 × 2868 px — at least 3 screenshots
-- [ ] **iPad Pro 13"**: 2064 × 2752 px — at least 3 screenshots
+Do not rely on hardcoded dimensions in static docs. Apple updates required display classes over time.
 
-Upload using:
-- Drag & drop in App Store Connect, or
-- Fastlane Deliver (automated): `fastlane deliver`
+- [ ] Open Apple live screenshot spec page before upload
+- [ ] Provide required screenshot sets for all supported device families (iPhone and iPad)
+- [ ] Provide 3–10 screenshots per required size class
 
 ---
 
-## Step 6: App Privacy
+## Step 6: App Privacy (Nutrition Labels)
 
-Navigate to: **App Privacy** → **Get Started**
+Navigate to: **App Privacy** -> **Get Started**
 
-Complete per `store-assets/DATA-SAFETY.md` Section 2.
+Complete from current, production data flows only:
+- Canonical prep doc: `store-assets/DATA-SAFETY.md`
+- Google cross-check doc: `docs/google-play-data-safety.md`
 
-Key declarations:
-- Contact Info (Email) — Used to Track You: **No** → Linked to You: **Yes**
-- User ID — Linked to You: **Yes**
-- Purchase History — Linked to You: **Yes**
-- App Interactions — Linked to You: **Yes**
-- Crash Data — Not Linked to You: **Yes**
+Do not copy stale declarations from old submissions. Re-validate:
+- SDKs enabled in the release build
+- Feature flags enabled for the release build
+- Third-party processors used by release APIs
 
 ---
 
 ## Step 7: In-App Purchases
 
-Navigate to: **Features** → **In-App Purchases**
+Navigate to: **Features** -> **In-App Purchases**
 
-### Create Products (if not already done)
 Use `REVENUECAT-BLUEPRINT.md` as the source of truth for plan/package IDs and baseline pricing.
 
 For launch-ready paid plans, keep RevenueCat package identifiers exactly as:
@@ -165,7 +165,7 @@ Store product identifiers can use App Store naming conventions, but map each pro
 ### Subscription Group
 - Group Name: **Koydo Premium**
 - Add launch-ready paid products to the group
-- Configure upgrade/downgrade order to match your launch offer hierarchy (individual vs family tiers).
+- Configure upgrade/downgrade order to match your launch offer hierarchy (individual vs family tiers)
 
 ### Status Check
 - Both products must be **Ready to Submit** or **Approved** before the app can go live
@@ -178,16 +178,18 @@ Navigate to: **App Review Information**
 
 - Sign-in required: **Yes**
 - From `store-assets/app-store/en-US/review_notes.txt`:
-  - Test account email + password
+  - Non-expiring reviewer account credentials
   - IAP sandbox testing instructions
   - Offline mode testing steps
   - Notes about push notifications requiring real device
+
+If your app requires special setup, provide complete, reproducible steps for App Review.
 
 ---
 
 ## Step 9: Localizations (Spanish)
 
-Navigate to: **Version** → **English** dropdown → **Manage Localizations** → **Spanish (Spain)**
+Navigate to: **Version** -> **English** dropdown -> **Manage Localizations** -> **Spanish (Spain)**
 
 Add content from `store-assets/app-store/es-ES/`:
 - [ ] Name
@@ -202,33 +204,31 @@ Add content from `store-assets/app-store/es-ES/`:
 ## Step 10: Submit for Review
 
 1. Select the TestFlight build to submit
-2. Export Compliance: **No** (standard HTTPS networking only, no custom encryption)
+2. Export Compliance: answer based on actual encryption usage in this build
 3. Click **Submit for Review**
 
 ### Review Timeline
-- Standard: 1–3 business days
-- Expedited (for critical fixes): Request via Resolution Center
+- Standard: typically 1–3 business days
+- Expedited (critical fixes): request via Resolution Center
 
 ---
 
 ## Step 11: Post-Approval Actions
 
 - [ ] Set release date or release manually
-- [ ] Monitor crash reports in Xcode Organizer → Crashes
-- [ ] Monitor reviews in App Store Connect → Ratings and Reviews
+- [ ] Monitor crash reports in Xcode Organizer -> Crashes
+- [ ] Monitor reviews in App Store Connect -> Ratings and Reviews
 - [ ] Respond to early reviews
-- [ ] Update `V1-LAUNCH-COORDINATION.md` with approval date
-- [ ] Post launch announcement
+- [ ] Update launch coordination docs with approval date
 
 ---
 
-## Common Rejection Reasons & Fixes
+## Common Rejection Risks (and how to prevent)
 
-| Guideline | Common Issue | Fix |
-|-----------|-------------|-----|
-| 2.1 | App crashes on launch | Test on iOS 14.0 minimum |
-| 3.1.1 | IAP product not approved | Approve all IAP products first |
-| 5.1.1 | Privacy policy missing | Verify `https://koydo.app/privacy` is live |
-| 4.0 | Minimum functionality | Add value for free tier to justify standalone app |
-| 2.3.3 | Placeholder content | Replace all placeholder text/images |
-| 4.8 | Sign in with Apple not offered | Only required if other social login is offered |
+| Guideline | Common Issue | Prevention |
+|-----------|-------------|------------|
+| 2.1 | App crashes or broken flows | Validate on iOS 15.0 minimum + latest iOS before submit |
+| 3.1.1 | IAP not configured correctly | Ensure all required subscriptions are approved and mapped |
+| 5.1.1 | Privacy mismatch | Ensure App Privacy labels match production data behavior |
+| 4.8 | Missing Sign in with Apple parity | If third-party sign-in is offered, include Apple sign-in equivalently |
+| 2.3.3 | Metadata mismatch | Ensure screenshots, descriptions, and feature claims match the shipped app |

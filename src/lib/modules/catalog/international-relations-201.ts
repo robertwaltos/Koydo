@@ -47,19 +47,19 @@ export const InternationalRelations201Module: LearningModule = {
           "id": "international-relations-201-l01-c1",
           "kind": "concept",
           "title": "Scope and Shared Vocabulary",
-          "content": "This lesson defines the scope of International Relations, key terms, and how state and non-state actors and strategic bargaining interact in practical contexts."
+          "content": "In this lesson, we will explore the exciting world of International Relations. We will define what International Relations means and discuss important terms that help us understand this field. Additionally, we will learn about the different players involved, such as countries (which we call state actors) and organizations or groups that are not countries (known as non-state actors). We will also examine how these actors interact with each other and how they negotiate and make decisions in real-life situations.\nContext recap: In this lesson, we will explore the exciting world of International Relations. We will define what International Relations means and discuss important terms that help us understand this field. Additionally, we will learn about the different players involved, such as countries (which we call state actors) and organizations or groups that are not countries (known as non-state actors). We will also examine how these actors interact with each other and how they negotiate and make decisions in real-life situations."
         },
         {
           "id": "international-relations-201-l01-c2",
           "kind": "concept",
           "title": "Causal Structure and Constraints",
-          "content": "Learners map causal pathways and test hidden assumptions before selecting interventions."
+          "content": "In this part of the lesson, students will learn how to identify and map out the connections between different events and decisions in International Relations. This process helps us understand the reasons behind certain actions and the potential outcomes. Before making any decisions, learners will also practice questioning their own assumptions to ensure they are making informed choices. This critical thinking skill is essential for selecting the best actions to take in complex situations.\nContext recap: In this part of the lesson, students will learn how to identify and map out the connections between different events and decisions in International Relations. This process helps us understand the reasons behind certain actions and the potential outcomes. Before making any decisions, learners will also practice questioning their own assumptions to ensure they are making informed choices. This critical thinking skill is essential for selecting the best actions to take in complex situations."
         },
         {
           "id": "international-relations-201-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "Claims are tied to observable indicators, uncertainty notes, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of using evidence to support our claims in International Relations. This means that when we make statements or arguments, we should connect them to observable facts or indicators. Additionally, we will discuss the significance of acknowledging uncertainties and having checkpoints to review our progress. This approach ensures that our conclusions are based on solid evidence and helps us stay on track.\nContext recap: In this recap, we will emphasize the importance of using evidence to support our claims in International Relations. This means that when we make statements or arguments, we should connect them to observable facts or indicators. Additionally, we will discuss the significance of acknowledging uncertainties and having checkpoints to review our progress. This approach ensures that our conclusions are based on solid evidence and helps us stay on track."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const InternationalRelations201Module: LearningModule = {
           "id": "international-relations-201-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction and Test",
-          "content": "Learners design a workflow emphasizing method execution, workflow discipline, and evidence-based reasoning, then stress-test reliability under uncertainty."
+          "content": "In this interactive activity, learners will have the opportunity to design their own workflow. This means they will create a step-by-step plan that focuses on how to carry out methods effectively. They will also learn about the importance of following a structured approach and using evidence to support their reasoning. After creating their workflows, students will test their plans to see how reliable they are when faced with uncertainty. This hands-on experience will help them understand the practical aspects of International Relations.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This means they will create a step-by-step plan that focuses on how to carry out methods effectively. They will also learn about the importance of following a structured approach and using evidence to support their reasoning. After creating their workflows, students will test their plans to see how reliable they are when faced with uncertainty."
         },
         {
           "id": "international-relations-201-l02-c2",
           "kind": "recap",
           "title": "Control Gates and Readiness",
-          "content": "Readiness requires owner mapping, gate criteria, rollback conditions, and verification signals."
+          "content": "In this recap, we will discuss the concept of readiness in our workflows. This means that before we proceed with our plans, we need to ensure that we have mapped out who is responsible for each part of the process. We will also talk about the criteria for moving forward, what to do if we need to go back to a previous step, and how to verify that everything is on track. Understanding these elements is crucial for successful planning and execution.\nContext recap: In this recap, we will discuss the concept of readiness in our workflows. This means that before we proceed with our plans, we need to ensure that we have mapped out who is responsible for each part of the process. We will also talk about the criteria for moving forward, what to do if we need to go back to a previous step, and how to verify that everything is on track. Understanding these elements is crucial for successful planning and execution."
         }
       ],
       "interactiveActivities": [
@@ -322,19 +322,19 @@ export const InternationalRelations201Module: LearningModule = {
           "id": "international-relations-201-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "Case focus: a regional crisis requiring diplomacy, alliance management, and multilateral institution engagement. Learners map high-impact risks and competing constraints."
+          "content": "In this lesson, we will focus on a specific case that involves a regional crisis. This situation requires the use of diplomacy, which is the art of negotiating and managing relationships between countries. We will also explore how alliances (partnerships between countries) and multilateral institutions (organizations with multiple member countries) play a role in resolving conflicts. Learners will identify the major risks and challenges involved in this case, helping them understand the complexities of International Relations.\nContext recap: In this lesson, we will focus on a specific case that involves a regional crisis. This situation requires the use of diplomacy, which is the art of negotiating and managing relationships between countries. We will also explore how alliances (partnerships between countries) and multilateral institutions (organizations with multiple member countries) play a role in resolving conflicts. Learners will identify the major risks and challenges involved in this case, helping them understand the complexities of International Relations."
         },
         {
           "id": "international-relations-201-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Intervention options are scored across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool helps us evaluate different intervention options by scoring them based on several important factors. These factors include how effective each option is, how reliable it is, whether it is fair to all parties involved, and how feasible it is to implement. By using this matrix, learners can make informed decisions about which actions to take in complex situations.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool helps us evaluate different intervention options by scoring them based on several important factors. These factors include how effective each option is, how reliable it is, whether it is fair to all parties involved, and how feasible it is to implement. By using this matrix, learners can make informed decisions about which actions to take in complex situations."
         },
         {
           "id": "international-relations-201-l04-c3",
           "kind": "recap",
           "title": "Failure Learning and Recovery",
-          "content": "The lesson transforms failure patterns into safeguards, response playbooks, and monitoring updates."
+          "content": "In this recap, we will focus on the lessons we can learn from failures in International Relations. Instead of seeing failures as setbacks, we will explore how they can be transformed into valuable learning experiences. This includes creating safeguards to prevent similar issues in the future, developing response plans for when things go wrong, and establishing monitoring systems to keep track of progress. This proactive approach helps us improve our strategies over time.\nContext recap: In this recap, we will focus on the lessons we can learn from failures in International Relations. Instead of seeing failures as setbacks, we will explore how they can be transformed into valuable learning experiences. This includes creating safeguards to prevent similar issues in the future, developing response plans for when things go wrong, and establishing monitoring systems to keep track of progress. This proactive approach helps us improve our strategies over time."
         }
       ],
       "flashcards": [
@@ -373,13 +373,13 @@ export const InternationalRelations201Module: LearningModule = {
           "id": "international-relations-201-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure intervention scenarios, uncertainty parameters, and measurable success thresholds."
+          "content": "In this interactive practice, learners will set up their own simulation scenarios. This involves configuring different intervention options, determining the levels of uncertainty they might face, and establishing clear criteria for measuring success. By engaging in this activity, students will gain hands-on experience in planning and executing strategies in International Relations, helping them understand the complexities involved.\nContext recap: In this interactive practice, learners will set up their own simulation scenarios. This involves configuring different intervention options, determining the levels of uncertainty they might face, and establishing clear criteria for measuring success. By engaging in this activity, students will gain hands-on experience in planning and executing strategies in International Relations, helping them understand the complexities involved."
         },
         {
           "id": "international-relations-201-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "Post-run review evaluates outcomes, side effects, and alignment with governance constraints."
+          "content": "After completing the simulation, we will conduct a debriefing session. During this review, we will evaluate the outcomes of the simulation, discuss any unexpected side effects, and assess how well our actions aligned with established governance rules. This reflective process is essential for understanding what worked, what didn’t, and how we can improve in future simulations and real-world situations.\nContext recap: After completing the simulation, we will conduct a debriefing session. During this review, we will evaluate the outcomes of the simulation, discuss any unexpected side effects, and assess how well our actions aligned with established governance rules. This reflective process is essential for understanding what worked, what didn’t, and how we can improve in future simulations and real-world situations."
         }
       ],
       "interactiveActivities": [
@@ -579,19 +579,19 @@ export const InternationalRelations201Module: LearningModule = {
           "id": "international-relations-201-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "Learners examine how benefits and burdens are distributed across stakeholders and time horizons."
+          "content": "In this lesson, learners will explore the concept of stakeholder impact mapping. This involves examining how the benefits and burdens of decisions are distributed among different stakeholders, which can include individuals, groups, and organizations. We will also consider how these impacts may change over time. Understanding these dynamics is crucial for making fair and informed decisions in International Relations.\nContext recap: In this lesson, learners will explore the concept of stakeholder impact mapping. This involves examining how the benefits and burdens of decisions are distributed among different stakeholders, which can include individuals, groups, and organizations. We will also consider how these impacts may change over time. Understanding these dynamics is crucial for making fair and informed decisions in International Relations."
         },
         {
           "id": "international-relations-201-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability is framed through traceability, review rights, and remediation obligations."
+          "content": "In this section, we will discuss the importance of accountability in International Relations. This means ensuring that actions taken can be traced back to those responsible, and that there are rights to review decisions and obligations to correct any mistakes. By framing accountability in this way, we can promote transparency and trust among stakeholders, which is essential for effective governance.\nContext recap: In this section, we will discuss the importance of accountability in International Relations. This means ensuring that actions taken can be traced back to those responsible, and that there are rights to review decisions and obligations to correct any mistakes. By framing accountability in this way, we can promote transparency and trust among stakeholders, which is essential for effective governance."
         },
         {
           "id": "international-relations-201-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist links technical performance with policy, ethics, and stakeholder trust outcomes."
+          "content": "At the end of our lesson, we will use a helpful checklist that connects how well we perform our tasks with important ideas about policy, ethics, and the trust of those involved. This checklist will guide us in making responsible decisions that consider the impact on everyone affected.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects how well we perform our tasks with important ideas about policy, ethics, and the trust of those involved. This checklist will guide us in making responsible decisions that consider the impact on everyone affected."
         }
       ],
       "flashcards": [
@@ -630,13 +630,13 @@ export const InternationalRelations201Module: LearningModule = {
           "id": "international-relations-201-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft capstone objective, constraints, metrics, and governance gates in one decision charter."
+          "content": "In this activity, you will create a detailed plan for your capstone project. This plan will include your main goal, any limitations you might face, the ways you will measure success, and the steps needed to ensure everything is on track. This decision charter will help you stay organized and focused as you work on your project.\nContext recap: In this activity, you will create a detailed plan for your capstone project. This plan will include your main goal, any limitations you might face, the ways you will measure success, and the steps needed to ensure everything is on track. This decision charter will help you stay organized and focused as you work on your project."
         },
         {
           "id": "international-relations-201-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare evidence-backed defenses for technical, policy, and stakeholder critiques."
+          "content": "In this part of the lesson, you will gather and prepare strong evidence to support your ideas. You will create well-reasoned arguments that address any technical issues, policy concerns, and feedback from stakeholders. This preparation will help you confidently respond to critiques and strengthen your project.\nContext recap: In this part of the lesson, you will gather and prepare strong evidence to support your ideas. You will create well-reasoned arguments that address any technical issues, policy concerns, and feedback from stakeholders. This preparation will help you confidently respond to critiques and strengthen your project."
         }
       ],
       "interactiveActivities": [

@@ -183,7 +183,7 @@ export async function generateCurriculumModules(
   };
 
   // If no API key, return specific mock based on grade or world
-  if (!serverEnv.OPENAI_API_KEY) {
+  if (!(serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY)) {
      if (worldId) {
         return { modules: mockModulesByPath[worldId] ?? createDomainMockModules(worldId), source: "mock" };
      }
@@ -249,7 +249,7 @@ export async function generateCurriculumModules(
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${serverEnv.OPENAI_API_KEY}`,
+        Authorization: `Bearer ${serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

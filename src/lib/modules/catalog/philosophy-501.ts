@@ -47,19 +47,19 @@ export const Philosophy501Module: LearningModule = {
           "id": "philosophy-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Philosophy, with focus on humanities systems diagnostics and humanities operations and execution design."
+          "content": "In this lesson, we will explore the advanced boundaries of philosophy, particularly focusing on how we can analyze and improve systems within the humanities. We will discuss the importance of understanding the different elements that make up these systems and how they interact with one another. This foundational knowledge will help us design effective strategies for executing philosophical inquiries and operations.\nContext recap: In this lesson, we will explore the advanced boundaries of philosophy, particularly focusing on how we can analyze and improve systems within the humanities. We will discuss the importance of understanding the different elements that make up these systems and how they interact with one another. This foundational knowledge will help us design effective strategies for executing philosophical inquiries and operations."
         },
         {
           "id": "philosophy-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is crucial before planning any interventions, as it allows us to anticipate potential outcomes and make informed decisions.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is crucial before planning any interventions, as it allows us to anticipate potential outcomes and make informed decisions."
         },
         {
           "id": "philosophy-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds, which help us understand how certain we are about our claims, and set up review checkpoints to assess our progress. This structured approach ensures that our philosophical arguments are grounded in evidence.\nContext recap: In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds, which help us understand how certain we are about our claims, and set up review checkpoints to assess our progress. This structured approach ensures that our philosophical arguments are grounded in evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Philosophy501Module: LearningModule = {
           "id": "philosophy-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive session, learners will have the opportunity to design specialized workflows. These workflows will be put to the test in various challenging scenarios to see how they hold up under pressure. This practice is essential for understanding how to create robust methods that can withstand real-world challenges.\nContext recap: In this interactive session, learners will have the opportunity to design specialized workflows. These workflows will be put to the test in various challenging scenarios to see how they hold up under pressure. This practice is essential for understanding how to create robust methods that can withstand real-world challenges."
         },
         {
           "id": "philosophy-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows should include important elements such as checkpoints, which allow us to monitor progress, rollback criteria that help us revert to previous states if needed, and threshold-based escalation to ensure that we respond appropriately to different situations. These components are vital for maintaining control and ensuring effective governance.\nContext recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, which allow us to monitor progress, rollback criteria that help us revert to previous states if needed, and threshold-based escalation to ensure that we respond appropriately to different situations. These components are vital for maintaining control and ensuring effective governance."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Philosophy501Module: LearningModule = {
           "id": "philosophy-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in humanities systems diagnostics and humanities impact and tradeoff analysis."
+          "content": "In this lesson, we will frame cases that highlight the competing constraints we face in humanities systems diagnostics. We will analyze the impacts and trade-offs involved in our decisions, helping us understand the complexities of the situations we encounter. This analysis is crucial for making informed philosophical arguments.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints we face in humanities systems diagnostics. We will analyze the impacts and trade-offs involved in our decisions, helping us understand the complexities of the situations we encounter. This analysis is crucial for making informed philosophical arguments."
         },
         {
           "id": "philosophy-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options based on various important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and how to prioritize different factors when evaluating options.\nContext recap: During this practice session, learners will compare different options based on various important dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in decision-making and how to prioritize different factors when evaluating options."
         },
         {
           "id": "philosophy-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation we make should include clear assumptions, evidence to support our claims, risk controls to mitigate potential issues, and fallback plans in case things do not go as expected. This structured approach ensures that our decisions are well thought out and accountable.\nContext recap: In our recap, we will highlight that each recommendation we make should include clear assumptions, evidence to support our claims, risk controls to mitigate potential issues, and fallback plans in case things do not go as expected. This structured approach ensures that our decisions are well thought out and accountable."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Philosophy501Module: LearningModule = {
           "id": "philosophy-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to practice making decisions in real-time, considering both the effectiveness of their actions and the ethical implications of their choices.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to practice making decisions in real-time, considering both the effectiveness of their actions and the ethical implications of their choices.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to practice making decisions in real-time, considering both the effectiveness of their actions and the ethical implications of their choices. Context recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to practice making decisions in real-time, considering both the effectiveness of their actions and the ethical implications of their choices."
         },
         {
           "id": "philosophy-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that we can still track our decisions and understand the reasons behind them.\nContext recap: In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that we can still track our decisions and understand the reasons behind them."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Philosophy501Module: LearningModule = {
           "id": "philosophy-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits and burdens among different stakeholder groups. They will also explore the delayed effects of decisions, helping them understand how different groups are impacted over time. This analysis is crucial for ethical decision-making in philosophy.\nContext recap: In this lesson, learners will map out the distribution of benefits and burdens among different stakeholder groups. They will also explore the delayed effects of decisions, helping them understand how different groups are impacted over time. This analysis is crucial for ethical decision-making in philosophy."
         },
         {
           "id": "philosophy-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. Understanding these elements is vital for maintaining ethical standards in governance.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. Understanding these elements is vital for maintaining ethical standards in governance.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. Understanding these elements is vital for maintaining ethical standards in governance. Context recap: In this section, we will discuss the architecture of accountability in decision-making.\nWhy this matters: Accountability Architecture helps learners in Humanities connect ideas from Philosophy Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "philosophy-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and promotes resilience in leadership. This checklist will help us understand how to be responsible leaders in our communities.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and promotes resilience in leadership. This checklist will help us understand how to be responsible leaders in our communities."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Philosophy501Module: LearningModule = {
           "id": "philosophy-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and possible pathways for addressing any issues that may arise. This practice will help us prepare for presenting our ideas effectively.\nContext recap: In this activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and possible pathways for addressing any issues that may arise. This practice will help us prepare for presenting our ideas effectively."
         },
         {
           "id": "philosophy-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to questions and critiques that may come from experts in the field, as well as from stakeholders and governance representatives. This rehearsal will help build confidence and ensure that we are ready to engage in meaningful discussions about our ideas.\nContext recap: During this session, learners will practice their responses to questions and critiques that may come from experts in the field, as well as from stakeholders and governance representatives. This rehearsal will help build confidence and ensure that we are ready to engage in meaningful discussions about our ideas."
         }
       ],
       "interactiveActivities": [

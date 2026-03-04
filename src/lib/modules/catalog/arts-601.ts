@@ -47,19 +47,19 @@ export const Arts601Module: LearningModule = {
           "id": "arts-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Arts, with focus on arts systems diagnostics and arts operations and execution design."
+          "content": "In this lesson, we will dive deep into the idea of advanced scope boundaries in the arts. We will learn how to effectively diagnose arts systems, which means understanding how different parts of the arts work together. Additionally, we will focus on designing operations that improve how we carry out artistic projects. By concentrating on these important areas, you will gain valuable insights into creating structured frameworks that guide your artistic efforts and help ensure successful outcomes in your creative work.\nContext recap: In this lesson, we will dive deep into the idea of advanced scope boundaries in the arts. We will learn how to effectively diagnose arts systems, which means understanding how different parts of the arts work together. Additionally, we will focus on designing operations that improve how we carry out artistic projects. By concentrating on these important areas, you will gain valuable insights into creating structured frameworks that guide your artistic efforts and help ensure successful outcomes in your creative work."
         },
         {
           "id": "arts-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify uncertainty ranges and understand how various system components depend on each other. This foundational knowledge is essential for planning effective interventions in the arts, allowing learners to anticipate challenges and strategize accordingly.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify uncertainty ranges and understand how various system components depend on each other. This foundational knowledge is essential for planning effective interventions in the arts, allowing learners to anticipate challenges and strategize accordingly."
         },
         {
           "id": "arts-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims made in our artistic projects are backed by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints. By establishing these evidence thresholds, learners will be better equipped to validate their work and make informed decisions based on solid data.\nContext recap: It is important to ensure that all claims made in our artistic projects are backed by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints. By establishing these evidence thresholds, learners will be better equipped to validate their work and make informed decisions based on solid data."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Arts601Module: LearningModule = {
           "id": "arts-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to their artistic projects. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well their designs hold up under pressure. This hands-on experience is crucial for developing resilience and adaptability in artistic practices.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to their artistic projects. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well their designs hold up under pressure. This hands-on experience is crucial for developing resilience and adaptability in artistic practices."
         },
         {
           "id": "arts-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "This recap focuses on the architecture of control gates within workflows. Learners will understand how to integrate essential checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. By mastering these elements, they will create more robust and reliable workflows that can adapt to changing circumstances.\nContext recap: This recap focuses on the architecture of control gates within workflows. Learners will understand how to integrate essential checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. By mastering these elements, they will create more robust and reliable workflows that can adapt to changing circumstances."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Arts601Module: LearningModule = {
           "id": "arts-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in arts systems diagnostics and arts impact and tradeoff analysis."
+          "content": "In this lesson, we will frame case studies that highlight the competing constraints faced in arts systems diagnostics. Learners will analyze the impacts of various artistic decisions and the trade-offs involved. This understanding is vital for making informed choices that balance creativity with practical considerations.\nContext recap: In this lesson, we will frame case studies that highlight the competing constraints faced in arts systems diagnostics. Learners will analyze the impacts of various artistic decisions and the trade-offs involved. This understanding is vital for making informed choices that balance creativity with practical considerations."
         },
         {
           "id": "arts-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options available to them, evaluating each across multiple dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the complexities involved in decision-making within the arts and prepare them for real-world challenges.\nContext recap: During this practice session, learners will compare different options available to them, evaluating each across multiple dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the complexities involved in decision-making within the arts and prepare them for real-world challenges."
         },
         {
           "id": "arts-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will discuss the importance of structuring decision memos. Each recommendation made should clearly outline the underlying assumptions, the evidence supporting the decision, risk controls in place, and fallback plans. This structured approach ensures that decisions are transparent and accountable.\nContext recap: In this recap, we will discuss the importance of structuring decision memos. Each recommendation made should clearly outline the underlying assumptions, the evidence supporting the decision, risk controls in place, and fallback plans. This structured approach ensures that decisions are transparent and accountable."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Arts601Module: LearningModule = {
           "id": "arts-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn to balance performance with governance constraints, ensuring that their artistic projects remain compliant while achieving their intended outcomes. This experience will enhance their ability to navigate complex environments.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn to balance performance with governance constraints, ensuring that their artistic projects remain compliant while achieving their intended outcomes. This experience will enhance their ability to navigate complex environments."
         },
         {
           "id": "arts-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "This recap emphasizes the design of adaptive responses in artistic projects. Effective responses should be able to update control gates as needed while maintaining traceability and accountability. This skill is essential for ensuring that changes can be tracked and justified throughout the creative process.\nContext recap: This recap emphasizes the design of adaptive responses in artistic projects. Effective responses should be able to update control gates as needed while maintaining traceability and accountability. This skill is essential for ensuring that changes can be tracked and justified throughout the creative process."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Arts601Module: LearningModule = {
           "id": "arts-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and that the impacts of artistic decisions are equitably shared.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and that the impacts of artistic decisions are equitably shared."
         },
         {
           "id": "arts-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "This section focuses on the architecture of accountability within decision-making processes. Learners will explore how to integrate elements such as decision traceability, review rights, and obligations for remediation. This knowledge is vital for fostering trust and responsibility in artistic governance.\nContext recap: This section focuses on the architecture of accountability within decision-making processes. Learners will explore how to integrate elements such as decision traceability, review rights, and obligations for remediation. This knowledge is vital for fostering trust and responsibility in artistic governance."
         },
         {
           "id": "arts-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our resilience as leaders in the arts. This checklist will help us reflect on our responsibilities and the impact of our decisions.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our resilience as leaders in the arts. This checklist will help us reflect on our responsibilities and the impact of our decisions."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Arts601Module: LearningModule = {
           "id": "arts-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work together to create a detailed brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible ways to address any challenges that may arise. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this activity, you will work together to create a detailed brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible ways to address any challenges that may arise. This exercise will help you practice organizing your thoughts and presenting them clearly."
         },
         {
           "id": "arts-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will have the opportunity to practice your responses to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you feel more confident and ready for real discussions.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you feel more confident and ready for real discussions."
         }
       ],
       "interactiveActivities": [

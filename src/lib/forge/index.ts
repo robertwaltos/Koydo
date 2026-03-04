@@ -79,9 +79,13 @@ export const FORGE_CAPABILITIES: ForgeCapability[] = [
     id: "tts.lesson-narration",
     name: "Lesson narration audio (pre-generated)",
     outputType: "audio",
-    module: "forge/tts/voice-engine.ts",
-    exports: ["getVoiceUrl", "requestDynamicVoice"],
+    module: "lib/media/tts-service.ts",
+    exports: ["generateTTS"],
     providers: [
+      { name: "OpenAI TTS-1", type: "cloud", active: true },
+      { name: "ElevenLabs", type: "cloud", active: true },
+      { name: "Kokoro-82M (local)", type: "local", active: true },
+      { name: "XTTS v2 (local)", type: "local", active: true },
       { name: "Pre-generated (Supabase)", type: "pre-seeded", active: true },
     ],
     cached: true,
@@ -89,6 +93,7 @@ export const FORGE_CAPABILITIES: ForgeCapability[] = [
     freeTierAllowed: true,
     seedScripts: ["scripts/process-audio-jobs.mjs", "scripts/queue-audio-jobs.mjs"],
     status: "production",
+    notes: "voice-engine.ts removed (dead code); TTS now routes through tts-service.ts with local Kokoro/XTTS provider via services/local-tts/",
   },
 
   /* ── Audiobook Pipeline ───────────────────────────────────────────────── */
@@ -406,6 +411,78 @@ export const FORGE_CAPABILITIES: ForgeCapability[] = [
     cached: false,
     freeTierAllowed: false,
     freeTierFallback: "Not user-facing. Internal engine only.",
+    status: "ready",
+  },
+
+  /* ── Multilingual Media ─────────────────────────────────────────────── */
+
+  {
+    id: "media.multilingual",
+    name: "Multilingual media cache-on-demand resolver",
+    outputType: "audio" as const,
+    module: "forge/media/multilingual-media.ts",
+    exports: [
+      "resolveLocalizedMedia", "resolveMediaLocale",
+      "isLaunchLocale", "getTtsParams", "getLocalTtsEngine",
+      "LOCALE_VOICE_MAP", "HEYGEN_LANGUAGE_MAP",
+    ],
+    providers: [
+      { name: "Cache-on-demand (Supabase Storage)", type: "pre-seeded", active: true },
+    ],
+    cached: true,
+    cachePattern: "{locale}/{voiceId}/{hash}.mp3 | heygen/{module}/{lesson}/{locale}.mp4",
+    freeTierAllowed: true,
+    freeTierFallback: "Pre-generated cached media for launch languages only",
+    apiRoutes: ["GET /api/media/resolve?locale=xx"],
+    status: "ready",
+  },
+
+  /* ── StoryForge Cinema (E-16, foundation ready) ────────────────────── */
+
+  {
+    id: "storyforge.scene-decomp",
+    name: "StoryForge scene decomposition (LLM)",
+    outputType: "text" as const,
+    module: "forge/storyforge/scene-decomp.ts",
+    exports: ["decomposeBookToScenes", "SceneManifest"],
+    providers: [
+      { name: "Ollama local LLM", type: "local", active: true },
+      { name: "OpenAI GPT-4o-mini", type: "cloud-paid", active: true },
+    ],
+    cached: true,
+    cachePattern: "storyforge/{bookSlug}/scenes.json",
+    freeTierAllowed: true,
+    status: "ready",
+  },
+
+  {
+    id: "storyforge.music-score",
+    name: "StoryForge ambient music scoring",
+    outputType: "audio" as const,
+    module: "forge/storyforge/music-score.ts",
+    exports: ["generateAmbientScore", "SceneMoodTag"],
+    providers: [
+      { name: "Music AI (planned)", type: "cloud-paid", active: false },
+    ],
+    cached: true,
+    cachePattern: "storyforge/{bookSlug}/music/{sceneIndex}.mp3",
+    freeTierAllowed: true,
+    status: "partial",
+  },
+
+  {
+    id: "storyforge.interactive-layer",
+    name: "StoryForge interactive layer (quizzes/hotspots)",
+    outputType: "text" as const,
+    module: "forge/storyforge/interactive-layer.ts",
+    exports: ["generateInteractiveLayer", "InteractiveOverlay"],
+    providers: [
+      { name: "Ollama local LLM", type: "local", active: true },
+      { name: "OpenAI GPT-4o-mini", type: "cloud-paid", active: true },
+    ],
+    cached: true,
+    cachePattern: "storyforge/{bookSlug}/interactive/{sceneIndex}.json",
+    freeTierAllowed: true,
     status: "ready",
   },
 ];

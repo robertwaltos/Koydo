@@ -47,19 +47,19 @@ export const Robotics601Module: LearningModule = {
           "id": "robotics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Robotics, with focus on robotics systems diagnostics and robotics operations and execution design."
+          "content": "In this lesson, we will dive into the advanced concepts of scope boundaries in the field of robotics. We will learn how to effectively diagnose robotics systems, which means figuring out what is working well and what might need improvement. Additionally, we will focus on designing operations that ensure our robotic systems can execute their tasks successfully. Understanding these boundaries is essential for creating efficient and reliable robots that can perform their jobs accurately and safely. By mastering these skills, you will be better equipped to contribute to the exciting world of robotics.\nContext recap: In this lesson, we will dive into the advanced concepts of scope boundaries in the field of robotics. We will learn how to effectively diagnose robotics systems, which means figuring out what is working well and what might need improvement. Additionally, we will focus on designing operations that ensure our robotic systems can execute their tasks successfully. Understanding these boundaries is essential for creating efficient and reliable robots that can perform their jobs accurately and safely."
         },
         {
           "id": "robotics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions in robotics. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is essential for planning effective interventions in robotics projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions in robotics. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is essential for planning effective interventions in robotics projects."
         },
         {
           "id": "robotics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize the importance of ensuring that all claims made during our robotics projects are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. This process helps us maintain accuracy and reliability in our work.\nContext recap: In our recap, we will emphasize the importance of ensuring that all claims made during our robotics projects are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. This process helps us maintain accuracy and reliability in our work."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Robotics601Module: LearningModule = {
           "id": "robotics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will design specialized workflows tailored for specific robotics tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding the robustness of their designs.\nContext recap: In this interactive practice, learners will design specialized workflows tailored for specific robotics tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding the robustness of their designs."
         },
         {
           "id": "robotics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows should incorporate various checkpoints, rollback criteria, and escalation thresholds. This architecture ensures that if something goes wrong, there are clear guidelines on how to respond and recover, maintaining the integrity of the robotics system.\nContext recap: In our recap, we will discuss how workflows should incorporate various checkpoints, rollback criteria, and escalation thresholds. This architecture ensures that if something goes wrong, there are clear guidelines on how to respond and recover, maintaining the integrity of the robotics system.\nContext recap: In our recap, we will discuss how workflows should incorporate various checkpoints, rollback criteria, and escalation thresholds. This architecture ensures that if something goes wrong, there are clear guidelines on how to respond and recover, maintaining the integrity of the robotics system. Context recap: In our recap, we will discuss how workflows should incorporate various checkpoints, rollback criteria, and escalation thresholds. This architecture ensures that if something goes wrong, there are clear guidelines on how to respond and recover, maintaining the integrity of the robotics system."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Robotics601Module: LearningModule = {
           "id": "robotics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in robotics systems diagnostics and robotics impact and tradeoff analysis."
+          "content": "In this lesson, we will frame cases that highlight the competing constraints faced in robotics systems diagnostics. We will analyze the impacts and trade-offs involved in different robotics decisions, helping learners understand the complexities of balancing various factors in robotics projects.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints faced in robotics systems diagnostics. We will analyze the impacts and trade-offs involved in different robotics decisions, helping learners understand the complexities of balancing various factors in robotics projects.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints faced in robotics systems diagnostics. We will analyze the impacts and trade-offs involved in different robotics decisions, helping learners understand the complexities of balancing various factors in robotics projects. Context recap: In this lesson, we will frame cases that highlight the competing constraints faced in robotics systems diagnostics. We will analyze the impacts and trade-offs involved in different robotics decisions, helping learners understand the complexities of balancing various factors in robotics projects."
         },
         {
           "id": "robotics-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them by considering multiple dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that take into account the broader implications of their choices.\nContext recap: In this practice session, learners will compare different options available to them by considering multiple dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that take into account the broader implications of their choices.\nContext recap: In this practice session, learners will compare different options available to them by considering multiple dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that take into account the broader implications of their choices. Context recap: In this practice session, learners will compare different options available to them by considering multiple dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that take into account the broader implications of their choices."
         },
         {
           "id": "robotics-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made during our robotics projects. This structured approach ensures that decisions are well-supported and that there are strategies in place to address potential challenges.\nContext recap: In our recap, we will highlight the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made during our robotics projects. This structured approach ensures that decisions are well-supported and that there are strategies in place to address potential challenges."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Robotics601Module: LearningModule = {
           "id": "robotics-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "During this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will teach them how to manage competing priorities effectively in real-time situations, a crucial skill in robotics.\nContext recap: During this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will teach them how to manage competing priorities effectively in real-time situations, a crucial skill in robotics.\nWhy this matters: Live Scenario Controls helps learners in Robotics connect ideas from Robotics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "robotics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as changes are made, it is essential to keep a clear record of decisions and actions taken, ensuring transparency in the process.\nContext recap: In our recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as changes are made, it is essential to keep a clear record of decisions and actions taken, ensuring transparency in the process."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Robotics601Module: LearningModule = {
           "id": "robotics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is crucial for ensuring that robotics projects are equitable and considerate of all parties involved.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is crucial for ensuring that robotics projects are equitable and considerate of all parties involved.\nWhy this matters: Stakeholder Impact Distribution helps learners in Robotics connect ideas from Robotics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "robotics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in robotics. This includes integrating decision traceability, review rights, and remediation obligations into our processes. By doing so, we ensure that all decisions are accountable and that there are mechanisms in place for addressing any issues that arise.\nContext recap: In this section, we will explore the architecture of accountability in robotics. This includes integrating decision traceability, review rights, and remediation obligations into our processes. By doing so, we ensure that all decisions are accountable and that there are mechanisms in place for addressing any issues that arise."
         },
         {
           "id": "robotics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and promotes resilience in our robotics projects. This checklist is a great tool for responsible leadership in robotics.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and promotes resilience in our robotics projects. This checklist is a great tool for responsible leadership in robotics.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and promotes resilience in our robotics projects. This checklist is a great tool for responsible leadership in robotics. Context recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and promotes resilience in our robotics projects. This checklist is a great tool for responsible leadership in robotics."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Robotics601Module: LearningModule = {
           "id": "robotics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a detailed brief. This brief will include their claims, supporting evidence, the limits of their uncertainty, and suggested pathways for remediation. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a detailed brief. This brief will include their claims, supporting evidence, the limits of their uncertainty, and suggested pathways for remediation. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a detailed brief. This brief will include their claims, supporting evidence, the limits of their uncertainty, and suggested pathways for remediation. This exercise helps develop critical thinking and communication skills. Context recap: In this activity, learners will work together to create a detailed brief.\nWhy this matters: Defense Brief Assembly helps learners in Robotics connect ideas from Robotics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "robotics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is essential for building confidence and improving their presentation skills.\nContext recap: During this session, learners will practice their responses to various critiques. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is essential for building confidence and improving their presentation skills.\nContext recap: During this session, learners will practice their responses to various critiques. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal is essential for building confidence and improving their presentation skills. Context recap: During this session, learners will practice their responses to various critiques.\nWhy this matters: Expert Panel Rehearsal helps learners in Robotics connect ideas from Robotics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [

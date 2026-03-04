@@ -1,66 +1,107 @@
 import { NextRequest, NextResponse } from "next/server";
+import { z } from "zod";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
+import { serverEnv } from "@/lib/config/env";
+import { buildCompanionSystemPrompt, type PersonalityContext } from "@/lib/greeter/companion-personality";
+import type { CompanionMood } from "@/lib/greeter/companion-mood";
 
 export type ChatMessage = {
   role: "user" | "assistant";
   content: string;
 };
 
-interface ChatRequestBody {
-  message: string;
-  companionGender: "female" | "male";
-  history?: ChatMessage[];
-}
-
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY ?? "";
+const OPENAI_API_KEY = serverEnv.OPENAI_API_KEY ?? "";
 const MODEL = "gpt-4o-mini";
 const MAX_TOKENS = 200;
+const MAX_HISTORY_MESSAGES = 8;
 
-const COMPANION_SYSTEM_PROMPT = (gender: "female" | "male") => {
-  const name = gender === "female" ? "Aria" : "Kai";
-  const personality =
-    gender === "female"
-      ? "You are Aria, a warm, nurturing, and endlessly patient learning companion on Koydo. You celebrate every small win with genuine excitement. You use phrases like 'Great job!', 'You're so smart!', 'I believe in you!', and 'Let's figure this out together!' You are like a kind older sister or favorite teacher."
-      : "You are Kai, an energetic, enthusiastic learning companion on Koydo who makes everything feel like an adventure. You use phrases like 'Awesome!', 'Let's GO!', 'You totally got this!', 'Challenge accepted!', and 'That was EPIC!' You are like a cool older brother or a coach who gets excited about every topic.";
+const chatMessageSchema = z.object({
+  role: z.enum(["user", "assistant"]),
+  content: z.string().trim().min(1).max(1000),
+});
 
-  return `${personality}
+const chatRequestSchema = z.object({
+  message: z.string().trim().min(1).max(1000),
+  companionGender: z.enum(["female", "male"]),
+  history: z.array(chatMessageSchema).max(MAX_HISTORY_MESSAGES).optional().default([]),
+  // Personality tuning (optional — clients send if available)
+  ageRange: z.string().max(10).optional(),
+  mood: z.string().max(30).optional(),
+  locale: z.string().max(10).optional(),
+  streak: z.coerce.number().int().min(0).max(9999).optional(),
+  displayName: z.string().max(100).optional(),
+});
 
-IMPORTANT RULES:
-1. You ONLY discuss topics covered in the Koydo educational curriculum: math, science, language arts, history, geography, coding, arts, music, and life skills.
-2. If asked about anything outside Koydo curriculum, gently redirect: "I can only help with Koydo learning topics! Want to explore [relevant subject]?"
-3. Keep responses SHORT (2-3 sentences max). This is a quick helper chat, not a lecture.
-4. Never discuss politics, religion, adult content, violence, or personal information.
-5. Always be encouraging and age-appropriate.
-6. Your name is ${name} and you work for Koydo.`;
-};
+function rateLimitExceededResponse(retryAfterSeconds: number) {
+  return NextResponse.json(
+    { error: "Too many companion chat requests. Please retry shortly." },
+    {
+      status: 429,
+      headers: {
+        "Retry-After": String(retryAfterSeconds),
+      },
+    },
+  );
+}
 
 export async function POST(req: NextRequest) {
+  const rateLimit = await enforceIpRateLimit(req, "api:companion:chat:post", {
+    max: 45,
+    windowMs: 60_000,
+  });
+  if (!rateLimit.allowed) {
+    return rateLimitExceededResponse(rateLimit.retryAfterSeconds);
+  }
+
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+  if (authError || !user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
   if (!OPENAI_API_KEY) {
     return NextResponse.json({ reply: "Chat is temporarily unavailable." }, { status: 503 });
   }
 
-  let body: ChatRequestBody;
-  try {
-    body = await req.json() as ChatRequestBody;
-  } catch {
-    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+  const contentType = req.headers.get("content-type")?.toLowerCase() ?? "";
+  if (contentType && !contentType.includes("application/json")) {
+    return NextResponse.json({ error: "Unsupported content type." }, { status: 415 });
   }
 
-  const { message, companionGender, history = [] } = body;
-
-  if (!message?.trim()) {
-    return NextResponse.json({ error: "message is required" }, { status: 400 });
+  const rawBody = await req.json().catch(() => null);
+  const parsed = chatRequestSchema.safeParse(rawBody);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { error: "Invalid payload", details: parsed.error.flatten() },
+      { status: 400 },
+    );
   }
 
-  if (!companionGender || !["female", "male"].includes(companionGender)) {
-    return NextResponse.json({ error: "companionGender must be female or male" }, { status: 400 });
-  }
+  const { message, companionGender, history, ageRange, mood, locale, streak, displayName } = parsed.data;
 
-  // Build OpenAI messages array
+  // Build personality-tuned system prompt
+  const personalityCtx: PersonalityContext = {
+    gender: companionGender,
+    ageRange,
+    mood: mood as CompanionMood | undefined,
+    locale,
+    streak,
+    displayName,
+  };
+  const systemPrompt = buildCompanionSystemPrompt(personalityCtx);
+
   const messages: Array<{ role: string; content: string }> = [
-    { role: "system", content: COMPANION_SYSTEM_PROMPT(companionGender) },
-    // Include up to last 8 history messages
-    ...history.slice(-8).map((m) => ({ role: m.role, content: m.content })),
-    { role: "user", content: message.slice(0, 1000) },
+    { role: "system", content: systemPrompt },
+    ...history.slice(-MAX_HISTORY_MESSAGES).map((entry) => ({
+      role: entry.role,
+      content: entry.content,
+    })),
+    { role: "user", content: message },
   ];
 
   try {
@@ -80,7 +121,10 @@ export async function POST(req: NextRequest) {
 
     if (!res.ok) {
       const err = await res.text();
-      console.error("[companion/chat] OpenAI error:", err);
+      console.error("[companion/chat] OpenAI error.", {
+        status: res.status,
+        body: err.slice(0, 400),
+      });
       return NextResponse.json(
         { reply: "I'm having a little trouble right now. Try again in a moment! 😊" },
         { status: 200 },
@@ -94,7 +138,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ reply });
   } catch (err) {
-    console.error("[companion/chat] Fetch failed:", err);
+    console.error("[companion/chat] Fetch failed.", toSafeErrorRecord(err));
     return NextResponse.json(
       { reply: "Oops! Something went wrong. Try again! 😊" },
       { status: 200 },

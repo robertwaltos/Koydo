@@ -46,19 +46,19 @@ export const SustainabilityPolicy401Module: LearningModule = {
           "id": "sustainability-policy-401-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "This lesson defines operational language, scope boundaries, and how policy instrument design and transition economics connect in real systems."
+          "content": "In this lesson, we will explore important concepts related to sustainability policy. We will define what operational language means, understand the boundaries of our scope, and learn how the design of policy instruments connects with the economics of transitioning to sustainable practices. This understanding is crucial for applying these ideas in real-world systems.\nContext recap: In this lesson, we will explore important concepts related to sustainability policy. We will define what operational language means, understand the boundaries of our scope, and learn how the design of policy instruments connects with the economics of transitioning to sustainable practices. This understanding is crucial for applying these ideas in real-world systems."
         },
         {
           "id": "sustainability-policy-401-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning Under Constraints",
-          "content": "Learners model cause-effect pathways and identify failure-prone assumptions before selecting interventions."
+          "content": "In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes. Additionally, we will identify assumptions that might lead to failure in our plans before we choose which interventions to implement. This critical thinking helps us make better decisions.\nContext recap: In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes. Additionally, we will identify assumptions that might lead to failure in our plans before we choose which interventions to implement. This critical thinking helps us make better decisions.\nContext recap: In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes. Additionally, we will identify assumptions that might lead to failure in our plans before we choose which interventions to implement. This critical thinking helps us make better decisions.\nWhy this matters: Causal Reasoning Under Constraints helps learners in Policy Studies connect ideas from Sustainability Policy Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sustainability-policy-401-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All claims in this module must map to observable indicators, uncertainty bounds, and review checkpoints."
+          "content": "Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. We will also consider the bounds of uncertainty and establish review checkpoints to ensure our findings are reliable and valid.\nContext recap: Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. We will also consider the bounds of uncertainty and establish review checkpoints to ensure our findings are reliable and valid."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const SustainabilityPolicy401Module: LearningModule = {
           "id": "sustainability-policy-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners design a workflow emphasizing strategic leadership, policy and operations alignment, and capstone defense and review, then test resilience against uncertainty."
+          "content": "In this engaging interactive lab, students will have the opportunity to create a detailed workflow that highlights the significance of strategic leadership in sustainability policy. This process involves ensuring that policies are effectively aligned with operational practices, which is crucial for successful implementation. Additionally, learners will prepare for their capstone defense and review, which is an important part of their educational journey. Once their workflows are complete, students will put their designs to the test by evaluating how well they can withstand uncertainty. This exercise not only enhances their understanding of policy-making but also equips them with essential skills needed to navigate real-world challenges in the field of sustainability.\nContext recap: In this engaging interactive lab, students will have the opportunity to create a detailed workflow that highlights the significance of strategic leadership in sustainability policy. This process involves ensuring that policies are effectively aligned with operational practices, which is crucial for successful implementation. Additionally, learners will prepare for their capstone defense and review, which is an important part of their educational journey. Once their workflows are complete, students will put their designs to the test by evaluating how well they can withstand uncertainty."
         },
         {
           "id": "sustainability-policy-401-l02-c2",
           "kind": "recap",
           "title": "Readiness and Control Gates",
-          "content": "Operational readiness requires owner mapping, control gates, and post-decision verification hooks."
+          "content": "To ensure operational readiness, it is crucial to map out who is responsible for each part of the process. This involves setting up control gates, which are checkpoints that help us monitor progress. Additionally, we will establish verification hooks that allow us to check our decisions after they have been made, ensuring accountability.\nContext recap: To ensure operational readiness, it is crucial to map out who is responsible for each part of the process. This involves setting up control gates, which are checkpoints that help us monitor progress. Additionally, we will establish verification hooks that allow us to check our decisions after they have been made, ensuring accountability."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const SustainabilityPolicy401Module: LearningModule = {
           "id": "sustainability-policy-401-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a city decarbonization roadmap requiring tradeoffs between affordability, reliability, and environmental targets. Learners map decision stakes and identify non-obvious risks."
+          "content": "In this engaging case study, we will explore a city's roadmap for decarbonization, which is a plan aimed at reducing carbon emissions to combat climate change. This project requires us to make important trade-offs between three key factors: affordability, which means keeping costs reasonable for residents; reliability, ensuring that energy sources are dependable; and environmental targets, which focus on protecting our planet. As learners, you will actively map out the stakes involved in these critical decisions and identify potential risks that may not be immediately obvious. Understanding these elements is essential for effective strategic planning and helps us think critically about the future of our communities.\nContext recap: In this engaging case study, we will explore a city's roadmap for decarbonization, which is a plan aimed at reducing carbon emissions to combat climate change. This project requires us to make important trade-offs between three key factors: affordability, which means keeping costs reasonable for residents; reliability, ensuring that energy sources are dependable; and environmental targets, which focus on protecting our planet. As learners, you will actively map out the stakes involved in these critical decisions and identify potential risks that may not be immediately obvious. Understanding these elements is essential for effective strategic planning and helps us think critically about the future of our communities.\nContext recap: In this engaging case study, we will explore a city's roadmap for decarbonization, which is a plan aimed at reducing carbon emissions to combat climate change. This project requires us to make important trade-offs between three key factors: affordability, which means keeping costs reasonable for residents; reliability, ensuring that energy sources are dependable; and environmental targets, which focus on protecting our planet. As learners, you will actively map out the stakes involved in these critical decisions and identify potential risks that may not be immediately obvious. Understanding these elements is essential for effective strategic planning and helps us think critically about the future of our communities.\nWhy this matters: Case Context and Stakes helps learners in Policy Studies connect ideas from Sustainability Policy Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sustainability-policy-401-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix Construction",
-          "content": "Interventions are compared across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will construct a tradeoff matrix to compare different interventions. We will evaluate them based on their effectiveness, reliability, equity, and how feasible they are to implement. This comparison will help us understand the strengths and weaknesses of each option.\nContext recap: In this section, we will construct a tradeoff matrix to compare different interventions. We will evaluate them based on their effectiveness, reliability, equity, and how feasible they are to implement. This comparison will help us understand the strengths and weaknesses of each option.\nContext recap: In this section, we will construct a tradeoff matrix to compare different interventions. We will evaluate them based on their effectiveness, reliability, equity, and how feasible they are to implement. This comparison will help us understand the strengths and weaknesses of each option. Context recap: In this section, we will construct a tradeoff matrix to compare different interventions.\nWhy this matters: Tradeoff Matrix Construction helps learners in Policy Studies connect ideas from Sustainability Policy Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sustainability-policy-401-l04-c3",
           "kind": "recap",
           "title": "Failure Lessons and Recovery",
-          "content": "The lesson converts failure signatures into safeguards, response playbooks, and monitoring updates."
+          "content": "This lesson will teach us how to learn from failures. We will convert the signs of failure into safeguards that can help us avoid similar mistakes in the future. Additionally, we will create response playbooks and establish monitoring updates to ensure we are prepared to adapt and improve our strategies.\nContext recap: This lesson will teach us how to learn from failures. We will convert the signs of failure into safeguards that can help us avoid similar mistakes in the future. Additionally, we will create response playbooks and establish monitoring updates to ensure we are prepared to adapt and improve our strategies."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const SustainabilityPolicy401Module: LearningModule = {
           "id": "sustainability-policy-401-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation Setup",
-          "content": "Learners configure interventions, define uncertainty parameters, and set measurable success thresholds."
+          "content": "In this practice session, learners will set up scenarios for simulation. This involves configuring various interventions, defining parameters of uncertainty, and establishing measurable thresholds for success. This hands-on experience will help students understand how to create effective policies.\nContext recap: In this practice session, learners will set up scenarios for simulation. This involves configuring various interventions, defining parameters of uncertainty, and establishing measurable thresholds for success. This hands-on experience will help students understand how to create effective policies.\nContext recap: In this practice session, learners will set up scenarios for simulation. This involves configuring various interventions, defining parameters of uncertainty, and establishing measurable thresholds for success. This hands-on experience will help students understand how to create effective policies. Context recap: In this practice session, learners will set up scenarios for simulation.\nWhy this matters: Scenario Simulation Setup helps learners in Policy Studies connect ideas from Sustainability Policy Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sustainability-policy-401-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After each run, results are reviewed for expected gains, side effects, and governance compliance."
+          "content": "After each simulation run, we will conduct a debriefing session. During this time, we will review the results to assess expected gains, identify any side effects, and ensure that our actions comply with governance standards. This reflective practice is essential for continuous improvement.\nContext recap: After each simulation run, we will conduct a debriefing session. During this time, we will review the results to assess expected gains, identify any side effects, and ensure that our actions comply with governance standards. This reflective practice is essential for continuous improvement.\nContext recap: After each simulation run, we will conduct a debriefing session. During this time, we will review the results to assess expected gains, identify any side effects, and ensure that our actions comply with governance standards. This reflective practice is essential for continuous improvement. Context recap: After each simulation run, we will conduct a debriefing session.\nWhy this matters: Simulation Debrief helps learners in Policy Studies connect ideas from Sustainability Policy Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const SustainabilityPolicy401Module: LearningModule = {
           "id": "sustainability-policy-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "This lesson identifies impact distribution, especially where benefits and burdens diverge across groups."
+          "content": "In this lesson, we will identify how the impacts of policies are distributed among different stakeholders. We will pay special attention to situations where the benefits and burdens of policies do not align across various groups. Understanding these dynamics is crucial for creating fair and effective policies.\nContext recap: In this lesson, we will identify how the impacts of policies are distributed among different stakeholders. We will pay special attention to situations where the benefits and burdens of policies do not align across various groups. Understanding these dynamics is crucial for creating fair and effective policies."
         },
         {
           "id": "sustainability-policy-401-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability requires clear decision traceability, review rights, and remediation standards."
+          "content": "Accountability in policy-making is essential. This requires that decisions can be traced back clearly, that there are rights to review those decisions, and that standards for remediation are established. By ensuring accountability, we can build trust and improve the effectiveness of our policies.\nContext recap: Accountability in policy-making is essential. This requires that decisions can be traced back clearly, that there are rights to review those decisions, and that standards for remediation are established. By ensuring accountability, we can build trust and improve the effectiveness of our policies."
         },
         {
           "id": "sustainability-policy-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist combines policy, ethics, technical reliability, and stakeholder trust criteria."
+          "content": "To ensure that our sustainability policies are effective and ethical, we can use a final checklist. This checklist will help us evaluate important aspects such as the integration of ethical considerations, the technical reliability of our policies, and the level of trust we have built with stakeholders. By reviewing these criteria, we can make sure our policies are responsible and beneficial for everyone involved.\nContext recap: To ensure that our sustainability policies are effective and ethical, we can use a final checklist. This checklist will help us evaluate important aspects such as the integration of ethical considerations, the technical reliability of our policies, and the level of trust we have built with stakeholders. By reviewing these criteria, we can make sure our policies are responsible and beneficial for everyone involved."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const SustainabilityPolicy401Module: LearningModule = {
           "id": "sustainability-policy-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter Drafting",
-          "content": "Learners draft capstone scope, constraints, metrics, and governance checkpoints in one decision charter."
+          "content": "In this interactive session, learners will have the opportunity to draft a comprehensive charter for their capstone project. This charter will outline the scope of the project, identify any constraints we might face, establish metrics for measuring success, and set governance checkpoints to ensure everything stays on track. This exercise will help students think critically about the planning process and the various elements that contribute to a successful project.\nContext recap: In this interactive session, learners will have the opportunity to draft a comprehensive charter for their capstone project. This charter will outline the scope of the project, identify any constraints we might face, establish metrics for measuring success, and set governance checkpoints to ensure everything stays on track. This exercise will help students think critically about the planning process and the various elements that contribute to a successful project."
         },
         {
           "id": "sustainability-policy-401-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Final preparation focuses on evidence-backed justification and robust response to critical review."
+          "content": "As we prepare for our final presentations, it is crucial to focus on developing strong justifications for our ideas. This means gathering evidence to support our claims and being ready to respond thoughtfully to any critical feedback we might receive. By honing our defense readiness, we can confidently present our work and engage in meaningful discussions about our sustainability policies.\nContext recap: As we prepare for our final presentations, it is crucial to focus on developing strong justifications for our ideas. This means gathering evidence to support our claims and being ready to respond thoughtfully to any critical feedback we might receive. By honing our defense readiness, we can confidently present our work and engage in meaningful discussions about our sustainability policies."
         }
       ],
       "interactiveActivities": [

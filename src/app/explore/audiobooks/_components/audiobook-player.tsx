@@ -20,8 +20,14 @@ interface AudiobookPlayerProps {
   chapterText: string;
   language: AudiobookLanguage;
   totalChapters: number;
+  resumeAtSeconds?: number;
   onChapterChange: (chapter: number) => void;
   onLanguageChange: (lang: AudiobookLanguage) => void;
+  onPlaybackProgress?: (input: {
+    currentTimeSeconds: number;
+    durationSeconds: number;
+    progress: number;
+  }) => void;
 }
 
 type PlayerState = "idle" | "loading" | "playing" | "paused" | "error";
@@ -34,8 +40,10 @@ export function AudiobookPlayer({
   chapterText,
   language,
   totalChapters,
+  resumeAtSeconds = 0,
   onChapterChange,
   onLanguageChange,
+  onPlaybackProgress,
 }: AudiobookPlayerProps) {
   const { voice } = useVoicePreference();
   const [state, setState] = useState<PlayerState>("idle");
@@ -43,19 +51,33 @@ export function AudiobookPlayer({
   const [progress, setProgress] = useState(0); // 0-1
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const animFrameRef = useRef<number>(0);
+  const lastReportedSecondRef = useRef(-1);
 
   /* ── Cleanup on unmount or chapter change ─────────────────────── */
 
   const stopAudio = useCallback(() => {
+    const audio = audioRef.current;
+    if (audio && onPlaybackProgress) {
+      const durationSeconds = Number.isFinite(audio.duration) ? Math.max(0, audio.duration) : 0;
+      const currentTimeSeconds = Math.max(0, audio.currentTime || 0);
+      const currentProgress = durationSeconds > 0 ? Math.min(1, currentTimeSeconds / durationSeconds) : 0;
+      onPlaybackProgress({
+        currentTimeSeconds,
+        durationSeconds,
+        progress: currentProgress,
+      });
+    }
+
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.src = "";
       audioRef.current = null;
     }
     cancelAnimationFrame(animFrameRef.current);
+    lastReportedSecondRef.current = -1;
     setProgress(0);
     setState("idle");
-  }, []);
+  }, [onPlaybackProgress]);
 
   useEffect(() => {
     return () => stopAudio();
@@ -67,10 +89,26 @@ export function AudiobookPlayer({
     const audio = audioRef.current;
     if (!audio || audio.paused) return;
     if (audio.duration > 0) {
-      setProgress(audio.currentTime / audio.duration);
+      const currentTimeSeconds = Math.max(0, audio.currentTime || 0);
+      const durationSeconds = Math.max(0, audio.duration || 0);
+      const currentProgress = durationSeconds > 0 ? Math.min(1, currentTimeSeconds / durationSeconds) : 0;
+
+      setProgress(currentProgress);
+
+      if (onPlaybackProgress) {
+        const roundedSecond = Math.floor(currentTimeSeconds);
+        if (roundedSecond !== lastReportedSecondRef.current) {
+          lastReportedSecondRef.current = roundedSecond;
+          onPlaybackProgress({
+            currentTimeSeconds,
+            durationSeconds,
+            progress: currentProgress,
+          });
+        }
+      }
     }
     animFrameRef.current = requestAnimationFrame(trackProgress);
-  }, []);
+  }, [onPlaybackProgress]);
 
   /* ── Play / pause ────────────────────────────────────────────── */
 
@@ -87,6 +125,15 @@ export function AudiobookPlayer({
     if (state === "playing" && audioRef.current) {
       audioRef.current.pause();
       cancelAnimationFrame(animFrameRef.current);
+      if (onPlaybackProgress && audioRef.current.duration > 0) {
+        const currentTimeSeconds = Math.max(0, audioRef.current.currentTime || 0);
+        const durationSeconds = Math.max(0, audioRef.current.duration || 0);
+        onPlaybackProgress({
+          currentTimeSeconds,
+          durationSeconds,
+          progress: durationSeconds > 0 ? Math.min(1, currentTimeSeconds / durationSeconds) : 0,
+        });
+      }
       setState("paused");
       return;
     }
@@ -117,10 +164,27 @@ export function AudiobookPlayer({
 
       const audio = new Audio(result.audioUrl);
       audioRef.current = audio;
+      lastReportedSecondRef.current = -1;
+
+      audio.addEventListener("loadedmetadata", () => {
+        if (!Number.isFinite(audio.duration) || audio.duration <= 0) return;
+        const maxSeek = Math.max(0, audio.duration - 0.25);
+        const nextTime = Math.min(Math.max(0, resumeAtSeconds), maxSeek);
+        if (nextTime <= 0.5) return;
+        audio.currentTime = nextTime;
+        setProgress(nextTime / audio.duration);
+      });
 
       audio.addEventListener("ended", () => {
         cancelAnimationFrame(animFrameRef.current);
         setProgress(1);
+        if (onPlaybackProgress && audio.duration > 0) {
+          onPlaybackProgress({
+            currentTimeSeconds: audio.duration,
+            durationSeconds: audio.duration,
+            progress: 1,
+          });
+        }
         setState("idle");
       });
 
@@ -136,7 +200,17 @@ export function AudiobookPlayer({
       setState("error");
       setErrorMsg(err instanceof Error ? err.message : "TTS generation failed.");
     }
-  }, [state, bookSlug, chapterNumber, language, voice, chapterText, trackProgress]);
+  }, [
+    state,
+    bookSlug,
+    chapterNumber,
+    language,
+    voice,
+    chapterText,
+    trackProgress,
+    resumeAtSeconds,
+    onPlaybackProgress,
+  ]);
 
   /* ── Chapter navigation ──────────────────────────────────────── */
 

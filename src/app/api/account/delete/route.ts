@@ -4,12 +4,14 @@ import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
+import { consumeParentChangeChallenge } from "@/lib/security/parent-change-confirmation";
 
 /** Soft-delete grace period in days (GDPR best-practice). */
 const DELETION_GRACE_PERIOD_DAYS = 30;
 
 const requestSchema = z.object({
   confirmation: z.literal("DELETE"),
+  challengeId: z.string().uuid(),
 });
 
 export async function POST(request: Request) {
@@ -40,6 +42,19 @@ export async function POST(request: Request) {
   const payload = requestSchema.safeParse(await request.json().catch(() => null));
   if (!payload.success) {
     return NextResponse.json({ error: "Invalid payload." }, { status: 400 });
+  }
+
+  try {
+    await consumeParentChangeChallenge({
+      userId: user.id,
+      challengeId: payload.data.challengeId,
+      scope: "account_delete",
+    });
+  } catch (error) {
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : "Account deletion verification challenge failed." },
+      { status: 400 },
+    );
   }
 
   const admin = createSupabaseAdminClient();

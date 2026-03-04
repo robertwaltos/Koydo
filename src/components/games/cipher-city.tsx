@@ -1,12 +1,20 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
-import { ShieldCheck, Lock, Unlock, Zap, Terminal, Cpu, Database, Network, EyeOff, Key } from "lucide-react";
-import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
+import { motion } from "framer-motion";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import { Lock, Unlock, Terminal } from "lucide-react";
+import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
+
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
 
 /* --- Cipher Types --- */
 type Signal = {
@@ -25,6 +33,17 @@ export default function CipherCity() {
     const [timeLeft, setTimeLeft] = useState(30);
     const [score, setScore] = useState(0);
     const [level, setLevel] = useState(1);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
+
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        completionEmittedRef.current = false;
+    }, []);
 
     const signals: Signal[] = useMemo(() => [
         { id: "s1", encrypted: "Koydo Is Fun", decrypted: "Koydo Is Fun", hint: "Direct Input Test", complexity: 1 },
@@ -46,12 +65,14 @@ export default function CipherCity() {
     const startBreach = () => {
         setScore(0);
         setLevel(1);
+        resetRunTracking();
         nextLevel();
         hapticSuccess();
     };
 
     const handleInput = (char: string) => {
         if (gameState !== "DECRYPTING") return;
+        interactionCountRef.current += 1;
         setUserInput(prev => prev + char);
         hapticSelection();
     };
@@ -59,13 +80,28 @@ export default function CipherCity() {
     const checkDecryption = useCallback(() => {
         if (!currentSignal) return;
         if (userInput.toLowerCase() === currentSignal.decrypted.toLowerCase()) {
-            setScore(s => s + (timeLeft * 100));
+            const earnedPoints = timeLeft * 100;
+            const nextScore = score + earnedPoints;
+            setScore(s => s + earnedPoints);
             if (level < signals.length) {
                 setLevel(l => l + 1);
                 hapticSuccess();
                 setMessage("Signal decrypted! Moving to the next node... ⚡");
             } else {
                 setGameState("SECURED");
+                if (!completionEmittedRef.current) {
+                    completionEmittedRef.current = true;
+                    emitLegacyGameComplete({
+                        sessionId: sessionIdRef.current,
+                        gameId: "cipher",
+                        elapsedMs: getElapsedMs(runStartedAtRef.current),
+                        interactions: Math.max(1, interactionCountRef.current),
+                        score: nextScore,
+                        maxScore: signals.length * 3000,
+                        source: "component",
+                        occurredAt: new Date().toISOString(),
+                    });
+                }
                 hapticSuccess();
                 setMessage("Mainframe Access Granted! All signals secured. 🏆");
             }
@@ -73,23 +109,25 @@ export default function CipherCity() {
             hapticError();
             setUserInput(""); // Reset on wrong try for challenge
         }
-    }, [userInput, currentSignal, timeLeft, level, signals.length, setMessage]);
+    }, [userInput, currentSignal, timeLeft, score, level, signals.length, setMessage]);
 
     // Timer Loop
     useEffect(() => {
-        if (gameState !== "DECRYPTING" || timeLeft <= 0) return;
-        const timer = setInterval(() => setTimeLeft(t => t - 1), 1000);
+        if (gameState !== "DECRYPTING") return;
+        const timer = setInterval(() => {
+            setTimeLeft((timeValue) => {
+                if (timeValue <= 1) {
+                    setGameState("BREACHED");
+                    hapticError();
+                    setMood("sad");
+                    setMessage("Firewall reset! The encryption reinforced. System lockout imminent. 🛑");
+                    return 0;
+                }
+                return timeValue - 1;
+            });
+        }, 1000);
         return () => clearInterval(timer);
-    }, [gameState, timeLeft]);
-
-    useEffect(() => {
-        if (timeLeft === 0 && gameState === "DECRYPTING") {
-            setGameState("BREACHED");
-            hapticError();
-            setMood("sad");
-            setMessage("Firewall reset! The encryption reinforced. System lockout imminent. 🛑");
-        }
-    }, [timeLeft, gameState, setMood, setMessage]);
+    }, [gameState, setMessage, setMood]);
 
     return (
         <div className="relative w-full max-w-5xl mx-auto h-[650px] bg-zinc-950 rounded-[4rem] border border-green-500/20 overflow-hidden shadow-2xl flex flex-col font-mono">
@@ -196,7 +234,7 @@ export default function CipherCity() {
                             onClick={startBreach}
                             className={`${gameState === "BREACHED" ? 'bg-rose-500' : 'bg-green-500'} h-24 px-20 rounded-[3rem] text-2xl`}
                         >
-                            {gameState === "BREACHED" ? "RETART PROXY 🔄" : "START DECRYPTION ⚡"}
+                            {gameState === "BREACHED" ? "RESTART PROXY 🔄" : "START DECRYPTION ⚡"}
                         </PhysicalButton>
                     </motion.div>
                 )}

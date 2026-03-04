@@ -1,0 +1,204 @@
+{
+  "generatedAt": "2026-03-04T01:35:17.151Z",
+  "sourceFile": "D:\\PythonProjects\\Koydo\\.env",
+  "modes": {
+    "billingMode": "stripe_external",
+    "translationProvider": "auto",
+    "ttsProvider": "openai"
+  },
+  "totals": {
+    "ready": 4,
+    "needs_keys": 0,
+    "optional_pending": 1,
+    "not_required": 4,
+    "total": 9
+  },
+  "checks": [
+    {
+      "id": "supabase_core",
+      "label": "Supabase Core",
+      "requiredForLaunch": true,
+      "required": [
+        [
+          "NEXT_PUBLIC_SUPABASE_URL",
+          "EXPO_PUBLIC_SUPABASE_URL"
+        ],
+        [
+          "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+          "EXPO_PUBLIC_SUPABASE_KEY"
+        ],
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ],
+      "detailContext": "Auth, database, and server-side admin operations.",
+      "status": "ready",
+      "detail": "Auth, database, and server-side admin operations. Configured.",
+      "presentKeys": [
+        "NEXT_PUBLIC_SUPABASE_URL",
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ],
+      "missingKeys": [],
+      "placeholderKeys": []
+    },
+    {
+      "id": "stripe_billing",
+      "label": "Stripe Billing",
+      "requiredForLaunch": true,
+      "notRequired": false,
+      "required": [
+        "STRIPE_SECRET_KEY",
+        "STRIPE_WEBHOOK_SECRET"
+      ],
+      "optional": [
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"
+      ],
+      "detailContext": "Billing provider mode: stripe_external.",
+      "status": "ready",
+      "detail": "Billing provider mode: stripe_external. Configured.",
+      "presentKeys": [
+        "STRIPE_SECRET_KEY",
+        "STRIPE_WEBHOOK_SECRET",
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"
+      ],
+      "missingKeys": [],
+      "placeholderKeys": []
+    },
+    {
+      "id": "revenuecat_native",
+      "label": "RevenueCat Native Billing",
+      "requiredForLaunch": false,
+      "notRequired": true,
+      "required": [
+        [
+          "NEXT_PUBLIC_REVENUECAT_API_KEY",
+          "NEXT_PUBLIC_REVENUECAT_APPLE_KEY",
+          "NEXT_PUBLIC_REVENUECAT_GOOGLE_KEY"
+        ]
+      ],
+      "optional": [
+        "REVENUECAT_WEBHOOK_SECRET",
+        "REVENUECAT_API_SECRET_KEY"
+      ],
+      "detailContext": "Billing provider mode: stripe_external.",
+      "status": "not_required",
+      "detail": "Not required in current mode. Billing provider mode: stripe_external.",
+      "presentKeys": [],
+      "missingKeys": [],
+      "placeholderKeys": []
+    },
+    {
+      "id": "upstash_rate_limit",
+      "label": "Upstash Redis Rate Limiting",
+      "requiredForLaunch": false,
+      "notRequired": true,
+      "required": [
+        "UPSTASH_REDIS_REST_URL",
+        "UPSTASH_REDIS_REST_TOKEN"
+      ],
+      "detailContext": "RATE_LIMIT_BACKEND=memory (explicit in-memory fallback mode).",
+      "status": "not_required",
+      "detail": "Not required in current mode. RATE_LIMIT_BACKEND=memory (explicit in-memory fallback mode).",
+      "presentKeys": [],
+      "missingKeys": [],
+      "placeholderKeys": []
+    },
+    {
+      "id": "ai_model_provider",
+      "label": "AI Model Provider Access",
+      "requiredForLaunch": false,
+      "required": [
+        [
+          "OPENAI_API_KEY",
+          "GROK_API_KEY",
+          "ANTHROPIC_API_KEY",
+          "GEMINI_API_KEY"
+        ]
+      ],
+      "optional": [
+        "OPENAI_MEDIA_API_KEY"
+      ],
+      "detailContext": "AI tutor/remediation/media generation providers.",
+      "status": "ready",
+      "detail": "AI tutor/remediation/media generation providers. Optional keys not set: OPENAI_MEDIA_API_KEY.",
+      "presentKeys": [
+        "OPENAI_API_KEY"
+      ],
+      "missingKeys": [
+        "OPENAI_MEDIA_API_KEY"
+      ],
+      "placeholderKeys": []
+    },
+    {
+      "id": "tts_primary_provider",
+      "label": "TTS Primary Provider",
+      "requiredForLaunch": false,
+      "notRequired": false,
+      "required": [
+        [
+          "OPENAI_API_KEY",
+          "OPENAI_MEDIA_API_KEY"
+        ]
+      ],
+      "detailContext": "Primary TTS provider: openai.",
+      "status": "ready",
+      "detail": "Primary TTS provider: openai. Configured.",
+      "presentKeys": [
+        "OPENAI_API_KEY"
+      ],
+      "missingKeys": [],
+      "placeholderKeys": []
+    },
+    {
+      "id": "translation_provider",
+      "label": "Translation Provider",
+      "requiredForLaunch": false,
+      "notRequired": false,
+      "required": [
+        [
+          "DEEPL_API_KEY",
+          "GOOGLE_TRANSLATE_API_KEY"
+        ]
+      ],
+      "detailContext": "Translation provider: auto.",
+      "status": "optional_pending",
+      "detail": "Translation provider: auto. Ready for user-supplied keys: DEEPL_API_KEY | GOOGLE_TRANSLATE_API_KEY.",
+      "presentKeys": [],
+      "missingKeys": [
+        "DEEPL_API_KEY | GOOGLE_TRANSLATE_API_KEY"
+      ],
+      "placeholderKeys": []
+    },
+    {
+      "id": "parent_consent_email",
+      "label": "Parent Consent Email Delivery",
+      "requiredForLaunch": false,
+      "notRequired": true,
+      "required": [
+        "RESEND_API_KEY",
+        "PARENT_CONSENT_FROM_EMAIL"
+      ],
+      "detailContext": "Local simulation mode configured.",
+      "status": "not_required",
+      "detail": "Not required in current mode. Local simulation mode configured.",
+      "presentKeys": [],
+      "missingKeys": [],
+      "placeholderKeys": []
+    },
+    {
+      "id": "signup_email",
+      "label": "Signup Welcome Email Delivery",
+      "requiredForLaunch": false,
+      "notRequired": true,
+      "required": [
+        "RESEND_API_KEY",
+        "SIGNUP_FROM_EMAIL"
+      ],
+      "detailContext": "Local simulation mode configured.",
+      "status": "not_required",
+      "detail": "Not required in current mode. Local simulation mode configured.",
+      "presentKeys": [],
+      "missingKeys": [],
+      "placeholderKeys": []
+    }
+  ]
+}

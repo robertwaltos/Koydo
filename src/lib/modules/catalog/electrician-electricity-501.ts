@@ -47,19 +47,19 @@ export const ElectricianElectricity501Module: LearningModule = {
           "id": "electrician-electricity-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Electrician Electricity, with focus on electricity systems diagnostics and electricity operations and execution design."
+          "content": "In this lesson, we will explore the advanced boundaries that define the scope of work for Electricians specializing in electricity. We will focus on how to diagnose electricity systems effectively and design operations that ensure safe and efficient execution. Understanding these boundaries is crucial for ensuring that all electrical work is performed within safe and regulated limits.\nContext recap: In this lesson, we will explore the advanced boundaries that define the scope of work for Electricians specializing in electricity. We will focus on how to diagnose electricity systems effectively and design operations that ensure safe and efficient execution. Understanding these boundaries is crucial for ensuring that all electrical work is performed within safe and regulated limits."
         },
         {
           "id": "electrician-electricity-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can affect electricity systems. Additionally, we will examine uncertainty ranges and system dependencies, which are important to understand before planning any interventions. This process helps ensure that we are prepared for various outcomes and can make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can affect electricity systems. Additionally, we will examine uncertainty ranges and system dependencies, which are important to understand before planning any interventions. This process helps ensure that we are prepared for various outcomes and can make informed decisions."
         },
         {
           "id": "electrician-electricity-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize that all claims made during our analysis should be linked to measurable indicators. This means we will establish confidence bounds and create review checkpoints to ensure that our findings are reliable. By doing this, we can maintain a high standard of accuracy in our work and ensure that our conclusions are well-supported.\nContext recap: In our recap, we will emphasize that all claims made during our analysis should be linked to measurable indicators. This means we will establish confidence bounds and create review checkpoints to ensure that our findings are reliable. By doing this, we can maintain a high standard of accuracy in our work and ensure that our conclusions are well-supported."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const ElectricianElectricity501Module: LearningModule = {
           "id": "electrician-electricity-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows that are tailored to specific electrical tasks. After creating these workflows, we will put them to the test by stress-testing them in various challenging scenarios. This hands-on experience will help learners understand how to adapt their designs to ensure they work effectively under pressure.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows that are tailored to specific electrical tasks. After creating these workflows, we will put them to the test by stress-testing them in various challenging scenarios. This hands-on experience will help learners understand how to adapt their designs to ensure they work effectively under pressure."
         },
         {
           "id": "electrician-electricity-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap of this section, we will discuss how workflows should include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are crucial for maintaining control over the processes and ensuring that any issues can be addressed promptly. By integrating these features, we can enhance the reliability and safety of our workflows.\nContext recap: In our recap of this section, we will discuss how workflows should include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are crucial for maintaining control over the processes and ensuring that any issues can be addressed promptly. By integrating these features, we can enhance the reliability and safety of our workflows."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const ElectricianElectricity501Module: LearningModule = {
           "id": "electrician-electricity-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in electricity systems diagnostics and electricity impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that presents competing constraints within electricity systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about electricity systems. Understanding these competing factors is essential for making informed choices that balance efficiency, safety, and effectiveness.\nContext recap: In this lesson, we will frame a case that presents competing constraints within electricity systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about electricity systems. Understanding these competing factors is essential for making informed choices that balance efficiency, safety, and effectiveness."
         },
         {
           "id": "electrician-electricity-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. By evaluating these aspects, learners will gain a deeper understanding of how to make balanced decisions that consider the needs of all stakeholders involved.\nContext recap: During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. By evaluating these aspects, learners will gain a deeper understanding of how to make balanced decisions that consider the needs of all stakeholders involved."
         },
         {
           "id": "electrician-electricity-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well thought out and that we have strategies in place to address any potential challenges that may arise.\nContext recap: In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well thought out and that we have strategies in place to address any potential challenges that may arise."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const ElectricianElectricity501Module: LearningModule = {
           "id": "electrician-electricity-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will help learners understand the importance of maintaining high standards while also adhering to regulations and best practices in the field of electricity.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will help learners understand the importance of maintaining high standards while also adhering to regulations and best practices in the field of electricity."
         },
         {
           "id": "electrician-electricity-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to challenges should involve updating control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that all changes are documented and that we can track the decisions made throughout the process.\nContext recap: In our recap, we will discuss how effective responses to challenges should involve updating control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that all changes are documented and that we can track the decisions made throughout the process."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const ElectricianElectricity501Module: LearningModule = {
           "id": "electrician-electricity-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by electricity systems is crucial for making decisions that are fair and equitable for everyone involved.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by electricity systems is crucial for making decisions that are fair and equitable for everyone involved."
         },
         {
           "id": "electrician-electricity-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This involves integrating decision traceability, review rights, and remediation obligations into our processes. By doing so, we ensure that all decisions are transparent and that there are clear pathways for addressing any issues that may arise.\nContext recap: In this section, we will explore the concept of accountability architecture. This involves integrating decision traceability, review rights, and remediation obligations into our processes. By doing so, we ensure that all decisions are transparent and that there are clear pathways for addressing any issues that may arise."
         },
         {
           "id": "electrician-electricity-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our learning journey, we will use a comprehensive checklist that connects important outcomes with ethical considerations, adherence to policies, and our ability to adapt and be resilient in various situations. This checklist will help us ensure that we are making responsible decisions as future leaders in the field of electricity.\nContext recap: At the end of our learning journey, we will use a comprehensive checklist that connects important outcomes with ethical considerations, adherence to policies, and our ability to adapt and be resilient in various situations. This checklist will help us ensure that we are making responsible decisions as future leaders in the field of electricity."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const ElectricianElectricity501Module: LearningModule = {
           "id": "electrician-electricity-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and clear pathways for remediation. This exercise will help learners develop critical thinking and communication skills that are essential for their future careers.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and clear pathways for remediation. This exercise will help learners develop critical thinking and communication skills that are essential for their future careers."
         },
         {
           "id": "electrician-electricity-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to a variety of critiques that may come from experts in the field. These critiques will cover technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will prepare learners to confidently defend their ideas and solutions in real-world scenarios.\nContext recap: During this session, learners will practice their responses to a variety of critiques that may come from experts in the field. These critiques will cover technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will prepare learners to confidently defend their ideas and solutions in real-world scenarios."
         }
       ],
       "interactiveActivities": [

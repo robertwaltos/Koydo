@@ -1,12 +1,13 @@
 {
-  "generatedAt": "2026-03-02T06:29:11.046Z",
+  "generatedAt": "2026-03-04T06:12:48.017Z",
   "command": "node scripts/check-env.mjs --json --runtime production --source-file .env.production.audit --fail-on-warn",
-  "commandExitCode": 1,
+  "commandExitCode": 0,
   "sourceFile": ".env.production.audit",
+  "sourceFallbackNote": "",
   "runtime": "production",
   "envReport": {
-    "generatedAt": "2026-03-02T06:29:11.012Z",
-    "source": "D:\\PythonProjects\\Koydo\\eduforge-web\\.env.production.audit",
+    "generatedAt": "2026-03-04T06:12:48.002Z",
+    "source": "D:\\PythonProjects\\Koydo\\.env.production.audit",
     "options": {
       "runtimeOverride": "production",
       "envFile": ".env.production.audit",
@@ -18,21 +19,21 @@
       "overrideApplied": true
     },
     "totals": {
-      "pass": 18,
+      "pass": 20,
       "warn": 0,
-      "fail": 1,
-      "total": 19
+      "fail": 0,
+      "total": 20
     },
     "checks": [
       {
         "label": "Env Source File",
         "status": "pass",
-        "detail": "Loaded D:\\PythonProjects\\Koydo\\eduforge-web\\.env.production.audit"
+        "detail": "Loaded D:\\PythonProjects\\Koydo\\.env.production.audit"
       },
       {
         "label": "Public App URL",
         "status": "pass",
-        "detail": "https://koydo.vercel.app"
+        "detail": "https://koydo.app"
       },
       {
         "label": "Supabase URL",
@@ -51,8 +52,8 @@
       },
       {
         "label": "Upstash Redis Rate Limit Backend",
-        "status": "fail",
-        "detail": "Missing UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN in production runtime."
+        "status": "pass",
+        "detail": "Configured"
       },
       {
         "label": "Billing Provider Mode",
@@ -107,7 +108,12 @@
       {
         "label": "Parent Consent Email",
         "status": "pass",
-        "detail": "Local simulation mode configured (Resend optional)."
+        "detail": "Resend + sender configured"
+      },
+      {
+        "label": "Signup Welcome Email",
+        "status": "pass",
+        "detail": "Resend + sender configured"
       },
       {
         "label": "Parent Consent Token Secret",

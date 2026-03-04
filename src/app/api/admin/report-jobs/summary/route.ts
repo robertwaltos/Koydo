@@ -3,7 +3,7 @@ import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
-const REPORT_TYPES = ["dsar", "support", "audit", "telemetry"] as const;
+const REPORT_TYPES = ["dsar", "support", "audit", "telemetry", "finance", "finance_analytics", "compliance_audit"] as const;
 
 function coerceNumber(value: unknown) {
   if (typeof value === "number" && Number.isFinite(value)) return value;

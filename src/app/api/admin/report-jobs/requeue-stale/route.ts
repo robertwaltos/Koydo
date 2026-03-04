@@ -7,7 +7,9 @@ import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 const requeueStaleSchema = z.object({
   limit: z.number().int().min(1).max(500).optional(),
   maxAgeMinutes: z.number().int().min(5).max(10080).optional(),
-  reportType: z.enum(["dsar", "support", "audit", "telemetry"]).optional(),
+  reportType: z
+    .enum(["dsar", "support", "audit", "telemetry", "finance", "finance_analytics", "compliance_audit"])
+    .optional(),
 });
 
 export async function POST(request: Request) {

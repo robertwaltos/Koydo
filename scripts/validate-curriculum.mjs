@@ -301,6 +301,7 @@ function parseArgs(argv) {
     json: flags.has("--json"),
     writeReport: flags.has("--write-report"),
     noFail: flags.has("--no-fail"),
+    includeExternal: flags.has("--include-external"),
   };
 }
 
@@ -340,7 +341,11 @@ function toMarkdown(report) {
 
 function main() {
   const args = parseArgs(process.argv);
-  const modules = loadCatalogModules();
+  const allModules = loadCatalogModules();
+  const externalModules = allModules.filter((entry) => entry.fileName.endsWith("-external.ts"));
+  const modules = args.includeExternal
+    ? allModules
+    : allModules.filter((entry) => !entry.fileName.endsWith("-external.ts"));
   const state = {
     moduleIds: new Map(),
     globalLessonIds: new Map(),
@@ -372,10 +377,12 @@ function main() {
     sourceDir: path.relative(process.cwd(), catalogDir).replace(/\\/g, "/"),
     totals: {
       modules: modules.length,
+      modulesSkippedExternal: args.includeExternal ? 0 : externalModules.length,
       modulesWithIssues: modulesWithIssues.length,
       errors: errorCount,
       warnings: warnCount,
     },
+    includeExternal: args.includeExternal,
     modules: byModule,
     modulesWithIssues,
   };
@@ -394,6 +401,10 @@ function main() {
     process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
   } else {
     console.log(`Validated ${modules.length} module(s).`);
+    if (!args.includeExternal) {
+      console.log(`Skipped external modules: ${externalModules.length}`);
+      console.log("Use --include-external to validate imported external dataset modules as well.");
+    }
     console.log(`Errors: ${errorCount}`);
     console.log(`Warnings: ${warnCount}`);
 

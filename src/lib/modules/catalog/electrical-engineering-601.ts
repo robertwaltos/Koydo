@@ -47,19 +47,19 @@ export const ElectricalEngineering601Module: LearningModule = {
           "id": "electrical-engineering-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Electrical Engineering, with focus on power systems systems diagnostics and power systems operations and execution design."
+          "content": "In this lesson, we will dive deep into the advanced boundaries of scope in the field of Electrical Engineering. Our primary focus will be on power systems, which are crucial for the generation, transmission, and distribution of electricity. We will learn about the significance of diagnosing problems within these power systems, which helps us identify and fix issues that may arise. Additionally, we will discuss how to design effective operations and execution strategies to ensure that our engineering projects run smoothly and achieve their goals. By understanding these concepts, we will be better equipped to define our engineering projects clearly and lead them to success."
         },
         {
           "id": "electrical-engineering-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how various system components depend on each other. This foundational knowledge is crucial for planning effective interventions in engineering projects, ensuring that all potential outcomes are considered.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how various system components depend on each other. This foundational knowledge is crucial for planning effective interventions in engineering projects, ensuring that all potential outcomes are considered."
         },
         {
           "id": "electrical-engineering-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made during our engineering processes should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and valid. This practice helps maintain the integrity of our work and supports informed decision-making.\nContext recap: In our recap, we emphasize that all claims made during our engineering processes should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and valid. This practice helps maintain the integrity of our work and supports informed decision-making."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const ElectricalEngineering601Module: LearningModule = {
           "id": "electrical-engineering-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific engineering tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is essential for understanding how to create robust systems that can withstand challenges in real-world applications.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific engineering tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is essential for understanding how to create robust systems that can withstand challenges in real-world applications."
         },
         {
           "id": "electrical-engineering-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows should include essential components such as checkpoints, rollback criteria, and threshold-based escalation procedures. These elements are vital for ensuring that our engineering processes are not only efficient but also capable of adapting to unexpected situations while maintaining quality and safety.\nContext recap: In our recap, we will discuss how workflows should include essential components such as checkpoints, rollback criteria, and threshold-based escalation procedures. These elements are vital for ensuring that our engineering processes are not only efficient but also capable of adapting to unexpected situations while maintaining quality and safety."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const ElectricalEngineering601Module: LearningModule = {
           "id": "electrical-engineering-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in power systems systems diagnostics and power systems impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in power systems diagnostics. We will analyze the impacts and trade-offs involved in different engineering decisions. This understanding will help us navigate the complexities of power systems and make informed choices that balance various factors effectively.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in power systems diagnostics. We will analyze the impacts and trade-offs involved in different engineering decisions. This understanding will help us navigate the complexities of power systems and make informed choices that balance various factors effectively."
         },
         {
           "id": "electrical-engineering-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare various options available to them across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is crucial for making well-rounded decisions that consider the broader implications of engineering choices on society and the environment.\nContext recap: In this practice session, learners will compare various options available to them across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is crucial for making well-rounded decisions that consider the broader implications of engineering choices on society and the environment."
         },
         {
           "id": "electrical-engineering-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will review the structure of decision memos. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of a decision are considered, promoting transparency and accountability in engineering practices.\nContext recap: In our recap, we will review the structure of decision memos. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of a decision are considered, promoting transparency and accountability in engineering practices."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const ElectricalEngineering601Module: LearningModule = {
           "id": "electrical-engineering-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This exercise is designed to help them understand the importance of maintaining high performance in engineering tasks while adhering to established governance standards.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This exercise is designed to help them understand the importance of maintaining high performance in engineering tasks while adhering to established governance standards."
         },
         {
           "id": "electrical-engineering-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that all changes are documented and that we can track the decisions made throughout the process.\nContext recap: In our recap, we will discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that all changes are documented and that we can track the decisions made throughout the process."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const ElectricalEngineering601Module: LearningModule = {
           "id": "electrical-engineering-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will explore how to map the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is essential for ensuring that engineering decisions are equitable and considerate of all parties involved.\nContext recap: In this lesson, learners will explore how to map the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is essential for ensuring that engineering decisions are equitable and considerate of all parties involved."
         },
         {
           "id": "electrical-engineering-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will focus on the architecture of accountability in decision-making processes. We will integrate elements such as decision traceability, review rights, and remediation obligations. This framework is crucial for ensuring that all decisions are made responsibly and that there is a clear path for addressing any issues that may arise.\nContext recap: In this section, we will focus on the architecture of accountability in decision-making processes. We will integrate elements such as decision traceability, review rights, and remediation obligations. This framework is crucial for ensuring that all decisions are made responsibly and that there is a clear path for addressing any issues that may arise."
         },
         {
           "id": "electrical-engineering-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and emphasizes the importance of resilience in our leadership roles. This checklist serves as a guide to make sure we are making responsible decisions in electrical engineering.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and emphasizes the importance of resilience in our leadership roles. This checklist serves as a guide to make sure we are making responsible decisions in electrical engineering."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const ElectricalEngineering601Module: LearningModule = {
           "id": "electrical-engineering-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of uncertainty in our findings, and clear pathways for remediation. This practice helps us prepare for real-world challenges in electrical engineering.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of uncertainty in our findings, and clear pathways for remediation. This practice helps us prepare for real-world challenges in electrical engineering."
         },
         {
           "id": "electrical-engineering-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will have the opportunity to practice their responses to various critiques. These critiques will cover technical aspects, governance issues, and concerns from stakeholders. This rehearsal is essential for building confidence and ensuring we can effectively communicate our ideas and solutions.\nContext recap: During this session, learners will have the opportunity to practice their responses to various critiques. These critiques will cover technical aspects, governance issues, and concerns from stakeholders. This rehearsal is essential for building confidence and ensuring we can effectively communicate our ideas and solutions."
         }
       ],
       "interactiveActivities": [

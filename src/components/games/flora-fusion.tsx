@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Leaf, Beaker, Zap, Thermometer, Droplets, Sun, Activity, ShieldCheck, Info, ChevronRight, Sparkles } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Biology Types --- */
 type Trait = "GLOW" | "THORNS" | "HEALING" | "POISON" | "SPEED" | "DEFENSE";
@@ -38,10 +39,32 @@ export default function FloraFusion() {
         humidity: 60,
         light: 80
     });
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const currentDNA = useMemo(() => {
         return selectedTraits.map(t => t.substring(0, 2)).join("-") || "EMPTY";
     }, [selectedTraits]);
+
+    useEffect(() => {
+        if (gameState !== "SUCCESS" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "flora",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, selectedTraits.length),
+            score: plants.length,
+            maxScore: 10,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, selectedTraits.length, plants.length]);
 
     const handleTraitToggle = (trait: Trait) => {
         if (selectedTraits.includes(trait)) {

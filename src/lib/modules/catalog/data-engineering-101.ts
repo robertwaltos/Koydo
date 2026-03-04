@@ -46,19 +46,19 @@ export const DataEngineering101Module: LearningModule = {
           "id": "data-engineering-101-l01-c1",
           "kind": "concept",
           "title": "Vocabulary and System Boundaries",
-          "content": "This lesson establishes shared language for Data Engineering, defines operating boundaries, and maps where pipeline architecture and data quality contracts interact in real environments."
+          "content": "In this lesson, we will dive into some key vocabulary that is essential for understanding Data Engineering. Learning these terms will help us communicate effectively about data systems. We will also define the boundaries within which we operate, which means we will clarify how different components of data systems work together and interact. Furthermore, we will explore the relationship between pipeline architecture and data quality contracts in real-world scenarios. This understanding is crucial for ensuring that our data processes are efficient and reliable. By the end of this lesson, you will have a solid grasp of these important concepts and how they apply in practice."
         },
         {
           "id": "data-engineering-101-l01-c2",
           "kind": "concept",
           "title": "Causal Structures and Constraints",
-          "content": "Learners model causal paths, identify hidden assumptions, and apply constraint checks before proposing interventions."
+          "content": "In this section, learners will practice modeling causal paths, which means understanding how different events or actions can lead to certain outcomes. We will also identify hidden assumptions that might affect our understanding of these paths. Finally, we will learn how to apply checks for constraints, which are limits or rules we must follow, before suggesting any changes or interventions.\nContext recap: In this section, learners will practice modeling causal paths, which means understanding how different events or actions can lead to certain outcomes. We will also identify hidden assumptions that might affect our understanding of these paths. Finally, we will learn how to apply checks for constraints, which are limits or rules we must follow, before suggesting any changes or interventions."
         },
         {
           "id": "data-engineering-101-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "The module introduces an evidence-first workflow where each claim is tied to observable indicators and expected uncertainty."
+          "content": "This module introduces an evidence-first workflow, which is a method that emphasizes the importance of using observable indicators to support our claims. Each claim we make will be connected to these indicators, and we will also consider the expected uncertainty that comes with our findings. This approach helps us make informed decisions based on solid evidence.\nContext recap: This module introduces an evidence-first workflow, which is a method that emphasizes the importance of using observable indicators to support our claims. Each claim we make will be connected to these indicators, and we will also consider the expected uncertainty that comes with our findings. This approach helps us make informed decisions based on solid evidence."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const DataEngineering101Module: LearningModule = {
           "id": "data-engineering-101-l02-c1",
           "kind": "practice",
           "title": "Method Sequence Construction",
-          "content": "Learners build a method sequence optimized for foundational vocabulary, core mechanisms, and baseline analysis, then stress-test each step under uncertainty."
+          "content": "In this interactive lab, learners will create a sequence of methods that are optimized for foundational vocabulary, core mechanisms, and baseline analysis. This means we will carefully choose the steps we take to ensure they are effective. After building this sequence, we will stress-test each step to see how they hold up under uncertainty, helping us understand their reliability.\nContext recap: In this interactive lab, learners will create a sequence of methods that are optimized for foundational vocabulary, core mechanisms, and baseline analysis. This means we will carefully choose the steps we take to ensure they are effective. After building this sequence, we will stress-test each step to see how they hold up under uncertainty, helping us understand their reliability."
         },
         {
           "id": "data-engineering-101-l02-c2",
           "kind": "recap",
           "title": "Operational Readiness Checks",
-          "content": "Readiness is assessed with owner mapping, checkpoint cadence, rollback triggers, and evidence logs."
+          "content": "In this recap, we will assess our readiness by mapping out who is responsible for each part of the process. We will also establish a schedule for checkpoints, which are regular reviews to ensure everything is on track. Additionally, we will identify rollback triggers, which are actions we can take if something goes wrong, and maintain evidence logs to keep track of our findings.\nContext recap: In this recap, we will assess our readiness by mapping out who is responsible for each part of the process. We will also establish a schedule for checkpoints, which are regular reviews to ensure everything is on track. Additionally, we will identify rollback triggers, which are actions we can take if something goes wrong, and maintain evidence logs to keep track of our findings."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const DataEngineering101Module: LearningModule = {
           "id": "data-engineering-101-l04-c1",
           "kind": "example",
           "title": "Case Setup and Stakes",
-          "content": "The case examines a multi-source analytics platform with late-arriving events and strict SLA targets, requiring learners to separate evidence, assumptions, and high-consequence risks."
+          "content": "In this engaging case study, we will explore a multi-source analytics platform that encounters some interesting challenges, particularly with late-arriving events and strict Service Level Agreement (SLA) targets. These targets are important because they set the expectations for how quickly and accurately data should be processed. As we dive into this analysis, learners will be tasked with distinguishing between evidence—what we know for sure—and assumptions—what we think might be true. Additionally, we will identify high-consequence risks, which are significant risks that could lead to serious problems if not managed properly. This exercise is designed to deepen our understanding of the complexities involved in effectively managing data and making informed decisions in the field of data engineering."
         },
         {
           "id": "data-engineering-101-l04-c2",
           "kind": "concept",
           "title": "Decision Tradeoff Matrix",
-          "content": "Alternatives are scored across performance, reliability, cost, and equity implications before selecting an intervention path."
+          "content": "In this section, we will use a Decision Tradeoff Matrix to evaluate different alternatives based on several criteria. We will score each option according to its performance, reliability, cost, and implications for equity. This process will help us make informed decisions about which intervention path to choose, ensuring we consider all important factors.\nContext recap: In this section, we will use a Decision Tradeoff Matrix to evaluate different alternatives based on several criteria. We will score each option according to its performance, reliability, cost, and implications for equity. This process will help us make informed decisions about which intervention path to choose, ensuring we consider all important factors."
         },
         {
           "id": "data-engineering-101-l04-c3",
           "kind": "recap",
           "title": "Lessons from Failure Modes",
-          "content": "Failure patterns are categorized to convert one-off incidents into reusable design safeguards."
+          "content": "In this recap, we will categorize different failure patterns that we have observed. By doing this, we can learn from past mistakes and turn one-time incidents into reusable design safeguards. This means we will develop strategies to prevent similar failures in the future, enhancing our overall approach to data engineering.\nContext recap: In this recap, we will categorize different failure patterns that we have observed. By doing this, we can learn from past mistakes and turn one-time incidents into reusable design safeguards. This means we will develop strategies to prevent similar failures in the future, enhancing our overall approach to data engineering."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const DataEngineering101Module: LearningModule = {
           "id": "data-engineering-101-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure a scenario model with explicit uncertainty assumptions and success metrics tied to cost-performance tuning."
+          "content": "In this interactive practice session, learners will configure a scenario model that includes clear assumptions about uncertainty and success metrics. These metrics will be linked to cost-performance tuning, which means we will evaluate how well our decisions balance costs with performance outcomes. This setup will help us understand the implications of our choices.\nContext recap: In this interactive practice session, learners will configure a scenario model that includes clear assumptions about uncertainty and success metrics. These metrics will be linked to cost-performance tuning, which means we will evaluate how well our decisions balance costs with performance outcomes. This setup will help us understand the implications of our choices."
         },
         {
           "id": "data-engineering-101-l05-c2",
           "kind": "recap",
           "title": "Decision Review Loop",
-          "content": "Each simulation round ends with evidence review, policy alignment checks, and improvement actions."
+          "content": "At the end of each simulation round, we will conduct a review of the evidence we gathered. This will include checking for alignment with our policies and identifying any actions we can take to improve our processes. This decision review loop is essential for ensuring that we learn from each simulation and continuously enhance our approach.\nContext recap: At the end of each simulation round, we will conduct a review of the evidence we gathered. This will include checking for alignment with our policies and identifying any actions we can take to improve our processes. This decision review loop is essential for ensuring that we learn from each simulation and continuously enhance our approach."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const DataEngineering101Module: LearningModule = {
           "id": "data-engineering-101-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Analysis",
-          "content": "Learners identify who benefits, who bears risk, and how policy choices shape outcomes across groups."
+          "content": "In this section, learners will conduct a stakeholder analysis to identify who benefits from our data engineering efforts, who might bear risks, and how our policy choices can shape outcomes for different groups. Understanding these dynamics is crucial for making ethical decisions in data engineering.\nContext recap: In this section, learners will conduct a stakeholder analysis to identify who benefits from our data engineering efforts, who might bear risks, and how our policy choices can shape outcomes for different groups. Understanding these dynamics is crucial for making ethical decisions in data engineering."
         },
         {
           "id": "data-engineering-101-l07-c2",
           "kind": "concept",
           "title": "Governance and Accountability",
-          "content": "Governance mechanisms are linked to measurable controls, transparency obligations, and remediation pathways."
+          "content": "In this part of the lesson, we will explore governance and accountability in data engineering. We will learn how governance mechanisms are connected to measurable controls, which help ensure that our processes are transparent and accountable. Additionally, we will discuss the importance of having clear pathways for remediation, or ways to correct issues that arise.\nContext recap: In this part of the lesson, we will explore governance and accountability in data engineering. We will learn how governance mechanisms are connected to measurable controls, which help ensure that our processes are transparent and accountable. Additionally, we will discuss the importance of having clear pathways for remediation, or ways to correct issues that arise."
         },
         {
           "id": "data-engineering-101-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist integrates legal, ethical, technical, and user-impact criteria before deployment decisions."
+          "content": "Before making any decisions about deploying a data engineering project, it is important to use a comprehensive checklist. This checklist should include important factors such as legal requirements, ethical considerations, technical aspects, and the potential impact on users. By reviewing these criteria, we can ensure that our project is responsible and beneficial to everyone involved.\nContext recap: Before making any decisions about deploying a data engineering project, it is important to use a comprehensive checklist. This checklist should include important factors such as legal requirements, ethical considerations, technical aspects, and the potential impact on users. By reviewing these criteria, we can ensure that our project is responsible and beneficial to everyone involved."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const DataEngineering101Module: LearningModule = {
           "id": "data-engineering-101-l08-c1",
           "kind": "practice",
           "title": "Capstone Scope Definition",
-          "content": "Learners draft a capstone charter with objective, risks, success metrics, and governance checkpoints."
+          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objective of the project, identify potential risks, establish success metrics to measure outcomes, and set governance checkpoints to ensure everything stays on track. This process helps students think critically about their project and plan for success.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objective of the project, identify potential risks, establish success metrics to measure outcomes, and set governance checkpoints to ensure everything stays on track. This process helps students think critically about their project and plan for success."
         },
         {
           "id": "data-engineering-101-l08-c2",
           "kind": "recap",
           "title": "Defense Preparation",
-          "content": "The lesson ends with a defense template that requires evidence-backed claims and explicit tradeoff reasoning."
+          "content": "To conclude the lesson, students will receive a defense preparation template. This template will guide them in making claims that are supported by evidence and will require them to explain the reasoning behind any trade-offs they make. This exercise encourages clear thinking and effective communication of their ideas.\nContext recap: To conclude the lesson, students will receive a defense preparation template. This template will guide them in making claims that are supported by evidence and will require them to explain the reasoning behind any trade-offs they make. This exercise encourages clear thinking and effective communication of their ideas."
         }
       ],
       "interactiveActivities": [

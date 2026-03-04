@@ -47,19 +47,19 @@ export const Macos601Module: LearningModule = {
           "id": "macos-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Macos, with focus on macos systems diagnostics and macos operations and execution design."
+          "content": "In this lesson, we will delve into the advanced concepts of scope boundaries within the Macos operating system. We will examine how Macos systems conduct diagnostics, which are essential for identifying and resolving issues effectively. Additionally, we will discuss the design of operations and execution within Macos, which is crucial for ensuring that the system runs smoothly and efficiently. By understanding these concepts, you will be better equipped to navigate the complexities of Macos systems and enhance your skills in managing them effectively.\nContext recap: In this lesson, we will delve into the advanced concepts of scope boundaries within the Macos operating system. We will examine how Macos systems conduct diagnostics, which are essential for identifying and resolving issues effectively. Additionally, we will discuss the design of operations and execution within Macos, which is crucial for ensuring that the system runs smoothly and efficiently. By understanding these concepts, you will be better equipped to navigate the complexities of Macos systems and enhance your skills in managing them effectively."
         },
         {
           "id": "macos-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, identifying ranges of uncertainty, and understanding the dependencies within systems. This foundational work is essential for planning effective interventions that can lead to successful outcomes in various scenarios.\nContext recap: In this section, learners will engage in mapping out causal pathways, identifying ranges of uncertainty, and understanding the dependencies within systems. This foundational work is essential for planning effective interventions that can lead to successful outcomes in various scenarios."
         },
         {
           "id": "macos-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims made in our analysis are supported by measurable indicators. We will discuss how to establish confidence bounds and set up review checkpoints to validate our findings and maintain the integrity of our work.\nContext recap: It is important to ensure that all claims made in our analysis are supported by measurable indicators. We will discuss how to establish confidence bounds and set up review checkpoints to validate our findings and maintain the integrity of our work."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Macos601Module: LearningModule = {
           "id": "macos-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows to see how they perform under challenging or adverse conditions, ensuring they are robust and effective.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows to see how they perform under challenging or adverse conditions, ensuring they are robust and effective."
         },
         {
           "id": "macos-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will review how workflows can be structured to include essential checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This architecture is crucial for maintaining control and ensuring that processes run smoothly.\nContext recap: In this recap, we will review how workflows can be structured to include essential checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This architecture is crucial for maintaining control and ensuring that processes run smoothly."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Macos601Module: LearningModule = {
           "id": "macos-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in macos systems diagnostics and macos impact and tradeoff analysis."
+          "content": "In this case study, we will explore the various competing constraints that can emerge during Macos systems diagnostics. By examining these constraints, we will delve into the impacts and trade-offs that decision-makers face. This analysis will equip learners with the skills to effectively navigate and manage complex scenarios, enhancing their problem-solving abilities in real-world situations.\nContext recap: In this case study, we will explore the various competing constraints that can emerge during Macos systems diagnostics. By examining these constraints, we will delve into the impacts and trade-offs that decision-makers face. This analysis will equip learners with the skills to effectively navigate and manage complex scenarios, enhancing their problem-solving abilities in real-world situations."
         },
         {
           "id": "macos-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that consider multiple factors.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that consider multiple factors.\nWhy this matters: Tradeoff Framing helps learners in Macos connect ideas from Macos Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "macos-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be revisited if necessary.\nContext recap: In our recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be revisited if necessary.\nWhy this matters: Decision Memo Pattern helps learners in Macos connect ideas from Macos Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Macos601Module: LearningModule = {
           "id": "macos-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "During this interactive session, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This hands-on experience will enhance their understanding of how to manage real-world scenarios effectively.\nContext recap: During this interactive session, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This hands-on experience will enhance their understanding of how to manage real-world scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Macos connect ideas from Macos Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "macos-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss how effective responses can be designed to update control gates while ensuring that traceability and accountability are maintained. This is crucial for transparency and trust in decision-making processes.\nContext recap: In this recap, we will discuss how effective responses can be designed to update control gates while ensuring that traceability and accountability are maintained. This is crucial for transparency and trust in decision-making processes.\nWhy this matters: Adaptive Response Design helps learners in Macos connect ideas from Macos Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Macos601Module: LearningModule = {
           "id": "macos-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and any delayed effects that may impact different stakeholder groups. Understanding these dynamics is essential for effective governance and public impact.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and any delayed effects that may impact different stakeholder groups. Understanding these dynamics is essential for effective governance and public impact.\nWhy this matters: Stakeholder Impact Distribution helps learners in Macos connect ideas from Macos Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "macos-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability, which includes the traceability of decisions, the rights to review those decisions, and the obligations for remediation. This framework is vital for ensuring responsible governance.\nContext recap: In this section, we will explore the architecture of accountability, which includes the traceability of decisions, the rights to review those decisions, and the obligations for remediation. This framework is vital for ensuring responsible governance.\nWhy this matters: Accountability Architecture helps learners in Macos connect ideas from Macos Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "macos-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important ideas such as the results we want to achieve, the ethical considerations we must keep in mind, the rules and policies we need to follow, and how we can be resilient in the face of challenges. This checklist is a great tool for ensuring that we are responsible leaders.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important ideas such as the results we want to achieve, the ethical considerations we must keep in mind, the rules and policies we need to follow, and how we can be resilient in the face of challenges. This checklist is a great tool for ensuring that we are responsible leaders."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Macos601Module: LearningModule = {
           "id": "macos-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work on putting together a brief. This brief should include your main claims, the evidence that supports those claims, the uncertainties that may arise, and the pathways for addressing any issues that could come up. This process will help you think critically and prepare effectively for your defense.\nContext recap: In this activity, you will work on putting together a brief. This brief should include your main claims, the evidence that supports those claims, the uncertainties that may arise, and the pathways for addressing any issues that could come up. This process will help you think critically and prepare effectively for your defense."
         },
         {
           "id": "macos-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this practice session, you will have the opportunity to rehearse your responses to various critiques. These critiques may come from experts in technical fields, governance issues, or from stakeholders who have an interest in your work. This rehearsal will help you feel more confident and prepared for your upcoming presentations.\nContext recap: During this practice session, you will have the opportunity to rehearse your responses to various critiques. These critiques may come from experts in technical fields, governance issues, or from stakeholders who have an interest in your work. This rehearsal will help you feel more confident and prepared for your upcoming presentations."
         }
       ],
       "interactiveActivities": [

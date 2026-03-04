@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { requireAdminForApi } from "@/lib/admin/auth";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
@@ -8,25 +8,9 @@ const runMediaJobsSchema = z.object({
   batchSize: z.coerce.number().int().min(1).max(50).default(10),
   moduleId: z.string().trim().max(120).optional(),
   lessonId: z.string().trim().max(120).optional(),
-  assetType: z.enum(["video", "animation", "image"]).optional(),
+  assetType: z.enum(["video", "animation", "image", "thumbnail", "concept-clip", "avatar-lesson", "companion-intro"]).optional(),
+  provider: z.enum(["simulated", "comfyui", "google-imagen", "google-veo", "heygen"]).default("simulated"),
 });
-
-async function assertAdmin() {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.getUser();
-  if (authError || !user) return null;
-
-  const { data: profile } = await supabase
-    .from("user_profiles")
-    .select("is_admin")
-    .eq("user_id", user.id)
-    .maybeSingle();
-
-  return profile?.is_admin ? user.id : null;
-}
 
 function buildSimulatedOutputUrl(assetType: string, moduleId: string | null, lessonId: string | null) {
   const base =
@@ -68,9 +52,9 @@ async function claimQueuedMediaJob(
 }
 
 export async function POST(request: Request) {
-  const adminUserId = await assertAdmin();
-  if (!adminUserId) {
-    return NextResponse.json({ error: "Admin access required." }, { status: 403 });
+  const auth = await requireAdminForApi();
+  if (!auth.isAuthorized) {
+    return auth.response;
   }
 
   const parsedBody = runMediaJobsSchema.safeParse(await request.json().catch(() => null));
@@ -80,7 +64,7 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   }
-  const { batchSize, moduleId, lessonId, assetType } = parsedBody.data;
+  const { batchSize, moduleId, lessonId, assetType, provider } = parsedBody.data;
 
   const admin = createSupabaseAdminClient();
   let query = admin
@@ -142,8 +126,9 @@ export async function POST(request: Request) {
         output_url: outputUrl,
         completed_at: new Date().toISOString(),
         metadata: {
-          processed_by: adminUserId,
-          runner: "simulated-provider",
+          processed_by: auth.userId,
+          runner: provider === "simulated" ? "simulated-provider" : `${provider}-api`,
+          provider,
         },
       })
       .eq("id", job.id)

@@ -6,7 +6,7 @@
  * - "analytics" — Mixpanel, xAPI-lite telemetry
  *
  * Consent is stored in localStorage under `koydo.trackingConsent`.
- * On native iOS, App Tracking Transparency (ATT) overrides analytics consent.
+ * Native Capacitor builds keep web Mixpanel analytics disabled in this release.
  */
 
 export type ConsentCategory = "necessary" | "analytics";

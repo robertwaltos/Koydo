@@ -47,19 +47,19 @@ export const Astronomy501Module: LearningModule = {
           "id": "astronomy-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Astronomy, with focus on astronomy systems diagnostics and astronomy operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of astronomy. Our focus will be on understanding how to diagnose various astronomy systems, which is crucial for identifying any issues that may arise. Additionally, we will learn how to design effective operations and execution plans. By mastering these skills, we will be better equipped to manage complex astronomical projects, ensuring that they run smoothly and efficiently. This knowledge is essential for anyone looking to make significant contributions to the field of astronomy.\nContext recap: In this lesson, we will delve into the advanced boundaries of astronomy. Our focus will be on understanding how to diagnose various astronomy systems, which is crucial for identifying any issues that may arise. Additionally, we will learn how to design effective operations and execution plans. By mastering these skills, we will be better equipped to manage complex astronomical projects, ensuring that they run smoothly and efficiently."
         },
         {
           "id": "astronomy-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or phenomena. They will also identify uncertainty ranges and system dependencies, which are important for planning interventions. This process helps us understand how different factors influence each other in astronomy.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or phenomena. They will also identify uncertainty ranges and system dependencies, which are important for planning interventions. This process helps us understand how different factors influence each other in astronomy."
         },
         {
           "id": "astronomy-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize that all claims made in our studies must be linked to measurable indicators. This means we need to have clear evidence to support our statements. Additionally, we will discuss the importance of confidence bounds and review checkpoints to ensure our findings are reliable and valid.\nContext recap: In our recap, we will emphasize that all claims made in our studies must be linked to measurable indicators. This means we need to have clear evidence to support our statements. Additionally, we will discuss the importance of confidence bounds and review checkpoints to ensure our findings are reliable and valid."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Astronomy501Module: LearningModule = {
           "id": "astronomy-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to prepare for unexpected challenges in astronomy projects.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to prepare for unexpected challenges in astronomy projects."
         },
         {
           "id": "astronomy-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows should include important elements like checkpoints, rollback criteria, and threshold-based escalation. These components are essential for ensuring that our processes are robust and can adapt to changes or challenges that may arise.\nContext recap: In our recap, we will discuss how workflows should include important elements like checkpoints, rollback criteria, and threshold-based escalation. These components are essential for ensuring that our processes are robust and can adapt to changes or challenges that may arise."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Astronomy501Module: LearningModule = {
           "id": "astronomy-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in astronomy systems diagnostics and astronomy impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in astronomy systems diagnostics. We will also analyze the impacts and trade-offs involved in making decisions related to astronomical studies. This will help learners understand the complexities of decision-making in this field.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in astronomy systems diagnostics. We will also analyze the impacts and trade-offs involved in making decisions related to astronomical studies. This will help learners understand the complexities of decision-making in this field."
         },
         {
           "id": "astronomy-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on various important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how to make informed decisions that consider multiple factors.\nContext recap: In this practice session, learners will compare different options based on various important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how to make informed decisions that consider multiple factors.\nWhy this matters: Tradeoff Framing helps learners in Astronomy connect ideas from Astronomy Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "astronomy-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made in our analysis should include key elements such as assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well thought out and prepared for potential challenges.\nContext recap: In our recap, we will highlight that each recommendation made in our analysis should include key elements such as assumptions, evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well thought out and prepared for potential challenges."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Astronomy501Module: LearningModule = {
           "id": "astronomy-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This exercise will help them understand how to manage different aspects of astronomical scenarios effectively.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This exercise will help them understand how to manage different aspects of astronomical scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Astronomy connect ideas from Astronomy Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "astronomy-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses should update control gates while maintaining traceability and accountability. This means that as we make changes, we need to keep track of what we did and why, ensuring transparency in our processes.\nContext recap: In our recap, we will discuss how effective responses should update control gates while maintaining traceability and accountability. This means that as we make changes, we need to keep track of what we did and why, ensuring transparency in our processes."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Astronomy501Module: LearningModule = {
           "id": "astronomy-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the benefits, burdens, and delayed effects that different stakeholder groups experience. This understanding is crucial for recognizing how decisions in astronomy can impact various communities and individuals.\nContext recap: In this lesson, learners will map out the benefits, burdens, and delayed effects that different stakeholder groups experience. This understanding is crucial for recognizing how decisions in astronomy can impact various communities and individuals.\nWhy this matters: Stakeholder Impact Distribution helps learners in Astronomy connect ideas from Astronomy Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "astronomy-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decisions are traced, the rights of individuals to review those decisions, and the obligations to remedy any issues that arise. This framework is vital for ensuring responsible governance in astronomy.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decisions are traced, the rights of individuals to review those decisions, and the obligations to remedy any issues that arise. This framework is vital for ensuring responsible governance in astronomy."
         },
         {
           "id": "astronomy-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our leadership roles. This checklist will guide us in making responsible decisions in the field of astronomy.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our leadership roles. This checklist will guide us in making responsible decisions in the field of astronomy."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Astronomy501Module: LearningModule = {
           "id": "astronomy-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the boundaries of uncertainty related to your claims, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting your ideas clearly.\nContext recap: In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the boundaries of uncertainty related to your claims, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting your ideas clearly."
         },
         {
           "id": "astronomy-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will have the opportunity to practice your responses to questions and critiques that may come from experts in the field. You will rehearse how to address technical issues, governance matters, and concerns from stakeholders. This practice will prepare you for real-world discussions and enhance your confidence.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and critiques that may come from experts in the field. You will rehearse how to address technical issues, governance matters, and concerns from stakeholders. This practice will prepare you for real-world discussions and enhance your confidence."
         }
       ],
       "interactiveActivities": [

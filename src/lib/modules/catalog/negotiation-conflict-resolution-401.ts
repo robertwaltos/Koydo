@@ -47,19 +47,19 @@ export const NegotiationConflictResolution401Module: LearningModule = {
           "id": "negotiation-conflict-resolution-401-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "This lesson defines operational language, scope boundaries, and how interest mapping and agreement design connect in real systems."
+          "content": "In this lesson, we will explore important concepts that help us understand how to communicate effectively in negotiations. We will define what operational language means, discuss the boundaries of our discussions, and learn how interest mapping and agreement design work together in real-life situations. This will help us see how these elements connect and influence our ability to resolve conflicts successfully.\nContext recap: In this lesson, we will explore important concepts that help us understand how to communicate effectively in negotiations. We will define what operational language means, discuss the boundaries of our discussions, and learn how interest mapping and agreement design work together in real-life situations. This will help us see how these elements connect and influence our ability to resolve conflicts successfully."
         },
         {
           "id": "negotiation-conflict-resolution-401-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning Under Constraints",
-          "content": "Learners model cause-effect pathways and identify failure-prone assumptions before selecting interventions."
+          "content": "In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how different actions can lead to various outcomes. We will also identify assumptions that might lead us to make mistakes, especially when we are under constraints. By doing this, we can better select the right interventions to address issues effectively and avoid potential failures.\nContext recap: In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how different actions can lead to various outcomes. We will also identify assumptions that might lead us to make mistakes, especially when we are under constraints. By doing this, we can better select the right interventions to address issues effectively and avoid potential failures.\nContext recap: In this section, learners will engage in modeling cause-and-effect pathways. This means we will look at how different actions can lead to various outcomes. We will also identify assumptions that might lead us to make mistakes, especially when we are under constraints. By doing this, we can better select the right interventions to address issues effectively and avoid potential failures.\nWhy this matters: Causal Reasoning Under Constraints helps learners in Human Development connect ideas from Negotiation and Conflict Resolution Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "negotiation-conflict-resolution-401-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All claims in this module must map to observable indicators, uncertainty bounds, and review checkpoints."
+          "content": "Throughout this module, it is crucial that all claims we make are supported by observable indicators. This means we need to have clear evidence that backs up our statements. Additionally, we will establish uncertainty bounds and set up review checkpoints to ensure that our conclusions are reliable and can be verified. This approach helps us maintain high standards of evidence in our discussions.\nContext recap: Throughout this module, it is crucial that all claims we make are supported by observable indicators. This means we need to have clear evidence that backs up our statements. Additionally, we will establish uncertainty bounds and set up review checkpoints to ensure that our conclusions are reliable and can be verified. This approach helps us maintain high standards of evidence in our discussions.\nContext recap: Throughout this module, it is crucial that all claims we make are supported by observable indicators. This means we need to have clear evidence that backs up our statements. Additionally, we will establish uncertainty bounds and set up review checkpoints to ensure that our conclusions are reliable and can be verified. This approach helps us maintain high standards of evidence in our discussions.\nWhy this matters: Evidence Standards helps learners in Human Development connect ideas from Negotiation and Conflict Resolution Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const NegotiationConflictResolution401Module: LearningModule = {
           "id": "negotiation-conflict-resolution-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners design a workflow emphasizing strategic leadership, policy and operations alignment, and capstone defense and review, then test resilience against uncertainty."
+          "content": "In this interactive lab, learners will have the opportunity to design a workflow that emphasizes the importance of strategic leadership. We will focus on aligning policies and operations while preparing for a capstone defense and review. Additionally, we will test the resilience of our designs against uncertainty, which will help us understand how to adapt and respond to unexpected challenges.\nContext recap: In this interactive lab, learners will have the opportunity to design a workflow that emphasizes the importance of strategic leadership. We will focus on aligning policies and operations while preparing for a capstone defense and review. Additionally, we will test the resilience of our designs against uncertainty, which will help us understand how to adapt and respond to unexpected challenges."
         },
         {
           "id": "negotiation-conflict-resolution-401-l02-c2",
           "kind": "recap",
           "title": "Readiness and Control Gates",
-          "content": "Operational readiness requires owner mapping, control gates, and post-decision verification hooks."
+          "content": "To ensure operational readiness, it is essential to map out who is responsible for different tasks, establish control gates, and create verification hooks that allow us to check our decisions after they are made. This process helps us maintain control over our operations and ensures that we can respond effectively to any issues that arise.\nContext recap: To ensure operational readiness, it is essential to map out who is responsible for different tasks, establish control gates, and create verification hooks that allow us to check our decisions after they are made. This process helps us maintain control over our operations and ensures that we can respond effectively to any issues that arise."
         }
       ],
       "interactiveActivities": [
@@ -322,19 +322,19 @@ export const NegotiationConflictResolution401Module: LearningModule = {
           "id": "negotiation-conflict-resolution-401-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a multi-party dispute where incentives conflict and trust has degraded over repeated breakdowns. Learners map decision stakes and identify non-obvious risks."
+          "content": "In this case analysis, we will explore a situation involving multiple parties who have different interests and goals. These differences have led to a breakdown in trust, making it difficult for everyone to communicate effectively. As part of this exercise, learners will carefully map out the various stakes involved in the decisions being made. Additionally, we will work together to identify potential risks that may not be immediately obvious. By engaging in this analysis, we will gain a deeper understanding of the complexities involved in negotiation, especially in challenging circumstances where trust is fragile and communication is key.\nContext recap: In this case analysis, we will explore a situation involving multiple parties who have different interests and goals. These differences have led to a breakdown in trust, making it difficult for everyone to communicate effectively. As part of this exercise, learners will carefully map out the various stakes involved in the decisions being made. Additionally, we will work together to identify potential risks that may not be immediately obvious."
         },
         {
           "id": "negotiation-conflict-resolution-401-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix Construction",
-          "content": "Interventions are compared across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will learn how to construct a tradeoff matrix. This tool allows us to compare different interventions based on their effectiveness, reliability, fairness, and how feasible they are to implement. By using this matrix, we can make informed decisions about which options are best suited for addressing the issues at hand.\nContext recap: In this section, we will learn how to construct a tradeoff matrix. This tool allows us to compare different interventions based on their effectiveness, reliability, fairness, and how feasible they are to implement. By using this matrix, we can make informed decisions about which options are best suited for addressing the issues at hand."
         },
         {
           "id": "negotiation-conflict-resolution-401-l04-c3",
           "kind": "recap",
           "title": "Failure Lessons and Recovery",
-          "content": "The lesson converts failure signatures into safeguards, response playbooks, and monitoring updates."
+          "content": "This lesson will teach us how to turn lessons learned from failures into valuable safeguards. We will create response playbooks that outline steps to take in case of setbacks and establish monitoring updates to keep track of our progress. This proactive approach helps us learn from our experiences and improve our future responses.\nContext recap: This lesson will teach us how to turn lessons learned from failures into valuable safeguards. We will create response playbooks that outline steps to take in case of setbacks and establish monitoring updates to keep track of our progress. This proactive approach helps us learn from our experiences and improve our future responses."
         }
       ],
       "flashcards": [
@@ -373,13 +373,13 @@ export const NegotiationConflictResolution401Module: LearningModule = {
           "id": "negotiation-conflict-resolution-401-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation Setup",
-          "content": "Learners configure interventions, define uncertainty parameters, and set measurable success thresholds."
+          "content": "In this interactive simulation studio, learners will have the chance to configure various interventions. This includes defining parameters of uncertainty and setting measurable thresholds for success. By doing this, we can better understand how our choices impact the outcomes of our negotiations and conflict resolutions.\nContext recap: In this interactive simulation studio, learners will have the chance to configure various interventions. This includes defining parameters of uncertainty and setting measurable thresholds for success. By doing this, we can better understand how our choices impact the outcomes of our negotiations and conflict resolutions."
         },
         {
           "id": "negotiation-conflict-resolution-401-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After each run, results are reviewed for expected gains, side effects, and governance compliance."
+          "content": "After each simulation run, we will review the results to assess whether we achieved the expected gains. We will also look for any side effects that may have occurred and ensure that our actions comply with governance standards. This debriefing process is essential for learning and improving our strategies.\nContext recap: After each simulation run, we will review the results to assess whether we achieved the expected gains. We will also look for any side effects that may have occurred and ensure that our actions comply with governance standards. This debriefing process is essential for learning and improving our strategies."
         }
       ],
       "interactiveActivities": [
@@ -579,19 +579,19 @@ export const NegotiationConflictResolution401Module: LearningModule = {
           "id": "negotiation-conflict-resolution-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "This lesson identifies impact distribution, especially where benefits and burdens diverge across groups."
+          "content": "In this lesson, we will focus on mapping the impact of our decisions on various stakeholders. It is important to identify how benefits and burdens are distributed, especially when they differ across different groups. Understanding these dynamics will help us make more equitable decisions in our negotiations.\nContext recap: In this lesson, we will focus on mapping the impact of our decisions on various stakeholders. It is important to identify how benefits and burdens are distributed, especially when they differ across different groups. Understanding these dynamics will help us make more equitable decisions in our negotiations."
         },
         {
           "id": "negotiation-conflict-resolution-401-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability requires clear decision traceability, review rights, and remediation standards."
+          "content": "To ensure accountability in our decision-making processes, we need to establish clear pathways for tracing decisions. This includes defining rights for review and setting standards for remediation when things do not go as planned. By doing so, we can foster a culture of responsibility and transparency in our negotiations.\nContext recap: To ensure accountability in our decision-making processes, we need to establish clear pathways for tracing decisions. This includes defining rights for review and setting standards for remediation when things do not go as planned. By doing so, we can foster a culture of responsibility and transparency in our negotiations."
         },
         {
           "id": "negotiation-conflict-resolution-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist combines policy, ethics, technical reliability, and stakeholder trust criteria."
+          "content": "To ensure responsible execution of our plans, we create a final checklist. This checklist includes important elements such as adherence to policies, ethical considerations, the reliability of our technical methods, and the trust we build with stakeholders. Each of these criteria plays a crucial role in guiding our actions and decisions.\nContext recap: To ensure responsible execution of our plans, we create a final checklist. This checklist includes important elements such as adherence to policies, ethical considerations, the reliability of our technical methods, and the trust we build with stakeholders. Each of these criteria plays a crucial role in guiding our actions and decisions."
         }
       ],
       "flashcards": [
@@ -630,13 +630,13 @@ export const NegotiationConflictResolution401Module: LearningModule = {
           "id": "negotiation-conflict-resolution-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter Drafting",
-          "content": "Learners draft capstone scope, constraints, metrics, and governance checkpoints in one decision charter."
+          "content": "In this interactive session, learners will have the opportunity to draft a comprehensive decision charter for their capstone project. This charter will outline the project's scope, identify any constraints, establish metrics for success, and set governance checkpoints to ensure everything stays on track. This exercise helps students think critically about their project planning and execution.\nContext recap: In this interactive session, learners will have the opportunity to draft a comprehensive decision charter for their capstone project. This charter will outline the project's scope, identify any constraints, establish metrics for success, and set governance checkpoints to ensure everything stays on track. This exercise helps students think critically about their project planning and execution."
         },
         {
           "id": "negotiation-conflict-resolution-401-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Final preparation focuses on evidence-backed justification and robust response to critical review."
+          "content": "As we prepare for our final presentation, it is essential to focus on creating strong justifications based on evidence. This preparation also involves developing a robust response to any critical feedback we might receive. By doing so, we ensure that we are ready to defend our ideas and demonstrate the thoroughness of our work.\nContext recap: As we prepare for our final presentation, it is essential to focus on creating strong justifications based on evidence. This preparation also involves developing a robust response to any critical feedback we might receive. By doing so, we ensure that we are ready to defend our ideas and demonstrate the thoroughness of our work."
         }
       ],
       "interactiveActivities": [

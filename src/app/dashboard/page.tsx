@@ -10,6 +10,7 @@ import AiCoachCard from "./ai-coach-card";
 import AiTutorPanel from "./ai-tutor-panel";
 import AiWeeklyPlanCard from "./ai-weekly-plan-card";
 import AiRemediationWorksheetCard from "./ai-remediation-worksheet-card";
+import AdaptiveNextLessons from "./adaptive-next-lessons";
 import ModuleCoverImage from "@/app/components/module-cover-image";
 import { resolveLanguageUsageEntitlement } from "@/lib/language-learning";
 import { toLessonPath } from "@/lib/routing/paths";
@@ -18,6 +19,7 @@ import { summarizeLanguageProgress } from "@/lib/language-learning/progress-metr
 import { isSupportedLocale, translate, type Locale } from "@/lib/i18n/translations";
 import { formatDate } from "@/lib/i18n/format";
 import PageHeader from "@/app/components/page-header";
+import { isLaunchFeaturePending, resolveLaunchHref } from "@/lib/platform/launch-readiness";
 
 export const dynamic = "force-dynamic";
 
@@ -206,6 +208,8 @@ export default async function DashboardPage() {
     ? describeUsageState(usageEntitlement.reason, t)
     : usageEntitlementWarning ?? t("dashboard_usage_state_awaiting_telemetry");
   const showUsageUpgradeCta = usageEntitlement?.mode === "practice_only";
+  const experienceHubPending = isLaunchFeaturePending("experience-hub");
+  const experienceHubHref = resolveLaunchHref("/experience-hub");
 
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12 tablet:max-w-5xl tablet:px-8">
@@ -220,18 +224,26 @@ export default async function DashboardPage() {
       />
 
       <section className="flex flex-col gap-8">
-        <Link href="/experience-hub" className="group relative overflow-hidden bg-indigo-600 rounded-[2rem] p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 transition-transform hover:scale-[1.01] active:scale-[0.99] shadow-2xl">
+        <Link href={experienceHubHref} className="group relative overflow-hidden bg-indigo-600 rounded-[2rem] p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 transition-transform hover:scale-[1.01] active:scale-[0.99] shadow-2xl">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-50" />
           <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all" />
 
           <div className="relative z-10 flex flex-col gap-1 text-center md:text-left">
-            <span className="text-xs font-black uppercase tracking-widest text-indigo-200">New Feature</span>
-            <h2 className="text-3xl font-black italic tracking-tighter">ENTER EXPERIENCE HUB</h2>
-            <p className="text-indigo-100 font-medium">Your progress galaxy, trophies, and companions await!</p>
+            <span className="text-xs font-black uppercase tracking-widest text-indigo-200">
+              {experienceHubPending ? "Coming Soon" : "New Feature"}
+            </span>
+            <h2 className="text-3xl font-black italic tracking-tighter">
+              {experienceHubPending ? "MORE TO EXPLORE" : "ENTER EXPERIENCE HUB"}
+            </h2>
+            <p className="text-indigo-100 font-medium">
+              {experienceHubPending
+                ? "More exciting features coming soon. Stay tuned!"
+                : "Your progress galaxy, trophies, and companions await!"}
+            </p>
           </div>
 
           <div className="relative z-10 bg-white/20 px-8 py-4 rounded-3xl backdrop-blur-md border border-white/30 font-black italic text-xl group-hover:bg-white transition-colors group-hover:text-indigo-600">
-            LAUNCH →
+            {experienceHubPending ? "STAY TUNED →" : "LAUNCH →"}
           </div>
         </Link>
 
@@ -399,6 +411,7 @@ export default async function DashboardPage() {
         </SoftCard>
 
         <RecommendedLesson />
+        <AdaptiveNextLessons />
         <AiCoachCard />
         <AiRemediationWorksheetCard />
         <AiWeeklyPlanCard />

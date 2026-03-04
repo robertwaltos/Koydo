@@ -4,11 +4,13 @@ import SupportClient from "./support-client";
 import SoftCard from "@/app/components/ui/soft-card";
 import ProgressChip from "@/app/components/ui/progress-chip";
 import PageHeader from "@/app/components/page-header";
+import { loadSupportRuntimeConfig } from "@/lib/support/config";
 
 export const dynamic = "force-dynamic";
 
 export default async function SupportPage() {
   const supabase = await createSupabaseServerClient();
+  const supportConfig = await loadSupportRuntimeConfig();
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -17,7 +19,7 @@ export default async function SupportPage() {
     ? (
         await supabase
           .from("support_tickets")
-          .select("id, subject, status, priority, created_at, updated_at")
+          .select("id, subject, status, priority, ticket_type, parent_confirmation_status, ai_response_text, first_response_due_at, created_at, updated_at")
           .eq("user_id", user.id)
           .order("created_at", { ascending: false })
       ).data ?? []
@@ -52,14 +54,22 @@ export default async function SupportPage() {
       <SoftCard className="p-5 space-y-2">
         <h2 className="text-lg font-semibold">Contact &amp; FAQ / Contacto y Preguntas Frecuentes</h2>
         <p className="text-sm text-foreground">
-          <strong>Email:</strong> support@koydo.app <br />
+          <strong>Email:</strong> {supportConfig.supportEmail} <br />
+          <strong>Emergency call:</strong> {supportConfig.emergencyPhone} <br />
           <strong>Bug Reporting:</strong> Use the form below to report any technical issues. <br />
           <strong>FAQ:</strong> Subscriptions can be managed directly via your App Store / Google Play account settings.
+          <br />
+          <strong>Response policy:</strong> Koydo support currently operates on a best-effort basis and does not
+          offer strict 24/7 SLA guarantees.
           <br /><br />
           <em>
-          <strong>Correo electrónico:</strong> support@koydo.app <br />
+          <strong>Correo electrónico:</strong> {supportConfig.supportEmail} <br />
+          <strong>Llamada de emergencia:</strong> {supportConfig.emergencyPhone} <br />
           <strong>Reporte de errores:</strong> Use el formulario a continuación para reportar cualquier problema técnico. <br />
           <strong>Preguntas Frecuentes:</strong> Las suscripciones se pueden administrar directamente a través de la configuración de su cuenta de App Store o Google Play.
+          <br />
+          <strong>Política de respuesta:</strong> El soporte de Koydo opera actualmente bajo mejor esfuerzo y no
+          ofrece garantías estrictas de SLA 24/7.
           </em>
         </p>
       </SoftCard>
@@ -70,7 +80,7 @@ export default async function SupportPage() {
         <SoftCard className="space-y-3 p-5">
           <h2 className="text-lg font-semibold">Need help right now?</h2>
           <p className="text-sm text-foreground">
-            You can still reach us at support@koydo.app. Sign in when ready to create and track
+            You can still reach us at {supportConfig.supportEmail} or call {supportConfig.emergencyPhone}. Sign in when ready to create and track
             support tickets directly in your account.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -81,7 +91,7 @@ export default async function SupportPage() {
               Sign in
             </Link>
             <a
-              href="mailto:support@koydo.app"
+              href={`mailto:${supportConfig.supportEmail}`}
               className="ui-soft-button ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-border bg-surface-muted px-4 py-2 text-sm font-semibold text-foreground"
             >
               Email support

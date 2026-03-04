@@ -7,7 +7,11 @@ import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-prim
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import { hapticSelection, hapticError, hapticSuccess } from "@/lib/platform/haptics";
-import { Zap, ArrowUp, ArrowDown, Activity, FastForward } from "lucide-react";
+import { Zap, ArrowUp, ArrowDown, Activity, FastForward, type LucideIcon } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Velocity Vector Content --- */
 type Obstacle = {
@@ -19,6 +23,11 @@ type Obstacle = {
     type: "ice" | "metal" | "energy";
 };
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+const OBSTACLE_TYPES: Obstacle["type"][] = ["ice", "metal", "energy"];
+
 export default function VelocityVector() {
     const { setMood, setMessage } = useMascot();
     const [gameState, setGameState] = useState<"ready" | "playing" | "gameover">("ready");
@@ -29,11 +38,24 @@ export default function VelocityVector() {
 
     const requestRef = useRef<number | undefined>(undefined);
     const previousTimeRef = useRef<number | undefined>(undefined);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const currentScoreRef = useRef<number>(0);
+    const nextCompletionScoreRef = useRef<number>(1200);
 
     useEffect(() => {
         setMessage("Welcome to the Velocity Vector. Pilot the probe using the power of physics! 🚀⚡");
         setMood("happy");
-    }, []);
+    }, [setMessage, setMood]);
+
+    const resetRunTracking = (nextCompletionScore = 1200) => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        currentScoreRef.current = 0;
+        nextCompletionScoreRef.current = nextCompletionScore;
+    };
 
     const spawnObstacle = () => {
         const newObstacle: Obstacle = {
@@ -42,7 +64,7 @@ export default function VelocityVector() {
             y: Math.random() * 80 + 10,
             width: 10,
             height: 20,
-            type: ["ice", "metal", "energy"][Math.floor(Math.random() * 3)] as any
+            type: OBSTACLE_TYPES[Math.floor(Math.random() * OBSTACLE_TYPES.length)]
         };
         setObstacles(prev => [...prev, newObstacle]);
     };
@@ -51,8 +73,6 @@ export default function VelocityVector() {
         if (gameState !== "playing") return;
 
         if (previousTimeRef.current !== undefined) {
-            const deltaTime = time - previousTimeRef.current;
-
             setObstacles(prev => {
                 const moved = prev.map(o => ({ ...o, x: o.x - 0.5 - (velocity * 0.05) }));
                 const filtered = moved.filter(o => o.x > -20);
@@ -64,6 +84,18 @@ export default function VelocityVector() {
                 );
 
                 if (collision) {
+                    if (currentScoreRef.current >= 400) {
+                        emitLegacyGameComplete({
+                            sessionId: sessionIdRef.current,
+                            gameId: "velocity",
+                            elapsedMs: getElapsedMs(runStartedAtRef.current),
+                            interactions: Math.max(1, interactionCountRef.current),
+                            score: currentScoreRef.current,
+                            maxScore: 5000,
+                            source: "component",
+                            occurredAt: new Date().toISOString(),
+                        });
+                    }
                     setGameState("gameover");
                     void hapticError();
                     setMood("thinking");
@@ -74,7 +106,25 @@ export default function VelocityVector() {
                 return filtered;
             });
 
-            setScore(prev => prev + 1);
+            setScore(prev => {
+                const nextScore = prev + 1;
+                currentScoreRef.current = nextScore;
+                if (nextScore >= nextCompletionScoreRef.current) {
+                    emitLegacyGameComplete({
+                        sessionId: sessionIdRef.current,
+                        gameId: "velocity",
+                        elapsedMs: getElapsedMs(runStartedAtRef.current),
+                        interactions: Math.max(1, interactionCountRef.current),
+                        score: nextScore,
+                        maxScore: 5000,
+                        source: "component",
+                        occurredAt: new Date().toISOString(),
+                    });
+                    resetRunTracking(nextScore + 1200);
+                    currentScoreRef.current = nextScore;
+                }
+                return nextScore;
+            });
             if (time % 2000 < 20) spawnObstacle();
         }
         previousTimeRef.current = time;
@@ -95,6 +145,7 @@ export default function VelocityVector() {
         setVelocity(5);
         setPositionY(50);
         setObstacles([]);
+        resetRunTracking();
         setGameState("playing");
         void hapticSelection();
         setMood("happy");
@@ -102,6 +153,7 @@ export default function VelocityVector() {
     };
 
     const adjustVector = (delta: number) => {
+        interactionCountRef.current += 1;
         setPositionY(prev => Math.max(10, Math.min(90, prev + delta)));
         void hapticSelection();
     };
@@ -221,7 +273,7 @@ export default function VelocityVector() {
     );
 }
 
-function StatBox({ icon: Icon, label, value, color }: { icon: any, label: string, value: string, color: string }) {
+function StatBox({ icon: Icon, label, value, color }: { icon: LucideIcon, label: string, value: string, color: string }) {
     return (
         <div className="bg-white/5 border border-white/5 p-4 rounded-2xl backdrop-blur-md flex items-center gap-4">
             <div className={`p-2 rounded-lg bg-black/40 ${color}`}>

@@ -1,46 +1,87 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
-import { JUICY_VARIANTS, JUICY_SPRINGS, EXPERIENCE_COLORS } from "@/lib/experience/interaction-primitives";
+import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
-import { hapticSuccess, hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
-import { Flame, Beaker, Hammer, Star } from "lucide-react";
+import { hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
+import { Beaker, Hammer } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
-/* --- Fraction Forge Logic --- */
-type Ingot = {
-    target: number; // e.g. 0.75 for 3/4
-    current: number;
-    fractions: number[]; // e.g. [0.25, 0.5, 0.125]
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
+const getRandomUnit = () => {
+    if (typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function") {
+        const values = new Uint32Array(1);
+        crypto.getRandomValues(values);
+        return values[0] / 0x100000000;
+    }
+    return Math.random();
+};
+
+const shuffled = <T,>(input: T[]) => {
+    const clone = [...input];
+    for (let i = clone.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(getRandomUnit() * (i + 1));
+        const temp = clone[i];
+        clone[i] = clone[j];
+        clone[j] = temp;
+    }
+    return clone;
+};
+
+const createChallenge = () => {
+    const possibleFractions = [0.25, 0.5, 0.125, 0.33, 0.66];
+    const targetBase = 0.5 + getRandomUnit() * 0.4;
+    return {
+        target: parseFloat(targetBase.toFixed(2)),
+        options: shuffled(possibleFractions).slice(0, 3),
+    };
 };
 
 export default function FractionForge() {
     const { setMood, setMessage } = useMascot();
-    const [target, setTarget] = useState(0.75);
+    const [target, setTarget] = useState(() => createChallenge().target);
     const [current, setCurrent] = useState(0);
-    const [options, setOptions] = useState([0.25, 0.5, 0.125]);
+    const [options, setOptions] = useState(() => createChallenge().options);
     const [streak, setStreak] = useState(0);
     const [phase, setPhase] = useState<"forging" | "success" | "exploding">("forging");
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
+
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        completionEmittedRef.current = false;
+    }, []);
+
+    const generateChallenge = useCallback(() => {
+        const challenge = createChallenge();
+        setTarget(challenge.target);
+        setCurrent(0);
+        setOptions(challenge.options);
+        setPhase("forging");
+    }, []);
 
     useEffect(() => {
         setMessage("Welcome to the Fraction Forge! Let's mix some magical alloys! 🔥");
         setMood("happy");
-        generateChallenge();
-    }, []);
-
-    const generateChallenge = () => {
-        const possibleFractions = [0.25, 0.5, 0.125, 0.33, 0.66];
-        const t = 0.5 + Math.random() * 0.4;
-        setTarget(parseFloat(t.toFixed(2)));
-        setCurrent(0);
-        setOptions(possibleFractions.sort(() => Math.random() - 0.5).slice(0, 3));
-        setPhase("forging");
-    };
+        resetRunTracking();
+    }, [resetRunTracking, setMessage, setMood]);
 
     const addAlloy = (val: number) => {
         if (phase !== "forging") return;
+        interactionCountRef.current += 1;
 
         const next = parseFloat((current + val).toFixed(2));
         void hapticSelection();
@@ -56,11 +97,27 @@ export default function FractionForge() {
     };
 
     const handleSuccess = () => {
+        const nextStreak = streak + 1;
         setPhase("success");
-        setStreak(prev => prev + 1);
+        setStreak(nextStreak);
         setMood("happy");
         setMessage("A perfect Ingot! You're a Master Smith! 🔨✨");
         void hapticCelebration();
+
+        if (nextStreak >= 3 && nextStreak % 3 === 0 && !completionEmittedRef.current) {
+            completionEmittedRef.current = true;
+            emitLegacyGameComplete({
+                sessionId: sessionIdRef.current,
+                gameId: "fraction",
+                elapsedMs: getElapsedMs(runStartedAtRef.current),
+                interactions: Math.max(1, interactionCountRef.current),
+                score: Math.round(nextStreak * 180 + target * 100),
+                maxScore: 1800,
+                source: "component",
+                occurredAt: new Date().toISOString(),
+            });
+            resetRunTracking();
+        }
 
         setTimeout(() => {
             generateChallenge();

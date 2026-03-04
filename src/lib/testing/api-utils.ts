@@ -20,6 +20,7 @@ export function isMissingTestingTableError(error: unknown) {
     || lowered.includes("classroom_entities")
     || lowered.includes("class_enrollments")
     || lowered.includes("class_assignments")
+    || lowered.includes("classroom_sessions")
   );
 }
 

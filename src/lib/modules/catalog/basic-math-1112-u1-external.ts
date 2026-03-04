@@ -65,22 +65,22 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-1-chunk-1",
           "title": "What is a Limit?",
-          "content": "A LIMIT describes the value a function APPROACHES as the input approaches some value — even if the function never actually reaches that value.\n\nlim[x→2] (x² − 4)/(x − 2)\n\nWe can't plug in x=2 (division by zero!), but as x gets CLOSER to 2, the expression gets closer to 4.\n\nWe write: lim[x→2] = 4"
+          "content": "In mathematics, a limit is an important idea that helps us understand how a function behaves as we approach a particular input value. Think of it like this: when you have a function, you might want to find out what value it is getting closer to as you near a specific number. For instance, let's consider the function (x² − 4)/(x − 2) and examine what happens as x approaches 2. If we try to substitute 2 directly into the function, we run into a problem because it would mean dividing by zero, which is not allowed in mathematics. Instead, we can look at the values of the function as x gets closer and closer to 2 from both sides. As we do this, we notice that the function approaches the value 4. Therefore, we can conclude that the limit of this function as x approaches 2 is 4. We express this mathematically as lim[x→2] = 4. Understanding limits is crucial because they form the foundation for more advanced topics in calculus, such as derivatives and integrals, which help us analyze and understand changes in functions more deeply."
         },
         {
           "id": "basic-math-1112-u1-1-chunk-2",
           "title": "Evaluating Limits: Direct Substitution",
-          "content": "For CONTINUOUS functions at point c:\nlim[x→c] f(x) = f(c)\n\nSimply substitute!\nExample: lim[x→3] (2x + 1) = 2(3) + 1 = 7\n\nWhen does this fail? When substitution gives 0/0 (indeterminate form) — then factor, rationalize, or use L'Hôpital's Rule."
+          "content": "When we study continuous functions, we often have a straightforward way to find limits by substituting the value directly into the function. This means that if we want to determine the limit of a function f(x) as x approaches a specific point c, we can simply replace x with c in the function. For instance, if we want to calculate lim[x→3] (2x + 1), we substitute 3 into the function. This gives us 2(3) + 1, which equals 7. However, it's important to note that this method doesn't always work perfectly. If substituting the value results in an indeterminate form like 0/0, we cannot use direct substitution. In such cases, we need to apply other techniques to find the limit. These techniques include factoring the expression, rationalizing it, or using L'Hôpital's Rule, which is a special method for dealing with limits that result in indeterminate forms. Understanding when and how to use these methods is crucial for mastering limits in calculus."
         },
         {
           "id": "basic-math-1112-u1-1-chunk-3",
           "title": "Factoring to Resolve Indeterminate Form",
-          "content": "lim[x→3] (x² − 9)/(x − 3)\n\nDirect substitution gives 0/0 — indeterminate form.\n\nFactor: (x−3)(x+3)/(x−3)\nCancel (x−3): (x+3)\nNow substitute: 3 + 3 = 6 ✓\n\nlim[x→3] (x² − 9)/(x − 3) = 6\n\nThe key: factor → cancel → substitute."
+          "content": "Let's consider the limit of the function (x² − 9)/(x − 3) as x approaches 3. If we try to substitute 3 directly, we get 0/0, which is an indeterminate form. To resolve this, we can factor the expression. The numerator can be factored as (x−3)(x+3), so we rewrite the limit as (x−3)(x+3)/(x−3). Now, we can cancel out the (x−3) terms, which simplifies our expression to just (x+3). After canceling, we can substitute 3 back into the simplified function, giving us 3 + 3 = 6. Therefore, we find that lim[x→3] (x² − 9)/(x − 3) equals 6. The important steps here are to factor, cancel, and then substitute."
         },
         {
           "id": "basic-math-1112-u1-1-chunk-4",
           "title": "One-Sided & Infinite Limits",
-          "content": "LEFT-HAND LIMIT: lim[x→c⁻] f(x) — approach from the LEFT\nRIGHT-HAND LIMIT: lim[x→c⁺] f(x) — approach from the RIGHT\n\nThe TWO-SIDED limit exists only if BOTH one-sided limits are EQUAL.\n\nINFINITE LIMITS: lim[x→0] 1/x² = ∞ (denominator → 0, fraction → ∞)\nVERTICAL ASYMPTOTES occur where functions approach ±∞."
+          "content": "In the fascinating world of calculus, we explore the concept of one-sided limits, which are essential for understanding how a function behaves as we get closer to a specific point from one direction. Let's break this down! The left-hand limit is represented as lim[x→c⁻] f(x). This notation indicates that we are approaching the point 'c' from the left side. On the other hand, the right-hand limit is shown as lim[x→c⁺] f(x), which means we are approaching 'c' from the right side. For a two-sided limit to exist, it's important that both the left-hand and right-hand limits are equal to each other. This ensures that the function behaves consistently from both directions. Additionally, we encounter infinite limits, such as lim[x→0] 1/x². In this case, as the denominator approaches zero, the value of the fraction increases without bound, leading to infinity. This phenomenon often results in vertical asymptotes on the graph of the function, where the graph dramatically rises or falls towards infinity, creating a striking visual representation of the function's behavior near that point."
         }
       ],
       "flashcards": [
@@ -209,13 +209,13 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-interactive-chunk-intro",
           "title": "Calculus: Limits, Derivatives & Integration Supplemental Practice Overview",
-          "content": "Reinforce core Mathematics concepts in Calculus: Limits, Derivatives & Integration.",
+          "content": "In this section, we will focus on reinforcing the core concepts of mathematics related to calculus, specifically the topics of limits, derivatives, and integration. These foundational ideas are essential for understanding more complex mathematical principles and will help you build a strong base for your future studies in calculus.\nContext recap: In this section, we will focus on reinforcing the core concepts of mathematics related to calculus, specifically the topics of limits, derivatives, and integration. These foundational ideas are essential for understanding more complex mathematical principles and will help you build a strong base for your future studies in calculus.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-interactive-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "As we wrap up this section, let's summarize one key idea that we have learned about limits and how they help us understand the behavior of functions. After identifying this key concept, think about one next step you can take to further your understanding of calculus. This could involve practicing more problems, reviewing your notes, or discussing concepts with a classmate.\nContext recap: As we wrap up this section, let's summarize one key idea that we have learned about limits and how they help us understand the behavior of functions. After identifying this key concept, think about one next step you can take to further your understanding of calculus. This could involve practicing more problems, reviewing your notes, or discussing concepts with a classmate.",
           "kind": "recap"
         }
       ],
@@ -426,13 +426,13 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-quiz-chunk-intro",
           "title": "Calculus: Limits, Derivatives & Integration Supplemental Check Overview",
-          "content": "Reinforce core Mathematics concepts in Calculus: Limits, Derivatives & Integration.",
+          "content": "In this quiz section, we will reinforce the core concepts of mathematics that we have explored in calculus, focusing on limits, derivatives, and integration. This will help you assess your understanding and retention of these important topics.\nContext recap: In this quiz section, we will reinforce the core concepts of mathematics that we have explored in calculus, focusing on limits, derivatives, and integration. This will help you assess your understanding and retention of these important topics.\nWhy this matters: Calculus: Limits, Derivatives & Integration Supplemental Check Overview helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-quiz-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "As we conclude this quiz section, let's summarize one key idea that you have learned about calculus. After identifying this concept, think about one next step you can take to improve your understanding or skills in this area. This could involve additional practice, seeking help from a teacher, or collaborating with peers.\nContext recap: As we conclude this quiz section, let's summarize one key idea that you have learned about calculus. After identifying this concept, think about one next step you can take to improve your understanding or skills in this area. This could involve additional practice, seeking help from a teacher, or collaborating with peers.",
           "kind": "recap"
         }
       ],
@@ -485,25 +485,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-04-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before we dive into solving problems, it's important to model the problem using a visual representation or an equation. This helps us to clearly understand what we are trying to solve and sets a solid foundation for finding the solution.\nContext recap: Before we dive into solving problems, it's important to model the problem using a visual representation or an equation. This helps us to clearly understand what we are trying to solve and sets a solid foundation for finding the solution.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-04-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice, we will work through one example together, and then you will have the opportunity to solve a similar problem on your own. This approach will help you recognize the pattern and apply what you've learned effectively.\nContext recap: In this guided practice, we will work through one example together, and then you will have the opportunity to solve a similar problem on your own. This approach will help you recognize the pattern and apply what you've learned effectively.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-04-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "As you apply the multi-step strategy to solve problems, be aware of one common error that students often make. We will identify this mistake and discuss how to correct it using evidence from our calculations. This will help you avoid similar pitfalls in your own work.\nContext recap: As you apply the multi-step strategy to solve problems, be aware of one common error that students often make. We will identify this mistake and discuss how to correct it using evidence from our calculations. This will help you avoid similar pitfalls in your own work.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-04-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's take a moment to review the multi-step strategy we discussed. After this review, think about one clear target for improvement that you can focus on moving forward. Setting specific goals will help you enhance your skills in calculus.\nContext recap: Let's take a moment to review the multi-step strategy we discussed. After this review, think about one clear target for improvement that you can focus on moving forward. Setting specific goals will help you enhance your skills in calculus.",
           "kind": "recap"
         }
       ],
@@ -619,25 +619,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-05-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, you will identify a specific mathematical operation and explain how it applies to the problem at hand. Understanding the operation is crucial because it helps us see how it fits into the larger context of our calculations and solutions.\nContext recap: In this section, you will identify a specific mathematical operation and explain how it applies to the problem at hand. Understanding the operation is crucial because it helps us see how it fits into the larger context of our calculations and solutions.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-05-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "As you work through the problems, use a simple checklist to guide your process. First, plan your approach to the problem. Next, solve it step by step. Finally, verify your solution to ensure it is correct and makes sense.\nContext recap: As you work through the problems, use a simple checklist to guide your process. First, plan your approach to the problem. Next, solve it step by step. Finally, verify your solution to ensure it is correct and makes sense.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-05-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "As you work through the error-check routines, it's important to stay vigilant for a frequent mistake that many learners encounter. This mistake can lead to misunderstandings in your calculations. When you spot this error, take a moment to correct it thoughtfully. Make sure to explain your reasoning or provide evidence for your correction. This practice will not only help you fix the mistake but also deepen your comprehension of the concepts involved.\nContext recap: As you work through the error-check routines, it's important to stay vigilant for a frequent mistake that many learners encounter. This mistake can lead to misunderstandings in your calculations. When you spot this error, take a moment to correct it thoughtfully. Make sure to explain your reasoning or provide evidence for your correction.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-05-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's take a moment to review the error-check routines we have discussed. After this review, think about one specific area where you can improve your skills or understanding. Setting a clear improvement target will help you focus your efforts moving forward.\nContext recap: Let's take a moment to review the error-check routines we have discussed. After this review, think about one specific area where you can improve your skills or understanding. Setting a clear improvement target will help you focus your efforts moving forward.",
           "kind": "recap"
         }
       ],
@@ -859,25 +859,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-06-chunk-intro",
           "title": "Number Sense Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before you finalize your answers, it is important to check the units, signs, and overall reasonableness of your solutions. This step ensures that your results are not only mathematically correct but also make sense in the context of the problem.\nContext recap: Before you finalize your answers, it is important to check the units, signs, and overall reasonableness of your solutions. This step ensures that your results are not only mathematically correct but also make sense in the context of the problem.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-06-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice section, you will compare two different strategies for solving a problem. After evaluating both methods, choose the one that you believe is more reliable and effective for achieving the correct solution.\nContext recap: In this practice section, you will compare two different strategies for solving a problem. After evaluating both methods, choose the one that you believe is more reliable and effective for achieving the correct solution.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-06-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying number sense, then correct it with evidence.",
+          "content": "As you apply your number sense skills, be vigilant for a common error that can occur. Once you spot this mistake, take the opportunity to correct it and support your correction with evidence or reasoning to strengthen your understanding.\nContext recap: As you apply your number sense skills, be vigilant for a common error that can occur. Once you spot this mistake, take the opportunity to correct it and support your correction with evidence or reasoning to strengthen your understanding.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-06-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review number sense, then set one clear improvement target.",
+          "content": "Let's quickly review the key concepts related to number sense that we have covered. After this recap, think about one specific area where you can improve your understanding or skills. Setting a clear improvement target will help guide your future learning.\nContext recap: Let's quickly review the key concepts related to number sense that we have covered. After this recap, think about one specific area where you can improve your understanding or skills. Setting a clear improvement target will help guide your future learning.",
           "kind": "recap"
         }
       ],
@@ -940,25 +940,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-07-chunk-intro",
           "title": "Equation Setup Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before you start solving a problem, it's helpful to model the situation using a visual representation or an equation. This step will provide a clearer understanding of the problem and help you organize your thoughts as you work towards a solution.\nContext recap: Before you start solving a problem, it's helpful to model the situation using a visual representation or an equation. This step will provide a clearer understanding of the problem and help you organize your thoughts as you work towards a solution.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-07-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice, you will first solve one example problem together with guidance. After that, you will tackle a similar problem on your own, using the same pattern you learned from the first example. This will help reinforce your understanding.\nContext recap: In this guided practice, you will first solve one example problem together with guidance. After that, you will tackle a similar problem on your own, using the same pattern you learned from the first example. This will help reinforce your understanding.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-07-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying equation setup, then correct it with evidence.",
+          "content": "As you work on setting up equations, keep an eye out for a common error that students often make. Once you identify this mistake, take the time to correct it and provide evidence or reasoning for your correction to enhance your learning.\nContext recap: As you work on setting up equations, keep an eye out for a common error that students often make. Once you identify this mistake, take the time to correct it and provide evidence or reasoning for your correction to enhance your learning.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-07-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review equation setup, then set one clear improvement target.",
+          "content": "Let's take a moment to review the process of setting up equations that we have discussed. After this review, think about one specific area where you can improve your skills or understanding. Setting a clear improvement target will help you focus your efforts as you continue learning.\nContext recap: Let's take a moment to review the process of setting up equations that we have discussed. After this review, think about one specific area where you can improve your skills or understanding. Setting a clear improvement target will help you focus your efforts as you continue learning.",
           "kind": "recap"
         }
       ],
@@ -1074,25 +1074,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-08-chunk-intro",
           "title": "Fraction Reasoning Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, we will identify the mathematical operation we are using and discuss why it is the appropriate choice for solving our problem. Understanding the reasoning behind our operations is crucial for mastering fractions.\nContext recap: In this section, we will identify the mathematical operation we are using and discuss why it is the appropriate choice for solving our problem. Understanding the reasoning behind our operations is crucial for mastering fractions.\nWhy this matters: Fraction Reasoning Intro helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-08-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "As you work through the problems, use a simple checklist to guide your process. First, plan your approach, then solve the problem step by step, and finally, verify your answer to ensure it makes sense.\nContext recap: As you work through the problems, use a simple checklist to guide your process. First, plan your approach, then solve the problem step by step, and finally, verify your answer to ensure it makes sense.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-08-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying fraction reasoning, then correct it with evidence.",
+          "content": "As you work through problems involving fractions, it's important to be aware of a frequent mistake that many students make. This mistake can lead to incorrect answers and misunderstandings about how fractions work. Once you spot this error, take a moment to think critically about how to fix it. Make sure to gather evidence or examples that clearly show why your correction is valid. This practice will help strengthen your understanding of fraction reasoning and improve your problem-solving skills.\nContext recap: As you work through problems involving fractions, it's important to be aware of a frequent mistake that many students make. This mistake can lead to incorrect answers and misunderstandings about how fractions work. Once you spot this error, take a moment to think critically about how to fix it. Make sure to gather evidence or examples that clearly show why your correction is valid.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-08-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review fraction reasoning, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we have learned about fraction reasoning. After this review, think about one specific area where you can improve your understanding or skills.\nContext recap: Let's take a moment to review what we have learned about fraction reasoning. After this review, think about one specific area where you can improve your understanding or skills.\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1314,25 +1314,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-09-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before you finalize your answers, make sure to check the units you are using, the signs of your numbers, and whether your results seem reasonable. This step is essential for ensuring accuracy in your calculations.\nContext recap: Before you finalize your answers, make sure to check the units you are using, the signs of your numbers, and whether your results seem reasonable. This step is essential for ensuring accuracy in your calculations.\nWhy this matters: Multi Step Strategy Intro helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-09-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice section, you will compare two different strategies for solving a problem. After evaluating both methods, choose the one that you believe is more reliable and effective.\nContext recap: In this practice section, you will compare two different strategies for solving a problem. After evaluating both methods, choose the one that you believe is more reliable and effective.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-09-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "When you use the multi-step strategy in your calculations, it's important to stay alert for a common mistake that many students make. This error can lead to incorrect answers, so it's crucial to identify it. Once you find this mistake, take a moment to correct it carefully. Make sure to provide clear evidence or reasoning that supports your correction, as this will help reinforce your understanding of the concept and ensure you grasp the material thoroughly.\nContext recap: When you use the multi-step strategy in your calculations, it's important to stay alert for a common mistake that many students make. This error can lead to incorrect answers, so it's crucial to identify it. Once you find this mistake, take a moment to correct it carefully. Make sure to provide clear evidence or reasoning that supports your correction, as this will help reinforce your understanding of the concept and ensure you grasp the material thoroughly.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-09-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's quickly review the multi-step strategy we discussed. After this recap, think about one specific improvement target that you can focus on to enhance your skills.\nContext recap: Let's quickly review the multi-step strategy we discussed. After this recap, think about one specific improvement target that you can focus on to enhance your skills.\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1395,25 +1395,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-10-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before you start solving a problem, it's helpful to model it using a visual representation or an equation. This approach can provide clarity and guide you through the solution process.\nContext recap: Before you start solving a problem, it's helpful to model it using a visual representation or an equation. This approach can provide clarity and guide you through the solution process.\nWhy this matters: Error Check Routines Intro helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-10-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice session, we will start by working through one problem as a group. This collaborative approach will help you understand the steps involved. Once we finish that, you will have the opportunity to solve a similar problem independently, applying the same pattern we just discussed. This will allow you to practice and reinforce your understanding of the concepts we've covered.\nContext recap: In this guided practice session, we will start by working through one problem as a group. This collaborative approach will help you understand the steps involved. Once we finish that, you will have the opportunity to solve a similar problem independently, applying the same pattern we just discussed. This will allow you to practice and reinforce your understanding of the concepts we've covered.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-10-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "As you work through the error-check routines, it's important to stay alert for a frequent mistake that many students encounter. This mistake can lead to incorrect conclusions if not addressed. Once you spot this error, take the time to correct it carefully. Additionally, make sure to provide clear evidence or reasoning that supports your correction. This practice not only helps reinforce your understanding but also strengthens your problem-solving skills.\nContext recap: As you work through the error-check routines, it's important to stay alert for a frequent mistake that many students encounter. This mistake can lead to incorrect conclusions if not addressed. Once you spot this error, take the time to correct it carefully. Additionally, make sure to provide clear evidence or reasoning that supports your correction.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-10-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's take a moment to review the error-check routines we have learned. After this review, think about one clear target for improvement that you can work on moving forward.\nContext recap: Let's take a moment to review the error-check routines we have learned. After this review, think about one clear target for improvement that you can work on moving forward.\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1529,25 +1529,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-11-chunk-intro",
           "title": "Number Sense Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, you will identify a specific mathematical operation and explain how it applies to the problem at hand. Understanding the operation is crucial because it helps you to see how it fits into the larger context of the math you are learning.\nContext recap: In this section, you will identify a specific mathematical operation and explain how it applies to the problem at hand. Understanding the operation is crucial because it helps you to see how it fits into the larger context of the math you are learning.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-11-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "As you work through the problems, use a simple checklist to guide your process. First, make a plan for how you will approach the problem. Next, solve the problem step by step. Finally, verify your solution to ensure it is correct and makes sense.\nContext recap: As you work through the problems, use a simple checklist to guide your process. First, make a plan for how you will approach the problem. Next, solve the problem step by step. Finally, verify your solution to ensure it is correct and makes sense.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-11-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying number sense, then correct it with evidence.",
+          "content": "As you work through problems that involve number sense, it's important to be aware of a frequent error that many students encounter. This mistake can lead to misunderstandings in calculations or interpretations. When you spot this error, take a moment to think critically about it. Provide clear evidence or reasoning that explains why this mistake occurred and how to fix it. This practice will not only help you correct the error but also deepen your understanding of the concepts involved.\nContext recap: As you work through problems that involve number sense, it's important to be aware of a frequent error that many students encounter. This mistake can lead to misunderstandings in calculations or interpretations. When you spot this error, take a moment to think critically about it. Provide clear evidence or reasoning that explains why this mistake occurred and how to fix it.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-11-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review number sense, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we have learned about number sense. After the review, think about one specific area where you can improve your understanding or skills moving forward.\nContext recap: Let's take a moment to review what we have learned about number sense. After the review, think about one specific area where you can improve your understanding or skills moving forward.\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1769,25 +1769,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-12-chunk-intro",
           "title": "Equation Setup Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before you finalize your equations, it's important to check your units, signs, and the overall reasonableness of your answers. This step ensures that your work is accurate and that your conclusions are valid.\nContext recap: Before you finalize your equations, it's important to check your units, signs, and the overall reasonableness of your answers. This step ensures that your work is accurate and that your conclusions are valid.\nWhy this matters: Equation Setup Intro helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-12-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice section, you will compare two different strategies for solving a problem. After evaluating both methods, choose the one that you believe is more reliable and effective for reaching the correct solution.\nContext recap: In this practice section, you will compare two different strategies for solving a problem. After evaluating both methods, choose the one that you believe is more reliable and effective for reaching the correct solution.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-12-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying equation setup, then correct it with evidence.",
+          "content": "As you engage in the process of setting up your equations, it's important to stay vigilant for a frequent mistake that many learners encounter. This error can lead to incorrect results, so once you identify it, make sure to take a moment to correct it. Additionally, provide clear evidence or reasoning that supports your correction. This practice will not only help you understand the material better but also strengthen your problem-solving skills.\nContext recap: As you engage in the process of setting up your equations, it's important to stay vigilant for a frequent mistake that many learners encounter. This error can lead to incorrect results, so once you identify it, make sure to take a moment to correct it. Additionally, provide clear evidence or reasoning that supports your correction. This practice will not only help you understand the material better but also strengthen your problem-solving skills.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-12-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review equation setup, then set one clear improvement target.",
+          "content": "Let's quickly review what we have learned about setting up equations. After the recap, think about one specific target for improvement that you can focus on in your future work.\nContext recap: Let's quickly review what we have learned about setting up equations. After the recap, think about one specific target for improvement that you can focus on in your future work.\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1850,25 +1850,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-13-chunk-intro",
           "title": "Fraction Reasoning Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before you start solving a problem involving fractions, it's helpful to model the situation using a visual representation or an equation. This approach can make it easier to understand the problem and find the solution.\nContext recap: Before you start solving a problem involving fractions, it's helpful to model the situation using a visual representation or an equation. This approach can make it easier to understand the problem and find the solution.\nWhy this matters: Fraction Reasoning Intro helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-13-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice, you will first solve one problem together with guidance. After that, try to solve a similar problem on your own using the same pattern. This will help reinforce your understanding.\nContext recap: In this guided practice, you will first solve one problem together with guidance. After that, try to solve a similar problem on your own using the same pattern. This will help reinforce your understanding.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-13-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying fraction reasoning, then correct it with evidence.",
+          "content": "As you work through problems involving fractions, it's important to be aware of a frequent mistake that many students make. This error can lead to incorrect answers, so it's crucial to spot it early. Once you recognize this mistake, take a moment to correct it. Be sure to explain your reasoning clearly and provide evidence that supports your correction. This practice will help strengthen your understanding of fraction reasoning and improve your overall math skills.\nContext recap: As you work through problems involving fractions, it's important to be aware of a frequent mistake that many students make. This error can lead to incorrect answers, so it's crucial to spot it early. Once you recognize this mistake, take a moment to correct it. Be sure to explain your reasoning clearly and provide evidence that supports your correction.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-13-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review fraction reasoning, then set one clear improvement target.",
+          "content": "Let's take a moment to review the key concepts related to fraction reasoning. After the review, think about one specific area where you would like to improve your skills in this topic.\nContext recap: Let's take a moment to review the key concepts related to fraction reasoning. After the review, think about one specific area where you would like to improve your skills in this topic.\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Calculus: Limits, Derivatives & Integration to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1984,25 +1984,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-14-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, we will identify the specific mathematical operation we are using and discuss why it is the most suitable choice for solving the problem at hand. Understanding the reasoning behind our operations is crucial for developing strong problem-solving skills in calculus.\nContext recap: In this section, we will identify the specific mathematical operation we are using and discuss why it is the most suitable choice for solving the problem at hand. Understanding the reasoning behind our operations is crucial for developing strong problem-solving skills in calculus.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-14-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "To effectively tackle the problems in this lab, we will use a simple checklist that includes three important steps: first, we will plan our approach; next, we will solve the problem using our chosen method; and finally, we will verify our solution to ensure it is correct. This structured approach will help us stay organized and focused.\nContext recap: To effectively tackle the problems in this lab, we will use a simple checklist that includes three important steps: first, we will plan our approach; next, we will solve the problem using our chosen method; and finally, we will verify our solution to ensure it is correct. This structured approach will help us stay organized and focused.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-14-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "As we apply our multi-step strategy, it is important to be aware of a common mistake that many students make. We will identify this error and learn how to correct it by providing clear evidence from our calculations. This practice will enhance our understanding and help us avoid similar mistakes in the future.\nContext recap: As we apply our multi-step strategy, it is important to be aware of a common mistake that many students make. We will identify this error and learn how to correct it by providing clear evidence from our calculations. This practice will enhance our understanding and help us avoid similar mistakes in the future.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-14-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's take a moment to review the multi-step strategy we have learned. After our review, each of you should set a specific goal for improvement based on what you have learned. This will help you focus on areas where you can grow and enhance your skills in calculus.\nContext recap: Let's take a moment to review the multi-step strategy we have learned. After our review, each of you should set a specific goal for improvement based on what you have learned. This will help you focus on areas where you can grow and enhance your skills in calculus.",
           "kind": "recap"
         }
       ],
@@ -2224,25 +2224,25 @@ export const BasicMath1112U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-1112-u1-external-supp-seq-15-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before finalizing your answers, it is essential to check several important aspects: the units of measurement, the signs of your calculations, and the overall reasonableness of your results. This careful checking process will help ensure that your final answers are accurate and reliable.\nContext recap: Before finalizing your answers, it is essential to check several important aspects: the units of measurement, the signs of your calculations, and the overall reasonableness of your results. This careful checking process will help ensure that your final answers are accurate and reliable.",
           "kind": "concept"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-15-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice session, we will compare two different strategies for solving a problem. After analyzing both methods, you will choose the one that you believe is more reliable. This exercise will help you develop critical thinking skills and improve your decision-making in mathematics.\nContext recap: In this practice session, we will compare two different strategies for solving a problem. After analyzing both methods, you will choose the one that you believe is more reliable. This exercise will help you develop critical thinking skills and improve your decision-making in mathematics.",
           "kind": "practice"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-15-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "As we implement our error-check routines, be on the lookout for a common mistake that can occur. Once you identify this error, you will learn how to correct it by providing evidence from your work. This practice will strengthen your understanding and help you avoid pitfalls in your calculations.\nContext recap: As we implement our error-check routines, be on the lookout for a common mistake that can occur. Once you identify this error, you will learn how to correct it by providing evidence from your work. This practice will strengthen your understanding and help you avoid pitfalls in your calculations.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-1112-u1-external-supp-seq-15-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's quickly review the error-check routines we have discussed. After this review, I encourage each of you to set a clear target for improvement based on what you have learned. This will guide your future practice and help you become more proficient in calculus.\nContext recap: Let's quickly review the error-check routines we have discussed. After this review, I encourage each of you to set a clear target for improvement based on what you have learned. This will guide your future practice and help you become more proficient in calculus.",
           "kind": "recap"
         }
       ],

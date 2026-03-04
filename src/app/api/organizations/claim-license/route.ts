@@ -25,6 +25,36 @@ type ProvisioningTokenRow = {
   revoked_at: string | null;
 };
 
+function extractRequestCountry(headers: Headers) {
+  const candidate =
+    headers.get("x-vercel-ip-country")
+    ?? headers.get("cf-ipcountry")
+    ?? headers.get("cloudfront-viewer-country")
+    ?? headers.get("x-appengine-country");
+  if (!candidate) return null;
+  const normalized = candidate.trim().toUpperCase().slice(0, 2);
+  return /^[A-Z]{2}$/.test(normalized) ? normalized : null;
+}
+
+function extractRequestTimeZone(headers: Headers) {
+  const candidate =
+    headers.get("x-vercel-ip-timezone")
+    ?? headers.get("cf-timezone")
+    ?? headers.get("x-appengine-time-zone");
+  if (!candidate) return null;
+  const value = candidate.trim();
+  if (value.length < 3 || value.length > 80) return null;
+  return value;
+}
+
+function extractRequestIp(headers: Headers) {
+  const forwardedFor = headers.get("x-forwarded-for");
+  if (forwardedFor) {
+    return forwardedFor.split(",")[0]?.trim() || null;
+  }
+  return headers.get("x-real-ip") ?? null;
+}
+
 function rateLimitExceededResponse(retryAfterSeconds: number) {
   return NextResponse.json(
     { error: "Too many requests. Please retry shortly." },
@@ -83,6 +113,9 @@ export async function POST(request: Request) {
   const admin = createSupabaseAdminClient();
   const tokenHash = hashProvisioningToken(parsed.data.token);
   const nowIso = new Date().toISOString();
+  const requestCountry = extractRequestCountry(request.headers);
+  const requestTimeZone = extractRequestTimeZone(request.headers);
+  const requestIp = extractRequestIp(request.headers);
 
   const { data: tokenData, error: tokenError } = await admin
     .from("organization_provisioning_tokens")
@@ -210,6 +243,10 @@ export async function POST(request: Request) {
       status: "active",
       metadata: {
         source: "api:organizations:claim-license",
+        claimedAtUtc: nowIso,
+        requestCountry,
+        requestTimeZone,
+        requestIp,
       },
     })
     .select("id")
@@ -253,6 +290,10 @@ export async function POST(request: Request) {
         studentProfileId: parsed.data.studentProfileId ?? null,
         externalStudentId: parsed.data.externalStudentId ?? null,
         schoolName: parsed.data.schoolName ?? null,
+        claimedAtUtc: nowIso,
+        requestCountry,
+        requestTimeZone,
+        requestIp,
       },
     });
   } catch {

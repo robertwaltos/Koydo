@@ -68,7 +68,7 @@ export { default as ClimateCommander } from "./climate-commander";
 export { default as HistoryHacker } from "./history-hacker";
 export { default as NanoNexus } from "./nano-nexus";
 export { default as MarsColony } from "./mars-colony";
-export { default as QuantumSupremacy } from "./quantum-supremacy";
+export { default as QuantumCascade } from "./quantum-cascade";
 export { default as SyntheticArchitect } from "./synthetic-architect";
 export { default as GlobalHarmony } from "./global-harmony";
 export { default as EvolutionPrime } from "./evolution-prime";

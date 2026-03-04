@@ -7,6 +7,7 @@ import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-prim
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Types --- */
 type QuantumParticle = {
@@ -33,6 +34,9 @@ export default function QuantumQuest() {
     const [gameState, setGameState] = useState<"IDLE" | "PLAYING" | "STABILIZED" | "CRITICAL">("IDLE");
     const [energyLevel, setEnergyLevel] = useState(100);
     const [score, setScore] = useState(0);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const initializeLevel = useCallback(() => {
         const newWells: GravityWell[] = [
@@ -123,6 +127,25 @@ export default function QuantumQuest() {
         initializeLevel();
         hapticSuccess();
     };
+
+    useEffect(() => {
+        if (score < 2000 || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "quantum",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, particles.length),
+            score,
+            maxScore: 5000,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [score, particles.length]);
 
     return (
         <div className="relative w-full max-w-5xl mx-auto h-[650px] bg-slate-950 rounded-[4rem] border border-white/10 overflow-hidden shadow-2xl flex flex-col font-mono">

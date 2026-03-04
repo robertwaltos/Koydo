@@ -11,6 +11,7 @@ import {
 import SubjectShowcase from "@/app/components/subject-showcase";
 import { ASSETS } from "@/lib/config/assets";
 import VoicePicker from "@/app/explore/_components/voice-picker";
+import LandingCompanion from "@/app/components/landing-companion";
 
 export const metadata: Metadata = {
   title: "Koydo — Learn Anything, Any Age, Any Language",
@@ -63,7 +64,7 @@ export default async function Home() {
           <div className="flex flex-1 flex-col justify-center lg:flex-row lg:items-center lg:gap-16">
             {/* Left column: copy */}
             <div className="max-w-[580px]">
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-600">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
                 {t("home_hero_eyebrow")}
               </p>
               <h1
@@ -98,6 +99,11 @@ export default async function Home() {
                 </Link>
                 <VoicePicker />
               </div>
+            </div>
+
+            {/* Right column: companion avatar */}
+            <div className="hidden lg:flex lg:items-center lg:justify-center">
+              <LandingCompanion />
             </div>
           </div>
 
@@ -193,7 +199,7 @@ export default async function Home() {
             >
               <div className="flex items-start gap-4">
                 <span
-                  className="shrink-0 text-[11px] font-black tabular-nums tracking-widest text-zinc-300"
+                  className="shrink-0 text-[11px] font-black tabular-nums tracking-widest text-zinc-600"
                   aria-hidden="true"
                 >
                   {card.step}
@@ -277,7 +283,7 @@ export default async function Home() {
         <div className="overflow-hidden rounded-3xl border border-zinc-200/60 bg-white/70 shadow-sm backdrop-blur-sm">
           {/* Header strip */}
           <div className="border-b border-zinc-100 px-6 py-8 text-center sm:px-10 sm:py-10">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-600">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
               For Parents & Educators
             </p>
             <h2
@@ -374,7 +380,7 @@ export default async function Home() {
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-zinc-100 px-6 py-5 sm:px-8">
             <p className="text-sm text-zinc-500">
               Questions? Email{" "}
-              <a href="mailto:support@koydo.app" className="text-emerald-600 hover:underline">
+              <a href="mailto:support@koydo.app" className="text-emerald-700 hover:underline">
                 support@koydo.app
               </a>
             </p>
@@ -409,7 +415,7 @@ export default async function Home() {
           aria-hidden="true"
         />
         <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-4 py-24 text-center">
-          <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-600">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
             Your journey starts here
           </p>
           <h2
