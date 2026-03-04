@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 127",
   title: "River Circuit",
   mascot: "spark",
-  startMessage: "Spark: stay adaptive and pick evidence-backed actions as pressure scales in River Circuit.",
-  winMessage: "Spark: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Spark: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Spark: keep arithmetic flow stable and route each operation with low error in River Circuit.",
+  winMessage: "Spark: computation lane synchronized. Great precision under pace.",
+  failMessage: "Spark: calculation drift detected. Re-enter with tighter checks.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "ratio lane",
+    "sum node",
+    "factor ring",
+    "sequence rail",
+    "equation grid",
+    "logic core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Numeric pressure detected on",
+    "Choose the operation that keeps parity in",
+    "Only one move preserves low-error flow in",
+    "Computation surge incoming on"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Simplify",
+    "Balance",
+    "Normalize",
+    "Reduce",
+    "Align"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
     "Skip",
-    "Bypass",
-    "Overload"
+    "Overclock",
+    "Inflate",
+    "Fragment",
+    "Distort"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Estimate before committing.",
+    "Balanced equations reduce propagation errors.",
+    "Pattern checks catch hidden drift.",
+    "Small corrections prevent large misses."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_18%,rgba(251,191,36,0.24),transparent_46%),radial-gradient(circle_at_82%_82%,rgba(245,158,11,0.2),transparent_52%)]",
@@ -61,6 +61,8 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  targetBestCombo: 7,
 };
 
 export default function Arcade127RiverCircuit() {

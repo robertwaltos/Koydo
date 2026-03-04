@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 130",
   title: "Nova Circuit",
   mascot: "terra",
-  startMessage: "Terra: stay adaptive and pick evidence-backed actions as pressure scales in Nova Circuit.",
-  winMessage: "Terra: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Terra: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Terra: protect system resilience with safe high-pressure interventions in Nova Circuit.",
+  winMessage: "Terra: resilience corridor secured. Strong systems discipline.",
+  failMessage: "Terra: failure cascade initiated. Retry with safer choices.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "stability lane",
+    "sensor node",
+    "safety ring",
+    "control rail",
+    "resilience grid",
+    "systems core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Load variance detected on",
+    "Choose the intervention that limits cascade risk in",
+    "Only one response preserves safety margin in",
+    "Critical systems alert for"
   ],
   correctActions: [
     "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Regulate",
+    "Buffer",
+    "Reinforce",
+    "Calibrate"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
+    "Overheat",
     "Bypass",
-    "Overload"
+    "Drain",
+    "Spike",
+    "Strip"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Safety margins protect complex systems.",
+    "Early mitigation reduces cascade risk.",
+    "Reliable models beat risky shortcuts.",
+    "Engineering tradeoffs require evidence."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_16%,rgba(74,222,128,0.24),transparent_46%),radial-gradient(circle_at_82%_84%,rgba(34,197,94,0.18),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 9,
 };
 
 export default function Arcade130NovaCircuit() {

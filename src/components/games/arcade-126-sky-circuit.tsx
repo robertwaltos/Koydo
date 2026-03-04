@@ -9,9 +9,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 126",
   title: "Sky Circuit",
   mascot: "echo",
-  startMessage: "Echo: Echo: read the language cue and pick the strongest meaning path in Sky Circuit.",
-  winMessage: "Echo: Echo: language channel stable. Your evidence choices stayed coherent.",
-  failMessage: "Echo: Echo: interpretation drifted. Rebuild with cleaner textual evidence.",
+  startMessage: "Echo: read the language cue and pick the strongest meaning path in Sky Circuit.",
+  winMessage: "Echo: language channel stable. Your evidence choices stayed coherent.",
+  failMessage: "Echo: interpretation drifted. Rebuild with cleaner textual evidence.",
   objectiveNouns: [
     "context lane",
     "evidence thread",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5600,
   minRoundMs: 3000,
   roundDecayMs: 340,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 8,
 };
 
 export default function Arcade126SkyCircuit() {

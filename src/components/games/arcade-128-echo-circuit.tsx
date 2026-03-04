@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 128",
   title: "Echo Circuit",
   mascot: "echo",
-  startMessage: "Echo: stay adaptive and pick evidence-backed actions as pressure scales in Echo Circuit.",
-  winMessage: "Echo: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Echo: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Echo: preserve argument integrity while ambiguity pressure rises in Echo Circuit.",
+  winMessage: "Echo: discourse channel secured. Strong textual reasoning.",
+  failMessage: "Echo: claim stability failed. Retry with better evidence anchors.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "context lane",
+    "evidence node",
+    "claim ring",
+    "inference rail",
+    "citation grid",
+    "reason core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Interpretation conflict detected on",
+    "Choose the strongest supporting move for",
+    "Only one response keeps coherence in",
+    "Ambiguity escalating around"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Corroborate",
+    "Contextualize",
+    "Clarify",
+    "Anchor",
+    "Verify"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
-    "Bypass",
-    "Overload"
+    "Assume",
+    "Distort",
+    "Overstate",
+    "Ignore",
+    "Speculate"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Context changes interpretation strength.",
+    "Claims require evidence continuity.",
+    "Precision beats speed when ambiguity is high.",
+    "Repair reasoning chains quickly after misses."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_20%,rgba(167,139,250,0.24),transparent_46%),radial-gradient(circle_at_82%_82%,rgba(139,92,246,0.2),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 8,
 };
 
 export default function Arcade128EchoCircuit() {

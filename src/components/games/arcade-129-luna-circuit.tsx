@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 129",
   title: "Luna Circuit",
   mascot: "luna",
-  startMessage: "Luna: stay adaptive and pick evidence-backed actions as pressure scales in Luna Circuit.",
-  winMessage: "Luna: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Luna: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Luna: sustain rhythmic architecture and phrase sequencing under tempo pressure in Luna Circuit.",
+  winMessage: "Luna: pattern lattice secured. Great cadence control.",
+  failMessage: "Luna: tempo chain broke. Re-enter with steadier sequencing.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "tempo lane",
+    "phrase node",
+    "accent ring",
+    "groove rail",
+    "pattern grid",
+    "pulse core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Cadence instability detected on",
+    "Choose the phrase move that preserves flow in",
+    "Only one sequence keeps timing coherence in",
+    "Stage pressure rising around"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
+    "Phrase",
+    "Sync",
+    "Resolve",
+    "Accentuate",
     "Balance"
   ],
   decoyActions: [
     "Rush",
-    "Spike",
-    "Skip",
-    "Bypass",
-    "Overload"
+    "Drag",
+    "Flatten",
+    "Overplay",
+    "Scatter"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Structured pacing improves execution quality.",
+    "Phrase consistency supports retention.",
+    "Correct timing drift before it cascades.",
+    "Balanced emphasis strengthens memory."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_16%_20%,rgba(244,114,182,0.24),transparent_46%),radial-gradient(circle_at_84%_84%,rgba(217,70,239,0.18),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  allowTrapDecoys: true,
+  targetBestCombo: 7,
 };
 
 export default function Arcade129LunaCircuit() {
