@@ -1767,3 +1767,33 @@ CLAIM: Codex-D taking arcade-061, arcade-062, arcade-063, arcade-064, arcade-065
   - None specific to this tranche.
 - Next tranche planned:
   - Codex-B educational lane hardening complete through arcade-160; next phase is optional QA sweep for deeper mechanic divergence in bespoke titles.
+
+## TRANCHE REPORT - Codex-C - 2026-03-04 13:06 local
+- Tranche ID: C-T15
+- Game IDs completed: arcade-128, arcade-129
+- Runtime files added/changed: src/components/games/arcade-128-echo-circuit.tsx, src/components/games/arcade-129-luna-circuit.tsx, games1.md
+- Character implementation notes: arcade-128 uses Echo as an active argument-mesh coach with mood/message changes on stabilization, link correctness, node collapse, and run completion; arcade-129 uses Luna as an active rhythm coach with phrase-lane guidance and feedback on timing hits, burst usage, misses, and mission outcomes.
+- Gameplay proof:
+  - Win condition: arcade-128 clears 26 route chains before mission timeout; arcade-129 reaches 96 synced hits.
+  - Fail condition: both games fail on life depletion or mission timeout before objective completion.
+  - Scoring model: arcade-128 scores stabilization + ordered link execution with combo and route-clear bonuses plus collapse/mismatch penalties; arcade-129 scores timing-window hits with combo/phrase bonuses and applies miss penalties.
+  - Difficulty behavior: arcade-128 ramps ambient decay and noise-front pressure by level; arcade-129 ramps note cadence/speed and miss pressure with level progression.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: replaced both wrapper-based configurations with bespoke runtime systems (argument-grid routing sim and rhythmic lane conductor) including full controls, progression, telemetry, and character feedback loops.
+- Tests run:
+  - Command: npx eslint src/components/games/arcade-128-echo-circuit.tsx src/components/games/arcade-129-luna-circuit.tsx
+  - Result: PASS
+  - Command: npm run games:audit:implementation
+  - Result: PASS (catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0)
+  - Command: npm run games:audit:games1-contract
+  - Result: PASS (status=pass checks=21 failures=0)
+- Smoke status:
+  - Command: not run in this tranche (targeted lint + contract audits executed).
+  - Result: n/a
+- Known issues:
+  - None observed in these two runtimes from targeted lint and contract audits.
+- Next tranche planned:
+  - C-T16: arcade-130 and arcade-131 bespoke runtime rewrites with non-overlapping mechanic families.

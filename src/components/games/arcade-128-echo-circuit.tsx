@@ -329,7 +329,7 @@ function reduceGame(state: GameState, action: Action): GameState {
       }
 
       const success = node.kind === expected;
-      let grid = state.grid.slice();
+      const grid = state.grid.slice();
       let routeIndex = state.routeIndex;
       let linksCompleted = state.linksCompleted;
       let score = state.score;
@@ -469,7 +469,7 @@ function reduceGame(state: GameState, action: Action): GameState {
       let score = state.score;
       let nextNoiseId = state.nextNoiseId;
 
-      let noise = state.noise
+      const noise = state.noise
         .map((entry) => ({
           ...entry,
           ttlMs: entry.ttlMs - TICK_MS,
