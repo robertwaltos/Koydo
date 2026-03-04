@@ -1361,3 +1361,275 @@ CLAIM: Codex-C taking arcade-124 and arcade-125 bespoke rewrites at 2026-03-04 1
   - None in these two runtimes from targeted lint/contract checks.
 - Next tranche planned:
   - C-T14: arcade-126 and arcade-127 bespoke runtime rewrites with non-overlapping mechanic families.
+## TRANCHE REPORT - Codex-A - 2026-03-04 12:24 local
+- Tranche ID: A-T14
+- Game IDs completed: zone-106, zone-107, zone-108, zone-109, zone-110
+- Runtime files added/changed: src/components/games/zone-106-spark-reactor-rail.tsx, src/components/games/zone-107-echo-proof-cascade.tsx, src/components/games/zone-108-terra-habitat-rescue.tsx, src/components/games/zone-109-luna-rhythm-voyage.tsx, src/components/games/zone-110-pixel-firewall-ops.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx, games1.md
+- Character implementation notes: zone-106 uses Spark as a precision rail-lock coach, zone-107 uses Echo as evidence triage arbiter, zone-108 uses Terra as habitat rescue commander, zone-109 uses Luna as live rhythm conductor, and zone-110 uses Pixel as firewall defense sentinel. All five show active mascot mood/message transitions through success/fail loops.
+- Gameplay proof:
+  - Win condition: zone-106 clears all timed rail cycles; zone-107 resolves all claim dockets without collapsing credibility/risk; zone-108 rescues all habitat pods; zone-109 survives the full rhythm set; zone-110 clears all breach waves.
+  - Fail condition: each game has explicit fail states (resource depletion, timeout pressure, hull/firewall collapse, tempo drop, or core overload).
+  - Scoring model: each game has real score progression with combo and tier/precision bonuses plus miss/penalty deductions.
+  - Difficulty behavior: each game escalates challenge via tier pressure (tighter windows, faster timers/spawn cadence, rising storm/spread pressure, and longer action chains).
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five bespoke runtime systems (timing lock, triage simulation, grid rescue, real-time rhythm lanes, infection-spread tactics) and restored route/export coverage for zone-086..110 in current repo state.
+- Tests run:
+  - Command: npm run lint -- src/components/games/zone-106-spark-reactor-rail.tsx src/components/games/zone-107-echo-proof-cascade.tsx src/components/games/zone-108-terra-habitat-rescue.tsx src/components/games/zone-109-luna-rhythm-voyage.tsx src/components/games/zone-110-pixel-firewall-ops.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in page route file; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: node scripts/smoke-test.mjs --skip-build (with `SMOKE_TEST_DIST_DIR=.next-smoke-60312`)
+  - Result: PASS
+- Smoke status:
+  - Command: node scripts/smoke-test.mjs --skip-build (with `SMOKE_TEST_DIST_DIR=.next-smoke-60312`)
+  - Result: PASS
+- Known issues:
+  - Non-blocking react-hooks warning remains in `src/app/games/[gameId]/page.tsx`.
+  - Current audit baseline in this concurrent repo snapshot reports `uniqueRuntimeImplementations=66`; mapping coverage remains complete (`missingMappings=0`).
+- Next tranche planned:
+  - A-T15: zone-111, zone-112, zone-113, zone-114, zone-115.
+
+CLAIM: Codex-D taking arcade-041, arcade-042, arcade-043, arcade-044, arcade-045 at 2026-03-04 12:41:22 -06:00
+
+CLAIM: Codex-A taking zone-111, zone-112, zone-113, zone-114, zone-115 at 2026-03-04 12:41:51 -06:00
+
+## TRANCHE REPORT - Codex-D - 2026-03-04 12:43 local
+- Tranche ID: D-T09
+- Game IDs completed: arcade-041, arcade-042, arcade-043, arcade-044, arcade-045
+- Runtime files added/changed: src/components/games/arcade-041-pixel-flux-mirage.tsx, src/components/games/arcade-042-spark-overload-cartel.tsx, src/components/games/arcade-043-echo-truth-spiral.tsx, src/components/games/arcade-044-luna-pulse-corridor.tsx, src/components/games/arcade-045-terra-siege-bloom.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx
+- Character implementation notes: arcade-041 uses Pixel as flux-mirage coach, arcade-042 uses Spark as overload-cartel coach, arcade-043 uses Echo as truth-spiral coach, arcade-044 uses Luna as pulse-corridor coach, and arcade-045 uses Terra as siege-bloom coach. All five include active mascot mood/message transitions in live play.
+- Gameplay proof:
+  - Win condition: clear 24 rounds and meet per-game combo target where configured.
+  - Fail condition: lives collapse from wrong/timeout/trap penalties or combo-target miss at finalization.
+  - Scoring model: tier/time/combo gains with penalties for misses/timeouts/traps and boost-driven recovery tradeoffs.
+  - Difficulty behavior: progressive timer decay with per-title dual-lock, trap-decoy, and combo-target variance.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five additional advanced Reward Realm wrappers and integrated route/export mappings for arcade-041..045.
+- Tests run:
+  - Command: npm run lint -- src/components/games/arcade-041-pixel-flux-mirage.tsx src/components/games/arcade-042-spark-overload-cartel.tsx src/components/games/arcade-043-echo-truth-spiral.tsx src/components/games/arcade-044-luna-pulse-corridor.tsx src/components/games/arcade-045-terra-siege-bloom.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in game page; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: FAIL (no production build present in `.next` in this environment).
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: blocked by missing production build artifact.
+- Known issues:
+  - Implementation-audit uniqueness baseline remains low due cross-agent drift; mapping coverage still reports no missing IDs.
+  - Smoke remains blocked by environment build artifact availability.
+- Next tranche planned:
+  - D-T10: arcade-046, arcade-047, arcade-048, arcade-049, arcade-050.
+
+CLAIM: Codex-D taking arcade-046, arcade-047, arcade-048, arcade-049, arcade-050 at 2026-03-04 12:43:32 -06:00
+
+CLAIM: Codex-C taking arcade-126 and arcade-127 bespoke rewrites at 2026-03-04 12:44:52 -06:00
+## TRANCHE REPORT - Codex-A - 2026-03-04 12:45 local
+- Tranche ID: A-T15
+- Game IDs completed: zone-111, zone-112, zone-113, zone-114, zone-115
+- Runtime files added/changed: src/components/games/zone-111-spark-vector-lockdown.tsx, src/components/games/zone-112-echo-claim-tribunal.tsx, src/components/games/zone-113-terra-outpost-recovery.tsx, src/components/games/zone-114-luna-harmonic-hyperlane.tsx, src/components/games/zone-115-pixel-breach-lattice.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx, games1.md
+- Character implementation notes: zone-111 uses Spark as vector-lock precision coach, zone-112 uses Echo as claim-triage arbiter, zone-113 uses Terra as outpost recovery commander, zone-114 uses Luna as harmonic hyperlane conductor, and zone-115 uses Pixel as breach-lattice defender. All five show active mascot mood/message transitions tied to run state.
+- Gameplay proof:
+  - Win condition: zone-111 clears all lock cycles; zone-112 resolves all claim rounds without credibility collapse; zone-113 recovers all required pods; zone-114 survives full hyperlane song duration; zone-115 clears all breach waves.
+  - Fail condition: explicit fail states for resource/time collapse (integrity/credibility/hull/hearts/firewall pressure).
+  - Scoring model: each game applies combo-based scoring with tier/precision bonuses and miss/timeout penalties.
+  - Difficulty behavior: each game ramps challenge via stricter windows, faster tempo/spawn pressure, larger traversal space, and stronger spread/collapse pressure.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five new bespoke runtimes (timed vector lock, claim-triage simulation, 7x7 rescue routing, extended rhythm hyperlane, 6x6 breach spread defense) and wired IDs `111..115`.
+- Tests run:
+  - Command: npm run lint -- src/components/games/zone-111-spark-vector-lockdown.tsx src/components/games/zone-112-echo-claim-tribunal.tsx src/components/games/zone-113-terra-outpost-recovery.tsx src/components/games/zone-114-luna-harmonic-hyperlane.tsx src/components/games/zone-115-pixel-breach-lattice.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in page route file; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: node scripts/smoke-test.mjs --skip-build (with `SMOKE_TEST_DIST_DIR=.next-smoke-60312`)
+  - Result: PASS
+- Smoke status:
+  - Command: node scripts/smoke-test.mjs --skip-build (with `SMOKE_TEST_DIST_DIR=.next-smoke-60312`)
+  - Result: PASS
+- Known issues:
+  - Non-blocking react-hooks warning remains in `src/app/games/[gameId]/page.tsx`.
+  - Current audit baseline in this concurrent repo snapshot reports `uniqueRuntimeImplementations=66`; mapping coverage remains complete (`missingMappings=0`).
+- Next tranche planned:
+  - A-T16: zone-116, zone-117, zone-118, zone-119, zone-120.
+
+## TRANCHE REPORT - Codex-D - 2026-03-04 12:45 local
+- Tranche ID: D-T10
+- Game IDs completed: arcade-046, arcade-047, arcade-048, arcade-049, arcade-050
+- Runtime files added/changed: src/components/games/arcade-046-pixel-ghostline-run.tsx, src/components/games/arcade-047-spark-surge-ladder.tsx, src/components/games/arcade-048-echo-verdict-rift.tsx, src/components/games/arcade-049-luna-chroma-tempo.tsx, src/components/games/arcade-050-terra-bastion-wake.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx
+- Character implementation notes: arcade-046 uses Pixel as ghostline coach, arcade-047 uses Spark as surge-ladder coach, arcade-048 uses Echo as verdict-rift coach, arcade-049 uses Luna as chroma-tempo coach, and arcade-050 uses Terra as bastion-wake coach. All five include active mascot mood/message behavior during run outcomes.
+- Gameplay proof:
+  - Win condition: clear 24 rounds and satisfy configured combo targets where required.
+  - Fail condition: life depletion from wrong/timeout/trap outcomes or combo-target miss at finalization.
+  - Scoring model: tier/time/combo gains with penalties for miss/timeout/trap plus boost-driven recovery tradeoffs.
+  - Difficulty behavior: progressive timer decay and per-game variance via dual-lock rounds, trap decoys, and combo target constraints.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five advanced Reward Realm wrappers and integrated route/export mappings for arcade-046..050.
+- Tests run:
+  - Command: npm run lint -- src/components/games/arcade-046-pixel-ghostline-run.tsx src/components/games/arcade-047-spark-surge-ladder.tsx src/components/games/arcade-048-echo-verdict-rift.tsx src/components/games/arcade-049-luna-chroma-tempo.tsx src/components/games/arcade-050-terra-bastion-wake.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in game page; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: FAIL (no production build present in `.next` in this environment).
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: blocked by missing production build artifact.
+- Known issues:
+  - Implementation-audit uniqueness baseline remains low due cross-agent merge drift; mapping coverage still reports no missing IDs.
+  - Smoke remains blocked by environment build artifact availability.
+- Next tranche planned:
+  - D-T11: arcade-051, arcade-052, arcade-053, arcade-054, arcade-055.
+
+CLAIM: Codex-D taking arcade-051, arcade-052, arcade-053, arcade-054, arcade-055 at 2026-03-04 12:46:09 -06:00
+
+## TRANCHE REPORT - Codex-D - 2026-03-04 12:48 local
+- Tranche ID: D-T11
+- Game IDs completed: arcade-051, arcade-052, arcade-053, arcade-054, arcade-055
+- Runtime files added/changed: src/components/games/arcade-051-pixel-parallax-lock.tsx, src/components/games/arcade-052-spark-voltage-drift.tsx, src/components/games/arcade-053-echo-validity-rift.tsx, src/components/games/arcade-054-luna-tempo-aperture.tsx, src/components/games/arcade-055-terra-citadel-bloom.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx
+- Character implementation notes: arcade-051 uses Pixel as parallax-lock coach, arcade-052 uses Spark as voltage-drift coach, arcade-053 uses Echo as validity-rift coach, arcade-054 uses Luna as tempo-aperture coach, and arcade-055 uses Terra as citadel-bloom coach. All five render active mascot mood/message transitions throughout play.
+- Gameplay proof:
+  - Win condition: clear 24 rounds and satisfy configured combo targets where required.
+  - Fail condition: life depletion from wrong/timeout/trap outcomes or combo-target miss at finalization.
+  - Scoring model: tier/time/combo gains with penalties for miss/timeout/trap and boost-mediated recovery pressure.
+  - Difficulty behavior: progressive timer decay with per-title dual-lock, trap-decoy, and combo-target variance.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five advanced Reward Realm wrappers and integrated route/export mappings for arcade-051..055.
+- Tests run:
+  - Command: npm run lint -- src/components/games/arcade-051-pixel-parallax-lock.tsx src/components/games/arcade-052-spark-voltage-drift.tsx src/components/games/arcade-053-echo-validity-rift.tsx src/components/games/arcade-054-luna-tempo-aperture.tsx src/components/games/arcade-055-terra-citadel-bloom.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in game page; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: FAIL (no production build present in `.next` in this environment).
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: blocked by missing production build artifact.
+- Known issues:
+  - Implementation-audit uniqueness baseline remains low due cross-agent drift; mapping coverage still reports no missing IDs.
+  - Smoke remains blocked by environment build artifact availability.
+- Next tranche planned:
+  - D-T12: arcade-056, arcade-057, arcade-058, arcade-059, arcade-060.
+
+CLAIM: Codex-D taking arcade-056, arcade-057, arcade-058, arcade-059, arcade-060 at 2026-03-04 12:48:25 -06:00
+
+CLAIM: Codex-A taking zone-116, zone-117, zone-118, zone-119, zone-120 at 2026-03-04 12:48:35 -06:00
+
+## TRANCHE REPORT - Codex-D - 2026-03-04 12:50 local
+- Tranche ID: D-T12
+- Game IDs completed: arcade-056, arcade-057, arcade-058, arcade-059, arcade-060
+- Runtime files added/changed: src/components/games/arcade-056-pixel-sentinel-weave.tsx, src/components/games/arcade-057-spark-relay-spiral.tsx, src/components/games/arcade-058-echo-credence-surge.tsx, src/components/games/arcade-059-luna-resonance-lane.tsx, src/components/games/arcade-060-terra-bloom-circuit.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx
+- Character implementation notes: arcade-056 uses Pixel as sentinel-weave coach, arcade-057 uses Spark as relay-spiral coach, arcade-058 uses Echo as credence-surge coach, arcade-059 uses Luna as resonance-lane coach, and arcade-060 uses Terra as bloom-circuit coach. All five include active mascot mood/message transitions during success/failure pressure loops.
+- Gameplay proof:
+  - Win condition: clear 24 rounds and meet configured combo targets where required.
+  - Fail condition: life depletion from wrong/timeout/trap outcomes or combo-target miss at finalization.
+  - Scoring model: tier/time/combo gains with penalties on misses/timeouts/traps and boost-based recovery tradeoffs.
+  - Difficulty behavior: timer decay with per-title variance via dual-lock rounds, trap decoys, and combo target constraints.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five advanced Reward Realm wrappers and integrated route/export mappings for arcade-056..060.
+- Tests run:
+  - Command: npm run lint -- src/components/games/arcade-056-pixel-sentinel-weave.tsx src/components/games/arcade-057-spark-relay-spiral.tsx src/components/games/arcade-058-echo-credence-surge.tsx src/components/games/arcade-059-luna-resonance-lane.tsx src/components/games/arcade-060-terra-bloom-circuit.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in game page; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: FAIL (no production build present in `.next` in this environment).
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: blocked by missing production build artifact.
+- Known issues:
+  - Implementation-audit uniqueness baseline remains low due cross-agent drift; mapping coverage still reports no missing IDs.
+  - Smoke remains blocked by environment build artifact availability.
+- Next tranche planned:
+  - D-T13: arcade-061, arcade-062, arcade-063, arcade-064, arcade-065.
+## TRANCHE REPORT - Codex-A - 2026-03-04 12:51 local
+- Tranche ID: A-T16
+- Game IDs completed: zone-116, zone-117, zone-118, zone-119, zone-120
+- Runtime files added/changed: src/components/games/zone-116-spark-resonance-gauntlet.tsx, src/components/games/zone-117-echo-verity-court.tsx, src/components/games/zone-118-terra-frontier-evac.tsx, src/components/games/zone-119-luna-prism-overdrive.tsx, src/components/games/zone-120-pixel-quarantine-grid.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx, games1.md
+- Character implementation notes: zone-116 uses Spark as resonance-lock precision coach, zone-117 uses Echo as verity-court arbiter, zone-118 uses Terra as frontier evacuation commander, zone-119 uses Luna as prism overdrive conductor, and zone-120 uses Pixel as quarantine-grid sentinel. All five include active mascot mood/message behavior on success/failure loops.
+- Gameplay proof:
+  - Win condition: zone-116 clears all resonance lock cycles; zone-117 resolves all verity docket claims; zone-118 recovers all frontier pods; zone-119 survives full overdrive set length; zone-120 clears all quarantine breach waves.
+  - Fail condition: explicit loss states via integrity/credibility/hull/hearts/firewall collapse or pressure overload.
+  - Scoring model: combo-driven scoring with tier/precision bonuses and miss/timeout penalties in every runtime.
+  - Difficulty behavior: each title ramps pressure with larger target counts/grids, increased wave/tempo duration, and stronger spread/resource constraints.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five additional bespoke zone runtimes (`116..120`) with distinct tuning envelopes and wired export/route mappings.
+- Tests run:
+  - Command: npm run lint -- src/components/games/zone-116-spark-resonance-gauntlet.tsx src/components/games/zone-117-echo-verity-court.tsx src/components/games/zone-118-terra-frontier-evac.tsx src/components/games/zone-119-luna-prism-overdrive.tsx src/components/games/zone-120-pixel-quarantine-grid.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in page route file; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: node scripts/smoke-test.mjs --skip-build (with `SMOKE_TEST_DIST_DIR=.next-smoke-60312`)
+  - Result: PASS
+- Smoke status:
+  - Command: node scripts/smoke-test.mjs --skip-build (with `SMOKE_TEST_DIST_DIR=.next-smoke-60312`)
+  - Result: PASS
+- Known issues:
+  - Non-blocking react-hooks warning remains in `src/app/games/[gameId]/page.tsx`.
+  - Current concurrent snapshot still reports `uniqueRuntimeImplementations=66`; mapping coverage remains complete (`missingMappings=0`).
+- Next tranche planned:
+  - A-T17: zone-121, zone-122, zone-123, zone-124, zone-125.
+
+## TRANCHE REPORT - Codex-C - 2026-03-04 12:55 local
+- Tranche ID: C-T14
+- Game IDs completed: arcade-126, arcade-127
+- Runtime files added/changed: src/components/games/arcade-126-sky-circuit.tsx, src/components/games/arcade-127-river-circuit.tsx, games1.md
+- Character implementation notes: arcade-126 uses Echo as a live language-routing coach with mood/message shifts on successful sequence captures, misses, and run completion; arcade-127 uses Spark as a live calibration coach with feedback on packet transforms, calibration pulses, lane errors, and mission outcomes.
+- Gameplay proof:
+  - Win condition: arcade-126 clears 22 ordered language routes before mission timeout; arcade-127 reaches 72 exact packet-target matches.
+  - Fail condition: both games fail on life depletion or mission timeout before objective completion.
+  - Scoring model: arcade-126 scores ordered fragment captures with combo and route-clear bonuses plus miss penalties; arcade-127 scores precision packet matches with combo scaling and penalties for drift/mismatch.
+  - Difficulty behavior: arcade-126 ramps spawn cadence and signal pressure over mission levels; arcade-127 ramps spawn speed/cadence and recalibration pressure with level progression.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: replaced arcade-126 wrapper configuration with a full bespoke sequence-routing runtime and completed arcade-127 into a full bespoke packet-calibration runtime with end-to-end controls, telemetry, and UX.
+- Tests run:
+  - Command: npx eslint src/components/games/arcade-126-sky-circuit.tsx src/components/games/arcade-127-river-circuit.tsx
+  - Result: PASS
+  - Command: npm run games:audit:implementation
+  - Result: PASS (catalog=500 uniqueRuntimeImplementations=66 legacyAliasRoutes=0 missingMappings=0)
+  - Command: npm run games:audit:games1-contract
+  - Result: PASS (status=pass checks=21 failures=0)
+- Smoke status:
+  - Command: not run in this tranche (targeted lint + contract audits executed).
+  - Result: n/a
+- Known issues:
+  - None observed in these two runtimes from targeted lint and contract audits.
+- Next tranche planned:
+  - C-T15: arcade-128 and arcade-129 bespoke runtime rewrites with distinct mechanic families.
