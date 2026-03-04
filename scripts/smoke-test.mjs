@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+import fs from "node:fs";
+import path from "node:path";
 import { spawn } from "node:child_process";
 import process from "node:process";
 
@@ -7,7 +9,11 @@ const PORT = Number(process.env.SMOKE_TEST_PORT ?? (4200 + Math.floor(Math.rando
 const BASE_URL = `http://127.0.0.1:${PORT}`;
 const STARTUP_TIMEOUT_MS = 120_000;
 const NPM_COMMAND = "npm";
-const SKIP_BUILD = process.argv.includes("--skip-build");
+const DIST_DIR = process.env.SMOKE_TEST_DIST_DIR ?? ".next-smoke";
+const SKIP_BUILD =
+  process.argv.includes("--skip-build")
+  || process.env.npm_config_skip_build === "true"
+  || process.env.SKIP_BUILD === "true";
 
 const ROUTES = [
   { path: "/", allowRedirect: false },
@@ -52,6 +58,40 @@ function runCommand(command, args, options = {}) {
       reject(new Error(`Command failed: ${command} ${args.join(" ")} (exit ${code ?? "null"})`));
     });
   });
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function clearNextBuildOutput() {
+  const buildDir = path.resolve(DIST_DIR);
+  if (!fs.existsSync(buildDir)) return;
+  fs.rmSync(buildDir, { recursive: true, force: true });
+}
+
+async function buildWithRecovery() {
+  const maxAttempts = 4;
+  const buildEnv = {
+    ...process.env,
+    NEXT_DIST_DIR: DIST_DIR,
+  };
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    try {
+      await runCommand(NPM_COMMAND, ["run", "build"], { env: buildEnv });
+      return;
+    } catch (error) {
+      if (attempt >= maxAttempts) {
+        throw error;
+      }
+      const message = error instanceof Error ? error.message : String(error);
+      log(
+        `Build attempt ${attempt}/${maxAttempts} failed (${message}). Clearing .next and retrying...`,
+      );
+      clearNextBuildOutput();
+      await sleep(1200 * attempt);
+    }
+  }
 }
 
 function waitForServerReady(child, timeoutMs) {
@@ -135,14 +175,19 @@ async function main() {
     log("1/3 Skipping build (using existing build output)...");
   } else {
     log("1/3 Building app (next build)...");
-    await runCommand(NPM_COMMAND, ["run", "build"]);
+    await buildWithRecovery();
   }
 
   log(`2/3 Starting Next server on port ${PORT}...`);
+  const runtimeEnv = {
+    ...process.env,
+    NEXT_DIST_DIR: DIST_DIR,
+  };
   const devServer = spawn(NPM_COMMAND, ["run", "start", "--", "-p", String(PORT)], {
     cwd: process.cwd(),
     stdio: "inherit",
     shell: true,
+    env: runtimeEnv,
   });
 
   let cleanedUp = false;

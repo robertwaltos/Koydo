@@ -13,7 +13,7 @@ type ReportJob = {
   error?: string | null;
 };
 
-type ReportType = "dsar" | "support" | "audit" | "telemetry";
+type ReportType = "dsar" | "support" | "audit" | "telemetry" | "finance" | "finance_analytics" | "compliance_audit";
 
 type ReportTypeBreakdownEntry = {
   queuedReady: number;
@@ -50,7 +50,15 @@ type ReportQueueSummaryResponse = Partial<ReportQueueSummary> & {
   error?: string;
 };
 
-const REPORT_TYPES: ReportType[] = ["dsar", "support", "audit", "telemetry"];
+const REPORT_TYPES: ReportType[] = [
+  "dsar",
+  "support",
+  "audit",
+  "telemetry",
+  "finance",
+  "finance_analytics",
+  "compliance_audit",
+];
 
 function isFiniteNumber(value: unknown): value is number {
   return typeof value === "number" && Number.isFinite(value);
@@ -102,6 +110,33 @@ function buildDefaultReportTypeBreakdown(): ReportTypeBreakdown {
       failed24h: 0,
     },
     telemetry: {
+      queuedReady: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+    finance: {
+      queuedReady: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+    finance_analytics: {
+      queuedReady: 0,
+      running: 0,
+      backlog: 0,
+      staleQueued: 0,
+      staleRunning: 0,
+      stale: 0,
+      failed24h: 0,
+    },
+    compliance_audit: {
       queuedReady: 0,
       running: 0,
       backlog: 0,
@@ -479,6 +514,9 @@ export default function ReportsClient({
           <option value="support">Support</option>
           <option value="audit">Audit</option>
           <option value="telemetry">Telemetry</option>
+          <option value="finance">Finance</option>
+          <option value="finance_analytics">Finance Analytics</option>
+          <option value="compliance_audit">Compliance Audit</option>
         </select>
         <input
           name="runAfterIso"

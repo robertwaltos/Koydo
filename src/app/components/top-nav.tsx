@@ -13,6 +13,7 @@ import { VOICES, useVoicePreference } from "@/app/explore/_components/voice-pref
 import LanguageSwitcher from "./language-switcher";
 import ThemeControls from "./theme-controls";
 import { ASSETS } from "@/lib/config/assets";
+import { isLaunchRouteLocked, resolveLaunchHref } from "@/lib/platform/launch-readiness";
 
 type NavItem = {
   href: string;
@@ -383,6 +384,7 @@ export default function TopNav() {
     return pathname === href || pathname.startsWith(`${href}/`);
   };
   const resolveLabel = (item: NavItem) => (item.label ? item.label : item.labelKey ? t(item.labelKey) : item.href);
+  const resolveNavHref = (href: string) => resolveLaunchHref(href);
 
   // Admin and parent routes use DashShell for navigation — hide the student TopNav.
   if (pathname?.startsWith("/admin") || pathname?.startsWith("/parent")) {
@@ -391,7 +393,7 @@ export default function TopNav() {
 
   return (
     <header
-      className={`safe-area-top sticky top-0 z-50 w-full border-b backdrop-blur-xl ${isHomePage
+      className={`safe-area-top sticky top-0 z-50 w-full border-b backdrop-blur-xl header-glow-border relative ${isHomePage
           ? "border-white/8 bg-slate-950/50"
           : isAdminRoute
             ? "border-zinc-200/80 bg-white/90 border-border/40 dark:bg-background/85"
@@ -404,7 +406,7 @@ export default function TopNav() {
             href={brandHref}
             title={authContext.isAuthenticated ? t("top_nav_go_to_dashboard") : t("top_nav_go_to_home")}
             className={`ui-focus-ring inline-flex min-h-12 items-center gap-2.5 rounded-2xl border px-3.5 py-2 shadow-sm backdrop-blur-sm transition-colors ${isHomePage
-                ? "border-white/12 bg-white/8 hover:bg-white/15"
+                ? "border-white/60 bg-white/78 hover:bg-white/88"
                 : "border-white/80 bg-white/80 hover:bg-white border-border/55 dark:bg-surface/70 dark:hover:bg-surface/90"
               }`}
             onClick={closeMenus}
@@ -421,7 +423,7 @@ export default function TopNav() {
                 className="size-full object-cover"
               />
             </div>
-            <span className={`ui-type-display text-lg font-extrabold tracking-tight ${isHomePage ? "text-white" : "text-zinc-900 dark:text-foreground"}`}>
+            <span className={`ui-type-display text-lg font-extrabold tracking-tight ${isHomePage ? "text-zinc-900" : "text-zinc-900 dark:text-foreground"}`}>
               Koydo
             </span>
           </Link>
@@ -430,13 +432,19 @@ export default function TopNav() {
           {authContext.isAuthenticated ? (
             <nav className="ml-1 hidden flex-1 items-center gap-2 md:flex">
               {primaryNavItems.map((item) => (
+                (() => {
+                  const locked = isLaunchRouteLocked(item.href);
+                  const href = resolveNavHref(item.href);
+                  return (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={href}
                   title={
                     item.href === "/explore"
                       ? t("top_nav_explore_tooltip")
-                      : undefined
+                      : locked
+                        ? "More exciting features coming soon"
+                        : undefined
                   }
                   className={`ui-soft-button ui-focus-ring ui-type-body-sm inline-flex min-h-10 items-center gap-1.5 rounded-full border px-3.5 py-1.5 font-semibold tracking-[0.01em] transition-all ${isItemActive(item.href)
                       ? isHomePage
@@ -453,7 +461,10 @@ export default function TopNav() {
                     {item.icon}
                   </span>
                   {resolveLabel(item)}
+                  {locked ? <span className="rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
                 </Link>
+                  );
+                })()
               ))}
             </nav>
           ) : (
@@ -467,14 +478,14 @@ export default function TopNav() {
                 type="button"
                 onClick={openCommandPalette}
                 className={`ui-soft-button ui-focus-ring hidden min-h-10 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold shadow-sm transition hover:brightness-110 sm:inline-flex ${isHomePage
-                    ? "border-white/14 bg-white/10 text-slate-200 hover:bg-white/16"
+                    ? "border-white/60 bg-white/78 text-zinc-900 hover:bg-white/88"
                     : "border-zinc-300 bg-white text-zinc-700 hover:bg-surface-muted border-border/65 dark:bg-surface/60 dark:text-foreground dark:hover:bg-surface/80"
                   }`}
                 title="Search navigation (Ctrl/Cmd+K)"
               >
                 <span aria-hidden="true">🔎</span>
                 <span>{t("top_nav_search")}</span>
-                <kbd className="rounded border border-zinc-300 px-1.5 py-0.5 text-[10px] text-zinc-500 dark:border-border dark:text-foreground/70">
+                <kbd className="rounded border border-zinc-400 bg-white/90 px-1.5 py-0.5 text-[10px] text-zinc-700 dark:border-border dark:text-foreground/70">
                   ⌘K
                 </kbd>
               </button>
@@ -513,7 +524,7 @@ export default function TopNav() {
               >
                 <span aria-hidden="true">🔎</span>
                 <span className="hidden sm:inline">{t("top_nav_search")}</span>
-                <kbd className="hidden rounded border border-zinc-300 px-1.5 py-0.5 text-[10px] text-zinc-500 dark:border-border dark:text-foreground/70 md:inline-block">
+                <kbd className="hidden rounded border border-zinc-400 bg-white/90 px-1.5 py-0.5 text-[10px] text-zinc-700 dark:border-border dark:text-foreground/70 md:inline-block">
                   ⌘K
                 </kbd>
               </button>
@@ -548,19 +559,26 @@ export default function TopNav() {
                 {isMainMenuOpen && (
                   <div
                     ref={mainMenuPanelRef}
-                    className="absolute right-0 mt-2 w-[min(92vw,24rem)] rounded-2xl border border-zinc-200/90 bg-white/95 p-3 shadow-xl backdrop-blur-sm border-border/50 dark:bg-background/92"
+                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,24rem)] p-3"
                   >
                     <div className="grid gap-2">
                       {primaryNavItems.map((item) => (
+                        (() => {
+                          const locked = isLaunchRouteLocked(item.href);
+                          const href = resolveNavHref(item.href);
+                          return (
                         <Link
                           key={item.href}
-                          href={item.href}
+                          href={href}
                           className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
                           onClick={closeMenus}
                         >
                           <span aria-hidden="true">{item.icon}</span>
                           {resolveLabel(item)}
+                          {locked ? <span className="ml-auto rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-900">Coming Soon</span> : null}
                         </Link>
+                          );
+                        })()
                       ))}
                     </div>
 
@@ -569,15 +587,22 @@ export default function TopNav() {
                         <div className="my-3 border-t border-zinc-200/80 border-border/45" />
                         <div className="grid gap-2">
                           {secondaryNavItems.map((item) => (
+                            (() => {
+                              const locked = isLaunchRouteLocked(item.href);
+                              const href = resolveNavHref(item.href);
+                              return (
                             <Link
                               key={item.href}
-                              href={item.href}
+                              href={href}
                               className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-surface-muted border-border/45 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
                               onClick={closeMenus}
                             >
                               <span aria-hidden="true">{item.icon}</span>
                               {resolveLabel(item)}
+                              {locked ? <span className="ml-auto rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-900">Coming Soon</span> : null}
                             </Link>
+                              );
+                            })()
                           ))}
                         </div>
                       </>
@@ -637,12 +662,12 @@ export default function TopNav() {
                 {isExploreToolsOpen && (
                   <div
                     ref={exploreToolsPanelRef}
-                    className="absolute right-0 mt-2 w-[min(92vw,20rem)] rounded-2xl border border-zinc-200/90 bg-white/95 p-3 shadow-xl backdrop-blur-sm border-border/50 dark:bg-background/92"
+                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,20rem)] p-3"
                   >
                     <div className="grid gap-2">
                       <Link
                         href="/explore"
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >
                         <span aria-hidden="true">🌍</span>
@@ -650,7 +675,7 @@ export default function TopNav() {
                       </Link>
                       <Link
                         href="/modules"
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >
                         <span aria-hidden="true">📚</span>
@@ -658,7 +683,7 @@ export default function TopNav() {
                       </Link>
                       <Link
                         href="/language/speaking-lab"
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >
                         <span aria-hidden="true">🎙️</span>
@@ -666,7 +691,7 @@ export default function TopNav() {
                       </Link>
                       <Link
                         href={parentPortalHref}
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >
                         <span aria-hidden="true">👨‍👩‍👧</span>
@@ -675,7 +700,7 @@ export default function TopNav() {
                       <button
                         type="button"
                         onClick={togglePreReaderMode}
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-surface-muted border-border/45 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground/90"
                       >
                         <span aria-hidden="true">{isPreReaderMode ? "👶" : "🔤"}</span>
                         {isPreReaderMode ? t("top_nav_reader_mode_off") : t("top_nav_reader_mode_on")}
@@ -683,7 +708,7 @@ export default function TopNav() {
                       <button
                         type="button"
                         onClick={() => setTypographyDensity(nextTypographyDensity)}
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-surface-muted border-border/45 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground/90"
                       >
                         <span aria-hidden="true">{typographyIcon}</span>
                         {typographyLabel}
@@ -730,9 +755,13 @@ export default function TopNav() {
             className="mt-2.5 flex items-center gap-2 overflow-x-auto pb-1 md:hidden"
           >
             {mobileQuickNavItems.map((item) => (
+              (() => {
+                const locked = isLaunchRouteLocked(item.href);
+                const href = resolveNavHref(item.href);
+                return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={href}
                 className={`ui-soft-button ui-focus-ring inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold transition ${isItemActive(item.href)
                     ? isHomePage
                       ? "border-amber-200 bg-amber-300 text-amber-950"
@@ -748,7 +777,10 @@ export default function TopNav() {
                   {item.icon}
                 </span>
                 {resolveLabel(item)}
+                {locked ? <span className="rounded-full bg-amber-200 px-1.5 py-0.5 text-[9px] font-bold text-amber-900">Soon</span> : null}
               </Link>
+                );
+              })()
             ))}
           </nav>
         ) : null}

@@ -408,7 +408,7 @@ async function generateOpenAiWorksheet(input: {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${serverEnv.OPENAI_API_KEY}`,
+        Authorization: `Bearer ${serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -570,7 +570,7 @@ export async function generateAndStoreRemediationWorksheet(
       };
     }
 
-    const allowOpenAi = params.allowOpenAi !== false && Boolean(serverEnv.OPENAI_API_KEY);
+    const allowOpenAi = params.allowOpenAi !== false && Boolean(serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY);
     const force = Boolean(params.force);
 
     if (!force) {

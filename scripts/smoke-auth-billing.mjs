@@ -120,6 +120,31 @@ async function expectStatus(baseUrl, routePath, expectedStatus, cookieHeader = n
   };
 }
 
+async function expectProtectedApi(baseUrl, routePath, body, cookieHeader = null) {
+  const headers = { "Content-Type": "application/json" };
+  if (cookieHeader) {
+    headers.cookie = cookieHeader;
+  }
+
+  const { response, json } = await request(baseUrl, routePath, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body ?? {}),
+  });
+
+  if (response.status === 401 || response.status === 403 || response.status === 429) {
+    return {
+      ok: true,
+      detail: `status=${response.status}`,
+    };
+  }
+
+  return {
+    ok: false,
+    detail: `status=${response.status} error=${json?.error ?? "unknown"}`,
+  };
+}
+
 async function expectProtectedBillingApi(baseUrl, routePath, cookieHeader = null) {
   const headers = { "Content-Type": "application/json" };
   if (cookieHeader) {
@@ -415,6 +440,35 @@ async function main() {
     {
       name: "Billing checkout page loads",
       run: () => expectStatus(baseUrl, "/billing/checkout", 200),
+    },
+    {
+      name: "Companion chat API blocks anonymous access",
+      run: () =>
+        expectProtectedApi(baseUrl, "/api/companion/chat", {
+          message: "hello",
+          companionGender: "female",
+          history: [],
+        }),
+    },
+    {
+      name: "Cloud TTS API blocks anonymous access",
+      run: () =>
+        expectProtectedApi(baseUrl, "/api/tts/generate", {
+          text: "hello",
+          locale: "en",
+          lessonId: "companion",
+        }),
+    },
+    {
+      name: "Audiobook TTS API blocks anonymous access",
+      run: () =>
+        expectProtectedApi(baseUrl, "/api/audiobooks/tts", {
+          bookSlug: "smoke-book",
+          chapterNumber: 1,
+          language: "en",
+          voiceId: "nova",
+          chapterText: "Smoke test chapter content.",
+        }),
     },
     {
       name: "Stripe checkout API remains protected",

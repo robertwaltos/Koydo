@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-03-03T16:37:02.304Z",
+  "cleanupMode": "agent-local retry-warning-modules",
+  "stateUpdatedAt": "2026-03-03T16:33:39.314Z",
+  "totals": {
+    "modulesProcessed": 812,
+    "lessonsTouched": 4001,
+    "chunksTouched": 12754,
+    "chunksLengthPassed": 12754,
+    "chunksAgeFlagged": 0,
+    "lessonFailures": 0
+  },
+  "warningModuleCount": 0,
+  "incompleteCoverageModuleCount": 0
+}

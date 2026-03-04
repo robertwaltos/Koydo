@@ -57,6 +57,38 @@ export default async function AdminCompliancePage() {
     .order("requested_at", { ascending: false })
     .limit(100);
 
+  const { data: latestAuditRun } = await admin
+    .from("compliance_audit_runs")
+    .select(
+      "id, status, score, target_score, checks_total, checks_pass, checks_warn, checks_fail, evidence_artifact_id, completed_at, error, created_at",
+    )
+    .eq("scope", "app_store")
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .maybeSingle<{
+      id: string;
+      status: string;
+      score: number;
+      target_score: number;
+      checks_total: number;
+      checks_pass: number;
+      checks_warn: number;
+      checks_fail: number;
+      evidence_artifact_id: string | null;
+      completed_at: string | null;
+      error: string | null;
+      created_at: string;
+    }>();
+  const latestAuditFindings = latestAuditRun
+    ? (
+        await admin
+          .from("compliance_audit_findings")
+          .select("id, pass_name, finding_key, severity, title, detail, remediation, created_at")
+          .eq("run_id", latestAuditRun.id)
+          .order("created_at", { ascending: true })
+      ).data ?? []
+    : [];
+
   const statusCounts = appStoreComplianceChecklist.reduce(
     (acc, item) => {
       acc[item.status] += 1;
@@ -76,6 +108,17 @@ export default async function AdminCompliancePage() {
           <ProgressChip label="Implemented" value={statusCounts.implemented} tone="success" />
           <ProgressChip label="Partial" value={statusCounts.partial} tone="warning" />
           <ProgressChip label="Pending" value={statusCounts.pending} tone="warning" />
+          <ProgressChip
+            label="Triple Pass Score"
+            value={latestAuditRun ? `${Number(latestAuditRun.score).toFixed(2)}/10` : "Not run"}
+            tone={
+              latestAuditRun
+                ? Number(latestAuditRun.score) >= Number(latestAuditRun.target_score)
+                  ? "success"
+                  : "warning"
+                : "neutral"
+            }
+          />
         </div>
       </SoftCard>
 
@@ -122,7 +165,11 @@ export default async function AdminCompliancePage() {
         </ul>
       </SoftCard>
 
-      <ComplianceAdminClient initialDsarRequests={dsarRequests ?? []} />
+      <ComplianceAdminClient
+        initialDsarRequests={dsarRequests ?? []}
+        initialAuditRun={latestAuditRun ?? null}
+        initialAuditFindings={latestAuditFindings}
+      />
     </main>
   );
 }

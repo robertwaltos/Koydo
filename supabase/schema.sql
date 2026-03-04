@@ -556,7 +556,7 @@ create table if not exists public.media_generation_jobs (
   updated_at timestamptz not null default now(),
   completed_at timestamptz,
   constraint media_generation_jobs_asset_type_check
-    check (asset_type in ('video', 'animation', 'image')),
+    check (asset_type in ('video', 'animation', 'image', 'audio')),
   constraint media_generation_jobs_status_check
     check (status in ('queued', 'running', 'completed', 'failed', 'canceled'))
 );

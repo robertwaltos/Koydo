@@ -14,6 +14,9 @@ import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
+const MAX_SCIM_POST_PAYLOAD_BYTES = 6_000_000;
+const MAX_SCIM_PATCH_PAYLOAD_BYTES = 1_500_000;
+
 const querySchema = z.object({
   status: z.enum(["pending", "invited", "provisioned", "inactive"]).optional(),
   search: z.string().trim().max(160).optional(),
@@ -60,6 +63,95 @@ function rateLimitExceededResponse(retryAfterSeconds: number) {
   );
 }
 
+function unauthorizedResponse() {
+  return NextResponse.json(
+    { error: "Unauthorized", code: "auth_required" },
+    { status: 401 },
+  );
+}
+
+function payloadTooLargeResponse(maxBytes: number) {
+  return NextResponse.json(
+    {
+      error: "Payload too large.",
+      code: "payload_too_large",
+      maxBytes,
+    },
+    { status: 413 },
+  );
+}
+
+async function requireAuthenticatedUserId() {
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return {
+      ok: false as const,
+      response: unauthorizedResponse(),
+    };
+  }
+
+  return {
+    ok: true as const,
+    userId: user.id,
+  };
+}
+
+async function parseJsonBodyWithLimit<T>(
+  request: Request,
+  schema: z.ZodType<T>,
+  maxBytes: number,
+) {
+  const contentLengthHeader = request.headers.get("content-length");
+  const contentLength = contentLengthHeader ? Number.parseInt(contentLengthHeader, 10) : null;
+  if (Number.isFinite(contentLength) && (contentLength ?? 0) > maxBytes) {
+    return {
+      ok: false as const,
+      response: payloadTooLargeResponse(maxBytes),
+    };
+  }
+
+  const rawBody = await request.text().catch(() => "");
+  if (Buffer.byteLength(rawBody, "utf8") > maxBytes) {
+    return {
+      ok: false as const,
+      response: payloadTooLargeResponse(maxBytes),
+    };
+  }
+
+  let parsedRawBody: unknown = null;
+  if (rawBody.length > 0) {
+    try {
+      parsedRawBody = JSON.parse(rawBody);
+    } catch {
+      return {
+        ok: false as const,
+        response: NextResponse.json({ error: "Invalid payload" }, { status: 400 }),
+      };
+    }
+  }
+
+  const parsed = schema.safeParse(parsedRawBody);
+  if (!parsed.success) {
+    return {
+      ok: false as const,
+      response: NextResponse.json(
+        { error: "Invalid payload", details: parsed.error.flatten() },
+        { status: 400 },
+      ),
+    };
+  }
+
+  return {
+    ok: true as const,
+    data: parsed.data,
+  };
+}
+
 function toRosterStatus(user: z.infer<typeof scimUserSchema>) {
   if (!user.active) return "inactive";
   if (user.linkedUserId || user.linkedStudentProfileId) return "provisioned";
@@ -92,19 +184,15 @@ export async function GET(
     );
   }
 
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.getUser();
-  if (authError || !user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const auth = await requireAuthenticatedUserId();
+  if (!auth.ok) {
+    return auth.response;
   }
 
   const admin = createSupabaseAdminClient();
   const membership = await requireOrganizationMembership(
     admin,
-    user.id,
+    auth.userId,
     organizationId,
     ["owner", "admin", "teacher", "it_manager", "viewer"],
   );
@@ -171,34 +259,26 @@ export async function POST(
   }
 
   const { organizationId } = await context.params;
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.getUser();
-  if (authError || !user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const auth = await requireAuthenticatedUserId();
+  if (!auth.ok) {
+    return auth.response;
   }
 
-  const body = await request.json().catch(() => null);
-  const parsed = postSchema.safeParse(body);
-  if (!parsed.success) {
-    return NextResponse.json(
-      { error: "Invalid payload", details: parsed.error.flatten() },
-      { status: 400 },
-    );
+  const body = await parseJsonBodyWithLimit(request, postSchema, MAX_SCIM_POST_PAYLOAD_BYTES);
+  if (!body.ok) {
+    return body.response;
   }
 
   const admin = createSupabaseAdminClient();
   const membership = await requireOrganizationMembership(
     admin,
-    user.id,
+    auth.userId,
     organizationId,
     ["owner", "admin", "it_manager"],
   );
   if (!membership.ok) return membership.response;
 
-  const entries: OrganizationRosterEntryInput[] = parsed.data.users.map((scimUser) => ({
+  const entries: OrganizationRosterEntryInput[] = body.data.users.map((scimUser) => ({
     externalStudentId: scimUser.externalId,
     email: scimUser.userName ?? null,
     displayName: scimUser.displayName ?? null,
@@ -216,13 +296,13 @@ export async function POST(
     const summary = await upsertOrganizationRosterEntries(admin, {
       organizationId,
       entries,
-      createdBy: user.id,
-      dryRun: parsed.data.dryRun,
-      replaceExistingForSource: parsed.data.replaceExisting ? "scim" : null,
+      createdBy: auth.userId,
+      dryRun: body.data.dryRun,
+      replaceExistingForSource: body.data.replaceExisting ? "scim" : null,
       onLearnerAssignmentDeactivated: (entry) => {
         auditEvents.push({
           organizationId,
-          actorUserId: user.id,
+          actorUserId: auth.userId,
           eventType: "learner_deactivated",
           subjectType: "organization_learner",
           subjectId: entry.learnerId,
@@ -237,7 +317,7 @@ export async function POST(
 
     let autoAssigned = 0;
     let autoAssignSkipped = 0;
-    if (parsed.data.autoAssignLicenses && !parsed.data.dryRun) {
+    if (body.data.autoAssignLicenses && !body.data.dryRun) {
       const seatSummary = await getOrganizationSeatSummary(admin, organizationId);
       let seatsAvailable = seatSummary.availableSeats;
 
@@ -255,7 +335,7 @@ export async function POST(
             organization_id: organizationId,
             learner_user_id: entry.linkedUserId ?? null,
             student_profile_id: entry.linkedStudentProfileId ?? null,
-            provisioned_by_user_id: user.id,
+            provisioned_by_user_id: auth.userId,
             external_student_id: entry.externalStudentId ?? null,
             school_name: entry.schoolName ?? null,
             status: "active",
@@ -278,7 +358,7 @@ export async function POST(
           seatsAvailable -= 1;
           auditEvents.push({
             organizationId,
-            actorUserId: user.id,
+            actorUserId: auth.userId,
             eventType: "learner_assigned",
             subjectType: "organization_learner",
             subjectId: inserted.id,
@@ -347,28 +427,20 @@ export async function PATCH(
   }
 
   const { organizationId } = await context.params;
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.getUser();
-  if (authError || !user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const auth = await requireAuthenticatedUserId();
+  if (!auth.ok) {
+    return auth.response;
   }
 
-  const body = await request.json().catch(() => null);
-  const parsed = patchSchema.safeParse(body);
-  if (!parsed.success) {
-    return NextResponse.json(
-      { error: "Invalid payload", details: parsed.error.flatten() },
-      { status: 400 },
-    );
+  const body = await parseJsonBodyWithLimit(request, patchSchema, MAX_SCIM_PATCH_PAYLOAD_BYTES);
+  if (!body.ok) {
+    return body.response;
   }
 
   const admin = createSupabaseAdminClient();
   const membership = await requireOrganizationMembership(
     admin,
-    user.id,
+    auth.userId,
     organizationId,
     ["owner", "admin", "it_manager"],
   );
@@ -377,12 +449,12 @@ export async function PATCH(
   let updated = 0;
   let assignmentsDeactivated = 0;
   const auditEvents: OrganizationAuditEventInput[] = [];
-  for (const entry of parsed.data.users) {
+  for (const entry of body.data.users) {
     const updatePayload = {
       metadata: {
         source: "api:organizations:scim:users:patch",
         active: entry.active,
-        updatedBy: user.id,
+        updatedBy: auth.userId,
       },
     } as {
       status?: "pending" | "inactive";
@@ -445,7 +517,7 @@ export async function PATCH(
       for (const learner of deactivatedLearners ?? []) {
         auditEvents.push({
           organizationId,
-          actorUserId: user.id,
+          actorUserId: auth.userId,
           eventType: "learner_deactivated",
           subjectType: "organization_learner",
           subjectId: learner.id,

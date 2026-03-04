@@ -46,19 +46,19 @@ export const SportsScience201Module: LearningModule = {
           "id": "sports-science-201-l01-c1",
           "kind": "concept",
           "title": "Scope and Shared Vocabulary",
-          "content": "This lesson defines the scope of Sports Science, key terms, and how performance physiology and training periodization interact in practical contexts."
+          "content": "In this lesson, we will explore the exciting field of Sports Science. We will define what Sports Science encompasses, introduce important terms that are commonly used, and discuss how performance physiology interacts with training periodization. This means we will learn how the body performs during sports and how training schedules can be organized to improve athletic performance. Understanding these concepts is essential for anyone interested in sports and health.\nContext recap: In this lesson, we will explore the exciting field of Sports Science. We will define what Sports Science encompasses, introduce important terms that are commonly used, and discuss how performance physiology interacts with training periodization. This means we will learn how the body performs during sports and how training schedules can be organized to improve athletic performance. Understanding these concepts is essential for anyone interested in sports and health.\nContext recap: In this lesson, we will explore the exciting field of Sports Science. We will define what Sports Science encompasses, introduce important terms that are commonly used, and discuss how performance physiology interacts with training periodization. This means we will learn how the body performs during sports and how training schedules can be organized to improve athletic performance. Understanding these concepts is essential for anyone interested in sports and health.\nWhy this matters: Scope and Shared Vocabulary helps learners in Health Science connect ideas from Sports Science Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "sports-science-201-l01-c2",
           "kind": "concept",
           "title": "Causal Structure and Constraints",
-          "content": "Learners map causal pathways and test hidden assumptions before selecting interventions."
+          "content": "In this section, learners will engage in mapping out causal pathways, which means they will identify how different factors influence each other in sports performance. They will also test hidden assumptions, which involves questioning what they think they know before deciding on the best actions to take. This critical thinking process is important for making informed decisions in sports science.\nContext recap: In this section, learners will engage in mapping out causal pathways, which means they will identify how different factors influence each other in sports performance. They will also test hidden assumptions, which involves questioning what they think they know before deciding on the best actions to take. This critical thinking process is important for making informed decisions in sports science."
         },
         {
           "id": "sports-science-201-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "Claims are tied to observable indicators, uncertainty notes, and review checkpoints."
+          "content": "In this recap, we emphasize that all claims made in sports science should be supported by observable indicators. This means that we need to look for evidence that can be seen or measured. Additionally, we will discuss the importance of noting any uncertainties and having review checkpoints to ensure that our findings are accurate and reliable. This approach helps us maintain a high standard of evidence in our work.\nContext recap: In this recap, we emphasize that all claims made in sports science should be supported by observable indicators. This means that we need to look for evidence that can be seen or measured. Additionally, we will discuss the importance of noting any uncertainties and having review checkpoints to ensure that our findings are accurate and reliable. This approach helps us maintain a high standard of evidence in our work.\nContext recap: In this recap, we emphasize that all claims made in sports science should be supported by observable indicators. This means that we need to look for evidence that can be seen or measured. Additionally, we will discuss the importance of noting any uncertainties and having review checkpoints to ensure that our findings are accurate and reliable. This approach helps us maintain a high standard of evidence in our work.\nWhy this matters: Evidence Discipline helps learners in Health Science connect ideas from Sports Science Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const SportsScience201Module: LearningModule = {
           "id": "sports-science-201-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction and Test",
-          "content": "Learners design a workflow emphasizing method execution, workflow discipline, and evidence-based reasoning, then stress-test reliability under uncertainty."
+          "content": "In this interactive activity, learners will have the opportunity to design their own workflow. This means they will focus on how to execute methods effectively, maintain discipline in their workflow, and apply evidence-based reasoning. After creating their workflows, they will put them to the test to see how reliable they are, especially when faced with uncertainty. This hands-on experience is crucial for developing practical skills in sports science.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This means they will focus on how to execute methods effectively, maintain discipline in their workflow, and apply evidence-based reasoning. After creating their workflows, they will put them to the test to see how reliable they are, especially when faced with uncertainty. This hands-on experience is crucial for developing practical skills in sports science.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This means they will focus on how to execute methods effectively, maintain discipline in their workflow, and apply evidence-based reasoning. After creating their workflows, they will put them to the test to see how reliable they are, especially when faced with uncertainty. This hands-on experience is crucial for developing practical skills in sports science.\nWhy this matters: Workflow Construction and Test helps learners in Health Science connect ideas from Sports Science Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "sports-science-201-l02-c2",
           "kind": "recap",
           "title": "Control Gates and Readiness",
-          "content": "Readiness requires owner mapping, gate criteria, rollback conditions, and verification signals."
+          "content": "In this recap, we will discuss the concept of readiness in our workflows. This involves mapping out who is responsible for each part of the process, establishing criteria for control gates, defining rollback conditions, and identifying verification signals. Understanding these elements is essential for ensuring that our workflows are prepared for any challenges that may arise.\nContext recap: In this recap, we will discuss the concept of readiness in our workflows. This involves mapping out who is responsible for each part of the process, establishing criteria for control gates, defining rollback conditions, and identifying verification signals. Understanding these elements is essential for ensuring that our workflows are prepared for any challenges that may arise."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const SportsScience201Module: LearningModule = {
           "id": "sports-science-201-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "Case focus: a high-performance training program balancing performance gains, recovery, and injury risk. Learners map high-impact risks and competing constraints."
+          "content": "In this case analysis, we will explore a high-performance training program designed to enhance athletic performance while also ensuring proper recovery and minimizing the risk of injury. Students will engage in mapping out significant risks that could impact athletes, as well as the various constraints that coaches and athletes must navigate. This exercise will deepen their understanding of the intricate challenges involved in creating effective training programs that prioritize both improvement and safety.\nContext recap: In this case analysis, we will explore a high-performance training program designed to enhance athletic performance while also ensuring proper recovery and minimizing the risk of injury. Students will engage in mapping out significant risks that could impact athletes, as well as the various constraints that coaches and athletes must navigate. This exercise will deepen their understanding of the intricate challenges involved in creating effective training programs that prioritize both improvement and safety."
         },
         {
           "id": "sports-science-201-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Intervention options are scored across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will introduce the tradeoff matrix, a tool used to evaluate different intervention options. Each option will be scored based on its effectiveness, reliability, equity, and how feasible it is to implement. This scoring system helps learners understand the importance of making informed choices when selecting interventions in sports science.\nContext recap: In this section, we will introduce the tradeoff matrix, a tool used to evaluate different intervention options. Each option will be scored based on its effectiveness, reliability, equity, and how feasible it is to implement. This scoring system helps learners understand the importance of making informed choices when selecting interventions in sports science."
         },
         {
           "id": "sports-science-201-l04-c3",
           "kind": "recap",
           "title": "Failure Learning and Recovery",
-          "content": "The lesson transforms failure patterns into safeguards, response playbooks, and monitoring updates."
+          "content": "In this recap, we will learn how to transform patterns of failure into valuable lessons. This involves creating safeguards, developing response playbooks, and updating monitoring systems. By doing so, we can ensure that we are better prepared for future challenges and can improve our practices in sports science.\nContext recap: In this recap, we will learn how to transform patterns of failure into valuable lessons. This involves creating safeguards, developing response playbooks, and updating monitoring systems. By doing so, we can ensure that we are better prepared for future challenges and can improve our practices in sports science."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const SportsScience201Module: LearningModule = {
           "id": "sports-science-201-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure intervention scenarios, uncertainty parameters, and measurable success thresholds."
+          "content": "In this interactive practice, learners will set up their own simulation scenarios. They will configure various intervention scenarios, define parameters of uncertainty, and establish measurable success thresholds. This hands-on experience will help them understand how to create realistic simulations that can be used to test their ideas in sports science.\nContext recap: In this interactive practice, learners will set up their own simulation scenarios. They will configure various intervention scenarios, define parameters of uncertainty, and establish measurable success thresholds. This hands-on experience will help them understand how to create realistic simulations that can be used to test their ideas in sports science."
         },
         {
           "id": "sports-science-201-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "Post-run review evaluates outcomes, side effects, and alignment with governance constraints."
+          "content": "In this recap, we will conduct a post-run review of the simulations. This review will evaluate the outcomes, identify any side effects, and check how well the results align with governance constraints. This process is essential for understanding the implications of our simulations and ensuring that we adhere to ethical standards in sports science.\nContext recap: In this recap, we will conduct a post-run review of the simulations. This review will evaluate the outcomes, identify any side effects, and check how well the results align with governance constraints. This process is essential for understanding the implications of our simulations and ensuring that we adhere to ethical standards in sports science."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const SportsScience201Module: LearningModule = {
           "id": "sports-science-201-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "Learners examine how benefits and burdens are distributed across stakeholders and time horizons."
+          "content": "In this lesson, learners will examine how the benefits and burdens of sports science practices are distributed among different stakeholders. They will consider how these impacts vary over time, helping them understand the broader implications of their work in the field. This perspective is crucial for developing responsible practices in sports science.\nContext recap: In this lesson, learners will examine how the benefits and burdens of sports science practices are distributed among different stakeholders. They will consider how these impacts vary over time, helping them understand the broader implications of their work in the field. This perspective is crucial for developing responsible practices in sports science."
         },
         {
           "id": "sports-science-201-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability is framed through traceability, review rights, and remediation obligations."
+          "content": "In this section, we will explore the concept of accountability in sports science. This includes understanding traceability, which means being able to track decisions and actions, as well as review rights and remediation obligations. By framing accountability in this way, learners will appreciate the importance of ethical practices in their work.\nContext recap: In this section, we will explore the concept of accountability in sports science. This includes understanding traceability, which means being able to track decisions and actions, as well as review rights and remediation obligations. By framing accountability in this way, learners will appreciate the importance of ethical practices in their work."
         },
         {
           "id": "sports-science-201-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist links technical performance with policy, ethics, and stakeholder trust outcomes."
+          "content": "At the end of our lesson, we will create a helpful checklist that connects how well we perform in sports with important ideas about rules, ethics, and the trust of everyone involved in sports. This checklist will guide us in making responsible choices that respect both the game and the people who support it.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects how well we perform in sports with important ideas about rules, ethics, and the trust of everyone involved in sports. This checklist will guide us in making responsible choices that respect both the game and the people who support it."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const SportsScience201Module: LearningModule = {
           "id": "sports-science-201-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft capstone objective, constraints, metrics, and governance gates in one decision charter."
+          "content": "In this activity, you will work on a special document called a capstone charter. This charter will include your main goal for the project, any challenges you might face, the ways you will measure success, and the steps you will take to ensure everything is done correctly. This is a great opportunity to think critically and plan effectively for your capstone project.\nContext recap: In this activity, you will work on a special document called a capstone charter. This charter will include your main goal for the project, any challenges you might face, the ways you will measure success, and the steps you will take to ensure everything is done correctly. This is a great opportunity to think critically and plan effectively for your capstone project."
         },
         {
           "id": "sports-science-201-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare evidence-backed defenses for technical, policy, and stakeholder critiques."
+          "content": "As part of our preparation, you will gather strong evidence to support your ideas and plans. This means you will think about possible questions or concerns from others regarding your technical choices, policies, and the interests of different people involved. Being ready with solid defenses will help you present your project confidently.\nContext recap: As part of our preparation, you will gather strong evidence to support your ideas and plans. This means you will think about possible questions or concerns from others regarding your technical choices, policies, and the interests of different people involved. Being ready with solid defenses will help you present your project confidently."
         }
       ],
       "interactiveActivities": [

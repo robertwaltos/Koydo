@@ -65,22 +65,22 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-1-chunk-1",
           "title": "What Are Directions?",
-          "content": "Directions are words that tell you what to do. When someone says 'Please sit down' or 'Clap your hands,' those are directions! Learning to listen and follow directions is a super important skill."
+          "content": "Directions are special words that help us understand what to do. For example, when someone says 'Please sit down' or 'Clap your hands,' they are giving us directions! These directions tell us how to act or what steps to take. Learning to listen carefully and follow these directions is a very important skill that helps us in many activities, like playing games, following instructions in class, or even helping at home. When we pay attention and follow directions, we can have fun and stay safe! Let's practice being great listeners together and see how well we can follow directions in our games and activities!"
         },
         {
           "id": "lang-arts-prek-u1-1-chunk-2",
           "title": "One-Step Directions",
-          "content": "A one-step direction has just ONE thing to do. Examples: 'Touch your nose.' 'Stand up.' 'Clap your hands.' Let's practice! Try each one as you read it."
+          "content": "A one-step direction is a simple instruction that tells you to do just ONE thing. For example, when I say 'Touch your nose,' or 'Stand up,' or 'Clap your hands,' those are all one-step directions! They are easy to follow and help us practice listening carefully. Let's have some fun practicing together! When I say each direction, I want you to try to do it right away. Are you ready to listen and follow along? Remember, it's important to pay attention so you can do the actions just like I say. Let's get started and see how well we can follow these directions!"
         },
         {
           "id": "lang-arts-prek-u1-1-chunk-3",
           "title": "Two-Step Directions",
-          "content": "A two-step direction has TWO things to do. Example: 'Pick up your pencil AND put it on the table.' Remember: listen to ALL the words before you start!"
+          "content": "A two-step direction means you have TWO things to do! For example, if I say, 'Pick up your pencil AND put it on the table,' that’s a two-step direction. It’s really important to listen to ALL the words before you start, so you know exactly what to do. This helps us follow directions correctly and makes sure we don’t miss anything! Let’s practice some two-step directions together. I will say a direction, and you can show me how well you can follow it! Are you ready to have some fun and learn? Let’s go!"
         },
         {
           "id": "lang-arts-prek-u1-1-chunk-4",
           "title": "Tips for Good Listening",
-          "content": "👀 Eyes on the speaker\n👂 Ears ready to hear\n🤐 Mouth quiet\n🧠 Brain thinking about the words\n\nThese four things help you be a GREAT listener!"
+          "content": "To be a GREAT listener, there are four important things you can do: First, keep your eyes on the speaker so you can see them. Second, have your ears ready to hear what they say. Third, keep your mouth quiet so you can listen closely. Finally, use your brain to think about the words you hear. When you do these four things, you will be an amazing listener!\nContext recap: To be a GREAT listener, there are four important things you can do: First, keep your eyes on the speaker so you can see them. Second, have your ears ready to hear what they say. Third, keep your mouth quiet so you can listen closely. Finally, use your brain to think about the words you hear."
         }
       ],
       "flashcards": [
@@ -206,22 +206,22 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-2-chunk-1",
           "title": "What is a Rhyme?",
-          "content": "Rhyming words sound the SAME at the END! Listen: cat 🐱, hat 🎩, bat 🦇. Do you hear it? C-AT, H-AT, B-AT. They all end with the '-at' sound!"
+          "content": "Rhyming words are special words that sound the SAME at the END! For example, listen closely to these fun words: cat 🐱, hat 🎩, and bat 🦇. Can you hear it? They all end with the '-at' sound! Isn't that cool? Rhymes are not just fun to say, but they also help us play with words and make our speaking and listening even better. Let’s go on a little adventure together and find more rhyming words! How many can we think of? Maybe we can even make a silly rhyme together!"
         },
         {
           "id": "lang-arts-prek-u1-2-chunk-2",
           "title": "Common Rhyme Families",
-          "content": "The -AT family: cat, hat, bat, sat, mat, fat, rat\nThe -AN family: can, man, fan, pan, ran, tan\nThe -IN family: bin, fin, pin, win, tin, chin\nThe -OT family: dot, hot, pot, not, got, lot"
+          "content": "Let’s have fun exploring some common rhyme families together! First, we have the -AT family. This family includes words like cat, hat, bat, sat, mat, fat, and rat. Can you say those words with me? Next, we have the -AN family, which has words like can, man, fan, pan, ran, and tan. Let’s clap our hands for each word as we say them! Now, let’s look at the -IN family. It features words like bin, fin, pin, win, tin, and chin. Can you make a funny face while saying chin? Lastly, we have the -OT family, which includes dot, hot, pot, not, got, and lot. Can you think of more words that belong to these rhyme families? Let’s share them with each other and have a great time rhyming!"
         },
         {
           "id": "lang-arts-prek-u1-2-chunk-3",
           "title": "Finding Rhymes",
-          "content": "To find if two words rhyme, cover the BEGINNING of each word and listen to the end:\n- Dog / log → og / og ✅ RHYME!\n- Cat / dog → at / og ❌ NOT a rhyme\n- Sun / run → un / un ✅ RHYME!"
+          "content": "To discover if two words rhyme, we can use a fun trick! First, let's cover the BEGINNING part of each word and focus on the sounds at the end. For instance, when we say 'dog' and 'log,' we can hear the ending sounds 'og' and 'og.' Since they sound the same, we can say they rhyme! Now, let’s try another pair: 'cat' and 'dog.' When we listen closely, we hear 'at' and 'og.' Since those sounds are different, we know they do NOT rhyme. How about we practice together? I will say some more words, and you can help me find out if they rhyme or not! This will be a fun way to play with sounds and words!"
         },
         {
           "id": "lang-arts-prek-u1-2-chunk-4",
           "title": "Making Your Own Rhymes",
-          "content": "Pick a word. Change just the FIRST sound to make a new word!\n- Start with 'cat' → change /c/ to /b/ → bat!\n- Start with 'hop' → change /h/ to /p/ → pop!\nYou're a rhyme maker now! 🌟"
+          "content": "Now it’s your turn to be a rhyme maker! Let’s have some fun with words. First, pick a word that you like. Once you have your word, try changing just the FIRST sound to create a brand new word! For example, if you start with the word 'cat' and you change the /c/ sound to a /b/, what do you get? That’s right, you get 'bat!' Isn’t that cool? Or let’s try another one: if you start with 'hop' and you change the /h/ sound to a /p/, what do you make? Yes, you make 'pop!' You’re doing an amazing job at making rhymes, and it’s so much fun to play with sounds! Keep going and see how many rhymes you can create! 🌟"
         }
       ],
       "flashcards": [
@@ -451,22 +451,22 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-3-chunk-1",
           "title": "Why We Listen to Stories",
-          "content": "Stories take us on adventures! When we listen carefully, we can picture the story in our minds like a movie. Good listeners remember: WHO is in the story, WHERE the story happens, and WHAT happens."
+          "content": "Listening to stories is like going on exciting adventures! When we listen carefully, we can imagine the story in our minds, just like watching a movie. Good listeners remember important details: WHO is in the story, WHERE the story takes place, and WHAT happens throughout the story. These details help us understand and enjoy the story even more! Let’s practice listening to a story together and see what we can remember! After we listen, we can talk about our favorite parts and share what we imagined. This will help us become even better listeners and storytellers!"
         },
         {
           "id": "lang-arts-prek-u1-3-chunk-2",
           "title": "The Story Map: Characters",
-          "content": "CHARACTERS are the people or animals in the story. They are WHO the story is about.\n\nExample: In 'The Three Little Pigs,' the characters are the three pigs 🐷🐷🐷 and the wolf 🐺."
+          "content": "CHARACTERS are the people or animals that we meet in the story. They are WHO the story is all about! For example, in the story 'The Three Little Pigs,' the characters are the three pigs 🐷🐷🐷 and the big bad wolf 🐺. Characters can be brave, funny, silly, or even a little scary! Let’s think of other stories we know, like 'Goldilocks and the Three Bears' or 'Cinderella.' Who are the characters in those stories? Can you name them? Talking about characters helps us understand the story better and makes it more fun to share with our friends! So, let’s explore and discover all the different characters we can find in our favorite tales!"
         },
         {
           "id": "lang-arts-prek-u1-3-chunk-3",
           "title": "The Story Map: Setting",
-          "content": "The SETTING is WHERE and WHEN the story takes place. It can be a forest, a house, outer space, long ago, or today!\n\nExample: The Three Little Pigs takes place in houses in the countryside."
+          "content": "The SETTING of a story is very important because it tells us WHERE and WHEN the story happens. The setting can be many different places! For example, it might be in a magical forest filled with tall trees and friendly animals, or it could be in a cozy house where a family lives. Sometimes, stories take us to outer space where we can see stars and planets, or they might happen a long time ago, like in fairy tales. Other times, the setting is right here, in our world today! For instance, in the story 'The Three Little Pigs,' the setting is in houses located in the beautiful countryside. Now, let’s think about other stories we know and describe their settings together! What places do you remember from your favorite stories? How do those settings make you feel? Let's share our ideas!"
         },
         {
           "id": "lang-arts-prek-u1-3-chunk-4",
           "title": "Retelling in Order",
-          "content": "Retelling means telling what happened in ORDER: First, Next, Then, Last.\n\n1st: The three pigs each built a house\n2nd: The wolf came and huffed and puffed\n3rd: The brick house saved them all!\n\nUsing ORDER WORDS makes your retelling clear!"
+          "content": "Retelling a story is a fun way to share what happened, and it's important to do it in the right ORDER! We can use special words to help us remember the sequence: First, Next, Then, and Last. Let’s think about a story we all know, like 'The Three Little Pigs.' We can say: 1st: The three pigs each built their own house. 2nd: The big bad wolf came and huffed and puffed to try to blow their houses down. 3rd: But the brick house was strong and saved them all! By using ORDER WORDS, we make our retelling clear and easy for everyone to understand. Now, let’s practice retelling a story together! Can you remember the order of events? What happened first? What happened next? Let’s have fun with it and share our stories!"
         }
       ],
       "flashcards": [
@@ -540,25 +540,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-04-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "Let's start by reading the prompt together! After that, we will look for important words and phrases that help us understand the main ideas. Highlighting these key parts will make it easier for us to remember what we read.\nContext recap: Let's start by reading the prompt together! After that, we will look for important words and phrases that help us understand the main ideas. Highlighting these key parts will make it easier for us to remember what we read.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-04-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now, let's practice! Choose a short passage and read it carefully. As you read, think about what the main idea is. After that, write a few sentences to summarize what you learned from the passage. This will help you understand how to find the most important information.\nContext recap: Now, let's practice! Choose a short passage and read it carefully. As you read, think about what the main idea is. After that, write a few sentences to summarize what you learned from the passage.\nWhy this matters: Guided Practice helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-04-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "While we learn about paragraph structure, it's important to watch out for common mistakes. Let's identify one common error that people make when organizing their paragraphs. Once we find it, we can work together to fix it using evidence from the text. This will help us improve our writing skills!\nContext recap: While we learn about paragraph structure, it's important to watch out for common mistakes. Let's identify one common error that people make when organizing their paragraphs. Once we find it, we can work together to fix it using evidence from the text. This will help us improve our writing skills!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-04-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about paragraph structure! Remember the key points we discussed. Now, think of one specific goal you can set for yourself to improve your writing. This will help you become a better writer!\nContext recap: Let's quickly review what we learned about paragraph structure! Remember the key points we discussed. Now, think of one specific goal you can set for yourself to improve your writing. This will help you become a better writer!",
           "kind": "recap"
         }
       ],
@@ -674,25 +674,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-05-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this section, we will learn how to make a strong claim and support it with details from the text. A clear claim is like a strong statement that you believe in, and using text-based details helps others understand why you believe it. Let's practice this together!\nContext recap: In this section, we will learn how to make a strong claim and support it with details from the text. A clear claim is like a strong statement that you believe in, and using text-based details helps others understand why you believe it. Let's practice this together!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-05-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time for some hands-on practice! Take a sentence that you wrote and think about how you can make it clearer and more precise. You can change some words or rearrange the sentence to improve its tone. This will help your writing sound even better!\nContext recap: Now it's time for some hands-on practice! Take a sentence that you wrote and think about how you can make it clearer and more precise. You can change some words or rearrange the sentence to improve its tone. This will help your writing sound even better!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-05-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As we work on our evidence-based responses, let's keep an eye out for common mistakes. We will look for one specific error that people often make. Once we find it, we can correct it together using evidence from the text. This will help us learn and grow as writers!\nContext recap: As we work on our evidence-based responses, let's keep an eye out for common mistakes. We will look for one specific error that people often make. Once we find it, we can correct it together using evidence from the text. This will help us learn and grow as writers!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-05-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about evidence-based responses! Think about the key points we discussed. Now, set one clear goal for yourself to improve your writing. This will help you become a more effective communicator!\nContext recap: Let's take a moment to review what we learned about evidence-based responses! Think about the key points we discussed. Now, set one clear goal for yourself to improve your writing. This will help you become a more effective communicator!",
           "kind": "recap"
         }
       ],
@@ -914,25 +914,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-06-chunk-intro",
           "title": "Close Reading Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "In this part, we will focus on revising our writing. This means we will look closely at our work to make sure it is clear, has correct grammar, and flows smoothly from one idea to the next. Revising helps our writing shine!\nContext recap: In this part, we will focus on revising our writing. This means we will look closely at our work to make sure it is clear, has correct grammar, and flows smoothly from one idea to the next. Revising helps our writing shine!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-06-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Now, let's build a short paragraph together! Make sure to include a claim, some evidence to support it, and an explanation of why that evidence is important. This will help you practice organizing your thoughts clearly.\nContext recap: Now, let's build a short paragraph together! Make sure to include a claim, some evidence to support it, and an explanation of why that evidence is important. This will help you practice organizing your thoughts clearly.\nWhy this matters: Guided Practice helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-06-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying close reading, then correct it with evidence.",
+          "content": "As we practice close reading, let's be aware of common mistakes that can happen. We will identify one specific error that people often make when reading closely. Once we find it, we can work together to correct it using evidence from the text. This will help us improve our reading skills!\nContext recap: As we practice close reading, let's be aware of common mistakes that can happen. We will identify one specific error that people often make when reading closely. Once we find it, we can work together to correct it using evidence from the text. This will help us improve our reading skills!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-06-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review close reading, then set one clear improvement target.",
+          "content": "Let's quickly recap what we learned about close reading! Think about the important points we discussed. Now, set one clear goal for yourself to improve your reading skills. This will help you become a better reader!\nContext recap: Let's quickly recap what we learned about close reading! Think about the important points we discussed. Now, set one clear goal for yourself to improve your reading skills. This will help you become a better reader!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -995,25 +995,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-07-chunk-intro",
           "title": "Vocabulary In Context Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "Let's start by reading the prompt together! After that, we will look for important words and phrases that help us understand the main ideas. Highlighting these key words will help us remember what we are learning.\nContext recap: Let's start by reading the prompt together! After that, we will look for important words and phrases that help us understand the main ideas. Highlighting these key words will help us remember what we are learning.\nWhy this matters: Vocabulary In Context Intro helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-07-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now, let's practice! Choose a short passage to read. As you read, think about what the main idea is. Afterward, write a few sentences that summarize what you learned from the passage. This will help you understand how to find the most important parts of a text.\nContext recap: Now, let's practice! Choose a short passage to read. As you read, think about what the main idea is. Afterward, write a few sentences that summarize what you learned from the passage.\nWhy this matters: Guided Practice helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-07-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying vocabulary in context, then correct it with evidence.",
+          "content": "As we learn about vocabulary in context, it's important to be aware of common mistakes. Watch closely for one common error that people make when using vocabulary. Once you spot it, think about how you can correct it using examples from the text. This will help you become a better reader!\nContext recap: As we learn about vocabulary in context, it's important to be aware of common mistakes. Watch closely for one common error that people make when using vocabulary. Once you spot it, think about how you can correct it using examples from the text. This will help you become a better reader!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-07-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review vocabulary in context, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about vocabulary in context. After our review, think about one specific area where you can improve. Setting a clear goal will help you focus on becoming even better at understanding words in different situations.\nContext recap: Let's take a moment to review what we learned about vocabulary in context. After our review, think about one specific area where you can improve. Setting a clear goal will help you focus on becoming even better at understanding words in different situations.",
           "kind": "recap"
         }
       ],
@@ -1129,25 +1129,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-08-chunk-intro",
           "title": "Sentence Revision Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this section, we will learn how to make a strong statement and support it with details from the text. It's important to have one clear claim that we can back up with evidence. This will help us express our ideas more effectively!\nContext recap: In this section, we will learn how to make a strong statement and support it with details from the text. It's important to have one clear claim that we can back up with evidence. This will help us express our ideas more effectively!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-08-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time for some hands-on practice! Choose one sentence and think about how you can make it clearer and more precise. Rewrite the sentence to improve its tone and meaning. This will help you communicate your ideas better!\nContext recap: Now it's time for some hands-on practice! Choose one sentence and think about how you can make it clearer and more precise. Rewrite the sentence to improve its tone and meaning. This will help you communicate your ideas better!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-08-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying sentence revision, then correct it with evidence.",
+          "content": "As we work on revising sentences, it's important to look out for common mistakes. Pay attention to one common error that might happen during sentence revision. Once you find it, think about how you can correct it using examples from your writing. This will help you improve your skills!\nContext recap: As we work on revising sentences, it's important to look out for common mistakes. Pay attention to one common error that might happen during sentence revision. Once you find it, think about how you can correct it using examples from your writing. This will help you improve your skills!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-08-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review sentence revision, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about sentence revision. After our review, think about one specific area where you can improve your writing. Setting a clear improvement target will help you focus on becoming a better writer!\nContext recap: Let's quickly review what we learned about sentence revision. After our review, think about one specific area where you can improve your writing. Setting a clear improvement target will help you focus on becoming a better writer!",
           "kind": "recap"
         }
       ],
@@ -1369,25 +1369,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-09-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "In this part, we will focus on making our writing clearer. It's important to revise our work for clarity, grammar, and smooth transitions between ideas. This will help our readers understand our thoughts better!\nContext recap: In this part, we will focus on making our writing clearer. It's important to revise our work for clarity, grammar, and smooth transitions between ideas. This will help our readers understand our thoughts better!\nWhy this matters: Paragraph Structure Intro helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-09-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Let's practice building a short paragraph together! Make sure to include a claim, some evidence to support it, and an explanation of your ideas. This will help you learn how to structure your thoughts in writing.\nContext recap: Let's practice building a short paragraph together! Make sure to include a claim, some evidence to support it, and an explanation of your ideas. This will help you learn how to structure your thoughts in writing.\nWhy this matters: Guided Practice helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-09-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "As we work on paragraph structure, it's important to be aware of common errors. Look for one common mistake that can happen when writing paragraphs. Once you find it, think about how you can correct it using examples from your writing. This will help you improve your writing skills!\nContext recap: As we work on paragraph structure, it's important to be aware of common errors. Look for one common mistake that can happen when writing paragraphs. Once you find it, think about how you can correct it using examples from your writing. This will help you improve your writing skills!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-09-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about paragraph structure. After our review, think about one specific area where you can improve your writing. Setting a clear improvement target will help you focus on becoming a better writer!\nContext recap: Let's take a moment to review what we learned about paragraph structure. After our review, think about one specific area where you can improve your writing. Setting a clear improvement target will help you focus on becoming a better writer!",
           "kind": "recap"
         }
       ],
@@ -1450,25 +1450,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-10-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "First, let's read the question carefully. After that, we will find and underline the important words and sentences that give us clues about the answer. This will help us understand what we need to focus on.\nContext recap: First, let's read the question carefully. After that, we will find and underline the important words and sentences that give us clues about the answer. This will help us understand what we need to focus on.\nWhy this matters: Evidence Based Response Intro helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-10-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now, let's practice together! Choose a short piece of writing and highlight the main idea. Then, write a few sentences to explain what that main idea is. This will help you learn how to summarize important information.\nContext recap: Now, let's practice together! Choose a short piece of writing and highlight the main idea. Then, write a few sentences to explain what that main idea is. This will help you learn how to summarize important information.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-10-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As we learn about using evidence in our responses, let's be on the lookout for a common mistake. If you notice this mistake, think about how you can fix it by finding the right evidence to support your answer. This will make your response stronger!\nContext recap: As we learn about using evidence in our responses, let's be on the lookout for a common mistake. If you notice this mistake, think about how you can fix it by finding the right evidence to support your answer. This will make your response stronger!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-10-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about using evidence in our answers. After that, think of one specific way you can improve your responses next time. Setting a clear goal will help you get better!\nContext recap: Let's quickly review what we learned about using evidence in our answers. After that, think of one specific way you can improve your responses next time. Setting a clear goal will help you get better!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -1584,25 +1584,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-11-chunk-intro",
           "title": "Close Reading Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "When we make a claim, it's important to back it up with details from the text. This means we should use specific examples from what we read to support what we are saying. Let's practice this together!\nContext recap: When we make a claim, it's important to back it up with details from the text. This means we should use specific examples from what we read to support what we are saying. Let's practice this together!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-11-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "For our practice, take a sentence and think about how you can make it clearer and more interesting. Try to change a few words to improve how it sounds and what it means. This will help you express your ideas better!\nContext recap: For our practice, take a sentence and think about how you can make it clearer and more interesting. Try to change a few words to improve how it sounds and what it means. This will help you express your ideas better!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-11-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying close reading, then correct it with evidence.",
+          "content": "While we are learning about close reading, let's be careful of a common mistake. If you see this mistake, think about how you can fix it by using the right details from the text. This will help you understand better!\nContext recap: While we are learning about close reading, let's be careful of a common mistake. If you see this mistake, think about how you can fix it by using the right details from the text. This will help you understand better!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-11-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review close reading, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about close reading. After that, think of one specific goal you can set for yourself to improve your reading skills. This will help you become a better reader!\nContext recap: Let's take a moment to review what we learned about close reading. After that, think of one specific goal you can set for yourself to improve your reading skills. This will help you become a better reader!",
           "kind": "recap"
         }
       ],
@@ -1824,25 +1824,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-12-chunk-intro",
           "title": "Vocabulary In Context Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "When we write, it's important to make sure our sentences are clear and easy to understand. This means checking for good grammar and making sure our ideas flow smoothly from one to the next.\nContext recap: When we write, it's important to make sure our sentences are clear and easy to understand. This means checking for good grammar and making sure our ideas flow smoothly from one to the next.\nWhy this matters: Vocabulary In Context Intro helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-12-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Let's practice writing! Try to create a short paragraph that includes a claim, some evidence to support it, and an explanation of why that evidence is important. This will help you learn how to express your thoughts clearly.\nContext recap: Let's practice writing! Try to create a short paragraph that includes a claim, some evidence to support it, and an explanation of why that evidence is important. This will help you learn how to express your thoughts clearly.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-12-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying vocabulary in context, then correct it with evidence.",
+          "content": "As we work on using vocabulary in context, let's be aware of a common mistake. If you notice this mistake, think about how you can correct it by using the right words and examples. This will help you improve your writing!\nContext recap: As we work on using vocabulary in context, let's be aware of a common mistake. If you notice this mistake, think about how you can correct it by using the right words and examples. This will help you improve your writing!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-12-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review vocabulary in context, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about using vocabulary in context. After that, think of one specific way you can improve your vocabulary skills. Setting a clear goal will help you grow!\nContext recap: Let's quickly review what we learned about using vocabulary in context. After that, think of one specific way you can improve your vocabulary skills. Setting a clear goal will help you grow!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -1905,25 +1905,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-13-chunk-intro",
           "title": "Sentence Revision Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "Let's start by reading the prompt together! After that, we will look for important words and lines in the text that help us understand what we need to focus on. Highlighting these key parts will make it easier for us to revise our sentences later.\nContext recap: Let's start by reading the prompt together! After that, we will look for important words and lines in the text that help us understand what we need to focus on. Highlighting these key parts will make it easier for us to revise our sentences later.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-13-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now, let's practice! Choose a short passage to read. As you read, think about what the main idea is. After that, write a few sentences to summarize what you learned. This will help you understand the text better and improve your writing skills.\nContext recap: Now, let's practice! Choose a short passage to read. As you read, think about what the main idea is. After that, write a few sentences to summarize what you learned.\nWhy this matters: Guided Practice helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-13-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying sentence revision, then correct it with evidence.",
+          "content": "As we work on revising our sentences, let's keep an eye out for a common mistake that can happen. If you notice this error, try to fix it by using evidence from the text. This will help us make our writing clearer and more effective!\nContext recap: As we work on revising our sentences, let's keep an eye out for a common mistake that can happen. If you notice this error, try to fix it by using evidence from the text. This will help us make our writing clearer and more effective!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-13-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review sentence revision, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about sentence revision. Think about one specific area where you can improve your writing. Setting a clear goal will help you become a better writer!\nContext recap: Let's quickly review what we learned about sentence revision. Think about one specific area where you can improve your writing. Setting a clear goal will help you become a better writer!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -2039,25 +2039,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-14-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this section, we will learn how to create a strong paragraph. Start with one clear claim, and then support it with details from the text. This will help your writing be more convincing and interesting!\nContext recap: In this section, we will learn how to create a strong paragraph. Start with one clear claim, and then support it with details from the text. This will help your writing be more convincing and interesting!\nWhy this matters: Paragraph Structure Intro helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-14-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time to practice! Take a sentence and think about how you can make it better. Try to rewrite it to improve its clarity and tone. This will help your writing sound more polished and professional.\nContext recap: Now it's time to practice! Take a sentence and think about how you can make it better. Try to rewrite it to improve its clarity and tone. This will help your writing sound more polished and professional.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-14-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "While we are working on our paragraph structure, let's look out for a common mistake that can happen. If you find this error, remember to correct it using evidence from your writing. This will help strengthen your paragraphs!\nContext recap: While we are working on our paragraph structure, let's look out for a common mistake that can happen. If you find this error, remember to correct it using evidence from your writing. This will help strengthen your paragraphs!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-14-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's recap what we learned about paragraph structure. Think about one specific area where you can improve your writing. Setting a clear goal will help you become a better writer!\nContext recap: Let's recap what we learned about paragraph structure. Think about one specific area where you can improve your writing. Setting a clear goal will help you become a better writer!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -2279,25 +2279,25 @@ export const LangArtsPrekU1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-prek-u1-external-supp-seq-15-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "In this part, we will focus on revising our writing for clarity, grammar, and smooth transitions. This means making sure our sentences are easy to understand and flow well together.\nContext recap: In this part, we will focus on revising our writing for clarity, grammar, and smooth transitions. This means making sure our sentences are easy to understand and flow well together.\nWhy this matters: Evidence Based Response Intro helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-15-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Let's practice building a short paragraph! Start with a claim, then add evidence to support it, and finish with an explanation. This will help you create strong and persuasive writing.\nContext recap: Let's practice building a short paragraph! Start with a claim, then add evidence to support it, and finish with an explanation. This will help you create strong and persuasive writing.\nWhy this matters: Guided Practice helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-15-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As we work on our evidence-based responses, let's watch for a common mistake that can happen. If you notice this error, try to correct it using evidence from your writing. This will help improve the quality of your responses!\nContext recap: As we work on our evidence-based responses, let's watch for a common mistake that can happen. If you notice this error, try to correct it using evidence from your writing. This will help improve the quality of your responses!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-prek-u1-external-supp-seq-15-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about evidence-based responses. Think about one specific area where you can improve your writing. Setting a clear goal will help you become a better writer!\nContext recap: Let's quickly review what we learned about evidence-based responses. Think about one specific area where you can improve your writing. Setting a clear goal will help you become a better writer!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Oral Language & Listening to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],

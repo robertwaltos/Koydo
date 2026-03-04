@@ -7,7 +7,7 @@ import ProgressChip from "@/app/components/ui/progress-chip";
 import ExplorerMetricsPanel from "./explorer-metrics-panel";
 
 export const dynamic = "force-dynamic";
-const REPORT_TYPES = ["dsar", "support", "audit", "telemetry"] as const;
+const REPORT_TYPES = ["dsar", "support", "audit", "telemetry", "finance", "finance_analytics", "compliance_audit"] as const;
 
 function coerceNumber(value: unknown) {
   if (typeof value === "number" && Number.isFinite(value)) return value;
@@ -623,6 +623,62 @@ export default async function AdminReportsPage() {
               className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
             >
               Download Language Pricing Funnel (JSON, 30d)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/finance?days=365"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Finance Ledger Report (CSV, 365d)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/finance-analytics?days=30"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Finance Analytics Report (CSV, 30d)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/compliance-audit"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Triple-Pass Compliance Audit (CSV)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/tax-projection?days=365&format=csv"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Tax Projection Report (CSV, 365d)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/investors"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Investor Cap Table Report (CSV)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/dividends"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Dividend Register Report (CSV)
+            </a>
+          </li>
+          <li>
+            <a
+              href="/api/admin/reports/banking-audit?days=365&format=csv&persist=1"
+              className="ui-focus-ring inline-flex rounded px-1 text-sm font-medium underline"
+            >
+              Download Banking Audit Report (CSV)
             </a>
           </li>
         </ul>

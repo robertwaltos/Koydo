@@ -47,19 +47,19 @@ export const Reading601Module: LearningModule = {
           "id": "reading-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Reading, with focus on reading systems diagnostics and reading operations and execution design."
+          "content": "In this lesson, we will delve into the concept of advanced scope boundaries in the field of reading. We will examine how to effectively diagnose reading systems, which involves understanding the various components that contribute to a reader's success. Additionally, we will discuss how to design operations that enhance reading execution, meaning we will look at strategies and methods that improve how reading is taught and assessed. By understanding these boundaries, we can create better frameworks for reading instruction and assessment, ensuring that we meet the specific needs of all learners and help them thrive in their reading journeys.\nContext recap: In this lesson, we will delve into the concept of advanced scope boundaries in the field of reading. We will examine how to effectively diagnose reading systems, which involves understanding the various components that contribute to a reader's success. Additionally, we will discuss how to design operations that enhance reading execution, meaning we will look at strategies and methods that improve how reading is taught and assessed. By understanding these boundaries, we can create better frameworks for reading instruction and assessment, ensuring that we meet the specific needs of all learners and help them thrive in their reading journeys.\nContext recap: In this lesson, we will delve into the concept of advanced scope boundaries in the field of reading. We will examine how to effectively diagnose reading systems, which involves understanding the various components that contribute to a reader's success. Additionally, we will discuss how to design operations that enhance reading execution, meaning we will look at strategies and methods that improve how reading is taught and assessed. By understanding these boundaries, we can create better frameworks for reading instruction and assessment, ensuring that we meet the specific needs of all learners and help them thrive in their reading journeys.\nWhy this matters: Scope and Boundary Design helps learners in Reading connect ideas from Reading Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "reading-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence reading outcomes. Additionally, we will examine uncertainty ranges and system dependencies, which are important for planning effective interventions. This process helps us understand how various elements interact and prepares us for making informed decisions in our reading strategies.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence reading outcomes. Additionally, we will examine uncertainty ranges and system dependencies, which are important for planning effective interventions. This process helps us understand how various elements interact and prepares us for making informed decisions in our reading strategies."
         },
         {
           "id": "reading-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in our reading assessments must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our conclusions are supported by evidence. This approach helps us maintain high standards in our reading programs and ensures accountability.\nContext recap: In our recap, we emphasize that all claims made in our reading assessments must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our conclusions are supported by evidence. This approach helps us maintain high standards in our reading programs and ensures accountability."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Reading601Module: LearningModule = {
           "id": "reading-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design workflows specifically tailored for reading specialists. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience allows learners to identify potential weaknesses and improve their methods, ensuring that they can effectively support diverse reading needs.\nContext recap: In this interactive practice, learners will have the opportunity to design workflows specifically tailored for reading specialists. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience allows learners to identify potential weaknesses and improve their methods, ensuring that they can effectively support diverse reading needs."
         },
         {
           "id": "reading-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss the importance of integrating control gates into our workflows. These gates will include checkpoints, rollback criteria, and escalation thresholds. This structure ensures that we can monitor progress effectively and make necessary adjustments to our reading interventions, promoting a responsive and responsible approach.\nContext recap: In our recap, we will discuss the importance of integrating control gates into our workflows. These gates will include checkpoints, rollback criteria, and escalation thresholds. This structure ensures that we can monitor progress effectively and make necessary adjustments to our reading interventions, promoting a responsive and responsible approach."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Reading601Module: LearningModule = {
           "id": "reading-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in reading systems diagnostics and reading impact and tradeoff analysis."
+          "content": "In this lesson, we will frame our case analysis by examining the competing constraints that exist within reading systems diagnostics. We will also explore the impact of reading interventions and conduct tradeoff analyses. This comprehensive approach helps us understand the complexities involved in making decisions about reading programs and their effectiveness.\nContext recap: In this lesson, we will frame our case analysis by examining the competing constraints that exist within reading systems diagnostics. We will also explore the impact of reading interventions and conduct tradeoff analyses. This comprehensive approach helps us understand the complexities involved in making decisions about reading programs and their effectiveness."
         },
         {
           "id": "reading-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options for reading interventions across various dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them understand the tradeoffs involved and make informed decisions that consider the needs of all stakeholders.\nContext recap: During this practice session, learners will compare different options for reading interventions across various dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them understand the tradeoffs involved and make informed decisions that consider the needs of all stakeholders.\nContext recap: During this practice session, learners will compare different options for reading interventions across various dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them understand the tradeoffs involved and make informed decisions that consider the needs of all stakeholders. Context recap: During this practice session, learners will compare different options for reading interventions across various dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them understand the tradeoffs involved and make informed decisions that consider the needs of all stakeholders."
         },
         {
           "id": "reading-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight the essential components of a decision memo. Each recommendation should clearly outline the underlying assumptions, the evidence supporting the decision, the risk controls in place, and any fallback plans. This structured approach ensures that our decisions are well-informed and transparent.\nContext recap: In our recap, we will highlight the essential components of a decision memo. Each recommendation should clearly outline the underlying assumptions, the evidence supporting the decision, the risk controls in place, and any fallback plans. This structured approach ensures that our decisions are well-informed and transparent."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Reading601Module: LearningModule = {
           "id": "reading-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This exercise will help them understand the importance of maintaining high standards while also being flexible and responsive to changing circumstances in reading interventions.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This exercise will help them understand the importance of maintaining high standards while also being flexible and responsive to changing circumstances in reading interventions.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This exercise will help them understand the importance of maintaining high standards while also being flexible and responsive to changing circumstances in reading interventions. Context recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This exercise will help them understand the importance of maintaining high standards while also being flexible and responsive to changing circumstances in reading interventions."
         },
         {
           "id": "reading-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the design of effective adaptive responses. These responses should be able to update control gates without losing traceability or accountability. This ensures that we can adapt our reading strategies as needed while maintaining a clear record of our decisions and actions.\nContext recap: In our recap, we will discuss the design of effective adaptive responses. These responses should be able to update control gates without losing traceability or accountability. This ensures that we can adapt our reading strategies as needed while maintaining a clear record of our decisions and actions."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Reading601Module: LearningModule = {
           "id": "reading-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from reading interventions. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from reading interventions. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in the decision-making process."
         },
         {
           "id": "reading-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in our reading programs. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. By integrating these elements, we can foster a culture of responsibility and transparency in our reading initiatives.\nContext recap: In this section, we will explore the architecture of accountability in our reading programs. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. By integrating these elements, we can foster a culture of responsibility and transparency in our reading initiatives."
         },
         {
           "id": "reading-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important ideas. This checklist includes outcomes we want to achieve, ethical considerations we must keep in mind, compliance with policies we need to follow, and the resilience we should develop to face challenges. It's a great tool to ensure we are responsible leaders.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important ideas. This checklist includes outcomes we want to achieve, ethical considerations we must keep in mind, compliance with policies we need to follow, and the resilience we should develop to face challenges. It's a great tool to ensure we are responsible leaders."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Reading601Module: LearningModule = {
           "id": "reading-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a brief. This brief will include important claims that support our ideas, evidence that backs up those claims, uncertainty bounds that show where we might not be sure, and pathways for remediation that outline how we can fix any issues. This process helps us think critically and prepare effectively.\nContext recap: In this activity, learners will work together to create a brief. This brief will include important claims that support our ideas, evidence that backs up those claims, uncertainty bounds that show where we might not be sure, and pathways for remediation that outline how we can fix any issues. This process helps us think critically and prepare effectively."
         },
         {
           "id": "reading-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this practice session, learners will rehearse their responses to various critiques. These critiques may come from experts in technical fields, governance issues, and stakeholders who have an interest in our work. This rehearsal is important as it helps us prepare to communicate our ideas clearly and confidently.\nContext recap: During this practice session, learners will rehearse their responses to various critiques. These critiques may come from experts in technical fields, governance issues, and stakeholders who have an interest in our work. This rehearsal is important as it helps us prepare to communicate our ideas clearly and confidently."
         }
       ],
       "interactiveActivities": [

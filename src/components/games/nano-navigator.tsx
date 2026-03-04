@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Activity, ShieldCheck, Info, ChevronRight, Zap, Target, Microscope, Atom, Dna, Waves, Thermometer, Wind } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Microbiology Types --- */
 type CellStructure = "NUCLEUS" | "MITOCHONDRIA" | "RIBOSOME" | "MEMBRANE";
@@ -29,6 +30,9 @@ export default function NanoNavigator() {
     });
     const [position, setPosition] = useState({ x: 50, y: 50 });
     const [samples, setSamples] = useState<CellStructure[]>([]);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const updateMovement = useCallback((dx: number, dy: number) => {
         if (gameState !== "NAVIGATING") return;
@@ -60,6 +64,25 @@ export default function NanoNavigator() {
         window.addEventListener("keydown", handleKeys);
         return () => window.removeEventListener("keydown", handleKeys);
     }, [updateMovement]);
+
+    useEffect(() => {
+        if (gameState !== "SAMPLING" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "nano",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, samples.length),
+            score: samples.length,
+            maxScore: 4,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, samples.length]);
 
     const collectSample = (type: CellStructure) => {
         if (samples.includes(type)) return;

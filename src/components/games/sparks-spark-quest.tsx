@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Zap,
@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /**
  * SPARK'S SPARK-QUEST - Phase 9 (Explorer Batch)
@@ -69,8 +70,30 @@ export default function SparksSparkQuest() {
     const [userInput, setUserInput] = useState("");
     const [isComplete, setIsComplete] = useState(false);
     const [error, setError] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const currentSector = CITY_SECTORS[sectorIndex];
+
+    useEffect(() => {
+        if (!isComplete || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "spark-quest",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, poweredSectors.length),
+            score: poweredSectors.length,
+            maxScore: CITY_SECTORS.length,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [isComplete, poweredSectors.length]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();

@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import ConsoleAiChatbox from "./console-ai-chatbox";
 
 type SupportTicket = {
   id: string;
@@ -188,6 +189,79 @@ type LanguageUnlockReconciliationResult = {
   queuedForReview: number;
 };
 
+type OwnerSecurityStatusResponse = {
+  owner: {
+    userId: string;
+    email: string | null;
+    dataMode: "live" | "beta";
+  };
+  security: {
+    ownerConfigured: boolean;
+    factors: Array<{
+      id: string;
+      factorType: "totp" | "secondary_email" | "yubikey_otp";
+      label: string | null;
+      emailAddress: string | null;
+      yubikeyPublicId: string | null;
+      verifiedAt: string | null;
+      lastUsedAt: string | null;
+      createdAt: string;
+    }>;
+    activeStepUpSessions: Array<{
+      id: string;
+      scope: string;
+      factorType: "totp" | "secondary_email" | "yubikey_otp";
+      expiresAt: string;
+    }>;
+    recentEvents: Array<{
+      id: string;
+      eventType: string;
+      factorType: "totp" | "secondary_email" | "yubikey_otp" | null;
+      severity: "info" | "warning" | "critical";
+      createdAt: string;
+    }>;
+  };
+};
+
+type ModuleBaselineSummary = {
+  baselineVersion: string | null;
+  totalModules: number;
+  modulesRequiringBaseline: number;
+  modulesWithoutBaselineNeed: number;
+  capturedAt: string | null;
+};
+
+type FactoryResetRunSummary = {
+  id: string;
+  mode: "dry_run" | "apply";
+  scope: "beta_only" | "all_non_owner";
+  status: "running" | "completed" | "failed";
+  reason: string | null;
+  target_user_count: number;
+  rows_scanned: number;
+  rows_deleted: number;
+  baseline_version: string | null;
+  error: string | null;
+  created_at: string;
+  completed_at: string | null;
+};
+
+type FactoryResetStatusResponse = {
+  baselineSummary: ModuleBaselineSummary;
+  runs: FactoryResetRunSummary[];
+};
+
+type OwnershipTransferPlaybook = {
+  id: string;
+  status: "planned" | "ready" | "executed" | "cancelled";
+  current_owner_user_id: string;
+  candidate_owner_user_id: string;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+  executed_at: string | null;
+};
+
 const DEFAULT_LANGUAGE_RUNTIME_CONFIG: LanguageRuntimeConfig = {
   source: "default",
   phase: "1",
@@ -311,6 +385,15 @@ const CONSOLE_NAV: ConsoleCategoryDef[] = [
       { id: "role-management", title: "Role Management",
         description: "Change what a user is allowed to do: grant or remove admin access and parent-portal access for any existing account.",
         tip: "Type UPDATE_ROLES exactly in the confirmation box to prevent accidental changes. Be careful not to remove your own admin access — you would be locked out of this console." },
+      { id: "owner-security", title: "Owner Security (MFA + Step-Up)",
+        description: "Configure and verify owner-level protection, including authenticator app, backup email, and YubiKey OTP step-up requirements.",
+        tip: "Use this before touching highly sensitive operations. Revoke existing step-up sessions if you suspect any credential exposure." },
+      { id: "factory-reset", title: "Factory Reset + Module Baselines",
+        description: "Capture and compare baseline snapshots and execute full owner-controlled recovery workflows when the platform must be reset safely.",
+        tip: "Always review baseline drift and confirmation checkpoints before running destructive reset workflows." },
+      { id: "ownership-transfer", title: "Ownership Transfer Playbooks",
+        description: "Prepare and execute ownership transfer playbooks with explicit confirmation and secure handoff records.",
+        tip: "Use playbook mode first to validate all prerequisites, then execute with transfer credentials only after final verification." },
       { id: "account-recovery", title: "Account Recovery",
         description: "Generate a secure password-reset link for a user who is locked out of their account. The link will appear in the result — copy and send it to the user by email.",
         tip: "The link is single-use and expires quickly. If the user misses it, simply generate a new one here at any time." },
@@ -387,58 +470,6 @@ function InfoTip({ tip }: { tip: string }) {
         </>
       )}
     </span>
-  );
-}
-
-// ── Console secondary nav category ───────────────────────────────────────────
-
-function ConsoleNavCategory({
-  category, selectedId, onSelect, badges,
-}: {
-  category: ConsoleCategoryDef;
-  selectedId: string;
-  onSelect: (id: string) => void;
-  badges: Record<string, number>;
-}) {
-  const hasActive = category.sections.some((s) => s.id === selectedId);
-  const [open, setOpen] = useState(hasActive);
-  return (
-    <div className="mb-1">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between rounded-md px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500 hover:bg-slate-100 hover:text-slate-700 transition-colors"
-        aria-expanded={open}
-      >
-        <span className="flex items-center gap-1.5"><span aria-hidden="true">{category.icon}</span>{category.label}</span>
-        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true" className={`shrink-0 transition-transform duration-150 ${open ? "rotate-180" : ""}`}>
-          <path d="M1 2.5 4 5.5 7 2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </button>
-      {open && (
-        <div className="mt-0.5 space-y-0.5 pl-1 pb-1">
-          {category.sections.map((section) => {
-            const isActive = section.id === selectedId;
-            const badge = badges[section.id] ?? 0;
-            return (
-              <button
-                key={section.id}
-                type="button"
-                onClick={() => onSelect(section.id)}
-                className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-[12px] font-medium transition-colors ${
-                  isActive ? "bg-blue-100 text-blue-900" : "text-slate-600 hover:bg-slate-100 hover:text-slate-800"
-                }`}
-              >
-                <span className="truncate">{section.title}</span>
-                {badge > 0 && (
-                  <span className="ml-1.5 flex h-3.5 min-w-3.5 items-center justify-center rounded-full bg-amber-400 px-1 text-[9px] font-bold text-white">{badge}</span>
-                )}
-              </button>
-            );
-          })}
-        </div>
-      )}
-    </div>
   );
 }
 
@@ -557,6 +588,11 @@ function toErroredUsers(value: unknown): Array<{ userId: string; error: string }
 function formatUserId(userId: string) {
   if (userId.length <= 8) return userId;
   return `${userId.slice(0, 8)}...`;
+}
+
+function formatShortId(value: string) {
+  if (value.length <= 10) return value;
+  return `${value.slice(0, 6)}...${value.slice(-4)}`;
 }
 
 function formatDateTime(value: string | null) {
@@ -1048,6 +1084,26 @@ export default function OperationsConsole({
     useState<LanguagePricingAnalyticsReport | null>(null);
   const [languagePricingReportStatus, setLanguagePricingReportStatus] = useState("");
   const [languagePricingReportBusy, setLanguagePricingReportBusy] = useState(false);
+  const [ownerSecurityStatus, setOwnerSecurityStatus] = useState<OwnerSecurityStatusResponse | null>(null);
+  const [ownerSecurityBusy, setOwnerSecurityBusy] = useState(false);
+  const [ownerSecurityMessage, setOwnerSecurityMessage] = useState("");
+  const [ownerTotpProvision, setOwnerTotpProvision] = useState<{
+    factorId: string;
+    secret: string;
+    otpauthUri: string;
+  } | null>(null);
+  const [ownerEmailChallenge, setOwnerEmailChallenge] = useState<{
+    challengeId: string;
+    scope: "owner_console" | "factory_reset" | "ownership_transfer" | "security_admin";
+    expiresAt: string;
+    debugCode?: string | null;
+  } | null>(null);
+  const [factoryResetStatus, setFactoryResetStatus] = useState<FactoryResetStatusResponse | null>(null);
+  const [factoryResetBusy, setFactoryResetBusy] = useState(false);
+  const [factoryResetMessage, setFactoryResetMessage] = useState("");
+  const [transferPlaybooks, setTransferPlaybooks] = useState<OwnershipTransferPlaybook[]>([]);
+  const [transferBusy, setTransferBusy] = useState(false);
+  const [transferMessage, setTransferMessage] = useState("");
 
   // Support direct deep-linking via ?s= URL parameter from the sidebar
   const searchParams = useSearchParams();
@@ -1121,7 +1177,9 @@ export default function OperationsConsole({
         password: form.get("password"),
         displayName: form.get("displayName") || undefined,
         isAdmin: form.get("isAdmin") === "on",
+        isOwner: form.get("isOwner") === "on",
         isParent: form.get("isParent") === "on",
+        dataMode: form.get("dataMode"),
       });
       setStatus(`User created: ${String(result.userId)}`);
       event.currentTarget.reset();
@@ -1142,7 +1200,9 @@ export default function OperationsConsole({
       await postJson("/api/admin/users/update-roles", {
         userId: form.get("userId"),
         isAdmin: form.get("setIsAdmin") === "on",
+        isOwner: form.get("setIsOwner") === "on",
         isParent: form.get("setIsParent") === "on",
+        dataMode: form.get("setDataMode"),
         confirmText,
       });
       setStatus("User roles updated.");
@@ -1843,50 +1903,377 @@ export default function OperationsConsole({
     }
   };
 
+  const refreshOwnerSecurity = useCallback(async () => {
+    setOwnerSecurityMessage("");
+    setOwnerSecurityBusy(true);
+    try {
+      const response = await fetch("/api/admin/owner/security/status");
+      const payload = (await response.json().catch(() => null)) as
+        | OwnerSecurityStatusResponse
+        | { error?: string }
+        | null;
+      if (!response.ok) {
+        const message = payload && "error" in payload && typeof payload.error === "string"
+          ? payload.error
+          : "Failed to load owner security status.";
+        setOwnerSecurityMessage(message);
+        return;
+      }
+      if (!payload || !("owner" in payload) || !("security" in payload)) {
+        setOwnerSecurityMessage("Received unexpected owner security payload.");
+        return;
+      }
+      setOwnerSecurityStatus(payload);
+    } catch {
+      setOwnerSecurityMessage("Failed to load owner security status.");
+    } finally {
+      setOwnerSecurityBusy(false);
+    }
+  }, []);
+
+  const refreshFactoryResetStatus = useCallback(async () => {
+    setFactoryResetMessage("");
+    setFactoryResetBusy(true);
+    try {
+      const response = await fetch("/api/admin/owner/factory-reset/status");
+      const payload = (await response.json().catch(() => null)) as
+        | FactoryResetStatusResponse
+        | { error?: string }
+        | null;
+      if (!response.ok) {
+        const message = payload && "error" in payload && typeof payload.error === "string"
+          ? payload.error
+          : "Failed to load factory reset status.";
+        setFactoryResetMessage(message);
+        return;
+      }
+      if (!payload || !("runs" in payload) || !("baselineSummary" in payload)) {
+        setFactoryResetMessage("Received unexpected factory reset payload.");
+        return;
+      }
+      setFactoryResetStatus(payload);
+    } catch {
+      setFactoryResetMessage("Failed to load factory reset status.");
+    } finally {
+      setFactoryResetBusy(false);
+    }
+  }, []);
+
+  const refreshTransferPlaybooks = useCallback(async () => {
+    setTransferMessage("");
+    setTransferBusy(true);
+    try {
+      const response = await fetch("/api/admin/owner/transfer/playbook");
+      const payload = (await response.json().catch(() => null)) as
+        | { playbooks?: OwnershipTransferPlaybook[]; error?: string }
+        | null;
+      if (!response.ok) {
+        setTransferMessage(payload?.error ?? "Failed to load ownership transfer playbooks.");
+        return;
+      }
+      setTransferPlaybooks(payload?.playbooks ?? []);
+    } catch {
+      setTransferMessage("Failed to load ownership transfer playbooks.");
+    } finally {
+      setTransferBusy(false);
+    }
+  }, []);
+
+  const handleProvisionOwnerTotp = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const result = (await postJson("/api/admin/owner/security/totp/provision", {
+        label: String(form.get("label") ?? "").trim() || undefined,
+        confirmText: "PROVISION_OWNER_TOTP",
+      })) as {
+        factorId: string;
+        secret: string;
+        otpauthUri: string;
+      };
+      setOwnerTotpProvision({
+        factorId: result.factorId,
+        secret: result.secret,
+        otpauthUri: result.otpauthUri,
+      });
+      setOwnerSecurityMessage("Authenticator factor provisioned. Verify a code to activate step-up.");
+      await refreshOwnerSecurity();
+    } catch (error) {
+      setOwnerSecurityMessage(error instanceof Error ? error.message : "Failed to provision authenticator factor.");
+    }
+  };
+
+  const handleVerifyOwnerTotp = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const result = (await postJson("/api/admin/owner/security/totp/verify", {
+        code: form.get("code"),
+        scope: form.get("scope"),
+      })) as { scope: string; expiresAt: string };
+      setOwnerSecurityMessage(`Owner step-up verified via authenticator for ${result.scope} until ${formatDateTime(result.expiresAt)}.`);
+      event.currentTarget.reset();
+      await refreshOwnerSecurity();
+    } catch (error) {
+      setOwnerSecurityMessage(error instanceof Error ? error.message : "Failed to verify authenticator code.");
+    }
+  };
+
+  const handleSetSecondaryOwnerEmail = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const result = (await postJson("/api/admin/owner/security/email-factor", {
+        email: form.get("email"),
+        confirmText: "SET_OWNER_SECONDARY_EMAIL",
+      })) as { email: string };
+      setOwnerSecurityMessage(`Secondary owner security email set to ${result.email}.`);
+      await refreshOwnerSecurity();
+    } catch (error) {
+      setOwnerSecurityMessage(error instanceof Error ? error.message : "Failed to set secondary owner email.");
+    }
+  };
+
+  const handleSendOwnerEmailChallenge = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const result = (await postJson("/api/admin/owner/security/email/challenge", {
+        scope: form.get("scope"),
+        confirmText: "SEND_OWNER_EMAIL_CHALLENGE",
+      })) as {
+        challengeId: string;
+        scope: "owner_console" | "factory_reset" | "ownership_transfer" | "security_admin";
+        expiresAt: string;
+        deliveryMode: string;
+        debugCode?: string | null;
+      };
+      setOwnerEmailChallenge({
+        challengeId: result.challengeId,
+        scope: result.scope,
+        expiresAt: result.expiresAt,
+        debugCode: result.debugCode ?? null,
+      });
+      setOwnerSecurityMessage(`Email challenge sent (${result.deliveryMode}) for scope ${result.scope}.`);
+    } catch (error) {
+      setOwnerSecurityMessage(error instanceof Error ? error.message : "Failed to send owner email challenge.");
+    }
+  };
+
+  const handleVerifyOwnerEmailChallenge = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const challengeId = String(form.get("challengeId") ?? ownerEmailChallenge?.challengeId ?? "");
+    if (!challengeId) {
+      setOwnerSecurityMessage("Email challenge ID is required.");
+      return;
+    }
+    try {
+      const result = (await postJson("/api/admin/owner/security/email/verify", {
+        challengeId,
+        code: form.get("code"),
+        scope: form.get("scope") ?? ownerEmailChallenge?.scope ?? "owner_console",
+      })) as { scope: string; expiresAt: string };
+      setOwnerSecurityMessage(`Owner step-up verified via secondary email for ${result.scope} until ${formatDateTime(result.expiresAt)}.`);
+      event.currentTarget.reset();
+      setOwnerEmailChallenge(null);
+      await refreshOwnerSecurity();
+    } catch (error) {
+      setOwnerSecurityMessage(error instanceof Error ? error.message : "Failed to verify owner email challenge.");
+    }
+  };
+
+  const handleRegisterOwnerYubikey = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const result = (await postJson("/api/admin/owner/security/yubikey/register", {
+        otp: form.get("otp"),
+        label: String(form.get("label") ?? "").trim() || undefined,
+        confirmText: "REGISTER_YUBIKEY_FACTOR",
+      })) as { publicId: string };
+      setOwnerSecurityMessage(`YubiKey factor registered (${result.publicId}).`);
+      event.currentTarget.reset();
+      await refreshOwnerSecurity();
+    } catch (error) {
+      setOwnerSecurityMessage(error instanceof Error ? error.message : "Failed to register YubiKey factor.");
+    }
+  };
+
+  const handleVerifyOwnerYubikey = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const result = (await postJson("/api/admin/owner/security/yubikey/verify", {
+        otp: form.get("otp"),
+        scope: form.get("scope"),
+      })) as { scope: string; expiresAt: string };
+      setOwnerSecurityMessage(`Owner step-up verified via YubiKey for ${result.scope} until ${formatDateTime(result.expiresAt)}.`);
+      event.currentTarget.reset();
+      await refreshOwnerSecurity();
+    } catch (error) {
+      setOwnerSecurityMessage(error instanceof Error ? error.message : "Failed to verify YubiKey OTP.");
+    }
+  };
+
+  const handleRevokeOwnerStepUp = async () => {
+    try {
+      await postJson("/api/admin/owner/security/step-up/revoke", {});
+      setOwnerSecurityMessage("Owner step-up sessions revoked.");
+      await refreshOwnerSecurity();
+    } catch (error) {
+      setOwnerSecurityMessage(error instanceof Error ? error.message : "Failed to revoke owner step-up session.");
+    }
+  };
+
+  const handleCaptureModuleBaseline = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const result = (await postJson("/api/admin/owner/baseline/capture", {
+        confirmText: "CAPTURE_MODULE_BASELINE",
+        baselineVersion: String(form.get("baselineVersion") ?? "").trim() || undefined,
+      })) as {
+        summary?: {
+          baselineVersion: string;
+          totalModules: number;
+          modulesRequiringBaseline: number;
+        };
+      };
+      setFactoryResetMessage(
+        result.summary
+          ? `Baseline captured (${result.summary.baselineVersion}) across ${result.summary.totalModules} modules.`
+          : "Baseline captured.",
+      );
+      await refreshFactoryResetStatus();
+    } catch (error) {
+      setFactoryResetMessage(error instanceof Error ? error.message : "Failed to capture module baseline.");
+    }
+  };
+
+  const handleRunFactoryReset = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const confirmText = String(form.get("confirmText") ?? "");
+    if (confirmText !== "FACTORY_RESET_APP") {
+      setFactoryResetMessage("Factory reset blocked. Type FACTORY_RESET_APP to confirm.");
+      return;
+    }
+    try {
+      const result = (await postJson("/api/admin/owner/factory-reset/run", {
+        mode: form.get("mode"),
+        scope: form.get("scope"),
+        reason: form.get("reason"),
+        resetPassword: form.get("resetPassword"),
+        includeModuleBaselineRefresh: form.get("includeModuleBaselineRefresh") === "on",
+        promoteBetaUsersToLive: form.get("promoteBetaUsersToLive") === "on",
+        userChunkSize: Number(form.get("userChunkSize")),
+        confirmText,
+      })) as {
+        result?: {
+          runId: string;
+          mode: string;
+          targetUserCount: number;
+          rowsScanned: number;
+          rowsDeleted: number;
+        };
+      };
+      const run = result.result;
+      if (run) {
+        setFactoryResetMessage(
+          `Factory reset ${run.mode} completed (run ${run.runId}). Target users: ${run.targetUserCount}, scanned: ${run.rowsScanned}, deleted: ${run.rowsDeleted}.`,
+        );
+      } else {
+        setFactoryResetMessage("Factory reset request completed.");
+      }
+      await refreshFactoryResetStatus();
+    } catch (error) {
+      setFactoryResetMessage(error instanceof Error ? error.message : "Failed to execute factory reset.");
+    }
+  };
+
+  const handleCreateTransferPlaybook = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    try {
+      const result = (await postJson("/api/admin/owner/transfer/playbook", {
+        candidateOwnerUserId: form.get("candidateOwnerUserId"),
+        notes: form.get("notes"),
+        confirmText: "PREPARE_OWNERSHIP_TRANSFER",
+      })) as { playbook?: { id: string; candidate_owner_user_id: string } };
+      if (result.playbook) {
+        setTransferMessage(
+          `Ownership transfer playbook created (${result.playbook.id}) for candidate ${formatShortId(result.playbook.candidate_owner_user_id)}.`,
+        );
+      } else {
+        setTransferMessage("Ownership transfer playbook created.");
+      }
+      event.currentTarget.reset();
+      await refreshTransferPlaybooks();
+    } catch (error) {
+      setTransferMessage(error instanceof Error ? error.message : "Failed to create ownership transfer playbook.");
+    }
+  };
+
+  const handleExecuteTransferPlaybook = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const confirmText = String(form.get("confirmText") ?? "");
+    if (confirmText !== "EXECUTE_OWNERSHIP_TRANSFER") {
+      setTransferMessage("Ownership transfer blocked. Type EXECUTE_OWNERSHIP_TRANSFER to confirm.");
+      return;
+    }
+    try {
+      const result = (await postJson("/api/admin/owner/transfer/execute", {
+        playbookId: form.get("playbookId"),
+        mode: form.get("mode"),
+        transferPassword: form.get("transferPassword"),
+        confirmText,
+      })) as { result?: { playbookId: string; executionMode: string } };
+      setTransferMessage(
+        result.result
+          ? `Ownership transfer executed (${result.result.playbookId}) in ${result.result.executionMode} mode.`
+          : "Ownership transfer executed.",
+      );
+      event.currentTarget.reset();
+      await refreshTransferPlaybooks();
+      await refreshOwnerSecurity();
+    } catch (error) {
+      setTransferMessage(error instanceof Error ? error.message : "Failed to execute ownership transfer.");
+    }
+  };
+
   useEffect(() => {
     void refreshLanguagePriceMap();
     void refreshLanguageRuntimeConfig();
     void refreshLanguageUnlockPricing();
     void refreshLanguagePricingAnalytics();
+    void refreshOwnerSecurity();
+    void refreshFactoryResetStatus();
+    void refreshTransferPlaybooks();
   }, [
     refreshLanguagePriceMap,
     refreshLanguageRuntimeConfig,
     refreshLanguageUnlockPricing,
     refreshLanguagePricingAnalytics,
+    refreshOwnerSecurity,
+    refreshFactoryResetStatus,
+    refreshTransferPlaybooks,
   ]);
 
   return (
-    <div className="flex h-full min-h-0" style={{ colorScheme: "light" }}>
-      {/* ── Secondary console navigation ── */}
-      <aside className="w-52 shrink-0 overflow-y-auto border-r border-slate-200 bg-slate-50 py-3 px-2">
-        {CONSOLE_NAV.map((cat) => (
-          <ConsoleNavCategory
-            key={cat.id}
-            category={cat}
-            selectedId={selectedSectionId}
-            onSelect={setSelectedSectionId}
-            badges={{
-              "support-queue": activeTicketCount,
-              "exam-maintenance": openExamMaintenanceAlerts + unacknowledgedRunSummaries,
-              "env-checks": envReadinessIssues.length,
-              "db-status": dbReadinessIssues.length,
-              "stripe-webhooks": hasStripeWebhookIssues ? 1 : 0,
-            }}
-          />
-        ))}
-      </aside>
+    <div className="space-y-6">
+      <div className="ui-soft-card rounded-2xl border border-indigo-300 bg-indigo-50 px-4 py-3 text-sm text-indigo-900">
+        Active support tickets: {activeTicketCount}
+      </div>
+      {status ? (
+        <div className="rounded-2xl border border-border bg-surface-muted px-4 py-3 text-sm">
+          {status}
+        </div>
+      ) : null}
+      <ConsoleAiChatbox />
 
-      {/* ── Content area ── */}
-      <div className="flex-1 overflow-y-auto">
-        <div className="mx-auto max-w-4xl p-6 space-y-4">
-          {status ? (
-            <div className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700 shadow-sm">
-              {status}
-            </div>
-          ) : null}
-
-          {selectedSectionId === "system-health" && (<Section title="System Health" description="An all-in-one view of your platform health. Use this first whenever something seems broken — it combines environment, database, and payment checks in a single summary." tip="Green = everything working. Yellow = warnings that may limit some features. Red = a blocking problem needing urgent attention. Click 'Refresh All' to get the latest status.">
-
+      {selectedSectionId === "system-health" && (<Section title="System Health" description="An all-in-one view of platform health. Use this first whenever anything seems broken — it combines environment, database, and payment signals in one summary." tip="Green means healthy. Yellow indicates warnings that may degrade behavior. Red indicates a blocking issue requiring urgent attention.">
         <div
           className={`mb-3 rounded-md border px-3 py-2 text-sm ${
             systemBlockingIssues > 0
@@ -1952,38 +2339,43 @@ export default function OperationsConsole({
         ) : (
           <div className="mt-4 space-y-2">
             <p className="text-sm font-semibold">Runbook Hints</p>
-            {runbookHints.map((hint) => (
-              <div
-                key={hint.id}
-                className={`rounded-2xl border p-3 text-xs ${
-                  hint.severity === "critical" ? "border-rose-200 bg-rose-50" : "border-amber-200 bg-amber-50"
-                }`}
-              >
-                <p className="font-semibold">
-                  {hint.title} | {hint.severity}
-                </p>
-                <p className="mt-1 text-zinc-700">{hint.description}</p>
-                <div className="mt-2 space-y-1">
-                  {hint.commands.map((command) => (
-                    <code key={command} className="block rounded border border-border bg-white px-2 py-1 text-[11px]">
-                      {command}
-                    </code>
-                  ))}
-                </div>
-                {hint.href && hint.hrefLabel ? (
-                  <div className="mt-2">
-                    <a
-                      href={hint.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="ui-soft-button ui-focus-ring rounded border border-border bg-surface px-2 py-1 text-[11px]"
-                    >
-                      {hint.hrefLabel}
-                    </a>
+            {runbookHints.map((hint) => {
+              const hintContainerClass =
+                hint.severity === "critical"
+                  ? "rounded-2xl border border-rose-200 bg-rose-50 p-3 text-xs"
+                  : "rounded-2xl border border-amber-200 bg-amber-50 p-3 text-xs";
+
+              return (
+                <div key={hint.id} className={hintContainerClass}>
+                  <p className="font-semibold">
+                    {hint.title} | {hint.severity}
+                  </p>
+                  <p className="mt-1 text-zinc-700">{hint.description}</p>
+                  <div className="mt-2 space-y-1">
+                    {hint.commands.map((command) => (
+                      <code
+                        key={command}
+                        className="block rounded border border-border bg-white px-2 py-1 text-[11px]"
+                      >
+                        {command}
+                      </code>
+                    ))}
                   </div>
-                ) : null}
-              </div>
-            ))}
+                  {hint.href && hint.hrefLabel ? (
+                    <div className="mt-2">
+                      <a
+                        href={hint.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="ui-soft-button ui-focus-ring rounded border border-border bg-surface px-2 py-1 text-[11px]"
+                      >
+                        {hint.hrefLabel}
+                      </a>
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
           </div>
         )}
       </Section>
@@ -2243,9 +2635,24 @@ export default function OperationsConsole({
           <input name="email" type="email" placeholder="email@example.com" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <input name="password" type="password" placeholder="Temporary password" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <input name="displayName" placeholder="Display name (optional)" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2" />
+          <label className="flex flex-col gap-1 text-xs text-zinc-600 md:col-span-2">
+            <span className="font-semibold text-zinc-700">Initial data mode</span>
+            <select
+              name="dataMode"
+              className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              defaultValue="live"
+            >
+              <option value="live">live</option>
+              <option value="beta">beta</option>
+            </select>
+          </label>
           <label className="flex items-center gap-2 text-sm">
             <input name="isAdmin" type="checkbox" />
             Grant admin access
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input name="isOwner" type="checkbox" />
+            Grant owner role
           </label>
           <label className="flex items-center gap-2 text-sm">
             <input name="isParent" type="checkbox" />
@@ -2519,8 +2926,23 @@ export default function OperationsConsole({
             Set admin role
           </label>
           <label className="flex items-center gap-2 text-sm">
+            <input name="setIsOwner" type="checkbox" />
+            Set owner role
+          </label>
+          <label className="flex items-center gap-2 text-sm">
             <input name="setIsParent" type="checkbox" />
             Set parent role
+          </label>
+          <label className="flex flex-col gap-1 text-xs text-zinc-600 md:col-span-2">
+            <span className="font-semibold text-zinc-700">Data mode</span>
+            <select
+              name="setDataMode"
+              className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              defaultValue="live"
+            >
+              <option value="live">live</option>
+              <option value="beta">beta</option>
+            </select>
           </label>
           <input
             name="confirmText"
@@ -2535,13 +2957,498 @@ export default function OperationsConsole({
       </Section>
       )}
 
-      {selectedSectionId === "account-recovery" && (<Section title="Account Recovery" description="Generate a secure password-reset link for a user who is locked out of their account. The link will appear in the result — copy and send it to the user by email." tip="The link is single-use and expires quickly. If the user misses it, simply generate a new one here at any time.">
+      {selectedSectionId === "owner-security" ? (<Section title="Owner Security (MFA + Step-Up)" description="Password sign-in is required first; owner-sensitive actions require step-up via authenticator, secondary email, or YubiKey OTP." tip="Enable at least two factors so owners are never locked out. Revoke active step-up sessions after any security incident.">
+        <div className="mb-3 rounded-md border border-indigo-300 bg-indigo-50 px-3 py-2 text-sm text-indigo-900">
+          Password sign-in is required first; owner-sensitive actions require step-up via authenticator, secondary email, or YubiKey OTP.
+        </div>
+
+        <div className="mb-4 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => void refreshOwnerSecurity()}
+            disabled={ownerSecurityBusy}
+            className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm disabled:opacity-60"
+          >
+            {ownerSecurityBusy ? "Refreshing..." : "Refresh Owner Security"}
+          </button>
+          <button
+            type="button"
+            onClick={() => void handleRevokeOwnerStepUp()}
+            className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            Revoke Step-Up Sessions
+          </button>
+          <a
+            href="/api/admin/owner/security/status"
+            target="_blank"
+            rel="noreferrer"
+            className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          >
+            Open Owner Security JSON
+          </a>
+        </div>
+
+        {ownerSecurityMessage ? <p className="mb-3 text-sm text-zinc-700">{ownerSecurityMessage}</p> : null}
+
+        {ownerSecurityStatus ? (
+          <div className="mb-4 grid gap-3 md:grid-cols-4">
+            <div className="rounded-2xl border border-border p-3 text-xs">
+              <p className="uppercase tracking-wide text-zinc-500">Owner</p>
+              <p className="mt-1 font-semibold text-zinc-900">{ownerSecurityStatus.owner.email ?? "unknown"}</p>
+              <p className="mt-1 text-zinc-600">mode: {ownerSecurityStatus.owner.dataMode}</p>
+            </div>
+            <div className="rounded-2xl border border-border p-3 text-xs">
+              <p className="uppercase tracking-wide text-zinc-500">Configured Factors</p>
+              <p className="mt-1 font-semibold text-zinc-900">{ownerSecurityStatus.security.factors.length}</p>
+              <p className="mt-1 text-zinc-600">
+                {ownerSecurityStatus.security.ownerConfigured ? "ready" : "not verified"}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border p-3 text-xs">
+              <p className="uppercase tracking-wide text-zinc-500">Active Step-Up</p>
+              <p className="mt-1 font-semibold text-zinc-900">
+                {ownerSecurityStatus.security.activeStepUpSessions.length}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border p-3 text-xs">
+              <p className="uppercase tracking-wide text-zinc-500">Recent Events</p>
+              <p className="mt-1 font-semibold text-zinc-900">{ownerSecurityStatus.security.recentEvents.length}</p>
+            </div>
+          </div>
+        ) : null}
+
+        <div className="grid gap-4 md:grid-cols-2">
+          <form onSubmit={handleSetSecondaryOwnerEmail} className="space-y-2 rounded-2xl border border-border p-3">
+            <p className="text-sm font-semibold">Secondary Email Factor</p>
+            <input
+              name="email"
+              type="email"
+              placeholder="owner-security@example.com"
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              required
+            />
+            <button
+              type="submit"
+              className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              Set Secondary Email
+            </button>
+          </form>
+
+          <form onSubmit={handleProvisionOwnerTotp} className="space-y-2 rounded-2xl border border-border p-3">
+            <p className="text-sm font-semibold">Authenticator (TOTP)</p>
+            <input
+              name="label"
+              placeholder="Authenticator App"
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            />
+            <button
+              type="submit"
+              className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              Provision Authenticator
+            </button>
+            {ownerTotpProvision ? (
+              <div className="rounded-md border border-border bg-surface-muted p-2 text-xs text-zinc-700">
+                <p>Secret: <code>{ownerTotpProvision.secret}</code></p>
+                <p className="mt-1">URI:</p>
+                <code className="block overflow-x-auto">{ownerTotpProvision.otpauthUri}</code>
+              </div>
+            ) : null}
+          </form>
+
+          <form onSubmit={handleVerifyOwnerTotp} className="space-y-2 rounded-2xl border border-border p-3">
+            <p className="text-sm font-semibold">Verify Authenticator Step-Up</p>
+            <input
+              name="code"
+              placeholder="123456"
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              required
+            />
+            <select name="scope" className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm">
+              <option value="owner_console">owner_console</option>
+              <option value="factory_reset">factory_reset</option>
+              <option value="ownership_transfer">ownership_transfer</option>
+              <option value="security_admin">security_admin</option>
+            </select>
+            <button
+              type="submit"
+              className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              Verify Authenticator
+            </button>
+          </form>
+
+          <form onSubmit={handleSendOwnerEmailChallenge} className="space-y-2 rounded-2xl border border-border p-3">
+            <p className="text-sm font-semibold">Email Step-Up Challenge</p>
+            <select name="scope" className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm">
+              <option value="owner_console">owner_console</option>
+              <option value="factory_reset">factory_reset</option>
+              <option value="ownership_transfer">ownership_transfer</option>
+              <option value="security_admin">security_admin</option>
+            </select>
+            <button
+              type="submit"
+              className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              Send Email Challenge
+            </button>
+            {ownerEmailChallenge?.debugCode ? (
+              <p className="text-xs text-zinc-600">Debug code (non-production): <code>{ownerEmailChallenge.debugCode}</code></p>
+            ) : null}
+          </form>
+
+          <form onSubmit={handleVerifyOwnerEmailChallenge} className="space-y-2 rounded-2xl border border-border p-3">
+            <p className="text-sm font-semibold">Verify Email Challenge</p>
+            <input
+              name="challengeId"
+              defaultValue={ownerEmailChallenge?.challengeId ?? ""}
+              placeholder="Challenge UUID"
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            />
+            <input
+              name="code"
+              placeholder="123456"
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              required
+            />
+            <select
+              name="scope"
+              defaultValue={ownerEmailChallenge?.scope ?? "owner_console"}
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              <option value="owner_console">owner_console</option>
+              <option value="factory_reset">factory_reset</option>
+              <option value="ownership_transfer">ownership_transfer</option>
+              <option value="security_admin">security_admin</option>
+            </select>
+            <button
+              type="submit"
+              className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              Verify Email Challenge
+            </button>
+          </form>
+
+          <form onSubmit={handleRegisterOwnerYubikey} className="space-y-2 rounded-2xl border border-border p-3">
+            <p className="text-sm font-semibold">Register YubiKey OTP</p>
+            <input
+              name="label"
+              placeholder="YubiKey OTP"
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            />
+            <input
+              name="otp"
+              placeholder="Paste YubiKey OTP"
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              required
+            />
+            <button
+              type="submit"
+              className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              Register YubiKey
+            </button>
+          </form>
+
+          <form onSubmit={handleVerifyOwnerYubikey} className="space-y-2 rounded-2xl border border-border p-3">
+            <p className="text-sm font-semibold">Verify YubiKey Step-Up</p>
+            <input
+              name="otp"
+              placeholder="Paste YubiKey OTP"
+              className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
+              required
+            />
+            <select name="scope" className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm">
+              <option value="owner_console">owner_console</option>
+              <option value="factory_reset">factory_reset</option>
+              <option value="ownership_transfer">ownership_transfer</option>
+              <option value="security_admin">security_admin</option>
+            </select>
+            <button
+              type="submit"
+              className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              Verify YubiKey
+            </button>
+          </form>
+        </div>
+
+        {ownerSecurityStatus && ownerSecurityStatus.security.factors.length > 0 ? (
+          <div className="mt-4 space-y-2">
+            <p className="text-sm font-semibold">Configured Factors</p>
+            {ownerSecurityStatus.security.factors.map((factor) => (
+              <div key={factor.id} className="rounded-2xl border border-border p-3 text-xs">
+                <p className="font-semibold">
+                  {factor.factorType} | {factor.label ?? "n/a"}
+                </p>
+                <p className="mt-1 text-zinc-600">
+                  {factor.emailAddress ? `email: ${factor.emailAddress}` : ""}
+                  {factor.yubikeyPublicId ? `publicId: ${factor.yubikeyPublicId}` : ""}
+                </p>
+                <p className="mt-1 text-zinc-500">
+                  verified: {formatDateTime(factor.verifiedAt)} | last used: {formatDateTime(factor.lastUsedAt)}
+                </p>
+              </div>
+            ))}
+          </div>
+        ) : null}
+      </Section>
+      ) : null}
+
+      {selectedSectionId === "factory-reset" ? (<Section title="Factory Reset + Module Baselines" description="Capture baselines and validate owner-only reset readiness before executing recovery workflows." tip="Treat reset actions as high-risk: validate baseline captures and follow approval steps before executing.">
+        {factoryResetMessage ? <p className="mb-3 text-sm text-zinc-700">{factoryResetMessage}</p> : null}
+
+        <div className="mb-4 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => void refreshFactoryResetStatus()}
+            disabled={factoryResetBusy}
+            className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm disabled:opacity-60"
+          >
+            {factoryResetBusy ? "Refreshing..." : "Refresh Reset Status"}
+          </button>
+          <a
+            href="/api/admin/owner/factory-reset/status"
+            target="_blank"
+            rel="noreferrer"
+            className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          >
+            Open Factory Reset JSON
+          </a>
+        </div>
+
+        {factoryResetStatus ? (
+          <div className="mb-4 grid gap-3 md:grid-cols-4">
+            <div className="rounded-2xl border border-border p-3 text-xs">
+              <p className="uppercase tracking-wide text-zinc-500">Baseline Version</p>
+              <p className="mt-1 font-semibold text-zinc-900">
+                {factoryResetStatus.baselineSummary.baselineVersion ?? "not captured"}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border p-3 text-xs">
+              <p className="uppercase tracking-wide text-zinc-500">Modules</p>
+              <p className="mt-1 font-semibold text-zinc-900">
+                {factoryResetStatus.baselineSummary.totalModules}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border p-3 text-xs">
+              <p className="uppercase tracking-wide text-zinc-500">Requires Baseline</p>
+              <p className="mt-1 font-semibold text-zinc-900">
+                {factoryResetStatus.baselineSummary.modulesRequiringBaseline}
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border p-3 text-xs">
+              <p className="uppercase tracking-wide text-zinc-500">Captured</p>
+              <p className="mt-1 font-semibold text-zinc-900">
+                {formatDateTime(factoryResetStatus.baselineSummary.capturedAt)}
+              </p>
+            </div>
+          </div>
+        ) : null}
+
+        <form onSubmit={handleCaptureModuleBaseline} className="mb-4 grid gap-3 md:grid-cols-2">
+          <input
+            name="baselineVersion"
+            placeholder="Baseline version (optional)"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          />
+          <button
+            type="submit"
+            className="ui-soft-button ui-focus-ring w-fit rounded-md border border-border bg-surface-muted px-4 py-2 text-sm"
+          >
+            Capture Module Baseline
+          </button>
+        </form>
+
+        <form onSubmit={handleRunFactoryReset} className="grid gap-3 md:grid-cols-2">
+          <label className="flex flex-col gap-1 text-xs text-zinc-600">
+            <span className="font-semibold text-zinc-700">Mode</span>
+            <select name="mode" defaultValue="dry_run" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
+              <option value="dry_run">dry_run</option>
+              <option value="apply">apply</option>
+            </select>
+          </label>
+          <label className="flex flex-col gap-1 text-xs text-zinc-600">
+            <span className="font-semibold text-zinc-700">Scope</span>
+            <select name="scope" defaultValue="beta_only" className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm">
+              <option value="beta_only">beta_only</option>
+              <option value="all_non_owner">all_non_owner</option>
+            </select>
+          </label>
+          <input
+            name="reason"
+            placeholder="Reason (required)"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2"
+            required
+          />
+          <input
+            name="resetPassword"
+            type="password"
+            placeholder="Factory reset password"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            required
+          />
+          <input
+            name="userChunkSize"
+            type="number"
+            min={25}
+            max={500}
+            defaultValue={100}
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          />
+          <label className="flex items-center gap-2 text-sm">
+            <input name="includeModuleBaselineRefresh" type="checkbox" defaultChecked />
+            Refresh module baseline after run
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input name="promoteBetaUsersToLive" type="checkbox" defaultChecked />
+            Promote beta users to live (beta_only apply)
+          </label>
+          <input
+            name="confirmText"
+            placeholder="Type FACTORY_RESET_APP"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm md:col-span-2"
+            required
+          />
+          <button
+            type="submit"
+            className="ui-soft-button ui-focus-ring w-fit rounded-md border border-rose-300 bg-rose-50 px-4 py-2 text-sm text-rose-900"
+          >
+            Run Factory Reset
+          </button>
+        </form>
+
+        {factoryResetStatus && factoryResetStatus.runs.length > 0 ? (
+          <div className="mt-4 space-y-2">
+            <p className="text-sm font-semibold">Recent Reset Runs</p>
+            {factoryResetStatus.runs.map((run) => (
+              <div key={run.id} className="rounded-2xl border border-border p-3 text-xs">
+                <p className="font-semibold">
+                  {run.status.toUpperCase()} | {run.mode} | {run.scope}
+                </p>
+                <p className="mt-1 text-zinc-600">
+                  run: {formatShortId(run.id)} | users: {run.target_user_count} | scanned: {run.rows_scanned} | deleted: {run.rows_deleted}
+                </p>
+                <p className="mt-1 text-zinc-500">
+                  started: {formatDateTime(run.created_at)} | completed: {formatDateTime(run.completed_at)}
+                </p>
+                {run.error ? <p className="mt-1 text-rose-700">error: {run.error}</p> : null}
+              </div>
+            ))}
+          </div>
+        ) : null}
+      </Section>
+      ) : null}
+
+      {selectedSectionId === "ownership-transfer" ? (<Section title="Ownership Transfer Playbooks" description="Manage ownership transfer playbooks and execute verified handoff workflows with explicit confirmation." tip="Never execute transfer flows without validated playbook prerequisites and a known-good recovery path.">
+        {transferMessage ? <p className="mb-3 text-sm text-zinc-700">{transferMessage}</p> : null}
+
+        <div className="mb-4 flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => void refreshTransferPlaybooks()}
+            disabled={transferBusy}
+            className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm disabled:opacity-60"
+          >
+            {transferBusy ? "Refreshing..." : "Refresh Transfer Playbooks"}
+          </button>
+          <a
+            href="/api/admin/owner/transfer/playbook"
+            target="_blank"
+            rel="noreferrer"
+            className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          >
+            Open Transfer JSON
+          </a>
+        </div>
+
+        <form onSubmit={handleCreateTransferPlaybook} className="mb-4 grid gap-3 md:grid-cols-2">
+          <input
+            name="candidateOwnerUserId"
+            placeholder="Candidate owner user UUID"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            required
+          />
+          <input
+            name="notes"
+            placeholder="Notes (optional)"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          />
+          <button
+            type="submit"
+            className="ui-soft-button ui-focus-ring w-fit rounded-md border border-border bg-surface-muted px-4 py-2 text-sm"
+          >
+            Create Transfer Playbook
+          </button>
+        </form>
+
+        <form onSubmit={handleExecuteTransferPlaybook} className="grid gap-3 md:grid-cols-2">
+          <input
+            name="playbookId"
+            placeholder="Playbook UUID"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            required
+          />
+          <select
+            name="mode"
+            defaultValue="replace_owner"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          >
+            <option value="replace_owner">replace_owner</option>
+            <option value="co_owner">co_owner</option>
+          </select>
+          <input
+            name="transferPassword"
+            type="password"
+            placeholder="Ownership transfer password"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            required
+          />
+          <input
+            name="confirmText"
+            placeholder="Type EXECUTE_OWNERSHIP_TRANSFER"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            required
+          />
+          <button
+            type="submit"
+            className="ui-soft-button ui-focus-ring w-fit rounded-md border border-amber-300 bg-amber-50 px-4 py-2 text-sm text-amber-900"
+          >
+            Execute Ownership Transfer
+          </button>
+        </form>
+
+        {transferPlaybooks.length > 0 ? (
+          <div className="mt-4 space-y-2">
+            <p className="text-sm font-semibold">Recent Playbooks</p>
+            {transferPlaybooks.map((playbook) => (
+              <div key={playbook.id} className="rounded-2xl border border-border p-3 text-xs">
+                <p className="font-semibold">
+                  {playbook.status.toUpperCase()} | {formatShortId(playbook.id)}
+                </p>
+                <p className="mt-1 text-zinc-600">
+                  current: {formatShortId(playbook.current_owner_user_id)} | candidate: {formatShortId(playbook.candidate_owner_user_id)}
+                </p>
+                <p className="mt-1 text-zinc-500">
+                  created: {formatDateTime(playbook.created_at)} | executed: {formatDateTime(playbook.executed_at)}
+                </p>
+                {playbook.notes ? <p className="mt-1 text-zinc-600">{playbook.notes}</p> : null}
+              </div>
+            ))}
+          </div>
+        ) : null}
+      </Section>
+      ) : null}
+
+      {selectedSectionId === "account-recovery" ? (
+      <Section title="Account Recovery">
         <form onSubmit={handleResetPassword} className="flex flex-wrap gap-3">
           <input name="email" type="email" placeholder="User email" className="min-w-80 ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Generate Password Reset Link</button>
         </form>
       </Section>
-      )}
+      ) : null}
 
       {selectedSectionId === "account-reset" && (<Section title="Account Reset / Deletion" description="Reset a learner's progress data, or permanently delete an account. These actions cannot be undone — always verify the correct user ID before proceeding." tip="Soft delete hides the account but keeps data for compliance reporting. Hard delete permanently removes everything. For a GDPR erasure request, use hard delete alongside a DSAR record in Compliance.">
         <form onSubmit={handleResetProgress} className="mb-4 flex flex-wrap gap-3">
@@ -3161,8 +4068,6 @@ export default function OperationsConsole({
         </div>
       </Section>
       )}
-        </div>
-      </div>
     </div>
   );
 }

@@ -47,19 +47,19 @@ export const Science601Module: LearningModule = {
           "id": "science-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Science, with focus on science systems diagnostics and science operations and execution design."
+          "content": "In this lesson, we will explore the concept of advanced scope boundaries in the field of science. We will focus on understanding how to diagnose science systems effectively and how to design operations and execution plans that are efficient and reliable. This foundational knowledge is crucial for anyone looking to lead in scientific research and development.\nContext recap: In this lesson, we will explore the concept of advanced scope boundaries in the field of science. We will focus on understanding how to diagnose science systems effectively and how to design operations and execution plans that are efficient and reliable. This foundational knowledge is crucial for anyone looking to lead in scientific research and development."
         },
         {
           "id": "science-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or factors. They will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is essential before planning any interventions, as it helps ensure that decisions are well-informed and effective.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or factors. They will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is essential before planning any interventions, as it helps ensure that decisions are well-informed and effective."
         },
         {
           "id": "science-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims made in scientific research are backed by measurable indicators. This lesson emphasizes the need for confidence bounds and review checkpoints to validate these claims. By doing so, we can maintain a high standard of evidence in our scientific work, ensuring that our conclusions are reliable and trustworthy.\nContext recap: It is important to ensure that all claims made in scientific research are backed by measurable indicators. This lesson emphasizes the need for confidence bounds and review checkpoints to validate these claims. By doing so, we can maintain a high standard of evidence in our scientific work, ensuring that our conclusions are reliable and trustworthy."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Science601Module: LearningModule = {
           "id": "science-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific scientific tasks. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for developing practical skills in scientific method design.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific scientific tasks. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for developing practical skills in scientific method design."
         },
         {
           "id": "science-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows can be structured to include essential checkpoints, criteria for rolling back to previous states, and escalation procedures based on thresholds. Understanding these components is crucial for ensuring that scientific processes are robust and can adapt to unexpected challenges.\nContext recap: In this recap, we will discuss how workflows can be structured to include essential checkpoints, criteria for rolling back to previous states, and escalation procedures based on thresholds. Understanding these components is crucial for ensuring that scientific processes are robust and can adapt to unexpected challenges."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Science601Module: LearningModule = {
           "id": "science-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in science systems diagnostics and science impact and tradeoff analysis."
+          "content": "This lesson focuses on scenario architecture, which involves framing the competing constraints that arise in science systems diagnostics. We will analyze the impacts and trade-offs that come with different scientific decisions, helping learners understand the complexities involved in scientific analysis.\nContext recap: This lesson focuses on scenario architecture, which involves framing the competing constraints that arise in science systems diagnostics. We will analyze the impacts and trade-offs that come with different scientific decisions, helping learners understand the complexities involved in scientific analysis.\nContext recap: This lesson focuses on scenario architecture, which involves framing the competing constraints that arise in science systems diagnostics. We will analyze the impacts and trade-offs that come with different scientific decisions, helping learners understand the complexities involved in scientific analysis. Context recap: This lesson focuses on scenario architecture, which involves framing the competing constraints that arise in science systems diagnostics. We will analyze the impacts and trade-offs that come with different scientific decisions, helping learners understand the complexities involved in scientific analysis."
         },
         {
           "id": "science-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice section, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is essential for making informed decisions that balance multiple factors in scientific research.\nContext recap: In this practice section, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is essential for making informed decisions that balance multiple factors in scientific research.\nWhy this matters: Tradeoff Framing helps learners in Science connect ideas from Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "science-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made during scientific analysis. This structured approach ensures that decisions are well-supported and that there are strategies in place to address potential challenges.\nContext recap: In our recap, we will highlight the importance of including assumptions, evidence, risk controls, and fallback plans in each recommendation made during scientific analysis. This structured approach ensures that decisions are well-supported and that there are strategies in place to address potential challenges."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Science601Module: LearningModule = {
           "id": "science-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This practice will help them understand how to manage complex situations in real-time, a crucial skill for any aspiring scientist or researcher.\nContext recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This practice will help them understand how to manage complex situations in real-time, a crucial skill for any aspiring scientist or researcher.\nContext recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This practice will help them understand how to manage complex situations in real-time, a crucial skill for any aspiring scientist or researcher. Context recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This practice will help them understand how to manage complex situations in real-time, a crucial skill for any aspiring scientist or researcher."
         },
         {
           "id": "science-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss how effective responses to challenges can update control gates while maintaining traceability and accountability. This ensures that all actions taken are documented and can be reviewed, which is essential for maintaining integrity in scientific work.\nContext recap: In this recap, we will discuss how effective responses to challenges can update control gates while maintaining traceability and accountability. This ensures that all actions taken are documented and can be reviewed, which is essential for maintaining integrity in scientific work.\nContext recap: In this recap, we will discuss how effective responses to challenges can update control gates while maintaining traceability and accountability. This ensures that all actions taken are documented and can be reviewed, which is essential for maintaining integrity in scientific work. Context recap: In this recap, we will discuss how effective responses to challenges can update control gates while maintaining traceability and accountability. This ensures that all actions taken are documented and can be reviewed, which is essential for maintaining integrity in scientific work."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Science601Module: LearningModule = {
           "id": "science-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by scientific decisions is crucial for responsible governance and public engagement in science.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by scientific decisions is crucial for responsible governance and public engagement in science.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by scientific decisions is crucial for responsible governance and public engagement in science. Context recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by scientific decisions is crucial for responsible governance and public engagement in science."
         },
         {
           "id": "science-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "This section focuses on the architecture of accountability, which includes the traceability of decisions, the rights of stakeholders to review those decisions, and the obligations to remediate any issues that arise. This framework is essential for ensuring that scientific practices are transparent and responsible.\nContext recap: This section focuses on the architecture of accountability, which includes the traceability of decisions, the rights of stakeholders to review those decisions, and the obligations to remediate any issues that arise. This framework is essential for ensuring that scientific practices are transparent and responsible."
         },
         {
           "id": "science-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we are following relevant policies, and promotes resilience in our leadership practices. This checklist will help us reflect on our responsibilities as leaders in the scientific community.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we are following relevant policies, and promotes resilience in our leadership practices. This checklist will help us reflect on our responsibilities as leaders in the scientific community."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Science601Module: LearningModule = {
           "id": "science-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work on assembling a detailed brief that includes your main claims supported by evidence. Additionally, you will outline any uncertainties related to your claims and propose pathways for remediation. This exercise will help you practice how to effectively communicate your research findings and address potential challenges.\nContext recap: In this activity, you will work on assembling a detailed brief that includes your main claims supported by evidence. Additionally, you will outline any uncertainties related to your claims and propose pathways for remediation. This exercise will help you practice how to effectively communicate your research findings and address potential challenges."
         },
         {
           "id": "science-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal session, you will practice responding to questions and critiques from an expert panel. You will prepare answers related to technical aspects of your work, governance issues, and concerns from stakeholders. This practice will enhance your confidence and readiness for the actual defense of your project.\nContext recap: During this rehearsal session, you will practice responding to questions and critiques from an expert panel. You will prepare answers related to technical aspects of your work, governance issues, and concerns from stakeholders. This practice will enhance your confidence and readiness for the actual defense of your project."
         }
       ],
       "interactiveActivities": [

@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import MascotHost from "@/components/experience/MascotHost";
 import MascotFriend from "@/components/experience/KoydoMascotFriends";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -13,12 +14,16 @@ import {
     Trophy,
     Sparkles,
     Compass,
+    Lock,
 } from "lucide-react";
 import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
 import ProgressOrb from "@/components/experience/ProgressOrb";
 import GalaxyMap from "@/components/experience/GalaxyMap";
 import { useMascot } from "@/components/experience/MascotHost";
 import { DeviceGatewayProvider, useDeviceGateway } from "@/components/experience/DeviceGatewayProvider";
+import { isVoyagerZeroPremiumPending } from "@/lib/platform/features";
+import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
+import ComingSoonBanner from "@/app/components/coming-soon-banner";
 
 const SpatialExperienceHub = dynamic(
     () => import("@/components/experience/SpatialExperienceHub").then((mod) => mod.SpatialExperienceHub),
@@ -29,15 +34,33 @@ const SpatialExperienceHub = dynamic(
 export default function ExperienceHubPage() {
     const [selectedMascot, setSelectedMascot] = useState<FriendId>("pixel");
     const [showToast, setShowToast] = useState(false);
+    const voyagerZeroPremiumPending = isVoyagerZeroPremiumPending();
+    const experienceHubLaunchPending = isLaunchFeaturePending("experience-hub");
+
+    if (experienceHubLaunchPending) {
+        return (
+            <main className="min-h-screen px-6 py-10">
+                <ComingSoonBanner
+                    title="New Experience"
+                    description="More exciting features coming soon. Stay tuned!"
+                    primaryHref="/dashboard"
+                    primaryLabel="Back to dashboard"
+                    secondaryHref="/explore"
+                    secondaryLabel="Continue learning"
+                />
+            </main>
+        );
+    }
 
     return (
-        <DeviceGatewayProvider>
+        <DeviceGatewayProvider enabled={!voyagerZeroPremiumPending}>
             <MascotHost friendId={selectedMascot} initialMood="happy">
                 <ExperienceHubContent
                     selectedMascot={selectedMascot}
                     setSelectedMascot={setSelectedMascot}
                     showToast={showToast}
                     setShowToast={setShowToast}
+                    voyagerZeroPremiumPending={voyagerZeroPremiumPending}
                 />
             </MascotHost>
         </DeviceGatewayProvider>
@@ -49,6 +72,7 @@ type ExperienceHubContentProps = {
     setSelectedMascot: (id: FriendId) => void;
     showToast: boolean;
     setShowToast: (show: boolean) => void;
+    voyagerZeroPremiumPending: boolean;
 };
 
 function ExperienceHubContent({
@@ -56,14 +80,16 @@ function ExperienceHubContent({
     setSelectedMascot,
     showToast,
     setShowToast,
+    voyagerZeroPremiumPending,
 }: ExperienceHubContentProps) {
     const { friendshipLevel, interactionCount } = useMascot();
     const { canSpatial, isReady, tier, capabilities } = useDeviceGateway();
+    const canRenderSpatial = !voyagerZeroPremiumPending && canSpatial;
 
     return (
         <main className="min-h-screen bg-background text-foreground selection:bg-indigo-500/30 overflow-x-hidden">
             {/* Spatial Computing / VR Background — DORMANT until Tier 2+ */}
-            {canSpatial ? (
+            {canRenderSpatial ? (
                 <div className="fixed inset-0 pointer-events-auto z-0 opacity-80 mix-blend-screen mix-blend-plus-lighter">
                     <SpatialExperienceHub />
                 </div>
@@ -72,7 +98,27 @@ function ExperienceHubContent({
                 <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-950 via-indigo-950/50 to-slate-950">
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.15),transparent_50%)]" />
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(52,211,153,0.1),transparent_50%)]" />
-                    {isReady && tier < 2 && (
+                    {voyagerZeroPremiumPending ? (
+                        <div className="absolute bottom-6 left-6 z-50 bg-white/5 backdrop-blur-xl border border-amber-400/30 rounded-2xl p-4 max-w-xs text-xs text-zinc-300">
+                            <p className="font-bold text-amber-300 mb-1 flex items-center gap-2">
+                                <Lock className="h-3.5 w-3.5" />
+                                Premium Pending Feature
+                            </p>
+                            <p>
+                                Voyager Zero Spatial Mode is temporarily locked while premium rollout
+                                and device certification are pending.
+                            </p>
+                            <p className="mt-2 text-zinc-400">
+                                Core Experience Hub content remains available.
+                            </p>
+                            <Link
+                                href="/billing/paywall"
+                                className="mt-3 inline-flex items-center rounded-full bg-amber-400/20 border border-amber-300/40 px-3 py-1.5 text-[11px] font-semibold text-amber-200 hover:bg-amber-400/30 transition"
+                            >
+                                Join Premium Waitlist
+                            </Link>
+                        </div>
+                    ) : isReady && tier < 2 && (
                         <div className="absolute bottom-6 left-6 z-50 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 max-w-xs text-xs text-zinc-400">
                             <p className="font-bold text-cyan-300 mb-1">✨ Upgrade Available</p>
                             <p>Your device is running in <strong className="text-white">{capabilities?.tierLabel}</strong> mode. Connect a VR headset or use a more powerful GPU to unlock the full 3D spatial experience.</p>
@@ -80,6 +126,11 @@ function ExperienceHubContent({
                                 <p className="text-zinc-300/90">
                                     GPU profile: Tier {capabilities?.gpuTier ?? 0}
                                     {capabilities?.hasWebGPU ? " • WebGPU ready" : " • WebGPU unavailable"}
+                                </p>
+                                <p className="text-zinc-300/90">
+                                    Detection confidence: {Math.round((capabilities?.discoveryConfidence ?? 0) * 100)}%
+                                    {" • "}
+                                    {(capabilities?.discoveryConfidenceBand ?? "low").toUpperCase()}
                                 </p>
                                 {capabilities?.lowPowerModeLikely && (
                                     <p className="text-amber-300/90">🔋 Low-power conditions detected; fidelity auto-scaled down.</p>

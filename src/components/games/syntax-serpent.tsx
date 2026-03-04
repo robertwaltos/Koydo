@@ -7,6 +7,10 @@ import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-prim
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Types --- */
 type Point = { x: number; y: number };
@@ -16,6 +20,10 @@ type LogicNode = { id: string; x: number; y: number; type: "variable" | "loop" |
 const GRID_SIZE = 20;
 const INITIAL_SPEED = 150;
 const SPEED_INCREMENT = 5;
+
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
 
 export default function SyntaxSerpent() {
     const { setMessage, setMood } = useMascot();
@@ -29,6 +37,17 @@ export default function SyntaxSerpent() {
     const [highScore, setHighScore] = useState(0);
 
     const gameLoopRef = useRef<NodeJS.Timeout | null>(null);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const nextCompletionScoreRef = useRef<number>(1000);
+
+    const resetRunTracking = (nextCompletionScore = 1000) => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        nextCompletionScoreRef.current = nextCompletionScore;
+    };
 
     // Logic Node Generation
     const spawnNode = useCallback((currentSnake: Point[]) => {
@@ -59,6 +78,7 @@ export default function SyntaxSerpent() {
     }, []);
 
     const startGame = () => {
+        resetRunTracking();
         setSnake([{ x: 10, y: 10 }]);
         setDirection("RIGHT");
         setNextDirection("RIGHT");
@@ -72,13 +92,13 @@ export default function SyntaxSerpent() {
         hapticSuccess();
     };
 
-    const endGame = () => {
+    const endGame = useCallback(() => {
         setGameState("GAMEOVER");
         setMood("sad");
         setMessage("Logic loop terminated. Let's try again!");
         hapticError();
         if (score > highScore) setHighScore(score);
-    };
+    }, [highScore, score, setMessage, setMood]);
 
     const moveSnake = useCallback(() => {
         setSnake(prevSnake => {
@@ -111,7 +131,23 @@ export default function SyntaxSerpent() {
             const nodeIndex = nodes.findIndex(n => n.x === newHead.x && n.y === newHead.y);
             if (nodeIndex !== -1) {
                 const node = nodes[nodeIndex];
-                setScore(s => s + 100);
+                setScore((currentScore) => {
+                    const nextScore = currentScore + 100;
+                    if (nextScore >= nextCompletionScoreRef.current) {
+                        emitLegacyGameComplete({
+                            sessionId: sessionIdRef.current,
+                            gameId: "syntax",
+                            elapsedMs: getElapsedMs(runStartedAtRef.current),
+                            interactions: Math.max(1, interactionCountRef.current),
+                            score: nextScore,
+                            maxScore: 5000,
+                            source: "component",
+                            occurredAt: new Date().toISOString(),
+                        });
+                        resetRunTracking(nextScore + 1000);
+                    }
+                    return nextScore;
+                });
                 setSpeed(v => Math.max(80, v - SPEED_INCREMENT));
                 setNodes(prev => prev.filter((_, i) => i !== nodeIndex));
                 spawnNode(newSnake);
@@ -124,7 +160,7 @@ export default function SyntaxSerpent() {
 
             return newSnake;
         });
-    }, [nextDirection, nodes, spawnNode]);
+    }, [endGame, nextDirection, nodes, setMessage, setMood, spawnNode]);
 
     useEffect(() => {
         if (gameState === "PLAYING") {
@@ -137,11 +173,35 @@ export default function SyntaxSerpent() {
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
+            let interacted = false;
             switch (e.key) {
-                case "ArrowUp": if (direction !== "DOWN") setNextDirection("UP"); break;
-                case "ArrowDown": if (direction !== "UP") setNextDirection("DOWN"); break;
-                case "ArrowLeft": if (direction !== "RIGHT") setNextDirection("LEFT"); break;
-                case "ArrowRight": if (direction !== "LEFT") setNextDirection("RIGHT"); break;
+                case "ArrowUp":
+                    if (direction !== "DOWN") {
+                        setNextDirection("UP");
+                        interacted = true;
+                    }
+                    break;
+                case "ArrowDown":
+                    if (direction !== "UP") {
+                        setNextDirection("DOWN");
+                        interacted = true;
+                    }
+                    break;
+                case "ArrowLeft":
+                    if (direction !== "RIGHT") {
+                        setNextDirection("LEFT");
+                        interacted = true;
+                    }
+                    break;
+                case "ArrowRight":
+                    if (direction !== "LEFT") {
+                        setNextDirection("RIGHT");
+                        interacted = true;
+                    }
+                    break;
+            }
+            if (interacted) {
+                interactionCountRef.current += 1;
             }
         };
         window.addEventListener("keydown", handleKeyDown);

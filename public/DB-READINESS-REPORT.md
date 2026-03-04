@@ -1,0 +1,86 @@
+# Database Readiness Report
+
+Generated: 2026-03-04T00:41:27.274Z
+Supabase host: osnxbuusohdzzcrakavn.supabase.co
+
+Summary: 77 present / 0 missing / 0 error (total 77)
+
+| Table | Status | Detail |
+| --- | --- | --- |
+| user_profiles | present | Present |
+| student_profiles | present | Present |
+| user_tokens | present | Present |
+| parent_consents | present | Present |
+| subscriptions | present | Present |
+| stripe_webhook_events | present | Present |
+| dsar_requests | present | Present |
+| user_learning_progress | present | Present |
+| user_skill_mastery | present | Present |
+| app_settings | present | Present |
+| admin_action_logs | present | Present |
+| support_tickets | present | Present |
+| sales_events | present | Present |
+| policy_acceptances | present | Present |
+| admin_alerts | present | Present |
+| admin_rate_limit_events | present | Present |
+| admin_report_exports | present | Present |
+| admin_approval_requests | present | Present |
+| admin_alert_notifications | present | Present |
+| admin_report_jobs | present | Present |
+| media_generation_jobs | present | Present |
+| testing_exams | present | Present |
+| testing_question_bank | present | Present |
+| user_exam_entitlements | present | Present |
+| testing_purchases | present | Present |
+| testing_exam_attempts | present | Present |
+| testing_attempt_answers | present | Present |
+| classroom_entities | present | Present |
+| class_enrollments | present | Present |
+| class_assignments | present | Present |
+| pronunciation_attempts | present | Present |
+| gamification_states | present | Present |
+| gamification_events | present | Present |
+| language_usage_tracking | present | Present |
+| pricing_ladders | present | Present |
+| exam_unlock_purchases | present | Present |
+| transaction_ledger | present | Present |
+| reconciliation_queue | present | Present |
+| business_chart_of_accounts | present | Present |
+| business_gl_transactions | present | Present |
+| owner_tax_profiles | present | Present |
+| investor_classes | present | Present |
+| investors | present | Present |
+| investor_bank_accounts | present | Present |
+| investor_holdings | present | Present |
+| dividend_declarations | present | Present |
+| dividend_payments | present | Present |
+| investor_report_dispatches | present | Present |
+| bank_audit_runs | present | Present |
+| bank_audit_findings | present | Present |
+| investor_portal_access | present | Present |
+| bank_connections | present | Present |
+| bank_statement_imports | present | Present |
+| bank_statement_lines | present | Present |
+| bank_reconciliation_runs | present | Present |
+| bank_reconciliation_items | present | Present |
+| service_integrations_registry | present | Present |
+| service_integration_usage_daily | present | Present |
+| service_billing_records | present | Present |
+| service_billing_reconciliation_runs | present | Present |
+| service_billing_reconciliation_items | present | Present |
+| finance_analytics_snapshots | present | Present |
+| owner_security_factors | present | Present |
+| owner_security_challenges | present | Present |
+| owner_step_up_sessions | present | Present |
+| owner_security_events | present | Present |
+| parent_security_factors | present | Present |
+| parent_account_change_challenges | present | Present |
+| module_baseline_snapshots | present | Present |
+| owner_factory_reset_runs | present | Present |
+| owner_transfer_playbooks | present | Present |
+| compliance_evidence_artifacts | present | Present |
+| compliance_audit_runs | present | Present |
+| compliance_audit_findings | present | Present |
+| content_moderation_jobs | present | Present |
+| content_moderation_votes | present | Present |
+| content_moderation_actions | present | Present |

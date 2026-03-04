@@ -65,22 +65,22 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-1-chunk-1",
           "title": "What is a Function?",
-          "content": "A FUNCTION is a rule that assigns EXACTLY ONE output to each input. Think of it as a machine: put in a number (input/domain), get out one number (output/range).\n\nKey rule: Each input has EXACTLY ONE output. If one input maps to two outputs, it's NOT a function."
+          "content": "A FUNCTION is like a special machine that takes an input and gives back exactly one output. Imagine you have a box where you can put a number in (this is called the input or domain), and when you close the box, it processes that number and gives you back one specific number (this is called the output or range). It's important to remember that for every input you use, there should only be one output. If you ever find that one input leads to two different outputs, then it means that what you have is NOT a function. Functions help us understand relationships between numbers in a clear way! They are essential in mathematics because they allow us to describe how one quantity depends on another. For example, if you think about how the temperature changes throughout the day, you can see that for each time of day (input), there is a specific temperature (output). This relationship can be represented as a function, helping us make predictions and understand patterns in data. Functions are everywhere in math and science, and learning about them is a key step in becoming a great problem solver!"
         },
         {
           "id": "basic-math-910-u1-1-chunk-2",
           "title": "Function Notation: f(x)",
-          "content": "Instead of y = 2x + 3, we write f(x) = 2x + 3\n\nf(x) is read 'f of x' and means the OUTPUT when x is the input.\n\nf(5) = 2(5) + 3 = 13 means: when input is 5, output is 13.\n\nYou can name functions anything: g(x), h(x), p(t) — the letter in parentheses is the input variable."
+          "content": "When we want to express a function in mathematics, we often use something called function notation. Instead of writing it in the traditional way as y = 2x + 3, we can write it as f(x) = 2x + 3. Here, 'f(x)' is pronounced as 'f of x.' This notation helps us understand what the output will be when we choose a specific number for x. For instance, if we say f(5), we are substituting 5 into our function. To find the output, we can calculate it like this: f(5) = 2(5) + 3. When we do the math, we find that f(5) equals 13. This means that when we input the number 5 into our function, the output we receive is 13. It's important to note that we can name functions in various ways. For example, we could use g(x), h(x), or even p(t). The letter inside the parentheses represents the input variable, and you can choose any number you like to substitute in for that variable! Understanding function notation is a key step in learning about functions and how they work in mathematics."
         },
         {
           "id": "basic-math-910-u1-1-chunk-3",
           "title": "Domain and Range",
-          "content": "DOMAIN: The set of all valid INPUTS (x-values)\nRANGE: The set of all valid OUTPUTS (y or f(x) values)\n\nFor f(x) = √x:\n• Domain: x ≥ 0 (can't take square root of negative numbers)\n• Range: f(x) ≥ 0 (square roots are always non-negative)\n\nFor f(x) = 1/x:\n• Domain: x ≠ 0 (can't divide by zero)\n• Range: f(x) ≠ 0"
+          "content": "In mathematics, understanding the concepts of DOMAIN and RANGE is essential when working with functions. The DOMAIN of a function refers to the complete set of all possible inputs, which are often represented as x-values. This means that when you think about what numbers you can plug into a function, you are considering its domain. On the other hand, the RANGE of a function is the complete set of all possible outputs, which can be represented as y-values or f(x) values. This tells you what results you can expect when you use the inputs from the domain.\nLet's look at a specific example to clarify these ideas. Consider the function f(x) = √x. For this function, the domain is defined as x ≥ 0. This is because you cannot take the square root of a negative number; therefore, only zero and positive numbers can be used as inputs. As for the range, it is f(x) ≥ 0, since the result of a square root is always a non-negative number.\nNow, let's examine another function: f(x) = 1/x. In this case, the domain is x ≠ 0. This restriction exists because dividing by zero is undefined in mathematics, so we cannot use zero as an input. The range for this function is also f(x) ≠ 0, which means that the output values cannot equal zero either. Understanding these concepts helps us to work with functions more effectively and avoid errors in calculations."
         },
         {
           "id": "basic-math-910-u1-1-chunk-4",
           "title": "Vertical Line Test",
-          "content": "To check if a graph represents a FUNCTION:\nDraw (or imagine) vertical lines across the graph.\n• If ANY vertical line touches the graph MORE than once → NOT a function\n• If every vertical line touches the graph AT MOST once → IS a function\n\nA circle is NOT a function. A parabola opening up/down IS a function."
+          "content": "To find out if a graph shows a FUNCTION, we can use a helpful technique called the Vertical Line Test. Picture this: you take a pencil and draw vertical lines straight up and down across the graph. Now, pay close attention! If you see that any of these vertical lines touch the graph in more than one spot, then that graph does NOT represent a function. This is because a function can only have one output for each input. On the other hand, if every vertical line you draw touches the graph at most once, then congratulations! You have a function!\nLet’s look at some examples to make this clearer. A circle, for instance, does not pass the Vertical Line Test. If you draw a vertical line through the middle of a circle, it will touch the circle in two places, which means it is not a function. In contrast, a parabola that opens either up or down does pass the test because any vertical line you draw will only touch it once. This is a great way to check if a graph is a function or not, and it helps us understand the relationship between inputs and outputs in mathematics better!\nSo remember, the Vertical Line Test is a simple yet powerful tool to identify functions in graphs! Keep practicing, and you'll become a pro at spotting functions in no time!"
         }
       ],
       "flashcards": [
@@ -209,13 +209,13 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-interactive-chunk-intro",
           "title": "Algebra II: Functions, Systems & Polynomials Supplemental Practice Overview",
-          "content": "Reinforce core Mathematics concepts in Algebra II: Functions, Systems & Polynomials.",
+          "content": "In this section, we will focus on reinforcing the important concepts of Mathematics that are covered in Algebra II, specifically related to Functions, Systems, and Polynomials. This practice will help you strengthen your understanding and skills in these areas, making you more confident in solving problems and applying what you’ve learned!\nContext recap: In this section, we will focus on reinforcing the important concepts of Mathematics that are covered in Algebra II, specifically related to Functions, Systems, and Polynomials. This practice will help you strengthen your understanding and skills in these areas, making you more confident in solving problems and applying what you’ve learned!",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-interactive-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "Let's take a moment to summarize one key idea that we learned today. This will help us remember the most important concept. After that, we can plan one next step to continue improving our understanding and skills in mathematics. Setting a clear goal will guide us in our learning journey!\nContext recap: Let's take a moment to summarize one key idea that we learned today. This will help us remember the most important concept. After that, we can plan one next step to continue improving our understanding and skills in mathematics. Setting a clear goal will guide us in our learning journey!",
           "kind": "recap"
         }
       ],
@@ -426,13 +426,13 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-quiz-chunk-intro",
           "title": "Algebra II: Functions, Systems & Polynomials Supplemental Check Overview",
-          "content": "Reinforce core Mathematics concepts in Algebra II: Functions, Systems & Polynomials.",
+          "content": "In this section, we will reinforce the core concepts of Mathematics that we have explored in Algebra II, focusing on Functions, Systems, and Polynomials. This will be a great opportunity to check your understanding and see how well you can apply these concepts in different situations!\nContext recap: In this section, we will reinforce the core concepts of Mathematics that we have explored in Algebra II, focusing on Functions, Systems, and Polynomials. This will be a great opportunity to check your understanding and see how well you can apply these concepts in different situations!",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-quiz-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "Now, let's summarize one key idea that we discussed in this lesson. This will help us remember the most important takeaway. Additionally, we can plan one next step to further our understanding and skills in mathematics. Setting a clear goal will help us stay focused on our learning!\nContext recap: Now, let's summarize one key idea that we discussed in this lesson. This will help us remember the most important takeaway. Additionally, we can plan one next step to further our understanding and skills in mathematics. Setting a clear goal will help us stay focused on our learning!",
           "kind": "recap"
         }
       ],
@@ -485,25 +485,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-04-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before we start solving problems, it's helpful to model the problem visually or write it down as an equation. This strategy will make it easier for us to understand what we are trying to solve and will guide us in finding the solution step by step.\nContext recap: Before we start solving problems, it's helpful to model the problem visually or write it down as an equation. This strategy will make it easier for us to understand what we are trying to solve and will guide us in finding the solution step by step.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-04-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "Let's work together on one guided problem first, where I will help you through the steps. After that, you will try to solve one independent problem that follows the same pattern. This way, you can practice what you've learned and gain confidence in your skills!\nContext recap: Let's work together on one guided problem first, where I will help you through the steps. After that, you will try to solve one independent problem that follows the same pattern. This way, you can practice what you've learned and gain confidence in your skills!",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-04-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "As we apply the multi-step strategy, it's important to be aware of common mistakes that can happen. I will point out one common error that students often make, and then we will discuss how to correct it using evidence from our work. This will help us avoid these pitfalls in the future!\nContext recap: As we apply the multi-step strategy, it's important to be aware of common mistakes that can happen. I will point out one common error that students often make, and then we will discuss how to correct it using evidence from our work. This will help us avoid these pitfalls in the future!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-04-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's quickly review the multi-step strategy we discussed today. After that, we can set one clear improvement target for ourselves. This will help us focus on what we want to achieve in our next learning session!\nContext recap: Let's quickly review the multi-step strategy we discussed today. After that, we can set one clear improvement target for ourselves. This will help us focus on what we want to achieve in our next learning session!",
           "kind": "recap"
         }
       ],
@@ -619,25 +619,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-05-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, we will identify a specific mathematical operation and discuss why it is the appropriate choice for the problem at hand. Understanding the reasoning behind our operations helps us become better problem solvers.\nContext recap: In this section, we will identify a specific mathematical operation and discuss why it is the appropriate choice for the problem at hand. Understanding the reasoning behind our operations helps us become better problem solvers.\nWhy this matters: Error Check Routines Intro helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-05-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "As you work through your math problems, use a simple checklist to guide you. First, make a plan for how you will approach the problem. Next, solve it step by step. Finally, verify your solution to ensure it is correct. This method will help you stay organized and focused.\nContext recap: As you work through your math problems, use a simple checklist to guide you. First, make a plan for how you will approach the problem. Next, solve it step by step. Finally, verify your solution to ensure it is correct.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-05-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "While you are applying error-check routines, be on the lookout for a common mistake that many students make. Once you identify this error, take the time to correct it and provide evidence for your correction. This practice will enhance your understanding and accuracy.\nContext recap: While you are applying error-check routines, be on the lookout for a common mistake that many students make. Once you identify this error, take the time to correct it and provide evidence for your correction. This practice will enhance your understanding and accuracy.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-05-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's take a moment to review the error-check routines we have discussed. After this review, think about one specific area where you can improve your skills. Setting a clear improvement target will help you focus your efforts moving forward.\nContext recap: Let's take a moment to review the error-check routines we have discussed. After this review, think about one specific area where you can improve your skills. Setting a clear improvement target will help you focus your efforts moving forward.",
           "kind": "recap"
         }
       ],
@@ -859,25 +859,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-06-chunk-intro",
           "title": "Number Sense Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before you finalize your answers, it's important to check your units, signs, and the overall reasonableness of your solutions. This step ensures that your work is accurate and makes sense in the context of the problem.\nContext recap: Before you finalize your answers, it's important to check your units, signs, and the overall reasonableness of your solutions. This step ensures that your work is accurate and makes sense in the context of the problem.\nWhy this matters: Number Sense Intro helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-06-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice section, you will compare two different strategies for solving a problem. After evaluating both methods, choose the one that you believe is more reliable. This exercise will help you develop critical thinking skills.\nContext recap: In this practice section, you will compare two different strategies for solving a problem. After evaluating both methods, choose the one that you believe is more reliable. This exercise will help you develop critical thinking skills.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-06-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying number sense, then correct it with evidence.",
+          "content": "As you apply your number sense, be mindful of a common error that can occur. Once you spot this mistake, take the time to correct it and provide evidence for your correction. This practice will strengthen your understanding of number sense.\nContext recap: As you apply your number sense, be mindful of a common error that can occur. Once you spot this mistake, take the time to correct it and provide evidence for your correction. This practice will strengthen your understanding of number sense.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-06-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review number sense, then set one clear improvement target.",
+          "content": "Let's quickly review the key concepts of number sense that we have covered. After this recap, think about one specific target for improvement that you can focus on. Setting a clear goal will help you enhance your skills.\nContext recap: Let's quickly review the key concepts of number sense that we have covered. After this recap, think about one specific target for improvement that you can focus on. Setting a clear goal will help you enhance your skills.",
           "kind": "recap"
         }
       ],
@@ -940,25 +940,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-07-chunk-intro",
           "title": "Equation Setup Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before you start solving a problem, it's helpful to model it with a visual representation or an equation. This approach allows you to better understand the problem and lays a solid foundation for finding the solution.\nContext recap: Before you start solving a problem, it's helpful to model it with a visual representation or an equation. This approach allows you to better understand the problem and lays a solid foundation for finding the solution.\nWhy this matters: Equation Setup Intro helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-07-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice, you will first solve one example together with guidance. After that, you will tackle a similar problem on your own, using the same pattern. This method helps reinforce your learning and builds confidence.\nContext recap: In this guided practice, you will first solve one example together with guidance. After that, you will tackle a similar problem on your own, using the same pattern. This method helps reinforce your learning and builds confidence.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-07-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying equation setup, then correct it with evidence.",
+          "content": "While you are setting up equations, be aware of a common error that can happen. Once you identify this mistake, take the time to correct it and provide evidence for your correction. This practice will enhance your skills in equation setup.\nContext recap: While you are setting up equations, be aware of a common error that can happen. Once you identify this mistake, take the time to correct it and provide evidence for your correction. This practice will enhance your skills in equation setup.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-07-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review equation setup, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we have learned about equation setup. After this recap, think about one specific area where you can improve. Setting a clear target will help you focus your learning efforts.\nContext recap: Let's take a moment to review what we have learned about equation setup. After this recap, think about one specific area where you can improve. Setting a clear target will help you focus your learning efforts.\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1074,25 +1074,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-08-chunk-intro",
           "title": "Fraction Reasoning Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, we will identify the mathematical operation we need to use and explain why it is the best choice for solving our problem. Understanding the reasoning behind our operations helps us become better problem solvers.\nContext recap: In this section, we will identify the mathematical operation we need to use and explain why it is the best choice for solving our problem. Understanding the reasoning behind our operations helps us become better problem solvers.\nWhy this matters: Fraction Reasoning Intro helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-08-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "As you work through the problems, use a simple checklist to guide your process. First, make a plan for how you will approach the problem. Next, solve the problem step by step. Finally, verify your solution to ensure it is correct.\nContext recap: As you work through the problems, use a simple checklist to guide your process. First, make a plan for how you will approach the problem. Next, solve the problem step by step. Finally, verify your solution to ensure it is correct.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-08-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying fraction reasoning, then correct it with evidence.",
+          "content": "While applying fraction reasoning, be on the lookout for a common mistake that many students make. Once you identify this error, take the time to correct it and provide evidence for your correction. This will help reinforce your understanding.\nContext recap: While applying fraction reasoning, be on the lookout for a common mistake that many students make. Once you identify this error, take the time to correct it and provide evidence for your correction. This will help reinforce your understanding.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-08-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review fraction reasoning, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we have learned about fraction reasoning. After the review, think about one specific area where you can improve your skills. Setting a clear target will help you focus your efforts.\nContext recap: Let's take a moment to review what we have learned about fraction reasoning. After the review, think about one specific area where you can improve your skills. Setting a clear target will help you focus your efforts.",
           "kind": "recap"
         }
       ],
@@ -1314,25 +1314,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-09-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before you finalize your answers, it is important to check your units, signs, and the overall reasonableness of your solutions. This step ensures that your work is accurate and makes sense.\nContext recap: Before you finalize your answers, it is important to check your units, signs, and the overall reasonableness of your solutions. This step ensures that your work is accurate and makes sense.\nWhy this matters: Multi Step Strategy Intro helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-09-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice section, you will compare two different strategies for solving a problem. After evaluating both, choose the strategy that you believe is more reliable and effective for reaching the correct solution.\nContext recap: In this practice section, you will compare two different strategies for solving a problem. After evaluating both, choose the strategy that you believe is more reliable and effective for reaching the correct solution.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-09-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "As you work through the multi-step strategy in your math problems, it's important to stay alert for a common mistake that many students make. This error can lead to incorrect answers, so take a moment to identify it when it appears. Once you find this mistake, focus on correcting it carefully. Be sure to provide clear evidence or reasoning that supports your correction. This practice not only helps you improve your accuracy but also strengthens your overall problem-solving skills, making you a more confident mathematician.\nContext recap: As you work through the multi-step strategy in your math problems, it's important to stay alert for a common mistake that many students make. This error can lead to incorrect answers, so take a moment to identify it when it appears. Once you find this mistake, focus on correcting it carefully. Be sure to provide clear evidence or reasoning that supports your correction.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-09-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's quickly review the multi-step strategy we have learned. After the review, think about one specific area where you can improve your approach. Setting a clear improvement target will help you focus on your learning.\nContext recap: Let's quickly review the multi-step strategy we have learned. After the review, think about one specific area where you can improve your approach. Setting a clear improvement target will help you focus on your learning.\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1395,25 +1395,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-10-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before you start solving a problem, it's helpful to model it using a visual representation or an equation. This approach will give you a clearer understanding of the problem and guide you toward finding the solution.\nContext recap: Before you start solving a problem, it's helpful to model it using a visual representation or an equation. This approach will give you a clearer understanding of the problem and guide you toward finding the solution.\nWhy this matters: Error Check Routines Intro helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-10-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice, you will first solve one problem together with guidance. After that, you will tackle a similar problem on your own, using the same pattern you learned. This will help reinforce your understanding.\nContext recap: In this guided practice, you will first solve one problem together with guidance. After that, you will tackle a similar problem on your own, using the same pattern you learned. This will help reinforce your understanding.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Algebra II: Functions, Systems & Polynomials to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-10-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "As you apply the error-check routines in your mathematical work, it's important to be mindful of a frequent mistake that can occur. This mistake can lead to incorrect conclusions if not addressed. Once you spot this error, take the time to correct it carefully. Be sure to gather evidence that supports your correction, such as showing your work or explaining your reasoning. This practice will not only help you avoid similar mistakes in the future but will also enhance your overall problem-solving skills, making you a more confident mathematician.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-10-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's take a moment to review the error-check routines we have discussed. After this review, think about one specific area where you can improve your skills. Setting a clear improvement target will help you focus your learning.\nContext recap: Let's take a moment to review the error-check routines we have discussed. After this review, think about one specific area where you can improve your skills. Setting a clear improvement target will help you focus your learning.",
           "kind": "recap"
         }
       ],
@@ -1529,25 +1529,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-11-chunk-intro",
           "title": "Number Sense Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, you will identify the mathematical operation being used in a problem. After naming the operation, take a moment to explain why you believe it is the correct choice for the situation. This will help you develop a deeper understanding of how different operations work together in mathematics.\nContext recap: In this section, you will identify the mathematical operation being used in a problem. After naming the operation, take a moment to explain why you believe it is the correct choice for the situation. This will help you develop a deeper understanding of how different operations work together in mathematics.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-11-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "As you work through your math problems, use a simple checklist to guide your process. Start by planning your approach, then solve the problem step by step, and finally, verify your answer to ensure it makes sense. This structured method will help you become more confident in your problem-solving skills.\nContext recap: As you work through your math problems, use a simple checklist to guide your process. Start by planning your approach, then solve the problem step by step, and finally, verify your answer to ensure it makes sense. This structured method will help you become more confident in your problem-solving skills.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-11-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying number sense, then correct it with evidence.",
+          "content": "While applying your number sense skills, be on the lookout for a common mistake that many students make. Once you identify this error, take the time to correct it and provide evidence for your correction. This practice will enhance your analytical skills and help you avoid similar pitfalls in the future.\nContext recap: While applying your number sense skills, be on the lookout for a common mistake that many students make. Once you identify this error, take the time to correct it and provide evidence for your correction. This practice will enhance your analytical skills and help you avoid similar pitfalls in the future.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-11-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review number sense, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we have learned about number sense. After reflecting on the key concepts, set a specific goal for improvement. This will give you a clear target to aim for as you continue to develop your mathematical abilities.\nContext recap: Let's take a moment to review what we have learned about number sense. After reflecting on the key concepts, set a specific goal for improvement. This will give you a clear target to aim for as you continue to develop your mathematical abilities.",
           "kind": "recap"
         }
       ],
@@ -1769,25 +1769,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-12-chunk-intro",
           "title": "Equation Setup Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before finalizing your equations, it is important to check several key aspects. Make sure to verify the units you are using, ensure that the signs are correct, and assess the reasonableness of your answers. This careful review process will help you catch any mistakes before they become problems.\nContext recap: Before finalizing your equations, it is important to check several key aspects. Make sure to verify the units you are using, ensure that the signs are correct, and assess the reasonableness of your answers. This careful review process will help you catch any mistakes before they become problems.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-12-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice section, you will compare two different strategies for solving a problem. After analyzing both approaches, choose the one that you believe is more reliable. This exercise will help you develop critical thinking skills and improve your decision-making in mathematics.\nContext recap: In this practice section, you will compare two different strategies for solving a problem. After analyzing both approaches, choose the one that you believe is more reliable. This exercise will help you develop critical thinking skills and improve your decision-making in mathematics.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-12-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying equation setup, then correct it with evidence.",
+          "content": "As you work on setting up your equations, be mindful of a common mistake that can occur. Once you spot this error, take the time to correct it and provide evidence for your correction. This practice will strengthen your understanding of equation setup and help you avoid similar mistakes in the future.\nContext recap: As you work on setting up your equations, be mindful of a common mistake that can occur. Once you spot this error, take the time to correct it and provide evidence for your correction. This practice will strengthen your understanding of equation setup and help you avoid similar mistakes in the future.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-12-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review equation setup, then set one clear improvement target.",
+          "content": "Let's quickly review what we have learned about setting up equations. After this recap, take a moment to set a clear target for improvement. This will help you focus on areas where you can grow and enhance your skills.\nContext recap: Let's quickly review what we have learned about setting up equations. After this recap, take a moment to set a clear target for improvement. This will help you focus on areas where you can grow and enhance your skills.",
           "kind": "recap"
         }
       ],
@@ -1850,25 +1850,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-13-chunk-intro",
           "title": "Fraction Reasoning Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before you begin solving a problem involving fractions, it's helpful to model the situation visually or with an equation. This approach will give you a clearer understanding of the problem and make it easier to find the solution.\nContext recap: Before you begin solving a problem involving fractions, it's helpful to model the situation visually or with an equation. This approach will give you a clearer understanding of the problem and make it easier to find the solution.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-13-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice, you will first solve one problem together with guidance, and then you will tackle a similar problem on your own. This pattern will help reinforce your understanding and build your confidence in working with fractions.\nContext recap: In this guided practice, you will first solve one problem together with guidance, and then you will tackle a similar problem on your own. This pattern will help reinforce your understanding and build your confidence in working with fractions.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-13-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying fraction reasoning, then correct it with evidence.",
+          "content": "While applying your fraction reasoning skills, be aware of a common mistake that can happen. Once you identify this error, take the time to correct it and provide evidence for your correction. This will help you improve your understanding and avoid making the same mistake in the future.\nContext recap: While applying your fraction reasoning skills, be aware of a common mistake that can happen. Once you identify this error, take the time to correct it and provide evidence for your correction. This will help you improve your understanding and avoid making the same mistake in the future.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-13-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review fraction reasoning, then set one clear improvement target.",
+          "content": "Let's take a moment to review the key concepts of fraction reasoning that we have discussed. After this quick recap, set a specific goal for improvement. This will guide your learning and help you focus on areas where you can enhance your skills.\nContext recap: Let's take a moment to review the key concepts of fraction reasoning that we have discussed. After this quick recap, set a specific goal for improvement. This will guide your learning and help you focus on areas where you can enhance your skills.",
           "kind": "recap"
         }
       ],
@@ -1984,25 +1984,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-14-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, you will identify the mathematical operation you need to use and explain why this operation is the best choice for solving the problem at hand. Understanding the reasoning behind your choice is crucial for mastering multi-step strategies in math.\nContext recap: In this section, you will identify the mathematical operation you need to use and explain why this operation is the best choice for solving the problem at hand. Understanding the reasoning behind your choice is crucial for mastering multi-step strategies in math.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-14-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "As you work through your problems, use a simple checklist to guide you. First, make a plan on how to approach the problem. Next, solve the problem step by step. Finally, verify your solution to ensure it is correct. This method will help you stay organized and focused.\nContext recap: As you work through your problems, use a simple checklist to guide you. First, make a plan on how to approach the problem. Next, solve the problem step by step. Finally, verify your solution to ensure it is correct.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-14-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "While applying the multi-step strategy, be on the lookout for a common mistake that many students make. Once you identify this error, take the time to correct it and provide evidence for your correction. This practice will enhance your problem-solving skills and help you avoid similar mistakes in the future.\nContext recap: While applying the multi-step strategy, be on the lookout for a common mistake that many students make. Once you identify this error, take the time to correct it and provide evidence for your correction. This practice will enhance your problem-solving skills and help you avoid similar mistakes in the future.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-14-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's take a moment to review the multi-step strategy we discussed. After the review, think about one specific area where you can improve your skills. Setting a clear improvement target will help you focus your efforts and track your progress.\nContext recap: Let's take a moment to review the multi-step strategy we discussed. After the review, think about one specific area where you can improve your skills. Setting a clear improvement target will help you focus your efforts and track your progress.",
           "kind": "recap"
         }
       ],
@@ -2224,25 +2224,25 @@ export const BasicMath910U1ExternalModule: LearningModule = {
         {
           "id": "basic-math-910-u1-external-supp-seq-15-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before you finalize your answers, it's important to check a few key elements. Make sure to verify the units you are using, check the signs of your numbers, and assess the reasonableness of your answers. This careful checking process will help ensure your solutions are accurate.\nContext recap: Before you finalize your answers, it's important to check a few key elements. Make sure to verify the units you are using, check the signs of your numbers, and assess the reasonableness of your answers. This careful checking process will help ensure your solutions are accurate.",
           "kind": "concept"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-15-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice section, you will compare two different strategies for solving a problem. Take the time to analyze each strategy and decide which one you believe is more reliable. This comparison will help you develop critical thinking skills and improve your problem-solving techniques.\nContext recap: In this practice section, you will compare two different strategies for solving a problem. Take the time to analyze each strategy and decide which one you believe is more reliable. This comparison will help you develop critical thinking skills and improve your problem-solving techniques.",
           "kind": "practice"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-15-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "As you apply the error-check routines, be aware of a common mistake that can occur. Once you spot this error, work on correcting it and provide evidence for your correction. This practice will not only help you learn from your mistakes but also strengthen your understanding of the material.\nContext recap: As you apply the error-check routines, be aware of a common mistake that can occur. Once you spot this error, work on correcting it and provide evidence for your correction. This practice will not only help you learn from your mistakes but also strengthen your understanding of the material.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-910-u1-external-supp-seq-15-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's quickly review the error-check routines we have learned. After the review, think about one specific area where you can improve your approach to checking your work. Setting a clear improvement target will help you focus on enhancing your skills.\nContext recap: Let's quickly review the error-check routines we have learned. After the review, think about one specific area where you can improve your approach to checking your work. Setting a clear improvement target will help you focus on enhancing your skills.",
           "kind": "recap"
         }
       ],

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-02-27T02:37:15.761Z",
+  "generatedAt": "2026-03-04T00:41:27.274Z",
   "supabaseHost": "osnxbuusohdzzcrakavn.supabase.co",
   "totals": {
-    "present": 30,
+    "present": 77,
     "missing": 0,
     "error": 0,
-    "total": 30
+    "total": 77
   },
   "tables": [
     {
@@ -155,6 +155,241 @@
     },
     {
       "table": "class_assignments",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "pronunciation_attempts",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "gamification_states",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "gamification_events",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "language_usage_tracking",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "pricing_ladders",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "exam_unlock_purchases",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "transaction_ledger",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "reconciliation_queue",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "business_chart_of_accounts",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "business_gl_transactions",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "owner_tax_profiles",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "investor_classes",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "investors",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "investor_bank_accounts",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "investor_holdings",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "dividend_declarations",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "dividend_payments",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "investor_report_dispatches",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "bank_audit_runs",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "bank_audit_findings",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "investor_portal_access",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "bank_connections",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "bank_statement_imports",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "bank_statement_lines",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "bank_reconciliation_runs",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "bank_reconciliation_items",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "service_integrations_registry",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "service_integration_usage_daily",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "service_billing_records",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "service_billing_reconciliation_runs",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "service_billing_reconciliation_items",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "finance_analytics_snapshots",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "owner_security_factors",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "owner_security_challenges",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "owner_step_up_sessions",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "owner_security_events",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "parent_security_factors",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "parent_account_change_challenges",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "module_baseline_snapshots",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "owner_factory_reset_runs",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "owner_transfer_playbooks",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "compliance_evidence_artifacts",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "compliance_audit_runs",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "compliance_audit_findings",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "content_moderation_jobs",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "content_moderation_votes",
+      "status": "present",
+      "detail": "Present"
+    },
+    {
+      "table": "content_moderation_actions",
       "status": "present",
       "detail": "Present"
     }

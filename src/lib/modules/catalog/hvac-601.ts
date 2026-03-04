@@ -47,19 +47,19 @@ export const Hvac601Module: LearningModule = {
           "id": "hvac-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Hvac, with focus on hvac systems diagnostics and hvac operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of HVAC systems. We will learn how to effectively diagnose HVAC systems, which means figuring out what might be wrong and how to fix it. Additionally, we will discuss how to design operations that ensure everything runs smoothly and efficiently. Understanding these boundaries is essential for anyone who wants to excel in the field of HVAC technology and management, as it helps in creating safe and effective environments for everyone.\nContext recap: In this lesson, we will delve into the advanced boundaries of HVAC systems. We will learn how to effectively diagnose HVAC systems, which means figuring out what might be wrong and how to fix it. Additionally, we will discuss how to design operations that ensure everything runs smoothly and efficiently. Understanding these boundaries is essential for anyone who wants to excel in the field of HVAC technology and management, as it helps in creating safe and effective environments for everyone."
         },
         {
           "id": "hvac-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in HVAC systems. We will also look at uncertainty ranges and how various system components depend on each other. This foundational knowledge is essential for planning effective interventions in HVAC operations.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in HVAC systems. We will also look at uncertainty ranges and how various system components depend on each other. This foundational knowledge is essential for planning effective interventions in HVAC operations."
         },
         {
           "id": "hvac-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we will emphasize that all claims made in HVAC diagnostics must be linked to measurable indicators. We will discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our findings are reliable and actionable.\nContext recap: In this recap, we will emphasize that all claims made in HVAC diagnostics must be linked to measurable indicators. We will discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our findings are reliable and actionable."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Hvac601Module: LearningModule = {
           "id": "hvac-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows for HVAC systems. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding real-world applications of HVAC methods.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows for HVAC systems. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding real-world applications of HVAC methods."
         },
         {
           "id": "hvac-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will review how workflows should be structured to include important checkpoints, criteria for rolling back changes, and escalation procedures based on specific thresholds. This architecture is essential for maintaining control and ensuring safety in HVAC operations.\nContext recap: In this recap, we will review how workflows should be structured to include important checkpoints, criteria for rolling back changes, and escalation procedures based on specific thresholds. This architecture is essential for maintaining control and ensuring safety in HVAC operations."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Hvac601Module: LearningModule = {
           "id": "hvac-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in hvac systems diagnostics and hvac impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case study that highlights the competing constraints faced in HVAC systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about HVAC systems, which is crucial for effective problem-solving in this field.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints faced in HVAC systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions about HVAC systems, which is crucial for effective problem-solving in this field."
         },
         {
           "id": "hvac-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the complexities involved in making informed decisions in HVAC scenarios.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the complexities involved in making informed decisions in HVAC scenarios."
         },
         {
           "id": "hvac-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will discuss the essential components of each recommendation made in HVAC decision-making. This includes outlining the assumptions made, the evidence supporting the decision, the risk controls in place, and the fallback plans that ensure safety and accountability.\nContext recap: In this recap, we will discuss the essential components of each recommendation made in HVAC decision-making. This includes outlining the assumptions made, the evidence supporting the decision, the risk controls in place, and the fallback plans that ensure safety and accountability."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Hvac601Module: LearningModule = {
           "id": "hvac-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will have the chance to operate scenario controls while carefully balancing performance with governance constraints. This experience is designed to enhance their practical skills in managing HVAC systems effectively.\nContext recap: In this interactive clinic, learners will have the chance to operate scenario controls while carefully balancing performance with governance constraints. This experience is designed to enhance their practical skills in managing HVAC systems effectively.\nWhy this matters: Live Scenario Controls helps learners in HVAC connect ideas from Hvac Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "hvac-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will focus on the importance of effective responses that update control gates in HVAC systems. We will discuss how to do this while maintaining traceability and accountability, which are critical for ensuring that all actions taken are well-documented and responsible.\nContext recap: In this recap, we will focus on the importance of effective responses that update control gates in HVAC systems. We will discuss how to do this while maintaining traceability and accountability, which are critical for ensuring that all actions taken are well-documented and responsible."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Hvac601Module: LearningModule = {
           "id": "hvac-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects that HVAC decisions have on various stakeholder groups. Understanding these impacts is essential for responsible decision-making in HVAC governance.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects that HVAC decisions have on various stakeholder groups. Understanding these impacts is essential for responsible decision-making in HVAC governance.\nWhy this matters: Stakeholder Impact Distribution helps learners in HVAC connect ideas from Hvac Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "hvac-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in HVAC governance. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into the decision-making process, ensuring that all actions are accountable and transparent.\nContext recap: In this section, we will explore the architecture of accountability in HVAC governance. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into the decision-making process, ensuring that all actions are accountable and transparent."
         },
         {
           "id": "hvac-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we are following policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions in the HVAC field.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we are following policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions in the HVAC field."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Hvac601Module: LearningModule = {
           "id": "hvac-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of the uncertainties involved, and clear pathways for remediation. This exercise helps us practice critical thinking and effective communication.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of the uncertainties involved, and clear pathways for remediation. This exercise helps us practice critical thinking and effective communication."
         },
         {
           "id": "hvac-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may come from technical experts, governance bodies, and stakeholders. This rehearsal is essential for building confidence and ensuring that we can effectively address concerns and questions in a real-world setting.\nContext recap: During this session, learners will practice their responses to various critiques that may come from technical experts, governance bodies, and stakeholders. This rehearsal is essential for building confidence and ensuring that we can effectively address concerns and questions in a real-world setting."
         }
       ],
       "interactiveActivities": [

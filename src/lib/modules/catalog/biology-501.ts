@@ -47,19 +47,19 @@ export const Biology501Module: LearningModule = {
           "id": "biology-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Biology, with focus on biology systems diagnostics and biology operations and execution design."
+          "content": "In this lesson, we will dive into the advanced boundaries of biology as a fascinating field of study. We will learn how to effectively diagnose biological systems, which involves understanding how different components interact within living organisms. Additionally, we will discuss how to design effective operations and execution strategies that can be applied in real-world biological scenarios. Mastering these concepts is crucial for anyone who wants to enhance their understanding of biology and its practical applications in various fields, such as medicine, environmental science, and biotechnology.\nContext recap: In this lesson, we will dive into the advanced boundaries of biology as a fascinating field of study. We will learn how to effectively diagnose biological systems, which involves understanding how different components interact within living organisms. Additionally, we will discuss how to design effective operations and execution strategies that can be applied in real-world biological scenarios. Mastering these concepts is crucial for anyone who wants to enhance their understanding of biology and its practical applications in various fields, such as medicine, environmental science, and biotechnology."
         },
         {
           "id": "biology-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different biological factors. They will also identify uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning effective interventions in biological systems.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different biological factors. They will also identify uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning effective interventions in biological systems."
         },
         {
           "id": "biology-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid.\nContext recap: In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Biology501Module: LearningModule = {
           "id": "biology-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding real-world applications.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding real-world applications."
         },
         {
           "id": "biology-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation procedures based on specific thresholds. This architecture is essential for maintaining control and ensuring the effectiveness of biological methods.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation procedures based on specific thresholds. This architecture is essential for maintaining control and ensuring the effectiveness of biological methods."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Biology501Module: LearningModule = {
           "id": "biology-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in biology systems diagnostics and biology impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints found in biological systems diagnostics. We will also analyze the impacts and trade-offs involved in making decisions within these systems. Understanding these dynamics is crucial for effective problem-solving.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints found in biological systems diagnostics. We will also analyze the impacts and trade-offs involved in making decisions within these systems. Understanding these dynamics is crucial for effective problem-solving."
         },
         {
           "id": "biology-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making informed decisions in biology.\nContext recap: In this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making informed decisions in biology.\nWhy this matters: Tradeoff Framing helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "biology-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be revisited if necessary.\nContext recap: In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be revisited if necessary.\nWhy this matters: Decision Memo Pattern helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Biology501Module: LearningModule = {
           "id": "biology-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "During this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will help them understand how to manage different factors that influence biological systems effectively.\nContext recap: During this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will help them understand how to manage different factors that influence biological systems effectively.\nWhy this matters: Live Scenario Controls helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "biology-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses can update control gates while maintaining traceability and accountability. This is important for ensuring that all actions taken are transparent and can be tracked back to their origins.\nContext recap: In our recap, we will discuss how effective responses can update control gates while maintaining traceability and accountability. This is important for ensuring that all actions taken are transparent and can be tracked back to their origins.\nWhy this matters: Adaptive Response Design helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Biology501Module: LearningModule = {
           "id": "biology-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is essential for recognizing how biological decisions impact various communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is essential for recognizing how biological decisions impact various communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "biology-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. Understanding these elements is crucial for ensuring responsible governance in biological practices.\nContext recap: In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. Understanding these elements is crucial for ensuring responsible governance in biological practices.\nWhy this matters: Accountability Architecture helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "biology-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will provide a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and promotes resilience in our leadership practices. This checklist will serve as a guide to help you reflect on how to be a responsible leader in biology and beyond.\nContext recap: At the end of our lesson, we will provide a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and promotes resilience in our leadership practices. This checklist will serve as a guide to help you reflect on how to be a responsible leader in biology and beyond."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Biology501Module: LearningModule = {
           "id": "biology-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the uncertainties related to your claims, and possible pathways for remediation. This exercise will help you practice how to present your ideas clearly and effectively, preparing you for real-world discussions and decisions in biology.\nContext recap: In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the uncertainties related to your claims, and possible pathways for remediation. This exercise will help you practice how to present your ideas clearly and effectively, preparing you for real-world discussions and decisions in biology."
         },
         {
           "id": "biology-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will have the opportunity to practice your responses to various critiques. These critiques may come from experts in the field, governance representatives, or stakeholders who have an interest in your work. Rehearsing these responses will help you build confidence and improve your ability to communicate effectively under pressure.\nContext recap: During this session, you will have the opportunity to practice your responses to various critiques. These critiques may come from experts in the field, governance representatives, or stakeholders who have an interest in your work. Rehearsing these responses will help you build confidence and improve your ability to communicate effectively under pressure."
         }
       ],
       "interactiveActivities": [

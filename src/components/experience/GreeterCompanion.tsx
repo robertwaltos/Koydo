@@ -14,7 +14,7 @@ import CompanionIntroVideo from "@/components/experience/CompanionIntroVideo";
 import CompanionPicker from "@/components/experience/CompanionPicker";
 import { useTTS } from "@/hooks/useTTS";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
-import { getGreeterConfig } from "@/lib/greeter/messages";
+import { getGreeterConfig, getRouteSlug, getRouteMessageCount } from "@/lib/greeter/messages";
 import {
   COMPANIONS,
   COMPANION_STORAGE_KEY,
@@ -22,6 +22,7 @@ import {
   type CompanionGender,
 } from "@/lib/greeter/companion-config";
 import type { ChatMessage } from "@/app/api/companion/chat/route";
+import { useCompanionPreferences } from "@/lib/greeter/companion-preferences";
 
 const DISMISSED_KEY = "koydo.greeter.dismissed";
 const MINIMIZED_KEY = "koydo.greeter.minimized";
@@ -35,6 +36,7 @@ type UIMode = "hidden" | "minimized" | "greeting" | "chat";
 
 export default function GreeterCompanion() {
   const pathname = usePathname();
+  const { avatarStyle } = useCompanionPreferences();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [displayName, setDisplayName] = useState("");
   const [companionGender, setCompanionGender] = useState<CompanionGender | null>(null);
@@ -53,10 +55,12 @@ export default function GreeterCompanion() {
   const tts = useTTS({
     voice: companionGender === "female" ? "nova" : "echo",
     lessonId: "companion",
+    disableBrowserFallback: true,
   });
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const showTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const lastGreetedAt = useRef(0);
+  const staticAudioRef = useRef<HTMLAudioElement | null>(null);
   const companion = companionGender ? COMPANIONS[companionGender] : null;
 
   const isExcluded = useCallback(
@@ -75,12 +79,37 @@ export default function GreeterCompanion() {
     }, GREETING_AUTO_HIDE);
   }, []);
 
-  // Speak greeting message when bubble appears
+  // Speak greeting message when bubble appears — try pre-recorded static audio first
   useEffect(() => {
-    if (uiMode === "greeting" && greetingMessage && speakEnabled) {
-      tts.speak(greetingMessage);
+    if (uiMode === "greeting" && greetingMessage && speakEnabled && companionGender) {
+      // Stop any previous static audio
+      if (staticAudioRef.current) {
+        staticAudioRef.current.pause();
+        staticAudioRef.current = null;
+      }
+
+      const slug = getRouteSlug(pathname);
+      const count = getRouteMessageCount(slug);
+      const idx = Math.floor(Math.random() * count);
+      const staticUrl = `/audio/greetings/${companionGender}-${slug}-${idx}.mp3`;
+      const audio = new Audio(staticUrl);
+      staticAudioRef.current = audio;
+
+      audio.play()
+        .then(() => {
+          audio.onended = () => { staticAudioRef.current = null; };
+        })
+        .catch(() => {
+          // Static audio not available — fall back to cloud TTS
+          staticAudioRef.current = null;
+          tts.speak(greetingMessage);
+        });
     }
     if (uiMode !== "greeting" && uiMode !== "chat") {
+      if (staticAudioRef.current) {
+        staticAudioRef.current.pause();
+        staticAudioRef.current = null;
+      }
       tts.stop();
     }
   }, [uiMode, greetingMessage]);
@@ -100,7 +129,21 @@ export default function GreeterCompanion() {
       if (session?.user) {
         setIsAuthenticated(true);
         setDisplayName(extractName(session.user.user_metadata, session.user.email ?? ""));
-        if (_event === "SIGNED_IN") { localStorage.removeItem(DISMISSED_KEY); setIsDismissed(false); }
+        if (_event === "SIGNED_IN") {
+          localStorage.removeItem(DISMISSED_KEY);
+          setIsDismissed(false);
+          // Carry over landing page companion pick if no companion selected yet
+          const existingGender = localStorage.getItem(COMPANION_STORAGE_KEY);
+          if (!existingGender) {
+            const landingPick = typeof sessionStorage !== "undefined"
+              ? sessionStorage.getItem("koydo.landing.companion") as CompanionGender | null
+              : null;
+            if (landingPick === "female" || landingPick === "male") {
+              setCompanionGender(landingPick);
+              localStorage.setItem(COMPANION_STORAGE_KEY, landingPick);
+            }
+          }
+        }
       } else {
         setIsAuthenticated(false); setDisplayName(""); setUiMode("hidden"); setChatHistory([]);
       }
@@ -175,10 +218,12 @@ export default function GreeterCompanion() {
   }, [companionGender, showGreeting]);
 
   const handleDismiss = useCallback(() => {
+    if (staticAudioRef.current) { staticAudioRef.current.pause(); staticAudioRef.current = null; }
     tts.stop(); clearTimers(); setUiMode("hidden"); setIsDismissed(true); localStorage.setItem(DISMISSED_KEY, "true");
   }, [clearTimers, tts]);
 
   const handleMinimize = useCallback(() => {
+    if (staticAudioRef.current) { staticAudioRef.current.pause(); staticAudioRef.current = null; }
     tts.stop(); clearTimers(); setUiMode("minimized"); localStorage.setItem(MINIMIZED_KEY, "true");
   }, [clearTimers, tts]);
 
@@ -236,7 +281,7 @@ export default function GreeterCompanion() {
             {uiMode === "chat" && companion && (
               <motion.div key="chat-panel" initial={{ opacity: 0, y: 16, scale: 0.92 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 12, scale: 0.94 }} transition={{ type: "spring", stiffness: 300, damping: 24 }} className={`w-72 overflow-hidden rounded-2xl border shadow-2xl ${colorScheme?.border} bg-white`}>
                 <div className={`flex items-center gap-2 px-4 py-3 ${colorScheme?.bg}`}>
-                  <CompanionAvatarSVG gender={companionGender} size={32} pulse={isChatLoading} previewImageUrl={companion?.previewImageUrl} />
+                  <CompanionAvatarSVG gender={companionGender} size={32} pulse={isChatLoading} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
                   <div className="flex-1 min-w-0">
                     <p className={`text-sm font-bold leading-none ${colorScheme?.text}`}>{companion.name}</p>
                     <p className="text-xs text-zinc-400 truncate">Koydo learning companion</p>
@@ -251,13 +296,13 @@ export default function GreeterCompanion() {
                 <div className="flex h-56 flex-col gap-2 overflow-y-auto p-3 scroll-smooth">
                   {chatHistory.length === 0 && (
                     <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
-                      <CompanionAvatarSVG gender={companionGender} size={44} previewImageUrl={companion?.previewImageUrl} />
+                      <CompanionAvatarSVG gender={companionGender} size={44} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
                       <p className="text-xs text-zinc-400 max-w-45">Hi, I am {companion.name}! Ask me anything about what you are learning on Koydo! 🌟</p>
                     </div>
                   )}
                   {chatHistory.map((msg, i) => (
                     <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} gap-1.5`}>
-                      {msg.role === "assistant" && <CompanionAvatarSVG gender={companionGender} size={22} className="mt-0.5 shrink-0" previewImageUrl={companion?.previewImageUrl} />}
+                      {msg.role === "assistant" && <CompanionAvatarSVG gender={companionGender} size={22} className="mt-0.5 shrink-0" previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />}
                       <div className={`max-w-[78%] rounded-2xl px-3 py-2 text-xs leading-snug ${msg.role === "user" ? "rounded-br-sm bg-zinc-100 text-zinc-800" : `rounded-bl-sm text-white ${companionGender === "female" ? "bg-violet-500" : "bg-cyan-600"}`}`}>
                         {msg.content}
                         {msg.role === "assistant" && speakEnabled && (
@@ -268,7 +313,7 @@ export default function GreeterCompanion() {
                   ))}
                   {isChatLoading && (
                     <div className="flex justify-start gap-1.5">
-                      <CompanionAvatarSVG gender={companionGender} size={22} pulse className="mt-0.5" previewImageUrl={companion?.previewImageUrl} />
+                      <CompanionAvatarSVG gender={companionGender} size={22} pulse className="mt-0.5" previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
                       <div className={`flex items-center gap-1 rounded-2xl rounded-bl-sm px-3 py-2 text-white ${companionGender === "female" ? "bg-violet-500" : "bg-cyan-600"}`}>
                         <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white [animation-delay:0ms]" />
                         <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white [animation-delay:150ms]" />
@@ -308,7 +353,7 @@ export default function GreeterCompanion() {
               )}
             </AnimatePresence>
             <motion.button onClick={handleAvatarClick} whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.93 }} className={`rounded-full shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${companionGender === "female" ? "shadow-violet-200/60 focus-visible:ring-violet-400" : "shadow-cyan-200/60 focus-visible:ring-cyan-400"}`} aria-label={uiMode === "minimized" ? `Open ${companion?.name}` : `${companion?.name}`}>
-              <CompanionAvatarSVG gender={companionGender} size={uiMode === "minimized" ? 44 : 60} pulse={isChatLoading} previewImageUrl={companion?.previewImageUrl} />
+              <CompanionAvatarSVG gender={companionGender} size={uiMode === "minimized" ? 44 : 60} pulse={isChatLoading} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
             </motion.button>
           </div>
         </div>

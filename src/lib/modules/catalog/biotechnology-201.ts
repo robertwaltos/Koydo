@@ -46,19 +46,19 @@ export const Biotechnology201Module: LearningModule = {
           "id": "biotechnology-201-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "Biotechnology at level 201 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In our exploration of Biotechnology at level 201, using clear and precise language is essential for effective communication. We will focus on defining the boundaries of our work, which helps us understand what is included in our study and what is not. Additionally, we will identify the specific unit we are analyzing, whether it's a cell, a gene, or a process. By aligning our terminology, we ensure that everyone on the team is on the same page. This approach allows us to make decisions that can be easily compared across different teams, fostering better collaboration and understanding among all members. Clear communication is key to our success in biotechnology!"
         },
         {
           "id": "biotechnology-201-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in Biotechnology depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "To succeed in the field of Biotechnology, it's important to grasp the reasons why things happen, not just the outcomes we observe. In this lesson, we will dive into the process of identifying and mapping our assumptions, dependencies, and constraints. By doing this, we can better understand the underlying factors that contribute to various challenges. This approach allows us to tackle the root causes of problems instead of merely addressing the symptoms, which is a vital skill for effective problem-solving in Biotechnology and beyond.\nContext recap: To succeed in the field of Biotechnology, it's important to grasp the reasons why things happen, not just the outcomes we observe. In this lesson, we will dive into the process of identifying and mapping our assumptions, dependencies, and constraints. By doing this, we can better understand the underlying factors that contribute to various challenges. This approach allows us to tackle the root causes of problems instead of merely addressing the symptoms, which is a vital skill for effective problem-solving in Biotechnology and beyond."
         },
         {
           "id": "biotechnology-201-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this section, we will introduce important practices that are essential for reliable execution in Biotechnology. These include setting evidence standards, maintaining discipline in logging our work, and creating clear accountability loops. By following these practices, we can ensure that our work is trustworthy and that we can track our progress effectively.\nContext recap: In this section, we will introduce important practices that are essential for reliable execution in Biotechnology. These include setting evidence standards, maintaining discipline in logging our work, and creating clear accountability loops. By following these practices, we can ensure that our work is trustworthy and that we can track our progress effectively."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const Biotechnology201Module: LearningModule = {
           "id": "biotechnology-201-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for genetic engineering and bioprocess systems, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this interactive lab, you will have the opportunity to construct a complete workflow for genetic engineering and bioprocess systems. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, outlining the expected outputs, and determining rollback triggers to address any issues that may arise. This hands-on experience will deepen your understanding of the workflow process.\nContext recap: In this interactive lab, you will have the opportunity to construct a complete workflow for genetic engineering and bioprocess systems. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, outlining the expected outputs, and determining rollback triggers to address any issues that may arise. This hands-on experience will deepen your understanding of the workflow process."
         },
         {
           "id": "biotechnology-201-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we will emphasize the importance of logging every decision made during the workflow process. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point. This practice will enable us to conduct thorough post-run analyses, helping us learn from our experiences and improve future outcomes.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during the workflow process. Each decision should be accompanied by a clear rationale, an expected effect, and a verification point. This practice will enable us to conduct thorough post-run analyses, helping us learn from our experiences and improve future outcomes."
         }
       ],
       "interactiveActivities": [
@@ -296,19 +296,19 @@ export const Biotechnology201Module: LearningModule = {
           "id": "biotechnology-201-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for Biotechnology scenarios."
+          "content": "In Biotechnology, choosing the right method is very important and involves thinking about several key factors. First, we need to look at any constraints we might face, such as time, resources, or regulations. Next, we should evaluate the quality of the information we have; reliable data is crucial for making informed decisions. Lastly, we must consider the potential cost of errors, as mistakes can lead to significant consequences. In this lesson, you will explore different methods and compare their advantages and disadvantages. You will also learn how to justify your choice of method for specific Biotechnology scenarios. This exercise will not only help you understand the importance of method selection but will also improve your critical thinking and decision-making skills, which are essential in the field of Biotechnology."
         },
         {
           "id": "biotechnology-201-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "In this example, we will explore how a metric architecture connects leading indicators, lagging outcomes, and diagnostic measures. Leading indicators are early signs that can predict future performance, while lagging outcomes show the results of past actions. Diagnostic measures help teams understand why certain outcomes occurred. By using this framework, teams can spot any deviations from what they expect to happen early on and respond thoughtfully. Understanding this architecture is key to maintaining effective oversight in Biotechnology projects, ensuring that everything runs smoothly and efficiently.\nContext recap: In this example, we will explore how a metric architecture connects leading indicators, lagging outcomes, and diagnostic measures. Leading indicators are early signs that can predict future performance, while lagging outcomes show the results of past actions. Diagnostic measures help teams understand why certain outcomes occurred. By using this framework, teams can spot any deviations from what they expect to happen early on and respond thoughtfully."
         },
         {
           "id": "biotechnology-201-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we will categorize failures into four main groups: data, process, execution, and governance. By organizing failures this way, we can create specific mitigation plans that address the unique challenges of each category, rather than using generic solutions. This targeted approach will improve our ability to prevent and respond to issues.\nContext recap: In this recap, we will categorize failures into four main groups: data, process, execution, and governance. By organizing failures this way, we can create specific mitigation plans that address the unique challenges of each category, rather than using generic solutions. This targeted approach will improve our ability to prevent and respond to issues."
         }
       ],
       "flashcards": [
@@ -347,13 +347,13 @@ export const Biotechnology201Module: LearningModule = {
           "id": "biotechnology-201-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, you will break down a realistic scenario into its key components: objectives, context, constraints, and possible intervention options. You will also note the trade-offs involved in each option. This exercise will help you develop critical analysis skills and understand the complexities of improving a Biotechnology system.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components: objectives, context, constraints, and possible intervention options. You will also note the trade-offs involved in each option. This exercise will help you develop critical analysis skills and understand the complexities of improving a Biotechnology system."
         },
         {
           "id": "biotechnology-201-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "In this recap, you will present a structured improvement proposal based on your analysis of the case study. Your proposal should include clear success criteria, mapping out who is responsible for each part of the plan, and a timeline for follow-up actions. This exercise will enhance your ability to communicate ideas effectively and plan for successful implementation.\nContext recap: In this recap, you will present a structured improvement proposal based on your analysis of the case study. Your proposal should include clear success criteria, mapping out who is responsible for each part of the plan, and a timeline for follow-up actions. This exercise will enhance your ability to communicate ideas effectively and plan for successful implementation."
         }
       ],
       "interactiveActivities": [

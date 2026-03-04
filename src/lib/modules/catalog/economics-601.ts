@@ -47,19 +47,19 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Economics, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will explore the advanced concepts of scope boundaries in Economics. We will focus on how to analyze business systems effectively, looking closely at how businesses operate and how they can design their processes for better execution. Understanding these boundaries helps us identify what is included in our analysis and what is not, which is crucial for making informed decisions in business.\nContext recap: In this lesson, we will explore the advanced concepts of scope boundaries in Economics. We will focus on how to analyze business systems effectively, looking closely at how businesses operate and how they can design their processes for better execution. Understanding these boundaries helps us identify what is included in our analysis and what is not, which is crucial for making informed decisions in business."
         },
         {
           "id": "economics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to certain outcomes. Additionally, we will explore uncertainty ranges and system dependencies, which help us understand the various elements that might affect our plans. This preparation is essential before we create strategies for intervention, ensuring that we are well-informed about the potential impacts of our actions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to certain outcomes. Additionally, we will explore uncertainty ranges and system dependencies, which help us understand the various elements that might affect our plans. This preparation is essential before we create strategies for intervention, ensuring that we are well-informed about the potential impacts of our actions."
         },
         {
           "id": "economics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in our analysis should be supported by measurable indicators. This means we need to have clear evidence that can be quantified. We will also discuss the importance of confidence bounds, which help us understand the reliability of our claims, and review checkpoints that ensure we stay on track throughout our analysis process.\nContext recap: In our recap, we emphasize that all claims made in our analysis should be supported by measurable indicators. This means we need to have clear evidence that can be quantified. We will also discuss the importance of confidence bounds, which help us understand the reliability of our claims, and review checkpoints that ensure we stay on track throughout our analysis process."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, which means they will see how their designs hold up under challenging conditions. This hands-on experience is vital for understanding how to create robust systems that can withstand unexpected challenges.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios, which means they will see how their designs hold up under challenging conditions. This hands-on experience is vital for understanding how to create robust systems that can withstand unexpected challenges."
         },
         {
           "id": "economics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints help us monitor progress and ensure that we can revert to previous steps if necessary. Additionally, we will explore the concept of threshold-based escalation, which means that certain criteria will trigger specific actions when limits are reached, ensuring that we maintain control over our processes.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints help us monitor progress and ensure that we can revert to previous steps if necessary. Additionally, we will explore the concept of threshold-based escalation, which means that certain criteria will trigger specific actions when limits are reached, ensuring that we maintain control over our processes."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze how different factors impact business decisions and the trade-offs that must be considered. Understanding these dynamics is crucial for making informed choices that balance various business needs and objectives.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze how different factors impact business decisions and the trade-offs that must be considered. Understanding these dynamics is crucial for making informed choices that balance various business needs and objectives."
         },
         {
           "id": "economics-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain a deeper understanding of how to make balanced decisions that consider multiple perspectives and stakeholder needs.\nContext recap: In this practice session, learners will compare different options available to them across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain a deeper understanding of how to make balanced decisions that consider multiple perspectives and stakeholder needs."
         },
         {
           "id": "economics-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will outline the essential components of each recommendation made in our analysis. This includes detailing the assumptions that underpin our decisions, the evidence we have gathered, the risk controls we have put in place, and the fallback plans that will guide us if things do not go as expected. This structured approach ensures that our recommendations are well-founded and actionable.\nContext recap: In our recap, we will outline the essential components of each recommendation made in our analysis. This includes detailing the assumptions that underpin our decisions, the evidence we have gathered, the risk controls we have put in place, and the fallback plans that will guide us if things do not go as expected. This structured approach ensures that our recommendations are well-founded and actionable."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, which means ensuring that their actions meet both efficiency goals and regulatory requirements. This experience will help them understand the complexities involved in decision-making within a business context.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, which means ensuring that their actions meet both efficiency goals and regulatory requirements. This experience will help them understand the complexities involved in decision-making within a business context."
         },
         {
           "id": "economics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the importance of effective responses that can adapt to changing circumstances. Learners will explore how to update control gates while maintaining traceability and accountability. This means that even as adjustments are made, it is crucial to keep track of decisions and ensure that responsibilities are clear.\nContext recap: In our recap, we will discuss the importance of effective responses that can adapt to changing circumstances. Learners will explore how to update control gates while maintaining traceability and accountability. This means that even as adjustments are made, it is crucial to keep track of decisions and ensure that responsibilities are clear."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying who benefits, who bears burdens, and what delayed effects may arise from decisions made. Understanding these dynamics is essential for ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying who benefits, who bears burdens, and what delayed effects may arise from decisions made. Understanding these dynamics is essential for ensuring that all voices are considered in the decision-making process."
         },
         {
           "id": "economics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This involves integrating elements such as decision traceability, which tracks how decisions are made, review rights that allow stakeholders to assess decisions, and remediation obligations that ensure responsibilities are met. This framework is vital for fostering trust and transparency in governance.\nContext recap: In this section, we will explore the concept of accountability architecture. This involves integrating elements such as decision traceability, which tracks how decisions are made, review rights that allow stakeholders to assess decisions, and remediation obligations that ensure responsibilities are met. This framework is vital for fostering trust and transparency in governance."
         },
         {
           "id": "economics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt to challenges. This checklist will guide us in making responsible decisions as leaders.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt to challenges. This checklist will guide us in making responsible decisions as leaders."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Economics601Module: LearningModule = {
           "id": "economics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will work together to create a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of uncertainty in your arguments, and possible solutions to address any issues that arise. This exercise will help you practice presenting your ideas clearly and effectively.\nContext recap: In this interactive activity, you will work together to create a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of uncertainty in your arguments, and possible solutions to address any issues that arise. This exercise will help you practice presenting your ideas clearly and effectively."
         },
         {
           "id": "economics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will have the opportunity to practice your responses to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you gain confidence and improve your communication skills.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you gain confidence and improve your communication skills."
         }
       ],
       "interactiveActivities": [

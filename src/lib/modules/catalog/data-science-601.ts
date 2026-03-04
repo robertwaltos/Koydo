@@ -46,19 +46,19 @@ export const DataScience601Module: LearningModule = {
           "id": "data-science-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for Data Science, framing how experimental design and causal inference interact across complex systems."
+          "content": "In this lesson, we will dive deep into the advanced boundaries of Data Science. We will discover how experimental design and causal inference are interconnected and how they function within complex systems. By grasping these important concepts, you will be better equipped to make informed and effective decisions in your data-driven projects. This understanding is essential for anyone looking to excel in the field of Data Science, as it lays the groundwork for robust analysis and interpretation of data.\nContext recap: In this lesson, we will dive deep into the advanced boundaries of Data Science. We will discover how experimental design and causal inference are interconnected and how they function within complex systems. By grasping these important concepts, you will be better equipped to make informed and effective decisions in your data-driven projects. This understanding is essential for anyone looking to excel in the field of Data Science, as it lays the groundwork for robust analysis and interpretation of data."
         },
         {
           "id": "data-science-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "Learners model causal pathways, uncertainty ranges, and hidden assumptions before intervention design."
+          "content": "In this section, learners will model causal pathways, which are the routes through which one event influences another. We will also examine uncertainty ranges and hidden assumptions that may affect our designs before we create any interventions. This helps us to think critically about our decisions.\nContext recap: In this section, learners will model causal pathways, which are the routes through which one event influences another. We will also examine uncertainty ranges and hidden assumptions that may affect our designs before we create any interventions. This helps us to think critically about our decisions."
         },
         {
           "id": "data-science-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "All advanced claims are tied to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to note that all advanced claims in Data Science must be supported by measurable indicators. This means we need to have confidence bounds and review checkpoints to ensure our findings are reliable and valid. This lesson emphasizes the importance of rigor in our research.\nContext recap: It is important to note that all advanced claims in Data Science must be supported by measurable indicators. This means we need to have confidence bounds and review checkpoints to ensure our findings are reliable and valid. This lesson emphasizes the importance of rigor in our research."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const DataScience601Module: LearningModule = {
           "id": "data-science-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "Learners build a specialist workflow emphasizing research-grade reasoning, leadership decision quality, and publishable capstone defense, then test it against adversarial or edge-case conditions."
+          "content": "In this engaging interactive lab, students will create a specialized workflow that highlights the importance of thorough research reasoning, making thoughtful leadership decisions, and crafting a compelling defense for their capstone projects. This process will help them understand how to present their findings effectively. Once they have built their workflow, they will put it to the test by challenging it with difficult scenarios and edge cases. This step is crucial as it ensures that their workflow is strong and can handle unexpected situations, preparing them for real-world applications.\nContext recap: In this engaging interactive lab, students will create a specialized workflow that highlights the importance of thorough research reasoning, making thoughtful leadership decisions, and crafting a compelling defense for their capstone projects. This process will help them understand how to present their findings effectively. Once they have built their workflow, they will put it to the test by challenging it with difficult scenarios and edge cases. This step is crucial as it ensures that their workflow is strong and can handle unexpected situations, preparing them for real-world applications."
         },
         {
           "id": "data-science-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "Robust specialist workflows require control gates, rollback criteria, and accountability checkpoints."
+          "content": "To create effective specialist workflows, it is essential to incorporate control gates, rollback criteria, and accountability checkpoints. These elements help ensure that the workflow remains reliable and can adapt to unexpected challenges.\nContext recap: To create effective specialist workflows, it is essential to incorporate control gates, rollback criteria, and accountability checkpoints. These elements help ensure that the workflow remains reliable and can adapt to unexpected challenges.\nWhy this matters: Controls and Failure Gates helps learners in Data Science connect ideas from Data Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -396,19 +396,19 @@ export const DataScience601Module: LearningModule = {
           "id": "data-science-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "Case focus: a decision-support pipeline where correlation-driven gains conflict with causal confidence requirements. Learners map strategic objectives, failure risks, and governance constraints before action."
+          "content": "In this engaging case study, we will explore a decision-support pipeline that highlights an important challenge: the benefits we gain from looking at correlations can sometimes clash with the need for strong causal confidence. This means that while we may see patterns in the data that suggest a relationship, we must also ensure that we understand the true cause-and-effect dynamics at play. As part of this learning experience, you will work on mapping out strategic objectives that guide our decisions, identifying potential risks that could lead to failure, and understanding the governance constraints that we must navigate before taking any action. This comprehensive approach will help you develop a well-rounded perspective on the complexities involved in data science decision-making."
         },
         {
           "id": "data-science-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "Options are scored across effectiveness, reliability, equity, feasibility, and long-term maintainability."
+          "content": "In this section, we will learn how to score different options based on various criteria such as effectiveness, reliability, equity, feasibility, and long-term maintainability. This scoring helps us make informed decisions about which options to pursue.\nContext recap: In this section, we will learn how to score different options based on various criteria such as effectiveness, reliability, equity, feasibility, and long-term maintainability. This scoring helps us make informed decisions about which options to pursue.\nWhy this matters: Tradeoff Matrix and Option Scoring helps learners in Data Science connect ideas from Data Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "data-science-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are translated into safeguards, response playbooks, and measurable adaptation loops."
+          "content": "When we encounter failures, it is important to translate those experiences into safeguards and response playbooks. This lesson will cover how to create measurable adaptation loops that help us learn from failures and improve our processes.\nContext recap: When we encounter failures, it is important to translate those experiences into safeguards and response playbooks. This lesson will cover how to create measurable adaptation loops that help us learn from failures and improve our processes.\nWhy this matters: Recovery and Adaptation Design helps learners in Data Science connect ideas from Data Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -447,13 +447,13 @@ export const DataScience601Module: LearningModule = {
           "id": "data-science-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "Learners configure simulation assumptions, thresholds, and intervention pathways under high-stakes conditions."
+          "content": "In this practice session, learners will configure simulation assumptions, set thresholds, and determine intervention pathways under high-stakes conditions. This hands-on experience will help them understand how to navigate complex scenarios effectively.\nContext recap: In this practice session, learners will configure simulation assumptions, set thresholds, and determine intervention pathways under high-stakes conditions. This hands-on experience will help them understand how to navigate complex scenarios effectively.\nWhy this matters: Scenario Modeling helps learners in Data Science connect ideas from Data Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "data-science-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each run, teams review target attainment, side effects, and governance compliance gaps."
+          "content": "After each simulation run, teams will take the time to carefully review their performance. This includes looking at whether they achieved their targets, identifying any unexpected side effects that may have occurred, and checking for any gaps in governance compliance. This debriefing process is essential for fostering continuous improvement and ensuring that future simulations are even more effective.\nContext recap: After each simulation run, teams will take the time to carefully review their performance. This includes looking at whether they achieved their targets, identifying any unexpected side effects that may have occurred, and checking for any gaps in governance compliance. This debriefing process is essential for fostering continuous improvement and ensuring that future simulations are even more effective."
         }
       ],
       "interactiveActivities": [
@@ -728,19 +728,19 @@ export const DataScience601Module: LearningModule = {
           "id": "data-science-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners evaluate how outcomes are distributed across stakeholders, including delayed and indirect effects."
+          "content": "In this lesson, learners will evaluate how the outcomes of their projects are distributed among different stakeholders. This includes considering both delayed and indirect effects, which is important for understanding the broader impact of their work.\nContext recap: In this lesson, learners will evaluate how the outcomes of their projects are distributed among different stakeholders. This includes considering both delayed and indirect effects, which is important for understanding the broader impact of their work.\nWhy this matters: Stakeholder Impact Distribution helps learners in Data Science connect ideas from Data Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "data-science-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "Accountability is implemented through traceability standards, review rights, and remediation obligations."
+          "content": "To ensure accountability in Data Science projects, it is essential to implement traceability standards, establish review rights, and set up remediation obligations. This framework helps maintain trust and integrity in the research process.\nContext recap: To ensure accountability in Data Science projects, it is essential to implement traceability standards, establish review rights, and set up remediation obligations. This framework helps maintain trust and integrity in the research process.\nWhy this matters: Accountability System Design helps learners in Data Science connect ideas from Data Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "data-science-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A leadership checklist links strategy, ethics, policy, and operational controls into one review artifact."
+          "content": "A responsible leadership checklist is an important tool that helps connect different aspects of leadership, including strategy, ethics, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all these elements work together effectively to promote good governance and positive public impact in data science projects.\nContext recap: A responsible leadership checklist is an important tool that helps connect different aspects of leadership, including strategy, ethics, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all these elements work together effectively to promote good governance and positive public impact in data science projects."
         }
       ],
       "flashcards": [
@@ -779,13 +779,13 @@ export const DataScience601Module: LearningModule = {
           "id": "data-science-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "Learners assemble a capstone charter with objectives, constraints, metrics, governance controls, and evidence plan."
+          "content": "In this activity, learners will create a capstone charter. This document will outline the project's objectives, identify any constraints, establish metrics for success, and define governance controls. Additionally, it will include a plan for gathering evidence to support the project's findings. This process helps students think critically about their project and ensures they are prepared for future discussions.\nContext recap: In this activity, learners will create a capstone charter. This document will outline the project's objectives, identify any constraints, establish metrics for success, and define governance controls. Additionally, it will include a plan for gathering evidence to support the project's findings. This process helps students think critically about their project and ensures they are prepared for future discussions."
         },
         {
           "id": "data-science-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "The final practice round trains learners to defend decisions against technical, governance, and stakeholder critiques."
+          "content": "During the final practice round, learners will have the opportunity to rehearse defending their decisions. This exercise prepares them to respond to critiques from technical experts, governance bodies, and stakeholders. By simulating these discussions, students build confidence and improve their ability to articulate their reasoning and defend their choices effectively.\nContext recap: During the final practice round, learners will have the opportunity to rehearse defending their decisions. This exercise prepares them to respond to critiques from technical experts, governance bodies, and stakeholders. By simulating these discussions, students build confidence and improve their ability to articulate their reasoning and defend their choices effectively."
         }
       ],
       "interactiveActivities": [

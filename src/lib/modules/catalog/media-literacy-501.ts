@@ -47,19 +47,19 @@ export const MediaLiteracy501Module: LearningModule = {
           "id": "media-literacy-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Media Literacy, with focus on information ecosystem diagnostics and misinformation detection and verification workflows."
+          "content": "In this lesson, we will explore the advanced boundaries of Media Literacy. We will focus on understanding how to analyze the information ecosystem, which includes identifying and diagnosing various sources of information. Additionally, we will learn about the processes involved in detecting misinformation and verifying the accuracy of information through structured workflows. This knowledge will help us navigate the complex world of media more effectively.\nContext recap: In this lesson, we will explore the advanced boundaries of Media Literacy. We will focus on understanding how to analyze the information ecosystem, which includes identifying and diagnosing various sources of information. Additionally, we will learn about the processes involved in detecting misinformation and verifying the accuracy of information through structured workflows. This knowledge will help us navigate the complex world of media more effectively."
         },
         {
           "id": "media-literacy-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which means identifying how different events or factors are connected. We will also explore uncertainty ranges, which help us understand the limits of our knowledge about these connections. Finally, we will look at system dependencies, which are the relationships between different parts of a system. This foundational knowledge will be essential for planning effective interventions in media literacy.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which means identifying how different events or factors are connected. We will also explore uncertainty ranges, which help us understand the limits of our knowledge about these connections. Finally, we will look at system dependencies, which are the relationships between different parts of a system. This foundational knowledge will be essential for planning effective interventions in media literacy."
         },
         {
           "id": "media-literacy-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize that all claims we make should be linked to measurable indicators. This means we need to have clear evidence that supports our statements. We will also discuss the importance of establishing confidence bounds, which help us understand how certain we are about our claims. Lastly, we will introduce review checkpoints, which are moments where we can reassess our claims and ensure they are still valid. This structured approach will enhance our critical thinking skills.\nContext recap: In our recap, we will emphasize that all claims we make should be linked to measurable indicators. This means we need to have clear evidence that supports our statements. We will also discuss the importance of establishing confidence bounds, which help us understand how certain we are about our claims. Lastly, we will introduce review checkpoints, which are moments where we can reassess our claims and ensure they are still valid."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const MediaLiteracy501Module: LearningModule = {
           "id": "media-literacy-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive session, learners will have the opportunity to design their own specialist workflows. This means creating step-by-step processes for how to analyze and respond to media information. After designing these workflows, we will stress-test them by putting them through challenging scenarios. This practice will help learners understand how to adapt their methods in real-world situations and ensure they are effective under pressure.\nContext recap: In this interactive session, learners will have the opportunity to design their own specialist workflows. This means creating step-by-step processes for how to analyze and respond to media information. After designing these workflows, we will stress-test them by putting them through challenging scenarios. This practice will help learners understand how to adapt their methods in real-world situations and ensure they are effective under pressure."
         },
         {
           "id": "media-literacy-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss the architecture of control gates within our workflows. This includes integrating important checkpoints, which are points where we can pause and evaluate our progress. We will also cover rollback criteria, which are guidelines for what to do if something goes wrong, and threshold-based escalation, which helps us determine when to take further action. Understanding these elements will enhance our ability to manage workflows effectively.\nContext recap: In our recap, we will discuss the architecture of control gates within our workflows. This includes integrating important checkpoints, which are points where we can pause and evaluate our progress. We will also cover rollback criteria, which are guidelines for what to do if something goes wrong, and threshold-based escalation, which helps us determine when to take further action. Understanding these elements will enhance our ability to manage workflows effectively."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const MediaLiteracy501Module: LearningModule = {
           "id": "media-literacy-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in information ecosystem diagnostics and platform incentives and narrative influence analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints within information ecosystem diagnostics. We will analyze how platform incentives and narrative influences can affect the way information is shared and perceived. By understanding these dynamics, learners will be better equipped to navigate the complexities of media and make informed decisions.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within information ecosystem diagnostics. We will analyze how platform incentives and narrative influences can affect the way information is shared and perceived. By understanding these dynamics, learners will be better equipped to navigate the complexities of media and make informed decisions."
         },
         {
           "id": "media-literacy-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on several important dimensions: safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in making decisions related to media literacy. By evaluating these factors, learners will develop a more nuanced understanding of how to approach complex media-related issues.\nContext recap: In this practice session, learners will compare different options based on several important dimensions: safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in making decisions related to media literacy. By evaluating these factors, learners will develop a more nuanced understanding of how to approach complex media-related issues."
         },
         {
           "id": "media-literacy-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will emphasize that each recommendation we make should include several key components. These include the assumptions we are making, the evidence that supports our claims, the risk controls we have in place to mitigate potential issues, and fallback plans that outline what to do if things do not go as expected. This structured approach will enhance our decision-making skills.\nContext recap: In our recap, we will emphasize that each recommendation we make should include several key components. These include the assumptions we are making, the evidence that supports our claims, the risk controls we have in place to mitigate potential issues, and fallback plans that outline what to do if things do not go as expected. This structured approach will enhance our decision-making skills."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const MediaLiteracy501Module: LearningModule = {
           "id": "media-literacy-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive session, learners will operate scenario controls, which means they will manage different aspects of a media situation. They will need to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow. This practice will help learners develop their skills in managing complex media scenarios effectively.\nContext recap: In this interactive session, learners will operate scenario controls, which means they will manage different aspects of a media situation. They will need to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow. This practice will help learners develop their skills in managing complex media scenarios effectively."
         },
         {
           "id": "media-literacy-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the importance of effective responses in media scenarios. This means updating control gates, which are the mechanisms that help us manage our workflows, without losing traceability or accountability. We will explore how to ensure that our actions are transparent and that we can track our decisions over time. This understanding will be crucial for maintaining integrity in media literacy practices.\nContext recap: In our recap, we will discuss the importance of effective responses in media scenarios. This means updating control gates, which are the mechanisms that help us manage our workflows, without losing traceability or accountability. We will explore how to ensure that our actions are transparent and that we can track our decisions over time. This understanding will be crucial for maintaining integrity in media literacy practices."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const MediaLiteracy501Module: LearningModule = {
           "id": "media-literacy-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of impacts among different stakeholders. This means identifying who benefits, who bears burdens, and what delayed effects may arise from decisions made in media contexts. By understanding these dynamics, learners will gain insight into the broader implications of media literacy and how it affects various groups in society.\nContext recap: In this lesson, learners will map out the distribution of impacts among different stakeholders. This means identifying who benefits, who bears burdens, and what delayed effects may arise from decisions made in media contexts. By understanding these dynamics, learners will gain insight into the broader implications of media literacy and how it affects various groups in society."
         },
         {
           "id": "media-literacy-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this part of the lesson, we will explore the architecture of accountability within decision-making processes. This includes understanding how we can trace decisions back to their origins, the rights of individuals to review those decisions, and the obligations we have to remediate any issues that arise. By integrating these elements, learners will develop a strong foundation in ethical decision-making in media literacy.\nContext recap: In this part of the lesson, we will explore the architecture of accountability within decision-making processes. This includes understanding how we can trace decisions back to their origins, the rights of individuals to review those decisions, and the obligations we have to remediate any issues that arise. By integrating these elements, learners will develop a strong foundation in ethical decision-making in media literacy."
         },
         {
           "id": "media-literacy-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "To ensure responsible leadership, it's important to have a checklist that connects various important elements. This checklist should include the expected outcomes of our actions, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By using this checklist, leaders can make informed decisions that positively impact the community.\nContext recap: To ensure responsible leadership, it's important to have a checklist that connects various important elements. This checklist should include the expected outcomes of our actions, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. By using this checklist, leaders can make informed decisions that positively impact the community."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const MediaLiteracy501Module: LearningModule = {
           "id": "media-literacy-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims that express their main ideas, supporting evidence that backs up those claims, and an understanding of the uncertainties involved. Additionally, they will outline possible pathways for remediation, which are steps to take if things don't go as planned. This practice helps learners think critically and prepare for real-world situations.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims that express their main ideas, supporting evidence that backs up those claims, and an understanding of the uncertainties involved. Additionally, they will outline possible pathways for remediation, which are steps to take if things don't go as planned. This practice helps learners think critically and prepare for real-world situations."
         },
         {
           "id": "media-literacy-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal, learners will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This preparation is crucial as it helps learners build confidence and improve their communication skills, ensuring they can effectively defend their ideas and proposals.\nContext recap: During this rehearsal, learners will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of different stakeholders. This preparation is crucial as it helps learners build confidence and improve their communication skills, ensuring they can effectively defend their ideas and proposals."
         }
       ],
       "interactiveActivities": [

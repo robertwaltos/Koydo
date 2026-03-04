@@ -1,14 +1,12 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
+import {
+  type StreamingTargets,
+  scoreDeviceDiscoveryConfidence,
+} from "@/lib/experience/device-gateway-confidence";
 
 /* ── Types ── */
-
-type StreamingTargets = {
-  chromecast: boolean;
-  airplay: boolean;
-  dlna: boolean;
-};
 
 export interface DeviceCapabilities {
   /** Human-readable label for the current device tier */
@@ -37,6 +35,14 @@ export interface DeviceCapabilities {
   isCharging: boolean | null;
   /** Remote streaming target capability probe */
   streamingTargets: StreamingTargets;
+  /** Deterministic QA confidence score for discovery signals */
+  discoveryConfidence: number;
+  /** Confidence band used by QA harness thresholds */
+  discoveryConfidenceBand: "low" | "medium" | "high";
+  /** Number of positive capability signals used in confidence scoring */
+  discoverySignalCount: number;
+  /** Number of detected streaming targets (0-3) */
+  streamingTargetCount: number;
   /** Actionable upgrade guidance for tier 0/1 users */
   upgradePath: string[];
   /** Capability detection version for analytics/debug parity */
@@ -184,10 +190,93 @@ function buildUpgradePath(input: {
   return steps;
 }
 
-export function DeviceGatewayProvider({ children }: { children: ReactNode }) {
+function emitDeviceTierTelemetry(input: {
+  tier: number;
+  gpuTier: number;
+  hasWebXR: boolean;
+  hasWebGPU: boolean;
+  supportsWebGL2: boolean;
+  maxTextureSize: number | null;
+  canCast: boolean;
+  lowPowerModeLikely: boolean;
+  batteryLevel: number | null;
+  supportedWebXRModes: string[];
+  streamingTargets: StreamingTargets;
+  discoveryConfidence: number;
+  discoveryConfidenceBand: "low" | "medium" | "high";
+  discoverySignalCount: number;
+  streamingTargetCount: number;
+}): void {
+  if (typeof navigator === "undefined") return;
+
+  const castTargets = [
+    input.streamingTargets.chromecast ? "chromecast" : null,
+    input.streamingTargets.airplay ? "airplay" : null,
+    input.streamingTargets.dlna ? "dlna" : null,
+  ].filter((value): value is string => Boolean(value));
+
+  const body = JSON.stringify({
+    events: [
+      {
+        eventType: "activity_interacted",
+        lessonId: "experience-hub-device-gateway",
+        moduleId: "voyager-zero-e17",
+        payload: {
+          detectionVersion: DETECTION_VERSION,
+          tier: input.tier,
+          gpuTier: input.gpuTier,
+          hasWebXR: input.hasWebXR,
+          hasWebGPU: input.hasWebGPU,
+          supportsWebGL2: input.supportsWebGL2,
+          maxTextureSize: input.maxTextureSize,
+          canCast: input.canCast,
+          lowPowerModeLikely: input.lowPowerModeLikely,
+          batteryLevel: input.batteryLevel,
+          xrModes: input.supportedWebXRModes,
+          castTargets,
+          discoveryConfidence: input.discoveryConfidence,
+          discoveryConfidenceBand: input.discoveryConfidenceBand,
+          discoverySignalCount: input.discoverySignalCount,
+          streamingTargetCount: input.streamingTargetCount,
+        },
+      },
+    ],
+  });
+
+  if (typeof navigator.sendBeacon === "function") {
+    const blob = new Blob([body], { type: "application/json" });
+    navigator.sendBeacon("/api/telemetry/events", blob);
+    return;
+  }
+
+  void fetch("/api/telemetry/events", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body,
+    keepalive: true,
+  }).catch(() => undefined);
+}
+
+export function DeviceGatewayProvider({
+  children,
+  enabled = true,
+}: {
+  children: ReactNode;
+  enabled?: boolean;
+}) {
   const [state, setState] = useState<DeviceGatewayContextValue>(DEFAULT_CONTEXT);
 
   useEffect(() => {
+    if (!enabled) {
+      setState({
+        canSpatial: false,
+        isReady: true,
+        tier: 0,
+        capabilities: null,
+      });
+      return;
+    }
+
     const detect = async () => {
       let hasWebXR = false;
       const supportedWebXRModes: string[] = [];
@@ -288,6 +377,17 @@ export function DeviceGatewayProvider({ children }: { children: ReactNode }) {
 
       const streamingTargets = detectStreamingTargets();
       const canCast = streamingTargets.chromecast || streamingTargets.airplay || streamingTargets.dlna;
+      const discoveryConfidence = scoreDeviceDiscoveryConfidence({
+        tier,
+        gpuTier: baseTier,
+        hasWebXR,
+        hasWebGPU,
+        supportsWebGL2,
+        maxTextureSize,
+        maxCombinedTextureImageUnits,
+        lowPowerModeLikely,
+        streamingTargets,
+      });
 
       const upgradePath = buildUpgradePath({
         tier,
@@ -296,6 +396,24 @@ export function DeviceGatewayProvider({ children }: { children: ReactNode }) {
         supportsWebGL2,
         lowPowerModeLikely,
         canCast,
+      });
+
+      emitDeviceTierTelemetry({
+        tier,
+        gpuTier: baseTier,
+        hasWebXR,
+        hasWebGPU,
+        supportsWebGL2,
+        maxTextureSize,
+        canCast,
+        lowPowerModeLikely,
+        batteryLevel,
+        supportedWebXRModes,
+        streamingTargets,
+        discoveryConfidence: discoveryConfidence.confidence,
+        discoveryConfidenceBand: discoveryConfidence.band,
+        discoverySignalCount: discoveryConfidence.signalCount,
+        streamingTargetCount: discoveryConfidence.streamingTargetCount,
       });
 
       setState({
@@ -316,6 +434,10 @@ export function DeviceGatewayProvider({ children }: { children: ReactNode }) {
           batteryLevel,
           isCharging,
           streamingTargets,
+          discoveryConfidence: discoveryConfidence.confidence,
+          discoveryConfidenceBand: discoveryConfidence.band,
+          discoverySignalCount: discoveryConfidence.signalCount,
+          streamingTargetCount: discoveryConfidence.streamingTargetCount,
           upgradePath,
           detectionVersion: DETECTION_VERSION,
         },
@@ -323,7 +445,7 @@ export function DeviceGatewayProvider({ children }: { children: ReactNode }) {
     };
 
     void detect();
-  }, []);
+  }, [enabled]);
 
   return (
     <DeviceGatewayContext.Provider value={state}>

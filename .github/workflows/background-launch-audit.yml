@@ -1,0 +1,90 @@
+name: Background Launch Audit
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: Force execution regardless of cadence decision
+        required: false
+        default: "false"
+      max_days:
+        description: Max days allowed between runs (1-30)
+        required: false
+        default: "5"
+      daily_probability:
+        description: Daily random execution probability (0-1)
+        required: false
+        default: "0.35"
+
+concurrency:
+  group: background-launch-audit
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL || secrets.NEXT_PUBLIC_SUPABASE_URL || '' }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY || '' }}
+      COMPLIANCE_EVIDENCE_STORAGE_PROVIDER: ${{ vars.COMPLIANCE_EVIDENCE_STORAGE_PROVIDER || 'google_vault_export' }}
+      COMPLIANCE_EVIDENCE_RETENTION_DAYS: ${{ vars.COMPLIANCE_EVIDENCE_RETENTION_DAYS || '2555' }}
+      COMPLIANCE_TRIPLE_PASS_TARGET_SCORE: ${{ vars.COMPLIANCE_TRIPLE_PASS_TARGET_SCORE || '10' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run randomized background launch audit
+        shell: bash
+        env:
+          INPUT_FORCE_RUN: ${{ inputs.force_run || 'false' }}
+          INPUT_MAX_DAYS: ${{ inputs.max_days || '5' }}
+          INPUT_DAILY_PROBABILITY: ${{ inputs.daily_probability || '0.35' }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "${NEXT_PUBLIC_SUPABASE_URL}" || -z "${SUPABASE_SERVICE_ROLE_KEY}" ]]; then
+            echo "Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY."
+            exit 1
+          fi
+
+          extra_flags=""
+          if [[ "${INPUT_FORCE_RUN}" == "true" ]]; then
+            extra_flags="${extra_flags} --force"
+          fi
+
+          npm run compliance:background-audit -- \
+            --apply \
+            --max-days "${INPUT_MAX_DAYS}" \
+            --daily-probability "${INPUT_DAILY_PROBABILITY}" \
+            --target-score "${COMPLIANCE_TRIPLE_PASS_TARGET_SCORE}" \
+            ${extra_flags}
+
+      - name: Upload background audit artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: background-launch-audit-bundle
+          path: |
+            public/APPSTORE-COMPLIANCE-AUDIT.json
+            public/APPSTORE-COMPLIANCE-AUDIT.md
+            public/DB-READINESS-REPORT.json
+            public/DB-READINESS-REPORT.md
+            public/TYPECHECK-REPORT.json
+            public/TYPECHECK-REPORT.md
+            public/TRIPLE-PASS-LAUNCH-REVIEW.json
+            public/TRIPLE-PASS-LAUNCH-REVIEW.md
+            public/BACKGROUND-LAUNCH-AUDIT-LATEST.json
+            public/BACKGROUND-LAUNCH-AUDIT-LATEST.md

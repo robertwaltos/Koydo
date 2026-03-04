@@ -14,7 +14,7 @@ export async function GET() {
   const { data, error } = await admin
     .from("support_tickets")
     .select(
-      "id, user_id, subject, description, status, priority, assigned_to, resolution_notes, created_at, updated_at, resolved_at"
+      "id, user_id, subject, description, status, priority, ticket_type, parent_confirmation_required, parent_confirmation_status, ai_response_status, ai_response_text, auto_response_model, first_response_due_at, first_response_at, sla_breached_at, assigned_to, resolution_notes, created_at, updated_at, resolved_at"
     )
     .order("created_at", { ascending: false })
     .limit(5000);
@@ -34,6 +34,15 @@ export async function GET() {
     "description",
     "status",
     "priority",
+    "ticket_type",
+    "parent_confirmation_required",
+    "parent_confirmation_status",
+    "ai_response_status",
+    "ai_response_text",
+    "auto_response_model",
+    "first_response_due_at",
+    "first_response_at",
+    "sla_breached_at",
     "assigned_to",
     "resolution_notes",
     "created_at",

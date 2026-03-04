@@ -9,15 +9,27 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    "**/.next/**",
     "out/**",
+    "**/out/**",
     "build/**",
     "**/build/**",
     "android/**",
     "ios/**",
     "scripts/**",
     "storybook-static/**",
+    "**/storybook-static/**",
     "next-env.d.ts",
+    // Generated artifacts and external workspaces.
+    "e2e/report/**",
+    "playwright-report/**",
     "External_AI_Agents/**",
+    "data/**",
+    "eduforge-web/**",
+    ".claude/**",
+    "**/.claude/**",
+    "tmp/**",
+    "**/tmp/**",
   ]),
 ]);
 

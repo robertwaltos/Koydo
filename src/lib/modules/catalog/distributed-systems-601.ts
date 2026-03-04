@@ -46,19 +46,19 @@ export const DistributedSystems601Module: LearningModule = {
           "id": "distributed-systems-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Distributed Systems, with focus on distributed consistency strategy and reliability and fault-domain design."
+          "content": "In this lesson, we will explore the advanced concepts of scope and boundary design in Distributed Systems. We will focus on how to create strategies that ensure consistency across distributed systems, as well as how to design for reliability and manage fault domains effectively. Understanding these elements is crucial for building systems that can operate smoothly even when faced with challenges.\nContext recap: In this lesson, we will explore the advanced concepts of scope and boundary design in Distributed Systems. We will focus on how to create strategies that ensure consistency across distributed systems, as well as how to design for reliability and manage fault domains effectively. Understanding these elements is crucial for building systems that can operate smoothly even when faced with challenges."
         },
         {
           "id": "distributed-systems-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within the system. This process is essential for planning effective interventions, as it helps us understand how different factors influence one another and what potential outcomes we might expect.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within the system. This process is essential for planning effective interventions, as it helps us understand how different factors influence one another and what potential outcomes we might expect."
         },
         {
           "id": "distributed-systems-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims made in our analysis are backed by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing this, we can ensure that our conclusions are reliable and that we can track our progress effectively.\nContext recap: It is important to ensure that all claims made in our analysis are backed by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing this, we can ensure that our conclusions are reliable and that we can track our progress effectively."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const DistributedSystems601Module: LearningModule = {
           "id": "distributed-systems-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding the practical applications of theoretical concepts.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding the practical applications of theoretical concepts."
         },
         {
           "id": "distributed-systems-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows can be enhanced by integrating control gates. These gates will include checkpoints to monitor progress, rollback criteria to revert to previous states if necessary, and threshold-based escalation to manage situations when certain limits are reached. This structured approach helps maintain control over complex processes.\nContext recap: In this recap, we will discuss how workflows can be enhanced by integrating control gates. These gates will include checkpoints to monitor progress, rollback criteria to revert to previous states if necessary, and threshold-based escalation to manage situations when certain limits are reached. This structured approach helps maintain control over complex processes."
         }
       ],
       "interactiveActivities": [
@@ -367,19 +367,19 @@ export const DistributedSystems601Module: LearningModule = {
           "id": "distributed-systems-601-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a global service architecture handling partial failures, consistency delays, and incident escalation at scale. Learners map constraints, risk classes, and governance boundaries."
+          "content": "In this engaging case study, we will explore a complex global service architecture that is designed to manage various challenges, including partial failures, delays in achieving consistency, and the escalation of incidents that can occur on a large scale. As part of this analysis, learners will have the opportunity to map out the constraints that affect the system, identify different classes of risk that may arise, and gain a deeper understanding of the governance boundaries that are relevant to this scenario. This thorough analysis is essential for developing systems that are not only effective but also resilient in the face of challenges."
         },
         {
           "id": "distributed-systems-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Alternatives are scored across effectiveness, feasibility, risk, equity, and implementation cost."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. Here, alternatives will be evaluated and scored based on several criteria, including their effectiveness, feasibility, associated risks, equity, and the costs of implementation. This structured evaluation helps in making informed decisions about which options to pursue.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Here, alternatives will be evaluated and scored based on several criteria, including their effectiveness, feasibility, associated risks, equity, and the costs of implementation. This structured evaluation helps in making informed decisions about which options to pursue."
         },
         {
           "id": "distributed-systems-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are mapped to remediation actions and measurable recovery triggers."
+          "content": "In this recap, we will discuss how to design for recovery and adaptation in our systems. This involves mapping failure signatures, which are patterns that indicate how a system fails, to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help us monitor when a system has returned to normal operation.\nContext recap: In this recap, we will discuss how to design for recovery and adaptation in our systems. This involves mapping failure signatures, which are patterns that indicate how a system fails, to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help us monitor when a system has returned to normal operation."
         }
       ],
       "flashcards": [
@@ -418,13 +418,13 @@ export const DistributedSystems601Module: LearningModule = {
           "id": "distributed-systems-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners configure interventions, constraints, and escalation logic for high-stakes tests."
+          "content": "In this interactive practice session, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience allows learners to apply their knowledge in a simulated environment, preparing them for real-world scenarios where quick and effective decision-making is crucial.\nContext recap: In this interactive practice session, learners will configure various interventions, constraints, and escalation logic for high-stakes tests. This hands-on experience allows learners to apply their knowledge in a simulated environment, preparing them for real-world scenarios where quick and effective decision-making is crucial."
         },
         {
           "id": "distributed-systems-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Outcomes are reviewed for gains, side effects, and governance compliance gaps."
+          "content": "In this recap, we will review the outcomes of our simulations. We will analyze the gains achieved, any side effects that occurred, and identify gaps in governance compliance. This reflective process is essential for understanding the effectiveness of our strategies and for making necessary adjustments in future scenarios.\nContext recap: In this recap, we will review the outcomes of our simulations. We will analyze the gains achieved, any side effects that occurred, and identify gaps in governance compliance. This reflective process is essential for understanding the effectiveness of our strategies and for making necessary adjustments in future scenarios."
         }
       ],
       "interactiveActivities": [
@@ -675,19 +675,19 @@ export const DistributedSystems601Module: LearningModule = {
           "id": "distributed-systems-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits and burdens that different groups experience, as well as any delayed effects that may arise. Understanding these dynamics is key to ensuring that all voices are heard and considered in decision-making processes.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits and burdens that different groups experience, as well as any delayed effects that may arise. Understanding these dynamics is key to ensuring that all voices are heard and considered in decision-making processes."
         },
         {
           "id": "distributed-systems-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability within our systems. This includes ensuring that decision-making processes are traceable, that stakeholders have rights to review decisions, and that there are clear obligations for remediation when issues arise. This framework is essential for maintaining trust and integrity in distributed systems.\nContext recap: In this section, we will explore the architecture of accountability within our systems. This includes ensuring that decision-making processes are traceable, that stakeholders have rights to review decisions, and that there are clear obligations for remediation when issues arise. This framework is essential for maintaining trust and integrity in distributed systems."
         },
         {
           "id": "distributed-systems-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our systems. This checklist will guide us in making responsible decisions as leaders in distributed systems.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our systems. This checklist will guide us in making responsible decisions as leaders in distributed systems."
         }
       ],
       "flashcards": [
@@ -726,13 +726,13 @@ export const DistributedSystems601Module: LearningModule = {
           "id": "distributed-systems-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will work together to create a brief that includes your main claims, supporting evidence, the boundaries of uncertainty, and possible solutions for any issues that may arise. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this interactive activity, you will work together to create a brief that includes your main claims, supporting evidence, the boundaries of uncertainty, and possible solutions for any issues that may arise. This exercise will help you practice organizing your thoughts and presenting them clearly."
         },
         {
           "id": "distributed-systems-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will have the opportunity to practice your responses to questions and critiques from experts regarding technical aspects, governance issues, and stakeholder concerns. This rehearsal will prepare you to confidently defend your ideas and proposals in front of an audience.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and critiques from experts regarding technical aspects, governance issues, and stakeholder concerns. This rehearsal will prepare you to confidently defend your ideas and proposals in front of an audience."
         }
       ],
       "interactiveActivities": [

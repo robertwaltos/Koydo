@@ -46,19 +46,19 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for AI Workflows, framing how agent orchestration and retrieval quality interact across complex systems."
+          "content": "In this lesson, we will explore the advanced boundaries that define AI Workflows. We will discuss how the orchestration of agents, which are the components that work together in AI systems, interacts with the quality of information retrieval. This interaction is crucial when we are dealing with complex systems, as it helps us understand the limits and possibilities of AI applications.\nContext recap: In this lesson, we will explore the advanced boundaries that define AI Workflows. We will discuss how the orchestration of agents, which are the components that work together in AI systems, interacts with the quality of information retrieval. This interaction is crucial when we are dealing with complex systems, as it helps us understand the limits and possibilities of AI applications."
         },
         {
           "id": "ai-workflows-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "Learners model causal pathways, uncertainty ranges, and hidden assumptions before intervention design."
+          "content": "In this section, learners will engage in modeling causal pathways, which are the connections between causes and effects. They will also explore ranges of uncertainty and identify hidden assumptions that may affect their designs. This foundational understanding is essential before creating interventions, as it allows learners to anticipate potential challenges and outcomes.\nContext recap: In this section, learners will engage in modeling causal pathways, which are the connections between causes and effects. They will also explore ranges of uncertainty and identify hidden assumptions that may affect their designs. This foundational understanding is essential before creating interventions, as it allows learners to anticipate potential challenges and outcomes."
         },
         {
           "id": "ai-workflows-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "All advanced claims are tied to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to note that all advanced claims made in our work must be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By adhering to these standards, we can maintain rigor in our research and ensure that our conclusions are well-founded.\nContext recap: It is important to note that all advanced claims made in our work must be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By adhering to these standards, we can maintain rigor in our research and ensure that our conclusions are well-founded."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "Learners build a specialist workflow emphasizing research-grade reasoning, leadership decision quality, and publishable capstone defense, then test it against adversarial or edge-case conditions."
+          "content": "In this engaging interactive lab, participants will have the opportunity to design a specialized workflow that focuses on developing strong research reasoning skills, making informed leadership decisions, and preparing to defend their work in a way that is suitable for publication. Once they have constructed their workflows, they will face a series of challenging scenarios, referred to as adversarial or edge-case conditions. This testing phase is crucial as it allows learners to assess the strength and effectiveness of their workflows under pressure, ensuring they are well-prepared for real-world applications."
         },
         {
           "id": "ai-workflows-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "Robust specialist workflows require control gates, rollback criteria, and accountability checkpoints."
+          "content": "To ensure that our specialized workflows are effective, we must incorporate control gates, rollback criteria, and accountability checkpoints. These elements are essential for managing risks and ensuring that we can respond appropriately if something goes wrong. By having these safeguards in place, we can enhance the reliability of our workflows.\nContext recap: To ensure that our specialized workflows are effective, we must incorporate control gates, rollback criteria, and accountability checkpoints. These elements are essential for managing risks and ensuring that we can respond appropriately if something goes wrong. By having these safeguards in place, we can enhance the reliability of our workflows."
         }
       ],
       "interactiveActivities": [
@@ -396,19 +396,19 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "Case focus: an enterprise AI workflow integrating retrieval, tools, and policy enforcement under production load. Learners map strategic objectives, failure risks, and governance constraints before action."
+          "content": "In this case study, we will explore an enterprise AI workflow that combines information retrieval, a variety of tools, and the enforcement of policies while operating under a production load. As learners, you will engage in mapping out the strategic objectives that guide the workflow. Additionally, you will identify potential risks that could lead to failures and understand the governance constraints that must be adhered to before taking any action. This thorough approach ensures that we consider all important aspects of the workflow, leading to more effective and responsible outcomes."
         },
         {
           "id": "ai-workflows-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "Options are scored across effectiveness, reliability, equity, feasibility, and long-term maintainability."
+          "content": "In this section, we will discuss how to score different options based on several important criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By evaluating options through this tradeoff matrix, learners can make informed decisions that balance various factors in their workflows.\nContext recap: In this section, we will discuss how to score different options based on several important criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. By evaluating options through this tradeoff matrix, learners can make informed decisions that balance various factors in their workflows."
         },
         {
           "id": "ai-workflows-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are translated into safeguards, response playbooks, and measurable adaptation loops."
+          "content": "When we encounter failures, it is crucial to translate these experiences into actionable safeguards. This involves creating response playbooks and measurable adaptation loops that guide us in improving our processes. By learning from failures, we can design better systems that are more resilient and adaptable to change.\nContext recap: When we encounter failures, it is crucial to translate these experiences into actionable safeguards. This involves creating response playbooks and measurable adaptation loops that guide us in improving our processes. By learning from failures, we can design better systems that are more resilient and adaptable to change."
         }
       ],
       "flashcards": [
@@ -447,13 +447,13 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "Learners configure simulation assumptions, thresholds, and intervention pathways under high-stakes conditions."
+          "content": "In this practice session, learners will configure various assumptions, thresholds, and intervention pathways for their simulations. This exercise will take place under high-stakes conditions, allowing learners to understand the complexities and challenges that can arise in real-world scenarios. This hands-on experience is vital for developing practical skills.\nContext recap: In this practice session, learners will configure various assumptions, thresholds, and intervention pathways for their simulations. This exercise will take place under high-stakes conditions, allowing learners to understand the complexities and challenges that can arise in real-world scenarios. This hands-on experience is vital for developing practical skills."
         },
         {
           "id": "ai-workflows-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each run, teams review target attainment, side effects, and governance compliance gaps."
+          "content": "After each simulation run, teams will conduct a thorough review to assess how well they met their targets. They will analyze any side effects that occurred and identify any gaps in governance compliance. This debriefing process is essential for improving future performance and ensuring that all aspects of the workflow are aligned with best practices.\nContext recap: After each simulation run, teams will conduct a thorough review to assess how well they met their targets. They will analyze any side effects that occurred and identify any gaps in governance compliance. This debriefing process is essential for improving future performance and ensuring that all aspects of the workflow are aligned with best practices."
         }
       ],
       "interactiveActivities": [
@@ -728,19 +728,19 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners evaluate how outcomes are distributed across stakeholders, including delayed and indirect effects."
+          "content": "In this lesson, learners will evaluate how the outcomes of their workflows are distributed among various stakeholders. This includes considering both delayed and indirect effects that may not be immediately apparent. Understanding these impacts is crucial for ensuring that all voices are heard and that the benefits and drawbacks of AI systems are fairly distributed.\nContext recap: In this lesson, learners will evaluate how the outcomes of their workflows are distributed among various stakeholders. This includes considering both delayed and indirect effects that may not be immediately apparent. Understanding these impacts is crucial for ensuring that all voices are heard and that the benefits and drawbacks of AI systems are fairly distributed."
         },
         {
           "id": "ai-workflows-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "Accountability is implemented through traceability standards, review rights, and remediation obligations."
+          "content": "Designing an accountability system is essential for maintaining trust and transparency in AI workflows. This involves implementing traceability standards, establishing review rights, and defining remediation obligations. By creating a robust accountability framework, we can ensure that all stakeholders are held responsible for their actions and that there is a clear path for addressing any issues that arise.\nContext recap: Designing an accountability system is essential for maintaining trust and transparency in AI workflows. This involves implementing traceability standards, establishing review rights, and defining remediation obligations. By creating a robust accountability framework, we can ensure that all stakeholders are held responsible for their actions and that there is a clear path for addressing any issues that arise."
         },
         {
           "id": "ai-workflows-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A leadership checklist links strategy, ethics, policy, and operational controls into one review artifact."
+          "content": "A responsible leadership checklist is an important tool that helps leaders connect their strategies with ethical considerations, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are considered and aligned for effective governance.\nContext recap: A responsible leadership checklist is an important tool that helps leaders connect their strategies with ethical considerations, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are considered and aligned for effective governance."
         }
       ],
       "flashcards": [
@@ -779,13 +779,13 @@ export const AiWorkflows601Module: LearningModule = {
           "id": "ai-workflows-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "Learners assemble a capstone charter with objectives, constraints, metrics, governance controls, and evidence plan."
+          "content": "In this activity, learners will work together to create a capstone charter. This charter will outline the main objectives of their project, identify any constraints they might face, establish metrics for success, and define governance controls. Additionally, they will develop a plan for gathering evidence to support their findings and decisions.\nContext recap: In this activity, learners will work together to create a capstone charter. This charter will outline the main objectives of their project, identify any constraints they might face, establish metrics for success, and define governance controls. Additionally, they will develop a plan for gathering evidence to support their findings and decisions."
         },
         {
           "id": "ai-workflows-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "The final practice round trains learners to defend decisions against technical, governance, and stakeholder critiques."
+          "content": "During the final practice round, learners will have the opportunity to rehearse their defense. This session will prepare them to confidently present their decisions and respond to critiques from technical experts, governance representatives, and stakeholders. It is a crucial step in ensuring they are ready to articulate their reasoning and defend their choices effectively.\nContext recap: During the final practice round, learners will have the opportunity to rehearse their defense. This session will prepare them to confidently present their decisions and respond to critiques from technical experts, governance representatives, and stakeholders. It is a crucial step in ensuring they are ready to articulate their reasoning and defend their choices effectively."
         }
       ],
       "interactiveActivities": [

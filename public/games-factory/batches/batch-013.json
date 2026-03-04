@@ -1,0 +1,672 @@
+{
+  "generatedAt": "2026-03-04T15:43:40.864Z",
+  "batchId": "batch-013",
+  "batchNumber": 13,
+  "totalBatches": 42,
+  "throttle": {
+    "pauseMs": 120,
+    "sequential": true
+  },
+  "games": [
+    {
+      "id": "arcade-080",
+      "title": "Nova Lab",
+      "shortName": "Nova Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🎮",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-081",
+      "title": "Terra Lab",
+      "shortName": "Terra Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🧠",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-082",
+      "title": "Comet Lab",
+      "shortName": "Comet Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🧩",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-083",
+      "title": "Aurora Lab",
+      "shortName": "Aurora Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🎨",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-084",
+      "title": "Orbit Lab",
+      "shortName": "Orbit Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🌠",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-085",
+      "title": "Pixel Lab",
+      "shortName": "Pixel Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🏁",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-086",
+      "title": "Clover Lab",
+      "shortName": "Clover Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "arcade",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-087",
+      "title": "Harbor Lab",
+      "shortName": "Harbor Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "adventure",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-088",
+      "title": "Meadow Lab",
+      "shortName": "Meadow Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "logic",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-089",
+      "title": "Dawn Lab",
+      "shortName": "Dawn Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "creative",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "story-explorer",
+        "label": "Story Explorer",
+        "subject": "geography",
+        "tags": [
+          "dora-style",
+          "exploration",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-experience-template",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-090",
+      "title": "Summit Lab",
+      "shortName": "Summit Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "science",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "bio-lab",
+        "label": "Bio Lab",
+        "subject": "biology",
+        "tags": [
+          "science",
+          "systems",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-science-sim",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-091",
+      "title": "Prism Lab",
+      "shortName": "Prism Lab",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "math",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "subject-mastery",
+        "label": "Subject Mastery",
+        "subject": "cross-subject",
+        "tags": [
+          "educational",
+          "assessment",
+          "adaptive-difficulty"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-quiz-factory",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    }
+  ]
+}

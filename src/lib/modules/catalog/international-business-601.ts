@@ -47,19 +47,19 @@ export const InternationalBusiness601Module: LearningModule = {
           "id": "international-business-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for International Business, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will delve into the advanced ideas surrounding scope boundaries in the field of International Business. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will discuss how to design operations that lead to successful execution of business strategies. This knowledge is crucial as it will empower you to recognize both the limitations and opportunities that exist in various international business environments, helping you make informed decisions in your future career.\nContext recap: In this lesson, we will delve into the advanced ideas surrounding scope boundaries in the field of International Business. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will discuss how to design operations that lead to successful execution of business strategies. This knowledge is crucial as it will empower you to recognize both the limitations and opportunities that exist in various international business environments, helping you make informed decisions in your future career."
         },
         {
           "id": "international-business-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a business. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in business scenarios.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a business. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in business scenarios."
         },
         {
           "id": "international-business-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we emphasize that all claims made in business decisions should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our decisions are based on solid evidence and can be evaluated effectively.\nContext recap: In this recap, we emphasize that all claims made in business decisions should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our decisions are based on solid evidence and can be evaluated effectively."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const InternationalBusiness601Module: LearningModule = {
           "id": "international-business-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific business needs. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding real-world business challenges.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific business needs. They will also conduct stress tests on these workflows, simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding real-world business challenges."
         },
         {
           "id": "international-business-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss the importance of integrating control gates into workflows. These gates serve as checkpoints that help monitor progress, establish rollback criteria for when things go wrong, and set up threshold-based escalation procedures to address issues effectively.\nContext recap: In this recap, we will discuss the importance of integrating control gates into workflows. These gates serve as checkpoints that help monitor progress, establish rollback criteria for when things go wrong, and set up threshold-based escalation procedures to address issues effectively."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const InternationalBusiness601Module: LearningModule = {
           "id": "international-business-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in business systems diagnostics. We will analyze the impact of various business decisions and the trade-offs that must be considered. Understanding these dynamics is essential for making informed decisions in international business.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in business systems diagnostics. We will analyze the impact of various business decisions and the trade-offs that must be considered. Understanding these dynamics is essential for making informed decisions in international business."
         },
         {
           "id": "international-business-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how they affect various stakeholders.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how they affect various stakeholders."
         },
         {
           "id": "international-business-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will review the structure of a decision memo. Each recommendation made should clearly outline the assumptions behind it, the evidence supporting it, the risk controls in place, and any fallback plans that can be activated if things do not go as expected. This clarity is crucial for effective decision-making.\nContext recap: In this recap, we will review the structure of a decision memo. Each recommendation made should clearly outline the assumptions behind it, the evidence supporting it, the risk controls in place, and any fallback plans that can be activated if things do not go as expected. This clarity is crucial for effective decision-making."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const InternationalBusiness601Module: LearningModule = {
           "id": "international-business-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different business situations. They will learn how to balance performance goals with governance constraints, ensuring that their decisions are both effective and responsible.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different business situations. They will learn how to balance performance goals with governance constraints, ensuring that their decisions are both effective and responsible."
         },
         {
           "id": "international-business-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates without losing track of accountability or traceability, ensuring that all actions taken are transparent and responsible.\nContext recap: In this recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates without losing track of accountability or traceability, ensuring that all actions taken are transparent and responsible."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const InternationalBusiness601Module: LearningModule = {
           "id": "international-business-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This includes understanding the benefits, burdens, and any delayed effects that may arise from business decisions. Recognizing these impacts is essential for responsible business practices.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This includes understanding the benefits, burdens, and any delayed effects that may arise from business decisions. Recognizing these impacts is essential for responsible business practices."
         },
         {
           "id": "international-business-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this lesson, we will focus on the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation when necessary. These elements are crucial for maintaining trust and integrity in business operations.\nContext recap: In this lesson, we will focus on the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation when necessary. These elements are crucial for maintaining trust and integrity in business operations."
         },
         {
           "id": "international-business-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we are following policies correctly, and highlights the importance of being resilient in our leadership roles. This checklist serves as a guide to make sure we are making responsible decisions in international business.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we are following policies correctly, and highlights the importance of being resilient in our leadership roles. This checklist serves as a guide to make sure we are making responsible decisions in international business."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const InternationalBusiness601Module: LearningModule = {
           "id": "international-business-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will work on putting together a detailed brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions to any challenges that may arise. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this interactive activity, you will work on putting together a detailed brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions to any challenges that may arise. This exercise will help you practice organizing your thoughts and presenting them clearly."
         },
         {
           "id": "international-business-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this part of the lesson, you will practice responding to questions and feedback from an expert panel. You will prepare answers to critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you build confidence and improve your communication skills in a professional setting.\nContext recap: During this part of the lesson, you will practice responding to questions and feedback from an expert panel. You will prepare answers to critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will help you build confidence and improve your communication skills in a professional setting."
         }
       ],
       "interactiveActivities": [

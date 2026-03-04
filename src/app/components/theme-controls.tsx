@@ -1,20 +1,15 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { type ThemeMode, useTheme } from "@/lib/theme/provider";
+import { useTheme } from "@/lib/theme/provider";
 
 export default function ThemeControls({ compact = false }: { compact?: boolean }) {
   const {
-    themeMode,
     themePack,
     typographyDensity,
-    setThemeMode,
     setTypographyDensity,
   } = useTheme();
   const didMount = useRef(false);
-  const applyThemeMode = (value: ThemeMode) => {
-    setThemeMode(value);
-  };
 
   useEffect(() => {
     if (!didMount.current) {
@@ -30,7 +25,7 @@ export default function ThemeControls({ compact = false }: { compact?: boolean }
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            theme_mode: themeMode,
+            theme_mode: "light",
             theme_pack: themePack,
             motion_pref: "standard",
             contrast_pref: "standard",
@@ -44,22 +39,16 @@ export default function ThemeControls({ compact = false }: { compact?: boolean }
 
     void persist();
     return () => controller.abort();
-  }, [themeMode, themePack]);
+  }, [themePack]);
 
   return (
     <div className="flex items-center gap-2 text-xs">
-      <label className="flex items-center gap-1">
+      <div className="flex items-center gap-1">
         <span className="text-foreground">Theme</span>
-        <select
-          value={themeMode}
-          onChange={(event) => applyThemeMode(event.target.value as ThemeMode)}
-          className="ui-focus-ring min-h-9 min-w-40 rounded-full border border-border bg-surface px-3 py-1 text-foreground shadow-sm"
-        >
-          <option value="system">System</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </label>
+        <span className="inline-flex min-h-9 min-w-24 items-center justify-center rounded-full border border-border bg-surface px-3 py-1 font-medium text-foreground shadow-sm">
+          Light
+        </span>
+      </div>
       {!compact ? (
         <label className="flex items-center gap-1">
           <span className="text-foreground">Type</span>

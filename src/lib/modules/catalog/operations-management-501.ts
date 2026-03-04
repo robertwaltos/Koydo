@@ -47,19 +47,19 @@ export const OperationsManagement501Module: LearningModule = {
           "id": "operations-management-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Operations Management, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will delve into the advanced concepts of scope boundaries within the field of Operations Management. Understanding these boundaries is crucial as they define the limits and capabilities of different business processes. We will focus on effective methods for diagnosing business systems, which involves analyzing how well these systems function and identifying areas for improvement. Additionally, we will discuss how to design operations that not only enhance execution but also align with the overall goals of the organization. By the end of this lesson, you will have a clearer understanding of how to manage business processes efficiently and effectively, ensuring that you can optimize performance and drive success.\nContext recap: In this lesson, we will delve into the advanced concepts of scope boundaries within the field of Operations Management. Understanding these boundaries is crucial as they define the limits and capabilities of different business processes. We will focus on effective methods for diagnosing business systems, which involves analyzing how well these systems function and identifying areas for improvement. Additionally, we will discuss how to design operations that not only enhance execution but also align with the overall goals of the organization."
         },
         {
           "id": "operations-management-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence outcomes. Additionally, we will examine uncertainty ranges and system dependencies, which are crucial for planning interventions. By understanding these elements, you will be better prepared to make informed decisions when addressing complex business challenges.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence outcomes. Additionally, we will examine uncertainty ranges and system dependencies, which are crucial for planning interventions. By understanding these elements, you will be better prepared to make informed decisions when addressing complex business challenges."
         },
         {
           "id": "operations-management-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is essential that all claims made in our analysis are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable. By doing so, we can maintain a high standard of evidence that supports our conclusions and recommendations.\nContext recap: It is essential that all claims made in our analysis are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable. By doing so, we can maintain a high standard of evidence that supports our conclusions and recommendations."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const OperationsManagement501Module: LearningModule = {
           "id": "operations-management-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific business needs. After creating these workflows, you will stress-test them by simulating adverse scenarios to see how well they hold up under pressure. This practice will help you understand the importance of resilience in operations management.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific business needs. After creating these workflows, you will stress-test them by simulating adverse scenarios to see how well they hold up under pressure. This practice will help you understand the importance of resilience in operations management."
         },
         {
           "id": "operations-management-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation procedures based on specific thresholds. These elements are crucial for maintaining control and ensuring that any issues can be addressed promptly and effectively.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation procedures based on specific thresholds. These elements are crucial for maintaining control and ensuring that any issues can be addressed promptly and effectively.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation procedures based on specific thresholds. These elements are crucial for maintaining control and ensuring that any issues can be addressed promptly and effectively. Context recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation procedures based on specific thresholds. These elements are crucial for maintaining control and ensuring that any issues can be addressed promptly and effectively."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const OperationsManagement501Module: LearningModule = {
           "id": "operations-management-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "This lesson focuses on the architecture of scenarios that frame competing constraints within business systems diagnostics. We will analyze how different factors impact business performance and the trade-offs that must be considered when making decisions. Understanding these dynamics is key to effective operations management.\nContext recap: This lesson focuses on the architecture of scenarios that frame competing constraints within business systems diagnostics. We will analyze how different factors impact business performance and the trade-offs that must be considered when making decisions. Understanding these dynamics is key to effective operations management."
         },
         {
           "id": "operations-management-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare various options across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand the complexities involved in making balanced decisions that consider all relevant factors.\nContext recap: In this practice session, learners will compare various options across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand the complexities involved in making balanced decisions that consider all relevant factors.\nContext recap: In this practice session, learners will compare various options across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand the complexities involved in making balanced decisions that consider all relevant factors. Context recap: In this practice session, learners will compare various options across multiple dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you understand the complexities involved in making balanced decisions that consider all relevant factors."
         },
         {
           "id": "operations-management-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will emphasize that each recommendation made in our analysis should clearly outline the underlying assumptions, the evidence supporting the claims, the risk controls in place, and any fallback plans. This structured approach ensures that our decision-making process is transparent and accountable.\nContext recap: In our recap, we will emphasize that each recommendation made in our analysis should clearly outline the underlying assumptions, the evidence supporting the claims, the risk controls in place, and any fallback plans. This structured approach ensures that our decision-making process is transparent and accountable."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const OperationsManagement501Module: LearningModule = {
           "id": "operations-management-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "During this interactive session, learners will operate scenario controls while balancing performance metrics and governance constraints. This hands-on experience will provide insight into the challenges of managing operations effectively while adhering to necessary regulations and standards.\nContext recap: During this interactive session, learners will operate scenario controls while balancing performance metrics and governance constraints. This hands-on experience will provide insight into the challenges of managing operations effectively while adhering to necessary regulations and standards.\nWhy this matters: Live Scenario Controls helps learners in Business connect ideas from Operations Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "operations-management-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss how effective responses to operational challenges can be designed to update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed if necessary, maintaining a high level of integrity in operations management.\nContext recap: In this recap, we will discuss how effective responses to operational challenges can be designed to update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed if necessary, maintaining a high level of integrity in operations management."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const OperationsManagement501Module: LearningModule = {
           "id": "operations-management-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is crucial for making informed decisions that consider the well-being of all parties involved.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is crucial for making informed decisions that consider the well-being of all parties involved.\nWhy this matters: Stakeholder Impact Distribution helps learners in Business connect ideas from Operations Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "operations-management-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. These components are essential for ensuring that decisions are made responsibly and that there is a clear process for addressing any issues that arise.\nContext recap: In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. These components are essential for ensuring that decisions are made responsibly and that there is a clear process for addressing any issues that arise."
         },
         {
           "id": "operations-management-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt and recover from challenges. This checklist is a valuable tool for responsible leadership.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt and recover from challenges. This checklist is a valuable tool for responsible leadership.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt and recover from challenges. This checklist is a valuable tool for responsible leadership. Context recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to adapt and recover from challenges. This checklist is a valuable tool for responsible leadership."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const OperationsManagement501Module: LearningModule = {
           "id": "operations-management-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will create a comprehensive brief that includes your main claims, supporting evidence, the limits of your knowledge, and potential solutions to any issues that may arise. This exercise helps you practice critical thinking and effective communication.\nContext recap: In this interactive activity, you will create a comprehensive brief that includes your main claims, supporting evidence, the limits of your knowledge, and potential solutions to any issues that may arise. This exercise helps you practice critical thinking and effective communication.\nContext recap: In this interactive activity, you will create a comprehensive brief that includes your main claims, supporting evidence, the limits of your knowledge, and potential solutions to any issues that may arise. This exercise helps you practice critical thinking and effective communication. Context recap: In this interactive activity, you will create a comprehensive brief that includes your main claims, supporting evidence, the limits of your knowledge, and potential solutions to any issues that may arise. This exercise helps you practice critical thinking and effective communication."
         },
         {
           "id": "operations-management-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal session, you will practice responding to questions and feedback from experts regarding technical aspects, governance issues, and the perspectives of various stakeholders. This preparation is essential for building confidence and improving your presentation skills.\nContext recap: During this rehearsal session, you will practice responding to questions and feedback from experts regarding technical aspects, governance issues, and the perspectives of various stakeholders. This preparation is essential for building confidence and improving your presentation skills.\nWhy this matters: Expert Panel Rehearsal helps learners in Business connect ideas from Operations Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [

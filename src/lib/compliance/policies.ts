@@ -1,3 +1,8 @@
+import {
+  TERMS_EFFECTIVE_DATE,
+  TERMS_VERSION,
+} from "@/lib/legal/terms-of-service";
+
 export type PolicyType = "privacy" | "terms" | "refunds";
 
 type PolicyDescriptor = {
@@ -11,8 +16,8 @@ export const policyRegistry: Record<PolicyType, PolicyDescriptor> = {
     effectiveDate: "2026-02-20",
   },
   terms: {
-    version: "2026-02-20",
-    effectiveDate: "2026-02-20",
+    version: TERMS_VERSION,
+    effectiveDate: TERMS_EFFECTIVE_DATE,
   },
   refunds: {
     version: "2026-02-20",

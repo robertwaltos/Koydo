@@ -6,6 +6,7 @@ import {
   resolveLanguageUsageEntitlement,
 } from "@/lib/language-learning";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { resolveClassroomAccessForUser } from "@/lib/organizations/classroom-access";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 function isMissingTableError(message: string) {
@@ -31,13 +32,19 @@ export async function GET(request: NextRequest) {
 
   try {
     const runtimeConfig = await getLanguageRuntimeConfig();
+    const classroomAccess = await resolveClassroomAccessForUser({
+      userId: user.id,
+      requestHeaders: request.headers,
+    });
     const entitlement = await resolveLanguageUsageEntitlement(supabase, {
       userId: user.id,
       studentProfileId: studentProfileId ?? undefined,
+      classroomAccess,
     });
 
     return NextResponse.json({
       entitlement,
+      classroomAccess,
       policy: getLanguageLearningPolicySnapshot(),
       pricing: getLanguagePricingSnapshot(),
       runtimeConfig,

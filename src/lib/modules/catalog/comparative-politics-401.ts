@@ -47,19 +47,19 @@ export const ComparativePolitics401Module: LearningModule = {
           "id": "comparative-politics-401-l01-c1",
           "kind": "concept",
           "title": "Scope and Vocabulary",
-          "content": "This lesson establishes shared vocabulary for Comparative Politics and clarifies the scope boundaries for institutional system comparison and state-society dynamics."
+          "content": "In this lesson, we will learn important words and phrases that are commonly used in the study of Comparative Politics. We will also discuss the limits of what we can compare when looking at different political systems and how these systems interact with society. Understanding this vocabulary will help us communicate better about political ideas and concepts.\nContext recap: In this lesson, we will learn important words and phrases that are commonly used in the study of Comparative Politics. We will also discuss the limits of what we can compare when looking at different political systems and how these systems interact with society. Understanding this vocabulary will help us communicate better about political ideas and concepts."
         },
         {
           "id": "comparative-politics-401-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning",
-          "content": "Learners map causal relationships, assumptions, and constraints before intervention design."
+          "content": "In this part of the lesson, students will explore how to identify and understand the relationships between different causes and effects in political situations. Before designing any interventions or solutions, learners will consider the assumptions they have and the limitations they face. This process will help them think critically about how to approach complex political issues.\nContext recap: In this part of the lesson, students will explore how to identify and understand the relationships between different causes and effects in political situations. Before designing any interventions or solutions, learners will consider the assumptions they have and the limitations they face. This process will help them think critically about how to approach complex political issues."
         },
         {
           "id": "comparative-politics-401-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "Claims are anchored to measurable indicators, confidence ranges, and review checkpoints."
+          "content": "In this section, we will focus on how to support our claims with solid evidence. This means using measurable indicators and establishing confidence levels to ensure our conclusions are reliable. We will also discuss the importance of having checkpoints for reviewing our findings, which helps us stay on track and make informed decisions.\nContext recap: In this section, we will focus on how to support our claims with solid evidence. This means using measurable indicators and establishing confidence levels to ensure our conclusions are reliable. We will also discuss the importance of having checkpoints for reviewing our findings, which helps us stay on track and make informed decisions."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const ComparativePolitics401Module: LearningModule = {
           "id": "comparative-politics-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Build",
-          "content": "Learners build a workflow with owner mapping, control gates, and measurable outcomes."
+          "content": "In this interactive activity, students will create a workflow that outlines the roles of different participants, establishes control points, and defines measurable outcomes. This exercise will help learners understand how to organize tasks and responsibilities effectively, ensuring that everyone knows their role in achieving the desired results.\nContext recap: In this interactive activity, students will create a workflow that outlines the roles of different participants, establishes control points, and defines measurable outcomes. This exercise will help learners understand how to organize tasks and responsibilities effectively, ensuring that everyone knows their role in achieving the desired results."
         },
         {
           "id": "comparative-politics-401-l02-c2",
           "kind": "recap",
           "title": "Readiness and Rollback",
-          "content": "Systems are stress-tested for failure scenarios and rollback decision thresholds."
+          "content": "In this recap, we will discuss how to test our systems for potential failures and identify decision points for rolling back actions if necessary. This is an important step in ensuring that our plans are robust and can withstand unexpected challenges. By stress-testing our systems, we can better prepare for real-world scenarios.\nContext recap: In this recap, we will discuss how to test our systems for potential failures and identify decision points for rolling back actions if necessary. This is an important step in ensuring that our plans are robust and can withstand unexpected challenges. By stress-testing our systems, we can better prepare for real-world scenarios."
         }
       ],
       "interactiveActivities": [
@@ -268,19 +268,19 @@ export const ComparativePolitics401Module: LearningModule = {
           "id": "comparative-politics-401-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: cross-country policy responses to a shared crisis with differing institutions, legitimacy, and enforcement capacity. Learners identify competing objectives and system risks."
+          "content": "In this engaging case study, we will explore how various countries tackled a shared crisis, focusing on their distinct political systems, the trust they hold from their citizens, and how effectively they can enforce their policies. Students will dive deep into the different objectives each nation aimed to achieve and the potential risks that came with their strategies. This analysis will not only enhance their understanding of international relations but also highlight the intricate challenges that arise when countries face similar issues. By examining these factors, learners will gain valuable insights into the complexities of global responses to crises."
         },
         {
           "id": "comparative-politics-401-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are scored across effectiveness, feasibility, risk, and stakeholder impact."
+          "content": "In this section, we will learn about how to evaluate different options using a tradeoff matrix. This matrix will help students score each option based on its effectiveness, feasibility, potential risks, and impact on stakeholders. This structured approach will guide learners in making informed decisions about policy choices.\nContext recap: In this section, we will learn about how to evaluate different options using a tradeoff matrix. This matrix will help students score each option based on its effectiveness, feasibility, potential risks, and impact on stakeholders. This structured approach will guide learners in making informed decisions about policy choices."
         },
         {
           "id": "comparative-politics-401-l04-c3",
           "kind": "recap",
           "title": "Recovery Design",
-          "content": "Failure patterns are converted into safeguards and response playbooks."
+          "content": "In this recap, we will discuss how to transform patterns of failure into proactive safeguards and response strategies. By analyzing what went wrong in previous scenarios, students will learn how to create playbooks that outline steps to take in future situations, ensuring better preparedness and resilience.\nContext recap: In this recap, we will discuss how to transform patterns of failure into proactive safeguards and response strategies. By analyzing what went wrong in previous scenarios, students will learn how to create playbooks that outline steps to take in future situations, ensuring better preparedness and resilience."
         }
       ],
       "flashcards": [
@@ -319,13 +319,13 @@ export const ComparativePolitics401Module: LearningModule = {
           "id": "comparative-politics-401-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners run multiple intervention scenarios under uncertainty and compare outcomes."
+          "content": "In this interactive simulation, learners will have the opportunity to run various intervention scenarios while facing uncertainty. They will compare the outcomes of these different approaches, allowing them to see how different decisions can lead to different results in political contexts.\nContext recap: In this interactive simulation, learners will have the opportunity to run various intervention scenarios while facing uncertainty. They will compare the outcomes of these different approaches, allowing them to see how different decisions can lead to different results in political contexts."
         },
         {
           "id": "comparative-politics-401-l05-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "Each run is evaluated for target attainment, side effects, and governance compliance."
+          "content": "In this debriefing session, students will evaluate each simulation run by looking at whether they achieved their goals, any unintended side effects, and how well they adhered to governance standards. This reflection will help learners understand the importance of accountability and continuous improvement in their decision-making processes.\nContext recap: In this debriefing session, students will evaluate each simulation run by looking at whether they achieved their goals, any unintended side effects, and how well they adhered to governance standards. This reflection will help learners understand the importance of accountability and continuous improvement in their decision-making processes."
         }
       ],
       "interactiveActivities": [
@@ -476,19 +476,19 @@ export const ComparativePolitics401Module: LearningModule = {
           "id": "comparative-politics-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact",
-          "content": "Learners map benefit and burden distribution across stakeholder groups."
+          "content": "In this part of the lesson, students will explore how different stakeholders are affected by political decisions. They will map out who benefits and who bears the burdens of these decisions, helping them understand the importance of considering all perspectives in governance.\nContext recap: In this part of the lesson, students will explore how different stakeholders are affected by political decisions. They will map out who benefits and who bears the burdens of these decisions, helping them understand the importance of considering all perspectives in governance."
         },
         {
           "id": "comparative-politics-401-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will discuss the concept of accountability in decision-making. Students will learn about how decisions can be traced back to their origins, the rights of individuals to review those decisions, and the responsibilities that come with making choices. This understanding is crucial for fostering transparency and trust in governance.\nContext recap: In this section, we will discuss the concept of accountability in decision-making. Students will learn about how decisions can be traced back to their origins, the rights of individuals to review those decisions, and the responsibilities that come with making choices. This understanding is crucial for fostering transparency and trust in governance."
         },
         {
           "id": "comparative-politics-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution",
-          "content": "A final checklist balances performance, risk control, and ethical impact."
+          "content": "At the end of our project, it's important to use a final checklist that helps us evaluate our performance. This checklist should also consider how well we manage risks and the ethical impact of our decisions. By balancing these elements, we can ensure that our actions are responsible and beneficial.\nContext recap: At the end of our project, it's important to use a final checklist that helps us evaluate our performance. This checklist should also consider how well we manage risks and the ethical impact of our decisions. By balancing these elements, we can ensure that our actions are responsible and beneficial."
         }
       ],
       "flashcards": [
@@ -527,13 +527,13 @@ export const ComparativePolitics401Module: LearningModule = {
           "id": "comparative-politics-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft objective, constraints, metrics, and governance triggers."
+          "content": "In this activity, learners will work on creating a detailed Capstone Charter. This involves drafting clear objectives that outline what we want to achieve, identifying any constraints that might limit our project, establishing metrics to measure our success, and defining governance triggers that will guide our decision-making process throughout the project.\nContext recap: In this activity, learners will work on creating a detailed Capstone Charter. This involves drafting clear objectives that outline what we want to achieve, identifying any constraints that might limit our project, establishing metrics to measure our success, and defining governance triggers that will guide our decision-making process throughout the project."
         },
         {
           "id": "comparative-politics-401-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare to defend decisions against technical and governance critiques."
+          "content": "As part of our preparation, learners will get ready to defend their decisions. This means they will practice explaining their choices and how they relate to technical aspects and governance critiques. This exercise helps build confidence and ensures that they can articulate their reasoning effectively.\nContext recap: As part of our preparation, learners will get ready to defend their decisions. This means they will practice explaining their choices and how they relate to technical aspects and governance critiques. This exercise helps build confidence and ensures that they can articulate their reasoning effectively."
         }
       ],
       "interactiveActivities": [

@@ -46,19 +46,19 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Sports Science, with focus on performance systems modeling and training and recovery design."
+          "content": "In this lesson, we will explore the advanced boundaries of Sports Science. We will focus on how to model performance systems effectively, as well as how to design training and recovery programs that help athletes perform at their best. Understanding these concepts is crucial for anyone interested in the science behind sports and athletic performance.\nContext recap: In this lesson, we will explore the advanced boundaries of Sports Science. We will focus on how to model performance systems effectively, as well as how to design training and recovery programs that help athletes perform at their best. Understanding these concepts is crucial for anyone interested in the science behind sports and athletic performance."
         },
         {
           "id": "sports-science-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence performance. Additionally, we will examine uncertainty ranges and the dependencies within systems. This foundational knowledge is essential for planning effective interventions in sports science.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence performance. Additionally, we will examine uncertainty ranges and the dependencies within systems. This foundational knowledge is essential for planning effective interventions in sports science."
         },
         {
           "id": "sports-science-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims made in sports science are backed by measurable indicators. In this recap, we will discuss how to establish confidence bounds and set up review checkpoints to verify our findings. This process helps maintain the integrity and reliability of our research.\nContext recap: It is important to ensure that all claims made in sports science are backed by measurable indicators. In this recap, we will discuss how to establish confidence bounds and set up review checkpoints to verify our findings. This process helps maintain the integrity and reliability of our research."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows tailored for sports science applications. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding real-world applications.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows tailored for sports science applications. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding real-world applications."
         },
         {
           "id": "sports-science-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss the architecture of control gates within our workflows. These gates are essential for integrating checkpoints, rollback criteria, and threshold-based escalation. Understanding this architecture helps ensure that our processes are robust and can adapt to various situations.\nContext recap: In this recap, we will discuss the architecture of control gates within our workflows. These gates are essential for integrating checkpoints, rollback criteria, and threshold-based escalation. Understanding this architecture helps ensure that our processes are robust and can adapt to various situations.\nContext recap: In this recap, we will discuss the architecture of control gates within our workflows. These gates are essential for integrating checkpoints, rollback criteria, and threshold-based escalation. Understanding this architecture helps ensure that our processes are robust and can adapt to various situations. Context recap: In this recap, we will discuss the architecture of control gates within our workflows.\nWhy this matters: Control Gate Architecture helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -367,19 +367,19 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a high-performance program aligning competitive goals with recovery science and long-term athlete health. Learners map constraints, risk classes, and governance boundaries."
+          "content": "In this case analysis, we will explore a high-performance sports program designed to harmonize competitive objectives with the principles of recovery science, all while prioritizing the long-term health of athletes. Participants will engage in mapping out various constraints that may affect the program, identifying different classes of risk that could impact athlete performance and well-being, and establishing clear governance boundaries. This structured approach will help us gain a deeper understanding of the complexities involved in managing such a program and the critical stakes at play for athletes and coaches alike.\nContext recap: In this case analysis, we will explore a high-performance sports program designed to harmonize competitive objectives with the principles of recovery science, all while prioritizing the long-term health of athletes. Participants will engage in mapping out various constraints that may affect the program, identifying different classes of risk that could impact athlete performance and well-being, and establishing clear governance boundaries. This structured approach will help us gain a deeper understanding of the complexities involved in managing such a program and the critical stakes at play for athletes and coaches alike."
         },
         {
           "id": "sports-science-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Alternatives are scored across effectiveness, feasibility, risk, equity, and implementation cost."
+          "content": "In this section, we will explore a tradeoff matrix where various alternatives are evaluated. Each option will be scored based on its effectiveness, feasibility, risk, equity, and implementation cost. This analysis is crucial for making informed decisions in sports science.\nContext recap: In this section, we will explore a tradeoff matrix where various alternatives are evaluated. Each option will be scored based on its effectiveness, feasibility, risk, equity, and implementation cost. This analysis is crucial for making informed decisions in sports science.\nContext recap: In this section, we will explore a tradeoff matrix where various alternatives are evaluated. Each option will be scored based on its effectiveness, feasibility, risk, equity, and implementation cost. This analysis is crucial for making informed decisions in sports science. Context recap: In this section, we will explore a tradeoff matrix where various alternatives are evaluated.\nWhy this matters: Tradeoff Matrix helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sports-science-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are mapped to remediation actions and measurable recovery triggers."
+          "content": "In this recap, we will discuss how to map failure signatures to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help athletes return to optimal performance. This understanding is key to designing effective recovery and adaptation strategies.\nContext recap: In this recap, we will discuss how to map failure signatures to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help athletes return to optimal performance. This understanding is key to designing effective recovery and adaptation strategies.\nContext recap: In this recap, we will discuss how to map failure signatures to specific remediation actions. Additionally, we will identify measurable recovery triggers that can help athletes return to optimal performance. This understanding is key to designing effective recovery and adaptation strategies. Context recap: In this recap, we will discuss how to map failure signatures to specific remediation actions.\nWhy this matters: Recovery and Adaptation Design helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -418,13 +418,13 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners configure interventions, constraints, and escalation logic for high-stakes tests."
+          "content": "In this interactive practice, learners will configure various interventions, constraints, and escalation logic for high-stakes testing scenarios. This exercise will help them understand how to manage complex situations in sports science effectively.\nContext recap: In this interactive practice, learners will configure various interventions, constraints, and escalation logic for high-stakes testing scenarios. This exercise will help them understand how to manage complex situations in sports science effectively.\nWhy this matters: Scenario Simulation helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sports-science-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Outcomes are reviewed for gains, side effects, and governance compliance gaps."
+          "content": "In this recap, we will review the outcomes of our interventions, focusing on the gains achieved, any side effects observed, and any gaps in governance compliance. This reflection is important for continuous improvement in sports science practices.\nContext recap: In this recap, we will review the outcomes of our interventions, focusing on the gains achieved, any side effects observed, and any gaps in governance compliance. This reflection is important for continuous improvement in sports science practices.\nWhy this matters: Debrief and Adaptation helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -675,19 +675,19 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this section, learners will map out the distribution of benefits and burdens among different stakeholder groups. They will also consider any delayed effects that may arise from decisions made in sports science. This understanding is crucial for assessing the broader impact of sports programs.\nContext recap: In this section, learners will map out the distribution of benefits and burdens among different stakeholder groups. They will also consider any delayed effects that may arise from decisions made in sports science. This understanding is crucial for assessing the broader impact of sports programs."
         },
         {
           "id": "sports-science-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring traceability of decisions, establishing review rights, and outlining remediation obligations. These elements are essential for maintaining transparency and responsibility in sports science.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring traceability of decisions, establishing review rights, and outlining remediation obligations. These elements are essential for maintaining transparency and responsibility in sports science.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring traceability of decisions, establishing review rights, and outlining remediation obligations. These elements are essential for maintaining transparency and responsibility in sports science. Context recap: In this section, we will discuss the architecture of accountability in decision-making processes.\nWhy this matters: Accountability Architecture helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sports-science-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "As we conclude our discussion, it's important to remember a checklist that connects various important aspects of responsible leadership. This checklist includes outcomes we aim for, ethical considerations we must uphold, compliance with policies we need to follow, and the resilience we should develop to face challenges. Keeping these elements in mind helps ensure that our leadership is effective and responsible.\nContext recap: As we conclude our discussion, it's important to remember a checklist that connects various important aspects of responsible leadership. This checklist includes outcomes we aim for, ethical considerations we must uphold, compliance with policies we need to follow, and the resilience we should develop to face challenges. Keeping these elements in mind helps ensure that our leadership is effective and responsible."
         }
       ],
       "flashcards": [
@@ -726,13 +726,13 @@ export const SportsScience601Module: LearningModule = {
           "id": "sports-science-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, and clear boundaries of uncertainty. Additionally, it will outline potential pathways for remediation, which are strategies to address any issues that may arise. This exercise helps develop critical thinking and communication skills essential for effective sports science leadership.\nContext recap: In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, and clear boundaries of uncertainty. Additionally, it will outline potential pathways for remediation, which are strategies to address any issues that may arise. This exercise helps develop critical thinking and communication skills essential for effective sports science leadership.\nContext recap: In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, and clear boundaries of uncertainty. Additionally, it will outline potential pathways for remediation, which are strategies to address any issues that may arise. This exercise helps develop critical thinking and communication skills essential for effective sports science leadership.\nWhy this matters: Defense Brief Assembly helps learners in Health Science connect ideas from Sports Science Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sports-science-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this recap session, learners will practice their responses to various critiques they might face from experts, governance bodies, and stakeholders. This rehearsal is crucial as it prepares them to confidently address questions and concerns, ensuring they can effectively communicate their ideas and defend their positions in a professional setting. This practice enhances their readiness for real-world challenges in sports science.\nContext recap: During this recap session, learners will practice their responses to various critiques they might face from experts, governance bodies, and stakeholders. This rehearsal is crucial as it prepares them to confidently address questions and concerns, ensuring they can effectively communicate their ideas and defend their positions in a professional setting. This practice enhances their readiness for real-world challenges in sports science."
         }
       ],
       "interactiveActivities": [

@@ -46,19 +46,19 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "This lesson defines operational language, scope boundaries, and how consistency and availability and fault tolerance connect in real systems."
+          "content": "In this lesson, we will dive into some key ideas that are essential for understanding distributed systems. First, we will define what we mean by operational language, which is the way we communicate and describe the functions of these systems. Next, we will discuss scope boundaries, which help us understand the limits and areas of influence within a system. Additionally, we will explore how the concepts of consistency, availability, and fault tolerance are all connected. These principles are crucial for ensuring that distributed systems work smoothly and can handle problems effectively. By grasping these concepts, you will gain a better understanding of how these systems operate and why they are designed the way they are, especially when they encounter challenges in real-world scenarios."
         },
         {
           "id": "distributed-systems-101-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning Under Constraints",
-          "content": "Learners model cause-effect pathways and identify failure-prone assumptions before selecting interventions."
+          "content": "In this part of the lesson, learners will practice modeling cause-and-effect pathways. This means they will identify what leads to certain outcomes and recognize assumptions that might lead to failures. Before deciding on solutions or interventions, it is crucial to understand these pathways to make informed choices.\nContext recap: In this part of the lesson, learners will practice modeling cause-and-effect pathways. This means they will identify what leads to certain outcomes and recognize assumptions that might lead to failures. Before deciding on solutions or interventions, it is crucial to understand these pathways to make informed choices."
         },
         {
           "id": "distributed-systems-101-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All claims in this module must map to observable indicators, uncertainty bounds, and review checkpoints."
+          "content": "Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. Additionally, we will establish uncertainty bounds and create review checkpoints to ensure that our findings are reliable and valid.\nContext recap: Throughout this module, it is essential that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. Additionally, we will establish uncertainty bounds and create review checkpoints to ensure that our findings are reliable and valid."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners design a workflow emphasizing foundational vocabulary, core mechanism mapping, and basic scenario analysis, then test resilience against uncertainty."
+          "content": "In this interactive lab, learners will design a workflow that emphasizes the use of foundational vocabulary and the mapping of core mechanisms. They will also conduct a basic analysis of different scenarios. After creating their workflows, they will test how resilient their designs are when faced with uncertainty, helping them understand the importance of adaptability.\nContext recap: In this interactive lab, learners will design a workflow that emphasizes the use of foundational vocabulary and the mapping of core mechanisms. They will also conduct a basic analysis of different scenarios. After creating their workflows, they will test how resilient their designs are when faced with uncertainty, helping them understand the importance of adaptability."
         },
         {
           "id": "distributed-systems-101-l02-c2",
           "kind": "recap",
           "title": "Readiness and Control Gates",
-          "content": "Operational readiness requires owner mapping, control gates, and post-decision verification hooks."
+          "content": "To ensure operational readiness, it is important to map out who is responsible for different tasks, establish control gates, and create verification hooks that check decisions after they are made. This process helps maintain oversight and ensures that everything runs smoothly.\nContext recap: To ensure operational readiness, it is important to map out who is responsible for different tasks, establish control gates, and create verification hooks that check decisions after they are made. This process helps maintain oversight and ensures that everything runs smoothly."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a global service experiencing partial outages, stale reads, and recovery pressure under traffic spikes. Learners map decision stakes and identify non-obvious risks."
+          "content": "In this engaging case study, we will explore a global service that is encountering several significant challenges. These include experiencing partial outages, which means that some parts of the service are not working properly, and dealing with stale reads, where users receive outdated information instead of the most current data. Additionally, the service faces intense pressure to recover quickly during peak traffic times when many users are trying to access it at once. Throughout this lesson, learners will dive deep into the decision-making process, mapping out the stakes involved in each choice. They will also work on identifying risks that may not be immediately obvious, which will help sharpen their critical thinking and problem-solving skills. By the end of this lesson, students will have a better understanding of how to navigate complex situations in distributed systems and the importance of making informed decisions under pressure."
         },
         {
           "id": "distributed-systems-101-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix Construction",
-          "content": "Interventions are compared across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will create a tradeoff matrix to compare different interventions. We will look at factors such as effectiveness, reliability, fairness, and how easy they are to implement. This comparison will help learners understand the complexities involved in making decisions in distributed systems.\nContext recap: In this section, we will create a tradeoff matrix to compare different interventions. We will look at factors such as effectiveness, reliability, fairness, and how easy they are to implement. This comparison will help learners understand the complexities involved in making decisions in distributed systems."
         },
         {
           "id": "distributed-systems-101-l04-c3",
           "kind": "recap",
           "title": "Failure Lessons and Recovery",
-          "content": "The lesson converts failure signatures into safeguards, response playbooks, and monitoring updates."
+          "content": "This lesson will teach us how to turn the lessons learned from failures into proactive measures. We will develop safeguards, create response playbooks, and implement monitoring updates to ensure that we can respond effectively to future challenges.\nContext recap: This lesson will teach us how to turn the lessons learned from failures into proactive measures. We will develop safeguards, create response playbooks, and implement monitoring updates to ensure that we can respond effectively to future challenges.\nWhy this matters: Failure Lessons and Recovery helps learners in Computer Science connect ideas from Distributed Systems Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation Setup",
-          "content": "Learners configure interventions, define uncertainty parameters, and set measurable success thresholds."
+          "content": "In this interactive simulation setup, learners will configure various interventions, define parameters of uncertainty, and establish measurable thresholds for success. This hands-on experience will help them understand how to set realistic goals and evaluate their effectiveness.\nContext recap: In this interactive simulation setup, learners will configure various interventions, define parameters of uncertainty, and establish measurable thresholds for success. This hands-on experience will help them understand how to set realistic goals and evaluate their effectiveness.\nWhy this matters: Scenario Simulation Setup helps learners in Computer Science connect ideas from Distributed Systems Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "distributed-systems-101-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After each run, results are reviewed for expected gains, side effects, and governance compliance."
+          "content": "After each simulation run, learners will review the results to assess whether they achieved the expected gains. They will also analyze any side effects that occurred and check for compliance with governance standards. This reflective process is crucial for continuous improvement.\nContext recap: After each simulation run, learners will review the results to assess whether they achieved the expected gains. They will also analyze any side effects that occurred and check for compliance with governance standards. This reflective process is crucial for continuous improvement."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "This lesson identifies impact distribution, especially where benefits and burdens diverge across groups."
+          "content": "In this lesson, we will identify how the impacts of decisions are distributed among different stakeholders. We will pay special attention to situations where the benefits and burdens are not shared equally across groups, fostering a deeper understanding of fairness and equity in distributed systems.\nContext recap: In this lesson, we will identify how the impacts of decisions are distributed among different stakeholders. We will pay special attention to situations where the benefits and burdens are not shared equally across groups, fostering a deeper understanding of fairness and equity in distributed systems."
         },
         {
           "id": "distributed-systems-101-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability requires clear decision traceability, review rights, and remediation standards."
+          "content": "To ensure accountability in decision-making, it is important to have a clear structure that allows us to trace decisions back to their origins. This includes establishing rights for review and setting standards for remediation when issues arise. This framework helps maintain trust and responsibility.\nContext recap: To ensure accountability in decision-making, it is important to have a clear structure that allows us to trace decisions back to their origins. This includes establishing rights for review and setting standards for remediation when issues arise. This framework helps maintain trust and responsibility."
         },
         {
           "id": "distributed-systems-101-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist combines policy, ethics, technical reliability, and stakeholder trust criteria."
+          "content": "At the end of our lesson, we will create a comprehensive checklist that includes important aspects such as policies, ethical considerations, technical reliability, and the trust of all stakeholders involved. This checklist will help ensure that we are making responsible decisions in our distributed systems projects.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that includes important aspects such as policies, ethical considerations, technical reliability, and the trust of all stakeholders involved. This checklist will help ensure that we are making responsible decisions in our distributed systems projects."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const DistributedSystems101Module: LearningModule = {
           "id": "distributed-systems-101-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter Drafting",
-          "content": "Learners draft capstone scope, constraints, metrics, and governance checkpoints in one decision charter."
+          "content": "In this activity, you will work on drafting a detailed capstone charter. This document will outline the scope of your project, identify any constraints you might face, establish metrics for success, and set governance checkpoints to guide your work. This is an important step in ensuring that your project is well-planned and organized.\nContext recap: In this activity, you will work on drafting a detailed capstone charter. This document will outline the scope of your project, identify any constraints you might face, establish metrics for success, and set governance checkpoints to guide your work. This is an important step in ensuring that your project is well-planned and organized."
         },
         {
           "id": "distributed-systems-101-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Final preparation focuses on evidence-backed justification and robust response to critical review."
+          "content": "As we prepare for the final stages of our project, we will focus on gathering strong evidence to support our decisions. Additionally, we will develop a solid plan to respond to any critical reviews or feedback we receive. This preparation is crucial for demonstrating the validity of our work and ensuring we are ready for any challenges that may arise.\nContext recap: As we prepare for the final stages of our project, we will focus on gathering strong evidence to support our decisions. Additionally, we will develop a solid plan to respond to any critical reviews or feedback we receive. This preparation is crucial for demonstrating the validity of our work and ensuring we are ready for any challenges that may arise."
         }
       ],
       "interactiveActivities": [

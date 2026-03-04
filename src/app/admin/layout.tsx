@@ -34,8 +34,11 @@ const ADMIN_NAV: DashNavGroup[] = [
   {
     label: "Content & Media",
     items: [
-      { href: "/admin/media",       label: "Media Pipeline",    icon: "▶" },
-      { href: "/admin/curriculum",  label: "Curriculum",        icon: "≡" },
+      { href: "/admin/compliance",  label: "Compliance",     icon: "◎" },
+      { href: "/admin/finance",     label: "Finance",        icon: "¤" },
+      { href: "/admin/partners",    label: "Partners",       icon: "∞" },
+      { href: "/admin/costs",       label: "Costs",          icon: "$" },
+      { href: "/admin/audit",       label: "Audit Log",      icon: "☰" },
     ],
   },
   {

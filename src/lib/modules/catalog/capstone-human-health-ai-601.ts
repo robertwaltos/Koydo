@@ -46,19 +46,19 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "The capstone frames a health system board reviewing model safety incidents, patient equity outcomes, and continuation criteria for deployment. Learners define objectives, constraints, and stakeholder exposures."
+          "content": "In this capstone project, we will dive into the critical role of a health system board as it reviews significant safety incidents that may affect patient care. We will also look at how the board evaluates outcomes related to patient equity, ensuring that all patients receive fair treatment. Additionally, we will discuss the criteria that the board uses to decide whether to continue using specific health models. As learners, you will collaborate to define clear objectives for your project, identify any constraints that may limit your options, and understand the various stakeholders involved in this process. This collaborative effort will help you appreciate the complexities of health systems and the importance of making informed, thoughtful decisions that can impact many lives."
         },
         {
           "id": "capstone-human-health-ai-601-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "Boundary design distinguishes what is controllable, what is uncertain, and what requires policy escalation."
+          "content": "When designing boundaries for decision-making, it is essential to distinguish between what aspects we can control, what remains uncertain, and what issues may need to be escalated to policy makers. Understanding these boundaries will help you navigate the complexities of health systems and make informed choices that can lead to better outcomes for patients and communities.\nContext recap: When designing boundaries for decision-making, it is essential to distinguish between what aspects we can control, what remains uncertain, and what issues may need to be escalated to policy makers. Understanding these boundaries will help you navigate the complexities of health systems and make informed choices that can lead to better outcomes for patients and communities."
         },
         {
           "id": "capstone-human-health-ai-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All capstone claims must map to measurable indicators and explicit uncertainty notes."
+          "content": "All claims made during the capstone project must be connected to measurable indicators and should include notes on any uncertainties. This means that you will need to provide clear evidence for your claims and be transparent about any factors that may affect the outcomes. This practice will help ensure that your conclusions are based on solid data and can be trusted by others.\nContext recap: All claims made during the capstone project must be connected to measurable indicators and should include notes on any uncertainties. This means that you will need to provide clear evidence for your claims and be transparent about any factors that may affect the outcomes. This practice will help ensure that your conclusions are based on solid data and can be trusted by others."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "Learners build an integrated intervention plan across technical, policy, and stakeholder dimensions."
+          "content": "As part of this interactive lab, you will work on creating a comprehensive intervention plan that integrates various aspects such as technical solutions, policy considerations, and the perspectives of different stakeholders. This collaborative effort will help you understand how to address complex health issues by combining different methods and viewpoints into a cohesive strategy.\nContext recap: As part of this interactive lab, you will work on creating a comprehensive intervention plan that integrates various aspects such as technical solutions, policy considerations, and the perspectives of different stakeholders. This collaborative effort will help you understand how to address complex health issues by combining different methods and viewpoints into a cohesive strategy."
         },
         {
           "id": "capstone-human-health-ai-601-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "The plan includes control thresholds, rollback criteria, and accountability checkpoints."
+          "content": "Your intervention plan should include specific control thresholds, criteria for rolling back decisions if necessary, and accountability checkpoints. These elements are crucial for ensuring that the plan is effective and that everyone involved understands their responsibilities. By establishing these control gates, you will be better equipped to manage the implementation of your plan and respond to any challenges that arise.\nContext recap: Your intervention plan should include specific control thresholds, criteria for rolling back decisions if necessary, and accountability checkpoints. These elements are crucial for ensuring that the plan is effective and that everyone involved understands their responsibilities. By establishing these control gates, you will be better equipped to manage the implementation of your plan and respond to any challenges that arise."
         }
       ],
       "interactiveActivities": [
@@ -367,13 +367,13 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l04-c1",
           "kind": "practice",
           "title": "Simulation Run",
-          "content": "Learners run multiple interventions under uncertainty and compare outcomes."
+          "content": "In this interactive simulation, you will run multiple interventions while considering various uncertainties that may affect the outcomes. By comparing the results of these different runs, you will gain valuable insights into how different strategies can lead to different results. This hands-on experience will help you understand the importance of adaptability in health interventions.\nContext recap: In this interactive simulation, you will run multiple interventions while considering various uncertainties that may affect the outcomes. By comparing the results of these different runs, you will gain valuable insights into how different strategies can lead to different results. This hands-on experience will help you understand the importance of adaptability in health interventions."
         },
         {
           "id": "capstone-human-health-ai-601-l04-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "Each run is debriefed for objective attainment, side effects, and governance compliance through explicit data analysis that feeds an implementation artifact."
+          "content": "After each simulation run, you will take part in a debriefing session. During this session, you will carefully analyze the objectives that were successfully achieved, any side effects that were observed, and how well the interventions followed the established governance standards. This important process will involve detailed data analysis, which will help you create an implementation artifact. This artifact will summarize your findings and provide recommendations based on your observations and analyses.\nContext recap: After each simulation run, you will take part in a debriefing session. During this session, you will carefully analyze the objectives that were successfully achieved, any side effects that were observed, and how well the interventions followed the established governance standards. This important process will involve detailed data analysis, which will help you create an implementation artifact. This artifact will summarize your findings and provide recommendations based on your observations and analyses."
         }
       ],
       "interactiveActivities": [
@@ -624,13 +624,13 @@ export const CapstoneHumanHealthAi601Module: LearningModule = {
           "id": "capstone-human-health-ai-601-l06-c1",
           "kind": "practice",
           "title": "Defense Preparation",
-          "content": "Learners assemble a decision brief with claims, evidence, uncertainty ranges, and one implementation artifact mapped to rubric criteria."
+          "content": "As you prepare for the capstone defense panel, you will create a decision brief that includes your claims, supporting evidence, ranges of uncertainty, and one implementation artifact that aligns with the evaluation criteria. This preparation will help you articulate your ideas clearly and confidently during the defense, showcasing your understanding of the project.\nContext recap: As you prepare for the capstone defense panel, you will create a decision brief that includes your claims, supporting evidence, ranges of uncertainty, and one implementation artifact that aligns with the evaluation criteria. This preparation will help you articulate your ideas clearly and confidently during the defense, showcasing your understanding of the project."
         },
         {
           "id": "capstone-human-health-ai-601-l06-c2",
           "kind": "recap",
           "title": "Panel Response Strategy",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques in a structured policy debate using the scoring rubric."
+          "content": "During the panel response strategy session, you will practice responding to critiques related to technical aspects, governance issues, and stakeholder concerns. This structured policy debate will utilize a scoring rubric to guide your responses, helping you refine your arguments and improve your ability to engage in constructive discussions about your work.\nContext recap: During the panel response strategy session, you will practice responding to critiques related to technical aspects, governance issues, and stakeholder concerns. This structured policy debate will utilize a scoring rubric to guide your responses, helping you refine your arguments and improve your ability to engage in constructive discussions about your work."
         }
       ],
       "interactiveActivities": [

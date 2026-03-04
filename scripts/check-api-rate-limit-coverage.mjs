@@ -159,6 +159,10 @@ const ROUTE_GUARDS = [
     mustInclude: ["enforceIpRateLimit", "api:parent:reports:language:get"],
   },
   {
+    file: "src/app/api/parent-gate/route.ts",
+    mustInclude: ["enforceIpRateLimit", "api:parent-gate:get", "api:parent-gate:post"],
+  },
+  {
     file: "src/app/api/parent/ai-interventions/route.ts",
     mustInclude: ["enforceIpRateLimit", "api:parent:ai-interventions:get"],
   },

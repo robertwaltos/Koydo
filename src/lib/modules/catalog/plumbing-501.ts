@@ -47,19 +47,19 @@ export const Plumbing501Module: LearningModule = {
           "id": "plumbing-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Plumbing, with focus on plumbing systems diagnostics and plumbing operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of plumbing systems. We will learn how to effectively diagnose various plumbing issues, which is crucial for maintaining and repairing systems. Additionally, we will focus on designing operations that ensure the successful execution of plumbing tasks. By mastering these concepts, you will be better equipped to manage plumbing systems efficiently and tackle real-world challenges that you may encounter in your plumbing career.\nContext recap: In this lesson, we will delve into the advanced boundaries of plumbing systems. We will learn how to effectively diagnose various plumbing issues, which is crucial for maintaining and repairing systems. Additionally, we will focus on designing operations that ensure the successful execution of plumbing tasks. By mastering these concepts, you will be better equipped to manage plumbing systems efficiently and tackle real-world challenges that you may encounter in your plumbing career.\nContext recap: In this lesson, we will delve into the advanced boundaries of plumbing systems. We will learn how to effectively diagnose various plumbing issues, which is crucial for maintaining and repairing systems. Additionally, we will focus on designing operations that ensure the successful execution of plumbing tasks. By mastering these concepts, you will be better equipped to manage plumbing systems efficiently and tackle real-world challenges that you may encounter in your plumbing career.\nWhy this matters: Scope and Boundary Design helps learners in Plumbing connect ideas from Plumbing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "plumbing-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out the pathways that show how different factors influence plumbing systems. We will also look at the ranges of uncertainty and the dependencies within these systems. This foundational knowledge is essential for planning effective interventions in plumbing projects.\nContext recap: In this section, learners will engage in mapping out the pathways that show how different factors influence plumbing systems. We will also look at the ranges of uncertainty and the dependencies within these systems. This foundational knowledge is essential for planning effective interventions in plumbing projects."
         },
         {
           "id": "plumbing-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made during our plumbing analysis must be supported by measurable indicators. We will also discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our plumbing solutions are reliable and effective.\nContext recap: In our recap, we emphasize that all claims made during our plumbing analysis must be supported by measurable indicators. We will also discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our plumbing solutions are reliable and effective."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Plumbing501Module: LearningModule = {
           "id": "plumbing-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows for plumbing tasks. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is crucial for understanding the practical applications of plumbing methods.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows for plumbing tasks. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is crucial for understanding the practical applications of plumbing methods."
         },
         {
           "id": "plumbing-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will review how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and methods for escalating issues based on specific thresholds. This architecture is vital for maintaining control and ensuring the success of plumbing projects.\nContext recap: In our recap, we will review how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and methods for escalating issues based on specific thresholds. This architecture is vital for maintaining control and ensuring the success of plumbing projects.\nContext recap: In our recap, we will review how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and methods for escalating issues based on specific thresholds. This architecture is vital for maintaining control and ensuring the success of plumbing projects. Context recap: In our recap, we will review how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and methods for escalating issues based on specific thresholds. This architecture is vital for maintaining control and ensuring the success of plumbing projects."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Plumbing501Module: LearningModule = {
           "id": "plumbing-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in plumbing systems diagnostics and plumbing impact and tradeoff analysis."
+          "content": "This lesson focuses on the architecture of plumbing scenarios, where we will analyze competing constraints that arise during plumbing diagnostics. We will also explore the impact of these constraints and how trade-off analysis can help us make informed decisions in plumbing projects.\nContext recap: This lesson focuses on the architecture of plumbing scenarios, where we will analyze competing constraints that arise during plumbing diagnostics. We will also explore the impact of these constraints and how trade-off analysis can help us make informed decisions in plumbing projects.\nContext recap: This lesson focuses on the architecture of plumbing scenarios, where we will analyze competing constraints that arise during plumbing diagnostics. We will also explore the impact of these constraints and how trade-off analysis can help us make informed decisions in plumbing projects. Context recap: This lesson focuses on the architecture of plumbing scenarios, where we will analyze competing constraints that arise during plumbing diagnostics. We will also explore the impact of these constraints and how trade-off analysis can help us make informed decisions in plumbing projects."
         },
         {
           "id": "plumbing-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice section, learners will compare various options available in plumbing projects. We will evaluate these options based on important factors such as safety, reliability, cost, equity, and governance. This comparison will help learners understand the complexities involved in making plumbing decisions.\nContext recap: In this practice section, learners will compare various options available in plumbing projects. We will evaluate these options based on important factors such as safety, reliability, cost, equity, and governance. This comparison will help learners understand the complexities involved in making plumbing decisions.\nContext recap: In this practice section, learners will compare various options available in plumbing projects. We will evaluate these options based on important factors such as safety, reliability, cost, equity, and governance. This comparison will help learners understand the complexities involved in making plumbing decisions. Context recap: In this practice section, learners will compare various options available in plumbing projects.\nWhy this matters: Tradeoff Framing helps learners in Plumbing connect ideas from Plumbing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "plumbing-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made in plumbing projects should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be adjusted if necessary.\nContext recap: In our recap, we will highlight that each recommendation made in plumbing projects should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be adjusted if necessary.\nContext recap: In our recap, we will highlight that each recommendation made in plumbing projects should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be adjusted if necessary. Context recap: In our recap, we will highlight that each recommendation made in plumbing projects should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be adjusted if necessary."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Plumbing501Module: LearningModule = {
           "id": "plumbing-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will practice operating scenario controls while considering both performance and governance constraints. This experience will help them understand how to balance different priorities in real-world plumbing situations.\nContext recap: In this interactive clinic, learners will practice operating scenario controls while considering both performance and governance constraints. This experience will help them understand how to balance different priorities in real-world plumbing situations.\nWhy this matters: Live Scenario Controls helps learners in Plumbing connect ideas from Plumbing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "plumbing-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to plumbing challenges can be designed to update control gates while maintaining traceability and accountability. This is essential for ensuring that all actions taken are documented and can be reviewed later.\nContext recap: In our recap, we will discuss how effective responses to plumbing challenges can be designed to update control gates while maintaining traceability and accountability. This is essential for ensuring that all actions taken are documented and can be reviewed later.\nContext recap: In our recap, we will discuss how effective responses to plumbing challenges can be designed to update control gates while maintaining traceability and accountability. This is essential for ensuring that all actions taken are documented and can be reviewed later. Context recap: In our recap, we will discuss how effective responses to plumbing challenges can be designed to update control gates while maintaining traceability and accountability. This is essential for ensuring that all actions taken are documented and can be reviewed later."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Plumbing501Module: LearningModule = {
           "id": "plumbing-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects of plumbing decisions are distributed among different stakeholder groups. Understanding these impacts is crucial for making responsible and equitable plumbing choices.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects of plumbing decisions are distributed among different stakeholder groups. Understanding these impacts is crucial for making responsible and equitable plumbing choices.\nWhy this matters: Stakeholder Impact Distribution helps learners in Plumbing connect ideas from Plumbing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "plumbing-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in plumbing governance. We will discuss how to ensure that decisions are traceable, that stakeholders have review rights, and that there are clear obligations for remediation when issues arise. This framework is vital for maintaining trust and integrity in plumbing practices.\nContext recap: In this section, we will explore the architecture of accountability in plumbing governance. We will discuss how to ensure that decisions are traceable, that stakeholders have review rights, and that there are clear obligations for remediation when issues arise. This framework is vital for maintaining trust and integrity in plumbing practices."
         },
         {
           "id": "plumbing-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "As we wrap up our lesson, we have created a very helpful checklist that links essential outcomes with ethical considerations. This checklist is specifically designed to assist us in ensuring that we are adhering to all necessary policies and guidelines in our plumbing practices. Additionally, it encourages us to cultivate resilience, which is crucial in overcoming challenges we may face in our work. This checklist acts as a valuable resource, reminding us of our significant responsibilities as leaders in the plumbing industry. By utilizing this checklist, we can make well-informed decisions that not only enhance our work but also have a positive impact on the communities we serve. Remember, being a responsible leader means being aware of our actions and their effects on others, and this checklist will help guide us in that journey.\nContext recap: As we wrap up our lesson, we have created a very helpful checklist that links essential outcomes with ethical considerations. This checklist is specifically designed to assist us in ensuring that we are adhering to all necessary policies and guidelines in our plumbing practices. Additionally, it encourages us to cultivate resilience, which is crucial in overcoming challenges we may face in our work. This checklist acts as a valuable resource, reminding us of our significant responsibilities as leaders in the plumbing industry.\nWhy this matters: Responsible Leadership Checklist helps learners in Plumbing connect ideas from Plumbing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Plumbing501Module: LearningModule = {
           "id": "plumbing-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this engaging interactive activity, learners will collaborate in small groups to create a detailed brief that showcases their understanding of plumbing concepts. This brief will include well-supported claims, which are statements backed by reliable information, strong evidence that supports those claims, clear boundaries of uncertainty that identify areas where more information is needed, and suggested pathways for remediation, which are practical solutions to any problems identified. By working together, we will not only enhance our understanding of how to effectively present our ideas but also prepare ourselves for real-world challenges we may face in the plumbing industry. This exercise fosters teamwork and communication skills, while also helping us develop critical thinking skills that are essential for success in our future careers. Through collaboration, we can learn from each other and build a stronger foundation in plumbing knowledge and practices.\nContext recap: In this engaging interactive activity, learners will collaborate in small groups to create a detailed brief that showcases their understanding of plumbing concepts. This brief will include well-supported claims, which are statements backed by reliable information, strong evidence that supports those claims, clear boundaries of uncertainty that identify areas where more information is needed, and suggested pathways for remediation, which are practical solutions to any problems identified. By working together, we will not only enhance our understanding of how to effectively present our ideas but also prepare ourselves for real-world challenges we may face in the plumbing industry. This exercise fosters teamwork and communication skills, while also helping us develop critical thinking skills that are essential for success in our future careers."
         },
         {
           "id": "plumbing-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "In this practice session, learners will engage in a valuable rehearsal where they can prepare their responses to different critiques that might come from experts, governance bodies, and stakeholders. This preparation is not just about building confidence; it is essential for ensuring that we can effectively address any concerns that may arise during our presentations. By taking the time to practice our responses, we will enhance our ability to communicate our ideas clearly and persuasively. This skill is crucial in any professional environment, as it helps us convey our thoughts and solutions in a way that resonates with our audience. Additionally, this rehearsal will allow us to anticipate questions and challenges, making us more adept at handling unexpected situations during our actual presentations. Overall, this session is a key step in our journey to becoming proficient in our field and ensuring that we are well-prepared for any feedback we may receive.\nContext recap: In this practice session, learners will engage in a valuable rehearsal where they can prepare their responses to different critiques that might come from experts, governance bodies, and stakeholders. This preparation is not just about building confidence; it is essential for ensuring that we can effectively address any concerns that may arise during our presentations. By taking the time to practice our responses, we will enhance our ability to communicate our ideas clearly and persuasively. This skill is crucial in any professional environment, as it helps us convey our thoughts and solutions in a way that resonates with our audience.\nWhy this matters: Expert Panel Rehearsal helps learners in Plumbing connect ideas from Plumbing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [

@@ -23,7 +23,7 @@ export const CapstoneHumanHealthAi501Module: LearningModule = {
     "Design defensible solutions for clinical workflow modeling under real constraints",
     "Evaluate interventions in evidence and bias controls with measurable tradeoff analysis",
     "Operationalize human oversight protocols through accountable governance design",
-    "Lead evidence-backed decision defense for care impact governance scenarios",
+    "Lead evidence-backed decision defense for care impact governance scenarios with clear data analysis evidence",
     "Integrate technical, policy, and stakeholder perspectives into one execution model",
     "Produce capstone artifacts that withstand expert cross-examination"
   ],
@@ -46,19 +46,19 @@ export const CapstoneHumanHealthAi501Module: LearningModule = {
           "id": "capstone-human-health-ai-501-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "The capstone frames a hospital AI-assisted pathway balancing diagnostic support gains with safety, fairness, and clinician workload constraints. Learners define objectives, constraints, and stakeholder exposures."
+          "content": "In this exciting capstone project, we will dive into the fascinating world of artificial intelligence (AI) and its role in hospitals, particularly in enhancing the way patients are diagnosed. While AI has the potential to bring many benefits, such as faster and more accurate diagnoses, it is crucial to consider important factors like safety, fairness, and the impact on the workload of healthcare professionals. As you embark on this journey, you will collaborate with your peers to clearly define what our goals are, understand the limitations we might encounter, and identify the various stakeholders who are part of this important process. This will help ensure that we create a balanced approach that prioritizes patient care and supports healthcare workers effectively."
         },
         {
           "id": "capstone-human-health-ai-501-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "Boundary design distinguishes what is controllable, what is uncertain, and what requires policy escalation."
+          "content": "When designing our project, we need to establish clear boundaries. This means identifying what aspects we can control, what elements are uncertain, and which issues may require further policy discussions. Understanding these boundaries will help us make informed decisions as we develop our AI-assisted solutions.\nContext recap: When designing our project, we need to establish clear boundaries. This means identifying what aspects we can control, what elements are uncertain, and which issues may require further policy discussions. Understanding these boundaries will help us make informed decisions as we develop our AI-assisted solutions."
         },
         {
           "id": "capstone-human-health-ai-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All capstone claims must map to measurable indicators and explicit uncertainty notes."
+          "content": "It is essential that all claims made during our capstone project are supported by measurable indicators. Additionally, we must clearly note any uncertainties associated with our findings. This practice ensures that our conclusions are based on solid evidence and allows us to communicate our results effectively.\nContext recap: It is essential that all claims made during our capstone project are supported by measurable indicators. Additionally, we must clearly note any uncertainties associated with our findings. This practice ensures that our conclusions are based on solid evidence and allows us to communicate our results effectively."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const CapstoneHumanHealthAi501Module: LearningModule = {
           "id": "capstone-human-health-ai-501-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "Learners build an integrated intervention plan across technical, policy, and stakeholder dimensions."
+          "content": "In this interactive lab, you will work on creating a comprehensive intervention plan that integrates various aspects such as technical solutions, policy considerations, and the perspectives of stakeholders. This holistic approach will help ensure that our interventions are effective and considerate of all involved parties.\nContext recap: In this interactive lab, you will work on creating a comprehensive intervention plan that integrates various aspects such as technical solutions, policy considerations, and the perspectives of stakeholders. This holistic approach will help ensure that our interventions are effective and considerate of all involved parties."
         },
         {
           "id": "capstone-human-health-ai-501-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "The plan includes control thresholds, rollback criteria, and accountability checkpoints."
+          "content": "Your intervention plan should also include specific control thresholds, criteria for rolling back decisions if necessary, and checkpoints for accountability. These elements are crucial for monitoring the effectiveness of our interventions and ensuring that we can respond appropriately to any challenges that arise.\nContext recap: Your intervention plan should also include specific control thresholds, criteria for rolling back decisions if necessary, and checkpoints for accountability. These elements are crucial for monitoring the effectiveness of our interventions and ensuring that we can respond appropriately to any challenges that arise."
         }
       ],
       "interactiveActivities": [
@@ -367,13 +367,13 @@ export const CapstoneHumanHealthAi501Module: LearningModule = {
           "id": "capstone-human-health-ai-501-l04-c1",
           "kind": "practice",
           "title": "Simulation Run",
-          "content": "Learners run multiple interventions under uncertainty and compare outcomes."
+          "content": "During this simulation exercise, you will conduct multiple interventions while considering various uncertainties. After running these simulations, you will compare the outcomes to understand how different approaches can lead to different results. This hands-on experience will deepen your understanding of the complexities involved in healthcare interventions.\nContext recap: During this simulation exercise, you will conduct multiple interventions while considering various uncertainties. After running these simulations, you will compare the outcomes to understand how different approaches can lead to different results. This hands-on experience will deepen your understanding of the complexities involved in healthcare interventions."
         },
         {
           "id": "capstone-human-health-ai-501-l04-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "Each run is debriefed for objective attainment, side effects, and governance compliance through explicit data analysis that feeds an implementation artifact."
+          "content": "After we complete each simulation run, we will gather for a debriefing session. In this session, we will carefully review the objectives we successfully achieved, discuss any side effects that may have arisen during the simulation, and evaluate how effectively we followed governance standards. This thorough analysis will be documented in detail, and the information we gather will contribute to an implementation artifact that captures our findings and the decisions we made throughout the process.\nContext recap: After we complete each simulation run, we will gather for a debriefing session. In this session, we will carefully review the objectives we successfully achieved, discuss any side effects that may have arisen during the simulation, and evaluate how effectively we followed governance standards. This thorough analysis will be documented in detail, and the information we gather will contribute to an implementation artifact that captures our findings and the decisions we made throughout the process."
         }
       ],
       "interactiveActivities": [
@@ -624,13 +624,13 @@ export const CapstoneHumanHealthAi501Module: LearningModule = {
           "id": "capstone-human-health-ai-501-l06-c1",
           "kind": "practice",
           "title": "Defense Preparation",
-          "content": "Learners assemble a decision brief with claims, evidence, uncertainty ranges, and one implementation artifact mapped to rubric criteria."
+          "content": "As you prepare for the capstone defense panel, you will create a decision brief. This brief should include your claims, supporting evidence, ranges of uncertainty, and one implementation artifact that aligns with the criteria outlined in the rubric. This preparation is key to effectively communicating your project to the panel.\nContext recap: As you prepare for the capstone defense panel, you will create a decision brief. This brief should include your claims, supporting evidence, ranges of uncertainty, and one implementation artifact that aligns with the criteria outlined in the rubric. This preparation is key to effectively communicating your project to the panel."
         },
         {
           "id": "capstone-human-health-ai-501-l06-c2",
           "kind": "recap",
           "title": "Panel Response Strategy",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques in a structured policy debate using the scoring rubric."
+          "content": "As you get ready for the panel discussion, it's important to practice how to respond to different types of critiques. You will focus on three main areas: technical aspects, governance issues, and stakeholder concerns. This practice will take place in a structured policy debate format. To help you during this process, we will use a scoring rubric. This rubric will not only guide your responses but also assist you in expressing your ideas in a clear and confident manner. Remember, the goal is to engage thoughtfully with the critiques and showcase your understanding of the topic."
         }
       ],
       "interactiveActivities": [

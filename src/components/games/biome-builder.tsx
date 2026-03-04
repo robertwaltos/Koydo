@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Sun, CloudRain, Wind, TreePine, Bird, Waves, Thermometer, ShieldCheck, Activity, Info } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Ecosystem Types --- */
 type Entity = "PLANNER" | "CONSUMER" | "DECOMPOSER";
@@ -22,6 +23,28 @@ export default function BiomeBuilder() {
     });
     const [equilibrium, setEquilibrium] = useState(70);
     const [days, setDays] = useState(0);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
+
+    useEffect(() => {
+        if (gameState !== "STABLE" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "biome",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, days),
+            score: Math.round(equilibrium),
+            maxScore: 100,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, days, equilibrium]);
 
     const runSimulation = useCallback(() => {
         if (gameState !== "SIMULATING") return;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
 import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
@@ -8,6 +8,10 @@ import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import { hapticSuccess, hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
 import { Rocket, Satellite, BookOpen, Search } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Vocabulary Voyager Content --- */
 type WordMission = {
@@ -38,21 +42,38 @@ const MISSIONS: WordMission[] = [
     }
 ];
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
 export default function VocabularyVoyager() {
     const { setMood, setMessage } = useMascot();
     const [missionIdx, setMissionIdx] = useState(0);
     const [gameState, setGameState] = useState<"briefing" | "warping" | "warped">("briefing");
     const [streak, setStreak] = useState(0);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
+
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        completionEmittedRef.current = false;
+    }, []);
 
     const currentMission = MISSIONS[missionIdx];
 
     useEffect(() => {
         setMessage("Greetings, Captain! Our engines need semantic fuel. Let's decode these nebulae! 🚀");
         setMood("happy");
-    }, []);
+        resetRunTracking();
+    }, [resetRunTracking, setMessage, setMood]);
 
     const handleAnswer = (choice: string) => {
         if (gameState !== "briefing") return;
+        interactionCountRef.current += 1;
 
         void hapticSelection();
 
@@ -64,11 +85,27 @@ export default function VocabularyVoyager() {
     };
 
     const handleSuccess = () => {
+        const nextStreak = streak + 1;
         setGameState("warping");
-        setStreak(prev => prev + 1);
+        setStreak(nextStreak);
         setMood("happy");
         setMessage("Incredible! That's high-grade fuel! Engaging Warp Drive... 🌌");
         void hapticCelebration();
+
+        if (nextStreak >= 3 && nextStreak % 3 === 0 && !completionEmittedRef.current) {
+            completionEmittedRef.current = true;
+            emitLegacyGameComplete({
+                sessionId: sessionIdRef.current,
+                gameId: "vocabulary",
+                elapsedMs: getElapsedMs(runStartedAtRef.current),
+                interactions: Math.max(1, interactionCountRef.current),
+                score: nextStreak * 200 + (missionIdx + 1) * 120,
+                maxScore: 2400,
+                source: "component",
+                occurredAt: new Date().toISOString(),
+            });
+            resetRunTracking();
+        }
 
         setTimeout(() => {
             setGameState("warped");
@@ -121,7 +158,7 @@ export default function VocabularyVoyager() {
                             <div className="text-center space-y-4">
                                 <span className="text-[10px] font-black uppercase text-indigo-400 px-3 py-1 bg-indigo-500/10 rounded-full border border-indigo-500/20">Target Signature Found</span>
                                 <h1 className="text-6xl font-black text-white tracking-widest">{currentMission.word}</h1>
-                                <p className="text-indigo-200/60 font-medium italic text-sm">"{currentMission.context}"</p>
+                                <p className="text-indigo-200/60 font-medium italic text-sm">&quot;{currentMission.context}&quot;</p>
                             </div>
 
                             <div className="grid gap-4">

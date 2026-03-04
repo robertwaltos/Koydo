@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-03-04T04:15:51.007Z",
+  "summary": {
+    "totalSchoolPartners": 1,
+    "withAccountClass": 1,
+    "linkedOrganizations": 1,
+    "updatedPartners": 0,
+    "unresolvedPartners": 0
+  },
+  "updates": [],
+  "partners": [
+    {
+      "partnerId": "48477fd6-8290-4f71-9c1c-11ec3f0b2892",
+      "displayName": "School API Smoke Partner",
+      "contactEmail": "codex.partner.smoke@example.com",
+      "accountClass": "SCHOOL",
+      "organizationId": "f062ae5d-6407-435d-b12d-a43b82328dd5",
+      "linked": true,
+      "linkedVia": "metadata.organizationId"
+    }
+  ]
+}

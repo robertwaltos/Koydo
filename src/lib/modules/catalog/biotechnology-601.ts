@@ -46,19 +46,19 @@ export const Biotechnology601Module: LearningModule = {
           "id": "biotechnology-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for Biotechnology, framing how bioprocess optimization and translational validation interact across complex systems."
+          "content": "In this lesson, we will explore the advanced boundaries of Biotechnology. We will learn how bioprocess optimization, which is the process of making biotechnological methods more efficient, interacts with translational validation. This means we will see how these concepts work together within complex systems, helping us understand the bigger picture of biotechnology.\nContext recap: In this lesson, we will explore the advanced boundaries of Biotechnology. We will learn how bioprocess optimization, which is the process of making biotechnological methods more efficient, interacts with translational validation. This means we will see how these concepts work together within complex systems, helping us understand the bigger picture of biotechnology."
         },
         {
           "id": "biotechnology-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "Learners model causal pathways, uncertainty ranges, and hidden assumptions before intervention design."
+          "content": "In this section, learners will model the pathways that show cause and effect in biotechnology. We will also look at the ranges of uncertainty that can affect our decisions and identify any hidden assumptions we might have. This foundational understanding is crucial before we design any interventions or solutions in our projects.\nContext recap: In this section, learners will model the pathways that show cause and effect in biotechnology. We will also look at the ranges of uncertainty that can affect our decisions and identify any hidden assumptions we might have. This foundational understanding is crucial before we design any interventions or solutions in our projects."
         },
         {
           "id": "biotechnology-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "All advanced claims are tied to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In advanced biotechnology, it is essential that all claims we make are supported by measurable indicators. This means we need to have clear evidence to back up our statements. Additionally, we will discuss the importance of confidence bounds and review checkpoints to ensure that our findings are rigorous and reliable.\nContext recap: In advanced biotechnology, it is essential that all claims we make are supported by measurable indicators. This means we need to have clear evidence to back up our statements. Additionally, we will discuss the importance of confidence bounds and review checkpoints to ensure that our findings are rigorous and reliable."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const Biotechnology601Module: LearningModule = {
           "id": "biotechnology-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "Learners build a specialist workflow emphasizing research-grade reasoning, leadership decision quality, and publishable capstone defense, then test it against adversarial or edge-case conditions."
+          "content": "In this engaging interactive lab, students will have the opportunity to design a specialized workflow that highlights the significance of using research-grade reasoning and making informed leadership decisions. We will also learn how to effectively defend our research findings in a manner that meets publication standards. Once we have constructed our workflows, we will challenge them by testing against difficult scenarios, which will help us understand their strengths and weaknesses. This hands-on experience will prepare us for real-world applications in biotechnology.\nContext recap: In this engaging interactive lab, students will have the opportunity to design a specialized workflow that highlights the significance of using research-grade reasoning and making informed leadership decisions. We will also learn how to effectively defend our research findings in a manner that meets publication standards. Once we have constructed our workflows, we will challenge them by testing against difficult scenarios, which will help us understand their strengths and weaknesses. This hands-on experience will prepare us for real-world applications in biotechnology."
         },
         {
           "id": "biotechnology-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "Robust specialist workflows require control gates, rollback criteria, and accountability checkpoints."
+          "content": "To ensure that our specialized workflows are effective, we need to incorporate control gates, which are checkpoints that help us monitor progress. We will also establish rollback criteria, which allow us to revert to previous steps if necessary, and accountability checkpoints to ensure that everyone involved is responsible for their part in the process.\nContext recap: To ensure that our specialized workflows are effective, we need to incorporate control gates, which are checkpoints that help us monitor progress. We will also establish rollback criteria, which allow us to revert to previous steps if necessary, and accountability checkpoints to ensure that everyone involved is responsible for their part in the process."
         }
       ],
       "interactiveActivities": [
@@ -396,19 +396,19 @@ export const Biotechnology601Module: LearningModule = {
           "id": "biotechnology-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "Case focus: a therapeutic biotechnology program moving from lab-stage results to clinical and regulatory milestones. Learners map strategic objectives, failure risks, and governance constraints before action."
+          "content": "In this engaging case study, we will explore a therapeutic biotechnology program that is making an important transition from the results obtained in the laboratory to the critical stages of clinical trials and regulatory approval. As part of this learning experience, you will have the opportunity to carefully map out the strategic objectives that guide the program's development. Additionally, you will identify potential risks that could lead to failure and examine the governance constraints that may influence decision-making processes before any actions are taken. This comprehensive analysis will help you understand the complexities involved in advancing biotechnology innovations."
         },
         {
           "id": "biotechnology-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "Options are scored across effectiveness, reliability, equity, feasibility, and long-term maintainability."
+          "content": "In this section, we will learn about scoring options using a tradeoff matrix. We will evaluate different choices based on their effectiveness, reliability, equity, feasibility, and long-term maintainability. This scoring process helps us make informed decisions about which options to pursue in our biotechnology projects.\nContext recap: In this section, we will learn about scoring options using a tradeoff matrix. We will evaluate different choices based on their effectiveness, reliability, equity, feasibility, and long-term maintainability. This scoring process helps us make informed decisions about which options to pursue in our biotechnology projects."
         },
         {
           "id": "biotechnology-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are translated into safeguards, response playbooks, and measurable adaptation loops."
+          "content": "When we encounter failures in our projects, it is important to translate those experiences into safeguards. In this recap, we will discuss how to create response playbooks that outline steps to take in case of failure and establish measurable adaptation loops that allow us to learn and improve from our experiences.\nContext recap: When we encounter failures in our projects, it is important to translate those experiences into safeguards. In this recap, we will discuss how to create response playbooks that outline steps to take in case of failure and establish measurable adaptation loops that allow us to learn and improve from our experiences."
         }
       ],
       "flashcards": [
@@ -447,13 +447,13 @@ export const Biotechnology601Module: LearningModule = {
           "id": "biotechnology-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "Learners configure simulation assumptions, thresholds, and intervention pathways under high-stakes conditions."
+          "content": "In this interactive practice session, learners will configure the assumptions, thresholds, and intervention pathways for simulations under high-stakes conditions. This hands-on experience will help us understand how to prepare for various scenarios and make informed decisions based on our simulations.\nContext recap: In this interactive practice session, learners will configure the assumptions, thresholds, and intervention pathways for simulations under high-stakes conditions. This hands-on experience will help us understand how to prepare for various scenarios and make informed decisions based on our simulations."
         },
         {
           "id": "biotechnology-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each run, teams review target attainment, side effects, and governance compliance gaps."
+          "content": "After each simulation run, teams will gather to review how well they met their targets. We will discuss any side effects that occurred and identify gaps in governance compliance. This debriefing process is crucial for improving our decision-making and ensuring that we learn from each simulation.\nContext recap: After each simulation run, teams will gather to review how well they met their targets. We will discuss any side effects that occurred and identify gaps in governance compliance. This debriefing process is crucial for improving our decision-making and ensuring that we learn from each simulation."
         }
       ],
       "interactiveActivities": [
@@ -728,19 +728,19 @@ export const Biotechnology601Module: LearningModule = {
           "id": "biotechnology-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners evaluate how outcomes are distributed across stakeholders, including delayed and indirect effects."
+          "content": "In this lesson, learners will evaluate how the outcomes of our biotechnology projects are distributed among different stakeholders. We will consider not only the immediate effects but also any delayed and indirect effects that may arise. Understanding this distribution is key to ensuring fairness and equity in our work.\nContext recap: In this lesson, learners will evaluate how the outcomes of our biotechnology projects are distributed among different stakeholders. We will consider not only the immediate effects but also any delayed and indirect effects that may arise. Understanding this distribution is key to ensuring fairness and equity in our work."
         },
         {
           "id": "biotechnology-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "Accountability is implemented through traceability standards, review rights, and remediation obligations."
+          "content": "In this section, we will learn about designing accountability systems in biotechnology. This includes establishing traceability standards, which help us track decisions and actions, as well as review rights and remediation obligations to ensure that everyone is held accountable for their contributions.\nContext recap: In this section, we will learn about designing accountability systems in biotechnology. This includes establishing traceability standards, which help us track decisions and actions, as well as review rights and remediation obligations to ensure that everyone is held accountable for their contributions."
         },
         {
           "id": "biotechnology-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A leadership checklist links strategy, ethics, policy, and operational controls into one review artifact."
+          "content": "A responsible leadership checklist is a helpful tool that combines important elements such as strategy, ethics, policy, and operational controls. This checklist serves as a single document that allows leaders to review and ensure they are making thoughtful and ethical decisions in their biotechnology projects.\nContext recap: A responsible leadership checklist is a helpful tool that combines important elements such as strategy, ethics, policy, and operational controls. This checklist serves as a single document that allows leaders to review and ensure they are making thoughtful and ethical decisions in their biotechnology projects."
         }
       ],
       "flashcards": [
@@ -779,13 +779,13 @@ export const Biotechnology601Module: LearningModule = {
           "id": "biotechnology-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "Learners assemble a capstone charter with objectives, constraints, metrics, governance controls, and evidence plan."
+          "content": "In this activity, learners will create a capstone charter. This charter will include clear objectives, any constraints they might face, metrics for measuring success, governance controls to ensure ethical practices, and a plan for gathering evidence to support their project. This comprehensive approach helps ensure that all aspects of the project are well thought out and organized.\nContext recap: In this activity, learners will create a capstone charter. This charter will include clear objectives, any constraints they might face, metrics for measuring success, governance controls to ensure ethical practices, and a plan for gathering evidence to support their project. This comprehensive approach helps ensure that all aspects of the project are well thought out and organized."
         },
         {
           "id": "biotechnology-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "The final practice round trains learners to defend decisions against technical, governance, and stakeholder critiques."
+          "content": "During the final practice round, learners will have the opportunity to rehearse defending their decisions. This exercise prepares them to respond to critiques from technical experts, governance bodies, and stakeholders. By practicing these defenses, learners build confidence and improve their ability to communicate their ideas effectively.\nContext recap: During the final practice round, learners will have the opportunity to rehearse defending their decisions. This exercise prepares them to respond to critiques from technical experts, governance bodies, and stakeholders. By practicing these defenses, learners build confidence and improve their ability to communicate their ideas effectively."
         }
       ],
       "interactiveActivities": [

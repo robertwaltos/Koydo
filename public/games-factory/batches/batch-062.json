@@ -1,0 +1,452 @@
+{
+  "generatedAt": "2026-03-04T05:55:50.101Z",
+  "batchId": "batch-062",
+  "batchNumber": 62,
+  "totalBatches": 63,
+  "throttle": {
+    "pauseMs": 180,
+    "sequential": true
+  },
+  "games": [
+    {
+      "id": "zone-224",
+      "title": "Nimbus Mission",
+      "shortName": "Nimbus Mission",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "literacy",
+      "ageMin": 19,
+      "ageMax": 99,
+      "ageBand": "college",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "word-quest",
+        "label": "Word Quest",
+        "subject": "literacy",
+        "tags": [
+          "language",
+          "spelling",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-literacy-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-225",
+      "title": "Flare Mission",
+      "shortName": "Flare Mission",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🚀",
+      "ageMin": 19,
+      "ageMax": 99,
+      "ageBand": "college",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-226",
+      "title": "Sky Path",
+      "shortName": "Sky Path",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🌌",
+      "ageMin": 19,
+      "ageMax": 99,
+      "ageBand": "college",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": "MIT-like",
+        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
+        "commit": "e5c0c42"
+      }
+    },
+    {
+      "id": "zone-227",
+      "title": "River Path",
+      "shortName": "River Path",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🛸",
+      "ageMin": 19,
+      "ageMax": 99,
+      "ageBand": "college",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": "MIT",
+        "remote": "https://github.com/louis-e/openstreetguesser.git",
+        "commit": "6620d77"
+      }
+    },
+    {
+      "id": "zone-228",
+      "title": "Echo Path",
+      "shortName": "Echo Path",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "⚡",
+      "ageMin": 19,
+      "ageMax": 99,
+      "ageBand": "college",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-229",
+      "title": "Luna Path",
+      "shortName": "Luna Path",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🎮",
+      "ageMin": 19,
+      "ageMax": 99,
+      "ageBand": "college",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-230",
+      "title": "Nova Path",
+      "shortName": "Nova Path",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🧠",
+      "ageMin": 19,
+      "ageMax": 99,
+      "ageBand": "college",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": "MIT-like",
+        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
+        "commit": "e5c0c42"
+      }
+    },
+    {
+      "id": "zone-231",
+      "title": "Terra Path",
+      "shortName": "Terra Path",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🧩",
+      "ageMin": 19,
+      "ageMax": 99,
+      "ageBand": "college",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": "MIT",
+        "remote": "https://github.com/louis-e/openstreetguesser.git",
+        "commit": "6620d77"
+      }
+    }
+  ]
+}

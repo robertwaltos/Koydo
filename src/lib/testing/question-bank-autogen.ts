@@ -388,7 +388,7 @@ async function generateOpenAiQuestions(params: {
   blueprint: unknown;
   questionCount: number;
 }) {
-  if (!serverEnv.OPENAI_API_KEY || params.questionCount <= 0) {
+  if (!(serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY) || params.questionCount <= 0) {
     return [] as GeneratedQuestion[];
   }
 
@@ -400,7 +400,7 @@ async function generateOpenAiQuestions(params: {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${serverEnv.OPENAI_API_KEY}`,
+        Authorization: `Bearer ${serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -591,7 +591,7 @@ async function ensureQuestionBankSupplyInternal(
     return { inserted: 0, generationMode: "none" };
   }
 
-  const allowOpenAi = params.allowOpenAi !== false && Boolean(serverEnv.OPENAI_API_KEY);
+  const allowOpenAi = params.allowOpenAi !== false && Boolean(serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY);
   let aiQuestions: GeneratedQuestion[] = [];
 
   if (allowOpenAi) {

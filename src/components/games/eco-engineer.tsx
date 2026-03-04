@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Zap, Sun, Wind, Battery, Activity, ShieldCheck, Thermometer, Info, ChevronRight, Leaf, Trash2, CloudRain } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Sustainability Types --- */
 type EnergySource = "SOLAR" | "WIND" | "COAL" | "NUCLEAR";
@@ -33,6 +34,9 @@ export default function EcoEngineer() {
         budget: 5000,
         happiness: 50
     });
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const updateSimulation = useCallback(() => {
         if (gameState !== "GRID") return;
@@ -55,6 +59,27 @@ export default function EcoEngineer() {
         const interval = setInterval(updateSimulation, 1000);
         return () => clearInterval(interval);
     }, [updateSimulation]);
+
+    useEffect(() => {
+        const renewableCount = sources.SOLAR + sources.WIND;
+        const stabilized = gameState === "GRID" && renewableCount >= 4 && stats.carbon <= 40 && stats.power >= 60;
+        if (!stabilized || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "eco",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, renewableCount),
+            score: Math.round(100 - stats.carbon),
+            maxScore: 100,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, sources.SOLAR, sources.WIND, stats.carbon, stats.power]);
 
     const buildSource = (type: EnergySource) => {
         const costs: Record<EnergySource, number> = { SOLAR: 500, WIND: 800, COAL: 300, NUCLEAR: 2500 };

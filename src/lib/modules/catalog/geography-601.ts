@@ -47,19 +47,19 @@ export const Geography601Module: LearningModule = {
           "id": "geography-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Geography, with focus on geography systems diagnostics and geography operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of geography, which are essential for understanding the complex systems that shape our world. We will focus on how to identify and diagnose issues within these geographical systems, which can include anything from environmental changes to urban planning challenges. Additionally, we will learn how to design effective operations and execution plans that address these issues. By building this foundational knowledge, we will be better equipped to analyze geographical data critically and make informed decisions that can positively impact our communities and the environment."
         },
         {
           "id": "geography-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this part of the lesson, learners will create maps that illustrate causal pathways, which show how different factors influence each other. We will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is essential for planning effective interventions in geographical contexts.\nContext recap: In this part of the lesson, learners will create maps that illustrate causal pathways, which show how different factors influence each other. We will also identify ranges of uncertainty and understand how various systems depend on one another. This preparation is essential for planning effective interventions in geographical contexts."
         },
         {
           "id": "geography-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims we make are supported by measurable indicators. In this recap, we will discuss how to establish confidence bounds and set up review checkpoints. These practices help us validate our findings and ensure that our conclusions are based on solid evidence.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. In this recap, we will discuss how to establish confidence bounds and set up review checkpoints. These practices help us validate our findings and ensure that our conclusions are based on solid evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Geography601Module: LearningModule = {
           "id": "geography-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive session, learners will design specialized workflows that are tailored to specific geographical tasks. We will also conduct stress tests on these workflows by simulating challenging scenarios. This practice will help us understand how our designs hold up under pressure and identify areas for improvement.\nContext recap: In this interactive session, learners will design specialized workflows that are tailored to specific geographical tasks. We will also conduct stress tests on these workflows by simulating challenging scenarios. This practice will help us understand how our designs hold up under pressure and identify areas for improvement."
         },
         {
           "id": "geography-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will review the architecture of our workflows, focusing on how they integrate various checkpoints, rollback criteria, and threshold-based escalation processes. Understanding these components is crucial for ensuring that our workflows are robust and can adapt to changing circumstances.\nContext recap: In this recap, we will review the architecture of our workflows, focusing on how they integrate various checkpoints, rollback criteria, and threshold-based escalation processes. Understanding these components is crucial for ensuring that our workflows are robust and can adapt to changing circumstances."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Geography601Module: LearningModule = {
           "id": "geography-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in geography systems diagnostics and geography impact and tradeoff analysis."
+          "content": "In this lesson, we will frame case studies that highlight competing constraints within geographical systems. We will analyze how these constraints affect diagnostics and assess the impacts and trade-offs involved in different geographical scenarios. This understanding is key to making informed decisions.\nContext recap: In this lesson, we will frame case studies that highlight competing constraints within geographical systems. We will analyze how these constraints affect diagnostics and assess the impacts and trade-offs involved in different geographical scenarios. This understanding is key to making informed decisions."
         },
         {
           "id": "geography-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help us understand the trade-offs involved in decision-making and the implications of our choices.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help us understand the trade-offs involved in decision-making and the implications of our choices."
         },
         {
           "id": "geography-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will discuss the structure of our decision memos. Each recommendation we make should include clear assumptions, supporting evidence, risk controls, and fallback plans. This ensures that our decisions are well-founded and that we are prepared for any potential challenges.\nContext recap: In this recap, we will discuss the structure of our decision memos. Each recommendation we make should include clear assumptions, supporting evidence, risk controls, and fallback plans. This ensures that our decisions are well-founded and that we are prepared for any potential challenges."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Geography601Module: LearningModule = {
           "id": "geography-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will take charge of scenario controls while balancing performance and governance constraints. This hands-on experience will help us understand the complexities involved in managing geographical scenarios effectively.\nContext recap: In this interactive clinic, learners will take charge of scenario controls while balancing performance and governance constraints. This hands-on experience will help us understand the complexities involved in managing geographical scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Geography connect ideas from Geography Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "geography-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will explore how effective responses can update control gates while maintaining traceability and accountability. This is crucial for ensuring that our actions are transparent and that we can track the outcomes of our decisions.\nContext recap: In this recap, we will explore how effective responses can update control gates while maintaining traceability and accountability. This is crucial for ensuring that our actions are transparent and that we can track the outcomes of our decisions."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Geography601Module: LearningModule = {
           "id": "geography-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is essential for assessing the impact of geographical decisions on various communities.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is essential for assessing the impact of geographical decisions on various communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Geography connect ideas from Geography Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "geography-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this part of the lesson, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. These elements are vital for maintaining trust and integrity in geographical governance.\nContext recap: In this part of the lesson, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. These elements are vital for maintaining trust and integrity in geographical governance."
         },
         {
           "id": "geography-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will use a comprehensive checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt to challenges. This checklist will help ensure that we are making responsible decisions in our leadership roles.\nContext recap: At the end of our lesson, we will use a comprehensive checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt to challenges. This checklist will help ensure that we are making responsible decisions in our leadership roles."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Geography601Module: LearningModule = {
           "id": "geography-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, students will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for remediation. This exercise will help students practice critical thinking and effective communication.\nContext recap: In this interactive activity, students will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for remediation. This exercise will help students practice critical thinking and effective communication."
         },
         {
           "id": "geography-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, students will practice their responses to potential questions and critiques from an expert panel. They will prepare for inquiries related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will enhance their confidence and readiness for real-world discussions.\nContext recap: During this session, students will practice their responses to potential questions and critiques from an expert panel. They will prepare for inquiries related to technical aspects, governance issues, and the perspectives of various stakeholders. This rehearsal will enhance their confidence and readiness for real-world discussions."
         }
       ],
       "interactiveActivities": [

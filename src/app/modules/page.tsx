@@ -87,7 +87,7 @@ export default async function ModulesPage({ searchParams }: ModulesPageProps) {
     <main className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-10">
       {/* Background glow */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-35"
+        className="pointer-events-none absolute inset-0 opacity-35 dark:opacity-20"
         style={{
           background: `
             radial-gradient(ellipse at 15% 20%, #a7f3d0 0%, transparent 45%),

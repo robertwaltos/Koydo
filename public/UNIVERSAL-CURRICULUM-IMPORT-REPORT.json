@@ -1,0 +1,618 @@
+{
+  "generatedAt": "2026-03-03T05:42:55.117Z",
+  "domain": "all",
+  "summary": {
+    "totalRawItems": 87889,
+    "duplicatesRemoved": 8872,
+    "uniqueItems": 70145,
+    "subjectsFound": 69,
+    "modulesGenerated": 67,
+    "totalLessons": 1576
+  },
+  "modules": [
+    {
+      "id": "masters-abstract-algebra-u1-external",
+      "title": "Abstract Algebra (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 111,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-anatomy-u1-external",
+      "title": "Anatomy (Master's Level)",
+      "domain": "masters",
+      "lessons": 10,
+      "questions": 149,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-astronomy-u1-external",
+      "title": "Astronomy (Master's Level)",
+      "domain": "masters",
+      "lessons": 11,
+      "questions": 161,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-biology-advanced-u1-external",
+      "title": "Biology (Advanced) (Master's Level)",
+      "domain": "masters",
+      "lessons": 28,
+      "questions": 415,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-biology-mmlu-u1-external",
+      "title": "Biology (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 23,
+      "questions": 341,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "mba-business-advanced-u1-external",
+      "title": "Business (Advanced) (Master's Level)",
+      "domain": "business",
+      "lessons": 42,
+      "questions": 624,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "mba-business-case-studies-u1-external",
+      "title": "Business Case Studies (Master's Level)",
+      "domain": "business",
+      "lessons": 100,
+      "questions": 0,
+      "flashcards": 0,
+      "chunks": 7295
+    },
+    {
+      "id": "mba-business-ethics-u1-external",
+      "title": "Business Ethics (Master's Level)",
+      "domain": "business",
+      "lessons": 8,
+      "questions": 111,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "law-case-law-holdings-u1-external",
+      "title": "Case Law & Holdings (Master's Level)",
+      "domain": "law",
+      "lessons": 100,
+      "questions": 42484,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-chemistry-advanced-u1-external",
+      "title": "Chemistry (Advanced) (Master's Level)",
+      "domain": "masters",
+      "lessons": 64,
+      "questions": 955,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-chemistry-mmlu-u1-external",
+      "title": "Chemistry (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 15,
+      "questions": 219,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-clinical-knowledge-u1-external",
+      "title": "Clinical Knowledge (Master's Level)",
+      "domain": "masters",
+      "lessons": 20,
+      "questions": 288,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-college-biology-u1-external",
+      "title": "College Biology (Master's Level)",
+      "domain": "masters",
+      "lessons": 11,
+      "questions": 160,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-college-chemistry-u1-external",
+      "title": "College Chemistry (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 106,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-college-computer-science-u1-external",
+      "title": "College Computer Science (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 111,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-college-mathematics-u1-external",
+      "title": "College Mathematics (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 110,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-college-medicine-u1-external",
+      "title": "College Medicine (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 106,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-college-physics-u1-external",
+      "title": "College Physics (Master's Level)",
+      "domain": "masters",
+      "lessons": 6,
+      "questions": 89,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-computer-security-u1-external",
+      "title": "Computer Security (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 111,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-conceptual-physics-u1-external",
+      "title": "Conceptual Physics (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 18,
+      "questions": 256,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-cs-advanced-u1-external",
+      "title": "Computer Science (Advanced) (Master's Level)",
+      "domain": "masters",
+      "lessons": 10,
+      "questions": 136,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-cs-intro-u1-external",
+      "title": "Computer Science (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 108,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-econometrics-u1-external",
+      "title": "Econometrics (Master's Level)",
+      "domain": "masters",
+      "lessons": 9,
+      "questions": 126,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "mba-economics-advanced-u1-external",
+      "title": "Economics (Advanced) (Master's Level)",
+      "domain": "business",
+      "lessons": 27,
+      "questions": 401,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "ee-electrical-engineering-u1-external",
+      "title": "Electrical Engineering (Master's Level)",
+      "domain": "ee",
+      "lessons": 11,
+      "questions": 161,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "ee-engineering-advanced-u1-external",
+      "title": "Engineering (Advanced) (Master's Level)",
+      "domain": "ee",
+      "lessons": 60,
+      "questions": 900,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-european-history-u1-external",
+      "title": "European History (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 13,
+      "questions": 181,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-formal-logic-u1-external",
+      "title": "Formal Logic (Master's Level)",
+      "domain": "masters",
+      "lessons": 10,
+      "questions": 140,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-general-knowledge-u1-external",
+      "title": "General Knowledge (Master's Level)",
+      "domain": "masters",
+      "lessons": 58,
+      "questions": 868,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-geography-mmlu-u1-external",
+      "title": "Geography (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 15,
+      "questions": 220,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-global-facts-u1-external",
+      "title": "Global Facts (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 110,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-government-politics-u1-external",
+      "title": "Government & Politics (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 15,
+      "questions": 214,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-human-aging-u1-external",
+      "title": "Human Aging (Master's Level)",
+      "domain": "masters",
+      "lessons": 17,
+      "questions": 246,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-human-sexuality-u1-external",
+      "title": "Human Sexuality (Master's Level)",
+      "domain": "masters",
+      "lessons": 10,
+      "questions": 143,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "law-international-law-u1-external",
+      "title": "International Law (Master's Level)",
+      "domain": "law",
+      "lessons": 9,
+      "questions": 132,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "law-jurisprudence-u1-external",
+      "title": "Jurisprudence (Master's Level)",
+      "domain": "law",
+      "lessons": 8,
+      "questions": 119,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-logical-fallacies-u1-external",
+      "title": "Logical Fallacies (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 12,
+      "questions": 180,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-machine-learning-u1-external",
+      "title": "Machine Learning (Master's Level)",
+      "domain": "masters",
+      "lessons": 9,
+      "questions": 121,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "mba-macroeconomics-u1-external",
+      "title": "Macroeconomics (Undergraduate Level)",
+      "domain": "business",
+      "lessons": 29,
+      "questions": 427,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "mba-management-u1-external",
+      "title": "Management (Master's Level)",
+      "domain": "business",
+      "lessons": 8,
+      "questions": 114,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "mba-marketing-u1-external",
+      "title": "Marketing (Master's Level)",
+      "domain": "business",
+      "lessons": 18,
+      "questions": 258,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-math-advanced-u1-external",
+      "title": "Mathematics (Advanced) (Master's Level)",
+      "domain": "masters",
+      "lessons": 54,
+      "questions": 807,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-mathematics-mmlu-u1-external",
+      "title": "Mathematics (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 20,
+      "questions": 292,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-medical-genetics-mmlu-u1-external",
+      "title": "Medical Genetics (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 111,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "mba-microeconomics-u1-external",
+      "title": "Microeconomics (Undergraduate Level)",
+      "domain": "business",
+      "lessons": 18,
+      "questions": 256,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-moral-disputes-u1-external",
+      "title": "Moral Disputes (Master's Level)",
+      "domain": "masters",
+      "lessons": 26,
+      "questions": 383,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-moral-scenarios-u1-external",
+      "title": "Moral Scenarios (Master's Level)",
+      "domain": "masters",
+      "lessons": 67,
+      "questions": 995,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-nutrition-mmlu-u1-external",
+      "title": "Nutrition (Master's Level)",
+      "domain": "masters",
+      "lessons": 22,
+      "questions": 328,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-philosophy-mmlu-u1-external",
+      "title": "Philosophy (Master's Level)",
+      "domain": "masters",
+      "lessons": 23,
+      "questions": 345,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-physics-advanced-u1-external",
+      "title": "Physics (Advanced) (Master's Level)",
+      "domain": "masters",
+      "lessons": 60,
+      "questions": 887,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-physics-mmlu-u1-external",
+      "title": "Physics (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 12,
+      "questions": 166,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-prehistory-u1-external",
+      "title": "Prehistory (Master's Level)",
+      "domain": "masters",
+      "lessons": 24,
+      "questions": 358,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "mba-professional-accounting-u1-external",
+      "title": "Professional Accounting (Master's Level)",
+      "domain": "business",
+      "lessons": 21,
+      "questions": 312,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "law-professional-law-u1-external",
+      "title": "Professional Law (Master's Level)",
+      "domain": "law",
+      "lessons": 100,
+      "questions": 1704,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-professional-medicine-u1-external",
+      "title": "Professional Medicine (Master's Level)",
+      "domain": "masters",
+      "lessons": 21,
+      "questions": 303,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-professional-psychology-u1-external",
+      "title": "Professional Psychology (Master's Level)",
+      "domain": "masters",
+      "lessons": 45,
+      "questions": 673,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-psychology-advanced-u1-external",
+      "title": "Psychology (Advanced) (Master's Level)",
+      "domain": "masters",
+      "lessons": 21,
+      "questions": 304,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-psychology-mmlu-u1-external",
+      "title": "Psychology (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 40,
+      "questions": 593,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-public-relations-u1-external",
+      "title": "Public Relations (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 118,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-security-studies-u1-external",
+      "title": "Security Studies (Master's Level)",
+      "domain": "masters",
+      "lessons": 19,
+      "questions": 271,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-sociology-u1-external",
+      "title": "Sociology (Master's Level)",
+      "domain": "masters",
+      "lessons": 15,
+      "questions": 222,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-statistics-mmlu-u1-external",
+      "title": "Statistics (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 16,
+      "questions": 236,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-us-foreign-policy-u1-external",
+      "title": "US Foreign Policy (Master's Level)",
+      "domain": "masters",
+      "lessons": 8,
+      "questions": 109,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-us-history-u1-external",
+      "title": "US History (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 16,
+      "questions": 226,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-virology-u1-external",
+      "title": "Virology (Master's Level)",
+      "domain": "masters",
+      "lessons": 13,
+      "questions": 184,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-world-history-mmlu-u1-external",
+      "title": "World History (Undergraduate Level)",
+      "domain": "masters",
+      "lessons": 18,
+      "questions": 263,
+      "flashcards": 0,
+      "chunks": 0
+    },
+    {
+      "id": "masters-world-religions-u1-external",
+      "title": "World Religions (Master's Level)",
+      "domain": "masters",
+      "lessons": 13,
+      "questions": 190,
+      "flashcards": 0,
+      "chunks": 0
+    }
+  ],
+  "applied": true
+}

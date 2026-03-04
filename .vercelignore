@@ -1,9 +1,10 @@
 # Exclude nested workspaces and local artifacts from deployment uploads.
 eduforge-web/
 External_AI_Agents/
-data/
+/data/
 logs/
 .next/
+.next-smoke*/
 node_modules/
 storybook-static/
 out/
@@ -12,3 +13,13 @@ ios/
 tailwindcss-*.log
 *.tsbuildinfo
 supabase/.temp/
+.mypy_cache/
+__pycache__/
+e2e/test-results*/
+e2e/report/
+public/Grok Assets/
+public/generated-images/
+GROK_Prompts/
+scripts/_chapter_data*.json
+scripts/epub-catalog.json
+scripts/epub-educational-picks.json

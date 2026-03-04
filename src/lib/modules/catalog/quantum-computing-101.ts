@@ -46,19 +46,19 @@ export const QuantumComputing101Module: LearningModule = {
           "id": "quantum-computing-101-l01-c1",
           "kind": "concept",
           "title": "Scope and Shared Vocabulary",
-          "content": "This lesson defines the scope of Quantum Computing, key terms, and how qubit state modeling and quantum circuit design interact in practical contexts."
+          "content": "In this lesson, we will explore the exciting world of Quantum Computing! We will define what Quantum Computing is, discuss important terms that you will need to know, and understand how qubits, which are the building blocks of quantum information, work together in quantum circuits. This will help us see how these concepts apply in real-life situations and why they are important in the field of computer science.\nContext recap: In this lesson, we will explore the exciting world of Quantum Computing! We will define what Quantum Computing is, discuss important terms that you will need to know, and understand how qubits, which are the building blocks of quantum information, work together in quantum circuits. This will help us see how these concepts apply in real-life situations and why they are important in the field of computer science."
         },
         {
           "id": "quantum-computing-101-l01-c2",
           "kind": "concept",
           "title": "Causal Structure and Constraints",
-          "content": "Learners map causal pathways and test hidden assumptions before selecting interventions."
+          "content": "In this part of the lesson, learners will focus on mapping out causal pathways. This means understanding how different events or actions can lead to certain outcomes. Before making decisions about what actions to take, it is important to test our assumptions and think critically about the possible consequences. This helps ensure that we make informed choices in our interventions.\nContext recap: In this part of the lesson, learners will focus on mapping out causal pathways. This means understanding how different events or actions can lead to certain outcomes. Before making decisions about what actions to take, it is important to test our assumptions and think critically about the possible consequences. This helps ensure that we make informed choices in our interventions.\nContext recap: In this part of the lesson, learners will focus on mapping out causal pathways. This means understanding how different events or actions can lead to certain outcomes. Before making decisions about what actions to take, it is important to test our assumptions and think critically about the possible consequences. This helps ensure that we make informed choices in our interventions.\nWhy this matters: Causal Structure and Constraints helps learners in Computer Science connect ideas from Quantum Computing Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "quantum-computing-101-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "Claims are tied to observable indicators, uncertainty notes, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of tying our claims to observable evidence. This means that any statements we make should be supported by clear indicators that we can see or measure. Additionally, we will note any uncertainties we encounter and establish checkpoints for reviewing our progress. This approach helps us stay grounded and ensures that our conclusions are based on solid evidence.\nContext recap: In this recap, we will emphasize the importance of tying our claims to observable evidence. This means that any statements we make should be supported by clear indicators that we can see or measure. Additionally, we will note any uncertainties we encounter and establish checkpoints for reviewing our progress. This approach helps us stay grounded and ensures that our conclusions are based on solid evidence.\nContext recap: In this recap, we will emphasize the importance of tying our claims to observable evidence. This means that any statements we make should be supported by clear indicators that we can see or measure. Additionally, we will note any uncertainties we encounter and establish checkpoints for reviewing our progress. This approach helps us stay grounded and ensures that our conclusions are based on solid evidence.\nWhy this matters: Evidence Discipline helps learners in Computer Science connect ideas from Quantum Computing Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const QuantumComputing101Module: LearningModule = {
           "id": "quantum-computing-101-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction and Test",
-          "content": "Learners design a workflow emphasizing foundational vocabulary, mechanism comprehension, and basic scenario interpretation, then stress-test reliability under uncertainty."
+          "content": "In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary related to quantum computing, understanding how different mechanisms work, and interpreting basic scenarios. After creating their workflows, students will put them to the test to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the concepts.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary related to quantum computing, understanding how different mechanisms work, and interpreting basic scenarios. After creating their workflows, students will put them to the test to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the concepts.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary related to quantum computing, understanding how different mechanisms work, and interpreting basic scenarios. After creating their workflows, students will put them to the test to see how reliable they are when faced with uncertainty. This hands-on experience will deepen their understanding of the concepts.\nWhy this matters: Workflow Construction and Test helps learners in Computer Science connect ideas from Quantum Computing Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "quantum-computing-101-l02-c2",
           "kind": "recap",
           "title": "Control Gates and Readiness",
-          "content": "Readiness requires owner mapping, gate criteria, rollback conditions, and verification signals."
+          "content": "In this recap, we will discuss the concept of readiness in quantum computing. Being ready means that we have mapped out who is responsible for what, established criteria for our control gates, identified conditions for rolling back actions if needed, and set up signals to verify our processes. Understanding these elements is crucial for ensuring that our quantum systems operate smoothly and effectively.\nContext recap: In this recap, we will discuss the concept of readiness in quantum computing. Being ready means that we have mapped out who is responsible for what, established criteria for our control gates, identified conditions for rolling back actions if needed, and set up signals to verify our processes. Understanding these elements is crucial for ensuring that our quantum systems operate smoothly and effectively."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const QuantumComputing101Module: LearningModule = {
           "id": "quantum-computing-101-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "Case focus: a hybrid classical-quantum workflow choosing between noisy quantum runs and stable classical alternatives. Learners map high-impact risks and competing constraints."
+          "content": "In this case analysis, we will focus on a scenario that involves a hybrid workflow combining classical and quantum computing. Here, learners will explore the decision-making process of choosing between using noisy quantum runs or stable classical alternatives. Students will map out the high-impact risks associated with each option and consider the competing constraints that may influence their decisions. This exercise will help them understand the complexities involved in real-world applications of quantum computing.\nContext recap: In this case analysis, we will focus on a scenario that involves a hybrid workflow combining classical and quantum computing. Here, learners will explore the decision-making process of choosing between using noisy quantum runs or stable classical alternatives. Students will map out the high-impact risks associated with each option and consider the competing constraints that may influence their decisions. This exercise will help them understand the complexities involved in real-world applications of quantum computing.\nContext recap: In this case analysis, we will focus on a scenario that involves a hybrid workflow combining classical and quantum computing. Here, learners will explore the decision-making process of choosing between using noisy quantum runs or stable classical alternatives. Students will map out the high-impact risks associated with each option and consider the competing constraints that may influence their decisions. This exercise will help them understand the complexities involved in real-world applications of quantum computing.\nWhy this matters: Case Context and Decision Stakes helps learners in Computer Science connect ideas from Quantum Computing Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "quantum-computing-101-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Intervention options are scored across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool helps us evaluate different intervention options by scoring them based on several important criteria, including effectiveness, reliability, equity, and how feasible they are to implement. By using this matrix, learners will gain insights into how to make balanced decisions that consider multiple factors.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool helps us evaluate different intervention options by scoring them based on several important criteria, including effectiveness, reliability, equity, and how feasible they are to implement. By using this matrix, learners will gain insights into how to make balanced decisions that consider multiple factors."
         },
         {
           "id": "quantum-computing-101-l04-c3",
           "kind": "recap",
           "title": "Failure Learning and Recovery",
-          "content": "The lesson transforms failure patterns into safeguards, response playbooks, and monitoring updates."
+          "content": "In this recap, we will discuss how to learn from failures in quantum computing. Instead of viewing failures as setbacks, we will transform them into valuable lessons. This involves creating safeguards, developing response playbooks for future situations, and updating our monitoring processes. By doing this, we can improve our systems and ensure better outcomes in the future.\nContext recap: In this recap, we will discuss how to learn from failures in quantum computing. Instead of viewing failures as setbacks, we will transform them into valuable lessons. This involves creating safeguards, developing response playbooks for future situations, and updating our monitoring processes. By doing this, we can improve our systems and ensure better outcomes in the future.\nContext recap: In this recap, we will discuss how to learn from failures in quantum computing. Instead of viewing failures as setbacks, we will transform them into valuable lessons. This involves creating safeguards, developing response playbooks for future situations, and updating our monitoring processes. By doing this, we can improve our systems and ensure better outcomes in the future.\nWhy this matters: Failure Learning and Recovery helps learners in Computer Science connect ideas from Quantum Computing Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const QuantumComputing101Module: LearningModule = {
           "id": "quantum-computing-101-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure intervention scenarios, uncertainty parameters, and measurable success thresholds."
+          "content": "In this interactive practice session, learners will set up their own simulation scenarios. This includes configuring the parameters of uncertainty they want to explore and defining measurable success thresholds for their interventions. This hands-on experience will allow students to engage deeply with the concepts and see how different variables can affect outcomes.\nContext recap: In this interactive practice session, learners will set up their own simulation scenarios. This includes configuring the parameters of uncertainty they want to explore and defining measurable success thresholds for their interventions. This hands-on experience will allow students to engage deeply with the concepts and see how different variables can affect outcomes."
         },
         {
           "id": "quantum-computing-101-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "Post-run review evaluates outcomes, side effects, and alignment with governance constraints."
+          "content": "In this recap, we will conduct a post-run review of the simulations. This will involve evaluating the outcomes of the scenarios, discussing any side effects that occurred, and checking how well the results align with the established governance constraints. This reflective process is essential for understanding the implications of our simulations and improving future practices.\nContext recap: In this recap, we will conduct a post-run review of the simulations. This will involve evaluating the outcomes of the scenarios, discussing any side effects that occurred, and checking how well the results align with the established governance constraints. This reflective process is essential for understanding the implications of our simulations and improving future practices."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const QuantumComputing101Module: LearningModule = {
           "id": "quantum-computing-101-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "Learners examine how benefits and burdens are distributed across stakeholders and time horizons."
+          "content": "In this lesson, learners will examine the impact of quantum computing on various stakeholders. This involves understanding how the benefits and burdens of quantum technologies are distributed among different groups and over time. By mapping these impacts, students will gain a clearer picture of the broader implications of their work in quantum computing.\nContext recap: In this lesson, learners will examine the impact of quantum computing on various stakeholders. This involves understanding how the benefits and burdens of quantum technologies are distributed among different groups and over time. By mapping these impacts, students will gain a clearer picture of the broader implications of their work in quantum computing."
         },
         {
           "id": "quantum-computing-101-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability is framed through traceability, review rights, and remediation obligations."
+          "content": "In this section, we will discuss the concept of accountability in quantum computing. This includes understanding how accountability is established through traceability, the rights to review decisions, and the obligations to correct any issues that arise. By framing accountability in this way, learners will appreciate the importance of ethical considerations in technology development.\nContext recap: In this section, we will discuss the concept of accountability in quantum computing. This includes understanding how accountability is established through traceability, the rights to review decisions, and the obligations to correct any issues that arise. By framing accountability in this way, learners will appreciate the importance of ethical considerations in technology development."
         },
         {
           "id": "quantum-computing-101-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist links technical performance with policy, ethics, and stakeholder trust outcomes."
+          "content": "At the end of our lesson, we will create a final checklist that connects how well our technology performs with important ideas about policy, ethics, and the trust of everyone involved. This checklist will help us ensure that we are making responsible choices in our quantum computing projects.\nContext recap: At the end of our lesson, we will create a final checklist that connects how well our technology performs with important ideas about policy, ethics, and the trust of everyone involved. This checklist will help us ensure that we are making responsible choices in our quantum computing projects."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const QuantumComputing101Module: LearningModule = {
           "id": "quantum-computing-101-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft capstone objective, constraints, metrics, and governance gates in one decision charter."
+          "content": "In this activity, you will work on drafting a capstone charter. This charter will include important elements such as your project's main objective, any constraints you might face, the metrics you will use to measure success, and the governance gates that will guide your decision-making process. This is a crucial step in planning your capstone project effectively.\nContext recap: In this activity, you will work on drafting a capstone charter. This charter will include important elements such as your project's main objective, any constraints you might face, the metrics you will use to measure success, and the governance gates that will guide your decision-making process. This is a crucial step in planning your capstone project effectively."
         },
         {
           "id": "quantum-computing-101-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare evidence-backed defenses for technical, policy, and stakeholder critiques."
+          "content": "As part of your preparation, you will gather evidence to support your project. This evidence will help you build strong defenses against any critiques related to technical aspects, policy considerations, and stakeholder concerns. Being well-prepared will ensure that you can confidently present your work and respond to questions.\nContext recap: As part of your preparation, you will gather evidence to support your project. This evidence will help you build strong defenses against any critiques related to technical aspects, policy considerations, and stakeholder concerns. Being well-prepared will ensure that you can confidently present your work and respond to questions."
         }
       ],
       "interactiveActivities": [

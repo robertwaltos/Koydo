@@ -145,5 +145,15 @@
     "tier": "yellow",
     "transcriptFormat": "html",
     "notes": "Use page-level ingestion with attribution and manual rights review."
+  },
+  {
+    "id": "koydo-curated",
+    "name": "Koydo Curated Reference",
+    "region": "Global",
+    "category": "curated_reference",
+    "automationAllowed": true,
+    "tier": "green",
+    "transcriptFormat": "markdown",
+    "notes": "Original reference content authored by the Koydo curriculum team to fill domain gaps."
   }
 ]

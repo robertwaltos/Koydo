@@ -1,12 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
 import { JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { hapticSelection, hapticSuccess, hapticCelebration } from "@/lib/platform/haptics";
 import { Box, Layers, MousePointer2, Eraser, Share2, Sparkles } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Cosmic Canvas Content --- */
 type BlockType = "glass" | "gold" | "chrome" | "neon";
@@ -23,6 +27,15 @@ const BLOCK_CONFIG: Record<BlockType, { color: string, label: string }> = {
     neon: { color: "bg-indigo-500 border-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.8)]", label: "Vivid Neon" }
 };
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
+const computeGridScore = (grid: (Block | null)[][]) => grid.reduce(
+    (total, row) => total + row.reduce((rowTotal, block) => rowTotal + (block?.height ?? 0), 0),
+    0,
+);
+
 export default function CosmicCanvas() {
     const { setMood, setMessage } = useMascot();
     const [grid, setGrid] = useState<(Block | null)[][]>(
@@ -30,15 +43,26 @@ export default function CosmicCanvas() {
     );
     const [activeBrush, setActiveBrush] = useState<BlockType>("glass");
     const [isErasing, setIsErasing] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+    }, []);
 
     useEffect(() => {
         setMessage("Welcome to the Cosmic Canvas. Let's harmonize the spatial frequency of this galaxy! 🌙✨");
         setMood("happy");
-    }, []);
+        resetRunTracking();
+    }, [resetRunTracking, setMessage, setMood]);
 
     const handleGridClick = (r: number, c: number) => {
         if (isErasing) {
             if (grid[r][c]) {
+                interactionCountRef.current += 1;
                 void hapticSelection();
                 setGrid(prev => {
                     const next = prev.map(row => [...row]);
@@ -49,6 +73,7 @@ export default function CosmicCanvas() {
             return;
         }
 
+        interactionCountRef.current += 1;
         void hapticSuccess();
         setGrid(prev => {
             const next = prev.map(row => [...row]);
@@ -63,7 +88,7 @@ export default function CosmicCanvas() {
             return next;
         });
 
-        if (Math.random() > 0.8) {
+        if (interactionCountRef.current % 5 === 0) {
             setMood("happy");
             setMessage("A beautiful structural resonance! Keep building. 🏛️");
         }
@@ -74,6 +99,32 @@ export default function CosmicCanvas() {
         setGrid(Array(8).fill(null).map(() => Array(8).fill(null)));
         setMood("thinking");
         setMessage("A fresh start. The stars are ready for a new vision.");
+    };
+
+    const handleExportGalaxy = () => {
+        interactionCountRef.current += 1;
+        const buildScore = computeGridScore(grid);
+        if (buildScore <= 0) {
+            void hapticSelection();
+            setMood("thinking");
+            setMessage("Place at least one structure before exporting your galaxy.");
+            return;
+        }
+
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "canvas",
+            elapsedMs: getElapsedMs(runStartedAtRef.current),
+            interactions: Math.max(1, interactionCountRef.current),
+            score: buildScore * 20,
+            maxScore: 5000,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+        void hapticCelebration();
+        setMood("happy");
+        setMessage(`Galaxy exported. Structural resonance score: ${buildScore}.`);
+        resetRunTracking();
     };
 
     return (
@@ -101,6 +152,7 @@ export default function CosmicCanvas() {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => {
+                                interactionCountRef.current += 1;
                                 setActiveBrush(type);
                                 setIsErasing(false);
                                 void hapticSelection();
@@ -116,6 +168,7 @@ export default function CosmicCanvas() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => {
+                            interactionCountRef.current += 1;
                             setIsErasing(true);
                             void hapticSelection();
                         }}
@@ -173,7 +226,7 @@ export default function CosmicCanvas() {
                 <PhysicalButton onClick={clearCanvas} className="bg-rose-500/20 text-rose-300 px-6 h-12 rounded-2xl text-xs font-black uppercase tracking-widest border border-rose-500/30">
                     WIPE GRID 🧹
                 </PhysicalButton>
-                <PhysicalButton onClick={() => void hapticCelebration()} className="bg-indigo-500 text-white px-8 h-12 rounded-2xl text-xs font-black uppercase tracking-widest flex items-center gap-2">
+                <PhysicalButton onClick={handleExportGalaxy} className="bg-indigo-500 text-white px-8 h-12 rounded-2xl text-xs font-black uppercase tracking-widest flex items-center gap-2">
                     <Share2 className="w-4 h-4" /> EXPORT GALAXY
                 </PhysicalButton>
             </div>

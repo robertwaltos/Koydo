@@ -47,19 +47,19 @@ export const SpaceMissionsEngineering501Module: LearningModule = {
           "id": "space-missions-engineering-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Space Missions Engineering, with focus on mission architecture and systems integration and navigation, autonomy, and fault-management design."
+          "content": "In this lesson, we will explore the important concept of defining advanced scope boundaries in Space Missions Engineering. We will focus on how to design mission architecture, which is like creating a blueprint for a space mission. Additionally, we will learn about systems integration, which involves making sure all the different parts of a mission work together smoothly. We will also discuss navigation, autonomy, and how to design systems that can manage faults or problems that may arise during a mission. Understanding these elements is crucial for successful space missions.\nContext recap: In this lesson, we will explore the important concept of defining advanced scope boundaries in Space Missions Engineering. We will focus on how to design mission architecture, which is like creating a blueprint for a space mission. Additionally, we will learn about systems integration, which involves making sure all the different parts of a mission work together smoothly. We will also discuss navigation, autonomy, and how to design systems that can manage faults or problems that may arise during a mission."
         },
         {
           "id": "space-missions-engineering-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. We will also look at uncertainty ranges, which help us recognize the limits of our knowledge about a situation. Additionally, we will explore system dependencies, which show how different systems rely on one another. This mapping is essential before we start planning any interventions or actions, as it helps us make informed decisions.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. We will also look at uncertainty ranges, which help us recognize the limits of our knowledge about a situation. Additionally, we will explore system dependencies, which show how different systems rely on one another. This mapping is essential before we start planning any interventions or actions, as it helps us make informed decisions.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. We will also look at uncertainty ranges, which help us recognize the limits of our knowledge about a situation. Additionally, we will explore system dependencies, which show how different systems rely on one another. This mapping is essential before we start planning any interventions or actions, as it helps us make informed decisions.\nWhy this matters: Causal and Uncertainty Modeling helps learners in Engineering connect ideas from Space Missions Engineering Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "space-missions-engineering-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of ensuring that all claims made during our engineering processes are backed by measurable indicators. This means we need to have clear evidence that supports our statements. We will also discuss confidence bounds, which help us understand how certain we are about our findings. Lastly, we will introduce review checkpoints, which are important milestones that allow us to assess our progress and make necessary adjustments along the way.\nContext recap: In this recap, we will emphasize the importance of ensuring that all claims made during our engineering processes are backed by measurable indicators. This means we need to have clear evidence that supports our statements. We will also discuss confidence bounds, which help us understand how certain we are about our findings. Lastly, we will introduce review checkpoints, which are important milestones that allow us to assess our progress and make necessary adjustments along the way.\nContext recap: In this recap, we will emphasize the importance of ensuring that all claims made during our engineering processes are backed by measurable indicators. This means we need to have clear evidence that supports our statements. We will also discuss confidence bounds, which help us understand how certain we are about our findings. Lastly, we will introduce review checkpoints, which are important milestones that allow us to assess our progress and make necessary adjustments along the way.\nWhy this matters: Evidence Thresholds helps learners in Engineering connect ideas from Space Missions Engineering Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const SpaceMissionsEngineering501Module: LearningModule = {
           "id": "space-missions-engineering-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive session, learners will have the opportunity to design specialized workflows, which are step-by-step processes tailored for specific tasks in space missions. After creating these workflows, we will stress-test them by simulating adverse scenarios, which are challenging situations that could occur during a mission. This practice will help learners understand how to prepare for unexpected events and ensure that their designs are robust and effective.\nContext recap: In this interactive session, learners will have the opportunity to design specialized workflows, which are step-by-step processes tailored for specific tasks in space missions. After creating these workflows, we will stress-test them by simulating adverse scenarios, which are challenging situations that could occur during a mission. This practice will help learners understand how to prepare for unexpected events and ensure that their designs are robust and effective."
         },
         {
           "id": "space-missions-engineering-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows should integrate various important elements such as checkpoints, which are points where we can assess progress, rollback criteria, which allow us to revert to a previous state if needed, and threshold-based escalation, which means knowing when to take action based on specific criteria. These components are essential for creating effective and reliable workflows in space missions.\nContext recap: In this recap, we will discuss how workflows should integrate various important elements such as checkpoints, which are points where we can assess progress, rollback criteria, which allow us to revert to a previous state if needed, and threshold-based escalation, which means knowing when to take action based on specific criteria. These components are essential for creating effective and reliable workflows in space missions."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const SpaceMissionsEngineering501Module: LearningModule = {
           "id": "space-missions-engineering-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in mission architecture and systems integration and resource-risk tradeoff modeling under mission constraints."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints involved in mission architecture and systems integration. We will also explore resource-risk tradeoff modeling, which helps us understand how to balance different resources while managing risks under the constraints of a mission. This understanding is crucial for making informed decisions that can lead to successful mission outcomes.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints involved in mission architecture and systems integration. We will also explore resource-risk tradeoff modeling, which helps us understand how to balance different resources while managing risks under the constraints of a mission. This understanding is crucial for making informed decisions that can lead to successful mission outcomes."
         },
         {
           "id": "space-missions-engineering-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them across various important dimensions. These dimensions include safety, reliability, cost, equity, and governance. By analyzing these factors, learners will gain a deeper understanding of how to make balanced decisions that consider multiple perspectives and implications for their space missions.\nContext recap: In this practice session, learners will compare different options available to them across various important dimensions. These dimensions include safety, reliability, cost, equity, and governance. By analyzing these factors, learners will gain a deeper understanding of how to make balanced decisions that consider multiple perspectives and implications for their space missions."
         },
         {
           "id": "space-missions-engineering-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will highlight the key components that should be included in each recommendation made during our decision-making process. These components include assumptions, which are the beliefs we hold to be true, evidence that supports our recommendations, risk controls that help us manage potential issues, and fallback plans that outline what to do if things do not go as expected. Understanding these elements is vital for effective decision-making.\nContext recap: In this recap, we will highlight the key components that should be included in each recommendation made during our decision-making process. These components include assumptions, which are the beliefs we hold to be true, evidence that supports our recommendations, risk controls that help us manage potential issues, and fallback plans that outline what to do if things do not go as expected. Understanding these elements is vital for effective decision-making."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const SpaceMissionsEngineering501Module: LearningModule = {
           "id": "space-missions-engineering-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different aspects of a mission. While doing this, they will need to balance performance, which refers to how well the mission is executed, and governance constraints, which are the rules and regulations that must be followed. This exercise will help learners understand the complexities of managing a mission effectively.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different aspects of a mission. While doing this, they will need to balance performance, which refers to how well the mission is executed, and governance constraints, which are the rules and regulations that must be followed. This exercise will help learners understand the complexities of managing a mission effectively."
         },
         {
           "id": "space-missions-engineering-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss the importance of effective responses in managing scenarios. Effective responses should be able to update control gates, which are the mechanisms that help us manage the mission, without losing traceability or accountability. This means that we need to ensure that all changes made during the mission can be tracked and that everyone involved is responsible for their actions.\nContext recap: In this recap, we will discuss the importance of effective responses in managing scenarios. Effective responses should be able to update control gates, which are the mechanisms that help us manage the mission, without losing traceability or accountability. This means that we need to ensure that all changes made during the mission can be tracked and that everyone involved is responsible for their actions."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const SpaceMissionsEngineering501Module: LearningModule = {
           "id": "space-missions-engineering-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of impacts on various stakeholders involved in space missions. This includes identifying the benefits that different groups receive, the burdens they may face, and any delayed effects that might occur over time. Understanding these impacts is crucial for ensuring that all voices are heard and considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of impacts on various stakeholders involved in space missions. This includes identifying the benefits that different groups receive, the burdens they may face, and any delayed effects that might occur over time. Understanding these impacts is crucial for ensuring that all voices are heard and considered in the decision-making process."
         },
         {
           "id": "space-missions-engineering-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this lesson, we will explore the concept of accountability architecture. This involves integrating important elements such as decision traceability, which allows us to track who made which decisions, review rights, which give stakeholders the ability to assess decisions, and remediation obligations, which outline responsibilities for addressing any issues that arise. Understanding these components is essential for maintaining transparency and trust in space missions.\nContext recap: In this lesson, we will explore the concept of accountability architecture. This involves integrating important elements such as decision traceability, which allows us to track who made which decisions, review rights, which give stakeholders the ability to assess decisions, and remediation obligations, which outline responsibilities for addressing any issues that arise. Understanding these components is essential for maintaining transparency and trust in space missions."
         },
         {
           "id": "space-missions-engineering-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will review a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and emphasizes the importance of resilience in our engineering practices. This checklist will serve as a valuable tool for responsible leadership in space missions.\nContext recap: At the end of our lesson, we will review a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and emphasizes the importance of resilience in our engineering practices. This checklist will serve as a valuable tool for responsible leadership in space missions."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const SpaceMissionsEngineering501Module: LearningModule = {
           "id": "space-missions-engineering-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, clear uncertainty bounds, and proposed remediation pathways. By engaging in this process, students will enhance their critical thinking and communication skills, preparing them for real-world engineering challenges.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, clear uncertainty bounds, and proposed remediation pathways. By engaging in this process, students will enhance their critical thinking and communication skills, preparing them for real-world engineering challenges."
         },
         {
           "id": "space-missions-engineering-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may arise from technical experts, governance bodies, and stakeholders. This rehearsal will help students build confidence and improve their ability to articulate their ideas clearly and effectively, ensuring they are well-prepared for any questions or challenges they might face.\nContext recap: During this session, learners will practice their responses to various critiques that may arise from technical experts, governance bodies, and stakeholders. This rehearsal will help students build confidence and improve their ability to articulate their ideas clearly and effectively, ensuring they are well-prepared for any questions or challenges they might face."
         }
       ],
       "interactiveActivities": [

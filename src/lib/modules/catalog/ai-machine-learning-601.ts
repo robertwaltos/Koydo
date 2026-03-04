@@ -46,19 +46,19 @@ export const AiMachineLearning601Module: LearningModule = {
           "id": "ai-machine-learning-601-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for AI and Machine Learning, framing how model architecture tradeoffs and evaluation robustness interact across complex systems."
+          "content": "In this lesson, we will explore the advanced boundaries that define the fields of Artificial Intelligence (AI) and Machine Learning (ML). We will discuss how different model architectures can influence the performance of AI systems and how we can evaluate their effectiveness across complex systems. Understanding these trade-offs is crucial for developing robust AI models that can adapt to various challenges.\nContext recap: In this lesson, we will explore the advanced boundaries that define the fields of Artificial Intelligence (AI) and Machine Learning (ML). We will discuss how different model architectures can influence the performance of AI systems and how we can evaluate their effectiveness across complex systems. Understanding these trade-offs is crucial for developing robust AI models that can adapt to various challenges."
         },
         {
           "id": "ai-machine-learning-601-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "Learners model causal pathways, uncertainty ranges, and hidden assumptions before intervention design."
+          "content": "In this section, learners will engage in modeling causal pathways, which are the routes through which one event leads to another. We will also examine ranges of uncertainty and identify hidden assumptions that may affect our designs. This foundational understanding is essential before we create interventions that aim to solve problems effectively.\nContext recap: In this section, learners will engage in modeling causal pathways, which are the routes through which one event leads to another. We will also examine ranges of uncertainty and identify hidden assumptions that may affect our designs. This foundational understanding is essential before we create interventions that aim to solve problems effectively."
         },
         {
           "id": "ai-machine-learning-601-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "All advanced claims are tied to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to remember that all advanced claims we make in AI and ML must be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By adhering to these standards, we can maintain rigor in our research and decision-making processes.\nContext recap: It is important to remember that all advanced claims we make in AI and ML must be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our findings are reliable. By adhering to these standards, we can maintain rigor in our research and decision-making processes."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const AiMachineLearning601Module: LearningModule = {
           "id": "ai-machine-learning-601-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "Learners build a specialist workflow emphasizing research-grade reasoning, leadership decision quality, and publishable capstone defense, then test it against adversarial or edge-case conditions."
+          "content": "In this engaging interactive lab, learners will have the opportunity to design a specialized workflow that emphasizes the importance of high-quality research reasoning. This involves making thoughtful and informed decisions as leaders in the field of AI and machine learning. Additionally, learners will prepare a capstone project that is suitable for publication, showcasing their skills and knowledge. Once the workflow is developed, we will rigorously test it by introducing challenging adversarial conditions or edge cases. This will help us understand how well the workflow performs under stress and identify areas for improvement, ensuring that it is robust and effective."
         },
         {
           "id": "ai-machine-learning-601-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "Robust specialist workflows require control gates, rollback criteria, and accountability checkpoints."
+          "content": "To ensure that our specialist workflows are robust, we need to incorporate control gates, rollback criteria, and accountability checkpoints. These elements help us manage risks and maintain the integrity of our processes, ensuring that we can respond effectively to any issues that arise.\nContext recap: To ensure that our specialist workflows are robust, we need to incorporate control gates, rollback criteria, and accountability checkpoints. These elements help us manage risks and maintain the integrity of our processes, ensuring that we can respond effectively to any issues that arise."
         }
       ],
       "interactiveActivities": [
@@ -396,19 +396,19 @@ export const AiMachineLearning601Module: LearningModule = {
           "id": "ai-machine-learning-601-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "Case focus: a high-impact ML system with shifting data distributions and strict accountability requirements. Learners map strategic objectives, failure risks, and governance constraints before action."
+          "content": "In this case study, we will explore a significant Machine Learning system that encounters challenges because of evolving data patterns and the need for strict accountability. As learners, you will engage in mapping out the strategic goals of the project, pinpointing possible risks of failure, and examining the governance rules that must be followed before any actions are taken. This thorough analysis is essential for making well-informed decisions that can lead to successful outcomes in the field of AI and Machine Learning.\nContext recap: In this case study, we will explore a significant Machine Learning system that encounters challenges because of evolving data patterns and the need for strict accountability. As learners, you will engage in mapping out the strategic goals of the project, pinpointing possible risks of failure, and examining the governance rules that must be followed before any actions are taken. This thorough analysis is essential for making well-informed decisions that can lead to successful outcomes in the field of AI and Machine Learning."
         },
         {
           "id": "ai-machine-learning-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "Options are scored across effectiveness, reliability, equity, feasibility, and long-term maintainability."
+          "content": "In this section, we will learn about a tradeoff matrix that helps us evaluate different options based on several criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. Scoring options in this way allows us to make better decisions when faced with competing objectives.\nContext recap: In this section, we will learn about a tradeoff matrix that helps us evaluate different options based on several criteria. These criteria include effectiveness, reliability, equity, feasibility, and long-term maintainability. Scoring options in this way allows us to make better decisions when faced with competing objectives."
         },
         {
           "id": "ai-machine-learning-601-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are translated into safeguards, response playbooks, and measurable adaptation loops."
+          "content": "When we encounter failures in our systems, it is essential to translate these failure signatures into actionable safeguards. This includes creating response playbooks and measurable adaptation loops that allow us to learn from our mistakes and improve our systems over time.\nContext recap: When we encounter failures in our systems, it is essential to translate these failure signatures into actionable safeguards. This includes creating response playbooks and measurable adaptation loops that allow us to learn from our mistakes and improve our systems over time."
         }
       ],
       "flashcards": [
@@ -447,13 +447,13 @@ export const AiMachineLearning601Module: LearningModule = {
           "id": "ai-machine-learning-601-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "Learners configure simulation assumptions, thresholds, and intervention pathways under high-stakes conditions."
+          "content": "In this practice session, learners will configure simulation assumptions, set thresholds, and design intervention pathways while operating under high-stakes conditions. This hands-on experience will help us understand how to navigate complex scenarios and make informed decisions based on our simulations.\nContext recap: In this practice session, learners will configure simulation assumptions, set thresholds, and design intervention pathways while operating under high-stakes conditions. This hands-on experience will help us understand how to navigate complex scenarios and make informed decisions based on our simulations."
         },
         {
           "id": "ai-machine-learning-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each run, teams review target attainment, side effects, and governance compliance gaps."
+          "content": "After each simulation run, teams will conduct a thorough review to assess whether they met their targets. We will also examine any side effects that occurred and identify gaps in governance compliance. This debriefing process is crucial for improving our decision-making and ensuring accountability.\nContext recap: After each simulation run, teams will conduct a thorough review to assess whether they met their targets. We will also examine any side effects that occurred and identify gaps in governance compliance. This debriefing process is crucial for improving our decision-making and ensuring accountability."
         }
       ],
       "interactiveActivities": [
@@ -728,19 +728,19 @@ export const AiMachineLearning601Module: LearningModule = {
           "id": "ai-machine-learning-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners evaluate how outcomes are distributed across stakeholders, including delayed and indirect effects."
+          "content": "In this lesson, learners will evaluate how the outcomes of our AI and ML systems are distributed among different stakeholders. We will consider not only the direct effects but also any delayed and indirect impacts that may arise. Understanding this distribution is vital for ensuring fairness and equity in our systems.\nContext recap: In this lesson, learners will evaluate how the outcomes of our AI and ML systems are distributed among different stakeholders. We will consider not only the direct effects but also any delayed and indirect impacts that may arise. Understanding this distribution is vital for ensuring fairness and equity in our systems."
         },
         {
           "id": "ai-machine-learning-601-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "Accountability is implemented through traceability standards, review rights, and remediation obligations."
+          "content": "Designing an effective accountability system is essential for maintaining trust in AI and ML systems. This involves implementing traceability standards, establishing review rights, and setting up remediation obligations. By doing so, we can ensure that all stakeholders are held accountable for their actions and decisions.\nContext recap: Designing an effective accountability system is essential for maintaining trust in AI and ML systems. This involves implementing traceability standards, establishing review rights, and setting up remediation obligations. By doing so, we can ensure that all stakeholders are held accountable for their actions and decisions."
         },
         {
           "id": "ai-machine-learning-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A leadership checklist links strategy, ethics, policy, and operational controls into one review artifact."
+          "content": "A responsible leadership checklist is an important tool that helps leaders connect their strategies, ethical considerations, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are aligned and accountable, promoting transparency and good governance in AI and machine learning projects.\nContext recap: A responsible leadership checklist is an important tool that helps leaders connect their strategies, ethical considerations, policies, and operational controls. This checklist serves as a comprehensive review document that ensures all aspects of leadership are aligned and accountable, promoting transparency and good governance in AI and machine learning projects."
         }
       ],
       "flashcards": [
@@ -779,13 +779,13 @@ export const AiMachineLearning601Module: LearningModule = {
           "id": "ai-machine-learning-601-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "Learners assemble a capstone charter with objectives, constraints, metrics, governance controls, and evidence plan."
+          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of their project, identify any constraints they may face, establish metrics for measuring success, and define governance controls. Additionally, they will develop a plan for gathering evidence to support their findings, ensuring that their work is well-structured and thoroughly documented.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of their project, identify any constraints they may face, establish metrics for measuring success, and define governance controls. Additionally, they will develop a plan for gathering evidence to support their findings, ensuring that their work is well-structured and thoroughly documented."
         },
         {
           "id": "ai-machine-learning-601-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "The final practice round trains learners to defend decisions against technical, governance, and stakeholder critiques."
+          "content": "During the final practice round, learners will engage in a defense rehearsal. This session is designed to prepare them to confidently defend their decisions and project outcomes. They will practice responding to critiques from technical experts, governance bodies, and stakeholders, helping them to articulate their reasoning and demonstrate the robustness of their work in AI and machine learning.\nContext recap: During the final practice round, learners will engage in a defense rehearsal. This session is designed to prepare them to confidently defend their decisions and project outcomes. They will practice responding to critiques from technical experts, governance bodies, and stakeholders, helping them to articulate their reasoning and demonstrate the robustness of their work in AI and machine learning."
         }
       ],
       "interactiveActivities": [

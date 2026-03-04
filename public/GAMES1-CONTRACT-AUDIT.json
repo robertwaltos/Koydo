@@ -1,0 +1,135 @@
+{
+  "generatedAt": "2026-03-04T15:43:38.269Z",
+  "status": "pass",
+  "checks": [
+    {
+      "name": "total-catalog-size",
+      "status": "pass",
+      "details": "500/500"
+    },
+    {
+      "name": "numbering-1-to-500",
+      "status": "pass",
+      "details": "All game numbers are unique and complete."
+    },
+    {
+      "name": "unique-ids",
+      "status": "pass",
+      "details": "All game IDs are unique."
+    },
+    {
+      "name": "unique-titles",
+      "status": "pass",
+      "details": "All titles are unique."
+    },
+    {
+      "name": "age-Kindergarten (4-6)",
+      "status": "pass",
+      "details": "100/100"
+    },
+    {
+      "name": "age-Elementary (7-11)",
+      "status": "pass",
+      "details": "150/150"
+    },
+    {
+      "name": "age-Middle School (12-14)",
+      "status": "pass",
+      "details": "100/100"
+    },
+    {
+      "name": "age-High School (15-18)",
+      "status": "pass",
+      "details": "100/100"
+    },
+    {
+      "name": "age-College (19+)",
+      "status": "pass",
+      "details": "50/50"
+    },
+    {
+      "name": "engine-Unreal Engine 5.5+",
+      "status": "pass",
+      "details": "200/200"
+    },
+    {
+      "name": "engine-Unity 6+",
+      "status": "pass",
+      "details": "200/200"
+    },
+    {
+      "name": "engine-Godot 4.3+",
+      "status": "pass",
+      "details": "100/100"
+    },
+    {
+      "name": "track-Educational Core",
+      "status": "pass",
+      "details": "400/400"
+    },
+    {
+      "name": "track-Reward Realm",
+      "status": "pass",
+      "details": "100/100"
+    },
+    {
+      "name": "markdown-required-columns",
+      "status": "pass",
+      "details": "Header appears 5 times."
+    },
+    {
+      "name": "markdown-section-Kindergarten (4-6)",
+      "status": "pass",
+      "details": "Rows=100"
+    },
+    {
+      "name": "markdown-section-Elementary (7-11)",
+      "status": "pass",
+      "details": "Rows=150"
+    },
+    {
+      "name": "markdown-section-Middle School (12-14)",
+      "status": "pass",
+      "details": "Rows=100"
+    },
+    {
+      "name": "markdown-section-High School (15-18)",
+      "status": "pass",
+      "details": "Rows=100"
+    },
+    {
+      "name": "markdown-section-College (19+)",
+      "status": "pass",
+      "details": "Rows=50"
+    },
+    {
+      "name": "row-required-fields",
+      "status": "pass",
+      "details": "All required fields are populated."
+    }
+  ],
+  "counts": {
+    "ageGroups": {
+      "Kindergarten (4-6)": 100,
+      "Elementary (7-11)": 150,
+      "Middle School (12-14)": 100,
+      "High School (15-18)": 100,
+      "College (19+)": 50
+    },
+    "engines": {
+      "Unreal Engine 5.5+": 200,
+      "Unity 6+": 200,
+      "Godot 4.3+": 100
+    },
+    "tracks": {
+      "Educational Core": 400,
+      "Reward Realm": 100
+    }
+  },
+  "outputs": {
+    "masterJson": "public/GAMES-500-MASTER-CATALOG.json",
+    "masterMarkdown": "GAMES-500-MASTER-CATALOG.md",
+    "auditJson": "public/GAMES1-CONTRACT-AUDIT.json",
+    "auditMarkdown": "GAMES1-CONTRACT-AUDIT.md"
+  }
+}

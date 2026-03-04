@@ -13,6 +13,11 @@ interface CompanionAvatarSVGProps {
    * Falls back to SVG on load error.
    */
   previewImageUrl?: string;
+  /**
+   * Override avatar rendering style. "human" uses the previewImageUrl photo,
+   * "animated" forces the SVG cartoon. Controlled via parental settings.
+   */
+  avatarStyle?: "human" | "animated";
 }
 
 export default function CompanionAvatarSVG({
@@ -21,9 +26,11 @@ export default function CompanionAvatarSVG({
   pulse = false,
   className = "",
   previewImageUrl,
+  avatarStyle,
 }: CompanionAvatarSVGProps) {
   const [imgFailed, setImgFailed] = useState(false);
-  const showImg = previewImageUrl && !imgFailed;
+  const forceAnimated = avatarStyle === "animated";
+  const showImg = previewImageUrl && !imgFailed && !forceAnimated;
 
   const pulseClass = pulse ? "animate-pulse" : "";
   const borderColor = gender === "female" ? "#7c3aed" : "#0891b2";

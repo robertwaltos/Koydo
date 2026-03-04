@@ -32,17 +32,17 @@ export const Coding101Module: LearningModule = {
         {
           "id": "coding-101-l01-c1",
           "title": "Code Is Instructions",
-          "content": "Code is a set of instructions that tells a computer what to do — like a recipe tells a chef how to cook. Computers are very fast but not smart on their own. They follow your instructions exactly, step by step. A single typo can change the outcome!"
+          "content": "Code is like a special set of instructions that tells a computer exactly what to do, much like how a recipe guides a chef in preparing a delicious meal. Just as a chef needs to follow the recipe carefully to create the perfect dish, computers need to follow our instructions step by step to perform tasks. While computers are incredibly fast at processing information, they don't have the ability to think for themselves. They rely entirely on the instructions we give them, and they follow each step precisely. This means that even a tiny mistake, like a typo, can lead to unexpected results! For example, if a chef accidentally adds salt instead of sugar, the dessert won't taste right. Similarly, in coding, it's important to be careful and clear when writing code to ensure everything works as intended. So, remember, just like cooking, coding requires attention to detail and precision to achieve the best results!"
         },
         {
           "id": "coding-101-l01-c2",
           "title": "Programming Languages",
-          "content": "Humans speak English, Spanish, or Mandarin. Computers understand programming languages like Python, JavaScript, and Scratch. Python reads almost like English: print('Hello, World!') tells the computer to display those words on screen."
+          "content": "Just like people communicate in languages such as English, Spanish, or Mandarin, computers have their own special languages called programming languages. These languages allow us to give instructions to computers so they can perform tasks for us. Some popular programming languages include Python, JavaScript, and Scratch. For instance, in Python, when you write the line of code print('Hello, World!'), you are telling the computer to display the words 'Hello, World!' on the screen. Learning these programming languages is like discovering a new way to talk to computers and make them do amazing things! By understanding how to use these languages, you can create games, websites, and much more. So, are you ready to start your journey into the world of coding?"
         },
         {
           "id": "coding-101-l01-c3",
           "title": "Algorithms",
-          "content": "An algorithm is a step-by-step plan to solve a problem. Example: Algorithm for making a peanut butter sandwich — 1. Get two slices of bread. 2. Spread peanut butter on one slice. 3. Put the other slice on top. Coding is writing algorithms in a language the computer understands."
+          "content": "An algorithm is like a recipe or a set of instructions that helps us solve a problem step by step. Imagine you want to make a delicious peanut butter sandwich. Here’s how you would do it using an algorithm: 1. First, take out two slices of bread from the package. 2. Next, grab a jar of peanut butter and a knife. 3. Carefully spread peanut butter on one of the slices of bread. Make sure to cover it well! 4. Now, take the second slice of bread and place it on top of the first slice with the peanut butter. 5. Finally, you can cut the sandwich in half if you like, and enjoy your tasty treat! In the world of coding, we write algorithms using special programming languages. These languages help computers understand our instructions so they can perform tasks just like we do when we follow a recipe. Learning to create algorithms is an important first step in becoming a great programmer!"
         }
       ],
       "flashcards": [
@@ -167,17 +167,17 @@ export const Coding101Module: LearningModule = {
         {
           "id": "coding-101-l02-c1",
           "title": "What Are Variables?",
-          "content": "A variable is like a labeled box that holds a value. In Python: name = 'Alex' stores the text Alex in a box called name. age = 10 stores the number 10 in a box called age. You can change what's in the box anytime: age = 11."
+          "content": "A variable is like a special box that has a label on it, and it can hold different kinds of values. Imagine you have a box labeled 'name'. When we write in Python, 'name = 'Alex'', we are putting the name 'Alex' inside that box. Now, if we have another box labeled 'age', and we write 'age = 10', we are putting the number 10 in that box. The exciting part about variables is that we can change what is inside these boxes whenever we want! For example, if we decide that Alex has a birthday and is now a year older, we can write 'age = 11'. This means we have updated the value in the 'age' box to 11. Variables help us keep track of information that can change over time, making our programs more dynamic and interesting!"
         },
         {
           "id": "coding-101-l02-c2",
           "title": "Data Types",
-          "content": "Variables store different types of data. Strings are text in quotes: 'Hello'. Integers are whole numbers: 42. Floats are decimal numbers: 3.14. Booleans are True or False. Knowing the type matters — you can add numbers (5 + 3 = 8) but adding strings joins them ('Hi' + ' there' = 'Hi there')."
+          "content": "Variables are special containers in programming that can hold different kinds of data. It's really important to know what type of data you're working with because it helps us understand how to use it correctly. For example, strings are pieces of text that we put inside quotes, like 'Hello'. When we see something like this, we know it's a string! Next, we have integers, which are whole numbers without any fractions or decimals, such as 42. Then, there are floats, which are numbers that include decimals, like 3.14. Finally, we have booleans, which are a bit different because they can only be either True or False. Understanding these different data types is super important because it changes how we can use them in our programs. For instance, we can add numbers together, like 5 + 3, which equals 8. But if we try to add strings, we aren't really adding them; instead, we're joining them together. For example, if we take 'Hi' and add ' there', we get 'Hi there' as the result. So, knowing about data types helps us write better code and avoid mistakes!"
         },
         {
           "id": "coding-101-l02-c3",
           "title": "Naming Variables",
-          "content": "Good variable names describe what they hold: player_score, favorite_color, total_cost. Python rules: no spaces (use underscores), cannot start with a number, and case matters (Age and age are different). Clear names make your code easier to read!"
+          "content": "Choosing good names for your variables is very important because it helps others (and yourself!) understand what the code does. For example, names like player_score, favorite_color, and total_cost clearly describe what each variable holds. This makes it easier for anyone reading your code to know what information is being stored. In Python, there are some rules to follow when naming variables: you can't use spaces (so use underscores instead), a variable name can't start with a number, and remember that uppercase and lowercase letters are treated differently (for example, Age and age are not the same). Clear and descriptive names make your code much easier to read and understand! By following these guidelines, you can write code that is not only functional but also easy for others to follow, which is a key skill for any programmer."
         }
       ],
       "flashcards": [
@@ -302,17 +302,17 @@ export const Coding101Module: LearningModule = {
         {
           "id": "coding-101-l03-c1",
           "title": "If Statements",
-          "content": "An if statement lets the computer make decisions. In Python:\n\nif temperature > 90:\n    print('It is hot!')\n\nThe computer checks: is the temperature greater than 90? If yes (True), it prints the message. If no (False), it skips it."
+          "content": "An if statement is a really cool tool that helps the computer make decisions based on specific conditions. For instance, in the programming language Python, we can write something like this: if temperature > 90: print('It is hot!'). In this example, the computer looks at the temperature and checks if it is greater than 90 degrees. If this condition is true, the computer will show the message 'It is hot!'. However, if the temperature is not greater than 90, the computer will skip this instruction and continue with the next one. This ability to make choices based on conditions is what makes programming so fun and interesting! It allows us to create programs that can respond differently depending on the situation, just like how we make decisions in our daily lives."
         },
         {
           "id": "coding-101-l03-c2",
           "title": "Elif and Else",
-          "content": "elif means 'else if' — another condition to check. else is the fallback when nothing else matches.\n\nif score >= 90:\n    print('A')\nelif score >= 80:\n    print('B')\nelse:\n    print('Keep trying!')\n\nPython checks each condition top-to-bottom and runs the first match."
+          "content": "In programming, we often need to make decisions based on certain conditions. The word 'elif' is short for 'else if'. It helps us check another condition if the first one we checked was not true. On the other hand, 'else' is what the computer will do if none of the conditions we checked are true. Let's look at an example to understand this better:\nImagine we want to give grades based on a score. We can write our code like this:\nif score >= 90:\n    print('A')\nelif score >= 80:\n    print('B')\nelse:\n    print('Keep trying!')\nIn this example, Python will check each condition one by one, starting from the top. If the score is 90 or higher, it will print 'A'. If the score is 80 or higher but less than 90, it will print 'B'. If the score is below 80, it will print 'Keep trying!'. This way, we can make our programs smarter by allowing them to make choices based on different situations!"
         },
         {
           "id": "coding-101-l03-c3",
           "title": "Comparison Operators",
-          "content": "Conditionals use comparison operators: == (equals), != (not equals), > (greater than), < (less than), >= (greater or equal), <= (less or equal). Important: = assigns a value, but == compares two values. 5 == 5 is True. 5 == 3 is False."
+          "content": "When working with conditionals, we use special symbols called comparison operators to compare values. These include: == (which checks if two values are equal), != (which checks if they are not equal), > (greater than), < (less than), >= (greater than or equal to), and <= (less than or equal to). It's important to remember that the single equals sign '=' is used to assign a value, while the double equals '==' is used to compare two values. For example, 5 == 5 is true, but 5 == 3 is false. Understanding these operators is key to making effective decisions in your code!"
         }
       ],
       "flashcards": [
@@ -437,17 +437,17 @@ export const Coding101Module: LearningModule = {
         {
           "id": "coding-101-l04-c1",
           "title": "Code and Algorithms Review",
-          "content": "Code gives computers step-by-step instructions. Algorithms are plans before you code. Programming languages include Python, JavaScript, and Scratch."
+          "content": "In coding, we use code to give computers step-by-step instructions on how to perform tasks. Before we start coding, we often create algorithms, which are detailed plans that outline how we will solve a problem. There are many programming languages available, such as Python, JavaScript, and Scratch, each with its own unique features and uses. Understanding these concepts is essential as we continue our journey into the world of programming!\nContext recap: In coding, we use code to give computers step-by-step instructions on how to perform tasks. Before we start coding, we often create algorithms, which are detailed plans that outline how we will solve a problem. There are many programming languages available, such as Python, JavaScript, and Scratch, each with its own unique features and uses. Understanding these concepts is essential as we continue our journey into the world of programming!"
         },
         {
           "id": "coding-101-l04-c2",
           "title": "Variables and Conditionals Review",
-          "content": "Variables store data (strings, integers, floats, booleans). Conditionals (if/elif/else) let the computer make decisions based on conditions."
+          "content": "Variables are an important part of programming because they allow us to store different types of data, such as strings (text), integers (whole numbers), floats (decimal numbers), and booleans (true or false values). Additionally, conditionals, which include if, elif, and else statements, enable the computer to make decisions based on specific conditions. Together, these concepts form the foundation of coding and help us create more complex programs!\nContext recap: Variables are an important part of programming because they allow us to store different types of data, such as strings (text), integers (whole numbers), floats (decimal numbers), and booleans (true or false values). Additionally, conditionals, which include if, elif, and else statements, enable the computer to make decisions based on specific conditions. Together, these concepts form the foundation of coding and help us create more complex programs!"
         },
         {
           "id": "coding-101-l04-c3",
           "title": "Keep Coding!",
-          "content": "You understand the basics: instructions, data storage, and decision-making. Next: loops, functions, and data structures!"
+          "content": "Congratulations! You have learned the basics of coding, including how to give instructions to computers, how to store data using variables, and how to make decisions with conditionals. As you continue your coding journey, you will soon explore exciting new topics such as loops, functions, and data structures. Keep up the great work, and get ready for more fun challenges ahead!\nContext recap: Congratulations! You have learned the basics of coding, including how to give instructions to computers, how to store data using variables, and how to make decisions with conditionals. As you continue your coding journey, you will soon explore exciting new topics such as loops, functions, and data structures. Keep up the great work, and get ready for more fun challenges ahead!"
         }
       ],
       "flashcards": [
@@ -572,17 +572,17 @@ export const Coding101Module: LearningModule = {
         {
           "id": "coding-101-l05-c1",
           "title": "For Loops",
-          "content": "A for loop repeats code a set number of times.\n\nfor i in range(5):\n    print('Hello!')\n\nThis prints 'Hello!' five times. range(5) generates numbers 0, 1, 2, 3, 4. For loops are great when you know how many times to repeat."
+          "content": "A for loop is a powerful and helpful tool in programming that allows us to repeat a set of instructions a specific number of times. Imagine you want to greet someone by saying 'Hello!' five times. Instead of writing 'Hello!' over and over again, we can use a for loop to do it for us! Here’s how it looks in code:\n```python\nfor i in range(5):\n    print('Hello!')\n```\nIn this example, 'range(5)' creates a list of numbers starting from 0 up to 4. This means the loop will run five times in total. Each time the loop runs, it prints 'Hello!'. For loops are especially useful when we know exactly how many times we want to repeat something, which helps make our code cleaner and easier to understand. By using for loops, we can save time and avoid mistakes in our programming, making it a great skill to learn as we become better coders!"
         },
         {
           "id": "coding-101-l05-c2",
           "title": "While Loops",
-          "content": "A while loop repeats as long as a condition is True.\n\ncount = 0\nwhile count < 3:\n    print(count)\n    count = count + 1\n\nThis prints 0, 1, 2. When count reaches 3 the condition is False and the loop stops. Warning: forgetting count = count + 1 creates an infinite loop!"
+          "content": "A while loop is a special kind of loop that keeps running a set of instructions as long as a specific condition is true. Let's look at an example where we want to count from 0 to 2. We start by setting our count to 0:\ncount = 0\nNext, we write our while loop like this:\nwhile count < 3:\n    print(count)\n    count = count + 1\nIn this code, the loop will keep printing the current value of 'count'. It starts at 0, then goes to 1, and finally to 2. When 'count' reaches 3, the condition 'count < 3' is no longer true, so the loop stops running. It's very important to remember to update the count inside the loop. If we forget to do that, we might create an infinite loop, which means the loop would keep running forever without stopping! So always make sure to change the count to avoid that situation! Understanding while loops is a key step in learning how to code effectively, as they allow us to repeat actions without writing the same code multiple times."
         },
         {
           "id": "coding-101-l05-c3",
           "title": "When to Use Each",
-          "content": "Use a for loop when you know exactly how many times to repeat (like counting 1 to 10). Use a while loop when you want to repeat until something changes (like asking for a password until it's correct). Loops save you from writing the same code over and over."
+          "content": "When you're coding, it's important to know which type of loop to use for different situations. A for loop is perfect when you know exactly how many times you want to repeat a task. For example, if you want to count from 1 to 10, a for loop is the best choice because you can specify that you want to repeat the action 10 times. On the other hand, a while loop is useful when you want to keep doing something until a specific condition is met. For instance, if you're creating a program that asks a user to enter a password, you would use a while loop to keep asking them until they provide the correct password. Loops are really helpful because they allow you to write your code more efficiently. Instead of writing the same instructions over and over again, you can use loops to repeat actions, making your code cleaner and easier to understand. This way, you can focus on creating fun and interesting programs without getting bogged down by repetitive tasks!"
         }
       ],
       "flashcards": [
@@ -699,17 +699,17 @@ export const Coding101Module: LearningModule = {
         {
           "id": "coding-101-l06-c1",
           "title": "What Are Functions?",
-          "content": "A function is a reusable block of code with a name. In Python:\n\ndef greet(name):\n    print('Hello, ' + name + '!')\n\ngreet('Alex')  # prints: Hello, Alex!\ngreet('Sam')   # prints: Hello, Sam!\n\ndef means 'define a function'. You write the code once and call it many times."
+          "content": "A function is a special part of our code that has a name and can be used again and again, just like a magic spell! Functions help us keep our code neat and tidy, making it easier for us to understand what we wrote. In Python, we can create a function by using the word 'def', which stands for 'define'. Here’s how we can create a simple greeting function:\ndef greet(name):\n    print('Hello, ' + name + '!')\nWhen we want to use this function, we just call it with a name. For example, if we call greet('Alex'), it will say:\nHello, Alex!\nAnd if we call greet('Sam'), it will say:\nHello, Sam!\nThis means we only need to write the greeting code once, but we can use it many times with different names. Isn’t that cool? Functions make our coding life much easier and more fun!"
         },
         {
           "id": "coding-101-l06-c2",
           "title": "Parameters and Return Values",
-          "content": "Parameters are inputs a function needs. Return values are the outputs.\n\ndef add(a, b):\n    return a + b\n\nresult = add(3, 5)  # result is 8\n\nThe function takes two numbers, adds them, and sends back the answer with return."
+          "content": "Functions are special tools in programming that help us organize our code and make it easier to use. They can take inputs, which we call parameters, and they can also give us outputs, known as return values. Let's look at an example of a function that adds two numbers together. We can define this function like this:\ndef add(a, b):\n    return a + b\nIn this example, 'a' and 'b' are the parameters. When we call this function with two numbers, such as 3 and 5, it will add them together and return the result. We can see this in action with the following line of code:\nresult = add(3, 5)  # Here, 'result' will be 8\nThis means that the function takes the two numbers, adds them, and sends back the answer using the 'return' statement. This is super helpful because it allows us to perform calculations without having to write the same code over and over again! Functions make our programming cleaner and more efficient, which is why they are so important in coding."
         },
         {
           "id": "coding-101-l06-c3",
           "title": "Why Functions Matter",
-          "content": "Functions keep your code organized, avoid repetition, and make debugging easier. If something breaks, you fix it in one function instead of many places. Python has built-in functions too: print(), len(), input(), range(). You can build your own library of useful functions!"
+          "content": "Functions are really important in coding because they help us keep our code neat and organized. Imagine if you had to write the same instructions over and over again in different parts of your program; that would be confusing and take a lot of time! Functions allow us to write a set of instructions just once and then use them whenever we need to. This makes it much easier to find and fix mistakes. If something goes wrong in our program, we only need to look in one place—the function—to fix it, instead of searching through all our code.\nPython, the programming language we're learning, has many built-in functions that we can use right away, like print() to show messages, len() to count items, input() to get information from users, and range() to create a list of numbers. These built-in functions help us code more efficiently.\nBut that's not all! We can also create our own functions, which are like our personal toolbox of helpful tools. This means we can make our coding experience even more fun and tailored to what we need! So, functions are not just useful; they make coding easier and more enjoyable!"
         }
       ],
       "flashcards": [
@@ -826,17 +826,17 @@ export const Coding101Module: LearningModule = {
         {
           "id": "coding-101-l07-c1",
           "title": "What Are Lists?",
-          "content": "A list stores multiple values in one variable.\n\nfruits = ['apple', 'banana', 'cherry']\n\nAccess items by index (position, starting at 0): fruits[0] is 'apple', fruits[1] is 'banana'. Add items: fruits.append('grape'). Remove items: fruits.remove('banana')."
+          "content": "A list is a special type of variable that allows us to store multiple values together in one place. For example, we can create a list of fruits like this:\nfruits = ['apple', 'banana', 'cherry']\nWe can access each fruit in the list by its position, starting from 0. So, 'fruits[0]' gives us 'apple', and 'fruits[1]' gives us 'banana'. We can also add new items to our list using 'fruits.append('grape')' to add 'grape' at the end. If we want to remove an item, we can use 'fruits.remove('banana')' to take 'banana' out of the list. Lists are super helpful for keeping track of collections of related data!"
         },
         {
           "id": "coding-101-l07-c2",
           "title": "Looping Through Lists",
-          "content": "Combine lists with for loops to process each item:\n\nfor fruit in fruits:\n    print(fruit)\n\nThis prints every fruit in the list. You can also use len(fruits) to find how many items are in the list. Lists make it easy to manage collections of data."
+          "content": "In coding, we often work with lists, which are like containers that hold multiple items. Sometimes, we want to look at each item in a list and do something with it, like printing it out. To do this, we can use a special tool called a 'for loop'. Here’s how it works: if we have a list of fruits, we can write the following code:\nfor fruit in fruits:\n    print(fruit)\nThis code will go through the list of fruits and print each one, one at a time. So if our list has apples, bananas, and cherries, it will print 'apple', then 'banana', and finally 'cherry'.\nWe can also find out how many items are in our list by using the function 'len(fruits)'. This will tell us the total number of fruits in our list. Using loops with lists is a powerful way to manage and work with collections of data, making our coding tasks easier and more organized! Remember, lists help us keep track of many items at once, and loops help us interact with each item individually."
         },
         {
           "id": "coding-101-l07-c3",
           "title": "Dictionaries",
-          "content": "A dictionary stores key-value pairs — like a real dictionary where each word has a definition.\n\nstudent = {'name': 'Alex', 'age': 10, 'grade': 5}\nprint(student['name'])  # Alex\n\nDictionaries are great when you want to look up a value by its label instead of a number."
+          "content": "A dictionary is a special type of data structure that helps us organize information in pairs, similar to how a real dictionary defines words. In a dictionary, each piece of information has a label, known as a key, and a value that describes it. For instance, we can create a dictionary to store details about a student like this:\nstudent = {'name': 'Alex', 'age': 10, 'grade': 5}\nIn this example, 'name', 'age', and 'grade' are the keys, while 'Alex', 10, and 5 are the values that go with those keys. If we want to find out the student's name, we can use the command 'print(student['name'])', and it will display 'Alex'. This way of organizing information is very helpful because it allows us to look up details using their labels instead of just numbers. Dictionaries are super useful in programming because they make it easy to manage and access data efficiently!"
         }
       ],
       "flashcards": [
@@ -953,17 +953,17 @@ export const Coding101Module: LearningModule = {
         {
           "id": "coding-101-l08-c1",
           "title": "Code, Variables, and Conditionals Review",
-          "content": "Code is instructions for computers. Variables store data (strings, integers, floats, booleans). Conditionals (if/elif/else) make decisions."
+          "content": "In programming, code is a set of instructions that tells the computer what to do. We use variables to store different types of data, such as strings (text), integers (whole numbers), floats (decimal numbers), and booleans (true or false values). Conditionals, which include 'if', 'elif', and 'else', help our programs make decisions based on certain conditions. Understanding these concepts is essential for writing effective code!\nContext recap: In programming, code is a set of instructions that tells the computer what to do. We use variables to store different types of data, such as strings (text), integers (whole numbers), floats (decimal numbers), and booleans (true or false values). Conditionals, which include 'if', 'elif', and 'else', help our programs make decisions based on certain conditions. Understanding these concepts is essential for writing effective code!"
         },
         {
           "id": "coding-101-l08-c2",
           "title": "Loops and Functions Review",
-          "content": "For loops repeat a known number of times. While loops repeat until a condition is False. Functions are reusable blocks of code with parameters and return values."
+          "content": "For loops are a special tool in programming that allow us to repeat a specific action a set number of times. Imagine you want to say 'Hello!' five times; a for loop makes this easy! On the other hand, while loops are a bit different. They keep repeating an action as long as a certain condition is true. For example, if you want to keep playing a game until you lose, a while loop would be perfect for that! Functions are another important concept. They are like little machines in your code that can take inputs, called parameters, and give you outputs, known as return values. By using loops and functions wisely, you can write more efficient and organized code, which is a crucial skill for any programmer! Understanding these concepts will help you on your journey to becoming a great coder!"
         },
         {
           "id": "coding-101-l08-c3",
           "title": "Data Structures Review",
-          "content": "Lists store ordered collections accessed by index. Dictionaries store key-value pairs. Combining these tools lets you build real programs!"
+          "content": "Lists are used to store ordered collections of items, and we can access each item by its index position. On the other hand, dictionaries store information in key-value pairs, which allows us to look up values using their labels. By combining these powerful tools, we can create real programs that are organized and efficient, making our coding journey exciting and rewarding!\nContext recap: Lists are used to store ordered collections of items, and we can access each item by its index position. On the other hand, dictionaries store information in key-value pairs, which allows us to look up values using their labels. By combining these powerful tools, we can create real programs that are organized and efficient, making our coding journey exciting and rewarding!"
         }
       ],
       "flashcards": [

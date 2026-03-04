@@ -47,19 +47,19 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Digital Marketing, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will dive deep into the advanced boundaries of digital marketing. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations that can be executed successfully. By mastering these concepts, you will be able to identify both the limits and the exciting possibilities within digital marketing strategies. This knowledge is essential for ensuring that your business can operate not just efficiently, but also effectively in a competitive landscape.\nContext recap: In this lesson, we will dive deep into the advanced boundaries of digital marketing. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will focus on designing operations that can be executed successfully. By mastering these concepts, you will be able to identify both the limits and the exciting possibilities within digital marketing strategies."
         },
         {
           "id": "digital-marketing-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will explore uncertainty ranges, which help us understand the limits of our predictions, and system dependencies, which show how different parts of a business rely on each other. This foundational knowledge is crucial for planning effective interventions in digital marketing.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will explore uncertainty ranges, which help us understand the limits of our predictions, and system dependencies, which show how different parts of a business rely on each other. This foundational knowledge is crucial for planning effective interventions in digital marketing."
         },
         {
           "id": "digital-marketing-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we emphasize the importance of ensuring that all claims made in digital marketing are supported by measurable indicators. This means that we need to establish confidence bounds, which help us understand how certain we are about our claims, and set up review checkpoints to evaluate our progress. This approach ensures that our marketing strategies are based on solid evidence.\nContext recap: In this recap, we emphasize the importance of ensuring that all claims made in digital marketing are supported by measurable indicators. This means that we need to establish confidence bounds, which help us understand how certain we are about our claims, and set up review checkpoints to evaluate our progress. This approach ensures that our marketing strategies are based on solid evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific digital marketing tasks. After creating these workflows, they will stress-test them by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding how to create robust marketing strategies.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific digital marketing tasks. After creating these workflows, they will stress-test them by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding how to create robust marketing strategies."
         },
         {
           "id": "digital-marketing-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate checkpoints to monitor progress, rollback criteria to revert to previous states if needed, and threshold-based escalation to address issues as they arise. Understanding this architecture will help ensure that workflows remain effective and adaptable.\nContext recap: In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate checkpoints to monitor progress, rollback criteria to revert to previous states if needed, and threshold-based escalation to address issues as they arise. Understanding this architecture will help ensure that workflows remain effective and adaptable."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints within business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. This understanding is crucial for making informed decisions that balance different business needs and objectives.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. This understanding is crucial for making informed decisions that balance different business needs and objectives."
         },
         {
           "id": "digital-marketing-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to make decisions that are not only effective but also responsible.\nContext recap: In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to make decisions that are not only effective but also responsible."
         },
         {
           "id": "digital-marketing-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will review the key components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls to mitigate potential issues, and fallback plans to ensure that there are alternatives if the initial plan does not work out. This structured approach is essential for effective decision-making in digital marketing.\nContext recap: In this recap, we will review the key components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls to mitigate potential issues, and fallback plans to ensure that there are alternatives if the initial plan does not work out. This structured approach is essential for effective decision-making in digital marketing."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in digital marketing. They will learn how to balance performance goals with governance constraints, ensuring that their marketing efforts are both effective and compliant with regulations.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in digital marketing. They will learn how to balance performance goals with governance constraints, ensuring that their marketing efforts are both effective and compliant with regulations."
         },
         {
           "id": "digital-marketing-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss the importance of effective responses in digital marketing. These responses should be designed to update control gates without losing traceability or accountability. This means that as changes are made, it is crucial to keep track of what has been done and ensure that responsibilities are clear.\nContext recap: In this recap, we will discuss the importance of effective responses in digital marketing. These responses should be designed to update control gates without losing traceability or accountability. This means that as changes are made, it is crucial to keep track of what has been done and ensure that responsibilities are clear."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these impacts is vital for ensuring that all voices are considered in the decision-making process, leading to more equitable outcomes in digital marketing.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these impacts is vital for ensuring that all voices are considered in the decision-making process, leading to more equitable outcomes in digital marketing."
         },
         {
           "id": "digital-marketing-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this lesson, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation if issues arise. Integrating these elements is crucial for maintaining trust and integrity in digital marketing practices.\nContext recap: In this lesson, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation if issues arise. Integrating these elements is crucial for maintaining trust and integrity in digital marketing practices."
         },
         {
           "id": "digital-marketing-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and builds resilience in our digital marketing strategies. This checklist will guide us in making responsible decisions.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and builds resilience in our digital marketing strategies. This checklist will guide us in making responsible decisions."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const DigitalMarketing601Module: LearningModule = {
           "id": "digital-marketing-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work on putting together a detailed brief. This brief will include your main claims, the evidence that supports them, the uncertainties you might face, and the pathways for addressing any challenges that arise. This practice will help you communicate your ideas clearly and effectively.\nContext recap: In this activity, you will work on putting together a detailed brief. This brief will include your main claims, the evidence that supports them, the uncertainties you might face, and the pathways for addressing any challenges that arise. This practice will help you communicate your ideas clearly and effectively."
         },
         {
           "id": "digital-marketing-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will practice responding to various critiques from experts. These critiques will cover technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will prepare you to confidently defend your ideas and handle questions during your presentation.\nContext recap: During this session, you will practice responding to various critiques from experts. These critiques will cover technical aspects, governance issues, and the perspectives of different stakeholders. This rehearsal will prepare you to confidently defend your ideas and handle questions during your presentation."
         }
       ],
       "interactiveActivities": [

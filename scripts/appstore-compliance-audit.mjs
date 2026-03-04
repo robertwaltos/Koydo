@@ -7,7 +7,12 @@ const outMd = path.join(projectRoot, "public", "APPSTORE-COMPLIANCE-AUDIT.md");
 
 const requiredFiles = [
   "src/app/account/settings/page.tsx",
+  "src/app/account-deletion/page.tsx",
   "src/app/api/account/delete/route.ts",
+  "src/app/privacy/page.tsx",
+  "src/app/terms/page.tsx",
+  "src/app/refunds/page.tsx",
+  "src/app/data-deletion/page.tsx",
   "src/app/legal/privacy/page.tsx",
   "src/app/legal/terms/page.tsx",
   "src/app/legal/refunds/page.tsx",
@@ -58,18 +63,93 @@ function checkBillingMode() {
 function checkOAuthParity() {
   const signInPath = path.join(projectRoot, "src", "app", "auth", "sign-in", "oauth-buttons.tsx");
   const signUpPath = path.join(projectRoot, "src", "app", "auth", "sign-up", "page.tsx");
-  const providers = ["google", "facebook", "apple", "twitter"];
   const signInContent = fs.existsSync(signInPath) ? fs.readFileSync(signInPath, "utf8").toLowerCase() : "";
   const signUpContent = fs.existsSync(signUpPath) ? fs.readFileSync(signUpPath, "utf8").toLowerCase() : "";
-  const missing = providers.filter(
-    (provider) => !(signInContent.includes(provider) && signUpContent.includes(provider)),
-  );
+
+  const hasOAuthComponent = signUpContent.includes("oauthbuttons");
+  const offersThirdPartySignIn = ["google", "facebook", "twitter"]
+    .some((provider) => signInContent.includes(`id: "${provider}"`));
+  const hasAppleProvider = signInContent.includes('id: "apple"');
+
+  if (!hasOAuthComponent) {
+    return {
+      id: "auth:oauth-parity",
+      category: "auth",
+      status: "warn",
+      detail: "Sign-up page does not reference shared OAuth buttons component.",
+    };
+  }
+
+  if (offersThirdPartySignIn && !hasAppleProvider) {
+    return {
+      id: "auth:oauth-parity",
+      category: "auth",
+      status: "fail",
+      detail: "Third-party sign-in detected without Sign in with Apple parity.",
+    };
+  }
 
   return {
     id: "auth:oauth-parity",
     category: "auth",
-    status: missing.length === 0 ? "pass" : "warn",
-    detail: missing.length === 0 ? "Sign-in/sign-up include target providers." : `Missing or inconsistent: ${missing.join(", ")}`,
+    status: "pass",
+    detail: offersThirdPartySignIn
+      ? "Third-party sign-in includes Sign in with Apple parity and shared sign-up usage."
+      : "No third-party sign-in providers detected; Apple parity requirement not triggered.",
+  };
+}
+
+function checkIosTrackingConsentConfiguration() {
+  const infoPlistPath = path.join(projectRoot, "ios", "App", "App", "Info.plist");
+  if (!fs.existsSync(infoPlistPath)) {
+    return {
+      id: "ios:tracking-consent-config",
+      category: "ios-privacy",
+      status: "warn",
+      detail: "Info.plist not found; unable to validate iOS tracking consent configuration.",
+    };
+  }
+
+  const plistContent = fs.readFileSync(infoPlistPath, "utf8");
+  const declaresTrackingUsageDescription = plistContent.includes("<key>NSUserTrackingUsageDescription</key>");
+
+  const iosAppDirectory = path.join(projectRoot, "ios", "App", "App");
+  const swiftFiles = fs.existsSync(iosAppDirectory)
+    ? fs.readdirSync(iosAppDirectory).filter((entry) => entry.endsWith(".swift"))
+    : [];
+
+  const requestsTrackingAuthorization = swiftFiles.some((fileName) => {
+    const swiftContent = fs.readFileSync(path.join(iosAppDirectory, fileName), "utf8");
+    return (
+      swiftContent.includes("requestTrackingAuthorization(") ||
+      swiftContent.includes("ATTrackingManager")
+    );
+  });
+
+  if (!declaresTrackingUsageDescription) {
+    return {
+      id: "ios:tracking-consent-config",
+      category: "ios-privacy",
+      status: "pass",
+      detail: "Info.plist does not declare NSUserTrackingUsageDescription.",
+    };
+  }
+
+  if (!requestsTrackingAuthorization) {
+    return {
+      id: "ios:tracking-consent-config",
+      category: "ios-privacy",
+      status: "warn",
+      detail:
+        "NSUserTrackingUsageDescription is declared, but no ATT authorization request was detected in iOS runtime code.",
+    };
+  }
+
+  return {
+    id: "ios:tracking-consent-config",
+    category: "ios-privacy",
+    status: "pass",
+    detail: "ATT usage key and runtime authorization request are both present.",
   };
 }
 
@@ -78,6 +158,7 @@ function buildAudit() {
     ...requiredFiles.map(checkFileExists),
     checkBillingMode(),
     checkOAuthParity(),
+    checkIosTrackingConsentConfiguration(),
   ];
 
   const totals = {
@@ -111,6 +192,7 @@ function toMarkdown(audit) {
   lines.push("## Notes");
   lines.push("");
   lines.push("- This audit checks structural and configuration basics only.");
+  lines.push("- Public store-listing URLs should resolve: /privacy, /terms, /refunds, /account-deletion, /data-deletion.");
   lines.push("- Final app store compliance still requires policy/legal and UX review before submission.");
   lines.push("");
   return lines.join("\n");

@@ -47,19 +47,19 @@ export const HumanResourceManagement601Module: LearningModule = {
           "id": "human-resource-management-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Human Resource Management, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will dive into the advanced ideas of scope and boundaries within the field of Human Resource Management. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will discuss how to design business operations that are efficient and effective. Grasping these concepts is essential for helping organizations operate smoothly and reach their objectives while making the best use of their resources.\nContext recap: In this lesson, we will dive into the advanced ideas of scope and boundaries within the field of Human Resource Management. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will discuss how to design business operations that are efficient and effective. Grasping these concepts is essential for helping organizations operate smoothly and reach their objectives while making the best use of their resources."
         },
         {
           "id": "human-resource-management-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which help us understand how different factors influence each other. We will also look at uncertainty ranges and system dependencies. This mapping is essential for planning interventions effectively, as it allows us to visualize the relationships and potential outcomes before making decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which help us understand how different factors influence each other. We will also look at uncertainty ranges and system dependencies. This mapping is essential for planning interventions effectively, as it allows us to visualize the relationships and potential outcomes before making decisions."
         },
         {
           "id": "human-resource-management-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in our analysis should be linked to measurable indicators. This means we need to establish confidence bounds and set up review checkpoints. By doing this, we ensure that our decisions are based on solid evidence and that we can track our progress effectively.\nContext recap: In our recap, we emphasize that all claims made in our analysis should be linked to measurable indicators. This means we need to establish confidence bounds and set up review checkpoints. By doing this, we ensure that our decisions are based on solid evidence and that we can track our progress effectively."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const HumanResourceManagement601Module: LearningModule = {
           "id": "human-resource-management-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. After creating these workflows, they will stress-test them by simulating adverse scenarios. This hands-on experience is vital for understanding how workflows can perform under pressure and what adjustments may be necessary to improve resilience.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. After creating these workflows, they will stress-test them by simulating adverse scenarios. This hands-on experience is vital for understanding how workflows can perform under pressure and what adjustments may be necessary to improve resilience."
         },
         {
           "id": "human-resource-management-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints, rollback criteria, and threshold-based escalation processes. These elements help ensure that workflows can adapt to changes and challenges while maintaining quality and safety standards.\nContext recap: In our recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints, rollback criteria, and threshold-based escalation processes. These elements help ensure that workflows can adapt to changes and challenges while maintaining quality and safety standards."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const HumanResourceManagement601Module: LearningModule = {
           "id": "human-resource-management-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "In this lesson, we will frame scenarios that highlight competing constraints in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs involved. This understanding is crucial for making informed choices that balance different needs and priorities within an organization.\nContext recap: In this lesson, we will frame scenarios that highlight competing constraints in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs involved. This understanding is crucial for making informed choices that balance different needs and priorities within an organization."
         },
         {
           "id": "human-resource-management-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis helps us to understand the implications of our choices and to make decisions that are fair and effective for all stakeholders involved.\nContext recap: During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis helps us to understand the implications of our choices and to make decisions that are fair and effective for all stakeholders involved."
         },
         {
           "id": "human-resource-management-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will outline the key components of a decision memo. Each recommendation should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we have strategies in place to address potential challenges.\nContext recap: In our recap, we will outline the key components of a decision memo. Each recommendation should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we have strategies in place to address potential challenges."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const HumanResourceManagement601Module: LearningModule = {
           "id": "human-resource-management-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This exercise is designed to help learners understand how to manage competing priorities effectively and make decisions that align with both organizational goals and ethical standards.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This exercise is designed to help learners understand how to manage competing priorities effectively and make decisions that align with both organizational goals and ethical standards."
         },
         {
           "id": "human-resource-management-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the importance of designing adaptive responses that can update control gates without losing traceability or accountability. This ensures that organizations can respond effectively to changing circumstances while maintaining clear records of their decisions and actions.\nContext recap: In our recap, we will discuss the importance of designing adaptive responses that can update control gates without losing traceability or accountability. This ensures that organizations can respond effectively to changing circumstances while maintaining clear records of their decisions and actions."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const HumanResourceManagement601Module: LearningModule = {
           "id": "human-resource-management-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is essential for ensuring that all voices are heard and that decisions are made with consideration for everyone affected.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is essential for ensuring that all voices are heard and that decisions are made with consideration for everyone affected."
         },
         {
           "id": "human-resource-management-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This includes integrating decision traceability, review rights, and remediation obligations into our processes. By doing so, we create a system where decisions are transparent and responsible, fostering trust among stakeholders.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes integrating decision traceability, review rights, and remediation obligations into our processes. By doing so, we create a system where decisions are transparent and responsible, fostering trust among stakeholders."
         },
         {
           "id": "human-resource-management-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to be resilient in various situations. This checklist serves as a guide to remind us of our responsibilities as leaders.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and builds our ability to be resilient in various situations. This checklist serves as a guide to remind us of our responsibilities as leaders."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const HumanResourceManagement601Module: LearningModule = {
           "id": "human-resource-management-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, students will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of any uncertainties involved, and clear pathways for how to address any issues that may arise. This exercise helps develop critical thinking and communication skills.\nContext recap: In this interactive activity, students will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of any uncertainties involved, and clear pathways for how to address any issues that may arise. This exercise helps develop critical thinking and communication skills."
         },
         {
           "id": "human-resource-management-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During our rehearsal session, students will practice responding to various critiques that may come from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This practice is essential for building confidence and improving our ability to communicate effectively.\nContext recap: During our rehearsal session, students will practice responding to various critiques that may come from experts in the field. These critiques will focus on technical aspects, governance issues, and the perspectives of different stakeholders. This practice is essential for building confidence and improving our ability to communicate effectively."
         }
       ],
       "interactiveActivities": [

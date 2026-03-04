@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     TreePine,
@@ -17,6 +17,7 @@ import {
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /**
  * TERRA'S TREK - Phase 9 (Explorer Batch)
@@ -66,8 +67,30 @@ export default function TerrasTrek() {
     const [isComplete, setIsComplete] = useState(false);
     const [isCapturing, setIsCapturing] = useState(false);
     const [scannerActive, setScannerActive] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const currentPoint = SURVEY_POINTS[pointIndex];
+
+    useEffect(() => {
+        if (!isComplete || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "terra-trek",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, loggedPoints.length),
+            score: loggedPoints.length,
+            maxScore: SURVEY_POINTS.length,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [isComplete, loggedPoints.length]);
 
     const handleSurvey = (e: React.MouseEvent | React.TouchEvent) => {
         if (isComplete || isCapturing) return;

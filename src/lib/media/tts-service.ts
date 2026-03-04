@@ -13,7 +13,7 @@ import crypto from "crypto";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
-export type TTSProvider = "openai" | "elevenlabs" | "browser";
+export type TTSProvider = "openai" | "elevenlabs" | "local" | "browser";
 
 export const OPENAI_VOICES = [
   { id: "alloy", label: "Alloy", description: "Neutral, warm" },
@@ -29,6 +29,8 @@ export type OpenAIVoice = (typeof OPENAI_VOICES)[number]["id"];
 export interface TTSRequest {
   text: string;
   voice?: OpenAIVoice;
+  /** Speaking speed (0.25–4.0, default 0.95). Used for multilingual pacing. */
+  speed?: number;
   /** Optional lesson ID for cache key namespacing */
   lessonId?: string;
   /** Skip cache and regenerate */
@@ -116,9 +118,9 @@ async function setCachedAudio(key: string, audioBuffer: Buffer): Promise<string 
 
 // ── OpenAI TTS Provider ────────────────────────────────────────────────────
 
-async function generateOpenAI(text: string, voice: OpenAIVoice): Promise<Buffer> {
-  const apiKey = serverEnv.OPENAI_API_KEY;
-  if (!apiKey) throw new Error("OPENAI_API_KEY not configured");
+async function generateOpenAI(text: string, voice: OpenAIVoice, speed?: number): Promise<Buffer> {
+  const apiKey = serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY;
+  if (!apiKey) throw new Error("OPENAI_MEDIA_API_KEY / OPENAI_API_KEY not configured");
 
   const response = await fetch("https://api.openai.com/v1/audio/speech", {
     method: "POST",
@@ -131,7 +133,7 @@ async function generateOpenAI(text: string, voice: OpenAIVoice): Promise<Buffer>
       input: text,
       voice,
       response_format: "mp3",
-      speed: 0.95, // slightly slower for educational content
+      speed: speed ?? 0.95, // slightly slower for educational content
     }),
   });
 
@@ -194,6 +196,51 @@ async function generateElevenLabs(text: string, voice: OpenAIVoice): Promise<Buf
   return Buffer.from(arrayBuffer);
 }
 
+// ── Local TTS Provider (Kokoro-82M / XTTS v2) ──────────────────────────────
+
+/** Map OpenAI voice names to Kokoro voice IDs */
+const KOKORO_VOICE_MAP: Record<OpenAIVoice, string> = {
+  alloy: "af_bella",
+  echo: "am_echo",
+  fable: "bf_emma",
+  onyx: "am_adam",
+  nova: "af_nova",
+  shimmer: "af_heart",
+};
+
+async function generateLocal(
+  text: string,
+  voice: OpenAIVoice,
+  speed?: number,
+  language?: string
+): Promise<Buffer> {
+  const baseUrl = serverEnv.LOCAL_TTS_URL;
+  if (!baseUrl) throw new Error("LOCAL_TTS_URL not configured");
+
+  const kokoroVoice = KOKORO_VOICE_MAP[voice] ?? "af_nova";
+
+  const response = await fetch(`${baseUrl}/generate`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      text,
+      voice: kokoroVoice,
+      language: language ?? "en",
+      speed: speed ?? 1.0,
+      format: "mp3",
+    }),
+    signal: AbortSignal.timeout(30_000), // 30s timeout
+  });
+
+  if (!response.ok) {
+    const body = await response.text().catch(() => "");
+    throw new Error(`Local TTS error ${response.status}: ${body}`);
+  }
+
+  const arrayBuffer = await response.arrayBuffer();
+  return Buffer.from(arrayBuffer);
+}
+
 // ── Main TTS function with fallback chain ──────────────────────────────────
 
 export async function generateTTS(request: TTSRequest): Promise<TTSResult> {
@@ -219,19 +266,40 @@ export async function generateTTS(request: TTSRequest): Promise<TTSResult> {
 
   const providers: Array<{ name: TTSProvider; generate: () => Promise<Buffer> }> = [];
 
-  if (primary === "openai" || (primary !== "elevenlabs" && primary !== "browser")) {
-    providers.push({ name: "openai", generate: () => generateOpenAI(request.text, voice) });
-  }
-  if (primary === "elevenlabs") {
-    providers.push({ name: "elevenlabs", generate: () => generateElevenLabs(request.text, voice) });
+  // Helper to add a named provider
+  const addProvider = (name: TTSProvider) => {
+    switch (name) {
+      case "local":
+        if (serverEnv.LOCAL_TTS_URL) {
+          providers.push({ name: "local", generate: () => generateLocal(request.text, voice, request.speed) });
+        }
+        break;
+      case "openai":
+        providers.push({ name: "openai", generate: () => generateOpenAI(request.text, voice, request.speed) });
+        break;
+      case "elevenlabs":
+        providers.push({ name: "elevenlabs", generate: () => generateElevenLabs(request.text, voice) });
+        break;
+    }
+  };
+
+  // Add primary
+  if (primary === "local") {
+    addProvider("local");
+  } else if (primary === "openai" || (primary !== "elevenlabs" && primary !== "browser" && primary !== "local")) {
+    addProvider("openai");
+  } else if (primary === "elevenlabs") {
+    addProvider("elevenlabs");
   }
 
-  // Add fallback
-  if (fallback === "elevenlabs" && primary !== "elevenlabs") {
-    providers.push({ name: "elevenlabs", generate: () => generateElevenLabs(request.text, voice) });
+  // Add fallback (skip if same as primary)
+  if (fallback && fallback !== primary && fallback !== "browser") {
+    addProvider(fallback as TTSProvider);
   }
-  if (fallback === "openai" && primary !== "openai") {
-    providers.push({ name: "openai", generate: () => generateOpenAI(request.text, voice) });
+
+  // Always try local as last cloud-free fallback if configured & not already added
+  if (serverEnv.LOCAL_TTS_URL && primary !== "local" && fallback !== "local") {
+    addProvider("local");
   }
 
   // 3. Try each provider

@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import SoftCard from "@/app/components/ui/soft-card";
-import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { getAllLearningPaths } from "@/lib/explorer/learning-paths";
 import {
   formatSubscriptionDate,
@@ -19,6 +18,9 @@ import { canUseStripe, isIOS, isAndroid, canUseIAP } from "@/lib/platform/featur
 import { useI18n } from "@/lib/i18n/provider";
 import { initializeRevenueCat } from "@/lib/billing/revenuecat-client";
 import { hasRevenueCatProEntitlement } from "@/lib/billing/revenuecat-config";
+import { useCompanionPreferences, type CompanionAvatarStyle } from "@/lib/greeter/companion-preferences";
+import { COMPANIONS, COMPANION_STORAGE_KEY, type CompanionGender } from "@/lib/greeter/companion-config";
+import CompanionAvatarSVG from "@/components/experience/CompanionAvatarSVG";
 
 type LearnerPathProfile = {
   id: string;
@@ -34,6 +36,8 @@ type SettingsClientProps = {
 };
 
 type StatusTone = "error" | "success";
+type VerificationScope = "student_profile_settings" | "account_delete";
+type VerificationChannel = "email" | "sms" | "authenticator";
 
 function normalizePathAllowlist(value: unknown): string[] | null {
   if (!Array.isArray(value)) return null;
@@ -43,6 +47,7 @@ function normalizePathAllowlist(value: unknown): string[] | null {
 
 export default function SettingsClient({ subscription, learnerProfiles }: SettingsClientProps) {
   const { t, locale } = useI18n();
+  const { avatarStyle, setAvatarStyle } = useCompanionPreferences();
   const externalBillingAllowed = canUseStripe();
   const iapBillingAllowed = canUseIAP();
 
@@ -55,6 +60,17 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isOpeningPortal, setIsOpeningPortal] = useState(false);
   const [savingLearnerId, setSavingLearnerId] = useState<string | null>(null);
+  const [verificationChannel, setVerificationChannel] = useState<VerificationChannel>("email");
+  const [verificationCode, setVerificationCode] = useState("");
+  const [verificationPhone, setVerificationPhone] = useState("");
+  const [verificationStatus, setVerificationStatus] = useState("");
+  const [verificationStatusTone, setVerificationStatusTone] = useState<StatusTone>("success");
+  const [verificationBusy, setVerificationBusy] = useState(false);
+  const [activeChallenges, setActiveChallenges] = useState<Partial<Record<VerificationScope, string>>>({});
+  const [verifiedChallenges, setVerifiedChallenges] = useState<Partial<Record<VerificationScope, string>>>({});
+  const [debugCodes, setDebugCodes] = useState<Partial<Record<VerificationScope, string>>>({});
+  const [totpProvisionUri, setTotpProvisionUri] = useState("");
+  const [totpProvisionSecret, setTotpProvisionSecret] = useState("");
   const [allowlistDrafts, setAllowlistDrafts] = useState<Record<string, string[] | null>>(() =>
     Object.fromEntries(
       learnerProfiles.map((profile) => [profile.id, normalizePathAllowlist(profile.path_allowlist)]),
@@ -62,7 +78,6 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
   );
 
   const router = useRouter();
-  const supabase = useMemo(() => createSupabaseBrowserClient(), []);
 
   const allPaths = useMemo(() => getAllLearningPaths(), []);
   const allPathIds = useMemo(() => allPaths.map((path) => path.id), [allPaths]);
@@ -71,7 +86,7 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
   const statusLabel = getSubscriptionStatusLabel(subscription.status);
   const periodEndLabel = formatSubscriptionDate(subscription.currentPeriodEnd, locale);
   const hasPortalManagedSubscription = requiresPortalManagement(subscription.status);
-  const canSubmitDelete = confirmationValue === "DELETE" && !isSubmitting;
+  const canSubmitDelete = confirmationValue === "DELETE" && !isSubmitting && Boolean(verifiedChallenges.account_delete);
 
   const subscriptionToneClass =
     subscriptionTone === "good"
@@ -167,9 +182,126 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
     }
   };
 
+  const requestVerificationChallenge = async (scope: VerificationScope) => {
+    setVerificationStatus("");
+    setVerificationBusy(true);
+    try {
+      const response = await fetch("/api/account/security/change-confirmation/challenge", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          scope,
+          channel: verificationChannel,
+          phoneNumber: verificationPhone || undefined,
+        }),
+      });
+      const payload = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        challenge?: { challengeId?: string; debugCode?: string; deliveryMode?: string };
+      };
+      if (!response.ok || !payload.challenge?.challengeId) {
+        throw new Error(payload.error ?? "Unable to request a verification challenge.");
+      }
+
+      const challengeId = payload.challenge.challengeId;
+      const debugCode = payload.challenge.debugCode;
+      setActiveChallenges((current) => ({ ...current, [scope]: challengeId }));
+      setVerifiedChallenges((current) => ({ ...current, [scope]: undefined }));
+      if (debugCode) {
+        setDebugCodes((current) => ({ ...current, [scope]: debugCode }));
+      }
+
+      setVerificationStatusTone("success");
+      setVerificationStatus(
+        payload.challenge.deliveryMode === "authenticator"
+          ? "Authenticator challenge created. Enter your authenticator code to verify."
+          : "Verification code sent. Enter the code to continue.",
+      );
+    } catch (error) {
+      setVerificationStatusTone("error");
+      setVerificationStatus(
+        error instanceof Error ? error.message : "Unable to request a verification challenge.",
+      );
+    } finally {
+      setVerificationBusy(false);
+    }
+  };
+
+  const verifyChallengeCode = async (scope: VerificationScope) => {
+    const challengeId = activeChallenges[scope];
+    if (!challengeId) {
+      setVerificationStatusTone("error");
+      setVerificationStatus("Request a challenge before verifying a code.");
+      return;
+    }
+    setVerificationStatus("");
+    setVerificationBusy(true);
+    try {
+      const response = await fetch("/api/account/security/change-confirmation/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          scope,
+          challengeId,
+          code: verificationCode,
+        }),
+      });
+      const payload = (await response.json().catch(() => ({}))) as { error?: string };
+      if (!response.ok) {
+        throw new Error(payload.error ?? "Unable to verify the code.");
+      }
+
+      setVerifiedChallenges((current) => ({ ...current, [scope]: challengeId }));
+      setVerificationStatusTone("success");
+      setVerificationStatus("Verification complete. You can now apply the sensitive change.");
+      setVerificationCode("");
+    } catch (error) {
+      setVerificationStatusTone("error");
+      setVerificationStatus(error instanceof Error ? error.message : "Unable to verify the code.");
+    } finally {
+      setVerificationBusy(false);
+    }
+  };
+
+  const provisionAuthenticator = async () => {
+    setVerificationStatus("");
+    setVerificationBusy(true);
+    try {
+      const response = await fetch("/api/account/security/change-confirmation/totp/provision", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ label: "Parent Authenticator" }),
+      });
+      const payload = (await response.json().catch(() => ({}))) as {
+        error?: string;
+        provisioned?: { otpauthUri?: string; secret?: string };
+      };
+      if (!response.ok || !payload.provisioned?.otpauthUri || !payload.provisioned.secret) {
+        throw new Error(payload.error ?? "Unable to provision authenticator factor.");
+      }
+      setTotpProvisionUri(payload.provisioned.otpauthUri);
+      setTotpProvisionSecret(payload.provisioned.secret);
+      setVerificationStatusTone("success");
+      setVerificationStatus("Authenticator factor provisioned. Add it to your app, then request a challenge.");
+    } catch (error) {
+      setVerificationStatusTone("error");
+      setVerificationStatus(
+        error instanceof Error ? error.message : "Unable to provision authenticator factor.",
+      );
+    } finally {
+      setVerificationBusy(false);
+    }
+  };
+
   const handleDeleteAccount = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setDeleteStatus("");
+    const challengeId = verifiedChallenges.account_delete;
+    if (!challengeId) {
+      setDeleteStatusTone("error");
+      setDeleteStatus("Complete verification for account deletion before continuing.");
+      return;
+    }
     setIsSubmitting(true);
 
     const form = new FormData(event.currentTarget);
@@ -179,7 +311,7 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
       const response = await fetch("/api/account/delete", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ confirmation }),
+        body: JSON.stringify({ confirmation, challengeId }),
       });
       const data = (await response.json().catch(() => ({}))) as { error?: string };
       if (!response.ok) {
@@ -190,6 +322,7 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
 
       setDeleteStatusTone("success");
       setDeleteStatus(t("account_settings_delete_success_redirecting"));
+      setVerifiedChallenges((current) => ({ ...current, account_delete: undefined }));
       router.push("/");
       router.refresh();
     } catch {
@@ -230,6 +363,12 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
 
   const saveAllowlist = async (profile: LearnerPathProfile) => {
     setPathsStatus("");
+    const challengeId = verifiedChallenges.student_profile_settings;
+    if (!challengeId) {
+      setPathsStatusTone("error");
+      setPathsStatus("Complete parent verification for learner settings before saving.");
+      return;
+    }
     const draft = normalizePathAllowlist(allowlistDrafts[profile.id]);
 
     if (draft && draft.length === 0) {
@@ -244,20 +383,24 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
     const payload = draft && draft.length === allPathIds.length ? null : draft;
 
     try {
-      const { error } = await supabase
-        .from("student_profiles")
-        .update({ path_allowlist: payload })
-        .eq("id", profile.id);
-
-      if (error) {
+      const response = await fetch("/api/account/settings/learner-paths", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          profileId: profile.id,
+          pathAllowlist: payload,
+          challengeId,
+        }),
+      });
+      const data = (await response.json().catch(() => ({}))) as { error?: string };
+      if (!response.ok) {
         setPathsStatusTone("error");
-        setPathsStatus(
-          error.message || t("account_settings_paths_unable_save", { learner: profile.display_name }),
-        );
+        setPathsStatus(data.error ?? t("account_settings_paths_unable_save", { learner: profile.display_name }));
         return;
       }
 
       setAllowlistDrafts((current) => ({ ...current, [profile.id]: payload }));
+      setVerifiedChallenges((current) => ({ ...current, student_profile_settings: undefined }));
       setPathsStatusTone("success");
       setPathsStatus(t("account_settings_paths_saved", { learner: profile.display_name }));
     } catch {
@@ -337,6 +480,134 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
         ) : null}
 
         {billingStatus ? <p role="status" className="mt-3 text-sm text-zinc-700">{billingStatus}</p> : null}
+      </SoftCard>
+
+      <CompanionSettingsCard avatarStyle={avatarStyle} setAvatarStyle={setAvatarStyle} />
+
+      <SoftCard as="section" className="p-5">
+        <h2 className="text-lg font-semibold">Parent Security Verification</h2>
+        <p className="mt-2 text-sm text-zinc-600">
+          Sensitive account changes require a fresh parent verification challenge.
+        </p>
+        <div className="mt-3 grid gap-3 md:grid-cols-2">
+          <label className="flex flex-col gap-1 text-sm">
+            <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Verification channel</span>
+            <select
+              value={verificationChannel}
+              onChange={(event) => setVerificationChannel(event.target.value as VerificationChannel)}
+              className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            >
+              <option value="email">Email code</option>
+              <option value="sms">SMS code</option>
+              <option value="authenticator">Authenticator app</option>
+            </select>
+          </label>
+          <label className="flex flex-col gap-1 text-sm">
+            <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">SMS phone (optional)</span>
+            <input
+              value={verificationPhone}
+              onChange={(event) => setVerificationPhone(event.target.value)}
+              placeholder="+1..."
+              className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+            />
+          </label>
+        </div>
+        {verificationChannel === "authenticator" ? (
+          <div className="mt-3 rounded-lg border border-border bg-surface-muted p-3 text-sm">
+            <button
+              type="button"
+              onClick={() => {
+                void provisionAuthenticator();
+              }}
+              disabled={verificationBusy}
+              className="ui-soft-button ui-focus-ring rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-semibold"
+            >
+              {verificationBusy ? "Provisioning..." : "Provision/Rotate Authenticator Factor"}
+            </button>
+            {totpProvisionSecret ? (
+              <p className="mt-2 text-xs text-zinc-700">Secret: {totpProvisionSecret}</p>
+            ) : null}
+            {totpProvisionUri ? (
+              <p className="mt-1 break-all text-[11px] text-zinc-600">{totpProvisionUri}</p>
+            ) : null}
+          </div>
+        ) : null}
+        <div className="mt-3 grid gap-2 md:grid-cols-2">
+          <div className="rounded-lg border border-border p-3 text-sm">
+            <p className="font-semibold">Learner settings</p>
+            <p className="mt-1 text-xs text-zinc-600">
+              {verifiedChallenges.student_profile_settings ? "Verified" : "Verification required"}
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                void requestVerificationChallenge("student_profile_settings");
+              }}
+              disabled={verificationBusy}
+              className="ui-soft-button ui-focus-ring mt-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-semibold"
+            >
+              {verificationBusy ? "Requesting..." : "Request Code"}
+            </button>
+          </div>
+          <div className="rounded-lg border border-border p-3 text-sm">
+            <p className="font-semibold">Account deletion</p>
+            <p className="mt-1 text-xs text-zinc-600">
+              {verifiedChallenges.account_delete ? "Verified" : "Verification required"}
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                void requestVerificationChallenge("account_delete");
+              }}
+              disabled={verificationBusy}
+              className="ui-soft-button ui-focus-ring mt-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-semibold"
+            >
+              {verificationBusy ? "Requesting..." : "Request Code"}
+            </button>
+          </div>
+        </div>
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <input
+            value={verificationCode}
+            onChange={(event) => setVerificationCode(event.target.value)}
+            placeholder="Enter verification code"
+            className="ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm"
+          />
+          <button
+            type="button"
+            onClick={() => {
+              void verifyChallengeCode("student_profile_settings");
+            }}
+            disabled={verificationBusy || !activeChallenges.student_profile_settings}
+            className="ui-soft-button ui-focus-ring rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-semibold disabled:opacity-70"
+          >
+            Verify Learner Settings
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              void verifyChallengeCode("account_delete");
+            }}
+            disabled={verificationBusy || !activeChallenges.account_delete}
+            className="ui-soft-button ui-focus-ring rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-semibold disabled:opacity-70"
+          >
+            Verify Account Delete
+          </button>
+        </div>
+        {(debugCodes.student_profile_settings || debugCodes.account_delete) ? (
+          <p className="mt-2 text-xs text-amber-700">
+            Debug codes (non-production): learner={debugCodes.student_profile_settings ?? "n/a"} | delete=
+            {debugCodes.account_delete ?? "n/a"}
+          </p>
+        ) : null}
+        {verificationStatus ? (
+          <p
+            role="status"
+            className={`mt-2 text-sm ${verificationStatusTone === "success" ? "text-emerald-700" : "text-red-700"}`}
+          >
+            {verificationStatus}
+          </p>
+        ) : null}
       </SoftCard>
 
       <SoftCard as="section" className="p-5">
@@ -455,6 +726,9 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
         <p className="mt-2 text-sm text-red-700 dark:text-red-300">
           {t("account_settings_delete_desc_prefix")} <code>DELETE</code> {t("account_settings_delete_desc_suffix")}
         </p>
+        <p className="mt-2 text-sm text-red-700 dark:text-red-300">
+          A verified parent security challenge for account deletion is required before submission.
+        </p>
 
         <form onSubmit={handleDeleteAccount} className="mt-4 flex flex-wrap items-center gap-3">
           <input
@@ -488,5 +762,103 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
         ) : null}
       </SoftCard>
     </div>
+  );
+}
+
+function CompanionSettingsCard({
+  avatarStyle,
+  setAvatarStyle,
+}: {
+  avatarStyle: CompanionAvatarStyle;
+  setAvatarStyle: (style: CompanionAvatarStyle) => void;
+}) {
+  const [currentGender, setCurrentGender] = useState<CompanionGender | null>(null);
+
+  useEffect(() => {
+    const stored = localStorage.getItem(COMPANION_STORAGE_KEY) as CompanionGender | null;
+    if (stored === "female" || stored === "male") setCurrentGender(stored);
+  }, []);
+
+  const companion = currentGender ? COMPANIONS[currentGender] : null;
+
+  const handleSwitch = () => {
+    const next: CompanionGender = currentGender === "female" ? "male" : "female";
+    setCurrentGender(next);
+    localStorage.setItem(COMPANION_STORAGE_KEY, next);
+  };
+
+  return (
+    <SoftCard as="section" className="p-5">
+      <h2 className="text-lg font-semibold">Companion Settings</h2>
+      <p className="mt-2 text-sm text-zinc-600">
+        Customize your child&apos;s learning companion appearance.
+      </p>
+
+      <div className="mt-4 space-y-4">
+        <div>
+          <p className="text-sm font-medium text-zinc-700">Companion Avatar Style</p>
+          <div className="mt-2 flex gap-3">
+            <label
+              className={`flex cursor-pointer items-center gap-2 rounded-xl border px-4 py-3 text-sm transition-colors ${
+                avatarStyle === "human"
+                  ? "border-emerald-400 bg-emerald-50 text-emerald-800"
+                  : "border-zinc-200 bg-white text-zinc-600 hover:border-zinc-300"
+              }`}
+            >
+              <input
+                type="radio"
+                name="avatar-style"
+                value="human"
+                checked={avatarStyle === "human"}
+                onChange={() => setAvatarStyle("human")}
+                className="h-4 w-4 accent-emerald-600"
+              />
+              Human photo
+            </label>
+            <label
+              className={`flex cursor-pointer items-center gap-2 rounded-xl border px-4 py-3 text-sm transition-colors ${
+                avatarStyle === "animated"
+                  ? "border-emerald-400 bg-emerald-50 text-emerald-800"
+                  : "border-zinc-200 bg-white text-zinc-600 hover:border-zinc-300"
+              }`}
+            >
+              <input
+                type="radio"
+                name="avatar-style"
+                value="animated"
+                checked={avatarStyle === "animated"}
+                onChange={() => setAvatarStyle("animated")}
+                className="h-4 w-4 accent-emerald-600"
+              />
+              Animated cartoon
+            </label>
+          </div>
+        </div>
+
+        {companion && currentGender && (
+          <div className="flex items-center gap-4 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3">
+            <CompanionAvatarSVG
+              gender={currentGender}
+              size={48}
+              previewImageUrl={companion.previewImageUrl}
+              avatarStyle={avatarStyle}
+            />
+            <div className="flex-1">
+              <p className="text-sm font-semibold text-zinc-800">
+                Current companion: {companion.name}
+              </p>
+              <p className="text-xs text-zinc-500">{companion.tagline}</p>
+            </div>
+            <button
+              type="button"
+              onClick={handleSwitch}
+              className="ui-soft-button ui-focus-ring rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-semibold text-zinc-600 hover:border-zinc-300"
+            >
+              Switch companion
+            </button>
+          </div>
+        )}
+      </div>
+    </SoftCard>
   );
 }

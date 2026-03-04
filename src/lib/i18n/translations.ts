@@ -12,7 +12,15 @@ export const SUPPORTED_LOCALES = [
   "pl",
 ] as const;
 
-export const ACTIVE_LOCALES = ["en", "es", "zh", "pl"] as const;
+/**
+ * Launch languages — full functionality enabled.
+ * All other SUPPORTED_LOCALES are prepared but locked in the UI.
+ */
+export const LAUNCH_LOCALES = ["en", "es", "zh", "pl"] as const;
+
+export const ACTIVE_LOCALES = LAUNCH_LOCALES;
+
+export type LaunchLocale = (typeof LAUNCH_LOCALES)[number];
 
 export type ActiveLocale = (typeof ACTIVE_LOCALES)[number];
 
@@ -589,7 +597,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "For questions about data protection or to exercise your rights under GDPR, you may contact our Data Protection Officer at dpo@koydo.app. You also have the right to lodge a complaint with your local supervisory authority.",
     legal_privacy_section_cookies_title: "Cookies and Tracking Technologies",
     legal_privacy_section_cookies_body:
-      "We use strictly necessary cookies to maintain session state and user preferences. Analytics cookies (Mixpanel) are only activated with your explicit consent via our cookie banner. You can change your cookie preferences at any time from the consent banner or by clearing your browser storage. On native mobile apps, device identifiers are only accessed after you grant permission through the App Tracking Transparency prompt.",
+      "We use strictly necessary cookies to maintain session state and user preferences. Analytics cookies (Mixpanel) are only activated with your explicit consent via our cookie banner. You can change your cookie preferences at any time from the consent banner or by clearing your browser storage. On native mobile builds, web analytics tracking is disabled in this release.",
     legal_terms_title: "Terms of Service",
     legal_terms_subtitle:
       "By using Koydo, users agree to use the service lawfully and in accordance with child safety and educational conduct rules.",
@@ -1177,7 +1185,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "Para preguntas sobre protección de datos o para ejercer sus derechos bajo el RGPD, puede contactar a nuestro Delegado de Protección de Datos en dpo@koydo.app. También tiene derecho a presentar una queja ante su autoridad de supervisión local.",
     legal_privacy_section_cookies_title: "Cookies y tecnologías de seguimiento",
     legal_privacy_section_cookies_body:
-      "Utilizamos cookies estrictamente necesarias para mantener el estado de la sesión y las preferencias del usuario. Las cookies de análisis (Mixpanel) solo se activan con su consentimiento explícito a través de nuestro banner de cookies. Puede cambiar sus preferencias de cookies en cualquier momento desde el banner de consentimiento o limpiando el almacenamiento de su navegador. En aplicaciones móviles nativas, los identificadores del dispositivo solo se acceden después de que otorgue permiso a través del aviso de Transparencia de Seguimiento de Aplicaciones.",
+      "Utilizamos cookies estrictamente necesarias para mantener el estado de la sesión y las preferencias del usuario. Las cookies de análisis (Mixpanel) solo se activan con su consentimiento explícito a través de nuestro banner de cookies. Puede cambiar sus preferencias de cookies en cualquier momento desde el banner de consentimiento o limpiando el almacenamiento de su navegador. En compilaciones móviles nativas, el seguimiento analítico web está deshabilitado en esta versión.",
     legal_terms_title: "Términos de servicio",
     legal_terms_subtitle:
       "Al usar Koydo, los usuarios aceptan usar el servicio legalmente y de acuerdo con reglas de seguridad infantil y conducta educativa.",
@@ -1225,7 +1233,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "Pour toute question relative à la protection des données ou pour exercer vos droits en vertu du RGPD, vous pouvez contacter notre Délégué à la protection des données à dpo@koydo.app. Vous avez également le droit de déposer une plainte auprès de votre autorité de contrôle locale.",
     legal_privacy_section_cookies_title: "Cookies et technologies de suivi",
     legal_privacy_section_cookies_body:
-      "Nous utilisons des cookies strictement nécessaires pour maintenir l'état de la session et les préférences utilisateur. Les cookies d'analyse (Mixpanel) ne sont activés qu'avec votre consentement explicite via notre bannière de cookies. Vous pouvez modifier vos préférences de cookies à tout moment depuis la bannière de consentement ou en effaçant le stockage de votre navigateur. Sur les applications mobiles natives, les identifiants d'appareil ne sont consultés qu'après votre autorisation via l'invite App Tracking Transparency.",
+      "Nous utilisons des cookies strictement nécessaires pour maintenir l'état de la session et les préférences utilisateur. Les cookies d'analyse (Mixpanel) ne sont activés qu'avec votre consentement explicite via notre bannière de cookies. Vous pouvez modifier vos préférences de cookies à tout moment depuis la bannière de consentement ou en effaçant le stockage de votre navigateur. Sur les builds mobiles natives, le suivi analytique web est désactivé dans cette version.",
   },
   de: {
     nav_home: "Start",
@@ -1421,12 +1429,12 @@ export const translations: Record<Locale, TranslationDictionary> = {
     nav_dashboard: "Panel",
     nav_parent_dashboard: "Panel rodzica",
     nav_parent_reports: "Raporty rodzica",
-    nav_parent_compliance: "Zgodność dla rodziców",
+    nav_parent_compliance: "Zgodność rodzicielska",
     nav_explore: "Odkrywaj",
     nav_modules: "Moduły",
     nav_exam_prep: "Przygotowanie do egzaminu",
-    nav_science_lab: "Laboratorium",
-    nav_support: "Wsparcie",
+    nav_science_lab: "Laboratorium naukowe",
+    nav_support: "Pomoc",
     nav_privacy_center: "Centrum prywatności",
     nav_account: "Konto",
     nav_audit: "Audyt",
@@ -1434,62 +1442,14 @@ export const translations: Record<Locale, TranslationDictionary> = {
     nav_owner_ops: "Operacje",
     nav_admin_overview: "Przegląd administratora",
     nav_curriculum: "Program nauczania",
-    nav_media_ops: "Media ops",
+    nav_media_ops: "Operacje mediów",
     nav_reports: "Raporty",
-    nav_alerts: "Alerty",
+    nav_alerts: "Powiadomienia",
     nav_sign_in: "Zaloguj się",
-    nav_sign_up: "Utwórz konto",
+    nav_sign_up: "Zarejestruj się",
     language_label: "Język",
-    offline_banner: "Jesteś offline. Zapisane treści są nadal dostępne.",
-    online_banner: "Wróciłeś online. Synchronizacja wznowiona.",
-    common_hear_it: "Odsłuchaj",
-    common_cancel: "Anuluj",
-    common_free: "Bezpłatnie",
-    common_premium: "Premium",
-    home_hero_cta: "Zacznij eksplorować",
-    home_levels_title: "Każdy poziom, jedna platforma",
-    auth_sign_in_title: "Zaloguj się",
-    auth_sign_in_label_email: "E-mail",
-    auth_sign_in_label_password: "Hasło",
-    auth_sign_in_button_signing_in: "Logowanie...",
-    auth_sign_in_button_continue_email: "Kontynuuj z e-mailem",
-    auth_sign_up_title: "Utwórz konto",
-    auth_sign_up_label_email: "E-mail",
-    auth_sign_up_label_password: "Hasło",
-    auth_sign_up_button_creating: "Tworzenie...",
-    auth_sign_up_button_create: "Utwórz konto",
-    auth_sign_up_divider_or: "LUB",
-    auth_sign_up_footer_have_account: "Masz już konto?",
-    auth_sign_up_footer_sign_in: "Zaloguj się",
-    auth_oauth_sign_in_with: "Zaloguj przez {provider}",
-    auth_oauth_sign_up_with: "Zarejestruj przez {provider}",
-    parent_dashboard_title: "Panel rodzica",
-    parent_dashboard_add_learner: "Dodaj ucznia",
-    parent_dashboard_launch: "Uruchom",
-    parent_dashboard_report: "Raport",
-    parent_dashboard_stat_learners: "Uczniowie",
-    parent_dashboard_stat_subscription: "Subskrypcja",
-    parent_dashboard_subscription_none: "Brak aktywnego okresu rozliczeniowego.",
-    parent_dashboard_status_ready: "Gotowy",
-    parent_dashboard_status_setup_needed: "Wymaga konfiguracji",
-    parent_dashboard_grade: "Klasa {grade}",
-    parent_dashboard_age: "Wiek {age}",
-    parent_reports_title: "Raporty rodzica",
-    parent_reports_refresh: "Odśwież",
-    select_profile_heading: "Kto się uczy dzisiaj?",
-    select_profile_add_learner: "Dodaj ucznia",
-    select_profile_loading_text: "Ładowanie profili uczniów...",
-    onboarding_heading: "Utwórz nowy profil ucznia",
-    onboarding_label_name: "Imię ucznia",
-    onboarding_label_grade: "Klasa",
-    onboarding_label_age: "Wiek",
-    onboarding_continue_to_diagnostic: "Kontynuuj do diagnozy",
-    onboarding_profile_ready: "Profil gotowy!",
-    billing_checkout_title: "Płatność za subskrypcję",
-    billing_checkout_start: "Rozpocznij płatność",
-    privacy_center_title: "Centrum prywatności",
-    legal_privacy_title: "Polityka prywatności",
-    legal_terms_title: "Warunki korzystania z usługi",
+    offline_banner: "Jesteś offline. Dostępna jest zawartość z pamięci podręcznej.",
+    online_banner: "Jesteś z powrotem online. Synchronizacja wznowiona.",
   },
 };
 
@@ -1926,32 +1886,7 @@ const launchSupplementalTranslations: Record<ActiveLocale, TranslationDictionary
     games_daily_bonus: "Bono diario: +{points} pts",
   },
   zh: {},
-  pl: {
-    account_settings_title: "Ustawienia konta",
-    account_settings_subtitle: "Zarządzaj rozliczeniami, dostępem uczniów i ustawieniami konta.",
-    account_settings_subscription_management: "Zarządzanie subskrypcją",
-    account_settings_subscription_no_active_period: "Brak aktywnego okresu rozliczeniowego.",
-    account_settings_subscription_manage: "Zarządzaj subskrypcją",
-    account_settings_subscription_choose_language_plan: "Wybierz plan językowy",
-    account_settings_delete_title: "Usuń konto",
-    account_settings_delete_cta: "Usuń konto",
-    account_settings_delete_deleting: "Usuwanie...",
-    dashboard_title: "Panel",
-    dashboard_signed_in_as: "Zalogowano jako {user}",
-    dashboard_stat_lessons_completed: "Ukończone lekcje",
-    dashboard_stat_mastery_score: "Wynik opanowania",
-    dashboard_no_activity_yet: "Brak aktywności",
-    dashboard_learning_path_title: "Ścieżka nauki",
-    dashboard_view_all_modules: "Pokaż wszystkie moduły",
-    dashboard_continue_lesson: "Kontynuuj",
-    top_nav_switch_learner: "Zmień ucznia",
-    top_nav_log_out: "Wyloguj się",
-    top_nav_parent_portal: "Portal rodzica",
-    root_error_title: "Coś poszło nie tak",
-    root_error_try_again: "Spróbuj ponownie",
-    root_not_found_title: "Strona nie znaleziona",
-    root_not_found_go_home: "Idź do strony głównej",
-  },
+  pl: {},
 };
 
 Object.assign(translations.en, launchSupplementalTranslations.en);

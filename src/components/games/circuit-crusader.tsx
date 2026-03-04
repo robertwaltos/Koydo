@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Cpu,
@@ -16,6 +16,10 @@ import {
 } from "lucide-react";
 import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /**
  * CIRCUIT CRUSADER - Phase 10 (Advanced Engineering)
@@ -32,12 +36,20 @@ interface CircuitGate {
     outputValue: boolean;
 }
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
 export default function CircuitCrusader() {
     const [gameState, setGameState] = useState<"intro" | "playing" | "success">("playing");
     const [inputs, setInputs] = useState<boolean[]>([true, false, true]);
     const [gateSelection, setGateSelection] = useState<GateType | null>(null);
     const [isSuccess, setIsSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(getTimestampMs());
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
 
     // Goal: Get the output to be TRUE using gates
     // Logic: (In1 AND In2) OR In3 -> No, let's make it a puzzle
@@ -55,6 +67,7 @@ export default function CircuitCrusader() {
     };
 
     const toggleInput = (idx: number) => {
+        interactionCountRef.current += 1;
         const newInputs = [...inputs];
         newInputs[idx] = !newInputs[idx];
         setInputs(newInputs);
@@ -62,6 +75,7 @@ export default function CircuitCrusader() {
     };
 
     const checkSolution = (type: GateType) => {
+        interactionCountRef.current += 1;
         // Simple 2-input logic puzzle for MVP
         const result = calculateLogic(type, inputs[0], inputs[1]);
         if (result === true && inputs[2] === true) {
@@ -74,6 +88,19 @@ export default function CircuitCrusader() {
     };
 
     const handleComplete = () => {
+        if (!completionEmittedRef.current) {
+            completionEmittedRef.current = true;
+            emitLegacyGameComplete({
+                sessionId: sessionIdRef.current,
+                gameId: "circuit-crusader",
+                elapsedMs: getElapsedMs(runStartedAtRef.current),
+                interactions: Math.max(1, interactionCountRef.current),
+                score: 1800,
+                maxScore: 1800,
+                source: "component",
+                occurredAt: new Date().toISOString(),
+            });
+        }
         hapticSuccess();
         setIsSuccess(true);
     };
@@ -203,7 +230,13 @@ export default function CircuitCrusader() {
                                 You have successfully stabilized the electronics logic. The system core is now operating at peak efficiency.
                             </p>
                             <button
-                                onClick={() => setIsSuccess(false)}
+                                onClick={() => {
+                                    sessionIdRef.current = createLegacySessionId();
+                                    runStartedAtRef.current = getTimestampMs();
+                                    interactionCountRef.current = 0;
+                                    completionEmittedRef.current = false;
+                                    setIsSuccess(false);
+                                }}
                                 className="w-full py-5 bg-indigo-500 text-white rounded-3xl font-black uppercase tracking-widest shadow-2xl shadow-indigo-500/40 active:scale-95 transition-all"
                             >
                                 Advance to Layer 2

@@ -6,12 +6,14 @@
  */
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import {
   AUDIOBOOK_LANGUAGE_LABELS,
   type AudiobookEntry,
   type AgeGroup,
   type AudiobookLanguage,
 } from "@/lib/audiobooks/types";
+import { isStoryForgeCinemaPremiumPending } from "@/lib/platform/features";
 import { BookCard } from "./book-card";
 
 interface AudiobookLibraryProps {
@@ -31,6 +33,7 @@ export function AudiobookLibrary({ books }: AudiobookLibraryProps) {
   const [genreFilter, setGenreFilter] = useState<string>("all");
   const [languageFilter, setLanguageFilter] = useState<AudiobookLanguage | "all">("all");
   const [search, setSearch] = useState("");
+  const storyForgeCinemaPremiumPending = isStoryForgeCinemaPremiumPending();
 
   const genreOptions = useMemo(() => {
     return [...new Set(books.flatMap((book) => book.genres.map((genre) => genre.trim())).filter(Boolean))].sort(
@@ -71,6 +74,23 @@ export function AudiobookLibrary({ books }: AudiobookLibraryProps) {
 
   return (
     <>
+      {storyForgeCinemaPremiumPending ? (
+        <section className="mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-900/60 dark:bg-amber-950/30">
+          <p className="text-sm font-semibold text-amber-900 dark:text-amber-100">
+            StoryForge Cinema: Premium Pending Feature
+          </p>
+          <p className="mt-1 text-sm text-amber-800/90 dark:text-amber-200/90">
+            Interactive book-to-film mode is currently locked while premium rollout is pending.
+          </p>
+          <Link
+            href="/billing/paywall"
+            className="mt-3 inline-flex items-center rounded-full border border-amber-300/70 bg-amber-100 px-3 py-1.5 text-xs font-semibold text-amber-900 transition hover:bg-amber-200 dark:border-amber-700 dark:bg-amber-900/50 dark:text-amber-100 dark:hover:bg-amber-900/70"
+          >
+            Join Premium Waitlist
+          </Link>
+        </section>
+      ) : null}
+
       {/* ── Filter bar ─────────────────────────────────────── */}
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6">
         {/* Age tabs */}

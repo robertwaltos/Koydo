@@ -140,12 +140,20 @@ export default function TestingClassesClient() {
                 Updated {new Date(entry.updatedAt).toLocaleString()}
               </p>
               <div className="mt-3">
-                <Link
-                  href={`/testing/classes/${encodeURIComponent(entry.id)}`}
-                  className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-bold text-zinc-900 hover:bg-zinc-100"
-                >
-                  Open Class
-                </Link>
+                <div className="flex flex-wrap gap-2">
+                  <Link
+                    href={`/testing/classes/${encodeURIComponent(entry.id)}`}
+                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-bold text-zinc-900 hover:bg-zinc-100"
+                  >
+                    Open Class
+                  </Link>
+                  <Link
+                    href={`/testing/classes/${encodeURIComponent(entry.id)}/classroom`}
+                    className="ui-focus-ring inline-flex min-h-11 items-center rounded-full border border-violet-300 bg-violet-50 px-4 py-2 text-sm font-bold text-violet-900 hover:bg-violet-100"
+                  >
+                    Control Room
+                  </Link>
+                </div>
               </div>
             </SoftCard>
           ))}

@@ -47,19 +47,19 @@ export const Geoscience501Module: LearningModule = {
           "id": "geoscience-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for Geoscience, including control points for earth system diagnostics and hazard forecasting design."
+          "content": "In this lesson, we will explore the advanced boundaries that define the field of Geoscience. This includes understanding the important control points that help us diagnose various Earth systems and design effective hazard forecasting strategies. By learning about these boundaries, you will gain insights into how scientists assess risks and make informed decisions regarding our planet's health.\nContext recap: In this lesson, we will explore the advanced boundaries that define the field of Geoscience. This includes understanding the important control points that help us diagnose various Earth systems and design effective hazard forecasting strategies. By learning about these boundaries, you will gain insights into how scientists assess risks and make informed decisions regarding our planet's health."
         },
         {
           "id": "geoscience-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Structure",
-          "content": "Learners map causal pathways and uncertainty ranges before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways and identifying ranges of uncertainty. This process is crucial before planning any interventions. By understanding the connections between different factors and recognizing where uncertainties lie, you will be better equipped to make decisions that can positively impact our environment and communities.\nContext recap: In this section, learners will engage in mapping out causal pathways and identifying ranges of uncertainty. This process is crucial before planning any interventions. By understanding the connections between different factors and recognizing where uncertainties lie, you will be better equipped to make decisions that can positively impact our environment and communities."
         },
         {
           "id": "geoscience-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "Claims are tied to measurable indicators, uncertainty declarations, and review checkpoints."
+          "content": "In this recap, we will discuss how claims in Geoscience are closely linked to measurable indicators. This means that when we make a statement about a phenomenon, we must also declare any uncertainties and establish review checkpoints. This practice ensures that our findings are reliable and can be trusted by others in the scientific community.\nContext recap: In this recap, we will discuss how claims in Geoscience are closely linked to measurable indicators. This means that when we make a statement about a phenomenon, we must also declare any uncertainties and establish review checkpoints. This practice ensures that our findings are reliable and can be trusted by others in the scientific community."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Geoscience501Module: LearningModule = {
           "id": "geoscience-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them against adversarial conditions."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific geoscience challenges. Additionally, you will stress-test these workflows against various adversarial conditions to see how well they hold up. This hands-on experience will help you understand the importance of resilience in scientific methods.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that are tailored to specific geoscience challenges. Additionally, you will stress-test these workflows against various adversarial conditions to see how well they hold up. This hands-on experience will help you understand the importance of resilience in scientific methods."
         },
         {
           "id": "geoscience-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Design",
-          "content": "Gate criteria, rollback conditions, and escalation thresholds are integrated into the workflow."
+          "content": "In this recap, we will integrate key elements such as gate criteria, rollback conditions, and escalation thresholds into our workflow design. Understanding these components is essential for creating effective systems that can adapt to changing circumstances and ensure that we are prepared for any challenges that may arise.\nContext recap: In this recap, we will integrate key elements such as gate criteria, rollback conditions, and escalation thresholds into our workflow design. Understanding these components is essential for creating effective systems that can adapt to changing circumstances and ensure that we are prepared for any challenges that may arise."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Geoscience501Module: LearningModule = {
           "id": "geoscience-501-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: a regional geoscience board coordinating seismic, flood, and groundwater risk responses. Learners identify constraints, risks, and governance boundaries."
+          "content": "In this case analysis, we will focus on a regional geoscience board that is responsible for coordinating responses to seismic events, floods, and groundwater risks. As learners, you will identify the constraints, risks, and governance boundaries that influence decision-making in these critical situations. This will help you understand the complexities involved in managing natural hazards.\nContext recap: In this case analysis, we will focus on a regional geoscience board that is responsible for coordinating responses to seismic events, floods, and groundwater risks. As learners, you will identify the constraints, risks, and governance boundaries that influence decision-making in these critical situations. This will help you understand the complexities involved in managing natural hazards."
         },
         {
           "id": "geoscience-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are evaluated across performance, reliability, equity, and feasibility dimensions."
+          "content": "In this section, we will evaluate different options using a tradeoff matrix. This matrix will help us assess various dimensions such as performance, reliability, equity, and feasibility. By analyzing these factors, you will learn how to make informed decisions that balance competing interests in geoscience projects.\nContext recap: In this section, we will evaluate different options using a tradeoff matrix. This matrix will help us assess various dimensions such as performance, reliability, equity, and feasibility. By analyzing these factors, you will learn how to make informed decisions that balance competing interests in geoscience projects."
         },
         {
           "id": "geoscience-501-l04-c3",
           "kind": "recap",
           "title": "Failure and Recovery Design",
-          "content": "Failure signatures are mapped to mitigation actions and measurable recovery triggers."
+          "content": "In this recap, we will discuss how failure signatures can be mapped to specific mitigation actions and measurable recovery triggers. Understanding these connections is vital for developing strategies that not only address failures but also facilitate effective recovery processes in geoscience applications.\nContext recap: In this recap, we will discuss how failure signatures can be mapped to specific mitigation actions and measurable recovery triggers. Understanding these connections is vital for developing strategies that not only address failures but also facilitate effective recovery processes in geoscience applications."
         }
       ],
       "flashcards": [
@@ -419,13 +419,13 @@ export const Geoscience501Module: LearningModule = {
           "id": "geoscience-501-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure scenarios, constraints, metrics, and escalation logic for intervention tests."
+          "content": "In this interactive practice, learners will configure various scenarios, constraints, metrics, and escalation logic for intervention tests. This setup is crucial for simulating real-world situations and understanding how different factors can influence outcomes in geoscience interventions.\nContext recap: In this interactive practice, learners will configure various scenarios, constraints, metrics, and escalation logic for intervention tests. This setup is crucial for simulating real-world situations and understanding how different factors can influence outcomes in geoscience interventions.\nWhy this matters: Simulation Setup helps learners in Earth Science connect ideas from Geoscience Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "geoscience-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Simulation outcomes are reviewed for gains, side effects, and governance compliance."
+          "content": "In this recap, we will review the outcomes of our simulations, focusing on the gains achieved, any side effects observed, and how well we adhered to governance standards. This reflection is important for understanding the effectiveness of our interventions and making necessary adjustments for future scenarios.\nContext recap: In this recap, we will review the outcomes of our simulations, focusing on the gains achieved, any side effects observed, and how well we adhered to governance standards. This reflection is important for understanding the effectiveness of our interventions and making necessary adjustments for future scenarios."
         }
       ],
       "interactiveActivities": [
@@ -676,19 +676,19 @@ export const Geoscience501Module: LearningModule = {
           "id": "geoscience-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefit and burden distribution across stakeholders and time horizons."
+          "content": "In this section, learners will map out how benefits and burdens are distributed among different stakeholders over time. This understanding is crucial for ensuring that all voices are heard and that the impacts of geoscience decisions are equitable and just.\nContext recap: In this section, learners will map out how benefits and burdens are distributed among different stakeholders over time. This understanding is crucial for ensuring that all voices are heard and that the impacts of geoscience decisions are equitable and just."
         },
         {
           "id": "geoscience-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated into governance design."
+          "content": "In this section, we will explore the architecture of accountability within governance design. This includes understanding how decisions are traced, the rights of individuals to review those decisions, and the obligations to remediate any issues that arise. This framework is essential for maintaining trust and integrity in geoscience practices.\nContext recap: In this section, we will explore the architecture of accountability within governance design. This includes understanding how decisions are traced, the rights of individuals to review those decisions, and the obligations to remediate any issues that arise. This framework is essential for maintaining trust and integrity in geoscience practices."
         },
         {
           "id": "geoscience-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links technical outcomes, policy compliance, ethics, and resilience."
+          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important technical results with the necessary policies, ethical considerations, and strategies for building resilience. This checklist will help ensure that all aspects of responsible leadership are considered in geoscience governance.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important technical results with the necessary policies, ethical considerations, and strategies for building resilience. This checklist will help ensure that all aspects of responsible leadership are considered in geoscience governance."
         }
       ],
       "flashcards": [
@@ -727,13 +727,13 @@ export const Geoscience501Module: LearningModule = {
           "id": "geoscience-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty, and proposed pathways for remediation. This exercise will enhance critical thinking and communication skills as learners prepare to defend their ideas.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainty, and proposed pathways for remediation. This exercise will enhance critical thinking and communication skills as learners prepare to defend their ideas."
         },
         {
           "id": "geoscience-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critique scenarios."
+          "content": "During this recap session, learners will practice their responses to various scenarios that involve technical questions, governance issues, and critiques from stakeholders. This rehearsal will help build confidence and prepare learners for real-world discussions and presentations in the field of geoscience.\nContext recap: During this recap session, learners will practice their responses to various scenarios that involve technical questions, governance issues, and critiques from stakeholders. This rehearsal will help build confidence and prepare learners for real-world discussions and presentations in the field of geoscience."
         }
       ],
       "interactiveActivities": [

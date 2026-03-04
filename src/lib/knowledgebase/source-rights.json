@@ -172,5 +172,17 @@
     "requiresAttribution": true,
     "requiresManualReview": true,
     "notes": "Use only page-level educational articles after legal and ToS review."
+  },
+  {
+    "sourceId": "koydo-curated",
+    "rightsStatus": "approved",
+    "ingestionPolicy": "original_content",
+    "allowedAssetTypes": [
+      "reference_article",
+      "curriculum_supplement"
+    ],
+    "requiresAttribution": false,
+    "requiresManualReview": false,
+    "notes": "Original content authored by Koydo — no external rights required."
   }
 ]

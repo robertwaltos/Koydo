@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Cpu, Play, Square, RotateCcw, Code, Zap, Settings, Activity, ShieldCheck, ChevronRight, Terminal, Bot } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Programming Types --- */
 type Command = "MOVE_FORWARD" | "TURN_LEFT" | "TURN_RIGHT" | "REPEAT_2" | "COLLECT";
@@ -34,6 +35,9 @@ export default function BotBuilder() {
     const [execIndex, setExecIndex] = useState(-1);
     const [gridSize] = useState(5);
     const [target] = useState({ x: 3, y: 3 });
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     // Reset simulation
     const resetBot = useCallback(() => {
@@ -84,6 +88,23 @@ export default function BotBuilder() {
         setExecIndex(-1);
 
         if (currentBot.inventory > 0) {
+            if (!completionSentRef.current) {
+                if (runStartedAtRef.current === 0) {
+                    runStartedAtRef.current = Date.now();
+                }
+                completionSentRef.current = true;
+                emitLegacyGameComplete({
+                    sessionId: sessionIdRef.current,
+                    gameId: "bot",
+                    difficulty: "medium",
+                    elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+                    interactions: Math.max(1, program.length),
+                    score: currentBot.inventory,
+                    maxScore: 5,
+                    source: "component",
+                    occurredAt: new Date().toISOString(),
+                });
+            }
             setMessage("Sequence complete! Data package secured. Great coding! 🌟");
             setMood("happy");
             hapticSuccess();

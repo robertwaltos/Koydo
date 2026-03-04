@@ -12,6 +12,8 @@ import { getAllLearningModules } from "@/lib/modules";
 import { type StudentProfile } from "@/lib/profiles/types";
 import { generateCurriculumModules } from "@/app/actions/student-curriculum";
 import { WorldSelector } from "@/components/explorer/WorldSelector";
+import SoftCard from "@/app/components/ui/soft-card";
+import { useRevealOnScroll } from "@/lib/hooks/use-reveal-on-scroll";
 
 function normalizePathAllowlist(value: unknown): string[] | null {
   if (!Array.isArray(value)) return null;
@@ -44,6 +46,14 @@ function isMissingProfileColumn(error: unknown) {
     || lowered.includes("ai_skill_level_map");
 }
 
+/* ── Stat-card accent colours (token-aware) ── */
+const STAT_ACCENTS = [
+  { text: "text-accent" },
+  { text: "text-success" },
+  { text: "text-warn" },
+  { text: "text-foreground/70" },
+] as const;
+
 export default function StudentDashboardPage() {
   const router = useRouter();
   const supabase = useMemo(() => createSupabaseBrowserClient(), []);
@@ -60,6 +70,9 @@ export default function StudentDashboardPage() {
     completedModules: number;
     totalModules: number;
   } | null>(null);
+
+  const revealRef = useRevealOnScroll<HTMLDivElement>();
+
   const interestPathIds = useMemo(
     () => extractInterestPathIds(profile?.ai_skill_level_map ?? null),
     [profile?.ai_skill_level_map],
@@ -269,10 +282,12 @@ export default function StudentDashboardPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-stone-50 flex items-center justify-center">
-        <div className="flex flex-col items-center">
-             <div className="w-12 h-12 border-4 border-teal-200 border-t-teal-600 rounded-full animate-spin mb-4" />
-             <div className="text-stone-400 text-sm tracking-widest uppercase">Preparing your learning space...</div>
+      <div className="flex min-h-[80vh] items-center justify-center">
+        <div className="flex flex-col items-center gap-4">
+          <div className="size-12 rounded-full border-4 border-accent/20 border-t-accent animate-spin" />
+          <span className="text-foreground/50 text-sm tracking-widest uppercase">
+            Preparing your learning space…
+          </span>
         </div>
       </div>
     );
@@ -282,133 +297,149 @@ export default function StudentDashboardPage() {
     return null;
   }
 
-  return (
-    <div className="min-h-screen bg-stone-50 text-stone-800 font-sans selection:bg-teal-100 selection:text-teal-900">
-      
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-stone-50/90 backdrop-blur-md border-b border-stone-200">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16 items-center">
-                <div className="flex items-center gap-4">
-                    {profile?.avatar_url ? (
-                        // External avatar URLs are user-provided and not guaranteed to be in Next image allowlists.
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={profile.avatar_url} alt="Avatar" className="w-10 h-10 rounded-full" />
-                    ) : (
-                        <span className="text-2xl">🧠</span>
-                    )}
-                    <div>
-                        <span className="font-bold text-xl tracking-tight text-stone-700">{profile.display_name}</span>
-                        <span className="text-sm text-stone-500 block">Learning Dashboard</span>
-                    </div>
-                </div>
-                {recommendedStage && (
-                    <Link href={`/explore?stage=${recommendedStage.id}`} className="text-sm text-teal-600 font-semibold hover:underline">
-                        Recommended Stage: {recommendedStage.label}
-                    </Link>
-                )}
-            </div>
-        </div>
-      </nav>
+  const lessonPct = progress
+    ? progress.totalLessons > 0
+      ? Math.round((progress.completedLessons / progress.totalLessons) * 100)
+      : 0
+    : null;
 
-      {/* Interface Wrapper */}
-      <main className="py-12 px-4 max-w-6xl mx-auto min-h-screen">
-        
-        {/* Full-screen generation loading overlay */}
-        {isSynthesizing && (
-          <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-stone-900/90 backdrop-blur animate-in fade-in duration-300">
-            <div className="flex flex-col items-center gap-6 text-center px-6">
-              <div className="relative">
-                <div className="w-20 h-20 rounded-full border-4 border-teal-200/30 border-t-teal-400 animate-spin" />
-                <span className="absolute inset-0 flex items-center justify-center text-3xl">
-                  {selectedWorldLabel ? "🌟" : "✨"}
-                </span>
-              </div>
-              <div>
-                <p className="text-white font-extrabold text-xl tracking-tight">
-                  Building{selectedWorldLabel ? ` your ${selectedWorldLabel} path` : " your path"}…
-                </p>
-                <p className="mt-2 text-white/60 text-sm">
-                  Personalising modules for you
-                </p>
-              </div>
+  return (
+    <div ref={revealRef} className="min-h-[80vh] font-sans selection:bg-accent/15 selection:text-accent">
+
+      {/* Synthesizing overlay */}
+      {isSynthesizing && (
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background/90 backdrop-blur-lg animate-in fade-in duration-300">
+          <div className="flex flex-col items-center gap-6 text-center px-6">
+            <div className="relative">
+              <div className="size-20 rounded-full border-4 border-accent/20 border-t-accent animate-spin" />
+              <span className="absolute inset-0 flex items-center justify-center text-3xl">
+                {selectedWorldLabel ? "🌟" : "✨"}
+              </span>
+            </div>
+            <div>
+              <p className="text-foreground font-extrabold text-xl tracking-tight">
+                Building{selectedWorldLabel ? ` your ${selectedWorldLabel} path` : " your path"}…
+              </p>
+              <p className="mt-2 text-foreground/50 text-sm">
+                Personalising modules for you
+              </p>
             </div>
           </div>
+        </div>
+      )}
+
+      <main className="py-10 px-4 sm:px-6 max-w-6xl mx-auto space-y-10">
+
+        {/* Welcome banner */}
+        {!isSynthesizing && (
+          <header className="reveal-on-scroll text-center space-y-3">
+            <div className="inline-flex items-center gap-3 mb-2">
+              {profile.avatar_url ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={profile.avatar_url} alt="" className="size-12 rounded-full ring-2 ring-accent/20" />
+              ) : (
+                <span className="flex size-12 items-center justify-center rounded-full bg-accent/10 text-2xl">🧠</span>
+              )}
+              <div className="text-left">
+                <h1
+                  className="text-foreground font-black tracking-tight"
+                  style={{ fontSize: "var(--type-heading-xl)" }}
+                >
+                  Welcome back, {profile.display_name}
+                </h1>
+                {recommendedStage && (
+                  <Link
+                    href={`/explore?stage=${recommendedStage.id}`}
+                    className="text-sm font-semibold text-accent hover:underline"
+                  >
+                    Recommended: {recommendedStage.label}
+                  </Link>
+                )}
+              </div>
+            </div>
+            <p className="text-foreground/60 max-w-xl mx-auto" style={{ fontSize: "var(--type-body-lg)" }}>
+              Tap a path below to begin — your modules are generated in seconds.
+            </p>
+          </header>
         )}
 
-        {/* Intro / Welcome — shown while learner is picking a path */}
-        {!isSynthesizing && (
-            <div className="text-center mb-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <h2 className="text-3xl font-bold mb-4">Welcome back, {profile.display_name}.</h2>
-                <p className="text-stone-600 max-w-xl mx-auto">
-                Tap a path below to begin — your modules are generated in seconds.
-                </p>
-            </div>
-        )}
-        
-        {/* Progress Summary */}
+        {/* Stats grid */}
         {progress && (
-          <section className="mb-12 animate-in fade-in slide-in-from-bottom-6 duration-700">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              <div className="bg-white p-4 rounded-lg shadow-sm border border-stone-200">
-                <p className="text-2xl font-bold text-teal-600">{progress.completedLessons}</p>
-                <p className="text-sm text-stone-500">Lessons Completed</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm border border-stone-200">
-                <p className="text-2xl font-bold text-teal-600">{progress.completedModules}</p>
-                <p className="text-sm text-stone-500">Modules Completed</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm border border-stone-200">
-                <p className="text-2xl font-bold text-stone-500">{progress.totalLessons}</p>
-                <p className="text-sm text-stone-500">Total Lessons</p>
-              </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm border border-stone-200">
-                <p className="text-2xl font-bold text-stone-500">{progress.totalModules}</p>
-                <p className="text-sm text-stone-500">Total Modules</p>
-              </div>
+          <section className="reveal-stagger">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {([
+                { value: progress.completedLessons, label: "Lessons Done" },
+                { value: progress.completedModules, label: "Modules Done" },
+                { value: progress.totalLessons,     label: "Total Lessons" },
+                { value: progress.totalModules,     label: "Total Modules" },
+              ] as const).map((stat, i) => {
+                const accent = STAT_ACCENTS[i % STAT_ACCENTS.length];
+                return (
+                  <SoftCard key={stat.label} glass className="reveal-on-scroll p-5 text-center">
+                    <p className={`text-2xl font-extrabold ${accent.text}`}>{stat.value}</p>
+                    <p className="text-sm text-foreground/55 mt-1">{stat.label}</p>
+                  </SoftCard>
+                );
+              })}
             </div>
+
+            {lessonPct !== null && (
+              <div className="mt-4 reveal-on-scroll">
+                <div className="flex items-center justify-between text-xs text-foreground/50 mb-1.5">
+                  <span>Overall Progress</span>
+                  <span className="font-semibold text-foreground/70">{lessonPct}%</span>
+                </div>
+                <progress
+                  className="ui-progress ui-progress--accent w-full h-2.5"
+                  value={progress.completedLessons}
+                  max={progress.totalLessons}
+                />
+              </div>
+            )}
           </section>
         )}
 
-        {/* Path selector — shown when not currently generating */}
+        {/* Recommended next step + world selector */}
         {!isSynthesizing && (
-          <div className="animate-in zoom-in-95 duration-500 space-y-8">
-            <section className="rounded-2xl border border-teal-200 bg-white p-5 shadow-sm">
-              <h3 className="text-lg font-semibold text-stone-800">
+          <div className="space-y-8 reveal-stagger">
+            <SoftCard glass className="reveal-on-scroll p-6 space-y-3">
+              <h2 className="text-foreground font-bold" style={{ fontSize: "var(--type-heading-md)" }}>
                 Recommended Next Step
-              </h3>
-              <p className="mt-2 text-sm text-stone-600">
+              </h2>
+              <p className="text-foreground/60 text-sm">
                 Tap a path below — your personalised modules will be ready instantly.
               </p>
-              {profile.module_assignment_mode === "random" ? (
-                <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-teal-700">
+              {profile.module_assignment_mode === "random" && (
+                <p className="text-xs font-bold uppercase tracking-widest text-accent">
                   Daily path auto-selected for you
                 </p>
-              ) : null}
-              <div className="mt-4">
+              )}
+              <div className="pt-1">
                 <Link
                   href="/modules"
-                  className="inline-flex min-h-10 items-center rounded-full border border-teal-300 bg-teal-50 px-4 py-2 text-sm font-semibold text-teal-800 transition-colors hover:bg-teal-100"
+                  className="ui-soft-button inline-flex min-h-10 items-center border border-accent/25 bg-accent/8 px-5 py-2 text-sm font-semibold text-accent transition-colors hover:bg-accent/15 dark:bg-accent/15 dark:hover:bg-accent/25"
                 >
                   Browse All Paths
                 </Link>
               </div>
-            </section>
+            </SoftCard>
 
-            <WorldSelector
-              selectedWorldId={selectedWorldId || undefined}
-              learner_age_years={profile.age_years}
-              learnerGradeLevel={profile.grade_level}
-              allowedPathIds={profile.path_allowlist}
-              interestPathIds={interestPathIds}
-              onSelectWorld={(worldId, worldLabel) => {
-                void handleWorldSelected(worldId, worldLabel);
-              }}
-            />
+            <div className="reveal-on-scroll">
+              <WorldSelector
+                selectedWorldId={selectedWorldId || undefined}
+                learner_age_years={profile.age_years}
+                learnerGradeLevel={profile.grade_level}
+                allowedPathIds={profile.path_allowlist}
+                interestPathIds={interestPathIds}
+                onSelectWorld={(worldId, worldLabel) => {
+                  void handleWorldSelected(worldId, worldLabel);
+                }}
+              />
+            </div>
           </div>
         )}
-      </main>
 
+      </main>
     </div>
   );
 }

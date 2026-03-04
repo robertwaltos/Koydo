@@ -1,14 +1,18 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
-import { JUICY_VARIANTS, EXPERIENCE_COLORS } from "@/lib/experience/interaction-primitives";
+import { JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import JuicyConfetti from "@/components/experience/JuicyConfetti";
 import { hapticSuccess, hapticError, hapticCelebration } from "@/lib/platform/haptics";
-import { Activity, Brain, Zap } from "lucide-react";
+import { Brain, Zap } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Types --- */
 type Node = {
@@ -18,43 +22,81 @@ type Node = {
     active: boolean;
 };
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
+const getRandomUnit = () => {
+    if (typeof crypto !== "undefined" && typeof crypto.getRandomValues === "function") {
+        const values = new Uint32Array(1);
+        crypto.getRandomValues(values);
+        return values[0] / 0x100000000;
+    }
+    return Math.random();
+};
+
+const getRandomInt = (max: number) => {
+    if (max <= 0) {
+        return 0;
+    }
+    return Math.floor(getRandomUnit() * max);
+};
+
+const createNodes = (level: number) => {
+    const newNodes: Node[] = [];
+    const nodeCount = 5 + Math.floor(level / 2);
+    for (let i = 0; i < nodeCount; i++) {
+        newNodes.push({
+            id: i,
+            x: 10 + getRandomUnit() * 80,
+            y: 10 + getRandomUnit() * 80,
+            active: false
+        });
+    }
+    return newNodes;
+};
+
 export default function NeuralNavigator() {
     const { setMood, setMessage } = useMascot();
-    const [nodes, setNodes] = useState<Node[]>([]);
+    const [nodes, setNodes] = useState<Node[]>(() => createNodes(1));
     const [sequence, setSequence] = useState<number[]>([]);
     const [userSequence, setUserSequence] = useState<number[]>([]);
     const [gameState, setGameState] = useState<"idle" | "showing" | "playing" | "success" | "fail">("idle");
     const [level, setLevel] = useState(1);
     const [streak, setStreak] = useState(0);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
+
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        completionEmittedRef.current = false;
+    }, []);
+
+    const generateNodes = useCallback(() => {
+        setNodes(createNodes(level));
+    }, [level]);
 
     // Initial message from Terra
     useEffect(() => {
         setMessage("Welcome to the Neural Lab! Let's map some synapses. 🧠");
         setMood("happy");
-        generateNodes();
-    }, []);
-
-    const generateNodes = useCallback(() => {
-        const newNodes: Node[] = [];
-        const nodeCount = 5 + Math.floor(level / 2);
-        for (let i = 0; i < nodeCount; i++) {
-            newNodes.push({
-                id: i,
-                x: 10 + Math.random() * 80,
-                y: 10 + Math.random() * 80,
-                active: false
-            });
-        }
-        setNodes(newNodes);
-    }, [level]);
+        resetRunTracking();
+    }, [resetRunTracking, setMessage, setMood]);
 
     const startRound = () => {
+        if (completionEmittedRef.current || runStartedAtRef.current <= 0) {
+            resetRunTracking();
+        }
         const newSequence: number[] = [];
         const length = 3 + Math.floor(level / 3);
         const nodeCount = nodes.length;
 
         for (let i = 0; i < length; i++) {
-            newSequence.push(Math.floor(Math.random() * nodeCount));
+            newSequence.push(getRandomInt(nodeCount));
         }
 
         setSequence(newSequence);
@@ -81,6 +123,7 @@ export default function NeuralNavigator() {
 
     const handleNodeClick = (nodeId: number) => {
         if (gameState !== "playing") return;
+        interactionCountRef.current += 1;
 
         const expectedId = sequence[userSequence.length];
 
@@ -98,12 +141,28 @@ export default function NeuralNavigator() {
     };
 
     const handleSuccess = () => {
+        const nextStreak = streak + 1;
+        const nextLevel = level + 1;
         setGameState("success");
-        setStreak(prev => prev + 1);
-        setLevel(prev => prev + 1);
+        setStreak(nextStreak);
+        setLevel(nextLevel);
         setMood("happy");
         setMessage("Perfect connection! The brain is firing! 🔥");
         void hapticCelebration();
+
+        if (nextStreak >= 3 && nextStreak % 3 === 0 && !completionEmittedRef.current) {
+            completionEmittedRef.current = true;
+            emitLegacyGameComplete({
+                sessionId: sessionIdRef.current,
+                gameId: "neural",
+                elapsedMs: getElapsedMs(runStartedAtRef.current),
+                interactions: Math.max(1, interactionCountRef.current),
+                score: nextLevel * 120 + nextStreak * 40,
+                maxScore: 1500,
+                source: "component",
+                occurredAt: new Date().toISOString(),
+            });
+        }
 
         setTimeout(() => {
             setGameState("idle");

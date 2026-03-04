@@ -47,19 +47,19 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Civil Engineering, with focus on civil engineering systems diagnostics and civil engineering operations and execution design."
+          "content": "In this lesson, we will delve into the concept of advanced scope boundaries within the field of Civil Engineering. Understanding these boundaries is crucial for the success of engineering projects. We will examine how to effectively diagnose civil engineering systems, which involves identifying any issues or inefficiencies within these systems. Additionally, we will learn how to design effective operations and execution strategies that ensure projects are not only well-defined but also successfully implemented. This foundational knowledge will empower you to contribute to the field of Civil Engineering with confidence and precision."
         },
         {
           "id": "civil-engineering-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in engineering projects.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial for planning effective interventions in engineering projects."
         },
         {
           "id": "civil-engineering-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in engineering projects should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our work is accurate and reliable. This practice helps maintain high standards in civil engineering.\nContext recap: In our recap, we emphasize that all claims made in engineering projects should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our work is accurate and reliable. This practice helps maintain high standards in civil engineering."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific engineering tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding real-world engineering challenges.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific engineering tasks. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding real-world engineering challenges."
         },
         {
           "id": "civil-engineering-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation processes. These components ensure that projects can adapt to changes and challenges effectively, maintaining quality and safety throughout the engineering process.\nContext recap: In our recap, we will discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation processes. These components ensure that projects can adapt to changes and challenges effectively, maintaining quality and safety throughout the engineering process."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in civil engineering systems diagnostics and civil engineering impact and tradeoff analysis."
+          "content": "In this lesson, we will frame various competing constraints that exist within civil engineering systems. We will analyze how these constraints impact diagnostics and conduct tradeoff analyses to understand the implications of different engineering decisions. This knowledge is crucial for making informed choices in complex projects.\nContext recap: In this lesson, we will frame various competing constraints that exist within civil engineering systems. We will analyze how these constraints impact diagnostics and conduct tradeoff analyses to understand the implications of different engineering decisions. This knowledge is crucial for making informed choices in complex projects."
         },
         {
           "id": "civil-engineering-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is essential for understanding the tradeoffs involved in engineering decisions and ensuring that all factors are considered.\nContext recap: In this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is essential for understanding the tradeoffs involved in engineering decisions and ensuring that all factors are considered."
         },
         {
           "id": "civil-engineering-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made in engineering projects should clearly outline the underlying assumptions, the evidence supporting the decision, the risk controls in place, and any fallback plans. This structured approach helps ensure transparency and accountability in engineering practices.\nContext recap: In our recap, we will highlight that each recommendation made in engineering projects should clearly outline the underlying assumptions, the evidence supporting the decision, the risk controls in place, and any fallback plans. This structured approach helps ensure transparency and accountability in engineering practices."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This exercise is designed to help them understand the complexities of managing engineering projects in real-time, ensuring that they can make informed decisions under pressure.\nContext recap: In this interactive clinic, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This exercise is designed to help them understand the complexities of managing engineering projects in real-time, ensuring that they can make informed decisions under pressure."
         },
         {
           "id": "civil-engineering-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to challenges in engineering should involve updating control gates while maintaining traceability and accountability. This practice is essential for ensuring that all changes are documented and that the integrity of the project is preserved.\nContext recap: In our recap, we will discuss how effective responses to challenges in engineering should involve updating control gates while maintaining traceability and accountability. This practice is essential for ensuring that all changes are documented and that the integrity of the project is preserved."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and that the impacts of engineering decisions are fairly assessed.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and that the impacts of engineering decisions are fairly assessed."
         },
         {
           "id": "civil-engineering-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into engineering practices. These elements are vital for ensuring that decisions are made responsibly and that there is a clear path for addressing any issues that arise.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into engineering practices. These elements are vital for ensuring that decisions are made responsibly and that there is a clear path for addressing any issues that arise."
         },
         {
           "id": "civil-engineering-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our projects. This checklist will guide us in making responsible decisions as future civil engineers.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our projects. This checklist will guide us in making responsible decisions as future civil engineers."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const CivilEngineering501Module: LearningModule = {
           "id": "civil-engineering-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of uncertainty in your findings, and potential pathways for remediation. This exercise will help you practice how to present your ideas clearly and effectively.\nContext recap: In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of uncertainty in your findings, and potential pathways for remediation. This exercise will help you practice how to present your ideas clearly and effectively."
         },
         {
           "id": "civil-engineering-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will practice your responses to various critiques that may come from technical experts, governance representatives, and stakeholders. This rehearsal will prepare you to confidently address questions and feedback, ensuring you can effectively communicate your project’s value and impact.\nContext recap: During this session, you will practice your responses to various critiques that may come from technical experts, governance representatives, and stakeholders. This rehearsal will prepare you to confidently address questions and feedback, ensuring you can effectively communicate your project’s value and impact."
         }
       ],
       "interactiveActivities": [

@@ -116,7 +116,7 @@ export async function generateDiagnosticAssessment(
   }
 
   // If no API key, return mock immediately
-  if (!serverEnv.OPENAI_API_KEY) {
+  if (!(serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY)) {
     return {
       questions: ensureQuestionCount(getMockQuestionsByGrade(grade), 10),
       source: "mock",
@@ -143,7 +143,7 @@ export async function generateDiagnosticAssessment(
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${serverEnv.OPENAI_API_KEY}`,
+        Authorization: `Bearer ${serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({

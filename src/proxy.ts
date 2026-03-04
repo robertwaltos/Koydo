@@ -8,8 +8,9 @@ import { updateSupabaseSession } from "@/lib/supabase/middleware";
 const ACTIVE_PROFILE_COOKIE_KEY = "active_profile_id";
 const PROFILE_GATE_PATH = "/who-is-learning";
 const MUTATING_METHODS = new Set(["POST", "PUT", "PATCH", "DELETE"]);
-const CSRF_EXEMPT_PREFIXES = ["/api/stripe/webhook"];
+const CSRF_EXEMPT_PREFIXES = ["/api/stripe/webhook", "/api/revenuecat/webhook"];
 const SUPABASE_SESSION_COOKIE_FRAGMENT = "-auth-token";
+const HSTS_HEADER_VALUE = "max-age=63072000; includeSubDomains; preload";
 
 // ---------------------------------------------------------------------------
 // Nonce-based Content-Security-Policy (H-3 fix)
@@ -31,24 +32,54 @@ function buildCspHeader(nonce: string): string {
     ? `script-src 'self' 'unsafe-eval' 'unsafe-inline' https://js.stripe.com https://cdn.jsdelivr.net`
     : `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://js.stripe.com https://cdn.jsdelivr.net`;
 
-  return [
+  const directives = [
     "default-src 'self'",
-    "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.stripe.com",
+    "base-uri 'self'",
+    "object-src 'none'",
+    "frame-ancestors 'self'",
+    "form-action 'self'",
+    "manifest-src 'self'",
+    "connect-src 'self' https://*.supabase.co https://*.supabase.in wss://*.supabase.co wss://*.supabase.in https://api.stripe.com",
     scriptSrc,
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: blob: https://*.supabase.co https://*.supabase.in https://storage.googleapis.com",
     "font-src 'self'",
-    "frame-src https://js.stripe.com https://hooks.stripe.com",
+    "media-src 'self' data: blob: https://*.supabase.co https://*.supabase.in",
+    "frame-src https://js.stripe.com https://hooks.stripe.com https://checkout.stripe.com",
     "worker-src 'self' blob:",
-    "base-uri 'self'",
-    "form-action 'self'",
-  ].join("; ");
+  ];
+
+  if (!isDev) {
+    directives.push("upgrade-insecure-requests");
+  }
+
+  return directives.join("; ");
 }
 
-function applyCspHeaders(response: NextResponse): void {
+function applySecurityHeaders(response: NextResponse, requestPathname?: string): void {
   const nonce = generateCspNonce();
   response.headers.set("x-nonce", nonce);
   response.headers.set("Content-Security-Policy", buildCspHeader(nonce));
+  response.headers.set("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
+  response.headers.set("Cross-Origin-Resource-Policy", "same-site");
+  response.headers.set("Origin-Agent-Cluster", "?1");
+  response.headers.set("X-Permitted-Cross-Domain-Policies", "none");
+
+  if (process.env.NODE_ENV === "production") {
+    response.headers.set("Strict-Transport-Security", HSTS_HEADER_VALUE);
+  }
+
+  if (
+    requestPathname
+    && (
+      requestPathname.startsWith("/api/admin/owner/")
+      || requestPathname.startsWith("/api/account/security/")
+      || requestPathname === "/api/account/delete"
+    )
+  ) {
+    response.headers.set("Cache-Control", "no-store, private, max-age=0");
+    response.headers.set("Pragma", "no-cache");
+  }
 }
 
 type RateLimitPolicy = {
@@ -72,6 +103,35 @@ function isCsrfExemptPath(pathname: string) {
   return CSRF_EXEMPT_PREFIXES.some((prefix) => pathname.startsWith(prefix));
 }
 
+function normalizeOrigin(value: string | null | undefined) {
+  if (!value) return null;
+
+  try {
+    const url = new URL(value);
+    if (url.protocol !== "http:" && url.protocol !== "https:") {
+      return null;
+    }
+    return url.origin;
+  } catch {
+    return null;
+  }
+}
+
+function isLocalHostname(value: string) {
+  const normalized = value.toLowerCase();
+  return normalized === "localhost" || normalized === "127.0.0.1" || normalized === "::1";
+}
+
+function getTrustedMutationOrigins(request: NextRequest) {
+  const trustedOrigins = new Set<string>([request.nextUrl.origin]);
+  try {
+    trustedOrigins.add(new URL(publicEnv.NEXT_PUBLIC_APP_URL).origin);
+  } catch {
+    // Ignore malformed configured app URL and only trust request origin.
+  }
+  return trustedOrigins;
+}
+
 function isCrossSiteMutationRequest(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
@@ -87,15 +147,50 @@ function isCrossSiteMutationRequest(request: NextRequest) {
   const originHeader = request.headers.get("origin");
   if (!originHeader) return false;
 
-  try {
-    const originUrl = new URL(originHeader);
-    return originUrl.host !== request.nextUrl.host;
-  } catch {
+  const normalizedOrigin = normalizeOrigin(originHeader);
+  if (!normalizedOrigin) {
     return true;
   }
+
+  if (getTrustedMutationOrigins(request).has(normalizedOrigin)) {
+    return false;
+  }
+
+  if (process.env.NODE_ENV !== "production") {
+    try {
+      const requestHost = new URL(request.nextUrl.origin).hostname;
+      const originHost = new URL(normalizedOrigin).hostname;
+      if (isLocalHostname(requestHost) && isLocalHostname(originHost)) {
+        return false;
+      }
+    } catch {
+      return true;
+    }
+  }
+
+  return true;
 }
 
 function getApiMutationRateLimitPolicy(pathname: string): RateLimitPolicy {
+  if (
+    pathname.startsWith("/api/admin/owner/factory-reset/")
+    || pathname.startsWith("/api/admin/owner/transfer/")
+  ) {
+    return { scope: "api:admin:owner-critical", max: 10, windowMs: 300_000 };
+  }
+
+  if (pathname.startsWith("/api/admin/owner/security/")) {
+    return { scope: "api:admin:owner-security", max: 20, windowMs: 60_000 };
+  }
+
+  if (pathname.startsWith("/api/account/security/")) {
+    return { scope: "api:account:security", max: 30, windowMs: 60_000 };
+  }
+
+  if (pathname === "/api/account/delete") {
+    return { scope: "api:account:delete", max: 10, windowMs: 300_000 };
+  }
+
   if (pathname === "/api/stripe/webhook" || pathname === "/api/revenuecat/webhook") {
     return { scope: "api:billing:webhook", max: 300, windowMs: 60_000 };
   }
@@ -114,11 +209,17 @@ function getApiMutationRateLimitPolicy(pathname: string): RateLimitPolicy {
 
   if (
     pathname === "/api/ai/tutor"
+    || pathname === "/api/companion/chat"
     || pathname === "/api/media/generate"
     || pathname === "/api/images/generate"
     || pathname === "/api/tts/generate"
+    || pathname === "/api/audiobooks/tts"
   ) {
     return { scope: "api:expensive:mutations", max: 40, windowMs: 60_000 };
+  }
+
+  if (pathname.startsWith("/api/admin/")) {
+    return { scope: "api:admin:mutations", max: 80, windowMs: 60_000 };
   }
 
   return { scope: "api:mutations", max: 120, windowMs: 60_000 };
@@ -140,6 +241,7 @@ function buildProfileGateRedirect(request: NextRequest, baseResponse: NextRespon
     });
   }
 
+  applySecurityHeaders(redirect, request.nextUrl.pathname);
   return redirect;
 }
 
@@ -166,6 +268,7 @@ function buildSignInRedirect(
 
   const redirect = NextResponse.redirect(signInUrl);
   copyCookies(baseResponse, redirect);
+  applySecurityHeaders(redirect, request.nextUrl.pathname);
   return redirect;
 }
 
@@ -180,17 +283,19 @@ function buildComplianceRedirect(
 
   const redirect = NextResponse.redirect(redirectUrl);
   copyCookies(baseResponse, redirect);
+  applySecurityHeaders(redirect, request.nextUrl.pathname);
   return redirect;
 }
 
 export async function proxy(request: NextRequest) {
+  const pathname = request.nextUrl.pathname;
+
   if (isCrossSiteMutationRequest(request)) {
     const csrfResponse = NextResponse.json({ error: "CSRF validation failed." }, { status: 403 });
-    applyCspHeaders(csrfResponse);
+    applySecurityHeaders(csrfResponse, pathname);
     return csrfResponse;
   }
 
-  const pathname = request.nextUrl.pathname;
   const method = request.method.toUpperCase();
   if (pathname.startsWith("/api/") && MUTATING_METHODS.has(method)) {
     const policy = getApiMutationRateLimitPolicy(pathname);
@@ -211,7 +316,7 @@ export async function proxy(request: NextRequest) {
           },
         },
       );
-      applyCspHeaders(rateLimitResponse);
+      applySecurityHeaders(rateLimitResponse, pathname);
       return rateLimitResponse;
     }
   }
@@ -220,7 +325,7 @@ export async function proxy(request: NextRequest) {
   const response = await updateSupabaseSession(request);
 
   // Apply nonce-based CSP headers to every response.
-  applyCspHeaders(response);
+  applySecurityHeaders(response, pathname);
 
   if (!publicEnv.NEXT_PUBLIC_SUPABASE_URL || !publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
     return response;
@@ -306,6 +411,7 @@ export async function proxy(request: NextRequest) {
   if (user && (pathname === "/auth/sign-in" || pathname === "/auth/sign-up")) {
     const redirect = NextResponse.redirect(new URL(PROFILE_GATE_PATH, request.url));
     copyCookies(response, redirect);
+    applySecurityHeaders(redirect, pathname);
     return redirect;
   }
 

@@ -47,19 +47,19 @@ export const ComparativePolitics601Module: LearningModule = {
           "id": "comparative-politics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for Comparative Politics, including control points for institutional performance comparison and policy implementation divergence."
+          "content": "In this lesson, we will dive into the advanced boundaries of Comparative Politics. We will discover what these boundaries are and why they matter. Specifically, we will focus on the key control points that allow us to compare the performance of various political institutions. Additionally, we will examine how different institutions may implement policies in unique ways. Grasping these concepts is essential for effectively analyzing and understanding different political systems around the world.\nContext recap: In this lesson, we will dive into the advanced boundaries of Comparative Politics. We will discover what these boundaries are and why they matter. Specifically, we will focus on the key control points that allow us to compare the performance of various political institutions. Additionally, we will examine how different institutions may implement policies in unique ways."
         },
         {
           "id": "comparative-politics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Structure",
-          "content": "Learners map causal pathways and uncertainty ranges before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways and understanding the ranges of uncertainty that may arise before planning any interventions. This process helps us visualize how different factors are connected and prepares us for making informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways and understanding the ranges of uncertainty that may arise before planning any interventions. This process helps us visualize how different factors are connected and prepares us for making informed decisions."
         },
         {
           "id": "comparative-politics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "Claims are tied to measurable indicators, uncertainty declarations, and review checkpoints."
+          "content": "In this recap, we will discuss how to connect our claims to measurable indicators. It is important to declare any uncertainties we may have and to establish review checkpoints to ensure our findings are reliable and valid.\nContext recap: In this recap, we will discuss how to connect our claims to measurable indicators. It is important to declare any uncertainties we may have and to establish review checkpoints to ensure our findings are reliable and valid.\nWhy this matters: Evidence Thresholds helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const ComparativePolitics601Module: LearningModule = {
           "id": "comparative-politics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them against adversarial conditions."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. They will also stress-test these workflows to see how they hold up under challenging or adversarial conditions, which is essential for understanding their robustness.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. They will also stress-test these workflows to see how they hold up under challenging or adversarial conditions, which is essential for understanding their robustness."
         },
         {
           "id": "comparative-politics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Design",
-          "content": "Gate criteria, rollback conditions, and escalation thresholds are integrated into the workflow."
+          "content": "In this recap, we will integrate important elements such as gate criteria, rollback conditions, and escalation thresholds into our workflow designs. This integration helps ensure that our processes are well-structured and can adapt to changing circumstances.\nContext recap: In this recap, we will integrate important elements such as gate criteria, rollback conditions, and escalation thresholds into our workflow designs. This integration helps ensure that our processes are well-structured and can adapt to changing circumstances.\nWhy this matters: Control Gate Design helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const ComparativePolitics601Module: LearningModule = {
           "id": "comparative-politics-601-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: a comparative policy board evaluating institutional responses to shared crisis shocks across governance systems. Learners identify constraints, risks, and governance boundaries."
+          "content": "In this engaging case study, we will explore the work of a comparative policy board. This board examines how different institutions react to shared crisis shocks, which are significant challenges that affect many people at once, across various governance systems. As learners, you will have the opportunity to identify the constraints, risks, and boundaries of governance that influence how these institutions respond to such crises. This will help you understand the complexities of decision-making in times of difficulty.\nContext recap: In this engaging case study, we will explore the work of a comparative policy board. This board examines how different institutions react to shared crisis shocks, which are significant challenges that affect many people at once, across various governance systems. As learners, you will have the opportunity to identify the constraints, risks, and boundaries of governance that influence how these institutions respond to such crises. This will help you understand the complexities of decision-making in times of difficulty."
         },
         {
           "id": "comparative-politics-601-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are evaluated across performance, reliability, equity, and feasibility dimensions."
+          "content": "In this section, we will evaluate different options using a tradeoff matrix. We will consider important dimensions such as performance, reliability, equity, and feasibility to make informed decisions about which options are best.\nContext recap: In this section, we will evaluate different options using a tradeoff matrix. We will consider important dimensions such as performance, reliability, equity, and feasibility to make informed decisions about which options are best.\nWhy this matters: Tradeoff Matrix helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "comparative-politics-601-l04-c3",
           "kind": "recap",
           "title": "Failure and Recovery Design",
-          "content": "Failure signatures are mapped to mitigation actions and measurable recovery triggers."
+          "content": "In this recap, we will map out failure signatures and connect them to mitigation actions. We will also identify measurable recovery triggers to help us understand how to respond effectively when things do not go as planned.\nContext recap: In this recap, we will map out failure signatures and connect them to mitigation actions. We will also identify measurable recovery triggers to help us understand how to respond effectively when things do not go as planned.\nWhy this matters: Failure and Recovery Design helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -419,13 +419,13 @@ export const ComparativePolitics601Module: LearningModule = {
           "id": "comparative-politics-601-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure scenarios, constraints, metrics, and escalation logic for intervention tests."
+          "content": "In this interactive practice, learners will configure various scenarios, constraints, metrics, and escalation logic for their intervention tests. This setup is crucial for simulating real-world situations and understanding how to respond.\nContext recap: In this interactive practice, learners will configure various scenarios, constraints, metrics, and escalation logic for their intervention tests. This setup is crucial for simulating real-world situations and understanding how to respond.\nWhy this matters: Simulation Setup helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "comparative-politics-601-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Simulation outcomes are reviewed for gains, side effects, and governance compliance."
+          "content": "In this recap, we will review the outcomes of our simulations. We will analyze the gains, any side effects, and how well we complied with governance standards. This reflection is key to improving our future interventions.\nContext recap: In this recap, we will review the outcomes of our simulations. We will analyze the gains, any side effects, and how well we complied with governance standards. This reflection is key to improving our future interventions.\nWhy this matters: Debrief and Adaptation helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -676,19 +676,19 @@ export const ComparativePolitics601Module: LearningModule = {
           "id": "comparative-politics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefit and burden distribution across stakeholders and time horizons."
+          "content": "In this section, learners will map out how benefits and burdens are distributed among different stakeholders over time. Understanding this distribution is essential for assessing the impact of policies and decisions.\nContext recap: In this section, learners will map out how benefits and burdens are distributed among different stakeholders over time. Understanding this distribution is essential for assessing the impact of policies and decisions.\nWhy this matters: Stakeholder Impact Distribution helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "comparative-politics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated into governance design."
+          "content": "In this section, we will explore the concept of accountability architecture. We will learn how to integrate decision traceability, review rights, and remediation obligations into our governance design to ensure that decisions are transparent and responsible.\nContext recap: In this section, we will explore the concept of accountability architecture. We will learn how to integrate decision traceability, review rights, and remediation obligations into our governance design to ensure that decisions are transparent and responsible.\nWhy this matters: Accountability Architecture helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "comparative-politics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links technical outcomes, policy compliance, ethics, and resilience."
+          "content": "At the end of our lesson, we will create a helpful checklist that connects important areas such as technical results, following the rules of policy, maintaining ethical standards, and building resilience in leadership. This checklist will serve as a guide to ensure that leaders are responsible and effective in their roles.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important areas such as technical results, following the rules of policy, maintaining ethical standards, and building resilience in leadership. This checklist will serve as a guide to ensure that leaders are responsible and effective in their roles."
         }
       ],
       "flashcards": [
@@ -727,13 +727,13 @@ export const ComparativePolitics601Module: LearningModule = {
           "id": "comparative-politics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will work together to create a brief that includes your main arguments, supporting evidence, areas of uncertainty, and possible solutions to address any challenges. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this interactive activity, you will work together to create a brief that includes your main arguments, supporting evidence, areas of uncertainty, and possible solutions to address any challenges. This exercise will help you practice organizing your thoughts and presenting them clearly."
         },
         {
           "id": "comparative-politics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critique scenarios."
+          "content": "During this session, you will practice responding to various scenarios that involve technical questions, governance issues, and critiques from stakeholders. This rehearsal will prepare you to think on your feet and communicate effectively in real-world situations.\nContext recap: During this session, you will practice responding to various scenarios that involve technical questions, governance issues, and critiques from stakeholders. This rehearsal will prepare you to think on your feet and communicate effectively in real-world situations.\nWhy this matters: Expert Panel Rehearsal helps learners in Social Studies connect ideas from Comparative Politics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [

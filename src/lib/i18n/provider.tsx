@@ -94,7 +94,14 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 export function useI18n() {
   const context = useContext(I18nContext);
   if (!context) {
-    throw new Error("useI18n must be used inside I18nProvider.");
+    // Error and not-found boundaries can render before providers mount.
+    // Return a safe English fallback instead of crashing the whole route.
+    return {
+      locale: "en" as Locale,
+      setLocale: () => {},
+      t: (key: string, vars?: Record<string, string | number>) =>
+        translate("en", key, vars),
+    };
   }
 
   return context;

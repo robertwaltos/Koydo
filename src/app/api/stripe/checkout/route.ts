@@ -3,6 +3,7 @@ import type Stripe from "stripe";
 import { z } from "zod";
 import { serverEnv } from "@/lib/config/env";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import {
   getActiveStripePriceId,
   getStripePriceIdForLanguagePlan,
@@ -195,6 +196,13 @@ export async function POST(request: Request) {
 
   const stripe = createStripeServerClient(serverEnv.STRIPE_SECRET_KEY);
   let explicitPromotionCodeId: string | null = null;
+  let partnerAttribution:
+    | {
+        partnerId: string;
+        partnerCodeId: string;
+        partnerCode: string;
+      }
+    | null = null;
 
   if (parsed.data.couponCode) {
     try {
@@ -217,6 +225,31 @@ export async function POST(request: Request) {
         { status: 400 },
       );
     }
+
+    try {
+      const admin = createSupabaseAdminClient();
+      const nowIso = new Date().toISOString();
+      const { data: partnerCode } = await admin
+        .from("partner_codes")
+        .select("id, partner_id, code, status, starts_at, ends_at")
+        .eq("code", parsed.data.couponCode)
+        .in("status", ["active", "paused"])
+        .maybeSingle();
+      if (
+        partnerCode &&
+        partnerCode.status === "active" &&
+        (!partnerCode.starts_at || partnerCode.starts_at <= nowIso) &&
+        (!partnerCode.ends_at || partnerCode.ends_at >= nowIso)
+      ) {
+        partnerAttribution = {
+          partnerId: partnerCode.partner_id,
+          partnerCodeId: partnerCode.id,
+          partnerCode: partnerCode.code,
+        };
+      }
+    } catch (error) {
+      console.error("Failed to resolve optional partner attribution from coupon code.", toSafeErrorRecord(error));
+    }
   }
 
   const createSessionPayload: Stripe.Checkout.SessionCreateParams = {
@@ -229,12 +262,26 @@ export async function POST(request: Request) {
       metadata: {
         userId,
         ...(selectedLanguagePlanId ? { languagePlanId: selectedLanguagePlanId } : {}),
+        ...(partnerAttribution
+          ? {
+              partnerId: partnerAttribution.partnerId,
+              partnerCodeId: partnerAttribution.partnerCodeId,
+              partnerCode: partnerAttribution.partnerCode,
+            }
+          : {}),
       },
     },
     client_reference_id: userId,
     metadata: {
       userId,
       ...(selectedLanguagePlanId ? { languagePlanId: selectedLanguagePlanId } : {}),
+      ...(partnerAttribution
+        ? {
+            partnerId: partnerAttribution.partnerId,
+            partnerCodeId: partnerAttribution.partnerCodeId,
+            partnerCode: partnerAttribution.partnerCode,
+          }
+        : {}),
     },
   };
 

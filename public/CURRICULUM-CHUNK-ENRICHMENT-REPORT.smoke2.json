@@ -1,0 +1,35 @@
+{
+  "startedAt": "2026-03-03T01:58:48.839Z",
+  "updatedAt": "2026-03-03T02:01:15.369Z",
+  "options": {
+    "apply": false,
+    "model": "gpt-4o-mini",
+    "concurrency": 1,
+    "minMultiplier": 2.7
+  },
+  "completedModuleIds": [
+    "basic-math-101"
+  ],
+  "modules": [
+    {
+      "moduleId": "basic-math-101",
+      "file": "basic-math-101.ts",
+      "lessonsTouched": 9,
+      "chunksTouched": 24,
+      "chunksLengthPassed": 24,
+      "chunksAgeFlagged": 0,
+      "lessonFailures": 0,
+      "updated": false,
+      "warnings": []
+    }
+  ],
+  "totals": {
+    "modulesProcessed": 1,
+    "lessonsTouched": 9,
+    "chunksTouched": 24,
+    "chunksLengthPassed": 24,
+    "chunksAgeFlagged": 0,
+    "lessonFailures": 0
+  },
+  "errors": []
+}

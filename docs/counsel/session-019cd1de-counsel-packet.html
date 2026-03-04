@@ -1,0 +1,82 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><title>Koydo Counsel Packet</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:32px auto;line-height:1.45;color:#111;padding:0 24px}
+pre{white-space:pre-wrap;word-wrap:break-word;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+h1{font-size:24px;margin-bottom:16px}
+</style></head><body>
+<pre># Koydo Counsel Packet
+
+Session ID: `019cd1de-4d28-7111-962c-2f0cce651c7d`  
+Prepared on: 2026-03-03 (America/Chicago)
+
+## Executive Summary
+
+This packet documents the backend console AI rollout and associated operational follow-ups completed in this session.
+
+## Implemented Changes
+
+1. Admin Console AI Chat (backend + UI)
+- Added admin-only chat API route: `src/app/api/admin/ai/console-chat/route.ts`
+- Added console chat UI: `src/app/admin/operations/console-ai-chatbox.tsx`
+- Integrated chatbox into operations console: `src/app/admin/operations/operations-console.tsx`
+
+2. AI Data Access Model
+- Tool: `get_console_snapshot` (system health + support + alerts)
+- Tool: `query_table` (read-only table queries with filters/order/limit)
+- No write-capable AI tools are exposed.
+
+3. Governance and Auditability
+- Added explicit table governance:
+  - allowlist for operational tables
+  - denylist and deny-prefix guardrails
+- Added per-query audit logging to `admin_action_logs`
+  - `admin_console_ai_query_table`
+  - `admin_console_ai_query_table_blocked`
+
+4. Saved Prompt Shortcuts
+- Added one-click saved prompts in chat UI for repeatable operational queries.
+
+## Database Migration Status
+
+Migration applied to Supabase project `osnxbuusohdzzcrakavn`:
+- `supabase/migrations/202603030004_terms_stateful_acceptance_and_signup_state.sql`
+
+Verification checks passed:
+- `policy_acceptances.billing_state`
+- `policy_acceptances.document_key`
+- `policy_acceptances.document_hash`
+- `policy_acceptances.acceptance_metadata`
+- `policy_acceptances.evidence_ip`
+- `policy_acceptances.evidence_user_agent`
+- `user_profiles.billing_state`
+
+## Runtime Environment Status (Vercel)
+
+Completed:
+- `SIGNUP_FROM_EMAIL` is set across Production, Preview, Development.
+- Current fallback sender value used: `consent@koydo.local`
+
+Outstanding:
+- `RESEND_API_KEY` is not set in runtime environments.
+- Action required before real outbound email delivery:
+  - set production-safe `RESEND_API_KEY`
+  - optionally replace `SIGNUP_FROM_EMAIL`/`PARENT_CONSENT_FROM_EMAIL` with a verified domain sender.
+
+## Risk and Controls Note
+
+- AI console queries are constrained to read-only paths with logging.
+- Sensitive/system namespaces are blocked by governance checks.
+- Every AI table query is auditable post hoc in `admin_action_logs`.
+
+## Recommended Finalization Steps
+
+1. Set `RESEND_API_KEY` in Vercel (prod/preview/dev as applicable).  
+2. Replace local-domain sender (`@koydo.local`) with verified sender domain.  
+3. Run one post-change smoke test:
+   - open Admin Operations Console
+   - run one saved prompt
+   - confirm audit row appears in `admin_action_logs`.
+
+</pre>
+</body></html>

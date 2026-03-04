@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { serverEnv } from "@/lib/config/env";
 
-const HEYGEN_API_KEY = process.env.HEYGEN_API_KEY ?? "";
+const HEYGEN_API_KEY = serverEnv.HEYGEN_API_KEY ?? "";
 
 /**
  * GET /api/companion/intro-video?videoId=xxx

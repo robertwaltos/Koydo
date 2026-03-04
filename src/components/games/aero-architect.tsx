@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Wind, Rocket, Activity, ShieldCheck, Thermometer, Info, ChevronRight, Zap, Target, Sliders, Gauge, Play } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Aerodynamics Types --- */
 type WingShape = "DELTA" | "ELLIPTICAL" | "SWEPT" | "RECTANGULAR";
@@ -25,6 +26,9 @@ export default function AeroArchitect() {
     const [wingSpan, setWingSpan] = useState(50);
     const [enginePower, setEnginePower] = useState(50);
     const [velocity, setVelocity] = useState(0);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const stats = useMemo((): AirframeStats => {
         let lift = (wingSpan * 0.8) + (wingShape === "DELTA" ? 20 : wingShape === "ELLIPTICAL" ? 30 : 10);
@@ -48,6 +52,23 @@ export default function AeroArchitect() {
             if (v >= stats.speed) {
                 clearInterval(interval);
                 if (stats.lift > 70 && stats.stability > 60) {
+                    if (!completionSentRef.current) {
+                        if (runStartedAtRef.current === 0) {
+                            runStartedAtRef.current = Date.now();
+                        }
+                        completionSentRef.current = true;
+                        emitLegacyGameComplete({
+                            sessionId: sessionIdRef.current,
+                            gameId: "aero",
+                            difficulty: "medium",
+                            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+                            interactions: Math.max(1, Math.round(velocity)),
+                            score: Math.round(stats.lift + stats.stability),
+                            maxScore: 200,
+                            source: "component",
+                            occurredAt: new Date().toISOString(),
+                        });
+                    }
                     setMessage("Takeoff speed reached! Aerodynamic stability confirmed. ✈️");
                     setMood("happy");
                     hapticSuccess();

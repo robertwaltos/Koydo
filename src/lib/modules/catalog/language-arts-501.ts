@@ -47,19 +47,19 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Language Arts, with focus on language arts systems diagnostics and language arts operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of Language Arts. Our focus will be on understanding how to effectively assess language arts systems, which means looking at how different parts of language arts work together. We will also learn how to design operations and execution plans that can improve our learning outcomes. By doing this, we will create a clearer framework for our studies, ensuring that we address all the important components in our language arts education. This understanding will help us become better learners and communicators, setting a strong foundation for our future studies."
         },
         {
           "id": "language-arts-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This foundational knowledge is crucial for planning effective interventions in language arts, as it allows us to understand how various elements interact and influence one another before we take action.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This foundational knowledge is crucial for planning effective interventions in language arts, as it allows us to understand how various elements interact and influence one another before we take action."
         },
         {
           "id": "language-arts-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing this, we can ensure that our conclusions are based on solid evidence and can be trusted in our discussions and analyses.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing this, we can ensure that our conclusions are based on solid evidence and can be trusted in our discussions and analyses."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design workflows that are specific to their areas of expertise in language arts. They will also conduct stress tests on these workflows, simulating challenging scenarios to see how well their designs hold up under pressure. This hands-on experience is vital for developing practical skills and understanding the complexities of language arts operations.\nContext recap: In this interactive practice, learners will have the opportunity to design workflows that are specific to their areas of expertise in language arts. They will also conduct stress tests on these workflows, simulating challenging scenarios to see how well their designs hold up under pressure. This hands-on experience is vital for developing practical skills and understanding the complexities of language arts operations."
         },
         {
           "id": "language-arts-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and thresholds that trigger escalation. By integrating these elements, we can create a more robust system that ensures accountability and effectiveness in our language arts practices.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, criteria for rolling back decisions, and thresholds that trigger escalation. By integrating these elements, we can create a more robust system that ensures accountability and effectiveness in our language arts practices."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in language arts systems diagnostics and language arts impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints within language arts systems diagnostics. We will analyze the impacts and trade-offs involved in different approaches, helping us to understand the complexities of decision-making in language arts and how various factors can influence outcomes.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within language arts systems diagnostics. We will analyze the impacts and trade-offs involved in different approaches, helping us to understand the complexities of decision-making in language arts and how various factors can influence outcomes."
         },
         {
           "id": "language-arts-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to make informed decisions in language arts.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to make informed decisions in language arts."
         },
         {
           "id": "language-arts-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-founded and that we are prepared for any potential challenges that may arise.\nContext recap: In this recap, we will emphasize that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-founded and that we are prepared for any potential challenges that may arise."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will need to balance performance goals with governance constraints, ensuring that their actions align with established guidelines while striving for optimal outcomes in language arts.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will need to balance performance goals with governance constraints, ensuring that their actions align with established guidelines while striving for optimal outcomes in language arts."
         },
         {
           "id": "language-arts-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must maintain clear records of our decisions and actions to ensure transparency and responsibility.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must maintain clear records of our decisions and actions to ensure transparency and responsibility."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how various decisions in language arts impact different individuals and communities, fostering a sense of responsibility and awareness.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how various decisions in language arts impact different individuals and communities, fostering a sense of responsibility and awareness."
         },
         {
           "id": "language-arts-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. By doing so, we can create a system that holds individuals accountable for their decisions and actions in language arts.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. By doing so, we can create a system that holds individuals accountable for their decisions and actions in language arts."
         },
         {
           "id": "language-arts-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and highlights the importance of being resilient in our leadership roles. This checklist serves as a guide to help us reflect on our responsibilities as leaders.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and highlights the importance of being resilient in our leadership roles. This checklist serves as a guide to help us reflect on our responsibilities as leaders."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const LanguageArts501Module: LearningModule = {
           "id": "language-arts-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and suggested pathways for remediation. This exercise encourages critical thinking and collaboration among peers.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and suggested pathways for remediation. This exercise encourages critical thinking and collaboration among peers."
         },
         {
           "id": "language-arts-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may come from experts, governance representatives, and stakeholders. This rehearsal is essential for building confidence and ensuring that everyone is prepared to address questions and feedback effectively.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts, governance representatives, and stakeholders. This rehearsal is essential for building confidence and ensuring that everyone is prepared to address questions and feedback effectively."
         }
       ],
       "interactiveActivities": [

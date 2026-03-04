@@ -47,19 +47,19 @@ export const WorldHistory501Module: LearningModule = {
           "id": "world-history-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for World History, with focus on world history systems diagnostics and world history operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of World History. Our focus will be on understanding how various historical systems interact and influence one another. We will learn to analyze these systems critically and design effective operations that can enhance our comprehension of historical events. By doing so, we aim to gain a deeper insight into the intricate complexities of world history and the multitude of factors that have shaped our past. This exploration will not only enrich our knowledge but also equip us with the skills to think critically about historical narratives and their implications in today's world.\nContext recap: In this lesson, we will delve into the advanced boundaries of World History. Our focus will be on understanding how various historical systems interact and influence one another. We will learn to analyze these systems critically and design effective operations that can enhance our comprehension of historical events. By doing so, we aim to gain a deeper insight into the intricate complexities of world history and the multitude of factors that have shaped our past."
         },
         {
           "id": "world-history-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events in history. We will also look at uncertainty ranges, which help us understand the limits of our knowledge about historical events, and system dependencies, which show how different historical factors rely on one another. This preparation is crucial before we plan any interventions or actions based on our historical analysis.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events in history. We will also look at uncertainty ranges, which help us understand the limits of our knowledge about historical events, and system dependencies, which show how different historical factors rely on one another. This preparation is crucial before we plan any interventions or actions based on our historical analysis."
         },
         {
           "id": "world-history-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize that all claims we make about historical events must be supported by measurable indicators. This means we need to have clear evidence and confidence bounds to back up our statements. Additionally, we will establish review checkpoints to ensure that our conclusions are well-founded and reliable.\nContext recap: In our recap, we will emphasize that all claims we make about historical events must be supported by measurable indicators. This means we need to have clear evidence and confidence bounds to back up our statements. Additionally, we will establish review checkpoints to ensure that our conclusions are well-founded and reliable."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const WorldHistory501Module: LearningModule = {
           "id": "world-history-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of historical methods. They will then stress-test these workflows by applying them to challenging scenarios. This hands-on experience will help learners understand the importance of adaptability and resilience in historical analysis.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of historical methods. They will then stress-test these workflows by applying them to challenging scenarios. This hands-on experience will help learners understand the importance of adaptability and resilience in historical analysis."
         },
         {
           "id": "world-history-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints will help us monitor progress and ensure that we can roll back to previous steps if necessary. Additionally, we will explore threshold-based escalation, which means knowing when to take action based on specific criteria.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints will help us monitor progress and ensure that we can roll back to previous steps if necessary. Additionally, we will explore threshold-based escalation, which means knowing when to take action based on specific criteria."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const WorldHistory501Module: LearningModule = {
           "id": "world-history-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in world history systems diagnostics and world history impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints within world history systems. We will analyze how different factors impact historical diagnostics and the trade-offs that come with various decisions. Understanding these dynamics is essential for making informed choices in historical contexts.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within world history systems. We will analyze how different factors impact historical diagnostics and the trade-offs that come with various decisions. Understanding these dynamics is essential for making informed choices in historical contexts."
         },
         {
           "id": "world-history-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help learners appreciate the complexities involved in making historical decisions and the importance of considering multiple perspectives.\nContext recap: In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help learners appreciate the complexities involved in making historical decisions and the importance of considering multiple perspectives."
         },
         {
           "id": "world-history-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will outline the key components of each recommendation we make. This includes discussing the assumptions we hold, the evidence we have gathered, the risk controls we plan to implement, and the fallback plans we have in place. This structured approach ensures that our historical recommendations are well-supported and thought out.\nContext recap: In our recap, we will outline the key components of each recommendation we make. This includes discussing the assumptions we hold, the evidence we have gathered, the risk controls we plan to implement, and the fallback plans we have in place. This structured approach ensures that our historical recommendations are well-supported and thought out."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const WorldHistory501Module: LearningModule = {
           "id": "world-history-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, which means ensuring that their actions are effective while also adhering to rules and regulations. This experience will enhance their understanding of the importance of responsible decision-making in historical contexts.\nContext recap: In this interactive practice, learners will take on the role of operators managing scenario controls. They will learn how to balance performance with governance constraints, which means ensuring that their actions are effective while also adhering to rules and regulations. This experience will enhance their understanding of the importance of responsible decision-making in historical contexts."
         },
         {
           "id": "world-history-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to historical scenarios can be designed to update control gates. This means making necessary adjustments while maintaining traceability and accountability for our decisions. Understanding this process is crucial for ensuring that our historical analyses remain transparent and responsible.\nContext recap: In our recap, we will discuss how effective responses to historical scenarios can be designed to update control gates. This means making necessary adjustments while maintaining traceability and accountability for our decisions. Understanding this process is crucial for ensuring that our historical analyses remain transparent and responsible."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const WorldHistory501Module: LearningModule = {
           "id": "world-history-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. This mapping exercise will help us understand the broader impact of historical decisions and how they affect various communities and individuals over time.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. This mapping exercise will help us understand the broader impact of historical decisions and how they affect various communities and individuals over time.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. This mapping exercise will help us understand the broader impact of historical decisions and how they affect various communities and individuals over time. Context recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. This mapping exercise will help us understand the broader impact of historical decisions and how they affect various communities and individuals over time."
         },
         {
           "id": "world-history-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This includes understanding how decisions can be traced back to their origins, the rights of individuals to review those decisions, and the obligations we have to address any issues that arise. This framework is essential for fostering trust and responsibility in historical governance.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes understanding how decisions can be traced back to their origins, the rights of individuals to review those decisions, and the obligations we have to address any issues that arise. This framework is essential for fostering trust and responsibility in historical governance."
         },
         {
           "id": "world-history-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a comprehensive checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will help us ensure that leaders are responsible and effective in their roles.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will help us ensure that leaders are responsible and effective in their roles."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const WorldHistory501Module: LearningModule = {
           "id": "world-history-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, students will work together to put together a detailed brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and potential pathways for addressing any issues that may arise. This exercise will help develop critical thinking and analytical skills.\nContext recap: In this activity, students will work together to put together a detailed brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and potential pathways for addressing any issues that may arise. This exercise will help develop critical thinking and analytical skills."
         },
         {
           "id": "world-history-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and the perspectives of stakeholders. This rehearsal will prepare them to confidently address questions and feedback, enhancing their communication and presentation skills.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and the perspectives of stakeholders. This rehearsal will prepare them to confidently address questions and feedback, enhancing their communication and presentation skills.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and the perspectives of stakeholders. This rehearsal will prepare them to confidently address questions and feedback, enhancing their communication and presentation skills. Context recap: During this session, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and the perspectives of stakeholders. This rehearsal will prepare them to confidently address questions and feedback, enhancing their communication and presentation skills."
         }
       ],
       "interactiveActivities": [

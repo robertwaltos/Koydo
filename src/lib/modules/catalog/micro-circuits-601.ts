@@ -47,19 +47,19 @@ export const MicroCircuits601Module: LearningModule = {
           "id": "micro-circuits-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Micro Circuits, with focus on micro circuits systems diagnostics and micro circuits operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of scope in the field of Micro Circuits. Our primary focus will be on learning how to effectively diagnose micro circuit systems. This means understanding the various components and how they interact with each other. Additionally, we will explore how to design and execute operations within these systems. By doing so, we aim to ensure that our designs are not only functional but also efficient and reliable. This knowledge is crucial for anyone looking to excel in the field of Micro Circuits, as it lays the foundation for creating innovative and effective solutions."
         },
         {
           "id": "micro-circuits-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how different parts of the system depend on one another. This foundational knowledge is crucial for planning effective interventions in micro circuit systems.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how different parts of the system depend on one another. This foundational knowledge is crucial for planning effective interventions in micro circuit systems."
         },
         {
           "id": "micro-circuits-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing this, we can maintain a high standard of evidence in our work.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to verify our findings. By doing this, we can maintain a high standard of evidence in our work."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const MicroCircuits601Module: LearningModule = {
           "id": "micro-circuits-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to create robust systems that can withstand challenges.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to create robust systems that can withstand challenges."
         },
         {
           "id": "micro-circuits-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows can be enhanced by integrating various checkpoints. These checkpoints will include criteria for rolling back to previous states if necessary, as well as escalation procedures based on specific thresholds. This ensures that our processes are well-structured and responsive.\nContext recap: In this recap, we will discuss how workflows can be enhanced by integrating various checkpoints. These checkpoints will include criteria for rolling back to previous states if necessary, as well as escalation procedures based on specific thresholds. This ensures that our processes are well-structured and responsive."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const MicroCircuits601Module: LearningModule = {
           "id": "micro-circuits-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in micro circuits systems diagnostics and micro circuits impact and tradeoff analysis."
+          "content": "In this lesson, we will explore a fascinating case study that showcases the various competing constraints encountered in the diagnostics of micro circuit systems. We will take a closer look at the impacts these constraints have on the systems and the trade-offs that must be considered when making decisions. This analysis will help learners grasp the intricate complexities involved in decision-making within the field of micro circuits, fostering a deeper understanding of how these systems operate and the challenges they present.\nContext recap: In this lesson, we will explore a fascinating case study that showcases the various competing constraints encountered in the diagnostics of micro circuit systems. We will take a closer look at the impacts these constraints have on the systems and the trade-offs that must be considered when making decisions. This analysis will help learners grasp the intricate complexities involved in decision-making within the field of micro circuits, fostering a deeper understanding of how these systems operate and the challenges they present."
         },
         {
           "id": "micro-circuits-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that consider multiple factors.\nContext recap: During this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions that consider multiple factors.\nWhy this matters: Tradeoff Framing helps learners in Micro Circuits connect ideas from Micro Circuits Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "micro-circuits-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will emphasize that each recommendation made in our analyses should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-founded and prepared for potential challenges.\nContext recap: In this recap, we will emphasize that each recommendation made in our analyses should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-founded and prepared for potential challenges."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const MicroCircuits601Module: LearningModule = {
           "id": "micro-circuits-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will teach them how to manage competing priorities effectively in real-time situations.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance and governance constraints. This experience will teach them how to manage competing priorities effectively in real-time situations.\nWhy this matters: Live Scenario Controls helps learners in Micro Circuits connect ideas from Micro Circuits Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "micro-circuits-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss how effective responses to challenges can update control gates while maintaining traceability and accountability. This is crucial for ensuring that all actions taken are transparent and can be tracked back to their origins.\nContext recap: In this recap, we will discuss how effective responses to challenges can update control gates while maintaining traceability and accountability. This is crucial for ensuring that all actions taken are transparent and can be tracked back to their origins."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const MicroCircuits601Module: LearningModule = {
           "id": "micro-circuits-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is vital for recognizing how decisions impact various individuals and communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is vital for recognizing how decisions impact various individuals and communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Micro Circuits connect ideas from Micro Circuits Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "micro-circuits-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. This knowledge is essential for fostering trust and responsibility in our work.\nContext recap: In this section, we will explore the architecture of accountability. This includes understanding how decision traceability, review rights, and remediation obligations are integrated into our processes. This knowledge is essential for fostering trust and responsibility in our work."
         },
         {
           "id": "micro-circuits-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and builds our ability to adapt and recover from challenges. This checklist will guide us in making responsible decisions as leaders in the field of micro circuits.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures we follow the right policies, and builds our ability to adapt and recover from challenges. This checklist will guide us in making responsible decisions as leaders in the field of micro circuits."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const MicroCircuits601Module: LearningModule = {
           "id": "micro-circuits-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will work together to create a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions to any issues that arise. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this interactive activity, you will work together to create a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions to any issues that arise. This exercise will help you practice organizing your thoughts and presenting them clearly."
         },
         {
           "id": "micro-circuits-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this practice session, you will have the opportunity to rehearse your responses to questions and feedback from experts. You will focus on addressing technical details, governance issues, and the concerns of various stakeholders. This will help you prepare for real-world discussions and improve your confidence in presenting your ideas.\nContext recap: During this practice session, you will have the opportunity to rehearse your responses to questions and feedback from experts. You will focus on addressing technical details, governance issues, and the concerns of various stakeholders. This will help you prepare for real-world discussions and improve your confidence in presenting your ideas."
         }
       ],
       "interactiveActivities": [

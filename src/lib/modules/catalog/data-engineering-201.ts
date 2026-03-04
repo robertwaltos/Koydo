@@ -46,19 +46,19 @@ export const DataEngineering201Module: LearningModule = {
           "id": "data-engineering-201-l01-c1",
           "kind": "concept",
           "title": "Vocabulary and System Boundaries",
-          "content": "This lesson establishes shared language for Data Engineering, defines operating boundaries, and maps where pipeline architecture and data quality contracts interact in real environments."
+          "content": "In this lesson, we will dive into some key vocabulary that is essential for understanding Data Engineering. Knowing the right terms helps us communicate effectively about our work. We will also define the boundaries within which we operate, which is crucial for understanding how various components of data pipelines connect and function together. Furthermore, we will investigate how pipeline architecture interacts with data quality contracts in real-world scenarios. This exploration will ensure that we have a solid grasp of these important concepts and how they apply in practical situations."
         },
         {
           "id": "data-engineering-201-l01-c2",
           "kind": "concept",
           "title": "Causal Structures and Constraints",
-          "content": "Learners model causal paths, identify hidden assumptions, and apply constraint checks before proposing interventions."
+          "content": "In this section, learners will model causal paths, which means they will create diagrams that show how different factors influence one another. They will also identify hidden assumptions that might affect their understanding of these relationships. Before suggesting any changes or interventions, students will apply checks to ensure that constraints are considered, helping them think critically about the impact of their decisions.\nContext recap: In this section, learners will model causal paths, which means they will create diagrams that show how different factors influence one another. They will also identify hidden assumptions that might affect their understanding of these relationships. Before suggesting any changes or interventions, students will apply checks to ensure that constraints are considered, helping them think critically about the impact of their decisions."
         },
         {
           "id": "data-engineering-201-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "The module introduces an evidence-first workflow where each claim is tied to observable indicators and expected uncertainty."
+          "content": "This module introduces a workflow that prioritizes evidence, meaning that every claim made must be supported by observable indicators. Learners will understand how to connect their claims to expected uncertainties, which helps them make informed decisions based on solid evidence rather than assumptions. This approach encourages critical thinking and a deeper understanding of the data they are working with.\nContext recap: This module introduces a workflow that prioritizes evidence, meaning that every claim made must be supported by observable indicators. Learners will understand how to connect their claims to expected uncertainties, which helps them make informed decisions based on solid evidence rather than assumptions. This approach encourages critical thinking and a deeper understanding of the data they are working with."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const DataEngineering201Module: LearningModule = {
           "id": "data-engineering-201-l02-c1",
           "kind": "practice",
           "title": "Method Sequence Construction",
-          "content": "Learners build a method sequence optimized for method execution, workflow reliability, and scenario interpretation, then stress-test each step under uncertainty."
+          "content": "In this interactive lab, learners will construct a sequence of methods that are optimized for effective execution. They will focus on ensuring that their workflow is reliable and can be interpreted correctly in various scenarios. After building their method sequence, students will stress-test each step to see how it performs under uncertain conditions, helping them learn how to adapt and improve their processes.\nContext recap: In this interactive lab, learners will construct a sequence of methods that are optimized for effective execution. They will focus on ensuring that their workflow is reliable and can be interpreted correctly in various scenarios. After building their method sequence, students will stress-test each step to see how it performs under uncertain conditions, helping them learn how to adapt and improve their processes."
         },
         {
           "id": "data-engineering-201-l02-c2",
           "kind": "recap",
           "title": "Operational Readiness Checks",
-          "content": "Readiness is assessed with owner mapping, checkpoint cadence, rollback triggers, and evidence logs."
+          "content": "To ensure operational readiness, learners will assess their methods using several important criteria. They will create owner mappings to identify who is responsible for each part of the process, establish a cadence for checkpoints to monitor progress, set up rollback triggers to revert changes if needed, and maintain evidence logs to document their findings. This comprehensive approach helps ensure that everything is in place before moving forward.\nContext recap: To ensure operational readiness, learners will assess their methods using several important criteria. They will create owner mappings to identify who is responsible for each part of the process, establish a cadence for checkpoints to monitor progress, set up rollback triggers to revert changes if needed, and maintain evidence logs to document their findings. This comprehensive approach helps ensure that everything is in place before moving forward."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const DataEngineering201Module: LearningModule = {
           "id": "data-engineering-201-l04-c1",
           "kind": "example",
           "title": "Case Setup and Stakes",
-          "content": "The case examines a multi-source analytics platform with late-arriving events and strict SLA targets, requiring learners to separate evidence, assumptions, and high-consequence risks."
+          "content": "In this engaging case study, we will dive into the world of a multi-source analytics platform that encounters some significant challenges. One of the main issues is dealing with late-arriving events, which can complicate the data analysis process. Additionally, the platform has strict Service Level Agreement (SLA) targets that must be met to ensure success. As learners, you will have the important task of distinguishing between evidence and assumptions, which is crucial for making informed decisions. Furthermore, you will identify high-consequence risks that could potentially affect the project's overall success. This exercise is designed to enhance your understanding of the complexities involved in managing data from various sources, preparing you for real-world data engineering scenarios."
         },
         {
           "id": "data-engineering-201-l04-c2",
           "kind": "concept",
           "title": "Decision Tradeoff Matrix",
-          "content": "Alternatives are scored across performance, reliability, cost, and equity implications before selecting an intervention path."
+          "content": "In this section, learners will use a Decision Tradeoff Matrix to evaluate different alternatives. Each option will be scored based on its performance, reliability, cost, and implications for equity. This structured approach will help students make informed decisions about which intervention path to select, considering the various factors that could affect the outcome.\nContext recap: In this section, learners will use a Decision Tradeoff Matrix to evaluate different alternatives. Each option will be scored based on its performance, reliability, cost, and implications for equity. This structured approach will help students make informed decisions about which intervention path to select, considering the various factors that could affect the outcome."
         },
         {
           "id": "data-engineering-201-l04-c3",
           "kind": "recap",
           "title": "Lessons from Failure Modes",
-          "content": "Failure patterns are categorized to convert one-off incidents into reusable design safeguards."
+          "content": "In this recap, we will categorize different failure patterns that have been observed in past projects. By analyzing these patterns, learners will be able to convert one-time incidents into reusable design safeguards. This process not only helps prevent future mistakes but also encourages a culture of learning and improvement within the field of data engineering.\nContext recap: In this recap, we will categorize different failure patterns that have been observed in past projects. By analyzing these patterns, learners will be able to convert one-time incidents into reusable design safeguards. This process not only helps prevent future mistakes but also encourages a culture of learning and improvement within the field of data engineering."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const DataEngineering201Module: LearningModule = {
           "id": "data-engineering-201-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure a scenario model with explicit uncertainty assumptions and success metrics tied to cost-performance tuning."
+          "content": "In this interactive practice session, learners will configure a scenario model that includes explicit assumptions about uncertainty and defines success metrics related to cost-performance tuning. This hands-on experience will allow students to apply theoretical concepts in a practical setting, enhancing their understanding of how to manage uncertainty in data engineering.\nContext recap: In this interactive practice session, learners will configure a scenario model that includes explicit assumptions about uncertainty and defines success metrics related to cost-performance tuning. This hands-on experience will allow students to apply theoretical concepts in a practical setting, enhancing their understanding of how to manage uncertainty in data engineering."
         },
         {
           "id": "data-engineering-201-l05-c2",
           "kind": "recap",
           "title": "Decision Review Loop",
-          "content": "Each simulation round ends with evidence review, policy alignment checks, and improvement actions."
+          "content": "At the end of each simulation round, learners will participate in a Decision Review Loop. This involves reviewing the evidence gathered during the simulation, checking for alignment with established policies, and identifying actions for improvement. This iterative process helps students refine their approaches and ensures that they are continuously learning from their experiences.\nContext recap: At the end of each simulation round, learners will participate in a Decision Review Loop. This involves reviewing the evidence gathered during the simulation, checking for alignment with established policies, and identifying actions for improvement. This iterative process helps students refine their approaches and ensures that they are continuously learning from their experiences."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const DataEngineering201Module: LearningModule = {
           "id": "data-engineering-201-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Analysis",
-          "content": "Learners identify who benefits, who bears risk, and how policy choices shape outcomes across groups."
+          "content": "In this section, learners will conduct a Stakeholder Analysis to identify who benefits from data engineering projects, who might bear risks, and how different policy choices can shape outcomes for various groups. This analysis is crucial for understanding the broader impact of data engineering decisions on society and ensuring that all voices are considered.\nContext recap: In this section, learners will conduct a Stakeholder Analysis to identify who benefits from data engineering projects, who might bear risks, and how different policy choices can shape outcomes for various groups. This analysis is crucial for understanding the broader impact of data engineering decisions on society and ensuring that all voices are considered."
         },
         {
           "id": "data-engineering-201-l07-c2",
           "kind": "concept",
           "title": "Governance and Accountability",
-          "content": "Governance mechanisms are linked to measurable controls, transparency obligations, and remediation pathways."
+          "content": "In this lesson, we will explore the concepts of Governance and Accountability in data engineering. Learners will understand how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. This knowledge is essential for ensuring that data engineering practices are ethical and responsible.\nContext recap: In this lesson, we will explore the concepts of Governance and Accountability in data engineering. Learners will understand how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. This knowledge is essential for ensuring that data engineering practices are ethical and responsible."
         },
         {
           "id": "data-engineering-201-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist integrates legal, ethical, technical, and user-impact criteria before deployment decisions."
+          "content": "Before making any decisions about deploying a project, it's important to use a final checklist. This checklist should include important factors such as legal requirements, ethical considerations, technical aspects, and how the project will affect users. By reviewing these criteria, we can ensure that our decisions are responsible and well-informed.\nContext recap: Before making any decisions about deploying a project, it's important to use a final checklist. This checklist should include important factors such as legal requirements, ethical considerations, technical aspects, and how the project will affect users. By reviewing these criteria, we can ensure that our decisions are responsible and well-informed."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const DataEngineering201Module: LearningModule = {
           "id": "data-engineering-201-l08-c1",
           "kind": "practice",
           "title": "Capstone Scope Definition",
-          "content": "Learners draft a capstone charter with objective, risks, success metrics, and governance checkpoints."
+          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish success metrics to measure progress, and set up governance checkpoints to ensure everything stays on track. This process helps in planning effectively and preparing for any challenges that may arise.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish success metrics to measure progress, and set up governance checkpoints to ensure everything stays on track. This process helps in planning effectively and preparing for any challenges that may arise."
         },
         {
           "id": "data-engineering-201-l08-c2",
           "kind": "recap",
           "title": "Defense Preparation",
-          "content": "The lesson ends with a defense template that requires evidence-backed claims and explicit tradeoff reasoning."
+          "content": "To conclude the lesson, students will receive a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any trade-offs they make. This exercise will help them articulate their thoughts clearly and prepare for discussions about their projects.\nContext recap: To conclude the lesson, students will receive a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any trade-offs they make. This exercise will help them articulate their thoughts clearly and prepare for discussions about their projects."
         }
       ],
       "interactiveActivities": [

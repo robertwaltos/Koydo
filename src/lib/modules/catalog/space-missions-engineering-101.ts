@@ -46,19 +46,19 @@ export const SpaceMissionsEngineering101Module: LearningModule = {
           "id": "space-missions-engineering-101-l01-c1",
           "kind": "concept",
           "title": "Scope and Shared Vocabulary",
-          "content": "This lesson defines the scope of Space Missions Engineering, key terms, and how mission architecture and systems integration interact in practical contexts."
+          "content": "In this lesson, we will dive into the fascinating world of Space Missions Engineering! First, we will define what this field is all about and what it includes. Then, we will introduce some important vocabulary that you will often hear when discussing space missions. Finally, we will explain how mission architecture, which is the overall design of a space mission, and systems integration, which is how different parts of the mission work together, interact in real-life scenarios. Understanding these concepts is crucial for anyone who dreams of being involved in the design and execution of space missions, as they form the foundation of how we explore the universe.\nContext recap: In this lesson, we will dive into the fascinating world of Space Missions Engineering! First, we will define what this field is all about and what it includes. Then, we will introduce some important vocabulary that you will often hear when discussing space missions. Finally, we will explain how mission architecture, which is the overall design of a space mission, and systems integration, which is how different parts of the mission work together, interact in real-life scenarios."
         },
         {
           "id": "space-missions-engineering-101-l01-c2",
           "kind": "concept",
           "title": "Causal Structure and Constraints",
-          "content": "Learners map causal pathways and test hidden assumptions before selecting interventions."
+          "content": "In this part of the lesson, students will learn how to identify and map out causal pathways. This means understanding how different factors influence each other and testing any hidden assumptions we might have before deciding on the best actions to take. This skill is crucial for making informed decisions in engineering and problem-solving.\nContext recap: In this part of the lesson, students will learn how to identify and map out causal pathways. This means understanding how different factors influence each other and testing any hidden assumptions we might have before deciding on the best actions to take. This skill is crucial for making informed decisions in engineering and problem-solving."
         },
         {
           "id": "space-missions-engineering-101-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "Claims are tied to observable indicators, uncertainty notes, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of connecting our claims to observable indicators. This means that when we make a statement or claim, we should be able to back it up with evidence that can be seen or measured. Additionally, we will discuss the significance of noting any uncertainties and having checkpoints for review to ensure our work is accurate and reliable.\nContext recap: In this recap, we will emphasize the importance of connecting our claims to observable indicators. This means that when we make a statement or claim, we should be able to back it up with evidence that can be seen or measured. Additionally, we will discuss the significance of noting any uncertainties and having checkpoints for review to ensure our work is accurate and reliable."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const SpaceMissionsEngineering101Module: LearningModule = {
           "id": "space-missions-engineering-101-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction and Test",
-          "content": "Learners design a workflow emphasizing foundational vocabulary, mechanism comprehension, and basic scenario interpretation, then stress-test reliability under uncertainty."
+          "content": "In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary, understanding how different mechanisms work, and interpreting basic scenarios. After creating their workflows, students will put them to the test to see how reliable they are when faced with uncertainty. This hands-on experience will help solidify their understanding of the concepts.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary, understanding how different mechanisms work, and interpreting basic scenarios. After creating their workflows, students will put them to the test to see how reliable they are when faced with uncertainty. This hands-on experience will help solidify their understanding of the concepts.\nContext recap: In this interactive activity, learners will have the opportunity to design their own workflow. This will involve using foundational vocabulary, understanding how different mechanisms work, and interpreting basic scenarios. After creating their workflows, students will put them to the test to see how reliable they are when faced with uncertainty. This hands-on experience will help solidify their understanding of the concepts.\nWhy this matters: Workflow Construction and Test helps learners in Aerospace Engineering connect ideas from Space Missions Engineering Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "space-missions-engineering-101-l02-c2",
           "kind": "recap",
           "title": "Control Gates and Readiness",
-          "content": "Readiness requires owner mapping, gate criteria, rollback conditions, and verification signals."
+          "content": "In this recap, we will discuss the importance of readiness in engineering projects. This includes mapping out who is responsible for different tasks, setting criteria for control gates, understanding rollback conditions, and establishing verification signals. These elements are crucial for ensuring that a project is on track and ready for the next steps.\nContext recap: In this recap, we will discuss the importance of readiness in engineering projects. This includes mapping out who is responsible for different tasks, setting criteria for control gates, understanding rollback conditions, and establishing verification signals. These elements are crucial for ensuring that a project is on track and ready for the next steps."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const SpaceMissionsEngineering101Module: LearningModule = {
           "id": "space-missions-engineering-101-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "Case focus: a multi-phase mission facing payload constraints, launch windows, and in-flight anomaly risks. Learners map high-impact risks and competing constraints."
+          "content": "In this exciting case analysis, we will explore a multi-phase space mission that encounters several important challenges. These challenges include limitations on the payload, which is the equipment and materials we can send into space, the timing of launch windows, which are specific periods when it is safe to launch, and the risks that can arise during the flight itself. Students will engage in identifying high-impact risks, which are significant threats to the mission's success, and will learn to navigate the competing constraints that engineers must consider. This analysis will encourage critical thinking and problem-solving skills as students tackle real-world engineering scenarios in the field of aerospace.\nContext recap: In this exciting case analysis, we will explore a multi-phase space mission that encounters several important challenges. These challenges include limitations on the payload, which is the equipment and materials we can send into space, the timing of launch windows, which are specific periods when it is safe to launch, and the risks that can arise during the flight itself. Students will engage in identifying high-impact risks, which are significant threats to the mission's success, and will learn to navigate the competing constraints that engineers must consider. This analysis will encourage critical thinking and problem-solving skills as students tackle real-world engineering scenarios in the field of aerospace.\nContext recap: In this exciting case analysis, we will explore a multi-phase space mission that encounters several important challenges. These challenges include limitations on the payload, which is the equipment and materials we can send into space, the timing of launch windows, which are specific periods when it is safe to launch, and the risks that can arise during the flight itself. Students will engage in identifying high-impact risks, which are significant threats to the mission's success, and will learn to navigate the competing constraints that engineers must consider. This analysis will encourage critical thinking and problem-solving skills as students tackle real-world engineering scenarios in the field of aerospace.\nWhy this matters: Case Context and Decision Stakes helps learners in Aerospace Engineering connect ideas from Space Missions Engineering Foundations to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "space-missions-engineering-101-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Intervention options are scored across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool helps us evaluate different intervention options by scoring them based on their effectiveness, reliability, fairness, and how feasible they are to implement. Understanding how to use a tradeoff matrix is essential for making informed decisions in engineering.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool helps us evaluate different intervention options by scoring them based on their effectiveness, reliability, fairness, and how feasible they are to implement. Understanding how to use a tradeoff matrix is essential for making informed decisions in engineering."
         },
         {
           "id": "space-missions-engineering-101-l04-c3",
           "kind": "recap",
           "title": "Failure Learning and Recovery",
-          "content": "The lesson transforms failure patterns into safeguards, response playbooks, and monitoring updates."
+          "content": "In this recap, we will discuss how to learn from failures in engineering projects. We will explore how to transform patterns of failure into safeguards, create response playbooks for future incidents, and implement monitoring updates to improve our processes. This approach helps ensure that we continuously learn and adapt in our engineering practices.\nContext recap: In this recap, we will discuss how to learn from failures in engineering projects. We will explore how to transform patterns of failure into safeguards, create response playbooks for future incidents, and implement monitoring updates to improve our processes. This approach helps ensure that we continuously learn and adapt in our engineering practices."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const SpaceMissionsEngineering101Module: LearningModule = {
           "id": "space-missions-engineering-101-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure intervention scenarios, uncertainty parameters, and measurable success thresholds."
+          "content": "In this interactive practice, learners will set up their own simulation scenarios. This includes configuring different intervention options, defining uncertainty parameters, and establishing measurable success thresholds. This activity will allow students to apply their knowledge in a practical way and see how different factors can influence outcomes.\nContext recap: In this interactive practice, learners will set up their own simulation scenarios. This includes configuring different intervention options, defining uncertainty parameters, and establishing measurable success thresholds. This activity will allow students to apply their knowledge in a practical way and see how different factors can influence outcomes."
         },
         {
           "id": "space-missions-engineering-101-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "Post-run review evaluates outcomes, side effects, and alignment with governance constraints."
+          "content": "In this recap, we will conduct a review after running our simulations. This will involve evaluating the outcomes, identifying any side effects, and checking how well our results align with established governance constraints. This process is important for understanding the implications of our decisions and ensuring responsible engineering practices.\nContext recap: In this recap, we will conduct a review after running our simulations. This will involve evaluating the outcomes, identifying any side effects, and checking how well our results align with established governance constraints. This process is important for understanding the implications of our decisions and ensuring responsible engineering practices."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const SpaceMissionsEngineering101Module: LearningModule = {
           "id": "space-missions-engineering-101-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "Learners examine how benefits and burdens are distributed across stakeholders and time horizons."
+          "content": "In this lesson, learners will examine how the benefits and burdens of engineering projects are distributed among different stakeholders and over time. This understanding is crucial for ensuring that all voices are heard and considered in the decision-making process, promoting fairness and equity in engineering.\nContext recap: In this lesson, learners will examine how the benefits and burdens of engineering projects are distributed among different stakeholders and over time. This understanding is crucial for ensuring that all voices are heard and considered in the decision-making process, promoting fairness and equity in engineering."
         },
         {
           "id": "space-missions-engineering-101-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability is framed through traceability, review rights, and remediation obligations."
+          "content": "In this section, we will discuss the concept of accountability in engineering. This includes understanding how to trace decisions back to their origins, the rights of individuals to review decisions, and the obligations to correct any issues that arise. Establishing a strong accountability framework is essential for ethical engineering practices.\nContext recap: In this section, we will discuss the concept of accountability in engineering. This includes understanding how to trace decisions back to their origins, the rights of individuals to review decisions, and the obligations to correct any issues that arise. Establishing a strong accountability framework is essential for ethical engineering practices."
         },
         {
           "id": "space-missions-engineering-101-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist links technical performance with policy, ethics, and stakeholder trust outcomes."
+          "content": "At the end of our lesson, we will use a comprehensive checklist that connects the technical aspects of our space missions with important elements like policy, ethics, and the trust of those involved. This checklist will help ensure that we are not only achieving our technical goals but also acting responsibly and ethically in our work.\nContext recap: At the end of our lesson, we will use a comprehensive checklist that connects the technical aspects of our space missions with important elements like policy, ethics, and the trust of those involved. This checklist will help ensure that we are not only achieving our technical goals but also acting responsibly and ethically in our work."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const SpaceMissionsEngineering101Module: LearningModule = {
           "id": "space-missions-engineering-101-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft capstone objective, constraints, metrics, and governance gates in one decision charter."
+          "content": "In this interactive activity, you will have the opportunity to create a detailed capstone charter. This charter will include your main objectives for the project, any constraints you might face, the metrics you will use to measure success, and the governance gates that will guide your decision-making process. This is an important step in planning your capstone project effectively.\nContext recap: In this interactive activity, you will have the opportunity to create a detailed capstone charter. This charter will include your main objectives for the project, any constraints you might face, the metrics you will use to measure success, and the governance gates that will guide your decision-making process. This is an important step in planning your capstone project effectively."
         },
         {
           "id": "space-missions-engineering-101-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare evidence-backed defenses for technical, policy, and stakeholder critiques."
+          "content": "As part of our recap, you will prepare well-researched defenses for any critiques that may arise regarding your technical decisions, policy choices, and the perspectives of stakeholders involved in your project. This preparation will help you articulate your ideas clearly and confidently, ensuring that you can address any concerns effectively.\nContext recap: As part of our recap, you will prepare well-researched defenses for any critiques that may arise regarding your technical decisions, policy choices, and the perspectives of stakeholders involved in your project. This preparation will help you articulate your ideas clearly and confidently, ensuring that you can address any concerns effectively."
         }
       ],
       "interactiveActivities": [

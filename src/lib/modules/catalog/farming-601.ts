@@ -47,19 +47,19 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Farming, with focus on farming systems diagnostics and farming operations and execution design."
+          "content": "In this lesson, we will delve into the advanced concepts of scope and boundaries in the field of farming. Understanding these concepts is crucial for anyone looking to improve their farming practices. We will focus on how to effectively diagnose farming systems, which involves analyzing various components of the farming process. Additionally, we will learn how to design operations and execution strategies that not only enhance productivity but also promote sustainability in farming practices. By the end of this lesson, you will have a clearer understanding of how to apply these advanced principles to real-world farming scenarios."
         },
         {
           "id": "farming-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in farming. They will also identify ranges of uncertainty and understand how different systems depend on one another. This foundational knowledge is essential for planning effective interventions in farming practices.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in farming. They will also identify ranges of uncertainty and understand how different systems depend on one another. This foundational knowledge is essential for planning effective interventions in farming practices."
         },
         {
           "id": "farming-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims made in farming practices are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to validate these claims, ensuring that decisions are based on solid evidence.\nContext recap: It is important to ensure that all claims made in farming practices are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to validate these claims, ensuring that decisions are based on solid evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific farming tasks. They will also conduct stress tests on these workflows to see how they perform under challenging conditions, helping to ensure that they are robust and effective.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to specific farming tasks. They will also conduct stress tests on these workflows to see how they perform under challenging conditions, helping to ensure that they are robust and effective."
         },
         {
           "id": "farming-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "This recap focuses on the importance of integrating control gates within workflows. These gates will include checkpoints to monitor progress, criteria for rolling back to previous steps if necessary, and thresholds that trigger escalation when certain limits are reached.\nContext recap: This recap focuses on the importance of integrating control gates within workflows. These gates will include checkpoints to monitor progress, criteria for rolling back to previous steps if necessary, and thresholds that trigger escalation when certain limits are reached."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in farming systems diagnostics and farming impact and tradeoff analysis."
+          "content": "In this lesson, we will explore the different challenges that farmers face when making decisions about their practices. We will look at how to diagnose the impacts of farming on the environment and the community. Additionally, we will analyze the trade-offs that farmers must consider, such as balancing productivity with sustainability. Understanding these competing constraints is essential for effective farming systems management.\nContext recap: In this lesson, we will explore the different challenges that farmers face when making decisions about their practices. We will look at how to diagnose the impacts of farming on the environment and the community. Additionally, we will analyze the trade-offs that farmers must consider, such as balancing productivity with sustainability. Understanding these competing constraints is essential for effective farming systems management."
         },
         {
           "id": "farming-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "Learners will engage in comparing different options available to them in farming. They will evaluate these options based on several important dimensions, including safety, reliability, cost, fairness, and governance, to make informed decisions.\nContext recap: Learners will engage in comparing different options available to them in farming. They will evaluate these options based on several important dimensions, including safety, reliability, cost, fairness, and governance, to make informed decisions.\nWhy this matters: Tradeoff Framing helps learners in Farming connect ideas from Farming Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "farming-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will discuss the structure of decision memos. Each recommendation made should clearly outline the assumptions behind it, the evidence supporting it, the controls in place to manage risks, and the fallback plans that can be implemented if things do not go as expected.\nContext recap: In this recap, we will discuss the structure of decision memos. Each recommendation made should clearly outline the assumptions behind it, the evidence supporting it, the controls in place to manage risks, and the fallback plans that can be implemented if things do not go as expected."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive session, learners will take on the role of operators managing scenario controls. They will learn how to balance performance goals with governance constraints, ensuring that their decisions are both effective and responsible.\nContext recap: In this interactive session, learners will take on the role of operators managing scenario controls. They will learn how to balance performance goals with governance constraints, ensuring that their decisions are both effective and responsible.\nWhy this matters: Live Scenario Controls helps learners in Farming connect ideas from Farming Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "farming-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "This recap emphasizes the importance of designing effective responses that can adapt to changing circumstances. It is crucial that these responses update control gates while maintaining traceability and accountability throughout the process.\nContext recap: This recap emphasizes the importance of designing effective responses that can adapt to changing circumstances. It is crucial that these responses update control gates while maintaining traceability and accountability throughout the process.\nWhy this matters: Adaptive Response Design helps learners in Farming connect ideas from Farming Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits and burdens are distributed among different stakeholder groups in farming. They will also consider the delayed effects of decisions, ensuring a comprehensive understanding of stakeholder impact.\nContext recap: In this lesson, learners will map out how benefits and burdens are distributed among different stakeholder groups in farming. They will also consider the delayed effects of decisions, ensuring a comprehensive understanding of stakeholder impact.\nWhy this matters: Stakeholder Impact Distribution helps learners in Farming connect ideas from Farming Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "farming-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "This section focuses on the architecture of accountability in farming decisions. It is important to integrate elements such as decision traceability, the rights of stakeholders to review decisions, and the obligations to remediate any negative impacts that arise.\nContext recap: This section focuses on the architecture of accountability in farming decisions. It is important to integrate elements such as decision traceability, the rights of stakeholders to review decisions, and the obligations to remediate any negative impacts that arise."
         },
         {
           "id": "farming-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our farming practices. This checklist serves as a guide to help us make responsible decisions in our leadership roles.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies correctly, and promotes resilience in our farming practices. This checklist serves as a guide to help us make responsible decisions in our leadership roles."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Farming601Module: LearningModule = {
           "id": "farming-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and pathways for remediation. This process helps us understand how to present our ideas effectively and prepare for discussions about our findings.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and pathways for remediation. This process helps us understand how to present our ideas effectively and prepare for discussions about our findings."
         },
         {
           "id": "farming-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this recap session, learners will practice their responses to questions and critiques from experts in technical fields, governance, and stakeholder perspectives. This rehearsal is essential for building confidence and ensuring that we can communicate our ideas clearly and effectively when facing challenging questions.\nContext recap: During this recap session, learners will practice their responses to questions and critiques from experts in technical fields, governance, and stakeholder perspectives. This rehearsal is essential for building confidence and ensuring that we can communicate our ideas clearly and effectively when facing challenging questions."
         }
       ],
       "interactiveActivities": [

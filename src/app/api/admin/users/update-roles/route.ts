@@ -9,7 +9,9 @@ import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 const requestSchema = z.object({
   userId: z.string().uuid(),
   isAdmin: z.boolean().optional(),
+  isOwner: z.boolean().optional(),
   isParent: z.boolean().optional(),
+  dataMode: z.enum(["live", "beta"]).optional(),
   confirmText: z.literal("UPDATE_ROLES"),
 });
 
@@ -28,6 +30,9 @@ export async function POST(request: Request) {
   if (parsed.data.userId === auth.userId && parsed.data.isAdmin === false) {
     return NextResponse.json({ error: "You cannot remove your own admin role." }, { status: 400 });
   }
+  if (parsed.data.userId === auth.userId && parsed.data.isOwner === false) {
+    return NextResponse.json({ error: "You cannot remove your own owner role." }, { status: 400 });
+  }
 
   const rate = await enforceAdminActionRateLimit({
     adminUserId: auth.userId,
@@ -43,8 +48,17 @@ export async function POST(request: Request) {
   if (typeof parsed.data.isAdmin === "boolean") {
     updatePayload.is_admin = parsed.data.isAdmin;
   }
+  if (typeof parsed.data.isOwner === "boolean") {
+    updatePayload.is_owner = parsed.data.isOwner;
+    if (parsed.data.isOwner) {
+      updatePayload.is_admin = true;
+    }
+  }
   if (typeof parsed.data.isParent === "boolean") {
     updatePayload.is_parent = parsed.data.isParent;
+  }
+  if (parsed.data.dataMode) {
+    updatePayload.data_mode = parsed.data.dataMode;
   }
 
   if (Object.keys(updatePayload).length === 0) {
@@ -52,6 +66,31 @@ export async function POST(request: Request) {
   }
 
   const admin = createSupabaseAdminClient();
+
+  const { data: targetProfile, error: targetProfileError } = await admin
+    .from("user_profiles")
+    .select("is_owner")
+    .eq("user_id", parsed.data.userId)
+    .maybeSingle<{ is_owner: boolean }>();
+  if (targetProfileError || !targetProfile) {
+    return NextResponse.json({ error: "Target user profile not found." }, { status: 404 });
+  }
+
+  if (parsed.data.isOwner === false && targetProfile.is_owner) {
+    const ownerCountResult = await admin
+      .from("user_profiles")
+      .select("user_id", { count: "exact", head: true })
+      .eq("is_owner", true);
+    if (ownerCountResult.error) {
+      console.error("Unexpected API error.", toSafeErrorRecord(ownerCountResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
+    }
+    const ownerCount = ownerCountResult.count ?? 0;
+    if (ownerCount <= 1) {
+      return NextResponse.json({ error: "Cannot remove the last owner profile." }, { status: 400 });
+    }
+  }
+
   const { error } = await admin
     .from("user_profiles")
     .update(updatePayload)
@@ -68,7 +107,9 @@ export async function POST(request: Request) {
     targetUserId: parsed.data.userId,
     metadata: {
       isAdmin: parsed.data.isAdmin ?? null,
+      isOwner: parsed.data.isOwner ?? null,
       isParent: parsed.data.isParent ?? null,
+      dataMode: parsed.data.dataMode ?? null,
     },
   });
 

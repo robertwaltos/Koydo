@@ -1,0 +1,135 @@
+{
+  "reportDate": "2026-03-03",
+  "generatedBy": "ingest-enrichment-datasets.mjs",
+  "stats": {
+    "totalParsed": 396006,
+    "afterDedup": 377571,
+    "dupesRemoved": 18435,
+    "totalLessons": 800,
+    "totalQuestions": 324327,
+    "totalFlashcards": 21277,
+    "totalChunks": 31967
+  },
+  "modules": [
+    {
+      "id": "enrichment-math-algebra-word-problems-u1-external",
+      "title": "Algebra Word Problems (Enrichment)",
+      "lessons": 100,
+      "questions": 79892,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "aqua-rat"
+      ],
+      "licenses": [
+        "Apache-2.0"
+      ],
+      "overflow": 5227
+    },
+    {
+      "id": "enrichment-biomedical-biomedical-research-qa-u1-external",
+      "title": "Biomedical Research Q&A (Enrichment)",
+      "lessons": 100,
+      "questions": 212136,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "pubmedqa"
+      ],
+      "licenses": [
+        "MIT"
+      ],
+      "overflow": 14043
+    },
+    {
+      "id": "enrichment-general-commonsense-reasoning-u1-external",
+      "title": "Commonsense Reasoning (Enrichment)",
+      "lessons": 100,
+      "questions": 10961,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "commonsenseqa"
+      ],
+      "licenses": [
+        "MIT"
+      ],
+      "overflow": 631
+    },
+    {
+      "id": "enrichment-math-competition-math-u1-external",
+      "title": "Competition Mathematics (Enrichment)",
+      "lessons": 100,
+      "questions": 0,
+      "flashcards": 12486,
+      "chunks": 12486,
+      "sources": [
+        "math-hendrycks"
+      ],
+      "licenses": [
+        "MIT"
+      ],
+      "overflow": 2398
+    },
+    {
+      "id": "enrichment-math-grade-school-math-solutions-u1-external",
+      "title": "Grade-School Math Solutions (Enrichment)",
+      "lessons": 100,
+      "questions": 0,
+      "flashcards": 8791,
+      "chunks": 8792,
+      "sources": [
+        "gsm8k"
+      ],
+      "licenses": [
+        "MIT"
+      ],
+      "overflow": 1659
+    },
+    {
+      "id": "enrichment-science-science-concepts-u1-external",
+      "title": "Science Concepts (Enrichment)",
+      "lessons": 100,
+      "questions": 13586,
+      "flashcards": 0,
+      "chunks": 10689,
+      "sources": [
+        "sciq"
+      ],
+      "licenses": [
+        "CC-BY-NC-3.0"
+      ],
+      "overflow": 2944
+    },
+    {
+      "id": "enrichment-science-science-reasoning-challenge-u1-external",
+      "title": "Science Reasoning (Challenge) (Enrichment)",
+      "lessons": 100,
+      "questions": 2574,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "arc"
+      ],
+      "licenses": [
+        "CC-BY-SA-4.0"
+      ],
+      "overflow": 72
+    },
+    {
+      "id": "enrichment-science-science-reasoning-easy-u1-external",
+      "title": "Science Reasoning (Standard) (Enrichment)",
+      "lessons": 100,
+      "questions": 5178,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "arc"
+      ],
+      "licenses": [
+        "CC-BY-SA-4.0"
+      ],
+      "overflow": 246
+    }
+  ]
+}

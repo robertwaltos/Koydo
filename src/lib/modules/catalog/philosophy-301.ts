@@ -46,19 +46,19 @@ export const Philosophy301Module: LearningModule = {
           "id": "philosophy-301-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "Philosophy at level 301 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In our advanced Philosophy course, using clear and precise language is very important. We will learn how to define the boundaries of our discussions, which means understanding what topics we will cover and what we will not. Additionally, we will identify the main focus of our analysis, which helps us know what we are examining closely. It is also crucial to use consistent terminology, or the same words, throughout our discussions. This consistency allows us to compare our ideas and decisions effectively across different teams. By doing this, we can make our discussions more meaningful and productive, leading to deeper insights and understanding of philosophical concepts.\nContext recap: In our advanced Philosophy course, using clear and precise language is very important. We will learn how to define the boundaries of our discussions, which means understanding what topics we will cover and what we will not. Additionally, we will identify the main focus of our analysis, which helps us know what we are examining closely. It is also crucial to use consistent terminology, or the same words, throughout our discussions.\nWhy this matters: Operating Vocabulary and Scope helps learners in Humanities connect ideas from Philosophy Systems and Analysis to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "philosophy-301-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in Philosophy depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "To truly excel in the study of Philosophy, it is essential to grasp the underlying reasons for events, rather than merely focusing on their outcomes. In this lesson, we will delve into our assumptions, explore the connections between various ideas, and identify any constraints that may limit our understanding. By concentrating on the root causes of issues instead of just their symptoms, we can develop more effective solutions and interventions. This approach not only enhances our critical thinking skills but also empowers us to engage with complex philosophical questions more deeply.\nContext recap: To truly excel in the study of Philosophy, it is essential to grasp the underlying reasons for events, rather than merely focusing on their outcomes. In this lesson, we will delve into our assumptions, explore the connections between various ideas, and identify any constraints that may limit our understanding. By concentrating on the root causes of issues instead of just their symptoms, we can develop more effective solutions and interventions. This approach not only enhances our critical thinking skills but also empowers us to engage with complex philosophical questions more deeply.\nContext recap: To truly excel in the study of Philosophy, it is essential to grasp the underlying reasons for events, rather than merely focusing on their outcomes. In this lesson, we will delve into our assumptions, explore the connections between various ideas, and identify any constraints that may limit our understanding. By concentrating on the root causes of issues instead of just their symptoms, we can develop more effective solutions and interventions. This approach not only enhances our critical thinking skills but also empowers us to engage with complex philosophical questions more deeply.\nWhy this matters: Causal Thinking and Constraints helps learners in Humanities connect ideas from Philosophy Systems and Analysis to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "philosophy-301-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this section, we will introduce important practices that ensure our work is reliable and accountable. We will discuss the importance of setting evidence standards, maintaining a disciplined approach to logging our findings, and creating clear accountability loops. These practices are essential for ensuring that our philosophical inquiries are conducted with integrity and rigor.\nContext recap: In this section, we will introduce important practices that ensure our work is reliable and accountable. We will discuss the importance of setting evidence standards, maintaining a disciplined approach to logging our findings, and creating clear accountability loops. These practices are essential for ensuring that our philosophical inquiries are conducted with integrity and rigor."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const Philosophy301Module: LearningModule = {
           "id": "philosophy-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for argument structure and epistemology, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this interactive activity, you will have the opportunity to create a comprehensive workflow that outlines the structure of an argument and the study of knowledge, known as epistemology. This workflow will include various components such as inputs, checkpoints to assess progress, outputs, and triggers that allow us to revisit earlier steps if necessary. This exercise will help you understand how to organize and analyze philosophical arguments effectively.\nContext recap: In this interactive activity, you will have the opportunity to create a comprehensive workflow that outlines the structure of an argument and the study of knowledge, known as epistemology. This workflow will include various components such as inputs, checkpoints to assess progress, outputs, and triggers that allow us to revisit earlier steps if necessary. This exercise will help you understand how to organize and analyze philosophical arguments effectively."
         },
         {
           "id": "philosophy-301-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we will emphasize the importance of documenting every decision made during our philosophical inquiries. Each decision should be accompanied by a clear rationale, an expected outcome, and a point for verification. This practice will enable us to analyze our work after it is completed, helping us learn from our experiences and improve future decision-making.\nContext recap: In this recap, we will emphasize the importance of documenting every decision made during our philosophical inquiries. Each decision should be accompanied by a clear rationale, an expected outcome, and a point for verification. This practice will enable us to analyze our work after it is completed, helping us learn from our experiences and improve future decision-making."
         }
       ],
       "interactiveActivities": [
@@ -296,19 +296,19 @@ export const Philosophy301Module: LearningModule = {
           "id": "philosophy-301-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for Philosophy scenarios."
+          "content": "When selecting methods for our philosophical inquiries, we must consider various factors such as constraints, the quality of information available, and the potential costs of making errors. In this lesson, you will learn how to compare different methods and justify why a particular approach is suitable for specific philosophical scenarios. This critical thinking exercise will enhance your ability to make informed choices.\nContext recap: When selecting methods for our philosophical inquiries, we must consider various factors such as constraints, the quality of information available, and the potential costs of making errors. In this lesson, you will learn how to compare different methods and justify why a particular approach is suitable for specific philosophical scenarios. This critical thinking exercise will enhance your ability to make informed choices."
         },
         {
           "id": "philosophy-301-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "In this example, we will explore how a metric architecture connects leading indicators, which are early signs of progress, with lagging outcomes, which are the results of our efforts. Additionally, we will look at diagnostic measures that help teams identify any deviations from their goals early on. Understanding this architecture will empower you to respond thoughtfully and effectively to any challenges that arise.\nContext recap: In this example, we will explore how a metric architecture connects leading indicators, which are early signs of progress, with lagging outcomes, which are the results of our efforts. Additionally, we will look at diagnostic measures that help teams identify any deviations from their goals early on. Understanding this architecture will empower you to respond thoughtfully and effectively to any challenges that arise."
         },
         {
           "id": "philosophy-301-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we will categorize different types of failures that can occur in our philosophical work. These failures can be related to data, processes, execution, or governance. By grouping failures in this way, we can develop specific plans to address them, rather than relying on generic solutions. This targeted approach will help us improve our philosophical practices.\nContext recap: In this recap, we will categorize different types of failures that can occur in our philosophical work. These failures can be related to data, processes, execution, or governance. By grouping failures in this way, we can develop specific plans to address them, rather than relying on generic solutions. This targeted approach will help us improve our philosophical practices.\nContext recap: In this recap, we will categorize different types of failures that can occur in our philosophical work. These failures can be related to data, processes, execution, or governance. By grouping failures in this way, we can develop specific plans to address them, rather than relying on generic solutions. This targeted approach will help us improve our philosophical practices.\nWhy this matters: Failure Taxonomy helps learners in Humanities connect ideas from Philosophy Systems and Analysis to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -347,13 +347,13 @@ export const Philosophy301Module: LearningModule = {
           "id": "philosophy-301-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, you will break down a realistic philosophical scenario into its essential components. This includes identifying the main objective, understanding the context, recognizing any constraints, and exploring various intervention options. You will also make notes on the trade-offs involved in each option. This exercise will enhance your analytical skills and deepen your understanding of philosophical problem-solving.\nContext recap: In this interactive case study, you will break down a realistic philosophical scenario into its essential components. This includes identifying the main objective, understanding the context, recognizing any constraints, and exploring various intervention options. You will also make notes on the trade-offs involved in each option. This exercise will enhance your analytical skills and deepen your understanding of philosophical problem-solving.\nContext recap: In this interactive case study, you will break down a realistic philosophical scenario into its essential components. This includes identifying the main objective, understanding the context, recognizing any constraints, and exploring various intervention options. You will also make notes on the trade-offs involved in each option. This exercise will enhance your analytical skills and deepen your understanding of philosophical problem-solving.\nWhy this matters: Case Decomposition helps learners in Humanities connect ideas from Philosophy Systems and Analysis to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "philosophy-301-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "In this recap, you will present a structured proposal for improving a philosophical system. Your proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This exercise will help you practice articulating your ideas clearly and effectively, which is a vital skill in philosophy.\nContext recap: In this recap, you will present a structured proposal for improving a philosophical system. Your proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This exercise will help you practice articulating your ideas clearly and effectively, which is a vital skill in philosophy."
         }
       ],
       "interactiveActivities": [

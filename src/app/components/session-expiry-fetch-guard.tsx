@@ -42,6 +42,12 @@ function resolveRequestUrl(input: RequestInfo | URL): URL | null {
 
 export default function SessionExpiryFetchGuard() {
   useEffect(() => {
+    // Playwright/E2E runs frequently use unauthenticated contexts and intentional
+    // API probing, so redirecting on 401 introduces nondeterministic navigation.
+    if (navigator.webdriver) {
+      return;
+    }
+
     const originalFetch = window.fetch.bind(window);
     let isRedirecting = false;
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Thermometer,
@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { hapticSuccess, hapticSelection, hapticWarning } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /**
  * CLIMATE COMMANDER - Phase 11 (Expansion Frontier)
@@ -29,6 +30,29 @@ export default function ClimateCommander() {
     const [sequestration, setSequestration] = useState(20);
     const [temperature, setTemperature] = useState(1.5);
     const [isSuccess, setIsSuccess] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
+
+    useEffect(() => {
+        if (!isSuccess || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        const climateScore = Math.max(0, 100 - Math.round(Math.abs(temperature - 1) * 100));
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "climate-commander",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, emission + sequestration),
+            score: climateScore,
+            maxScore: 100,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [isSuccess, temperature, emission, sequestration]);
 
     const handleEmissionChange = (val: number) => {
         setEmission(val);

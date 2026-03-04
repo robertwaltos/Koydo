@@ -5,13 +5,21 @@
  * by subject matching (case-insensitive). This is the missing link
  * between the UI learning-path system and the module-lesson graph.
  *
- * Subjects are intentionally broad so every module belongs to >= 1 path.
+ * Subjects are intentionally broad so every module belongs to ≥ 1 path.
  */
 
 import type { LearningModule } from "@/lib/modules/types";
 
 /* ─── Subject Mapping Table ───────────────────────────────────── */
 
+/**
+ * Each learning-path ID maps to an array of subject matchers.
+ * A matcher is tested as a **case-insensitive substring** against
+ * `module.subject` — so `"math"` matches `"Math"`, `"Advanced Math"`,
+ * `"Basic Math"`, `"Mathematics"`, etc.
+ *
+ * Order doesn't matter; a module can appear in multiple paths.
+ */
 const PATH_SUBJECT_MATCHERS: Record<string, string[]> = {
   // ── Foundational progression ───────────────────────────────
   "numbers":  ["math", "basic math", "financial literacy", "accounting"],
@@ -62,6 +70,7 @@ function subjectMatchesAny(subject: string, matchers: string[]): boolean {
 
 /**
  * Return modules whose `subject` matches the given path ID.
+ * Uses the `PATH_SUBJECT_MATCHERS` table for subject-based matching.
  */
 export function getModulesForPath(
   pathId: string,
@@ -74,6 +83,7 @@ export function getModulesForPath(
 
 /**
  * Return a Map from path-ID → list of module IDs.
+ * Useful for pre-computing the mapping once.
  */
 export function buildPathModuleIndex(
   allModules: LearningModule[],
@@ -81,7 +91,10 @@ export function buildPathModuleIndex(
   const index = new Map<string, string[]>();
   for (const pathId of Object.keys(PATH_SUBJECT_MATCHERS)) {
     const modules = getModulesForPath(pathId, allModules);
-    index.set(pathId, modules.map((m) => m.id));
+    index.set(
+      pathId,
+      modules.map((m) => m.id),
+    );
   }
   return index;
 }
@@ -89,7 +102,9 @@ export function buildPathModuleIndex(
 /**
  * Inverse lookup: for a given module, return all path IDs it belongs to.
  */
-export function getPathsForModule(moduleSubject: string): string[] {
+export function getPathsForModule(
+  moduleSubject: string,
+): string[] {
   const result: string[] = [];
   for (const [pathId, matchers] of Object.entries(PATH_SUBJECT_MATCHERS)) {
     if (subjectMatchesAny(moduleSubject, matchers)) {

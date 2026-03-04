@@ -5,6 +5,7 @@ import { toSafeErrorRecord } from '@/lib/logging/safe-error';
 import { serverEnv } from '@/lib/config/env';
 import { resolveCadenceFromProductId } from '@/lib/billing/revenuecat-matrix';
 import { enforceIpRateLimit } from '@/lib/security/ip-rate-limit';
+import { resolveClassroomAccessForUser } from '@/lib/organizations/classroom-access';
 
 /**
  * GET /api/subscription/status
@@ -72,6 +73,11 @@ export async function GET(request: Request) {
       );
     }
 
+    const classroomAccess = await resolveClassroomAccessForUser({
+      userId: user.id,
+      requestHeaders: request.headers,
+    });
+
     // Fetch subscription row from Supabase
     const { data: subscription, error: dbError } = await supabase
       .from('subscriptions')
@@ -102,6 +108,7 @@ export async function GET(request: Request) {
         isInTrial: false,
         willRenew: false,
         managementUrl: null,
+        classroomAccess,
       });
     }
 
@@ -136,6 +143,7 @@ export async function GET(request: Request) {
       isInTrial: subscription.is_in_trial ?? false,
       willRenew: !(subscription.cancel_at_period_end ?? false),
       managementUrl,
+      classroomAccess,
     });
   } catch (err) {
     console.error('[subscription/status] Unexpected error.', toSafeErrorRecord(err));

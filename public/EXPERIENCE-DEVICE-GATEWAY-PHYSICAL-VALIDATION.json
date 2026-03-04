@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "voyager-zero-device-gateway-physical-v1",
+  "generatedAt": "2026-03-03T01:27:01.336Z",
+  "updatedAt": "2026-03-04T15:43:44.582Z",
+  "devices": [
+    {
+      "deviceId": "apple-vision-pro",
+      "deviceName": "Apple Vision Pro",
+      "tester": "",
+      "runtime": {
+        "browser": "",
+        "os": "",
+        "appVersion": "",
+        "notes": ""
+      },
+      "checks": [
+        {
+          "checkId": "webxr_session_launch",
+          "label": "WebXR session launch succeeds",
+          "status": "pending",
+          "notes": "",
+          "evidence": []
+        },
+        {
+          "checkId": "tier_classification_parity",
+          "label": "Tier classification matches expected hardware tier",
+          "status": "pending",
+          "notes": "",
+          "evidence": []
+        },
+        {
+          "checkId": "telemetry_event_captured",
+          "label": "Telemetry event persisted in /api/telemetry/events",
+          "status": "pending",
+          "notes": "",
+          "evidence": []
+        },
+        {
+          "checkId": "discovery_confidence_logged",
+          "label": "Discovery confidence fields logged in telemetry payload",
+          "status": "pending",
+          "notes": "",
+          "evidence": []
+        }
+      ],
+      "telemetry": {
+        "eventTimestamp": "",
+        "eventSource": "",
+        "detectionVersion": "",
+        "tier": null,
+        "gpuTier": null,
+        "discoveryConfidence": null,
+        "discoveryConfidenceBand": "",
+        "streamingTargetCount": null,
+        "castTargets": []
+      },
+      "notes": "No live, non-simulated telemetry evidence selected."
+    },
+    {
+      "deviceId": "meta-quest",
+      "deviceName": "Meta Quest",
+      "tester": "",
+      "runtime": {
+        "browser": "",
+        "os": "",
+        "appVersion": "",
+        "notes": ""
+      },
+      "checks": [
+        {
+          "checkId": "webxr_session_launch",
+          "label": "WebXR session launch succeeds",
+          "status": "pending",
+          "notes": "",
+          "evidence": []
+        },
+        {
+          "checkId": "tier_classification_parity",
+          "label": "Tier classification matches expected hardware tier",
+          "status": "pending",
+          "notes": "",
+          "evidence": []
+        },
+        {
+          "checkId": "telemetry_event_captured",
+          "label": "Telemetry event persisted in /api/telemetry/events",
+          "status": "pending",
+          "notes": "",
+          "evidence": []
+        },
+        {
+          "checkId": "discovery_confidence_logged",
+          "label": "Discovery confidence fields logged in telemetry payload",
+          "status": "pending",
+          "notes": "",
+          "evidence": []
+        }
+      ],
+      "telemetry": {
+        "eventTimestamp": "",
+        "eventSource": "",
+        "detectionVersion": "",
+        "tier": null,
+        "gpuTier": null,
+        "discoveryConfidence": null,
+        "discoveryConfidenceBand": "",
+        "streamingTargetCount": null,
+        "castTargets": []
+      },
+      "notes": "No live, non-simulated telemetry evidence selected."
+    }
+  ],
+  "signOff": {
+    "status": "pending",
+    "approver": "",
+    "approvedAt": "",
+    "notes": "Pending live non-simulated Vision Pro + Quest telemetry captures."
+  }
+}

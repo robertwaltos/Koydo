@@ -1,0 +1,672 @@
+{
+  "generatedAt": "2026-03-04T15:43:43.079Z",
+  "batchId": "batch-031",
+  "batchNumber": 31,
+  "totalBatches": 42,
+  "throttle": {
+    "pauseMs": 120,
+    "sequential": true
+  },
+  "games": [
+    {
+      "id": "zone-096",
+      "title": "Breeze Chronicle",
+      "shortName": "Breeze Chronicle",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🎨",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-097",
+      "title": "Sprout Chronicle",
+      "shortName": "Sprout Chronicle",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🌠",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-098",
+      "title": "Pebble Chronicle",
+      "shortName": "Pebble Chronicle",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🏁",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-099",
+      "title": "Nimbus Chronicle",
+      "shortName": "Nimbus Chronicle",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "arcade",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-100",
+      "title": "Flare Chronicle",
+      "shortName": "Flare Chronicle",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "adventure",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-101",
+      "title": "Sky Frontier",
+      "shortName": "Sky Frontier",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "logic",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-102",
+      "title": "River Frontier",
+      "shortName": "River Frontier",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "creative",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-103",
+      "title": "Echo Frontier",
+      "shortName": "Echo Frontier",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "science",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "subject-mastery",
+        "label": "Subject Mastery",
+        "subject": "cross-subject",
+        "tags": [
+          "educational",
+          "assessment",
+          "adaptive-difficulty"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-quiz-factory",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-104",
+      "title": "Luna Frontier",
+      "shortName": "Luna Frontier",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "math",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "math-lab",
+        "label": "Math Lab",
+        "subject": "math",
+        "tags": [
+          "math",
+          "adaptive-difficulty",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "2048",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-105",
+      "title": "Nova Frontier",
+      "shortName": "Nova Frontier",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "literacy",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "story-explorer",
+        "label": "Story Explorer",
+        "subject": "geography",
+        "tags": [
+          "dora-style",
+          "exploration",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-experience-template",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-106",
+      "title": "Terra Frontier",
+      "shortName": "Terra Frontier",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🚀",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-107",
+      "title": "Comet Frontier",
+      "shortName": "Comet Frontier",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🌌",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    }
+  ]
+}

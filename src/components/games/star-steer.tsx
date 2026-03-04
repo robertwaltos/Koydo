@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Navigation, Compass, Star, Map as MapIcon, Info, ChevronRight, Target, Move, Rocket, Sparkles, Crosshair, ZoomIn } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Star Steer Types --- */
 type Constellation = "ORION" | "LYRA" | "CYGNUS" | "CASSIOPEIA";
@@ -26,6 +27,9 @@ export default function StarSteer() {
     const [viewAngle, setViewAngle] = useState({ yaw: 0, pitch: 0 });
     const [targets, setTargets] = useState<string[]>([]);
     const [zoom, setZoom] = useState(1);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const STARS: StarData[] = useMemo(() => [
         { id: "S1", name: "Rigel", constellation: "ORION", x: 25, y: 75, magnitude: 1.2 },
@@ -34,6 +38,25 @@ export default function StarSteer() {
         { id: "S4", name: "Deneb", constellation: "CYGNUS", x: 80, y: 50, magnitude: 1.3 },
         { id: "S5", name: "Cassiopeia A", constellation: "CASSIOPEIA", x: 15, y: 20, magnitude: 1.4 }
     ], []);
+
+    useEffect(() => {
+        if (gameState !== "SUCCESS" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "star-steer",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, targets.length),
+            score: targets.length,
+            maxScore: STARS.length,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, targets.length, STARS.length]);
 
     const updateView = useCallback((dyaw: number, dpitch: number) => {
         if (gameState !== "NAVIGATING") return;

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     Zap,
@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { hapticSuccess, hapticSelection, hapticWarning } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /**
  * FUSION FOUNDER - Phase 10 (Advanced Engineering)
@@ -26,6 +27,28 @@ export default function FusionFounder() {
     const [containment, setContainment] = useState(50);
     const [temperature, setTemperature] = useState(100);
     const [isSuccess, setIsSuccess] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
+
+    useEffect(() => {
+        if (!isSuccess || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "fusion-founder",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, containment),
+            score: Math.round(containment),
+            maxScore: 100,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [isSuccess, containment]);
 
     const handleContainmentChange = (val: number) => {
         setContainment(val);
@@ -44,6 +67,7 @@ export default function FusionFounder() {
     const handleComplete = () => {
         hapticSuccess();
         setIsSuccess(true);
+        setGameState("success");
     };
 
     return (
