@@ -160,7 +160,9 @@ export default function Zone087PixelMerge2048() {
               elapsedMs: Date.now() - startTime,
               interactions,
               difficulty: "medium",
-            });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
           }, 1500);
         } else if (earned >= 256) {
           mascot.speak(`${earned} pts! Huge merge!`, "celebrate");
@@ -178,7 +180,9 @@ export default function Zone087PixelMerge2048() {
             elapsedMs: Date.now() - startTime,
             interactions,
             difficulty: "medium",
-          });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
           mascot.speak("No more moves! Great run!", "encourage");
         }, 500);
       }
@@ -219,7 +223,7 @@ export default function Zone087PixelMerge2048() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="pixel" size="sm" />
+        <MascotFriend id="pixel" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Pixel Merge 2048</h2>
           <p className="text-xs text-stone-500">Swipe to merge tiles — reach 2048!</p>

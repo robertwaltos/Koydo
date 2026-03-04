@@ -83,6 +83,8 @@ export default function Zone082PixelShaftDrop() {
       elapsedMs: Date.now() - startTime,
       interactions: interactionsRef.current,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     if (finalScore >= 150) mascot.speak("Shaft master! Incredible depth!", "celebrate");
     else mascot.speak("You fell! Bounce off platforms to dive deeper.", "encourage");
@@ -262,7 +264,7 @@ export default function Zone082PixelShaftDrop() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="pixel" size="sm" />
+        <MascotFriend id="pixel" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Pixel Shaft Drop</h2>
           <p className="text-xs text-stone-500">Fall as deep as possible — avoid the spikes!</p>

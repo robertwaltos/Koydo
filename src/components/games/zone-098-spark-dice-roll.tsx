@@ -142,7 +142,9 @@ export default function Zone098SparkDiceRoll() {
           elapsedMs: Date.now() - startTime,
           interactions,
           difficulty: "easy",
-        });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
         mascot.speak(`Final score: ${totalScore + pts}! Great dice game!`, "celebrate");
       }, 600);
     } else {
@@ -158,7 +160,7 @@ export default function Zone098SparkDiceRoll() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="spark" size="sm" />
+        <MascotFriend id="spark" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Spark Dice Roll</h2>
           <p className="text-xs text-stone-500">Roll, hold, score combos!</p>

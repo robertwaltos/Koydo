@@ -378,7 +378,7 @@ function reduceGame(state: GameState, action: Action): GameState {
         }
       }
 
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let pendingEvent: Omit<RuntimeEvent, "id"> | null = null;
 

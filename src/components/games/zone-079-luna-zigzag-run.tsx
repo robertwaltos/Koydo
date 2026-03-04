@@ -134,7 +134,9 @@ export default function Zone079LunaZigzagRun() {
           elapsedMs: Date.now() - startTime,
           interactions: interactionsRef.current,
           difficulty: "medium",
-        });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
         if (s.score >= 200) mascot.speak("Amazing run! Zigzag master!", "celebrate");
         else mascot.speak("Good try! Tap to turn before hitting walls.", "encourage");
         draw();
@@ -185,7 +187,7 @@ export default function Zone079LunaZigzagRun() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="luna" size="sm" />
+        <MascotFriend id="luna" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Luna Zigzag Run</h2>
           <p className="text-xs text-stone-500">Tap to flip direction — stay on the path!</p>

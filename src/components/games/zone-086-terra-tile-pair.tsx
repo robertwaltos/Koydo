@@ -91,7 +91,9 @@ export default function Zone086TerraTilePair() {
         elapsedMs: elapsed,
         interactions,
         difficulty: "medium",
-      });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
       mascot.speak("All tiles matched! Terra Tile Master!", "celebrate");
       return;
     }
@@ -116,7 +118,9 @@ export default function Zone086TerraTilePair() {
         elapsedMs: elapsed,
         interactions,
         difficulty: "medium",
-      });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
       mascot.speak("No more free pairs — but great effort!", "encourage");
     }
   }, [interactions, mascot, startTime, totalPairs]);
@@ -181,7 +185,7 @@ export default function Zone086TerraTilePair() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="terra" size="sm" />
+        <MascotFriend id="terra" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Terra Tile Pair</h2>
           <p className="text-xs text-stone-500">Match free edge tiles with the same symbol!</p>

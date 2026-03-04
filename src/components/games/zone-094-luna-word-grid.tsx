@@ -110,7 +110,9 @@ export default function Zone094LunaWordGrid() {
             elapsedMs: Date.now() - startTime,
             interactions: newFound.size,
             difficulty: "medium",
-          });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
           mascot.speak("All words found! Incredible search skills!", "celebrate");
         }
         return;
@@ -164,7 +166,7 @@ export default function Zone094LunaWordGrid() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="luna" size="sm" />
+        <MascotFriend id="luna" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Luna Word Grid</h2>
           <p className="text-xs text-stone-500">Drag to find hidden science words!</p>

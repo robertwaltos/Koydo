@@ -153,6 +153,8 @@ export default function Zone077PixelBlockDrop() {
       elapsedMs,
       interactions: interactionCount,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     if (totalLines >= 10) {
       mascot.speak("Pixel master! Incredible stacking!", "celebrate");
@@ -303,7 +305,7 @@ export default function Zone077PixelBlockDrop() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="pixel" size="sm" />
+        <MascotFriend id="pixel" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Pixel Block Drop</h2>
           <p className="text-xs text-stone-500">Stack & clear lines to score!</p>

@@ -108,7 +108,9 @@ export default function Zone084EchoAnagramBlast() {
         elapsedMs: Date.now() - startTime,
         interactions,
         difficulty: "medium",
-      });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
       if (newScore >= TOTAL_ROUNDS * 70) mascot.speak("Word master! Perfect anagram skills!", "celebrate");
       else mascot.speak("Great wordplay! Anagram training complete.", "happy");
       return;
@@ -165,7 +167,7 @@ export default function Zone084EchoAnagramBlast() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="echo" size="sm" />
+        <MascotFriend id="echo" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Echo Anagram Blast</h2>
           <p className="text-xs text-stone-500">Unscramble the word before time runs out!</p>

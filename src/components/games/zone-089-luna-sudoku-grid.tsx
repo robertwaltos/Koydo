@@ -122,7 +122,9 @@ export default function Zone089LunaSudokuGrid() {
             elapsedMs: Date.now() - startTime,
             interactions,
             difficulty: "hard",
-          });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
         }
       }
       return next;
@@ -161,7 +163,7 @@ export default function Zone089LunaSudokuGrid() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="luna" size="sm" />
+        <MascotFriend id="luna" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Luna Sudoku Grid</h2>
           <p className="text-xs text-stone-500">Fill 1–9 in every row, column & box</p>

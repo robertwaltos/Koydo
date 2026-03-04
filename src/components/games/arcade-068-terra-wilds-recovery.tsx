@@ -195,7 +195,7 @@ function reduceGame(state: GameState, action: Action): GameState {
       const combo = safe >= 4 ? state.combo + 1 : 0;
       const bestCombo = Math.max(state.bestCombo, combo);
       let stabilizers = state.stabilizers;
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let tone: EventTone = "neutral";
       let mood: RuntimeEvent["mood"] = "thinking";

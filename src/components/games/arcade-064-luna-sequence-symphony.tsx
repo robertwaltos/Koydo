@@ -233,7 +233,7 @@ export default function Arcade064LunaSequenceSymphony() {
 
   useEffect(() => {
     if (phase !== "preview") return;
-    const timers: Array<ReturnType<typeof window.setTimeout>> = [];
+    const timers: number[] = [];
     const sequence = MASTER_SEQUENCE.slice(0, roundIndex + 1);
     const beatMs = previewStepMs(roundIndex);
     let cursor = 0;

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export type MascotMood = "idle" | "happy" | "thinking" | "sad" | "cheering" | "surprised";
+export type MascotMood = "idle" | "happy" | "thinking" | "sad" | "cheering" | "surprised" | "celebrate" | "encourage" | "confused";
 
 type KoydoMascotProps = {
     mood?: MascotMood;

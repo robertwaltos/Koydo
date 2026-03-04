@@ -84,6 +84,8 @@ export default function Zone078SparkBreakoutSurge() {
       elapsedMs: Date.now() - startTime,
       interactions: interactionsRef.current,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     if (won) {
       hapticSuccess();
@@ -283,7 +285,7 @@ export default function Zone078SparkBreakoutSurge() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="spark" size="sm" />
+        <MascotFriend id="spark" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Spark Breakout Surge</h2>
           <p className="text-xs text-stone-500">Smash all the bricks — don't drop the ball!</p>

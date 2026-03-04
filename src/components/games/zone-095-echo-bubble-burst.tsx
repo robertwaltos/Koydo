@@ -77,6 +77,8 @@ export default function Zone095EchoBubbleBurst() {
       elapsedMs: Date.now() - (stateRef.current?.startTime ?? Date.now()),
       interactions: score / 10,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     if (won) { hapticSuccess(); mascot.speak("Board cleared! Bubble master!", "celebrate"); }
     else { hapticError(); mascot.speak("Bubbles reached the bottom! Try again!", "encourage"); }
@@ -298,7 +300,7 @@ export default function Zone095EchoBubbleBurst() {
   return (
     <div className="flex flex-col items-center gap-3 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="echo" size="sm" />
+        <MascotFriend id="echo" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Echo Bubble Burst</h2>
           <p className="text-xs text-stone-500">Aim, shoot, match 3+!</p>

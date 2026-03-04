@@ -208,7 +208,7 @@ function resolveHit(state: GameState, note: Note, notes: Note[]): GameState {
   let combo = state.combo;
   let bestCombo = state.bestCombo;
   let burstCharges = state.burstCharges;
-  let phase = state.phase;
+  let phase: Phase = state.phase;
   let outcome = state.outcome;
   let mood: RuntimeEvent["mood"] = success ? "happy" : "sad";
   let message = success ? "Luna: timing window captured." : "Luna: phrase lane mismatch.";
@@ -464,7 +464,7 @@ function reduceGame(state: GameState, action: Action): GameState {
         score += 1;
       }
 
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let pendingEvent: Omit<RuntimeEvent, "id"> | null = null;
 

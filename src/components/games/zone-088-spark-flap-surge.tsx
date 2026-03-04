@@ -78,6 +78,8 @@ export default function Zone088SparkFlapSurge() {
       elapsedMs: Date.now() - s.startTime,
       interactions: s.interactions,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     mascot.speak(s.score >= 10 ? `${s.score} pipes! Great flappin'!` : "Keep flapping! You'll go further!", "encourage");
   }, [mascot]);
@@ -229,7 +231,7 @@ export default function Zone088SparkFlapSurge() {
   return (
     <div className="flex flex-col items-center gap-3 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="spark" size="sm" />
+        <MascotFriend id="spark" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Spark Flap Surge</h2>
           <p className="text-xs text-stone-500">Tap to flap · Dodge every pipe!</p>

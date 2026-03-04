@@ -91,7 +91,9 @@ export default function Zone092PixelCardMatch() {
                 elapsedMs: Date.now() - startTime,
                 interactions: attempts + 1,
                 difficulty: "easy",
-              });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
               mascot.speak("All pairs found! Excellent memory!", "celebrate");
             } else if (next % 3 === 0) {
               mascot.speak("Great match!", "happy");
@@ -118,7 +120,7 @@ export default function Zone092PixelCardMatch() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="pixel" size="sm" />
+        <MascotFriend id="pixel" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Pixel Card Match</h2>
           <p className="text-xs text-stone-500">Find all 8 matching pairs!</p>

@@ -56,6 +56,8 @@ export default function Zone097PixelTypeRush() {
       elapsedMs: Date.now() - startTimeRef.current,
       interactions: finalScore / 10 + finalErrors,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     mascot.speak(finalScore >= 150 ? "Lightning fast! Top typist!" : `${finalScore} pts! Keep practicing!`, "celebrate");
   }, [mascot]);
@@ -126,7 +128,7 @@ export default function Zone097PixelTypeRush() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="pixel" size="sm" />
+        <MascotFriend id="pixel" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Pixel Type Rush</h2>
           <p className="text-xs text-stone-500">Type science words as fast as you can!</p>

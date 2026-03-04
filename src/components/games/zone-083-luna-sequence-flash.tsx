@@ -64,7 +64,7 @@ export default function Zone083LunaSequenceFlash() {
     phaseRef.current = "showing";
     await new Promise((r) => setTimeout(r, 500));
     for (const colorId of seq) {
-      if (phaseRef.current === "complete") return;
+      if ((phaseRef.current as Phase) === "complete") return;
       setLitId(colorId);
       playTone(COLORS[colorId].sound);
       await new Promise((r) => setTimeout(r, 600));
@@ -108,7 +108,9 @@ export default function Zone083LunaSequenceFlash() {
         elapsedMs: Date.now() - startTime,
         interactions: interactions + 1,
         difficulty: "medium",
-      });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
       mascot.speak(`Oops! You reached round ${round}. Great memory workout!`, "encourage");
       return;
     }
@@ -133,7 +135,9 @@ export default function Zone083LunaSequenceFlash() {
           elapsedMs: Date.now() - startTime,
           interactions: interactions + 1,
           difficulty: "medium",
-        });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
         mascot.speak("Perfect memory! All 10 rounds complete!", "celebrate");
         return;
       }
@@ -160,7 +164,7 @@ export default function Zone083LunaSequenceFlash() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="luna" size="sm" />
+        <MascotFriend id="luna" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Luna Sequence Flash</h2>
           <p className="text-xs text-stone-500">Remember and repeat the color sequence!</p>

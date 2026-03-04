@@ -131,6 +131,8 @@ export default function Zone081TerraMinefieldMap() {
       elapsedMs: elapsed,
       interactions,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     mascot.speak("All mines found! Terra Minefield Master!", "celebrate");
   }, [interactions, mascot, startTime]);
@@ -152,6 +154,8 @@ export default function Zone081TerraMinefieldMap() {
       elapsedMs: Date.now() - startTime,
       interactions,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     mascot.speak("BOOM! You hit a mine. Flag suspicious cells first next time!", "encourage");
   }, [interactions, mascot, startTime]);
@@ -226,7 +230,7 @@ export default function Zone081TerraMinefieldMap() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="terra" size="sm" />
+        <MascotFriend id="terra" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Terra Minefield Map</h2>
           <p className="text-xs text-stone-500">Reveal safe squares, flag the mines!</p>

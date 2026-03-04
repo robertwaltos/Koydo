@@ -287,7 +287,7 @@ function reduceGame(state: GameState, action: Action): GameState {
       let sequenceIndex = state.sequenceIndex;
       let sequence = state.sequence;
       let pulseCharges = state.pulseCharges;
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       const tone: EventTone = success ? "good" : "bad";
       let mood: RuntimeEvent["mood"] = success ? "happy" : "sad";
@@ -432,7 +432,7 @@ function reduceGame(state: GameState, action: Action): GameState {
         score += 1;
       }
 
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let pendingEvent: Omit<RuntimeEvent, "id"> | null = null;
 

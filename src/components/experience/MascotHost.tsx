@@ -11,6 +11,7 @@ interface MascotContextType {
     setMood: (mood: MascotMood) => void;
     message: string | null;
     setMessage: (msg: string | null) => void;
+    speak: (text: string, newMood?: MascotMood) => void;
     friendId: string;
     interactionCount: number;
     friendshipLevel: number;
@@ -74,6 +75,12 @@ export default function MascotHost({
         return () => clearInterval(idleInterval);
     }, [mood]);
 
+    const speak = (text: string, newMood?: MascotMood) => {
+        if (newMood) setMood(newMood);
+        setMessage(text);
+        setTimeout(() => setMessage(null), 4000);
+    };
+
     const handleMascotClick = () => {
         setMood("happy");
         setInteractionCount(prev => prev + 1);
@@ -91,7 +98,7 @@ export default function MascotHost({
     };
 
     return (
-        <MascotContext.Provider value={{ mood, setMood, message, setMessage, friendId, interactionCount, friendshipLevel }}>
+        <MascotContext.Provider value={{ mood, setMood, message, setMessage, speak, friendId, interactionCount, friendshipLevel }}>
             <div className="relative isolate min-h-screen w-full overflow-x-hidden pt-16">
                 {/* The Mascot Layer */}
                 <div className="pointer-events-none fixed inset-0 z-50 overflow-hidden">

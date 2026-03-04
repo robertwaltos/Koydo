@@ -58,8 +58,8 @@ export default function Zone085SparkIdleForge() {
   const totalRef = useRef(totalSparks);
   const upgradesRef = useRef(upgrades);
   const phaseRef = useRef<Phase>("ready");
-  const tickRef = useRef<ReturnType<typeof setInterval>>();
-  const countdownRef = useRef<ReturnType<typeof setInterval>>();
+  const tickRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const countdownRef = useRef<ReturnType<typeof setInterval>>(undefined);
 
   useEffect(() => { sparksRef.current = sparks; }, [sparks]);
   useEffect(() => { totalRef.current = totalSparks; }, [totalSparks]);
@@ -87,6 +87,8 @@ export default function Zone085SparkIdleForge() {
       elapsedMs: Date.now() - startTime,
       interactions,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     if (finalSparks >= GOAL_SPARKS) mascot.speak("GOAL REACHED! Spark Forge Master!", "celebrate");
     else mascot.speak(`Time's up! ${Math.floor(finalSparks).toLocaleString()} sparks generated. Not bad!`, "happy");
@@ -170,7 +172,7 @@ export default function Zone085SparkIdleForge() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="spark" size="sm" />
+        <MascotFriend id="spark" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Spark Idle Forge</h2>
           <p className="text-xs text-stone-500">Click to forge sparks — buy upgrades to automate!</p>

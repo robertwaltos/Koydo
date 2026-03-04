@@ -139,7 +139,9 @@ export default function Zone080EchoWordRescue() {
         elapsedMs: Date.now() - startTime,
         interactions,
         difficulty: "medium",
-      });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
       if (score >= 400) mascot.speak("Word genius! Echo is impressed!", "celebrate");
       else mascot.speak("Great vocabulary workout!", "happy");
     }
@@ -167,7 +169,7 @@ export default function Zone080EchoWordRescue() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="echo" size="sm" />
+        <MascotFriend id="echo" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Echo Word Rescue</h2>
           <p className="text-xs text-stone-500">Guess the word before the figure is complete!</p>

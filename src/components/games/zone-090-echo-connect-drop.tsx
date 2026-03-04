@@ -106,6 +106,8 @@ export default function Zone090EchoConnectDrop() {
       elapsedMs: Date.now() - startTime,
       interactions: moves,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     if (result === 1) { hapticSuccess(); mascot.speak("Connect 4! You beat the AI! Amazing!", "celebrate"); }
     else if (result === "draw") mascot.speak("It's a draw! Neck and neck!", "encourage");
@@ -160,7 +162,7 @@ export default function Zone090EchoConnectDrop() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="echo" size="sm" />
+        <MascotFriend id="echo" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Echo Connect Drop</h2>
           <p className="text-xs text-stone-500">Connect 4 in a row to win!</p>

@@ -79,6 +79,8 @@ export default function Zone093SparkSnakeTrail() {
       elapsedMs: Date.now() - s.startTime,
       interactions: s.score,
       difficulty: "medium",
+      source: "component",
+      occurredAt: new Date().toISOString(),
     });
     mascot.speak(s.score >= 100 ? `${s.score} pts! Legendary snake!` : "Great run! Try to eat more!", "encourage");
   }, [mascot]);
@@ -197,7 +199,7 @@ export default function Zone093SparkSnakeTrail() {
   return (
     <div className="flex flex-col items-center gap-3 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="spark" size="sm" />
+        <MascotFriend id="spark" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Spark Snake Trail</h2>
           <p className="text-xs text-stone-500">Eat the dots · Don't crash!</p>

@@ -124,7 +124,9 @@ export default function Zone096TerraCrossword() {
           elapsedMs: Date.now() - startTime,
           interactions,
           difficulty: "medium",
-        });
+      source: "component",
+      occurredAt: new Date().toISOString(),
+    });
         mascot.speak("Crossword complete! Brilliant solver!", "celebrate");
       }
     }
@@ -143,7 +145,7 @@ export default function Zone096TerraCrossword() {
   return (
     <div className="flex flex-col items-center gap-4 py-4 select-none">
       <div className="flex items-center gap-3">
-        <MascotFriend friendId="terra" size="sm" />
+        <MascotFriend id="terra" size="sm" />
         <div className="text-center">
           <h2 className="text-xl font-black text-stone-800">Terra Crossword</h2>
           <p className="text-xs text-stone-500">Fill in the mini crossword!</p>
