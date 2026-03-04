@@ -219,7 +219,7 @@
     "db:check:report": "node scripts/check-db-readiness.mjs --write-report",
     "ops:doctor": "npm run env:check && npm run db:check && npm run curriculum:validate",
     "prebuild": "npm run modules:sync && node scripts/compile-catalog-json.mjs",
-    "build": "node --max-old-space-size=6144 ./node_modules/next/dist/bin/next build --webpack",
+    "build": "node --max-old-space-size=14336 ./node_modules/next/dist/bin/next build --webpack",
     "start": "next start",
     "lint": "eslint",
     "seed:supabase": "node scripts/seed-supabase.mjs",
