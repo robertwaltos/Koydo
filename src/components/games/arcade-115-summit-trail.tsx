@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 115",
   title: "Summit Trail",
   mascot: "terra",
-  startMessage: "Terra: stay adaptive and pick evidence-backed actions as pressure scales in Summit Trail.",
-  winMessage: "Terra: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Terra: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Terra: hold system stability and pick resilient interventions as pressure escalates in Summit Trail.",
+  winMessage: "Terra: summit systems stabilized. Excellent engineering judgment.",
+  failMessage: "Terra: resilience threshold breached. Retry with safer tradeoffs.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "stability lane",
+    "load node",
+    "safety ring",
+    "control rail",
+    "resilience grid",
+    "systems core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Structural stress detected on",
+    "Choose the intervention that preserves safety in",
+    "Only one action limits cascade risk in",
+    "Critical systems alert: stabilize"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
+    "Reinforce",
+    "Buffer",
+    "Regulate",
     "Calibrate",
-    "Secure",
-    "Balance"
+    "Stabilize"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
+    "Overload",
     "Bypass",
-    "Overload"
+    "Strip",
+    "Spike",
+    "Rush"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Safety margins reduce failure cascades.",
+    "High pressure needs disciplined sequencing.",
+    "Evidence-backed tradeoffs outperform shortcuts.",
+    "Early stabilization prevents compounding damage."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_16%,rgba(74,222,128,0.24),transparent_46%),radial-gradient(circle_at_82%_84%,rgba(34,197,94,0.18),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 9,
 };
 
 export default function Arcade115SummitTrail() {

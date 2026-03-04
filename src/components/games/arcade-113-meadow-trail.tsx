@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 113",
   title: "Meadow Trail",
   mascot: "echo",
-  startMessage: "Echo: stay adaptive and pick evidence-backed actions as pressure scales in Meadow Trail.",
-  winMessage: "Echo: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Echo: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Echo: maintain textual coherence and choose evidence-grounded interpretations in Meadow Trail.",
+  winMessage: "Echo: interpretation mesh stabilized. Strong language reasoning.",
+  failMessage: "Echo: meaning drift detected. Retry with tighter evidence links.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "context lane",
+    "evidence node",
+    "claim ring",
+    "narrative rail",
+    "reference grid",
+    "meaning core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Semantic ambiguity detected on",
+    "Choose the strongest evidence move for",
+    "Only one reading preserves coherence in",
+    "Context shift incoming: stabilize"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Corroborate",
+    "Contextualize",
+    "Clarify",
+    "Anchor",
+    "Verify"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
-    "Bypass",
-    "Overload"
+    "Assume",
+    "Speculate",
+    "Overstate",
+    "Flatten",
+    "Distort"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Context controls interpretation quality.",
+    "Evidence must support each claim jump.",
+    "Coherence improves when assumptions are explicit.",
+    "Resolve ambiguity before accelerating."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_20%,rgba(167,139,250,0.24),transparent_46%),radial-gradient(circle_at_82%_82%,rgba(139,92,246,0.2),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 8,
 };
 
 export default function Arcade113MeadowTrail() {

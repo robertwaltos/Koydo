@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 114",
   title: "Dawn Trail",
   mascot: "luna",
-  startMessage: "Luna: stay adaptive and pick evidence-backed actions as pressure scales in Dawn Trail.",
-  winMessage: "Luna: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Luna: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Luna: preserve rhythmic structure and visual pacing under rising tempo pressure in Dawn Trail.",
+  winMessage: "Luna: stage flow secured. Strong rhythm and composition control.",
+  failMessage: "Luna: cadence collapsed. Re-enter with cleaner tempo decisions.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "cadence lane",
+    "phrase node",
+    "rhythm ring",
+    "choreo rail",
+    "pattern grid",
+    "beat core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Cadence disruption detected on",
+    "Choose the move that preserves stage flow in",
+    "Only one phrasing keeps tempo integrity in",
+    "Timing pressure rising: stabilize"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Phrase",
+    "Sync",
+    "Accentuate",
+    "Balance",
+    "Resolve"
   ],
   decoyActions: [
     "Rush",
-    "Spike",
-    "Skip",
-    "Bypass",
-    "Overload"
+    "Flatten",
+    "Drag",
+    "Scatter",
+    "Overplay"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Structured tempo supports creative precision.",
+    "Pacing decisions shape performance quality.",
+    "Recover rhythm quickly after a miss.",
+    "Balanced emphasis improves retention."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_16%_20%,rgba(244,114,182,0.24),transparent_46%),radial-gradient(circle_at_84%_84%,rgba(217,70,239,0.18),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  allowTrapDecoys: true,
+  targetBestCombo: 7,
 };
 
 export default function Arcade114DawnTrail() {
