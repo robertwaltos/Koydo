@@ -738,6 +738,24 @@ Last Updated: 2026-03-03
   - Tier detection is deterministic and logged for analytics
   - Upgrade Path UI shown to non-qualifying devices with clear hardware explanation
 
+## Pipeline: Game UI Translations (Post-Polish)
+
+> Added 2026-03-04 — Priority: P1
+
+**Context**: After the game cleanup (419→223 files, commit `442089dc`), the remaining 223 game components contain hardcoded English strings in their UIs (button labels, mascot dialogue, instructions, score labels, outcome messages). These need to be extracted into the i18n translation system.
+
+**Scope**:
+- Extract all user-facing strings from 223 game components into `translations.ts` keys
+- Add translations for all LAUNCH_LOCALES: en, es, zh, pl
+- Game categories: 8 core, ~55 edtech, 19 arcade, 51 classic, 84 zone games
+- Priority order: Core games → EdTech games → Classic games → Arcade → Zone games
+
+**Acceptance Criteria**:
+- All game UI strings use `t()` translation function instead of hardcoded English
+- es, zh, pl translations provided for all extracted game strings
+- No hardcoded English visible when locale is set to es/zh/pl
+- Game category names and descriptions translated in game hub
+
 ## KPI Tracking (Backlog-wide)
 
 - Mastery lift per learner
