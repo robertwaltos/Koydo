@@ -127,6 +127,30 @@ const LEGACY_COMPONENTS: Record<string, () => React.JSX.Element> = {
   "zone-074": Games.Zone074LunaSkylineSet,
   "zone-075": Games.Zone075PixelSentinelLattice,
   "zone-076": Games.Zone076SparkVaultThrust,
+  "zone-077": Games.Zone077SparkReactorConvoy,
+  "zone-078": Games.Zone078EchoSignalTribunal,
+  "zone-079": Games.Zone079TerraFrontlineWardens,
+  "zone-080": Games.Zone080LunaSkylineSet,
+  "zone-081": Games.Zone081PixelSentinelLattice,
+  "zone-082": Games.Zone082SparkVaultThrust,
+  "zone-083": Games.Zone083SparkReactorConvoy,
+  "zone-084": Games.Zone084EchoSignalTribunal,
+  "zone-085": Games.Zone085TerraFrontlineWardens,
+  "zone-086": Games.Zone086LunaSkylineSet,
+  "zone-087": Games.Zone087PixelSentinelLattice,
+  "zone-088": Games.Zone088SparkVaultThrust,
+  "zone-089": Games.Zone089SparkReactorConvoy,
+  "zone-090": Games.Zone090EchoSignalTribunal,
+  "zone-091": Games.Zone091TerraFrontlineWardens,
+  "zone-092": Games.Zone092LunaSkylineSet,
+  "zone-093": Games.Zone093PixelSentinelLattice,
+  "zone-094": Games.Zone094SparkVaultThrust,
+  "zone-095": Games.Zone095SparkReactorConvoy,
+  "zone-096": Games.Zone096EchoSignalTribunal,
+  "zone-097": Games.Zone097TerraFrontlineWardens,
+  "zone-098": Games.Zone098LunaSkylineSet,
+  "zone-099": Games.Zone099PixelSentinelLattice,
+  "zone-100": Games.Zone100SparkVaultThrust,
 };
 
 function friendForCategory(category: string): "pixel" | "spark" | "echo" | "luna" | "terra" {
@@ -1535,4 +1559,5 @@ export default function GamePlayerPage() {
     </main>
   );
 }
+
 

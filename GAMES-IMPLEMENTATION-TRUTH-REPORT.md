@@ -1,18 +1,18 @@
 # Games Implementation Truth Report
 
-Generated: 2026-03-04T16:52:17.892Z
+Generated: 2026-03-04T16:55:46.590Z
 
 ## Verified Snapshot
 - Catalog entries: 500 (core=8, legacy=57, arcade=200, expansion=235).
-- Runtime routes: core=8, mapped-components=93, template-routed=399.
-- Unique runtime implementation files behind all 500 routes: 102.
+- Runtime routes: core=8, mapped-components=117, template-routed=375.
+- Unique runtime implementation files behind all 500 routes: 126.
 - Mapped-component routes that are alias wrappers: 0.
 
 ## Coverage Checks
 - Core IDs missing a mapped component: 0.
 - Legacy IDs missing a mapped component: 0.
 - Catalog IDs mapped to component names missing index exports: 0.
-- Arcade/Expansion IDs are template-routed by design: 399.
+- Arcade/Expansion IDs are template-routed by design: 375.
 
 ## Alias Samples
 | gameId | routed component | entry file | resolved implementation |
