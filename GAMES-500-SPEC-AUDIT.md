@@ -1,6 +1,6 @@
 # Games 500 Spec Audit
 
-Generated: 2026-03-04T15:10:36.349Z
+Generated: 2026-03-04T15:12:59.500Z
 
 ## Status
 - Total games: 500

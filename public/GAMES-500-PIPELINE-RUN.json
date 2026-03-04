@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-03-04T15:10:42.667Z",
-  "startedAt": "2026-03-04T15:10:36.108Z",
-  "finishedAt": "2026-03-04T15:10:42.667Z",
+  "generatedAt": "2026-03-04T15:13:05.896Z",
+  "startedAt": "2026-03-04T15:12:59.264Z",
+  "finishedAt": "2026-03-04T15:13:05.896Z",
   "status": "pass",
   "steps": [
     {
@@ -9,49 +9,49 @@
       "command": "node scripts/games-implementation-audit.mjs",
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 144
+      "durationMs": 130
     },
     {
       "id": "spec-audit-500",
       "command": "node scripts/games500-spec-audit.mjs",
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 123
+      "durationMs": 135
     },
     {
       "id": "games1-contract-audit",
       "command": "node scripts/games1-contract-audit.mjs",
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 101
+      "durationMs": 120
     },
     {
       "id": "reward-realm-contract-test",
       "command": "node scripts/test-games-reward-realm-contract.mjs",
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 724
+      "durationMs": 753
     },
     {
       "id": "open-source-audit",
       "command": "node scripts/audit-open-source-game-repos.mjs",
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 95
+      "durationMs": 107
     },
     {
       "id": "factory-plan",
       "command": "node scripts/build-500-games-factory-plan.mjs",
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 5268
+      "durationMs": 5281
     },
     {
       "id": "xr-readiness-status",
       "command": "node scripts/check-device-gateway-physical-validation.mjs --no-fail",
       "status": "pass",
       "exitCode": 0,
-      "durationMs": 103
+      "durationMs": 105
     }
   ],
   "output": "public/GAMES-500-PIPELINE-RUN.json"

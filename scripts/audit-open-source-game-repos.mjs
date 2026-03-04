@@ -211,12 +211,12 @@ async function inspectRepo(repoPath) {
 
 async function main() {
   const exists = await fs.stat(REPOS_DIR).then(() => true).catch(() => false);
-  if (!exists) {
-    throw new Error(`Repos directory not found: ${relativeFromRoot(REPOS_DIR)}`);
-  }
-
-  const entries = await fs.readdir(REPOS_DIR, { withFileTypes: true });
-  const repoDirs = entries.filter((entry) => entry.isDirectory()).map((entry) => path.join(REPOS_DIR, entry.name));
+  const entries = exists
+    ? await fs.readdir(REPOS_DIR, { withFileTypes: true })
+    : [];
+  const repoDirs = entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => path.join(REPOS_DIR, entry.name));
   const repos = [];
   for (const repoDir of repoDirs) {
     repos.push(await inspectRepo(repoDir));
@@ -225,8 +225,15 @@ async function main() {
   const report = {
     generatedAt: new Date().toISOString(),
     sourceDirectory: relativeFromRoot(REPOS_DIR),
+    sourceDirectoryPresent: exists,
     repoCount: repos.length,
     repos,
+    ...(exists
+      ? {}
+      : {
+        warning:
+          "Open-source repos directory is missing. Created an empty audit report to keep pipeline deterministic.",
+      }),
   };
 
   await fs.mkdir(path.dirname(JSON_OUT), { recursive: true });
@@ -235,7 +242,9 @@ async function main() {
     fs.writeFile(MD_OUT, `${toMarkdown(report)}\n`, "utf8"),
   ]);
 
-  console.log(`[open-source-game-audit] repos=${report.repoCount}`);
+  console.log(
+    `[open-source-game-audit] repos=${report.repoCount} sourceDirectoryPresent=${report.sourceDirectoryPresent}`,
+  );
 }
 
 main().catch((error) => {
