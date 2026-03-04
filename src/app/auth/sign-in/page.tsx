@@ -196,7 +196,7 @@ function SignInPageContent() {
 
         <div className="relative mx-auto w-full max-w-6xl">
           {/* Hero image with overlaid title */}
-          <div className="relative overflow-hidden rounded-3xl shadow-xl">
+          <div className="relative overflow-hidden rounded-3xl shadow-xl ring-1 ring-white/40">
             <Image
               src={ASSETS.heroSignIn}
               alt="Students exploring the world of learning on Koydo"
@@ -205,6 +205,8 @@ function SignInPageContent() {
               className="w-full object-cover"
               priority
             />
+            {/* Soft vignette to feather edges */}
+            <div className="pointer-events-none absolute inset-0" style={{ boxShadow: 'inset 0 0 40px 12px rgba(255,255,255,0.45)' }} aria-hidden="true" />
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-5 pb-5 pt-14">
               <p className="text-xs font-bold uppercase tracking-widest text-emerald-300">
                 {t("auth_sign_in_hero_eyebrow")}
@@ -218,7 +220,7 @@ function SignInPageContent() {
       </section>
 
       <section className="relative z-10 mx-auto -mt-12 w-full max-w-6xl space-y-6 px-4 sm:px-6">
-        <SoftCard as="section" className="border-zinc-200/60 p-6 backdrop-blur-sm" style={{ background: 'rgba(255,255,255,0.92)' }}>
+        <SoftCard as="section" className="border-zinc-200/60 p-6 backdrop-blur-sm" style={{ background: 'rgba(237,241,248,0.95)' }}>
           <h2 className="ui-type-heading-xl text-zinc-900">{t("auth_sign_in_title")}</h2>
           <OAuthButtons layout="grid-2" className="mt-5" nextPath={nextPath} />
           {!hasSupabaseConfig ? (
@@ -229,7 +231,7 @@ function SignInPageContent() {
         </SoftCard>
 
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
-          <SoftCard as="section" className="border-zinc-200/60 p-5" style={{ background: 'rgba(255,255,255,0.92)' }}>
+          <SoftCard as="section" className="border-zinc-200/60 p-5" style={{ background: 'rgba(237,241,248,0.95)' }}>
             <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_email_password_title")}</h3>
             <form onSubmit={onPasswordSubmit} className="mt-4 space-y-4">
               <div>
@@ -241,7 +243,7 @@ function SignInPageContent() {
                   type="email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
                   required
                 />
               </div>
@@ -255,7 +257,7 @@ function SignInPageContent() {
                   type="password"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
-                  className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
                   required
                 />
               </div>
@@ -272,7 +274,7 @@ function SignInPageContent() {
             </form>
           </SoftCard>
 
-          <SoftCard as="section" className="border-zinc-200/60 p-5" style={{ background: 'rgba(255,255,255,0.92)' }}>
+          <SoftCard as="section" className="border-zinc-200/60 p-5" style={{ background: 'rgba(237,241,248,0.95)' }}>
             <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_magic_link_title")}</h3>
             <form onSubmit={onEmailOtpSubmit} className="mt-4 space-y-4">
               <div>
@@ -284,7 +286,7 @@ function SignInPageContent() {
                   type="email"
                   value={emailOtp}
                   onChange={(event) => setEmailOtp(event.target.value)}
-                  className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
                   required
                 />
               </div>
@@ -299,7 +301,7 @@ function SignInPageContent() {
             </form>
           </SoftCard>
 
-          <SoftCard as="section" className="border-zinc-200/60 p-5" style={{ background: 'rgba(255,255,255,0.92)' }}>
+          <SoftCard as="section" className="border-zinc-200/60 p-5" style={{ background: 'rgba(237,241,248,0.95)' }}>
             <h3 className="ui-type-heading-md text-zinc-900">{t("auth_sign_in_phone_title")}</h3>
             <form onSubmit={onSendPhoneOtp} className="mt-4 space-y-4">
               <div>
@@ -311,7 +313,7 @@ function SignInPageContent() {
                   type="tel"
                   value={phone}
                   onChange={(event) => setPhone(event.target.value)}
-                className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
                   placeholder="+15551234567"
                   required
                 />
@@ -336,7 +338,7 @@ function SignInPageContent() {
                     type="text"
                     value={phoneToken}
                     onChange={(event) => setPhoneToken(event.target.value)}
-                    className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                    className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
                     inputMode="numeric"
                     autoComplete="one-time-code"
                     required

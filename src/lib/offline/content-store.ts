@@ -231,7 +231,8 @@ export async function saveOfflineProgress(
 
 export async function getUnsyncedProgress(): Promise<OfflineProgressRecord[]> {
   const db = await getDB();
-  return db.getAllFromIndex("offlineProgress", "by-synced", false);
+  const all = await db.getAll("offlineProgress");
+  return all.filter((r) => !r.synced);
 }
 
 export async function markProgressSynced(

@@ -116,7 +116,7 @@ function SignUpPageInner() {
             as="section"
             organicCorners
             className="self-start border-zinc-200/60 p-6 backdrop-blur-sm"
-            style={{ background: 'rgba(255,255,255,0.92)' }}
+            style={{ background: 'rgba(237,241,248,0.95)' }}
           >
             <h2 className="ui-type-heading-xl text-zinc-900">
               {t("auth_sign_up_title")}
@@ -148,7 +148,7 @@ function SignUpPageInner() {
                   type="email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                  className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
                   required
                 />
               </div>
@@ -162,7 +162,7 @@ function SignUpPageInner() {
                   type="password"
                   value={password}
                   onChange={(event) => setPassword(event.target.value)}
-                  className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
                   minLength={8}
                   required
                 />

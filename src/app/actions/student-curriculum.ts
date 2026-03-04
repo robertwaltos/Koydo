@@ -6,24 +6,8 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { MEDIA_PROMPTS } from "@/lib/media/generated-prompts";
 import { redirect } from "next/navigation";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
-
-/* -------------------------------------------------------------------------- */
-/*                                    Types                                   */
-/* -------------------------------------------------------------------------- */
-
-const CurriculumModuleSchema = z.object({
-  id: z.string().optional(),
-  title: z.string(),
-  desc: z.string(),
-  icon: z.string(),
-  media: z.object({
-    introVideoId: z.string().optional(),
-    ambientAudioId: z.string().optional(),
-    animationStyle: z.string().optional(),
-  }).optional(),
-});
-
-type CurriculumModule = z.infer<typeof CurriculumModuleSchema>;
+import { CurriculumModuleSchema } from "@/lib/types/curriculum";
+import type { CurriculumModule } from "@/lib/types/curriculum";
 
 /* -------------------------------------------------------------------------- */
 /*                         DB session helpers                                 */
@@ -414,7 +398,4 @@ export async function getCurriculumSession(sessionId: string): Promise<{
     created_at: data.created_at as string,
   };
 }
-
-/* Re-export the type for consumers */
-export type { CurriculumModule };
 

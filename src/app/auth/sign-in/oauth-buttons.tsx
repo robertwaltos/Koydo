@@ -174,7 +174,7 @@ export default function OAuthButtons({
           disabled={!hasSupabaseConfig || activeProvider !== null}
           title={!hasSupabaseConfig ? t("auth_oauth_unavailable_supabase") : undefined}
           className={joinClasses(
-            "ui-soft-button ui-focus-ring flex min-h-11 w-full items-center gap-3 rounded-full border border-border bg-surface-muted text-sm font-medium hover:bg-surface disabled:opacity-70",
+            "ui-soft-button ui-focus-ring flex min-h-11 w-full items-center gap-3 rounded-full border border-sky-200 bg-sky-50/80 text-sm font-medium text-zinc-800 hover:bg-sky-100 disabled:opacity-70",
             layout === "grid-2"
               ? "justify-start px-4 py-3 sm:justify-center"
               : "justify-center px-4 py-2",

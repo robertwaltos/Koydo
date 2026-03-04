@@ -9,14 +9,21 @@ import {
 import {
   GAME_DIFFICULTIES,
   GAME_TYPES,
+  isValidGameId,
   type GamePlay,
   type GameResult,
   type GameStars,
+  type GameType,
 } from "@/lib/games/types";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { buildTrustedInternalApiUrl } from "@/lib/security/internal-origin";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+
+/** Accept both legacy 8 types and catalog IDs (e.g. "math-quiz-001") */
+const gameTypeSchema = z.string().refine(isValidGameId, {
+  message: "Invalid game type or catalog game ID",
+});
 
 const gameStarsSchema = z.union([
   z.literal(0),
@@ -31,7 +38,7 @@ const querySchema = z.object({
 });
 
 const postSchema = z.object({
-  gameType: z.enum(GAME_TYPES),
+  gameType: gameTypeSchema,
   difficulty: z.enum(GAME_DIFFICULTIES),
   score: z.number().int().min(0),
   maxScore: z.number().int().min(1),
@@ -42,7 +49,7 @@ const postSchema = z.object({
 const metadataGameResultSchema = z.object({
   source: z.string(),
   result: z.object({
-    gameType: z.enum(GAME_TYPES),
+    gameType: gameTypeSchema,
     score: z.number().int().min(0),
     maxScore: z.number().int().min(1),
     stars: gameStarsSchema,
@@ -110,8 +117,10 @@ function extractPlay(metadata: unknown, eventId: string, createdAt: string): Gam
   const parsed = metadataGameResultSchema.safeParse(metadata);
   if (!parsed.success) return null;
 
-  const { source, result, awardedPoints, normalizedScore, pointsDelta } = parsed.data;
+  const { source, result: rawResult, awardedPoints, normalizedScore, pointsDelta } = parsed.data;
   if (source !== "mini_game" && source !== "daily_challenge") return null;
+
+  const result = { ...rawResult, gameType: rawResult.gameType as GameType };
 
   return {
     id: eventId,
@@ -321,7 +330,7 @@ export async function POST(request: NextRequest) {
     if (ownershipError) return ownershipError;
 
     const draftResult: GameResult = {
-      gameType: payload.gameType,
+      gameType: payload.gameType as GameType,
       difficulty: payload.difficulty,
       score: payload.score,
       maxScore: payload.maxScore,

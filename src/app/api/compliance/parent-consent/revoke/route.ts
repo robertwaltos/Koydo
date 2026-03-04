@@ -26,7 +26,7 @@ const revokeSchema = z.object({
 
 export async function POST(request: NextRequest) {
   // Rate limit: 10 attempts per 15 minutes
-  const rateCheck = enforceIpRateLimit(request, "api:compliance:parent-consent:revoke", {
+  const rateCheck = await enforceIpRateLimit(request, "api:compliance:parent-consent:revoke", {
     max: 10,
     windowMs: 15 * 60 * 1000,
   });

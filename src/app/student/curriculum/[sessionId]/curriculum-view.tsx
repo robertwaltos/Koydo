@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { LessonPlayer } from "@/components/explorer/LessonPlayer";
-import type { CurriculumModule } from "@/app/actions/student-curriculum";
+import type { CurriculumModule } from "@/lib/types/curriculum";
 
 type CurriculumViewProps = {
   sessionId: string;

@@ -11,6 +11,18 @@ export const GAME_TYPES = [
 
 export type GameType = (typeof GAME_TYPES)[number];
 
+/**
+ * Validates that a string is either a legacy 8-game type OR a valid
+ * catalog game ID (e.g. "math-quiz-001"). Catalog IDs follow the
+ * pattern: lowercase letters/digits/hyphens, 5-30 chars.
+ */
+export function isValidGameId(value: string): boolean {
+  // Legacy 8 types
+  if ((GAME_TYPES as readonly string[]).includes(value)) return true;
+  // Catalog IDs follow a strict pattern: category-mechanic-NNN
+  return /^[a-z][a-z0-9-]{3,29}$/.test(value);
+}
+
 export const GAME_DIFFICULTIES = ["easy", "medium", "hard"] as const;
 
 export type GameDifficulty = (typeof GAME_DIFFICULTIES)[number];
