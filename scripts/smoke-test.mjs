@@ -9,6 +9,7 @@ const PORT = Number(process.env.SMOKE_TEST_PORT ?? (4200 + Math.floor(Math.rando
 const BASE_URL = `http://127.0.0.1:${PORT}`;
 const STARTUP_TIMEOUT_MS = 120_000;
 const NPM_COMMAND = "npm";
+const DIST_DIR = process.env.SMOKE_TEST_DIST_DIR ?? ".next-smoke";
 const SKIP_BUILD =
   process.argv.includes("--skip-build")
   || process.env.npm_config_skip_build === "true"
@@ -64,24 +65,31 @@ function sleep(ms) {
 }
 
 function clearNextBuildOutput() {
-  const nextDir = path.resolve(".next");
-  if (!fs.existsSync(nextDir)) return;
-  fs.rmSync(nextDir, { recursive: true, force: true });
+  const buildDir = path.resolve(DIST_DIR);
+  if (!fs.existsSync(buildDir)) return;
+  fs.rmSync(buildDir, { recursive: true, force: true });
 }
 
 async function buildWithRecovery() {
-  const maxAttempts = 2;
+  const maxAttempts = 4;
+  const buildEnv = {
+    ...process.env,
+    NEXT_DIST_DIR: DIST_DIR,
+  };
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
-      await runCommand(NPM_COMMAND, ["run", "build"]);
+      await runCommand(NPM_COMMAND, ["run", "build"], { env: buildEnv });
       return;
     } catch (error) {
       if (attempt >= maxAttempts) {
         throw error;
       }
-      log("Build failed on first attempt. Clearing .next and retrying once...");
+      const message = error instanceof Error ? error.message : String(error);
+      log(
+        `Build attempt ${attempt}/${maxAttempts} failed (${message}). Clearing .next and retrying...`,
+      );
       clearNextBuildOutput();
-      await sleep(1200);
+      await sleep(1200 * attempt);
     }
   }
 }
@@ -171,10 +179,15 @@ async function main() {
   }
 
   log(`2/3 Starting Next server on port ${PORT}...`);
+  const runtimeEnv = {
+    ...process.env,
+    NEXT_DIST_DIR: DIST_DIR,
+  };
   const devServer = spawn(NPM_COMMAND, ["run", "start", "--", "-p", String(PORT)], {
     cwd: process.cwd(),
     stdio: "inherit",
     shell: true,
+    env: runtimeEnv,
   });
 
   let cleanedUp = false;

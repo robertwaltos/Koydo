@@ -70,6 +70,7 @@
     "media:reset:regen:yes": "node scripts/reset-media-for-regen.mjs --yes",
     "media:reset:regen:all": "node scripts/reset-media-for-regen.mjs --include-video --yes",
     "compliance:audit": "node scripts/appstore-compliance-audit.mjs",
+    "compliance:store:audit": "node scripts/store-compliance-audit.mjs",
     "compliance:triple-pass": "node scripts/run-launch-triple-pass.mjs",
     "compliance:background-audit": "node scripts/run-background-launch-audit.mjs",
     "curriculum:report": "node scripts/curriculum-coverage-report.mjs",

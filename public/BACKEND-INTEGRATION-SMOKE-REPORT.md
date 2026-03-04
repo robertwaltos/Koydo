@@ -1,7 +1,7 @@
 # Backend Integration Smoke Report
 
-Generated: 2026-03-04T06:16:01.957Z
-Duration: 187200ms
+Generated: 2026-03-04T06:28:47.949Z
+Duration: 450711ms
 
 ## Summary
 
@@ -14,21 +14,21 @@ Duration: 187200ms
 
 | Check | Status | Duration (ms) | Detail |
 | --- | --- | ---: | --- |
-| Ops preflight (env/db/webhook/auth-billing) | WARN | 32065 | pass=3 warn=1 fail=0 skip=0 |
-| Route smoke (launch-critical paths + /api/health) | FAIL | 142563 | No prebuilt .next output was available; reran route smoke with build but failed: ⨯ Unable to acquire lock at D:\PythonProjects\Koydo\.next\lock, is another instance of next build running? |
-| Placement diagnostic scoring contract | PASS | 718 | Command passed. |
-| Placement diagnostic flow contract | PASS | 765 | Command passed. |
-| Audiobook checkpoint contract | PASS | 742 | Command passed. |
-| Device gateway confidence contract | PASS | 689 | Command passed. |
-| Review queue contract | PASS | 765 | Command passed. |
-| Remediation tasking contract | PASS | 719 | Command passed. |
-| Offline progress sync contract | PASS | 675 | Command passed. |
-| Social cohorts and challenges contract | PASS | 725 | Command passed. |
-| Creator pipeline contract | PASS | 719 | Command passed. |
-| StoryForge cinema contract | PASS | 729 | Command passed. |
-| Teacher access contract | PASS | 901 | Command passed. |
-| Billing webhook processing lock contract | PASS | 755 | Command passed. |
-| RevenueCat offerings resolution contract | PASS | 735 | Command passed. |
+| Ops preflight (env/db/webhook/auth-billing) | WARN | 32882 | pass=3 warn=1 fail=0 skip=0 |
+| Route smoke (launch-critical paths + /api/health) | FAIL | 405019 | No prebuilt .next output was available; reran route smoke with build but failed: ⨯ Unable to acquire lock at D:\PythonProjects\Koydo\.next\lock, is another instance of next build running? |
+| Placement diagnostic scoring contract | PASS | 686 | Command passed. |
+| Placement diagnostic flow contract | PASS | 788 | Command passed. |
+| Audiobook checkpoint contract | PASS | 729 | Command passed. |
+| Device gateway confidence contract | PASS | 713 | Command passed. |
+| Review queue contract | PASS | 753 | Command passed. |
+| Remediation tasking contract | PASS | 785 | Command passed. |
+| Offline progress sync contract | PASS | 768 | Command passed. |
+| Social cohorts and challenges contract | PASS | 774 | Command passed. |
+| Creator pipeline contract | PASS | 691 | Command passed. |
+| StoryForge cinema contract | PASS | 816 | Command passed. |
+| Teacher access contract | PASS | 909 | Command passed. |
+| Billing webhook processing lock contract | PASS | 757 | Command passed. |
+| RevenueCat offerings resolution contract | PASS | 736 | Command passed. |
 
 ## Attention Items
 

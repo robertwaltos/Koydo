@@ -16,6 +16,7 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  distDir: process.env.NEXT_DIST_DIR || ".next",
 
   // Skip TypeScript checking during Vercel builds — verified locally before deploy
   typescript: { ignoreBuildErrors: true },

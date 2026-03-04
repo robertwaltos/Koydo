@@ -1,6 +1,7 @@
 # Store Policy Verification Log — 2026-03-04
 
 This log records external policy verification used to update Koydo App Store / Google Play markdown docs.
+**Last verified**: 2026-03-04
 
 ## Official Sources Checked
 

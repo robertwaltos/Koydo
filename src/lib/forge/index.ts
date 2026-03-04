@@ -49,6 +49,8 @@ export interface ForgeCapability {
   apiRoutes?: string[];
   /** Current operational status */
   status: "production" | "ready" | "partial" | "planned";
+  /** Optional operational context note */
+  notes?: string;
 }
 
 // ── Registry ───────────────────────────────────────────────────────────────
@@ -82,8 +84,8 @@ export const FORGE_CAPABILITIES: ForgeCapability[] = [
     module: "lib/media/tts-service.ts",
     exports: ["generateTTS"],
     providers: [
-      { name: "OpenAI TTS-1", type: "cloud", active: true },
-      { name: "ElevenLabs", type: "cloud", active: true },
+      { name: "OpenAI TTS-1", type: "cloud-paid", active: true },
+      { name: "ElevenLabs", type: "cloud-paid", active: true },
       { name: "Kokoro-82M (local)", type: "local", active: true },
       { name: "XTTS v2 (local)", type: "local", active: true },
       { name: "Pre-generated (Supabase)", type: "pre-seeded", active: true },
@@ -514,3 +516,5 @@ export function getAllSeedScripts(): string[] {
   }
   return [...scripts].sort();
 }
+
+

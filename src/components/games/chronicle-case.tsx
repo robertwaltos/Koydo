@@ -53,7 +53,14 @@ interface Clue {
     category: "artifact" | "document" | "tool";
 }
 
-const HISTORICAL_CASES = [
+interface HistoricalCase {
+    id: string;
+    title: string;
+    era: string;
+    clues: Clue[];
+}
+
+const HISTORICAL_CASES: HistoricalCase[] = [
     {
         id: "case-1",
         title: "The Lost Library of Alexandria",
@@ -418,3 +425,4 @@ export default function ChronicleCase() {
         </div>
     );
 }
+

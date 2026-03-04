@@ -1,6 +1,6 @@
 # Launch Signoff Report
 
-Generated: 2026-03-04T06:16:02.074Z
+Generated: 2026-03-04T06:28:48.076Z
 Source file: D:\PythonProjects\Koydo\.env.production.audit
 Runtime gate: production live-mode required
 
@@ -16,16 +16,16 @@ Runtime gate: production live-mode required
 
 | Step | Status | Duration (ms) | Detail |
 | --- | --- | ---: | --- |
-| Production Build | FAIL | 13025 | ⨯ Unable to acquire lock at D:\PythonProjects\Koydo\.next\lock, is another instance of next build running? |
-| Env Readiness (Production Strict) | PASS | 97 | pass=20 warn=0 fail=0 runtime=production |
-| Production Env Checklist | PASS | 173 | pass=20 warn=0 fail=0 |
-| Ops Preflight (Production Audit) | PASS | 6646 | pass=3 warn=0 fail=0 skip=1 |
-| Backend Integration Smoke (Full) | FAIL | 187295 | pass=13 warn=1 fail=1 |
-| API Readiness (Production Live) | PASS | 101 | ready=7 needs_keys=0 optional_pending=0 not_required=2 |
+| Production Build | FAIL | 198164 | Next.js build worker exited with code: 4294967295 and signal: null |
+| Env Readiness (Production Strict) | PASS | 94 | pass=20 warn=0 fail=0 runtime=production |
+| Production Env Checklist | PASS | 161 | pass=20 warn=0 fail=0 |
+| Ops Preflight (Production Audit) | PASS | 7246 | pass=3 warn=0 fail=0 skip=1 |
+| Backend Integration Smoke (Full) | FAIL | 450801 | pass=13 warn=1 fail=1 |
+| API Readiness (Production Live) | PASS | 110 | ready=7 needs_keys=0 optional_pending=0 not_required=2 |
 
 ## Blockers
 
-- Production Build: ⨯ Unable to acquire lock at D:\PythonProjects\Koydo\.next\lock, is another instance of next build running?
+- Production Build: Next.js build worker exited with code: 4294967295 and signal: null
 - Backend Integration Smoke (Full): pass=13 warn=1 fail=1
 
 ## Artifacts

@@ -55,7 +55,7 @@ function parseArgs(argv) {
     locale: null,       // "es" | "zh" | "pl" | "all"
     apply: false,
     limit: Infinity,
-    concurrency: 8,
+    concurrency: 5,
     batchSize: 40,      // strings per OpenAI call (used as fallback)
     resume: true,
     verbose: false,
@@ -95,11 +95,11 @@ if (!OPENAI_KEY) {
 
 async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-async function callOpenAI(messages, model, retries = 3) {
+async function callOpenAI(messages, model, retries = 4) {
   for (let attempt = 0; attempt < retries; attempt++) {
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 120000); // 2 min timeout
+      const timeoutId = setTimeout(() => controller.abort(), 180000); // 3 min timeout (up from 2)
 
       const res = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
@@ -120,7 +120,7 @@ async function callOpenAI(messages, model, retries = 3) {
       clearTimeout(timeoutId);
 
       if (res.status === 429) {
-        const wait = Math.min(60000 * Math.pow(2, attempt), 240000);
+        const wait = Math.min(60000 * Math.pow(2, attempt), 300000);
         console.warn(`  429 rate limit, waiting ${(wait / 1000).toFixed(0)}s...`);
         await sleep(wait);
         continue;
@@ -141,8 +141,12 @@ async function callOpenAI(messages, model, retries = 3) {
       };
     } catch (e) {
       if (attempt === retries - 1) throw e;
-      console.warn(`  Attempt ${attempt + 1} failed: ${e.message}, retrying...`);
-      await sleep(5000 * (attempt + 1));
+      // Exponential backoff with jitter: 10s, 30s, 90s (+ random 0-5s)
+      const baseWait = 10000 * Math.pow(3, attempt);
+      const jitter = Math.random() * 5000;
+      const wait = Math.min(baseWait + jitter, 120000);
+      console.warn(`  Attempt ${attempt + 1}/${retries} failed: ${e.message}, retrying in ${(wait / 1000).toFixed(0)}s...`);
+      await sleep(wait);
     }
   }
 }
@@ -541,8 +545,9 @@ async function runLocale(locale) {
   console.log(`Total batches: ${totalBatches} (${singleBatches.length} single@${SINGLE_BATCH_SIZE}, ${consensusBatches.length} consensus@${CONSENSUS_BATCH_SIZE})`);
   console.log(`Concurrency: ${opts.concurrency}`);
 
-  const hashTranslations = { ...state.completedHashes };
+  // Use state.completedHashes as single source of truth (no duplication)
   let batchesDone = 0;
+  let consecutiveFailures = 0; // Circuit breaker counter
   const startTime = Date.now();
 
   // Queue-based concurrency control (avoids spinning thousands of polling promises)
@@ -550,27 +555,44 @@ async function runLocale(locale) {
     let nextIdx = 0;
 
     async function worker(workerId) {
+      let workerConsecutiveFails = 0;
+
       while (nextIdx < batches.length) {
         const idx = nextIdx++;
         const batch = batches[idx];
         const batchIdx = idx + batchIdxOffset;
 
+        // Circuit breaker: if this worker has 5+ consecutive failures, pause 2 minutes
+        if (workerConsecutiveFails >= 5) {
+          console.warn(`  Worker ${workerId}: 5 consecutive failures, pausing 120s...`);
+          await sleep(120000);
+          workerConsecutiveFails = 0;
+        }
+
+        // Global circuit breaker: if many failures across all workers, slow down
+        if (consecutiveFailures >= 15) {
+          console.warn(`  Global circuit breaker: ${consecutiveFailures} failures, all workers pausing 180s...`);
+          consecutiveFailures = 0; // Reset to avoid multiple workers all triggering
+          await sleep(180000);
+        }
+
         try {
           const results = await processor(locale, batch, state);
 
           for (const r of results) {
-            hashTranslations[r.hash] = r.final;
             state.completedHashes[r.hash] = r.final;
           }
 
           batchesDone++;
+          consecutiveFailures = Math.max(0, consecutiveFailures - 1); // Decay on success
+          workerConsecutiveFails = 0;
           const elapsed = ((Date.now() - startTime) / 1000).toFixed(0);
           const pct = ((batchesDone / totalBatches) * 100).toFixed(1);
           const rate = batchesDone / ((Date.now() - startTime) / 60000);
           const eta = rate > 0 ? (((totalBatches - batchesDone) / rate) * 60).toFixed(0) : "?";
 
-          // Periodic checkpoint every 20 batches
-          if (batchesDone % 20 === 0 || batchesDone === totalBatches) {
+          // Periodic checkpoint every 10 batches (more frequent than before)
+          if (batchesDone % 10 === 0 || batchesDone === totalBatches) {
             await saveState(locale, state);
           }
 
@@ -586,6 +608,13 @@ async function runLocale(locale) {
         } catch (e) {
           console.error(`  Batch ${batchIdx} FAILED: ${e.message}`);
           state.stats.errors += batch.length;
+          consecutiveFailures++;
+          workerConsecutiveFails++;
+
+          // Save state on failure too, so progress isn't lost
+          if (workerConsecutiveFails % 3 === 0) {
+            await saveState(locale, state);
+          }
         }
       }
     }
@@ -630,7 +659,7 @@ async function runLocale(locale) {
       const googleResults = await googleTranslate(chunk, locale);
       if (googleResults) {
         for (let j = 0; j < googleResults.length; j++) {
-          const ourTranslation = hashTranslations[chunkHashes[j]] || "";
+          const ourTranslation = state.completedHashes[chunkHashes[j]] || "";
           const sim = levenshteinSimilarity(ourTranslation, googleResults[j]);
           if (sim >= 0.70) agreements++;
         }
@@ -642,7 +671,7 @@ async function runLocale(locale) {
 
   // Write per-module JSON files
   console.log("\nWriting per-module translation files...");
-  const filesWritten = await writeModuleTranslations(locale, keyToHash, hashTranslations);
+  const filesWritten = await writeModuleTranslations(locale, keyToHash, state.completedHashes);
   console.log(`Wrote ${filesWritten} module translation files to public/translations/${locale}/`);
 
   // Summary

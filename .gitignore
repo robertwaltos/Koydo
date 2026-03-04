@@ -13,8 +13,8 @@
 # testing
 /coverage
 
-# playwright
-/e2e/test-results/
+# playwright test results (all variants)
+/e2e/test-results*/
 /e2e/report/
 /playwright-report/
 /blob-report/
@@ -22,6 +22,7 @@
 
 # next.js
 /.next/
+/.next-smoke*/
 /out/
 
 # production
@@ -48,6 +49,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Python
+__pycache__/
+*.pyc
+
 # AI-generated media assets (produced at runtime by overnight-media-runner.mjs / process-media-jobs.mjs)
 public/generated-images/
 
@@ -69,7 +74,6 @@ debug-storybook.log
 # Raw source assets (large originals kept locally)
 public/Grok Assets/
 
-.vercel
 .env*.local
 
 # Claude/agent temp files
@@ -78,6 +82,21 @@ tmp_resume*
 consensus.docx
 cleanup.md
 object_info.json
+nul
 
 # Data assets (large datasets, models, open-source-games)
 data/
+
+# Old/duplicate project workspace (has its own repo)
+eduforge-web/
+
+# Python type cache
+.mypy_cache/
+
+# Large intermediate data files in scripts (generated, not source)
+scripts/_chapter_data*.json
+scripts/epub-catalog.json
+scripts/epub-educational-picks.json
+
+# Logs
+logs/
