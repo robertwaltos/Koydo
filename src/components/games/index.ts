@@ -109,4 +109,10 @@ export { default as Zone067EchoTruthlineProtocol } from "./zone-067-echo-truthli
 export { default as Zone068TerraWildsRecovery } from "./zone-068-terra-wilds-recovery";
 export { default as Zone069LunaPulseRally } from "./zone-069-luna-pulse-rally";
 export { default as Zone070PixelFirewallFrontier } from "./zone-070-pixel-firewall-frontier";
+export { default as Zone071SparkReactorConvoy } from "./zone-071-spark-reactor-convoy";
+export { default as Zone072EchoSignalTribunal } from "./zone-072-echo-signal-tribunal";
+export { default as Zone073TerraFrontlineWardens } from "./zone-073-terra-frontline-wardens";
+export { default as Zone074LunaSkylineSet } from "./zone-074-luna-skyline-set";
+export { default as Zone075PixelSentinelLattice } from "./zone-075-pixel-sentinel-lattice";
+export { default as Zone076SparkVaultThrust } from "./zone-076-spark-vault-thrust";
 
