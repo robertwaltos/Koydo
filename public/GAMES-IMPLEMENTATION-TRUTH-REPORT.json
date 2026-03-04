@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T17:08:50.498Z",
+  "generatedAt": "2026-03-04T17:10:23.040Z",
   "catalog": {
     "core": 8,
     "legacy": 57,
@@ -451,12 +451,12 @@
   },
   "runtime": {
     "coreRouted": 8,
-    "legacyRouted": 119,
-    "mappedComponentRouted": 119,
-    "templateRouted": 373,
+    "legacyRouted": 120,
+    "mappedComponentRouted": 120,
+    "templateRouted": 372,
     "legacyAliasRoutes": 0,
     "mappedAliasRoutes": 0,
-    "uniqueRuntimeImplementationFiles": 128,
+    "uniqueRuntimeImplementationFiles": 129,
     "coreResolvedFiles": [
       "color-mixer",
       "letter-catcher",
@@ -586,7 +586,8 @@
       "zone-099-pixel-sentinel-lattice",
       "zone-100-spark-vault-thrust",
       "zone-101-spark-reactor-convoy",
-      "zone-102-echo-signal-tribunal"
+      "zone-102-echo-signal-tribunal",
+      "zone-103-terra-frontline-wardens"
     ],
     "mappedResolvedFiles": [
       "aero-architect",
@@ -707,7 +708,8 @@
       "zone-099-pixel-sentinel-lattice",
       "zone-100-spark-vault-thrust",
       "zone-101-spark-reactor-convoy",
-      "zone-102-echo-signal-tribunal"
+      "zone-102-echo-signal-tribunal",
+      "zone-103-terra-frontline-wardens"
     ],
     "templateFile": "immersive-arcade-template"
   },
@@ -1907,6 +1909,16 @@
       "aliasDepth": 0,
       "chain": [
         "zone-102-echo-signal-tribunal"
+      ]
+    },
+    {
+      "gameId": "zone-103",
+      "component": "Zone103TerraFrontlineWardens",
+      "entryFile": "zone-103-terra-frontline-wardens",
+      "resolvedFile": "zone-103-terra-frontline-wardens",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-103-terra-frontline-wardens"
       ]
     }
   ]

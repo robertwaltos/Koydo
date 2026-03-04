@@ -153,6 +153,7 @@ const LEGACY_COMPONENTS: Record<string, () => React.JSX.Element> = {
   "zone-100": Games.Zone100SparkVaultThrust,
   "zone-101": Games.Zone101SparkReactorConvoy,
   "zone-102": Games.Zone102EchoSignalTribunal,
+  "zone-103": Games.Zone103TerraFrontlineWardens,
 };
 
 function friendForCategory(category: string): "pixel" | "spark" | "echo" | "luna" | "terra" {

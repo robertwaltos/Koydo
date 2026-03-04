@@ -141,4 +141,5 @@ export { default as Zone099PixelSentinelLattice } from "./zone-099-pixel-sentine
 export { default as Zone100SparkVaultThrust } from "./zone-100-spark-vault-thrust";
 export { default as Zone101SparkReactorConvoy } from "./zone-101-spark-reactor-convoy";
 export { default as Zone102EchoSignalTribunal } from "./zone-102-echo-signal-tribunal";
+export { default as Zone103TerraFrontlineWardens } from "./zone-103-terra-frontline-wardens";
 
