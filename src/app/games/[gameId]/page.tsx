@@ -1,8 +1,8 @@
 "use client";
 
 import { useParams, useRouter } from "next/navigation";
-import { useState, useCallback, useMemo } from "react";
-import { getGameById, resolveEngine } from "@/lib/games/engine";
+import { useState, useCallback, useMemo, useEffect } from "react";
+import { useCatalog, getGameById, resolveEngine } from "@/lib/games/engine";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine";
 
 const DIFF_LABELS: { key: Difficulty; icon: string }[] = [
@@ -16,7 +16,8 @@ export default function GamePlayerPage() {
   const router = useRouter();
   const gameId = params.gameId;
 
-  const game = useMemo(() => getGameById(gameId), [gameId]);
+  const { loading } = useCatalog();
+  const game = useMemo(() => (loading ? undefined : getGameById(gameId)), [gameId, loading]);
   const Engine = useMemo(
     () => (game ? resolveEngine(game.mechanic) : undefined),
     [game],
@@ -36,6 +37,18 @@ export default function GamePlayerPage() {
     setPlaying(false);
     setResult(null);
   }, []);
+
+  /* ── Loading state ──────────────────────────────────────────────────── */
+  if (loading) {
+    return (
+      <main className="flex min-h-[60vh] flex-col items-center justify-center px-4">
+        <span className="text-5xl animate-bounce">🎮</span>
+        <p className="mt-4 text-sm font-semibold text-stone-500">
+          Loading game…
+        </p>
+      </main>
+    );
+  }
 
   /* ── Not found ─────────────────────────────────────────────────────── */
   if (!game) {

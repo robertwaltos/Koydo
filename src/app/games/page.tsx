@@ -3,9 +3,9 @@
 import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 import {
-  FULL_CATALOG,
+  useCatalog,
   getAllCategories,
-  TOTAL_GAMES,
+  getTotalGames,
   type GameDefinition,
   type EduCategory,
 } from "@/lib/games/engine";
@@ -30,6 +30,7 @@ const CATEGORY_LABELS: Record<EduCategory | "all", { label: string; icon: string
 const PAGE_SIZE = 24;
 
 export default function GamesHubPage() {
+  const { catalog, loading } = useCatalog();
   const [activeCategory, setActiveCategory] = useState<EduCategory | "all">("all");
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(0);
@@ -37,10 +38,10 @@ export default function GamesHubPage() {
   const categories = useMemo(() => {
     const cats = getAllCategories();
     return ["all" as const, ...cats];
-  }, []);
+  }, [catalog]);
 
   const filtered = useMemo(() => {
-    let games: GameDefinition[] = FULL_CATALOG;
+    let games: GameDefinition[] = catalog;
     if (activeCategory !== "all") {
       games = games.filter((g) => g.category === activeCategory);
     }
@@ -54,7 +55,7 @@ export default function GamesHubPage() {
       );
     }
     return games;
-  }, [activeCategory, search]);
+  }, [catalog, activeCategory, search]);
 
   const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
   const paged = useMemo(
@@ -75,10 +76,19 @@ export default function GamesHubPage() {
           Game Zone
         </h1>
         <p className="mt-1 text-sm text-stone-500">
-          {TOTAL_GAMES} immersive educational games — pick one and start learning through play!
+          {getTotalGames() || 300} immersive educational games — pick one and start learning through play!
         </p>
       </header>
 
+      {loading ? (
+        <div className="flex flex-col items-center justify-center py-20">
+          <span className="text-5xl animate-bounce">🎮</span>
+          <p className="mt-4 text-sm font-semibold text-stone-500">
+            Loading games…
+          </p>
+        </div>
+      ) : (
+        <>
       {/* Search bar */}
       <div className="mb-4">
         <input
@@ -102,8 +112,8 @@ export default function GamesHubPage() {
           const meta = CATEGORY_LABELS[key] ?? { label: key, icon: "📦" };
           const count =
             key === "all"
-              ? FULL_CATALOG.length
-              : FULL_CATALOG.filter((g) => g.category === key).length;
+              ? catalog.length
+              : catalog.filter((g) => g.category === key).length;
           return (
             <button
               key={key}
@@ -196,6 +206,8 @@ export default function GamesHubPage() {
             Next →
           </button>
         </div>
+      )}
+        </>
       )}
     </main>
   );
