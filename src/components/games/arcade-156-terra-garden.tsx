@@ -9,9 +9,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 156",
   title: "Terra Garden",
   mascot: "pixel",
-  startMessage: "Pixel: Pixel: isolate decoys fast and keep your logic chain consistent in Terra Garden.",
-  winMessage: "Pixel: Pixel: logic grid secured. Excellent pattern discipline.",
-  failMessage: "Pixel: Pixel: false branch chosen. Retry with cleaner reasoning.",
+  startMessage: "Pixel: isolate decoys fast and keep your logic chain consistent in Terra Garden.",
+  winMessage: "Pixel: logic grid secured. Excellent pattern discipline.",
+  failMessage: "Pixel: false branch chosen. Retry with cleaner reasoning.",
   objectiveNouns: [
     "logic lane",
     "state node",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5350,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  allowTrapDecoys: true,
+  targetBestCombo: 7,
 };
 
 export default function Arcade156TerraGarden() {

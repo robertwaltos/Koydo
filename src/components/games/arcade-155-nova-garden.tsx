@@ -9,9 +9,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 155",
   title: "Nova Garden",
   mascot: "echo",
-  startMessage: "Echo: Echo: track chronology and context to keep the mission narrative accurate in Nova Garden.",
-  winMessage: "Echo: Echo: timeline secured. Strong contextual reasoning.",
-  failMessage: "Echo: Echo: timeline fractured. Reconstruct with stronger source links.",
+  startMessage: "Echo: track chronology and context to keep the mission narrative accurate in Nova Garden.",
+  winMessage: "Echo: timeline secured. Strong contextual reasoning.",
+  failMessage: "Echo: timeline fractured. Reconstruct with stronger source links.",
   objectiveNouns: [
     "timeline node",
     "map corridor",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5550,
   minRoundMs: 3000,
   roundDecayMs: 335,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 8,
 };
 
 export default function Arcade155NovaGarden() {

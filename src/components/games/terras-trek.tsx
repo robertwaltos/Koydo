@@ -132,7 +132,7 @@ export default function TerrasTrek() {
     return (
         <div className="relative w-full aspect-video rounded-3xl overflow-hidden bg-emerald-950 border border-emerald-500/20 shadow-2xl font-sans group">
             {/* 4K Realistic Biome Background */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center brightness-75 transition-transform duration-1000 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-cover bg-center brightness-75 transition-transform duration-1000 group-hover:scale-105" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&q=80&w=2000')" }} />
 
             {/* Survey Overlay */}
             <motion.div

@@ -170,7 +170,7 @@ export default function HistoHunt() {
                                         EMPTY
                                     </motion.div>
                                 )}
-                                <div className="absolute inset-0 opacity-20 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+                                <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')" }} />
                             </motion.button>
                         ))}
                     </div>

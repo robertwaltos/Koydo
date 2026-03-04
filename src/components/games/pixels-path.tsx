@@ -126,7 +126,7 @@ export default function PixelsPath() {
     return (
         <div className="relative w-full aspect-video rounded-3xl overflow-hidden bg-slate-950 border border-blue-500/20 shadow-2xl font-sans group">
             {/* 4K Cyber-Grid Background */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center brightness-[0.2] opacity-50" />
+            <div className="absolute inset-0 bg-cover bg-center brightness-[0.2] opacity-50" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000')" }} />
             <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-purple-900/20" />
 
             {/* Network Nodes */}

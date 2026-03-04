@@ -199,7 +199,7 @@ export default function ChronicleCase() {
             {/* 4K Background Texture */}
             <div className="absolute inset-0 opacity-20 pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,_#ffffff10_0%,_transparent_50%)]" />
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10" />
+                <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')" }} />
             </div>
 
             <AnimatePresence mode="wait">

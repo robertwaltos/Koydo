@@ -9,9 +9,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 157",
   title: "Comet Garden",
   mascot: "luna",
-  startMessage: "Luna: Luna: keep rhythm and composition aligned while the tempo pressure climbs in Comet Garden.",
-  winMessage: "Luna: Luna: composition locked in. Beautiful pacing and control.",
-  failMessage: "Luna: Luna: structure fell apart. Reset and re-enter with smoother timing.",
+  startMessage: "Luna: keep rhythm and composition aligned while tempo pressure climbs in Comet Garden.",
+  winMessage: "Luna: composition locked in. Beautiful pacing and control.",
+  failMessage: "Luna: structure fell apart. Reset and re-enter with smoother timing.",
   objectiveNouns: [
     "phrase arc",
     "tempo lane",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2900,
   roundDecayMs: 320,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 8,
 };
 
 export default function Arcade157CometGarden() {

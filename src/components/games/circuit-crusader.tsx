@@ -108,7 +108,7 @@ export default function CircuitCrusader() {
     return (
         <div className="relative w-full aspect-video rounded-[3rem] overflow-hidden bg-[#020617] border border-indigo-500/20 shadow-2xl font-sans group">
             {/* 4K Circuit Blueprint Background */}
-            <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2000')] bg-cover grayscale mix-blend-overlay" />
+            <div className="absolute inset-0 opacity-20 bg-cover grayscale mix-blend-overlay" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=2000')" }} />
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-950/80 via-transparent to-blue-950/80 pointer-events-none" />
 
             {/* Animated Grid Lines */}

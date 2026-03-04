@@ -130,7 +130,7 @@ export default function LunasLegend() {
     return (
         <div className="relative w-full aspect-video rounded-3xl overflow-hidden bg-slate-900 border border-purple-500/20 shadow-2xl font-sans group">
             {/* 4K Mystical Night Background */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center brightness-[0.4] contrast-125" />
+            <div className="absolute inset-0 bg-cover bg-center brightness-[0.4] contrast-125" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=2000')" }} />
             <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-slate-900/80" />
 
             {/* Story Nodes */}

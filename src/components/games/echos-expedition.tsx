@@ -138,7 +138,7 @@ export default function EchosExpedition() {
     return (
         <div className="relative w-full aspect-video rounded-3xl overflow-hidden bg-slate-950 border border-white/10 shadow-2xl font-sans group">
             {/* 4K Background Environment (Cinematic Matte) */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center brightness-50 opacity-60 mix-blend-overlay" />
+            <div className="absolute inset-0 bg-cover bg-center brightness-50 opacity-60 mix-blend-overlay" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&q=80&w=2000')" }} />
 
             {/* Interactive Map Overlay */}
             <motion.div
@@ -294,7 +294,7 @@ export default function EchosExpedition() {
 
             {/* Cinematic Overlay - Grain & Vignette */}
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80" />
-            <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+            <div className="absolute inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay" style={{ backgroundImage: "url('https://grainy-gradients.vercel.app/noise.svg')" }} />
         </div>
     );
 }

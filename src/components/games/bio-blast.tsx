@@ -123,7 +123,8 @@ export default function BioBlast() {
                 <motion.div
                     animate={{ x: [-100, 100], y: [-50, 50] }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"
+                    className="absolute inset-0 opacity-10"
+                    style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/carbon-fibre.png')" }}
                 />
             </div>
 
