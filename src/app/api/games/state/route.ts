@@ -8,7 +8,6 @@ import {
 } from "@/lib/games/scoring";
 import {
   GAME_DIFFICULTIES,
-  GAME_TYPES,
   isValidGameId,
   type GamePlay,
   type GameResult,
@@ -26,6 +25,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getRegisteredGame } from "@/lib/games/catalog";
 import { isPremiumUserWithClient } from "@/lib/billing/premium-access";
+import { computeRewardRealmMasteryFromEvents } from "@/lib/games/reward-realm";
 
 /** Accept both legacy 8 types and catalog IDs (e.g. "math-quiz-001") */
 const gameTypeSchema = z.string().refine(isValidGameId, {
@@ -143,6 +143,43 @@ async function validateProfileOwnership(
   return {
     profile: { id: profile.id, ageYears: profile.age_years },
     errorResponse: null,
+  };
+}
+
+async function loadRewardRealmMastery(
+  userId: string,
+  studentProfileId: string | undefined,
+): Promise<{
+  mastery: ReturnType<typeof computeRewardRealmMasteryFromEvents>;
+  error: string | null;
+  tableMissing: boolean;
+}> {
+  const supabase = await createSupabaseServerClient();
+  const query = supabase
+    .from("gamification_events")
+    .select("metadata")
+    .eq("user_id", userId)
+    .eq("event_type", "points_awarded")
+    .order("created_at", { ascending: false })
+    .limit(600);
+
+  if (studentProfileId) {
+    query.eq("student_profile_id", studentProfileId);
+  }
+
+  const { data, error } = await query;
+  if (error) {
+    return {
+      mastery: computeRewardRealmMasteryFromEvents([]),
+      error: error.message,
+      tableMissing: isMissingTableError(error.message),
+    };
+  }
+
+  return {
+    mastery: computeRewardRealmMasteryFromEvents(data ?? []),
+    error: null,
+    tableMissing: false,
   };
 }
 
@@ -625,6 +662,34 @@ export async function POST(request: NextRequest) {
           );
         }
         guardianOverrideApplied = true;
+      }
+    }
+
+    if (registeredGame?.track === "Reward Realm") {
+      const masteryCheck = await loadRewardRealmMastery(user.id, ownership.profile?.id);
+      if (masteryCheck.error) {
+        return NextResponse.json(
+          {
+            error: masteryCheck.tableMissing
+              ? "Reward Realm is locked until gamification tracking is ready."
+              : "Unable to verify Reward Realm mastery status right now.",
+            requiresEducationalMastery: true,
+            mastery: masteryCheck.mastery,
+          },
+          { status: masteryCheck.tableMissing ? 503 : 500 },
+        );
+      }
+
+      if (!masteryCheck.mastery.unlocked) {
+        return NextResponse.json(
+          {
+            error: "Reward Realm is locked. Complete educational mastery milestones first.",
+            gameId: registeredGame.id,
+            requiresEducationalMastery: true,
+            mastery: masteryCheck.mastery,
+          },
+          { status: 403 },
+        );
       }
     }
 

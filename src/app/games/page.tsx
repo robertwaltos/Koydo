@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { DailyChallengeCard } from "@/components/gamification";
 import { GAME_CATALOG, type GameCategory } from "@/lib/games/catalog";
+import type { RewardRealmMasterySnapshot } from "@/lib/games/reward-realm";
 import type { GameDifficulty, GameType } from "@/lib/games/types";
 
 const CATEGORY_META: Record<
@@ -17,18 +17,9 @@ const CATEGORY_META: Record<
   adventure: { label: "Adventure", icon: "🧭" },
   literacy: { label: "Literacy", icon: "📚" },
   math: { label: "Math", icon: "🔢" },
-  literacy: { label: "Literacy", icon: "📚" },
-  science: { label: "Science", icon: "🔬" },
-  geography: { label: "Geography", icon: "🌍" },
-  chemistry: { label: "Chemistry", icon: "⚗️" },
-  physics: { label: "Physics", icon: "⚡" },
-  history: { label: "History", icon: "📜" },
-  coding: { label: "Coding", icon: "💻" },
-  music: { label: "Music", icon: "🎵" },
   logic: { label: "Logic", icon: "🧩" },
-  language: { label: "Language", icon: "🌐" },
   creative: { label: "Creative", icon: "🎨" },
-  science: { label: "Science", icon: "🧪" },
+  science: { label: "Science", icon: "🔬" },
 };
 
 type LearnerProfile = {
@@ -46,6 +37,11 @@ type DailyChallenge = {
   rewardPoints: number;
 };
 
+type RewardRealmStatus = {
+  unlocked: boolean;
+  mastery: RewardRealmMasterySnapshot;
+};
+
 export default function GamesHubPage() {
   const router = useRouter();
   const [activeCategory, setActiveCategory] = useState<string>("all");
@@ -56,6 +52,13 @@ export default function GamesHubPage() {
   const [dailyCompleted, setDailyCompleted] = useState(false);
   const [dailyStatus, setDailyStatus] = useState<string>("");
   const [isDailyLoading, setIsDailyLoading] = useState<boolean>(true);
+  const [rewardRealm, setRewardRealm] = useState<RewardRealmStatus | null>(null);
+  const [isRewardRealmLoading, setIsRewardRealmLoading] = useState<boolean>(true);
+  const [rewardRealmStatus, setRewardRealmStatus] = useState<string>("");
+  const categories = useMemo(
+    () => ["all", ...Array.from(new Set(GAME_CATALOG.map((game) => game.category)))],
+    [],
+  );
 
   const filtered = useMemo(
     () => (
@@ -136,6 +139,56 @@ export default function GamesHubPage() {
     };
   }, [selectedProfileId]);
 
+  useEffect(() => {
+    let active = true;
+    const loadRewardRealmStatus = async () => {
+      if (!selectedProfileId) {
+        setIsRewardRealmLoading(false);
+        setRewardRealm(null);
+        setRewardRealmStatus("Select a learner profile to evaluate Reward Realm unlock progress.");
+        return;
+      }
+
+      setIsRewardRealmLoading(true);
+      setRewardRealmStatus("");
+      const params = new URLSearchParams({
+        studentProfileId: selectedProfileId,
+      });
+      const response = await fetch(`/api/games/reward-realm/status?${params.toString()}`, {
+        cache: "no-store",
+      });
+      const payload = (await response.json().catch(() => ({}))) as {
+        unlocked?: boolean;
+        mastery?: RewardRealmMasterySnapshot;
+        error?: string;
+      };
+
+      if (!active) return;
+      if (!response.ok || !payload.mastery) {
+        setRewardRealm(null);
+        setRewardRealmStatus(payload.error ?? "Could not load Reward Realm unlock progress.");
+        setIsRewardRealmLoading(false);
+        return;
+      }
+
+      setRewardRealm({
+        unlocked: Boolean(payload.unlocked),
+        mastery: payload.mastery,
+      });
+      setRewardRealmStatus("");
+      setIsRewardRealmLoading(false);
+    };
+
+    void loadRewardRealmStatus();
+    return () => {
+      active = false;
+    };
+  }, [selectedProfileId]);
+
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category);
+  };
+
   const playDailyChallenge = () => {
     if (!dailyChallenge || !selectedProfileId) return;
     const params = new URLSearchParams({
@@ -144,6 +197,12 @@ export default function GamesHubPage() {
       studentProfileId: selectedProfileId,
     });
     router.push(`/games/${dailyChallenge.gameType}?${params.toString()}`);
+  };
+
+  const buildGameHref = (gameId: string) => {
+    if (!selectedProfileId) return `/games/${gameId}`;
+    const params = new URLSearchParams({ studentProfileId: selectedProfileId });
+    return `/games/${gameId}?${params.toString()}`;
   };
 
   return (
@@ -215,16 +274,57 @@ export default function GamesHubPage() {
         </p>
       </div>
 
+      <section className="mb-4 rounded-2xl border border-stone-200 bg-white p-3">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+            Reward Realm Gate
+          </h2>
+          <span
+            className={`rounded-full px-2 py-1 text-[10px] font-bold ${
+              rewardRealm?.unlocked
+                ? "bg-emerald-100 text-emerald-700"
+                : "bg-amber-100 text-amber-700"
+            }`}
+          >
+            {rewardRealm?.unlocked ? "Unlocked" : "Locked"}
+          </span>
+        </div>
+        {isRewardRealmLoading ? (
+          <p className="mt-2 text-xs text-stone-500">Checking educational mastery progress...</p>
+        ) : rewardRealm ? (
+          <div className="mt-2 grid gap-2 text-[11px] text-stone-600 sm:grid-cols-2">
+            <p>
+              Educational runs: {rewardRealm.mastery.progress.educationalRuns}/
+              {rewardRealm.mastery.policy.minEducationalRuns}
+            </p>
+            <p>
+              Distinct educational games: {rewardRealm.mastery.progress.distinctEducationalGames}/
+              {rewardRealm.mastery.policy.minDistinctEducationalGames}
+            </p>
+            <p>
+              Perfect educational runs: {rewardRealm.mastery.progress.perfectEducationalRuns}/
+              {rewardRealm.mastery.policy.minPerfectEducationalRuns}
+            </p>
+            <p>
+              Avg stars: {rewardRealm.mastery.progress.averageEducationalStars.toFixed(2)}/
+              {rewardRealm.mastery.policy.minAverageEducationalStars.toFixed(2)}
+            </p>
+          </div>
+        ) : (
+          <p className="mt-2 text-xs text-stone-500">{rewardRealmStatus}</p>
+        )}
+      </section>
+
       <div
         className="mb-6 flex items-center gap-2 overflow-x-auto pb-1"
         style={{ scrollbarWidth: "none" }}
       >
         {categories.map((key) => {
-          const meta = CATEGORY_LABELS[key] ?? { label: key, icon: "📦" };
+          const meta = CATEGORY_META[key] ?? { label: key, icon: "📦" };
           const count =
             key === "all"
-              ? catalog.length
-              : catalog.filter((g) => g.category === key).length;
+              ? GAME_CATALOG.length
+              : GAME_CATALOG.filter((g) => g.category === key).length;
           return (
             <button
               key={key}
@@ -245,50 +345,88 @@ export default function GamesHubPage() {
       </div>
 
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {filtered.map((game) => (
-          <Link
-            key={game.id}
-            href={`/games/${game.id}`}
-            className="group flex flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            <div
-              className={`flex h-28 items-center justify-center bg-gradient-to-br ${game.color}`}
-            >
-              <span className="text-5xl transition-transform duration-200 group-hover:scale-110">
-                {game.icon}
-              </span>
-            </div>
-            <div className="flex flex-1 flex-col p-3.5">
-              <h2 className="text-sm font-bold text-stone-800">
-                {game.title}
-              </h2>
-              <p className="mt-1 flex-1 text-xs leading-relaxed text-stone-500">
-                {game.description}
-              </p>
-              <div className="mt-2 flex items-center justify-between">
-                <span className="text-[10px] font-semibold text-stone-400">
-                  Ages {game.ageMin}-{game.ageMax}
-                </span>
-                <span className="rounded-full border border-stone-200 bg-stone-50 px-2 py-0.5 text-[10px] font-semibold capitalize text-stone-500">
-                  {game.category}
+        {filtered.map((game) => {
+          const ageLocked = learnerAge < game.ageMin || learnerAge > game.ageMax;
+          const rewardLocked = game.track === "Reward Realm" && !rewardRealm?.unlocked;
+          const cardClassName = [
+            "group flex flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm transition-all duration-200",
+            rewardLocked ? "opacity-90" : "hover:-translate-y-0.5 hover:shadow-lg",
+          ].join(" ");
+
+          const cardBody = (
+            <>
+              <div
+                className={`flex h-28 items-center justify-center bg-gradient-to-br ${game.color}`}
+              >
+                <span className="text-5xl transition-transform duration-200 group-hover:scale-110">
+                  {game.icon}
                 </span>
               </div>
-              <div className="mt-2 flex items-center justify-between text-[10px]">
-                <span className="rounded-full bg-stone-100 px-2 py-0.5 font-semibold text-stone-600">
-                  {game.mode === "core" ? "Scored Core Game" : game.mode === "legacy" ? "Gemini Legacy Game" : "Immersive Arcade"}
-                </span>
-                <span className="rounded-full bg-stone-100 px-2 py-0.5 font-semibold text-stone-600">
-                  {game.mechanic}
-                </span>
-                {learnerAge < game.ageMin || learnerAge > game.ageMax ? (
-                  <span className="rounded-full bg-amber-100 px-2 py-0.5 font-semibold text-amber-700">
-                    Age-Locked
+              <div className="flex flex-1 flex-col p-3.5">
+                <h2 className="text-sm font-bold text-stone-800">
+                  {game.title}
+                </h2>
+                <p className="mt-1 flex-1 text-xs leading-relaxed text-stone-500">
+                  {game.description}
+                </p>
+                <div className="mt-2 flex items-center justify-between">
+                  <span className="text-[10px] font-semibold text-stone-400">
+                    Ages {game.ageMin}-{game.ageMax}
                   </span>
-                ) : null}
+                  <span className="rounded-full border border-stone-200 bg-stone-50 px-2 py-0.5 text-[10px] font-semibold capitalize text-stone-500">
+                    {game.category}
+                  </span>
+                </div>
+                <div className="mt-2 flex items-center justify-between text-[10px]">
+                  <span className="rounded-full bg-stone-100 px-2 py-0.5 font-semibold text-stone-600">
+                    {game.mode === "core" ? "Scored Core Game" : game.mode === "legacy" ? "Gemini Legacy Game" : "Immersive Arcade"}
+                  </span>
+                  <span className={`rounded-full px-2 py-0.5 font-semibold ${
+                    game.track === "Reward Realm"
+                      ? "bg-indigo-100 text-indigo-700"
+                      : "bg-emerald-100 text-emerald-700"
+                  }`}
+                  >
+                    {game.track === "Reward Realm" ? "Reward Realm" : "Educational Core"}
+                  </span>
+                </div>
+                <div className="mt-2 flex items-center justify-between text-[10px]">
+                  <span className="rounded-full bg-stone-100 px-2 py-0.5 font-semibold text-stone-600">
+                    {game.mechanic}
+                  </span>
+                  {ageLocked ? (
+                    <span className="rounded-full bg-amber-100 px-2 py-0.5 font-semibold text-amber-700">
+                      Age-Locked
+                    </span>
+                  ) : null}
+                  {rewardLocked ? (
+                    <span className="rounded-full bg-amber-100 px-2 py-0.5 font-semibold text-amber-700">
+                      Reward Locked
+                    </span>
+                  ) : null}
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </>
+          );
+
+          if (rewardLocked) {
+            return (
+              <article key={game.id} className={cardClassName}>
+                {cardBody}
+              </article>
+            );
+          }
+
+          return (
+            <Link
+              key={game.id}
+              href={buildGameHref(game.id)}
+              className={cardClassName}
+            >
+              {cardBody}
+            </Link>
+          );
+        })}
       </div>
     </main>
   );

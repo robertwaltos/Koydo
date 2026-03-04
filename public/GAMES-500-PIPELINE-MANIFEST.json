@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T05:55:50.286Z",
+  "generatedAt": "2026-03-04T15:10:42.535Z",
   "pipelineVersion": "games-500-factory-v1",
   "constraints": {
     "bannedStyleTerms": "\\b(ultra|max|super|xuper|supremacy)\\b",
@@ -12,16 +12,16 @@
     }
   },
   "resourcePolicy": {
-    "batchSize": 8,
-    "pauseMs": 180,
+    "batchSize": 12,
+    "pauseMs": 120,
     "resumeBatch": 1,
     "maxBatches": null,
     "dryRun": false
   },
   "totals": {
     "games": 500,
-    "totalBatches": 63,
-    "executedBatches": 63
+    "totalBatches": 42,
+    "executedBatches": 42
   },
   "coverage": {
     "ageBands": {
@@ -241,9 +241,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -571,9 +571,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -901,9 +901,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -956,9 +956,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -1121,9 +1121,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -1176,9 +1176,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -1341,9 +1341,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -1396,9 +1396,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -1451,9 +1451,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -1671,9 +1671,9 @@
         "required": true,
         "sourceRepoName": "2048",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT",
-        "remote": "https://github.com/gabrielecirulli/2048.git",
-        "commit": "478b6ec"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -1781,9 +1781,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -1836,9 +1836,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -2001,9 +2001,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -2056,9 +2056,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -2221,9 +2221,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -2276,9 +2276,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -2716,9 +2716,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -2881,9 +2881,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -2936,9 +2936,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -3101,9 +3101,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -3156,9 +3156,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -3541,9 +3541,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -3981,9 +3981,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -4201,9 +4201,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -4256,9 +4256,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -4421,9 +4421,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -4476,9 +4476,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -4641,9 +4641,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -4751,9 +4751,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5081,9 +5081,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5136,9 +5136,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5301,9 +5301,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5356,9 +5356,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5521,9 +5521,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5576,9 +5576,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5631,9 +5631,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5851,9 +5851,9 @@
         "required": true,
         "sourceRepoName": "2048",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT",
-        "remote": "https://github.com/gabrielecirulli/2048.git",
-        "commit": "478b6ec"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -5961,9 +5961,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -6016,9 +6016,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -6181,9 +6181,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -6236,9 +6236,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -6401,9 +6401,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -6456,9 +6456,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -6896,9 +6896,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -7061,9 +7061,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -7116,9 +7116,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -7281,9 +7281,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -7336,9 +7336,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -7721,9 +7721,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -7941,9 +7941,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -7996,9 +7996,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -8161,9 +8161,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -8216,9 +8216,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -8381,9 +8381,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -8491,9 +8491,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -8821,9 +8821,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -8876,9 +8876,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9041,9 +9041,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9096,9 +9096,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9261,9 +9261,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9316,9 +9316,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9371,9 +9371,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9591,9 +9591,9 @@
         "required": true,
         "sourceRepoName": "2048",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT",
-        "remote": "https://github.com/gabrielecirulli/2048.git",
-        "commit": "478b6ec"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9701,9 +9701,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9756,9 +9756,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9921,9 +9921,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -9976,9 +9976,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -10141,9 +10141,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -10196,9 +10196,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -10636,9 +10636,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -10801,9 +10801,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -10856,9 +10856,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -11021,9 +11021,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -11076,9 +11076,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -11461,9 +11461,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -11681,9 +11681,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -11736,9 +11736,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -11901,9 +11901,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -11956,9 +11956,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -12121,9 +12121,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -12231,9 +12231,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -12561,9 +12561,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -12616,9 +12616,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -12781,9 +12781,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -12836,9 +12836,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13001,9 +13001,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13056,9 +13056,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13111,9 +13111,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13331,9 +13331,9 @@
         "required": true,
         "sourceRepoName": "2048",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT",
-        "remote": "https://github.com/gabrielecirulli/2048.git",
-        "commit": "478b6ec"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13441,9 +13441,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13496,9 +13496,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13661,9 +13661,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13716,9 +13716,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13881,9 +13881,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -13936,9 +13936,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -14376,9 +14376,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -14541,9 +14541,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -14596,9 +14596,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -14761,9 +14761,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -14981,9 +14981,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -15036,9 +15036,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -15201,9 +15201,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -15256,9 +15256,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -15421,9 +15421,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -15531,9 +15531,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -15861,9 +15861,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -15916,9 +15916,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16081,9 +16081,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16136,9 +16136,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16301,9 +16301,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16356,9 +16356,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16411,9 +16411,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16631,9 +16631,9 @@
         "required": true,
         "sourceRepoName": "2048",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT",
-        "remote": "https://github.com/gabrielecirulli/2048.git",
-        "commit": "478b6ec"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16741,9 +16741,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16796,9 +16796,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -16961,9 +16961,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -17016,9 +17016,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -17181,9 +17181,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -17236,9 +17236,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -17676,9 +17676,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -17841,9 +17841,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -17896,9 +17896,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -18061,9 +18061,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -18116,9 +18116,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -18501,9 +18501,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -18721,9 +18721,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -18776,9 +18776,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -18941,9 +18941,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -18996,9 +18996,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -19161,9 +19161,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -19271,9 +19271,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -19601,9 +19601,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -19656,9 +19656,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -19821,9 +19821,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -19876,9 +19876,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20041,9 +20041,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20096,9 +20096,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20151,9 +20151,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20371,9 +20371,9 @@
         "required": true,
         "sourceRepoName": "2048",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT",
-        "remote": "https://github.com/gabrielecirulli/2048.git",
-        "commit": "478b6ec"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20481,9 +20481,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20536,9 +20536,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20701,9 +20701,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20756,9 +20756,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20921,9 +20921,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -20976,9 +20976,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -21416,9 +21416,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -21581,9 +21581,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -21636,9 +21636,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -21801,9 +21801,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -21856,9 +21856,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -22241,9 +22241,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -22461,9 +22461,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -22516,9 +22516,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -22681,9 +22681,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -22736,9 +22736,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -22901,9 +22901,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -23011,9 +23011,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -23341,9 +23341,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -23396,9 +23396,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -23561,9 +23561,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -23616,9 +23616,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -23781,9 +23781,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -23836,9 +23836,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -23891,9 +23891,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -24111,9 +24111,9 @@
         "required": true,
         "sourceRepoName": "2048",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT",
-        "remote": "https://github.com/gabrielecirulli/2048.git",
-        "commit": "478b6ec"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -24221,9 +24221,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -24276,9 +24276,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -24441,9 +24441,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -24496,9 +24496,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -24661,9 +24661,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -24716,9 +24716,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -25156,9 +25156,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -25321,9 +25321,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -25376,9 +25376,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -25541,9 +25541,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -25596,9 +25596,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -25981,9 +25981,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -26201,9 +26201,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -26256,9 +26256,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -26421,9 +26421,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -26476,9 +26476,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -26641,9 +26641,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -26751,9 +26751,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -27081,9 +27081,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -27136,9 +27136,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -27301,9 +27301,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -27356,9 +27356,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -27521,9 +27521,9 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
@@ -27576,9 +27576,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     }
   ]

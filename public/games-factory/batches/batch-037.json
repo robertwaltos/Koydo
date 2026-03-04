@@ -1,32 +1,527 @@
 {
-  "generatedAt": "2026-03-04T05:55:45.435Z",
+  "generatedAt": "2026-03-04T15:10:41.904Z",
   "batchId": "batch-037",
   "batchNumber": 37,
-  "totalBatches": 63,
+  "totalBatches": 42,
   "throttle": {
-    "pauseMs": 180,
+    "pauseMs": 120,
     "sequential": true
   },
   "games": [
     {
-      "id": "zone-024",
-      "title": "Nimbus Arcade",
-      "shortName": "Nimbus Arcade",
+      "id": "zone-168",
+      "title": "Willow Summit",
+      "shortName": "Willow Summit",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "adventure",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-169",
+      "title": "Maple Summit",
+      "shortName": "Maple Summit",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "logic",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-170",
+      "title": "Coral Summit",
+      "shortName": "Coral Summit",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "creative",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-171",
+      "title": "Breeze Summit",
+      "shortName": "Breeze Summit",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "science",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "subject-mastery",
+        "label": "Subject Mastery",
+        "subject": "cross-subject",
+        "tags": [
+          "educational",
+          "assessment",
+          "adaptive-difficulty"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-quiz-factory",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-172",
+      "title": "Sprout Summit",
+      "shortName": "Sprout Summit",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "math",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "math-lab",
+        "label": "Math Lab",
+        "subject": "math",
+        "tags": [
+          "math",
+          "adaptive-difficulty",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "2048",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-173",
+      "title": "Pebble Summit",
+      "shortName": "Pebble Summit",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "literacy",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "story-explorer",
+        "label": "Story Explorer",
+        "subject": "geography",
+        "tags": [
+          "dora-style",
+          "exploration",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-experience-template",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-174",
+      "title": "Nimbus Summit",
+      "shortName": "Nimbus Summit",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🚀",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-175",
+      "title": "Flare Summit",
+      "shortName": "Flare Summit",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🌌",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-176",
+      "title": "Sky Expedition",
+      "shortName": "Sky Expedition",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🛸",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-177",
+      "title": "River Expedition",
+      "shortName": "River Expedition",
       "description": "Discover Create Grow",
       "mode": "arcade",
       "category": "⚡",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
       "graphicsTier": "4k-ready",
       "track": {
-        "key": "pure-fun",
-        "label": "Pure Fun",
-        "subject": "fun",
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
         "tags": [
-          "plain-fun",
-          "arcade",
-          "reward-loop"
+          "pacman-style",
+          "timing",
+          "fun"
         ]
       },
       "gameplay": {
@@ -57,31 +552,31 @@
       "attribution": {
         "required": false,
         "sourceRepoName": null,
-        "integrationTrack": "internal-fun-loop",
+        "integrationTrack": "internal-maze-runtime",
         "license": null,
         "remote": null,
         "commit": null
       }
     },
     {
-      "id": "zone-025",
-      "title": "Flare Arcade",
-      "shortName": "Flare Arcade",
+      "id": "zone-178",
+      "title": "Echo Expedition",
+      "shortName": "Echo Expedition",
       "description": "Discover Create Grow",
       "mode": "arcade",
       "category": "🎮",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
       "graphicsTier": "4k-ready",
       "track": {
-        "key": "maze-chase",
-        "label": "Maze Chase",
+        "key": "stack-lab",
+        "label": "Stack Lab",
         "subject": "logic",
         "tags": [
-          "pacman-style",
-          "timing",
-          "fun"
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
         ]
       },
       "gameplay": {
@@ -110,79 +605,24 @@
         ]
       },
       "attribution": {
-        "required": false,
-        "sourceRepoName": null,
-        "integrationTrack": "internal-maze-runtime",
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
         "license": null,
         "remote": null,
         "commit": null
       }
     },
     {
-      "id": "zone-026",
-      "title": "Sky Rally",
-      "shortName": "Sky Rally",
+      "id": "zone-179",
+      "title": "Luna Expedition",
+      "shortName": "Luna Expedition",
       "description": "Discover Create Grow",
       "mode": "arcade",
       "category": "🧠",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "stack-lab",
-        "label": "Stack Lab",
-        "subject": "logic",
-        "tags": [
-          "tetris-style",
-          "spatial-reasoning",
-          "educational"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": true,
-        "sourceRepoName": "javascript-tetris",
-        "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
-      }
-    },
-    {
-      "id": "zone-027",
-      "title": "River Rally",
-      "shortName": "River Rally",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "🧩",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
       "graphicsTier": "4k-ready",
       "track": {
         "key": "world-detective",
@@ -223,229 +663,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
-      }
-    },
-    {
-      "id": "zone-028",
-      "title": "Echo Rally",
-      "shortName": "Echo Rally",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "🎨",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "pure-fun",
-        "label": "Pure Fun",
-        "subject": "fun",
-        "tags": [
-          "plain-fun",
-          "arcade",
-          "reward-loop"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": false,
-        "sourceRepoName": null,
-        "integrationTrack": "internal-fun-loop",
         "license": null,
         "remote": null,
         "commit": null
-      }
-    },
-    {
-      "id": "zone-029",
-      "title": "Luna Rally",
-      "shortName": "Luna Rally",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "🌠",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "maze-chase",
-        "label": "Maze Chase",
-        "subject": "logic",
-        "tags": [
-          "pacman-style",
-          "timing",
-          "fun"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": false,
-        "sourceRepoName": null,
-        "integrationTrack": "internal-maze-runtime",
-        "license": null,
-        "remote": null,
-        "commit": null
-      }
-    },
-    {
-      "id": "zone-030",
-      "title": "Nova Rally",
-      "shortName": "Nova Rally",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "🏁",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "stack-lab",
-        "label": "Stack Lab",
-        "subject": "logic",
-        "tags": [
-          "tetris-style",
-          "spatial-reasoning",
-          "educational"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": true,
-        "sourceRepoName": "javascript-tetris",
-        "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
-      }
-    },
-    {
-      "id": "zone-031",
-      "title": "Terra Rally",
-      "shortName": "Terra Rally",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "arcade",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "world-detective",
-        "label": "World Detective",
-        "subject": "geography",
-        "tags": [
-          "carmen-style",
-          "map-clues",
-          "educational"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": true,
-        "sourceRepoName": "openstreetguesser",
-        "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
       }
     }
   ]

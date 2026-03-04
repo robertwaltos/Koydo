@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-03-04T05:55:50.286Z",
+  "generatedAt": "2026-03-04T15:10:42.535Z",
   "pipelineVersion": "games-500-factory-v1",
   "resourcePolicy": {
-    "batchSize": 8,
-    "pauseMs": 180,
+    "batchSize": 12,
+    "pauseMs": 120,
     "resumeBatch": 1,
     "maxBatches": null,
     "dryRun": false
   },
   "totals": {
     "games": 500,
-    "totalBatches": 63,
-    "executedBatches": 63
+    "totalBatches": 42,
+    "executedBatches": 42
   },
   "coverage": {
     "ageBands": {
@@ -71,28 +71,9 @@
     }
   },
   "openSource": {
-    "repoCount": 3,
+    "repoCount": 0,
     "integratedRepoCount": 189,
-    "repos": [
-      {
-        "name": "2048",
-        "license": "MIT",
-        "remote": "https://github.com/gabrielecirulli/2048.git",
-        "commit": "478b6ec"
-      },
-      {
-        "name": "javascript-tetris",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
-      },
-      {
-        "name": "openstreetguesser",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
-      }
-    ]
+    "repos": []
   },
   "outputs": {
     "manifest": "public/GAMES-500-PIPELINE-MANIFEST.json",
@@ -139,28 +120,7 @@
       "public/games-factory/batches/batch-039.json",
       "public/games-factory/batches/batch-040.json",
       "public/games-factory/batches/batch-041.json",
-      "public/games-factory/batches/batch-042.json",
-      "public/games-factory/batches/batch-043.json",
-      "public/games-factory/batches/batch-044.json",
-      "public/games-factory/batches/batch-045.json",
-      "public/games-factory/batches/batch-046.json",
-      "public/games-factory/batches/batch-047.json",
-      "public/games-factory/batches/batch-048.json",
-      "public/games-factory/batches/batch-049.json",
-      "public/games-factory/batches/batch-050.json",
-      "public/games-factory/batches/batch-051.json",
-      "public/games-factory/batches/batch-052.json",
-      "public/games-factory/batches/batch-053.json",
-      "public/games-factory/batches/batch-054.json",
-      "public/games-factory/batches/batch-055.json",
-      "public/games-factory/batches/batch-056.json",
-      "public/games-factory/batches/batch-057.json",
-      "public/games-factory/batches/batch-058.json",
-      "public/games-factory/batches/batch-059.json",
-      "public/games-factory/batches/batch-060.json",
-      "public/games-factory/batches/batch-061.json",
-      "public/games-factory/batches/batch-062.json",
-      "public/games-factory/batches/batch-063.json"
+      "public/games-factory/batches/batch-042.json"
     ],
     "reportJson": "public/GAMES-500-PIPELINE-REPORT.json",
     "reportMarkdown": "GAMES-500-PIPELINE-REPORT.md"

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import type { GameDifficulty, GameResult, GameType } from "@/lib/games/types";
 import { getRegisteredGame, isCoreGameType } from "@/lib/games/catalog";
+import type { RewardRealmMasterySnapshot } from "@/lib/games/reward-realm";
 import * as Games from "@/components/games";
 import ImmersiveArcadeTemplate from "@/components/games/immersive-arcade-template";
 import MascotHost from "@/components/experience/MascotHost";
@@ -242,6 +243,11 @@ type PremiumSeasonPassPayload = {
   };
 };
 
+type RewardRealmStatus = {
+  unlocked: boolean;
+  mastery: RewardRealmMasterySnapshot;
+};
+
 export default function GamePlayerPage() {
   const params = useParams<{ gameId: string }>();
   const router = useRouter();
@@ -251,6 +257,8 @@ export default function GamePlayerPage() {
 
   const gameId = params.gameId;
   const game = getRegisteredGame(gameId);
+  const gameCatalogId = game?.id ?? null;
+  const gameTrack = game?.track ?? null;
   const requestedProfileId = searchParams.get("studentProfileId") ?? "";
   const isDailyChallengeRun = searchParams.get("daily") === "1";
 
@@ -268,6 +276,9 @@ export default function GamePlayerPage() {
   const [guardianUnlocked, setGuardianUnlocked] = useState(false);
   const [resultMessage, setResultMessage] = useState<string>("");
   const [shareStatus, setShareStatus] = useState<string>("");
+  const [rewardRealmStatus, setRewardRealmStatus] = useState<RewardRealmStatus | null>(null);
+  const [rewardRealmStatusMessage, setRewardRealmStatusMessage] = useState<string>("");
+  const [rewardRealmStatusLoading, setRewardRealmStatusLoading] = useState<boolean>(false);
   const [playStyle, setPlayStyle] = useState<"solo" | "party">(() => {
     const requestedStyle = searchParams.get("style");
     if (requestedStyle === "solo" || requestedStyle === "party") {
@@ -334,6 +345,57 @@ export default function GamePlayerPage() {
       active = false;
     };
   }, [requestedProfileId]);
+
+  useEffect(() => {
+    let active = true;
+    const loadRewardRealmStatus = async () => {
+      if (!gameCatalogId || gameTrack !== "Reward Realm") {
+        setRewardRealmStatus(null);
+        setRewardRealmStatusMessage("");
+        setRewardRealmStatusLoading(false);
+        return;
+      }
+
+      if (!selectedProfileId) {
+        setRewardRealmStatus(null);
+        setRewardRealmStatusMessage("Select a learner profile to evaluate Reward Realm unlock.");
+        setRewardRealmStatusLoading(false);
+        return;
+      }
+
+      setRewardRealmStatusLoading(true);
+      setRewardRealmStatusMessage("");
+      const params = new URLSearchParams({ studentProfileId: selectedProfileId });
+      const response = await fetch(`/api/games/reward-realm/status?${params.toString()}`, {
+        cache: "no-store",
+      });
+      const payload = (await response.json().catch(() => ({}))) as {
+        unlocked?: boolean;
+        mastery?: RewardRealmMasterySnapshot;
+        error?: string;
+      };
+
+      if (!active) return;
+      if (!response.ok || !payload.mastery) {
+        setRewardRealmStatus(null);
+        setRewardRealmStatusMessage(payload.error ?? "Could not load Reward Realm status.");
+        setRewardRealmStatusLoading(false);
+        return;
+      }
+
+      setRewardRealmStatus({
+        unlocked: Boolean(payload.unlocked),
+        mastery: payload.mastery,
+      });
+      setRewardRealmStatusMessage("");
+      setRewardRealmStatusLoading(false);
+    };
+
+    void loadRewardRealmStatus();
+    return () => {
+      active = false;
+    };
+  }, [gameCatalogId, gameTrack, selectedProfileId]);
 
   const resetLegacyRunTracking = (nextInteractionCount = 0) => {
     legacySessionIdRef.current = createLegacySessionId();
@@ -492,12 +554,20 @@ export default function GamePlayerPage() {
     return playerAge < game.ageMin || playerAge > game.ageMax;
   }, [game, playerAge]);
 
+  const rewardRealmLocked = useMemo(() => {
+    if (!game || game.track !== "Reward Realm") return false;
+    if (!selectedProfileId) return false;
+    if (rewardRealmStatusLoading) return true;
+    return !rewardRealmStatus?.unlocked;
+  }, [game, rewardRealmStatus, rewardRealmStatusLoading, selectedProfileId]);
+
   const resolvedGameId = game?.id ?? gameId;
   const CoreComponent = game && isCoreGameType(game.id) ? CORE_COMPONENTS[game.id] : null;
   const LegacyComponent = game ? (LEGACY_COMPONENTS[game.id] ?? null) : null;
 
   useEffect(() => {
     if (!LegacyComponent || !selectedProfileId) return;
+    if (rewardRealmLocked) return;
     if (legacyAutoEventSentRef.current || legacySubmissionInFlightRef.current) return;
     if (legacyInteractionCount < LEGACY_MIN_INTERACTIONS) return;
 
@@ -533,6 +603,7 @@ export default function GamePlayerPage() {
     legacyRunStartedAt,
     resolvedGameId,
     difficulty,
+    rewardRealmLocked,
   ]);
 
   useEffect(() => {
@@ -542,6 +613,10 @@ export default function GamePlayerPage() {
       const event = rawEvent as CustomEvent<LegacyGameCompleteDetail>;
       const detail = event.detail;
       if (!detail || detail.gameId !== resolvedGameId) return;
+      if (rewardRealmLocked) {
+        setResultMessage("Reward Realm is locked. Complete educational mastery milestones first.");
+        return;
+      }
       if (legacySubmissionInFlightRef.current) return;
       if (detail.sessionId === legacyLastHandledSessionRef.current) return;
       if (!selectedProfileId) {
@@ -602,7 +677,7 @@ export default function GamePlayerPage() {
         handleLegacyCompleteEvent as EventListener,
       );
     };
-  }, [LegacyComponent, difficulty, guardianUnlocked, resolvedGameId, selectedProfileId, submitResult]);
+  }, [LegacyComponent, difficulty, guardianUnlocked, resolvedGameId, rewardRealmLocked, selectedProfileId, submitResult]);
 
   if (!game) {
     return (
@@ -660,6 +735,11 @@ export default function GamePlayerPage() {
   };
 
   const handleCoreComplete = async (result: GameResult) => {
+    if (rewardRealmLocked) {
+      setResultMessage("Reward Realm is locked. Complete educational mastery milestones first.");
+      return;
+    }
+
     setResultMessage("Submitting score...");
     const outcome = await submitResult({
       ...result,
@@ -693,6 +773,11 @@ export default function GamePlayerPage() {
     stars: 0 | 1 | 2 | 3;
     timeMs: number;
   }) => {
+    if (rewardRealmLocked) {
+      setResultMessage("Reward Realm is locked. Complete educational mastery milestones first.");
+      return;
+    }
+
     const mappedCore = reportAsCoreType(game.id);
     void submitResult({
       gameType: mappedCore,
@@ -979,21 +1064,6 @@ export default function GamePlayerPage() {
 
   const nextClaimableSeasonTier = premiumSeasonPass?.tiers.find((tier) => tier.unlocked && !tier.claimed) ?? null;
 
-  /* ── Playing state ─────────────────────────────────────────────────── */
-  if (playing && Engine) {
-    return (
-      <main className="mx-auto max-w-4xl px-4 py-4">
-        <Engine
-          game={game}
-          difficulty={difficulty}
-          level={level}
-          onComplete={handleComplete}
-          onExit={handleExit}
-        />
-      </main>
-    );
-  }
-
   /* ── Lobby (default) ───────────────────────────────────────────────── */
   return (
     <main className="mx-auto max-w-5xl px-4 py-8">
@@ -1017,6 +1087,17 @@ export default function GamePlayerPage() {
           <p className="text-sm font-bold text-stone-800">
             {game.mode === "core" ? "Core Game" : game.mode === "legacy" ? "Gemini Legacy Game" : "Immersive Arcade"}
           </p>
+          <p className="mt-1 text-[11px] text-stone-500">
+            Track: {game.track}
+          </p>
+          {game.track === "Reward Realm" ? (
+            <p className={`mt-1 text-[11px] font-semibold ${
+              rewardRealmLocked ? "text-amber-700" : "text-emerald-700"
+            }`}
+            >
+              {rewardRealmLocked ? "Locked pending educational mastery" : "Reward Realm unlocked"}
+            </p>
+          ) : null}
         </div>
         <div>
           <label className="text-[11px] font-semibold uppercase tracking-wider text-stone-500">Difficulty</label>
@@ -1110,6 +1191,13 @@ export default function GamePlayerPage() {
           {shareStatus ? <p className="mt-1 text-xs text-stone-500">{shareStatus}</p> : null}
         </div>
       </div>
+
+      {game.track === "Reward Realm" && rewardRealmStatusLoading ? (
+        <p className="mb-4 text-xs text-stone-500">Checking Reward Realm mastery status...</p>
+      ) : null}
+      {game.track === "Reward Realm" && rewardRealmStatusMessage ? (
+        <p className="mb-4 text-xs text-stone-500">{rewardRealmStatusMessage}</p>
+      ) : null}
 
       <section className="mb-4 rounded-2xl border border-stone-200 bg-white p-4">
         <h2 className="text-sm font-black uppercase tracking-wider text-stone-700">Live Network Events</h2>
@@ -1325,6 +1413,37 @@ export default function GamePlayerPage() {
           >
             Unlock Game
           </button>
+        </section>
+      ) : selectedProfileId && rewardRealmLocked ? (
+        <section className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+          <h1 className="text-xl font-black text-amber-900">Reward Realm Locked</h1>
+          <p className="mt-2 text-sm text-amber-800">
+            Reward Realm games unlock after educational mastery milestones are complete.
+          </p>
+          {rewardRealmStatus ? (
+            <div className="mt-3 grid gap-2 text-xs text-amber-900 sm:grid-cols-2">
+              <p>
+                Educational runs: {rewardRealmStatus.mastery.progress.educationalRuns}/
+                {rewardRealmStatus.mastery.policy.minEducationalRuns}
+              </p>
+              <p>
+                Distinct educational games: {rewardRealmStatus.mastery.progress.distinctEducationalGames}/
+                {rewardRealmStatus.mastery.policy.minDistinctEducationalGames}
+              </p>
+              <p>
+                Perfect educational runs: {rewardRealmStatus.mastery.progress.perfectEducationalRuns}/
+                {rewardRealmStatus.mastery.policy.minPerfectEducationalRuns}
+              </p>
+              <p>
+                Avg stars: {rewardRealmStatus.mastery.progress.averageEducationalStars.toFixed(2)}/
+                {rewardRealmStatus.mastery.policy.minAverageEducationalStars.toFixed(2)}
+              </p>
+            </div>
+          ) : (
+            <p className="mt-3 text-xs text-amber-800">
+              {rewardRealmStatusMessage || "Loading mastery progress..."}
+            </p>
+          )}
         </section>
       ) : selectedProfileId ? (
         <section className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">

@@ -51,6 +51,16 @@ async function main() {
       args: ["scripts/games500-spec-audit.mjs"],
     },
     {
+      id: "games1-contract-audit",
+      command: "node",
+      args: ["scripts/games1-contract-audit.mjs"],
+    },
+    {
+      id: "reward-realm-contract-test",
+      command: "node",
+      args: ["scripts/test-games-reward-realm-contract.mjs"],
+    },
+    {
       id: "open-source-audit",
       command: "node",
       args: ["scripts/audit-open-source-game-repos.mjs"],

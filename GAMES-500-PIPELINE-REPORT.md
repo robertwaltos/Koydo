@@ -1,16 +1,16 @@
 # Games 500 Pipeline Report
 
-Generated: 2026-03-04T05:55:50.286Z
+Generated: 2026-03-04T15:10:42.535Z
 
 ## Resource Policy
-- Batch size: 8
-- Pause between batches: 180 ms
+- Batch size: 12
+- Pause between batches: 120 ms
 - Process model: sequential
 
 ## Totals
 - Games planned: 500
-- Total batches: 63
-- Executed this run: 63
+- Total batches: 42
+- Executed this run: 42
 
 ## Coverage
 - Age bands (strict counts): {"kindergarten":100,"elementary":150,"middle-school":100,"high-school":100,"college":50,"unclassified":0}
@@ -65,7 +65,7 @@ Generated: 2026-03-04T05:55:50.286Z
 | reaction-model | 8 |
 
 ## Open Source Integrations
-- Audited repos available: 3
+- Audited repos available: 0
 - Integrated with attribution: 189
 
 ## Output Paths

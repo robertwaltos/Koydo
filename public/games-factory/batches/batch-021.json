@@ -1,17 +1,292 @@
 {
-  "generatedAt": "2026-03-04T05:55:42.453Z",
+  "generatedAt": "2026-03-04T15:10:39.898Z",
   "batchId": "batch-021",
   "batchNumber": 21,
-  "totalBatches": 63,
+  "totalBatches": 42,
   "throttle": {
-    "pauseMs": 180,
+    "pauseMs": 120,
     "sequential": true
   },
   "games": [
     {
-      "id": "arcade-096",
-      "title": "Breeze Lab",
-      "shortName": "Breeze Lab",
+      "id": "arcade-176",
+      "title": "Sky Studio",
+      "shortName": "Sky Studio",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "math",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "math-lab",
+        "label": "Math Lab",
+        "subject": "math",
+        "tags": [
+          "math",
+          "adaptive-difficulty",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "2048",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-177",
+      "title": "River Studio",
+      "shortName": "River Studio",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "literacy",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "story-explorer",
+        "label": "Story Explorer",
+        "subject": "geography",
+        "tags": [
+          "dora-style",
+          "exploration",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-experience-template",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-178",
+      "title": "Echo Studio",
+      "shortName": "Echo Studio",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🚀",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-179",
+      "title": "Luna Studio",
+      "shortName": "Luna Studio",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🌌",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-180",
+      "title": "Nova Studio",
+      "shortName": "Nova Studio",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🛸",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-181",
+      "title": "Terra Studio",
+      "shortName": "Terra Studio",
       "description": "Build Explore Learn",
       "mode": "arcade",
       "category": "⚡",
@@ -20,13 +295,13 @@
       "ageBand": "elementary",
       "graphicsTier": "4k-ready",
       "track": {
-        "key": "pure-fun",
-        "label": "Pure Fun",
-        "subject": "fun",
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
         "tags": [
-          "plain-fun",
-          "arcade",
-          "reward-loop"
+          "pacman-style",
+          "timing",
+          "fun"
         ]
       },
       "gameplay": {
@@ -57,16 +332,16 @@
       "attribution": {
         "required": false,
         "sourceRepoName": null,
-        "integrationTrack": "internal-fun-loop",
+        "integrationTrack": "internal-maze-runtime",
         "license": null,
         "remote": null,
         "commit": null
       }
     },
     {
-      "id": "arcade-097",
-      "title": "Sprout Lab",
-      "shortName": "Sprout Lab",
+      "id": "arcade-182",
+      "title": "Comet Studio",
+      "shortName": "Comet Studio",
       "description": "Build Explore Learn",
       "mode": "arcade",
       "category": "🎮",
@@ -75,61 +350,6 @@
       "ageBand": "elementary",
       "graphicsTier": "4k-ready",
       "track": {
-        "key": "maze-chase",
-        "label": "Maze Chase",
-        "subject": "logic",
-        "tags": [
-          "pacman-style",
-          "timing",
-          "fun"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": false,
-        "sourceRepoName": null,
-        "integrationTrack": "internal-maze-runtime",
-        "license": null,
-        "remote": null,
-        "commit": null
-      }
-    },
-    {
-      "id": "arcade-098",
-      "title": "Pebble Lab",
-      "shortName": "Pebble Lab",
-      "description": "Build Explore Learn",
-      "mode": "arcade",
-      "category": "🧠",
-      "ageMin": 7,
-      "ageMax": 11,
-      "ageBand": "elementary",
-      "graphicsTier": "4k-ready",
-      "track": {
         "key": "stack-lab",
         "label": "Stack Lab",
         "subject": "logic",
@@ -168,18 +388,18 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
-      "id": "arcade-099",
-      "title": "Nimbus Lab",
-      "shortName": "Nimbus Lab",
+      "id": "arcade-183",
+      "title": "Aurora Studio",
+      "shortName": "Aurora Studio",
       "description": "Build Explore Learn",
       "mode": "arcade",
-      "category": "🧩",
+      "category": "🧠",
       "ageMin": 7,
       "ageMax": 11,
       "ageBand": "elementary",
@@ -223,18 +443,18 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
-      "id": "arcade-100",
-      "title": "Flare Lab",
-      "shortName": "Flare Lab",
+      "id": "arcade-184",
+      "title": "Orbit Studio",
+      "shortName": "Orbit Studio",
       "description": "Build Explore Learn",
       "mode": "arcade",
-      "category": "🎨",
+      "category": "🧩",
       "ageMin": 7,
       "ageMax": 11,
       "ageBand": "elementary",
@@ -284,12 +504,12 @@
       }
     },
     {
-      "id": "arcade-101",
-      "title": "Sky Trail",
-      "shortName": "Sky Trail",
+      "id": "arcade-185",
+      "title": "Pixel Studio",
+      "shortName": "Pixel Studio",
       "description": "Build Explore Learn",
       "mode": "arcade",
-      "category": "🌠",
+      "category": "🎨",
       "ageMin": 7,
       "ageMax": 11,
       "ageBand": "elementary",
@@ -339,15 +559,15 @@
       }
     },
     {
-      "id": "arcade-102",
-      "title": "River Trail",
-      "shortName": "River Trail",
+      "id": "arcade-186",
+      "title": "Clover Studio",
+      "shortName": "Clover Studio",
       "description": "Build Explore Learn",
       "mode": "arcade",
-      "category": "🏁",
-      "ageMin": 7,
-      "ageMax": 11,
-      "ageBand": "elementary",
+      "category": "🌠",
+      "ageMin": 12,
+      "ageMax": 14,
+      "ageBand": "middle-school",
       "graphicsTier": "4k-ready",
       "track": {
         "key": "stack-lab",
@@ -388,21 +608,21 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
-      "id": "arcade-103",
-      "title": "Echo Trail",
-      "shortName": "Echo Trail",
+      "id": "arcade-187",
+      "title": "Harbor Studio",
+      "shortName": "Harbor Studio",
       "description": "Build Explore Learn",
       "mode": "arcade",
-      "category": "arcade",
-      "ageMin": 7,
-      "ageMax": 11,
-      "ageBand": "elementary",
+      "category": "🏁",
+      "ageMin": 12,
+      "ageMax": 14,
+      "ageBand": "middle-school",
       "graphicsTier": "4k-ready",
       "track": {
         "key": "world-detective",
@@ -443,9 +663,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     }
   ]

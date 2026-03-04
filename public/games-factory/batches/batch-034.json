@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-03-04T05:55:44.879Z",
+  "generatedAt": "2026-03-04T15:10:41.523Z",
   "batchId": "batch-034",
   "batchNumber": 34,
-  "totalBatches": 63,
+  "totalBatches": 42,
   "throttle": {
-    "pauseMs": 180,
+    "pauseMs": 120,
     "sequential": true
   },
   "games": [
     {
-      "id": "arcade-200",
-      "title": "Flare Studio",
-      "shortName": "Flare Studio",
-      "description": "Build Explore Learn",
+      "id": "zone-132",
+      "title": "Comet Odyssey",
+      "shortName": "Comet Odyssey",
+      "description": "Discover Create Grow",
       "mode": "arcade",
-      "category": "🧠",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
+      "category": "🏁",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
       "graphicsTier": "4k-ready",
       "track": {
         "key": "pure-fun",
@@ -64,235 +64,15 @@
       }
     },
     {
-      "id": "zone-001",
-      "title": "Sky Arcade",
-      "shortName": "Sky Arcade",
+      "id": "zone-133",
+      "title": "Aurora Odyssey",
+      "shortName": "Aurora Odyssey",
       "description": "Discover Create Grow",
       "mode": "arcade",
-      "category": "science",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "chem-lab",
-        "label": "Chem Lab",
-        "subject": "chemistry",
-        "tags": [
-          "chemistry",
-          "reaction-model",
-          "educational"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": false,
-        "sourceRepoName": null,
-        "integrationTrack": "internal-science-sim",
-        "license": null,
-        "remote": null,
-        "commit": null
-      }
-    },
-    {
-      "id": "zone-002",
-      "title": "River Arcade",
-      "shortName": "River Arcade",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "math",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "stack-lab",
-        "label": "Stack Lab",
-        "subject": "logic",
-        "tags": [
-          "tetris-style",
-          "spatial-reasoning",
-          "educational"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": true,
-        "sourceRepoName": "javascript-tetris",
-        "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
-      }
-    },
-    {
-      "id": "zone-003",
-      "title": "Echo Arcade",
-      "shortName": "Echo Arcade",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "literacy",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "pure-fun",
-        "label": "Pure Fun",
-        "subject": "fun",
-        "tags": [
-          "plain-fun",
-          "arcade",
-          "reward-loop"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": false,
-        "sourceRepoName": null,
-        "integrationTrack": "internal-fun-loop",
-        "license": null,
-        "remote": null,
-        "commit": null
-      }
-    },
-    {
-      "id": "zone-004",
-      "title": "Luna Arcade",
-      "shortName": "Luna Arcade",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "🚀",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
-      "graphicsTier": "4k-ready",
-      "track": {
-        "key": "pure-fun",
-        "label": "Pure Fun",
-        "subject": "fun",
-        "tags": [
-          "plain-fun",
-          "arcade",
-          "reward-loop"
-        ]
-      },
-      "gameplay": {
-        "levelModel": "infinite",
-        "progressionMode": "adaptive-and-endless",
-        "immersionStyle": "cinematic-4k"
-      },
-      "performance": {
-        "targetFps": 60,
-        "frameBudgetMs": 16.67,
-        "maxInputLatencyMs": 45,
-        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
-      },
-      "engine": {
-        "runtimeProfile": "immersive-arcade-engine",
-        "webgpuReady": true,
-        "webxrReady": true,
-        "visionGlassesReady": true,
-        "metaGlassesReady": true,
-        "inputAbstraction": [
-          "touch",
-          "keyboard",
-          "gamepad",
-          "gesture",
-          "xr-controller"
-        ]
-      },
-      "attribution": {
-        "required": false,
-        "sourceRepoName": null,
-        "integrationTrack": "internal-fun-loop",
-        "license": null,
-        "remote": null,
-        "commit": null
-      }
-    },
-    {
-      "id": "zone-005",
-      "title": "Nova Arcade",
-      "shortName": "Nova Arcade",
-      "description": "Discover Create Grow",
-      "mode": "arcade",
-      "category": "🌌",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
+      "category": "arcade",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
       "graphicsTier": "4k-ready",
       "track": {
         "key": "maze-chase",
@@ -339,15 +119,235 @@
       }
     },
     {
-      "id": "zone-006",
-      "title": "Terra Arcade",
-      "shortName": "Terra Arcade",
+      "id": "zone-134",
+      "title": "Orbit Odyssey",
+      "shortName": "Orbit Odyssey",
       "description": "Discover Create Grow",
       "mode": "arcade",
-      "category": "🛸",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
+      "category": "adventure",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "history-quest",
+        "label": "History Quest",
+        "subject": "history",
+        "tags": [
+          "history",
+          "timeline",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-story-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-135",
+      "title": "Pixel Odyssey",
+      "shortName": "Pixel Odyssey",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "logic",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "subject-mastery",
+        "label": "Subject Mastery",
+        "subject": "cross-subject",
+        "tags": [
+          "educational",
+          "assessment",
+          "adaptive-difficulty"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-quiz-factory",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-136",
+      "title": "Clover Odyssey",
+      "shortName": "Clover Odyssey",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "creative",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "creative-studio",
+        "label": "Creative Studio",
+        "subject": "arts",
+        "tags": [
+          "creative",
+          "music",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-creative-suite",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-137",
+      "title": "Harbor Odyssey",
+      "shortName": "Harbor Odyssey",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "science",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "chem-lab",
+        "label": "Chem Lab",
+        "subject": "chemistry",
+        "tags": [
+          "chemistry",
+          "reaction-model",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-science-sim",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-138",
+      "title": "Meadow Odyssey",
+      "shortName": "Meadow Odyssey",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "math",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
       "graphicsTier": "4k-ready",
       "track": {
         "key": "stack-lab",
@@ -388,21 +388,241 @@
         "required": true,
         "sourceRepoName": "javascript-tetris",
         "integrationTrack": "port-core-mechanic",
-        "license": "MIT-like",
-        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
-        "commit": "e5c0c42"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     },
     {
-      "id": "zone-007",
-      "title": "Comet Arcade",
-      "shortName": "Comet Arcade",
+      "id": "zone-139",
+      "title": "Dawn Odyssey",
+      "shortName": "Dawn Odyssey",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "literacy",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-140",
+      "title": "Summit Odyssey",
+      "shortName": "Summit Odyssey",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🚀",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-141",
+      "title": "Prism Odyssey",
+      "shortName": "Prism Odyssey",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🌌",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-142",
+      "title": "Marble Odyssey",
+      "shortName": "Marble Odyssey",
+      "description": "Discover Create Grow",
+      "mode": "arcade",
+      "category": "🛸",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "zone-143",
+      "title": "Willow Odyssey",
+      "shortName": "Willow Odyssey",
       "description": "Discover Create Grow",
       "mode": "arcade",
       "category": "⚡",
-      "ageMin": 12,
-      "ageMax": 14,
-      "ageBand": "middle-school",
+      "ageMin": 15,
+      "ageMax": 18,
+      "ageBand": "high-school",
       "graphicsTier": "4k-ready",
       "track": {
         "key": "world-detective",
@@ -443,9 +663,9 @@
         "required": true,
         "sourceRepoName": "openstreetguesser",
         "integrationTrack": "adapt-with-safe-map-mode",
-        "license": "MIT",
-        "remote": "https://github.com/louis-e/openstreetguesser.git",
-        "commit": "6620d77"
+        "license": null,
+        "remote": null,
+        "commit": null
       }
     }
   ]
