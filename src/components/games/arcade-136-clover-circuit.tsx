@@ -9,42 +9,43 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 136",
   title: "Clover Circuit",
   mascot: "pixel",
-  startMessage: "Pixel: stay adaptive and pick evidence-backed actions as pressure scales in Clover Circuit.",
-  winMessage: "Pixel: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Pixel: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Pixel: track integrity signals and choose the safest route corrections in Clover Circuit.",
+  winMessage: "Pixel: integrity corridor secured. Strong diagnostic control.",
+  failMessage: "Pixel: spoof cascade broke containment. Re-enter with cleaner validation.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "signal lane",
+    "checksum node",
+    "integrity ring",
+    "packet rail",
+    "logic mesh",
+    "validation core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Integrity drift detected on",
+    "Choose the most reliable correction for",
+    "Only one option preserves clean data flow in",
+    "Noise surge incoming: stabilize"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
+    "Verify",
+    "Validate",
+    "Anchor",
+    "Normalize",
     "Secure",
-    "Balance"
+    "Calibrate"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
+    "Guess",
     "Bypass",
-    "Overload"
+    "Flood",
+    "Skip",
+    "Overtrust"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Reliable checks reduce hidden failures.",
+    "Validation beats speed under noisy input.",
+    "Consistent tracing improves recovery.",
+    "Correct false branches early."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.26),transparent_46%),radial-gradient(circle_at_84%_80%,rgba(14,165,233,0.2),transparent_52%)]",
@@ -61,6 +62,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 7,
 };
 
 export default function Arcade136CloverCircuit() {
