@@ -51,6 +51,11 @@ async function main() {
       args: ["scripts/games500-spec-audit.mjs"],
     },
     {
+      id: "playability-audit-500",
+      command: "node",
+      args: ["scripts/games500-playability-audit.mjs"],
+    },
+    {
       id: "games1-contract-audit",
       command: "node",
       args: ["scripts/games1-contract-audit.mjs"],
