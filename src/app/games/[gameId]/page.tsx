@@ -169,7 +169,26 @@ const LEGACY_COMPONENTS: Record<string, () => React.JSX.Element> = {
   "zone-117": Games.Zone117EchoSignalTribunal,
   "zone-118": Games.Zone118TerraFrontlineWardens,
   "zone-119": Games.Zone119LunaSkylineSet,
-  "zone-120": Games.Zone120PixelSentinelLattice,
+  "zone-121": Games.Zone121SparkVaultThrust,
+  "zone-122": Games.Zone122SparkReactorConvoy,
+  "zone-123": Games.Zone123EchoSignalTribunal,
+  "zone-124": Games.Zone124TerraFrontlineWardens,
+  "zone-125": Games.Zone125LunaSkylineSet,
+  "zone-126": Games.Zone126PixelSentinelLattice,
+  "zone-127": Games.Zone127SparkVaultThrust,
+  "zone-128": Games.Zone128SparkReactorConvoy,
+  "zone-129": Games.Zone129EchoSignalTribunal,
+  "zone-130": Games.Zone130TerraFrontlineWardens,
+  "zone-131": Games.Zone131LunaSkylineSet,
+  "zone-132": Games.Zone132PixelSentinelLattice,
+  "zone-133": Games.Zone133SparkVaultThrust,
+  "zone-134": Games.Zone134SparkReactorConvoy,
+  "zone-135": Games.Zone135EchoSignalTribunal,
+  "zone-136": Games.Zone136TerraFrontlineWardens,
+  "zone-137": Games.Zone137LunaSkylineSet,
+  "zone-138": Games.Zone138PixelSentinelLattice,
+  "zone-139": Games.Zone139SparkVaultThrust,
+  "zone-140": Games.Zone140SparkReactorConvoy,
 };
 
 function friendForCategory(category: string): "pixel" | "spark" | "echo" | "luna" | "terra" {
@@ -1578,6 +1597,7 @@ export default function GamePlayerPage() {
     </main>
   );
 }
+
 
 
 

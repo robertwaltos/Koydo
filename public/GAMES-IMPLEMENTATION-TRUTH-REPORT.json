@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T17:13:32.640Z",
+  "generatedAt": "2026-03-04T17:18:42.011Z",
   "catalog": {
     "core": 8,
     "legacy": 57,
@@ -451,12 +451,12 @@
   },
   "runtime": {
     "coreRouted": 8,
-    "legacyRouted": 136,
-    "mappedComponentRouted": 136,
-    "templateRouted": 356,
+    "legacyRouted": 155,
+    "mappedComponentRouted": 155,
+    "templateRouted": 337,
     "legacyAliasRoutes": 0,
     "mappedAliasRoutes": 0,
-    "uniqueRuntimeImplementationFiles": 145,
+    "uniqueRuntimeImplementationFiles": 164,
     "coreResolvedFiles": [
       "color-mixer",
       "letter-catcher",
@@ -603,7 +603,26 @@
       "zone-117-echo-signal-tribunal",
       "zone-118-terra-frontline-wardens",
       "zone-119-luna-skyline-set",
-      "zone-120-pixel-sentinel-lattice"
+      "zone-121-spark-vault-thrust",
+      "zone-122-spark-reactor-convoy",
+      "zone-123-echo-signal-tribunal",
+      "zone-124-terra-frontline-wardens",
+      "zone-125-luna-skyline-set",
+      "zone-126-pixel-sentinel-lattice",
+      "zone-127-spark-vault-thrust",
+      "zone-128-spark-reactor-convoy",
+      "zone-129-echo-signal-tribunal",
+      "zone-130-terra-frontline-wardens",
+      "zone-131-luna-skyline-set",
+      "zone-132-pixel-sentinel-lattice",
+      "zone-133-spark-vault-thrust",
+      "zone-134-spark-reactor-convoy",
+      "zone-135-echo-signal-tribunal",
+      "zone-136-terra-frontline-wardens",
+      "zone-137-luna-skyline-set",
+      "zone-138-pixel-sentinel-lattice",
+      "zone-139-spark-vault-thrust",
+      "zone-140-spark-reactor-convoy"
     ],
     "mappedResolvedFiles": [
       "aero-architect",
@@ -741,7 +760,26 @@
       "zone-117-echo-signal-tribunal",
       "zone-118-terra-frontline-wardens",
       "zone-119-luna-skyline-set",
-      "zone-120-pixel-sentinel-lattice"
+      "zone-121-spark-vault-thrust",
+      "zone-122-spark-reactor-convoy",
+      "zone-123-echo-signal-tribunal",
+      "zone-124-terra-frontline-wardens",
+      "zone-125-luna-skyline-set",
+      "zone-126-pixel-sentinel-lattice",
+      "zone-127-spark-vault-thrust",
+      "zone-128-spark-reactor-convoy",
+      "zone-129-echo-signal-tribunal",
+      "zone-130-terra-frontline-wardens",
+      "zone-131-luna-skyline-set",
+      "zone-132-pixel-sentinel-lattice",
+      "zone-133-spark-vault-thrust",
+      "zone-134-spark-reactor-convoy",
+      "zone-135-echo-signal-tribunal",
+      "zone-136-terra-frontline-wardens",
+      "zone-137-luna-skyline-set",
+      "zone-138-pixel-sentinel-lattice",
+      "zone-139-spark-vault-thrust",
+      "zone-140-spark-reactor-convoy"
     ],
     "templateFile": "immersive-arcade-template"
   },
@@ -2104,13 +2142,203 @@
       ]
     },
     {
-      "gameId": "zone-120",
-      "component": "Zone120PixelSentinelLattice",
-      "entryFile": "zone-120-pixel-sentinel-lattice",
-      "resolvedFile": "zone-120-pixel-sentinel-lattice",
+      "gameId": "zone-121",
+      "component": "Zone121SparkVaultThrust",
+      "entryFile": "zone-121-spark-vault-thrust",
+      "resolvedFile": "zone-121-spark-vault-thrust",
       "aliasDepth": 0,
       "chain": [
-        "zone-120-pixel-sentinel-lattice"
+        "zone-121-spark-vault-thrust"
+      ]
+    },
+    {
+      "gameId": "zone-122",
+      "component": "Zone122SparkReactorConvoy",
+      "entryFile": "zone-122-spark-reactor-convoy",
+      "resolvedFile": "zone-122-spark-reactor-convoy",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-122-spark-reactor-convoy"
+      ]
+    },
+    {
+      "gameId": "zone-123",
+      "component": "Zone123EchoSignalTribunal",
+      "entryFile": "zone-123-echo-signal-tribunal",
+      "resolvedFile": "zone-123-echo-signal-tribunal",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-123-echo-signal-tribunal"
+      ]
+    },
+    {
+      "gameId": "zone-124",
+      "component": "Zone124TerraFrontlineWardens",
+      "entryFile": "zone-124-terra-frontline-wardens",
+      "resolvedFile": "zone-124-terra-frontline-wardens",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-124-terra-frontline-wardens"
+      ]
+    },
+    {
+      "gameId": "zone-125",
+      "component": "Zone125LunaSkylineSet",
+      "entryFile": "zone-125-luna-skyline-set",
+      "resolvedFile": "zone-125-luna-skyline-set",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-125-luna-skyline-set"
+      ]
+    },
+    {
+      "gameId": "zone-126",
+      "component": "Zone126PixelSentinelLattice",
+      "entryFile": "zone-126-pixel-sentinel-lattice",
+      "resolvedFile": "zone-126-pixel-sentinel-lattice",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-126-pixel-sentinel-lattice"
+      ]
+    },
+    {
+      "gameId": "zone-127",
+      "component": "Zone127SparkVaultThrust",
+      "entryFile": "zone-127-spark-vault-thrust",
+      "resolvedFile": "zone-127-spark-vault-thrust",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-127-spark-vault-thrust"
+      ]
+    },
+    {
+      "gameId": "zone-128",
+      "component": "Zone128SparkReactorConvoy",
+      "entryFile": "zone-128-spark-reactor-convoy",
+      "resolvedFile": "zone-128-spark-reactor-convoy",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-128-spark-reactor-convoy"
+      ]
+    },
+    {
+      "gameId": "zone-129",
+      "component": "Zone129EchoSignalTribunal",
+      "entryFile": "zone-129-echo-signal-tribunal",
+      "resolvedFile": "zone-129-echo-signal-tribunal",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-129-echo-signal-tribunal"
+      ]
+    },
+    {
+      "gameId": "zone-130",
+      "component": "Zone130TerraFrontlineWardens",
+      "entryFile": "zone-130-terra-frontline-wardens",
+      "resolvedFile": "zone-130-terra-frontline-wardens",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-130-terra-frontline-wardens"
+      ]
+    },
+    {
+      "gameId": "zone-131",
+      "component": "Zone131LunaSkylineSet",
+      "entryFile": "zone-131-luna-skyline-set",
+      "resolvedFile": "zone-131-luna-skyline-set",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-131-luna-skyline-set"
+      ]
+    },
+    {
+      "gameId": "zone-132",
+      "component": "Zone132PixelSentinelLattice",
+      "entryFile": "zone-132-pixel-sentinel-lattice",
+      "resolvedFile": "zone-132-pixel-sentinel-lattice",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-132-pixel-sentinel-lattice"
+      ]
+    },
+    {
+      "gameId": "zone-133",
+      "component": "Zone133SparkVaultThrust",
+      "entryFile": "zone-133-spark-vault-thrust",
+      "resolvedFile": "zone-133-spark-vault-thrust",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-133-spark-vault-thrust"
+      ]
+    },
+    {
+      "gameId": "zone-134",
+      "component": "Zone134SparkReactorConvoy",
+      "entryFile": "zone-134-spark-reactor-convoy",
+      "resolvedFile": "zone-134-spark-reactor-convoy",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-134-spark-reactor-convoy"
+      ]
+    },
+    {
+      "gameId": "zone-135",
+      "component": "Zone135EchoSignalTribunal",
+      "entryFile": "zone-135-echo-signal-tribunal",
+      "resolvedFile": "zone-135-echo-signal-tribunal",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-135-echo-signal-tribunal"
+      ]
+    },
+    {
+      "gameId": "zone-136",
+      "component": "Zone136TerraFrontlineWardens",
+      "entryFile": "zone-136-terra-frontline-wardens",
+      "resolvedFile": "zone-136-terra-frontline-wardens",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-136-terra-frontline-wardens"
+      ]
+    },
+    {
+      "gameId": "zone-137",
+      "component": "Zone137LunaSkylineSet",
+      "entryFile": "zone-137-luna-skyline-set",
+      "resolvedFile": "zone-137-luna-skyline-set",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-137-luna-skyline-set"
+      ]
+    },
+    {
+      "gameId": "zone-138",
+      "component": "Zone138PixelSentinelLattice",
+      "entryFile": "zone-138-pixel-sentinel-lattice",
+      "resolvedFile": "zone-138-pixel-sentinel-lattice",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-138-pixel-sentinel-lattice"
+      ]
+    },
+    {
+      "gameId": "zone-139",
+      "component": "Zone139SparkVaultThrust",
+      "entryFile": "zone-139-spark-vault-thrust",
+      "resolvedFile": "zone-139-spark-vault-thrust",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-139-spark-vault-thrust"
+      ]
+    },
+    {
+      "gameId": "zone-140",
+      "component": "Zone140SparkReactorConvoy",
+      "entryFile": "zone-140-spark-reactor-convoy",
+      "resolvedFile": "zone-140-spark-reactor-convoy",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-140-spark-reactor-convoy"
       ]
     }
   ]
