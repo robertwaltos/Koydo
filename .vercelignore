@@ -5,6 +5,7 @@ External_AI_Agents/
 logs/
 .next/
 .next-smoke*/
+.next-stale*/
 node_modules/
 storybook-static/
 out/
