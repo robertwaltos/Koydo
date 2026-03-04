@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 110",
   title: "Pixel Trail",
   mascot: "terra",
-  startMessage: "Terra: stay adaptive and pick evidence-backed actions as pressure scales in Pixel Trail.",
-  winMessage: "Terra: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Terra: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Terra: stabilize ecological systems by choosing resilient interventions in Pixel Trail.",
+  winMessage: "Terra: biosphere lane secured. Great ecological tradeoff control.",
+  failMessage: "Terra: resilience failed. Rebuild with stronger long-term choices.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "habitat grid",
+    "resource lane",
+    "waterway node",
+    "soil channel",
+    "biosphere gate",
+    "recovery ring"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Ecosystem pressure detected on",
+    "Choose the intervention that preserves balance in",
+    "Only one move supports long-term recovery in",
+    "Rapid decision required: protect"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Restore",
+    "Conserve",
+    "Buffer",
+    "Regulate",
+    "Reinforce"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
+    "Strip",
+    "Drain",
+    "Overdraw",
     "Bypass",
-    "Overload"
+    "Flood"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Resilience is built through balanced systems.",
+    "Short-term gains can weaken long-term stability.",
+    "Resource recovery needs measured pacing.",
+    "Early intervention limits collapse risk."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_16%,rgba(74,222,128,0.24),transparent_46%),radial-gradient(circle_at_82%_84%,rgba(34,197,94,0.18),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  allowTrapDecoys: true,
+  targetBestCombo: 6,
 };
 
 export default function Arcade110PixelTrail() {

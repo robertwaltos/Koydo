@@ -9,9 +9,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 106",
   title: "Terra Trail",
   mascot: "luna",
-  startMessage: "Luna: Luna: keep rhythm and composition aligned while the tempo pressure climbs in Terra Trail.",
-  winMessage: "Luna: Luna: composition locked in. Beautiful pacing and control.",
-  failMessage: "Luna: Luna: structure fell apart. Reset and re-enter with smoother timing.",
+  startMessage: "Luna: keep rhythm and composition aligned while tempo pressure climbs in Terra Trail.",
+  winMessage: "Luna: composition locked in. Beautiful pacing and control.",
+  failMessage: "Luna: structure fell apart. Reset and re-enter with smoother timing.",
   objectiveNouns: [
     "phrase arc",
     "tempo lane",
@@ -61,6 +61,8 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2900,
   roundDecayMs: 320,
+  roundMode: "double",
+  targetBestCombo: 7,
 };
 
 export default function Arcade106TerraTrail() {

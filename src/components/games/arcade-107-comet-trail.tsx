@@ -9,9 +9,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 107",
   title: "Comet Trail",
   mascot: "terra",
-  startMessage: "Terra: Terra: stabilize the system and choose interventions that hold long-term integrity in Comet Trail.",
-  winMessage: "Terra: Terra: system restored. Strong scientific judgment under pressure.",
-  failMessage: "Terra: Terra: cascade took hold. Rebuild with safer engineering tradeoffs.",
+  startMessage: "Terra: stabilize the system and choose interventions that hold long-term integrity in Comet Trail.",
+  winMessage: "Terra: system restored. Strong scientific judgment under pressure.",
+  failMessage: "Terra: cascade took hold. Rebuild with safer engineering tradeoffs.",
   objectiveNouns: [
     "reactor sleeve",
     "pressure conduit",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5500,
   minRoundMs: 3000,
   roundDecayMs: 340,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 7,
 };
 
 export default function Arcade107CometTrail() {
