@@ -83,7 +83,7 @@ export default function ClimateCommander() {
     return (
         <div className="relative w-full aspect-video rounded-[3rem] overflow-hidden bg-[#020617] border border-emerald-500/20 shadow-2xl font-sans group text-white">
             {/* 4K Earth Background */}
-            <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000')] bg-cover" />
+            <div className="absolute inset-0 opacity-40 bg-cover" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000')" }} />
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/80 via-transparent to-blue-950/80 pointer-events-none" />
 
             {/* HUD */}
@@ -154,7 +154,8 @@ export default function ClimateCommander() {
                             <motion.div
                                 animate={{ rotate: 360 }}
                                 transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                                className="w-full h-full bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000')] bg-cover opacity-80"
+                                className="w-full h-full bg-cover opacity-80"
+                                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2000')" }}
                             />
                         </div>
                     </div>

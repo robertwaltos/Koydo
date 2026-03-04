@@ -36,6 +36,8 @@ const START_CAPACITY = 62;
 const START_PRESSURE = 24;
 const START_INTEGRITY = 4;
 
+const clamp = (v: number, lo: number, hi: number): number => Math.min(hi, Math.max(lo, v));
+
 const ROUNDS: ShelterRound[] = [
   {
     id: "z058-r1",

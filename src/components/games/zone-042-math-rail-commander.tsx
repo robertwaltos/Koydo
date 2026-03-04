@@ -131,7 +131,7 @@ export default function Zone042MathRailCommander() {
       sessionId: sessionIdRef.current,
       gameId: "zone-042",
       difficulty: "medium",
-      elapsedMs: Math.max(0, new Date().getTime() - startedAt),
+      elapsedMs: Math.max(0, Date.now() - startedAt),
       interactions: Math.max(1, interactions),
       score: finalScore,
       maxScore: TOTAL_ROUNDS * 14,
@@ -150,7 +150,7 @@ export default function Zone042MathRailCommander() {
     setSelectedChoiceId(null);
     setResolution("derailed");
     setInteractions(0);
-    const now = new Date().getTime();
+    const now = Date.now();
     setStartedAt(now);
     sessionIdRef.current = createLegacySessionId();
     completionSentRef.current = false;

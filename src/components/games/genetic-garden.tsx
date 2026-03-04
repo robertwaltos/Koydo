@@ -168,7 +168,7 @@ export default function GeneticGarden() {
             {/* 4K Garden Background */}
             <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
                 <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/20 to-transparent" />
-                <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/leaf.png')]" />
+                <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/leaf.png')" }} />
             </div>
 
             {/* Header / HUD */}

@@ -149,7 +149,7 @@ export default function Zone043EchoStorySignal() {
       sessionId: sessionIdRef.current,
       gameId: "zone-043",
       difficulty: "medium",
-      elapsedMs: Math.max(0, new Date().getTime() - startedAt),
+      elapsedMs: Math.max(0, Date.now() - startedAt),
       interactions: Math.max(1, interactions),
       score: finalScore,
       maxScore: TOTAL_ROUNDS * 14,
@@ -179,7 +179,7 @@ export default function Zone043EchoStorySignal() {
     setInteractions(0);
     sessionIdRef.current = createLegacySessionId();
     completionSentRef.current = false;
-    const now = new Date().getTime();
+    const now = Date.now();
     setStartedAt(now);
     setMood("happy");
     setMessage("Echo: Watch each clue set, then respond with the strongest narrative decision.");

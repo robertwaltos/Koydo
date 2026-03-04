@@ -123,7 +123,7 @@ export default function SparksSparkQuest() {
     return (
         <div className="relative w-full aspect-video rounded-3xl overflow-hidden bg-slate-950 border border-amber-500/20 shadow-2xl font-sans group">
             {/* 4K Neon City Background */}
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519608487953-e999c86e74c6?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center brightness-[0.3] mix-blend-screen" />
+            <div className="absolute inset-0 bg-cover bg-center brightness-[0.3] mix-blend-screen" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1519608487953-e999c86e74c6?auto=format&fit=crop&q=80&w=2000')" }} />
             <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-slate-950/80 to-blue-500/10" />
 
             {/* Sector Visuals */}

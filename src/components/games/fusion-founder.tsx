@@ -73,7 +73,7 @@ export default function FusionFounder() {
     return (
         <div className="relative w-full aspect-video rounded-[3rem] overflow-hidden bg-[#020617] border border-cyan-500/20 shadow-2xl font-sans group">
             {/* 4K Reactor Core Background */}
-            <div className="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000')] bg-cover" />
+            <div className="absolute inset-0 opacity-40 bg-cover" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000')" }} />
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-950/80 via-transparent to-blue-950/80 pointer-events-none" />
 
             {/* HUD */}

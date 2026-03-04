@@ -130,9 +130,8 @@ export default function Zone041SignalRescue() {
   useEffect(() => {
     if (phase !== "playing") return;
     if (remainingMs > 0) return;
-    const timer = window.setTimeout(() => finalize("fail", score), 0);
-    return () => window.clearTimeout(timer);
-  }, [phase, remainingMs, score, finalize]);
+    finalize("fail", score);
+  }, [phase, remainingMs, score]);
 
   const startMission = () => {
     setPhase("playing");

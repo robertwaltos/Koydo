@@ -130,7 +130,8 @@ export default function VocabularyVoyager() {
                 <motion.div
                     animate={gameState === "warping" ? { y: [0, 1000] } : {}}
                     transition={{ duration: 0.5, repeat: gameState === "warping" ? Infinity : 0 }}
-                    className="absolute inset-x-0 top-0 bottom-0 opacity-40 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"
+                    className="absolute inset-x-0 top-0 bottom-0 opacity-40"
+                    style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/stardust.png')" }}
                 />
             </div>
 
