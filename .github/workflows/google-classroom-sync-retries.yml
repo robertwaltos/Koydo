@@ -1,0 +1,81 @@
+name: Google Classroom Sync Retries
+
+on:
+  schedule:
+    - cron: "35 * * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: Max queued sync items to process
+        required: false
+        default: "10"
+      dry_run:
+        description: Run without mutating records
+        required: false
+        default: "false"
+      include_queued_stub:
+        description: Include fresh queued_stub items in addition to queued_retry_required
+        required: false
+        default: "false"
+      class_id:
+        description: Optional class filter (UUID)
+        required: false
+        default: ""
+      sync_request_id:
+        description: Optional syncRequestId filter
+        required: false
+        default: ""
+
+concurrency:
+  group: google-classroom-sync-retries
+  cancel-in-progress: false
+
+jobs:
+  run-sync-retries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      APP_BASE_URL: ${{ vars.NEXT_PUBLIC_APP_URL || secrets.NEXT_PUBLIC_APP_URL || '' }}
+      CRON_SECRET: ${{ secrets.CRON_SECRET || '' }}
+      LIMIT: ${{ inputs.limit || '10' }}
+      DRY_RUN: ${{ inputs.dry_run || 'false' }}
+      INCLUDE_QUEUED_STUB: ${{ inputs.include_queued_stub || 'false' }}
+      CLASS_ID: ${{ inputs.class_id || '' }}
+      SYNC_REQUEST_ID: ${{ inputs.sync_request_id || '' }}
+
+    steps:
+      - name: Invoke Google Classroom sync cron endpoint
+        run: |
+          if [ -z "$APP_BASE_URL" ] || [ -z "$CRON_SECRET" ]; then
+            echo "APP_BASE_URL or CRON_SECRET missing. Skipping sync retry run."
+            exit 0
+          fi
+
+          payload="$(jq -nc \
+            --argjson limit "$LIMIT" \
+            --argjson dryRun "$DRY_RUN" \
+            --argjson includeQueuedStub "$INCLUDE_QUEUED_STUB" \
+            --arg classId "$CLASS_ID" \
+            --arg syncRequestId "$SYNC_REQUEST_ID" \
+            '{
+              limit: $limit,
+              dryRun: $dryRun,
+              includeQueuedStub: $includeQueuedStub
+            }
+            + (if $classId != "" then { classId: $classId } else {} end)
+            + (if $syncRequestId != "" then { syncRequestId: $syncRequestId } else {} end)')"
+
+          response="$(curl -sS -w '\n%{http_code}' \
+            -X POST "$APP_BASE_URL/api/testing/google-classroom/sync/cron" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $CRON_SECRET" \
+            --data "$payload")"
+
+          http_code="$(printf '%s\n' "$response" | tail -n1)"
+          body="$(printf '%s\n' "$response" | sed '$d')"
+          echo "$body"
+
+          if [ "$http_code" -ge 400 ]; then
+            echo "Google Classroom sync retry endpoint failed with HTTP $http_code"
+            exit 1
+          fi
