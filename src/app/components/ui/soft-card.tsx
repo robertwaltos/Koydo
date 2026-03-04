@@ -5,6 +5,7 @@ import type { HTMLAttributes, ReactNode } from "react";
 type SoftCardProps = HTMLAttributes<HTMLElement> & {
   as?: "div" | "article" | "section" | "aside" | "header" | "li";
   interactive?: boolean;
+  glass?: boolean;
   organicCorners?: boolean;
   children?: ReactNode;
 };
@@ -16,6 +17,7 @@ function joinClasses(...parts: Array<string | undefined | false>) {
 export default function SoftCard({
   as = "div",
   interactive = false,
+  glass = false,
   organicCorners = false,
   className,
   style,
@@ -29,6 +31,7 @@ export default function SoftCard({
       className={joinClasses(
         "ui-soft-card",
         interactive && "ui-soft-card--interactive",
+        glass && "ui-soft-card--glass",
         className,
       )}
       style={{

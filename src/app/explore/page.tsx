@@ -73,7 +73,7 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
 
       <header className="relative overflow-hidden px-4 pb-6 pt-8 text-center sm:pb-8 sm:pt-10">
         <div
-          className="absolute inset-0 opacity-35"
+          className="absolute inset-0 opacity-35 dark:opacity-20"
           style={{
             background: `
               radial-gradient(ellipse at 20% 50%, #a7f3d0 0%, transparent 50%),

@@ -37,15 +37,15 @@ export default function PageHeader({
       <div className="flex items-start justify-between gap-3">
         <div>
           {eyebrow ? (
-            <p className="text-xs font-bold uppercase tracking-wide text-zinc-500">{eyebrow}</p>
+            <p className="text-xs font-bold uppercase tracking-wide text-zinc-500 dark:text-foreground/50">{eyebrow}</p>
           ) : null}
-          <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">{title}</h1>
-          {description ? <p className="mt-1 max-w-2xl text-sm text-zinc-600">{description}</p> : null}
+          <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-foreground sm:text-4xl">{title}</h1>
+          {description ? <p className="mt-1 max-w-2xl text-sm text-zinc-600 dark:text-foreground/65">{description}</p> : null}
           {stats && stats.length > 0 ? (
-            <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
+            <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500 dark:text-foreground/55">
               {stats.map((stat) => (
                 <span key={stat.label}>
-                  <span className="font-semibold text-zinc-700">{stat.value}</span>{" "}
+                  <span className="font-semibold text-zinc-700 dark:text-foreground/80">{stat.value}</span>{" "}
                   <span>{stat.label}</span>
                 </span>
               ))}

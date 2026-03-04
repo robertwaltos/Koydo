@@ -391,7 +391,7 @@ export default function TopNav() {
 
   return (
     <header
-      className={`safe-area-top sticky top-0 z-50 w-full border-b backdrop-blur-xl ${isHomePage
+      className={`safe-area-top sticky top-0 z-50 w-full border-b backdrop-blur-xl header-glow-border relative ${isHomePage
           ? "border-white/8 bg-slate-950/50"
           : isAdminRoute
             ? "border-zinc-200/80 bg-white/90 border-border/40 dark:bg-background/85"

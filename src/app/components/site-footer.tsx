@@ -74,9 +74,20 @@ export default function SiteFooter() {
       className={`safe-area-bottom border-t text-sm ${
         isHomePage
           ? "border-white/10 bg-slate-950 text-slate-400"
-          : "border-border bg-surface-muted text-zinc-600 dark:bg-surface/60 dark:text-foreground/70"
+          : "border-transparent bg-surface-muted/80 backdrop-blur-md text-zinc-600 dark:bg-surface/50 dark:text-foreground/70"
       }`}
     >
+      {/* Gradient accent top border (inner pages only) */}
+      {!isHomePage && (
+        <div
+          className="h-px"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--accent) 35%, transparent) 30%, color-mix(in srgb, var(--accent) 55%, transparent) 50%, color-mix(in srgb, var(--accent) 35%, transparent) 70%, transparent 100%)",
+          }}
+          aria-hidden="true"
+        />
+      )}
       {/* ── Main grid ── */}
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-4 py-14 sm:grid-cols-2 md:grid-cols-4">
 
