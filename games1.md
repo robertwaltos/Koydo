@@ -926,3 +926,71 @@ CLAIM: Codex-B taking arcade-156, arcade-157, arcade-158, arcade-159, arcade-160
   - A-T10: zone-086, zone-087, zone-088, zone-089, zone-090 with extended mission duration, stronger adaptive recovery economies, and higher-pressure endgame pacing.
 
 CLAIM: Codex-D taking arcade-006, arcade-007, arcade-008, arcade-009, arcade-010 at 2026-03-04 11:18:35 -06:00
+
+CLAIM: Codex-A taking zone-086, zone-087, zone-088, zone-089, zone-090 at 2026-03-04 11:19:43 -06:00
+CLAIM: Codex-B taking arcade-101, arcade-102, arcade-103, arcade-104, arcade-105 hardening at 2026-03-04 11:26:46 -06:00
+
+## TRANCHE REPORT - Codex-B - 2026-03-04 11:27 local
+- Tranche ID: B-T13
+- Game IDs completed: arcade-101, arcade-102, arcade-103, arcade-104, arcade-105
+- Runtime files added/changed: src/components/games/reward-realm-character-gauntlet.tsx, src/components/games/arcade-101-sky-trail.tsx, src/components/games/arcade-102-river-trail.tsx, src/components/games/arcade-103-echo-trail.tsx, src/components/games/arcade-104-luna-trail.tsx, src/components/games/arcade-105-nova-trail.tsx, games1.md
+- Character implementation notes: arcade-101 keeps Pixel coaching precision-combo play, arcade-102 upgrades Spark lane to dual-lock rounds, arcade-103 upgrades Echo lane with trap-decoy handling, arcade-104 combines dual-lock plus trap pressure with Echo coaching, and arcade-105 adds high combo-target logic pressure with Pixel coaching.
+- Gameplay proof:
+  - Win condition: clear all rounds and satisfy configured combo target where required (`targetBestCombo`), with dual-lock rounds requiring two correct cues.
+  - Fail condition: life depletion, timeout pressure, trap-decoy penalties (extra life loss and boost drain), or end-run combo target miss.
+  - Scoring model: correct reads grant tier/time/combo bonuses; dual-lock clears grant additional precision bonus; misses/timeouts/traps apply stronger penalties.
+  - Difficulty behavior: timer decay and tier pressure remain, plus per-game divergence via single vs dual-lock rounds, trap-decoy risk, and combo target constraints.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: extended shared runtime with configurable mechanical variants and upgraded first five Codex-B games to distinct gameplay contracts.
+- Tests run:
+  - Command: npm run build
+  - Result: PASS
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=181 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: PASS
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: PASS
+- Known issues:
+  - Follow-up hardening is still needed across arcade-106..160 to fully remove config-only differentiation in the remaining wrappers.
+- Next tranche planned:
+  - B-T14: harden arcade-106, arcade-107, arcade-108, arcade-109, arcade-110 with additional mechanic variants and per-title scoring identities.
+
+## TRANCHE REPORT - Codex-D - 2026-03-04 11:26 local
+- Tranche ID: D-T02
+- Game IDs completed: arcade-006, arcade-007, arcade-008, arcade-009, arcade-010
+- Runtime files added/changed: src/components/games/arcade-006-pixel-glitch-dash.tsx, src/components/games/arcade-007-spark-circuit-rally.tsx, src/components/games/arcade-008-echo-proof-sprint.tsx, src/components/games/arcade-009-luna-prism-drift.tsx, src/components/games/arcade-010-terra-storm-bastion.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx
+- Character implementation notes: arcade-006 keeps Pixel as glitch-control coach, arcade-007 uses Spark as circuit pressure coach, arcade-008 uses Echo as proof-sprint coach, arcade-009 uses Luna as rhythm-shape coach, and arcade-010 uses Terra as bastion defense coach. Each game has active mascot rendering with mood/message transitions tied to correct/incorrect/timeouts and run outcome.
+- Gameplay proof:
+  - Win condition: complete all 24 rounds with lives remaining and trigger mission-cleared completion state.
+  - Fail condition: life pool reaches zero from wrong picks or timeout decay, triggering mission-failed state.
+  - Scoring model: score accumulates via tier bonus + combo + time efficiency; penalties apply on wrong/timeout resolutions; boosts alter clutch survival economy.
+  - Difficulty behavior: timed pressure decays by tier every 6 rounds with escalating decoy risk and tighter response windows.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five new Reward Realm wrappers with unique themes/objective vocab and integrated runtime route mapping.
+- Tests run:
+  - Command: npm run lint -- src/components/games/arcade-006-pixel-glitch-dash.tsx src/components/games/arcade-007-spark-circuit-rally.tsx src/components/games/arcade-008-echo-proof-sprint.tsx src/components/games/arcade-009-luna-prism-drift.tsx src/components/games/arcade-010-terra-storm-bastion.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in game page; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=181 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: PASS routes/health checks; command exceeded tool timeout after PASS output while process remained active.
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: PASS routes/health checks observed before timeout.
+- Known issues:
+- Next tranche planned:
+  - D-T03: arcade-011, arcade-012, arcade-013, arcade-014, arcade-015.
+
+CLAIM: Codex-D taking arcade-011, arcade-012, arcade-013, arcade-014, arcade-015 at 2026-03-04 11:27:13 -06:00

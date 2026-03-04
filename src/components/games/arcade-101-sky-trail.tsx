@@ -61,6 +61,8 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  targetBestCombo: 6,
 };
 
 export default function Arcade101SkyTrail() {

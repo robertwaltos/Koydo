@@ -35,6 +35,7 @@ type RoundOption = {
   label: string;
   microHint: string;
   isCorrect: boolean;
+  isTrap: boolean;
 };
 
 type RoundModel = {
@@ -43,7 +44,10 @@ type RoundModel = {
   learningSprinkle: string;
   options: RoundOption[];
   tier: number;
+  requiredHits: number;
 };
+
+type RoundMode = "single" | "double";
 
 export type RewardRealmCharacterGauntletConfig = {
   gameId: string;
@@ -62,6 +66,9 @@ export type RewardRealmCharacterGauntletConfig = {
   baseRoundMs: number;
   minRoundMs: number;
   roundDecayMs: number;
+  roundMode?: RoundMode;
+  allowTrapDecoys?: boolean;
+  targetBestCombo?: number;
 };
 
 type RewardRealmCharacterGauntletProps = {
@@ -101,24 +108,49 @@ function getRoundDuration(config: RewardRealmCharacterGauntletConfig, roundIndex
   return Math.max(config.minRoundMs, config.baseRoundMs - (tier - 1) * config.roundDecayMs);
 }
 
+function pickSlots(count: number, random: () => number) {
+  const pool = [0, 1, 2, 3];
+  const picked: number[] = [];
+  while (picked.length < count && pool.length > 0) {
+    const index = Math.floor(random() * pool.length);
+    const [slot] = pool.splice(index, 1);
+    if (typeof slot === "number") {
+      picked.push(slot);
+    }
+  }
+  return picked;
+}
+
 function buildRound(config: RewardRealmCharacterGauntletConfig, roundIndex: number): RoundModel {
   const random = seeded(`${config.gameId}:${roundIndex + 1}`);
   const tier = getTier(roundIndex);
-  const correctIndex = Math.floor(random() * 4);
+  const requiredHits = config.roundMode === "double" ? 2 : 1;
+  const correctIndices = new Set(pickSlots(requiredHits, random));
+  const decoySlots = [0, 1, 2, 3].filter((slot) => !correctIndices.has(slot));
+  const trapSlot =
+    config.allowTrapDecoys && decoySlots.length > 0
+      ? decoySlots[Math.floor(random() * decoySlots.length)]
+      : null;
   const objective = pick(config.objectiveNouns, random);
   const promptLead = pick(config.promptLeads, random);
   const learningSprinkle = pick(config.learningSprinkles, random);
 
   const options: RoundOption[] = [0, 1, 2, 3].map((slot) => {
-    const isCorrect = slot === correctIndex;
+    const isCorrect = correctIndices.has(slot);
+    const isTrap = trapSlot === slot;
     const verb = isCorrect
       ? pick(config.correctActions, random)
       : pick(config.decoyActions, random);
     return {
       id: `${config.gameId}-r${roundIndex + 1}-o${slot + 1}`,
       label: `${verb} ${objective}`,
-      microHint: isCorrect ? "Matches coach cue" : "Decoy signal",
+      microHint: isCorrect
+        ? "Matches coach cue"
+        : isTrap
+          ? "Critical decoy"
+          : "Decoy signal",
       isCorrect,
+      isTrap,
     };
   });
 
@@ -128,6 +160,7 @@ function buildRound(config: RewardRealmCharacterGauntletConfig, roundIndex: numb
     learningSprinkle,
     options,
     tier,
+    requiredHits,
   };
 }
 
@@ -150,7 +183,8 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
   const [score, setScore] = useState(0);
   const [combo, setCombo] = useState(0);
   const [bestCombo, setBestCombo] = useState(0);
-  const [selectedOption, setSelectedOption] = useState<number | null>(null);
+  const [selectedOptions, setSelectedOptions] = useState<number[]>([]);
+  const [isSettling, setIsSettling] = useState(false);
   const [timeLeftMs, setTimeLeftMs] = useState(getRoundDuration(config, 0));
   const [outcome, setOutcome] = useState<Outcome>("failure");
   const [feedback, setFeedback] = useState<{ kind: FeedbackKind; text: string } | null>(null);
@@ -204,50 +238,90 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
   };
 
   const resolveRound = (optionIndex: number | null, reason: ResolveReason) => {
-    if (phase !== "playing" || !round || settlingRef.current) return;
+    if (phase !== "playing" || !round || settlingRef.current || isSettling) return;
 
-    settlingRef.current = true;
-    setSelectedOption(optionIndex);
+    const option = optionIndex === null ? null : round.options[optionIndex] ?? null;
+    const isCorrect = Boolean(option?.isCorrect);
+    const isTrap = Boolean(option?.isTrap);
+    const alreadySelected = optionIndex !== null && selectedOptions.includes(optionIndex);
+    if (alreadySelected) return;
 
-    const isCorrect = optionIndex !== null && Boolean(round.options[optionIndex]?.isCorrect);
+    const nextSelectedOptions =
+      isCorrect && optionIndex !== null
+        ? [...selectedOptions, optionIndex]
+        : selectedOptions;
+    const roundCleared = reason !== "timeout" && isCorrect && nextSelectedOptions.length >= round.requiredHits;
     const nextInteractions = interactions + 1;
     setInteractions(nextInteractions);
+
+    if (isCorrect && !roundCleared && reason !== "timeout") {
+      setSelectedOptions(nextSelectedOptions);
+      setScore((value) => value + 4 + round.tier);
+      setFeedback({
+        kind: "correct",
+        text: `Signal locked (${nextSelectedOptions.length}/${round.requiredHits}). Find the final match.`,
+      });
+      setMood("happy");
+      setMessage(`${config.shortLabel}: partial lock confirmed. Keep tracking the true cue.`);
+      void hapticSuccess();
+      return;
+    }
+
+    settlingRef.current = true;
+    setIsSettling(true);
+    setSelectedOptions(nextSelectedOptions);
 
     let nextLives = lives;
     let nextBoosts = boosts;
     let nextScore = score;
     let nextCombo = combo;
+    let nextBestCombo = bestCombo;
 
-    if (isCorrect) {
+    if (roundCleared) {
       const tempoBonus = Math.floor(timeLeftMs / 250);
       nextCombo += 1;
       nextScore += 14 + round.tier * 2 + Math.min(14, nextCombo * 2) + tempoBonus;
-      if (nextCombo > bestCombo) {
-        setBestCombo(nextCombo);
+      if (round.requiredHits > 1) {
+        nextScore += 6 + round.tier;
       }
+      nextBestCombo = Math.max(bestCombo, nextCombo);
       if (nextCombo > 0 && nextCombo % 5 === 0) {
         nextBoosts = Math.min(MAX_BOOSTS, nextBoosts + 1);
       }
       setFeedback({
         kind: "correct",
-        text: "Perfect read. Momentum gained.",
+        text: round.requiredHits > 1 ? "Dual lock secured. Momentum gained." : "Perfect read. Momentum gained.",
       });
       setMood("happy");
       setMessage(`${config.shortLabel}: cue matched. Keep the combo alive.`);
       void hapticSuccess();
     } else {
-      nextLives = Math.max(0, nextLives - 1);
+      const lifeLoss = isTrap ? 2 : 1;
+      nextLives = Math.max(0, nextLives - lifeLoss);
       nextCombo = 0;
-      nextScore = Math.max(0, nextScore - (reason === "timeout" ? 7 + round.tier : 5 + round.tier));
+      if (isTrap) {
+        nextBoosts = Math.max(0, nextBoosts - 1);
+      }
+      nextScore = Math.max(
+        0,
+        nextScore - (reason === "timeout" ? 7 + round.tier : 5 + round.tier + (isTrap ? 3 : 0)),
+      );
       setFeedback({
         kind: reason === "timeout" ? "timeout" : "wrong",
-        text: reason === "timeout" ? "Window missed. Drift escalated." : "Decoy selected. Recover quickly.",
+        text:
+          reason === "timeout"
+            ? "Window missed. Drift escalated."
+            : isTrap
+              ? "Critical decoy triggered. Systems destabilized."
+              : "Decoy selected. Recover quickly.",
       });
       setMood("sad");
       setMessage(
         reason === "timeout"
           ? `${config.shortLabel}: timer lapsed. Reset and strike decisively.`
-          : `${config.shortLabel}: that was a decoy. Re-center on the objective.`,
+          : isTrap
+            ? `${config.shortLabel}: trap triggered. Recover control before the next wave.`
+            : `${config.shortLabel}: that was a decoy. Re-center on the objective.`,
       );
       void hapticError();
     }
@@ -256,9 +330,11 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
     setBoosts(nextBoosts);
     setScore(nextScore);
     setCombo(nextCombo);
+    setBestCombo(nextBestCombo);
 
     window.setTimeout(() => {
       if (nextLives <= 0) {
+        setIsSettling(false);
         settlingRef.current = false;
         finalizeRun("failure", nextScore, nextInteractions);
         return;
@@ -266,17 +342,22 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
 
       if (roundIndex >= ROUND_COUNT - 1) {
         const victoryScore = nextScore + nextLives * 4 + nextBoosts * 3;
-        setScore(victoryScore);
+        const comboRequirement = config.targetBestCombo ?? 0;
+        const canWin = nextBestCombo >= comboRequirement;
+        const finalScore = canWin ? victoryScore : Math.max(0, victoryScore - 18);
+        setScore(finalScore);
+        setIsSettling(false);
         settlingRef.current = false;
-        finalizeRun("victory", victoryScore, nextInteractions);
+        finalizeRun(canWin ? "victory" : "failure", finalScore, nextInteractions);
         return;
       }
 
       const nextRoundIndex = roundIndex + 1;
       setRoundIndex(nextRoundIndex);
-      setSelectedOption(null);
+      setSelectedOptions([]);
       setFeedback(null);
       setTimeLeftMs(getRoundDuration(config, nextRoundIndex));
+      setIsSettling(false);
       settlingRef.current = false;
     }, SETTLE_MS);
   };
@@ -289,7 +370,8 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
     setScore(0);
     setCombo(0);
     setBestCombo(0);
-    setSelectedOption(null);
+    setSelectedOptions([]);
+    setIsSettling(false);
     setTimeLeftMs(getRoundDuration(config, 0));
     setOutcome("failure");
     setFeedback(null);
@@ -304,7 +386,7 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
   };
 
   const activateBoost = () => {
-    if (phase !== "playing" || boosts <= 0 || settlingRef.current) return;
+    if (phase !== "playing" || boosts <= 0 || settlingRef.current || isSettling) return;
 
     const nextBoosts = boosts - 1;
     const roundCap = getRoundDuration(config, roundIndex);
@@ -322,21 +404,21 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
   };
 
   useEffect(() => {
-    if (phase !== "playing" || selectedOption !== null || settlingRef.current) return;
+    if (phase !== "playing" || isSettling || settlingRef.current) return;
     const timer = window.setInterval(() => {
       setTimeLeftMs((value) => Math.max(0, value - 100));
     }, 100);
     return () => window.clearInterval(timer);
-  }, [phase, roundIndex, selectedOption]);
+  }, [isSettling, phase, roundIndex]);
 
   useEffect(() => {
-    if (phase !== "playing" || selectedOption !== null) return;
+    if (phase !== "playing" || isSettling) return;
     if (timeLeftMs > 0) return;
     const timeout = window.setTimeout(() => {
       resolveRound(null, "timeout");
     }, 0);
     return () => window.clearTimeout(timeout);
-  }, [phase, resolveRound, selectedOption, timeLeftMs]);
+  }, [isSettling, phase, resolveRound, timeLeftMs]);
 
   useEffect(() => {
     if (phase !== "playing" && phase !== "paused") return;
@@ -411,6 +493,8 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
                 <MascotFriend id={config.mascot} mood="thinking" size="lg" />
                 <p className={combineClasses("max-w-2xl text-sm", config.theme.textSoft)}>
                   Complete 24 rounds with adaptive pressure, keep your streak alive, and avoid decoys.
+                  {config.roundMode === "double" ? " Dual-lock rounds require two correct cues each." : ""}
+                  {config.targetBestCombo ? ` Clear with a best combo of at least ${config.targetBestCombo}.` : ""}
                 </p>
                 <PhysicalButton
                   onClick={startRun}
@@ -437,7 +521,7 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
               <div className={combineClasses("mb-4 flex flex-wrap items-center justify-between gap-2 text-xs", config.theme.textSoft)}>
                 <span className={combineClasses("inline-flex items-center gap-2 rounded-full border px-3 py-1", config.theme.chip)}>
                   <Gauge className="h-3.5 w-3.5" />
-                  Round {roundIndex + 1}/{ROUND_COUNT} | Tier {round.tier}
+                  Round {roundIndex + 1}/{ROUND_COUNT} | Tier {round.tier} | Locks {selectedOptions.length}/{round.requiredHits}
                 </span>
                 <span className={combineClasses("inline-flex items-center gap-2 rounded-full border px-3 py-1", config.theme.chip)}>
                   <TimerReset className="h-3.5 w-3.5" />
@@ -474,7 +558,7 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
 
               <div className="grid gap-3 sm:grid-cols-2">
                 {round.options.map((option, index) => {
-                  const selected = selectedOption === index;
+                  const selected = selectedOptions.includes(index);
                   const optionClass = selected
                     ? config.theme.optionActive
                     : config.theme.optionIdle;
@@ -482,11 +566,12 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
                     <button
                       key={option.id}
                       type="button"
-                      disabled={selectedOption !== null}
+                      disabled={isSettling || selected}
                       onClick={() => resolveRound(index, "choice")}
                       className={combineClasses(
                         "rounded-2xl border px-4 py-3 text-left transition",
                         optionClass,
+                        option.isTrap && !selected ? "shadow-[0_0_0_1px_rgba(244,63,94,0.16)_inset]" : "",
                       )}
                     >
                       <p className="text-sm font-black text-white">[{index + 1}] {option.label}</p>
@@ -501,7 +586,7 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
               <div className="mt-5 grid gap-3 sm:grid-cols-2">
                 <PhysicalButton
                   onClick={activateBoost}
-                  disabled={boosts <= 0}
+                  disabled={boosts <= 0 || isSettling}
                   className={combineClasses("h-10 text-xs font-black disabled:opacity-40", config.theme.primaryButton)}
                 >
                   <span className="inline-flex items-center gap-1">
@@ -511,6 +596,7 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
                 </PhysicalButton>
                 <PhysicalButton
                   onClick={() => setPhase("paused")}
+                  disabled={isSettling}
                   className={combineClasses("h-10 text-xs font-black", config.theme.secondaryButton)}
                 >
                   <span className="inline-flex items-center gap-1">
@@ -580,6 +666,11 @@ export default function RewardRealmCharacterGauntlet({ config }: RewardRealmChar
               <p className={combineClasses("mt-2 text-sm", config.theme.textSoft)}>
                 Score {score} | Best combo {bestCombo} | Interactions {Math.max(1, interactions)}
               </p>
+              {config.targetBestCombo ? (
+                <p className={combineClasses("mt-1 text-xs", config.theme.textSoft)}>
+                  Combo target: {bestCombo}/{config.targetBestCombo}
+                </p>
+              ) : null}
               <div className="mt-5">
                 <PhysicalButton
                   onClick={startRun}

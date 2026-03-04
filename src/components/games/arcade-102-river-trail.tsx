@@ -61,6 +61,8 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  targetBestCombo: 5,
 };
 
 export default function Arcade102RiverTrail() {
