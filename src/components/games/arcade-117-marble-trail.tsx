@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 117",
   title: "Marble Trail",
   mascot: "spark",
-  startMessage: "Spark: stay adaptive and pick evidence-backed actions as pressure scales in Marble Trail.",
-  winMessage: "Spark: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Spark: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Spark: solve quantitative pressure lines and avoid false shortcuts in Marble Trail.",
+  winMessage: "Spark: quantitative lane secured. Excellent numeric discipline.",
+  failMessage: "Spark: branch contradiction detected. Re-enter with stronger checks.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "equation lane",
+    "ratio node",
+    "proof ring",
+    "factor rail",
+    "solution grid",
+    "calculus core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Quantitative instability detected on",
+    "Choose the most rigorous step for",
+    "Only one operation preserves consistency in",
+    "Computation pressure rising on"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Simplify",
+    "Derive",
+    "Normalize",
+    "Prove",
+    "Resolve"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
+    "Guess",
     "Skip",
+    "Approximate",
     "Bypass",
-    "Overload"
+    "Overfit"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Rigorous steps reduce compounding error.",
+    "Symbol discipline improves speed safely.",
+    "Check constraints before final answers.",
+    "Recover fast after a false assumption."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_18%,rgba(251,191,36,0.24),transparent_46%),radial-gradient(circle_at_82%_82%,rgba(245,158,11,0.2),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 8,
 };
 
 export default function Arcade117MarbleTrail() {

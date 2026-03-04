@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 118",
   title: "Willow Trail",
   mascot: "echo",
-  startMessage: "Echo: stay adaptive and pick evidence-backed actions as pressure scales in Willow Trail.",
-  winMessage: "Echo: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Echo: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Echo: protect argument coherence under ambiguity spikes in Willow Trail.",
+  winMessage: "Echo: reasoning channel stabilized. Great evidence control.",
+  failMessage: "Echo: coherence fracture detected. Rebuild with stronger support.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "claim lane",
+    "context node",
+    "evidence ring",
+    "reason rail",
+    "citation grid",
+    "logic core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Reasoning conflict detected on",
+    "Choose the best-supported move for",
+    "Only one decision keeps argument integrity in",
+    "Ambiguity pressure rising around"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Corroborate",
+    "Qualify",
+    "Anchor",
+    "Clarify",
+    "Substantiate"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
-    "Bypass",
-    "Overload"
+    "Assume",
+    "Generalize",
+    "Overstate",
+    "Speculate",
+    "Distort"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Strong claims require direct support.",
+    "Coherence depends on context.",
+    "Distinguish evidence from inference.",
+    "Stabilize logic before accelerating."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_20%,rgba(167,139,250,0.24),transparent_46%),radial-gradient(circle_at_82%_82%,rgba(139,92,246,0.2),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  allowTrapDecoys: true,
+  targetBestCombo: 7,
 };
 
 export default function Arcade118WillowTrail() {
