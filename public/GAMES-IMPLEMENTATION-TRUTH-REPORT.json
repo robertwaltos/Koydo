@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-03-04T19:10:27.585Z",
+  "generatedAt": "2026-03-04T19:29:01.169Z",
   "catalog": {
     "core": 8,
     "legacy": 57,
     "arcade": 200,
     "expansion": 235,
     "total": 500,
+    "source": "public/GAMES-500-MASTER-CATALOG.json",
     "generatedIds": {
       "arcade": [
         "arcade-001",
@@ -450,10 +451,12 @@
   },
   "runtime": {
     "coreRouted": 8,
-    "legacyRouted": 57,
-    "templateRouted": 435,
+    "legacyRouted": 272,
+    "mappedComponentRouted": 272,
+    "templateRouted": 220,
     "legacyAliasRoutes": 0,
-    "uniqueRuntimeImplementationFiles": 66,
+    "mappedAliasRoutes": 0,
+    "uniqueRuntimeImplementationFiles": 281,
     "coreResolvedFiles": [
       "color-mixer",
       "letter-catcher",
@@ -467,6 +470,136 @@
     "legacyResolvedFiles": [
       "aero-architect",
       "alphabet-airship",
+      "arcade-001-neon-vault-breaker",
+      "arcade-002-spark-loop-rush",
+      "arcade-003-echo-rift-runner",
+      "arcade-004-luna-beat-bloom",
+      "arcade-005-terra-shield-garden",
+      "arcade-006-pixel-glitch-dash",
+      "arcade-007-spark-circuit-rally",
+      "arcade-008-echo-proof-sprint",
+      "arcade-009-luna-prism-drift",
+      "arcade-010-terra-storm-bastion",
+      "arcade-011-pixel-vector-forge",
+      "arcade-012-spark-prime-flux",
+      "arcade-013-echo-verdict-run",
+      "arcade-014-luna-chorus-grid",
+      "arcade-015-terra-canopy-siege",
+      "arcade-016-pixel-hyperlane-heist",
+      "arcade-017-spark-relay-frenzy",
+      "arcade-018-echo-cipher-tribunal",
+      "arcade-019-luna-tempo-shards",
+      "arcade-020-terra-bastion-current",
+      "arcade-021-pixel-drift-sentinel",
+      "arcade-022-spark-pulse-barrage",
+      "arcade-023-echo-logic-chase",
+      "arcade-024-luna-prism-relay",
+      "arcade-025-terra-stormline-command",
+      "arcade-026-pixel-quantum-driftline",
+      "arcade-027-spark-gridquake",
+      "arcade-028-echo-proofline-panic",
+      "arcade-029-luna-harmonic-siege",
+      "arcade-030-terra-corefront",
+      "arcade-031-pixel-shard-ambush",
+      "arcade-032-spark-throttle-rift",
+      "arcade-033-echo-veracity-gauntlet",
+      "arcade-034-luna-crescendo-vortex",
+      "arcade-035-terra-barrier-blackout",
+      "arcade-036-pixel-fracture-relay",
+      "arcade-037-spark-current-clash",
+      "arcade-038-echo-integrity-orbit",
+      "arcade-039-luna-rhythm-singularity",
+      "arcade-040-terra-citadel-surge",
+      "arcade-041-pixel-flux-mirage",
+      "arcade-042-spark-overload-cartel",
+      "arcade-043-echo-truth-spiral",
+      "arcade-044-luna-pulse-corridor",
+      "arcade-045-terra-siege-bloom",
+      "arcade-046-pixel-ghostline-run",
+      "arcade-047-spark-surge-ladder",
+      "arcade-048-echo-verdict-rift",
+      "arcade-049-luna-chroma-tempo",
+      "arcade-050-terra-bastion-wake",
+      "arcade-051-pixel-parallax-lock",
+      "arcade-052-spark-voltage-drift",
+      "arcade-053-echo-validity-rift",
+      "arcade-054-luna-tempo-aperture",
+      "arcade-055-terra-citadel-bloom",
+      "arcade-056-pixel-sentinel-weave",
+      "arcade-057-spark-relay-spiral",
+      "arcade-058-echo-credence-surge",
+      "arcade-059-luna-resonance-lane",
+      "arcade-060-terra-bloom-circuit",
+      "arcade-061-pixel-prism-patrol",
+      "arcade-062-spark-factor-furnace",
+      "arcade-063-echo-claim-cascade",
+      "arcade-064-luna-sequence-symphony",
+      "arcade-065-terra-ecosystem-rescue",
+      "arcade-066-spark-thruster-trial",
+      "arcade-067-echo-truthline-protocol",
+      "arcade-068-terra-wilds-recovery",
+      "arcade-069-luna-pulse-rally",
+      "arcade-070-pixel-firewall-frontier",
+      "arcade-101-sky-trail",
+      "arcade-102-river-trail",
+      "arcade-103-echo-trail",
+      "arcade-104-luna-trail",
+      "arcade-105-nova-trail",
+      "arcade-106-terra-trail",
+      "arcade-107-comet-trail",
+      "arcade-108-aurora-trail",
+      "arcade-109-orbit-trail",
+      "arcade-110-pixel-trail",
+      "arcade-111-clover-trail",
+      "arcade-112-harbor-trail",
+      "arcade-113-meadow-trail",
+      "arcade-114-dawn-trail",
+      "arcade-115-summit-trail",
+      "arcade-116-prism-trail",
+      "arcade-117-marble-trail",
+      "arcade-118-willow-trail",
+      "arcade-119-maple-trail",
+      "arcade-120-coral-trail",
+      "arcade-121-breeze-trail",
+      "arcade-122-sprout-trail",
+      "arcade-123-pebble-trail",
+      "arcade-124-nimbus-trail",
+      "arcade-125-flare-trail",
+      "arcade-126-sky-circuit",
+      "arcade-127-river-circuit",
+      "arcade-128-echo-circuit",
+      "arcade-129-luna-circuit",
+      "arcade-130-nova-circuit",
+      "arcade-131-terra-circuit",
+      "arcade-132-comet-circuit",
+      "arcade-133-aurora-circuit",
+      "arcade-134-orbit-circuit",
+      "arcade-135-pixel-circuit",
+      "arcade-136-clover-circuit",
+      "arcade-137-harbor-circuit",
+      "arcade-138-meadow-circuit",
+      "arcade-139-dawn-circuit",
+      "arcade-140-summit-circuit",
+      "arcade-141-prism-circuit",
+      "arcade-142-marble-circuit",
+      "arcade-143-willow-circuit",
+      "arcade-144-maple-circuit",
+      "arcade-145-coral-circuit",
+      "arcade-146-breeze-circuit",
+      "arcade-147-sprout-circuit",
+      "arcade-148-pebble-circuit",
+      "arcade-149-nimbus-circuit",
+      "arcade-150-flare-circuit",
+      "arcade-151-sky-garden",
+      "arcade-152-river-garden",
+      "arcade-153-echo-garden",
+      "arcade-154-luna-garden",
+      "arcade-155-nova-garden",
+      "arcade-156-terra-garden",
+      "arcade-157-comet-garden",
+      "arcade-158-aurora-garden",
+      "arcade-159-orbit-garden",
+      "arcade-160-pixel-garden",
       "artistic-algorithms",
       "bio-blast",
       "biome-builder",
@@ -521,13 +654,373 @@
       "terras-trek",
       "velocity-vector",
       "vocabulary-voyager",
-      "word-woods"
+      "word-woods",
+      "zone-041-signal-rescue",
+      "zone-042-math-rail-commander",
+      "zone-043-echo-story-signal",
+      "zone-044-terra-lab-sort",
+      "zone-045-luna-rhythm-forge",
+      "zone-046-pixel-cipher-sprint",
+      "zone-047-spark-grid-fuse",
+      "zone-048-echo-evidence-judge",
+      "zone-049-terra-habitat-triage",
+      "zone-050-pixel-lane-defender",
+      "zone-051-luna-chorus-cascade",
+      "zone-052-spark-reactor-grid",
+      "zone-053-echo-debate-duel",
+      "zone-054-terra-weather-command",
+      "zone-055-pixel-drone-intercept",
+      "zone-056-spark-orbital-surge",
+      "zone-057-echo-signal-crossfire",
+      "zone-058-terra-rift-shelter",
+      "zone-059-luna-stage-strategy",
+      "zone-060-pixel-circuit-siege",
+      "zone-061-spark-flux-gauntlet",
+      "zone-062-echo-proof-relay",
+      "zone-063-terra-greenhouse-command",
+      "zone-064-luna-beatline-run",
+      "zone-065-pixel-breach-hunter",
+      "zone-066-spark-thruster-trial",
+      "zone-067-echo-truthline-protocol",
+      "zone-068-terra-wilds-recovery",
+      "zone-069-luna-pulse-rally",
+      "zone-070-pixel-firewall-frontier",
+      "zone-071-spark-reactor-convoy",
+      "zone-072-echo-signal-tribunal",
+      "zone-073-terra-frontline-wardens",
+      "zone-074-luna-skyline-set",
+      "zone-075-pixel-sentinel-lattice",
+      "zone-076-spark-vault-thrust",
+      "zone-077-echo-audit-matrix",
+      "zone-078-terra-ridge-evacuation",
+      "zone-079-luna-prism-chorus",
+      "zone-080-pixel-bastion-sieve",
+      "zone-081-spark-core-vector",
+      "zone-082-echo-verdict-switchboard",
+      "zone-083-terra-floodline-command",
+      "zone-084-luna-crescendo-lab",
+      "zone-085-pixel-shield-fabric",
+      "zone-086-spark-reactor-pulse",
+      "zone-087-echo-truth-circuit",
+      "zone-088-terra-breakwater-grid",
+      "zone-089-luna-radiant-arc",
+      "zone-090-pixel-guardian-weave",
+      "zone-091-spark-citadel-pulse",
+      "zone-092-echo-verdict-relay",
+      "zone-093-terra-harbor-grid",
+      "zone-094-luna-aurora-arc",
+      "zone-095-pixel-aegis-weave",
+      "zone-096-spark-bastion-flux",
+      "zone-097-echo-tribunal-matrix",
+      "zone-098-terra-breakwater-vanguard",
+      "zone-099-luna-starlight-chorus",
+      "zone-100-pixel-citadel-firewall",
+      "zone-101-spark-sentinel-dynamo",
+      "zone-102-echo-evidence-lattice",
+      "zone-103-terra-stormline-bastion",
+      "zone-104-luna-nebula-cadence",
+      "zone-105-pixel-quantum-bulwark",
+      "zone-106-spark-reactor-rail",
+      "zone-107-echo-proof-cascade",
+      "zone-108-terra-habitat-rescue",
+      "zone-109-luna-rhythm-voyage",
+      "zone-110-pixel-firewall-ops",
+      "zone-111-spark-vector-lockdown",
+      "zone-112-echo-claim-tribunal",
+      "zone-113-terra-outpost-recovery",
+      "zone-114-luna-harmonic-hyperlane",
+      "zone-115-pixel-breach-lattice",
+      "zone-116-spark-resonance-gauntlet",
+      "zone-117-echo-verity-court",
+      "zone-118-terra-frontier-evac",
+      "zone-119-luna-prism-overdrive",
+      "zone-120-pixel-quarantine-grid",
+      "zone-121-spark-helix-lock",
+      "zone-122-echo-judgment-circuit",
+      "zone-123-terra-colony-evac",
+      "zone-124-luna-nova-cadence",
+      "zone-125-pixel-containment-matrix"
+    ],
+    "mappedResolvedFiles": [
+      "aero-architect",
+      "alphabet-airship",
+      "arcade-001-neon-vault-breaker",
+      "arcade-002-spark-loop-rush",
+      "arcade-003-echo-rift-runner",
+      "arcade-004-luna-beat-bloom",
+      "arcade-005-terra-shield-garden",
+      "arcade-006-pixel-glitch-dash",
+      "arcade-007-spark-circuit-rally",
+      "arcade-008-echo-proof-sprint",
+      "arcade-009-luna-prism-drift",
+      "arcade-010-terra-storm-bastion",
+      "arcade-011-pixel-vector-forge",
+      "arcade-012-spark-prime-flux",
+      "arcade-013-echo-verdict-run",
+      "arcade-014-luna-chorus-grid",
+      "arcade-015-terra-canopy-siege",
+      "arcade-016-pixel-hyperlane-heist",
+      "arcade-017-spark-relay-frenzy",
+      "arcade-018-echo-cipher-tribunal",
+      "arcade-019-luna-tempo-shards",
+      "arcade-020-terra-bastion-current",
+      "arcade-021-pixel-drift-sentinel",
+      "arcade-022-spark-pulse-barrage",
+      "arcade-023-echo-logic-chase",
+      "arcade-024-luna-prism-relay",
+      "arcade-025-terra-stormline-command",
+      "arcade-026-pixel-quantum-driftline",
+      "arcade-027-spark-gridquake",
+      "arcade-028-echo-proofline-panic",
+      "arcade-029-luna-harmonic-siege",
+      "arcade-030-terra-corefront",
+      "arcade-031-pixel-shard-ambush",
+      "arcade-032-spark-throttle-rift",
+      "arcade-033-echo-veracity-gauntlet",
+      "arcade-034-luna-crescendo-vortex",
+      "arcade-035-terra-barrier-blackout",
+      "arcade-036-pixel-fracture-relay",
+      "arcade-037-spark-current-clash",
+      "arcade-038-echo-integrity-orbit",
+      "arcade-039-luna-rhythm-singularity",
+      "arcade-040-terra-citadel-surge",
+      "arcade-041-pixel-flux-mirage",
+      "arcade-042-spark-overload-cartel",
+      "arcade-043-echo-truth-spiral",
+      "arcade-044-luna-pulse-corridor",
+      "arcade-045-terra-siege-bloom",
+      "arcade-046-pixel-ghostline-run",
+      "arcade-047-spark-surge-ladder",
+      "arcade-048-echo-verdict-rift",
+      "arcade-049-luna-chroma-tempo",
+      "arcade-050-terra-bastion-wake",
+      "arcade-051-pixel-parallax-lock",
+      "arcade-052-spark-voltage-drift",
+      "arcade-053-echo-validity-rift",
+      "arcade-054-luna-tempo-aperture",
+      "arcade-055-terra-citadel-bloom",
+      "arcade-056-pixel-sentinel-weave",
+      "arcade-057-spark-relay-spiral",
+      "arcade-058-echo-credence-surge",
+      "arcade-059-luna-resonance-lane",
+      "arcade-060-terra-bloom-circuit",
+      "arcade-061-pixel-prism-patrol",
+      "arcade-062-spark-factor-furnace",
+      "arcade-063-echo-claim-cascade",
+      "arcade-064-luna-sequence-symphony",
+      "arcade-065-terra-ecosystem-rescue",
+      "arcade-066-spark-thruster-trial",
+      "arcade-067-echo-truthline-protocol",
+      "arcade-068-terra-wilds-recovery",
+      "arcade-069-luna-pulse-rally",
+      "arcade-070-pixel-firewall-frontier",
+      "arcade-101-sky-trail",
+      "arcade-102-river-trail",
+      "arcade-103-echo-trail",
+      "arcade-104-luna-trail",
+      "arcade-105-nova-trail",
+      "arcade-106-terra-trail",
+      "arcade-107-comet-trail",
+      "arcade-108-aurora-trail",
+      "arcade-109-orbit-trail",
+      "arcade-110-pixel-trail",
+      "arcade-111-clover-trail",
+      "arcade-112-harbor-trail",
+      "arcade-113-meadow-trail",
+      "arcade-114-dawn-trail",
+      "arcade-115-summit-trail",
+      "arcade-116-prism-trail",
+      "arcade-117-marble-trail",
+      "arcade-118-willow-trail",
+      "arcade-119-maple-trail",
+      "arcade-120-coral-trail",
+      "arcade-121-breeze-trail",
+      "arcade-122-sprout-trail",
+      "arcade-123-pebble-trail",
+      "arcade-124-nimbus-trail",
+      "arcade-125-flare-trail",
+      "arcade-126-sky-circuit",
+      "arcade-127-river-circuit",
+      "arcade-128-echo-circuit",
+      "arcade-129-luna-circuit",
+      "arcade-130-nova-circuit",
+      "arcade-131-terra-circuit",
+      "arcade-132-comet-circuit",
+      "arcade-133-aurora-circuit",
+      "arcade-134-orbit-circuit",
+      "arcade-135-pixel-circuit",
+      "arcade-136-clover-circuit",
+      "arcade-137-harbor-circuit",
+      "arcade-138-meadow-circuit",
+      "arcade-139-dawn-circuit",
+      "arcade-140-summit-circuit",
+      "arcade-141-prism-circuit",
+      "arcade-142-marble-circuit",
+      "arcade-143-willow-circuit",
+      "arcade-144-maple-circuit",
+      "arcade-145-coral-circuit",
+      "arcade-146-breeze-circuit",
+      "arcade-147-sprout-circuit",
+      "arcade-148-pebble-circuit",
+      "arcade-149-nimbus-circuit",
+      "arcade-150-flare-circuit",
+      "arcade-151-sky-garden",
+      "arcade-152-river-garden",
+      "arcade-153-echo-garden",
+      "arcade-154-luna-garden",
+      "arcade-155-nova-garden",
+      "arcade-156-terra-garden",
+      "arcade-157-comet-garden",
+      "arcade-158-aurora-garden",
+      "arcade-159-orbit-garden",
+      "arcade-160-pixel-garden",
+      "artistic-algorithms",
+      "bio-blast",
+      "biome-builder",
+      "bot-builder",
+      "chronicle-case",
+      "cipher-city",
+      "circuit-crusader",
+      "climate-commander",
+      "cosmic-canvas",
+      "count-constellations",
+      "echos-expedition",
+      "eco-engineer",
+      "ethical-engine",
+      "ethos-engine",
+      "evolution-prime",
+      "flora-fusion",
+      "fraction-factory",
+      "fraction-forge",
+      "fusion-founder",
+      "genetic-garden",
+      "global-harmony",
+      "gravity-goliath",
+      "histo-hunt",
+      "history-hacker",
+      "linguist-lookout",
+      "logic-labyrinth",
+      "logical-link",
+      "lunas-legend",
+      "market-maker",
+      "mars-colony",
+      "nano-navigator",
+      "nano-nexus",
+      "neural-navigator",
+      "neural-net",
+      "orbit-operator",
+      "pixels-path",
+      "protein-painter",
+      "quantum-cascade",
+      "quantum-quest",
+      "quantum-quirk",
+      "rhyme-river",
+      "rhythm-rules",
+      "sentence-safari",
+      "sparks-spark-quest",
+      "star-steer",
+      "stellar-state",
+      "story-smith",
+      "syntax-serpent",
+      "synthesis-sphere",
+      "synthetic-architect",
+      "tectonic-trek",
+      "terras-trek",
+      "velocity-vector",
+      "vocabulary-voyager",
+      "word-woods",
+      "zone-041-signal-rescue",
+      "zone-042-math-rail-commander",
+      "zone-043-echo-story-signal",
+      "zone-044-terra-lab-sort",
+      "zone-045-luna-rhythm-forge",
+      "zone-046-pixel-cipher-sprint",
+      "zone-047-spark-grid-fuse",
+      "zone-048-echo-evidence-judge",
+      "zone-049-terra-habitat-triage",
+      "zone-050-pixel-lane-defender",
+      "zone-051-luna-chorus-cascade",
+      "zone-052-spark-reactor-grid",
+      "zone-053-echo-debate-duel",
+      "zone-054-terra-weather-command",
+      "zone-055-pixel-drone-intercept",
+      "zone-056-spark-orbital-surge",
+      "zone-057-echo-signal-crossfire",
+      "zone-058-terra-rift-shelter",
+      "zone-059-luna-stage-strategy",
+      "zone-060-pixel-circuit-siege",
+      "zone-061-spark-flux-gauntlet",
+      "zone-062-echo-proof-relay",
+      "zone-063-terra-greenhouse-command",
+      "zone-064-luna-beatline-run",
+      "zone-065-pixel-breach-hunter",
+      "zone-066-spark-thruster-trial",
+      "zone-067-echo-truthline-protocol",
+      "zone-068-terra-wilds-recovery",
+      "zone-069-luna-pulse-rally",
+      "zone-070-pixel-firewall-frontier",
+      "zone-071-spark-reactor-convoy",
+      "zone-072-echo-signal-tribunal",
+      "zone-073-terra-frontline-wardens",
+      "zone-074-luna-skyline-set",
+      "zone-075-pixel-sentinel-lattice",
+      "zone-076-spark-vault-thrust",
+      "zone-077-echo-audit-matrix",
+      "zone-078-terra-ridge-evacuation",
+      "zone-079-luna-prism-chorus",
+      "zone-080-pixel-bastion-sieve",
+      "zone-081-spark-core-vector",
+      "zone-082-echo-verdict-switchboard",
+      "zone-083-terra-floodline-command",
+      "zone-084-luna-crescendo-lab",
+      "zone-085-pixel-shield-fabric",
+      "zone-086-spark-reactor-pulse",
+      "zone-087-echo-truth-circuit",
+      "zone-088-terra-breakwater-grid",
+      "zone-089-luna-radiant-arc",
+      "zone-090-pixel-guardian-weave",
+      "zone-091-spark-citadel-pulse",
+      "zone-092-echo-verdict-relay",
+      "zone-093-terra-harbor-grid",
+      "zone-094-luna-aurora-arc",
+      "zone-095-pixel-aegis-weave",
+      "zone-096-spark-bastion-flux",
+      "zone-097-echo-tribunal-matrix",
+      "zone-098-terra-breakwater-vanguard",
+      "zone-099-luna-starlight-chorus",
+      "zone-100-pixel-citadel-firewall",
+      "zone-101-spark-sentinel-dynamo",
+      "zone-102-echo-evidence-lattice",
+      "zone-103-terra-stormline-bastion",
+      "zone-104-luna-nebula-cadence",
+      "zone-105-pixel-quantum-bulwark",
+      "zone-106-spark-reactor-rail",
+      "zone-107-echo-proof-cascade",
+      "zone-108-terra-habitat-rescue",
+      "zone-109-luna-rhythm-voyage",
+      "zone-110-pixel-firewall-ops",
+      "zone-111-spark-vector-lockdown",
+      "zone-112-echo-claim-tribunal",
+      "zone-113-terra-outpost-recovery",
+      "zone-114-luna-harmonic-hyperlane",
+      "zone-115-pixel-breach-lattice",
+      "zone-116-spark-resonance-gauntlet",
+      "zone-117-echo-verity-court",
+      "zone-118-terra-frontier-evac",
+      "zone-119-luna-prism-overdrive",
+      "zone-120-pixel-quarantine-grid",
+      "zone-121-spark-helix-lock",
+      "zone-122-echo-judgment-circuit",
+      "zone-123-terra-colony-evac",
+      "zone-124-luna-nova-cadence",
+      "zone-125-pixel-containment-matrix"
     ],
     "templateFile": "immersive-arcade-template"
   },
   "coverage": {
     "missingCoreMappings": [],
     "missingLegacyMappings": [],
+    "missingMappedComponentFiles": [],
     "missingCount": 0
   },
   "aliasExamples": [],
@@ -1100,6 +1593,2156 @@
       "aliasDepth": 0,
       "chain": [
         "fraction-factory"
+      ]
+    },
+    {
+      "gameId": "arcade-001",
+      "component": "Arcade001NeonVaultBreaker",
+      "entryFile": "arcade-001-neon-vault-breaker",
+      "resolvedFile": "arcade-001-neon-vault-breaker",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-001-neon-vault-breaker"
+      ]
+    },
+    {
+      "gameId": "arcade-002",
+      "component": "Arcade002SparkLoopRush",
+      "entryFile": "arcade-002-spark-loop-rush",
+      "resolvedFile": "arcade-002-spark-loop-rush",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-002-spark-loop-rush"
+      ]
+    },
+    {
+      "gameId": "arcade-003",
+      "component": "Arcade003EchoRiftRunner",
+      "entryFile": "arcade-003-echo-rift-runner",
+      "resolvedFile": "arcade-003-echo-rift-runner",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-003-echo-rift-runner"
+      ]
+    },
+    {
+      "gameId": "arcade-004",
+      "component": "Arcade004LunaBeatBloom",
+      "entryFile": "arcade-004-luna-beat-bloom",
+      "resolvedFile": "arcade-004-luna-beat-bloom",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-004-luna-beat-bloom"
+      ]
+    },
+    {
+      "gameId": "arcade-005",
+      "component": "Arcade005TerraShieldGarden",
+      "entryFile": "arcade-005-terra-shield-garden",
+      "resolvedFile": "arcade-005-terra-shield-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-005-terra-shield-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-006",
+      "component": "Arcade006PixelGlitchDash",
+      "entryFile": "arcade-006-pixel-glitch-dash",
+      "resolvedFile": "arcade-006-pixel-glitch-dash",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-006-pixel-glitch-dash"
+      ]
+    },
+    {
+      "gameId": "arcade-007",
+      "component": "Arcade007SparkCircuitRally",
+      "entryFile": "arcade-007-spark-circuit-rally",
+      "resolvedFile": "arcade-007-spark-circuit-rally",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-007-spark-circuit-rally"
+      ]
+    },
+    {
+      "gameId": "arcade-008",
+      "component": "Arcade008EchoProofSprint",
+      "entryFile": "arcade-008-echo-proof-sprint",
+      "resolvedFile": "arcade-008-echo-proof-sprint",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-008-echo-proof-sprint"
+      ]
+    },
+    {
+      "gameId": "arcade-009",
+      "component": "Arcade009LunaPrismDrift",
+      "entryFile": "arcade-009-luna-prism-drift",
+      "resolvedFile": "arcade-009-luna-prism-drift",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-009-luna-prism-drift"
+      ]
+    },
+    {
+      "gameId": "arcade-010",
+      "component": "Arcade010TerraStormBastion",
+      "entryFile": "arcade-010-terra-storm-bastion",
+      "resolvedFile": "arcade-010-terra-storm-bastion",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-010-terra-storm-bastion"
+      ]
+    },
+    {
+      "gameId": "arcade-011",
+      "component": "Arcade011PixelVectorForge",
+      "entryFile": "arcade-011-pixel-vector-forge",
+      "resolvedFile": "arcade-011-pixel-vector-forge",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-011-pixel-vector-forge"
+      ]
+    },
+    {
+      "gameId": "arcade-012",
+      "component": "Arcade012SparkPrimeFlux",
+      "entryFile": "arcade-012-spark-prime-flux",
+      "resolvedFile": "arcade-012-spark-prime-flux",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-012-spark-prime-flux"
+      ]
+    },
+    {
+      "gameId": "arcade-013",
+      "component": "Arcade013EchoVerdictRun",
+      "entryFile": "arcade-013-echo-verdict-run",
+      "resolvedFile": "arcade-013-echo-verdict-run",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-013-echo-verdict-run"
+      ]
+    },
+    {
+      "gameId": "arcade-014",
+      "component": "Arcade014LunaChorusGrid",
+      "entryFile": "arcade-014-luna-chorus-grid",
+      "resolvedFile": "arcade-014-luna-chorus-grid",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-014-luna-chorus-grid"
+      ]
+    },
+    {
+      "gameId": "arcade-015",
+      "component": "Arcade015TerraCanopySiege",
+      "entryFile": "arcade-015-terra-canopy-siege",
+      "resolvedFile": "arcade-015-terra-canopy-siege",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-015-terra-canopy-siege"
+      ]
+    },
+    {
+      "gameId": "arcade-016",
+      "component": "Arcade016PixelHyperlaneHeist",
+      "entryFile": "arcade-016-pixel-hyperlane-heist",
+      "resolvedFile": "arcade-016-pixel-hyperlane-heist",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-016-pixel-hyperlane-heist"
+      ]
+    },
+    {
+      "gameId": "arcade-017",
+      "component": "Arcade017SparkRelayFrenzy",
+      "entryFile": "arcade-017-spark-relay-frenzy",
+      "resolvedFile": "arcade-017-spark-relay-frenzy",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-017-spark-relay-frenzy"
+      ]
+    },
+    {
+      "gameId": "arcade-018",
+      "component": "Arcade018EchoCipherTribunal",
+      "entryFile": "arcade-018-echo-cipher-tribunal",
+      "resolvedFile": "arcade-018-echo-cipher-tribunal",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-018-echo-cipher-tribunal"
+      ]
+    },
+    {
+      "gameId": "arcade-019",
+      "component": "Arcade019LunaTempoShards",
+      "entryFile": "arcade-019-luna-tempo-shards",
+      "resolvedFile": "arcade-019-luna-tempo-shards",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-019-luna-tempo-shards"
+      ]
+    },
+    {
+      "gameId": "arcade-020",
+      "component": "Arcade020TerraBastionCurrent",
+      "entryFile": "arcade-020-terra-bastion-current",
+      "resolvedFile": "arcade-020-terra-bastion-current",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-020-terra-bastion-current"
+      ]
+    },
+    {
+      "gameId": "arcade-021",
+      "component": "Arcade021PixelDriftSentinel",
+      "entryFile": "arcade-021-pixel-drift-sentinel",
+      "resolvedFile": "arcade-021-pixel-drift-sentinel",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-021-pixel-drift-sentinel"
+      ]
+    },
+    {
+      "gameId": "arcade-022",
+      "component": "Arcade022SparkPulseBarrage",
+      "entryFile": "arcade-022-spark-pulse-barrage",
+      "resolvedFile": "arcade-022-spark-pulse-barrage",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-022-spark-pulse-barrage"
+      ]
+    },
+    {
+      "gameId": "arcade-023",
+      "component": "Arcade023EchoLogicChase",
+      "entryFile": "arcade-023-echo-logic-chase",
+      "resolvedFile": "arcade-023-echo-logic-chase",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-023-echo-logic-chase"
+      ]
+    },
+    {
+      "gameId": "arcade-024",
+      "component": "Arcade024LunaPrismRelay",
+      "entryFile": "arcade-024-luna-prism-relay",
+      "resolvedFile": "arcade-024-luna-prism-relay",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-024-luna-prism-relay"
+      ]
+    },
+    {
+      "gameId": "arcade-025",
+      "component": "Arcade025TerraStormlineCommand",
+      "entryFile": "arcade-025-terra-stormline-command",
+      "resolvedFile": "arcade-025-terra-stormline-command",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-025-terra-stormline-command"
+      ]
+    },
+    {
+      "gameId": "arcade-026",
+      "component": "Arcade026PixelQuantumDriftline",
+      "entryFile": "arcade-026-pixel-quantum-driftline",
+      "resolvedFile": "arcade-026-pixel-quantum-driftline",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-026-pixel-quantum-driftline"
+      ]
+    },
+    {
+      "gameId": "arcade-027",
+      "component": "Arcade027SparkGridquake",
+      "entryFile": "arcade-027-spark-gridquake",
+      "resolvedFile": "arcade-027-spark-gridquake",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-027-spark-gridquake"
+      ]
+    },
+    {
+      "gameId": "arcade-028",
+      "component": "Arcade028EchoProoflinePanic",
+      "entryFile": "arcade-028-echo-proofline-panic",
+      "resolvedFile": "arcade-028-echo-proofline-panic",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-028-echo-proofline-panic"
+      ]
+    },
+    {
+      "gameId": "arcade-029",
+      "component": "Arcade029LunaHarmonicSiege",
+      "entryFile": "arcade-029-luna-harmonic-siege",
+      "resolvedFile": "arcade-029-luna-harmonic-siege",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-029-luna-harmonic-siege"
+      ]
+    },
+    {
+      "gameId": "arcade-030",
+      "component": "Arcade030TerraCorefront",
+      "entryFile": "arcade-030-terra-corefront",
+      "resolvedFile": "arcade-030-terra-corefront",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-030-terra-corefront"
+      ]
+    },
+    {
+      "gameId": "arcade-031",
+      "component": "Arcade031PixelShardAmbush",
+      "entryFile": "arcade-031-pixel-shard-ambush",
+      "resolvedFile": "arcade-031-pixel-shard-ambush",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-031-pixel-shard-ambush"
+      ]
+    },
+    {
+      "gameId": "arcade-032",
+      "component": "Arcade032SparkThrottleRift",
+      "entryFile": "arcade-032-spark-throttle-rift",
+      "resolvedFile": "arcade-032-spark-throttle-rift",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-032-spark-throttle-rift"
+      ]
+    },
+    {
+      "gameId": "arcade-033",
+      "component": "Arcade033EchoVeracityGauntlet",
+      "entryFile": "arcade-033-echo-veracity-gauntlet",
+      "resolvedFile": "arcade-033-echo-veracity-gauntlet",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-033-echo-veracity-gauntlet"
+      ]
+    },
+    {
+      "gameId": "arcade-034",
+      "component": "Arcade034LunaCrescendoVortex",
+      "entryFile": "arcade-034-luna-crescendo-vortex",
+      "resolvedFile": "arcade-034-luna-crescendo-vortex",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-034-luna-crescendo-vortex"
+      ]
+    },
+    {
+      "gameId": "arcade-035",
+      "component": "Arcade035TerraBarrierBlackout",
+      "entryFile": "arcade-035-terra-barrier-blackout",
+      "resolvedFile": "arcade-035-terra-barrier-blackout",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-035-terra-barrier-blackout"
+      ]
+    },
+    {
+      "gameId": "arcade-036",
+      "component": "Arcade036PixelFractureRelay",
+      "entryFile": "arcade-036-pixel-fracture-relay",
+      "resolvedFile": "arcade-036-pixel-fracture-relay",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-036-pixel-fracture-relay"
+      ]
+    },
+    {
+      "gameId": "arcade-037",
+      "component": "Arcade037SparkCurrentClash",
+      "entryFile": "arcade-037-spark-current-clash",
+      "resolvedFile": "arcade-037-spark-current-clash",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-037-spark-current-clash"
+      ]
+    },
+    {
+      "gameId": "arcade-038",
+      "component": "Arcade038EchoIntegrityOrbit",
+      "entryFile": "arcade-038-echo-integrity-orbit",
+      "resolvedFile": "arcade-038-echo-integrity-orbit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-038-echo-integrity-orbit"
+      ]
+    },
+    {
+      "gameId": "arcade-039",
+      "component": "Arcade039LunaRhythmSingularity",
+      "entryFile": "arcade-039-luna-rhythm-singularity",
+      "resolvedFile": "arcade-039-luna-rhythm-singularity",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-039-luna-rhythm-singularity"
+      ]
+    },
+    {
+      "gameId": "arcade-040",
+      "component": "Arcade040TerraCitadelSurge",
+      "entryFile": "arcade-040-terra-citadel-surge",
+      "resolvedFile": "arcade-040-terra-citadel-surge",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-040-terra-citadel-surge"
+      ]
+    },
+    {
+      "gameId": "arcade-041",
+      "component": "Arcade041PixelFluxMirage",
+      "entryFile": "arcade-041-pixel-flux-mirage",
+      "resolvedFile": "arcade-041-pixel-flux-mirage",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-041-pixel-flux-mirage"
+      ]
+    },
+    {
+      "gameId": "arcade-042",
+      "component": "Arcade042SparkOverloadCartel",
+      "entryFile": "arcade-042-spark-overload-cartel",
+      "resolvedFile": "arcade-042-spark-overload-cartel",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-042-spark-overload-cartel"
+      ]
+    },
+    {
+      "gameId": "arcade-043",
+      "component": "Arcade043EchoTruthSpiral",
+      "entryFile": "arcade-043-echo-truth-spiral",
+      "resolvedFile": "arcade-043-echo-truth-spiral",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-043-echo-truth-spiral"
+      ]
+    },
+    {
+      "gameId": "arcade-044",
+      "component": "Arcade044LunaPulseCorridor",
+      "entryFile": "arcade-044-luna-pulse-corridor",
+      "resolvedFile": "arcade-044-luna-pulse-corridor",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-044-luna-pulse-corridor"
+      ]
+    },
+    {
+      "gameId": "arcade-045",
+      "component": "Arcade045TerraSiegeBloom",
+      "entryFile": "arcade-045-terra-siege-bloom",
+      "resolvedFile": "arcade-045-terra-siege-bloom",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-045-terra-siege-bloom"
+      ]
+    },
+    {
+      "gameId": "arcade-046",
+      "component": "Arcade046PixelGhostlineRun",
+      "entryFile": "arcade-046-pixel-ghostline-run",
+      "resolvedFile": "arcade-046-pixel-ghostline-run",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-046-pixel-ghostline-run"
+      ]
+    },
+    {
+      "gameId": "arcade-047",
+      "component": "Arcade047SparkSurgeLadder",
+      "entryFile": "arcade-047-spark-surge-ladder",
+      "resolvedFile": "arcade-047-spark-surge-ladder",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-047-spark-surge-ladder"
+      ]
+    },
+    {
+      "gameId": "arcade-048",
+      "component": "Arcade048EchoVerdictRift",
+      "entryFile": "arcade-048-echo-verdict-rift",
+      "resolvedFile": "arcade-048-echo-verdict-rift",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-048-echo-verdict-rift"
+      ]
+    },
+    {
+      "gameId": "arcade-049",
+      "component": "Arcade049LunaChromaTempo",
+      "entryFile": "arcade-049-luna-chroma-tempo",
+      "resolvedFile": "arcade-049-luna-chroma-tempo",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-049-luna-chroma-tempo"
+      ]
+    },
+    {
+      "gameId": "arcade-050",
+      "component": "Arcade050TerraBastionWake",
+      "entryFile": "arcade-050-terra-bastion-wake",
+      "resolvedFile": "arcade-050-terra-bastion-wake",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-050-terra-bastion-wake"
+      ]
+    },
+    {
+      "gameId": "arcade-051",
+      "component": "Arcade051PixelParallaxLock",
+      "entryFile": "arcade-051-pixel-parallax-lock",
+      "resolvedFile": "arcade-051-pixel-parallax-lock",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-051-pixel-parallax-lock"
+      ]
+    },
+    {
+      "gameId": "arcade-052",
+      "component": "Arcade052SparkVoltageDrift",
+      "entryFile": "arcade-052-spark-voltage-drift",
+      "resolvedFile": "arcade-052-spark-voltage-drift",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-052-spark-voltage-drift"
+      ]
+    },
+    {
+      "gameId": "arcade-053",
+      "component": "Arcade053EchoValidityRift",
+      "entryFile": "arcade-053-echo-validity-rift",
+      "resolvedFile": "arcade-053-echo-validity-rift",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-053-echo-validity-rift"
+      ]
+    },
+    {
+      "gameId": "arcade-054",
+      "component": "Arcade054LunaTempoAperture",
+      "entryFile": "arcade-054-luna-tempo-aperture",
+      "resolvedFile": "arcade-054-luna-tempo-aperture",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-054-luna-tempo-aperture"
+      ]
+    },
+    {
+      "gameId": "arcade-055",
+      "component": "Arcade055TerraCitadelBloom",
+      "entryFile": "arcade-055-terra-citadel-bloom",
+      "resolvedFile": "arcade-055-terra-citadel-bloom",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-055-terra-citadel-bloom"
+      ]
+    },
+    {
+      "gameId": "arcade-056",
+      "component": "Arcade056PixelSentinelWeave",
+      "entryFile": "arcade-056-pixel-sentinel-weave",
+      "resolvedFile": "arcade-056-pixel-sentinel-weave",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-056-pixel-sentinel-weave"
+      ]
+    },
+    {
+      "gameId": "arcade-057",
+      "component": "Arcade057SparkRelaySpiral",
+      "entryFile": "arcade-057-spark-relay-spiral",
+      "resolvedFile": "arcade-057-spark-relay-spiral",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-057-spark-relay-spiral"
+      ]
+    },
+    {
+      "gameId": "arcade-058",
+      "component": "Arcade058EchoCredenceSurge",
+      "entryFile": "arcade-058-echo-credence-surge",
+      "resolvedFile": "arcade-058-echo-credence-surge",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-058-echo-credence-surge"
+      ]
+    },
+    {
+      "gameId": "arcade-059",
+      "component": "Arcade059LunaResonanceLane",
+      "entryFile": "arcade-059-luna-resonance-lane",
+      "resolvedFile": "arcade-059-luna-resonance-lane",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-059-luna-resonance-lane"
+      ]
+    },
+    {
+      "gameId": "arcade-060",
+      "component": "Arcade060TerraBloomCircuit",
+      "entryFile": "arcade-060-terra-bloom-circuit",
+      "resolvedFile": "arcade-060-terra-bloom-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-060-terra-bloom-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-061",
+      "component": "Arcade061PixelPrismPatrol",
+      "entryFile": "arcade-061-pixel-prism-patrol",
+      "resolvedFile": "arcade-061-pixel-prism-patrol",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-061-pixel-prism-patrol"
+      ]
+    },
+    {
+      "gameId": "arcade-062",
+      "component": "Arcade062SparkFactorFurnace",
+      "entryFile": "arcade-062-spark-factor-furnace",
+      "resolvedFile": "arcade-062-spark-factor-furnace",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-062-spark-factor-furnace"
+      ]
+    },
+    {
+      "gameId": "arcade-063",
+      "component": "Arcade063EchoClaimCascade",
+      "entryFile": "arcade-063-echo-claim-cascade",
+      "resolvedFile": "arcade-063-echo-claim-cascade",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-063-echo-claim-cascade"
+      ]
+    },
+    {
+      "gameId": "arcade-064",
+      "component": "Arcade064LunaSequenceSymphony",
+      "entryFile": "arcade-064-luna-sequence-symphony",
+      "resolvedFile": "arcade-064-luna-sequence-symphony",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-064-luna-sequence-symphony"
+      ]
+    },
+    {
+      "gameId": "arcade-065",
+      "component": "Arcade065TerraEcosystemRescue",
+      "entryFile": "arcade-065-terra-ecosystem-rescue",
+      "resolvedFile": "arcade-065-terra-ecosystem-rescue",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-065-terra-ecosystem-rescue"
+      ]
+    },
+    {
+      "gameId": "arcade-066",
+      "component": "Arcade066SparkThrusterTrial",
+      "entryFile": "arcade-066-spark-thruster-trial",
+      "resolvedFile": "arcade-066-spark-thruster-trial",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-066-spark-thruster-trial"
+      ]
+    },
+    {
+      "gameId": "arcade-067",
+      "component": "Arcade067EchoTruthlineProtocol",
+      "entryFile": "arcade-067-echo-truthline-protocol",
+      "resolvedFile": "arcade-067-echo-truthline-protocol",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-067-echo-truthline-protocol"
+      ]
+    },
+    {
+      "gameId": "arcade-068",
+      "component": "Arcade068TerraWildsRecovery",
+      "entryFile": "arcade-068-terra-wilds-recovery",
+      "resolvedFile": "arcade-068-terra-wilds-recovery",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-068-terra-wilds-recovery"
+      ]
+    },
+    {
+      "gameId": "arcade-069",
+      "component": "Arcade069LunaPulseRally",
+      "entryFile": "arcade-069-luna-pulse-rally",
+      "resolvedFile": "arcade-069-luna-pulse-rally",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-069-luna-pulse-rally"
+      ]
+    },
+    {
+      "gameId": "arcade-070",
+      "component": "Arcade070PixelFirewallFrontier",
+      "entryFile": "arcade-070-pixel-firewall-frontier",
+      "resolvedFile": "arcade-070-pixel-firewall-frontier",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-070-pixel-firewall-frontier"
+      ]
+    },
+    {
+      "gameId": "arcade-101",
+      "component": "Arcade101SkyTrail",
+      "entryFile": "arcade-101-sky-trail",
+      "resolvedFile": "arcade-101-sky-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-101-sky-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-102",
+      "component": "Arcade102RiverTrail",
+      "entryFile": "arcade-102-river-trail",
+      "resolvedFile": "arcade-102-river-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-102-river-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-103",
+      "component": "Arcade103EchoTrail",
+      "entryFile": "arcade-103-echo-trail",
+      "resolvedFile": "arcade-103-echo-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-103-echo-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-104",
+      "component": "Arcade104LunaTrail",
+      "entryFile": "arcade-104-luna-trail",
+      "resolvedFile": "arcade-104-luna-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-104-luna-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-105",
+      "component": "Arcade105NovaTrail",
+      "entryFile": "arcade-105-nova-trail",
+      "resolvedFile": "arcade-105-nova-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-105-nova-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-106",
+      "component": "Arcade106TerraTrail",
+      "entryFile": "arcade-106-terra-trail",
+      "resolvedFile": "arcade-106-terra-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-106-terra-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-107",
+      "component": "Arcade107CometTrail",
+      "entryFile": "arcade-107-comet-trail",
+      "resolvedFile": "arcade-107-comet-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-107-comet-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-108",
+      "component": "Arcade108AuroraTrail",
+      "entryFile": "arcade-108-aurora-trail",
+      "resolvedFile": "arcade-108-aurora-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-108-aurora-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-109",
+      "component": "Arcade109OrbitTrail",
+      "entryFile": "arcade-109-orbit-trail",
+      "resolvedFile": "arcade-109-orbit-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-109-orbit-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-110",
+      "component": "Arcade110PixelTrail",
+      "entryFile": "arcade-110-pixel-trail",
+      "resolvedFile": "arcade-110-pixel-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-110-pixel-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-111",
+      "component": "Arcade111CloverTrail",
+      "entryFile": "arcade-111-clover-trail",
+      "resolvedFile": "arcade-111-clover-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-111-clover-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-112",
+      "component": "Arcade112HarborTrail",
+      "entryFile": "arcade-112-harbor-trail",
+      "resolvedFile": "arcade-112-harbor-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-112-harbor-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-113",
+      "component": "Arcade113MeadowTrail",
+      "entryFile": "arcade-113-meadow-trail",
+      "resolvedFile": "arcade-113-meadow-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-113-meadow-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-114",
+      "component": "Arcade114DawnTrail",
+      "entryFile": "arcade-114-dawn-trail",
+      "resolvedFile": "arcade-114-dawn-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-114-dawn-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-115",
+      "component": "Arcade115SummitTrail",
+      "entryFile": "arcade-115-summit-trail",
+      "resolvedFile": "arcade-115-summit-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-115-summit-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-116",
+      "component": "Arcade116PrismTrail",
+      "entryFile": "arcade-116-prism-trail",
+      "resolvedFile": "arcade-116-prism-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-116-prism-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-117",
+      "component": "Arcade117MarbleTrail",
+      "entryFile": "arcade-117-marble-trail",
+      "resolvedFile": "arcade-117-marble-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-117-marble-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-118",
+      "component": "Arcade118WillowTrail",
+      "entryFile": "arcade-118-willow-trail",
+      "resolvedFile": "arcade-118-willow-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-118-willow-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-119",
+      "component": "Arcade119MapleTrail",
+      "entryFile": "arcade-119-maple-trail",
+      "resolvedFile": "arcade-119-maple-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-119-maple-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-120",
+      "component": "Arcade120CoralTrail",
+      "entryFile": "arcade-120-coral-trail",
+      "resolvedFile": "arcade-120-coral-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-120-coral-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-121",
+      "component": "Arcade121BreezeTrail",
+      "entryFile": "arcade-121-breeze-trail",
+      "resolvedFile": "arcade-121-breeze-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-121-breeze-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-122",
+      "component": "Arcade122SproutTrail",
+      "entryFile": "arcade-122-sprout-trail",
+      "resolvedFile": "arcade-122-sprout-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-122-sprout-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-123",
+      "component": "Arcade123PebbleTrail",
+      "entryFile": "arcade-123-pebble-trail",
+      "resolvedFile": "arcade-123-pebble-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-123-pebble-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-124",
+      "component": "Arcade124NimbusTrail",
+      "entryFile": "arcade-124-nimbus-trail",
+      "resolvedFile": "arcade-124-nimbus-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-124-nimbus-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-125",
+      "component": "Arcade125FlareTrail",
+      "entryFile": "arcade-125-flare-trail",
+      "resolvedFile": "arcade-125-flare-trail",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-125-flare-trail"
+      ]
+    },
+    {
+      "gameId": "arcade-126",
+      "component": "Arcade126SkyCircuit",
+      "entryFile": "arcade-126-sky-circuit",
+      "resolvedFile": "arcade-126-sky-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-126-sky-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-127",
+      "component": "Arcade127RiverCircuit",
+      "entryFile": "arcade-127-river-circuit",
+      "resolvedFile": "arcade-127-river-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-127-river-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-128",
+      "component": "Arcade128EchoCircuit",
+      "entryFile": "arcade-128-echo-circuit",
+      "resolvedFile": "arcade-128-echo-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-128-echo-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-129",
+      "component": "Arcade129LunaCircuit",
+      "entryFile": "arcade-129-luna-circuit",
+      "resolvedFile": "arcade-129-luna-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-129-luna-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-130",
+      "component": "Arcade130NovaCircuit",
+      "entryFile": "arcade-130-nova-circuit",
+      "resolvedFile": "arcade-130-nova-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-130-nova-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-131",
+      "component": "Arcade131TerraCircuit",
+      "entryFile": "arcade-131-terra-circuit",
+      "resolvedFile": "arcade-131-terra-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-131-terra-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-132",
+      "component": "Arcade132CometCircuit",
+      "entryFile": "arcade-132-comet-circuit",
+      "resolvedFile": "arcade-132-comet-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-132-comet-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-133",
+      "component": "Arcade133AuroraCircuit",
+      "entryFile": "arcade-133-aurora-circuit",
+      "resolvedFile": "arcade-133-aurora-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-133-aurora-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-134",
+      "component": "Arcade134OrbitCircuit",
+      "entryFile": "arcade-134-orbit-circuit",
+      "resolvedFile": "arcade-134-orbit-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-134-orbit-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-135",
+      "component": "Arcade135PixelCircuit",
+      "entryFile": "arcade-135-pixel-circuit",
+      "resolvedFile": "arcade-135-pixel-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-135-pixel-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-136",
+      "component": "Arcade136CloverCircuit",
+      "entryFile": "arcade-136-clover-circuit",
+      "resolvedFile": "arcade-136-clover-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-136-clover-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-137",
+      "component": "Arcade137HarborCircuit",
+      "entryFile": "arcade-137-harbor-circuit",
+      "resolvedFile": "arcade-137-harbor-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-137-harbor-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-138",
+      "component": "Arcade138MeadowCircuit",
+      "entryFile": "arcade-138-meadow-circuit",
+      "resolvedFile": "arcade-138-meadow-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-138-meadow-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-139",
+      "component": "Arcade139DawnCircuit",
+      "entryFile": "arcade-139-dawn-circuit",
+      "resolvedFile": "arcade-139-dawn-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-139-dawn-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-140",
+      "component": "Arcade140SummitCircuit",
+      "entryFile": "arcade-140-summit-circuit",
+      "resolvedFile": "arcade-140-summit-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-140-summit-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-141",
+      "component": "Arcade141PrismCircuit",
+      "entryFile": "arcade-141-prism-circuit",
+      "resolvedFile": "arcade-141-prism-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-141-prism-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-142",
+      "component": "Arcade142MarbleCircuit",
+      "entryFile": "arcade-142-marble-circuit",
+      "resolvedFile": "arcade-142-marble-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-142-marble-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-143",
+      "component": "Arcade143WillowCircuit",
+      "entryFile": "arcade-143-willow-circuit",
+      "resolvedFile": "arcade-143-willow-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-143-willow-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-144",
+      "component": "Arcade144MapleCircuit",
+      "entryFile": "arcade-144-maple-circuit",
+      "resolvedFile": "arcade-144-maple-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-144-maple-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-145",
+      "component": "Arcade145CoralCircuit",
+      "entryFile": "arcade-145-coral-circuit",
+      "resolvedFile": "arcade-145-coral-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-145-coral-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-146",
+      "component": "Arcade146BreezeCircuit",
+      "entryFile": "arcade-146-breeze-circuit",
+      "resolvedFile": "arcade-146-breeze-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-146-breeze-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-147",
+      "component": "Arcade147SproutCircuit",
+      "entryFile": "arcade-147-sprout-circuit",
+      "resolvedFile": "arcade-147-sprout-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-147-sprout-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-148",
+      "component": "Arcade148PebbleCircuit",
+      "entryFile": "arcade-148-pebble-circuit",
+      "resolvedFile": "arcade-148-pebble-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-148-pebble-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-149",
+      "component": "Arcade149NimbusCircuit",
+      "entryFile": "arcade-149-nimbus-circuit",
+      "resolvedFile": "arcade-149-nimbus-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-149-nimbus-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-150",
+      "component": "Arcade150FlareCircuit",
+      "entryFile": "arcade-150-flare-circuit",
+      "resolvedFile": "arcade-150-flare-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-150-flare-circuit"
+      ]
+    },
+    {
+      "gameId": "arcade-151",
+      "component": "Arcade151SkyGarden",
+      "entryFile": "arcade-151-sky-garden",
+      "resolvedFile": "arcade-151-sky-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-151-sky-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-152",
+      "component": "Arcade152RiverGarden",
+      "entryFile": "arcade-152-river-garden",
+      "resolvedFile": "arcade-152-river-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-152-river-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-153",
+      "component": "Arcade153EchoGarden",
+      "entryFile": "arcade-153-echo-garden",
+      "resolvedFile": "arcade-153-echo-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-153-echo-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-154",
+      "component": "Arcade154LunaGarden",
+      "entryFile": "arcade-154-luna-garden",
+      "resolvedFile": "arcade-154-luna-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-154-luna-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-155",
+      "component": "Arcade155NovaGarden",
+      "entryFile": "arcade-155-nova-garden",
+      "resolvedFile": "arcade-155-nova-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-155-nova-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-156",
+      "component": "Arcade156TerraGarden",
+      "entryFile": "arcade-156-terra-garden",
+      "resolvedFile": "arcade-156-terra-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-156-terra-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-157",
+      "component": "Arcade157CometGarden",
+      "entryFile": "arcade-157-comet-garden",
+      "resolvedFile": "arcade-157-comet-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-157-comet-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-158",
+      "component": "Arcade158AuroraGarden",
+      "entryFile": "arcade-158-aurora-garden",
+      "resolvedFile": "arcade-158-aurora-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-158-aurora-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-159",
+      "component": "Arcade159OrbitGarden",
+      "entryFile": "arcade-159-orbit-garden",
+      "resolvedFile": "arcade-159-orbit-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-159-orbit-garden"
+      ]
+    },
+    {
+      "gameId": "arcade-160",
+      "component": "Arcade160PixelGarden",
+      "entryFile": "arcade-160-pixel-garden",
+      "resolvedFile": "arcade-160-pixel-garden",
+      "aliasDepth": 0,
+      "chain": [
+        "arcade-160-pixel-garden"
+      ]
+    },
+    {
+      "gameId": "zone-041",
+      "component": "Zone041SignalRescue",
+      "entryFile": "zone-041-signal-rescue",
+      "resolvedFile": "zone-041-signal-rescue",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-041-signal-rescue"
+      ]
+    },
+    {
+      "gameId": "zone-042",
+      "component": "Zone042MathRailCommander",
+      "entryFile": "zone-042-math-rail-commander",
+      "resolvedFile": "zone-042-math-rail-commander",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-042-math-rail-commander"
+      ]
+    },
+    {
+      "gameId": "zone-043",
+      "component": "Zone043EchoStorySignal",
+      "entryFile": "zone-043-echo-story-signal",
+      "resolvedFile": "zone-043-echo-story-signal",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-043-echo-story-signal"
+      ]
+    },
+    {
+      "gameId": "zone-044",
+      "component": "Zone044TerraLabSort",
+      "entryFile": "zone-044-terra-lab-sort",
+      "resolvedFile": "zone-044-terra-lab-sort",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-044-terra-lab-sort"
+      ]
+    },
+    {
+      "gameId": "zone-045",
+      "component": "Zone045LunaRhythmForge",
+      "entryFile": "zone-045-luna-rhythm-forge",
+      "resolvedFile": "zone-045-luna-rhythm-forge",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-045-luna-rhythm-forge"
+      ]
+    },
+    {
+      "gameId": "zone-046",
+      "component": "Zone046PixelCipherSprint",
+      "entryFile": "zone-046-pixel-cipher-sprint",
+      "resolvedFile": "zone-046-pixel-cipher-sprint",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-046-pixel-cipher-sprint"
+      ]
+    },
+    {
+      "gameId": "zone-047",
+      "component": "Zone047SparkGridFuse",
+      "entryFile": "zone-047-spark-grid-fuse",
+      "resolvedFile": "zone-047-spark-grid-fuse",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-047-spark-grid-fuse"
+      ]
+    },
+    {
+      "gameId": "zone-048",
+      "component": "Zone048EchoEvidenceJudge",
+      "entryFile": "zone-048-echo-evidence-judge",
+      "resolvedFile": "zone-048-echo-evidence-judge",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-048-echo-evidence-judge"
+      ]
+    },
+    {
+      "gameId": "zone-049",
+      "component": "Zone049TerraHabitatTriage",
+      "entryFile": "zone-049-terra-habitat-triage",
+      "resolvedFile": "zone-049-terra-habitat-triage",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-049-terra-habitat-triage"
+      ]
+    },
+    {
+      "gameId": "zone-050",
+      "component": "Zone050PixelLaneDefender",
+      "entryFile": "zone-050-pixel-lane-defender",
+      "resolvedFile": "zone-050-pixel-lane-defender",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-050-pixel-lane-defender"
+      ]
+    },
+    {
+      "gameId": "zone-051",
+      "component": "Zone051LunaChorusCascade",
+      "entryFile": "zone-051-luna-chorus-cascade",
+      "resolvedFile": "zone-051-luna-chorus-cascade",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-051-luna-chorus-cascade"
+      ]
+    },
+    {
+      "gameId": "zone-052",
+      "component": "Zone052SparkReactorGrid",
+      "entryFile": "zone-052-spark-reactor-grid",
+      "resolvedFile": "zone-052-spark-reactor-grid",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-052-spark-reactor-grid"
+      ]
+    },
+    {
+      "gameId": "zone-053",
+      "component": "Zone053EchoDebateDuel",
+      "entryFile": "zone-053-echo-debate-duel",
+      "resolvedFile": "zone-053-echo-debate-duel",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-053-echo-debate-duel"
+      ]
+    },
+    {
+      "gameId": "zone-054",
+      "component": "Zone054TerraWeatherCommand",
+      "entryFile": "zone-054-terra-weather-command",
+      "resolvedFile": "zone-054-terra-weather-command",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-054-terra-weather-command"
+      ]
+    },
+    {
+      "gameId": "zone-055",
+      "component": "Zone055PixelDroneIntercept",
+      "entryFile": "zone-055-pixel-drone-intercept",
+      "resolvedFile": "zone-055-pixel-drone-intercept",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-055-pixel-drone-intercept"
+      ]
+    },
+    {
+      "gameId": "zone-056",
+      "component": "Zone056SparkOrbitalSurge",
+      "entryFile": "zone-056-spark-orbital-surge",
+      "resolvedFile": "zone-056-spark-orbital-surge",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-056-spark-orbital-surge"
+      ]
+    },
+    {
+      "gameId": "zone-057",
+      "component": "Zone057EchoSignalCrossfire",
+      "entryFile": "zone-057-echo-signal-crossfire",
+      "resolvedFile": "zone-057-echo-signal-crossfire",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-057-echo-signal-crossfire"
+      ]
+    },
+    {
+      "gameId": "zone-058",
+      "component": "Zone058TerraRiftShelter",
+      "entryFile": "zone-058-terra-rift-shelter",
+      "resolvedFile": "zone-058-terra-rift-shelter",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-058-terra-rift-shelter"
+      ]
+    },
+    {
+      "gameId": "zone-059",
+      "component": "Zone059LunaStageStrategy",
+      "entryFile": "zone-059-luna-stage-strategy",
+      "resolvedFile": "zone-059-luna-stage-strategy",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-059-luna-stage-strategy"
+      ]
+    },
+    {
+      "gameId": "zone-060",
+      "component": "Zone060PixelCircuitSiege",
+      "entryFile": "zone-060-pixel-circuit-siege",
+      "resolvedFile": "zone-060-pixel-circuit-siege",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-060-pixel-circuit-siege"
+      ]
+    },
+    {
+      "gameId": "zone-061",
+      "component": "Zone061SparkFluxGauntlet",
+      "entryFile": "zone-061-spark-flux-gauntlet",
+      "resolvedFile": "zone-061-spark-flux-gauntlet",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-061-spark-flux-gauntlet"
+      ]
+    },
+    {
+      "gameId": "zone-062",
+      "component": "Zone062EchoProofRelay",
+      "entryFile": "zone-062-echo-proof-relay",
+      "resolvedFile": "zone-062-echo-proof-relay",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-062-echo-proof-relay"
+      ]
+    },
+    {
+      "gameId": "zone-063",
+      "component": "Zone063TerraGreenhouseCommand",
+      "entryFile": "zone-063-terra-greenhouse-command",
+      "resolvedFile": "zone-063-terra-greenhouse-command",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-063-terra-greenhouse-command"
+      ]
+    },
+    {
+      "gameId": "zone-064",
+      "component": "Zone064LunaBeatlineRun",
+      "entryFile": "zone-064-luna-beatline-run",
+      "resolvedFile": "zone-064-luna-beatline-run",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-064-luna-beatline-run"
+      ]
+    },
+    {
+      "gameId": "zone-065",
+      "component": "Zone065PixelBreachHunter",
+      "entryFile": "zone-065-pixel-breach-hunter",
+      "resolvedFile": "zone-065-pixel-breach-hunter",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-065-pixel-breach-hunter"
+      ]
+    },
+    {
+      "gameId": "zone-066",
+      "component": "Zone066SparkThrusterTrial",
+      "entryFile": "zone-066-spark-thruster-trial",
+      "resolvedFile": "zone-066-spark-thruster-trial",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-066-spark-thruster-trial"
+      ]
+    },
+    {
+      "gameId": "zone-067",
+      "component": "Zone067EchoTruthlineProtocol",
+      "entryFile": "zone-067-echo-truthline-protocol",
+      "resolvedFile": "zone-067-echo-truthline-protocol",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-067-echo-truthline-protocol"
+      ]
+    },
+    {
+      "gameId": "zone-068",
+      "component": "Zone068TerraWildsRecovery",
+      "entryFile": "zone-068-terra-wilds-recovery",
+      "resolvedFile": "zone-068-terra-wilds-recovery",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-068-terra-wilds-recovery"
+      ]
+    },
+    {
+      "gameId": "zone-069",
+      "component": "Zone069LunaPulseRally",
+      "entryFile": "zone-069-luna-pulse-rally",
+      "resolvedFile": "zone-069-luna-pulse-rally",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-069-luna-pulse-rally"
+      ]
+    },
+    {
+      "gameId": "zone-070",
+      "component": "Zone070PixelFirewallFrontier",
+      "entryFile": "zone-070-pixel-firewall-frontier",
+      "resolvedFile": "zone-070-pixel-firewall-frontier",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-070-pixel-firewall-frontier"
+      ]
+    },
+    {
+      "gameId": "zone-071",
+      "component": "Zone071SparkReactorConvoy",
+      "entryFile": "zone-071-spark-reactor-convoy",
+      "resolvedFile": "zone-071-spark-reactor-convoy",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-071-spark-reactor-convoy"
+      ]
+    },
+    {
+      "gameId": "zone-072",
+      "component": "Zone072EchoSignalTribunal",
+      "entryFile": "zone-072-echo-signal-tribunal",
+      "resolvedFile": "zone-072-echo-signal-tribunal",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-072-echo-signal-tribunal"
+      ]
+    },
+    {
+      "gameId": "zone-073",
+      "component": "Zone073TerraFrontlineWardens",
+      "entryFile": "zone-073-terra-frontline-wardens",
+      "resolvedFile": "zone-073-terra-frontline-wardens",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-073-terra-frontline-wardens"
+      ]
+    },
+    {
+      "gameId": "zone-074",
+      "component": "Zone074LunaSkylineSet",
+      "entryFile": "zone-074-luna-skyline-set",
+      "resolvedFile": "zone-074-luna-skyline-set",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-074-luna-skyline-set"
+      ]
+    },
+    {
+      "gameId": "zone-075",
+      "component": "Zone075PixelSentinelLattice",
+      "entryFile": "zone-075-pixel-sentinel-lattice",
+      "resolvedFile": "zone-075-pixel-sentinel-lattice",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-075-pixel-sentinel-lattice"
+      ]
+    },
+    {
+      "gameId": "zone-076",
+      "component": "Zone076SparkVaultThrust",
+      "entryFile": "zone-076-spark-vault-thrust",
+      "resolvedFile": "zone-076-spark-vault-thrust",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-076-spark-vault-thrust"
+      ]
+    },
+    {
+      "gameId": "zone-077",
+      "component": "Zone077EchoAuditMatrix",
+      "entryFile": "zone-077-echo-audit-matrix",
+      "resolvedFile": "zone-077-echo-audit-matrix",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-077-echo-audit-matrix"
+      ]
+    },
+    {
+      "gameId": "zone-078",
+      "component": "Zone078TerraRidgeEvacuation",
+      "entryFile": "zone-078-terra-ridge-evacuation",
+      "resolvedFile": "zone-078-terra-ridge-evacuation",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-078-terra-ridge-evacuation"
+      ]
+    },
+    {
+      "gameId": "zone-079",
+      "component": "Zone079LunaPrismChorus",
+      "entryFile": "zone-079-luna-prism-chorus",
+      "resolvedFile": "zone-079-luna-prism-chorus",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-079-luna-prism-chorus"
+      ]
+    },
+    {
+      "gameId": "zone-080",
+      "component": "Zone080PixelBastionSieve",
+      "entryFile": "zone-080-pixel-bastion-sieve",
+      "resolvedFile": "zone-080-pixel-bastion-sieve",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-080-pixel-bastion-sieve"
+      ]
+    },
+    {
+      "gameId": "zone-081",
+      "component": "Zone081SparkCoreVector",
+      "entryFile": "zone-081-spark-core-vector",
+      "resolvedFile": "zone-081-spark-core-vector",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-081-spark-core-vector"
+      ]
+    },
+    {
+      "gameId": "zone-082",
+      "component": "Zone082EchoVerdictSwitchboard",
+      "entryFile": "zone-082-echo-verdict-switchboard",
+      "resolvedFile": "zone-082-echo-verdict-switchboard",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-082-echo-verdict-switchboard"
+      ]
+    },
+    {
+      "gameId": "zone-083",
+      "component": "Zone083TerraFloodlineCommand",
+      "entryFile": "zone-083-terra-floodline-command",
+      "resolvedFile": "zone-083-terra-floodline-command",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-083-terra-floodline-command"
+      ]
+    },
+    {
+      "gameId": "zone-084",
+      "component": "Zone084LunaCrescendoLab",
+      "entryFile": "zone-084-luna-crescendo-lab",
+      "resolvedFile": "zone-084-luna-crescendo-lab",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-084-luna-crescendo-lab"
+      ]
+    },
+    {
+      "gameId": "zone-085",
+      "component": "Zone085PixelShieldFabric",
+      "entryFile": "zone-085-pixel-shield-fabric",
+      "resolvedFile": "zone-085-pixel-shield-fabric",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-085-pixel-shield-fabric"
+      ]
+    },
+    {
+      "gameId": "zone-086",
+      "component": "Zone086SparkReactorPulse",
+      "entryFile": "zone-086-spark-reactor-pulse",
+      "resolvedFile": "zone-086-spark-reactor-pulse",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-086-spark-reactor-pulse"
+      ]
+    },
+    {
+      "gameId": "zone-087",
+      "component": "Zone087EchoTruthCircuit",
+      "entryFile": "zone-087-echo-truth-circuit",
+      "resolvedFile": "zone-087-echo-truth-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-087-echo-truth-circuit"
+      ]
+    },
+    {
+      "gameId": "zone-088",
+      "component": "Zone088TerraBreakwaterGrid",
+      "entryFile": "zone-088-terra-breakwater-grid",
+      "resolvedFile": "zone-088-terra-breakwater-grid",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-088-terra-breakwater-grid"
+      ]
+    },
+    {
+      "gameId": "zone-089",
+      "component": "Zone089LunaRadiantArc",
+      "entryFile": "zone-089-luna-radiant-arc",
+      "resolvedFile": "zone-089-luna-radiant-arc",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-089-luna-radiant-arc"
+      ]
+    },
+    {
+      "gameId": "zone-090",
+      "component": "Zone090PixelGuardianWeave",
+      "entryFile": "zone-090-pixel-guardian-weave",
+      "resolvedFile": "zone-090-pixel-guardian-weave",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-090-pixel-guardian-weave"
+      ]
+    },
+    {
+      "gameId": "zone-091",
+      "component": "Zone091SparkCitadelPulse",
+      "entryFile": "zone-091-spark-citadel-pulse",
+      "resolvedFile": "zone-091-spark-citadel-pulse",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-091-spark-citadel-pulse"
+      ]
+    },
+    {
+      "gameId": "zone-092",
+      "component": "Zone092EchoVerdictRelay",
+      "entryFile": "zone-092-echo-verdict-relay",
+      "resolvedFile": "zone-092-echo-verdict-relay",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-092-echo-verdict-relay"
+      ]
+    },
+    {
+      "gameId": "zone-093",
+      "component": "Zone093TerraHarborGrid",
+      "entryFile": "zone-093-terra-harbor-grid",
+      "resolvedFile": "zone-093-terra-harbor-grid",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-093-terra-harbor-grid"
+      ]
+    },
+    {
+      "gameId": "zone-094",
+      "component": "Zone094LunaAuroraArc",
+      "entryFile": "zone-094-luna-aurora-arc",
+      "resolvedFile": "zone-094-luna-aurora-arc",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-094-luna-aurora-arc"
+      ]
+    },
+    {
+      "gameId": "zone-095",
+      "component": "Zone095PixelAegisWeave",
+      "entryFile": "zone-095-pixel-aegis-weave",
+      "resolvedFile": "zone-095-pixel-aegis-weave",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-095-pixel-aegis-weave"
+      ]
+    },
+    {
+      "gameId": "zone-096",
+      "component": "Zone096SparkBastionFlux",
+      "entryFile": "zone-096-spark-bastion-flux",
+      "resolvedFile": "zone-096-spark-bastion-flux",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-096-spark-bastion-flux"
+      ]
+    },
+    {
+      "gameId": "zone-097",
+      "component": "Zone097EchoTribunalMatrix",
+      "entryFile": "zone-097-echo-tribunal-matrix",
+      "resolvedFile": "zone-097-echo-tribunal-matrix",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-097-echo-tribunal-matrix"
+      ]
+    },
+    {
+      "gameId": "zone-098",
+      "component": "Zone098TerraBreakwaterVanguard",
+      "entryFile": "zone-098-terra-breakwater-vanguard",
+      "resolvedFile": "zone-098-terra-breakwater-vanguard",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-098-terra-breakwater-vanguard"
+      ]
+    },
+    {
+      "gameId": "zone-099",
+      "component": "Zone099LunaStarlightChorus",
+      "entryFile": "zone-099-luna-starlight-chorus",
+      "resolvedFile": "zone-099-luna-starlight-chorus",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-099-luna-starlight-chorus"
+      ]
+    },
+    {
+      "gameId": "zone-100",
+      "component": "Zone100PixelCitadelFirewall",
+      "entryFile": "zone-100-pixel-citadel-firewall",
+      "resolvedFile": "zone-100-pixel-citadel-firewall",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-100-pixel-citadel-firewall"
+      ]
+    },
+    {
+      "gameId": "zone-101",
+      "component": "Zone101SparkSentinelDynamo",
+      "entryFile": "zone-101-spark-sentinel-dynamo",
+      "resolvedFile": "zone-101-spark-sentinel-dynamo",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-101-spark-sentinel-dynamo"
+      ]
+    },
+    {
+      "gameId": "zone-102",
+      "component": "Zone102EchoEvidenceLattice",
+      "entryFile": "zone-102-echo-evidence-lattice",
+      "resolvedFile": "zone-102-echo-evidence-lattice",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-102-echo-evidence-lattice"
+      ]
+    },
+    {
+      "gameId": "zone-103",
+      "component": "Zone103TerraStormlineBastion",
+      "entryFile": "zone-103-terra-stormline-bastion",
+      "resolvedFile": "zone-103-terra-stormline-bastion",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-103-terra-stormline-bastion"
+      ]
+    },
+    {
+      "gameId": "zone-104",
+      "component": "Zone104LunaNebulaCadence",
+      "entryFile": "zone-104-luna-nebula-cadence",
+      "resolvedFile": "zone-104-luna-nebula-cadence",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-104-luna-nebula-cadence"
+      ]
+    },
+    {
+      "gameId": "zone-105",
+      "component": "Zone105PixelQuantumBulwark",
+      "entryFile": "zone-105-pixel-quantum-bulwark",
+      "resolvedFile": "zone-105-pixel-quantum-bulwark",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-105-pixel-quantum-bulwark"
+      ]
+    },
+    {
+      "gameId": "zone-106",
+      "component": "Zone106SparkReactorRail",
+      "entryFile": "zone-106-spark-reactor-rail",
+      "resolvedFile": "zone-106-spark-reactor-rail",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-106-spark-reactor-rail"
+      ]
+    },
+    {
+      "gameId": "zone-107",
+      "component": "Zone107EchoProofCascade",
+      "entryFile": "zone-107-echo-proof-cascade",
+      "resolvedFile": "zone-107-echo-proof-cascade",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-107-echo-proof-cascade"
+      ]
+    },
+    {
+      "gameId": "zone-108",
+      "component": "Zone108TerraHabitatRescue",
+      "entryFile": "zone-108-terra-habitat-rescue",
+      "resolvedFile": "zone-108-terra-habitat-rescue",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-108-terra-habitat-rescue"
+      ]
+    },
+    {
+      "gameId": "zone-109",
+      "component": "Zone109LunaRhythmVoyage",
+      "entryFile": "zone-109-luna-rhythm-voyage",
+      "resolvedFile": "zone-109-luna-rhythm-voyage",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-109-luna-rhythm-voyage"
+      ]
+    },
+    {
+      "gameId": "zone-110",
+      "component": "Zone110PixelFirewallOps",
+      "entryFile": "zone-110-pixel-firewall-ops",
+      "resolvedFile": "zone-110-pixel-firewall-ops",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-110-pixel-firewall-ops"
+      ]
+    },
+    {
+      "gameId": "zone-111",
+      "component": "Zone111SparkVectorLockdown",
+      "entryFile": "zone-111-spark-vector-lockdown",
+      "resolvedFile": "zone-111-spark-vector-lockdown",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-111-spark-vector-lockdown"
+      ]
+    },
+    {
+      "gameId": "zone-112",
+      "component": "Zone112EchoClaimTribunal",
+      "entryFile": "zone-112-echo-claim-tribunal",
+      "resolvedFile": "zone-112-echo-claim-tribunal",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-112-echo-claim-tribunal"
+      ]
+    },
+    {
+      "gameId": "zone-113",
+      "component": "Zone113TerraOutpostRecovery",
+      "entryFile": "zone-113-terra-outpost-recovery",
+      "resolvedFile": "zone-113-terra-outpost-recovery",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-113-terra-outpost-recovery"
+      ]
+    },
+    {
+      "gameId": "zone-114",
+      "component": "Zone114LunaHarmonicHyperlane",
+      "entryFile": "zone-114-luna-harmonic-hyperlane",
+      "resolvedFile": "zone-114-luna-harmonic-hyperlane",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-114-luna-harmonic-hyperlane"
+      ]
+    },
+    {
+      "gameId": "zone-115",
+      "component": "Zone115PixelBreachLattice",
+      "entryFile": "zone-115-pixel-breach-lattice",
+      "resolvedFile": "zone-115-pixel-breach-lattice",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-115-pixel-breach-lattice"
+      ]
+    },
+    {
+      "gameId": "zone-116",
+      "component": "Zone116SparkResonanceGauntlet",
+      "entryFile": "zone-116-spark-resonance-gauntlet",
+      "resolvedFile": "zone-116-spark-resonance-gauntlet",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-116-spark-resonance-gauntlet"
+      ]
+    },
+    {
+      "gameId": "zone-117",
+      "component": "Zone117EchoVerityCourt",
+      "entryFile": "zone-117-echo-verity-court",
+      "resolvedFile": "zone-117-echo-verity-court",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-117-echo-verity-court"
+      ]
+    },
+    {
+      "gameId": "zone-118",
+      "component": "Zone118TerraFrontierEvac",
+      "entryFile": "zone-118-terra-frontier-evac",
+      "resolvedFile": "zone-118-terra-frontier-evac",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-118-terra-frontier-evac"
+      ]
+    },
+    {
+      "gameId": "zone-119",
+      "component": "Zone119LunaPrismOverdrive",
+      "entryFile": "zone-119-luna-prism-overdrive",
+      "resolvedFile": "zone-119-luna-prism-overdrive",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-119-luna-prism-overdrive"
+      ]
+    },
+    {
+      "gameId": "zone-120",
+      "component": "Zone120PixelQuarantineGrid",
+      "entryFile": "zone-120-pixel-quarantine-grid",
+      "resolvedFile": "zone-120-pixel-quarantine-grid",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-120-pixel-quarantine-grid"
+      ]
+    },
+    {
+      "gameId": "zone-121",
+      "component": "Zone121SparkHelixLock",
+      "entryFile": "zone-121-spark-helix-lock",
+      "resolvedFile": "zone-121-spark-helix-lock",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-121-spark-helix-lock"
+      ]
+    },
+    {
+      "gameId": "zone-122",
+      "component": "Zone122EchoJudgmentCircuit",
+      "entryFile": "zone-122-echo-judgment-circuit",
+      "resolvedFile": "zone-122-echo-judgment-circuit",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-122-echo-judgment-circuit"
+      ]
+    },
+    {
+      "gameId": "zone-123",
+      "component": "Zone123TerraColonyEvac",
+      "entryFile": "zone-123-terra-colony-evac",
+      "resolvedFile": "zone-123-terra-colony-evac",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-123-terra-colony-evac"
+      ]
+    },
+    {
+      "gameId": "zone-124",
+      "component": "Zone124LunaNovaCadence",
+      "entryFile": "zone-124-luna-nova-cadence",
+      "resolvedFile": "zone-124-luna-nova-cadence",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-124-luna-nova-cadence"
+      ]
+    },
+    {
+      "gameId": "zone-125",
+      "component": "Zone125PixelContainmentMatrix",
+      "entryFile": "zone-125-pixel-containment-matrix",
+      "resolvedFile": "zone-125-pixel-containment-matrix",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-125-pixel-containment-matrix"
       ]
     }
   ]

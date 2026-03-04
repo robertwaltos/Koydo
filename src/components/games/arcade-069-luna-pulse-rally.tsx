@@ -196,9 +196,11 @@ export default function Arcade069LunaPulseRally() {
 
   useEffect(() => {
     if (phase !== "playing" || timeLeftMs > 0) return;
-    const finalScore = score;
-    finalize("offbeat", finalScore, interactions);
-  }, [interactions, phase, score, timeLeftMs]);
+    const timeout = window.setTimeout(() => {
+      finalize("offbeat", score, interactions);
+    }, 0);
+    return () => window.clearTimeout(timeout);
+  }, [finalize, interactions, phase, score, timeLeftMs]);
 
   useEffect(() => {
     if (phase !== "playing" && phase !== "paused") return;

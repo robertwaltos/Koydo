@@ -206,8 +206,8 @@ function reduceGame(state: GameState, action: Action): GameState {
       const cooldownMs = Math.max(0, state.cooldownMs - TICK_MS);
       let stability = state.stability;
       let score = state.score + safe * 2;
-      let combo = safe >= 4 ? state.combo + 1 : 0;
-      let bestCombo = Math.max(state.bestCombo, combo);
+      const combo = safe >= 4 ? state.combo + 1 : 0;
+      const bestCombo = Math.max(state.bestCombo, combo);
       let stabilizers = state.stabilizers;
       let phase = state.phase;
       let outcome = state.outcome;

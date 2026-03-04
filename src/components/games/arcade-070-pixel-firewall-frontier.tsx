@@ -34,10 +34,6 @@ const ROUND_COUNT = 18;
 const START_INTEGRITY = 4;
 const MAX_SCANS = 3;
 
-function clamp(value: number, min: number, max: number) {
-  return Math.min(max, Math.max(min, value));
-}
-
 function seeded(seed: string) {
   let hash = 0;
   for (let index = 0; index < seed.length; index += 1) {
