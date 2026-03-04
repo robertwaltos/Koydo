@@ -40,7 +40,10 @@ export type RegisteredGame = {
     | "core"
     | "precision-choice"
     | "sequence-recall"
-    | "lane-sort";
+    | "lane-sort"
+    | "timed-equation"
+    | "pattern-scan"
+    | "signal-balance";
   backdropImage: string;
   backdropVideo?: string | null;
 };
@@ -418,6 +421,9 @@ const MECHANIC_ROTATION: Array<RegisteredGame["mechanic"]> = [
   "precision-choice",
   "sequence-recall",
   "lane-sort",
+  "timed-equation",
+  "pattern-scan",
+  "signal-balance",
 ];
 const BACKDROP_ROTATION = [
   ASSETS.heroHome,

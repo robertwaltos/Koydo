@@ -1,6 +1,6 @@
 # Games 500 Playability Audit
 
-Generated: 2026-03-04T15:40:43.488Z
+Generated: 2026-03-04T15:43:38.131Z
 
 ## Status
 - Result: PASS
@@ -14,7 +14,7 @@ Generated: 2026-03-04T15:40:43.488Z
 - Arcade template routes validated: 435
 
 ## Template Capability
-- Template mechanics discovered: lane-sort, precision-choice, sequence-recall
+- Template mechanics discovered: lane-sort, pattern-scan, precision-choice, sequence-recall, timed-equation
 - Template fallback path present: true
 
 ## Issues

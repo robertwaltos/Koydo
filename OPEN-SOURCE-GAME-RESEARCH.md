@@ -1,6 +1,6 @@
 # Open Source Game Research
 
-Generated: 2026-03-04T15:40:44.603Z
+Generated: 2026-03-04T15:43:39.235Z
 
 ## Scope
 - Audited local clones under `data/open-source-games`.

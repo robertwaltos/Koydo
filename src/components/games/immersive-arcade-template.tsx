@@ -19,8 +19,8 @@ type ArcadeOutcome = {
   shieldUses: number;
 };
 
-type PrecisionRound = {
-  mechanic: "precision-choice";
+type ChoiceRound = {
+  mechanic: "precision-choice" | "timed-equation" | "pattern-scan";
   id: string;
   prompt: string;
   options: string[];
@@ -36,7 +36,7 @@ type SequenceRound = {
 };
 
 type SortRound = {
-  mechanic: "lane-sort";
+  mechanic: "lane-sort" | "signal-balance";
   id: string;
   prompt: string;
   item: string;
@@ -45,7 +45,7 @@ type SortRound = {
   correctLane: "left" | "right";
 };
 
-type ArcadeRound = PrecisionRound | SequenceRound | SortRound;
+type ArcadeRound = ChoiceRound | SequenceRound | SortRound;
 
 type Props = {
   game: RegisteredGame;
@@ -95,7 +95,7 @@ function seeded(seed: string) {
   };
 }
 
-function buildPrecisionRound(rand: () => number, id: string): PrecisionRound {
+function buildPrecisionRound(rand: () => number, id: string): ChoiceRound {
   const verbs = ["Calibrate", "Stabilize", "Route", "Align", "Decode", "Sync", "Track", "Protect"];
   const nouns = ["energy lane", "signal pattern", "mission beacon", "orbit path", "safety grid", "control node"];
   const mods = ["safely", "quickly", "accurately", "without overload"];
@@ -119,6 +119,72 @@ function buildPrecisionRound(rand: () => number, id: string): PrecisionRound {
   };
 }
 
+function buildTimedEquationRound(
+  rand: () => number,
+  id: string,
+  difficulty: GameDifficulty,
+  roundNumber: number,
+): ChoiceRound {
+  const maxOperand = difficulty === "easy" ? 12 : difficulty === "medium" ? 24 : 36;
+  const left = 1 + Math.floor(rand() * maxOperand);
+  const right = 1 + Math.floor(rand() * maxOperand);
+  const allowMultiply = difficulty !== "easy" && roundNumber % 3 === 0;
+  const operation = allowMultiply ? "×" : roundNumber % 2 === 0 ? "+" : "-";
+  const answer = operation === "+" ? left + right : operation === "-" ? left - right : left * right;
+  const safeAnswer = Math.max(0, answer);
+
+  const optionsSet = new Set([String(safeAnswer)]);
+  while (optionsSet.size < 4) {
+    const offset = Math.floor(rand() * 11) - 5;
+    const candidate = Math.max(0, safeAnswer + offset);
+    optionsSet.add(String(candidate));
+  }
+
+  const options = Array.from(optionsSet);
+  const shuffled = options
+    .map((value) => ({ value, weight: rand() }))
+    .sort((a, b) => a.weight - b.weight)
+    .map((entry) => entry.value);
+  const answerIndex = shuffled.indexOf(String(safeAnswer));
+
+  return {
+    mechanic: "timed-equation",
+    id,
+    prompt: `Solve quickly: ${left} ${operation} ${right} = ?`,
+    options: shuffled,
+    answerIndex: Math.max(0, answerIndex),
+  };
+}
+
+function buildPatternScanRound(rand: () => number, id: string): ChoiceRound {
+  const tokens = ["◆", "◇", "●", "○", "▲", "△", "■", "□"];
+  const first = tokens[Math.floor(rand() * tokens.length)]!;
+  let second = first;
+  while (second === first) {
+    second = tokens[Math.floor(rand() * tokens.length)]!;
+  }
+
+  const sequence = [first, second, first, second, first];
+  const answer = second;
+  const optionsSet = new Set([answer]);
+  while (optionsSet.size < 4) {
+    optionsSet.add(tokens[Math.floor(rand() * tokens.length)]!);
+  }
+  const options = Array.from(optionsSet)
+    .map((value) => ({ value, weight: rand() }))
+    .sort((a, b) => a.weight - b.weight)
+    .map((entry) => entry.value);
+  const answerIndex = options.indexOf(answer);
+
+  return {
+    mechanic: "pattern-scan",
+    id,
+    prompt: `Pattern scan: ${sequence.join("  ")}  ?`,
+    options,
+    answerIndex: Math.max(0, answerIndex),
+  };
+}
+
 function buildSequenceRound(
   rand: () => number,
   id: string,
@@ -139,7 +205,11 @@ function buildSequenceRound(
   };
 }
 
-function buildSortRound(rand: () => number, id: string): SortRound {
+function buildSortRound(
+  rand: () => number,
+  id: string,
+  mechanic: "lane-sort" | "signal-balance" = "lane-sort",
+): SortRound {
   const safeItems = ["Shield Node", "Safe Pulse", "Guardian Beacon", "Protected Channel", "Harmony Core"];
   const riskyItems = ["Overload Spark", "Hot Core", "Hazard Signal", "Volatile Flux", "Turbulence Coil"];
   const correctLane = rand() > 0.5 ? "left" : "right";
@@ -148,12 +218,15 @@ function buildSortRound(rand: () => number, id: string): SortRound {
       ? safeItems[Math.floor(rand() * safeItems.length)]!
       : riskyItems[Math.floor(rand() * riskyItems.length)]!;
   return {
-    mechanic: "lane-sort",
+    mechanic,
     id,
-    prompt: "Sort the incoming item into the correct lane.",
+    prompt:
+      mechanic === "signal-balance"
+        ? "Route the reactor signal to keep the system stable."
+        : "Sort the incoming item into the correct lane.",
     item,
-    leftLabel: "SAFE",
-    rightLabel: "RISK",
+    leftLabel: mechanic === "signal-balance" ? "STABLE" : "SAFE",
+    rightLabel: mechanic === "signal-balance" ? "OVERLOAD" : "RISK",
     correctLane,
   };
 }
@@ -161,8 +234,11 @@ function buildSortRound(rand: () => number, id: string): SortRound {
 function buildRound(game: RegisteredGame, difficulty: GameDifficulty, roundNumber: number): ArcadeRound {
   const id = `${game.id}-r-${roundNumber + 1}`;
   const rand = seeded(`${game.id}:${difficulty}:${roundNumber}`);
+  if (game.mechanic === "timed-equation") return buildTimedEquationRound(rand, id, difficulty, roundNumber);
+  if (game.mechanic === "pattern-scan") return buildPatternScanRound(rand, id);
   if (game.mechanic === "sequence-recall") return buildSequenceRound(rand, id, difficulty, roundNumber);
-  if (game.mechanic === "lane-sort") return buildSortRound(rand, id);
+  if (game.mechanic === "lane-sort") return buildSortRound(rand, id, "lane-sort");
+  if (game.mechanic === "signal-balance") return buildSortRound(rand, id, "signal-balance");
   return buildPrecisionRound(rand, id);
 }
 
@@ -389,8 +465,15 @@ export default function ImmersiveArcadeTemplate({
     }
   };
 
-  const handlePrecisionChoice = (choiceIndex: number) => {
-    if (!current || current.mechanic !== "precision-choice" || phase !== "playing") return;
+  const handleChoiceRound = (choiceIndex: number) => {
+    if (!current || phase !== "playing") return;
+    if (
+      current.mechanic !== "precision-choice"
+      && current.mechanic !== "timed-equation"
+      && current.mechanic !== "pattern-scan"
+    ) {
+      return;
+    }
     markResult(choiceIndex === current.answerIndex);
   };
 
@@ -409,7 +492,8 @@ export default function ImmersiveArcadeTemplate({
   };
 
   const handleSortLane = (lane: "left" | "right") => {
-    if (!current || current.mechanic !== "lane-sort" || phase !== "playing") return;
+    if (!current || phase !== "playing") return;
+    if (current.mechanic !== "lane-sort" && current.mechanic !== "signal-balance") return;
     markResult(lane === current.correctLane);
   };
 
@@ -568,13 +652,13 @@ export default function ImmersiveArcadeTemplate({
           >
             <p className="text-sm font-semibold">{current.prompt}</p>
 
-            {current.mechanic === "precision-choice" ? (
+            {current.mechanic === "precision-choice" || current.mechanic === "timed-equation" || current.mechanic === "pattern-scan" ? (
               <div className="mt-4 grid gap-3 md:grid-cols-2">
                 {current.options.map((option, choiceIndex) => (
                   <button
                     key={option}
                     type="button"
-                    onClick={() => handlePrecisionChoice(choiceIndex)}
+                    onClick={() => handleChoiceRound(choiceIndex)}
                     className={[
                       "rounded-2xl border px-4 py-3 text-left text-sm font-semibold transition-colors",
                       feedback === "correct" && choiceIndex === current.answerIndex
@@ -612,7 +696,7 @@ export default function ImmersiveArcadeTemplate({
               </div>
             ) : null}
 
-            {current.mechanic === "lane-sort" ? (
+            {current.mechanic === "lane-sort" || current.mechanic === "signal-balance" ? (
               <div className="mt-4 space-y-4">
                 <div className="rounded-2xl border border-white/30 bg-white/10 p-4 text-center text-lg font-black">
                   {current.item}

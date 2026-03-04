@@ -203,6 +203,12 @@ function chooseCoreMechanic(mechanic) {
       return "Sequence Recall";
     case "lane-sort":
       return "Lane Sort";
+    case "timed-equation":
+      return "Timed Equation";
+    case "pattern-scan":
+      return "Pattern Scan";
+    case "signal-balance":
+      return "Signal Balance";
     default:
       return "Core Mini-Game Loop";
   }
@@ -315,7 +321,14 @@ async function main() {
   const legacyLeft = parseStringArray(catalogSource, "LEGACY_TITLE_LEFT");
   const legacyRight = parseStringArray(catalogSource, "LEGACY_TITLE_RIGHT");
   const categoryRotation = parseStringArray(catalogSource, "CATEGORY_ROTATION");
-  const mechanicRotation = ["precision-choice", "sequence-recall", "lane-sort"];
+  const mechanicRotation = [
+    "precision-choice",
+    "sequence-recall",
+    "lane-sort",
+    "timed-equation",
+    "pattern-scan",
+    "signal-balance",
+  ];
 
   const arcadeCount = parseConstNumber(catalogSource, "ARCADE_GAME_COUNT");
   const expansionCount = parseConstNumber(catalogSource, "EXPANSION_ARCADE_GAME_COUNT");

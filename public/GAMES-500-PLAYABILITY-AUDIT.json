@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T15:40:43.488Z",
+  "generatedAt": "2026-03-04T15:43:38.131Z",
   "status": "pass",
   "totals": {
     "catalogTotal": 500,
@@ -17,8 +17,10 @@
     "hasFallback": true,
     "mechanics": [
       "lane-sort",
+      "pattern-scan",
       "precision-choice",
-      "sequence-recall"
+      "sequence-recall",
+      "timed-equation"
     ]
   },
   "issues": {
