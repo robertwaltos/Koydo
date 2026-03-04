@@ -1,7 +1,7 @@
 # Exclude nested workspaces and local artifacts from deployment uploads.
 eduforge-web/
 External_AI_Agents/
-data/
+/data/
 logs/
 .next/
 node_modules/
