@@ -19,9 +19,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   distDir: process.env.NEXT_DIST_DIR || ".next",
 
-  // Skip TypeScript and ESLint checks during Vercel builds — verified in CI/local scripts.
+  // Skip TypeScript checks during Vercel builds — verified in CI/local scripts.
   typescript: { ignoreBuildErrors: true },
-  eslint: { ignoreDuringBuilds: true },
 
   turbopack: {
     // Force Turbopack to resolve modules from the app directory even when
@@ -97,3 +96,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
