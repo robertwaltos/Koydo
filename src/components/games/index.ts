@@ -140,4 +140,5 @@ export { default as Zone098LunaSkylineSet } from "./zone-098-luna-skyline-set";
 export { default as Zone099PixelSentinelLattice } from "./zone-099-pixel-sentinel-lattice";
 export { default as Zone100SparkVaultThrust } from "./zone-100-spark-vault-thrust";
 export { default as Zone101SparkReactorConvoy } from "./zone-101-spark-reactor-convoy";
+export { default as Zone102EchoSignalTribunal } from "./zone-102-echo-signal-tribunal";
 

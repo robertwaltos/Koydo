@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T16:57:30.824Z",
+  "generatedAt": "2026-03-04T17:08:50.498Z",
   "catalog": {
     "core": 8,
     "legacy": 57,
@@ -451,12 +451,12 @@
   },
   "runtime": {
     "coreRouted": 8,
-    "legacyRouted": 118,
-    "mappedComponentRouted": 118,
-    "templateRouted": 374,
+    "legacyRouted": 119,
+    "mappedComponentRouted": 119,
+    "templateRouted": 373,
     "legacyAliasRoutes": 0,
     "mappedAliasRoutes": 0,
-    "uniqueRuntimeImplementationFiles": 127,
+    "uniqueRuntimeImplementationFiles": 128,
     "coreResolvedFiles": [
       "color-mixer",
       "letter-catcher",
@@ -585,7 +585,8 @@
       "zone-098-luna-skyline-set",
       "zone-099-pixel-sentinel-lattice",
       "zone-100-spark-vault-thrust",
-      "zone-101-spark-reactor-convoy"
+      "zone-101-spark-reactor-convoy",
+      "zone-102-echo-signal-tribunal"
     ],
     "mappedResolvedFiles": [
       "aero-architect",
@@ -705,7 +706,8 @@
       "zone-098-luna-skyline-set",
       "zone-099-pixel-sentinel-lattice",
       "zone-100-spark-vault-thrust",
-      "zone-101-spark-reactor-convoy"
+      "zone-101-spark-reactor-convoy",
+      "zone-102-echo-signal-tribunal"
     ],
     "templateFile": "immersive-arcade-template"
   },
@@ -1895,6 +1897,16 @@
       "aliasDepth": 0,
       "chain": [
         "zone-101-spark-reactor-convoy"
+      ]
+    },
+    {
+      "gameId": "zone-102",
+      "component": "Zone102EchoSignalTribunal",
+      "entryFile": "zone-102-echo-signal-tribunal",
+      "resolvedFile": "zone-102-echo-signal-tribunal",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-102-echo-signal-tribunal"
       ]
     }
   ]
