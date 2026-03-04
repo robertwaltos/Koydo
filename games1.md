@@ -1090,3 +1090,171 @@ CLAIM: Codex-C taking arcade-121 bespoke rewrite at 2026-03-04 11:47:00 -06:00
   - None in this runtime from targeted lint/contract checks.
 - Next tranche planned:
   - C-T12: arcade-122 bespoke runtime rewrite with a distinct mechanic family (no wrapper reuse).
+
+## TRANCHE REPORT - Codex-D - 2026-03-04 11:50 local
+- Tranche ID: D-T04
+- Game IDs completed: arcade-016, arcade-017, arcade-018, arcade-019, arcade-020
+- Runtime files added/changed: src/components/games/arcade-016-pixel-hyperlane-heist.tsx, src/components/games/arcade-017-spark-relay-frenzy.tsx, src/components/games/arcade-018-echo-cipher-tribunal.tsx, src/components/games/arcade-019-luna-tempo-shards.tsx, src/components/games/arcade-020-terra-bastion-current.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx
+- Character implementation notes: arcade-016 uses Pixel as dual-lock heist coach, arcade-017 uses Spark as trap-aware relay coach, arcade-018 uses Echo as dual-proof tribunal coach, arcade-019 uses Luna as high-combo rhythm coach, and arcade-020 uses Terra as dual-intervention bastion coach. Each runtime has active mascot mood/message behavior tied to success/failure pressure loops.
+- Gameplay proof:
+  - Win condition: clear 24 rounds with lives remaining and satisfy per-game combo targets where configured.
+  - Fail condition: life depletion from wrong/timeout/trap choices or failure to meet configured combo requirement by run end.
+  - Scoring model: tier + combo + time contributions with penalties for wrong/timeouts and extra punishment on trap decoys.
+  - Difficulty behavior: tighter timer decay by tier plus per-game mechanics (`roundMode=double`, trap decoys, combo targets) for stronger differentiation.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five advanced wrappers using the upgraded runtime's dual-lock/trap/combo-target mechanics and integrated routing/exports.
+- Tests run:
+  - Command: npm run lint -- src/components/games/arcade-016-pixel-hyperlane-heist.tsx src/components/games/arcade-017-spark-relay-frenzy.tsx src/components/games/arcade-018-echo-cipher-tribunal.tsx src/components/games/arcade-019-luna-tempo-shards.tsx src/components/games/arcade-020-terra-bastion-current.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in game page; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=232 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: FAIL (no production build present in `.next`).
+  - Command: npm run build
+  - Result: FAIL (`spawn EPERM` in this environment while creating production build).
+  - Command: npm run smoke-test (escalated attempt)
+  - Result: command timed out in tool environment before completion.
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: currently blocked by missing production build artifact in this environment.
+- Known issues:
+  - Smoke is currently blocked by environment build/permission instability (`spawn EPERM`) rather than tranche runtime code failures.
+- Next tranche planned:
+  - D-T05: arcade-021, arcade-022, arcade-023, arcade-024, arcade-025.
+
+CLAIM: Codex-D taking arcade-021, arcade-022, arcade-023, arcade-024, arcade-025 at 2026-03-04 11:50:56 -06:00
+
+## TRANCHE REPORT - Codex-D - 2026-03-04 11:52 local
+- Tranche ID: D-T05
+- Game IDs completed: arcade-021, arcade-022, arcade-023, arcade-024, arcade-025
+- Runtime files added/changed: src/components/games/arcade-021-pixel-drift-sentinel.tsx, src/components/games/arcade-022-spark-pulse-barrage.tsx, src/components/games/arcade-023-echo-logic-chase.tsx, src/components/games/arcade-024-luna-prism-relay.tsx, src/components/games/arcade-025-terra-stormline-command.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx
+- Character implementation notes: arcade-021 uses Pixel as drift-sentinel coach, arcade-022 uses Spark as dual-lock pulse coach, arcade-023 uses Echo as dual-proof logic coach, arcade-024 uses Luna as high-combo prism coach, and arcade-025 uses Terra as stormline defense coach. Mascot message/mood transitions are active in all five runtimes across success/failure pressure beats.
+- Gameplay proof:
+  - Win condition: complete 24 rounds with remaining lives and satisfy per-game combo targets where configured.
+  - Fail condition: lives collapse from wrong/timeout/trap penalties or combo-target miss at run finalization.
+  - Scoring model: tier + combo + timing gains with penalties on misses/timeouts/traps, plus boost-based recovery economy.
+  - Difficulty behavior: progressive timer decay with per-title mechanic variance (`roundMode=double`, trap decoys, stricter combo targets).
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five new advanced Reward Realm wrappers and integrated export/route mappings.
+- Tests run:
+  - Command: npm run lint -- src/components/games/arcade-021-pixel-drift-sentinel.tsx src/components/games/arcade-022-spark-pulse-barrage.tsx src/components/games/arcade-023-echo-logic-chase.tsx src/components/games/arcade-024-luna-prism-relay.tsx src/components/games/arcade-025-terra-stormline-command.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in game page; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=242 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: FAIL (no production build present in `.next` in this environment).
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: blocked by missing production build artifact.
+- Known issues:
+  - Smoke remains blocked by environment build constraints, not by tranche runtime contract/lint/audit failures.
+- Next tranche planned:
+  - D-T06: arcade-026, arcade-027, arcade-028, arcade-029, arcade-030.
+
+CLAIM: Codex-D taking arcade-026, arcade-027, arcade-028, arcade-029, arcade-030 at 2026-03-04 11:53:22 -06:00
+
+## TRANCHE REPORT - Codex-D - 2026-03-04 11:55 local
+- Tranche ID: D-T06
+- Game IDs completed: arcade-026, arcade-027, arcade-028, arcade-029, arcade-030
+- Runtime files added/changed: src/components/games/arcade-026-pixel-quantum-driftline.tsx, src/components/games/arcade-027-spark-gridquake.tsx, src/components/games/arcade-028-echo-proofline-panic.tsx, src/components/games/arcade-029-luna-harmonic-siege.tsx, src/components/games/arcade-030-terra-corefront.tsx, src/components/games/index.ts, src/app/games/[gameId]/page.tsx
+- Character implementation notes: arcade-026 uses Pixel as dual-vector driftline coach, arcade-027 uses Spark as gridquake stabilization coach, arcade-028 uses Echo as dual-proofline coach, arcade-029 uses Luna as combo-tempo siege coach, and arcade-030 uses Terra as dual-intervention corefront coach. All five display active mascot behavior and adaptive coaching messages through run states.
+- Gameplay proof:
+  - Win condition: clear 24 rounds and satisfy combo targets where configured.
+  - Fail condition: life depletion from wrong/timeout/trap penalties or combo-target miss at run finalization.
+  - Scoring model: tier/time/combo gains with penalties on misses/timeouts/traps, plus boost-mediated recovery pressure.
+  - Difficulty behavior: timer decay plus per-title mechanic variance via dual-lock rounds, trap decoys, and combo target constraints.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: authored five additional advanced Reward Realm wrappers and integrated exports/route mappings.
+- Tests run:
+  - Command: npm run lint -- src/components/games/arcade-026-pixel-quantum-driftline.tsx src/components/games/arcade-027-spark-gridquake.tsx src/components/games/arcade-028-echo-proofline-panic.tsx src/components/games/arcade-029-luna-harmonic-siege.tsx src/components/games/arcade-030-terra-corefront.tsx src/components/games/index.ts "src/app/games/[gameId]/page.tsx"
+  - Result: PASS with warnings (existing react-hooks/exhaustive-deps warning in game page; no lint errors).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=247 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: FAIL (no production build present in `.next` in this environment).
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next npm run smoke-test
+  - Result: blocked by missing production build artifact.
+- Known issues:
+  - Smoke remains environment-blocked due missing `.next` production build and `next build` spawn permission instability.
+- Next tranche planned:
+  - D-T07: arcade-031, arcade-032, arcade-033, arcade-034, arcade-035.
+CLAIM: Codex-B taking arcade-106, arcade-107, arcade-108, arcade-109, arcade-110 hardening at 2026-03-04 11:55:32 -06:00
+
+## TRANCHE REPORT - Codex-B - 2026-03-04 11:56 local
+- Tranche ID: B-T14
+- Game IDs completed: arcade-106, arcade-107, arcade-108, arcade-109, arcade-110
+- Runtime files added/changed: src/components/games/arcade-106-terra-trail.tsx, src/components/games/arcade-107-comet-trail.tsx, src/components/games/arcade-108-aurora-trail.tsx, src/components/games/arcade-109-orbit-trail.tsx, src/components/games/arcade-110-pixel-trail.tsx, games1.md
+- Character implementation notes: arcade-106 (Luna coach) now runs dual-lock rhythm/composition rounds, arcade-107 (Terra coach) adds trap-decoy risk, arcade-108 (Spark coach) runs dual-lock math precision rounds, arcade-109 (Echo coach) adds trap-heavy language interpretation pressure, and arcade-110 (Terra coach) now uses ecological recovery mechanics with dual-lock + trap rules.
+- Gameplay proof:
+  - Win condition: clear all rounds with per-game combo target met; dual-lock titles require two correct cue locks before round completion.
+  - Fail condition: life collapse from misses/timeouts, trap penalties (extra life and boost loss), or end-run combo target miss.
+  - Scoring model: tier+tempo+combo scoring persists; dual-lock completions add precision bonuses; trap mistakes apply stronger deductions.
+  - Difficulty behavior: timer decay and tier pressure remain with differentiated per-game mechanical contracts (`single`/`double`, trap decoys, combo targets).
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: hardened five Codex-B wrappers with distinct mechanical profiles and cleaned coach copy consistency.
+- Tests run:
+  - Command: npm run lint -- src/components/games/reward-realm-character-gauntlet.tsx src/components/games/arcade-106-terra-trail.tsx src/components/games/arcade-107-comet-trail.tsx src/components/games/arcade-108-aurora-trail.tsx src/components/games/arcade-109-orbit-trail.tsx src/components/games/arcade-110-pixel-trail.tsx
+  - Result: PASS with warnings (react-hooks/exhaustive-deps warnings in shared runtime listener dependencies).
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=232 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:reward-realm:contract:test
+  - Result: PASS
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next-smoke-37536 npm run smoke-test
+  - Result: PASS
+- Smoke status:
+  - Command: SKIP_BUILD=true SMOKE_TEST_DIST_DIR=.next-smoke-37536 npm run smoke-test
+  - Result: PASS
+- Known issues:
+  - Fresh `.next` production build is currently blocked in this shared workspace by persistent concurrent build lock/process churn outside this tranche; smoke used a known good prior build artifact.
+- Next tranche planned:
+  - B-T15: harden arcade-111, arcade-112, arcade-113, arcade-114, arcade-115 with additional scoring identity and trap-density tuning.
+CLAIM: Codex-C taking arcade-122 and arcade-123 bespoke rewrites at 2026-03-04 12:00:49 -06:00
+
+## TRANCHE REPORT - Codex-C - 2026-03-04 12:01 local
+- Tranche ID: C-T12
+- Game IDs completed: arcade-122, arcade-123
+- Runtime files added/changed: src/components/games/arcade-122-sprout-trail.tsx, src/components/games/arcade-123-pebble-trail.tsx, games1.md
+- Character implementation notes: arcade-122 uses Pixel as an active logic-routing coach with mood/message transitions on harvest success, missed packets, pulse activation, and mission end; arcade-123 uses Luna as an active rhythm-memory coach with in-run feedback for sequence progress, misses, timeouts, and completion.
+- Gameplay proof:
+  - Win condition: arcade-122 clears 7 rule cards before timeout; arcade-123 clears 18 memory rounds before mission end.
+  - Fail condition: both games fail on life depletion or timer expiry before target objective completion.
+  - Scoring model: arcade-122 scores valid route harvests with combo/rule-clear bonuses and penalties for glitches/missed-valid packets; arcade-123 scores correct sequence steps + round clears with combo scaling and penalties for wrong taps/timeouts.
+  - Difficulty behavior: arcade-122 ramps spawn cadence, hazard mix, and rule quotas; arcade-123 ramps pattern length, preview pressure, and round tempo with optional focus-slow resource management.
+- Source inspiration + attribution:
+  - Repo URL: none imported in this tranche (original in-repo implementation).
+  - Commit/Tag: n/a.
+  - License: n/a.
+  - Transformations made: replaced both wrapper-based games with full bespoke runtime systems and unique mechanic families (logic packet routing vs rhythm mosaic memory).
+- Tests run:
+  - Command: npx eslint src/components/games/arcade-122-sprout-trail.tsx src/components/games/arcade-123-pebble-trail.tsx
+  - Result: PASS
+  - Command: npm run games:audit:implementation
+  - Result: PASS (`catalog=500 uniqueRuntimeImplementations=247 legacyAliasRoutes=0 missingMappings=0`)
+  - Command: npm run games:audit:games1-contract
+  - Result: PASS (`status=pass checks=21 failures=0`)
+- Smoke status:
+  - Command: not run in this tranche (targeted lint + contract audits executed).
+  - Result: n/a
+- Known issues:
+  - None in these two runtimes from targeted lint/contract checks.
+- Next tranche planned:
+  - C-T13: arcade-124 and arcade-125 bespoke runtime rewrites with distinct mechanic families.
