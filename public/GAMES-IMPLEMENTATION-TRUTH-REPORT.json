@@ -1,11 +1,12 @@
 {
-  "generatedAt": "2026-03-04T15:43:37.071Z",
+  "generatedAt": "2026-03-04T16:47:27.892Z",
   "catalog": {
     "core": 8,
     "legacy": 57,
     "arcade": 200,
     "expansion": 235,
     "total": 500,
+    "source": "public/GAMES-500-MASTER-CATALOG.json",
     "generatedIds": {
       "arcade": [
         "arcade-001",
@@ -450,10 +451,12 @@
   },
   "runtime": {
     "coreRouted": 8,
-    "legacyRouted": 57,
-    "templateRouted": 435,
+    "legacyRouted": 87,
+    "mappedComponentRouted": 87,
+    "templateRouted": 405,
     "legacyAliasRoutes": 0,
-    "uniqueRuntimeImplementationFiles": 66,
+    "mappedAliasRoutes": 0,
+    "uniqueRuntimeImplementationFiles": 96,
     "coreResolvedFiles": [
       "color-mixer",
       "letter-catcher",
@@ -521,13 +524,133 @@
       "terras-trek",
       "velocity-vector",
       "vocabulary-voyager",
-      "word-woods"
+      "word-woods",
+      "zone-041-signal-rescue",
+      "zone-042-math-rail-commander",
+      "zone-043-echo-story-signal",
+      "zone-044-terra-lab-sort",
+      "zone-045-luna-rhythm-forge",
+      "zone-046-pixel-cipher-sprint",
+      "zone-047-spark-grid-fuse",
+      "zone-048-echo-evidence-judge",
+      "zone-049-terra-habitat-triage",
+      "zone-050-pixel-lane-defender",
+      "zone-051-luna-chorus-cascade",
+      "zone-052-spark-reactor-grid",
+      "zone-053-echo-debate-duel",
+      "zone-054-terra-weather-command",
+      "zone-055-pixel-drone-intercept",
+      "zone-056-spark-orbital-surge",
+      "zone-057-echo-signal-crossfire",
+      "zone-058-terra-rift-shelter",
+      "zone-059-luna-stage-strategy",
+      "zone-060-pixel-circuit-siege",
+      "zone-061-spark-flux-gauntlet",
+      "zone-062-echo-proof-relay",
+      "zone-063-terra-greenhouse-command",
+      "zone-064-luna-beatline-run",
+      "zone-065-pixel-breach-hunter",
+      "zone-066-spark-thruster-trial",
+      "zone-067-echo-truthline-protocol",
+      "zone-068-terra-wilds-recovery",
+      "zone-069-luna-pulse-rally",
+      "zone-070-pixel-firewall-frontier"
+    ],
+    "mappedResolvedFiles": [
+      "aero-architect",
+      "alphabet-airship",
+      "artistic-algorithms",
+      "bio-blast",
+      "biome-builder",
+      "bot-builder",
+      "chronicle-case",
+      "cipher-city",
+      "circuit-crusader",
+      "climate-commander",
+      "cosmic-canvas",
+      "count-constellations",
+      "echos-expedition",
+      "eco-engineer",
+      "ethical-engine",
+      "ethos-engine",
+      "evolution-prime",
+      "flora-fusion",
+      "fraction-factory",
+      "fraction-forge",
+      "fusion-founder",
+      "genetic-garden",
+      "global-harmony",
+      "gravity-goliath",
+      "histo-hunt",
+      "history-hacker",
+      "linguist-lookout",
+      "logic-labyrinth",
+      "logical-link",
+      "lunas-legend",
+      "market-maker",
+      "mars-colony",
+      "nano-navigator",
+      "nano-nexus",
+      "neural-navigator",
+      "neural-net",
+      "orbit-operator",
+      "pixels-path",
+      "protein-painter",
+      "quantum-cascade",
+      "quantum-quest",
+      "quantum-quirk",
+      "rhyme-river",
+      "rhythm-rules",
+      "sentence-safari",
+      "sparks-spark-quest",
+      "star-steer",
+      "stellar-state",
+      "story-smith",
+      "syntax-serpent",
+      "synthesis-sphere",
+      "synthetic-architect",
+      "tectonic-trek",
+      "terras-trek",
+      "velocity-vector",
+      "vocabulary-voyager",
+      "word-woods",
+      "zone-041-signal-rescue",
+      "zone-042-math-rail-commander",
+      "zone-043-echo-story-signal",
+      "zone-044-terra-lab-sort",
+      "zone-045-luna-rhythm-forge",
+      "zone-046-pixel-cipher-sprint",
+      "zone-047-spark-grid-fuse",
+      "zone-048-echo-evidence-judge",
+      "zone-049-terra-habitat-triage",
+      "zone-050-pixel-lane-defender",
+      "zone-051-luna-chorus-cascade",
+      "zone-052-spark-reactor-grid",
+      "zone-053-echo-debate-duel",
+      "zone-054-terra-weather-command",
+      "zone-055-pixel-drone-intercept",
+      "zone-056-spark-orbital-surge",
+      "zone-057-echo-signal-crossfire",
+      "zone-058-terra-rift-shelter",
+      "zone-059-luna-stage-strategy",
+      "zone-060-pixel-circuit-siege",
+      "zone-061-spark-flux-gauntlet",
+      "zone-062-echo-proof-relay",
+      "zone-063-terra-greenhouse-command",
+      "zone-064-luna-beatline-run",
+      "zone-065-pixel-breach-hunter",
+      "zone-066-spark-thruster-trial",
+      "zone-067-echo-truthline-protocol",
+      "zone-068-terra-wilds-recovery",
+      "zone-069-luna-pulse-rally",
+      "zone-070-pixel-firewall-frontier"
     ],
     "templateFile": "immersive-arcade-template"
   },
   "coverage": {
     "missingCoreMappings": [],
     "missingLegacyMappings": [],
+    "missingMappedComponentFiles": [],
     "missingCount": 0
   },
   "aliasExamples": [],
@@ -1100,6 +1223,306 @@
       "aliasDepth": 0,
       "chain": [
         "fraction-factory"
+      ]
+    },
+    {
+      "gameId": "zone-041",
+      "component": "Zone041SignalRescue",
+      "entryFile": "zone-041-signal-rescue",
+      "resolvedFile": "zone-041-signal-rescue",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-041-signal-rescue"
+      ]
+    },
+    {
+      "gameId": "zone-042",
+      "component": "Zone042MathRailCommander",
+      "entryFile": "zone-042-math-rail-commander",
+      "resolvedFile": "zone-042-math-rail-commander",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-042-math-rail-commander"
+      ]
+    },
+    {
+      "gameId": "zone-043",
+      "component": "Zone043EchoStorySignal",
+      "entryFile": "zone-043-echo-story-signal",
+      "resolvedFile": "zone-043-echo-story-signal",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-043-echo-story-signal"
+      ]
+    },
+    {
+      "gameId": "zone-044",
+      "component": "Zone044TerraLabSort",
+      "entryFile": "zone-044-terra-lab-sort",
+      "resolvedFile": "zone-044-terra-lab-sort",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-044-terra-lab-sort"
+      ]
+    },
+    {
+      "gameId": "zone-045",
+      "component": "Zone045LunaRhythmForge",
+      "entryFile": "zone-045-luna-rhythm-forge",
+      "resolvedFile": "zone-045-luna-rhythm-forge",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-045-luna-rhythm-forge"
+      ]
+    },
+    {
+      "gameId": "zone-046",
+      "component": "Zone046PixelCipherSprint",
+      "entryFile": "zone-046-pixel-cipher-sprint",
+      "resolvedFile": "zone-046-pixel-cipher-sprint",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-046-pixel-cipher-sprint"
+      ]
+    },
+    {
+      "gameId": "zone-047",
+      "component": "Zone047SparkGridFuse",
+      "entryFile": "zone-047-spark-grid-fuse",
+      "resolvedFile": "zone-047-spark-grid-fuse",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-047-spark-grid-fuse"
+      ]
+    },
+    {
+      "gameId": "zone-048",
+      "component": "Zone048EchoEvidenceJudge",
+      "entryFile": "zone-048-echo-evidence-judge",
+      "resolvedFile": "zone-048-echo-evidence-judge",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-048-echo-evidence-judge"
+      ]
+    },
+    {
+      "gameId": "zone-049",
+      "component": "Zone049TerraHabitatTriage",
+      "entryFile": "zone-049-terra-habitat-triage",
+      "resolvedFile": "zone-049-terra-habitat-triage",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-049-terra-habitat-triage"
+      ]
+    },
+    {
+      "gameId": "zone-050",
+      "component": "Zone050PixelLaneDefender",
+      "entryFile": "zone-050-pixel-lane-defender",
+      "resolvedFile": "zone-050-pixel-lane-defender",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-050-pixel-lane-defender"
+      ]
+    },
+    {
+      "gameId": "zone-051",
+      "component": "Zone051LunaChorusCascade",
+      "entryFile": "zone-051-luna-chorus-cascade",
+      "resolvedFile": "zone-051-luna-chorus-cascade",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-051-luna-chorus-cascade"
+      ]
+    },
+    {
+      "gameId": "zone-052",
+      "component": "Zone052SparkReactorGrid",
+      "entryFile": "zone-052-spark-reactor-grid",
+      "resolvedFile": "zone-052-spark-reactor-grid",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-052-spark-reactor-grid"
+      ]
+    },
+    {
+      "gameId": "zone-053",
+      "component": "Zone053EchoDebateDuel",
+      "entryFile": "zone-053-echo-debate-duel",
+      "resolvedFile": "zone-053-echo-debate-duel",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-053-echo-debate-duel"
+      ]
+    },
+    {
+      "gameId": "zone-054",
+      "component": "Zone054TerraWeatherCommand",
+      "entryFile": "zone-054-terra-weather-command",
+      "resolvedFile": "zone-054-terra-weather-command",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-054-terra-weather-command"
+      ]
+    },
+    {
+      "gameId": "zone-055",
+      "component": "Zone055PixelDroneIntercept",
+      "entryFile": "zone-055-pixel-drone-intercept",
+      "resolvedFile": "zone-055-pixel-drone-intercept",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-055-pixel-drone-intercept"
+      ]
+    },
+    {
+      "gameId": "zone-056",
+      "component": "Zone056SparkOrbitalSurge",
+      "entryFile": "zone-056-spark-orbital-surge",
+      "resolvedFile": "zone-056-spark-orbital-surge",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-056-spark-orbital-surge"
+      ]
+    },
+    {
+      "gameId": "zone-057",
+      "component": "Zone057EchoSignalCrossfire",
+      "entryFile": "zone-057-echo-signal-crossfire",
+      "resolvedFile": "zone-057-echo-signal-crossfire",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-057-echo-signal-crossfire"
+      ]
+    },
+    {
+      "gameId": "zone-058",
+      "component": "Zone058TerraRiftShelter",
+      "entryFile": "zone-058-terra-rift-shelter",
+      "resolvedFile": "zone-058-terra-rift-shelter",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-058-terra-rift-shelter"
+      ]
+    },
+    {
+      "gameId": "zone-059",
+      "component": "Zone059LunaStageStrategy",
+      "entryFile": "zone-059-luna-stage-strategy",
+      "resolvedFile": "zone-059-luna-stage-strategy",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-059-luna-stage-strategy"
+      ]
+    },
+    {
+      "gameId": "zone-060",
+      "component": "Zone060PixelCircuitSiege",
+      "entryFile": "zone-060-pixel-circuit-siege",
+      "resolvedFile": "zone-060-pixel-circuit-siege",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-060-pixel-circuit-siege"
+      ]
+    },
+    {
+      "gameId": "zone-061",
+      "component": "Zone061SparkFluxGauntlet",
+      "entryFile": "zone-061-spark-flux-gauntlet",
+      "resolvedFile": "zone-061-spark-flux-gauntlet",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-061-spark-flux-gauntlet"
+      ]
+    },
+    {
+      "gameId": "zone-062",
+      "component": "Zone062EchoProofRelay",
+      "entryFile": "zone-062-echo-proof-relay",
+      "resolvedFile": "zone-062-echo-proof-relay",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-062-echo-proof-relay"
+      ]
+    },
+    {
+      "gameId": "zone-063",
+      "component": "Zone063TerraGreenhouseCommand",
+      "entryFile": "zone-063-terra-greenhouse-command",
+      "resolvedFile": "zone-063-terra-greenhouse-command",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-063-terra-greenhouse-command"
+      ]
+    },
+    {
+      "gameId": "zone-064",
+      "component": "Zone064LunaBeatlineRun",
+      "entryFile": "zone-064-luna-beatline-run",
+      "resolvedFile": "zone-064-luna-beatline-run",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-064-luna-beatline-run"
+      ]
+    },
+    {
+      "gameId": "zone-065",
+      "component": "Zone065PixelBreachHunter",
+      "entryFile": "zone-065-pixel-breach-hunter",
+      "resolvedFile": "zone-065-pixel-breach-hunter",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-065-pixel-breach-hunter"
+      ]
+    },
+    {
+      "gameId": "zone-066",
+      "component": "Zone066SparkThrusterTrial",
+      "entryFile": "zone-066-spark-thruster-trial",
+      "resolvedFile": "zone-066-spark-thruster-trial",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-066-spark-thruster-trial"
+      ]
+    },
+    {
+      "gameId": "zone-067",
+      "component": "Zone067EchoTruthlineProtocol",
+      "entryFile": "zone-067-echo-truthline-protocol",
+      "resolvedFile": "zone-067-echo-truthline-protocol",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-067-echo-truthline-protocol"
+      ]
+    },
+    {
+      "gameId": "zone-068",
+      "component": "Zone068TerraWildsRecovery",
+      "entryFile": "zone-068-terra-wilds-recovery",
+      "resolvedFile": "zone-068-terra-wilds-recovery",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-068-terra-wilds-recovery"
+      ]
+    },
+    {
+      "gameId": "zone-069",
+      "component": "Zone069LunaPulseRally",
+      "entryFile": "zone-069-luna-pulse-rally",
+      "resolvedFile": "zone-069-luna-pulse-rally",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-069-luna-pulse-rally"
+      ]
+    },
+    {
+      "gameId": "zone-070",
+      "component": "Zone070PixelFirewallFrontier",
+      "entryFile": "zone-070-pixel-firewall-frontier",
+      "resolvedFile": "zone-070-pixel-firewall-frontier",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-070-pixel-firewall-frontier"
       ]
     }
   ]

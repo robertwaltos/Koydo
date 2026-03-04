@@ -91,6 +91,36 @@ const LEGACY_COMPONENTS: Record<string, () => React.JSX.Element> = {
   "rhyme-river": Games.RhymeRiver,
   "count-constellations": Games.CountConstellations,
   "fraction-factory": Games.FractionFactory,
+  "zone-041": Games.Zone041SignalRescue,
+  "zone-042": Games.Zone042MathRailCommander,
+  "zone-043": Games.Zone043EchoStorySignal,
+  "zone-044": Games.Zone044TerraLabSort,
+  "zone-045": Games.Zone045LunaRhythmForge,
+  "zone-046": Games.Zone046PixelCipherSprint,
+  "zone-047": Games.Zone047SparkGridFuse,
+  "zone-048": Games.Zone048EchoEvidenceJudge,
+  "zone-049": Games.Zone049TerraHabitatTriage,
+  "zone-050": Games.Zone050PixelLaneDefender,
+  "zone-051": Games.Zone051LunaChorusCascade,
+  "zone-052": Games.Zone052SparkReactorGrid,
+  "zone-053": Games.Zone053EchoDebateDuel,
+  "zone-054": Games.Zone054TerraWeatherCommand,
+  "zone-055": Games.Zone055PixelDroneIntercept,
+  "zone-056": Games.Zone056SparkOrbitalSurge,
+  "zone-057": Games.Zone057EchoSignalCrossfire,
+  "zone-058": Games.Zone058TerraRiftShelter,
+  "zone-059": Games.Zone059LunaStageStrategy,
+  "zone-060": Games.Zone060PixelCircuitSiege,
+  "zone-061": Games.Zone061SparkFluxGauntlet,
+  "zone-062": Games.Zone062EchoProofRelay,
+  "zone-063": Games.Zone063TerraGreenhouseCommand,
+  "zone-064": Games.Zone064LunaBeatlineRun,
+  "zone-065": Games.Zone065PixelBreachHunter,
+  "zone-066": Games.Zone066SparkThrusterTrial,
+  "zone-067": Games.Zone067EchoTruthlineProtocol,
+  "zone-068": Games.Zone068TerraWildsRecovery,
+  "zone-069": Games.Zone069LunaPulseRally,
+  "zone-070": Games.Zone070PixelFirewallFrontier,
 };
 
 function friendForCategory(category: string): "pixel" | "spark" | "echo" | "luna" | "terra" {
@@ -1499,3 +1529,4 @@ export default function GamePlayerPage() {
     </main>
   );
 }
+

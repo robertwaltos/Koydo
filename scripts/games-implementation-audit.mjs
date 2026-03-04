@@ -12,6 +12,7 @@ const CATALOG_PATH = path.join(ROOT, "src/lib/games/catalog.ts");
 const GAME_PAGE_PATH = path.join(ROOT, "src/app/games/[gameId]/page.tsx");
 const INDEX_PATH = path.join(ROOT, "src/components/games/index.ts");
 const COMPONENTS_DIR = path.join(ROOT, "src/components/games");
+const MASTER_CATALOG_PATH = path.join(ROOT, "public", "GAMES-500-MASTER-CATALOG.json");
 
 const MD_OUT_PATH = path.join(ROOT, "GAMES-IMPLEMENTATION-TRUTH-REPORT.md");
 const JSON_OUT_PATH = path.join(ROOT, "public/GAMES-IMPLEMENTATION-TRUTH-REPORT.json");
@@ -156,6 +157,19 @@ function generatePrefixedIds(prefix, count) {
   return Array.from({ length: count }, (_, index) => `${prefix}-${String(index + 1).padStart(3, "0")}`);
 }
 
+async function parseMasterCatalogIds() {
+  try {
+    const source = await fs.readFile(MASTER_CATALOG_PATH, "utf8");
+    const parsed = JSON.parse(source);
+    const rows = Array.isArray(parsed?.rows) ? parsed.rows : [];
+    return rows
+      .map((row) => (row && typeof row.id === "string" ? row.id : null))
+      .filter(Boolean);
+  } catch {
+    return [];
+  }
+}
+
 function buildMarkdown(report) {
   const missingCore = report.coverage.missingCoreMappings;
   const missingLegacy = report.coverage.missingLegacyMappings;
@@ -173,13 +187,14 @@ function buildMarkdown(report) {
     "",
     "## Verified Snapshot",
     `- Catalog entries: ${report.catalog.total} (core=${report.catalog.core}, legacy=${report.catalog.legacy}, arcade=${report.catalog.arcade}, expansion=${report.catalog.expansion}).`,
-    `- Runtime routes: core=${report.runtime.coreRouted}, legacy=${report.runtime.legacyRouted}, template-routed=${report.runtime.templateRouted}.`,
+    `- Runtime routes: core=${report.runtime.coreRouted}, mapped-components=${report.runtime.mappedComponentRouted}, template-routed=${report.runtime.templateRouted}.`,
     `- Unique runtime implementation files behind all ${report.catalog.total} routes: ${report.runtime.uniqueRuntimeImplementationFiles}.`,
-    `- Legacy routes that are alias wrappers: ${report.runtime.legacyAliasRoutes}.`,
+    `- Mapped-component routes that are alias wrappers: ${report.runtime.mappedAliasRoutes}.`,
     "",
     "## Coverage Checks",
     `- Core IDs missing a mapped component: ${missingCore.length}.`,
     `- Legacy IDs missing a mapped component: ${missingLegacy.length}.`,
+    `- Catalog IDs mapped to component names missing index exports: ${report.coverage.missingMappedComponentFiles.length}.`,
     `- Arcade/Expansion IDs are template-routed by design: ${report.runtime.templateRouted}.`,
     "",
     "## Alias Samples",
@@ -189,7 +204,7 @@ function buildMarkdown(report) {
     "",
     "## Interpretation",
     `- The ${report.catalog.total} catalog entries are real routes, but most are not unique engines.`,
-    "- A large portion of IDs route through shared implementations (legacy aliases + one arcade template).",
+    "- A large portion of IDs route through shared implementations (mapped components + one arcade template).",
     "- This report is generated from code and can be re-run to validate future claims.",
     "",
     "## Output Files",
@@ -222,11 +237,20 @@ async function main() {
     "const LEGACY_COMPONENTS: Record<string, () => React.JSX.Element> = {",
   );
   const componentFileMap = parseComponentFileMap(indexSource);
+  const masterCatalogIds = await parseMasterCatalogIds();
+  const fallbackCatalogIds = [
+    ...coreGames.map((game) => game.id),
+    ...legacyGames.map((game) => game.id),
+    ...generatePrefixedIds("arcade", arcadeCount),
+    ...generatePrefixedIds("zone", expansionCount),
+  ];
+  const allCatalogIds = masterCatalogIds.length > 0 ? masterCatalogIds : fallbackCatalogIds;
 
   const missingCoreMappings = [];
   const missingLegacyMappings = [];
+  const missingMappedComponentFileSet = new Set();
   const coreResolvedFiles = new Set();
-  const legacyResolvedFiles = new Set();
+  const mappedResolvedFiles = new Set();
 
   for (const game of coreGames) {
     const component = coreComponentMap.get(game.id);
@@ -243,7 +267,6 @@ async function main() {
     coreResolvedFiles.add(resolved.file);
   }
 
-  const legacyRouteRecords = [];
   for (const game of legacyGames) {
     const component = legacyComponentMap.get(game.id);
     if (!component) {
@@ -256,23 +279,61 @@ async function main() {
       continue;
     }
     const resolved = resolveAlias(file, aliasMap);
-    legacyResolvedFiles.add(resolved.file);
-    legacyRouteRecords.push({
-      gameId: game.id,
-      component,
-      entryFile: file,
-      resolvedFile: resolved.file,
-      aliasDepth: resolved.chain.length - 1,
-      chain: resolved.chain,
-    });
+    mappedResolvedFiles.add(resolved.file);
   }
 
-  const legacyAliasRoutes = legacyRouteRecords.filter((record) => record.aliasDepth > 0);
+  const mappedRouteRecords = [];
+  let coreRouted = 0;
+  let mappedComponentRouted = 0;
+  let templateRouted = 0;
+
+  for (const gameId of allCatalogIds) {
+    const coreComponent = coreComponentMap.get(gameId);
+    if (coreComponent) {
+      coreRouted += 1;
+      const file = componentFileMap.get(coreComponent);
+      if (!file) {
+        missingMappedComponentFileSet.add(gameId);
+        continue;
+      }
+      const resolved = resolveAlias(file, aliasMap);
+      coreResolvedFiles.add(resolved.file);
+      continue;
+    }
+
+    const mappedComponent = legacyComponentMap.get(gameId);
+    if (mappedComponent) {
+      mappedComponentRouted += 1;
+      const file = componentFileMap.get(mappedComponent);
+      if (!file) {
+        missingMappedComponentFileSet.add(gameId);
+        continue;
+      }
+      const resolved = resolveAlias(file, aliasMap);
+      mappedResolvedFiles.add(resolved.file);
+      mappedRouteRecords.push({
+        gameId,
+        component: mappedComponent,
+        entryFile: file,
+        resolvedFile: resolved.file,
+        aliasDepth: resolved.chain.length - 1,
+        chain: resolved.chain,
+      });
+      continue;
+    }
+
+    templateRouted += 1;
+  }
+
+  const mappedAliasRoutes = mappedRouteRecords.filter((record) => record.aliasDepth > 0);
   const runtimeImplementationUnion = new Set([
     ...coreResolvedFiles,
-    ...legacyResolvedFiles,
-    "immersive-arcade-template",
+    ...mappedResolvedFiles,
   ]);
+  if (templateRouted > 0) {
+    runtimeImplementationUnion.add("immersive-arcade-template");
+  }
+  const missingMappedComponentFiles = Array.from(missingMappedComponentFileSet).sort();
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -281,28 +342,33 @@ async function main() {
       legacy: legacyGames.length,
       arcade: arcadeCount,
       expansion: expansionCount,
-      total: coreGames.length + legacyGames.length + arcadeCount + expansionCount,
+      total: allCatalogIds.length,
+      source: masterCatalogIds.length > 0 ? "public/GAMES-500-MASTER-CATALOG.json" : "catalog-derived-fallback",
       generatedIds: {
         arcade: generatePrefixedIds("arcade", arcadeCount),
         expansion: generatePrefixedIds("zone", expansionCount),
       },
     },
     runtime: {
-      coreRouted: coreGames.length,
-      legacyRouted: legacyGames.length,
-      templateRouted: arcadeCount + expansionCount,
-      legacyAliasRoutes: legacyAliasRoutes.length,
+      coreRouted,
+      legacyRouted: mappedComponentRouted,
+      mappedComponentRouted,
+      templateRouted,
+      legacyAliasRoutes: mappedAliasRoutes.length,
+      mappedAliasRoutes: mappedAliasRoutes.length,
       uniqueRuntimeImplementationFiles: runtimeImplementationUnion.size,
       coreResolvedFiles: Array.from(coreResolvedFiles).sort(),
-      legacyResolvedFiles: Array.from(legacyResolvedFiles).sort(),
+      legacyResolvedFiles: Array.from(mappedResolvedFiles).sort(),
+      mappedResolvedFiles: Array.from(mappedResolvedFiles).sort(),
       templateFile: "immersive-arcade-template",
     },
     coverage: {
       missingCoreMappings,
       missingLegacyMappings,
-      missingCount: missingCoreMappings.length + missingLegacyMappings.length,
+      missingMappedComponentFiles,
+      missingCount: missingCoreMappings.length + missingLegacyMappings.length + missingMappedComponentFiles.length,
     },
-    aliasExamples: legacyAliasRoutes
+    aliasExamples: mappedAliasRoutes
       .slice(0, 20)
       .map(({ gameId, component, entryFile, resolvedFile }) => ({
         gameId,
@@ -310,7 +376,7 @@ async function main() {
         entryFile,
         resolvedFile,
       })),
-    legacyRoutes: legacyRouteRecords,
+    legacyRoutes: mappedRouteRecords,
   };
 
   await fs.mkdir(path.dirname(JSON_OUT_PATH), { recursive: true });
@@ -322,7 +388,7 @@ async function main() {
   const summary = [
     `catalog=${report.catalog.total}`,
     `uniqueRuntimeImplementations=${report.runtime.uniqueRuntimeImplementationFiles}`,
-    `legacyAliasRoutes=${report.runtime.legacyAliasRoutes}`,
+    `mappedAliasRoutes=${report.runtime.mappedAliasRoutes}`,
     `missingMappings=${report.coverage.missingCount}`,
   ].join(" ");
   console.log(`[games-implementation-audit] ${summary}`);
