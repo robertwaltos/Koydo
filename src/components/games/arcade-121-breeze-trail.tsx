@@ -423,7 +423,7 @@ function reduceGame(state: GameState, action: Action): GameState {
         }
       }
 
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let resolvedItems = nextItems;
 

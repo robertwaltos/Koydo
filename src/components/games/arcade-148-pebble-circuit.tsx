@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 148",
   title: "Pebble Circuit",
   mascot: "echo",
-  startMessage: "Echo: stay adaptive and pick evidence-backed actions as pressure scales in Pebble Circuit.",
-  winMessage: "Echo: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Echo: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Echo: preserve meaning coherence and choose evidence-grounded interpretations in Pebble Circuit.",
+  winMessage: "Echo: interpretation mesh secured. Strong language reasoning.",
+  failMessage: "Echo: semantic drift escaped containment. Retry with tighter evidence links.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "context lane",
+    "evidence node",
+    "claim ring",
+    "inference rail",
+    "citation grid",
+    "reason core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Semantic ambiguity detected on",
+    "Choose the strongest supporting move for",
+    "Only one response preserves coherence in",
+    "Context conflict escalating around"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Corroborate",
+    "Contextualize",
+    "Clarify",
+    "Anchor",
+    "Verify"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
-    "Bypass",
-    "Overload"
+    "Assume",
+    "Distort",
+    "Overstate",
+    "Flatten",
+    "Speculate"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Context controls interpretation quality.",
+    "Claims need continuous evidence support.",
+    "Precision beats speed under ambiguity.",
+    "Repair inference chains quickly after misses."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_20%,rgba(167,139,250,0.24),transparent_46%),radial-gradient(circle_at_82%_82%,rgba(139,92,246,0.2),transparent_52%)]",
@@ -61,6 +61,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 8,
 };
 
 export default function Arcade148PebbleCircuit() {

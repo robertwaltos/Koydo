@@ -1,0 +1,15 @@
+
+============================================================
+  translate-simple.mjs - CHUNK-BASED - Spanish (es)
+  Sleep: 2000ms | Batch: 40 | LIVE
+============================================================
+  RSS=54MB heap=4/6MB
+
+Existing translations: 228,310
+After state load: RSS=277MB heap=191/218MB
+
+Found 729 chunk files
+
+Scanning chunks for pending strings...
+Pending: 135,951 | Batches: 3,399 | ~227 min
+

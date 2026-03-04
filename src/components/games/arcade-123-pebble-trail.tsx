@@ -289,7 +289,7 @@ function reduceGame(state: GameState, action: Action): GameState {
       let cursor = tapped;
       let focusCharges = state.focusCharges;
       let focusMs = state.focusMs;
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let tone: EventTone = "good";
       let mood: RuntimeEvent["mood"] = "happy";
@@ -406,7 +406,7 @@ function reduceGame(state: GameState, action: Action): GameState {
       let patternStep = state.patternStep;
       let patternTail = state.patternTail;
       let cursor = state.cursor;
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let pendingEvent: Omit<RuntimeEvent, "id"> | null = null;
 

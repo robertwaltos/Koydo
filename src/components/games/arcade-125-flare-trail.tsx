@@ -339,7 +339,7 @@ function reduceGame(state: GameState, action: Action): GameState {
       let bestCombo = state.bestCombo;
       let roundsCleared = state.roundsCleared;
       let hints = state.hints;
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let tone: EventTone = "good";
       let mood: RuntimeEvent["mood"] = "happy";
@@ -462,7 +462,7 @@ function reduceGame(state: GameState, action: Action): GameState {
 
       const remainingMs = Math.max(0, state.remainingMs - TICK_MS);
       const roundRemainingMs = Math.max(0, state.roundRemainingMs - TICK_MS);
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let lives = state.lives;
       let combo = state.combo;

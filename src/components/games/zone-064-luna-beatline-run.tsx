@@ -154,6 +154,8 @@ export default function Zone064LunaBeatlineRun() {
     void hapticSelection();
   };
 
+  const restart = start;
+
   useEffect(() => {
     if (phase !== "playing") {
       clearLoop();

@@ -332,7 +332,7 @@ function reduceGame(state: GameState, action: Action): GameState {
       let ruleClears = state.ruleClears;
       let ruleIndex = state.ruleIndex;
       let pulseCharges = state.pulseCharges;
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let tone: EventTone = "good";
       let mood: RuntimeEvent["mood"] = "happy";
@@ -468,7 +468,7 @@ function reduceGame(state: GameState, action: Action): GameState {
         }
       }
 
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       if (lives <= 0) {
         phase = "complete";

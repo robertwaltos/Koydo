@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 147",
   title: "Sprout Circuit",
   mascot: "spark",
-  startMessage: "Spark: stay adaptive and pick evidence-backed actions as pressure scales in Sprout Circuit.",
-  winMessage: "Spark: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Spark: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Spark: keep logistics flow stable and route each queue correction with precision in Sprout Circuit.",
+  winMessage: "Spark: dispatch grid synchronized. Excellent routing control.",
+  failMessage: "Spark: queue collapse exceeded limits. Re-enter with cleaner sequencing.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "dock lane",
+    "cargo node",
+    "route ring",
+    "berth rail",
+    "queue grid",
+    "dispatch core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Harbor congestion rising on",
+    "Choose the route plan that preserves throughput in",
+    "Only one intervention prevents queue collapse in",
+    "Rapid reroute required for"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Stage",
+    "Prioritize",
+    "Sequence",
+    "Buffer",
+    "Dispatch"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
+    "Jam",
     "Bypass",
-    "Overload"
+    "Overqueue",
+    "Stall",
+    "Misroute"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Throughput depends on sequencing quality.",
+    "Small delays can trigger major bottlenecks.",
+    "Priority rules reduce congestion risk.",
+    "Buffering critical lanes improves resilience."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_18%,rgba(251,191,36,0.24),transparent_46%),radial-gradient(circle_at_82%_82%,rgba(245,158,11,0.2),transparent_52%)]",
@@ -61,6 +61,8 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  targetBestCombo: 6,
 };
 
 export default function Arcade147SproutCircuit() {

@@ -248,7 +248,7 @@ function reduceGame(state: GameState, action: Action): GameState {
         message = "Terra: Cell stabilized within safe range.";
       }
 
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       if (interventions >= TARGET_INTERVENTIONS && state.remainingMs > 0) {
         phase = "complete";
@@ -441,7 +441,7 @@ function reduceGame(state: GameState, action: Action): GameState {
         score += safeCount >= 10 ? 2 : 1;
       }
 
-      let phase = state.phase;
+      let phase: Phase = state.phase;
       let outcome = state.outcome;
       let pendingEvent: Omit<RuntimeEvent, "id"> | null = null;
 
