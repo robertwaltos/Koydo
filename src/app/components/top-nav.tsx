@@ -548,14 +548,14 @@ export default function TopNav() {
                 {isMainMenuOpen && (
                   <div
                     ref={mainMenuPanelRef}
-                    className="absolute right-0 mt-2 w-[min(92vw,24rem)] rounded-2xl border border-zinc-200/90 bg-white/95 p-3 shadow-xl backdrop-blur-sm border-border/50 dark:bg-background/92"
+                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,24rem)] p-3"
                   >
                     <div className="grid gap-2">
                       {primaryNavItems.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                          className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                           onClick={closeMenus}
                         >
                           <span aria-hidden="true">{item.icon}</span>
@@ -572,7 +572,7 @@ export default function TopNav() {
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-surface-muted border-border/45 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                              className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground/90"
                               onClick={closeMenus}
                             >
                               <span aria-hidden="true">{item.icon}</span>
@@ -637,12 +637,12 @@ export default function TopNav() {
                 {isExploreToolsOpen && (
                   <div
                     ref={exploreToolsPanelRef}
-                    className="absolute right-0 mt-2 w-[min(92vw,20rem)] rounded-2xl border border-zinc-200/90 bg-white/95 p-3 shadow-xl backdrop-blur-sm border-border/50 dark:bg-background/92"
+                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,20rem)] p-3"
                   >
                     <div className="grid gap-2">
                       <Link
                         href="/explore"
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >
                         <span aria-hidden="true">🌍</span>
@@ -650,7 +650,7 @@ export default function TopNav() {
                       </Link>
                       <Link
                         href="/modules"
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >
                         <span aria-hidden="true">📚</span>
@@ -658,7 +658,7 @@ export default function TopNav() {
                       </Link>
                       <Link
                         href="/language/speaking-lab"
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >
                         <span aria-hidden="true">🎙️</span>
@@ -666,7 +666,7 @@ export default function TopNav() {
                       </Link>
                       <Link
                         href={parentPortalHref}
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >
                         <span aria-hidden="true">👨‍👩‍👧</span>
@@ -675,7 +675,7 @@ export default function TopNav() {
                       <button
                         type="button"
                         onClick={togglePreReaderMode}
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-surface-muted border-border/45 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground/90"
                       >
                         <span aria-hidden="true">{isPreReaderMode ? "👶" : "🔤"}</span>
                         {isPreReaderMode ? t("top_nav_reader_mode_off") : t("top_nav_reader_mode_on")}
@@ -683,7 +683,7 @@ export default function TopNav() {
                       <button
                         type="button"
                         onClick={() => setTypographyDensity(nextTypographyDensity)}
-                        className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-surface-muted border-border/45 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground/90"
                       >
                         <span aria-hidden="true">{typographyIcon}</span>
                         {typographyLabel}

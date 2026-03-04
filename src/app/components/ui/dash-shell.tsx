@@ -65,8 +65,8 @@ function SidebarNavLink({ item }: { item: DashNavItem }) {
       className={[
         "group flex items-center gap-2.5 rounded-lg px-3 py-1.5 text-[13px] font-medium leading-snug transition-colors",
         isActive
-          ? "bg-[#bddaf5] text-[#0e2d4e] shadow-sm"
-          : "text-[#3a5a7c] hover:bg-[#cfe5f7] hover:text-[#0e2d4e]",
+          ? "bg-accent/15 text-accent shadow-sm dark:bg-accent/20"
+          : "text-foreground/60 hover:bg-accent/8 hover:text-foreground dark:hover:bg-white/8",
       ].join(" ")}
     >
       <span
@@ -95,7 +95,7 @@ function SidebarNavGroup({ group }: { group: DashNavGroup }) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between px-3 py-1 rounded-md text-[11px] font-semibold uppercase tracking-widest text-[#6b8fae] hover:text-[#3a5a7c] hover:bg-[#d4e9f7] transition-colors"
+        className="flex w-full items-center justify-between px-3 py-1 rounded-md text-[11px] font-semibold uppercase tracking-widest text-foreground/50 hover:text-foreground/70 hover:bg-accent/6 transition-colors dark:hover:bg-white/6"
         aria-expanded={open}
       >
         <span>{group.label}</span>
@@ -139,22 +139,20 @@ function SidebarContent({
 }) {
   return (
     <div
-      className="flex h-full flex-col safe-area-top safe-area-left safe-area-bottom"
-      style={{ background: "#e4f0fa", borderRight: "1px solid #c1d9ee" }}
+      className="flex h-full flex-col safe-area-top safe-area-left safe-area-bottom ui-glass-sidebar"
     >
       {/* ── Logo / branding ── */}
       <div
-        className="flex h-14 shrink-0 items-center gap-3 px-4"
-        style={{ borderBottom: "1px solid #c1d9ee" }}
+        className="flex h-14 shrink-0 items-center gap-3 px-4 border-b border-border/20"
       >
         <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#635bff] text-[12px] font-bold text-white shadow-sm">
           K
         </div>
         <div className="min-w-0">
-          <p className="truncate text-[13px] font-semibold leading-tight text-[#0e2d4e]">
+          <p className="truncate text-[13px] font-semibold leading-tight text-foreground">
             Koydo
           </p>
-          <p className="truncate text-[11px] leading-tight text-[#6b8fae]">
+          <p className="truncate text-[11px] leading-tight text-foreground/50">
             {productSubtitle}
           </p>
         </div>
@@ -172,12 +170,11 @@ function SidebarContent({
 
       {/* ── Footer ── */}
       <div
-        className="shrink-0 px-4 py-3"
-        style={{ borderTop: "1px solid #c1d9ee" }}
+        className="shrink-0 px-4 py-3 border-t border-border/20"
       >
         <Link
           href="/dashboard"
-          className="flex items-center gap-2 text-[12px] text-[#6b8fae] transition-colors hover:text-[#3a5a7c]"
+          className="flex items-center gap-2 text-[12px] text-foreground/50 transition-colors hover:text-foreground/70"
         >
           <svg
             width="12"
@@ -224,8 +221,7 @@ export default function DashShell({
   return (
     // Force light color scheme for the entire dashboard shell
     <div
-      className="flex h-screen overflow-hidden bg-[#f6f9fc]"
-      style={{ colorScheme: "light" }}
+      className="flex h-screen overflow-hidden bg-surface-muted dark:bg-background"
     >
       {/* ── Mobile backdrop ── */}
       {sidebarOpen && (
@@ -254,14 +250,13 @@ export default function DashShell({
       <div className="flex min-w-0 flex-1 flex-col md:pl-72">
         {/* ── Top bar ── */}
         <header
-          className="safe-area-top sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between px-4 md:px-6"
-          style={{ borderBottom: "1px solid #dde6f0", background: "#ffffff" }}
+          className="safe-area-top sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between border-b border-border/20 bg-surface/90 backdrop-blur-sm px-4 md:px-6 dark:bg-background/90"
         >
           <div className="flex min-w-0 items-center gap-3">
             {/* Mobile hamburger */}
             <button
               type="button"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-md text-[#6b8fae] hover:bg-[#e4f0fa] md:hidden transition-colors"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-md text-foreground/50 hover:bg-accent/8 md:hidden transition-colors dark:hover:bg-white/8"
               onClick={() => setSidebarOpen(true)}
               aria-label="Open navigation"
             >
@@ -282,10 +277,10 @@ export default function DashShell({
             </button>
 
             <div className="min-w-0">
-              <span className="hidden text-[14px] font-semibold text-[#0e2d4e] md:block">
+              <span className="hidden text-[14px] font-semibold text-foreground md:block">
                 {productName}
               </span>
-              <p className="truncate text-[12px] font-medium text-[#4a7a9e] md:text-[11px]">
+              <p className="truncate text-[12px] font-medium text-foreground/60 md:text-[11px]">
                 {activeNavItemLabel}
               </p>
             </div>
@@ -295,12 +290,12 @@ export default function DashShell({
           <div className="flex items-center gap-3">
             <LanguageSwitcher compact />
             {userLabel && (
-              <span className="hidden text-[12px] text-[#6b8fae] md:block truncate max-w-48">
+              <span className="hidden text-[12px] text-foreground/50 md:block truncate max-w-48">
                 {userLabel}
               </span>
             )}
             <div
-              className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#bddaf5] text-[11px] font-bold text-[#0e2d4e]"
+              className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-accent/15 text-[11px] font-bold text-accent dark:bg-accent/25"
               title={userLabel}
               aria-hidden="true"
             >

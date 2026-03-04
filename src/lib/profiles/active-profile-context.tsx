@@ -25,7 +25,7 @@ export const ActiveProfileProvider = ({ children }: { children: React.ReactNode 
     setIsLoading(true);
     const { data, error } = await supabase
       .from("student_profiles")
-      .select("id, display_name, grade_level, avatar_url, ai_skill_level_map")
+      .select("id, display_name, grade_level, avatar_url, ai_skill_level_map, age_years")
       .eq("id", id)
       .single();
 

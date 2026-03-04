@@ -4,6 +4,7 @@ import "./globals.css";
 import AppProviders from "./app-providers";
 import OfflineBanner from "./components/offline-banner";
 import TopNav from "./components/top-nav";
+import AmbientBackground from "./components/ambient-background";
 import SiteFooter from "./components/site-footer";
 import GlobalCommandPalette from "./components/global-command-palette";
 import CookieConsentBanner from "./components/cookie-consent-banner";
@@ -139,6 +140,7 @@ export default function RootLayout({
           <a href="#app-main-content" className="app-skip-link">
             Skip to main content
           </a>
+          <AmbientBackground />
           <OfflineBanner />
           <TopNav />
           <GlobalCommandPalette />
