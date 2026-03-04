@@ -11,6 +11,7 @@ import {
   createLegacySessionId,
   emitLegacyGameComplete,
 } from "@/lib/games/legacy-runtime-events";
+import { clamp, seeded, tierForRound } from "./reward-realm-runtime-utils";
 
 type Phase = "ready" | "playing" | "paused" | "complete";
 type Outcome = "calibrated" | "drifted";
@@ -33,29 +34,14 @@ const ROUND_COUNT = 15;
 const START_INTEGRITY = 4;
 const MAX_OVERDRIVES = 3;
 
-function clamp(value: number, min: number, max: number) {
-  return Math.min(max, Math.max(min, value));
-}
-
-function seeded(seed: string) {
-  let hash = 0;
-  for (let index = 0; index < seed.length; index += 1) {
-    hash = (hash * 31 + seed.charCodeAt(index)) | 0;
-  }
-  return () => {
-    hash = (hash * 1664525 + 1013904223) | 0;
-    return ((hash >>> 0) % 10_000) / 10_000;
-  };
-}
-
 function roundWindowMs(roundIndex: number) {
-  const tier = 1 + Math.floor(roundIndex / 4);
+  const tier = tierForRound(roundIndex, 4);
   return Math.max(2300, 5200 - (tier - 1) * 650);
 }
 
 function buildRound(roundIndex: number): ThrusterRound {
   const random = seeded(`arcade-066:${roundIndex + 1}`);
-  const tier = 1 + Math.floor(roundIndex / 4);
+  const tier = tierForRound(roundIndex, 4);
   const target = 22 + Math.floor(random() * 70);
   const baseTolerance = Math.max(6, 14 - tier * 2);
   const deltas = [-14, -8, 6, 12].map((value) => value + Math.floor((random() - 0.5) * 4));
@@ -119,7 +105,7 @@ export default function Arcade066SparkThrusterTrial() {
   const settlingRef = useRef(false);
 
   const round = ROUNDS[roundIndex] ?? null;
-  const tier = 1 + Math.floor(roundIndex / 4);
+  const tier = tierForRound(roundIndex, 4);
   const progress = useMemo(
     () => Math.min(100, Math.round((roundIndex / ROUND_COUNT) * 100)),
     [roundIndex],

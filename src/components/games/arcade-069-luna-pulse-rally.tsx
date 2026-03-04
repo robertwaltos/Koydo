@@ -11,6 +11,7 @@ import {
   createLegacySessionId,
   emitLegacyGameComplete,
 } from "@/lib/games/legacy-runtime-events";
+import { clamp } from "./reward-realm-runtime-utils";
 
 type Phase = "ready" | "playing" | "paused" | "complete";
 type Outcome = "resonant" | "offbeat";
@@ -20,10 +21,6 @@ const MISSION_MS = 100_000;
 const TICK_MS = 50;
 const START_LIVES = 4;
 const MAX_PHASE_LOCKS = 3;
-
-function clamp(value: number, min: number, max: number) {
-  return Math.min(max, Math.max(min, value));
-}
 
 function formatClock(ms: number) {
   const safe = Math.max(0, ms);

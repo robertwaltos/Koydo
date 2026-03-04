@@ -11,6 +11,7 @@ import {
   createLegacySessionId,
   emitLegacyGameComplete,
 } from "@/lib/games/legacy-runtime-events";
+import { seeded } from "./reward-realm-runtime-utils";
 
 type Phase = "ready" | "playing" | "paused" | "complete";
 type Outcome = "secured" | "breached";
@@ -33,17 +34,6 @@ type PacketRound = {
 const ROUND_COUNT = 18;
 const START_INTEGRITY = 4;
 const MAX_SCANS = 3;
-
-function seeded(seed: string) {
-  let hash = 0;
-  for (let index = 0; index < seed.length; index += 1) {
-    hash = (hash * 31 + seed.charCodeAt(index)) | 0;
-  }
-  return () => {
-    hash = (hash * 1664525 + 1013904223) | 0;
-    return ((hash >>> 0) % 10_000) / 10_000;
-  };
-}
 
 function roundWindowMs(roundIndex: number) {
   const tier = 1 + Math.floor(roundIndex / 5);

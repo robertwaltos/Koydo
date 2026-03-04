@@ -11,6 +11,7 @@ import {
   createLegacySessionId,
   emitLegacyGameComplete,
 } from "@/lib/games/legacy-runtime-events";
+import { clamp, seeded, tierForRound } from "./reward-realm-runtime-utils";
 
 type Phase = "ready" | "playing" | "paused" | "complete";
 type Outcome = "verified" | "contested";
@@ -28,23 +29,8 @@ const ROUND_COUNT = 17;
 const START_CREDIBILITY = 4;
 const MAX_PROBES = 3;
 
-function seeded(seed: string) {
-  let hash = 0;
-  for (let index = 0; index < seed.length; index += 1) {
-    hash = (hash * 31 + seed.charCodeAt(index)) | 0;
-  }
-  return () => {
-    hash = (hash * 1664525 + 1013904223) | 0;
-    return ((hash >>> 0) % 10_000) / 10_000;
-  };
-}
-
-function clamp(value: number, min: number, max: number) {
-  return Math.min(max, Math.max(min, value));
-}
-
 function roundWindowMs(roundIndex: number) {
-  const tier = 1 + Math.floor(roundIndex / 5);
+  const tier = tierForRound(roundIndex, 5);
   return Math.max(2100, 5600 - (tier - 1) * 750);
 }
 
@@ -133,7 +119,7 @@ export default function Arcade067EchoTruthlineProtocol() {
   const settlingRef = useRef(false);
 
   const round = ROUNDS[roundIndex] ?? null;
-  const tier = 1 + Math.floor(roundIndex / 5);
+  const tier = tierForRound(roundIndex, 5);
   const progress = useMemo(
     () => Math.min(100, Math.round((roundIndex / ROUND_COUNT) * 100)),
     [roundIndex],
