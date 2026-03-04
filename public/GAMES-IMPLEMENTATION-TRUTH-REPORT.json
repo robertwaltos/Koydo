@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T16:55:46.590Z",
+  "generatedAt": "2026-03-04T16:57:30.824Z",
   "catalog": {
     "core": 8,
     "legacy": 57,
@@ -451,12 +451,12 @@
   },
   "runtime": {
     "coreRouted": 8,
-    "legacyRouted": 117,
-    "mappedComponentRouted": 117,
-    "templateRouted": 375,
+    "legacyRouted": 118,
+    "mappedComponentRouted": 118,
+    "templateRouted": 374,
     "legacyAliasRoutes": 0,
     "mappedAliasRoutes": 0,
-    "uniqueRuntimeImplementationFiles": 126,
+    "uniqueRuntimeImplementationFiles": 127,
     "coreResolvedFiles": [
       "color-mixer",
       "letter-catcher",
@@ -584,7 +584,8 @@
       "zone-097-terra-frontline-wardens",
       "zone-098-luna-skyline-set",
       "zone-099-pixel-sentinel-lattice",
-      "zone-100-spark-vault-thrust"
+      "zone-100-spark-vault-thrust",
+      "zone-101-spark-reactor-convoy"
     ],
     "mappedResolvedFiles": [
       "aero-architect",
@@ -703,7 +704,8 @@
       "zone-097-terra-frontline-wardens",
       "zone-098-luna-skyline-set",
       "zone-099-pixel-sentinel-lattice",
-      "zone-100-spark-vault-thrust"
+      "zone-100-spark-vault-thrust",
+      "zone-101-spark-reactor-convoy"
     ],
     "templateFile": "immersive-arcade-template"
   },
@@ -1883,6 +1885,16 @@
       "aliasDepth": 0,
       "chain": [
         "zone-100-spark-vault-thrust"
+      ]
+    },
+    {
+      "gameId": "zone-101",
+      "component": "Zone101SparkReactorConvoy",
+      "entryFile": "zone-101-spark-reactor-convoy",
+      "resolvedFile": "zone-101-spark-reactor-convoy",
+      "aliasDepth": 0,
+      "chain": [
+        "zone-101-spark-reactor-convoy"
       ]
     }
   ]
