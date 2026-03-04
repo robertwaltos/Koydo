@@ -89,6 +89,16 @@ consensus.docx
 cleanup.md
 object_info.json
 nul
+do_commit.ps1
+.git-acl-backup.txt
+
+# Temp analysis/audit files
+_*.txt
+.tmp-*
+.preflight-*.json
+
+# All log files (catch-all)
+*.log
 
 # Data assets (large datasets, models, open-source-games)
 data/
@@ -108,4 +118,36 @@ scripts/epub-educational-picks.json
 logs/
 
 .next-stale*/
+
+# Dev artifacts in public/ (reports, manifests, generated media)
+public/LESSON-MEDIA-PROMPT-PACK.json
+public/CURRICULUM-STATE-FOR-EXTERNAL-AGENTS.json
+public/translations/es/_state.json
+public/GROK-IMAGE-MANIFEST-NORMALIZED.json
+public/games-factory/
+public/media/generated/
+public/*-REPORT*.json
+public/*-REPORT*.md
+public/*-AUDIT*.json
+public/*-AUDIT*.md
+public/*-ENRICHMENT-*.json
+public/*-COVERAGE-*.json
+public/*-STATE-*.json
+public/*-QUEUE*.json
+public/*-MANIFEST*.json
+public/*-PLAN*.json
+public/*-BACKLOG*.json
+public/*-SIGNOFF*.json
+public/AUDIOBOOK-*.json
+public/BACKGROUND-LAUNCH-*.json
+public/BACKGROUND-LAUNCH-*.md
+public/BACKEND-INTEGRATION-*.json
+public/BACKEND-INTEGRATION-*.md
+public/UNUSED-SCRIPTS-*.json
+public/MODULE-LEVEL-*.json
+public/EXPERIENCE-DEVICE-GATEWAY-*.json
+public/EXPERIENCE-DEVICE-GATEWAY-*.md
+public/GAMES-*.json
+public/GAMES-*.md
+public/OPEN-SOURCE-*.json
 
