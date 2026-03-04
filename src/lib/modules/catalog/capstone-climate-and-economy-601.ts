@@ -25,7 +25,7 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
     "Apply rigorous communication methods for risk communication strategy",
     "Build accountable execution systems for executive policy defense",
     "Integrate technical, policy, economic, and civic perspectives into one decision framework",
-    "Defend recommendations under expert cross-examination with evidence and uncertainty bounds"
+    "Defend recommendations under expert cross-examination with explicit data analysis, evidence, and uncertainty bounds"
   ],
   "lessons": [
     {
@@ -46,19 +46,19 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "id": "capstone-climate-and-economy-601-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "Case frame: a cabinet-level decision process comparing climate policy packages under uncertainty, fiscal limits, and political constraints. Learners define objectives, constraints, and stakeholder exposure."
+          "content": "In this lesson, we will dive into an important decision-making process that focuses on evaluating various climate policy options. This process is not straightforward; it considers many uncertainties, such as changing environmental conditions, financial limitations that governments face, and the political challenges that can arise. As you engage with this material, you will have the chance to set your own goals, identify the limitations you might encounter, and explore how different groups of people, known as stakeholders, are impacted by these decisions. By doing this, you will develop critical thinking skills that are essential for understanding the complexities involved in creating effective climate policies."
         },
         {
           "id": "capstone-climate-and-economy-601-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "Boundaries distinguish controllable variables, uncertain factors, and escalation-required decisions."
+          "content": "In this section, we will discuss the importance of setting boundaries in decision-making. These boundaries help us identify which variables we can control, which factors are uncertain, and what decisions may require further escalation. Understanding these distinctions is crucial for effective problem-solving and ensures that we can navigate the complexities of climate policy with clarity.\nContext recap: In this section, we will discuss the importance of setting boundaries in decision-making. These boundaries help us identify which variables we can control, which factors are uncertain, and what decisions may require further escalation. Understanding these distinctions is crucial for effective problem-solving and ensures that we can navigate the complexities of climate policy with clarity."
         },
         {
           "id": "capstone-climate-and-economy-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All claims must map to measurable indicators, uncertainty ranges, and accountability checkpoints."
+          "content": "It is essential that all claims made in our discussions are supported by measurable indicators. This means we need to establish clear criteria for what we consider evidence, including ranges of uncertainty and accountability checkpoints. By doing so, we ensure that our arguments are grounded in solid data, making them more credible and reliable.\nContext recap: It is essential that all claims made in our discussions are supported by measurable indicators. This means we need to establish clear criteria for what we consider evidence, including ranges of uncertainty and accountability checkpoints. By doing so, we ensure that our arguments are grounded in solid data, making them more credible and reliable."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "id": "capstone-climate-and-economy-601-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "Learners build cross-domain interventions linking technical, policy, and stakeholder dimensions."
+          "content": "In this interactive lab, you will work on creating interventions that connect various domains, including technical aspects, policy considerations, and the perspectives of different stakeholders. This exercise will help you understand how to integrate diverse elements into a cohesive strategy that addresses climate-related challenges effectively.\nContext recap: In this interactive lab, you will work on creating interventions that connect various domains, including technical aspects, policy considerations, and the perspectives of different stakeholders. This exercise will help you understand how to integrate diverse elements into a cohesive strategy that addresses climate-related challenges effectively."
         },
         {
           "id": "capstone-climate-and-economy-601-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "Plans include checkpoints, rollback criteria, and accountability ownership."
+          "content": "As part of your planning process, it is important to include control gates. These are checkpoints that allow you to assess progress, establish criteria for rolling back decisions if necessary, and clarify who is responsible for accountability. By incorporating these elements, you can create a more structured and effective plan.\nContext recap: As part of your planning process, it is important to include control gates. These are checkpoints that allow you to assess progress, establish criteria for rolling back decisions if necessary, and clarify who is responsible for accountability. By incorporating these elements, you can create a more structured and effective plan."
         }
       ],
       "interactiveActivities": [
@@ -367,13 +367,13 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "id": "capstone-climate-and-economy-601-l04-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners run intervention scenarios under uncertainty and compare outcomes with predefined metrics."
+          "content": "In this practice session, you will simulate various intervention scenarios while considering uncertainties. You will compare the outcomes of these scenarios against predefined metrics to evaluate their effectiveness. This hands-on experience will enhance your understanding of how different strategies can impact climate policy.\nContext recap: In this practice session, you will simulate various intervention scenarios while considering uncertainties. You will compare the outcomes of these scenarios against predefined metrics to evaluate their effectiveness. This hands-on experience will enhance your understanding of how different strategies can impact climate policy."
         },
         {
           "id": "capstone-climate-and-economy-601-l04-c2",
           "kind": "recap",
           "title": "Debrief and Correction",
-          "content": "Each simulation run is reviewed for gains, side effects, and governance compliance gaps through explicit data analysis that feeds an implementation artifact."
+          "content": "Once you have completed your simulations, it is very important to take the time to conduct a detailed debriefing. This means you will carefully look back at what happened during the simulations. You will assess the positive outcomes or gains that were achieved, as well as any unexpected side effects that may have occurred. Additionally, you will need to identify any areas where governance compliance may have been lacking. To do this effectively, you will rely on clear and specific data that you collected during the simulations. This data will be instrumental in helping you create an implementation artifact, which is a document or tool that summarizes your findings and recommendations based on your analysis."
         }
       ],
       "interactiveActivities": [
@@ -624,13 +624,13 @@ export const CapstoneClimateAndEconomy601Module: LearningModule = {
           "id": "capstone-climate-and-economy-601-l06-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble claims, evidence, uncertainty ranges, remediation pathways, and one implementation artifact mapped to rubric criteria in one defense brief."
+          "content": "In this engaging practice session, you will work on creating a comprehensive defense brief. This brief will include several important components: your main claims, the evidence that supports those claims, the ranges of uncertainty related to your arguments, suggested pathways for remediation, and one implementation artifact that illustrates your ideas. Make sure to organize your brief according to the rubric criteria, which will help ensure that your arguments are clear, logical, and well-supported. This is a great opportunity to showcase your understanding and critical thinking skills!\nContext recap: In this engaging practice session, you will work on creating a comprehensive defense brief. This brief will include several important components: your main claims, the evidence that supports those claims, the ranges of uncertainty related to your arguments, suggested pathways for remediation, and one implementation artifact that illustrates your ideas. Make sure to organize your brief according to the rubric criteria, which will help ensure that your arguments are clear, logical, and well-supported. This is a great opportunity to showcase your understanding and critical thinking skills!"
         },
         {
           "id": "capstone-climate-and-economy-601-l06-c2",
           "kind": "recap",
           "title": "Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, policy, and stakeholder critiques in a structured policy debate using the scoring rubric."
+          "content": "In this important panel rehearsal, you will have the opportunity to practice your responses to various critiques. These critiques will cover three main areas: technical aspects of your project, the implications of your policy decisions, and the concerns of different stakeholders involved. This structured policy debate will be guided by a scoring rubric, which will help you organize your thoughts and responses effectively. By engaging in this practice, you will be better prepared for your final defense, allowing you to present your ideas confidently and clearly.\nContext recap: In this important panel rehearsal, you will have the opportunity to practice your responses to various critiques. These critiques will cover three main areas: technical aspects of your project, the implications of your policy decisions, and the concerns of different stakeholders involved. This structured policy debate will be guided by a scoring rubric, which will help you organize your thoughts and responses effectively. By engaging in this practice, you will be better prepared for your final defense, allowing you to present your ideas confidently and clearly."
         }
       ],
       "interactiveActivities": [

@@ -65,22 +65,22 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-1-chunk-1",
           "title": "Plants Are Amazing!",
-          "content": "Plants are living things that make their OWN food using sunlight, water, and air! This process is called PHOTOSYNTHESIS. Unlike animals, plants can't walk to find food — they stay in place and grow toward what they need."
+          "content": "Plants are truly amazing living beings! They have a special ability to create their own food using sunlight, water, and air. This wonderful process is called photosynthesis, which means 'putting together with light.' During photosynthesis, plants take in sunlight through their leaves, absorb water through their roots, and use carbon dioxide from the air. This magical combination allows them to produce food and oxygen, which is essential for all living creatures. Unlike animals, plants cannot move around to find their food. Instead, they stay rooted in one place and grow towards the sunlight and water they need to thrive. Isn’t it fascinating how they can make their own meals right where they are? This ability helps them survive and grow, making them an important part of our world. So, the next time you see a plant, remember how incredible it is that it can create its own food and help keep our air clean!"
         },
         {
           "id": "gen-science-k2-u1-1-chunk-2",
           "title": "Roots 🌱",
-          "content": "ROOTS grow underground. They do TWO important jobs:\n1. ANCHOR the plant in the soil (hold it firmly)\n2. ABSORB water and minerals from the soil\n\nThe water travels from roots up through the stem to the rest of the plant."
+          "content": "Roots are the hidden heroes of plants, growing deep underground where we can't see them! They have two very important jobs that help the plant stay healthy and strong. First, roots anchor the plant in the soil. This means they hold the plant firmly in place so it doesn’t fall over, just like how our feet help us stand up straight. Second, roots absorb water and essential minerals from the soil. These nutrients are super important for the plant's growth and help it thrive. Once the roots soak up the water, it travels up through the stem to nourish the entire plant, providing it with everything it needs to grow big and strong. So, the next time you see a plant, remember that its roots are working hard beneath the ground, helping it stand tall and healthy!"
         },
         {
           "id": "gen-science-k2-u1-1-chunk-3",
           "title": "Stem & Leaves",
-          "content": "STEM: The 'highway' of the plant!\n• Supports the plant, holds it upright\n• Transports water and nutrients from roots to leaves\n• Can be thin (flower) or thick (tree trunk)\n\nLEAVES: The food factories!\n• Collect sunlight for energy\n• Absorb CO₂ from the air\n• Where photosynthesis happens"
+          "content": "The stem of a plant is like a busy highway that connects all the different parts of the plant! It plays a very important role by supporting the plant and helping it stand tall and upright. Just like how cars travel on a highway, the stem transports water and nutrients from the roots deep in the ground all the way up to the leaves at the top. Stems can come in different shapes and sizes; some are thin, like the delicate stems of flowers, while others are thick and strong, like the sturdy trunk of a big tree.\nNow, let’s explore leaves! Leaves are like tiny food factories for the plant. They have a special job of collecting sunlight, which gives the plant the energy it needs to grow. Leaves also absorb carbon dioxide from the air, which is another important ingredient for making food. This amazing process is called photosynthesis, and it’s where the magic happens! During photosynthesis, the plant uses sunlight to turn carbon dioxide and water into food, helping it to grow strong and healthy. Isn’t that fascinating?"
         },
         {
           "id": "gen-science-k2-u1-1-chunk-4",
           "title": "Flowers, Fruit & Seeds",
-          "content": "FLOWERS: Attract pollinators (bees, butterflies) to help the plant reproduce\n\nFRUIT: Develops from the flower; CONTAINS the seeds\n🍎 = fruit; seeds inside = the apple seeds!\n\nSEEDS: New plant babies! Each seed can grow into a new plant under the right conditions (water, warmth, light).\n\nThe plant life cycle: Seed → Seedling → Plant → Flower → Fruit/Seed → Repeat!"
+          "content": "Flowers are not just beautiful; they are very important for helping plants make new plants! When flowers bloom, they attract special helpers called pollinators, like bees and butterflies. These little creatures visit the flowers to collect nectar and, in doing so, help the flowers create seeds. After a flower has done its job, it can turn into fruit. For example, when you see an apple, remember that it is a fruit that holds seeds inside! These seeds are like tiny plant babies, and each one has the potential to grow into a new plant if it gets the right care, such as water, warmth, and sunlight. This is how the life cycle of a plant works: it starts with a seed, then becomes a seedling, grows into a plant, blooms into a flower, produces fruit with seeds, and then the cycle begins all over again! Isn’t nature amazing? Each part of a plant has a special job to help it grow and thrive in its environment."
         }
       ],
       "flashcards": [
@@ -209,13 +209,13 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-interactive-chunk-intro",
           "title": "Plants, Animals & Their Habitats Supplemental Practice Overview",
-          "content": "Reinforce core General Science concepts in Plants, Animals & Their Habitats.",
+          "content": "In this section, we will have fun reinforcing the important concepts we learned about plants, animals, and their habitats! Through engaging activities, we will explore how these living things interact with each other and their environments. Let’s get ready to dive deeper into the wonderful world of science!\nContext recap: In this section, we will have fun reinforcing the important concepts we learned about plants, animals, and their habitats! Through engaging activities, we will explore how these living things interact with each other and their environments. Let’s get ready to dive deeper into the wonderful world of science!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-interactive-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "Let’s take a moment to summarize one key idea we learned today about plants and their amazing parts. After that, we can think about one next step we can take to learn even more! This could be asking a question, doing a fun activity, or exploring outside to see plants in action!\nContext recap: Let’s take a moment to summarize one key idea we learned today about plants and their amazing parts. After that, we can think about one next step we can take to learn even more! This could be asking a question, doing a fun activity, or exploring outside to see plants in action!",
           "kind": "recap"
         }
       ],
@@ -426,13 +426,13 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-quiz-chunk-intro",
           "title": "Plants, Animals & Their Habitats Supplemental Check Overview",
-          "content": "Reinforce core General Science concepts in Plants, Animals & Their Habitats.",
+          "content": "In this quiz section, we will reinforce the core concepts we learned about plants, animals, and their habitats. It’s a great way to check our understanding and see how much we remember! Let’s get ready to show what we know!\nContext recap: In this quiz section, we will reinforce the core concepts we learned about plants, animals, and their habitats. It’s a great way to check our understanding and see how much we remember! Let’s get ready to show what we know!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-quiz-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "As we wrap up, let’s summarize one key idea we discussed today and think about one next step we can take to continue our learning journey. This could be exploring more about a specific plant or animal, or even sharing what we learned with a friend or family member!\nContext recap: As we wrap up, let’s summarize one key idea we discussed today and think about one next step we can take to continue our learning journey. This could be exploring more about a specific plant or animal, or even sharing what we learned with a friend or family member!",
           "kind": "recap"
         }
       ],
@@ -485,25 +485,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-04-chunk-intro",
           "title": "Evidence Interpretation Intro",
-          "content": "Start with an observation and a testable question.",
+          "content": "Let’s begin our exploration by starting with an observation about something we see in nature. Then, we will come up with a testable question that we can investigate further. This is the first step in understanding how to explore the world around us!\nContext recap: Let’s begin our exploration by starting with an observation about something we see in nature. Then, we will come up with a testable question that we can investigate further. This is the first step in understanding how to explore the world around us!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-04-chunk-practice",
           "title": "Guided Practice",
-          "content": "Run a mini investigation and record outcomes in a table.",
+          "content": "Now it’s time for some hands-on fun! We will run a mini investigation where we can explore our question. As we do this, we will record our outcomes in a table to keep track of what we find. This will help us learn more about our observations!\nContext recap: Now it’s time for some hands-on fun! We will run a mini investigation where we can explore our question. As we do this, we will record our outcomes in a table to keep track of what we find. This will help us learn more about our observations!",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-04-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence interpretation, then correct it with evidence.",
+          "content": "While we are interpreting our evidence, let’s be on the lookout for one common mistake that can happen. If we spot it, we can correct it by using the evidence we collected. This will help us become better at understanding what we observe!\nContext recap: While we are interpreting our evidence, let’s be on the lookout for one common mistake that can happen. If we spot it, we can correct it by using the evidence we collected. This will help us become better at understanding what we observe!",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-04-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence interpretation, then set one clear improvement target.",
+          "content": "To finish up, let’s review what we learned about interpreting evidence. After that, we can set one clear improvement target for ourselves. This could be something we want to get better at or a new question we want to explore next!\nContext recap: To finish up, let’s review what we learned about interpreting evidence. After that, we can set one clear improvement target for ourselves. This could be something we want to get better at or a new question we want to explore next!",
           "kind": "recap"
         }
       ],
@@ -619,25 +619,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-05-chunk-intro",
           "title": "Scientific Explanation Intro",
-          "content": "Change one variable at a time to keep results clear.",
+          "content": "When we are doing experiments, it's important to change only one thing at a time. This way, we can see how that one change affects the results clearly. By keeping everything else the same, we can understand what caused any differences we observe.\nContext recap: When we are doing experiments, it's important to change only one thing at a time. This way, we can see how that one change affects the results clearly. By keeping everything else the same, we can understand what caused any differences we observe.",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-05-chunk-practice",
           "title": "Guided Practice",
-          "content": "Identify independent, dependent, and control variables.",
+          "content": "In our practice today, we will learn to identify three types of variables in an experiment. The independent variable is what we change, the dependent variable is what we measure, and the control variables are the things we keep the same. Understanding these will help us conduct better experiments.\nContext recap: In our practice today, we will learn to identify three types of variables in an experiment. The independent variable is what we change, the dependent variable is what we measure, and the control variables are the things we keep the same. Understanding these will help us conduct better experiments.",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-05-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying scientific explanation, then correct it with evidence.",
+          "content": "As we apply scientific explanations, be on the lookout for a common mistake. Sometimes, we might forget to use evidence to support our conclusions. If you notice this, remember to find the evidence that backs up your explanation and correct it.\nContext recap: As we apply scientific explanations, be on the lookout for a common mistake. Sometimes, we might forget to use evidence to support our conclusions. If you notice this, remember to find the evidence that backs up your explanation and correct it.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-05-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review scientific explanation, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about scientific explanations. After our review, think about one specific area where you can improve your understanding or skills. Setting a clear goal will help you focus on what to work on next.\nContext recap: Let's take a moment to review what we learned about scientific explanations. After our review, think about one specific area where you can improve your understanding or skills. Setting a clear goal will help you focus on what to work on next.",
           "kind": "recap"
         }
       ],
@@ -859,25 +859,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-06-chunk-intro",
           "title": "Observation Skills Intro",
-          "content": "Use evidence from results to support the conclusion.",
+          "content": "When we draw conclusions from our experiments, we should always use evidence from our results to support what we say. This means looking at the data we collected and explaining how it leads us to our conclusion.\nContext recap: When we draw conclusions from our experiments, we should always use evidence from our results to support what we say. This means looking at the data we collected and explaining how it leads us to our conclusion.\nWhy this matters: Observation Skills Intro helps learners in General Science connect ideas from Plants, Animals & Their Habitats to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-06-chunk-practice",
           "title": "Guided Practice",
-          "content": "Explain one result using evidence and science vocabulary.",
+          "content": "In this practice session, you will explain one of your results using evidence from your experiment. Make sure to use science vocabulary to describe what you found. This will help you communicate your ideas clearly.\nContext recap: In this practice session, you will explain one of your results using evidence from your experiment. Make sure to use science vocabulary to describe what you found. This will help you communicate your ideas clearly.\nWhy this matters: Guided Practice helps learners in General Science connect ideas from Plants, Animals & Their Habitats to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-06-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying observation skills, then correct it with evidence.",
+          "content": "As you practice your observation skills, be aware of a common mistake that can happen. Sometimes, we might not use enough evidence to back up our observations. If you see this, remember to find the evidence that supports your observations and make corrections.\nContext recap: As you practice your observation skills, be aware of a common mistake that can happen. Sometimes, we might not use enough evidence to back up our observations. If you see this, remember to find the evidence that supports your observations and make corrections.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-06-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review observation skills, then set one clear improvement target.",
+          "content": "Let's quickly review the observation skills we practiced. After our review, think about one specific area where you can improve your observation skills. Setting a clear goal will help you focus on what to work on next.\nContext recap: Let's quickly review the observation skills we practiced. After our review, think about one specific area where you can improve your observation skills. Setting a clear goal will help you focus on what to work on next.",
           "kind": "recap"
         }
       ],
@@ -940,25 +940,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-07-chunk-intro",
           "title": "Hypothesis Testing Intro",
-          "content": "Start with an observation and a testable question.",
+          "content": "To start our journey in hypothesis testing, we begin with an observation. From that observation, we can create a question that we can test. This question will guide our investigation and help us find answers.\nContext recap: To start our journey in hypothesis testing, we begin with an observation. From that observation, we can create a question that we can test. This question will guide our investigation and help us find answers.\nWhy this matters: Hypothesis Testing Intro helps learners in General Science connect ideas from Plants, Animals & Their Habitats to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-07-chunk-practice",
           "title": "Guided Practice",
-          "content": "Run a mini investigation and record outcomes in a table.",
+          "content": "In this guided practice, you will conduct a mini investigation. As you do this, make sure to record your outcomes in a table. This will help you organize your findings and make it easier to analyze the results later.\nContext recap: In this guided practice, you will conduct a mini investigation. As you do this, make sure to record your outcomes in a table. This will help you organize your findings and make it easier to analyze the results later.",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-07-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying hypothesis testing, then correct it with evidence.",
+          "content": "While you are applying hypothesis testing, keep an eye out for a common mistake. Sometimes, we may forget to use evidence to support our hypothesis. If you notice this, remember to find the evidence that backs up your hypothesis and make corrections.\nContext recap: While you are applying hypothesis testing, keep an eye out for a common mistake. Sometimes, we may forget to use evidence to support our hypothesis. If you notice this, remember to find the evidence that backs up your hypothesis and make corrections.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-07-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review hypothesis testing, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about hypothesis testing. After our review, think about one specific area where you can improve your hypothesis testing skills. Setting a clear goal will help you focus on what to work on next.\nContext recap: Let's take a moment to review what we learned about hypothesis testing. After our review, think about one specific area where you can improve your hypothesis testing skills. Setting a clear goal will help you focus on what to work on next.",
           "kind": "recap"
         }
       ],
@@ -1074,25 +1074,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-08-chunk-intro",
           "title": "Variable Control Intro",
-          "content": "Change one variable at a time to keep results clear.",
+          "content": "When we are doing experiments, it's important to change only one thing at a time. This helps us understand what is causing any changes we see in our results. By keeping everything else the same, we can be sure that the change we made is the reason for the different outcome. This way, our results will be clear and easy to understand.\nContext recap: When we are doing experiments, it's important to change only one thing at a time. This helps us understand what is causing any changes we see in our results. By keeping everything else the same, we can be sure that the change we made is the reason for the different outcome. This way, our results will be clear and easy to understand.",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-08-chunk-practice",
           "title": "Guided Practice",
-          "content": "Identify independent, dependent, and control variables.",
+          "content": "In this activity, you will learn to identify three important types of variables in an experiment. The independent variable is what you change, the dependent variable is what you measure, and the control variables are the things you keep the same. Understanding these will help you conduct better experiments and get clearer results.\nContext recap: In this activity, you will learn to identify three important types of variables in an experiment. The independent variable is what you change, the dependent variable is what you measure, and the control variables are the things you keep the same. Understanding these will help you conduct better experiments and get clearer results.",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-08-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying variable control, then correct it with evidence.",
+          "content": "As you work on your experiments, be careful of a common mistake. Sometimes, people forget to keep other variables the same while changing one. If you notice this error, think about how you can fix it. Use evidence from your results to show why it's important to control variables correctly.\nContext recap: As you work on your experiments, be careful of a common mistake. Sometimes, people forget to keep other variables the same while changing one. If you notice this error, think about how you can fix it. Use evidence from your results to show why it's important to control variables correctly.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-08-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review variable control, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about variable control. Remember, it's all about changing one thing at a time to see how it affects your results. After reviewing, think of one specific way you can improve your experiment next time. Setting a clear goal will help you become a better scientist!\nContext recap: Let's take a moment to review what we learned about variable control. Remember, it's all about changing one thing at a time to see how it affects your results. After reviewing, think of one specific way you can improve your experiment next time. Setting a clear goal will help you become a better scientist!",
           "kind": "recap"
         }
       ],
@@ -1314,25 +1314,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-09-chunk-intro",
           "title": "Evidence Interpretation Intro",
-          "content": "Use evidence from results to support the conclusion.",
+          "content": "When you finish an experiment, it's important to look at your results carefully. Use the evidence you gathered to help support your conclusion. This means explaining how the results you found connect to the question you were trying to answer. Evidence helps make your conclusions stronger!\nContext recap: When you finish an experiment, it's important to look at your results carefully. Use the evidence you gathered to help support your conclusion. This means explaining how the results you found connect to the question you were trying to answer. Evidence helps make your conclusions stronger!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-09-chunk-practice",
           "title": "Guided Practice",
-          "content": "Explain one result using evidence and science vocabulary.",
+          "content": "In this practice, you will explain one of your results using evidence. Try to use science vocabulary to make your explanation clear. This will help you communicate your findings effectively and show how your evidence supports your conclusion.\nContext recap: In this practice, you will explain one of your results using evidence. Try to use science vocabulary to make your explanation clear. This will help you communicate your findings effectively and show how your evidence supports your conclusion.",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-09-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence interpretation, then correct it with evidence.",
+          "content": "While interpreting evidence, be on the lookout for a common mistake. Sometimes, people may misinterpret their results. If you find this happening, think about how you can correct it. Use the evidence you have to explain the right interpretation clearly.\nContext recap: While interpreting evidence, be on the lookout for a common mistake. Sometimes, people may misinterpret their results. If you find this happening, think about how you can correct it. Use the evidence you have to explain the right interpretation clearly.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-09-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence interpretation, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about evidence interpretation. Remember, it's about using your results to support your conclusions. After this review, think of one specific area where you can improve your understanding of evidence in your next experiment.\nContext recap: Let's quickly review what we learned about evidence interpretation. Remember, it's about using your results to support your conclusions. After this review, think of one specific area where you can improve your understanding of evidence in your next experiment.",
           "kind": "recap"
         }
       ],
@@ -1395,25 +1395,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-10-chunk-intro",
           "title": "Scientific Explanation Intro",
-          "content": "Start with an observation and a testable question.",
+          "content": "Every scientific explanation starts with something you observe and a question that you can test. Observations are what you see, hear, or notice, and a testable question is something you can investigate through an experiment. This is the first step in exploring the world around you!\nContext recap: Every scientific explanation starts with something you observe and a question that you can test. Observations are what you see, hear, or notice, and a testable question is something you can investigate through an experiment. This is the first step in exploring the world around you!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-10-chunk-practice",
           "title": "Guided Practice",
-          "content": "Run a mini investigation and record outcomes in a table.",
+          "content": "Now it's time to run a mini investigation! As you conduct your experiment, make sure to record your outcomes in a table. This will help you organize your data and make it easier to see what happened during your experiment.\nContext recap: Now it's time to run a mini investigation! As you conduct your experiment, make sure to record your outcomes in a table. This will help you organize your data and make it easier to see what happened during your experiment.",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-10-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying scientific explanation, then correct it with evidence.",
+          "content": "While you are working on your scientific explanation, be aware of a common error that can occur. Sometimes, people may forget to connect their observations to their conclusions. If you notice this, think about how you can correct it by using evidence from your investigation.\nContext recap: While you are working on your scientific explanation, be aware of a common error that can occur. Sometimes, people may forget to connect their observations to their conclusions. If you notice this, think about how you can correct it by using evidence from your investigation.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-10-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review scientific explanation, then set one clear improvement target.",
+          "content": "Let's quickly recap what we learned about scientific explanations. Remember, it all starts with an observation and a question. After this recap, think about one specific way you can improve your scientific explanations in the future. Setting a clear goal will help you grow as a scientist!\nContext recap: Let's quickly recap what we learned about scientific explanations. Remember, it all starts with an observation and a question. After this recap, think about one specific way you can improve your scientific explanations in the future. Setting a clear goal will help you grow as a scientist!",
           "kind": "recap"
         }
       ],
@@ -1529,25 +1529,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-11-chunk-intro",
           "title": "Observation Skills Intro",
-          "content": "Change one variable at a time to keep results clear.",
+          "content": "When we are doing experiments, it's important to change only one thing at a time. This way, we can see how that one change affects our results. By keeping everything else the same, we can understand what is happening more clearly!\nContext recap: When we are doing experiments, it's important to change only one thing at a time. This way, we can see how that one change affects our results. By keeping everything else the same, we can understand what is happening more clearly!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-11-chunk-practice",
           "title": "Guided Practice",
-          "content": "Identify independent, dependent, and control variables.",
+          "content": "In our practice today, we will learn to identify three important types of variables. The independent variable is what we change, the dependent variable is what we measure, and the control variables are the things we keep the same. Understanding these will help us conduct better experiments!\nContext recap: In our practice today, we will learn to identify three important types of variables. The independent variable is what we change, the dependent variable is what we measure, and the control variables are the things we keep the same. Understanding these will help us conduct better experiments!",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-11-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying observation skills, then correct it with evidence.",
+          "content": "As we work on our observation skills, let's be on the lookout for a common mistake. Sometimes, we might forget to keep our control variables the same. If you notice this error, think about how you can use evidence from your observations to correct it. This will help us improve our experiments!\nContext recap: As we work on our observation skills, let's be on the lookout for a common mistake. Sometimes, we might forget to keep our control variables the same. If you notice this error, think about how you can use evidence from your observations to correct it. This will help us improve our experiments!",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-11-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review observation skills, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about observation skills. Remember, it's important to focus on one area where we can improve. Setting a clear goal will help us become better observers in our experiments!\nContext recap: Let's take a moment to review what we learned about observation skills. Remember, it's important to focus on one area where we can improve. Setting a clear goal will help us become better observers in our experiments!",
           "kind": "recap"
         }
       ],
@@ -1769,25 +1769,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-12-chunk-intro",
           "title": "Hypothesis Testing Intro",
-          "content": "Use evidence from results to support the conclusion.",
+          "content": "When we are testing our hypotheses, we need to use the evidence we gathered from our results to support our conclusions. This means looking closely at what we found and explaining how it helps us understand our question better!\nContext recap: When we are testing our hypotheses, we need to use the evidence we gathered from our results to support our conclusions. This means looking closely at what we found and explaining how it helps us understand our question better!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-12-chunk-practice",
           "title": "Guided Practice",
-          "content": "Explain one result using evidence and science vocabulary.",
+          "content": "In this practice session, try to explain one of your results using evidence. Use some science vocabulary to help describe what you found. This will make your explanation clearer and show how well you understand the science behind it!\nContext recap: In this practice session, try to explain one of your results using evidence. Use some science vocabulary to help describe what you found. This will make your explanation clearer and show how well you understand the science behind it!",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-12-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying hypothesis testing, then correct it with evidence.",
+          "content": "As we apply our hypothesis testing skills, let's watch out for a common mistake. Sometimes, we might forget to connect our evidence back to our hypothesis. If you see this happening, think about how you can use evidence to correct it and strengthen your conclusion!\nContext recap: As we apply our hypothesis testing skills, let's watch out for a common mistake. Sometimes, we might forget to connect our evidence back to our hypothesis. If you see this happening, think about how you can use evidence to correct it and strengthen your conclusion!",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-12-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review hypothesis testing, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about hypothesis testing. After that, think about one specific area where you can improve your skills. Setting a clear target will help you become more confident in your scientific thinking!\nContext recap: Let's quickly review what we learned about hypothesis testing. After that, think about one specific area where you can improve your skills. Setting a clear target will help you become more confident in your scientific thinking!\nWhy this matters: Quick Recap helps learners in General Science connect ideas from Plants, Animals & Their Habitats to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -1850,25 +1850,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-13-chunk-intro",
           "title": "Variable Control Intro",
-          "content": "Start with an observation and a testable question.",
+          "content": "To begin our exploration of variable control, we should start with an observation. From there, we can come up with a testable question. This will guide us in our investigation and help us find answers!\nContext recap: To begin our exploration of variable control, we should start with an observation. From there, we can come up with a testable question. This will guide us in our investigation and help us find answers!\nWhy this matters: Variable Control Intro helps learners in General Science connect ideas from Plants, Animals & Their Habitats to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-13-chunk-practice",
           "title": "Guided Practice",
-          "content": "Run a mini investigation and record outcomes in a table.",
+          "content": "Now it's time to run a mini investigation! As you conduct your experiment, make sure to record your outcomes in a table. This will help you organize your findings and make it easier to see what happened during your investigation!\nContext recap: Now it's time to run a mini investigation! As you conduct your experiment, make sure to record your outcomes in a table. This will help you organize your findings and make it easier to see what happened during your investigation!",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-13-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying variable control, then correct it with evidence.",
+          "content": "While we practice variable control, let's be aware of a common mistake. Sometimes, we might not control our variables properly. If you notice this, think about how you can use evidence to correct it and improve your experiment!\nContext recap: While we practice variable control, let's be aware of a common mistake. Sometimes, we might not control our variables properly. If you notice this, think about how you can use evidence to correct it and improve your experiment!",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-13-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review variable control, then set one clear improvement target.",
+          "content": "Let's review what we learned about variable control. After our recap, think about one specific area where you can improve your skills. Setting a clear target will help you become a better scientist!\nContext recap: Let's review what we learned about variable control. After our recap, think about one specific area where you can improve your skills. Setting a clear target will help you become a better scientist!\nWhy this matters: Quick Recap helps learners in General Science connect ideas from Plants, Animals & Their Habitats to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -1984,25 +1984,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-14-chunk-intro",
           "title": "Evidence Interpretation Intro",
-          "content": "Change one variable at a time to keep results clear.",
+          "content": "When we are doing experiments, it's important to change only one thing at a time. This way, we can see how that one change affects our results clearly. It helps us understand what is happening in our experiment better!\nContext recap: When we are doing experiments, it's important to change only one thing at a time. This way, we can see how that one change affects our results clearly. It helps us understand what is happening in our experiment better!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-14-chunk-practice",
           "title": "Guided Practice",
-          "content": "Identify independent, dependent, and control variables.",
+          "content": "In our practice today, we will learn to identify three important types of variables in our experiments. The independent variable is what we change, the dependent variable is what we measure, and the control variables are the things we keep the same. Understanding these will help us conduct better experiments!\nContext recap: In our practice today, we will learn to identify three important types of variables in our experiments. The independent variable is what we change, the dependent variable is what we measure, and the control variables are the things we keep the same. Understanding these will help us conduct better experiments!",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-14-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence interpretation, then correct it with evidence.",
+          "content": "As we work on interpreting evidence, be careful of a common mistake that many people make. It's important to recognize this error and learn how to correct it using the evidence we have gathered. This will help us become better at understanding our results!\nContext recap: As we work on interpreting evidence, be careful of a common mistake that many people make. It's important to recognize this error and learn how to correct it using the evidence we have gathered. This will help us become better at understanding our results!",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-14-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence interpretation, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about interpreting evidence. After our review, think about one specific way you can improve your understanding or skills in this area. Setting a clear goal will help you focus on what to work on next!\nContext recap: Let's take a moment to review what we learned about interpreting evidence. After our review, think about one specific way you can improve your understanding or skills in this area. Setting a clear goal will help you focus on what to work on next!",
           "kind": "recap"
         }
       ],
@@ -2224,25 +2224,25 @@ export const GenScienceK2U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-k2-u1-external-supp-seq-15-chunk-intro",
           "title": "Scientific Explanation Intro",
-          "content": "Use evidence from results to support the conclusion.",
+          "content": "When we draw conclusions from our experiments, we need to use the evidence we collected to support what we think. This means looking at our results carefully and explaining how they lead us to our conclusion. It’s like being a detective with science!\nContext recap: When we draw conclusions from our experiments, we need to use the evidence we collected to support what we think. This means looking at our results carefully and explaining how they lead us to our conclusion. It’s like being a detective with science!",
           "kind": "concept"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-15-chunk-practice",
           "title": "Guided Practice",
-          "content": "Explain one result using evidence and science vocabulary.",
+          "content": "In this practice session, you will explain one of your results using the evidence you gathered. Make sure to use some science vocabulary in your explanation. This will help you communicate your findings clearly and show how you understand the science behind it!\nContext recap: In this practice session, you will explain one of your results using the evidence you gathered. Make sure to use some science vocabulary in your explanation. This will help you communicate your findings clearly and show how you understand the science behind it!",
           "kind": "practice"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-15-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying scientific explanation, then correct it with evidence.",
+          "content": "While you are working on your scientific explanations, be on the lookout for a common mistake that can happen. It’s important to recognize this error and learn how to fix it using the evidence you have. This will help you improve your explanations and make them stronger!\nContext recap: While you are working on your scientific explanations, be on the lookout for a common mistake that can happen. It’s important to recognize this error and learn how to fix it using the evidence you have. This will help you improve your explanations and make them stronger!",
           "kind": "analysis"
         },
         {
           "id": "gen-science-k2-u1-external-supp-seq-15-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review scientific explanation, then set one clear improvement target.",
+          "content": "Let’s quickly review what we learned about scientific explanations. After our review, think about one specific area where you can improve your skills. Setting a clear target for improvement will help you become even better at explaining your scientific ideas!\nContext recap: Let’s quickly review what we learned about scientific explanations. After our review, think about one specific area where you can improve your skills. Setting a clear target for improvement will help you become even better at explaining your scientific ideas!",
           "kind": "recap"
         }
       ],

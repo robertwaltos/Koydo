@@ -28,6 +28,7 @@
  */
 
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -106,12 +107,27 @@ async function getUserIdFromRequest(req: Request): Promise<string | null> {
   try {
     // Check Authorization header for Supabase JWT
     const auth = req.headers.get("authorization");
-    if (!auth?.startsWith("Bearer ")) return null;
+    if (auth?.startsWith("Bearer ")) {
+      const token = auth.slice("Bearer ".length).trim();
+      if (token) {
+        const supabase = createSupabaseAdminClient();
+        const { data } = await supabase.auth.getUser(token);
+        if (data?.user?.id) {
+          return data.user.id;
+        }
+      }
+    }
 
-    const token = auth.slice(7);
-    const supabase = createSupabaseAdminClient();
-    const { data } = await supabase.auth.getUser(token);
-    return data?.user?.id ?? null;
+    // Fallback: same-origin cookie session (web app requests)
+    const supabase = await createSupabaseServerClient();
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.getUser();
+    if (error || !user) {
+      return null;
+    }
+    return user.id;
   } catch {
     return null;
   }

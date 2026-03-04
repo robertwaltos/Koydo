@@ -1,13 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
 import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
-import { ShieldCheck, Users, Globe, Cpu } from "lucide-react";
+import { ShieldCheck, Users, Globe, Cpu, type LucideIcon } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Ethical Engine Content --- */
 type Scenario = {
@@ -58,21 +62,38 @@ const SCENARIOS: Scenario[] = [
     }
 ];
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
 export default function EthicalEngine() {
     const { setMood, setMessage } = useMascot();
     const [scenarioIdx, setScenarioIdx] = useState(0);
     const [stats, setStats] = useState({ morale: 50, resources: 50, logic: 50 });
     const [history, setHistory] = useState<string[]>([]);
     const [showResult, setShowResult] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
+
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        completionEmittedRef.current = false;
+    }, []);
 
     const currentScenario = SCENARIOS[scenarioIdx];
 
     useEffect(() => {
         setMessage("Welcome to the Ethical Engine. Let's calculate the optimal path for humanity. 🤖💻");
         setMood("idle");
-    }, []);
+        resetRunTracking();
+    }, [resetRunTracking, setMessage, setMood]);
 
     const handleChoice = (choiceIdx: number) => {
+        interactionCountRef.current += 1;
         const choice = currentScenario.choices[choiceIdx];
         void hapticSelection();
 
@@ -89,6 +110,22 @@ export default function EthicalEngine() {
     };
 
     const nextScenario = () => {
+        const completingCycle = scenarioIdx === SCENARIOS.length - 1;
+        if (completingCycle && !completionEmittedRef.current) {
+            completionEmittedRef.current = true;
+            const harmonyScore = Math.max(0, Math.round((stats.morale + stats.resources + stats.logic) / 3));
+            emitLegacyGameComplete({
+                sessionId: sessionIdRef.current,
+                gameId: "ethical",
+                elapsedMs: getElapsedMs(runStartedAtRef.current),
+                interactions: Math.max(1, interactionCountRef.current),
+                score: harmonyScore * 12 + history.length * 120,
+                maxScore: 1800,
+                source: "component",
+                occurredAt: new Date().toISOString(),
+            });
+            resetRunTracking();
+        }
         setShowResult(false);
         setScenarioIdx((prev) => (prev + 1) % SCENARIOS.length);
         void hapticSuccess();
@@ -147,7 +184,7 @@ export default function EthicalEngine() {
                         >
                             <h3 className="text-2xl font-black text-amber-400 uppercase italic">Simulation Result</h3>
                             <div className="h-[2px] w-full bg-amber-500/20" />
-                            <p className="text-white text-lg font-medium italic">"{currentScenario.choices[0].feedback}"</p>
+                            <p className="text-white text-lg font-medium italic">&quot;{currentScenario.choices[0].feedback}&quot;</p>
                             <PhysicalButton onClick={nextScenario} className="bg-amber-500 text-black px-12 h-14 rounded-2xl">
                                 CONTINUE ANALYSIS 💾
                             </PhysicalButton>
@@ -163,18 +200,18 @@ export default function EthicalEngine() {
                         <motion.div
                             key={i}
                             animate={{ height: [4, 12, 4] }}
-                            transition={{ duration: Math.random() * 2 + 1, repeat: Infinity }}
+                            transition={{ duration: 1 + i * 0.2, repeat: Infinity }}
                             className="w-1 bg-amber-500"
                         />
                     ))}
                 </div>
-                <span className="text-[8px] font-black text-amber-500 uppercase tracking-widest">Pixel's Logic Engine: Running...</span>
+                <span className="text-[8px] font-black text-amber-500 uppercase tracking-widest">Pixel&apos;s Logic Engine: Running...</span>
             </div>
         </div>
     );
 }
 
-function StatCard({ icon: Icon, label, value, color }: { icon: any, label: string, value: number, color: string }) {
+function StatCard({ icon: Icon, label, value, color }: { icon: LucideIcon, label: string, value: number, color: string }) {
     return (
         <div className="bg-white/5 border border-white/5 p-4 rounded-2xl backdrop-blur-md">
             <div className="flex items-center gap-2 mb-2">

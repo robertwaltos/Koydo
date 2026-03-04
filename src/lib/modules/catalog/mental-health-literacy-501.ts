@@ -46,19 +46,19 @@ export const MentalHealthLiteracy501Module: LearningModule = {
           "id": "mental-health-literacy-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for Mental Health Literacy, including control points for risk signal interpretation and support pathway architecture."
+          "content": "In this lesson, we will explore the advanced boundaries of Mental Health Literacy. This includes understanding how to identify important control points that help us interpret risk signals effectively. Additionally, we will discuss the architecture of support pathways, which are essential for guiding individuals towards the help they need. By the end of this lesson, you will have a clearer understanding of how to navigate these complex systems.\nContext recap: In this lesson, we will explore the advanced boundaries of Mental Health Literacy. This includes understanding how to identify important control points that help us interpret risk signals effectively. Additionally, we will discuss the architecture of support pathways, which are essential for guiding individuals towards the help they need. By the end of this lesson, you will have a clearer understanding of how to navigate these complex systems."
         },
         {
           "id": "mental-health-literacy-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Structure",
-          "content": "Learners map causal pathways and uncertainty ranges before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways and understanding the ranges of uncertainty that may arise. This process is crucial before planning any interventions. By visualizing these pathways, you will be better equipped to anticipate potential outcomes and make informed decisions that can positively impact mental health support.\nContext recap: In this section, learners will engage in mapping out causal pathways and understanding the ranges of uncertainty that may arise. This process is crucial before planning any interventions. By visualizing these pathways, you will be better equipped to anticipate potential outcomes and make informed decisions that can positively impact mental health support."
         },
         {
           "id": "mental-health-literacy-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "Claims are tied to measurable indicators, uncertainty declarations, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of linking claims to measurable indicators. This means that any assertions made about mental health interventions should be supported by clear evidence. Additionally, we will discuss the significance of declaring uncertainties and establishing review checkpoints to ensure that the information we use is reliable and valid.\nContext recap: In this recap, we will emphasize the importance of linking claims to measurable indicators. This means that any assertions made about mental health interventions should be supported by clear evidence. Additionally, we will discuss the significance of declaring uncertainties and establishing review checkpoints to ensure that the information we use is reliable and valid."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const MentalHealthLiteracy501Module: LearningModule = {
           "id": "mental-health-literacy-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them against adversarial conditions."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that address mental health challenges. After creating these workflows, you will stress-test them against various adversarial conditions. This exercise will help you understand how to make your plans resilient and effective in real-world scenarios.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that address mental health challenges. After creating these workflows, you will stress-test them against various adversarial conditions. This exercise will help you understand how to make your plans resilient and effective in real-world scenarios."
         },
         {
           "id": "mental-health-literacy-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Design",
-          "content": "Gate criteria, rollback conditions, and escalation thresholds are integrated into the workflow."
+          "content": "In this recap, we will review the essential components of your workflow design. This includes integrating criteria for control gates, rollback conditions, and escalation thresholds. Understanding these elements will help ensure that your mental health interventions are both effective and adaptable to changing circumstances.\nContext recap: In this recap, we will review the essential components of your workflow design. This includes integrating criteria for control gates, rollback conditions, and escalation thresholds. Understanding these elements will help ensure that your mental health interventions are both effective and adaptable to changing circumstances."
         }
       ],
       "interactiveActivities": [
@@ -367,19 +367,19 @@ export const MentalHealthLiteracy501Module: LearningModule = {
           "id": "mental-health-literacy-501-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: a multi-institution support network designing early intervention and crisis escalation protocols. Learners identify constraints, risks, and governance boundaries."
+          "content": "In this case analysis, we will focus on a multi-institution support network that is working to design early intervention strategies and protocols for crisis escalation. As learners, you will identify various constraints, risks, and governance boundaries that may affect the implementation of these protocols. This analysis will provide valuable insights into the complexities of mental health support systems.\nContext recap: In this case analysis, we will focus on a multi-institution support network that is working to design early intervention strategies and protocols for crisis escalation. As learners, you will identify various constraints, risks, and governance boundaries that may affect the implementation of these protocols. This analysis will provide valuable insights into the complexities of mental health support systems."
         },
         {
           "id": "mental-health-literacy-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are evaluated across performance, reliability, equity, and feasibility dimensions."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. Here, options will be evaluated based on several important dimensions, including performance, reliability, equity, and feasibility. This evaluation process is crucial for making informed decisions that balance various factors in mental health interventions.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Here, options will be evaluated based on several important dimensions, including performance, reliability, equity, and feasibility. This evaluation process is crucial for making informed decisions that balance various factors in mental health interventions."
         },
         {
           "id": "mental-health-literacy-501-l04-c3",
           "kind": "recap",
           "title": "Failure and Recovery Design",
-          "content": "Failure signatures are mapped to mitigation actions and measurable recovery triggers."
+          "content": "In this recap, we will discuss how to map failure signatures to appropriate mitigation actions. Additionally, we will identify measurable recovery triggers that can help us understand when an intervention is successful. This knowledge is vital for improving mental health strategies and ensuring that we can effectively respond to challenges.\nContext recap: In this recap, we will discuss how to map failure signatures to appropriate mitigation actions. Additionally, we will identify measurable recovery triggers that can help us understand when an intervention is successful. This knowledge is vital for improving mental health strategies and ensuring that we can effectively respond to challenges."
         }
       ],
       "flashcards": [
@@ -418,13 +418,13 @@ export const MentalHealthLiteracy501Module: LearningModule = {
           "id": "mental-health-literacy-501-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure scenarios, constraints, metrics, and escalation logic for intervention tests."
+          "content": "In this interactive practice, learners will set up various scenarios for intervention tests. This includes configuring constraints, metrics, and escalation logic. By doing this, you will gain hands-on experience in creating realistic testing environments that can help evaluate the effectiveness of mental health interventions.\nContext recap: In this interactive practice, learners will set up various scenarios for intervention tests. This includes configuring constraints, metrics, and escalation logic. By doing this, you will gain hands-on experience in creating realistic testing environments that can help evaluate the effectiveness of mental health interventions."
         },
         {
           "id": "mental-health-literacy-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Simulation outcomes are reviewed for gains, side effects, and governance compliance."
+          "content": "In this recap, we will review the outcomes of the simulations you conducted. This includes analyzing the gains achieved, any side effects observed, and ensuring that all actions taken were in compliance with governance standards. This reflection is essential for continuous improvement in mental health practices.\nContext recap: In this recap, we will review the outcomes of the simulations you conducted. This includes analyzing the gains achieved, any side effects observed, and ensuring that all actions taken were in compliance with governance standards. This reflection is essential for continuous improvement in mental health practices."
         }
       ],
       "interactiveActivities": [
@@ -675,19 +675,19 @@ export const MentalHealthLiteracy501Module: LearningModule = {
           "id": "mental-health-literacy-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefit and burden distribution across stakeholders and time horizons."
+          "content": "In this section, learners will explore how to map the distribution of benefits and burdens among different stakeholders over time. Understanding this distribution is key to ensuring that mental health initiatives are equitable and effective for all involved. By analyzing these impacts, you will be better prepared to advocate for fair mental health policies.\nContext recap: In this section, learners will explore how to map the distribution of benefits and burdens among different stakeholders over time. Understanding this distribution is key to ensuring that mental health initiatives are equitable and effective for all involved. By analyzing these impacts, you will be better prepared to advocate for fair mental health policies."
         },
         {
           "id": "mental-health-literacy-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated into governance design."
+          "content": "In this section, we will delve into the architecture of accountability within governance design. This includes understanding how to trace decisions, the rights to review those decisions, and the obligations for remediation. By grasping these concepts, you will be equipped to contribute to more transparent and responsible mental health governance.\nContext recap: In this section, we will delve into the architecture of accountability within governance design. This includes understanding how to trace decisions, the rights to review those decisions, and the obligations for remediation. By grasping these concepts, you will be equipped to contribute to more transparent and responsible mental health governance."
         },
         {
           "id": "mental-health-literacy-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links technical outcomes, policy compliance, ethics, and resilience."
+          "content": "To ensure effective leadership in mental health governance, it is essential to have a comprehensive checklist. This checklist should connect important outcomes related to technical aspects, adherence to policies, ethical considerations, and the ability to foster resilience within communities. By using this checklist, leaders can better navigate the complexities of mental health initiatives and promote positive public impact.\nContext recap: To ensure effective leadership in mental health governance, it is essential to have a comprehensive checklist. This checklist should connect important outcomes related to technical aspects, adherence to policies, ethical considerations, and the ability to foster resilience within communities. By using this checklist, leaders can better navigate the complexities of mental health initiatives and promote positive public impact."
         }
       ],
       "flashcards": [
@@ -726,13 +726,13 @@ export const MentalHealthLiteracy501Module: LearningModule = {
           "id": "mental-health-literacy-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for remediation. This exercise encourages critical thinking and helps learners articulate their ideas clearly, preparing them for real-world applications in mental health literacy.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for remediation. This exercise encourages critical thinking and helps learners articulate their ideas clearly, preparing them for real-world applications in mental health literacy."
         },
         {
           "id": "mental-health-literacy-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critique scenarios."
+          "content": "During the Expert Panel Rehearsal, learners will practice responding to various scenarios that involve technical questions, governance issues, and critiques from stakeholders. This rehearsal is designed to build confidence and improve communication skills, allowing learners to effectively engage with complex topics and defend their ideas in a supportive environment.\nContext recap: During the Expert Panel Rehearsal, learners will practice responding to various scenarios that involve technical questions, governance issues, and critiques from stakeholders. This rehearsal is designed to build confidence and improve communication skills, allowing learners to effectively engage with complex topics and defend their ideas in a supportive environment."
         }
       ],
       "interactiveActivities": [

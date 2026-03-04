@@ -1,0 +1,47 @@
+# ──────────────────────────────────────────────────────────────────────────
+# Koydo Local TTS stack
+#
+# Usage:
+#   1. Download models:         docker compose run --rm tts python3 download_models.py
+#   2. Start the service:       docker compose up -d
+#   3. Test:                    curl -X POST http://localhost:8100/generate \
+#                                 -H "Content-Type: application/json" \
+#                                 -d '{"text":"Hello! Welcome to Koydo.","voice":"af_nova"}'
+# ──────────────────────────────────────────────────────────────────────────
+
+services:
+  tts:
+    build: .
+    container_name: koydo-local-tts
+    restart: unless-stopped
+    ports:
+      - "${TTS_PORT:-8100}:8100"
+    environment:
+      - PORT=8100
+      - MODELS_DIR=/models
+      - CACHE_DIR=/cache
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      # Persist models and cache between restarts
+      - tts-models:/models
+      - tts-cache:/cache
+      # Mount local voice reference files (optional)
+      - ./voice-references:/models/voice-references:ro
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8100/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  tts-models:
+    name: koydo-tts-models
+  tts-cache:
+    name: koydo-tts-cache

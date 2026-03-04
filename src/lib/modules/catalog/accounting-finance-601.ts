@@ -47,19 +47,19 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Accounting Finance, with focus on accounting and finance systems diagnostics and accounting and finance operations and execution design."
+          "content": "In this lesson, we will dive into the important concept of advanced scope boundaries within the realm of Accounting and Finance. We will learn how to effectively diagnose accounting and finance systems, which is crucial for identifying any issues that may arise. Furthermore, we will discuss the design of operations and execution processes in accounting and finance. By understanding these boundaries, we can develop better systems that are capable of adapting to various challenges, ultimately leading to improved efficiency and effectiveness in our financial practices. This knowledge is essential for anyone looking to excel in the field of accounting and finance."
         },
         {
           "id": "accounting-finance-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial before planning any interventions, as it allows learners to anticipate potential outcomes and make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is crucial before planning any interventions, as it allows learners to anticipate potential outcomes and make informed decisions."
         },
         {
           "id": "accounting-finance-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we need to establish confidence bounds, which help us understand the reliability of our data. Additionally, we will set up review checkpoints to ensure that our findings are accurate and can be verified. This structured approach is essential for maintaining integrity in our work.\nContext recap: In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we need to establish confidence bounds, which help us understand the reliability of our data. Additionally, we will set up review checkpoints to ensure that our findings are accurate and can be verified. This structured approach is essential for maintaining integrity in our work."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks within accounting and finance. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to prepare for unexpected challenges and ensuring that systems can withstand pressure.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks within accounting and finance. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is vital for understanding how to prepare for unexpected challenges and ensuring that systems can withstand pressure."
         },
         {
           "id": "accounting-finance-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints that allow for monitoring progress, defining rollback criteria to revert to previous states if necessary, and implementing threshold-based escalation procedures. These elements work together to create a robust system that can adapt to changes while maintaining control.\nContext recap: In our recap, we will discuss the importance of integrating control gate architecture into workflows. This includes establishing checkpoints that allow for monitoring progress, defining rollback criteria to revert to previous states if necessary, and implementing threshold-based escalation procedures. These elements work together to create a robust system that can adapt to changes while maintaining control."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in accounting and finance systems diagnostics and accounting and finance impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints faced in accounting and finance systems. We will analyze how diagnostics are conducted and explore the impacts and trade-offs involved in decision-making. By understanding these dynamics, learners will be better equipped to navigate complex situations in the field.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints faced in accounting and finance systems. We will analyze how diagnostics are conducted and explore the impacts and trade-offs involved in decision-making. By understanding these dynamics, learners will be better equipped to navigate complex situations in the field."
         },
         {
           "id": "accounting-finance-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare various options available to them across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced and informed decisions that consider multiple perspectives.\nContext recap: In this practice session, learners will compare various options available to them across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced and informed decisions that consider multiple perspectives."
         },
         {
           "id": "accounting-finance-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decision-making is transparent and that all potential risks are accounted for, fostering a culture of accountability.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decision-making is transparent and that all potential risks are accounted for, fostering a culture of accountability."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in real-time. They will learn how to balance performance with governance constraints, ensuring that their actions align with ethical standards and organizational policies. This experience is crucial for developing responsible decision-making skills.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that help manage different situations in real-time. They will learn how to balance performance with governance constraints, ensuring that their actions align with ethical standards and organizational policies. This experience is crucial for developing responsible decision-making skills."
         },
         {
           "id": "accounting-finance-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates without losing traceability or accountability. This means that even as situations evolve, it is essential to maintain a clear record of decisions and actions taken.\nContext recap: In our recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates without losing traceability or accountability. This means that even as situations evolve, it is essential to maintain a clear record of decisions and actions taken."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will explore how to map the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from decisions made in accounting and finance. Understanding these dynamics is crucial for ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from decisions made in accounting and finance. Understanding these dynamics is crucial for ensuring that all voices are considered in the decision-making process."
         },
         {
           "id": "accounting-finance-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will focus on the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation if issues arise. By integrating these elements, we can create a system that promotes transparency and responsibility.\nContext recap: In this section, we will focus on the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation if issues arise. By integrating these elements, we can create a system that promotes transparency and responsibility."
         },
         {
           "id": "accounting-finance-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and emphasizes the importance of resilience in leadership. This checklist serves as a guide to remind us of our responsibilities as leaders in the field of accounting and finance.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and emphasizes the importance of resilience in leadership. This checklist serves as a guide to remind us of our responsibilities as leaders in the field of accounting and finance."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const AccountingFinance601Module: LearningModule = {
           "id": "accounting-finance-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and proposed pathways for remediation. This exercise helps students practice critical thinking and effective communication skills, which are essential in the field of accounting and finance.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and proposed pathways for remediation. This exercise helps students practice critical thinking and effective communication skills, which are essential in the field of accounting and finance."
         },
         {
           "id": "accounting-finance-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may come from experts in the field. This includes addressing technical questions, governance issues, and concerns from stakeholders. Rehearsing these responses helps build confidence and prepares students for real-world scenarios where they must defend their ideas and decisions.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in the field. This includes addressing technical questions, governance issues, and concerns from stakeholders. Rehearsing these responses helps build confidence and prepares students for real-world scenarios where they must defend their ideas and decisions."
         }
       ],
       "interactiveActivities": [

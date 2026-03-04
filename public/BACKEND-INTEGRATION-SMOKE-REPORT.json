@@ -1,0 +1,289 @@
+{
+  "generatedAt": "2026-03-04T06:28:47.949Z",
+  "totalDurationMs": 450711,
+  "totals": {
+    "pass": 13,
+    "warn": 1,
+    "fail": 1,
+    "total": 15
+  },
+  "checks": [
+    {
+      "id": "ops_preflight",
+      "name": "Ops preflight (env/db/webhook/auth-billing)",
+      "status": "warn",
+      "detail": "pass=3 warn=1 fail=0 skip=0",
+      "durationMs": 32882,
+      "command": "node scripts/ops-preflight.mjs --json --start-server-if-needed",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "{\n  \"generatedAt\": \"2026-03-04T06:21:49.710Z\",\n  \"baseUrl\": \"http://localhost:3000\",\n  \"resolvedBaseUrl\": \"http://localhost:3000\",\n  \"strictWarn\": false,\n  \"requireLiveBase\": false,\n  \"skipAuthBillingSmoke\": false,\n  \"startServerIfNeeded\": true,\n  \"envRuntime\": null,\n  \"envSourceFile\": null,\n  \"baseProbe\": {\n    \"reachable\": false,\n    \"detail\": \"fetch failed\",\n    \"status\": null\n  },\n  \"serverStartup\": {\n    \"attempted\": true,\n    \"started\": false,\n    \"detail\": \"Local server did not become reachable: fetch failed\\nRecent server logs:\\n> koydo-web@0.1.0 start\\n> next start -p 3000\\n▲ Next.js 16.1.6\\n- Local:         http://localhost:3000\\n- Network:       http://100.81.11.56:3000\\n\\n✓ Starting...\\nError: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id\\n    at ignore-listed frames\",\n    \"port\": 3000,\n    \"waitMs\": 25000\n  },\n  \"totals\": {\n    \"pass\": 3,\n    \"warn\": 1,\n    \"fail\": 0,\n    \"skip\": 0,\n    \"total\": 4\n  },\n  \"checks\": [\n    {\n      \"name\": \"Environment\",\n      \"level\": \"pass\",\n      \"detail\": \"pass=20 warn=0 fail=0 runtime=development\",\n      \"passCount\": 20,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"DB readiness\",\n      \"level\": \"pass\",\n      \"detail\": \"present=77 missing=0 error=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Webhook health\",\n      \"level\": \"pass\",\n      \"detail\": \"healthy=yes tracking=on failed=0 stale=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Auth/Billing smoke\",\n      \"level\": \"warn\",\n      \"detail\": \"Skipped smoke check because base URL is unreachable (fetch failed). Use --require-live-base to fail this condition.\",\n      \"passCount\": 0,\n      \"warnCount\": 1,\n      \"failCount\": 0,\n      \"skipCount\": 0,\n      \"failures\": [],\n      \"warnings\": [],\n      ",
+        "stderr": ""
+      },
+      "payload": {
+        "generatedAt": "2026-03-04T06:21:49.710Z",
+        "baseUrl": "http://localhost:3000",
+        "resolvedBaseUrl": "http://localhost:3000",
+        "strictWarn": false,
+        "requireLiveBase": false,
+        "skipAuthBillingSmoke": false,
+        "startServerIfNeeded": true,
+        "envRuntime": null,
+        "envSourceFile": null,
+        "baseProbe": {
+          "reachable": false,
+          "detail": "fetch failed",
+          "status": null
+        },
+        "serverStartup": {
+          "attempted": true,
+          "started": false,
+          "detail": "Local server did not become reachable: fetch failed\nRecent server logs:\n> koydo-web@0.1.0 start\n> next start -p 3000\n▲ Next.js 16.1.6\n- Local:         http://localhost:3000\n- Network:       http://100.81.11.56:3000\n\n✓ Starting...\nError: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id\n    at ignore-listed frames",
+          "port": 3000,
+          "waitMs": 25000
+        },
+        "totals": {
+          "pass": 3,
+          "warn": 1,
+          "fail": 0,
+          "skip": 0,
+          "total": 4
+        },
+        "checks": [
+          {
+            "name": "Environment",
+            "level": "pass",
+            "detail": "pass=20 warn=0 fail=0 runtime=development",
+            "passCount": 20,
+            "warnCount": 0,
+            "failCount": 0
+          },
+          {
+            "name": "DB readiness",
+            "level": "pass",
+            "detail": "present=77 missing=0 error=0",
+            "passCount": 1,
+            "warnCount": 0,
+            "failCount": 0
+          },
+          {
+            "name": "Webhook health",
+            "level": "pass",
+            "detail": "healthy=yes tracking=on failed=0 stale=0",
+            "passCount": 1,
+            "warnCount": 0,
+            "failCount": 0
+          },
+          {
+            "name": "Auth/Billing smoke",
+            "level": "warn",
+            "detail": "Skipped smoke check because base URL is unreachable (fetch failed). Use --require-live-base to fail this condition.",
+            "passCount": 0,
+            "warnCount": 1,
+            "failCount": 0,
+            "skipCount": 0,
+            "failures": [],
+            "warnings": [],
+            "skips": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "route_smoke",
+      "name": "Route smoke (launch-critical paths + /api/health)",
+      "status": "fail",
+      "detail": "No prebuilt .next output was available; reran route smoke with build but failed: ⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running?",
+      "durationMs": 405019,
+      "command": "node scripts/smoke-test.mjs",
+      "exitCode": 1,
+      "outputPreview": {
+        "stdout": "1/3 Building app (next build)...\n\n> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 820 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 821 catalog .ts files\n  Extracted 821 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\modules\\generated\\catalog-data.json\n  Modules: 821\n  Size: 91.1 MB\n\n> koydo-web@0.1.0 build\n> node --max-old-space-size=8192 ./node_modules/next/dist/bin/next build --webpack\n\n  Suggestion: If you intended to restart next build, terminate the other process, and then try again.\nBuild attempt 1/4 failed (Command failed: npm run build (exit 1)). Clearing .next and retrying...\n\n> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 820 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 821 catalog .ts files\n  Extracted 821 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\modules\\generated\\catalog-data.json\n  Modules: 821\n  Size: 91.1 MB\n\n> koydo-web@0.1.0 build\n> node --max-old-space-size=8192 ./node_modules/next/dist/bin/next build --webpack\n\n▲ Next.js 16.1.6 (webpack)\n- Environments: .env.local, .env\n- Experiments (use with caution):\n  · optimizePackageImports\n\n  Creating an optimized production build ...\nBuild attempt 2/4 failed (Command failed: npm run build (exit 4294967295)). Clearing .next and retrying...\n\n> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 820 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 821 catalog .ts files\n  Extracted 821 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\m",
+        "stderr": "⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running?\nNext.js build worker exited with code: 4294967295 and signal: null\n⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running?\n⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running?"
+      },
+      "payload": null
+    },
+    {
+      "id": "placement_scoring_contract",
+      "name": "Placement diagnostic scoring contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 686,
+      "command": "node scripts/test-placement-diagnostic-scoring.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: stage-id normalization and guards\nPASS: confidence monotonicity and bounds\nPASS: stage recommendation behavior and edge capping\nPASS: placement diagnostic scoring contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "placement_flow_contract",
+      "name": "Placement diagnostic flow contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 788,
+      "command": "node scripts/test-placement-diagnostic-flow-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: submit -> summary consistency\nPASS: override -> summary override reflection\nPASS: history filtering (profileId/eventType/limit)\nPASS: placement diagnostic flow contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "audiobook_checkpoint_contract",
+      "name": "Audiobook checkpoint contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 729,
+      "command": "node scripts/test-audiobook-checkpoint-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: checkpoint interval gating is deterministic.\nPASS: quiz generation returns valid graded questions.\nPASS: quiz grading maps correct and incorrect answers consistently.\nPASS: lesson/skill/storage key contracts are stable.\nPASS: audiobook checkpoint contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "device_gateway_confidence_contract",
+      "name": "Device gateway confidence contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 713,
+      "command": "node scripts/test-device-gateway-confidence-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: streaming target counting is deterministic.\nPASS: Vision Pro profile confidence stays high and deterministic.\nPASS: Quest profile meets high-confidence threshold.\nPASS: baseline laptop profile remains medium confidence.\nPASS: low-power mobile profile confidence degrades below baseline.\nPASS: tier-0 profile remains low confidence.\nPASS: DeviceGatewayProvider wires confidence values into telemetry/state.\nPASS: device gateway confidence contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "review_queue_contract",
+      "name": "Review queue contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 753,
+      "command": "node scripts/test-review-queue-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: due queue is generated and prerequisite ordering is enforced.\nPASS: overdue lessons re-enter queue with decayed confidence.\nPASS: blocked lessons can be excluded while preserving due count visibility.\nPASS: review queue contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "remediation_tasking_contract",
+      "name": "Remediation tasking contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 785,
+      "command": "node scripts/test-remediation-tasking-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: unresolved wrong-answer rows are converted into remediation tasks.\nPASS: remediation tasks retain source lesson/chunk linkage.\nPASS: completed remediation items remain traceable when requested.\nPASS: mastery credit map includes unresolved skills only.\nPASS: remediation tasking contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "offline_progress_sync_contract",
+      "name": "Offline progress sync contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 768,
+      "command": "node scripts/test-offline-progress-sync-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: offline progress sync exports contract\nPASS: normalization clamps score + totalQuestions + lessonId\nPASS: deterministic conflict resolution for offline progress queue\nPASS: deterministic resolved ordering\nPASS: offline progress sync contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "social_cohorts_contract",
+      "name": "Social cohorts and challenges contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 774,
+      "command": "node scripts/test-social-cohorts-challenges-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: social cohort challenge contract exports\nPASS: social moderation blocks links/contact info\nPASS: challenge lifecycle transition guard\nPASS: leaderboard accepts validated events only\nPASS: leaderboard rankings update deterministically from validated events\nPASS: accountability nudge text contract\nPASS: social cohorts + challenges contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "creator_pipeline_contract",
+      "name": "Creator pipeline contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 691,
+      "command": "node scripts/test-creator-pipeline-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: creator pipeline contract exports\nPASS: creator moderation guard blocks unsafe links\nPASS: rubric score derivation from structured review\nPASS: draft -> review -> publish transition contract\nPASS: provenance + rights metadata normalization contract\nPASS: publish gate requires rubric threshold + verified rights\nPASS: creator pipeline contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "storyforge_cinema_contract",
+      "name": "StoryForge cinema contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 816,
+      "command": "node scripts/test-storyforge-cinema-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: storyforge cinema contract exports\nPASS: phase 1 StoryForge title set contains five canonical titles\nPASS: all phase 1 titles have verified public-domain rights records\nPASS: end-to-end film packages include scenes, checkpoints, and mastery feed contracts\nPASS: acceptance snapshot satisfies E-16 criteria contract\nPASS: mastery skill and checkpoint lesson IDs are deterministic\nPASS: storyforge cinema contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "teacher_access_contract",
+      "name": "Teacher access contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 909,
+      "command": "node scripts/test-teacher-access-contract.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: teacher access purpose contract\nPASS: teacher role purpose contract\nPASS: invalid teacher role purpose rejected\nPASS: teacher role db error handling\nPASS: non-teacher role blocked\nPASS: teacher role success path\nPASS: invalid purpose rejected\nPASS: missing classroom tables mapped to 503\nPASS: classroom not found handling\nPASS: unauthorized teacher blocked\nPASS: class-only teacher access\nPASS: non-enrolled learner blocked\nPASS: consent gate enforcement\nPASS: optional consent override contract\nPASS: consented learner access\nPASS: teacher access contract.",
+        "stderr": "[compliance/teacher-access] teacher role lookup failed (testing_classes_get) { message: 'db unavailable' }"
+      },
+      "payload": null
+    },
+    {
+      "id": "billing_webhook_lock_contract",
+      "name": "Billing webhook processing lock contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 757,
+      "command": "node scripts/test-billing-webhook-processing-lock.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: default lock duration export\nPASS: default lock activity window\nPASS: invalid and future timestamps\nPASS: custom lock duration override\nPASS: billing webhook processing lock contract.",
+        "stderr": ""
+      },
+      "payload": null
+    },
+    {
+      "id": "revenuecat_resolution_contract",
+      "name": "RevenueCat offerings resolution contract",
+      "status": "pass",
+      "detail": "Command passed.",
+      "durationMs": 736,
+      "command": "node scripts/test-revenuecat-offerings-resolution.mjs",
+      "exitCode": 0,
+      "outputPreview": {
+        "stdout": "PASS: exact package identifier mapping\nPASS: exact product identifier mapping\nPASS: heuristic alias mapping\nPASS: fail-safe resolution returns null when a target package is missing.\nPASS: language resolver wrapper parity\nPASS: RevenueCat offering resolver contract (7 matrix SKUs validated).",
+        "stderr": ""
+      },
+      "payload": null
+    }
+  ]
+}

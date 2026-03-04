@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Search, Map, ShieldCheck, Info, ChevronRight, Zap, Target, History, Hammer, Brush, Box, Globe } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Archeology Types --- */
 type Artifact = {
@@ -31,6 +32,9 @@ export default function HistoHunt() {
     const [grid, setGrid] = useState<number[]>(Array(25).fill(0)); // 0: untouched, 1: brushed, 2: dug
     const [foundArtifacts, setFoundArtifacts] = useState<Artifact[]>([]);
     const [currentDiscovery, setCurrentDiscovery] = useState<Artifact | null>(null);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const dig = (index: number) => {
         if (grid[index] === 2) return;
@@ -57,6 +61,23 @@ export default function HistoHunt() {
             setCurrentDiscovery(null);
             setGameState("DIGGING");
             hapticSuccess();
+            if (!completionSentRef.current) {
+                if (runStartedAtRef.current === 0) {
+                    runStartedAtRef.current = Date.now();
+                }
+                completionSentRef.current = true;
+                emitLegacyGameComplete({
+                    sessionId: sessionIdRef.current,
+                    gameId: "histo",
+                    difficulty: "medium",
+                    elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+                    interactions: Math.max(1, foundArtifacts.length + 1),
+                    score: foundArtifacts.length + 1,
+                    maxScore: ARTIFACTS.length,
+                    source: "component",
+                    occurredAt: new Date().toISOString(),
+                });
+            }
         }
     };
 

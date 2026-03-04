@@ -47,19 +47,19 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Us Civics, with focus on social studies systems diagnostics and social studies operations and execution design."
+          "content": "In this lesson, we will dive into the advanced boundaries of what Us Civics includes. We will learn about the different systems that make up social studies and how to identify and diagnose any problems that may arise within these systems. Additionally, we will discuss how to create effective plans for operations and execution. This foundational knowledge is essential for understanding the complexities of civic engagement and social studies, and it will empower us to participate more effectively in our communities and society as a whole.\nContext recap: In this lesson, we will dive into the advanced boundaries of what Us Civics includes. We will learn about the different systems that make up social studies and how to identify and diagnose any problems that may arise within these systems. Additionally, we will discuss how to create effective plans for operations and execution. This foundational knowledge is essential for understanding the complexities of civic engagement and social studies, and it will empower us to participate more effectively in our communities and society as a whole.\nContext recap: In this lesson, we will dive into the advanced boundaries of what Us Civics includes. We will learn about the different systems that make up social studies and how to identify and diagnose any problems that may arise within these systems. Additionally, we will discuss how to create effective plans for operations and execution. This foundational knowledge is essential for understanding the complexities of civic engagement and social studies, and it will empower us to participate more effectively in our communities and society as a whole.\nWhy this matters: Scope and Boundary Design helps learners in Social Studies connect ideas from Us Civics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "us-civics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how different systems depend on one another. This preparation is crucial for planning effective interventions that can lead to positive changes in our communities.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how different systems depend on one another. This preparation is crucial for planning effective interventions that can lead to positive changes in our communities."
         },
         {
           "id": "us-civics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "It is important to ensure that all claims we make are supported by measurable indicators. This means we will look for evidence that can be quantified, establish confidence bounds to understand the reliability of our claims, and set up review checkpoints to assess our progress. This process helps us maintain integrity in our civic discussions and decisions.\nContext recap: It is important to ensure that all claims we make are supported by measurable indicators. This means we will look for evidence that can be quantified, establish confidence bounds to understand the reliability of our claims, and set up review checkpoints to assess our progress. This process helps us maintain integrity in our civic discussions and decisions."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design workflows that specialists might use in various scenarios. They will also conduct stress tests on these workflows, simulating adverse conditions to see how well their designs hold up. This hands-on practice will help them understand the importance of resilience in civic methods.\nContext recap: In this interactive lab, learners will have the opportunity to design workflows that specialists might use in various scenarios. They will also conduct stress tests on these workflows, simulating adverse conditions to see how well their designs hold up. This hands-on practice will help them understand the importance of resilience in civic methods."
         },
         {
           "id": "us-civics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints will help us monitor progress, establish criteria for rolling back decisions if necessary, and set up thresholds that trigger escalation when certain limits are reached. This architecture is vital for ensuring that our civic processes are accountable and effective.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints. These checkpoints will help us monitor progress, establish criteria for rolling back decisions if necessary, and set up thresholds that trigger escalation when certain limits are reached. This architecture is vital for ensuring that our civic processes are accountable and effective."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in social studies systems diagnostics and social studies impact and tradeoff analysis."
+          "content": "In this lesson, we will frame cases that highlight competing constraints within social studies systems. This includes analyzing the impacts of different decisions and understanding the trade-offs involved. By examining these scenarios, learners will gain insights into the complexities of social studies diagnostics and the importance of thoughtful analysis.\nContext recap: In this lesson, we will frame cases that highlight competing constraints within social studies systems. This includes analyzing the impacts of different decisions and understanding the trade-offs involved. By examining these scenarios, learners will gain insights into the complexities of social studies diagnostics and the importance of thoughtful analysis."
         },
         {
           "id": "us-civics-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how different choices can affect different groups and the overall community.\nContext recap: In this practice session, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how different choices can affect different groups and the overall community.\nContext recap: In this practice session, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how different choices can affect different groups and the overall community. Context recap: In this practice session, learners will compare various options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help them understand how different choices can affect different groups and the overall community."
         },
         {
           "id": "us-civics-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will emphasize that each recommendation made in our analysis should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges.\nContext recap: In this recap, we will emphasize that each recommendation made in our analysis should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges.\nContext recap: In this recap, we will emphasize that each recommendation made in our analysis should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges. Context recap: In this recap, we will emphasize that each recommendation made in our analysis should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that our decisions are well-informed and that we are prepared for any potential challenges."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand how to balance different priorities in real-world situations, preparing them for future civic responsibilities.\nContext recap: In this interactive clinic, learners will operate scenario controls while considering both performance and governance constraints. This experience will help them understand how to balance different priorities in real-world situations, preparing them for future civic responsibilities.\nWhy this matters: Live Scenario Controls helps learners in Social Studies connect ideas from Us Civics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "us-civics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that we can still track our decisions and hold ourselves accountable for the outcomes.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This means that as we adapt our strategies, we must ensure that we can still track our decisions and hold ourselves accountable for the outcomes."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in civic discussions and decision-making processes.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in civic discussions and decision-making processes.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in civic discussions and decision-making processes. Context recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding these dynamics is crucial for ensuring that all voices are heard and considered in civic discussions and decision-making processes."
         },
         {
           "id": "us-civics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust and integrity in governance.\nContext recap: In this section, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust and integrity in governance.\nContext recap: In this section, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust and integrity in governance. Context recap: In this section, we will explore the architecture of accountability in decision-making.\nWhy this matters: Accountability Architecture helps learners in Social Studies connect ideas from Us Civics Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "us-civics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures that policies are being followed, and highlights the importance of resilience in leadership. This checklist will guide us in evaluating how well we are doing in these areas.\nContext recap: At the end of our lesson, we will use a helpful checklist that connects important outcomes with ethical considerations, ensures that policies are being followed, and highlights the importance of resilience in leadership. This checklist will guide us in evaluating how well we are doing in these areas."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const UsCivics601Module: LearningModule = {
           "id": "us-civics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will work on creating a detailed brief. This brief will include your main claims, the evidence that supports those claims, the uncertainties that may arise, and the pathways for remediation. This exercise will help you practice critical thinking and effective communication skills.\nContext recap: In this interactive activity, you will work on creating a detailed brief. This brief will include your main claims, the evidence that supports those claims, the uncertainties that may arise, and the pathways for remediation. This exercise will help you practice critical thinking and effective communication skills."
         },
         {
           "id": "us-civics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will have the opportunity to practice your responses to various critiques. These critiques may come from experts in technical fields, governance issues, or stakeholders who have an interest in your work. This rehearsal will prepare you to confidently address questions and feedback.\nContext recap: During this session, you will have the opportunity to practice your responses to various critiques. These critiques may come from experts in technical fields, governance issues, or stakeholders who have an interest in your work. This rehearsal will prepare you to confidently address questions and feedback."
         }
       ],
       "interactiveActivities": [

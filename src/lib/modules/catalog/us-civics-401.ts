@@ -47,19 +47,19 @@ export const UsCivics401Module: LearningModule = {
           "id": "us-civics-401-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "U.S. Civics at level 401 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In U.S. Civics at the 401 level, using clear and precise language is very important. This involves defining the boundaries of our discussions, which helps us understand what topics we are focusing on. We also need to identify the main focus of our analysis, which is the specific aspect we are examining. Additionally, it is crucial that everyone uses the same terms when discussing these topics. By ensuring that we are all on the same page with our vocabulary, we can make better decisions and compare our findings across different teams more effectively. Understanding the vocabulary and scope not only helps us communicate more clearly but also allows us to work together more efficiently, leading to better outcomes in our civic discussions and analyses.\nContext recap: In U.S. Civics at the 401 level, using clear and precise language is very important. This involves defining the boundaries of our discussions, which helps us understand what topics we are focusing on. We also need to identify the main focus of our analysis, which is the specific aspect we are examining.\nWhy this matters: Operating Vocabulary and Scope helps learners in Social Studies connect ideas from U.S. Civics Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "us-civics-401-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in U.S. Civics depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "To truly excel in U.S. Civics, it is essential to grasp the reasons behind various events and decisions, rather than merely focusing on their outcomes. This lesson will guide you through the exploration of the assumptions we often make, the relationships between different factors, and the limitations we encounter in civic discussions. By mapping out these elements, we can direct our efforts toward addressing the root causes of civic issues instead of just treating the symptoms. This thoughtful approach not only encourages deeper understanding but also fosters more effective problem-solving skills, which are vital for active participation in our democracy.\nContext recap: To truly excel in U.S. Civics, it is essential to grasp the reasons behind various events and decisions, rather than merely focusing on their outcomes. This lesson will guide you through the exploration of the assumptions we often make, the relationships between different factors, and the limitations we encounter in civic discussions. By mapping out these elements, we can direct our efforts toward addressing the root causes of civic issues instead of just treating the symptoms.\nContext recap: To truly excel in U.S. Civics, it is essential to grasp the reasons behind various events and decisions, rather than merely focusing on their outcomes. This lesson will guide you through the exploration of the assumptions we often make, the relationships between different factors, and the limitations we encounter in civic discussions. By mapping out these elements, we can direct our efforts toward addressing the root causes of civic issues instead of just treating the symptoms.\nWhy this matters: Causal Thinking and Constraints helps learners in Social Studies connect ideas from U.S. Civics Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "us-civics-401-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this lesson, we introduce important practices that are essential for ensuring accountability and reliability in our work. We will discuss the standards for evidence, the importance of keeping detailed records, and the need for clear accountability measures. These practices are non-negotiable and help us maintain high standards in our execution of civic responsibilities. By adhering to these principles, we can ensure that our actions are well-informed and transparent.\nContext recap: In this lesson, we introduce important practices that are essential for ensuring accountability and reliability in our work. We will discuss the standards for evidence, the importance of keeping detailed records, and the need for clear accountability measures. These practices are non-negotiable and help us maintain high standards in our execution of civic responsibilities. By adhering to these principles, we can ensure that our actions are well-informed and transparent.\nContext recap: In this lesson, we introduce important practices that are essential for ensuring accountability and reliability in our work. We will discuss the standards for evidence, the importance of keeping detailed records, and the need for clear accountability measures. These practices are non-negotiable and help us maintain high standards in our execution of civic responsibilities. By adhering to these principles, we can ensure that our actions are well-informed and transparent.\nWhy this matters: Evidence and Accountability helps learners in Social Studies connect ideas from U.S. Civics Mastery and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const UsCivics401Module: LearningModule = {
           "id": "us-civics-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for constitutional principles and institutional design, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this interactive activity, you will have the opportunity to create a comprehensive workflow that outlines the principles of the Constitution and the design of our institutions. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that arise. This hands-on experience will help you understand how these elements work together to support effective governance.\nContext recap: In this interactive activity, you will have the opportunity to create a comprehensive workflow that outlines the principles of the Constitution and the design of our institutions. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that arise. This hands-on experience will help you understand how these elements work together to support effective governance."
         },
         {
           "id": "us-civics-401-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we emphasize the importance of documenting every decision made during the workflow process. Each decision should be accompanied by a clear rationale, an expected outcome, and a point for verification. This practice enables us to conduct thorough analyses after the workflow has been executed, allowing us to learn from our experiences and improve future decision-making processes.\nContext recap: In this recap, we emphasize the importance of documenting every decision made during the workflow process. Each decision should be accompanied by a clear rationale, an expected outcome, and a point for verification. This practice enables us to conduct thorough analyses after the workflow has been executed, allowing us to learn from our experiences and improve future decision-making processes."
         }
       ],
       "interactiveActivities": [
@@ -297,19 +297,19 @@ export const UsCivics401Module: LearningModule = {
           "id": "us-civics-401-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for U.S. Civics scenarios."
+          "content": "When selecting methods for our civic projects, it is important to consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, you will compare different alternatives and justify which methods are best suited for specific U.S. Civics scenarios. This critical thinking exercise will help you understand how to make informed choices that align with our civic goals.\nContext recap: When selecting methods for our civic projects, it is important to consider various factors such as constraints, the quality of information available, and the potential cost of errors. In this lesson, you will compare different alternatives and justify which methods are best suited for specific U.S. Civics scenarios. This critical thinking exercise will help you understand how to make informed choices that align with our civic goals."
         },
         {
           "id": "us-civics-401-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "A well-structured metric architecture is essential for linking various indicators that help us measure success. This includes leading indicators, which predict future performance, lagging outcomes, which reflect past results, and diagnostic measures that help us understand the current situation. By connecting these elements, teams can identify early signs of deviation from expected outcomes and respond thoughtfully to keep projects on track.\nContext recap: A well-structured metric architecture is essential for linking various indicators that help us measure success. This includes leading indicators, which predict future performance, lagging outcomes, which reflect past results, and diagnostic measures that help us understand the current situation. By connecting these elements, teams can identify early signs of deviation from expected outcomes and respond thoughtfully to keep projects on track."
         },
         {
           "id": "us-civics-401-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures in this way, we can develop specific plans to address each type of issue rather than applying generic solutions. This targeted approach allows us to effectively mitigate risks and improve our civic systems.\nContext recap: In this recap, we categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures in this way, we can develop specific plans to address each type of issue rather than applying generic solutions. This targeted approach allows us to effectively mitigate risks and improve our civic systems."
         }
       ],
       "flashcards": [
@@ -348,13 +348,13 @@ export const UsCivics401Module: LearningModule = {
           "id": "us-civics-401-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, you will break down a realistic scenario into its key components: objectives, context, constraints, and possible intervention options. Additionally, you will take note of the trade-offs involved in each option. This exercise will enhance your analytical skills and help you understand the complexities involved in improving civic systems.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components: objectives, context, constraints, and possible intervention options. Additionally, you will take note of the trade-offs involved in each option. This exercise will enhance your analytical skills and help you understand the complexities involved in improving civic systems."
         },
         {
           "id": "us-civics-401-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "As a recap of your learning, you will present a structured improvement proposal based on the case study. This proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This exercise will help you practice articulating your ideas and ensure that your proposals are actionable and well-organized.\nContext recap: As a recap of your learning, you will present a structured improvement proposal based on the case study. This proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This exercise will help you practice articulating your ideas and ensure that your proposals are actionable and well-organized."
         }
       ],
       "interactiveActivities": [

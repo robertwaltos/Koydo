@@ -13,6 +13,7 @@ import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { buildTrustedInternalApiUrl } from "@/lib/security/internal-origin";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { getRegisteredGame } from "@/lib/games/catalog";
 
 const querySchema = z.object({
   studentProfileId: z.string().uuid().optional(),
@@ -25,6 +26,7 @@ const postSchema = z.object({
   maxScore: z.number().int().min(1),
   timeMs: z.number().int().min(0).max(30 * 60 * 1000),
   studentProfileId: z.string().uuid().optional(),
+  skipPointsAward: z.boolean().default(false),
 });
 
 type DailyChallenge = {
@@ -90,24 +92,30 @@ async function validateProfileOwnership(
   userId: string,
   studentProfileId: string | undefined,
 ) {
-  if (!studentProfileId) return null;
+  if (!studentProfileId) return { profile: null as null | { id: string; ageYears: number | null }, errorResponse: null };
 
   const supabase = await createSupabaseServerClient();
   const { data: profile, error } = await supabase
     .from("student_profiles")
-    .select("id")
+    .select("id, age_years")
     .eq("id", studentProfileId)
     .eq("account_id", userId)
     .maybeSingle();
 
   if (error || !profile) {
-    return NextResponse.json(
-      { error: "Student profile not found for current account." },
-      { status: 403 },
-    );
+    return {
+      profile: null,
+      errorResponse: NextResponse.json(
+        { error: "Student profile not found for current account." },
+        { status: 403 },
+      ),
+    };
   }
 
-  return null;
+  return {
+    profile: { id: profile.id, ageYears: profile.age_years },
+    errorResponse: null,
+  };
 }
 
 function hashString(input: string) {
@@ -258,11 +266,40 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const ownershipError = await validateProfileOwnership(user.id, query.data.studentProfileId);
-  if (ownershipError) return ownershipError;
+  const ownership = await validateProfileOwnership(user.id, query.data.studentProfileId);
+  if (ownership.errorResponse) return ownership.errorResponse;
 
   const seed = getDailyChallengeSeed();
   const challenge = buildDailyChallenge(seed);
+  const registeredGame = getRegisteredGame(challenge.gameType);
+  if (registeredGame) {
+    if (!ownership.profile) {
+      return NextResponse.json(
+        { error: "studentProfileId is required for age-verified daily challenges." },
+        { status: 400 },
+      );
+    }
+    if (typeof ownership.profile.ageYears !== "number") {
+      return NextResponse.json(
+        { error: "Learner age is not configured on the selected profile." },
+        { status: 409 },
+      );
+    }
+    if (
+      ownership.profile.ageYears < registeredGame.ageMin
+      || ownership.profile.ageYears > registeredGame.ageMax
+    ) {
+      return NextResponse.json(
+        {
+          error: "Today's daily challenge is age-locked for this learner profile.",
+          gameId: registeredGame.id,
+          allowedAgeRange: { min: registeredGame.ageMin, max: registeredGame.ageMax },
+          learnerAge: ownership.profile.ageYears,
+        },
+        { status: 403 },
+      );
+    }
+  }
   const questId = `daily-challenge:${seed}`;
   const completion = await hasCompletedChallenge(
     user.id,
@@ -326,11 +363,40 @@ export async function POST(request: NextRequest) {
     }
 
     const payload = parsed.data;
-    const ownershipError = await validateProfileOwnership(user.id, payload.studentProfileId);
-    if (ownershipError) return ownershipError;
+    const ownership = await validateProfileOwnership(user.id, payload.studentProfileId);
+    if (ownership.errorResponse) return ownership.errorResponse;
 
     const seed = getDailyChallengeSeed();
     const challenge = buildDailyChallenge(seed);
+    const registeredGame = getRegisteredGame(challenge.gameType);
+    if (registeredGame) {
+      if (!ownership.profile) {
+        return NextResponse.json(
+          { error: "studentProfileId is required for age-verified daily challenges." },
+          { status: 400 },
+        );
+      }
+      if (typeof ownership.profile.ageYears !== "number") {
+        return NextResponse.json(
+          { error: "Learner age is not configured on the selected profile." },
+          { status: 409 },
+        );
+      }
+      if (
+        ownership.profile.ageYears < registeredGame.ageMin
+        || ownership.profile.ageYears > registeredGame.ageMax
+      ) {
+        return NextResponse.json(
+          {
+            error: "Today's daily challenge is age-locked for this learner profile.",
+            gameId: registeredGame.id,
+            allowedAgeRange: { min: registeredGame.ageMin, max: registeredGame.ageMax },
+            learnerAge: ownership.profile.ageYears,
+          },
+          { status: 403 },
+        );
+      }
+    }
     const questId = `daily-challenge:${seed}`;
 
     if (
@@ -401,27 +467,29 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const pointsAwardEvent = await postGamificationEvent(request, {
-      eventType: "points_awarded",
-      pointsDelta: reported.points,
-      studentProfileId: payload.studentProfileId,
-      metadata: {
-        source: "daily_challenge",
-        challengeId: challenge.id,
-        challengeDate: seed,
-        result,
-        awardedPoints: reported.points,
-        normalizedScore: reported.normalized,
-      },
-    });
-
-    if (!pointsAwardEvent.ok) {
-      return NextResponse.json(
-        {
-          error: "Failed to award game points.",
+    if (!payload.skipPointsAward) {
+      const pointsAwardEvent = await postGamificationEvent(request, {
+        eventType: "points_awarded",
+        pointsDelta: reported.points,
+        studentProfileId: payload.studentProfileId,
+        metadata: {
+          source: "daily_challenge",
+          challengeId: challenge.id,
+          challengeDate: seed,
+          result,
+          awardedPoints: reported.points,
+          normalizedScore: reported.normalized,
         },
-        { status: pointsAwardEvent.status },
-      );
+      });
+
+      if (!pointsAwardEvent.ok) {
+        return NextResponse.json(
+          {
+            error: "Failed to award game points.",
+          },
+          { status: pointsAwardEvent.status },
+        );
+      }
     }
 
     const completionEvent = await postGamificationEvent(request, {
@@ -449,7 +517,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
+      pointsAwarded: payload.skipPointsAward ? 0 : reported.points,
       bonusPoints: challenge.rewardPoints,
+      totalAwarded: (payload.skipPointsAward ? 0 : reported.points) + challenge.rewardPoints,
     });
   } catch (error) {
     console.error(

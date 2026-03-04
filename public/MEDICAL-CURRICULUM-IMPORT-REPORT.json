@@ -1,0 +1,398 @@
+{
+  "generatedAt": "2026-03-03T05:06:41.791Z",
+  "summary": {
+    "totalRawItems": 247143,
+    "duplicatesRemoved": 19012,
+    "uniqueItems": 228131,
+    "subjectsFound": 36,
+    "modulesGenerated": 30,
+    "totalLessons": 2642,
+    "totalQuestions": 180522,
+    "totalFlashcards": 47599
+  },
+  "sources": {
+    "medmcqa": {
+      "count": 187005,
+      "license": "MIT"
+    },
+    "medquad": {
+      "count": 16407,
+      "license": "CC-BY-4.0"
+    },
+    "medqa": {
+      "count": 10178,
+      "license": "MIT"
+    },
+    "medicalMeadow": {
+      "count": 33553,
+      "license": "CC"
+    },
+    "openstax": {
+      "count": 0,
+      "license": "CC-BY-4.0"
+    }
+  },
+  "deduplication": {
+    "totalDuplicates": 19012,
+    "bySource": {
+      "medmcqa": 16658,
+      "medquad": 2071,
+      "medqa": 3,
+      "medical-meadow": 280
+    }
+  },
+  "modules": [
+    {
+      "id": "medicine-anatomy-physiology-u1-external",
+      "title": "Anatomy & Physiology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 21479,
+      "flashcards": 34,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-anesthesia-u1-external",
+      "title": "Anesthesia (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 2945,
+      "flashcards": 60,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-biochemistry-u1-external",
+      "title": "Biochemistry (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 7656,
+      "flashcards": 13,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-cardiology-u1-external",
+      "title": "Cardiology (Medical Curriculum)",
+      "lessons": 90,
+      "questions": 0,
+      "flashcards": 450,
+      "chunks": 446,
+      "sources": [
+        "medquad",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-dental-u1-external",
+      "title": "Dental Medicine (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 9940,
+      "flashcards": 51,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-dermatology-u1-external",
+      "title": "Dermatology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 1596,
+      "flashcards": 1095,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-ent-u1-external",
+      "title": "ENT (Otolaryngology) (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 4408,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "medmcqa"
+      ]
+    },
+    {
+      "id": "medicine-forensic-medicine-u1-external",
+      "title": "Forensic Medicine (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 5458,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "medmcqa"
+      ]
+    },
+    {
+      "id": "medicine-general-medical-u1-external",
+      "title": "General Medical Science (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 2789,
+      "flashcards": 31447,
+      "chunks": 1155,
+      "sources": [
+        "medmcqa",
+        "medquad",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-geriatric-medicine-u1-external",
+      "title": "Geriatric Medicine (Medical Curriculum)",
+      "lessons": 46,
+      "questions": 0,
+      "flashcards": 228,
+      "chunks": 228,
+      "sources": [
+        "medquad"
+      ]
+    },
+    {
+      "id": "medicine-internal-medicine-u1-external",
+      "title": "Internal Medicine (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 16805,
+      "flashcards": 792,
+      "chunks": 769,
+      "sources": [
+        "medmcqa",
+        "medquad",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-medical-genetics-u1-external",
+      "title": "Medical Genetics (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 0,
+      "flashcards": 4846,
+      "chunks": 4785,
+      "sources": [
+        "medquad",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-microbiology-u1-external",
+      "title": "Microbiology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 10182,
+      "flashcards": 26,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-neurology-u1-external",
+      "title": "Neurology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 0,
+      "flashcards": 902,
+      "chunks": 897,
+      "sources": [
+        "medquad",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-nursing-u1-external",
+      "title": "Nursing (Medical Curriculum)",
+      "lessons": 1,
+      "questions": 0,
+      "flashcards": 8,
+      "chunks": 0,
+      "sources": [
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-nutrition-u1-external",
+      "title": "Nutrition Science (Medical Curriculum)",
+      "lessons": 3,
+      "questions": 0,
+      "flashcards": 47,
+      "chunks": 0,
+      "sources": [
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-ob-gyn-u1-external",
+      "title": "Obstetrics & Gynecology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 9755,
+      "flashcards": 8,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-oncology-u1-external",
+      "title": "Oncology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 0,
+      "flashcards": 687,
+      "chunks": 683,
+      "sources": [
+        "medquad",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-ophthalmology-u1-external",
+      "title": "Ophthalmology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 6203,
+      "flashcards": 1,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-orthopedics-u1-external",
+      "title": "Orthopedics (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 2782,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "medmcqa"
+      ]
+    },
+    {
+      "id": "medicine-pathology-u1-external",
+      "title": "Pathology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 13732,
+      "flashcards": 163,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-pediatrics-u1-external",
+      "title": "Pediatrics (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 7223,
+      "flashcards": 6,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-pharmacology-u1-external",
+      "title": "Pharmacology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 12694,
+      "flashcards": 4,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-preventive-medicine-u1-external",
+      "title": "Preventive & Community Medicine (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 10665,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "medmcqa"
+      ]
+    },
+    {
+      "id": "medicine-psychiatry-u1-external",
+      "title": "Psychiatry (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 4059,
+      "flashcards": 1,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-public-health-u1-external",
+      "title": "Public Health (Medical Curriculum)",
+      "lessons": 2,
+      "questions": 0,
+      "flashcards": 28,
+      "chunks": 0,
+      "sources": [
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-radiology-u1-external",
+      "title": "Radiology (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 4231,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "medmcqa"
+      ]
+    },
+    {
+      "id": "medicine-rare-diseases-u1-external",
+      "title": "Rare Diseases (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 0,
+      "flashcards": 5373,
+      "chunks": 5373,
+      "sources": [
+        "medquad"
+      ]
+    },
+    {
+      "id": "medicine-surgery-u1-external",
+      "title": "Surgery (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 15745,
+      "flashcards": 1329,
+      "chunks": 0,
+      "sources": [
+        "medmcqa",
+        "medical-meadow"
+      ]
+    },
+    {
+      "id": "medicine-usmle-prep-u1-external",
+      "title": "USMLE Prep (Medical Curriculum)",
+      "lessons": 100,
+      "questions": 10175,
+      "flashcards": 0,
+      "chunks": 0,
+      "sources": [
+        "medqa"
+      ]
+    }
+  ],
+  "applied": true
+}

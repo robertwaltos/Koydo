@@ -65,22 +65,22 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-1-chunk-1",
           "title": "The Five Vowels",
-          "content": "The vowels are A, E, I, O, U. Every word has at least one vowel! Vowels are the SINGERS of the alphabet — without them, words can't be read aloud easily."
+          "content": "In the English alphabet, we have five special letters called vowels: A, E, I, O, and U. These letters are super important because every single word we use has at least one vowel in it! Think of vowels as the singers of our alphabet. They help make our words sound beautiful and clear, just like how a song needs a good melody to be enjoyable. Without vowels, it would be really hard to read words out loud, and our sentences would sound funny! So, let's celebrate our vowels and remember how important they are in every word we say. Next time you read or write, see if you can spot the vowels in your words. They are always there, helping us express our thoughts and ideas!"
         },
         {
           "id": "lang-arts-k2-u1-1-chunk-2",
           "title": "Short A — /a/",
-          "content": "Short A sounds like the 'a' in 'apple' 🍎\nWords: cat, hat, bat, map, nap, tap, cap, jam, man, ran\n\nPractice saying: 'The CAT sat on the MAT with a HAT!' Notice all the short-A sounds!"
+          "content": "The short vowel sound for the letter A is just like the sound you hear in the word 'apple' 🍎. This sound is very special because it helps us read and write many words! Here are some fun words that use the short A sound: cat, hat, bat, map, nap, tap, cap, jam, man, and ran. Let's practice saying a fun sentence together: 'The CAT sat on the MAT with a HAT!' Can you hear all the short A sounds in that sentence? Awesome! Keep practicing these words and sentences, and soon you'll be a vowel expert! Remember, every time you see the letter A, think about the sound it makes. You're doing a fantastic job learning about vowels!"
         },
         {
           "id": "lang-arts-k2-u1-1-chunk-3",
           "title": "Short E, I, O, U",
-          "content": "Short E /e/: bed, red, ten, hen, let, net, pet\nShort I /i/: big, pig, fit, sit, lip, dip, him, win\nShort O /o/: hot, pot, dog, log, fox, box, hop, top\nShort U /u/: bus, cup, fun, run, bug, hug, mud, sun"
+          "content": "Let's dive into the exciting world of short vowel sounds! First, we have the short E sound, which you can hear in words like bed, red, ten, hen, let, net, and pet. Can you think of any other words that have the short E sound? Next up is the short I sound! You can find this sound in words such as big, pig, fit, sit, lip, dip, him, and win. How about trying to say these words out loud? Now, let’s move on to the short O sound. This sound is present in words like hot, pot, dog, log, fox, box, hop, and top. Can you think of a fun sentence using some of these words? Lastly, we have the short U sound. You can hear it in words like bus, cup, fun, run, bug, hug, mud, and sun. Each of these short vowel sounds helps us build words that we can read and say. Let’s practice saying these sounds together and see how many words we can come up with! Learning these sounds is a fun way to become great readers!"
         },
         {
           "id": "lang-arts-k2-u1-1-chunk-4",
           "title": "CVC Words (Consonant-Vowel-Consonant)",
-          "content": "Most short-vowel words follow the CVC pattern:\n• C-A-T = consonant / short A / consonant\n• D-O-G = consonant / short O / consonant\n• S-I-T = consonant / short I / consonant\n\nBlend them together: /c/ + /a/ + /t/ = CAT! 🐱"
+          "content": "Many short vowel words follow a special pattern called CVC, which stands for Consonant-Vowel-Consonant. For example, in the word C-A-T, we have a consonant, a short A vowel, and another consonant. Similarly, in D-O-G, we have a consonant, a short O vowel, and a consonant. And in S-I-T, we have a consonant, a short I vowel, and a consonant. When we blend these sounds together, we can read the word! For instance, /c/ + /a/ + /t/ makes the word CAT! 🐱 Isn't that exciting? Let’s practice blending more CVC words!"
         }
       ],
       "flashcards": [
@@ -211,22 +211,22 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-2-chunk-1",
           "title": "What Are Sight Words?",
-          "content": "Sight words are very common words that good readers recognize INSTANTLY — without sounding them out! They appear so often in books that learning them makes reading much faster and easier."
+          "content": "Sight words are special words that we see very often when we read. Good readers can recognize these words instantly, which means they don’t have to sound them out! These words are so common in books that learning them helps us read much faster and easier. By knowing sight words, we can enjoy stories without getting stuck on every single word. When we learn sight words, we can read with more confidence and have more fun with our books! Let’s discover some sight words together and see how they can make reading more enjoyable and exciting! We can practice them in games and activities, making our reading adventures even better!"
         },
         {
           "id": "lang-arts-k2-u1-2-chunk-2",
           "title": "Dolch List: Pre-Primer (Most Common)",
-          "content": "These are the most common words in children's books:\na, and, away, big, blue, can, come, down, find, for, funny, go, help, here, I, in, is, it, jump, little, look, make, me, my, not, one, play, red, run, said, see, the, three, to, two, up, we, where, yellow, you"
+          "content": "Here is a list of some of the most common sight words you will find in children's books: a, and, away, big, blue, can, come, down, find, for, funny, go, help, here, I, in, is, it, jump, little, look, make, me, my, not, one, play, red, run, said, see, the, three, to, two, up, we, where, yellow, and you. These words are super important because they help us understand stories quickly. When we see these words often, we can read faster and enjoy our books even more! Let’s practice reading these words together. You can say them out loud with me, and we can even make up fun sentences using them. This will help us become even better readers and make reading time more exciting! Remember, the more we practice, the easier it will be to recognize these words in our favorite stories. Are you ready to start? Let’s go!"
         },
         {
           "id": "lang-arts-k2-u1-2-chunk-3",
           "title": "How to Learn Sight Words",
-          "content": "3 Powerful Strategies:\n1. 📖 READ: See the word in a sentence\n2. ✏️ WRITE: Trace and write it 3 times\n3. 🗣️ SAY: Spell it out loud\n\nRepeat daily — just 5-10 words at a time!"
+          "content": "Learning sight words can be fun and exciting! Here are three powerful strategies that will help you become a sight word superstar. First, 📖 READ the word in a sentence. This way, you can see how the word fits into a story or a phrase, making it easier to understand. Next, ✏️ WRITE the word by tracing it and then writing it three times. This practice helps your brain remember the shape and spelling of the word. Finally, 🗣️ SAY the word out loud! You can even spell it out loud to make it stick in your memory. Remember, practicing these strategies every day with just 5-10 words at a time will help you learn them quickly and easily. Keep up the great work, and soon you'll be reading like a pro!"
         },
         {
           "id": "lang-arts-k2-u1-2-chunk-4",
           "title": "Sight Words in Sentences",
-          "content": "Look for sight words in real sentences:\n• 'I can see the big red ball.'\n• 'We can go and play here.'\n• 'Look at me! I can jump up.'\n\nUnderline every sight word you find!"
+          "content": "Let’s go on a fun adventure to find sight words in real sentences! Sight words are special words that we see often in books and stories. Here are some sentences for us to explore together: First, we have 'I can see the big red ball.' Can you spot the sight words in that sentence? Next, let’s look at this one: 'We can go and play here.' Take a moment to think about which words are sight words. And here’s another sentence for you: 'Look at me! I can jump up.' As you read these sentences, remember to underline every sight word you find. This practice will help you recognize these important words even faster when you see them in other stories! Keep up the great work, and let’s discover more sight words together!"
         }
       ],
       "flashcards": [
@@ -463,13 +463,13 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-quiz-chunk-intro",
           "title": "Phonics & Early Reading Supplemental Check Overview",
-          "content": "Reinforce core Language Arts concepts in Phonics & Early Reading.",
+          "content": "In this supplemental check, we will reinforce the important concepts we learned in our Phonics and Early Reading lessons. This is a great opportunity to review what you have learned and see how much you remember. Let's have fun while we check our understanding of these key Language Arts ideas!\nContext recap: In this supplemental check, we will reinforce the important concepts we learned in our Phonics and Early Reading lessons. This is a great opportunity to review what you have learned and see how much you remember. Let's have fun while we check our understanding of these key Language Arts ideas!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-quiz-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "As we wrap up our lesson, let's summarize one key idea we learned today. Think about what stood out to you the most! After that, let's plan one next step we can take to continue improving our reading skills. This could be practicing more sight words or reading a new book. Remember, every step you take helps you become a better reader!\nContext recap: As we wrap up our lesson, let's summarize one key idea we learned today. Think about what stood out to you the most! After that, let's plan one next step we can take to continue improving our reading skills. This could be practicing more sight words or reading a new book.",
           "kind": "recap"
         }
       ],
@@ -522,25 +522,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-04-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "In this part of our lesson, we will read a prompt together. After reading, we will highlight the key words and important lines that give us evidence. This will help us understand the main idea better and make our writing stronger. Let’s get started and find those key words!\nContext recap: In this part of our lesson, we will read a prompt together. After reading, we will highlight the key words and important lines that give us evidence. This will help us understand the main idea better and make our writing stronger. Let’s get started and find those key words!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-04-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now it's time for some guided practice! We will take a short passage and annotate it together. This means we will mark important parts and summarize the main idea. By doing this, we will learn how to identify key information and express it in our own words. Let’s have fun with this activity!\nContext recap: Now it's time for some guided practice! We will take a short passage and annotate it together. This means we will mark important parts and summarize the main idea. By doing this, we will learn how to identify key information and express it in our own words.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-04-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "As you work on your paragraph structure, be on the lookout for a common mistake that many people make. Once you spot it, think about how you can fix it by using examples from the text to support your correction. This will help you understand how to create better paragraphs.\nContext recap: As you work on your paragraph structure, be on the lookout for a common mistake that many people make. Once you spot it, think about how you can fix it by using examples from the text to support your correction. This will help you understand how to create better paragraphs.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-04-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about paragraph structure. Remember to think about one specific area where you can improve your writing. Setting a clear goal will help you become a better writer!\nContext recap: Let's take a moment to review what we learned about paragraph structure. Remember to think about one specific area where you can improve your writing. Setting a clear goal will help you become a better writer!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Phonics & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -656,25 +656,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-05-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this activity, you will make a strong statement, known as a claim, and then support it with details from the text. This means you will find specific pieces of information that back up what you are saying. It's like being a detective who finds clues to prove your point!\nContext recap: In this activity, you will make a strong statement, known as a claim, and then support it with details from the text. This means you will find specific pieces of information that back up what you are saying. It's like being a detective who finds clues to prove your point!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-05-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now, let's practice! Take one of your sentences and think about how you can make it clearer and more effective. Try to change the words to make sure your message is strong and sounds just right. This will help your writing shine!\nContext recap: Now, let's practice! Take one of your sentences and think about how you can make it clearer and more effective. Try to change the words to make sure your message is strong and sounds just right. This will help your writing shine!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-05-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As you work on your evidence-based responses, keep an eye out for a common mistake that can happen. When you notice it, think about how you can correct it by using evidence from the text. This will help you improve your writing and make your arguments stronger!\nContext recap: As you work on your evidence-based responses, keep an eye out for a common mistake that can happen. When you notice it, think about how you can correct it by using evidence from the text. This will help you improve your writing and make your arguments stronger!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-05-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about evidence-based responses. After that, think about one specific goal you want to achieve in your writing. Setting a clear target will help you focus on improving your skills!\nContext recap: Let's quickly review what we learned about evidence-based responses. After that, think about one specific goal you want to achieve in your writing. Setting a clear target will help you focus on improving your skills!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Phonics & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -896,25 +896,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-06-chunk-intro",
           "title": "Close Reading Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "Before we start, remember to revise your writing. This means checking for clarity, making sure your grammar is correct, and ensuring that your ideas flow smoothly from one to the next. This will make your writing easier to understand!\nContext recap: Before we start, remember to revise your writing. This means checking for clarity, making sure your grammar is correct, and ensuring that your ideas flow smoothly from one to the next. This will make your writing easier to understand!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-06-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Now it's time for some guided practice! Try to create a short paragraph that includes a claim, evidence to support that claim, and an explanation of why the evidence is important. This will help you learn how to express your ideas clearly!\nContext recap: Now it's time for some guided practice! Try to create a short paragraph that includes a claim, evidence to support that claim, and an explanation of why the evidence is important. This will help you learn how to express your ideas clearly!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-06-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying close reading, then correct it with evidence.",
+          "content": "As you apply close reading techniques, watch out for a common mistake that can occur. When you find it, think about how you can correct it by using evidence from the text. This will help you understand the material better and improve your reading skills!\nContext recap: As you apply close reading techniques, watch out for a common mistake that can occur. When you find it, think about how you can correct it by using evidence from the text. This will help you understand the material better and improve your reading skills!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-06-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review close reading, then set one clear improvement target.",
+          "content": "Let's do a quick recap of what we learned about close reading. After that, think about one specific area where you can improve. Setting a clear goal will help you become a more skilled reader!\nContext recap: Let's do a quick recap of what we learned about close reading. After that, think about one specific area where you can improve. Setting a clear goal will help you become a more skilled reader!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Phonics & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -977,25 +977,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-07-chunk-intro",
           "title": "Vocabulary In Context Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "To get started, read the prompt carefully. Then, highlight the important words and the lines that provide evidence. This will help you focus on the key points and understand the text better!\nContext recap: To get started, read the prompt carefully. Then, highlight the important words and the lines that provide evidence. This will help you focus on the key points and understand the text better!\nWhy this matters: Vocabulary In Context Intro helps learners in Language Arts connect ideas from Phonics & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-07-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now, let's practice annotating! Choose a short passage and mark it up by highlighting important parts. After that, write a summary of the main idea in your own words. This will help you grasp the text's meaning!\nContext recap: Now, let's practice annotating! Choose a short passage and mark it up by highlighting important parts. After that, write a summary of the main idea in your own words. This will help you grasp the text's meaning!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-07-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying vocabulary in context, then correct it with evidence.",
+          "content": "As you work on using vocabulary in sentences, be on the lookout for a common mistake that many people make. This mistake can happen when we don't fully understand how to use a word in context. Take a moment to identify this error and then think about how you can correct it by finding evidence from the text that supports your correction. This will help you improve your understanding and use of vocabulary.\nContext recap: As you work on using vocabulary in sentences, be on the lookout for a common mistake that many people make. This mistake can happen when we don't fully understand how to use a word in context. Take a moment to identify this error and then think about how you can correct it by finding evidence from the text that supports your correction. This will help you improve your understanding and use of vocabulary.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-07-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review vocabulary in context, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about using vocabulary in context. It's important to understand how words fit into sentences and how they can change meaning based on their use. After this review, think about one specific area where you can improve your vocabulary skills. Setting a clear goal will help you focus on making progress.\nContext recap: Let's take a moment to review what we learned about using vocabulary in context. It's important to understand how words fit into sentences and how they can change meaning based on their use. After this review, think about one specific area where you can improve your vocabulary skills. Setting a clear goal will help you focus on making progress.",
           "kind": "recap"
         }
       ],
@@ -1111,25 +1111,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-08-chunk-intro",
           "title": "Sentence Revision Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this section, we will learn how to make our sentences stronger by using one clear claim. A claim is a statement that we believe to be true. To support our claim, we will find details from the text that help explain why our claim is correct. This practice will help us become better writers and communicators.\nContext recap: In this section, we will learn how to make our sentences stronger by using one clear claim. A claim is a statement that we believe to be true. To support our claim, we will find details from the text that help explain why our claim is correct. This practice will help us become better writers and communicators.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-08-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time to practice! Choose one sentence that you think could be improved. Your goal is to rewrite this sentence to make it clearer and to match the tone you want to convey. Think about the words you choose and how they make your sentence sound. This exercise will help you learn how to express your ideas more effectively.\nContext recap: Now it's time to practice! Choose one sentence that you think could be improved. Your goal is to rewrite this sentence to make it clearer and to match the tone you want to convey. Think about the words you choose and how they make your sentence sound.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-08-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying sentence revision, then correct it with evidence.",
+          "content": "As you revise your sentences, keep an eye out for a common mistake that can happen during this process. Sometimes, we might overlook important details that make our sentences clear and effective. Once you spot this error, think about how you can fix it by using evidence from your writing. This will help you become a more precise writer.\nContext recap: As you revise your sentences, keep an eye out for a common mistake that can happen during this process. Sometimes, we might overlook important details that make our sentences clear and effective. Once you spot this error, think about how you can fix it by using evidence from your writing. This will help you become a more precise writer.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-08-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review sentence revision, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about revising sentences. Remember, revising is all about making your writing better! After this review, think of one specific goal you want to achieve in your writing. Setting a clear improvement target will guide you as you continue to practice your writing skills.\nContext recap: Let's quickly review what we learned about revising sentences. Remember, revising is all about making your writing better! After this review, think of one specific goal you want to achieve in your writing. Setting a clear improvement target will guide you as you continue to practice your writing skills.",
           "kind": "recap"
         }
       ],
@@ -1351,25 +1351,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-09-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "In this part of our lesson, we will focus on how to revise our paragraphs for better clarity, grammar, and flow. Clarity means making sure our ideas are easy to understand, grammar helps us write correctly, and flow ensures our sentences connect smoothly. These skills are important for effective writing.\nContext recap: In this part of our lesson, we will focus on how to revise our paragraphs for better clarity, grammar, and flow. Clarity means making sure our ideas are easy to understand, grammar helps us write correctly, and flow ensures our sentences connect smoothly. These skills are important for effective writing.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-09-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Now, let's practice building a short paragraph together! Your paragraph should include a clear claim, some evidence to support that claim, and an explanation of why the evidence is important. This structure will help you communicate your ideas clearly and effectively.\nContext recap: Now, let's practice building a short paragraph together! Your paragraph should include a clear claim, some evidence to support that claim, and an explanation of why the evidence is important. This structure will help you communicate your ideas clearly and effectively.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-09-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "As you work on your paragraph structure, be aware of a common mistake that can occur. Sometimes, we might forget to connect our ideas properly, which can confuse our readers. Once you identify this issue, think about how you can correct it by using evidence from your writing. This will help improve the overall quality of your paragraph.\nContext recap: As you work on your paragraph structure, be aware of a common mistake that can occur. Sometimes, we might forget to connect our ideas properly, which can confuse our readers. Once you identify this issue, think about how you can correct it by using evidence from your writing. This will help improve the overall quality of your paragraph.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-09-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about paragraph structure. Remember, a well-structured paragraph helps your readers understand your ideas better. After this recap, think of one specific area where you can improve your paragraph writing. Setting a clear improvement target will help you focus on your writing skills.\nContext recap: Let's take a moment to review what we learned about paragraph structure. Remember, a well-structured paragraph helps your readers understand your ideas better. After this recap, think of one specific area where you can improve your paragraph writing. Setting a clear improvement target will help you focus on your writing skills.",
           "kind": "recap"
         }
       ],
@@ -1432,25 +1432,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-10-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "In this section, we will learn how to respond to prompts using evidence from the text. Start by reading the prompt carefully, and then highlight the key words and important lines that provide evidence. This will help you gather your thoughts and prepare a strong response based on what you have read.\nContext recap: In this section, we will learn how to respond to prompts using evidence from the text. Start by reading the prompt carefully, and then highlight the key words and important lines that provide evidence. This will help you gather your thoughts and prepare a strong response based on what you have read.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-10-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now it's time to practice annotating a short passage! As you read, make notes in the margins to highlight important ideas and details. After that, summarize the main idea of the passage in your own words. This practice will help you understand the text better and improve your ability to express your thoughts.\nContext recap: Now it's time to practice annotating a short passage! As you read, make notes in the margins to highlight important ideas and details. After that, summarize the main idea of the passage in your own words. This practice will help you understand the text better and improve your ability to express your thoughts.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-10-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As you watch the video, pay close attention to a common mistake that people often make when using evidence-based responses. After identifying this error, think about how you can fix it by using specific evidence from the text. This will help you understand how to support your ideas more effectively.\nContext recap: As you watch the video, pay close attention to a common mistake that people often make when using evidence-based responses. After identifying this error, think about how you can fix it by using specific evidence from the text. This will help you understand how to support your ideas more effectively.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-10-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about evidence-based responses. After discussing the key points, think about one specific area where you can improve your skills. Setting a clear goal will help you focus on what to work on next.\nContext recap: Let's take a moment to review what we learned about evidence-based responses. After discussing the key points, think about one specific area where you can improve your skills. Setting a clear goal will help you focus on what to work on next.",
           "kind": "recap"
         }
       ],
@@ -1566,25 +1566,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-11-chunk-intro",
           "title": "Close Reading Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "In this section, we will learn how to make a strong claim and support it with details from the text. A claim is an important statement that you believe to be true, and using text-based details means finding specific examples in the story or article that back up your claim.\nContext recap: In this section, we will learn how to make a strong claim and support it with details from the text. A claim is an important statement that you believe to be true, and using text-based details means finding specific examples in the story or article that back up your claim.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-11-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time for some guided practice! Choose one sentence from the text and think about how you can rewrite it to make it clearer and more effective. Focus on improving the way it sounds and the message it conveys. This will help you express your ideas more precisely.\nContext recap: Now it's time for some guided practice! Choose one sentence from the text and think about how you can rewrite it to make it clearer and more effective. Focus on improving the way it sounds and the message it conveys. This will help you express your ideas more precisely.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-11-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying close reading, then correct it with evidence.",
+          "content": "As you engage with close reading, be on the lookout for a common mistake that can happen. After you spot this error, think about how you can correct it using evidence from the text. This practice will enhance your understanding and ability to analyze what you read.\nContext recap: As you engage with close reading, be on the lookout for a common mistake that can happen. After you spot this error, think about how you can correct it using evidence from the text. This practice will enhance your understanding and ability to analyze what you read.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-11-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review close reading, then set one clear improvement target.",
+          "content": "Let's quickly recap what we learned about close reading. After our discussion, think about one specific area where you can improve your reading skills. Setting a clear target will help you focus on your next steps in becoming a better reader.\nContext recap: Let's quickly recap what we learned about close reading. After our discussion, think about one specific area where you can improve your reading skills. Setting a clear target will help you focus on your next steps in becoming a better reader.",
           "kind": "recap"
         }
       ],
@@ -1806,25 +1806,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-12-chunk-intro",
           "title": "Vocabulary In Context Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "In this part of the lesson, we will focus on revising our writing for clarity, grammar, and smooth transitions. This means making sure our sentences are easy to understand, free of mistakes, and flow well from one idea to the next.\nContext recap: In this part of the lesson, we will focus on revising our writing for clarity, grammar, and smooth transitions. This means making sure our sentences are easy to understand, free of mistakes, and flow well from one idea to the next.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-12-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Now, let's practice building a short paragraph. Your paragraph should include a clear claim, supporting evidence, and an explanation of why that evidence is important. This exercise will help you organize your thoughts and communicate your ideas effectively.\nContext recap: Now, let's practice building a short paragraph. Your paragraph should include a clear claim, supporting evidence, and an explanation of why that evidence is important. This exercise will help you organize your thoughts and communicate your ideas effectively.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-12-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying vocabulary in context, then correct it with evidence.",
+          "content": "As you work on applying vocabulary in context, keep an eye out for a common mistake that can occur. Once you identify this error, think about how you can correct it using evidence from the text. This will strengthen your understanding of how to use words correctly.\nContext recap: As you work on applying vocabulary in context, keep an eye out for a common mistake that can occur. Once you identify this error, think about how you can correct it using evidence from the text. This will strengthen your understanding of how to use words correctly.",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-12-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review vocabulary in context, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about using vocabulary in context. After our discussion, think about one specific area where you can improve your vocabulary skills. Setting a clear improvement target will guide your learning journey.\nContext recap: Let's take a moment to review what we learned about using vocabulary in context. After our discussion, think about one specific area where you can improve your vocabulary skills. Setting a clear improvement target will guide your learning journey.",
           "kind": "recap"
         }
       ],
@@ -1887,25 +1887,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-13-chunk-intro",
           "title": "Sentence Revision Intro",
-          "content": "Read the prompt, then highlight key words and evidence lines.",
+          "content": "In this section, we will read a prompt carefully and highlight the key words and important lines that provide evidence. This practice will help you focus on the main ideas and details that are essential for understanding the text.\nContext recap: In this section, we will read a prompt carefully and highlight the key words and important lines that provide evidence. This practice will help you focus on the main ideas and details that are essential for understanding the text.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-13-chunk-practice",
           "title": "Guided Practice",
-          "content": "Annotate one short passage and summarize the main idea.",
+          "content": "Now it's time for some guided practice! Choose a short passage and annotate it by marking important points. After that, summarize the main idea in your own words. This will help you improve your comprehension and retention of the material.\nContext recap: Now it's time for some guided practice! Choose a short passage and annotate it by marking important points. After that, summarize the main idea in your own words. This will help you improve your comprehension and retention of the material.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-13-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying sentence revision, then correct it with evidence.",
+          "content": "As you practice revising sentences, be on the lookout for a common mistake that many people make. Once you spot it, think about how you can fix it using specific examples from the text. This will help you understand the importance of clear writing!\nContext recap: As you practice revising sentences, be on the lookout for a common mistake that many people make. Once you spot it, think about how you can fix it using specific examples from the text. This will help you understand the importance of clear writing!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-13-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review sentence revision, then set one clear improvement target.",
+          "content": "Let's take a moment to quickly review what we learned about revising sentences. After that, think of one specific goal you can set for yourself to improve your writing. This will help you focus on making your sentences even better!\nContext recap: Let's take a moment to quickly review what we learned about revising sentences. After that, think of one specific goal you can set for yourself to improve your writing. This will help you focus on making your sentences even better!",
           "kind": "recap"
         }
       ],
@@ -2021,25 +2021,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-14-chunk-intro",
           "title": "Paragraph Structure Intro",
-          "content": "Use one clear claim and support it with text-based details.",
+          "content": "When writing a paragraph, it's important to start with a clear main idea or claim. Then, support that idea with details from the text that help explain or prove your point. This way, your writing will be strong and convincing!\nContext recap: When writing a paragraph, it's important to start with a clear main idea or claim. Then, support that idea with details from the text that help explain or prove your point. This way, your writing will be strong and convincing!",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-14-chunk-practice",
           "title": "Guided Practice",
-          "content": "Rewrite one sentence to improve precision and tone.",
+          "content": "Now it's time to practice! Choose one of your sentences and think about how you can make it clearer and more engaging. Try to change the words or structure to improve the way it sounds. This will help your writing shine!\nContext recap: Now it's time to practice! Choose one of your sentences and think about how you can make it clearer and more engaging. Try to change the words or structure to improve the way it sounds. This will help your writing shine!",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-14-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying paragraph structure, then correct it with evidence.",
+          "content": "As you work on your paragraph structure, keep an eye out for a common mistake that can happen. When you notice it, think about how you can correct it using examples from your writing. This will help you become a better writer!\nContext recap: As you work on your paragraph structure, keep an eye out for a common mistake that can happen. When you notice it, think about how you can correct it using examples from your writing. This will help you become a better writer!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-14-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review paragraph structure, then set one clear improvement target.",
+          "content": "Let's quickly go over what we learned about paragraph structure. After that, think of one specific area where you can improve. Setting a clear goal will help you focus on making your writing even stronger!\nContext recap: Let's quickly go over what we learned about paragraph structure. After that, think of one specific area where you can improve. Setting a clear goal will help you focus on making your writing even stronger!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Phonics & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -2261,25 +2261,25 @@ export const LangArtsK2U1ExternalModule: LearningModule = {
         {
           "id": "lang-arts-k2-u1-external-supp-seq-15-chunk-intro",
           "title": "Evidence Based Response Intro",
-          "content": "Revise for clarity, grammar, and transition flow.",
+          "content": "When you revise your writing, remember to check for clarity, grammar, and how smoothly your ideas flow from one to the next. This will make your writing easier to understand and more enjoyable to read!\nContext recap: When you revise your writing, remember to check for clarity, grammar, and how smoothly your ideas flow from one to the next. This will make your writing easier to understand and more enjoyable to read!\nWhy this matters: Evidence Based Response Intro helps learners in Language Arts connect ideas from Phonics & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-15-chunk-practice",
           "title": "Guided Practice",
-          "content": "Build a short paragraph with claim, evidence, and explanation.",
+          "content": "Now, let's build a short paragraph together! Start with a clear claim, then add evidence to support it, and finish with an explanation. This will help you practice creating strong arguments in your writing!\nContext recap: Now, let's build a short paragraph together! Start with a clear claim, then add evidence to support it, and finish with an explanation. This will help you practice creating strong arguments in your writing!\nWhy this matters: Guided Practice helps learners in Language Arts connect ideas from Phonics & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-15-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence-based response, then correct it with evidence.",
+          "content": "As you practice creating your evidence-based responses, it's important to pay attention to a common mistake that many people make. Sometimes, we forget to support our answers with clear examples from our writing. When you notice this mistake, take a moment to think about how you can fix it. Look for specific examples in your work that can help make your point stronger. This will not only help you correct the error but also improve your overall writing skills! Keep practicing, and you'll get better at this!",
           "kind": "analysis"
         },
         {
           "id": "lang-arts-k2-u1-external-supp-seq-15-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence-based response, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about evidence-based responses. After that, think of one specific goal you can set for yourself to improve your writing. This will help you focus on becoming a better writer!\nContext recap: Let's quickly review what we learned about evidence-based responses. After that, think of one specific goal you can set for yourself to improve your writing. This will help you focus on becoming a better writer!\nWhy this matters: Quick Recap helps learners in Language Arts connect ideas from Phonics & Early Reading to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],

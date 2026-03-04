@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-03-03T02:09:11.488Z",
+  "mode": "live_non_simulated_only",
+  "cleanupSimulated": true,
+  "deletedSimulatedCount": 2,
+  "totalRowsScanned": 0,
+  "candidateRows": 0,
+  "selected": {
+    "appleVisionPro": null,
+    "metaQuest": null
+  },
+  "rows": []
+}

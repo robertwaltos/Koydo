@@ -29,7 +29,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Install dependencies
@@ -43,6 +43,15 @@ jobs:
 
       - name: Validate capstone defense alignment
         run: npm run curriculum:capstone-defense:check
+
+      - name: Verify API rate-limit guard coverage
+        run: npm run security:api-rate-limit:check
+
+      - name: Verify API authz guard coverage
+        run: npm run security:api-authz-guard:check
+
+      - name: Verify billing webhook hardening guard coverage
+        run: npm run security:billing-webhook-hardening:check
 
       - name: Lint changed JS/TS files
         shell: bash

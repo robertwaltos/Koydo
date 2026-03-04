@@ -47,19 +47,19 @@ export const FinancialLiteracy501Module: LearningModule = {
           "id": "financial-literacy-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Financial Literacy, with focus on financial literacy systems diagnostics and financial literacy operations and execution design."
+          "content": "In this lesson, we will delve into the advanced concepts of scope and boundaries in the field of Financial Literacy. Our focus will be on understanding how to effectively diagnose financial literacy systems, which means identifying areas that need improvement or support. Additionally, we will learn how to design operations and execution strategies that can enhance your ability to make informed financial decisions. By gaining this knowledge, you will be better equipped to navigate complex financial environments with increased confidence and skill, ultimately leading to better financial outcomes in your life."
         },
         {
           "id": "financial-literacy-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different financial factors. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is essential for planning effective interventions in financial scenarios, ensuring that learners can make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different financial factors. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is essential for planning effective interventions in financial scenarios, ensuring that learners can make informed decisions."
         },
         {
           "id": "financial-literacy-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made during our analysis should be linked to measurable indicators. This means that we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This approach helps maintain the integrity of our financial assessments.\nContext recap: In our recap, we emphasize that all claims made during our analysis should be linked to measurable indicators. This means that we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. This approach helps maintain the integrity of our financial assessments."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const FinancialLiteracy501Module: LearningModule = {
           "id": "financial-literacy-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of financial processes. They will also stress-test these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is crucial for developing practical skills in financial literacy.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows that reflect their understanding of financial processes. They will also stress-test these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is crucial for developing practical skills in financial literacy."
         },
         {
           "id": "financial-literacy-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows should incorporate various control mechanisms. This includes integrating checkpoints to monitor progress, establishing rollback criteria to revert to previous states if necessary, and implementing threshold-based escalation procedures to address issues as they arise. These elements are vital for maintaining effective financial operations.\nContext recap: In our recap, we will discuss how workflows should incorporate various control mechanisms. This includes integrating checkpoints to monitor progress, establishing rollback criteria to revert to previous states if necessary, and implementing threshold-based escalation procedures to address issues as they arise. These elements are vital for maintaining effective financial operations."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const FinancialLiteracy501Module: LearningModule = {
           "id": "financial-literacy-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in financial literacy systems diagnostics and financial literacy impact and tradeoff analysis."
+          "content": "This lesson focuses on the architecture of scenarios in financial literacy case analysis. We will examine how to frame competing constraints within financial literacy systems, which involves understanding the impacts and trade-offs associated with different financial decisions. This analytical approach will enhance your ability to evaluate complex financial situations.\nContext recap: This lesson focuses on the architecture of scenarios in financial literacy case analysis. We will examine how to frame competing constraints within financial literacy systems, which involves understanding the impacts and trade-offs associated with different financial decisions. This analytical approach will enhance your ability to evaluate complex financial situations."
         },
         {
           "id": "financial-literacy-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them by evaluating various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis is essential for making informed decisions that balance multiple factors in financial scenarios.\nContext recap: In this practice session, learners will compare different options available to them by evaluating various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis is essential for making informed decisions that balance multiple factors in financial scenarios."
         },
         {
           "id": "financial-literacy-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight the importance of including key elements in each recommendation made during our analysis. This includes outlining the assumptions that underlie our decisions, providing evidence to support our claims, identifying risk controls to mitigate potential issues, and developing fallback plans in case our initial strategies do not work as intended.\nContext recap: In our recap, we will highlight the importance of including key elements in each recommendation made during our analysis. This includes outlining the assumptions that underlie our decisions, providing evidence to support our claims, identifying risk controls to mitigate potential issues, and developing fallback plans in case our initial strategies do not work as intended."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const FinancialLiteracy501Module: LearningModule = {
           "id": "financial-literacy-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This exercise will help them understand how to manage financial scenarios effectively while adhering to necessary regulations and standards.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This exercise will help them understand how to manage financial scenarios effectively while adhering to necessary regulations and standards.\nWhy this matters: Live Scenario Controls helps learners in Financial Literacy connect ideas from Financial Literacy Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "financial-literacy-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to financial scenarios should be designed to update control gates without losing traceability or accountability. This means ensuring that all changes made during the process can be tracked and that responsibilities are clearly defined.\nContext recap: In our recap, we will discuss how effective responses to financial scenarios should be designed to update control gates without losing traceability or accountability. This means ensuring that all changes made during the process can be tracked and that responsibilities are clearly defined."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const FinancialLiteracy501Module: LearningModule = {
           "id": "financial-literacy-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various stakeholders are impacted by financial decisions is crucial for making equitable and informed choices.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various stakeholders are impacted by financial decisions is crucial for making equitable and informed choices.\nWhy this matters: Stakeholder Impact Distribution helps learners in Financial Literacy connect ideas from Financial Literacy Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "financial-literacy-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in financial decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust and integrity in financial governance.\nContext recap: In this section, we will explore the architecture of accountability in financial decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust and integrity in financial governance."
         },
         {
           "id": "financial-literacy-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of this lesson, we provide a helpful checklist that connects important outcomes with ethical considerations, ensures compliance with policies, and emphasizes the importance of resilience in leadership. This checklist serves as a guide to help leaders make responsible decisions that positively impact their communities.\nContext recap: At the end of this lesson, we provide a helpful checklist that connects important outcomes with ethical considerations, ensures compliance with policies, and emphasizes the importance of resilience in leadership. This checklist serves as a guide to help leaders make responsible decisions that positively impact their communities."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const FinancialLiteracy501Module: LearningModule = {
           "id": "financial-literacy-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, clear boundaries of uncertainty, and suggested pathways for remediation. This exercise encourages critical thinking and helps learners understand how to present their ideas effectively.\nContext recap: In this interactive session, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, clear boundaries of uncertainty, and suggested pathways for remediation. This exercise encourages critical thinking and helps learners understand how to present their ideas effectively."
         },
         {
           "id": "financial-literacy-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal, learners will practice their responses to various critiques that may arise from experts in technical fields, governance issues, and stakeholder perspectives. This preparation is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions in front of an audience.\nContext recap: During this rehearsal, learners will practice their responses to various critiques that may arise from experts in technical fields, governance issues, and stakeholder perspectives. This preparation is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions in front of an audience."
         }
       ],
       "interactiveActivities": [

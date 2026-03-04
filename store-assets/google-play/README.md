@@ -1,12 +1,15 @@
 # Google Play Assets
 
-This folder contains assets required for the Google Play Store listing.
+This folder contains assets required for the Google Play listing.
 
-## Required Assets
-- eature_graphic.png (1024 x 500)
-- icon.png (512 x 512)
-- screenshots-phone/ (2-8 screenshots, 16:9 or 9:16 aspect ratio)
-- screenshots-7inch/ (2-8 screenshots for 7-inch tablets)
-- screenshots-10inch/ (2-8 screenshots for 10-inch tablets)
+## Required Assets (baseline)
+- `feature_graphic.png` (1024x500)
+- `icon.png` (512x512)
+- `screenshots-phone/` (required phone screenshots)
+- `screenshots-7inch/` (optional depending on listing strategy)
+- `screenshots-10inch/` (optional depending on listing strategy)
 
-*(Currently placeholders, drop real assets here)*
+Use the latest official requirements before upload:
+https://support.google.com/googleplay/android-developer/answer/1078870
+
+Keep placeholders out of release submissions.

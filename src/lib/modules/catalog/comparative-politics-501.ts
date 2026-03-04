@@ -47,19 +47,19 @@ export const ComparativePolitics501Module: LearningModule = {
           "id": "comparative-politics-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for Comparative Politics, including control points for institutional performance comparison and policy implementation divergence."
+          "content": "In this lesson, we will explore the advanced boundaries of Comparative Politics. This includes understanding the key points that help us compare how different institutions perform and how they implement policies in unique ways. By defining these boundaries, we can better analyze and understand the differences and similarities between various political systems.\nContext recap: In this lesson, we will explore the advanced boundaries of Comparative Politics. This includes understanding the key points that help us compare how different institutions perform and how they implement policies in unique ways. By defining these boundaries, we can better analyze and understand the differences and similarities between various political systems."
         },
         {
           "id": "comparative-politics-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Structure",
-          "content": "Learners map causal pathways and uncertainty ranges before intervention planning."
+          "content": "In this part of the lesson, learners will focus on mapping out the pathways that show how different factors cause certain outcomes. They will also identify areas of uncertainty that may affect their plans for intervention. This process is essential for creating effective strategies that consider all possible scenarios before taking action.\nContext recap: In this part of the lesson, learners will focus on mapping out the pathways that show how different factors cause certain outcomes. They will also identify areas of uncertainty that may affect their plans for intervention. This process is essential for creating effective strategies that consider all possible scenarios before taking action."
         },
         {
           "id": "comparative-politics-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "Claims are tied to measurable indicators, uncertainty declarations, and review checkpoints."
+          "content": "In this recap, we emphasize that any claims made in our analysis must be supported by measurable indicators. This means we need to clearly state any uncertainties we have and establish checkpoints for reviewing our findings. By doing this, we ensure that our conclusions are based on solid evidence and can be trusted.\nContext recap: In this recap, we emphasize that any claims made in our analysis must be supported by measurable indicators. This means we need to clearly state any uncertainties we have and establish checkpoints for reviewing our findings. By doing this, we ensure that our conclusions are based on solid evidence and can be trusted."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const ComparativePolitics501Module: LearningModule = {
           "id": "comparative-politics-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them against adversarial conditions."
+          "content": "In this interactive session, learners will have the opportunity to design specialized workflows that are tailored to specific political contexts. They will also conduct stress tests on these workflows to see how they perform under challenging or adversarial conditions. This practice helps learners understand the resilience of their designs.\nContext recap: In this interactive session, learners will have the opportunity to design specialized workflows that are tailored to specific political contexts. They will also conduct stress tests on these workflows to see how they perform under challenging or adversarial conditions. This practice helps learners understand the resilience of their designs."
         },
         {
           "id": "comparative-politics-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Design",
-          "content": "Gate criteria, rollback conditions, and escalation thresholds are integrated into the workflow."
+          "content": "In this recap, we will discuss how to integrate important criteria into our workflows. This includes setting up conditions for when to roll back decisions and establishing thresholds for escalation. By doing so, we create a robust framework that can adapt to changing circumstances.\nContext recap: In this recap, we will discuss how to integrate important criteria into our workflows. This includes setting up conditions for when to roll back decisions and establishing thresholds for escalation. By doing so, we create a robust framework that can adapt to changing circumstances."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const ComparativePolitics501Module: LearningModule = {
           "id": "comparative-politics-501-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: a comparative policy board evaluating institutional responses to shared crisis shocks across governance systems. Learners identify constraints, risks, and governance boundaries."
+          "content": "In this case study, we will explore a comparative policy board that examines how different institutions react to shared crisis situations, such as natural disasters or economic downturns. Students will have the opportunity to identify various constraints and risks that these institutions face, as well as the limits of governance that influence their decision-making processes. By analyzing these factors, we will gain a deeper understanding of how different systems manage challenges and work towards effective solutions in times of crisis.\nContext recap: In this case study, we will explore a comparative policy board that examines how different institutions react to shared crisis situations, such as natural disasters or economic downturns. Students will have the opportunity to identify various constraints and risks that these institutions face, as well as the limits of governance that influence their decision-making processes. By analyzing these factors, we will gain a deeper understanding of how different systems manage challenges and work towards effective solutions in times of crisis."
         },
         {
           "id": "comparative-politics-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are evaluated across performance, reliability, equity, and feasibility dimensions."
+          "content": "In this section, we will evaluate different options using a tradeoff matrix. This matrix will help us assess each option based on important factors such as performance, reliability, fairness, and feasibility. By comparing these dimensions, learners can make informed decisions about which options are best.\nContext recap: In this section, we will evaluate different options using a tradeoff matrix. This matrix will help us assess each option based on important factors such as performance, reliability, fairness, and feasibility. By comparing these dimensions, learners can make informed decisions about which options are best."
         },
         {
           "id": "comparative-politics-501-l04-c3",
           "kind": "recap",
           "title": "Failure and Recovery Design",
-          "content": "Failure signatures are mapped to mitigation actions and measurable recovery triggers."
+          "content": "In this recap, we will discuss how to map out failure signatures, which are indicators of potential failures in our plans. We will also explore the actions we can take to mitigate these failures and identify measurable triggers that signal recovery. This understanding is crucial for developing effective strategies.\nContext recap: In this recap, we will discuss how to map out failure signatures, which are indicators of potential failures in our plans. We will also explore the actions we can take to mitigate these failures and identify measurable triggers that signal recovery. This understanding is crucial for developing effective strategies."
         }
       ],
       "flashcards": [
@@ -419,13 +419,13 @@ export const ComparativePolitics501Module: LearningModule = {
           "id": "comparative-politics-501-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure scenarios, constraints, metrics, and escalation logic for intervention tests."
+          "content": "In this interactive practice, learners will set up various scenarios for testing interventions. They will configure constraints, metrics, and escalation logic to ensure that their tests are comprehensive and effective. This hands-on experience is vital for understanding how to implement political strategies.\nContext recap: In this interactive practice, learners will set up various scenarios for testing interventions. They will configure constraints, metrics, and escalation logic to ensure that their tests are comprehensive and effective. This hands-on experience is vital for understanding how to implement political strategies."
         },
         {
           "id": "comparative-politics-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Simulation outcomes are reviewed for gains, side effects, and governance compliance."
+          "content": "In this recap, we will review the outcomes of our simulations. Learners will analyze the gains achieved, any side effects that occurred, and how well the governance structures complied with the established rules. This reflection is important for learning from our experiences.\nContext recap: In this recap, we will review the outcomes of our simulations. Learners will analyze the gains achieved, any side effects that occurred, and how well the governance structures complied with the established rules. This reflection is important for learning from our experiences."
         }
       ],
       "interactiveActivities": [
@@ -676,19 +676,19 @@ export const ComparativePolitics501Module: LearningModule = {
           "id": "comparative-politics-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefit and burden distribution across stakeholders and time horizons."
+          "content": "In this lesson, learners will map out how benefits and burdens are distributed among different stakeholders over time. Understanding this distribution is crucial for assessing the impact of policies and decisions on various groups within society.\nContext recap: In this lesson, learners will map out how benefits and burdens are distributed among different stakeholders over time. Understanding this distribution is crucial for assessing the impact of policies and decisions on various groups within society.\nWhy this matters: Stakeholder Impact Distribution helps learners in Social Studies connect ideas from Comparative Politics Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "comparative-politics-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated into governance design."
+          "content": "In this section, we will explore the architecture of accountability within governance systems. This includes understanding how decisions can be traced back, the rights of individuals to review those decisions, and the obligations to address any issues that arise. Integrating these elements into governance design is essential for transparency and responsibility.\nContext recap: In this section, we will explore the architecture of accountability within governance systems. This includes understanding how decisions can be traced back, the rights of individuals to review those decisions, and the obligations to address any issues that arise. Integrating these elements into governance design is essential for transparency and responsibility."
         },
         {
           "id": "comparative-politics-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links technical outcomes, policy compliance, ethics, and resilience."
+          "content": "To ensure effective leadership, it is important to use a final checklist that connects various important aspects. This checklist should include technical outcomes, adherence to policies, ethical considerations, and the ability to adapt and recover from challenges. By focusing on these areas, leaders can make better decisions that positively impact their communities.\nContext recap: To ensure effective leadership, it is important to use a final checklist that connects various important aspects. This checklist should include technical outcomes, adherence to policies, ethical considerations, and the ability to adapt and recover from challenges. By focusing on these areas, leaders can make better decisions that positively impact their communities."
         }
       ],
       "flashcards": [
@@ -727,13 +727,13 @@ export const ComparativePolitics501Module: LearningModule = {
           "id": "comparative-politics-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, and clear boundaries of uncertainty. Additionally, learners will outline possible pathways for addressing any issues that may arise. This exercise helps develop critical thinking and problem-solving skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, and clear boundaries of uncertainty. Additionally, learners will outline possible pathways for addressing any issues that may arise. This exercise helps develop critical thinking and problem-solving skills."
         },
         {
           "id": "comparative-politics-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critique scenarios."
+          "content": "During this rehearsal session, learners will practice their responses to various scenarios that may involve technical questions, governance challenges, and critiques from stakeholders. This preparation is crucial for building confidence and ensuring that learners are ready to engage thoughtfully with different perspectives during discussions.\nContext recap: During this rehearsal session, learners will practice their responses to various scenarios that may involve technical questions, governance challenges, and critiques from stakeholders. This preparation is crucial for building confidence and ensuring that learners are ready to engage thoughtfully with different perspectives during discussions."
         }
       ],
       "interactiveActivities": [

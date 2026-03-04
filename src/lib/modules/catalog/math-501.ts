@@ -47,19 +47,19 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Math, with focus on math systems diagnostics and math operations and execution design."
+          "content": "In this lesson, we will explore the concept of advanced scope boundaries in mathematics. We will focus on understanding how to diagnose mathematical systems effectively and how to design operations and execution strategies that enhance our problem-solving skills. This foundational knowledge will help you navigate complex mathematical challenges with greater confidence and precision.\nContext recap: In this lesson, we will explore the concept of advanced scope boundaries in mathematics. We will focus on understanding how to diagnose mathematical systems effectively and how to design operations and execution strategies that enhance our problem-solving skills. This foundational knowledge will help you navigate complex mathematical challenges with greater confidence and precision."
         },
         {
           "id": "math-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or variables. We will also examine uncertainty ranges and system dependencies, which are crucial for understanding how different factors influence one another. This mapping process is essential for planning effective interventions in various scenarios.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or variables. We will also examine uncertainty ranges and system dependencies, which are crucial for understanding how different factors influence one another. This mapping process is essential for planning effective interventions in various scenarios."
         },
         {
           "id": "math-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize the importance of aligning all claims with measurable indicators. This means that every assertion we make should be supported by evidence that can be quantified. We will also discuss the significance of establishing confidence bounds and review checkpoints to ensure that our conclusions are reliable and well-founded.\nContext recap: In our recap, we will emphasize the importance of aligning all claims with measurable indicators. This means that every assertion we make should be supported by evidence that can be quantified. We will also discuss the significance of establishing confidence bounds and review checkpoints to ensure that our conclusions are reliable and well-founded."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific mathematical tasks. After creating these workflows, we will put them to the test by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience will help you understand the importance of resilience in mathematical methods.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific mathematical tasks. After creating these workflows, we will put them to the test by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience will help you understand the importance of resilience in mathematical methods."
         },
         {
           "id": "math-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will review how workflows can be structured to include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are vital for ensuring that our processes remain effective and can adapt to changing circumstances, allowing for better decision-making in complex situations.\nContext recap: In our recap, we will review how workflows can be structured to include essential components such as checkpoints, rollback criteria, and threshold-based escalation. These elements are vital for ensuring that our processes remain effective and can adapt to changing circumstances, allowing for better decision-making in complex situations."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in math systems diagnostics and math impact and tradeoff analysis."
+          "content": "In this lesson, we will frame case studies that highlight competing constraints within mathematical systems diagnostics. We will analyze the impacts and trade-offs involved in various mathematical decisions. Understanding these dynamics is crucial for making informed choices that balance multiple factors effectively.\nContext recap: In this lesson, we will frame case studies that highlight competing constraints within mathematical systems diagnostics. We will analyze the impacts and trade-offs involved in various mathematical decisions. Understanding these dynamics is crucial for making informed choices that balance multiple factors effectively."
         },
         {
           "id": "math-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you appreciate the complexities involved in decision-making and the need to weigh various factors against one another.\nContext recap: In this practice session, learners will compare different options based on several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis will help you appreciate the complexities involved in decision-making and the need to weigh various factors against one another."
         },
         {
           "id": "math-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will discuss the structure of decision memos. Each recommendation should clearly outline the underlying assumptions, the evidence supporting the decision, risk controls in place, and fallback plans. This structured approach ensures that all aspects of a decision are considered and documented for future reference.\nContext recap: In our recap, we will discuss the structure of decision memos. Each recommendation should clearly outline the underlying assumptions, the evidence supporting the decision, risk controls in place, and fallback plans. This structured approach ensures that all aspects of a decision are considered and documented for future reference."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls, focusing on balancing performance with governance constraints. This exercise will provide insights into how to manage competing priorities effectively while ensuring that all actions remain aligned with established guidelines.\nContext recap: In this interactive practice, learners will operate scenario controls, focusing on balancing performance with governance constraints. This exercise will provide insights into how to manage competing priorities effectively while ensuring that all actions remain aligned with established guidelines."
         },
         {
           "id": "math-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will highlight the importance of effective responses that update control gates while maintaining traceability and accountability. This means that as we adapt our strategies, we must ensure that all changes are documented and that we can track the outcomes of our decisions.\nContext recap: In our recap, we will highlight the importance of effective responses that update control gates while maintaining traceability and accountability. This means that as we adapt our strategies, we must ensure that all changes are documented and that we can track the outcomes of our decisions."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by decisions is essential for creating equitable solutions that consider everyone's needs.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how various groups are impacted by decisions is essential for creating equitable solutions that consider everyone's needs."
         },
         {
           "id": "math-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation when necessary. Establishing these frameworks is crucial for maintaining trust and integrity in mathematical governance.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for reviews, and obligations for remediation when necessary. Establishing these frameworks is crucial for maintaining trust and integrity in mathematical governance."
         },
         {
           "id": "math-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and highlights the importance of resilience in leadership. This checklist will serve as a valuable tool for responsible decision-making.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and highlights the importance of resilience in leadership. This checklist will serve as a valuable tool for responsible decision-making."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Math501Module: LearningModule = {
           "id": "math-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a detailed defense brief. This brief will include well-supported claims, relevant evidence, clear uncertainty bounds, and proposed pathways for remediation. This exercise will help develop critical thinking and analytical skills.\nContext recap: In this interactive activity, learners will work together to create a detailed defense brief. This brief will include well-supported claims, relevant evidence, clear uncertainty bounds, and proposed pathways for remediation. This exercise will help develop critical thinking and analytical skills."
         },
         {
           "id": "math-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may arise from technical experts, governance bodies, and stakeholders. This rehearsal will help build confidence and improve communication skills, ensuring that learners are well-prepared for real-world discussions.\nContext recap: During this session, learners will practice their responses to various critiques that may arise from technical experts, governance bodies, and stakeholders. This rehearsal will help build confidence and improve communication skills, ensuring that learners are well-prepared for real-world discussions."
         }
       ],
       "interactiveActivities": [

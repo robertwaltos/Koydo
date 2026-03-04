@@ -7,6 +7,7 @@ import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-prim
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Rhythm Types --- */
 type Note = {
@@ -28,6 +29,9 @@ export default function RhythmRules() {
 
     const gameLoopRef = useRef<number | null>(null);
     const startTimeRef = useRef<number>(0);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const levelData: Note[] = useMemo(() => [
         { id: "n1", lane: 0, time: 2000, text: "BA-", type: "SYLLABLE" },
@@ -38,6 +42,25 @@ export default function RhythmRules() {
         { id: "n6", lane: 0, time: 8000, text: "OR-", type: "SYLLABLE" },
         { id: "n7", lane: 2, time: 9000, text: "ANGE", type: "SYLLABLE" },
     ], []);
+
+    useEffect(() => {
+        if (gameState !== "RESULT" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "rhythm",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, activeNotes.length),
+            score,
+            maxScore: levelData.length * 100,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, activeNotes.length, score, levelData.length]);
 
     const startGame = () => {
         setGameState("PLAYING");

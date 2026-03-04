@@ -47,19 +47,19 @@ export const NutritionScience501Module: LearningModule = {
           "id": "nutrition-science-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Decision Boundaries",
-          "content": "This lesson defines advanced boundaries for Nutrition Science, including control points for metabolic evidence interpretation and intervention protocol design."
+          "content": "In this lesson, we will explore the advanced boundaries of Nutrition Science. This includes understanding key control points that help us interpret metabolic evidence effectively and design intervention protocols that can make a real difference in health outcomes. By establishing these boundaries, we can ensure that our approaches are both scientifically sound and practically applicable.\nContext recap: In this lesson, we will explore the advanced boundaries of Nutrition Science. This includes understanding key control points that help us interpret metabolic evidence effectively and design intervention protocols that can make a real difference in health outcomes. By establishing these boundaries, we can ensure that our approaches are both scientifically sound and practically applicable."
         },
         {
           "id": "nutrition-science-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Structure",
-          "content": "Learners map causal pathways and uncertainty ranges before intervention planning."
+          "content": "Before planning any interventions, learners will engage in mapping out causal pathways and identifying ranges of uncertainty. This process is crucial as it helps us understand the relationships between different factors and the potential variability in outcomes. By doing this, we can create more effective and informed intervention strategies.\nContext recap: Before planning any interventions, learners will engage in mapping out causal pathways and identifying ranges of uncertainty. This process is crucial as it helps us understand the relationships between different factors and the potential variability in outcomes. By doing this, we can create more effective and informed intervention strategies."
         },
         {
           "id": "nutrition-science-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "Claims are tied to measurable indicators, uncertainty declarations, and review checkpoints."
+          "content": "In our discussions, we will emphasize the importance of linking claims to measurable indicators. This means that any assertions we make must be supported by clear evidence. Additionally, we will discuss how to declare uncertainties and establish review checkpoints to ensure that our findings are reliable and can be trusted.\nContext recap: In our discussions, we will emphasize the importance of linking claims to measurable indicators. This means that any assertions we make must be supported by clear evidence. Additionally, we will discuss how to declare uncertainties and establish review checkpoints to ensure that our findings are reliable and can be trusted."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const NutritionScience501Module: LearningModule = {
           "id": "nutrition-science-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them against adversarial conditions."
+          "content": "In this interactive session, learners will have the opportunity to design specialized workflows tailored to their specific needs. They will also conduct stress tests on these workflows to see how they perform under challenging conditions. This hands-on practice is essential for understanding how to create robust and adaptable nutrition strategies.\nContext recap: In this interactive session, learners will have the opportunity to design specialized workflows tailored to their specific needs. They will also conduct stress tests on these workflows to see how they perform under challenging conditions. This hands-on practice is essential for understanding how to create robust and adaptable nutrition strategies."
         },
         {
           "id": "nutrition-science-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Design",
-          "content": "Gate criteria, rollback conditions, and escalation thresholds are integrated into the workflow."
+          "content": "As part of our recap, we will integrate key elements such as gate criteria, rollback conditions, and escalation thresholds into our workflow designs. This integration ensures that our processes are not only effective but also responsive to unexpected challenges, allowing for smooth adjustments when necessary.\nContext recap: As part of our recap, we will integrate key elements such as gate criteria, rollback conditions, and escalation thresholds into our workflow designs. This integration ensures that our processes are not only effective but also responsive to unexpected challenges, allowing for smooth adjustments when necessary."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const NutritionScience501Module: LearningModule = {
           "id": "nutrition-science-501-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: a clinical-community nutrition strategy balancing metabolic outcomes, adherence, and food-access realities. Learners identify constraints, risks, and governance boundaries."
+          "content": "In this engaging case study, we will explore a clinical-community nutrition strategy designed to achieve a balance between metabolic health outcomes and the adherence to dietary plans, while also considering the important realities of food access in our communities. As learners, you will have the opportunity to identify various constraints that may impact this strategy, such as economic factors and availability of resources. Additionally, you will assess potential risks that could arise and examine the governance boundaries that may influence the implementation of this strategy. This exercise will not only enhance your understanding of nutrition science but also develop your critical thinking and problem-solving skills, which are essential for addressing real-world challenges in health and nutrition."
         },
         {
           "id": "nutrition-science-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are evaluated across performance, reliability, equity, and feasibility dimensions."
+          "content": "During this segment, we will evaluate different options using a tradeoff matrix. This matrix will help us assess each option based on several important dimensions, including performance, reliability, equity, and feasibility. By doing so, we can make informed decisions that consider multiple perspectives and outcomes.\nContext recap: During this segment, we will evaluate different options using a tradeoff matrix. This matrix will help us assess each option based on several important dimensions, including performance, reliability, equity, and feasibility. By doing so, we can make informed decisions that consider multiple perspectives and outcomes."
         },
         {
           "id": "nutrition-science-501-l04-c3",
           "kind": "recap",
           "title": "Failure and Recovery Design",
-          "content": "Failure signatures are mapped to mitigation actions and measurable recovery triggers."
+          "content": "In our recap, we will discuss how to map failure signatures to appropriate mitigation actions and measurable recovery triggers. This process is vital for understanding how to respond effectively when things do not go as planned, ensuring that we can recover quickly and maintain the integrity of our nutrition strategies.\nContext recap: In our recap, we will discuss how to map failure signatures to appropriate mitigation actions and measurable recovery triggers. This process is vital for understanding how to respond effectively when things do not go as planned, ensuring that we can recover quickly and maintain the integrity of our nutrition strategies."
         }
       ],
       "flashcards": [
@@ -419,13 +419,13 @@ export const NutritionScience501Module: LearningModule = {
           "id": "nutrition-science-501-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure scenarios, constraints, metrics, and escalation logic for intervention tests."
+          "content": "In this interactive practice session, learners will configure various scenarios, constraints, metrics, and escalation logic for testing their intervention strategies. This setup is crucial for simulating real-world conditions and understanding how different factors can influence outcomes in nutrition science.\nContext recap: In this interactive practice session, learners will configure various scenarios, constraints, metrics, and escalation logic for testing their intervention strategies. This setup is crucial for simulating real-world conditions and understanding how different factors can influence outcomes in nutrition science."
         },
         {
           "id": "nutrition-science-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Simulation outcomes are reviewed for gains, side effects, and governance compliance."
+          "content": "After conducting simulations, we will review the outcomes to identify any gains, side effects, and compliance with governance standards. This debriefing process is essential for learning from our experiences and adapting our strategies to improve future interventions.\nContext recap: After conducting simulations, we will review the outcomes to identify any gains, side effects, and compliance with governance standards. This debriefing process is essential for learning from our experiences and adapting our strategies to improve future interventions.\nWhy this matters: Debrief and Adaptation helps learners in Health Science connect ideas from Nutrition Science Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -676,19 +676,19 @@ export const NutritionScience501Module: LearningModule = {
           "id": "nutrition-science-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefit and burden distribution across stakeholders and time horizons."
+          "content": "In this lesson, learners will map out how benefits and burdens are distributed among various stakeholders over different time horizons. Understanding this distribution is key to ensuring that nutrition interventions are equitable and serve the needs of all community members.\nContext recap: In this lesson, learners will map out how benefits and burdens are distributed among various stakeholders over different time horizons. Understanding this distribution is key to ensuring that nutrition interventions are equitable and serve the needs of all community members."
         },
         {
           "id": "nutrition-science-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated into governance design."
+          "content": "We will explore the concept of accountability architecture, which includes elements such as decision traceability, review rights, and obligations for remediation. Integrating these components into our governance design is crucial for fostering transparency and trust in nutrition science practices.\nContext recap: We will explore the concept of accountability architecture, which includes elements such as decision traceability, review rights, and obligations for remediation. Integrating these components into our governance design is crucial for fostering transparency and trust in nutrition science practices."
         },
         {
           "id": "nutrition-science-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links technical outcomes, policy compliance, ethics, and resilience."
+          "content": "To ensure effective leadership in nutrition science, it is important to follow a comprehensive checklist. This checklist connects important outcomes related to technical aspects, adherence to policies, ethical considerations, and the ability to adapt and recover from challenges. By using this checklist, leaders can make informed decisions that positively impact public health and nutrition.\nContext recap: To ensure effective leadership in nutrition science, it is important to follow a comprehensive checklist. This checklist connects important outcomes related to technical aspects, adherence to policies, ethical considerations, and the ability to adapt and recover from challenges. By using this checklist, leaders can make informed decisions that positively impact public health and nutrition."
         }
       ],
       "flashcards": [
@@ -727,13 +727,13 @@ export const NutritionScience501Module: LearningModule = {
           "id": "nutrition-science-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainties, and potential pathways for addressing any issues that may arise. This exercise helps learners develop critical thinking and communication skills necessary for effective advocacy in nutrition science.\nContext recap: In this interactive activity, learners will work together to create a detailed brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainties, and potential pathways for addressing any issues that may arise. This exercise helps learners develop critical thinking and communication skills necessary for effective advocacy in nutrition science."
         },
         {
           "id": "nutrition-science-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critique scenarios."
+          "content": "During this rehearsal session, learners will practice their responses to various scenarios that involve technical questions, governance challenges, and critiques from stakeholders. This preparation is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions in real-world situations.\nContext recap: During this rehearsal session, learners will practice their responses to various scenarios that involve technical questions, governance challenges, and critiques from stakeholders. This preparation is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions in real-world situations."
         }
       ],
       "interactiveActivities": [

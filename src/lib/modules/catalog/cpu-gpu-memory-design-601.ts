@@ -47,19 +47,19 @@ export const CpuGpuMemoryDesign601Module: LearningModule = {
           "id": "cpu-gpu-memory-design-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Cpu Gpu Memory Design, with focus on computer architecture systems diagnostics and computer architecture operations and execution design."
+          "content": "In this lesson, we will dive into the advanced scope boundaries of CPU, GPU, and memory design. We will take a closer look at how computer architecture systems function, which includes learning how to identify and diagnose potential issues that may arise. Additionally, we will discuss the design of operations that ensure effective execution of tasks within these systems. By the end of this lesson, you will gain a deeper understanding of how these critical components interact within a computer system and why their design is essential for optimizing overall performance. This knowledge will help you appreciate the intricate relationships between hardware and software in computing environments."
         },
         {
           "id": "cpu-gpu-memory-design-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how various system components depend on each other. This foundational knowledge is crucial for planning effective interventions in computer architecture design.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors in a system. They will also identify ranges of uncertainty and understand how various system components depend on each other. This foundational knowledge is crucial for planning effective interventions in computer architecture design."
         },
         {
           "id": "cpu-gpu-memory-design-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we emphasize that all claims made during our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. Understanding these concepts is essential for making informed decisions in computer architecture.\nContext recap: In this recap, we emphasize that all claims made during our analysis must be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be verified. Understanding these concepts is essential for making informed decisions in computer architecture."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const CpuGpuMemoryDesign601Module: LearningModule = {
           "id": "cpu-gpu-memory-design-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice session, learners will design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding the practical applications of theoretical concepts in computer architecture.\nContext recap: In this interactive practice session, learners will design specialized workflows tailored to specific tasks. They will also conduct stress tests on these workflows to see how they perform under challenging scenarios. This hands-on experience is vital for understanding the practical applications of theoretical concepts in computer architecture."
         },
         {
           "id": "cpu-gpu-memory-design-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows should include important features such as checkpoints, rollback criteria, and threshold-based escalation. These elements are crucial for ensuring that the system can recover from errors and maintain performance standards during operation.\nContext recap: In this recap, we will discuss how workflows should include important features such as checkpoints, rollback criteria, and threshold-based escalation. These elements are crucial for ensuring that the system can recover from errors and maintain performance standards during operation."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const CpuGpuMemoryDesign601Module: LearningModule = {
           "id": "cpu-gpu-memory-design-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in computer architecture systems diagnostics and computer architecture impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case study that highlights the competing constraints faced in computer architecture systems diagnostics. We will analyze the impacts and trade-offs involved in different design choices. This understanding will help learners appreciate the complexities of decision-making in technology.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints faced in computer architecture systems diagnostics. We will analyze the impacts and trade-offs involved in different design choices. This understanding will help learners appreciate the complexities of decision-making in technology."
         },
         {
           "id": "cpu-gpu-memory-design-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare various options based on important criteria such as safety, reliability, cost, equity, and governance. This exercise will help them understand how to weigh different factors when making decisions in computer architecture.\nContext recap: In this practice session, learners will compare various options based on important criteria such as safety, reliability, cost, equity, and governance. This exercise will help them understand how to weigh different factors when making decisions in computer architecture."
         },
         {
           "id": "cpu-gpu-memory-design-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will review the essential components of a decision memo. Each recommendation should clearly outline assumptions, present evidence, identify risk controls, and include fallback plans. This structured approach is crucial for effective communication and decision-making in technology projects.\nContext recap: In this recap, we will review the essential components of a decision memo. Each recommendation should clearly outline assumptions, present evidence, identify risk controls, and include fallback plans. This structured approach is crucial for effective communication and decision-making in technology projects."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const CpuGpuMemoryDesign601Module: LearningModule = {
           "id": "cpu-gpu-memory-design-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will provide them with insights into the challenges of managing technology systems effectively.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will provide them with insights into the challenges of managing technology systems effectively.\nWhy this matters: Live Scenario Controls helps learners in Computer Architecture connect ideas from Cpu Gpu Memory Design Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "cpu-gpu-memory-design-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This principle is vital for maintaining integrity and oversight in technology management.\nContext recap: In this recap, we will discuss how effective responses to challenges should update control gates without losing traceability or accountability. This principle is vital for maintaining integrity and oversight in technology management.\nWhy this matters: Adaptive Response Design helps learners in Computer Architecture connect ideas from Cpu Gpu Memory Design Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const CpuGpuMemoryDesign601Module: LearningModule = {
           "id": "cpu-gpu-memory-design-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for recognizing the broader impact of technology decisions on society.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these dynamics is essential for recognizing the broader impact of technology decisions on society.\nWhy this matters: Stakeholder Impact Distribution helps learners in Computer Architecture connect ideas from Cpu Gpu Memory Design Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "cpu-gpu-memory-design-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This includes integrating decision traceability, review rights, and remediation obligations into our processes. These elements are crucial for ensuring responsible governance in technology development.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes integrating decision traceability, review rights, and remediation obligations into our processes. These elements are crucial for ensuring responsible governance in technology development.\nWhy this matters: Accountability Architecture helps learners in Computer Architecture connect ideas from Cpu Gpu Memory Design Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "cpu-gpu-memory-design-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our leadership practices. This checklist serves as a guide to make sure we are making responsible decisions in our work.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and promotes resilience in our leadership practices. This checklist serves as a guide to make sure we are making responsible decisions in our work."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const CpuGpuMemoryDesign601Module: LearningModule = {
           "id": "cpu-gpu-memory-design-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of any uncertainties, and clear pathways for remediation. This exercise helps develop critical thinking and communication skills.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back them up, an understanding of any uncertainties, and clear pathways for remediation. This exercise helps develop critical thinking and communication skills."
         },
         {
           "id": "cpu-gpu-memory-design-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal session, learners will practice their responses to various critiques that may come from experts in the field, governance issues, and feedback from stakeholders. This preparation is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their work.\nContext recap: During this rehearsal session, learners will practice their responses to various critiques that may come from experts in the field, governance issues, and feedback from stakeholders. This preparation is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their work."
         }
       ],
       "interactiveActivities": [

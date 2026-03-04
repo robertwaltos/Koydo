@@ -17,6 +17,42 @@ import {
 const MAX_HISTORY_FETCH = 80;
 const DEFAULT_HISTORY_FETCH = 24;
 const RECENT_MEMORY_LIMIT = 8;
+const LOW_CONFIDENCE_THRESHOLD = 0.55;
+const MIN_GROUNDED_SCORE = 0.08;
+
+const AMBIGUOUS_QUESTION_PATTERN = /\b(this|that|it|they|them|these|those|here|there)\b/i;
+const GROUNDING_STOP_WORDS = new Set([
+  "a",
+  "about",
+  "an",
+  "and",
+  "are",
+  "as",
+  "at",
+  "be",
+  "by",
+  "for",
+  "from",
+  "how",
+  "i",
+  "in",
+  "is",
+  "it",
+  "of",
+  "on",
+  "or",
+  "that",
+  "the",
+  "this",
+  "to",
+  "we",
+  "what",
+  "which",
+  "why",
+  "with",
+  "you",
+  "your",
+]);
 
 const tutorRequestSchema = z.object({
   question: z.string().min(3).max(600),
@@ -55,15 +91,7 @@ type TutorUsage = {
   limitReached: boolean;
 };
 
-function mapUsageToLegacy(result: AiUsageResult): TutorUsage {
-  return {
-    dailyLimit: result.limit,
-    usedToday: result.used,
-    remainingToday: result.remaining,
-    usageTracked: true,
-    limitReached: !result.allowed,
-  };
-}
+type LessonLookup = NonNullable<ReturnType<typeof getLessonById>>;
 
 function isMissingTableError(params: { message: string | undefined; table: string }) {
   const { message, table } = params;
@@ -150,6 +178,141 @@ function buildRuleBasedAnswer(input: {
     `Your question: "${input.question}"`,
     "Direct guidance: break the question into smaller parts, solve one part at a time, then recombine.",
   ].join("\n");
+}
+
+function truncateText(value: string, maxLength: number) {
+  if (value.length <= maxLength) return value;
+  return `${value.slice(0, maxLength - 1)}...`;
+}
+
+function tokenizeForGrounding(value: string) {
+  const matches = value.toLowerCase().match(/[a-z0-9]{3,}/g) ?? [];
+  return matches.filter((token) => !GROUNDING_STOP_WORDS.has(token));
+}
+
+function buildTutorCitation(lessonLookup: LessonLookup | null) {
+  if (!lessonLookup) return null;
+  return `${lessonLookup.learningModule.title} -> ${lessonLookup.lesson.title}`;
+}
+
+function extractTutorSnippet(lessonLookup: LessonLookup | null) {
+  if (!lessonLookup) return null;
+  const chunkContent =
+    lessonLookup.lesson.chunks?.find((chunk) => typeof chunk.content === "string" && chunk.content.trim().length > 0)
+      ?.content ?? "";
+  const objective = lessonLookup.lesson.objectives?.find((entry) => typeof entry === "string" && entry.trim().length > 0) ?? "";
+  const learningAid =
+    lessonLookup.lesson.learningAids?.find(
+      (aid) => typeof aid.content === "string" && aid.content.trim().length > 0,
+    )?.content ?? "";
+
+  const rawSnippet = [chunkContent, objective, learningAid].find((value) => value.trim().length > 0) ?? "";
+  if (!rawSnippet) return null;
+  return truncateText(normalizeMessage(rawSnippet), 220);
+}
+
+function buildGroundingTokenSet(input: {
+  lessonLookup: LessonLookup | null;
+  focusSkills: string[];
+  summary?: string;
+  snippet?: string | null;
+}) {
+  const sources: string[] = [];
+  if (input.lessonLookup) {
+    sources.push(input.lessonLookup.lesson.title);
+    sources.push(input.lessonLookup.learningModule.title);
+    sources.push(input.lessonLookup.learningModule.subject);
+  }
+  if (input.summary) sources.push(input.summary);
+  if (input.snippet) sources.push(input.snippet);
+  if (input.focusSkills.length > 0) {
+    sources.push(input.focusSkills.join(" "));
+  }
+
+  const tokens = new Set<string>();
+  for (const source of sources) {
+    for (const token of tokenizeForGrounding(source)) {
+      tokens.add(token);
+    }
+  }
+  return tokens;
+}
+
+function calculateGroundingScore(answer: string, groundingTokens: Set<string>) {
+  if (groundingTokens.size === 0) {
+    return 1;
+  }
+  const answerTokens = new Set(tokenizeForGrounding(answer));
+  if (answerTokens.size === 0) {
+    return 0;
+  }
+
+  let overlap = 0;
+  for (const token of answerTokens) {
+    if (groundingTokens.has(token)) {
+      overlap += 1;
+    }
+  }
+
+  return overlap / Math.max(8, Math.min(groundingTokens.size, 18));
+}
+
+function shouldAskClarifyingQuestion(input: {
+  question: string;
+  lessonLookup: LessonLookup | null;
+  groundingScore: number;
+}) {
+  const questionTokenCount = tokenizeForGrounding(input.question).length;
+  if (!input.lessonLookup) return true;
+  if (questionTokenCount <= 5) return true;
+  if (AMBIGUOUS_QUESTION_PATTERN.test(input.question)) return true;
+  return input.groundingScore < LOW_CONFIDENCE_THRESHOLD;
+}
+
+function buildClarifyingQuestion(lessonLookup: LessonLookup | null) {
+  if (!lessonLookup) {
+    return "Which lesson, example, or exact problem are you referring to so I can ground the answer?";
+  }
+  return `Which exact step in "${lessonLookup.lesson.title}" should we unpack first?`;
+}
+
+function estimateTutorConfidence(input: {
+  lessonLookup: LessonLookup | null;
+  hasSummary: boolean;
+  focusSkillCount: number;
+  source: "openai" | "rule_based";
+  groundingScore: number;
+}) {
+  let confidence = input.lessonLookup ? 0.66 : 0.36;
+  confidence += Math.min(0.1, input.focusSkillCount * 0.02);
+  if (input.hasSummary) confidence += 0.06;
+  if (input.source === "openai") confidence += 0.05;
+  confidence += Math.min(0.2, Math.max(0, input.groundingScore) * 0.2);
+  return Number(Math.max(0.2, Math.min(0.95, confidence)).toFixed(3));
+}
+
+function withGroundingBlock(input: {
+  answer: string;
+  citation: string | null;
+  snippet: string | null;
+  clarifyingQuestion: string | null;
+}) {
+  const lines = [input.answer.trim()];
+  if (input.clarifyingQuestion) {
+    lines.push(`Clarifying question: ${input.clarifyingQuestion}`);
+  }
+  if (input.citation) {
+    lines.push(`Source: ${input.citation}`);
+    if (input.snippet) {
+      lines.push(`Snippet: "${input.snippet}"`);
+    }
+  } else {
+    lines.push(
+      "Uncertainty: I do not have a confirmed lesson source for this question yet. Share the lesson title or a short excerpt.",
+    );
+  }
+
+  return lines.join("\n\n");
 }
 
 function toResponseMessage(row: TutorConversationRow) {
@@ -433,39 +596,25 @@ export async function POST(request: Request) {
       focusSkills,
       recentTranscript: recentTranscript || undefined,
     });
+    const citation = buildTutorCitation(lessonLookup);
+    const snippet = extractTutorSnippet(lessonLookup);
+    const groundingTokens = buildGroundingTokenSet({
+      lessonLookup,
+      focusSkills,
+      summary,
+      snippet,
+    });
 
     let answer = baselineAnswer;
     let source: "openai" | "rule_based" = "rule_based";
     let warning: string | null = null;
-    let citations: Citation[] = [];
-    let confidenceScore: number | null = null;
-    let groundingUsed = false;
-    let contradictionDetected = false;
+    let contradictionBlocked = false;
 
-    // ── Grounding pipeline ──
-    let groundingContext: GroundingContext | null = null;
-    let groundedSystemPrompt: string | null = null;
-
-    if (lessonLookup) {
-      const grounding = runGroundingPipeline({
-        lesson: lessonLookup.lesson,
-        learningModule: lessonLookup.learningModule,
-        question,
-      });
-      groundingContext = grounding.context;
-      groundedSystemPrompt = grounding.systemPrompt;
-      confidenceScore = grounding.confidence.score;
-      groundingUsed = grounding.context.sources.length > 0;
-    }
-
-    if (serverEnv.OPENAI_API_KEY) {
-      const systemContent = groundedSystemPrompt
-        ?? "You are a concise, child-friendly teaching assistant. Give practical, step-by-step help and keep answers under 180 words.";
-
+    if (serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY) {
       const openAiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${serverEnv.OPENAI_API_KEY}`,
+          Authorization: `Bearer ${serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -475,7 +624,8 @@ export async function POST(request: Request) {
           messages: [
             {
               role: "system",
-              content: systemContent,
+              content:
+                "You are a concise, child-friendly teaching assistant. Stay aligned to provided lesson context. If context is missing, explicitly say you are uncertain and ask a clarifying question. Keep answers under 180 words.",
             },
             {
               role: "user",
@@ -491,6 +641,10 @@ export async function POST(request: Request) {
                   : null,
                 focusSkills,
                 summary,
+                curriculumEvidence: {
+                  citation,
+                  snippet,
+                },
                 recentConversation: recentConversationRows
                   .slice()
                   .reverse()
@@ -538,6 +692,38 @@ export async function POST(request: Request) {
       }
     }
 
+    const groundingScore = calculateGroundingScore(answer, groundingTokens);
+    if (lessonLookup && source === "openai" && groundingScore < MIN_GROUNDED_SCORE) {
+      contradictionBlocked = true;
+      answer = baselineAnswer;
+      source = "rule_based";
+      warning = warning
+        ? `${warning} Tutor answer was replaced to stay aligned with lesson context.`
+        : "Tutor answer was replaced to stay aligned with lesson context.";
+    }
+
+    const confidence = estimateTutorConfidence({
+      lessonLookup,
+      hasSummary: Boolean(summary),
+      focusSkillCount: focusSkills.length,
+      source,
+      groundingScore,
+    });
+    const clarifyingQuestion = shouldAskClarifyingQuestion({
+      question,
+      lessonLookup,
+      groundingScore,
+    }) || confidence < LOW_CONFIDENCE_THRESHOLD
+      ? buildClarifyingQuestion(lessonLookup)
+      : null;
+
+    answer = withGroundingBlock({
+      answer,
+      citation,
+      snippet,
+      clarifyingQuestion,
+    });
+
     const lessonIdForMemory = lessonLookup?.lesson.id ?? (activeLessonId || null);
     const moduleIdForMemory = lessonLookup?.learningModule.id ?? (followupRow?.module_id ?? null);
     let memorySaved = false;
@@ -565,17 +751,11 @@ export async function POST(request: Request) {
           metadata: {
             requested_via: "api/ai/tutor",
             warning: warning ?? null,
-            grounding: groundingUsed
-              ? {
-                  confidence_score: confidenceScore,
-                  citation_count: citations.length,
-                  contradiction_detected: contradictionDetected,
-                  source_count: groundingContext?.sources.length ?? 0,
-                }
-              : null,
-            citations: citations.length > 0
-              ? citations.map((c) => ({ id: c.sourceId, kind: c.kind, title: c.title }))
-              : null,
+            confidence,
+            grounding_score: Number(groundingScore.toFixed(3)),
+            contradiction_blocked: contradictionBlocked,
+            citation: citation ?? null,
+            clarifying_question_asked: Boolean(clarifyingQuestion),
           },
         },
       ]);
@@ -628,6 +808,14 @@ export async function POST(request: Request) {
         lessonTitle: lessonLookup?.lesson.title ?? null,
         moduleTitle: lessonLookup?.learningModule.title ?? null,
         focusSkills,
+      },
+      grounding: {
+        citation,
+        snippet,
+        confidence,
+        groundingScore: Number(groundingScore.toFixed(3)),
+        contradictionBlocked,
+        clarifyingQuestionAsked: Boolean(clarifyingQuestion),
       },
     });
   } catch (error) {

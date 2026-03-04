@@ -47,19 +47,19 @@ export const Medicine601Module: LearningModule = {
           "id": "medicine-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Medicine, with focus on medicine systems diagnostics and medicine operations and execution design."
+          "content": "In this lesson, we will dive deep into the advanced boundaries of the field of medicine. We will focus on how to accurately diagnose medical systems, which involves understanding the various components that make up these systems. Additionally, we will discuss how to design operations for their execution, ensuring that these practices are not only effective but also prioritize patient safety. Recognizing these boundaries is essential for anyone looking to make a positive impact in the medical field.\nContext recap: In this lesson, we will dive deep into the advanced boundaries of the field of medicine. We will focus on how to accurately diagnose medical systems, which involves understanding the various components that make up these systems. Additionally, we will discuss how to design operations for their execution, ensuring that these practices are not only effective but also prioritize patient safety. Recognizing these boundaries is essential for anyone looking to make a positive impact in the medical field."
         },
         {
           "id": "medicine-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to certain outcomes. Additionally, we will examine uncertainty ranges and system dependencies. This foundational knowledge is essential for planning interventions that can effectively address medical challenges.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can lead to certain outcomes. Additionally, we will examine uncertainty ranges and system dependencies. This foundational knowledge is essential for planning interventions that can effectively address medical challenges."
         },
         {
           "id": "medicine-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize that all claims made in the medical field should be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be trusted.\nContext recap: In our recap, we will emphasize that all claims made in the medical field should be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure that our findings are reliable and can be trusted."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Medicine601Module: LearningModule = {
           "id": "medicine-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored for specific medical tasks. They will also conduct stress tests on these workflows to see how they perform under challenging or adverse scenarios, helping to ensure that they are robust and reliable.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows that are tailored for specific medical tasks. They will also conduct stress tests on these workflows to see how they perform under challenging or adverse scenarios, helping to ensure that they are robust and reliable."
         },
         {
           "id": "medicine-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss how workflows should be designed to include important checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. This architecture is vital for maintaining control and ensuring safety in medical practices.\nContext recap: In our recap, we will discuss how workflows should be designed to include important checkpoints, criteria for rolling back decisions, and escalation procedures based on specific thresholds. This architecture is vital for maintaining control and ensuring safety in medical practices."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Medicine601Module: LearningModule = {
           "id": "medicine-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in medicine systems diagnostics and medicine impact and tradeoff analysis."
+          "content": "In this lesson, we will explore the intricate framework of medical case analysis by focusing on the various competing constraints that arise in medical systems diagnostics. We will delve into how these constraints influence decision-making in healthcare. Additionally, we will analyze the impacts and trade-offs associated with different medical choices, providing learners with a deeper understanding of the complexities involved in the field of medicine.\nContext recap: In this lesson, we will explore the intricate framework of medical case analysis by focusing on the various competing constraints that arise in medical systems diagnostics. We will delve into how these constraints influence decision-making in healthcare. Additionally, we will analyze the impacts and trade-offs associated with different medical choices, providing learners with a deeper understanding of the complexities involved in the field of medicine."
         },
         {
           "id": "medicine-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare various options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions in their future medical practices.\nContext recap: In this practice session, learners will compare various options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them make informed decisions in their future medical practices.\nWhy this matters: Tradeoff Framing helps learners in Medicine connect ideas from Medicine Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "medicine-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will highlight that each recommendation made in the medical field should clearly outline the underlying assumptions, the evidence supporting the recommendation, the controls for managing risks, and any fallback plans that can be implemented if needed.\nContext recap: In our recap, we will highlight that each recommendation made in the medical field should clearly outline the underlying assumptions, the evidence supporting the recommendation, the controls for managing risks, and any fallback plans that can be implemented if needed."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Medicine601Module: LearningModule = {
           "id": "medicine-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, ensuring that they make decisions that are both effective and responsible.\nContext recap: In this interactive clinic, learners will take on the role of operators managing scenario controls. They will need to balance performance with governance constraints, ensuring that they make decisions that are both effective and responsible.\nWhy this matters: Live Scenario Controls helps learners in Medicine connect ideas from Medicine Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "medicine-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss how effective responses to medical scenarios should update control gates while maintaining traceability and accountability. This ensures that all actions taken can be tracked and evaluated for their effectiveness.\nContext recap: In our recap, we will discuss how effective responses to medical scenarios should update control gates while maintaining traceability and accountability. This ensures that all actions taken can be tracked and evaluated for their effectiveness.\nWhy this matters: Adaptive Response Design helps learners in Medicine connect ideas from Medicine Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Medicine601Module: LearningModule = {
           "id": "medicine-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how medical decisions impact various individuals and communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is crucial for recognizing how medical decisions impact various individuals and communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Medicine connect ideas from Medicine Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "medicine-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in medical decision-making. This includes ensuring that there is traceability of decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust in medical systems.\nContext recap: In this section, we will explore the architecture of accountability in medical decision-making. This includes ensuring that there is traceability of decisions made, rights for review, and obligations for remediation when necessary. These elements are essential for maintaining trust in medical systems."
         },
         {
           "id": "medicine-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us reflect on our responsibilities as leaders in the medical field.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies, and promotes resilience in our leadership practices. This checklist serves as a guide to help us reflect on our responsibilities as leaders in the medical field."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Medicine601Module: LearningModule = {
           "id": "medicine-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and pathways for remediation. This exercise helps develop critical thinking and communication skills essential for effective leadership in medicine.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and pathways for remediation. This exercise helps develop critical thinking and communication skills essential for effective leadership in medicine."
         },
         {
           "id": "medicine-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this recap session, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This rehearsal is crucial for building confidence and ensuring that learners are well-prepared to address any questions or concerns that may arise during their presentations.\nContext recap: During this recap session, learners will practice their responses to various critiques that may come from experts, governance bodies, and stakeholders. This rehearsal is crucial for building confidence and ensuring that learners are well-prepared to address any questions or concerns that may arise during their presentations."
         }
       ],
       "interactiveActivities": [

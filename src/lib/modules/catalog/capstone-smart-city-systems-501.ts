@@ -23,7 +23,7 @@ export const CapstoneSmartCitySystems501Module: LearningModule = {
     "Design defensible solutions for urban systems integration under real constraints",
     "Evaluate interventions in infrastructure data orchestration with measurable tradeoff analysis",
     "Operationalize policy-to-operations alignment through accountable governance design",
-    "Lead evidence-backed decision defense for public impact governance scenarios",
+    "Lead evidence-backed decision defense for public impact governance scenarios with explicit data analysis evidence",
     "Integrate technical, policy, and stakeholder perspectives into one execution model",
     "Produce capstone artifacts that withstand expert cross-examination"
   ],
@@ -46,19 +46,19 @@ export const CapstoneSmartCitySystems501Module: LearningModule = {
           "id": "capstone-smart-city-systems-501-l01-c1",
           "kind": "concept",
           "title": "Problem Frame",
-          "content": "The capstone frames a city platform integrating transport, utilities, safety, and civic services with competing reliability and equity targets. Learners define objectives, constraints, and stakeholder exposures."
+          "content": "In this capstone project, we will explore how to create a smart city platform that brings together various important services like transportation, utilities, safety, and community services. These services must work together effectively while also ensuring that they are reliable and fair for everyone in the community. As learners, you will have the opportunity to define clear objectives for your project, identify any limitations you might face, and consider the different stakeholders who will be affected by your decisions.\nContext recap: In this capstone project, we will explore how to create a smart city platform that brings together various important services like transportation, utilities, safety, and community services. These services must work together effectively while also ensuring that they are reliable and fair for everyone in the community. As learners, you will have the opportunity to define clear objectives for your project, identify any limitations you might face, and consider the different stakeholders who will be affected by your decisions."
         },
         {
           "id": "capstone-smart-city-systems-501-l01-c2",
           "kind": "concept",
           "title": "Decision Boundaries",
-          "content": "Boundary design distinguishes what is controllable, what is uncertain, and what requires policy escalation."
+          "content": "When designing your project, it is essential to establish clear boundaries that help you understand what aspects of the project you can control, what elements are uncertain, and which issues may require changes in policy. This boundary design will guide your decision-making process and help you navigate the complexities of creating a smart city.\nContext recap: When designing your project, it is essential to establish clear boundaries that help you understand what aspects of the project you can control, what elements are uncertain, and which issues may require changes in policy. This boundary design will guide your decision-making process and help you navigate the complexities of creating a smart city."
         },
         {
           "id": "capstone-smart-city-systems-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All capstone claims must map to measurable indicators and explicit uncertainty notes."
+          "content": "It is crucial that all claims made during the capstone project are supported by measurable indicators. This means you should be able to track and assess your progress using specific data points. Additionally, you must clearly note any uncertainties that arise during your project to ensure transparency and accountability.\nContext recap: It is crucial that all claims made during the capstone project are supported by measurable indicators. This means you should be able to track and assess your progress using specific data points. Additionally, you must clearly note any uncertainties that arise during your project to ensure transparency and accountability."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const CapstoneSmartCitySystems501Module: LearningModule = {
           "id": "capstone-smart-city-systems-501-l02-c1",
           "kind": "practice",
           "title": "Method Integration",
-          "content": "Learners build an integrated intervention plan across technical, policy, and stakeholder dimensions."
+          "content": "In this interactive lab, you will work on creating a comprehensive intervention plan that integrates various aspects such as technical solutions, policy considerations, and the perspectives of different stakeholders. This plan will help ensure that your smart city project is well-rounded and addresses the needs of all involved.\nContext recap: In this interactive lab, you will work on creating a comprehensive intervention plan that integrates various aspects such as technical solutions, policy considerations, and the perspectives of different stakeholders. This plan will help ensure that your smart city project is well-rounded and addresses the needs of all involved."
         },
         {
           "id": "capstone-smart-city-systems-501-l02-c2",
           "kind": "recap",
           "title": "Control Gates",
-          "content": "The plan includes control thresholds, rollback criteria, and accountability checkpoints."
+          "content": "Your intervention plan should also include specific control gates. These are important thresholds that will help you monitor the progress of your project. Additionally, you should establish criteria for rolling back any changes if necessary, as well as accountability checkpoints to ensure that everyone involved is responsible for their part in the project.\nContext recap: Your intervention plan should also include specific control gates. These are important thresholds that will help you monitor the progress of your project. Additionally, you should establish criteria for rolling back any changes if necessary, as well as accountability checkpoints to ensure that everyone involved is responsible for their part in the project."
         }
       ],
       "interactiveActivities": [
@@ -367,13 +367,13 @@ export const CapstoneSmartCitySystems501Module: LearningModule = {
           "id": "capstone-smart-city-systems-501-l04-c1",
           "kind": "practice",
           "title": "Simulation Run",
-          "content": "Learners run multiple interventions under uncertainty and compare outcomes."
+          "content": "As part of your learning experience, you will conduct multiple simulations where you will run different interventions while considering various uncertainties. After each simulation, you will compare the outcomes to understand which strategies worked best and why. This hands-on practice will help you develop critical thinking skills.\nContext recap: As part of your learning experience, you will conduct multiple simulations where you will run different interventions while considering various uncertainties. After each simulation, you will compare the outcomes to understand which strategies worked best and why. This hands-on practice will help you develop critical thinking skills."
         },
         {
           "id": "capstone-smart-city-systems-501-l04-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "Each run is debriefed for objective attainment, side effects, and governance compliance through explicit data analysis that feeds an implementation artifact."
+          "content": "After running your simulations, it is important to hold a debriefing session. During this time, you will evaluate how well you achieved your objectives, identify any side effects that occurred, and ensure that your project complies with governance standards. This process will involve analyzing the data collected during the simulations, which will contribute to creating a final implementation artifact.\nContext recap: After running your simulations, it is important to hold a debriefing session. During this time, you will evaluate how well you achieved your objectives, identify any side effects that occurred, and ensure that your project complies with governance standards. This process will involve analyzing the data collected during the simulations, which will contribute to creating a final implementation artifact."
         }
       ],
       "interactiveActivities": [
@@ -624,13 +624,13 @@ export const CapstoneSmartCitySystems501Module: LearningModule = {
           "id": "capstone-smart-city-systems-501-l06-c1",
           "kind": "practice",
           "title": "Defense Preparation",
-          "content": "Learners assemble a decision brief with claims, evidence, uncertainty ranges, and one implementation artifact mapped to rubric criteria."
+          "content": "As you get ready for your capstone defense panel, it's important to create a well-structured decision brief. This document should clearly outline your main claims, which are the key points you want to make about your project. You will also need to include supporting evidence that backs up these claims, showing why they are valid. Additionally, it's crucial to address any ranges of uncertainty, which means acknowledging any factors that could affect your results or conclusions. Finally, you should include one implementation artifact, which is a tangible example or tool that demonstrates how your project can be put into action. Make sure this artifact aligns with the criteria outlined in the rubric, as this will help you present your work effectively and confidently during the defense. Preparing this brief is a vital step in ensuring that you can communicate your project clearly and persuasively to the panel."
         },
         {
           "id": "capstone-smart-city-systems-501-l06-c2",
           "kind": "recap",
           "title": "Panel Response Strategy",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques in a structured policy debate using the scoring rubric."
+          "content": "In preparation for the panel, you will also practice responding to critiques related to technical aspects, governance issues, and stakeholder concerns. This will take place in a structured policy debate format, where you will use the scoring rubric to guide your responses. This practice will help you build confidence and improve your communication skills.\nContext recap: In preparation for the panel, you will also practice responding to critiques related to technical aspects, governance issues, and stakeholder concerns. This will take place in a structured policy debate format, where you will use the scoring rubric to guide your responses. This practice will help you build confidence and improve your communication skills."
         }
       ],
       "interactiveActivities": [

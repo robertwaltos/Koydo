@@ -47,19 +47,19 @@ export const ClimateScience301Module: LearningModule = {
           "id": "climate-science-301-l01-c1",
           "kind": "concept",
           "title": "Vocabulary and System Boundaries",
-          "content": "This lesson establishes shared language for Climate Science, defines operating boundaries, and maps where earth energy balance and carbon cycle dynamics interact in real environments."
+          "content": "In this lesson, we will work together to build a shared vocabulary that will enhance our understanding of Climate Science. We will clearly define the boundaries that guide our study of climate systems, which is crucial for grasping the complexities of this field. Additionally, we will investigate how the balance of energy on Earth interacts with the carbon cycle. By mapping these interactions, we will gain insights into how they manifest in real-world environments. This understanding is vital for recognizing the challenges posed by climate change and its effects on our planet and communities."
         },
         {
           "id": "climate-science-301-l01-c2",
           "kind": "concept",
           "title": "Causal Structures and Constraints",
-          "content": "Learners model causal paths, identify hidden assumptions, and apply constraint checks before proposing interventions."
+          "content": "In this part of the lesson, students will learn how to model causal paths, which are the connections between different factors in climate systems. They will also identify any hidden assumptions that might affect their understanding. Before suggesting any changes or interventions, learners will apply checks to ensure that these constraints are considered, helping them to think critically about the implications of their proposals.\nContext recap: In this part of the lesson, students will learn how to model causal paths, which are the connections between different factors in climate systems. They will also identify any hidden assumptions that might affect their understanding. Before suggesting any changes or interventions, learners will apply checks to ensure that these constraints are considered, helping them to think critically about the implications of their proposals."
         },
         {
           "id": "climate-science-301-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "The module introduces an evidence-first workflow where each claim is tied to observable indicators and expected uncertainty."
+          "content": "This module introduces a workflow that prioritizes evidence in our understanding of climate science. Each claim made will be linked to observable indicators, which are measurable signs that support our statements. Additionally, we will discuss the concept of uncertainty, which acknowledges that not all outcomes can be predicted with complete confidence. This approach helps us build a more reliable understanding of climate issues.\nContext recap: This module introduces a workflow that prioritizes evidence in our understanding of climate science. Each claim made will be linked to observable indicators, which are measurable signs that support our statements. Additionally, we will discuss the concept of uncertainty, which acknowledges that not all outcomes can be predicted with complete confidence. This approach helps us build a more reliable understanding of climate issues."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const ClimateScience301Module: LearningModule = {
           "id": "climate-science-301-l02-c1",
           "kind": "practice",
           "title": "Method Sequence Construction",
-          "content": "Learners build a method sequence optimized for system tradeoffs, metrics architecture, and governance decisions, then stress-test each step under uncertainty."
+          "content": "In this interactive lab, learners will construct a sequence of methods that are optimized for making trade-offs in climate systems. They will consider various metrics and how these decisions impact governance. After building their method sequence, students will stress-test each step to see how it holds up under uncertain conditions, ensuring that their approach is robust and adaptable.\nContext recap: In this interactive lab, learners will construct a sequence of methods that are optimized for making trade-offs in climate systems. They will consider various metrics and how these decisions impact governance. After building their method sequence, students will stress-test each step to see how it holds up under uncertain conditions, ensuring that their approach is robust and adaptable."
         },
         {
           "id": "climate-science-301-l02-c2",
           "kind": "recap",
           "title": "Operational Readiness Checks",
-          "content": "Readiness is assessed with owner mapping, checkpoint cadence, rollback triggers, and evidence logs."
+          "content": "In this recap, we will assess the readiness of our methods by mapping out who is responsible for each part of the process. We will establish a cadence for checkpoints to ensure everything is on track, identify triggers for rolling back decisions if necessary, and maintain evidence logs to document our findings. This thorough approach helps ensure that our methods are prepared for real-world application.\nContext recap: In this recap, we will assess the readiness of our methods by mapping out who is responsible for each part of the process. We will establish a cadence for checkpoints to ensure everything is on track, identify triggers for rolling back decisions if necessary, and maintain evidence logs to document our findings. This thorough approach helps ensure that our methods are prepared for real-world application."
         }
       ],
       "interactiveActivities": [
@@ -322,19 +322,19 @@ export const ClimateScience301Module: LearningModule = {
           "id": "climate-science-301-l04-c1",
           "kind": "example",
           "title": "Case Setup and Stakes",
-          "content": "The case examines a coastal city balancing mitigation policy with heat and flood adaptation planning, requiring learners to separate evidence, assumptions, and high-consequence risks."
+          "content": "In this engaging case study, we will delve into the challenges faced by a coastal city as it strives to find a balance between implementing effective policies to mitigate the impacts of climate change and developing strategies to adapt to the increasing risks of heatwaves and flooding. As part of this analysis, learners will be encouraged to critically separate factual evidence from assumptions and to pinpoint the high-stakes risks that could significantly influence the city's future. This exercise will enhance our understanding of the intricate decision-making processes involved in addressing climate-related issues and the importance of informed policy-making."
         },
         {
           "id": "climate-science-301-l04-c2",
           "kind": "concept",
           "title": "Decision Tradeoff Matrix",
-          "content": "Alternatives are scored across performance, reliability, cost, and equity implications before selecting an intervention path."
+          "content": "In this section, we will create a decision tradeoff matrix where different alternatives are evaluated based on their performance, reliability, cost, and implications for equity. By scoring these alternatives, learners will be better equipped to select the most effective intervention path. This structured approach helps ensure that decisions are made thoughtfully and with consideration for all stakeholders involved.\nContext recap: In this section, we will create a decision tradeoff matrix where different alternatives are evaluated based on their performance, reliability, cost, and implications for equity. By scoring these alternatives, learners will be better equipped to select the most effective intervention path. This structured approach helps ensure that decisions are made thoughtfully and with consideration for all stakeholders involved."
         },
         {
           "id": "climate-science-301-l04-c3",
           "kind": "recap",
           "title": "Lessons from Failure Modes",
-          "content": "Failure patterns are categorized to convert one-off incidents into reusable design safeguards."
+          "content": "In this recap, we will categorize patterns of failure that have occurred in past climate interventions. By analyzing these failure modes, we can learn valuable lessons that will help us convert one-time incidents into reusable design safeguards. This proactive approach allows us to improve future strategies and avoid repeating mistakes.\nContext recap: In this recap, we will categorize patterns of failure that have occurred in past climate interventions. By analyzing these failure modes, we can learn valuable lessons that will help us convert one-time incidents into reusable design safeguards. This proactive approach allows us to improve future strategies and avoid repeating mistakes."
         }
       ],
       "flashcards": [
@@ -373,13 +373,13 @@ export const ClimateScience301Module: LearningModule = {
           "id": "climate-science-301-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure a scenario model with explicit uncertainty assumptions and success metrics tied to adaptation strategy."
+          "content": "In this interactive session, learners will set up a simulation scenario that includes clear assumptions about uncertainties and metrics for success related to their adaptation strategies. By configuring these elements, students will gain insights into how different factors can influence outcomes in climate scenarios, enhancing their understanding of the complexities involved.\nContext recap: In this interactive session, learners will set up a simulation scenario that includes clear assumptions about uncertainties and metrics for success related to their adaptation strategies. By configuring these elements, students will gain insights into how different factors can influence outcomes in climate scenarios, enhancing their understanding of the complexities involved."
         },
         {
           "id": "climate-science-301-l05-c2",
           "kind": "recap",
           "title": "Decision Review Loop",
-          "content": "Each simulation round ends with evidence review, policy alignment checks, and improvement actions."
+          "content": "At the end of each simulation round, we will conduct a review of the evidence gathered during the simulation. This will include checking for alignment with policy goals and identifying actions for improvement. This iterative process helps learners refine their strategies and ensures that they are making informed decisions based on the latest data.\nContext recap: At the end of each simulation round, we will conduct a review of the evidence gathered during the simulation. This will include checking for alignment with policy goals and identifying actions for improvement. This iterative process helps learners refine their strategies and ensures that they are making informed decisions based on the latest data."
         }
       ],
       "interactiveActivities": [
@@ -579,19 +579,19 @@ export const ClimateScience301Module: LearningModule = {
           "id": "climate-science-301-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Analysis",
-          "content": "Learners identify who benefits, who bears risk, and how policy choices shape outcomes across groups."
+          "content": "In this part of the lesson, learners will analyze the various stakeholders involved in climate policy. They will identify who benefits from certain policies, who might bear the risks, and how different policy choices can shape outcomes for various groups. This understanding is crucial for developing equitable and effective climate solutions.\nContext recap: In this part of the lesson, learners will analyze the various stakeholders involved in climate policy. They will identify who benefits from certain policies, who might bear the risks, and how different policy choices can shape outcomes for various groups. This understanding is crucial for developing equitable and effective climate solutions."
         },
         {
           "id": "climate-science-301-l07-c2",
           "kind": "concept",
           "title": "Governance and Accountability",
-          "content": "Governance mechanisms are linked to measurable controls, transparency obligations, and remediation pathways."
+          "content": "In this section, we will explore how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. Understanding these links is essential for ensuring accountability in climate policy and for fostering trust among stakeholders. This knowledge empowers learners to advocate for responsible governance in climate action.\nContext recap: In this section, we will explore how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. Understanding these links is essential for ensuring accountability in climate policy and for fostering trust among stakeholders. This knowledge empowers learners to advocate for responsible governance in climate action."
         },
         {
           "id": "climate-science-301-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist integrates legal, ethical, technical, and user-impact criteria before deployment decisions."
+          "content": "Before making any decisions about deploying a project, it is important to complete a final checklist. This checklist should include important factors such as legal requirements, ethical considerations, technical aspects, and the potential impact on users. By carefully reviewing these criteria, we can ensure that our decisions are responsible and beneficial for everyone involved.\nContext recap: Before making any decisions about deploying a project, it is important to complete a final checklist. This checklist should include important factors such as legal requirements, ethical considerations, technical aspects, and the potential impact on users. By carefully reviewing these criteria, we can ensure that our decisions are responsible and beneficial for everyone involved."
         }
       ],
       "flashcards": [
@@ -630,13 +630,13 @@ export const ClimateScience301Module: LearningModule = {
           "id": "climate-science-301-l08-c1",
           "kind": "practice",
           "title": "Capstone Scope Definition",
-          "content": "Learners draft a capstone charter with objective, risks, success metrics, and governance checkpoints."
+          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish metrics for measuring success, and set governance checkpoints to ensure everything stays on track. This process helps students think critically about their projects and prepares them for real-world challenges.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish metrics for measuring success, and set governance checkpoints to ensure everything stays on track. This process helps students think critically about their projects and prepares them for real-world challenges."
         },
         {
           "id": "climate-science-301-l08-c2",
           "kind": "recap",
           "title": "Defense Preparation",
-          "content": "The lesson ends with a defense template that requires evidence-backed claims and explicit tradeoff reasoning."
+          "content": "At the conclusion of this lesson, students will receive a defense preparation template. This template is designed to help them articulate their claims with supporting evidence and to clearly explain any trade-offs involved in their decisions. This exercise encourages critical thinking and helps students prepare for presenting their ideas effectively.\nContext recap: At the conclusion of this lesson, students will receive a defense preparation template. This template is designed to help them articulate their claims with supporting evidence and to clearly explain any trade-offs involved in their decisions. This exercise encourages critical thinking and helps students prepare for presenting their ideas effectively."
         }
       ],
       "interactiveActivities": [

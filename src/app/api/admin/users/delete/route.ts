@@ -43,6 +43,29 @@ export async function POST(request: Request) {
   }
 
   const admin = createSupabaseAdminClient();
+  const { data: targetProfile, error: targetProfileError } = await admin
+    .from("user_profiles")
+    .select("is_owner")
+    .eq("user_id", payload.data.userId)
+    .maybeSingle<{ is_owner: boolean }>();
+  if (targetProfileError || !targetProfile) {
+    return NextResponse.json({ error: "Target user profile not found." }, { status: 404 });
+  }
+
+  if (targetProfile.is_owner) {
+    const ownerCountResult = await admin
+      .from("user_profiles")
+      .select("user_id", { count: "exact", head: true })
+      .eq("is_owner", true);
+    if (ownerCountResult.error) {
+      console.error("Unexpected API error.", toSafeErrorRecord(ownerCountResult.error));
+      return NextResponse.json({ error: "Internal server error." }, { status: 500 });
+    }
+    if ((ownerCountResult.count ?? 0) <= 1) {
+      return NextResponse.json({ error: "Cannot delete the last owner account." }, { status: 400 });
+    }
+  }
+
   const approvalCheck = await requireApprovedRequestForAction({
     actionType: "user_delete",
     approvalRequestId: payload.data.approvalRequestId,

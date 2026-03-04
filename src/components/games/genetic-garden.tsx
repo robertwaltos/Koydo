@@ -1,12 +1,16 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useRef } from "react";
 import { Sprout, TestTube, Dna, Leaf, RefreshCw, Trophy, Heart, Sparkles } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
-import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
+import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Types --- */
 type Trait = {
@@ -33,6 +37,10 @@ const COLORS = [
 
 const PATTERNS: Trait["pattern"][] = ["solid", "striped", "spotted", "neon"];
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
 export default function GeneticGarden() {
     const { setMessage, setMood } = useMascot();
     const [garden, setGarden] = useState<Flower[]>([]);
@@ -40,6 +48,15 @@ export default function GeneticGarden() {
     const [gameState, setGameState] = useState<"IDLE" | "PLAYING" | "COMPLETED">("IDLE");
     const [targetTrait, setTargetTrait] = useState<Partial<Trait>>({});
     const [score, setScore] = useState(0);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+
+    const resetRunTracking = () => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+    };
 
     const generateRandomFlower = (gen: number = 1): Flower => {
         const rarityRoll = Math.random();
@@ -61,6 +78,7 @@ export default function GeneticGarden() {
     };
 
     const startGame = () => {
+        resetRunTracking();
         const initialPlants = [generateRandomFlower(), generateRandomFlower(), generateRandomFlower()];
         setGarden(initialPlants);
         setGameState("PLAYING");
@@ -80,6 +98,7 @@ export default function GeneticGarden() {
     };
 
     const handleSelect = (id: string) => {
+        interactionCountRef.current += 1;
         if (selected.includes(id)) {
             setSelected(prev => prev.filter(i => i !== id));
         } else if (selected.length < 2) {
@@ -90,6 +109,7 @@ export default function GeneticGarden() {
 
     const crossbreed = () => {
         if (selected.length !== 2) return;
+        interactionCountRef.current += 1;
 
         const parentA = garden.find(f => f.id === selected[0])!;
         const parentB = garden.find(f => f.id === selected[1])!;
@@ -117,7 +137,8 @@ export default function GeneticGarden() {
 
         setGarden(prev => [...prev, child]);
         setSelected([]);
-        setScore(s => s + 50);
+        const nextScore = score + 50;
+        setScore(nextScore);
         hapticSuccess();
 
         setMessage(`New Hybrid Generated! Gen ${child.generation} stabilized.`);
@@ -129,6 +150,16 @@ export default function GeneticGarden() {
             setMood("happy");
             setMessage("Master Breeder! You've stabilized the target strain! 🏆");
             hapticSuccess();
+            emitLegacyGameComplete({
+                sessionId: sessionIdRef.current,
+                gameId: "genetic",
+                elapsedMs: getElapsedMs(runStartedAtRef.current),
+                interactions: Math.max(1, interactionCountRef.current),
+                score: nextScore + 250,
+                maxScore: 3000,
+                source: "component",
+                occurredAt: new Date().toISOString(),
+            });
         }
     };
 

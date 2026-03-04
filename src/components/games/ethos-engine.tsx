@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { Scale, Zap, Globe, Users, ChevronRight, MessageSquare, Info, ShieldCheck, TrendingUp, Heart, AlertCircle, History, Sparkles } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Ethos Engine Types --- */
 interface PillarStats {
@@ -99,8 +100,31 @@ export default function EthosEngine() {
     const [currentNodeId, setCurrentNodeId] = useState("START");
     const [stats, setStats] = useState<PillarStats>({ social: 50, tech: 50, environment: 50 });
     const [history, setHistory] = useState<string[]>([]);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const currentNode = useMemo(() => STORY_GRAPH[currentNodeId], [currentNodeId]);
+
+    useEffect(() => {
+        if (gameState !== "FINISH" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        const score = Math.round((stats.social + stats.tech + stats.environment) / 3);
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "ethos-engine",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, history.length),
+            score,
+            maxScore: 100,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, history.length, stats.social, stats.tech, stats.environment]);
 
     const handleChoice = (choice: Choice) => {
         hapticSelection();

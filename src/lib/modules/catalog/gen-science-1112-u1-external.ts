@@ -65,22 +65,22 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-1-chunk-1",
           "title": "Newton's First Law: Inertia",
-          "content": "An object at REST stays at rest, and an object in MOTION stays in motion (at constant velocity and direction) unless acted upon by a NET EXTERNAL FORCE.\n\nThis is the law of INERTIA — matter resists changes to its state of motion.\n\nReal-world examples:\n• A ball rolling on a frictionless surface would roll forever\n• You lurch forward when a car brakes suddenly (your body wants to keep moving)\n• A tablecloth can be pulled quickly while dishes stay put"
+          "content": "Newton's First Law of Motion is a fundamental principle that helps us understand how objects behave. It states that an object that is at rest will remain at rest, and an object that is in motion will continue to move in a straight line at a constant speed unless it is acted upon by an external force. This concept is known as inertia, which describes the tendency of objects to resist changes in their state of motion.\nTo illustrate this idea, let's consider some relatable examples from our daily lives:\n- Picture a ball rolling on a perfectly smooth surface, like ice, where there is no friction. If no one stops it, that ball would keep rolling indefinitely, demonstrating how inertia allows it to maintain its motion.\n- Think about what happens when a car suddenly brakes. You might feel yourself lurch forward in your seat. This happens because your body wants to keep moving forward at the same speed, showcasing how inertia affects us in real-life situations.\n- Have you ever watched someone swiftly pull a tablecloth from underneath a set of dishes? Often, the dishes remain in place on the table because they are trying to stay at rest, illustrating inertia in action.\nUnderstanding Newton's First Law helps us grasp the behavior of objects around us and the forces that influence their motion. By recognizing these principles, we can better understand the physical world and how it operates."
         },
         {
           "id": "gen-science-1112-u1-1-chunk-2",
           "title": "Newton's Second Law: F = ma",
-          "content": "The NET FORCE acting on an object equals its mass times its acceleration:\n\nF = ma\n\n• F = Force (Newtons, N)\n• m = mass (kg)\n• a = acceleration (m/s²)\n\nImplications:\n• Greater force → greater acceleration (if mass is constant)\n• Greater mass → less acceleration (if force is constant)\n\nExample: Push a 10 kg box with 50 N: a = F/m = 50/10 = 5 m/s²"
+          "content": "Newton's Second Law of Motion is a fundamental principle in physics that helps us understand how forces affect the motion of objects. This law can be summarized with the equation F = ma. In this equation, F represents the force applied to an object, measured in Newtons (N), m is the mass of the object measured in kilograms (kg), and a is the acceleration of the object measured in meters per second squared (m/s²).\nThis law has significant implications for how we perceive motion. For instance, when you apply a greater force to an object, it will accelerate more quickly, assuming its mass does not change. On the other hand, if you are dealing with a heavier object, it will not accelerate as much when the same force is applied. This means that mass plays a crucial role in determining how an object responds to forces.\nTo illustrate this concept, consider the example of pushing a box that weighs 10 kg with a force of 50 N. You can find the acceleration of the box by rearranging the formula to a = F/m. Plugging in the values, you get a = 50 N / 10 kg, which simplifies to an acceleration of 5 m/s². This tells us that the box will increase its speed by 5 meters every second, demonstrating how force and mass interact to influence motion. Understanding this relationship is essential for studying mechanics and predicting how objects will move under various forces."
         },
         {
           "id": "gen-science-1112-u1-1-chunk-3",
           "title": "Newton's Third Law: Action-Reaction",
-          "content": "For every ACTION force, there is an equal and opposite REACTION force.\n\nForce pairs are ALWAYS:\n• Equal in magnitude\n• Opposite in direction\n• Acting on DIFFERENT objects\n\nExamples:\n• Rocket: exhaust gases pushed down (action) → rocket pushed up (reaction)\n• Walking: foot pushes back on ground (action) → ground pushes foot forward (reaction)\n• A rifle recoils when fired"
+          "content": "Newton's Third Law of Motion states that for every action, there is an equal and opposite reaction. This means that whenever one object exerts a force on another object, the second object exerts a force of equal strength in the opposite direction back on the first object.\nThese force pairs have some key characteristics: they are always equal in strength, opposite in direction, and they act on different objects.\nHere are a few examples to illustrate this law:\n- When a rocket launches, the gases it expels downward (the action) push the rocket upward (the reaction).\n- When you walk, your foot pushes backward against the ground (the action), and the ground pushes your foot forward (the reaction).\n- When a rifle is fired, the bullet moves forward while the rifle itself recoils backward. These examples show how action and reaction forces work together in our physical world."
         },
         {
           "id": "gen-science-1112-u1-1-chunk-4",
           "title": "Applying Newton's Laws: Free Body Diagrams",
-          "content": "FREE BODY DIAGRAMS (FBD) show all forces acting on an object.\n\nCommon forces:\n• Weight (Fg = mg, downward)\n• Normal force (N, perpendicular to surface)\n• Friction (f, opposing motion)\n• Applied force (Fa, in direction of push/pull)\n• Tension (T, in rope/string)\n\nNet force = Sum of all forces (consider direction!)\nIf Net force = 0 → object is in equilibrium (not accelerating)"
+          "content": "Free Body Diagrams, often abbreviated as FBD, are essential tools in physics that allow us to visualize and analyze all the forces acting on an object. By creating these diagrams, we can gain a clearer understanding of how different forces interact and affect the motion of the object in question.\nWhen drawing a Free Body Diagram, there are several common forces that you should consider including:\n- **Weight (Fg)**: This is the force of gravity acting downward on the object, and it can be calculated using the formula Fg = mg, where 'm' is the mass of the object and 'g' is the acceleration due to gravity.\n- **Normal Force (N)**: This is the support force that acts perpendicular to the surface on which the object rests. It balances the weight of the object when it is at rest on a flat surface.\n- **Friction (f)**: This force opposes the motion of the object. It acts in the opposite direction to the applied force and can vary depending on the surfaces in contact.\n- **Applied Force (Fa)**: This is the force that you exert on the object when you push or pull it. It is directed in the direction of your push or pull.\n- **Tension (T)**: This force is transmitted through a rope or string when it is pulled tight by forces acting from opposite ends.\nTo determine the net force acting on an object, you need to sum all the forces while considering their directions. If the total net force equals zero, it indicates that the object is in equilibrium, meaning it is not accelerating and remains at rest or moves at a constant velocity. Understanding these concepts is crucial for analyzing motion and predicting how objects will behave under various forces."
         }
       ],
       "flashcards": [
@@ -209,13 +209,13 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-interactive-chunk-intro",
           "title": "Physics: Mechanics, Thermodynamics & Waves Supplemental Practice Overview",
-          "content": "Reinforce core General Science concepts in Physics: Mechanics, Thermodynamics & Waves.",
+          "content": "In this section, we will focus on reinforcing the key concepts of General Science, specifically in the areas of Physics, Mechanics, Thermodynamics, and Waves. This will help you solidify your understanding and apply what you've learned in practical situations.\nContext recap: In this section, we will focus on reinforcing the key concepts of General Science, specifically in the areas of Physics, Mechanics, Thermodynamics, and Waves. This will help you solidify your understanding and apply what you've learned in practical situations.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-interactive-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "As we wrap up this section, take a moment to summarize one important idea you learned today. Think about how you can apply this knowledge in your next steps, whether it's in your studies or in real-life situations.\nContext recap: As we wrap up this section, take a moment to summarize one important idea you learned today. Think about how you can apply this knowledge in your next steps, whether it's in your studies or in real-life situations.",
           "kind": "recap"
         }
       ],
@@ -426,13 +426,13 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-quiz-chunk-intro",
           "title": "Physics: Mechanics, Thermodynamics & Waves Supplemental Check Overview",
-          "content": "Reinforce core General Science concepts in Physics: Mechanics, Thermodynamics & Waves.",
+          "content": "This quiz will help reinforce the core concepts of General Science, particularly in the fields of Physics, Mechanics, Thermodynamics, and Waves. It’s a great way to test your understanding and see how well you can apply what you have learned.\nContext recap: This quiz will help reinforce the core concepts of General Science, particularly in the fields of Physics, Mechanics, Thermodynamics, and Waves. It’s a great way to test your understanding and see how well you can apply what you have learned.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-quiz-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "As we conclude this quiz, take a moment to summarize one key idea that stood out to you. Consider what your next steps might be in your learning journey, and how you can continue to build on this knowledge.\nContext recap: As we conclude this quiz, take a moment to summarize one key idea that stood out to you. Consider what your next steps might be in your learning journey, and how you can continue to build on this knowledge.",
           "kind": "recap"
         }
       ],
@@ -485,25 +485,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-04-chunk-intro",
           "title": "Evidence Interpretation Intro",
-          "content": "Start with an observation and a testable question.",
+          "content": "To begin our exploration of evidence interpretation, start by making an observation about something you see and then come up with a question that can be tested. This will guide your investigation and help you find answers.\nContext recap: To begin our exploration of evidence interpretation, start by making an observation about something you see and then come up with a question that can be tested. This will guide your investigation and help you find answers.\nWhy this matters: Evidence Interpretation Intro helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-04-chunk-practice",
           "title": "Guided Practice",
-          "content": "Run a mini investigation and record outcomes in a table.",
+          "content": "Now it's time to conduct a mini investigation! As you explore, make sure to record your outcomes in a table. This will help you organize your findings and make it easier to analyze the results later.\nContext recap: Now it's time to conduct a mini investigation! As you explore, make sure to record your outcomes in a table. This will help you organize your findings and make it easier to analyze the results later.\nWhy this matters: Guided Practice helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-04-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence interpretation, then correct it with evidence.",
+          "content": "As you work on interpreting evidence, be aware of a common mistake that can occur. Pay attention to this error and think about how you can correct it using the evidence you have gathered. This will strengthen your understanding.\nContext recap: As you work on interpreting evidence, be aware of a common mistake that can occur. Pay attention to this error and think about how you can correct it using the evidence you have gathered. This will strengthen your understanding.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-04-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence interpretation, then set one clear improvement target.",
+          "content": "To wrap up our session on evidence interpretation, take a moment to review what you have learned. Then, set a clear target for improvement in your understanding or skills. This will help you focus on what to work on next.\nContext recap: To wrap up our session on evidence interpretation, take a moment to review what you have learned. Then, set a clear target for improvement in your understanding or skills. This will help you focus on what to work on next.",
           "kind": "recap"
         }
       ],
@@ -619,25 +619,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-05-chunk-intro",
           "title": "Scientific Explanation Intro",
-          "content": "Change one variable at a time to keep results clear.",
+          "content": "When conducting experiments, it's important to change only one variable at a time. This helps ensure that the results are clear and easy to understand, allowing you to see how that specific change affects the outcome of your experiment.\nContext recap: When conducting experiments, it's important to change only one variable at a time. This helps ensure that the results are clear and easy to understand, allowing you to see how that specific change affects the outcome of your experiment.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-05-chunk-practice",
           "title": "Guided Practice",
-          "content": "Identify independent, dependent, and control variables.",
+          "content": "In this activity, you will identify three types of variables in your experiment: the independent variable, which you change; the dependent variable, which you measure; and the control variables, which you keep constant to ensure a fair test. Understanding these concepts is crucial for conducting effective scientific investigations.\nContext recap: In this activity, you will identify three types of variables in your experiment: the independent variable, which you change; the dependent variable, which you measure; and the control variables, which you keep constant to ensure a fair test. Understanding these concepts is crucial for conducting effective scientific investigations.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-05-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying scientific explanation, then correct it with evidence.",
+          "content": "As you apply scientific explanations, be mindful of a common mistake: failing to use evidence to support your claims. Make sure to identify this error and correct it by providing clear evidence from your data to back up your conclusions.\nContext recap: As you apply scientific explanations, be mindful of a common mistake: failing to use evidence to support your claims. Make sure to identify this error and correct it by providing clear evidence from your data to back up your conclusions.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-05-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review scientific explanation, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about scientific explanations. After this recap, think about one specific area where you can improve your understanding or application of these concepts in future experiments.\nContext recap: Let's take a moment to review what we learned about scientific explanations. After this recap, think about one specific area where you can improve your understanding or application of these concepts in future experiments.\nWhy this matters: Quick Recap helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -859,25 +859,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-06-chunk-intro",
           "title": "Observation Skills Intro",
-          "content": "Use evidence from results to support the conclusion.",
+          "content": "In scientific investigations, it's essential to use evidence from your results to support your conclusions. This means looking closely at your data and explaining how it leads to your final thoughts or theories.\nContext recap: In scientific investigations, it's essential to use evidence from your results to support your conclusions. This means looking closely at your data and explaining how it leads to your final thoughts or theories.\nWhy this matters: Observation Skills Intro helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-06-chunk-practice",
           "title": "Guided Practice",
-          "content": "Explain one result using evidence and science vocabulary.",
+          "content": "For this practice, choose one of your results and explain it thoroughly. Use scientific vocabulary to describe what happened and how the evidence supports your explanation. This will help you communicate your findings effectively.\nContext recap: For this practice, choose one of your results and explain it thoroughly. Use scientific vocabulary to describe what happened and how the evidence supports your explanation. This will help you communicate your findings effectively.\nWhy this matters: Guided Practice helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-06-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying observation skills, then correct it with evidence.",
+          "content": "As you work on enhancing your observation skills, it's important to be mindful of a frequent mistake: failing to link your observations with the appropriate evidence. To improve your analysis, always ensure that you back up your observations with strong, reliable evidence that clearly supports what you have noticed. This connection is crucial for making accurate conclusions and understanding the concepts better.\nContext recap: As you work on enhancing your observation skills, it's important to be mindful of a frequent mistake: failing to link your observations with the appropriate evidence. To improve your analysis, always ensure that you back up your observations with strong, reliable evidence that clearly supports what you have noticed. This connection is crucial for making accurate conclusions and understanding the concepts better.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-06-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review observation skills, then set one clear improvement target.",
+          "content": "Let's quickly review the key points about observation skills that we discussed. After this review, think about one specific goal you can set to improve your observation skills in future experiments.\nContext recap: Let's quickly review the key points about observation skills that we discussed. After this review, think about one specific goal you can set to improve your observation skills in future experiments.\nWhy this matters: Quick Recap helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -940,25 +940,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-07-chunk-intro",
           "title": "Hypothesis Testing Intro",
-          "content": "Start with an observation and a testable question.",
+          "content": "To begin the process of hypothesis testing, start with a clear observation and formulate a testable question. This question will guide your investigation and help you determine what you want to find out.\nContext recap: To begin the process of hypothesis testing, start with a clear observation and formulate a testable question. This question will guide your investigation and help you determine what you want to find out.\nWhy this matters: Hypothesis Testing Intro helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-07-chunk-practice",
           "title": "Guided Practice",
-          "content": "Run a mini investigation and record outcomes in a table.",
+          "content": "In this guided practice, conduct a mini investigation based on your hypothesis. Record your outcomes in a table to keep track of your results. This will help you analyze the data more effectively later on.\nContext recap: In this guided practice, conduct a mini investigation based on your hypothesis. Record your outcomes in a table to keep track of your results. This will help you analyze the data more effectively later on.\nWhy this matters: Guided Practice helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-07-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying hypothesis testing, then correct it with evidence.",
+          "content": "As you engage in hypothesis testing, be on the lookout for a common mistake: not using evidence to support your hypothesis. If you notice this error, make sure to correct it by providing appropriate evidence from your investigation.\nContext recap: As you engage in hypothesis testing, be on the lookout for a common mistake: not using evidence to support your hypothesis. If you notice this error, make sure to correct it by providing appropriate evidence from your investigation.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-07-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review hypothesis testing, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we have learned about hypothesis testing. After this recap, think about one specific improvement target you can set for yourself to enhance your skills in this area.\nContext recap: Let's take a moment to review what we have learned about hypothesis testing. After this recap, think about one specific improvement target you can set for yourself to enhance your skills in this area.\nWhy this matters: Quick Recap helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "recap"
         }
       ],
@@ -1074,25 +1074,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-08-chunk-intro",
           "title": "Variable Control Intro",
-          "content": "Change one variable at a time to keep results clear.",
+          "content": "In scientific experiments, it is important to change only one variable at a time. This practice helps us understand how that specific change affects the results. By isolating one variable, we can clearly see the impact it has on our experiment, making our findings more reliable and easier to interpret.\nContext recap: In scientific experiments, it is important to change only one variable at a time. This practice helps us understand how that specific change affects the results. By isolating one variable, we can clearly see the impact it has on our experiment, making our findings more reliable and easier to interpret.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-08-chunk-practice",
           "title": "Guided Practice",
-          "content": "Identify independent, dependent, and control variables.",
+          "content": "In this activity, you will identify three types of variables in your experiment: independent variables, which you change; dependent variables, which you measure; and control variables, which you keep constant. Understanding these distinctions is crucial for conducting a successful experiment and drawing accurate conclusions.\nContext recap: In this activity, you will identify three types of variables in your experiment: independent variables, which you change; dependent variables, which you measure; and control variables, which you keep constant. Understanding these distinctions is crucial for conducting a successful experiment and drawing accurate conclusions.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-08-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying variable control, then correct it with evidence.",
+          "content": "As you apply variable control in your experiments, be mindful of a common mistake that many students make. This error can lead to confusing results. Take a moment to identify this mistake and think critically about how you can correct it using evidence from your observations.\nContext recap: As you apply variable control in your experiments, be mindful of a common mistake that many students make. This error can lead to confusing results. Take a moment to identify this mistake and think critically about how you can correct it using evidence from your observations.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-08-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review variable control, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we have learned about variable control. After this recap, think about one specific area where you can improve your understanding or application of this concept in future experiments. Setting a clear improvement target will help you focus your efforts.\nContext recap: Let's take a moment to review what we have learned about variable control. After this recap, think about one specific area where you can improve your understanding or application of this concept in future experiments. Setting a clear improvement target will help you focus your efforts.",
           "kind": "recap"
         }
       ],
@@ -1314,25 +1314,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-09-chunk-intro",
           "title": "Evidence Interpretation Intro",
-          "content": "Use evidence from results to support the conclusion.",
+          "content": "When drawing conclusions from your experimental results, it is essential to use evidence to support your claims. This means looking closely at the data you collected and explaining how it leads to your conclusion. Strong evidence makes your argument more convincing and scientifically valid.\nContext recap: When drawing conclusions from your experimental results, it is essential to use evidence to support your claims. This means looking closely at the data you collected and explaining how it leads to your conclusion. Strong evidence makes your argument more convincing and scientifically valid.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-09-chunk-practice",
           "title": "Guided Practice",
-          "content": "Explain one result using evidence and science vocabulary.",
+          "content": "In this guided practice, you will take one of your results and explain it using scientific vocabulary and evidence. This exercise will help you articulate your understanding of the data and demonstrate how it supports your conclusions, reinforcing your grasp of the scientific method.\nContext recap: In this guided practice, you will take one of your results and explain it using scientific vocabulary and evidence. This exercise will help you articulate your understanding of the data and demonstrate how it supports your conclusions, reinforcing your grasp of the scientific method.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-09-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence interpretation, then correct it with evidence.",
+          "content": "As you interpret evidence in your experiments, be aware of a common error that can lead to misinterpretation. Identifying this mistake is crucial for improving your analytical skills. Once you spot it, think about how you can correct it using the evidence you have gathered.\nContext recap: As you interpret evidence in your experiments, be aware of a common error that can lead to misinterpretation. Identifying this mistake is crucial for improving your analytical skills. Once you spot it, think about how you can correct it using the evidence you have gathered.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-09-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence interpretation, then set one clear improvement target.",
+          "content": "Let's quickly review the key points about evidence interpretation. After this review, consider setting a specific target for improvement in your ability to analyze and interpret data in future experiments. This will help you become a more effective scientist.\nContext recap: Let's quickly review the key points about evidence interpretation. After this review, consider setting a specific target for improvement in your ability to analyze and interpret data in future experiments. This will help you become a more effective scientist.",
           "kind": "recap"
         }
       ],
@@ -1395,25 +1395,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-10-chunk-intro",
           "title": "Scientific Explanation Intro",
-          "content": "Start with an observation and a testable question.",
+          "content": "To create a scientific explanation, you should start with a clear observation and formulate a testable question based on that observation. This process is fundamental in science, as it guides your investigation and helps you focus on what you want to learn.\nContext recap: To create a scientific explanation, you should start with a clear observation and formulate a testable question based on that observation. This process is fundamental in science, as it guides your investigation and helps you focus on what you want to learn.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-10-chunk-practice",
           "title": "Guided Practice",
-          "content": "Run a mini investigation and record outcomes in a table.",
+          "content": "In this guided practice, you will conduct a mini investigation. As you perform your experiment, make sure to record your outcomes in a table. This organized approach will help you analyze your results more effectively and draw meaningful conclusions.\nContext recap: In this guided practice, you will conduct a mini investigation. As you perform your experiment, make sure to record your outcomes in a table. This organized approach will help you analyze your results more effectively and draw meaningful conclusions.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-10-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying scientific explanation, then correct it with evidence.",
+          "content": "While applying scientific explanations, be on the lookout for a common mistake that can hinder your understanding. Recognizing this error is an important step in improving your scientific reasoning. Once you identify it, think about how to correct it using the evidence you have gathered.\nContext recap: While applying scientific explanations, be on the lookout for a common mistake that can hinder your understanding. Recognizing this error is an important step in improving your scientific reasoning. Once you identify it, think about how to correct it using the evidence you have gathered.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-10-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review scientific explanation, then set one clear improvement target.",
+          "content": "Let's recap what we have learned about scientific explanations. After this recap, take a moment to set a clear improvement target for your future scientific explanations. This will help you refine your skills and enhance your understanding of the scientific process.\nContext recap: Let's recap what we have learned about scientific explanations. After this recap, take a moment to set a clear improvement target for your future scientific explanations. This will help you refine your skills and enhance your understanding of the scientific process.",
           "kind": "recap"
         }
       ],
@@ -1529,25 +1529,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-11-chunk-intro",
           "title": "Observation Skills Intro",
-          "content": "Change one variable at a time to keep results clear.",
+          "content": "When conducting experiments, it is important to change only one variable at a time. This approach helps to ensure that the results are clear and easy to understand. By isolating each variable, you can accurately determine how it affects the outcome of your experiment.\nContext recap: When conducting experiments, it is important to change only one variable at a time. This approach helps to ensure that the results are clear and easy to understand. By isolating each variable, you can accurately determine how it affects the outcome of your experiment.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-11-chunk-practice",
           "title": "Guided Practice",
-          "content": "Identify independent, dependent, and control variables.",
+          "content": "In this guided practice, you will identify three types of variables in your experiment: the independent variable, which you change; the dependent variable, which you measure; and the control variables, which you keep constant. Understanding these variables is crucial for conducting effective scientific experiments.\nContext recap: In this guided practice, you will identify three types of variables in your experiment: the independent variable, which you change; the dependent variable, which you measure; and the control variables, which you keep constant. Understanding these variables is crucial for conducting effective scientific experiments.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-11-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying observation skills, then correct it with evidence.",
+          "content": "As you apply your observation skills, be on the lookout for a common mistake that many students make. Once you identify this error, use evidence from your observations to correct it. This practice will help you refine your skills and improve your scientific accuracy.\nContext recap: As you apply your observation skills, be on the lookout for a common mistake that many students make. Once you identify this error, use evidence from your observations to correct it. This practice will help you refine your skills and improve your scientific accuracy.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-11-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review observation skills, then set one clear improvement target.",
+          "content": "Let's take a moment to review the key observation skills we have learned. After this review, think about one specific area where you can improve your skills. Setting a clear improvement target will help you focus your efforts and enhance your scientific abilities.\nContext recap: Let's take a moment to review the key observation skills we have learned. After this review, think about one specific area where you can improve your skills. Setting a clear improvement target will help you focus your efforts and enhance your scientific abilities.",
           "kind": "recap"
         }
       ],
@@ -1769,25 +1769,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-12-chunk-intro",
           "title": "Hypothesis Testing Intro",
-          "content": "Use evidence from results to support the conclusion.",
+          "content": "When drawing conclusions from your experiments, it is essential to use evidence gathered from your results. This evidence should support your conclusions and help you understand the relationship between the variables you tested.\nContext recap: When drawing conclusions from your experiments, it is essential to use evidence gathered from your results. This evidence should support your conclusions and help you understand the relationship between the variables you tested.\nWhy this matters: Hypothesis Testing Intro helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-12-chunk-practice",
           "title": "Guided Practice",
-          "content": "Explain one result using evidence and science vocabulary.",
+          "content": "In this guided practice, you will explain one of your experimental results using scientific vocabulary and evidence. This exercise will help you articulate your findings clearly and demonstrate your understanding of the scientific concepts involved.\nContext recap: In this guided practice, you will explain one of your experimental results using scientific vocabulary and evidence. This exercise will help you articulate your findings clearly and demonstrate your understanding of the scientific concepts involved.\nWhy this matters: Guided Practice helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-12-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying hypothesis testing, then correct it with evidence.",
+          "content": "As you engage in hypothesis testing, be aware of a common error that can occur. Once you spot this mistake, use evidence from your experiment to correct it. This practice will strengthen your understanding of the hypothesis testing process.\nContext recap: As you engage in hypothesis testing, be aware of a common error that can occur. Once you spot this mistake, use evidence from your experiment to correct it. This practice will strengthen your understanding of the hypothesis testing process.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-12-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review hypothesis testing, then set one clear improvement target.",
+          "content": "Let's quickly review the concept of hypothesis testing. After this recap, think about one specific area where you can improve your approach to hypothesis testing. Setting a clear improvement target will help you enhance your skills in this important scientific process.\nContext recap: Let's quickly review the concept of hypothesis testing. After this recap, think about one specific area where you can improve your approach to hypothesis testing. Setting a clear improvement target will help you enhance your skills in this important scientific process.",
           "kind": "recap"
         }
       ],
@@ -1850,25 +1850,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-13-chunk-intro",
           "title": "Variable Control Intro",
-          "content": "Start with an observation and a testable question.",
+          "content": "To begin your investigation, start with a clear observation and formulate a testable question. This foundational step is crucial for guiding your research and ensuring that your experiment is focused and relevant.\nContext recap: To begin your investigation, start with a clear observation and formulate a testable question. This foundational step is crucial for guiding your research and ensuring that your experiment is focused and relevant.\nWhy this matters: Variable Control Intro helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-13-chunk-practice",
           "title": "Guided Practice",
-          "content": "Run a mini investigation and record outcomes in a table.",
+          "content": "In this guided practice, you will conduct a mini investigation. Be sure to record your outcomes in a table. This organized approach will help you analyze your results more effectively and draw meaningful conclusions from your data.\nContext recap: In this guided practice, you will conduct a mini investigation. Be sure to record your outcomes in a table. This organized approach will help you analyze your results more effectively and draw meaningful conclusions from your data.\nWhy this matters: Guided Practice helps learners in General Science connect ideas from Physics: Mechanics, Thermodynamics & Waves to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-13-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying variable control, then correct it with evidence.",
+          "content": "While applying variable control in your experiments, pay attention to a common error that can arise. Once you identify this mistake, use evidence from your investigation to correct it. This practice will enhance your understanding of how to effectively control variables.\nContext recap: While applying variable control in your experiments, pay attention to a common error that can arise. Once you identify this mistake, use evidence from your investigation to correct it. This practice will enhance your understanding of how to effectively control variables.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-13-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review variable control, then set one clear improvement target.",
+          "content": "Let's take a moment to review the concept of variable control. After this review, think about one specific area where you can improve your skills in controlling variables during experiments. Setting a clear improvement target will help you refine your scientific methods.\nContext recap: Let's take a moment to review the concept of variable control. After this review, think about one specific area where you can improve your skills in controlling variables during experiments. Setting a clear improvement target will help you refine your scientific methods.",
           "kind": "recap"
         }
       ],
@@ -1984,25 +1984,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-14-chunk-intro",
           "title": "Evidence Interpretation Intro",
-          "content": "Change one variable at a time to keep results clear.",
+          "content": "When conducting experiments, it is important to change only one variable at a time. This approach helps us to clearly see how that specific change affects the results of our experiment. By isolating one variable, we can better understand the relationship between different factors and draw more accurate conclusions.\nContext recap: When conducting experiments, it is important to change only one variable at a time. This approach helps us to clearly see how that specific change affects the results of our experiment. By isolating one variable, we can better understand the relationship between different factors and draw more accurate conclusions.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-14-chunk-practice",
           "title": "Guided Practice",
-          "content": "Identify independent, dependent, and control variables.",
+          "content": "In this activity, you will identify three types of variables in your experiment: independent variables, which you change; dependent variables, which you measure; and control variables, which you keep constant. Understanding these variables is crucial for designing a successful experiment and interpreting your results accurately.\nContext recap: In this activity, you will identify three types of variables in your experiment: independent variables, which you change; dependent variables, which you measure; and control variables, which you keep constant. Understanding these variables is crucial for designing a successful experiment and interpreting your results accurately.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-14-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying evidence interpretation, then correct it with evidence.",
+          "content": "As you apply evidence interpretation in your experiments, be on the lookout for a common mistake that many students make. Once you identify this error, think critically about how you can correct it using the evidence you have gathered. This practice will enhance your analytical skills and improve your scientific reasoning.\nContext recap: As you apply evidence interpretation in your experiments, be on the lookout for a common mistake that many students make. Once you identify this error, think critically about how you can correct it using the evidence you have gathered. This practice will enhance your analytical skills and improve your scientific reasoning.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-14-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review evidence interpretation, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we have learned about evidence interpretation. After this review, think about one specific area where you can improve your understanding or application of these concepts. Setting a clear improvement target will help you focus your efforts and enhance your skills in scientific inquiry.\nContext recap: Let's take a moment to review what we have learned about evidence interpretation. After this review, think about one specific area where you can improve your understanding or application of these concepts. Setting a clear improvement target will help you focus your efforts and enhance your skills in scientific inquiry.",
           "kind": "recap"
         }
       ],
@@ -2224,25 +2224,25 @@ export const GenScience1112U1ExternalModule: LearningModule = {
         {
           "id": "gen-science-1112-u1-external-supp-seq-15-chunk-intro",
           "title": "Scientific Explanation Intro",
-          "content": "Use evidence from results to support the conclusion.",
+          "content": "In scientific research, it is essential to use evidence from your results to support your conclusions. This means that when you make a claim or state a finding, you should back it up with data and observations that you have collected during your experiments. This practice strengthens your arguments and makes your conclusions more credible.\nContext recap: In scientific research, it is essential to use evidence from your results to support your conclusions. This means that when you make a claim or state a finding, you should back it up with data and observations that you have collected during your experiments. This practice strengthens your arguments and makes your conclusions more credible.",
           "kind": "concept"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-15-chunk-practice",
           "title": "Guided Practice",
-          "content": "Explain one result using evidence and science vocabulary.",
+          "content": "For this practice, choose one of your experimental results and explain it using scientific vocabulary and evidence. This will help you articulate your understanding and demonstrate how the data supports your conclusions. Using precise language is important in science, as it helps convey your ideas clearly to others.\nContext recap: For this practice, choose one of your experimental results and explain it using scientific vocabulary and evidence. This will help you articulate your understanding and demonstrate how the data supports your conclusions. Using precise language is important in science, as it helps convey your ideas clearly to others.",
           "kind": "practice"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-15-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying scientific explanation, then correct it with evidence.",
+          "content": "While applying scientific explanations, be aware of a common error that can occur. Identifying this mistake is the first step; then, think about how you can correct it using the evidence you have gathered. This process will not only improve your explanations but also enhance your overall understanding of scientific principles.\nContext recap: While applying scientific explanations, be aware of a common error that can occur. Identifying this mistake is the first step; then, think about how you can correct it using the evidence you have gathered. This process will not only improve your explanations but also enhance your overall understanding of scientific principles.",
           "kind": "analysis"
         },
         {
           "id": "gen-science-1112-u1-external-supp-seq-15-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review scientific explanation, then set one clear improvement target.",
+          "content": "Let's quickly review what we have covered regarding scientific explanations. After this recap, consider setting one clear target for improvement in your understanding or application of these concepts. This goal will guide your learning and help you become more proficient in scientific reasoning.\nContext recap: Let's quickly review what we have covered regarding scientific explanations. After this recap, consider setting one clear target for improvement in your understanding or application of these concepts. This goal will guide your learning and help you become more proficient in scientific reasoning.",
           "kind": "recap"
         }
       ],

@@ -46,19 +46,19 @@ export const AiSafetyAlignment401Module: LearningModule = {
           "id": "ai-safety-alignment-401-l01-c1",
           "kind": "concept",
           "title": "Vocabulary and System Boundaries",
-          "content": "This lesson establishes shared language for AI Safety and Alignment, defines operating boundaries, and maps where risk modeling and alignment objectives interact in real environments."
+          "content": "In this lesson, we will create a common vocabulary that helps us discuss AI Safety and Alignment effectively. We will also define the boundaries within which AI systems operate, ensuring that we understand the limits of their capabilities. Additionally, we will explore how risk modeling interacts with alignment objectives in real-world situations, helping us to identify potential risks and ensure that AI systems are aligned with our goals.\nContext recap: In this lesson, we will create a common vocabulary that helps us discuss AI Safety and Alignment effectively. We will also define the boundaries within which AI systems operate, ensuring that we understand the limits of their capabilities. Additionally, we will explore how risk modeling interacts with alignment objectives in real-world situations, helping us to identify potential risks and ensure that AI systems are aligned with our goals."
         },
         {
           "id": "ai-safety-alignment-401-l01-c2",
           "kind": "concept",
           "title": "Causal Structures and Constraints",
-          "content": "Learners model causal paths, identify hidden assumptions, and apply constraint checks before proposing interventions."
+          "content": "In this section, learners will engage in modeling causal paths, which involves understanding how different factors influence one another. They will also identify hidden assumptions that may affect their analysis. Before suggesting any interventions, learners will apply checks to ensure that constraints are considered, promoting a thorough understanding of the system dynamics at play.\nContext recap: In this section, learners will engage in modeling causal paths, which involves understanding how different factors influence one another. They will also identify hidden assumptions that may affect their analysis. Before suggesting any interventions, learners will apply checks to ensure that constraints are considered, promoting a thorough understanding of the system dynamics at play."
         },
         {
           "id": "ai-safety-alignment-401-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "The module introduces an evidence-first workflow where each claim is tied to observable indicators and expected uncertainty."
+          "content": "This module introduces a methodical approach to evidence gathering, emphasizing the importance of linking each claim to observable indicators. Learners will understand how to identify expected uncertainties associated with their claims, fostering a culture of evidence-based decision-making. This approach encourages critical thinking and helps learners to build strong arguments supported by data.\nContext recap: This module introduces a methodical approach to evidence gathering, emphasizing the importance of linking each claim to observable indicators. Learners will understand how to identify expected uncertainties associated with their claims, fostering a culture of evidence-based decision-making. This approach encourages critical thinking and helps learners to build strong arguments supported by data."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const AiSafetyAlignment401Module: LearningModule = {
           "id": "ai-safety-alignment-401-l02-c1",
           "kind": "practice",
           "title": "Method Sequence Construction",
-          "content": "Learners build a method sequence optimized for strategic leadership, cross-functional alignment, and capstone defense, then stress-test each step under uncertainty."
+          "content": "In this engaging interactive lab, learners will have the opportunity to create a carefully structured sequence of methods designed to enhance effective strategic leadership. This process involves ensuring that various teams collaborate seamlessly and are well-prepared for their capstone defense. As part of the learning experience, each step of the method sequence will be rigorously tested under uncertain conditions. This will not only help learners refine their strategies but also strengthen their problem-solving abilities, equipping them with essential skills for future challenges.\nContext recap: In this engaging interactive lab, learners will have the opportunity to create a carefully structured sequence of methods designed to enhance effective strategic leadership. This process involves ensuring that various teams collaborate seamlessly and are well-prepared for their capstone defense. As part of the learning experience, each step of the method sequence will be rigorously tested under uncertain conditions. This will not only help learners refine their strategies but also strengthen their problem-solving abilities, equipping them with essential skills for future challenges."
         },
         {
           "id": "ai-safety-alignment-401-l02-c2",
           "kind": "recap",
           "title": "Operational Readiness Checks",
-          "content": "Readiness is assessed with owner mapping, checkpoint cadence, rollback triggers, and evidence logs."
+          "content": "To ensure operational readiness, learners will assess various factors including owner mapping, which identifies who is responsible for different aspects of the project. They will also establish a cadence for checkpoints to monitor progress, identify rollback triggers that allow for adjustments, and maintain evidence logs to document their findings and decisions throughout the process.\nContext recap: To ensure operational readiness, learners will assess various factors including owner mapping, which identifies who is responsible for different aspects of the project. They will also establish a cadence for checkpoints to monitor progress, identify rollback triggers that allow for adjustments, and maintain evidence logs to document their findings and decisions throughout the process."
         }
       ],
       "interactiveActivities": [
@@ -321,19 +321,19 @@ export const AiSafetyAlignment401Module: LearningModule = {
           "id": "ai-safety-alignment-401-l04-c1",
           "kind": "example",
           "title": "Case Setup and Stakes",
-          "content": "The case examines an AI assistant deployed in education producing persuasive but occasionally fabricated answers, requiring learners to separate evidence, assumptions, and high-consequence risks."
+          "content": "In this engaging case study, we will delve into the role of an AI assistant that has been introduced in a classroom environment. This AI is designed to provide helpful and persuasive answers to students' questions. However, it has a tendency to occasionally produce information that is not accurate or even completely fabricated. As part of this learning experience, students will be challenged to distinguish between what is factual evidence and what are mere assumptions. They will also need to identify the potential high-consequence risks that could arise from relying on the AI's responses. This important exercise will not only enhance their critical thinking skills but also emphasize the necessity of careful evaluation when using AI technologies in education."
         },
         {
           "id": "ai-safety-alignment-401-l04-c2",
           "kind": "concept",
           "title": "Decision Tradeoff Matrix",
-          "content": "Alternatives are scored across performance, reliability, cost, and equity implications before selecting an intervention path."
+          "content": "In this section, learners will use a Decision Tradeoff Matrix to evaluate different alternatives based on several criteria. They will score each option according to its performance, reliability, cost, and implications for equity. This structured approach will help them make informed decisions about which intervention path to select, considering the broader impact of their choices.\nContext recap: In this section, learners will use a Decision Tradeoff Matrix to evaluate different alternatives based on several criteria. They will score each option according to its performance, reliability, cost, and implications for equity. This structured approach will help them make informed decisions about which intervention path to select, considering the broader impact of their choices."
         },
         {
           "id": "ai-safety-alignment-401-l04-c3",
           "kind": "recap",
           "title": "Lessons from Failure Modes",
-          "content": "Failure patterns are categorized to convert one-off incidents into reusable design safeguards."
+          "content": "In this recap, we will categorize different failure patterns observed in AI systems. By analyzing these patterns, learners will learn how to transform isolated incidents into reusable design safeguards. This process not only enhances their understanding of potential pitfalls but also equips them with strategies to prevent similar issues in the future.\nContext recap: In this recap, we will categorize different failure patterns observed in AI systems. By analyzing these patterns, learners will learn how to transform isolated incidents into reusable design safeguards. This process not only enhances their understanding of potential pitfalls but also equips them with strategies to prevent similar issues in the future."
         }
       ],
       "flashcards": [
@@ -372,13 +372,13 @@ export const AiSafetyAlignment401Module: LearningModule = {
           "id": "ai-safety-alignment-401-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure a scenario model with explicit uncertainty assumptions and success metrics tied to governance controls."
+          "content": "In this interactive practice session, learners will set up a simulation scenario that includes clear assumptions about uncertainties and defines success metrics that are linked to governance controls. This hands-on experience will allow them to apply theoretical knowledge in a practical context, enhancing their understanding of how to manage AI systems effectively.\nContext recap: In this interactive practice session, learners will set up a simulation scenario that includes clear assumptions about uncertainties and defines success metrics that are linked to governance controls. This hands-on experience will allow them to apply theoretical knowledge in a practical context, enhancing their understanding of how to manage AI systems effectively."
         },
         {
           "id": "ai-safety-alignment-401-l05-c2",
           "kind": "recap",
           "title": "Decision Review Loop",
-          "content": "Each simulation round ends with evidence review, policy alignment checks, and improvement actions."
+          "content": "At the end of each simulation round, learners will participate in a review process where they will analyze the evidence gathered during the simulation. They will also check for alignment with established policies and identify actions for improvement. This iterative process encourages continuous learning and adaptation, essential skills in the field of AI safety and alignment.\nContext recap: At the end of each simulation round, learners will participate in a review process where they will analyze the evidence gathered during the simulation. They will also check for alignment with established policies and identify actions for improvement. This iterative process encourages continuous learning and adaptation, essential skills in the field of AI safety and alignment."
         }
       ],
       "interactiveActivities": [
@@ -578,19 +578,19 @@ export const AiSafetyAlignment401Module: LearningModule = {
           "id": "ai-safety-alignment-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Analysis",
-          "content": "Learners identify who benefits, who bears risk, and how policy choices shape outcomes across groups."
+          "content": "In this section, learners will conduct a stakeholder analysis to identify who benefits from AI systems, who may bear risks, and how different policy choices can shape outcomes for various groups. This understanding is crucial for developing ethical AI practices that consider the diverse impacts on society.\nContext recap: In this section, learners will conduct a stakeholder analysis to identify who benefits from AI systems, who may bear risks, and how different policy choices can shape outcomes for various groups. This understanding is crucial for developing ethical AI practices that consider the diverse impacts on society."
         },
         {
           "id": "ai-safety-alignment-401-l07-c2",
           "kind": "concept",
           "title": "Governance and Accountability",
-          "content": "Governance mechanisms are linked to measurable controls, transparency obligations, and remediation pathways."
+          "content": "In this lesson, we will explore governance and accountability in the context of AI systems. Learners will understand how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation when issues arise. This knowledge is vital for ensuring that AI systems operate responsibly and ethically.\nContext recap: In this lesson, we will explore governance and accountability in the context of AI systems. Learners will understand how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation when issues arise. This knowledge is vital for ensuring that AI systems operate responsibly and ethically."
         },
         {
           "id": "ai-safety-alignment-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist integrates legal, ethical, technical, and user-impact criteria before deployment decisions."
+          "content": "Before making any decisions about deploying artificial intelligence systems, it is essential to use a comprehensive checklist. This checklist should include important aspects such as legal requirements, ethical considerations, technical specifications, and the potential impact on users. By carefully evaluating these criteria, we can ensure that our deployment decisions are responsible and beneficial to everyone involved.\nContext recap: Before making any decisions about deploying artificial intelligence systems, it is essential to use a comprehensive checklist. This checklist should include important aspects such as legal requirements, ethical considerations, technical specifications, and the potential impact on users. By carefully evaluating these criteria, we can ensure that our deployment decisions are responsible and beneficial to everyone involved."
         }
       ],
       "flashcards": [
@@ -629,13 +629,13 @@ export const AiSafetyAlignment401Module: LearningModule = {
           "id": "ai-safety-alignment-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Scope Definition",
-          "content": "Learners draft a capstone charter with objective, risks, success metrics, and governance checkpoints."
+          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks that could arise, establish success metrics to measure progress, and set up governance checkpoints to ensure everything stays on track. This process helps learners think critically about their projects and prepares them for real-world challenges.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks that could arise, establish success metrics to measure progress, and set up governance checkpoints to ensure everything stays on track. This process helps learners think critically about their projects and prepares them for real-world challenges."
         },
         {
           "id": "ai-safety-alignment-401-l08-c2",
           "kind": "recap",
           "title": "Defense Preparation",
-          "content": "The lesson ends with a defense template that requires evidence-backed claims and explicit tradeoff reasoning."
+          "content": "To conclude the lesson, students will work with a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any trade-offs they make. This exercise encourages learners to think deeply about their decisions and understand the importance of backing up their ideas with solid reasoning.\nContext recap: To conclude the lesson, students will work with a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any trade-offs they make. This exercise encourages learners to think deeply about their decisions and understand the importance of backing up their ideas with solid reasoning."
         }
       ],
       "interactiveActivities": [

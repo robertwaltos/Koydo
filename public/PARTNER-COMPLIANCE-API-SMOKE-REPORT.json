@@ -1,0 +1,305 @@
+{
+  "generatedAt": "2026-03-04T02:03:00.710Z",
+  "baseUrl": "http://127.0.0.1:4782",
+  "smokeUserEmail": "co***@example.com",
+  "durationMs": 223652,
+  "summary": {
+    "pass": 22,
+    "fail": 0,
+    "total": 22
+  },
+  "state": {
+    "userId": "9c9d91ed-4066-454d-9f1f-b935128f3cdf",
+    "usPartnerId": "a2c62b50-d02e-49db-baa7-1f3840b12b88",
+    "irPartnerId": "a724cdea-0146-4ddb-a7ea-dec2408f0f56",
+    "payoutBatchId": "91623545-005a-4533-981e-2719d07cffea"
+  },
+  "traces": [
+    {
+      "name": "admin_partners_list",
+      "method": "GET",
+      "url": "/api/admin/partners",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 557,
+      "error": null,
+      "responsePreview": "{\"partners\":[{\"id\":\"a638d0c1-b03e-4293-bb7e-2d345acb87de\",\"display_name\":\"Smoke IR Partner 1772589461037\",\"legal_name\":\"Smoke IR Partner Legal 1772589461037\",\"partner_type\":\"affiliate\",\"contact_email\":\"smoke-ir-1772589461037@example.com\",\"reward_tier_id\":null,\"onboarding_status\":\"invited\",\"compliance_status\":\"pending\",\"payout_status\":\"blocked\",\"kyc_status\":\"pending\",\"created_at\":\"2026-03-04T01:57:41.553339+00:00\",\"updated_at\":\"2026-03-04T01:57:41.553339+00:00\"},{\"id\":\"140b57d0-5bd1-4deb-a27c-1b5e145f2988\",\"display_name\":\"Smoke US Partner 1772589461037 Updated\",\"legal_name\":\"Smoke US Partner Legal 1772589461037 Updated\",\"partner_type\":\"affiliate\",\"contact_email\":\"smoke-us-1772589461037@example.com\",\"reward_tier_id\":null,\"onboarding_status\":\"payout_pending\",\"compliance_status\":\"pending\",\"payout_status\":\"blocked\",\"kyc_status\":\"pending\",\"created_at\":\"2026-03-04T01:57:40.9645+00:00\",\"updated_..."
+    },
+    {
+      "name": "admin_partner_create_us",
+      "method": "POST",
+      "url": "/api/admin/partners",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 626,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"partner\":{\"id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"display_name\":\"Smoke US Partner 1772589744018\",\"legal_name\":\"Smoke US Partner Legal 1772589744018\",\"partner_type\":\"affiliate\",\"contact_email\":\"smoke-us-1772589744018@example.com\",\"reward_tier_id\":null,\"onboarding_status\":\"invited\",\"compliance_status\":\"pending\",\"payout_status\":\"blocked\",\"kyc_status\":\"pending\",\"notes\":\"Automated partner compliance smoke run (US).\",\"metadata\":{},\"created_at\":\"2026-03-04T02:02:23.965962+00:00\",\"updated_at\":\"2026-03-04T02:02:23.965962+00:00\"},\"portalAccess\":{\"id\":\"b54db456-c1db-4780-9b8a-f7bb976420fb\",\"partner_id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"user_id\":\"9c9d91ed-4066-454d-9f1f-b935128f3cdf\",\"role\":\"owner\",\"status\":\"active\",\"created_at\":\"2026-03-04T02:02:24.047849+00:00\"}}"
+    },
+    {
+      "name": "admin_partner_create_ir",
+      "method": "POST",
+      "url": "/api/admin/partners",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 543,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"partner\":{\"id\":\"a724cdea-0146-4ddb-a7ea-dec2408f0f56\",\"display_name\":\"Smoke IR Partner 1772589744018\",\"legal_name\":\"Smoke IR Partner Legal 1772589744018\",\"partner_type\":\"affiliate\",\"contact_email\":\"smoke-ir-1772589744018@example.com\",\"reward_tier_id\":null,\"onboarding_status\":\"invited\",\"compliance_status\":\"pending\",\"payout_status\":\"blocked\",\"kyc_status\":\"pending\",\"notes\":\"Automated partner compliance smoke run (IR).\",\"metadata\":{},\"created_at\":\"2026-03-04T02:02:24.523802+00:00\",\"updated_at\":\"2026-03-04T02:02:24.523802+00:00\"},\"portalAccess\":{\"id\":\"ca381ebb-ee82-42df-a1a5-5f817c544dda\",\"partner_id\":\"a724cdea-0146-4ddb-a7ea-dec2408f0f56\",\"user_id\":\"9c9d91ed-4066-454d-9f1f-b935128f3cdf\",\"role\":\"owner\",\"status\":\"active\",\"created_at\":\"2026-03-04T02:02:24.602689+00:00\"}}"
+    },
+    {
+      "name": "admin_withholding_us",
+      "method": "POST",
+      "url": "/api/admin/partners/compliance/withholding",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 712,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"determination\":{\"id\":\"6334f7e1-1752-4e71-bc8e-28d73bec72db\",\"partner_id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"country_code\":\"US\",\"source_income_type\":\"service_commission\",\"us_source_income\":true,\"treaty_claimed\":false,\"treaty_country_code\":null,\"treaty_article\":null,\"determination_status\":\"approved\",\"approved_withholding_rate\":0,\"effective_start\":\"2026-02-25\",\"effective_end\":\"2026-06-02\",\"determination_reference\":\"SMOKE-US-1772589744018\",\"rationale\":\"US local partner smoke determination.\",\"metadata\":{},\"reviewed_by\":\"9c9d91ed-4066-454d-9f1f-b935128f3cdf\",\"reviewed_at\":\"2026-03-04T02:02:26.148+00:00\",\"created_at\":\"2026-03-04T02:02:25.311422+00:00\",\"updated_at\":\"2026-03-04T02:02:25.311422+00:00\"}}"
+    },
+    {
+      "name": "admin_withholding_ir",
+      "method": "POST",
+      "url": "/api/admin/partners/compliance/withholding",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 647,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"determination\":{\"id\":\"c118867e-fc91-4585-a31a-2b94ce0450e1\",\"partner_id\":\"a724cdea-0146-4ddb-a7ea-dec2408f0f56\",\"country_code\":\"IR\",\"source_income_type\":\"service_commission\",\"us_source_income\":true,\"treaty_claimed\":false,\"treaty_country_code\":null,\"treaty_article\":null,\"determination_status\":\"pending\",\"approved_withholding_rate\":null,\"effective_start\":null,\"effective_end\":null,\"determination_reference\":\"SMOKE-IR-1772589744018\",\"rationale\":\"International partner compliance pending review.\",\"metadata\":{},\"reviewed_by\":\"9c9d91ed-4066-454d-9f1f-b935128f3cdf\",\"reviewed_at\":\"2026-03-04T02:02:26.803+00:00\",\"created_at\":\"2026-03-04T02:02:25.966908+00:00\",\"updated_at\":\"2026-03-04T02:02:25.966908+00:00\"}}"
+    },
+    {
+      "name": "admin_commission_us",
+      "method": "POST",
+      "url": "/api/admin/partners/commissions",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 766,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"commissionEvent\":{\"id\":\"f1fbd0be-8b66-4cc6-b920-0bf9862eecc4\",\"partner_id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"referral_id\":null,\"partner_code_id\":null,\"event_type\":\"conversion_commission\",\"status\":\"approved\",\"source_event_ref\":\"SMOKE-US-EVT-1772589744018\",\"gross_revenue_cents\":120000,\"commission_rate\":0.2,\"commission_amount_cents\":24000,\"bonus_amount_cents\":5000,\"withholding_tax_cents\":0,\"net_amount_cents\":29000,\"currency\":\"USD\",\"earned_at\":\"2026-03-04T02:02:27.105+00:00\",\"available_at\":\"2026-03-04T02:02:27.105+00:00\",\"approved_at\":\"2026-03-04T02:02:27.72+00:00\",\"paid_at\":null,\"metadata\":{},\"created_at\":\"2026-03-04T02:02:26.729664+00:00\",\"updated_at\":\"2026-03-04T02:02:26.729664+00:00\"}}"
+    },
+    {
+      "name": "admin_commission_ir",
+      "method": "POST",
+      "url": "/api/admin/partners/commissions",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 688,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"commissionEvent\":{\"id\":\"9ab5791e-35b6-42a6-8965-71f41153482f\",\"partner_id\":\"a724cdea-0146-4ddb-a7ea-dec2408f0f56\",\"referral_id\":null,\"partner_code_id\":null,\"event_type\":\"conversion_commission\",\"status\":\"approved\",\"source_event_ref\":\"SMOKE-IR-EVT-1772589744018\",\"gross_revenue_cents\":90000,\"commission_rate\":0.2,\"commission_amount_cents\":18000,\"bonus_amount_cents\":0,\"withholding_tax_cents\":5400,\"net_amount_cents\":12600,\"currency\":\"USD\",\"earned_at\":\"2026-03-04T02:02:27.871+00:00\",\"available_at\":\"2026-03-04T02:02:27.871+00:00\",\"approved_at\":\"2026-03-04T02:02:28.407+00:00\",\"paid_at\":null,\"metadata\":{},\"created_at\":\"2026-03-04T02:02:27.413779+00:00\",\"updated_at\":\"2026-03-04T02:02:27.413779+00:00\"}}"
+    },
+    {
+      "name": "admin_payout_batch_create",
+      "method": "POST",
+      "url": "/api/admin/partners/payouts",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 807,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"batch\":{\"id\":\"91623545-005a-4533-981e-2719d07cffea\",\"batch_name\":\"Partner Payout Smoke 1772589744018\",\"period_start\":\"2026-02-25\",\"period_end\":\"2026-03-05\",\"status\":\"draft\",\"currency\":\"USD\",\"total_amount_cents\":0,\"item_count\":4,\"created_at\":\"2026-03-04T02:02:28.120378+00:00\"},\"summary\":{\"payoutItemCount\":4,\"totalGrossAmountCents\":0,\"totalNetAmountCents\":0,\"blockedItemCount\":4}}"
+    },
+    {
+      "name": "admin_payout_batch_get",
+      "method": "GET",
+      "url": "/api/admin/partners/payouts?batchId=91623545-005a-4533-981e-2719d07cffea",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 409,
+      "error": null,
+      "responsePreview": "{\"batch\":{\"id\":\"91623545-005a-4533-981e-2719d07cffea\",\"batch_name\":\"Partner Payout Smoke 1772589744018\",\"period_start\":\"2026-02-25\",\"period_end\":\"2026-03-05\",\"status\":\"draft\",\"scheduled_for\":null,\"processed_at\":null,\"currency\":\"USD\",\"total_amount_cents\":0,\"item_count\":4,\"notes\":\"Automated partner payout smoke batch.\",\"metadata\":{},\"created_at\":\"2026-03-04T02:02:28.120378+00:00\",\"updated_at\":\"2026-03-04T02:02:28.120378+00:00\"},\"items\":[{\"id\":\"08aeec73-7b5a-46d4-a162-ce79030dcd90\",\"payout_batch_id\":\"91623545-005a-4533-981e-2719d07cffea\",\"partner_id\":\"140b57d0-5bd1-4deb-a27c-1b5e145f2988\",\"partner_payout_account_id\":\"a0a13155-ef7d-4f57-af67-d22883d4b3b9\",\"tax_profile_status\":\"valid\",\"compliance_snapshot\":{\"kycStatus\":\"pending\",\"partnerId\":\"140b57d0-5bd1-4deb-a27c-1b5e145f2988\",\"countryCode\":\"US\",\"eligibility\":{\"reasons\":[\"No verified payout account is configured.\",\"Partner payout status is ..."
+    },
+    {
+      "name": "admin_compliance_monitor_run",
+      "method": "POST",
+      "url": "/api/admin/partners/compliance/monitor/run",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 2075,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"summary\":{\"partnerCount\":4,\"screeningCount\":4,\"alertCandidateCount\":18,\"openAlertCount\":18}}"
+    },
+    {
+      "name": "admin_regulatory_updates_run",
+      "method": "POST",
+      "url": "/api/admin/partners/compliance/regulatory-updates/run",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 11587,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"summary\":{\"scannedCount\":24,\"insertedCount\":24,\"actionItemCount\":0},\"updates\":[{\"title\":\"OFAC Recent Actions: Sanctions List Service\",\"summary\":\"Sanctions List Service\",\"updateDate\":null,\"effectiveDate\":null,\"actionRequired\":false,\"actionSeverity\":\"info\",\"actionNotes\":null,\"sourceName\":\"OFAC Recent Actions\",\"sourceUrl\":\"https://ofac.treasury.gov/recent-actions\",\"updateType\":\"sanctions_update\",\"jurisdiction\":\"US\",\"updateHash\":\"4dfe689925c9ab24a1dd7ee266f83ff9e81d503926f6229aca0fa0e2f201f669\"},{\"title\":\"OFAC Recent Actions: Consolidated Sanctions List (Non-SDN Lists)\",\"summary\":\"Consolidated Sanctions List (Non-SDN Lists)\",\"updateDate\":null,\"effectiveDate\":null,\"actionRequired\":false,\"actionSeverity\":\"info\",\"actionNotes\":null,\"sourceName\":\"OFAC Recent Actions\",\"sourceUrl\":\"https://ofac.treasury.gov/recent-actions\",\"updateType\":\"sanctions_update\",\"jurisdiction\":\"US\",\"update..."
+    },
+    {
+      "name": "admin_compliance_weekly_run",
+      "method": "POST",
+      "url": "/api/admin/partners/compliance/weekly/run",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 13089,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"monitor\":{\"success\":true,\"summary\":{\"partnerCount\":4,\"screeningCount\":4,\"alertCandidateCount\":18,\"openAlertCount\":18}},\"regulatoryUpdates\":{\"success\":true,\"summary\":{\"scannedCount\":24,\"insertedCount\":24,\"actionItemCount\":0},\"updates\":[{\"title\":\"OFAC Recent Actions: Sanctions List Service\",\"summary\":\"Sanctions List Service\",\"updateDate\":null,\"effectiveDate\":null,\"actionRequired\":false,\"actionSeverity\":\"info\",\"actionNotes\":null,\"sourceName\":\"OFAC Recent Actions\",\"sourceUrl\":\"https://ofac.treasury.gov/recent-actions\",\"updateType\":\"sanctions_update\",\"jurisdiction\":\"US\",\"updateHash\":\"4dfe689925c9ab24a1dd7ee266f83ff9e81d503926f6229aca0fa0e2f201f669\"},{\"title\":\"OFAC Recent Actions: Consolidated Sanctions List (Non-SDN Lists)\",\"summary\":\"Consolidated Sanctions List (Non-SDN Lists)\",\"updateDate\":null,\"effectiveDate\":null,\"actionRequired\":false,\"actionSeverity\":\"info\",\"actionNotes..."
+    },
+    {
+      "name": "admin_filings_queue_get",
+      "method": "GET",
+      "url": "/api/admin/partners/compliance/filings?periodStart=2026-02-25&periodEnd=2026-03-05",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 471,
+      "error": null,
+      "responsePreview": "{\"periodStart\":\"2026-02-25\",\"periodEnd\":\"2026-03-05\",\"filingQueue\":[{\"partnerId\":\"140b57d0-5bd1-4deb-a27c-1b5e145f2988\",\"legalName\":\"Smoke US Partner Legal 1772589461037 Updated\",\"countryCode\":\"US\",\"contactEmail\":\"smoke-us-1772589461037@example.com\",\"taxFormType\":\"w9\",\"taxProfileStatus\":\"valid\",\"recommendedPrimaryForm\":\"1099-NEC (or 1099-MISC as applicable)\",\"grossRevenueCents\":120000,\"withholdingTaxCents\":0,\"netPaidCents\":29000,\"commissionEventCount\":1,\"periodStart\":\"2026-02-25\",\"periodEnd\":\"2026-03-05\"},{\"partnerId\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"legalName\":\"Smoke US Partner Legal 1772589744018\",\"countryCode\":\"US\",\"contactEmail\":\"smoke-us-1772589744018@example.com\",\"taxFormType\":\"none\",\"taxProfileStatus\":\"missing\",\"recommendedPrimaryForm\":\"1042/1042-S\",\"grossRevenueCents\":120000,\"withholdingTaxCents\":0,\"netPaidCents\":29000,\"commissionEventCount\":1,\"periodStart\":\"2026-02-25\",\"p..."
+    },
+    {
+      "name": "admin_payout_scheduler_dry_run",
+      "method": "POST",
+      "url": "/api/admin/partners/payouts/scheduler/run",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 441,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"dryRun\":true,\"summary\":{\"periodStart\":\"2026-02-25\",\"periodEnd\":\"2026-03-05\",\"eligibleCount\":4,\"totalEligibleCents\":83200}}"
+    },
+    {
+      "name": "partner_onboarding_get",
+      "method": "GET",
+      "url": "/api/partner/onboarding?partnerId=a2c62b50-d02e-49db-baa7-1f3840b12b88",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 424,
+      "error": null,
+      "responsePreview": "{\"access\":{\"id\":\"b54db456-c1db-4780-9b8a-f7bb976420fb\",\"partner_id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"user_id\":\"9c9d91ed-4066-454d-9f1f-b935128f3cdf\",\"role\":\"owner\",\"status\":\"active\"},\"partner\":{\"id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"display_name\":\"Smoke US Partner 1772589744018\",\"legal_name\":\"Smoke US Partner Legal 1772589744018\",\"partner_type\":\"affiliate\",\"contact_email\":\"smoke-us-1772589744018@example.com\",\"contact_phone\":null,\"address_line1\":null,\"address_line2\":null,\"city\":null,\"state_region\":null,\"postal_code\":null,\"country_code\":\"US\",\"reward_tier_id\":null,\"onboarding_status\":\"invited\",\"compliance_status\":\"pending\",\"payout_status\":\"blocked\",\"kyc_status\":\"pending\",\"notes\":\"Automated partner compliance smoke run (US).\",\"metadata\":{},\"created_at\":\"2026-03-04T02:02:23.965962+00:00\",\"updated_at\":\"2026-03-04T02:02:23.965962+00:00\"},\"taxProfile\":null,\"payoutAccounts\":[]}"
+    },
+    {
+      "name": "partner_onboarding_profile_update",
+      "method": "POST",
+      "url": "/api/partner/onboarding",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 407,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"partner\":{\"id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"display_name\":\"Smoke US Partner 1772589744018 Updated\",\"legal_name\":\"Smoke US Partner Legal 1772589744018 Updated\",\"contact_email\":\"smoke-us-1772589744018@example.com\",\"contact_phone\":null,\"address_line1\":null,\"address_line2\":null,\"city\":\"Austin\",\"state_region\":\"TX\",\"postal_code\":null,\"country_code\":\"US\",\"onboarding_status\":\"profile_submitted\",\"updated_at\":\"2026-03-04T02:02:57.197567+00:00\"}}"
+    },
+    {
+      "name": "partner_onboarding_tax_update",
+      "method": "POST",
+      "url": "/api/partner/onboarding",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 472,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"taxProfile\":{\"id\":\"cf8b41c3-ae73-4fd6-8cd7-e623f4327005\",\"partner_id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"tax_form_type\":\"w9\",\"tax_classification\":null,\"tin_type\":\"ein\",\"tin_last4\":\"6789\",\"us_taxpayer\":true,\"backup_withholding_required\":false,\"withholding_rate\":0,\"exemption_code\":null,\"fatca_status\":\"not_applicable\",\"form_received_at\":\"2026-02-25\",\"form_expiration_date\":\"2027-03-04\",\"status\":\"valid\",\"notes\":\"Tax profile smoke update.\",\"metadata\":{\"submittedBy\":\"9c9d91ed-4066-454d-9f1f-b935128f3cdf\",\"submittedFrom\":\"partner_portal\"},\"updated_at\":\"2026-03-04T02:02:57.594151+00:00\"}}"
+    },
+    {
+      "name": "partner_onboarding_payout_account_create",
+      "method": "POST",
+      "url": "/api/partner/onboarding",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 471,
+      "error": null,
+      "responsePreview": "{\"success\":true,\"payoutAccount\":{\"id\":\"3659f93a-ed15-41ea-84c2-fbda6396ad8c\",\"partner_id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"account_holder_name\":\"Smoke Test LLC\",\"bank_name\":\"Smoke Test Bank\",\"account_type\":\"checking\",\"payout_method\":\"ach\",\"currency\":\"USD\",\"country_code\":\"US\",\"routing_number_last4\":\"1100\",\"account_number_last4\":\"9000\",\"iban_last4\":null,\"swift_bic\":null,\"verification_status\":\"pending\",\"is_primary\":true,\"metadata\":{\"submittedBy\":\"9c9d91ed-4066-454d-9f1f-b935128f3cdf\",\"submittedFrom\":\"partner_portal\"},\"created_at\":\"2026-03-04T02:02:58.05679+00:00\",\"updated_at\":\"2026-03-04T02:02:58.05679+00:00\"}}"
+    },
+    {
+      "name": "partner_portal_overview_get",
+      "method": "GET",
+      "url": "/api/partner/portal/overview?partnerId=a2c62b50-d02e-49db-baa7-1f3840b12b88",
+      "expectedStatuses": [
+        200
+      ],
+      "status": 200,
+      "pass": true,
+      "durationMs": 530,
+      "error": null,
+      "responsePreview": "{\"access\":{\"id\":\"b54db456-c1db-4780-9b8a-f7bb976420fb\",\"partner_id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"user_id\":\"9c9d91ed-4066-454d-9f1f-b935128f3cdf\",\"role\":\"owner\",\"status\":\"active\"},\"partner\":{\"id\":\"a2c62b50-d02e-49db-baa7-1f3840b12b88\",\"display_name\":\"Smoke US Partner 1772589744018 Updated\",\"legal_name\":\"Smoke US Partner Legal 1772589744018 Updated\",\"partner_type\":\"affiliate\",\"contact_email\":\"smoke-us-1772589744018@example.com\",\"reward_tier_id\":null,\"onboarding_status\":\"payout_pending\",\"compliance_status\":\"pending\",\"payout_status\":\"blocked\",\"kyc_status\":\"pending\",\"updated_at\":\"2026-03-04T02:02:58.141367+00:00\"},\"summary\":{\"codeCount\":0,\"qualifiedReferralCount\":0,\"pendingReferralCount\":0,\"grossReferredRevenueCents\":0,\"totalCommissionsCents\":29000,\"paidCommissionsCents\":0,\"pendingCommissionsCents\":29000,\"payoutItemCount\":1,\"paidPayoutItemCount\":0,\"blockedPayoutItemCount\":1},\"codes..."
+    },
+    {
+      "name": "owner_efiling_submit_requires_step_up",
+      "method": "POST",
+      "url": "/api/admin/partners/compliance/efiling/submit",
+      "expectedStatuses": [
+        428
+      ],
+      "status": 428,
+      "pass": true,
+      "durationMs": 336,
+      "error": null,
+      "responsePreview": "{\"error\":\"Owner step-up authentication required.\",\"code\":\"owner_step_up_required\",\"scope\":\"security_admin\",\"reason\":\"missing_cookie\"}"
+    },
+    {
+      "name": "owner_payout_approve_requires_step_up",
+      "method": "POST",
+      "url": "/api/admin/partners/payouts/91623545-005a-4533-981e-2719d07cffea/approve",
+      "expectedStatuses": [
+        428
+      ],
+      "status": 428,
+      "pass": true,
+      "durationMs": 317,
+      "error": null,
+      "responsePreview": "{\"error\":\"Owner step-up authentication required.\",\"code\":\"owner_step_up_required\",\"scope\":\"security_admin\",\"reason\":\"missing_cookie\"}"
+    },
+    {
+      "name": "owner_payout_process_requires_step_up",
+      "method": "POST",
+      "url": "/api/admin/partners/payouts/91623545-005a-4533-981e-2719d07cffea/process",
+      "expectedStatuses": [
+        428
+      ],
+      "status": 428,
+      "pass": true,
+      "durationMs": 309,
+      "error": null,
+      "responsePreview": "{\"error\":\"Owner step-up authentication required.\",\"code\":\"owner_step_up_required\",\"scope\":\"security_admin\",\"reason\":\"missing_cookie\"}"
+    }
+  ]
+}

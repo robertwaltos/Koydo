@@ -47,19 +47,19 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Coding, with focus on coding systems diagnostics and coding operations and execution design."
+          "content": "In this lesson, we will explore the advanced concepts of scope boundaries in coding. We will focus on how to effectively diagnose coding systems and design coding operations and execution processes. Understanding these boundaries is crucial for ensuring that our coding practices are efficient and effective. By the end of this lesson, you will have a clearer picture of how to set these boundaries in your coding projects.\nContext recap: In this lesson, we will explore the advanced concepts of scope boundaries in coding. We will focus on how to effectively diagnose coding systems and design coding operations and execution processes. Understanding these boundaries is crucial for ensuring that our coding practices are efficient and effective. By the end of this lesson, you will have a clearer picture of how to set these boundaries in your coding projects."
         },
         {
           "id": "coding-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is essential before planning any interventions or changes. By visualizing these relationships, learners will be better equipped to make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on each other. This foundational knowledge is essential before planning any interventions or changes. By visualizing these relationships, learners will be better equipped to make informed decisions."
         },
         {
           "id": "coding-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we emphasize that all claims made in our coding practices should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our coding processes are reliable. By doing this, we can maintain a high standard of quality and accountability in our work.\nContext recap: In this recap, we emphasize that all claims made in our coding practices should be linked to measurable indicators. This means that we need to establish confidence bounds and set up review checkpoints to ensure that our coding processes are reliable. By doing this, we can maintain a high standard of quality and accountability in our work."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their coding needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This practice will help them understand how their designs hold up under pressure and identify areas for improvement, ensuring that their coding solutions are robust and effective.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows tailored to their coding needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This practice will help them understand how their designs hold up under pressure and identify areas for improvement, ensuring that their coding solutions are robust and effective."
         },
         {
           "id": "coding-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we discuss the importance of integrating control gates within workflows. These gates serve as checkpoints that help monitor progress and ensure that any issues can be addressed promptly. Additionally, we will explore rollback criteria and threshold-based escalation, which are strategies to manage workflows effectively and maintain quality control.\nContext recap: In this recap, we discuss the importance of integrating control gates within workflows. These gates serve as checkpoints that help monitor progress and ensure that any issues can be addressed promptly. Additionally, we will explore rollback criteria and threshold-based escalation, which are strategies to manage workflows effectively and maintain quality control."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in coding systems diagnostics and coding impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints found in coding systems diagnostics. We will analyze the impact of coding decisions and the trade-offs involved. Understanding these dynamics is crucial for making informed choices that balance various factors, such as efficiency and effectiveness in coding.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints found in coding systems diagnostics. We will analyze the impact of coding decisions and the trade-offs involved. Understanding these dynamics is crucial for making informed choices that balance various factors, such as efficiency and effectiveness in coding."
         },
         {
           "id": "coding-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options based on several important dimensions: safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced decisions that consider the broader implications of their coding choices.\nContext recap: In this practice session, learners will compare different options based on several important dimensions: safety, reliability, cost, equity, and governance. By evaluating these factors, learners will gain insights into how to make balanced decisions that consider the broader implications of their coding choices."
         },
         {
           "id": "coding-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will summarize the key elements that should be included in each recommendation. This includes outlining the assumptions made, presenting supporting evidence, identifying risk controls, and developing fallback plans. By following this structured approach, learners will be better prepared to present their coding decisions clearly and effectively.\nContext recap: In this recap, we will summarize the key elements that should be included in each recommendation. This includes outlining the assumptions made, presenting supporting evidence, identifying risk controls, and developing fallback plans. By following this structured approach, learners will be better prepared to present their coding decisions clearly and effectively."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to apply their knowledge in real-time, making decisions that affect the outcome of the scenarios they are managing. This practice is essential for developing skills in managing complex coding environments.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow them to apply their knowledge in real-time, making decisions that affect the outcome of the scenarios they are managing. This practice is essential for developing skills in managing complex coding environments."
         },
         {
           "id": "coding-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as changes are made, it is crucial to maintain a clear record of what has been done and why. This practice ensures that all actions taken are transparent and can be reviewed if necessary.\nContext recap: In this recap, we will discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as changes are made, it is crucial to maintain a clear record of what has been done and why. This practice ensures that all actions taken are transparent and can be reviewed if necessary."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This exercise is important for understanding how coding decisions impact various individuals and communities. By recognizing these effects, learners can make more ethical and informed coding choices.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This exercise is important for understanding how coding decisions impact various individuals and communities. By recognizing these effects, learners can make more ethical and informed coding choices."
         },
         {
           "id": "coding-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this lesson, we will explore the architecture of accountability in coding. This includes understanding how decision traceability works, the rights of individuals to review decisions, and the obligations to remediate any issues that arise. By integrating these elements, learners will appreciate the importance of accountability in their coding practices.\nContext recap: In this lesson, we will explore the architecture of accountability in coding. This includes understanding how decision traceability works, the rights of individuals to review decisions, and the obligations to remediate any issues that arise. By integrating these elements, learners will appreciate the importance of accountability in their coding practices."
         },
         {
           "id": "coding-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow relevant policies, and promotes resilience in our coding practices. This checklist will help guide us in making responsible decisions as leaders in the coding field.\nContext recap: At the end of our lesson, we will create a comprehensive checklist that connects important outcomes with ethical considerations, ensures we follow relevant policies, and promotes resilience in our coding practices. This checklist will help guide us in making responsible decisions as leaders in the coding field."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Coding601Module: LearningModule = {
           "id": "coding-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work on assembling a detailed brief that includes your main claims, supporting evidence, the boundaries of uncertainty in your arguments, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for effective communication in coding projects.\nContext recap: In this activity, you will work on assembling a detailed brief that includes your main claims, supporting evidence, the boundaries of uncertainty in your arguments, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for effective communication in coding projects."
         },
         {
           "id": "coding-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal, you will practice responding to questions and critiques from an expert panel. These questions will cover technical aspects, governance issues, and concerns from stakeholders. This preparation will help you build confidence and improve your ability to defend your ideas in front of others.\nContext recap: During this rehearsal, you will practice responding to questions and critiques from an expert panel. These questions will cover technical aspects, governance issues, and concerns from stakeholders. This preparation will help you build confidence and improve your ability to defend your ideas in front of others."
         }
       ],
       "interactiveActivities": [

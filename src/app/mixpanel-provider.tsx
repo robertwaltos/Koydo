@@ -2,15 +2,23 @@
 
 import { useEffect, useCallback } from "react";
 import { initMixpanel } from "@/lib/analytics/mixpanel";
-import { isAnalyticsAllowed, getConsentState } from "@/lib/consent/tracking-consent";
+import { isAnalyticsAllowed } from "@/lib/consent/tracking-consent";
 import {
   deleteSyncedProgress,
+  deleteQueuedProgressByIds,
   getUnsyncedProgress,
 } from "@/lib/offline/progress-db";
+import { resolveOfflineProgressConflicts } from "@/lib/offline/progress-sync";
 
 type AuthContextPayload = {
   isAuthenticated?: boolean;
 };
+
+function isNativeCapacitorPlatform() {
+  if (typeof window === "undefined") return false;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return Boolean((window as any).Capacitor?.isNativePlatform?.());
+}
 
 async function isUserAuthenticated(): Promise<boolean> {
   try {
@@ -40,8 +48,13 @@ async function syncOfflineProgress() {
     return;
   }
 
-  console.debug(`Found ${unsynced.length} records to sync.`);
-  for (const record of unsynced) {
+  const resolution = resolveOfflineProgressConflicts(unsynced);
+  console.debug(
+    `Found ${unsynced.length} queued records. Resolved to ${resolution.resolved.length} deterministic sync item(s).`,
+  );
+
+  for (const item of resolution.resolved) {
+    const record = item.winner;
     try {
       const response = await fetch("/api/progress", {
         method: "POST",
@@ -50,22 +63,26 @@ async function syncOfflineProgress() {
         },
         body: JSON.stringify({
           lessonId: record.lessonId,
-          scorePercentage: record.totalQuestions > 0 ? record.score / record.totalQuestions : 0,
+          scorePercentage: record.scorePercentage,
         }),
       });
 
       if (response.ok) {
+        await deleteQueuedProgressByIds(item.mergedRecordIds);
         await deleteSyncedProgress(record.lessonId);
-        console.debug(`Record ${record.lessonId} synced successfully.`);
+        console.debug(
+          `Offline record synced for lesson ${record.lessonId}. Merged ${item.mergedRecordIds.length} record(s).`,
+        );
       } else if (response.status === 401 || response.status === 403) {
         // Session may have expired between checks; stop and retry on next cycle.
         console.debug("Offline progress sync paused: authentication required.");
         break;
       } else if (response.status === 400 || response.status === 422) {
         // Drop invalid payload rows so one bad entry cannot block the queue forever.
+        await deleteQueuedProgressByIds(item.mergedRecordIds);
         await deleteSyncedProgress(record.lessonId);
         console.warn(
-          `Dropped invalid offline progress ${record.lessonId}. Server responded with ${response.status}.`,
+          `Dropped invalid offline progress ${record.lessonId}. Server responded with ${response.status}. Merged ${item.mergedRecordIds.length} record(s).`,
         );
       } else if (response.status === 429 || response.status >= 500) {
         console.warn(
@@ -93,6 +110,8 @@ export default function MixpanelProvider({
   children: React.ReactNode;
 }) {
   const tryInitAnalytics = useCallback(() => {
+    // Native builds intentionally keep web Mixpanel tracking disabled.
+    if (isNativeCapacitorPlatform()) return;
     if (isAnalyticsAllowed()) {
       initMixpanel();
     }

@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-03-04T05:55:38.636Z",
+  "sourceDirectory": "data/open-source-games",
+  "repoCount": 3,
+  "repos": [
+    {
+      "name": "2048",
+      "remote": "https://github.com/gabrielecirulli/2048.git",
+      "commit": "478b6ec",
+      "readmeSummary": "# 2048\r",
+      "license": "MIT",
+      "category": "logic",
+      "mechanic": "grid-merge",
+      "ageBand": "8-17",
+      "childSafeFit": "high",
+      "integrationTrack": "port-core-mechanic",
+      "findings": [
+        {
+          "pattern": "http-url",
+          "file": "data/open-source-games/2048/index.html"
+        },
+        {
+          "pattern": "http-url",
+          "file": "data/open-source-games/2048/README.md"
+        }
+      ],
+      "riskSummary": "http-url:2"
+    },
+    {
+      "name": "javascript-tetris",
+      "remote": "https://github.com/jakesgordon/javascript-tetris.git",
+      "commit": "e5c0c42",
+      "readmeSummary": "Javascript Tetris\r",
+      "license": "MIT-like",
+      "category": "logic",
+      "mechanic": "block-stack",
+      "ageBand": "8-17",
+      "childSafeFit": "high",
+      "integrationTrack": "port-core-mechanic",
+      "findings": [
+        {
+          "pattern": "innerhtml-assign",
+          "file": "data/open-source-games/javascript-tetris/index.html"
+        },
+        {
+          "pattern": "http-url",
+          "file": "data/open-source-games/javascript-tetris/index.html"
+        },
+        {
+          "pattern": "http-url",
+          "file": "data/open-source-games/javascript-tetris/README.md"
+        },
+        {
+          "pattern": "innerhtml-assign",
+          "file": "data/open-source-games/javascript-tetris/stats.js"
+        },
+        {
+          "pattern": "http-url",
+          "file": "data/open-source-games/javascript-tetris/stats.js"
+        }
+      ],
+      "riskSummary": "innerhtml-assign:2, http-url:3"
+    },
+    {
+      "name": "openstreetguesser",
+      "remote": "https://github.com/louis-e/openstreetguesser.git",
+      "commit": "6620d77",
+      "readmeSummary": "# OpenStreetGuesser\r",
+      "license": "MIT",
+      "category": "adventure",
+      "mechanic": "geo-discovery",
+      "ageBand": "10-17",
+      "childSafeFit": "medium",
+      "integrationTrack": "adapt-with-safe-map-mode",
+      "findings": [
+        {
+          "pattern": "http-url",
+          "file": "data/open-source-games/openstreetguesser/index.html"
+        },
+        {
+          "pattern": "innerhtml-assign",
+          "file": "data/open-source-games/openstreetguesser/js/logic.js"
+        }
+      ],
+      "riskSummary": "http-url:1, innerhtml-assign:1"
+    }
+  ]
+}

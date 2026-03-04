@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FormEvent, Suspense, useState } from "react";
+import { FormEvent, Suspense, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { publicEnv } from "@/lib/config/env";
 import { sanitizeNextPath } from "@/lib/routing/next-path";
@@ -11,6 +11,7 @@ import { ASSETS } from "@/lib/config/assets";
 import OAuthButtons from "@/app/auth/sign-in/oauth-buttons";
 import SoftCard from "@/app/components/ui/soft-card";
 import { useI18n } from "@/lib/i18n/provider";
+import { usStateOptions } from "@/lib/legal/us-states";
 
 export default function SignUpPage() {
   return (
@@ -24,6 +25,8 @@ function SignUpPageInner() {
   const { t } = useI18n();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [billingState, setBillingState] = useState("");
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
@@ -32,13 +35,30 @@ function SignUpPageInner() {
   const hasSupabaseConfig =
     Boolean(publicEnv.NEXT_PUBLIC_SUPABASE_URL) && Boolean(publicEnv.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 
+  const termsHref = useMemo(() => {
+    if (!billingState) return "/legal/terms";
+    return `/legal/terms?state=${encodeURIComponent(billingState)}`;
+  }, [billingState]);
+
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setStatus("");
+
     if (!hasSupabaseConfig) {
       setStatus(t("auth_sign_up_status_unavailable"));
       return;
     }
+
+    if (!billingState) {
+      setStatus("Please select your billing state before creating an account.");
+      return;
+    }
+
+    if (!acceptedTerms) {
+      setStatus("You must accept the Terms of Service to continue.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -50,10 +70,41 @@ function SignUpPageInner() {
         return;
       }
 
-      setStatus(t("auth_sign_up_status_created"));
       const { error: signInError } = await supabase.auth.signInWithPassword({ email, password });
 
       if (!signInError) {
+        const acceptanceResponse = await fetch("/api/compliance/policy-acceptance", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            policyType: "terms",
+            billingState,
+          }),
+        });
+
+        if (!acceptanceResponse.ok) {
+          const data = (await acceptanceResponse.json().catch(() => ({}))) as { error?: string };
+          setStatus(data.error ?? "Unable to record Terms acceptance. Please try again.");
+          return;
+        }
+
+        const completionResponse = await fetch("/api/auth/signup-complete", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ billingState }),
+        });
+
+        if (!completionResponse.ok) {
+          const data = (await completionResponse.json().catch(() => ({}))) as {
+            error?: string;
+            details?: string;
+          };
+          const reason = data.details ?? data.error ?? "Unable to send signup email right now.";
+          setStatus(`Account created. ${reason}`);
+        } else {
+          setStatus(t("auth_sign_up_status_created"));
+        }
+
         const postAgeGateNextPath =
           nextPath && (nextPath.startsWith("/billing") || nextPath.startsWith("/account"))
             ? nextPath
@@ -74,7 +125,7 @@ function SignUpPageInner() {
 
   return (
     <main className="relative min-h-screen overflow-hidden pb-14">
-      {/* Page background — same as sign-in */}
+      {/* Page background - same as sign-in */}
       <div className="absolute inset-0 -z-10" aria-hidden="true">
         <Image
           src={ASSETS.bgAuth}
@@ -116,7 +167,7 @@ function SignUpPageInner() {
             as="section"
             organicCorners
             className="self-start border-zinc-200/60 p-6 backdrop-blur-sm"
-            style={{ background: 'rgba(237,241,248,0.95)' }}
+            style={{ background: "rgba(255,255,255,0.92)" }}
           >
             <h2 className="ui-type-heading-xl text-zinc-900">
               {t("auth_sign_up_title")}
@@ -167,6 +218,43 @@ function SignUpPageInner() {
                   required
                 />
               </div>
+
+              <div>
+                <label htmlFor="billing-state" className="mb-1 block text-sm font-medium">
+                  Billing State
+                </label>
+                <select
+                  id="billing-state"
+                  value={billingState}
+                  onChange={(event) => setBillingState(event.target.value)}
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                  required
+                >
+                  <option value="">Select billing state</option>
+                  {usStateOptions.map((state) => (
+                    <option key={state.code} value={state.code}>
+                      {state.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <label className="flex items-start gap-2 rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2 text-sm text-zinc-700">
+                <input
+                  type="checkbox"
+                  checked={acceptedTerms}
+                  onChange={(event) => setAcceptedTerms(event.target.checked)}
+                  className="mt-1 h-4 w-4 rounded border-zinc-300 text-emerald-600"
+                  required
+                />
+                <span>
+                  I agree to the{" "}
+                  <Link href={termsHref} target="_blank" rel="noopener noreferrer" className="font-semibold underline">
+                    Terms of Service
+                  </Link>
+                  {billingState ? ` for ${billingState}` : ""}.
+                </span>
+              </label>
 
               <button
                 type="submit"

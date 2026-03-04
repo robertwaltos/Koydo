@@ -46,19 +46,19 @@ export const Entrepreneurship201Module: LearningModule = {
           "id": "entrepreneurship-201-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "Entrepreneurship at level 201 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In Entrepreneurship 201, using clear and specific language is essential for our success. We will explore how to define the boundaries of our projects, which helps us understand what is included and what is not. Additionally, we will identify the main focus of our analysis, allowing us to concentrate on the most important aspects of our work. It's also crucial that everyone uses the same terms and vocabulary. This consistency enables us to compare decisions made by different teams effectively, ensuring that everyone understands each other and is working towards the same goals. By mastering this operating vocabulary, we can enhance our collaboration and make better-informed decisions together."
         },
         {
           "id": "entrepreneurship-201-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in Entrepreneurship depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "To achieve success in Entrepreneurship, it is essential to grasp the reasons behind our results, rather than merely looking at the outcomes. In this lesson, we will delve into our assumptions, dependencies, and the limitations we face. By understanding these elements, we can concentrate on tackling the root causes of problems instead of just addressing the symptoms. This approach will empower us to make more informed and effective decisions in our entrepreneurial journey, leading to better outcomes and sustainable growth.\nContext recap: To achieve success in Entrepreneurship, it is essential to grasp the reasons behind our results, rather than merely looking at the outcomes. In this lesson, we will delve into our assumptions, dependencies, and the limitations we face. By understanding these elements, we can concentrate on tackling the root causes of problems instead of just addressing the symptoms. This approach will empower us to make more informed and effective decisions in our entrepreneurial journey, leading to better outcomes and sustainable growth."
         },
         {
           "id": "entrepreneurship-201-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this recap, we will discuss the importance of having high standards for evidence, maintaining a disciplined approach to logging our work, and establishing clear accountability practices. These elements are essential for ensuring that our projects are executed reliably and that we can trust the outcomes we achieve.\nContext recap: In this recap, we will discuss the importance of having high standards for evidence, maintaining a disciplined approach to logging our work, and establishing clear accountability practices. These elements are essential for ensuring that our projects are executed reliably and that we can trust the outcomes we achieve."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const Entrepreneurship201Module: LearningModule = {
           "id": "entrepreneurship-201-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for opportunity discovery and business modeling, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this engaging interactive activity, you will have the chance to design a comprehensive workflow that will help you discover exciting business opportunities and create effective business models. You will start by identifying the essential inputs needed for your workflow. Next, you will set up checkpoints that will allow you to monitor your progress along the way. It's important to define the expected outputs, which are the results you hope to achieve. Additionally, you will establish rollback triggers, which are important steps to take if any challenges arise during your process. This activity will not only enhance your understanding of entrepreneurship but also equip you with practical skills for your future endeavors."
         },
         {
           "id": "entrepreneurship-201-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we will emphasize the importance of logging every decision made during our projects. Each decision should be accompanied by a clear explanation of the reasoning behind it, the expected effects, and a point for verification. This practice will enable us to analyze our decisions after the project is completed and learn from our experiences.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during our projects. Each decision should be accompanied by a clear explanation of the reasoning behind it, the expected effects, and a point for verification. This practice will enable us to analyze our decisions after the project is completed and learn from our experiences."
         }
       ],
       "interactiveActivities": [
@@ -296,19 +296,19 @@ export const Entrepreneurship201Module: LearningModule = {
           "id": "entrepreneurship-201-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for Entrepreneurship scenarios."
+          "content": "When we choose methods for our projects in entrepreneurship, it's important to think about several key factors. First, we need to look at any constraints we might have, such as time, resources, or regulations. Next, we should evaluate the quality of the information we have; is it reliable and accurate? Finally, we must consider the potential cost of making mistakes—what could happen if we choose the wrong method? In this lesson, you will explore different alternatives and explain why some methods work better than others in specific entrepreneurship situations. This will help you make informed decisions in your future projects."
         },
         {
           "id": "entrepreneurship-201-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "In this example, we will explore the concept of metric architecture. This framework connects three important elements: leading indicators, lagging outcomes, and diagnostic measures. Leading indicators are signs that show how well a team is progressing towards their goals. Lagging outcomes are the results that come after efforts have been made. Diagnostic measures help teams understand why they are or aren't meeting their goals. By linking these elements together, teams can spot any changes or issues early on. This allows them to respond thoughtfully and make necessary adjustments, ensuring they stay on the right path to achieve their objectives."
         },
         {
           "id": "entrepreneurship-201-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we will explore how to categorize failures into four important groups: data, process, execution, and governance. By organizing failures in this way, we can develop tailored plans to tackle each specific type of failure. This approach helps us avoid using one-size-fits-all solutions that might not work well in every situation. Instead, we can focus on what really needs to be fixed, making our strategies more effective and relevant to the challenges we face in entrepreneurship.\nContext recap: In this recap, we will explore how to categorize failures into four important groups: data, process, execution, and governance. By organizing failures in this way, we can develop tailored plans to tackle each specific type of failure. This approach helps us avoid using one-size-fits-all solutions that might not work well in every situation. Instead, we can focus on what really needs to be fixed, making our strategies more effective and relevant to the challenges we face in entrepreneurship."
         }
       ],
       "flashcards": [
@@ -347,13 +347,13 @@ export const Entrepreneurship201Module: LearningModule = {
           "id": "entrepreneurship-201-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, you will break down a realistic business scenario into its key components: the objective, the context in which it operates, the constraints it faces, and the various options for intervention. Make sure to include notes on the trade-offs involved in each option to help guide your decision-making.\nContext recap: In this interactive case study, you will break down a realistic business scenario into its key components: the objective, the context in which it operates, the constraints it faces, and the various options for intervention. Make sure to include notes on the trade-offs involved in each option to help guide your decision-making."
         },
         {
           "id": "entrepreneurship-201-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "In this recap, you will present a structured improvement proposal based on your analysis. This proposal should include clear success criteria, a mapping of who will be responsible for each part of the plan, and a timeline for follow-up actions to ensure that the improvements are implemented effectively.\nContext recap: In this recap, you will present a structured improvement proposal based on your analysis. This proposal should include clear success criteria, a mapping of who will be responsible for each part of the plan, and a timeline for follow-up actions to ensure that the improvements are implemented effectively."
         }
       ],
       "interactiveActivities": [

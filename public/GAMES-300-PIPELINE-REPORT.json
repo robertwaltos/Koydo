@@ -1,0 +1,283 @@
+{
+  "generatedAt": "2026-03-03T23:30:47.242Z",
+  "pipelineVersion": "games-300-factory-v1",
+  "resourcePolicy": {
+    "batchSize": 8,
+    "pauseMs": 120,
+    "resumeBatch": 1,
+    "maxBatches": null,
+    "dryRun": false
+  },
+  "totals": {
+    "games": 300,
+    "totalBatches": 38,
+    "executedBatches": 38
+  },
+  "coverage": {
+    "ageBands": {
+      "prek": 8,
+      "elementary": 126,
+      "middle": 292,
+      "teen": 285
+    },
+    "subjects": {
+      "literacy": 7,
+      "geography": 64,
+      "logic": 109,
+      "cross-subject": 24,
+      "fun": 61,
+      "biology": 5,
+      "math": 4,
+      "geometry": 8,
+      "physics": 4,
+      "history": 5,
+      "arts": 4,
+      "chemistry": 5
+    },
+    "themeTags": {
+      "language": 7,
+      "spelling": 7,
+      "educational": 179,
+      "dora-style": 14,
+      "exploration": 14,
+      "tetris-style": 57,
+      "spatial-reasoning": 57,
+      "assessment": 24,
+      "adaptive-difficulty": 28,
+      "pacman-style": 52,
+      "timing": 52,
+      "fun": 56,
+      "plain-fun": 61,
+      "arcade": 61,
+      "reward-loop": 61,
+      "science": 5,
+      "systems": 5,
+      "carmen-style": 50,
+      "map-clues": 50,
+      "math": 4,
+      "geometry": 8,
+      "shape-reasoning": 8,
+      "bridge-physics": 4,
+      "structures": 4,
+      "simulation": 4,
+      "history": 5,
+      "timeline": 5,
+      "creative": 4,
+      "music": 4,
+      "chemistry": 5,
+      "reaction-model": 5
+    }
+  },
+  "openSource": {
+    "repoCount": 3,
+    "integratedRepoCount": 111,
+    "repos": [
+      {
+        "name": "2048",
+        "license": "MIT",
+        "remote": "https://github.com/gabrielecirulli/2048.git",
+        "commit": "478b6ec"
+      },
+      {
+        "name": "javascript-tetris",
+        "license": "MIT-like",
+        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
+        "commit": "e5c0c42"
+      },
+      {
+        "name": "openstreetguesser",
+        "license": "MIT",
+        "remote": "https://github.com/louis-e/openstreetguesser.git",
+        "commit": "6620d77"
+      }
+    ]
+  },
+  "outputs": {
+    "manifest": "public/GAMES-300-PIPELINE-MANIFEST.json",
+    "batchDirectory": "public/games-factory/batches",
+    "batchFiles": [
+      "public/games-factory/batches/batch-001.json",
+      "public/games-factory/batches/batch-002.json",
+      "public/games-factory/batches/batch-003.json",
+      "public/games-factory/batches/batch-004.json",
+      "public/games-factory/batches/batch-005.json",
+      "public/games-factory/batches/batch-006.json",
+      "public/games-factory/batches/batch-007.json",
+      "public/games-factory/batches/batch-008.json",
+      "public/games-factory/batches/batch-009.json",
+      "public/games-factory/batches/batch-010.json",
+      "public/games-factory/batches/batch-011.json",
+      "public/games-factory/batches/batch-012.json",
+      "public/games-factory/batches/batch-013.json",
+      "public/games-factory/batches/batch-014.json",
+      "public/games-factory/batches/batch-015.json",
+      "public/games-factory/batches/batch-016.json",
+      "public/games-factory/batches/batch-017.json",
+      "public/games-factory/batches/batch-018.json",
+      "public/games-factory/batches/batch-019.json",
+      "public/games-factory/batches/batch-020.json",
+      "public/games-factory/batches/batch-021.json",
+      "public/games-factory/batches/batch-022.json",
+      "public/games-factory/batches/batch-023.json",
+      "public/games-factory/batches/batch-024.json",
+      "public/games-factory/batches/batch-025.json",
+      "public/games-factory/batches/batch-026.json",
+      "public/games-factory/batches/batch-027.json",
+      "public/games-factory/batches/batch-028.json",
+      "public/games-factory/batches/batch-029.json",
+      "public/games-factory/batches/batch-030.json",
+      "public/games-factory/batches/batch-031.json",
+      "public/games-factory/batches/batch-032.json",
+      "public/games-factory/batches/batch-033.json",
+      "public/games-factory/batches/batch-034.json",
+      "public/games-factory/batches/batch-035.json",
+      "public/games-factory/batches/batch-036.json",
+      "public/games-factory/batches/batch-037.json",
+      "public/games-factory/batches/batch-038.json"
+    ],
+    "reportJson": "public/GAMES-300-PIPELINE-REPORT.json",
+    "reportMarkdown": "GAMES-300-PIPELINE-REPORT.md"
+  },
+  "sampleGames": [
+    {
+      "id": "letter-catcher",
+      "title": "Letter Catcher",
+      "shortName": "Letter Catcher",
+      "track": "Word Quest",
+      "subject": "literacy"
+    },
+    {
+      "id": "word-builder",
+      "title": "Word Builder",
+      "shortName": "Word Builder",
+      "track": "Story Explorer",
+      "subject": "geography"
+    },
+    {
+      "id": "number-crunch",
+      "title": "Number Crunch",
+      "shortName": "Number Crunch",
+      "track": "Stack Lab",
+      "subject": "logic"
+    },
+    {
+      "id": "pattern-train",
+      "title": "Pattern Train",
+      "shortName": "Pattern Train",
+      "track": "Subject Mastery",
+      "subject": "cross-subject"
+    },
+    {
+      "id": "story-sequencer",
+      "title": "Story Sequencer",
+      "shortName": "Story Sequencer",
+      "track": "Word Quest",
+      "subject": "literacy"
+    },
+    {
+      "id": "memory-match",
+      "title": "Memory Match",
+      "shortName": "Memory Match",
+      "track": "Maze Chase",
+      "subject": "logic"
+    },
+    {
+      "id": "color-mixer",
+      "title": "Color Mixer",
+      "shortName": "Color Mixer",
+      "track": "Pure Fun",
+      "subject": "fun"
+    },
+    {
+      "id": "shape-safari",
+      "title": "Shape Safari",
+      "shortName": "Shape Safari",
+      "track": "Subject Mastery",
+      "subject": "cross-subject"
+    },
+    {
+      "id": "neural",
+      "title": "Atlas Journey",
+      "shortName": "Atlas Journey",
+      "track": "Stack Lab",
+      "subject": "logic"
+    },
+    {
+      "id": "fraction",
+      "title": "Beacon Journey",
+      "shortName": "Beacon Journey",
+      "track": "Story Explorer",
+      "subject": "geography"
+    },
+    {
+      "id": "vocabulary",
+      "title": "Cedar Journey",
+      "shortName": "Cedar Journey",
+      "track": "Bio Lab",
+      "subject": "biology"
+    },
+    {
+      "id": "artistic",
+      "title": "Delta Journey",
+      "shortName": "Delta Journey",
+      "track": "Subject Mastery",
+      "subject": "cross-subject"
+    },
+    {
+      "id": "ethical",
+      "title": "Ember Journey",
+      "shortName": "Ember Journey",
+      "track": "Word Quest",
+      "subject": "literacy"
+    },
+    {
+      "id": "synthesis",
+      "title": "Fable Journey",
+      "shortName": "Fable Journey",
+      "track": "Maze Chase",
+      "subject": "logic"
+    },
+    {
+      "id": "velocity",
+      "title": "Grove Journey",
+      "shortName": "Grove Journey",
+      "track": "Stack Lab",
+      "subject": "logic"
+    },
+    {
+      "id": "logic",
+      "title": "Ivory Journey",
+      "shortName": "Ivory Journey",
+      "track": "World Detective",
+      "subject": "geography"
+    },
+    {
+      "id": "canvas",
+      "title": "Jade Journey",
+      "shortName": "Jade Journey",
+      "track": "Pure Fun",
+      "subject": "fun"
+    },
+    {
+      "id": "chronicle",
+      "title": "Kindle Journey",
+      "shortName": "Kindle Journey",
+      "track": "Maze Chase",
+      "subject": "logic"
+    },
+    {
+      "id": "syntax",
+      "title": "Lantern Journey",
+      "shortName": "Lantern Journey",
+      "track": "Stack Lab",
+      "subject": "logic"
+    },
+    {
+      "id": "genetic",
+      "title": "Meridian Journey",
+      "shortName": "Meridian Journey",
+      "track": "World Detective",
+      "subject": "geography"
+    }
+  ]
+}

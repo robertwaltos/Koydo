@@ -5,9 +5,10 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const preferencePatchSchema = z.object({
   theme_pack: z.enum(["simple", "sunrise", "ocean", "forest", "candy", "space"]).optional(),
-  theme_mode: z.enum(["system", "light", "dark"]).optional(),
+  theme_mode: z.enum(["system", "light", "dark"]).optional().transform((value) => (value ? "light" : undefined)),
   motion_pref: z.enum(["standard"]).optional(),
   contrast_pref: z.enum(["standard", "high"]).optional(),
+  companion_avatar_style: z.enum(["human", "animated"]).optional(),
 });
 
 export async function GET() {
@@ -22,7 +23,7 @@ export async function GET() {
 
   const { data, error } = await supabase
     .from("user_profiles")
-    .select("theme_pack, theme_mode, motion_pref, contrast_pref")
+    .select("theme_pack, theme_mode, motion_pref, contrast_pref, companion_avatar_style")
     .eq("user_id", user.id)
     .maybeSingle();
 
@@ -34,9 +35,10 @@ export async function GET() {
   return NextResponse.json({
     preferences: {
       theme_pack: data?.theme_pack ?? "simple",
-      theme_mode: data?.theme_mode ?? "system",
+      theme_mode: "light",
       motion_pref: data?.motion_pref ?? "standard",
       contrast_pref: data?.contrast_pref ?? "standard",
+      companion_avatar_style: data?.companion_avatar_style ?? "human",
     },
   });
 }
@@ -58,7 +60,10 @@ export async function PATCH(request: Request) {
     return NextResponse.json({ error: "Invalid payload", details: parsed.error.flatten() }, { status: 400 });
   }
 
-  const update = parsed.data;
+  const update = {
+    ...parsed.data,
+    theme_mode: "light" as const,
+  };
   if (Object.keys(update).length === 0) {
     return NextResponse.json({ ok: true });
   }

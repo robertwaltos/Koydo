@@ -47,19 +47,19 @@ export const Geoscience101Module: LearningModule = {
           "id": "geoscience-101-l01-c1",
           "kind": "concept",
           "title": "Scope and Vocabulary",
-          "content": "This lesson establishes shared vocabulary for Geoscience and clarifies the scope boundaries for tectonic and surface processes and earth materials analysis."
+          "content": "In this lesson, we will dive into some key vocabulary that is essential for understanding Geoscience. These terms will help us communicate clearly about the exciting processes that shape our planet. We will also outline the specific areas we will focus on during our studies. This includes tectonic movements, which are the shifts and changes in the Earth's crust, surface processes that affect the landscape, and the analysis of different earth materials like rocks and minerals. By grasping these concepts and terms, we will build a strong foundation for our exploration of Geoscience and be better prepared to discuss and understand the world around us."
         },
         {
           "id": "geoscience-101-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning",
-          "content": "Learners map causal relationships, assumptions, and constraints before intervention design."
+          "content": "In this part of the lesson, students will learn how to identify and map out causal relationships. This means understanding how different factors influence one another, as well as recognizing any assumptions or limitations that might exist. Before designing any interventions or solutions, it is crucial to have a clear understanding of these relationships to ensure effective outcomes.\nContext recap: In this part of the lesson, students will learn how to identify and map out causal relationships. This means understanding how different factors influence one another, as well as recognizing any assumptions or limitations that might exist. Before designing any interventions or solutions, it is crucial to have a clear understanding of these relationships to ensure effective outcomes."
         },
         {
           "id": "geoscience-101-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "Claims are anchored to measurable indicators, confidence ranges, and review checkpoints."
+          "content": "In Geoscience, it is essential to support our claims with solid evidence. This means that any statements we make should be backed by measurable indicators, which help us gauge their accuracy. Additionally, we will discuss the importance of confidence ranges and review checkpoints to ensure that our findings are reliable and valid.\nContext recap: In Geoscience, it is essential to support our claims with solid evidence. This means that any statements we make should be backed by measurable indicators, which help us gauge their accuracy. Additionally, we will discuss the importance of confidence ranges and review checkpoints to ensure that our findings are reliable and valid."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Geoscience101Module: LearningModule = {
           "id": "geoscience-101-l02-c1",
           "kind": "practice",
           "title": "Workflow Build",
-          "content": "Learners build a workflow with owner mapping, control gates, and measurable outcomes."
+          "content": "In this interactive activity, students will have the opportunity to create their own workflow. This involves mapping out who is responsible for different tasks, establishing control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help learners understand the importance of organization and planning in Geoscience projects.\nContext recap: In this interactive activity, students will have the opportunity to create their own workflow. This involves mapping out who is responsible for different tasks, establishing control gates to monitor progress, and defining measurable outcomes to assess success. This hands-on experience will help learners understand the importance of organization and planning in Geoscience projects."
         },
         {
           "id": "geoscience-101-l02-c2",
           "kind": "recap",
           "title": "Readiness and Rollback",
-          "content": "Systems are stress-tested for failure scenarios and rollback decision thresholds."
+          "content": "In this recap, we will discuss how systems can be tested under stress to identify potential failure scenarios. Students will learn about the importance of having rollback decision thresholds, which are guidelines that help teams decide when to revert to a previous state if things do not go as planned. This practice is crucial in ensuring that projects remain on track and can adapt to challenges.\nContext recap: In this recap, we will discuss how systems can be tested under stress to identify potential failure scenarios. Students will learn about the importance of having rollback decision thresholds, which are guidelines that help teams decide when to revert to a previous state if things do not go as planned. This practice is crucial in ensuring that projects remain on track and can adapt to challenges."
         }
       ],
       "interactiveActivities": [
@@ -268,19 +268,19 @@ export const Geoscience101Module: LearningModule = {
           "id": "geoscience-101-l04-c1",
           "kind": "example",
           "title": "Case Context",
-          "content": "Case focus: a region facing seismic, erosion, and groundwater pressures requiring integrated geoscience decisions. Learners identify competing objectives and system risks."
+          "content": "In this case study, we will focus on a specific region that is facing challenges such as earthquakes, erosion, and groundwater issues. These problems require careful decision-making that integrates various aspects of Geoscience. Students will work to identify the different objectives that may compete with one another and assess the risks associated with the systems in place.\nContext recap: In this case study, we will focus on a specific region that is facing challenges such as earthquakes, erosion, and groundwater issues. These problems require careful decision-making that integrates various aspects of Geoscience. Students will work to identify the different objectives that may compete with one another and assess the risks associated with the systems in place."
         },
         {
           "id": "geoscience-101-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Options are scored across effectiveness, feasibility, risk, and stakeholder impact."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool allows students to evaluate different options based on several criteria, including effectiveness, feasibility, risk, and the impact on stakeholders. By scoring these options, learners can make informed decisions that consider both benefits and drawbacks.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool allows students to evaluate different options based on several criteria, including effectiveness, feasibility, risk, and the impact on stakeholders. By scoring these options, learners can make informed decisions that consider both benefits and drawbacks."
         },
         {
           "id": "geoscience-101-l04-c3",
           "kind": "recap",
           "title": "Recovery Design",
-          "content": "Failure patterns are converted into safeguards and response playbooks."
+          "content": "In this recap, we will discuss how patterns of failure can be transformed into proactive measures. This means developing safeguards and response playbooks that outline steps to take in case of an emergency. By preparing for potential issues, we can enhance our resilience and response capabilities in Geoscience.\nContext recap: In this recap, we will discuss how patterns of failure can be transformed into proactive measures. This means developing safeguards and response playbooks that outline steps to take in case of an emergency. By preparing for potential issues, we can enhance our resilience and response capabilities in Geoscience."
         }
       ],
       "flashcards": [
@@ -319,13 +319,13 @@ export const Geoscience101Module: LearningModule = {
           "id": "geoscience-101-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners run multiple intervention scenarios under uncertainty and compare outcomes."
+          "content": "In this interactive simulation, students will run various intervention scenarios while considering uncertainty. This means they will explore different possible outcomes based on their decisions and actions. By comparing these outcomes, learners will gain insights into the complexities of real-world Geoscience challenges.\nContext recap: In this interactive simulation, students will run various intervention scenarios while considering uncertainty. This means they will explore different possible outcomes based on their decisions and actions. By comparing these outcomes, learners will gain insights into the complexities of real-world Geoscience challenges."
         },
         {
           "id": "geoscience-101-l05-c2",
           "kind": "recap",
           "title": "Debrief",
-          "content": "Each run is evaluated for target attainment, side effects, and governance compliance."
+          "content": "In this debriefing session, we will evaluate each simulation run to determine how well the targets were met. Students will also assess any side effects that occurred and check for compliance with governance standards. This reflection is crucial for understanding the implications of their decisions and improving future simulations.\nContext recap: In this debriefing session, we will evaluate each simulation run to determine how well the targets were met. Students will also assess any side effects that occurred and check for compliance with governance standards. This reflection is crucial for understanding the implications of their decisions and improving future simulations."
         }
       ],
       "interactiveActivities": [
@@ -476,19 +476,19 @@ export const Geoscience101Module: LearningModule = {
           "id": "geoscience-101-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact",
-          "content": "Learners map benefit and burden distribution across stakeholder groups."
+          "content": "In this lesson, learners will explore how benefits and burdens are distributed among different stakeholder groups. By mapping these impacts, students will understand the importance of considering various perspectives in Geoscience decision-making, ensuring that all voices are heard and valued.\nContext recap: In this lesson, learners will explore how benefits and burdens are distributed among different stakeholder groups. By mapping these impacts, students will understand the importance of considering various perspectives in Geoscience decision-making, ensuring that all voices are heard and valued."
         },
         {
           "id": "geoscience-101-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will discuss the concept of accountability architecture. This involves ensuring that decisions made during Geoscience projects can be traced back to their origins. Students will learn about the rights to review decisions and the obligations to address any issues that arise, fostering a culture of responsibility and transparency.\nContext recap: In this section, we will discuss the concept of accountability architecture. This involves ensuring that decisions made during Geoscience projects can be traced back to their origins. Students will learn about the rights to review decisions and the obligations to address any issues that arise, fostering a culture of responsibility and transparency."
         },
         {
           "id": "geoscience-101-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution",
-          "content": "A final checklist balances performance, risk control, and ethical impact."
+          "content": "At the end of our project, it's important to have a checklist that helps us ensure we are performing well, managing risks effectively, and considering the ethical implications of our actions. This checklist will guide us in making responsible decisions that positively impact our community and environment.\nContext recap: At the end of our project, it's important to have a checklist that helps us ensure we are performing well, managing risks effectively, and considering the ethical implications of our actions. This checklist will guide us in making responsible decisions that positively impact our community and environment."
         }
       ],
       "flashcards": [
@@ -527,13 +527,13 @@ export const Geoscience101Module: LearningModule = {
           "id": "geoscience-101-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft objective, constraints, metrics, and governance triggers."
+          "content": "In this activity, you will create a detailed plan for your capstone project. This plan will include clear objectives that outline what you want to achieve, any constraints that may limit your project, metrics to measure your success, and triggers for governance that will help you stay on track and make informed decisions throughout the process.\nContext recap: In this activity, you will create a detailed plan for your capstone project. This plan will include clear objectives that outline what you want to achieve, any constraints that may limit your project, metrics to measure your success, and triggers for governance that will help you stay on track and make informed decisions throughout the process."
         },
         {
           "id": "geoscience-101-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare to defend decisions against technical and governance critiques."
+          "content": "As you work on your capstone project, it is essential to be ready to explain and defend your decisions. You will prepare to address any questions or critiques related to the technical aspects of your project and the governance processes you have chosen. This preparation will help you build confidence and ensure that your project meets the necessary standards.\nContext recap: As you work on your capstone project, it is essential to be ready to explain and defend your decisions. You will prepare to address any questions or critiques related to the technical aspects of your project and the governance processes you have chosen. This preparation will help you build confidence and ensure that your project meets the necessary standards."
         }
       ],
       "interactiveActivities": [

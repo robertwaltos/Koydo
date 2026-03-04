@@ -37,8 +37,12 @@ export type GameResultInput = {
   score: number;
   maxScore: number;
   timeMs: number;
+  /** Optional game id for non-core game modes (e.g., immersive arcade catalog). */
+  customGameId?: string;
   /** Optional profile scoping for multi-profile families. */
   studentProfileId?: string;
+  /** Optional guardian override phrase for age-locked game submissions. */
+  guardianUnlockPhrase?: string;
 };
 
 export type GameResultOutcome = {
@@ -119,15 +123,10 @@ export function useGameResult(): UseGameResultReturn {
         const badgeEarned = data.badgeEarned;
 
         // ── Pipe through ExperienceProvider so celebration UI fires ──────────
-        // awardXP handles optimistic update + server reconcile internally;
-        // we pass 0 here because /api/games/state already committed the points.
-        // Instead we push a synthetic local update so the context reflects it.
+        // /api/games/state has already persisted the points event.
+        // We update local ExperienceProvider state without a second POST.
         if (pointsAwarded > 0) {
-          // We use a "local-only" approach: awardXP with the awarded amount
-          // but pass source="game_submitted" so the server POST is a no-op
-          // if the games/state route already wrote it. In practice the
-          // language/gamification/state endpoint is idempotent via upsert.
-          await awardXP(pointsAwarded, `game:${input.gameType}`);
+          await awardXP(pointsAwarded, `game:${input.gameType}`, { persist: false });
         }
 
         if (badgeEarned) {

@@ -8,7 +8,8 @@
  * Query params:
  *   ?n=3      — number of recommendations (default 3, max 10)
  *   ?paths=   — comma-separated learning-path IDs to use as active
- *               context. When omitted, falls back to default core paths.
+ *               context. When omitted, falls back to the learner's
+ *               profile (planned) → all standard paths.
  */
 
 import { NextResponse } from "next/server";

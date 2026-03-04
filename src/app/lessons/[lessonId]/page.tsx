@@ -8,6 +8,7 @@ import LessonSessionTracker from "./lesson-session-tracker";
 import LessonExperience from "./lesson-experience";
 import SoftCard from "@/app/components/ui/soft-card";
 import ProgressChip from "@/app/components/ui/progress-chip";
+import OfflineLessonPackPill from "@/app/components/offline-lesson-pack-pill";
 
 export default function LessonPage({
   params,
@@ -33,6 +34,15 @@ async function LessonPageContent({
   if (resolvedParams.lessonId !== lesson.id) {
     redirect(toLessonPath(lesson.id));
   }
+
+  const lessonIndex = learningModule.lessons.findIndex((entry) => entry.id === lesson.id);
+  const nextLesson = lessonIndex >= 0 ? learningModule.lessons[lessonIndex + 1] ?? null : null;
+  const nextLessonHref = nextLesson ? toLessonPath(nextLesson.id) : null;
+  const offlinePackRoutes = [
+    toLessonPath(lesson.id),
+    "/dashboard",
+    ...(nextLessonHref ? [nextLessonHref] : []),
+  ];
 
   const supabase = await createSupabaseServerClient();
   const {
@@ -74,6 +84,7 @@ async function LessonPageContent({
         <div className="mt-3 flex flex-wrap items-center gap-2">
           <ProgressChip label="Subject" value={learningModule.subject} tone="info" />
           <ProgressChip label="Duration" value={`${lesson.duration} min`} tone="warning" />
+          <OfflineLessonPackPill routes={offlinePackRoutes} compact />
         </div>
       </SoftCard>
       <LessonExperience

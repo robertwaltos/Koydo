@@ -47,19 +47,19 @@ export const MediaLiteracy201Module: LearningModule = {
           "id": "media-literacy-201-l01-c1",
           "kind": "concept",
           "title": "Vocabulary and System Boundaries",
-          "content": "This lesson establishes shared language for Media Literacy, defines operating boundaries, and maps where source credibility and narrative framing interact in real environments."
+          "content": "In this lesson, we will work together to build a shared vocabulary that will enhance our understanding of Media Literacy. We will clearly define the boundaries that guide our discussions and learning. Additionally, we will investigate how the credibility of various sources and the way stories are presented can shape our perceptions in real-world contexts. By doing this, we aim to become more thoughtful and critical consumers of media, enabling us to navigate information more effectively and make informed decisions.\nContext recap: In this lesson, we will work together to build a shared vocabulary that will enhance our understanding of Media Literacy. We will clearly define the boundaries that guide our discussions and learning. Additionally, we will investigate how the credibility of various sources and the way stories are presented can shape our perceptions in real-world contexts. By doing this, we aim to become more thoughtful and critical consumers of media, enabling us to navigate information more effectively and make informed decisions."
         },
         {
           "id": "media-literacy-201-l01-c2",
           "kind": "concept",
           "title": "Causal Structures and Constraints",
-          "content": "Learners model causal paths, identify hidden assumptions, and apply constraint checks before proposing interventions."
+          "content": "In this section, learners will practice modeling causal paths, which means they will learn how to trace the connections between different events and outcomes. They will also identify hidden assumptions that may not be immediately obvious and apply checks to understand any constraints before suggesting possible interventions. This process will help them think critically about cause and effect in media narratives.\nContext recap: In this section, learners will practice modeling causal paths, which means they will learn how to trace the connections between different events and outcomes. They will also identify hidden assumptions that may not be immediately obvious and apply checks to understand any constraints before suggesting possible interventions. This process will help them think critically about cause and effect in media narratives."
         },
         {
           "id": "media-literacy-201-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "The module introduces an evidence-first workflow where each claim is tied to observable indicators and expected uncertainty."
+          "content": "This module introduces a workflow that prioritizes evidence. Learners will discover how to connect each claim they encounter to observable indicators, which are pieces of evidence that can be seen or measured. They will also learn to recognize the uncertainty that can come with different claims, helping them to approach information with a critical mindset.\nContext recap: This module introduces a workflow that prioritizes evidence. Learners will discover how to connect each claim they encounter to observable indicators, which are pieces of evidence that can be seen or measured. They will also learn to recognize the uncertainty that can come with different claims, helping them to approach information with a critical mindset."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const MediaLiteracy201Module: LearningModule = {
           "id": "media-literacy-201-l02-c1",
           "kind": "practice",
           "title": "Method Sequence Construction",
-          "content": "Learners build a method sequence optimized for method execution, workflow reliability, and scenario interpretation, then stress-test each step under uncertainty."
+          "content": "In this interactive practice, learners will construct a sequence of methods that are optimized for effective execution. They will focus on ensuring that their workflow is reliable and that they can interpret various scenarios accurately. After building their method sequence, they will stress-test each step to see how it holds up under uncertain conditions, which will enhance their problem-solving skills.\nContext recap: In this interactive practice, learners will construct a sequence of methods that are optimized for effective execution. They will focus on ensuring that their workflow is reliable and that they can interpret various scenarios accurately. After building their method sequence, they will stress-test each step to see how it holds up under uncertain conditions, which will enhance their problem-solving skills."
         },
         {
           "id": "media-literacy-201-l02-c2",
           "kind": "recap",
           "title": "Operational Readiness Checks",
-          "content": "Readiness is assessed with owner mapping, checkpoint cadence, rollback triggers, and evidence logs."
+          "content": "In this recap, learners will assess their readiness by mapping out who is responsible for each part of the process. They will check the timing of their checkpoints, identify triggers for rolling back decisions if necessary, and maintain evidence logs to track their findings. This will help them ensure that they are prepared for any challenges that may arise.\nContext recap: In this recap, learners will assess their readiness by mapping out who is responsible for each part of the process. They will check the timing of their checkpoints, identify triggers for rolling back decisions if necessary, and maintain evidence logs to track their findings. This will help them ensure that they are prepared for any challenges that may arise."
         }
       ],
       "interactiveActivities": [
@@ -322,19 +322,19 @@ export const MediaLiteracy201Module: LearningModule = {
           "id": "media-literacy-201-l04-c1",
           "kind": "example",
           "title": "Case Setup and Stakes",
-          "content": "The case examines a fast-moving public event where conflicting media narratives shape public behavior, requiring learners to separate evidence, assumptions, and high-consequence risks."
+          "content": "In this case study, we will explore a fast-paced public event that has generated various media narratives. These narratives can significantly affect how individuals and communities respond to the situation. As learners, your goal will be to critically analyze the information presented, distinguishing between solid evidence and personal assumptions. Additionally, you will identify the potential high-stakes risks that arise from these narratives. This exercise is designed to deepen your understanding of how media influences public perception and behavior, encouraging you to think critically about the information you consume."
         },
         {
           "id": "media-literacy-201-l04-c2",
           "kind": "concept",
           "title": "Decision Tradeoff Matrix",
-          "content": "Alternatives are scored across performance, reliability, cost, and equity implications before selecting an intervention path."
+          "content": "In this section, learners will evaluate different alternatives using a decision tradeoff matrix. They will score each option based on its performance, reliability, cost, and fairness implications. This structured approach will guide them in selecting the best intervention path, encouraging thoughtful decision-making.\nContext recap: In this section, learners will evaluate different alternatives using a decision tradeoff matrix. They will score each option based on its performance, reliability, cost, and fairness implications. This structured approach will guide them in selecting the best intervention path, encouraging thoughtful decision-making."
         },
         {
           "id": "media-literacy-201-l04-c3",
           "kind": "recap",
           "title": "Lessons from Failure Modes",
-          "content": "Failure patterns are categorized to convert one-off incidents into reusable design safeguards."
+          "content": "In this recap, learners will categorize patterns of failure to transform isolated incidents into valuable lessons. By understanding these failure modes, they can create reusable design safeguards that help prevent similar issues in the future, fostering a proactive approach to problem-solving.\nContext recap: In this recap, learners will categorize patterns of failure to transform isolated incidents into valuable lessons. By understanding these failure modes, they can create reusable design safeguards that help prevent similar issues in the future, fostering a proactive approach to problem-solving."
         }
       ],
       "flashcards": [
@@ -373,13 +373,13 @@ export const MediaLiteracy201Module: LearningModule = {
           "id": "media-literacy-201-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure a scenario model with explicit uncertainty assumptions and success metrics tied to civic decision impact."
+          "content": "In this interactive practice, learners will set up a scenario model that includes clear assumptions about uncertainty and metrics for success. These metrics will be linked to the impact of civic decisions, allowing learners to understand how their choices can affect the community and society at large.\nContext recap: In this interactive practice, learners will set up a scenario model that includes clear assumptions about uncertainty and metrics for success. These metrics will be linked to the impact of civic decisions, allowing learners to understand how their choices can affect the community and society at large."
         },
         {
           "id": "media-literacy-201-l05-c2",
           "kind": "recap",
           "title": "Decision Review Loop",
-          "content": "Each simulation round ends with evidence review, policy alignment checks, and improvement actions."
+          "content": "At the end of each simulation round, learners will engage in a review process. They will examine the evidence gathered, check for alignment with policy goals, and identify actions for improvement. This reflective practice will help them learn from their experiences and enhance their decision-making skills.\nContext recap: At the end of each simulation round, learners will engage in a review process. They will examine the evidence gathered, check for alignment with policy goals, and identify actions for improvement. This reflective practice will help them learn from their experiences and enhance their decision-making skills."
         }
       ],
       "interactiveActivities": [
@@ -579,19 +579,19 @@ export const MediaLiteracy201Module: LearningModule = {
           "id": "media-literacy-201-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Analysis",
-          "content": "Learners identify who benefits, who bears risk, and how policy choices shape outcomes across groups."
+          "content": "In this section, learners will conduct a stakeholder analysis to identify who benefits from certain decisions, who might face risks, and how different policy choices can shape outcomes for various groups. This understanding will help them appreciate the complexity of media impacts on society.\nContext recap: In this section, learners will conduct a stakeholder analysis to identify who benefits from certain decisions, who might face risks, and how different policy choices can shape outcomes for various groups. This understanding will help them appreciate the complexity of media impacts on society."
         },
         {
           "id": "media-literacy-201-l07-c2",
           "kind": "concept",
           "title": "Governance and Accountability",
-          "content": "Governance mechanisms are linked to measurable controls, transparency obligations, and remediation pathways."
+          "content": "In this concept segment, learners will explore governance and accountability. They will learn how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. This knowledge will empower them to understand how policies can be structured to ensure fairness and accountability.\nContext recap: In this concept segment, learners will explore governance and accountability. They will learn how governance mechanisms are connected to measurable controls, obligations for transparency, and pathways for remediation. This knowledge will empower them to understand how policies can be structured to ensure fairness and accountability."
         },
         {
           "id": "media-literacy-201-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist integrates legal, ethical, technical, and user-impact criteria before deployment decisions."
+          "content": "Before making any decisions about deploying media projects, it is essential to use a comprehensive checklist. This checklist should include important factors such as legal considerations, ethical standards, technical requirements, and the potential impact on users. By carefully evaluating these criteria, we can ensure that our media practices are responsible and beneficial to the community.\nContext recap: Before making any decisions about deploying media projects, it is essential to use a comprehensive checklist. This checklist should include important factors such as legal considerations, ethical standards, technical requirements, and the potential impact on users. By carefully evaluating these criteria, we can ensure that our media practices are responsible and beneficial to the community."
         }
       ],
       "flashcards": [
@@ -630,13 +630,13 @@ export const MediaLiteracy201Module: LearningModule = {
           "id": "media-literacy-201-l08-c1",
           "kind": "practice",
           "title": "Capstone Scope Definition",
-          "content": "Learners draft a capstone charter with objective, risks, success metrics, and governance checkpoints."
+          "content": "In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish metrics for measuring success, and set up governance checkpoints to ensure everything stays on track. This process helps students think critically about their projects and prepares them for real-world challenges.\nContext recap: In this activity, learners will create a detailed capstone charter. This document will outline the main objectives of the project, identify potential risks, establish metrics for measuring success, and set up governance checkpoints to ensure everything stays on track. This process helps students think critically about their projects and prepares them for real-world challenges."
         },
         {
           "id": "media-literacy-201-l08-c2",
           "kind": "recap",
           "title": "Defense Preparation",
-          "content": "The lesson ends with a defense template that requires evidence-backed claims and explicit tradeoff reasoning."
+          "content": "To conclude the lesson, students will work with a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any trade-offs they make. This exercise encourages critical thinking and helps students articulate their ideas clearly and convincingly.\nContext recap: To conclude the lesson, students will work with a defense preparation template. This template will guide them in making claims that are supported by evidence and require them to explain the reasoning behind any trade-offs they make. This exercise encourages critical thinking and helps students articulate their ideas clearly and convincingly."
         }
       ],
       "interactiveActivities": [

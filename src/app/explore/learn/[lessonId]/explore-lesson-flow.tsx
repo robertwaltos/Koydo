@@ -13,12 +13,15 @@ import type {
 import { trackLearningEvent } from "@/lib/analytics/xapi-lite";
 import { saveOfflineProgress, deleteSyncedProgress } from "@/lib/offline/progress-db";
 import SpeakButton from "../../_components/speak-button";
+import OfflineLessonPackPill from "@/app/components/offline-lesson-pack-pill";
 // Phase 1 (first screen) is static; phases 2–5 are lazy-loaded on demand
 import VisualChunkStepper from "../../_components/visual-chunk-stepper";
 import { usePreReaderMode } from "../../_components/pre-reader-mode";
 import AuthGuard from "@/app/components/auth-guard";
 import { ErrorBoundary } from "react-error-boundary";
 import { ErrorFallback } from "@/app/components/error-fallback";
+import { useI18n } from "@/lib/i18n/provider";
+import { useTranslatedLesson } from "@/lib/i18n/use-translated-lesson";
 
 const VisualFlashcards = dynamic(() => import("../../_components/visual-flashcards"), {
   loading: () => <div className="flex min-h-[40vh] items-center justify-center"><div className="family-orbit-spinner" /></div>,
@@ -83,10 +86,14 @@ export default function ExploreLessonFlow({
   nextLessonHref,
 }: ExploreLessonFlowProps) {
   const { isPreReaderMode } = usePreReaderMode();
-  const chunks = useMemo(() => normalizeChunks(lesson), [lesson]);
-  const flashcardData: Flashcard[] = lesson.flashcards ?? [];
-  const questions: Question[] = lesson.questions ?? [];
-  const activities: ActivityType[] = lesson.interactiveActivities ?? [];
+  const { locale } = useI18n();
+  const { lesson: tLesson, moduleTitle: tModuleTitle } = useTranslatedLesson(
+    lesson, moduleId, moduleTitle, locale,
+  );
+  const chunks = useMemo(() => normalizeChunks(tLesson), [tLesson]);
+  const flashcardData: Flashcard[] = tLesson.flashcards ?? [];
+  const questions: Question[] = tLesson.questions ?? [];
+  const activities: ActivityType[] = tLesson.interactiveActivities ?? [];
   const firstActivity = activities[0] ?? null;
 
   // Determine which phases are available
@@ -97,6 +104,14 @@ export default function ExploreLessonFlow({
   const [phase, setPhase] = useState<FlowPhase>("learn");
   const [quizScore, setQuizScore] = useState(0);
   const [quizTotal, setQuizTotal] = useState(0);
+  const offlinePackRoutes = useMemo(
+    () => [
+      worldHref,
+      `/explore/learn/${encodeURIComponent(lesson.id)}`,
+      ...(nextLessonHref ? [nextLessonHref] : []),
+    ],
+    [lesson.id, nextLessonHref, worldHref],
+  );
 
   // ── Analytics: track lesson_viewed on mount (once) ──
   const viewTrackedRef = useRef(false);
@@ -246,7 +261,7 @@ export default function ExploreLessonFlow({
                 )}
               </Link>
               <SpeakButton
-                text={lesson.title}
+                text={tLesson.title}
                 label={isPreReaderMode ? "🔊" : "Hear It"}
                 className="border-white/60 bg-white/80 text-zinc-700 shadow-sm backdrop-blur-sm hover:bg-white"
               />
@@ -260,11 +275,14 @@ export default function ExploreLessonFlow({
               <p
                 className={`mt-1 text-xs font-bold uppercase tracking-wide text-zinc-600 ${isPreReaderMode ? "sr-only" : ""}`}
               >
-                {subject} — {moduleTitle}
+                {subject} — {tModuleTitle}
               </p>
               <h1 className="mt-1 text-2xl font-extrabold tracking-tight text-zinc-900 sm:text-3xl">
-                {lesson.title}
+                {tLesson.title}
               </h1>
+              <div className="mt-2 flex justify-center">
+                <OfflineLessonPackPill routes={offlinePackRoutes} compact />
+              </div>
             </div>
 
             {/* Phase progress bar */}
@@ -327,10 +345,10 @@ export default function ExploreLessonFlow({
               <VisualFlashcards
                 lessonId={lesson.id}
                 moduleId={moduleId}
-                lessonTitle={lesson.title}
+                lessonTitle={tLesson.title}
                 flashcards={flashcardData.length > 0 ? flashcardData : undefined}
-                objectives={lesson.objectives}
-                chunks={lesson.chunks}
+                objectives={tLesson.objectives}
+                chunks={tLesson.chunks}
                 glowColor={glowColor}
                 borderColor={borderColor}
                 onComplete={handleFlashcardsComplete}
@@ -358,7 +376,7 @@ export default function ExploreLessonFlow({
 
           {phase === "celebration" ? (
             <LessonCelebration
-              lessonTitle={lesson.title}
+              lessonTitle={tLesson.title}
               quizScore={hasQuiz ? quizScore : undefined}
               quizTotal={hasQuiz ? quizTotal : undefined}
               glowColor={glowColor}

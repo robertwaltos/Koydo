@@ -5,6 +5,9 @@ import { serverEnv } from "@/lib/config/env";
 import { logAdminAction } from "@/lib/admin/audit";
 import { enforceAdminActionRateLimit } from "@/lib/admin/rate-limit";
 import { createStripeServerClient } from "@/lib/billing/stripe-client";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
+import { normalizePartnerCode } from "@/lib/partners/program";
+import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const requestSchema = z
   .object({
@@ -15,6 +18,9 @@ const requestSchema = z
     durationInMonths: z.number().int().positive().optional(),
     maxRedemptions: z.number().int().positive().optional(),
     redeemByIso: z.string().datetime().optional(),
+    partnerId: z.string().uuid().optional(),
+    attributionWindowDays: z.number().int().min(1).max(365).default(30),
+    partnerNotes: z.string().trim().max(2000).optional().nullable(),
   })
   .refine((value) => Boolean(value.percentOff) !== Boolean(value.amountOffUsd), {
     message: "Provide either percentOff or amountOffUsd.",
@@ -72,6 +78,62 @@ export async function POST(request: Request) {
     },
   });
 
+  let partnerCodeRecordId: string | null = null;
+  if (payload.data.partnerId) {
+    const adminDb = createSupabaseAdminClient();
+    const normalizedCode = normalizePartnerCode(payload.data.code);
+    const { data: partner, error: partnerError } = await adminDb
+      .from("partners")
+      .select("id")
+      .eq("id", payload.data.partnerId)
+      .maybeSingle();
+    if (partnerError || !partner) {
+      console.error("Failed to validate partner for promo-code assignment.", toSafeErrorRecord(partnerError));
+      return NextResponse.json(
+        {
+          error: "Promo code created in Stripe, but partner assignment failed because partner was not found.",
+          code: promotionCode.code,
+          couponId: coupon.id,
+          promotionCodeId: promotionCode.id,
+        },
+        { status: 500 },
+      );
+    }
+
+    const { data: partnerCode, error: partnerCodeError } = await adminDb
+      .from("partner_codes")
+      .insert({
+        partner_id: payload.data.partnerId,
+        code: normalizedCode,
+        stripe_promotion_code_id: promotionCode.id,
+        stripe_coupon_id: coupon.id,
+        status: "active",
+        attribution_window_days: payload.data.attributionWindowDays,
+        max_redemptions: payload.data.maxRedemptions ?? null,
+        notes: payload.data.partnerNotes?.trim() || null,
+        metadata: {
+          createdVia: "admin_billing_promo_code_route",
+          createdByAdmin: auth.userId,
+        },
+        created_by: auth.userId,
+      })
+      .select("id")
+      .single();
+    if (partnerCodeError) {
+      console.error("Failed to persist partner code assignment for promo code.", toSafeErrorRecord(partnerCodeError));
+      return NextResponse.json(
+        {
+          error: "Promo code created in Stripe, but partner assignment persistence failed.",
+          code: promotionCode.code,
+          couponId: coupon.id,
+          promotionCodeId: promotionCode.id,
+        },
+        { status: 500 },
+      );
+    }
+    partnerCodeRecordId = partnerCode.id;
+  }
+
   await logAdminAction({
     adminUserId: auth.userId,
     actionType: "billing_promo_code_create",
@@ -79,6 +141,8 @@ export async function POST(request: Request) {
       code: promotionCode.code,
       couponId: coupon.id,
       promotionCodeId: promotionCode.id,
+      partnerId: payload.data.partnerId ?? null,
+      partnerCodeRecordId,
     },
   });
 
@@ -87,5 +151,6 @@ export async function POST(request: Request) {
     code: promotionCode.code,
     couponId: coupon.id,
     promotionCodeId: promotionCode.id,
+    partnerCodeRecordId,
   });
 }

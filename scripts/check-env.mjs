@@ -374,7 +374,20 @@ function buildSupabaseUrlCheck({ supabaseUrl, isProduction }) {
   };
 }
 
-function buildUpstashRedisRateLimitCheck({ redisUrl, redisToken, isProduction }) {
+function buildUpstashRedisRateLimitCheck({ redisUrl, redisToken, isProduction, rateLimitBackend }) {
+  const backend = normalizeValue(rateLimitBackend).toLowerCase();
+  const usesInMemoryBackend = backend === "memory" || backend === "in_memory" || backend === "local";
+
+  if (usesInMemoryBackend) {
+    return {
+      label: "Upstash Redis Rate Limit Backend",
+      status: isProduction ? "fail" : "pass",
+      detail: isProduction
+        ? "Production runtime requires live Upstash Redis. Remove RATE_LIMIT_BACKEND=memory and configure UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN."
+        : "RATE_LIMIT_BACKEND=memory (explicit in-memory fallback mode).",
+    };
+  }
+
   const hasUrl = Boolean(redisUrl);
   const hasToken = Boolean(redisToken);
 
@@ -419,7 +432,6 @@ function buildUpstashRedisRateLimitCheck({ redisUrl, redisToken, isProduction })
     detail: "Configured",
   };
 }
-
 function isPlaceholderValue(value) {
   if (!value) return false;
   const normalized = normalizeValue(value).toLowerCase();
@@ -681,21 +693,34 @@ function buildParentConsentEmailCheck({
   resendApiKey,
   consentFromEmail,
   parentConsentEmailMode,
+  isProduction,
 }) {
   const mode = normalizeValue(parentConsentEmailMode).toLowerCase();
   const hasResend = Boolean(resendApiKey);
   const hasSender = Boolean(consentFromEmail);
   const hasLocalSender = isLikelyLocalSimulationEmail(consentFromEmail);
+  const isDisabledMode = mode === "disabled" || mode === "off" || mode === "false";
+  const isSimulationMode = mode === "local" || mode === "simulate" || mode === "simulation";
 
-  if (mode === "disabled" || mode === "off" || mode === "false") {
+  if (isDisabledMode) {
     return {
       label: "Parent Consent Email",
-      status: "pass",
-      detail: "Disabled by PARENT_CONSENT_EMAIL_MODE.",
+      status: isProduction ? "fail" : "pass",
+      detail: isProduction
+        ? "Production runtime requires live parent consent email delivery. Remove PARENT_CONSENT_EMAIL_MODE=disabled and configure Resend keys."
+        : "Disabled by PARENT_CONSENT_EMAIL_MODE.",
     };
   }
 
   if (hasResend && hasSender) {
+    if (isProduction && hasLocalSender) {
+      return {
+        label: "Parent Consent Email",
+        status: "fail",
+        detail: "Production runtime cannot use .local sender domains for parent consent email.",
+      };
+    }
+
     return {
       label: "Parent Consent Email",
       status: "pass",
@@ -703,26 +728,81 @@ function buildParentConsentEmailCheck({
     };
   }
 
-  if (
-    mode === "local"
-    || mode === "simulate"
-    || mode === "simulation"
-    || (!hasResend && hasLocalSender)
-  ) {
+  if (isSimulationMode || (!hasResend && hasLocalSender)) {
     return {
       label: "Parent Consent Email",
-      status: "pass",
-      detail: "Local simulation mode configured (Resend optional).",
+      status: isProduction ? "fail" : "pass",
+      detail: isProduction
+        ? "Production runtime requires live parent consent email delivery. Remove simulation mode and configure RESEND_API_KEY + PARENT_CONSENT_FROM_EMAIL."
+        : "Local simulation mode configured (Resend optional).",
     };
   }
 
   return {
     label: "Parent Consent Email",
-    status: "warn",
-    detail: "Missing RESEND_API_KEY or PARENT_CONSENT_FROM_EMAIL (falls back to local simulation link)",
+    status: isProduction ? "fail" : "warn",
+    detail: isProduction
+      ? "Missing RESEND_API_KEY or PARENT_CONSENT_FROM_EMAIL in production runtime."
+      : "Missing RESEND_API_KEY or PARENT_CONSENT_FROM_EMAIL (falls back to local simulation link)",
   };
 }
+function buildSignupEmailCheck({
+  resendApiKey,
+  signupFromEmail,
+  isProduction,
+  signupEmailMode,
+}) {
+  const mode = normalizeValue(signupEmailMode).toLowerCase();
+  const hasResend = Boolean(resendApiKey);
+  const hasSender = Boolean(signupFromEmail);
+  const hasLocalSender = isLikelyLocalSimulationEmail(signupFromEmail);
+  const isDisabledMode = mode === "disabled" || mode === "off" || mode === "false";
+  const isSimulationMode = mode === "local" || mode === "simulate" || mode === "simulation";
 
+  if (isDisabledMode) {
+    return {
+      label: "Signup Welcome Email",
+      status: isProduction ? "fail" : "pass",
+      detail: isProduction
+        ? "Production runtime requires live signup email delivery. Remove SIGNUP_EMAIL_MODE=disabled and configure Resend keys."
+        : "Disabled by SIGNUP_EMAIL_MODE.",
+    };
+  }
+
+  if (isSimulationMode) {
+    return {
+      label: "Signup Welcome Email",
+      status: isProduction ? "fail" : "pass",
+      detail: isProduction
+        ? "Production runtime requires live signup email delivery. Remove simulation mode and configure RESEND_API_KEY + SIGNUP_FROM_EMAIL."
+        : "Local simulation mode configured.",
+    };
+  }
+
+  if (hasResend && hasSender) {
+    if (isProduction && hasLocalSender) {
+      return {
+        label: "Signup Welcome Email",
+        status: "fail",
+        detail: "Production runtime cannot use .local sender domains for signup email.",
+      };
+    }
+
+    return {
+      label: "Signup Welcome Email",
+      status: "pass",
+      detail: "Resend + sender configured",
+    };
+  }
+
+  return {
+    label: "Signup Welcome Email",
+    status: isProduction ? "fail" : "warn",
+    detail: isProduction
+      ? "Missing RESEND_API_KEY or SIGNUP_FROM_EMAIL in production runtime."
+      : "Missing RESEND_API_KEY or SIGNUP_FROM_EMAIL (welcome email delivery limited).",
+  };
+}
 function buildMixpanelCheck({ mixpanel, analyticsEnabled }) {
   if (mixpanel) {
     return {
@@ -761,6 +841,7 @@ function main() {
   const supabaseService = readValue(env, "SUPABASE_SERVICE_ROLE_KEY");
   const upstashRedisUrl = readValue(env, "UPSTASH_REDIS_REST_URL");
   const upstashRedisToken = readValue(env, "UPSTASH_REDIS_REST_TOKEN");
+  const rateLimitBackend = readValue(env, "RATE_LIMIT_BACKEND");
   const billingMode = readValue(env, "BILLING_PROVIDER_MODE");
   const publicBillingMode = readValue(env, "NEXT_PUBLIC_BILLING_PROVIDER_MODE");
   const effectiveBillingMode = billingMode || publicBillingMode || "stripe_external";
@@ -778,6 +859,8 @@ function main() {
   const resendApiKey = readValue(env, "RESEND_API_KEY");
   const consentFromEmail = readValue(env, "PARENT_CONSENT_FROM_EMAIL");
   const parentConsentEmailMode = readValue(env, "PARENT_CONSENT_EMAIL_MODE");
+  const signupEmailMode = readValue(env, "SIGNUP_EMAIL_MODE");
+  const signupFromEmail = readValue(env, "SIGNUP_FROM_EMAIL");
   const consentTokenSecret = readValue(env, "PARENT_CONSENT_TOKEN_SECRET");
   const mixpanel = readValue(env, "NEXT_PUBLIC_MIXPANEL_TOKEN");
   const analyticsEnabled = readValue(
@@ -830,6 +913,7 @@ function main() {
       redisUrl: upstashRedisUrl,
       redisToken: upstashRedisToken,
       isProduction: runtime.isProduction,
+      rateLimitBackend,
     }),
   );
 
@@ -914,6 +998,16 @@ function main() {
       resendApiKey,
       consentFromEmail,
       parentConsentEmailMode,
+      isProduction: runtime.isProduction,
+    }),
+  );
+
+  checks.push(
+    buildSignupEmailCheck({
+      resendApiKey,
+      signupFromEmail,
+      isProduction: runtime.isProduction,
+      signupEmailMode,
     }),
   );
 

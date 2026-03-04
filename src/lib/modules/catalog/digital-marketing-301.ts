@@ -46,19 +46,19 @@ export const DigitalMarketing301Module: LearningModule = {
           "id": "digital-marketing-301-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "Digital Marketing at level 301 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In Digital Marketing at level 301, using clear and precise language is essential for effective communication. This involves establishing clear boundaries for the topics we discuss, identifying the specific components we are analyzing, and ensuring that everyone is using the same terminology. By doing this, we create a common understanding among team members. When teams make decisions, having a shared vocabulary allows us to easily compare their choices and understand each other's perspectives better. This clarity not only enhances collaboration but also improves the overall effectiveness of our marketing strategies."
         },
         {
           "id": "digital-marketing-301-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in Digital Marketing depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "In the world of Digital Marketing, achieving great results requires us to dig deeper than just looking at the final outcomes. It's important to understand the reasons behind why we get certain results. In this lesson, we will take a closer look at the assumptions we often make about our marketing strategies, the dependencies that connect different elements of our campaigns, and the constraints or limitations we might encounter. By identifying these factors, we can focus on solving the real problems at their source, rather than just addressing the visible symptoms. This approach will help us create more effective marketing strategies and achieve better results overall."
         },
         {
           "id": "digital-marketing-301-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this lesson, we will introduce some important practices that are essential for executing our plans reliably. These include setting high standards for evidence, maintaining a disciplined approach to logging our activities, and creating clear accountability loops. These practices help ensure that we can trust the results of our work and learn from our experiences.\nContext recap: In this lesson, we will introduce some important practices that are essential for executing our plans reliably. These include setting high standards for evidence, maintaining a disciplined approach to logging our activities, and creating clear accountability loops. These practices help ensure that we can trust the results of our work and learn from our experiences."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const DigitalMarketing301Module: LearningModule = {
           "id": "digital-marketing-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for audience strategy and campaign analytics, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this interactive activity, you will have the opportunity to create a complete workflow for your audience strategy and campaign analytics. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that may arise. This hands-on experience will help you understand how to effectively manage a digital marketing campaign.\nContext recap: In this interactive activity, you will have the opportunity to create a complete workflow for your audience strategy and campaign analytics. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, determining the expected outputs, and setting up rollback triggers to address any issues that may arise. This hands-on experience will help you understand how to effectively manage a digital marketing campaign."
         },
         {
           "id": "digital-marketing-301-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we will emphasize the importance of logging every decision you make during your marketing campaigns. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice will enable you to analyze the outcomes after the campaign is completed, helping you learn and improve for future efforts.\nContext recap: In this recap, we will emphasize the importance of logging every decision you make during your marketing campaigns. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice will enable you to analyze the outcomes after the campaign is completed, helping you learn and improve for future efforts."
         }
       ],
       "interactiveActivities": [
@@ -296,19 +296,19 @@ export const DigitalMarketing301Module: LearningModule = {
           "id": "digital-marketing-301-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for Digital Marketing scenarios."
+          "content": "When choosing methods for your digital marketing projects, you need to think about several important factors. These include any limitations you might face, the quality of the information you have, and how much it could cost you if you make a mistake. In this lesson, you will explore various options and explain why a certain method works best for different situations in Digital Marketing. This process of comparing and justifying your choices will enhance your critical thinking skills and help you make smarter decisions in your marketing strategies.\nContext recap: When choosing methods for your digital marketing projects, you need to think about several important factors. These include any limitations you might face, the quality of the information you have, and how much it could cost you if you make a mistake. In this lesson, you will explore various options and explain why a certain method works best for different situations in Digital Marketing. This process of comparing and justifying your choices will enhance your critical thinking skills and help you make smarter decisions in your marketing strategies."
         },
         {
           "id": "digital-marketing-301-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "A well-structured metric architecture is essential for successful digital marketing. It creates a connection between leading indicators, which are signs that help predict future performance, and lagging outcomes, which reflect past results. Additionally, it includes diagnostic measures that assist in identifying any problems. This framework enables teams to notice any deviations from their goals early on and respond thoughtfully, ensuring that their marketing campaigns stay on track and achieve the desired results.\nContext recap: A well-structured metric architecture is essential for successful digital marketing. It creates a connection between leading indicators, which are signs that help predict future performance, and lagging outcomes, which reflect past results. Additionally, it includes diagnostic measures that assist in identifying any problems. This framework enables teams to notice any deviations from their goals early on and respond thoughtfully, ensuring that their marketing campaigns stay on track and achieve the desired results."
         },
         {
           "id": "digital-marketing-301-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we will categorize failures into four main groups: data issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific plans to address each type of issue rather than using generic solutions. This targeted approach will help improve our digital marketing strategies.\nContext recap: In this recap, we will categorize failures into four main groups: data issues, process problems, execution errors, and governance challenges. By organizing failures this way, we can create specific plans to address each type of issue rather than using generic solutions. This targeted approach will help improve our digital marketing strategies."
         }
       ],
       "flashcards": [
@@ -347,13 +347,13 @@ export const DigitalMarketing301Module: LearningModule = {
           "id": "digital-marketing-301-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, you will break down a realistic scenario into its key components: the objective, the context in which it occurs, the constraints you face, and the options for intervention. You will also note any trade-offs involved in your decisions. This exercise will help you think critically about how to improve a digital marketing system.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components: the objective, the context in which it occurs, the constraints you face, and the options for intervention. You will also note any trade-offs involved in your decisions. This exercise will help you think critically about how to improve a digital marketing system."
         },
         {
           "id": "digital-marketing-301-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "In this recap, you will present a staged improvement proposal based on your analysis. This proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This structured approach will help ensure that your improvements are actionable and measurable.\nContext recap: In this recap, you will present a staged improvement proposal based on your analysis. This proposal should include clear success criteria, a mapping of who is responsible for each part of the plan, and a timeline for follow-up actions. This structured approach will help ensure that your improvements are actionable and measurable."
         }
       ],
       "interactiveActivities": [

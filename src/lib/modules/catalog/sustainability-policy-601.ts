@@ -47,19 +47,19 @@ export const SustainabilityPolicy601Module: LearningModule = {
           "id": "sustainability-policy-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Sustainability Policy, with focus on policy instrument design for sustainability transitions and cross-sector implementation and compliance systems."
+          "content": "In this lesson, we will dive into the crucial idea of defining advanced boundaries for Sustainability Policy. Understanding these boundaries is essential for creating effective policies that promote sustainability. We will focus on how to design policy instruments that facilitate a smooth transition to more sustainable practices. Furthermore, we will examine how these policies can be applied across various sectors, such as energy, transportation, and agriculture. It is also important to discuss how we can ensure that everyone adheres to the rules and guidelines established by these policies, fostering a culture of compliance and cooperation for a sustainable future.\nContext recap: In this lesson, we will dive into the crucial idea of defining advanced boundaries for Sustainability Policy. Understanding these boundaries is essential for creating effective policies that promote sustainability. We will focus on how to design policy instruments that facilitate a smooth transition to more sustainable practices. Furthermore, we will examine how these policies can be applied across various sectors, such as energy, transportation, and agriculture.\nWhy this matters: Scope and Boundary Design helps learners in Social Studies connect ideas from Sustainability Policy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sustainability-policy-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. They will also explore uncertainty ranges, which help us understand the limits of our knowledge about these factors. Finally, learners will identify system dependencies, which are the connections between different elements in a system, before planning any interventions to improve sustainability.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which means understanding how different factors influence each other. They will also explore uncertainty ranges, which help us understand the limits of our knowledge about these factors. Finally, learners will identify system dependencies, which are the connections between different elements in a system, before planning any interventions to improve sustainability."
         },
         {
           "id": "sustainability-policy-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we emphasize that all claims made in our sustainability policies should be linked to measurable indicators. This means we need to have clear evidence that supports our claims. Additionally, we will discuss the importance of establishing confidence bounds, which help us understand how certain we are about our findings, and review checkpoints that allow us to assess our progress and make necessary adjustments.\nContext recap: In this recap, we emphasize that all claims made in our sustainability policies should be linked to measurable indicators. This means we need to have clear evidence that supports our claims. Additionally, we will discuss the importance of establishing confidence bounds, which help us understand how certain we are about our findings, and review checkpoints that allow us to assess our progress and make necessary adjustments."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const SustainabilityPolicy601Module: LearningModule = {
           "id": "sustainability-policy-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive session, learners will have the opportunity to design specialized workflows, which are step-by-step processes that help us achieve our sustainability goals. They will also stress-test these workflows by putting them through challenging scenarios to see how well they hold up under pressure. This practice will help learners understand the importance of resilience in sustainability planning.\nContext recap: In this interactive session, learners will have the opportunity to design specialized workflows, which are step-by-step processes that help us achieve our sustainability goals. They will also stress-test these workflows by putting them through challenging scenarios to see how well they hold up under pressure. This practice will help learners understand the importance of resilience in sustainability planning."
         },
         {
           "id": "sustainability-policy-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows should include control gates. These are important checkpoints that help us monitor progress and ensure that we are on the right track. We will also talk about rollback criteria, which are guidelines for going back to a previous state if something goes wrong, and threshold-based escalation, which means knowing when to take action if certain limits are reached.\nContext recap: In this recap, we will discuss how workflows should include control gates. These are important checkpoints that help us monitor progress and ensure that we are on the right track. We will also talk about rollback criteria, which are guidelines for going back to a previous state if something goes wrong, and threshold-based escalation, which means knowing when to take action if certain limits are reached."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const SustainabilityPolicy601Module: LearningModule = {
           "id": "sustainability-policy-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in policy instrument design for sustainability transitions and equity-impact and cost-effectiveness evaluation."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints involved in designing policy instruments for sustainability transitions. We will also evaluate the impacts of these policies on equity, which means fairness in how benefits and burdens are distributed, as well as their cost-effectiveness, which refers to how efficiently resources are used to achieve desired outcomes.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints involved in designing policy instruments for sustainability transitions. We will also evaluate the impacts of these policies on equity, which means fairness in how benefits and burdens are distributed, as well as their cost-effectiveness, which refers to how efficiently resources are used to achieve desired outcomes."
         },
         {
           "id": "sustainability-policy-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in making decisions and how to choose the best option for sustainability.\nContext recap: In this practice session, learners will compare different options available to them by examining various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the trade-offs involved in making decisions and how to choose the best option for sustainability."
         },
         {
           "id": "sustainability-policy-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will highlight that each recommendation made in our decision-making process should include key components such as assumptions, which are the beliefs we hold to be true, evidence that supports our recommendations, risk controls that help us manage potential problems, and fallback plans that outline what to do if things do not go as expected.\nContext recap: In this recap, we will highlight that each recommendation made in our decision-making process should include key components such as assumptions, which are the beliefs we hold to be true, evidence that supports our recommendations, risk controls that help us manage potential problems, and fallback plans that outline what to do if things do not go as expected."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const SustainabilityPolicy601Module: LearningModule = {
           "id": "sustainability-policy-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls, which are tools that allow them to manage different situations as they arise. They will learn how to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow.\nContext recap: In this interactive clinic, learners will operate scenario controls, which are tools that allow them to manage different situations as they arise. They will learn how to balance performance, which refers to how well they are achieving their goals, with governance constraints, which are the rules and guidelines they must follow."
         },
         {
           "id": "sustainability-policy-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss the importance of effective responses that can update control gates without losing traceability or accountability. This means that when changes are made, it is crucial to keep track of what was done and ensure that everyone is responsible for their actions.\nContext recap: In this recap, we will discuss the importance of effective responses that can update control gates without losing traceability or accountability. This means that when changes are made, it is crucial to keep track of what was done and ensure that everyone is responsible for their actions."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const SustainabilityPolicy601Module: LearningModule = {
           "id": "sustainability-policy-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits and burdens are distributed among different stakeholder groups. This means understanding who gains from certain policies and who may face challenges as a result. Additionally, they will explore any delayed effects that may occur over time, ensuring a comprehensive understanding of the impacts of sustainability policies.\nContext recap: In this lesson, learners will map out how benefits and burdens are distributed among different stakeholder groups. This means understanding who gains from certain policies and who may face challenges as a result. Additionally, they will explore any delayed effects that may occur over time, ensuring a comprehensive understanding of the impacts of sustainability policies."
         },
         {
           "id": "sustainability-policy-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this lesson, we will explore the concept of accountability architecture. This involves ensuring that there is clear traceability of decisions made, which means being able to track who made what decision and why. We will also discuss the importance of review rights, which allow stakeholders to question decisions, and remediation obligations, which are responsibilities to correct any issues that arise.\nContext recap: In this lesson, we will explore the concept of accountability architecture. This involves ensuring that there is clear traceability of decisions made, which means being able to track who made what decision and why. We will also discuss the importance of review rights, which allow stakeholders to question decisions, and remediation obligations, which are responsibilities to correct any issues that arise."
         },
         {
           "id": "sustainability-policy-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will create a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide for responsible leadership in sustainability.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide for responsible leadership in sustainability.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide for responsible leadership in sustainability. Context recap: At the end of our lesson, we will create a helpful checklist that connects important outcomes, ethical considerations, adherence to policies, and the ability to adapt and recover from challenges. This checklist will serve as a guide for responsible leadership in sustainability."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const SustainabilityPolicy601Module: LearningModule = {
           "id": "sustainability-policy-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work together to put together a comprehensive brief. This brief will include your main arguments, supporting evidence, areas of uncertainty, and possible solutions to address any issues. This exercise will help you practice critical thinking and effective communication.\nContext recap: In this activity, you will work together to put together a comprehensive brief. This brief will include your main arguments, supporting evidence, areas of uncertainty, and possible solutions to address any issues. This exercise will help you practice critical thinking and effective communication.\nContext recap: In this activity, you will work together to put together a comprehensive brief. This brief will include your main arguments, supporting evidence, areas of uncertainty, and possible solutions to address any issues. This exercise will help you practice critical thinking and effective communication. Context recap: In this activity, you will work together to put together a comprehensive brief.\nWhy this matters: Defense Brief Assembly helps learners in Social Studies connect ideas from Sustainability Policy Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "sustainability-policy-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal, you will practice answering questions and responding to feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This will help you build confidence and improve your presentation skills.\nContext recap: During this rehearsal, you will practice answering questions and responding to feedback from an expert panel. You will prepare for critiques related to technical aspects, governance issues, and the perspectives of various stakeholders. This will help you build confidence and improve your presentation skills."
         }
       ],
       "interactiveActivities": [

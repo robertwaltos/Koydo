@@ -6,12 +6,14 @@ import {
   resolveGeneratedLessonMedia,
   resolveGeneratedModuleMedia,
 } from "@/lib/media/media-fallbacks";
+import { resolveMediaLocale } from "@/lib/forge/media/multilingual-media";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const mediaResolveSchema = z.object({
   moduleId: z.string().trim().min(1).optional(),
   lessonId: z.string().trim().min(1).optional(),
-  assetType: z.enum(["video", "animation", "image"]),
+  assetType: z.enum(["video", "animation", "image", "thumbnail", "concept-clip", "avatar-lesson", "companion-intro"]),
+  locale: z.string().trim().min(2).max(5).default("en"),
 });
 
 export async function GET(request: Request) {
@@ -30,6 +32,7 @@ export async function GET(request: Request) {
     moduleId: searchParams.get("moduleId") ?? undefined,
     lessonId: searchParams.get("lessonId") ?? undefined,
     assetType: searchParams.get("assetType") ?? "",
+    locale: searchParams.get("locale") ?? "en",
   });
 
   if (!parsed.success) {
@@ -37,7 +40,16 @@ export async function GET(request: Request) {
   }
 
   const { moduleId, lessonId, assetType } = parsed.data;
+  const locale = resolveMediaLocale(parsed.data.locale);
   const admin = createSupabaseAdminClient();
+
+  // For image/thumbnail/concept-clip: language-agnostic, always resolve English
+  // For avatar-lesson/companion-intro: try locale-specific first, then English
+  const isLanguageAgnostic = assetType === "image" || assetType === "thumbnail" || assetType === "concept-clip"
+    || assetType === "video" || assetType === "animation";
+  const effectiveLessonId = (!isLanguageAgnostic && locale !== "en" && lessonId)
+    ? `${lessonId}-${locale}`
+    : lessonId;
 
   const baseQuery = admin
     .from("media_generation_jobs")
@@ -48,8 +60,8 @@ export async function GET(request: Request) {
     .order("completed_at", { ascending: false })
     .limit(1);
 
-  const scopedQuery = lessonId
-    ? baseQuery.eq("lesson_id", lessonId)
+  const scopedQuery = effectiveLessonId
+    ? baseQuery.eq("lesson_id", effectiveLessonId)
     : moduleId
       ? baseQuery.eq("module_id", moduleId)
       : null;
@@ -64,7 +76,25 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Internal server error." }, { status: 500 });
   }
 
-  const row = data?.[0];
+  let row = data?.[0];
+
+  // If locale-specific asset not found, fall back to English version
+  let resolvedLocale = locale;
+  if (!row?.output_url && !isLanguageAgnostic && locale !== "en" && lessonId) {
+    const { data: enData } = await admin
+      .from("media_generation_jobs")
+      .select("id, output_url, completed_at")
+      .eq("asset_type", assetType)
+      .eq("status", "completed")
+      .not("output_url", "is", null)
+      .eq("lesson_id", lessonId)
+      .order("completed_at", { ascending: false })
+      .limit(1);
+    if (enData?.[0]?.output_url) {
+      row = enData[0];
+      resolvedLocale = "en";
+    }
+  }
 
   // During regen: if no completed job, look for a queued/running job that has
   // an archived old_output_url in its metadata (set by regen-media.mjs).
@@ -99,14 +129,18 @@ export async function GET(request: Request) {
     }
   }
 
+  // Fallback resolution only applies to legacy asset types (video/animation/image)
+  const legacyAssetType = assetType as "video" | "animation" | "image";
+  const supportsLegacyFallback = assetType === "video" || assetType === "animation" || assetType === "image";
+
   const fallbackUrl = row?.output_url
     ? null
     : regenFallbackUrl
       ? null // use regenFallbackUrl below, not the static placeholder
-      : lessonId
-        ? resolveGeneratedLessonMedia(lessonId, assetType)
-        : moduleId
-          ? resolveGeneratedModuleMedia(moduleId, assetType)
+      : supportsLegacyFallback && lessonId
+        ? resolveGeneratedLessonMedia(lessonId, legacyAssetType)
+        : supportsLegacyFallback && moduleId
+          ? resolveGeneratedModuleMedia(moduleId, legacyAssetType)
           : null;
 
   const resolvedUrl = row?.output_url ?? regenFallbackUrl ?? fallbackUrl ?? null;
@@ -122,6 +156,7 @@ export async function GET(request: Request) {
     found: Boolean(resolvedUrl),
     url: resolvedUrl,
     assetType,
+    locale: resolvedLocale,
     completedAt: row?.completed_at ?? null,
     source,
   });

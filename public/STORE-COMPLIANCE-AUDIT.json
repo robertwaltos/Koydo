@@ -1,0 +1,393 @@
+{
+  "generatedAt": "2026-03-04T06:47:56.019Z",
+  "gitCommit": "227a1c5",
+  "totals": {
+    "pass": 53,
+    "warn": 0,
+    "fail": 0,
+    "total": 53
+  },
+  "overallStatus": "pass",
+  "checks": [
+    {
+      "id": "file:APP-STORE-SUBMISSION-STEPS.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "APP-STORE-SUBMISSION-STEPS.md"
+    },
+    {
+      "id": "file:GOOGLE-PLAY-SUBMISSION-STEPS.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "GOOGLE-PLAY-SUBMISSION-STEPS.md"
+    },
+    {
+      "id": "file:STORE-COMPLIANCE-CHECKLIST.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "STORE-COMPLIANCE-CHECKLIST.md"
+    },
+    {
+      "id": "file:STORE-POLICY-VERIFICATION-2026-03-04.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "STORE-POLICY-VERIFICATION-2026-03-04.md"
+    },
+    {
+      "id": "file:store-assets/DATA-SAFETY.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "store-assets/DATA-SAFETY.md"
+    },
+    {
+      "id": "file:store-assets/google-play/DATA-SAFETY-DECLARATIONS.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "store-assets/google-play/DATA-SAFETY-DECLARATIONS.md"
+    },
+    {
+      "id": "file:store-assets/CONTENT-RATING-ANSWERS.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "store-assets/CONTENT-RATING-ANSWERS.md"
+    },
+    {
+      "id": "file:store-assets/SCREENSHOT-SPEC.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "store-assets/SCREENSHOT-SPEC.md"
+    },
+    {
+      "id": "file:docs/google-play-data-safety.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "docs/google-play-data-safety.md"
+    },
+    {
+      "id": "file:public/GOOGLE-PLAY-LISTING.md",
+      "category": "required-doc",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "public/GOOGLE-PLAY-LISTING.md"
+    },
+    {
+      "id": "metadata:APP-STORE-SUBMISSION-STEPS.md",
+      "category": "metadata",
+      "status": "pass",
+      "detail": "Contains last-verified style metadata.",
+      "path": "APP-STORE-SUBMISSION-STEPS.md"
+    },
+    {
+      "id": "metadata:GOOGLE-PLAY-SUBMISSION-STEPS.md",
+      "category": "metadata",
+      "status": "pass",
+      "detail": "Contains last-verified style metadata.",
+      "path": "GOOGLE-PLAY-SUBMISSION-STEPS.md"
+    },
+    {
+      "id": "metadata:STORE-COMPLIANCE-CHECKLIST.md",
+      "category": "metadata",
+      "status": "pass",
+      "detail": "Contains last-verified style metadata.",
+      "path": "STORE-COMPLIANCE-CHECKLIST.md"
+    },
+    {
+      "id": "metadata:STORE-POLICY-VERIFICATION-2026-03-04.md",
+      "category": "metadata",
+      "status": "pass",
+      "detail": "Contains last-verified style metadata.",
+      "path": "STORE-POLICY-VERIFICATION-2026-03-04.md"
+    },
+    {
+      "id": "metadata:store-assets/DATA-SAFETY.md",
+      "category": "metadata",
+      "status": "pass",
+      "detail": "Contains last-verified style metadata.",
+      "path": "store-assets/DATA-SAFETY.md"
+    },
+    {
+      "id": "metadata:store-assets/google-play/DATA-SAFETY-DECLARATIONS.md",
+      "category": "metadata",
+      "status": "pass",
+      "detail": "Contains last-verified style metadata.",
+      "path": "store-assets/google-play/DATA-SAFETY-DECLARATIONS.md"
+    },
+    {
+      "id": "metadata:docs/google-play-data-safety.md",
+      "category": "metadata",
+      "status": "pass",
+      "detail": "Contains last-verified style metadata.",
+      "path": "docs/google-play-data-safety.md"
+    },
+    {
+      "id": "metadata:public/GOOGLE-PLAY-LISTING.md",
+      "category": "metadata",
+      "status": "pass",
+      "detail": "Contains last-verified style metadata.",
+      "path": "public/GOOGLE-PLAY-LISTING.md"
+    },
+    {
+      "id": "links:apple-doc-links",
+      "category": "policy-links",
+      "status": "pass",
+      "detail": "Found 4 required-source link(s).",
+      "path": "APP-STORE-SUBMISSION-STEPS.md"
+    },
+    {
+      "id": "links:google-doc-links",
+      "category": "policy-links",
+      "status": "pass",
+      "detail": "Found 9 required-source link(s).",
+      "path": "GOOGLE-PLAY-SUBMISSION-STEPS.md"
+    },
+    {
+      "id": "links:verification-log-links",
+      "category": "policy-links",
+      "status": "pass",
+      "detail": "Found 13 required-source link(s).",
+      "path": "STORE-POLICY-VERIFICATION-2026-03-04.md"
+    },
+    {
+      "id": "ios:deployment-target",
+      "category": "platform-config",
+      "status": "pass",
+      "detail": "Found targets: 15.0",
+      "path": "ios/App/App.xcodeproj/project.pbxproj"
+    },
+    {
+      "id": "ios:deployment-target-docs",
+      "category": "doc-consistency",
+      "status": "pass",
+      "detail": "iOS deployment target appears in both submission guide and checklist.",
+      "path": "APP-STORE-SUBMISSION-STEPS.md, STORE-COMPLIANCE-CHECKLIST.md"
+    },
+    {
+      "id": "android:sdk-values",
+      "category": "platform-config",
+      "status": "pass",
+      "detail": "min=24, target=36, compile=36",
+      "path": "android/variables.gradle"
+    },
+    {
+      "id": "android:target-sdk-policy-floor",
+      "category": "platform-config",
+      "status": "pass",
+      "detail": "targetSdkVersion 36 meets current policy floor assumption.",
+      "path": "android/variables.gradle",
+      "expected": "targetSdkVersion >= 35"
+    },
+    {
+      "id": "android:sdk-doc-consistency",
+      "category": "doc-consistency",
+      "status": "pass",
+      "detail": "Android SDK values are aligned between source config and docs.",
+      "path": "GOOGLE-PLAY-SUBMISSION-STEPS.md, STORE-COMPLIANCE-CHECKLIST.md"
+    },
+    {
+      "id": "file:src/app/privacy/page.tsx",
+      "category": "public-route",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/privacy/page.tsx"
+    },
+    {
+      "id": "file:src/app/terms/page.tsx",
+      "category": "public-route",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/terms/page.tsx"
+    },
+    {
+      "id": "file:src/app/refunds/page.tsx",
+      "category": "public-route",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/refunds/page.tsx"
+    },
+    {
+      "id": "file:src/app/account-deletion/page.tsx",
+      "category": "public-route",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/account-deletion/page.tsx"
+    },
+    {
+      "id": "file:src/app/data-deletion/page.tsx",
+      "category": "public-route",
+      "status": "pass",
+      "detail": "Exists",
+      "path": "src/app/data-deletion/page.tsx"
+    },
+    {
+      "id": "review-notes:placeholder-guard",
+      "category": "reviewer-access",
+      "status": "pass",
+      "detail": "Expected credential placeholders are present.",
+      "path": "store-assets/app-store/en-US/review_notes.txt"
+    },
+    {
+      "id": "review-notes:no-real-email",
+      "category": "reviewer-access",
+      "status": "pass",
+      "detail": "No real email addresses detected.",
+      "path": "store-assets/app-store/en-US/review_notes.txt"
+    },
+    {
+      "id": "locale:app-store-locales",
+      "category": "localization",
+      "status": "pass",
+      "detail": "Required locale files present.",
+      "path": "store-assets/app-store/{locale}"
+    },
+    {
+      "id": "locale:google-play-locales",
+      "category": "localization",
+      "status": "pass",
+      "detail": "Required locale files present.",
+      "path": "store-assets/google-play/{locale}"
+    },
+    {
+      "id": "limit:app-store-name-en-US",
+      "category": "listing-length",
+      "status": "pass",
+      "detail": "28 characters",
+      "expected": "<= 30 characters",
+      "path": "store-assets/app-store/en-US/name.txt"
+    },
+    {
+      "id": "limit:app-store-subtitle-en-US",
+      "category": "listing-length",
+      "status": "pass",
+      "detail": "29 characters",
+      "expected": "<= 30 characters",
+      "path": "store-assets/app-store/en-US/subtitle.txt"
+    },
+    {
+      "id": "limit:app-store-keywords-en-US",
+      "category": "listing-length",
+      "status": "pass",
+      "detail": "84 characters",
+      "expected": "<= 100 characters",
+      "path": "store-assets/app-store/en-US/keywords.txt"
+    },
+    {
+      "id": "limit:app-store-promo-en-US",
+      "category": "listing-length",
+      "status": "pass",
+      "detail": "109 characters",
+      "expected": "<= 170 characters",
+      "path": "store-assets/app-store/en-US/promotional_text.txt"
+    },
+    {
+      "id": "limit:app-store-description-en-US",
+      "category": "listing-length",
+      "status": "pass",
+      "detail": "1818 characters",
+      "expected": "<= 4000 characters",
+      "path": "store-assets/app-store/en-US/description.txt"
+    },
+    {
+      "id": "limit:google-play-title-en-US",
+      "category": "listing-length",
+      "status": "pass",
+      "detail": "29 characters",
+      "expected": "<= 30 characters",
+      "path": "store-assets/google-play/en-US/title.txt"
+    },
+    {
+      "id": "limit:google-play-short-description-en-US",
+      "category": "listing-length",
+      "status": "pass",
+      "detail": "55 characters",
+      "expected": "<= 80 characters",
+      "path": "store-assets/google-play/en-US/short_description.txt"
+    },
+    {
+      "id": "limit:google-play-full-description-en-US",
+      "category": "listing-length",
+      "status": "pass",
+      "detail": "2208 characters",
+      "expected": "<= 4000 characters",
+      "path": "store-assets/google-play/en-US/full_description.txt"
+    },
+    {
+      "id": "placeholder:store-assets/app-store/en-US/name.txt",
+      "category": "listing-content",
+      "status": "pass",
+      "detail": "No placeholder tokens detected.",
+      "path": "store-assets/app-store/en-US/name.txt"
+    },
+    {
+      "id": "placeholder:store-assets/app-store/en-US/subtitle.txt",
+      "category": "listing-content",
+      "status": "pass",
+      "detail": "No placeholder tokens detected.",
+      "path": "store-assets/app-store/en-US/subtitle.txt"
+    },
+    {
+      "id": "placeholder:store-assets/app-store/en-US/description.txt",
+      "category": "listing-content",
+      "status": "pass",
+      "detail": "No placeholder tokens detected.",
+      "path": "store-assets/app-store/en-US/description.txt"
+    },
+    {
+      "id": "placeholder:store-assets/google-play/en-US/title.txt",
+      "category": "listing-content",
+      "status": "pass",
+      "detail": "No placeholder tokens detected.",
+      "path": "store-assets/google-play/en-US/title.txt"
+    },
+    {
+      "id": "placeholder:store-assets/google-play/en-US/short_description.txt",
+      "category": "listing-content",
+      "status": "pass",
+      "detail": "No placeholder tokens detected.",
+      "path": "store-assets/google-play/en-US/short_description.txt"
+    },
+    {
+      "id": "placeholder:store-assets/google-play/en-US/full_description.txt",
+      "category": "listing-content",
+      "status": "pass",
+      "detail": "No placeholder tokens detected.",
+      "path": "store-assets/google-play/en-US/full_description.txt"
+    },
+    {
+      "id": "placeholder:public/GOOGLE-PLAY-LISTING.md",
+      "category": "listing-content",
+      "status": "pass",
+      "detail": "No placeholder tokens detected.",
+      "path": "public/GOOGLE-PLAY-LISTING.md"
+    },
+    {
+      "id": "urls:play-listing-policy-links",
+      "category": "policy-url",
+      "status": "pass",
+      "detail": "All required URLs present.",
+      "path": "public/GOOGLE-PLAY-LISTING.md"
+    },
+    {
+      "id": "urls:data-safety-deletion-links",
+      "category": "policy-url",
+      "status": "pass",
+      "detail": "All required URLs present.",
+      "path": "store-assets/DATA-SAFETY.md"
+    },
+    {
+      "id": "urls:play-data-safety-deletion-link",
+      "category": "policy-url",
+      "status": "pass",
+      "detail": "All required URLs present.",
+      "path": "store-assets/google-play/DATA-SAFETY-DECLARATIONS.md"
+    }
+  ]
+}

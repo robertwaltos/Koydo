@@ -8,6 +8,12 @@ import {
   buildTelemetrySummary,
   type LearningEventReportRow,
 } from "@/lib/admin/telemetry-report";
+import { buildFinanceCsvRows, buildFinanceSnapshot, loadFinanceDataset } from "@/lib/finance/reporting";
+import {
+  buildFinanceAnalyticsCsvRows,
+  loadLatestFinanceAnalyticsSnapshot,
+  runFinanceServiceIntelligencePipeline,
+} from "@/lib/finance/service-intelligence";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 async function buildReportCsv(reportType: string) {
@@ -36,7 +42,7 @@ async function buildReportCsv(reportType: string) {
     const { data } = await admin
       .from("support_tickets")
       .select(
-        "id, user_id, subject, description, status, priority, assigned_to, resolution_notes, created_at, updated_at, resolved_at"
+        "id, user_id, subject, description, status, priority, ticket_type, parent_confirmation_required, parent_confirmation_status, ai_response_status, ai_response_text, auto_response_model, first_response_due_at, first_response_at, sla_breached_at, assigned_to, resolution_notes, created_at, updated_at, resolved_at"
       )
       .order("created_at", { ascending: false })
       .limit(5000);
@@ -48,6 +54,15 @@ async function buildReportCsv(reportType: string) {
       "description",
       "status",
       "priority",
+      "ticket_type",
+      "parent_confirmation_required",
+      "parent_confirmation_status",
+      "ai_response_status",
+      "ai_response_text",
+      "auto_response_model",
+      "first_response_due_at",
+      "first_response_at",
+      "sla_breached_at",
       "assigned_to",
       "resolution_notes",
       "created_at",
@@ -106,6 +121,158 @@ async function buildReportCsv(reportType: string) {
         sourceEventCount: sourceRows.length,
         cutoffIso,
         summary,
+      },
+    };
+  }
+
+  if (reportType === "finance") {
+    const days = 365;
+    const sinceDate = new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+    const dataset = await loadFinanceDataset(admin, { sinceDate, limit: 200000 });
+    const snapshot = buildFinanceSnapshot(dataset);
+    const rows = buildFinanceCsvRows(snapshot.line_items);
+    const csv = toCsv(rows, [
+      "occurred_on",
+      "transaction_id",
+      "description",
+      "side",
+      "account_code",
+      "account_name",
+      "account_type",
+      "account_category",
+      "amount_cents",
+      "signed_amount_cents",
+      "signed_amount_usd",
+      "revenue_channel",
+      "counterparty_name",
+      "tax_deductible",
+      "entry_kind",
+      "source_system",
+      "source_ref",
+      "created_at",
+    ]);
+    return {
+      csv,
+      rowCount: rows.length,
+      metadata: {
+        daysWindow: days,
+        sinceDate,
+        lineItemCount: rows.length,
+        totals: snapshot.totals,
+        revenueChannels: snapshot.revenue_channels,
+        expenseCategories: snapshot.expense_categories,
+        taxProjection: snapshot.tax_projection,
+      },
+    };
+  }
+
+  if (reportType === "finance_analytics") {
+    const windowDays = 30;
+    const snapshot =
+      (await loadLatestFinanceAnalyticsSnapshot(admin, windowDays)) ??
+      (await runFinanceServiceIntelligencePipeline(admin, {
+        windowDays,
+        reconciliationDays: 120,
+        maxRowsPerSource: 12000,
+        persistSnapshot: true,
+        runReconciliation: false,
+      }));
+    const rows = buildFinanceAnalyticsCsvRows(snapshot);
+    const csv = toCsv(rows, ["section", "key", "source", "region", "value_numeric", "value_text"]);
+    return {
+      csv,
+      rowCount: rows.length,
+      metadata: {
+        daysWindow: windowDays,
+        asOfDate: snapshot.as_of_date,
+        generatedAt: snapshot.generated_at,
+        kpis: snapshot.kpis,
+        coverage: snapshot.coverage,
+        pipelineHealth: snapshot.pipeline_health,
+      },
+    };
+  }
+
+  if (reportType === "compliance_audit") {
+    const { data: run, error: runError } = await admin
+      .from("compliance_audit_runs")
+      .select(
+        "id, status, score, target_score, checks_total, checks_pass, checks_warn, checks_fail, evidence_artifact_id, completed_at, created_at",
+      )
+      .eq("scope", "app_store")
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle();
+    if (runError) {
+      throw new Error(`Failed loading compliance audit run: ${runError.message}`);
+    }
+
+    if (!run) {
+      const rows = [
+        {
+          section: "warning",
+          key: "no_run",
+          source: "",
+          region: "",
+          value_numeric: "",
+          value_text: "No triple-pass compliance audit run found.",
+        },
+      ];
+      return {
+        csv: toCsv(rows, ["section", "key", "source", "region", "value_numeric", "value_text"]),
+        rowCount: rows.length,
+        metadata: {
+          generatedAt: new Date().toISOString(),
+          sourceRows: 0,
+        },
+      };
+    }
+
+    const { data: findings, error: findingError } = await admin
+      .from("compliance_audit_findings")
+      .select("pass_name, finding_key, severity, title, detail, remediation")
+      .eq("run_id", run.id)
+      .order("created_at", { ascending: true });
+    if (findingError) {
+      throw new Error(`Failed loading compliance audit findings: ${findingError.message}`);
+    }
+
+    const rows: Array<Record<string, string | number | null>> = [
+      { section: "run", key: "status", source: "", region: "", value_numeric: "", value_text: String(run.status) },
+      { section: "run", key: "score", source: "", region: "", value_numeric: Number(run.score ?? 0), value_text: "" },
+      { section: "run", key: "target_score", source: "", region: "", value_numeric: Number(run.target_score ?? 10), value_text: "" },
+      { section: "run", key: "checks_total", source: "", region: "", value_numeric: Number(run.checks_total ?? 0), value_text: "" },
+      { section: "run", key: "checks_pass", source: "", region: "", value_numeric: Number(run.checks_pass ?? 0), value_text: "" },
+      { section: "run", key: "checks_warn", source: "", region: "", value_numeric: Number(run.checks_warn ?? 0), value_text: "" },
+      { section: "run", key: "checks_fail", source: "", region: "", value_numeric: Number(run.checks_fail ?? 0), value_text: "" },
+      {
+        section: "run",
+        key: "evidence_artifact_id",
+        source: "",
+        region: "",
+        value_numeric: "",
+        value_text: String(run.evidence_artifact_id ?? ""),
+      },
+    ];
+
+    for (const finding of findings ?? []) {
+      rows.push({
+        section: `finding_${finding.severity}`,
+        key: `${finding.pass_name}:${finding.finding_key}`,
+        source: String(finding.pass_name),
+        region: "",
+        value_numeric: "",
+        value_text: `${finding.title} | ${finding.detail}${finding.remediation ? ` | remediation=${finding.remediation}` : ""}`,
+      });
+    }
+
+    return {
+      csv: toCsv(rows, ["section", "key", "source", "region", "value_numeric", "value_text"]),
+      rowCount: rows.length,
+      metadata: {
+        runId: run.id,
+        completedAt: run.completed_at,
+        generatedAt: run.created_at,
       },
     };
   }

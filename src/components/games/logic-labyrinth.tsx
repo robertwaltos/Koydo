@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Zap, Cpu, Activity, ShieldCheck, Info, ChevronRight, Target, Move, Grid3X3, Play, RotateCcw, Boxes, Split, Repeat } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Logic Labyrinth Types --- */
 type CommandType = "MOVE" | "TURN_L" | "TURN_R" | "LOOP" | "IF_CLEAR";
@@ -25,6 +26,9 @@ export default function LogicLabyrinth() {
     const [botPos, setBotPos] = useState({ x: 0, y: 0 });
     const [botDir, setBotDir] = useState<Direction>("RIGHT");
     const [activeCmdIdx, setActiveCmdIdx] = useState<number | null>(null);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const MAZE = useMemo(() => [
         [0, 0, 1, 0, 0],
@@ -33,6 +37,25 @@ export default function LogicLabyrinth() {
         [0, 1, 1, 1, 0],
         [0, 0, 0, 0, 'T'] // T = Target
     ], []);
+
+    useEffect(() => {
+        if (gameState !== "SUCCESS" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "logic-labyrinth",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, program.length),
+            score: program.length,
+            maxScore: 12,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, program.length]);
 
     const addCommand = (type: CommandType) => {
         if (gameState !== "CODING") return;

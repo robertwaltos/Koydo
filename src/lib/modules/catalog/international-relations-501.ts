@@ -47,19 +47,19 @@ export const InternationalRelations501Module: LearningModule = {
           "id": "international-relations-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for International Relations, with focus on strategic actor modeling and diplomatic pathway design."
+          "content": "In this lesson, we will delve into the advanced concepts of scope and boundaries within the field of International Relations. We will examine how to effectively model strategic actors, which are key players in international affairs, and how to design diplomatic pathways that facilitate communication and negotiation between nations. Grasping these concepts is essential for addressing complex global challenges and promoting successful diplomatic initiatives. By understanding the roles of different actors and the importance of clear boundaries, we can better navigate the intricate landscape of international relations and work towards peaceful resolutions."
         },
         {
           "id": "international-relations-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, identifying ranges of uncertainty, and understanding system dependencies. This foundational knowledge is essential for planning effective interventions in international relations, as it helps us anticipate challenges and devise strategies to address them.\nContext recap: In this section, learners will engage in mapping out causal pathways, identifying ranges of uncertainty, and understanding system dependencies. This foundational knowledge is essential for planning effective interventions in international relations, as it helps us anticipate challenges and devise strategies to address them."
         },
         {
           "id": "international-relations-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in international relations must be supported by measurable indicators. We will discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our assessments are reliable and grounded in evidence.\nContext recap: In our recap, we emphasize that all claims made in international relations must be supported by measurable indicators. We will discuss the importance of establishing confidence bounds and setting up review checkpoints to ensure that our assessments are reliable and grounded in evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const InternationalRelations501Module: LearningModule = {
           "id": "international-relations-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows that address specific challenges in international relations. They will also stress-test these workflows by simulating adverse scenarios, allowing them to identify potential weaknesses and improve their strategies.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows that address specific challenges in international relations. They will also stress-test these workflows by simulating adverse scenarios, allowing them to identify potential weaknesses and improve their strategies."
         },
         {
           "id": "international-relations-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss how workflows can be enhanced by integrating control gates. These gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This structure ensures that our processes remain effective and responsive to changing circumstances.\nContext recap: In this recap, we will discuss how workflows can be enhanced by integrating control gates. These gates will include checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. This structure ensures that our processes remain effective and responsive to changing circumstances."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const InternationalRelations501Module: LearningModule = {
           "id": "international-relations-501-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a multilateral crisis response balancing national interest, alliance obligations, and humanitarian outcomes. Learners map constraints, risk classes, and governance boundaries."
+          "content": "In this engaging case study, we will explore a multilateral crisis response that aims to find a balance between the interests of individual nations, the commitments they have to their allies, and the humanitarian needs of affected populations. Students will actively participate by mapping out the various constraints they encounter, categorizing different types of risks, and defining the boundaries of governance. This will help them gain a deeper understanding of the complexities and challenges involved in international relations during crises.\nContext recap: In this engaging case study, we will explore a multilateral crisis response that aims to find a balance between the interests of individual nations, the commitments they have to their allies, and the humanitarian needs of affected populations. Students will actively participate by mapping out the various constraints they encounter, categorizing different types of risks, and defining the boundaries of governance. This will help them gain a deeper understanding of the complexities and challenges involved in international relations during crises."
         },
         {
           "id": "international-relations-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Alternatives are scored across effectiveness, feasibility, risk, equity, and implementation cost."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. Here, alternatives will be evaluated based on various criteria, including effectiveness, feasibility, risk, equity, and the costs associated with implementation. This matrix will help learners make informed decisions when faced with multiple options.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. Here, alternatives will be evaluated based on various criteria, including effectiveness, feasibility, risk, equity, and the costs associated with implementation. This matrix will help learners make informed decisions when faced with multiple options."
         },
         {
           "id": "international-relations-501-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "Failure signatures are mapped to remediation actions and measurable recovery triggers."
+          "content": "In our recap, we will explore how to map failure signatures to appropriate remediation actions. We will also identify measurable recovery triggers that can help us monitor progress and ensure that we are on the right track toward recovery and adaptation in international relations.\nContext recap: In our recap, we will explore how to map failure signatures to appropriate remediation actions. We will also identify measurable recovery triggers that can help us monitor progress and ensure that we are on the right track toward recovery and adaptation in international relations."
         }
       ],
       "flashcards": [
@@ -419,13 +419,13 @@ export const InternationalRelations501Module: LearningModule = {
           "id": "international-relations-501-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation",
-          "content": "Learners configure interventions, constraints, and escalation logic for high-stakes tests."
+          "content": "In this interactive simulation, learners will configure various interventions, set constraints, and establish escalation logic for high-stakes tests. This hands-on experience will allow them to apply their knowledge in a practical setting, enhancing their understanding of decision-making in international relations.\nContext recap: In this interactive simulation, learners will configure various interventions, set constraints, and establish escalation logic for high-stakes tests. This hands-on experience will allow them to apply their knowledge in a practical setting, enhancing their understanding of decision-making in international relations."
         },
         {
           "id": "international-relations-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Adaptation",
-          "content": "Outcomes are reviewed for gains, side effects, and governance compliance gaps."
+          "content": "In this recap, we will review the outcomes of our simulations, focusing on the gains achieved, any side effects observed, and any gaps in governance compliance. This reflective process is essential for learning from our experiences and improving future strategies.\nContext recap: In this recap, we will review the outcomes of our simulations, focusing on the gains achieved, any side effects observed, and any gaps in governance compliance. This reflective process is essential for learning from our experiences and improving future strategies."
         }
       ],
       "interactiveActivities": [
@@ -676,19 +676,19 @@ export const InternationalRelations501Module: LearningModule = {
           "id": "international-relations-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this section, learners will map out the distribution of impacts among various stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from decisions made in international relations. Understanding these dynamics is crucial for promoting fairness and accountability.\nContext recap: In this section, learners will map out the distribution of impacts among various stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from decisions made in international relations. Understanding these dynamics is crucial for promoting fairness and accountability."
         },
         {
           "id": "international-relations-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this concept discussion, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability of decisions, rights to review actions taken, and obligations for remediation when necessary. These elements are vital for maintaining trust and integrity in governance.\nContext recap: In this concept discussion, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability of decisions, rights to review actions taken, and obligations for remediation when necessary. These elements are vital for maintaining trust and integrity in governance."
         },
         {
           "id": "international-relations-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "To ensure effective leadership in international relations, it is important to use a final checklist that connects various important aspects. This checklist should include outcomes that reflect our goals, ethical considerations that guide our decisions, compliance with relevant policies, and strategies for resilience in the face of challenges. By following this checklist, leaders can make informed and responsible choices.\nContext recap: To ensure effective leadership in international relations, it is important to use a final checklist that connects various important aspects. This checklist should include outcomes that reflect our goals, ethical considerations that guide our decisions, compliance with relevant policies, and strategies for resilience in the face of challenges. By following this checklist, leaders can make informed and responsible choices."
         }
       ],
       "flashcards": [
@@ -727,13 +727,13 @@ export const InternationalRelations501Module: LearningModule = {
           "id": "international-relations-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive defense brief. This brief will include well-supported claims, relevant evidence, and clear boundaries of uncertainty. Additionally, learners will outline potential pathways for remediation, which means they will suggest ways to address any issues that may arise. This exercise helps develop critical thinking and analytical skills essential for effective communication in international relations.\nContext recap: In this interactive activity, learners will work together to create a comprehensive defense brief. This brief will include well-supported claims, relevant evidence, and clear boundaries of uncertainty. Additionally, learners will outline potential pathways for remediation, which means they will suggest ways to address any issues that may arise. This exercise helps develop critical thinking and analytical skills essential for effective communication in international relations."
         },
         {
           "id": "international-relations-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During the Expert Panel Rehearsal, learners will practice their responses to a variety of critiques. These critiques may come from experts in technical fields, governance issues, and stakeholder perspectives. This rehearsal is a valuable opportunity for learners to refine their arguments and improve their ability to engage with different viewpoints, which is crucial in the field of international relations.\nContext recap: During the Expert Panel Rehearsal, learners will practice their responses to a variety of critiques. These critiques may come from experts in technical fields, governance issues, and stakeholder perspectives. This rehearsal is a valuable opportunity for learners to refine their arguments and improve their ability to engage with different viewpoints, which is crucial in the field of international relations."
         }
       ],
       "interactiveActivities": [

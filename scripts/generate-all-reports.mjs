@@ -22,6 +22,8 @@ const commands = [
   ["node", ["scripts/knowledgebase-export-lesson-pack.mjs", "--write-report", "--max-chunks-per-domain", "80", "--min-score", "2"]],
   ["node", ["scripts/stripe-webhook-health-report.mjs", "--write-report", "--no-fail"]],
   ["node", ["scripts/appstore-compliance-audit.mjs"]],
+  ["node", ["scripts/store-compliance-audit.mjs"]],
+  ["node", ["scripts/check-ai-personalization-fairness-coverage.mjs"]],
 ];
 
 for (const [cmd, args] of commands) {

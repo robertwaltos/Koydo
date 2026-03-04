@@ -47,19 +47,19 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Marketing Management, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will delve into the advanced concepts of scope boundaries within the field of Marketing Management. Understanding these boundaries is crucial for identifying the limits and possibilities of marketing strategies. We will particularly focus on how to effectively diagnose business systems, which involves analyzing how different parts of a business work together. Additionally, we will learn about designing operations that can be executed successfully, ensuring that marketing initiatives are not only innovative but also practical and aligned with the overall goals of the business. This foundational knowledge is essential for creating marketing strategies that can be implemented efficiently and lead to successful outcomes."
         },
         {
           "id": "marketing-management-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will examine uncertainty ranges and system dependencies. This foundational knowledge will help you plan interventions more effectively by understanding the various elements at play in a marketing context.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can influence outcomes. Additionally, we will examine uncertainty ranges and system dependencies. This foundational knowledge will help you plan interventions more effectively by understanding the various elements at play in a marketing context."
         },
         {
           "id": "marketing-management-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize the importance of ensuring that all claims made in marketing strategies are backed by measurable indicators. This includes establishing confidence bounds and setting up review checkpoints to monitor progress. By doing so, we can ensure that our marketing efforts are both credible and effective.\nContext recap: In our recap, we will emphasize the importance of ensuring that all claims made in marketing strategies are backed by measurable indicators. This includes establishing confidence bounds and setting up review checkpoints to monitor progress. By doing so, we can ensure that our marketing efforts are both credible and effective."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to their marketing strategies. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is crucial for understanding how to adapt and refine strategies in the face of challenges.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows tailored to their marketing strategies. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience is crucial for understanding how to adapt and refine strategies in the face of challenges."
         },
         {
           "id": "marketing-management-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate checkpoints, rollback criteria, and escalation procedures based on specific thresholds. Understanding this architecture helps ensure that workflows remain efficient and responsive to changing conditions.\nContext recap: In this recap, we will discuss the architecture of control gates within workflows. These control gates are essential as they integrate checkpoints, rollback criteria, and escalation procedures based on specific thresholds. Understanding this architecture helps ensure that workflows remain efficient and responsive to changing conditions."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. This analysis will help learners understand how to balance different factors when making marketing decisions.\nContext recap: In this lesson, we will frame a case study that highlights the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs that must be considered. This analysis will help learners understand how to balance different factors when making marketing decisions."
         },
         {
           "id": "marketing-management-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is vital for making informed decisions that consider all aspects of a marketing strategy.\nContext recap: During this practice session, learners will compare different options available to them across several important dimensions, including safety, reliability, cost, equity, and governance. This comparative analysis is vital for making informed decisions that consider all aspects of a marketing strategy."
         },
         {
           "id": "marketing-management-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be communicated effectively.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-founded and can be communicated effectively."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This experience will help them understand how to make decisions that optimize outcomes while adhering to necessary regulations and standards.\nContext recap: In this interactive practice, learners will operate scenario controls while carefully balancing performance metrics and governance constraints. This experience will help them understand how to make decisions that optimize outcomes while adhering to necessary regulations and standards.\nWhy this matters: Live Scenario Controls helps learners in Business connect ideas from Marketing Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "marketing-management-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the importance of effective responses in marketing scenarios. These responses should be designed to update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed if necessary.\nContext recap: In our recap, we will discuss the importance of effective responses in marketing scenarios. These responses should be designed to update control gates without losing traceability or accountability. This ensures that all actions taken are documented and can be reviewed if necessary."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from marketing decisions. Understanding these dynamics is crucial for responsible marketing management.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that may arise from marketing decisions. Understanding these dynamics is crucial for responsible marketing management."
         },
         {
           "id": "marketing-management-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. These elements are vital for maintaining integrity and trust in marketing practices.\nContext recap: In this section, we will explore the architecture of accountability in decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. These elements are vital for maintaining integrity and trust in marketing practices."
         },
         {
           "id": "marketing-management-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds our ability to adapt and recover from challenges. This checklist is a great tool for responsible leadership in marketing.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds our ability to adapt and recover from challenges. This checklist is a great tool for responsible leadership in marketing."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const MarketingManagement501Module: LearningModule = {
           "id": "marketing-management-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions to any uncertainties. This exercise helps you practice critical thinking and effective communication.\nContext recap: In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the limits of what we know, and possible solutions to any uncertainties. This exercise helps you practice critical thinking and effective communication."
         },
         {
           "id": "marketing-management-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will practice your responses to questions and feedback from experts regarding technical aspects, governance issues, and stakeholder concerns. This rehearsal is essential for building confidence and preparing you for real-world discussions.\nContext recap: During this session, you will practice your responses to questions and feedback from experts regarding technical aspects, governance issues, and stakeholder concerns. This rehearsal is essential for building confidence and preparing you for real-world discussions.\nWhy this matters: Expert Panel Rehearsal helps learners in Business connect ideas from Marketing Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [

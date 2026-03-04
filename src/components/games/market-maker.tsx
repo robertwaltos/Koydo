@@ -1,12 +1,16 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { TrendingUp, TrendingDown, DollarSign, Activity, BarChart3, PieChart, ArrowUpRight, ArrowDownRight, Briefcase } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Financial Types --- */
 type Asset = {
@@ -17,6 +21,10 @@ type Asset = {
     volatility: number;
     trend: number;
 };
+
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
 
 export default function MarketMaker() {
     const { setMessage, setMood } = useMascot();
@@ -33,6 +41,10 @@ export default function MarketMaker() {
     ]);
     const [day, setDay] = useState(1);
     const [gameState, setGameState] = useState<"IDLE" | "TRADING" | "CLOSED">("IDLE");
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const nextMilestoneRef = useRef<number>(12000);
 
     // Market Simulation Loop
     useEffect(() => {
@@ -56,6 +68,7 @@ export default function MarketMaker() {
             hapticError();
             return;
         }
+        interactionCountRef.current += 1;
 
         setBalance(b => b - asset.price);
         setPortfolio(p => ({ ...p, [symbol]: p[symbol] + 1 }));
@@ -68,6 +81,7 @@ export default function MarketMaker() {
             hapticError();
             return;
         }
+        interactionCountRef.current += 1;
 
         setBalance(b => b + asset.price);
         setPortfolio(p => ({ ...p, [symbol]: p[symbol] - 1 }));
@@ -80,11 +94,37 @@ export default function MarketMaker() {
     }, [balance, portfolio, assets]);
 
     const startTrading = () => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        nextMilestoneRef.current = 12000;
         setGameState("TRADING");
         setMood("happy");
         setMessage("The market is open! Use your mathematical intuition to spot trends and build your wealth. 📈");
         hapticSuccess();
     };
+
+    useEffect(() => {
+        if (gameState !== "TRADING") return;
+        if (totalValue < nextMilestoneRef.current) return;
+
+        const milestone = nextMilestoneRef.current;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "market",
+            elapsedMs: getElapsedMs(runStartedAtRef.current),
+            interactions: Math.max(1, interactionCountRef.current),
+            score: Math.round(totalValue),
+            maxScore: 50000,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        nextMilestoneRef.current = milestone + 2000;
+    }, [gameState, totalValue]);
 
     return (
         <div className="relative w-full max-w-6xl mx-auto min-h-[700px] bg-zinc-950 rounded-[4rem] border border-white/5 overflow-hidden shadow-2xl flex flex-col font-sans">

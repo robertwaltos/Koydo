@@ -15,11 +15,24 @@ import {
   TESTING_EXAM_UNLOCK_PRICE_CENTS,
 } from "@/lib/testing/unlock-pricing";
 import { isWebhookProcessingLockActive } from "@/lib/billing/webhook-processing-lock";
+import { computeCommissionAmounts, type PartnerTaxProfileRow } from "@/lib/partners/program";
+import {
+  resolvePartnerWithholdingRate,
+  type PartnerJurisdictionRuleRow,
+  type PartnerWithholdingDeterminationRow,
+} from "@/lib/partners/compliance";
 
 type WebhookClaimResult = "process" | "duplicate" | "untracked";
 
 const MAX_STRIPE_WEBHOOK_PAYLOAD_BYTES = 1_000_000;
-const STRIPE_WEBHOOK_SIGNATURE_TOLERANCE_SECONDS = 300;
+
+function stripeWebhookSignatureToleranceSeconds() {
+  const configured = serverEnv.STRIPE_WEBHOOK_SIGNATURE_TOLERANCE_SECONDS;
+  if (Number.isFinite(configured)) {
+    return Math.max(0, Math.min(900, Math.trunc(configured)));
+  }
+  return 300;
+}
 
 function rateLimitExceededResponse(retryAfterSeconds: number) {
   return NextResponse.json(
@@ -40,6 +53,12 @@ function toIsoDate(epochSeconds?: number | null) {
 function isMissingTableError(message: string) {
   const lower = message.toLowerCase();
   return lower.includes("could not find the table") || (lower.includes("relation") && lower.includes("does not exist"));
+}
+
+function addDaysIso(isoDate: string, days: number) {
+  const date = new Date(isoDate);
+  date.setUTCDate(date.getUTCDate() + Math.max(0, Math.trunc(days)));
+  return date.toISOString();
 }
 
 function isDuplicateKeyError(code?: string | null) {
@@ -79,6 +98,222 @@ async function upsertSubscriptionFromObject(subscription: Stripe.Subscription) {
 
   if (error) {
     throw new Error(error.message);
+  }
+}
+
+async function attributePartnerForSubscriptionCheckout(params: {
+  event: Stripe.Event;
+  session: Stripe.Checkout.Session;
+  subscription: Stripe.Subscription;
+}) {
+  const { event, session, subscription } = params;
+  const metadata = {
+    ...(session.metadata ?? {}),
+    ...(subscription.metadata ?? {}),
+  };
+
+  const partnerId = metadata.partnerId;
+  const partnerCodeId = metadata.partnerCodeId;
+  const partnerCode = metadata.partnerCode;
+  if (!partnerId || typeof partnerId !== "string") return;
+
+  const supabase = createSupabaseAdminClient();
+  const nowIso = new Date().toISOString();
+
+  const { data: existingReferral, error: existingReferralError } = await supabase
+    .from("partner_referrals")
+    .select("id")
+    .eq("stripe_checkout_session_id", session.id)
+    .maybeSingle();
+
+  if (existingReferralError) {
+    if (isMissingTableError(existingReferralError.message)) return;
+    throw new Error(existingReferralError.message);
+  }
+  if (existingReferral) return;
+
+  const firstPrice = subscription.items.data[0]?.price;
+  const conversionValueCents = Math.max(
+    0,
+    Number(session.amount_total ?? firstPrice?.unit_amount ?? 0),
+  );
+  const currency = (session.currency ?? firstPrice?.currency ?? "usd").toUpperCase();
+  const conversionStatus = session.payment_status === "paid" ? "qualified" : "pending";
+
+  const { data: referral, error: referralInsertError } = await supabase
+    .from("partner_referrals")
+    .insert({
+      partner_id: partnerId,
+      partner_code_id: typeof partnerCodeId === "string" ? partnerCodeId : null,
+      referred_user_id: session.client_reference_id ?? null,
+      stripe_checkout_session_id: session.id,
+      stripe_subscription_id: subscription.id,
+      stripe_customer_id:
+        typeof subscription.customer === "string" ? subscription.customer : subscription.customer?.id ?? null,
+      conversion_type: "subscription",
+      conversion_status: conversionStatus,
+      conversion_value_cents: conversionValueCents,
+      currency,
+      event_occurred_at: nowIso,
+      qualified_at: conversionStatus === "qualified" ? nowIso : null,
+      metadata: {
+        source: "stripe_webhook",
+        eventId: event.id,
+        partnerCode,
+      },
+    })
+    .select("id")
+    .single();
+
+  if (referralInsertError) {
+    if (isMissingTableError(referralInsertError.message)) return;
+    throw new Error(referralInsertError.message);
+  }
+
+  if (typeof partnerCodeId === "string") {
+    const { data: codeRow, error: codeError } = await supabase
+      .from("partner_codes")
+      .select("current_redemptions")
+      .eq("id", partnerCodeId)
+      .maybeSingle();
+    if (!codeError) {
+      const current = Number(codeRow?.current_redemptions ?? 0);
+      await supabase
+        .from("partner_codes")
+        .update({ current_redemptions: current + 1 })
+        .eq("id", partnerCodeId);
+    } else if (!isMissingTableError(codeError.message)) {
+      throw new Error(codeError.message);
+    }
+  }
+
+  if (conversionStatus !== "qualified") return;
+
+  const [partnerResult, taxResult] = await Promise.all([
+    supabase
+      .from("partners")
+      .select("id, reward_tier_id, country_code")
+      .eq("id", partnerId)
+      .maybeSingle(),
+    supabase
+      .from("partner_tax_profiles")
+      .select("partner_id, tax_form_type, us_taxpayer, backup_withholding_required, withholding_rate, form_expiration_date, status")
+      .eq("partner_id", partnerId)
+      .maybeSingle(),
+  ]);
+
+  if (partnerResult.error) {
+    if (!isMissingTableError(partnerResult.error.message)) {
+      throw new Error(partnerResult.error.message);
+    }
+    return;
+  }
+  if (taxResult.error && !isMissingTableError(taxResult.error.message)) {
+    throw new Error(taxResult.error.message);
+  }
+
+  let commissionRate = 0;
+  let bonusCents = 0;
+  let payoutDelayDays = 30;
+  if (partnerResult.data?.reward_tier_id) {
+    const { data: tier, error: tierError } = await supabase
+      .from("partner_reward_tiers")
+      .select("commission_rate, bonus_cents, payout_delay_days")
+      .eq("id", partnerResult.data.reward_tier_id)
+      .maybeSingle();
+    if (tierError) {
+      if (!isMissingTableError(tierError.message)) {
+        throw new Error(tierError.message);
+      }
+    } else {
+      commissionRate = Number(tier?.commission_rate ?? 0);
+      bonusCents = Number(tier?.bonus_cents ?? 0);
+      payoutDelayDays = Number(tier?.payout_delay_days ?? 30);
+    }
+  }
+
+  const countryCode = String(partnerResult.data?.country_code ?? "US").toUpperCase();
+  const [ruleResult, determinationResult] = await Promise.all([
+    supabase
+      .from("partner_jurisdiction_rules")
+      .select(
+        "id, country_code, jurisdiction_name, allow_engagement, allow_payouts, requires_manual_review, requires_w8, default_withholding_rate, sanctions_program, sanctions_basis",
+      )
+      .eq("country_code", countryCode)
+      .maybeSingle(),
+    supabase
+      .from("partner_withholding_determinations")
+      .select(
+        "partner_id, country_code, us_source_income, treaty_claimed, determination_status, approved_withholding_rate, effective_start, effective_end",
+      )
+      .eq("partner_id", partnerId)
+      .maybeSingle(),
+  ]);
+  if (ruleResult.error && !isMissingTableError(ruleResult.error.message)) {
+    throw new Error(ruleResult.error.message);
+  }
+  if (determinationResult.error && !isMissingTableError(determinationResult.error.message)) {
+    throw new Error(determinationResult.error.message);
+  }
+  const withholdingResolution = resolvePartnerWithholdingRate({
+    countryCode,
+    taxProfile: (taxResult.data as PartnerTaxProfileRow | null) ?? null,
+    jurisdictionRule: (ruleResult.data as PartnerJurisdictionRuleRow | null) ?? null,
+    determination: (determinationResult.data as PartnerWithholdingDeterminationRow | null) ?? null,
+  });
+  const withholdingRate = withholdingResolution.rate;
+  const amounts = computeCommissionAmounts({
+    grossRevenueCents: conversionValueCents,
+    commissionRate,
+    bonusCents,
+    withholdingRate,
+  });
+
+  const { data: existingCommission, error: existingCommissionError } = await supabase
+    .from("partner_commission_events")
+    .select("id")
+    .eq("source_event_ref", event.id)
+    .eq("partner_id", partnerId)
+    .maybeSingle();
+  if (existingCommissionError) {
+    if (!isMissingTableError(existingCommissionError.message)) {
+      throw new Error(existingCommissionError.message);
+    }
+    return;
+  }
+  if (existingCommission) return;
+
+  const { error: commissionError } = await supabase
+    .from("partner_commission_events")
+    .insert({
+      partner_id: partnerId,
+      referral_id: referral.id,
+      partner_code_id: typeof partnerCodeId === "string" ? partnerCodeId : null,
+      event_type: "conversion_commission",
+      status: "approved",
+      source_event_ref: event.id,
+      gross_revenue_cents: conversionValueCents,
+      commission_rate: commissionRate,
+      commission_amount_cents: amounts.commissionAmountCents,
+      bonus_amount_cents: amounts.bonusAmountCents,
+      withholding_tax_cents: amounts.withholdingTaxCents,
+      net_amount_cents: amounts.netAmountCents,
+      currency,
+      earned_at: nowIso,
+      available_at: addDaysIso(nowIso, payoutDelayDays),
+      approved_at: nowIso,
+      metadata: {
+        source: "stripe_webhook",
+        checkoutSessionId: session.id,
+        subscriptionId: subscription.id,
+        partnerCode,
+        withholdingSource: withholdingResolution.source,
+        withholdingReasons: withholdingResolution.reasons,
+      },
+    });
+
+  if (commissionError && !isMissingTableError(commissionError.message)) {
+    throw new Error(commissionError.message);
   }
 }
 
@@ -211,6 +446,11 @@ async function handleCheckoutCompleted(event: Stripe.Event, stripe: Stripe) {
 
     const freshSubscription = await stripe.subscriptions.retrieve(subscription.id);
     await upsertSubscriptionFromObject(freshSubscription);
+    await attributePartnerForSubscriptionCheckout({
+      event,
+      session,
+      subscription: freshSubscription,
+    });
     return;
   }
 
@@ -624,6 +864,11 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Missing stripe-signature header." }, { status: 400 });
   }
 
+  const contentType = request.headers.get("content-type")?.toLowerCase() ?? "";
+  if (contentType && !contentType.includes("application/json")) {
+    return NextResponse.json({ error: "Unsupported content type." }, { status: 415 });
+  }
+
   const payload = await request.text();
   if (!payload) {
     return NextResponse.json({ error: "Missing webhook payload." }, { status: 400 });
@@ -640,7 +885,7 @@ export async function POST(request: NextRequest) {
       payload,
       signature,
       serverEnv.STRIPE_WEBHOOK_SECRET,
-      STRIPE_WEBHOOK_SIGNATURE_TOLERANCE_SECONDS,
+      stripeWebhookSignatureToleranceSeconds(),
     );
   } catch (error) {
     console.error("Stripe webhook signature validation failed.", toSafeErrorRecord(error));

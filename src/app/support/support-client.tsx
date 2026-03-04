@@ -8,6 +8,10 @@ type Ticket = {
   subject: string;
   status: string;
   priority: string;
+  ticket_type?: string | null;
+  parent_confirmation_status?: string | null;
+  ai_response_text?: string | null;
+  first_response_due_at?: string | null;
   created_at: string;
   updated_at?: string;
 };
@@ -104,7 +108,23 @@ export default function SupportClient({ initialTickets }: { initialTickets: Tick
               <p className="font-medium">{ticket.subject}</p>
               <p className="text-xs text-zinc-500 dark:text-foreground/60">
                 Status: {ticket.status} | Priority: {ticket.priority}
+                {ticket.ticket_type ? ` | Type: ${ticket.ticket_type}` : ""}
               </p>
+              {ticket.parent_confirmation_status && ticket.parent_confirmation_status !== "not_required" ? (
+                <p className="text-xs text-amber-700">
+                  Parent verification: {ticket.parent_confirmation_status}
+                </p>
+              ) : null}
+              {ticket.first_response_due_at ? (
+                <p className="text-xs text-zinc-500 dark:text-foreground/60">
+                  Best-effort response target by: {new Date(ticket.first_response_due_at).toLocaleString()}
+                </p>
+              ) : null}
+              {ticket.ai_response_text ? (
+                <p className="mt-2 rounded-md border border-zinc-200 bg-zinc-50 p-2 text-xs text-zinc-700">
+                  AI response: {ticket.ai_response_text}
+                </p>
+              ) : null}
               <p className="text-xs text-zinc-500 dark:text-foreground/60">
                 Created: {new Date(ticket.created_at).toLocaleString()}
               </p>

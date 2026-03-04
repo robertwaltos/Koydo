@@ -5,7 +5,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 
 const createSchema = z.object({
-  reportType: z.enum(["dsar", "support", "audit", "telemetry"]),
+  reportType: z.enum(["dsar", "support", "audit", "telemetry", "finance", "finance_analytics", "compliance_audit"]),
   runAfterIso: z.string().optional(),
 });
 

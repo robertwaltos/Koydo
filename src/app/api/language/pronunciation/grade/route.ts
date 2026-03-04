@@ -11,6 +11,7 @@ import {
   resolvePronunciationGradingMode,
 } from "@/lib/language-learning";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
+import { resolveClassroomAccessForUser } from "@/lib/organizations/classroom-access";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 
 const requestSchema = z.object({
@@ -68,6 +69,10 @@ export async function POST(request: NextRequest) {
   try {
     const policy = getLanguageLearningPolicySnapshot();
     const confidenceGateMode = resolvePronunciationGradingMode(parsed.data.asrConfidence);
+    const classroomAccess = await resolveClassroomAccessForUser({
+      userId: user.id,
+      requestHeaders: request.headers,
+    });
     let usageEntitlement: Awaited<ReturnType<typeof resolveLanguageUsageEntitlement>> | null = null;
     let usageTracking: { tracked: boolean; reason?: string } = { tracked: false };
 
@@ -75,6 +80,7 @@ export async function POST(request: NextRequest) {
       usageEntitlement = await resolveLanguageUsageEntitlement(supabase, {
         userId: user.id,
         studentProfileId: parsed.data.studentProfileId,
+        classroomAccess,
       });
     } catch (usageError) {
       if (usageError instanceof Error && isMissingTableError(usageError.message)) {
@@ -114,6 +120,7 @@ export async function POST(request: NextRequest) {
             scoredAttemptsRemaining: usageEntitlement.scoredAttemptsRemaining,
             aiCostUsdThisMonth: usageEntitlement.aiCostUsdThisMonth,
             reason: usageEntitlement.reason,
+            classroomAccess: usageEntitlement.classroomAccess,
           }
         : null,
     };
@@ -202,6 +209,7 @@ export async function POST(request: NextRequest) {
             planName: plan?.name ?? usageEntitlement.planTier,
           }
         : null,
+      classroomAccess,
       usageTracking,
       persistence,
       policy,

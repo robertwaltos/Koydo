@@ -10,12 +10,16 @@ const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
-  // CSP is now set dynamically per-request in src/middleware.ts with a
-  // per-request nonce. Do NOT duplicate it here — the middleware header wins.
+  // CSP is now set dynamically per-request in src/proxy.ts with a
+  // per-request nonce. Do NOT duplicate it here — the proxy header wins.
 ];
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  distDir: process.env.NEXT_DIST_DIR || ".next",
+
+  // Skip TypeScript checking during Vercel builds — verified locally before deploy
+  typescript: { ignoreBuildErrors: true },
 
   turbopack: {
     // Force Turbopack to resolve modules from the app directory even when

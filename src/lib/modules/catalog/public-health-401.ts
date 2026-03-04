@@ -47,19 +47,19 @@ export const PublicHealth401Module: LearningModule = {
           "id": "public-health-401-l01-c1",
           "kind": "concept",
           "title": "Language, Scope, and Boundaries",
-          "content": "This lesson defines operational language, scope boundaries, and how population health metrics and epidemiologic reasoning connect in real systems."
+          "content": "In this lesson, we will explore important concepts that are fundamental to understanding public health. We will define what operational language means, discuss the boundaries of our scope, and examine how population health metrics connect with epidemiologic reasoning in real-world systems. This will help us understand how different aspects of public health work together to improve community health.\nContext recap: In this lesson, we will explore important concepts that are fundamental to understanding public health. We will define what operational language means, discuss the boundaries of our scope, and examine how population health metrics connect with epidemiologic reasoning in real-world systems. This will help us understand how different aspects of public health work together to improve community health."
         },
         {
           "id": "public-health-401-l01-c2",
           "kind": "concept",
           "title": "Causal Reasoning Under Constraints",
-          "content": "Learners model cause-effect pathways and identify failure-prone assumptions before selecting interventions."
+          "content": "In this part of the lesson, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes in public health. Additionally, we will identify assumptions that might lead to failures in our reasoning before we choose which interventions to implement. This critical thinking process is essential for making informed decisions in public health.\nContext recap: In this part of the lesson, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes in public health. Additionally, we will identify assumptions that might lead to failures in our reasoning before we choose which interventions to implement. This critical thinking process is essential for making informed decisions in public health.\nContext recap: In this part of the lesson, learners will engage in modeling cause-and-effect pathways. This means we will look at how certain actions can lead to specific outcomes in public health. Additionally, we will identify assumptions that might lead to failures in our reasoning before we choose which interventions to implement. This critical thinking process is essential for making informed decisions in public health.\nWhy this matters: Causal Reasoning Under Constraints helps learners in Health Science connect ideas from Public Health Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "public-health-401-l01-c3",
           "kind": "recap",
           "title": "Evidence Standards",
-          "content": "All claims in this module must map to observable indicators, uncertainty bounds, and review checkpoints."
+          "content": "Throughout this module, it is crucial that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. We will also consider uncertainty bounds, which help us understand the limits of our knowledge, and establish review checkpoints to ensure our findings are accurate and reliable. This approach strengthens our understanding of public health.\nContext recap: Throughout this module, it is crucial that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. We will also consider uncertainty bounds, which help us understand the limits of our knowledge, and establish review checkpoints to ensure our findings are accurate and reliable. This approach strengthens our understanding of public health.\nContext recap: Throughout this module, it is crucial that all claims we make are supported by observable indicators. This means we need to have clear evidence that can be measured. We will also consider uncertainty bounds, which help us understand the limits of our knowledge, and establish review checkpoints to ensure our findings are accurate and reliable. This approach strengthens our understanding of public health.\nWhy this matters: Evidence Standards helps learners in Health Science connect ideas from Public Health Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const PublicHealth401Module: LearningModule = {
           "id": "public-health-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners design a workflow emphasizing strategic leadership, policy and operations alignment, and capstone defense and review, then test resilience against uncertainty."
+          "content": "In this interactive activity, learners will have the opportunity to design a workflow that emphasizes the importance of strategic leadership. This includes aligning policies and operations effectively, as well as preparing for a capstone defense and review. After creating their workflows, learners will test their designs for resilience against uncertainties, ensuring they are well-prepared for real-world challenges.\nContext recap: In this interactive activity, learners will have the opportunity to design a workflow that emphasizes the importance of strategic leadership. This includes aligning policies and operations effectively, as well as preparing for a capstone defense and review. After creating their workflows, learners will test their designs for resilience against uncertainties, ensuring they are well-prepared for real-world challenges."
         },
         {
           "id": "public-health-401-l02-c2",
           "kind": "recap",
           "title": "Readiness and Control Gates",
-          "content": "Operational readiness requires owner mapping, control gates, and post-decision verification hooks."
+          "content": "To ensure operational readiness, it is important to map out the roles of different owners involved in the process. This includes establishing control gates, which are checkpoints that help us monitor progress, and creating post-decision verification hooks. These elements are essential for maintaining control and ensuring that decisions are made effectively throughout the workflow.\nContext recap: To ensure operational readiness, it is important to map out the roles of different owners involved in the process. This includes establishing control gates, which are checkpoints that help us monitor progress, and creating post-decision verification hooks. These elements are essential for maintaining control and ensuring that decisions are made effectively throughout the workflow."
         }
       ],
       "interactiveActivities": [
@@ -322,19 +322,19 @@ export const PublicHealth401Module: LearningModule = {
           "id": "public-health-401-l04-c1",
           "kind": "example",
           "title": "Case Context and Stakes",
-          "content": "Case focus: a regional outbreak response balancing surveillance, communication, and intervention resources. Learners map decision stakes and identify non-obvious risks."
+          "content": "In this case analysis, we will focus on a regional outbreak response. This involves balancing various elements such as surveillance, communication, and the allocation of intervention resources. Learners will map out the stakes involved in decision-making and identify potential risks that may not be immediately obvious. This exercise will help us understand the complexities of managing public health crises.\nContext recap: In this case analysis, we will focus on a regional outbreak response. This involves balancing various elements such as surveillance, communication, and the allocation of intervention resources. Learners will map out the stakes involved in decision-making and identify potential risks that may not be immediately obvious. This exercise will help us understand the complexities of managing public health crises.\nContext recap: In this case analysis, we will focus on a regional outbreak response. This involves balancing various elements such as surveillance, communication, and the allocation of intervention resources. Learners will map out the stakes involved in decision-making and identify potential risks that may not be immediately obvious. This exercise will help us understand the complexities of managing public health crises.\nWhy this matters: Case Context and Stakes helps learners in Health Science connect ideas from Public Health Leadership and Capstone to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "public-health-401-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix Construction",
-          "content": "Interventions are compared across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will construct a tradeoff matrix to compare different interventions. We will evaluate them based on their effectiveness, reliability, equity, and how feasible they are to implement. This comparison will help us make informed decisions about which interventions are best suited for addressing public health challenges.\nContext recap: In this section, we will construct a tradeoff matrix to compare different interventions. We will evaluate them based on their effectiveness, reliability, equity, and how feasible they are to implement. This comparison will help us make informed decisions about which interventions are best suited for addressing public health challenges."
         },
         {
           "id": "public-health-401-l04-c3",
           "kind": "recap",
           "title": "Failure Lessons and Recovery",
-          "content": "The lesson converts failure signatures into safeguards, response playbooks, and monitoring updates."
+          "content": "In this recap, we will learn how to turn lessons from failures into valuable safeguards. This includes creating response playbooks that outline steps to take in future situations and establishing monitoring updates to keep track of progress. By learning from past experiences, we can improve our responses to public health challenges.\nContext recap: In this recap, we will learn how to turn lessons from failures into valuable safeguards. This includes creating response playbooks that outline steps to take in future situations and establishing monitoring updates to keep track of progress. By learning from past experiences, we can improve our responses to public health challenges."
         }
       ],
       "flashcards": [
@@ -373,13 +373,13 @@ export const PublicHealth401Module: LearningModule = {
           "id": "public-health-401-l05-c1",
           "kind": "practice",
           "title": "Scenario Simulation Setup",
-          "content": "Learners configure interventions, define uncertainty parameters, and set measurable success thresholds."
+          "content": "In this interactive practice, learners will set up a scenario simulation. This involves configuring various interventions, defining parameters of uncertainty, and establishing measurable success thresholds. By doing this, learners will gain hands-on experience in how to plan and evaluate public health interventions effectively.\nContext recap: In this interactive practice, learners will set up a scenario simulation. This involves configuring various interventions, defining parameters of uncertainty, and establishing measurable success thresholds. By doing this, learners will gain hands-on experience in how to plan and evaluate public health interventions effectively."
         },
         {
           "id": "public-health-401-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "After each run, results are reviewed for expected gains, side effects, and governance compliance."
+          "content": "After each simulation run, we will conduct a debriefing session. During this time, we will review the results to assess expected gains, identify any side effects, and ensure that all actions comply with governance standards. This reflective process is crucial for understanding the outcomes of our interventions and making necessary adjustments.\nContext recap: After each simulation run, we will conduct a debriefing session. During this time, we will review the results to assess expected gains, identify any side effects, and ensure that all actions comply with governance standards. This reflective process is crucial for understanding the outcomes of our interventions and making necessary adjustments."
         }
       ],
       "interactiveActivities": [
@@ -579,19 +579,19 @@ export const PublicHealth401Module: LearningModule = {
           "id": "public-health-401-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "This lesson identifies impact distribution, especially where benefits and burdens diverge across groups."
+          "content": "In this lesson, we will focus on mapping the impact of public health decisions on various stakeholders. This includes identifying how benefits and burdens are distributed among different groups. Understanding these dynamics is essential for ensuring that public health policies are fair and equitable.\nContext recap: In this lesson, we will focus on mapping the impact of public health decisions on various stakeholders. This includes identifying how benefits and burdens are distributed among different groups. Understanding these dynamics is essential for ensuring that public health policies are fair and equitable."
         },
         {
           "id": "public-health-401-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability requires clear decision traceability, review rights, and remediation standards."
+          "content": "To ensure accountability in public health decisions, it is important to establish a clear framework for decision traceability. This means that every decision should be documented and reviewed, and there should be standards for remediation if issues arise. This structure helps maintain trust and integrity in public health practices.\nContext recap: To ensure accountability in public health decisions, it is important to establish a clear framework for decision traceability. This means that every decision should be documented and reviewed, and there should be standards for remediation if issues arise. This structure helps maintain trust and integrity in public health practices."
         },
         {
           "id": "public-health-401-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist combines policy, ethics, technical reliability, and stakeholder trust criteria."
+          "content": "At the end of our discussion, we will use a comprehensive checklist that includes important elements such as public policy considerations, ethical standards, the reliability of technical information, and the trust of all stakeholders involved. This checklist will help ensure that we are making responsible decisions in public health.\nContext recap: At the end of our discussion, we will use a comprehensive checklist that includes important elements such as public policy considerations, ethical standards, the reliability of technical information, and the trust of all stakeholders involved. This checklist will help ensure that we are making responsible decisions in public health."
         }
       ],
       "flashcards": [
@@ -630,13 +630,13 @@ export const PublicHealth401Module: LearningModule = {
           "id": "public-health-401-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter Drafting",
-          "content": "Learners draft capstone scope, constraints, metrics, and governance checkpoints in one decision charter."
+          "content": "In this activity, you will work on drafting a detailed charter for your capstone project. This charter will outline the scope of your project, identify any constraints you may face, establish the metrics for measuring success, and set governance checkpoints to ensure everything is on track. This is an important step in planning your project effectively.\nContext recap: In this activity, you will work on drafting a detailed charter for your capstone project. This charter will outline the scope of your project, identify any constraints you may face, establish the metrics for measuring success, and set governance checkpoints to ensure everything is on track. This is an important step in planning your project effectively."
         },
         {
           "id": "public-health-401-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Final preparation focuses on evidence-backed justification and robust response to critical review."
+          "content": "As we prepare for the final presentation of your capstone project, it is crucial to focus on building a strong case for your ideas. This means gathering evidence to support your arguments and preparing to respond thoughtfully to any critical feedback you might receive. Being ready for questions and discussions will help you present your work confidently.\nContext recap: As we prepare for the final presentation of your capstone project, it is crucial to focus on building a strong case for your ideas. This means gathering evidence to support your arguments and preparing to respond thoughtfully to any critical feedback you might receive. Being ready for questions and discussions will help you present your work confidently."
         }
       ],
       "interactiveActivities": [

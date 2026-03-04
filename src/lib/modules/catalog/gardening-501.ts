@@ -47,19 +47,19 @@ export const Gardening501Module: LearningModule = {
           "id": "gardening-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Gardening, with focus on agriculture systems diagnostics and agriculture operations and execution design."
+          "content": "In this lesson, we will explore the advanced concepts of scope and boundaries in gardening. We will focus on understanding how to diagnose agricultural systems and design effective operations for gardening practices. This knowledge will help you create a structured approach to managing your gardening projects, ensuring that you can identify the key areas to focus on for successful outcomes.\nContext recap: In this lesson, we will explore the advanced concepts of scope and boundaries in gardening. We will focus on understanding how to diagnose agricultural systems and design effective operations for gardening practices. This knowledge will help you create a structured approach to managing your gardening projects, ensuring that you can identify the key areas to focus on for successful outcomes."
         },
         {
           "id": "gardening-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different factors in gardening. Additionally, we will examine uncertainty ranges and how various systems depend on each other. This foundational understanding is crucial for planning interventions effectively, allowing you to make informed decisions that lead to better gardening practices.\nContext recap: In this part of the lesson, learners will engage in mapping out causal pathways, which are the connections between different factors in gardening. Additionally, we will examine uncertainty ranges and how various systems depend on each other. This foundational understanding is crucial for planning interventions effectively, allowing you to make informed decisions that lead to better gardening practices."
         },
         {
           "id": "gardening-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion we make about gardening practices should be supported by evidence that can be quantified. We will also discuss the significance of establishing confidence bounds and setting up review checkpoints to ensure that our gardening strategies are on track and effective.\nContext recap: In our recap, we will emphasize the importance of linking all claims to measurable indicators. This means that every assertion we make about gardening practices should be supported by evidence that can be quantified. We will also discuss the significance of establishing confidence bounds and setting up review checkpoints to ensure that our gardening strategies are on track and effective."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Gardening501Module: LearningModule = {
           "id": "gardening-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows for gardening tasks. Once these workflows are created, we will stress-test them by simulating adverse scenarios. This practice will help you understand how to adapt your gardening methods to handle unexpected challenges and ensure resilience in your gardening efforts.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows for gardening tasks. Once these workflows are created, we will stress-test them by simulating adverse scenarios. This practice will help you understand how to adapt your gardening methods to handle unexpected challenges and ensure resilience in your gardening efforts."
         },
         {
           "id": "gardening-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss the architecture of control gates within your workflows. These gates are essential as they integrate checkpoints, criteria for rolling back decisions, and escalation thresholds. Understanding this architecture will help you maintain control over your gardening processes and make timely adjustments when necessary.\nContext recap: In our recap, we will discuss the architecture of control gates within your workflows. These gates are essential as they integrate checkpoints, criteria for rolling back decisions, and escalation thresholds. Understanding this architecture will help you maintain control over your gardening processes and make timely adjustments when necessary."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Gardening501Module: LearningModule = {
           "id": "gardening-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in agriculture systems diagnostics and agriculture impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints found in agricultural systems diagnostics. We will analyze the impacts of various gardening practices and the trade-offs involved. This understanding will allow you to make more informed decisions about how to balance different factors in your gardening projects.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints found in agricultural systems diagnostics. We will analyze the impacts of various gardening practices and the trade-offs involved. This understanding will allow you to make more informed decisions about how to balance different factors in your gardening projects."
         },
         {
           "id": "gardening-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options available in gardening across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these aspects, you will develop a well-rounded perspective on how to choose the best practices for your gardening needs.\nContext recap: During this practice session, learners will compare different options available in gardening across several important dimensions. These include safety, reliability, cost, equity, and governance. By evaluating these aspects, you will develop a well-rounded perspective on how to choose the best practices for your gardening needs."
         },
         {
           "id": "gardening-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will focus on the pattern of decision memos. Each recommendation made in gardening should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach will help you communicate your decisions effectively and ensure that you are prepared for any challenges that may arise.\nContext recap: In our recap, we will focus on the pattern of decision memos. Each recommendation made in gardening should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach will help you communicate your decisions effectively and ensure that you are prepared for any challenges that may arise."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Gardening501Module: LearningModule = {
           "id": "gardening-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow you to practice making real-time decisions in gardening scenarios, helping you understand how to maintain a balance between achieving your gardening goals and adhering to best practices.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance and governance constraints. This hands-on experience will allow you to practice making real-time decisions in gardening scenarios, helping you understand how to maintain a balance between achieving your gardening goals and adhering to best practices."
         },
         {
           "id": "gardening-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the design of adaptive responses in gardening. Effective responses should update control gates while ensuring that traceability and accountability are maintained. This concept is crucial for managing your gardening practices effectively and ensuring that you can track changes and their impacts over time.\nContext recap: In our recap, we will discuss the design of adaptive responses in gardening. Effective responses should update control gates while ensuring that traceability and accountability are maintained. This concept is crucial for managing your gardening practices effectively and ensuring that you can track changes and their impacts over time."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Gardening501Module: LearningModule = {
           "id": "gardening-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups involved in gardening. Understanding these dynamics is essential for ensuring that all voices are heard and that gardening practices are equitable and beneficial for everyone involved.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups involved in gardening. Understanding these dynamics is essential for ensuring that all voices are heard and that gardening practices are equitable and beneficial for everyone involved."
         },
         {
           "id": "gardening-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this segment, we will explore the architecture of accountability in gardening practices. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into your gardening processes. By establishing clear accountability, you can foster trust and transparency in your gardening efforts.\nContext recap: In this segment, we will explore the architecture of accountability in gardening practices. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into your gardening processes. By establishing clear accountability, you can foster trust and transparency in your gardening efforts."
         },
         {
           "id": "gardening-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "To ensure effective gardening leadership, it's important to have a final checklist that connects the results we aim for with our ethical responsibilities, adherence to policies, and our ability to adapt to challenges. This checklist serves as a guide to help us reflect on our actions and their impact on the community and environment.\nContext recap: To ensure effective gardening leadership, it's important to have a final checklist that connects the results we aim for with our ethical responsibilities, adherence to policies, and our ability to adapt to challenges. This checklist serves as a guide to help us reflect on our actions and their impact on the community and environment."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Gardening501Module: LearningModule = {
           "id": "gardening-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of the uncertainties involved, and proposed pathways for addressing any issues that may arise. This exercise helps develop critical thinking and communication skills."
         },
         {
           "id": "gardening-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in the gardening project. This rehearsal is a valuable opportunity to refine their arguments and improve their presentation skills.\nContext recap: During the expert panel rehearsal, learners will practice their responses to various critiques. These critiques may come from technical experts, governance representatives, and stakeholders who have an interest in the gardening project. This rehearsal is a valuable opportunity to refine their arguments and improve their presentation skills."
         }
       ],
       "interactiveActivities": [

@@ -73,7 +73,18 @@ type PendingReward = {
 
 type ExperienceActions = {
   /** Award XP points. Source is stored in event metadata. */
-  awardXP: (amount: number, source?: string) => Promise<void>;
+  awardXP: (
+    amount: number,
+    source?: string,
+    options?: {
+      /**
+       * Default true.
+       * Set false when the points were already persisted by another endpoint
+       * and only local UI state should be updated.
+       */
+      persist?: boolean;
+    },
+  ) => Promise<void>;
   /** Award a badge by id. Pass a human-readable label for display. */
   awardBadge: (id: string, label?: string) => Promise<void>;
   /** Clear the queued reward (called by overlays when dismissed). */
@@ -247,11 +258,18 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
 
   // ── Actions ───────────────────────────────────────────────────────────────
 
-  const awardXP = useCallback(async (amount: number, source = "general") => {
+  const awardXP = useCallback(async (
+    amount: number,
+    source = "general",
+    options?: { persist?: boolean },
+  ) => {
     if (state.isUnavailable || amount <= 0) return;
 
     // Optimistic update
     dispatch({ type: "AWARD_XP_OPTIMISTIC", amount });
+
+    const shouldPersist = options?.persist ?? true;
+    if (!shouldPersist) return;
 
     try {
       const res = await fetch("/api/language/gamification/state", {

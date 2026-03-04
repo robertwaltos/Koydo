@@ -65,22 +65,22 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-1-chunk-1",
           "title": "Numbers Are Everywhere!",
-          "content": "Numbers tell us HOW MANY of something there is. When we count, we match each number word to ONE object. This is called one-to-one correspondence!"
+          "content": "Numbers are like magic words that help us understand how many things we have! When we count, we say a number for each item we see. This is called one-to-one correspondence, which means that each number matches with one object. So, if you have three apples, you would say 'one' for the first apple, 'two' for the second apple, and 'three' for the last apple. Counting helps us keep track of everything around us!\nContext recap: Numbers are like magic words that help us understand how many things we have! When we count, we say a number for each item we see. This is called one-to-one correspondence, which means that each number matches with one object. So, if you have three apples, you would say 'one' for the first apple, 'two' for the second apple, and 'three' for the last apple."
         },
         {
           "id": "basic-math-prek-u1-1-chunk-2",
           "title": "Counting 1, 2, 3",
-          "content": "1 = ONE ⭐\n2 = TWO ⭐⭐\n3 = THREE ⭐⭐⭐\n\nPoint to each star as you count: one... two... three!\nPractice tip: Count objects around you — toys, crackers, fingers!"
+          "content": "Let’s learn to count from one to three! Here’s how it goes: 1 is ONE ⭐, 2 is TWO ⭐⭐, and 3 is THREE ⭐⭐⭐. As you count, point to each star and say the numbers out loud: one... two... three! This is a fun way to practice counting! You can also look around your room and count things like your toys, snacks, or even your fingers. Counting is everywhere!\nContext recap: Let’s learn to count from one to three! Here’s how it goes: 1 is ONE ⭐, 2 is TWO ⭐⭐, and 3 is THREE ⭐⭐⭐. As you count, point to each star and say the numbers out loud: one... two...\nWhy this matters: Counting 1, 2, 3 helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical."
         },
         {
           "id": "basic-math-prek-u1-1-chunk-3",
           "title": "Counting 4 and 5",
-          "content": "4 = FOUR 🍎🍎🍎🍎\n5 = FIVE 🍎🍎🍎🍎🍎\n\nFIVE is special — it's the fingers on one hand! ✋\nHold up 5 fingers and count them: 1, 2, 3, 4, 5!"
+          "content": "Let's have fun counting to four and five together! When we say 4, we say FOUR, and we can show it with four apples: 🍎🍎🍎🍎. Now, when we count to 5, we say FIVE, and we can show it with five apples: 🍎🍎🍎🍎🍎. Isn't that exciting? Here’s a fun fact: the number FIVE is really special because it’s the same as the number of fingers on one hand! ✋ Can you hold up your hand and count your fingers with me? Let's do it together: 1, 2, 3, 4, 5! Counting like this helps us understand how numbers are all around us in our daily lives, just like our fingers! Keep practicing, and you'll be a counting expert in no time!"
         },
         {
           "id": "basic-math-prek-u1-1-chunk-4",
           "title": "Counting Rules",
-          "content": "Golden Rules of Counting:\n• Touch each object as you say each number\n• Say ONE number for each object\n• The LAST number you say tells how many there are\n• Line up objects so you don't miss or count twice!"
+          "content": "Let's learn some important rules that will help us count better! First, when you count, always touch each object as you say each number. This helps you keep track of what you have counted. Second, remember to say ONE number for each object you see. This means if you see three apples, you will say 'one' for the first apple, 'two' for the second apple, and 'three' for the third apple. Third, the last number you say tells you how many objects there are in total. So if you counted three apples, that means you have three apples altogether! Lastly, it’s a great idea to line up your objects in a row. This way, you can see them all clearly and you won’t miss any or accidentally count the same one twice. Following these counting rules will make your counting easier and a lot more fun! So let’s practice counting together!"
         }
       ],
       "flashcards": [
@@ -206,17 +206,17 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-2-chunk-1",
           "title": "6, 7, 8, 9, 10!",
-          "content": "6 = SIX 🎲🎲🎲🎲🎲🎲\n7 = SEVEN 🌈🌈🌈🌈🌈🌈🌈\n8 = EIGHT 🐙 (8 legs!)\n9 = NINE 🍫🍫🍫🍫🍫🍫🍫🍫🍫\n10 = TEN 🖐️🖐️ (two whole hands!)"
+          "content": "Let’s learn to count from six to ten! Here we go: 6 is SIX 🎲🎲🎲🎲🎲🎲, 7 is SEVEN 🌈🌈🌈🌈🌈🌈🌈, 8 is EIGHT 🐙 (that’s like an octopus with 8 legs!), 9 is NINE 🍫🍫🍫🍫🍫🍫🍫🍫🍫, and 10 is TEN 🖐️🖐️ (that’s two whole hands!). Counting up to ten is exciting, and you can practice by counting items you see around you!\nContext recap: Let’s learn to count from six to ten! Here we go: 6 is SIX 🎲🎲🎲🎲🎲🎲, 7 is SEVEN 🌈🌈🌈🌈🌈🌈🌈, 8 is EIGHT 🐙 (that’s like an octopus with 8 legs!), 9 is NINE 🍫🍫🍫🍫🍫🍫🍫🍫🍫, and 10 is TEN 🖐️🖐️ (that’s two whole hands!). Counting up to ten is exciting, and you can practice by counting items you see around you!"
         },
         {
           "id": "basic-math-prek-u1-2-chunk-2",
           "title": "More, Fewer, Same",
-          "content": "MORE means a bigger amount: 🍎🍎🍎🍎 is more than 🍎🍎\nFEWER means a smaller amount: 🍎🍎 is fewer than 🍎🍎🍎\nSAME means equal amounts: 🍎🍎🍎 = 🍎🍎🍎\n\nHow to compare: Count each group! The bigger number has MORE."
+          "content": "When we look at groups of things, we can use three important words to help us understand how many there are: MORE, FEWER, and SAME. Let's learn what each of these words means!\nMORE means that one group has a bigger amount than another. For example, if you have four apples 🍎🍎🍎🍎, that is MORE than just two apples 🍎🍎.\nFEWER means that one group has a smaller amount. So, if you have two apples 🍎🍎, that is FEWER than three apples 🍎🍎🍎.\nSAME means that both groups have equal amounts. For instance, if you have three apples 🍎🍎🍎 and your friend also has three apples 🍎🍎🍎, then you both have the SAME number of apples!\nTo compare groups, the best way is to count how many are in each group. The group with the bigger number has MORE! Counting helps us see which group has more, fewer, or the same number of items. Let's practice counting together!"
         },
         {
           "id": "basic-math-prek-u1-2-chunk-3",
           "title": "Number Order 1–10",
-          "content": "The counting order never changes:\n1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10\n\nEach number is ONE MORE than the number before it.\n6 is one more than 5.\n7 is one more than 6.\n8 is one more than 7."
+          "content": "The order of counting is always the same! We start with the number 1 and continue all the way to 10. Let's say it together: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10! Each number we say is one more than the number before it. For example, when we say 6, we can think of it as being one more than 5. And when we say 7, we can remember that it is one more than 6. This pattern helps us see how numbers are connected and how they grow! Counting is like a fun adventure where each step takes us to the next number. So, let's keep practicing our counting together and explore the wonderful world of numbers!"
         }
       ],
       "flashcards": [
@@ -453,13 +453,13 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-quiz-chunk-intro",
           "title": "Counting & Numbers 1–10 Supplemental Check Overview",
-          "content": "Reinforce core Mathematics concepts in Counting & Numbers 1–10.",
+          "content": "Let's have some fun reinforcing what we've learned about counting and numbers from 1 to 10! This will help you remember the important concepts and make counting even easier.\nContext recap: Let's have some fun reinforcing what we've learned about counting and numbers from 1 to 10! This will help you remember the important concepts and make counting even easier.\nWhy this matters: Counting & Numbers 1–10 Supplemental Check Overview helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-quiz-chunk-recap",
           "title": "Quick Recap",
-          "content": "Summarize one key idea and plan one next step.",
+          "content": "Let's quickly recap one key idea from our lesson today! Think about what you learned about counting. Now, what is one next step you can take to practice counting even more? Maybe you can count your toys or snacks!\nContext recap: Let's quickly recap one key idea from our lesson today! Think about what you learned about counting. Now, what is one next step you can take to practice counting even more? Maybe you can count your toys or snacks!",
           "kind": "recap"
         }
       ],
@@ -512,25 +512,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-04-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before we solve a problem, it’s helpful to model it with a picture or a simple equation. This way, we can see what we need to do before we start solving. It makes everything clearer!\nContext recap: Before we solve a problem, it’s helpful to model it with a picture or a simple equation. This way, we can see what we need to do before we start solving. It makes everything clearer!\nWhy this matters: Multi Step Strategy Intro helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-04-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "Let’s practice together! First, we will solve one problem together, and then you can try solving one on your own using the same pattern. This will help you feel confident in your counting skills!\nContext recap: Let’s practice together! First, we will solve one problem together, and then you can try solving one on your own using the same pattern. This will help you feel confident in your counting skills!\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-04-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "When we are using a multi-step strategy to solve problems, we need to be careful and look out for mistakes that can happen. One common mistake is forgetting to count all the steps. Let's find this mistake together and think about how we can fix it. By using evidence, like counting our fingers or drawing pictures, we can learn from our errors and become better at math! This practice will help us understand numbers even more!\nContext recap: When we are using a multi-step strategy to solve problems, we need to be careful and look out for mistakes that can happen. One common mistake is forgetting to count all the steps. Let's find this mistake together and think about how we can fix it. By using evidence, like counting our fingers or drawing pictures, we can learn from our errors and become better at math!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-04-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's take a moment to quickly review the multi-step strategy we learned. Remember, this strategy helps us solve problems by breaking them down into smaller steps. After our review, think about one specific area where you can improve your skills. Setting a clear goal will help you focus on what to practice next!\nContext recap: Let's take a moment to quickly review the multi-step strategy we learned. Remember, this strategy helps us solve problems by breaking them down into smaller steps. After our review, think about one specific area where you can improve your skills. Setting a clear goal will help you focus on what to practice next!",
           "kind": "recap"
         }
       ],
@@ -646,25 +646,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-05-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, we will talk about how to identify the operation we need to use for our math problems. An operation is like a special action we take, such as adding or subtracting. Can you explain why you think a certain operation fits the problem we are working on? This will help us understand our math better!\nContext recap: In this section, we will talk about how to identify the operation we need to use for our math problems. An operation is like a special action we take, such as adding or subtracting. Can you explain why you think a certain operation fits the problem we are working on? This will help us understand our math better!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-05-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "Now, let's practice using a simple checklist to help us with our math problems. First, we will plan what we need to do. Next, we will solve the problem step by step. Finally, we will verify our answer to make sure it is correct. This checklist will guide us through our math journey!\nContext recap: Now, let's practice using a simple checklist to help us with our math problems. First, we will plan what we need to do. Next, we will solve the problem step by step. Finally, we will verify our answer to make sure it is correct.",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-05-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "As we apply our error-check routines, let's pay attention to one common mistake that can happen. If we notice this error, we will learn how to correct it by looking for evidence in our work. This way, we can become better at spotting and fixing our mistakes!\nContext recap: As we apply our error-check routines, let's pay attention to one common mistake that can happen. If we notice this error, we will learn how to correct it by looking for evidence in our work. This way, we can become better at spotting and fixing our mistakes!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-05-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's quickly review the error-check routines we practiced. Remember, these routines help us find and fix mistakes in our work. After our review, think about one specific area where you can improve your skills. Setting a clear goal will help you focus on what to practice next!\nContext recap: Let's quickly review the error-check routines we practiced. Remember, these routines help us find and fix mistakes in our work. After our review, think about one specific area where you can improve your skills. Setting a clear goal will help you focus on what to practice next!",
           "kind": "recap"
         }
       ],
@@ -886,25 +886,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-06-chunk-intro",
           "title": "Number Sense Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before we finalize our answers, it's important to check a few things. We need to look at the units we are using, the signs in our equations, and whether our answers make sense. This step is called checking for reasonableness, and it helps us ensure that we are on the right track!\nContext recap: Before we finalize our answers, it's important to check a few things. We need to look at the units we are using, the signs in our equations, and whether our answers make sense. This step is called checking for reasonableness, and it helps us ensure that we are on the right track!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-06-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice, we will compare two different strategies for solving a problem. After looking at both, we will choose the one that seems more reliable and effective. This will help us learn how to make smart choices in our math work!\nContext recap: In this practice, we will compare two different strategies for solving a problem. After looking at both, we will choose the one that seems more reliable and effective. This will help us learn how to make smart choices in our math work!",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-06-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying number sense, then correct it with evidence.",
+          "content": "As we work on our number sense, let's be on the lookout for a common mistake that can occur. If we spot this error, we will learn how to correct it by providing evidence from our work. This practice will help us become more confident in our math skills!\nContext recap: As we work on our number sense, let's be on the lookout for a common mistake that can occur. If we spot this error, we will learn how to correct it by providing evidence from our work. This practice will help us become more confident in our math skills!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-06-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review number sense, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about number sense. Remember, number sense helps us understand and work with numbers better. After our review, think about one specific area where you can improve your skills. Setting a clear goal will help you focus on what to practice next!\nContext recap: Let's take a moment to review what we learned about number sense. Remember, number sense helps us understand and work with numbers better. After our review, think about one specific area where you can improve your skills. Setting a clear goal will help you focus on what to practice next!",
           "kind": "recap"
         }
       ],
@@ -967,25 +967,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-07-chunk-intro",
           "title": "Equation Setup Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before we start solving a problem, it's helpful to model it using a visual or an equation. This means we can draw a picture or write down the math we need to do. Modeling helps us understand the problem better and makes it easier to find the solution!\nContext recap: Before we start solving a problem, it's helpful to model it using a visual or an equation. This means we can draw a picture or write down the math we need to do. Modeling helps us understand the problem better and makes it easier to find the solution!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-07-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice, we will first solve one problem together as a group. Then, you will have the chance to solve a similar problem on your own. By following the same pattern, you will gain confidence in your ability to tackle these math challenges!\nContext recap: In this guided practice, we will first solve one problem together as a group. Then, you will have the chance to solve a similar problem on your own. By following the same pattern, you will gain confidence in your ability to tackle these math challenges!",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-07-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying equation setup, then correct it with evidence.",
+          "content": "As we set up our equations, let's keep an eye out for a common mistake that might happen. If we notice this error, we will learn how to correct it by looking for evidence in our work. This will help us become more skilled at setting up our equations correctly!\nContext recap: As we set up our equations, let's keep an eye out for a common mistake that might happen. If we notice this error, we will learn how to correct it by looking for evidence in our work. This will help us become more skilled at setting up our equations correctly!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-07-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review equation setup, then set one clear improvement target.",
+          "content": "Let's take a moment to quickly review how we set up equations. Remember, setting up an equation is like drawing a picture of what we want to find out. After we recap, think about one specific way you can improve your understanding of this process.\nContext recap: Let's take a moment to quickly review how we set up equations. Remember, setting up an equation is like drawing a picture of what we want to find out. After we recap, think about one specific way you can improve your understanding of this process.",
           "kind": "recap"
         }
       ],
@@ -1101,25 +1101,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-08-chunk-intro",
           "title": "Fraction Reasoning Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, we will talk about fractions! First, let's name the operation we will use. Can you think about why this operation is the best choice for working with fractions? Understanding this will help us solve problems better!\nContext recap: In this section, we will talk about fractions! First, let's name the operation we will use. Can you think about why this operation is the best choice for working with fractions? Understanding this will help us solve problems better!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-08-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "Now, let's practice together! Use this short checklist: First, make a plan for how you will solve the problem. Next, solve it step by step. Finally, verify your answer to make sure it makes sense. This will help you become a great problem solver!\nContext recap: Now, let's practice together! Use this short checklist: First, make a plan for how you will solve the problem. Next, solve it step by step. Finally, verify your answer to make sure it makes sense.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-08-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying fraction reasoning, then correct it with evidence.",
+          "content": "As we work on fraction reasoning, be on the lookout for a common mistake that many people make. If you notice this error, think about how you can correct it and provide evidence to support your correction. This will help you learn and grow!\nContext recap: As we work on fraction reasoning, be on the lookout for a common mistake that many people make. If you notice this error, think about how you can correct it and provide evidence to support your correction. This will help you learn and grow!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-08-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review fraction reasoning, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about fraction reasoning. After our review, think of one clear goal for how you can improve your understanding of fractions. Setting a goal will help you focus on what to practice next!\nContext recap: Let's quickly review what we learned about fraction reasoning. After our review, think of one clear goal for how you can improve your understanding of fractions. Setting a goal will help you focus on what to practice next!",
           "kind": "recap"
         }
       ],
@@ -1341,25 +1341,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-09-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before you finish your work, it's important to check your units, signs, and whether your answers make sense. This step is like giving your work a final look to make sure everything is correct and clear!\nContext recap: Before you finish your work, it's important to check your units, signs, and whether your answers make sense. This step is like giving your work a final look to make sure everything is correct and clear!\nWhy this matters: Multi Step Strategy Intro helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-09-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "Let's compare two different strategies for solving a problem. Think about which one seems more reliable and why. Choosing the best strategy will help you solve problems more effectively!\nContext recap: Let's compare two different strategies for solving a problem. Think about which one seems more reliable and why. Choosing the best strategy will help you solve problems more effectively!\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-09-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "As you apply your multi-step strategy, keep an eye out for a common mistake that can happen. If you find this error, think about how you can fix it and use evidence to support your correction. This practice will help you improve!\nContext recap: As you apply your multi-step strategy, keep an eye out for a common mistake that can happen. If you find this error, think about how you can fix it and use evidence to support your correction. This practice will help you improve!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-09-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's do a quick recap of the multi-step strategy we learned. After our review, think about one specific way you can improve your skills in using this strategy. Setting a target will help you focus on your learning!\nContext recap: Let's do a quick recap of the multi-step strategy we learned. After our review, think about one specific way you can improve your skills in using this strategy. Setting a target will help you focus on your learning!",
           "kind": "recap"
         }
       ],
@@ -1422,25 +1422,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-10-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before we solve a problem, it's helpful to model it using a visual or an equation. This step helps us see the problem clearly and understand what we need to do to find the answer!\nContext recap: Before we solve a problem, it's helpful to model it using a visual or an equation. This step helps us see the problem clearly and understand what we need to do to find the answer!\nWhy this matters: Error Check Routines Intro helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-10-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "Let's solve one problem together, following the same pattern. After that, you will try solving another problem on your own using what we've practiced. This will help you gain confidence in your skills!\nContext recap: Let's solve one problem together, following the same pattern. After that, you will try solving another problem on your own using what we've practiced. This will help you gain confidence in your skills!\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-10-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "While you are using error-check routines, be aware of a common mistake that can occur. If you spot this error, think about how you can correct it and provide evidence to show your correction. This will help you learn and improve your problem-solving skills!\nContext recap: While you are using error-check routines, be aware of a common mistake that can occur. If you spot this error, think about how you can correct it and provide evidence to show your correction. This will help you learn and improve your problem-solving skills!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-10-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's take a moment to think about the ways we can check our work for mistakes. After reviewing how to spot errors, let's choose one specific goal to improve our counting skills. This will help us become even better at recognizing numbers and counting accurately!\nContext recap: Let's take a moment to think about the ways we can check our work for mistakes. After reviewing how to spot errors, let's choose one specific goal to improve our counting skills. This will help us become even better at recognizing numbers and counting accurately!",
           "kind": "recap"
         }
       ],
@@ -1556,25 +1556,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-11-chunk-intro",
           "title": "Number Sense Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this section, we will talk about what it means to understand numbers better. Can you name the math operation we are using? Think about why this operation is the right choice for the numbers we are working with. Understanding this will help us become great mathematicians!\nContext recap: In this section, we will talk about what it means to understand numbers better. Can you name the math operation we are using? Think about why this operation is the right choice for the numbers we are working with. Understanding this will help us become great mathematicians!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-11-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "Now, let's practice together! We will use a simple checklist to help us. First, we will plan what we need to do. Next, we will solve the problem step by step. Finally, we will check our work to make sure everything is correct. This will help us learn how to solve math problems more effectively!\nContext recap: Now, let's practice together! We will use a simple checklist to help us. First, we will plan what we need to do. Next, we will solve the problem step by step.\nWhy this matters: Guided Practice helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-11-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying number sense, then correct it with evidence.",
+          "content": "As we work on our number sense, it's important to be aware of common mistakes we might make. Let's look for one common error that can happen and think about how we can fix it. We will use examples to show how to correct this mistake, which will help us improve our understanding of numbers.\nContext recap: As we work on our number sense, it's important to be aware of common mistakes we might make. Let's look for one common error that can happen and think about how we can fix it. We will use examples to show how to correct this mistake, which will help us improve our understanding of numbers.",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-11-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review number sense, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about number sense today. After our review, we will set one clear goal for improvement. This will help us focus on becoming even better at understanding and using numbers in our everyday lives!\nContext recap: Let's quickly review what we learned about number sense today. After our review, we will set one clear goal for improvement. This will help us focus on becoming even better at understanding and using numbers in our everyday lives!",
           "kind": "recap"
         }
       ],
@@ -1796,25 +1796,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-12-chunk-intro",
           "title": "Equation Setup Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before we finish our equations, it's important to check a few things. We need to look at the units we are using, make sure our signs are correct, and think about whether our answers make sense. This will help us create strong and accurate equations!\nContext recap: Before we finish our equations, it's important to check a few things. We need to look at the units we are using, make sure our signs are correct, and think about whether our answers make sense. This will help us create strong and accurate equations!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-12-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice session, we will compare two different strategies for solving a problem. After looking at both methods, we will choose the one that seems more reliable. This will help us learn how to make good choices when solving math problems!\nContext recap: In this practice session, we will compare two different strategies for solving a problem. After looking at both methods, we will choose the one that seems more reliable. This will help us learn how to make good choices when solving math problems!",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-12-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying equation setup, then correct it with evidence.",
+          "content": "As we set up our equations, it's important to be on the lookout for common mistakes. Let's identify one common error that can occur and discuss how we can fix it using examples. This will help us become more confident in our equation setup skills!\nContext recap: As we set up our equations, it's important to be on the lookout for common mistakes. Let's identify one common error that can occur and discuss how we can fix it using examples. This will help us become more confident in our equation setup skills!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-12-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review equation setup, then set one clear improvement target.",
+          "content": "Let's take a moment to review what we learned about setting up equations. After our recap, we will set one clear goal for improvement. This will guide us as we continue to practice our math skills!\nContext recap: Let's take a moment to review what we learned about setting up equations. After our recap, we will set one clear goal for improvement. This will guide us as we continue to practice our math skills!\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -1877,25 +1877,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-13-chunk-intro",
           "title": "Fraction Reasoning Intro",
-          "content": "Model the problem with a visual or equation before solving.",
+          "content": "Before we solve a problem involving fractions, it's helpful to create a visual or write an equation to model the situation. This will give us a clearer understanding of what we need to do. Let's practice this together!\nContext recap: Before we solve a problem involving fractions, it's helpful to create a visual or write an equation to model the situation. This will give us a clearer understanding of what we need to do. Let's practice this together!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-13-chunk-practice",
           "title": "Guided Practice",
-          "content": "Solve one guided item, then one independent item with the same pattern.",
+          "content": "In this guided practice, we will first solve one problem together, and then you will try solving another problem on your own using the same pattern. This will help reinforce what we've learned about fractions and how to work with them!\nContext recap: In this guided practice, we will first solve one problem together, and then you will try solving another problem on your own using the same pattern. This will help reinforce what we've learned about fractions and how to work with them!",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-13-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying fraction reasoning, then correct it with evidence.",
+          "content": "While we work on understanding fractions, it's important to be aware of common mistakes that can happen. Let's identify one common error and discuss how we can correct it with examples. This will help us improve our fraction reasoning skills!\nContext recap: While we work on understanding fractions, it's important to be aware of common mistakes that can happen. Let's identify one common error and discuss how we can correct it with examples. This will help us improve our fraction reasoning skills!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-13-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review fraction reasoning, then set one clear improvement target.",
+          "content": "Let's take a moment to think about what we learned about fractions. Remember, fractions are parts of a whole. Now, let's choose one thing we can work on to get even better at understanding fractions!\nContext recap: Let's take a moment to think about what we learned about fractions. Remember, fractions are parts of a whole. Now, let's choose one thing we can work on to get even better at understanding fractions!\nWhy this matters: Quick Recap helps learners in Mathematics connect ideas from Counting & Numbers 1–10 to decisions they make during practice and assessment. Keep the explanation friendly and practical.",
           "kind": "recap"
         }
       ],
@@ -2011,25 +2011,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-14-chunk-intro",
           "title": "Multi Step Strategy Intro",
-          "content": "Name the operation and explain why it fits.",
+          "content": "In this activity, we will talk about the steps we need to take to solve a problem. First, we will name the operation we need to use, like adding or subtracting. Then, we will explain why this operation is the best choice for our problem. This will help us think clearly and solve it correctly!\nContext recap: In this activity, we will talk about the steps we need to take to solve a problem. First, we will name the operation we need to use, like adding or subtracting. Then, we will explain why this operation is the best choice for our problem. This will help us think clearly and solve it correctly!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-14-chunk-practice",
           "title": "Guided Practice",
-          "content": "Use a short checklist: plan, solve, verify.",
+          "content": "Now, let's use a simple checklist to help us solve our problems step by step! First, we will make a plan about what we need to do. Next, we will solve the problem using our plan. Finally, we will check our answer to make sure it is correct. This way, we can be confident in our work!\nContext recap: Now, let's use a simple checklist to help us solve our problems step by step! First, we will make a plan about what we need to do. Next, we will solve the problem using our plan. Finally, we will check our answer to make sure it is correct.",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-14-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying multi-step strategy, then correct it with evidence.",
+          "content": "As we practice our multi-step strategies, let's keep an eye out for a common mistake that can happen. If we notice this mistake, we will take a moment to correct it and show why our new answer is better. This will help us learn and improve our skills!\nContext recap: As we practice our multi-step strategies, let's keep an eye out for a common mistake that can happen. If we notice this mistake, we will take a moment to correct it and show why our new answer is better. This will help us learn and improve our skills!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-14-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review multi-step strategy, then set one clear improvement target.",
+          "content": "Let's quickly review what we learned about using multi-step strategies. Remember, these strategies help us break down problems into smaller parts. Now, let's think of one specific area where we can improve our skills even more!\nContext recap: Let's quickly review what we learned about using multi-step strategies. Remember, these strategies help us break down problems into smaller parts. Now, let's think of one specific area where we can improve our skills even more!",
           "kind": "recap"
         }
       ],
@@ -2251,25 +2251,25 @@ export const BasicMathPrekU1ExternalModule: LearningModule = {
         {
           "id": "basic-math-prek-u1-external-supp-seq-15-chunk-intro",
           "title": "Error Check Routines Intro",
-          "content": "Check units, signs, and reasonableness before finalizing.",
+          "content": "Before we finish our work, it's important to check our answers carefully. We will look at the units we used, make sure our signs are correct, and think about whether our answers make sense. This will help us be sure that we did our best work!\nContext recap: Before we finish our work, it's important to check our answers carefully. We will look at the units we used, make sure our signs are correct, and think about whether our answers make sense. This will help us be sure that we did our best work!",
           "kind": "concept"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-15-chunk-practice",
           "title": "Guided Practice",
-          "content": "Compare two strategies and choose the more reliable one.",
+          "content": "In this practice, we will compare two different ways to solve a problem. We will think about which method seems more reliable and easier to understand. This will help us choose the best strategy for solving similar problems in the future!\nContext recap: In this practice, we will compare two different ways to solve a problem. We will think about which method seems more reliable and easier to understand. This will help us choose the best strategy for solving similar problems in the future!",
           "kind": "practice"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-15-chunk-check",
           "title": "Common Pitfall Check",
-          "content": "Watch for one common error while applying error-check routines, then correct it with evidence.",
+          "content": "As we use our error-check routines, let's be on the lookout for a common mistake that can happen. If we find this mistake, we will correct it and explain why our new answer is better. This will help us learn from our errors and become better problem solvers!\nContext recap: As we use our error-check routines, let's be on the lookout for a common mistake that can happen. If we find this mistake, we will correct it and explain why our new answer is better. This will help us learn from our errors and become better problem solvers!",
           "kind": "analysis"
         },
         {
           "id": "basic-math-prek-u1-external-supp-seq-15-chunk-recap",
           "title": "Quick Recap",
-          "content": "Review error-check routines, then set one clear improvement target.",
+          "content": "Let's take a moment to review the error-check routines we practiced. These routines help us make sure our answers are correct. Now, let's think of one specific area where we can improve our checking skills to become even better at math!\nContext recap: Let's take a moment to review the error-check routines we practiced. These routines help us make sure our answers are correct. Now, let's think of one specific area where we can improve our checking skills to become even better at math!",
           "kind": "recap"
         }
       ],

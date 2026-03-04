@@ -47,19 +47,19 @@ export const BusinessEthics601Module: LearningModule = {
           "id": "business-ethics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Business Ethics, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will explore the advanced concepts of scope and boundaries in Business Ethics. We will focus on how to analyze business systems effectively and design operations that are ethical and efficient. Understanding these boundaries helps us identify what is included in our ethical considerations and what is not, ensuring that we make informed decisions in business practices.\nContext recap: In this lesson, we will explore the advanced concepts of scope and boundaries in Business Ethics. We will focus on how to analyze business systems effectively and design operations that are ethical and efficient. Understanding these boundaries helps us identify what is included in our ethical considerations and what is not, ensuring that we make informed decisions in business practices."
         },
         {
           "id": "business-ethics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This process is crucial before planning any interventions, as it helps us understand the potential impacts of our decisions and prepares us to address challenges effectively.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions, as well as identifying ranges of uncertainty and dependencies within systems. This process is crucial before planning any interventions, as it helps us understand the potential impacts of our decisions and prepares us to address challenges effectively."
         },
         {
           "id": "business-ethics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in business ethics should be linked to measurable indicators. This means we need to have clear evidence and confidence levels for our claims, along with regular review checkpoints to ensure that our ethical standards are being met. This approach helps maintain accountability and transparency in business practices.\nContext recap: In our recap, we emphasize that all claims made in business ethics should be linked to measurable indicators. This means we need to have clear evidence and confidence levels for our claims, along with regular review checkpoints to ensure that our ethical standards are being met. This approach helps maintain accountability and transparency in business practices."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const BusinessEthics601Module: LearningModule = {
           "id": "business-ethics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive lab, learners will have the opportunity to design specialized workflows that reflect ethical business practices. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is essential for understanding how to create resilient and ethical business processes.\nContext recap: In this interactive lab, learners will have the opportunity to design specialized workflows that reflect ethical business practices. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is essential for understanding how to create resilient and ethical business processes."
         },
         {
           "id": "business-ethics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss the importance of integrating control gates within workflows. These gates serve as checkpoints to ensure that processes are running smoothly and ethically. They include criteria for rolling back decisions if necessary and escalation thresholds to address issues promptly. This structure helps maintain integrity in business operations.\nContext recap: In our recap, we will discuss the importance of integrating control gates within workflows. These gates serve as checkpoints to ensure that processes are running smoothly and ethically. They include criteria for rolling back decisions if necessary and escalation thresholds to address issues promptly. This structure helps maintain integrity in business operations."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const BusinessEthics601Module: LearningModule = {
           "id": "business-ethics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "In this lesson, we will frame scenarios that highlight the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs involved. Understanding these dynamics is crucial for making informed choices that balance ethical considerations with business objectives.\nContext recap: In this lesson, we will frame scenarios that highlight the competing constraints found in business systems diagnostics. We will analyze the impacts of various business decisions and the trade-offs involved. Understanding these dynamics is crucial for making informed choices that balance ethical considerations with business objectives."
         },
         {
           "id": "business-ethics-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice section, learners will compare different options available to them by evaluating various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making ethical business decisions and the importance of considering multiple factors.\nContext recap: In this practice section, learners will compare different options available to them by evaluating various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making ethical business decisions and the importance of considering multiple factors."
         },
         {
           "id": "business-ethics-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will outline the components of a decision memo. Each recommendation made should include the underlying assumptions, the evidence supporting the decision, risk controls to mitigate potential issues, and fallback plans in case the initial decision does not yield the expected results. This structured approach ensures thoroughness in ethical decision-making.\nContext recap: In our recap, we will outline the components of a decision memo. Each recommendation made should include the underlying assumptions, the evidence supporting the decision, risk controls to mitigate potential issues, and fallback plans in case the initial decision does not yield the expected results. This structured approach ensures thoroughness in ethical decision-making."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const BusinessEthics601Module: LearningModule = {
           "id": "business-ethics-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive clinic, learners will operate scenario controls while balancing performance metrics and governance constraints. This experience will help them understand how to make decisions that not only aim for high performance but also adhere to ethical standards and regulations.\nContext recap: In this interactive clinic, learners will operate scenario controls while balancing performance metrics and governance constraints. This experience will help them understand how to make decisions that not only aim for high performance but also adhere to ethical standards and regulations."
         },
         {
           "id": "business-ethics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the importance of effective responses in business scenarios. These responses should be designed to update control gates without losing traceability or accountability. This means that every action taken should be documented and accountable, ensuring that ethical standards are maintained throughout the process.\nContext recap: In our recap, we will discuss the importance of effective responses in business scenarios. These responses should be designed to update control gates without losing traceability or accountability. This means that every action taken should be documented and accountable, ensuring that ethical standards are maintained throughout the process."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const BusinessEthics601Module: LearningModule = {
           "id": "business-ethics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that decisions may have on different groups. Understanding these impacts is essential for making ethical decisions that consider the well-being of all parties involved.\nContext recap: In this lesson, learners will map out the distribution of impacts among various stakeholders. This includes identifying the benefits, burdens, and any delayed effects that decisions may have on different groups. Understanding these impacts is essential for making ethical decisions that consider the well-being of all parties involved."
         },
         {
           "id": "business-ethics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. By integrating these elements, we can create a more transparent and responsible business environment.\nContext recap: In this section, we will explore the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. By integrating these elements, we can create a more transparent and responsible business environment."
         },
         {
           "id": "business-ethics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensuring that we follow the right policies and build resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions in business.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensuring that we follow the right policies and build resilience in our leadership practices. This checklist serves as a guide to help us make responsible decisions in business."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const BusinessEthics601Module: LearningModule = {
           "id": "business-ethics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainties, and clear pathways for remediation. This exercise helps develop critical thinking and communication skills essential for effective leadership.\nContext recap: In this interactive activity, learners will work together to create a comprehensive brief. This brief will include well-supported claims, relevant evidence, an understanding of uncertainties, and clear pathways for remediation. This exercise helps develop critical thinking and communication skills essential for effective leadership."
         },
         {
           "id": "business-ethics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this practice session, learners will have the opportunity to rehearse their responses to various critiques. These critiques may come from experts in technical fields, governance, or stakeholders. This rehearsal is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions.\nContext recap: During this practice session, learners will have the opportunity to rehearse their responses to various critiques. These critiques may come from experts in technical fields, governance, or stakeholders. This rehearsal is crucial for building confidence and ensuring that learners can effectively communicate their ideas and defend their positions."
         }
       ],
       "interactiveActivities": [

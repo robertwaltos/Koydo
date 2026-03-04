@@ -47,19 +47,19 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Nursing, with focus on nursing systems diagnostics and nursing operations and execution design."
+          "content": "In this lesson, we will delve into the advanced boundaries of nursing practice. We will learn how to effectively diagnose nursing systems, which involves identifying the needs and challenges within healthcare settings. Additionally, we will focus on designing efficient nursing operations. Mastering these concepts is crucial for fostering a safe and effective healthcare environment, enabling nurses to deliver the highest quality of care to their patients.\nContext recap: In this lesson, we will delve into the advanced boundaries of nursing practice. We will learn how to effectively diagnose nursing systems, which involves identifying the needs and challenges within healthcare settings. Additionally, we will focus on designing efficient nursing operations. Mastering these concepts is crucial for fostering a safe and effective healthcare environment, enabling nurses to deliver the highest quality of care to their patients.\nContext recap: In this lesson, we will delve into the advanced boundaries of nursing practice. We will learn how to effectively diagnose nursing systems, which involves identifying the needs and challenges within healthcare settings. Additionally, we will focus on designing efficient nursing operations. Mastering these concepts is crucial for fostering a safe and effective healthcare environment, enabling nurses to deliver the highest quality of care to their patients.\nWhy this matters: Scope and Boundary Design helps learners in Nursing connect ideas from Nursing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
         },
         {
           "id": "nursing-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can affect patient care. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions that can improve patient outcomes.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that can affect patient care. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is crucial for planning effective interventions that can improve patient outcomes."
         },
         {
           "id": "nursing-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that all claims made in nursing practice should be linked to measurable indicators. This means that we need to have clear evidence and confidence bounds to support our decisions. Additionally, regular review checkpoints are important to ensure that we are on the right track and making informed choices.\nContext recap: In our recap, we emphasize that all claims made in nursing practice should be linked to measurable indicators. This means that we need to have clear evidence and confidence bounds to support our decisions. Additionally, regular review checkpoints are important to ensure that we are on the right track and making informed choices."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice session, learners will have the opportunity to design specialized workflows that reflect their unique nursing methods. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to adapt their approaches in challenging situations.\nContext recap: In this interactive practice session, learners will have the opportunity to design specialized workflows that reflect their unique nursing methods. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to adapt their approaches in challenging situations."
         },
         {
           "id": "nursing-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap of this session, we discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components ensure that nursing practices are not only effective but also safe and accountable, allowing for adjustments when necessary.\nContext recap: In our recap of this session, we discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components ensure that nursing practices are not only effective but also safe and accountable, allowing for adjustments when necessary.\nContext recap: In our recap of this session, we discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components ensure that nursing practices are not only effective but also safe and accountable, allowing for adjustments when necessary. Context recap: In our recap of this session, we discuss how workflows should include important elements such as checkpoints, rollback criteria, and threshold-based escalation. These components ensure that nursing practices are not only effective but also safe and accountable, allowing for adjustments when necessary."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in nursing systems diagnostics and nursing impact and tradeoff analysis."
+          "content": "In this lesson, we will examine the architecture of case scenarios that highlight the competing constraints faced in nursing systems diagnostics. We will analyze how to assess the impact of nursing decisions and the trade-offs that must be considered. This understanding is vital for making informed choices in patient care.\nContext recap: In this lesson, we will examine the architecture of case scenarios that highlight the competing constraints faced in nursing systems diagnostics. We will analyze how to assess the impact of nursing decisions and the trade-offs that must be considered. This understanding is vital for making informed choices in patient care."
         },
         {
           "id": "nursing-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to prioritize patient care effectively.\nContext recap: During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to prioritize patient care effectively.\nContext recap: During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to prioritize patient care effectively. Context recap: During this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the implications of their choices and how to prioritize patient care effectively."
         },
         {
           "id": "nursing-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we highlight that each recommendation made in nursing practice should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that nurses are prepared for various outcomes and can provide the best possible care.\nContext recap: In our recap, we highlight that each recommendation made in nursing practice should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that nurses are prepared for various outcomes and can provide the best possible care.\nContext recap: In our recap, we highlight that each recommendation made in nursing practice should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that nurses are prepared for various outcomes and can provide the best possible care. Context recap: In our recap, we highlight that each recommendation made in nursing practice should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that nurses are prepared for various outcomes and can provide the best possible care."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will teach them how to manage real-time situations effectively, ensuring that patient care remains a top priority while adhering to established guidelines.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will teach them how to manage real-time situations effectively, ensuring that patient care remains a top priority while adhering to established guidelines.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will teach them how to manage real-time situations effectively, ensuring that patient care remains a top priority while adhering to established guidelines. Context recap: In this interactive practice, learners will operate scenario controls while balancing performance with governance constraints. This experience will teach them how to manage real-time situations effectively, ensuring that patient care remains a top priority while adhering to established guidelines."
         },
         {
           "id": "nursing-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as situations change, nurses must be able to adapt their responses while keeping clear records of their actions and decisions.\nContext recap: In our recap, we discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as situations change, nurses must be able to adapt their responses while keeping clear records of their actions and decisions.\nContext recap: In our recap, we discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as situations change, nurses must be able to adapt their responses while keeping clear records of their actions and decisions. Context recap: In our recap, we discuss the importance of effective responses that update control gates without losing traceability or accountability. This means that as situations change, nurses must be able to adapt their responses while keeping clear records of their actions and decisions."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how decisions impact various individuals and communities is crucial for responsible nursing practice and ensuring equitable care.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding how decisions impact various individuals and communities is crucial for responsible nursing practice and ensuring equitable care.\nWhy this matters: Stakeholder Impact Distribution helps learners in Nursing connect ideas from Nursing Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "nursing-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the architecture of accountability in nursing. This includes understanding how decisions are traced, the rights to review those decisions, and the obligations to remediate any issues that arise. This framework is essential for maintaining trust and integrity in nursing practice.\nContext recap: In this section, we will explore the architecture of accountability in nursing. This includes understanding how decisions are traced, the rights to review those decisions, and the obligations to remediate any issues that arise. This framework is essential for maintaining trust and integrity in nursing practice."
         },
         {
           "id": "nursing-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "As you wrap up your learning, it's important to have a checklist that connects key outcomes with ethical considerations, adherence to policies, and the ability to bounce back from challenges. This checklist will help ensure that you are prepared to lead responsibly in the nursing field.\nContext recap: As you wrap up your learning, it's important to have a checklist that connects key outcomes with ethical considerations, adherence to policies, and the ability to bounce back from challenges. This checklist will help ensure that you are prepared to lead responsibly in the nursing field."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const Nursing501Module: LearningModule = {
           "id": "nursing-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, you will create a comprehensive brief that includes your main claims, supporting evidence, the limits of your uncertainty, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for your capstone defense.\nContext recap: In this activity, you will create a comprehensive brief that includes your main claims, supporting evidence, the limits of your uncertainty, and possible pathways for remediation. This exercise will help you practice organizing your thoughts and presenting them clearly, which is essential for your capstone defense."
         },
         {
           "id": "nursing-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this rehearsal, you will practice responding to questions and critiques from an expert panel. This includes addressing technical aspects, governance issues, and concerns from stakeholders. This preparation is crucial for building your confidence and ensuring you can effectively communicate your ideas during the actual defense.\nContext recap: During this rehearsal, you will practice responding to questions and critiques from an expert panel. This includes addressing technical aspects, governance issues, and concerns from stakeholders. This preparation is crucial for building your confidence and ensuring you can effectively communicate your ideas during the actual defense."
         }
       ],
       "interactiveActivities": [

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useMascot } from "@/components/experience/MascotHost";
 import { JUICY_VARIANTS, JUICY_SPRINGS } from "@/lib/experience/interaction-primitives";
@@ -8,6 +8,14 @@ import PhysicalButton from "@/components/experience/PhysicalButton";
 import JuicyStreak from "@/components/experience/JuicyStreak";
 import { hapticSuccess, hapticCelebration, hapticSelection } from "@/lib/platform/haptics";
 import { Moon, Star, Palette, RefreshCw } from "lucide-react";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
+
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
 
 export default function ArtisticAlgorithms() {
     const { setMood, setMessage } = useMascot();
@@ -16,11 +24,23 @@ export default function ArtisticAlgorithms() {
     const [targetParams] = useState({ frequency: 5, amplitude: 80, step: 0.05 });
     const [streak, setStreak] = useState(0);
     const [isMatching, setIsMatching] = useState(false);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(0);
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
+
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        completionEmittedRef.current = false;
+    }, []);
 
     useEffect(() => {
         setMessage("Welcome to the Stellar Canvas. Let's paint with the mathematics of the moon! 🌙✨");
         setMood("happy");
-    }, []);
+        resetRunTracking();
+    }, [resetRunTracking, setMessage, setMood]);
 
     // Drawing Logic
     useEffect(() => {
@@ -63,6 +83,7 @@ export default function ArtisticAlgorithms() {
     }, [params]);
 
     const checkMatch = () => {
+        interactionCountRef.current += 1;
         const diff = Math.abs(params.frequency - targetParams.frequency) +
             Math.abs(params.amplitude - targetParams.amplitude);
 
@@ -81,14 +102,31 @@ export default function ArtisticAlgorithms() {
     };
 
     const handleSuccess = () => {
-        setStreak(prev => prev + 1);
+        const nextStreak = streak + 1;
+        setStreak(nextStreak);
         setMood("happy");
         setMessage("A masterpiece! The constellation is perfectly aligned. 🌌🎨");
         void hapticCelebration();
         setIsMatching(false);
+
+        if (nextStreak >= 3 && nextStreak % 3 === 0 && !completionEmittedRef.current) {
+            completionEmittedRef.current = true;
+            emitLegacyGameComplete({
+                sessionId: sessionIdRef.current,
+                gameId: "artistic",
+                elapsedMs: getElapsedMs(runStartedAtRef.current),
+                interactions: Math.max(1, interactionCountRef.current),
+                score: Math.round(nextStreak * 220 + params.frequency * 40 + params.amplitude),
+                maxScore: 2800,
+                source: "component",
+                occurredAt: new Date().toISOString(),
+            });
+            resetRunTracking();
+        }
     };
 
     const handleSliderChange = (key: keyof typeof params, val: string) => {
+        interactionCountRef.current += 1;
         setParams(prev => ({ ...prev, [key]: parseFloat(val) }));
         void hapticSelection();
     };

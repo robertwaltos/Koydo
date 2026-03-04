@@ -174,6 +174,8 @@ import { Economics301Module } from "@/lib/modules/catalog/economics-301";
 import { Economics401Module } from "@/lib/modules/catalog/economics-401";
 import { Economics501Module } from "@/lib/modules/catalog/economics-501";
 import { Economics601Module } from "@/lib/modules/catalog/economics-601";
+import { EeElectricalEngineeringU1ExternalModule } from "@/lib/modules/catalog/ee-electrical-engineering-u1-external";
+import { EeEngineeringAdvancedU1ExternalModule } from "@/lib/modules/catalog/ee-engineering-advanced-u1-external";
 import { ElectricalEngineering101Module } from "@/lib/modules/catalog/electrical-engineering-101";
 import { ElectricalEngineering201Module } from "@/lib/modules/catalog/electrical-engineering-201";
 import { ElectricalEngineering301Module } from "@/lib/modules/catalog/electrical-engineering-301";
@@ -186,6 +188,14 @@ import { ElectricianElectricity301Module } from "@/lib/modules/catalog/electrici
 import { ElectricianElectricity401Module } from "@/lib/modules/catalog/electrician-electricity-401";
 import { ElectricianElectricity501Module } from "@/lib/modules/catalog/electrician-electricity-501";
 import { ElectricianElectricity601Module } from "@/lib/modules/catalog/electrician-electricity-601";
+import { EnrichmentBiomedicalBiomedicalResearchQaU1ExternalModule } from "@/lib/modules/catalog/enrichment-biomedical-biomedical-research-qa-u1-external";
+import { EnrichmentGeneralCommonsenseReasoningU1ExternalModule } from "@/lib/modules/catalog/enrichment-general-commonsense-reasoning-u1-external";
+import { EnrichmentMathAlgebraWordProblemsU1ExternalModule } from "@/lib/modules/catalog/enrichment-math-algebra-word-problems-u1-external";
+import { EnrichmentMathCompetitionMathU1ExternalModule } from "@/lib/modules/catalog/enrichment-math-competition-math-u1-external";
+import { EnrichmentMathGradeSchoolMathSolutionsU1ExternalModule } from "@/lib/modules/catalog/enrichment-math-grade-school-math-solutions-u1-external";
+import { EnrichmentScienceScienceConceptsU1ExternalModule } from "@/lib/modules/catalog/enrichment-science-science-concepts-u1-external";
+import { EnrichmentScienceScienceReasoningChallengeU1ExternalModule } from "@/lib/modules/catalog/enrichment-science-science-reasoning-challenge-u1-external";
+import { EnrichmentScienceScienceReasoningEasyU1ExternalModule } from "@/lib/modules/catalog/enrichment-science-science-reasoning-easy-u1-external";
 import { Entrepreneurship101Module } from "@/lib/modules/catalog/entrepreneurship-101";
 import { Entrepreneurship201Module } from "@/lib/modules/catalog/entrepreneurship-201";
 import { Entrepreneurship301Module } from "@/lib/modules/catalog/entrepreneurship-301";
@@ -340,6 +350,7 @@ import { FinancialLiteracy301Module } from "@/lib/modules/catalog/financial-lite
 import { FinancialLiteracy401Module } from "@/lib/modules/catalog/financial-literacy-401";
 import { FinancialLiteracy501Module } from "@/lib/modules/catalog/financial-literacy-501";
 import { FinancialLiteracy601Module } from "@/lib/modules/catalog/financial-literacy-601";
+import { FoodScience101Module } from "@/lib/modules/catalog/food-science-101";
 import { GaokaoPrep101Module } from "@/lib/modules/catalog/gaokao-prep-101";
 import { Gardening101Module } from "@/lib/modules/catalog/gardening-101";
 import { Gardening201Module } from "@/lib/modules/catalog/gardening-201";
@@ -423,6 +434,10 @@ import { LanguageArts301Module } from "@/lib/modules/catalog/language-arts-301";
 import { LanguageArts401Module } from "@/lib/modules/catalog/language-arts-401";
 import { LanguageArts501Module } from "@/lib/modules/catalog/language-arts-501";
 import { LanguageArts601Module } from "@/lib/modules/catalog/language-arts-601";
+import { LawCaseLawHoldingsU1ExternalModule } from "@/lib/modules/catalog/law-case-law-holdings-u1-external";
+import { LawInternationalLawU1ExternalModule } from "@/lib/modules/catalog/law-international-law-u1-external";
+import { LawJurisprudenceU1ExternalModule } from "@/lib/modules/catalog/law-jurisprudence-u1-external";
+import { LawProfessionalLawU1ExternalModule } from "@/lib/modules/catalog/law-professional-law-u1-external";
 import { LawStudies101Module } from "@/lib/modules/catalog/law-studies-101";
 import { LawStudies201Module } from "@/lib/modules/catalog/law-studies-201";
 import { LawStudies301Module } from "@/lib/modules/catalog/law-studies-301";
@@ -453,12 +468,73 @@ import { MarketingManagement301Module } from "@/lib/modules/catalog/marketing-ma
 import { MarketingManagement401Module } from "@/lib/modules/catalog/marketing-management-401";
 import { MarketingManagement501Module } from "@/lib/modules/catalog/marketing-management-501";
 import { MarketingManagement601Module } from "@/lib/modules/catalog/marketing-management-601";
+import { MastersAbstractAlgebraU1ExternalModule } from "@/lib/modules/catalog/masters-abstract-algebra-u1-external";
+import { MastersAnatomyU1ExternalModule } from "@/lib/modules/catalog/masters-anatomy-u1-external";
+import { MastersAstronomyU1ExternalModule } from "@/lib/modules/catalog/masters-astronomy-u1-external";
+import { MastersBiologyAdvancedU1ExternalModule } from "@/lib/modules/catalog/masters-biology-advanced-u1-external";
+import { MastersBiologyMmluU1ExternalModule } from "@/lib/modules/catalog/masters-biology-mmlu-u1-external";
+import { MastersChemistryAdvancedU1ExternalModule } from "@/lib/modules/catalog/masters-chemistry-advanced-u1-external";
+import { MastersChemistryMmluU1ExternalModule } from "@/lib/modules/catalog/masters-chemistry-mmlu-u1-external";
+import { MastersClinicalKnowledgeU1ExternalModule } from "@/lib/modules/catalog/masters-clinical-knowledge-u1-external";
+import { MastersCollegeBiologyU1ExternalModule } from "@/lib/modules/catalog/masters-college-biology-u1-external";
+import { MastersCollegeChemistryU1ExternalModule } from "@/lib/modules/catalog/masters-college-chemistry-u1-external";
+import { MastersCollegeComputerScienceU1ExternalModule } from "@/lib/modules/catalog/masters-college-computer-science-u1-external";
+import { MastersCollegeMathematicsU1ExternalModule } from "@/lib/modules/catalog/masters-college-mathematics-u1-external";
+import { MastersCollegeMedicineU1ExternalModule } from "@/lib/modules/catalog/masters-college-medicine-u1-external";
+import { MastersCollegePhysicsU1ExternalModule } from "@/lib/modules/catalog/masters-college-physics-u1-external";
+import { MastersComputerSecurityU1ExternalModule } from "@/lib/modules/catalog/masters-computer-security-u1-external";
+import { MastersConceptualPhysicsU1ExternalModule } from "@/lib/modules/catalog/masters-conceptual-physics-u1-external";
+import { MastersCsAdvancedU1ExternalModule } from "@/lib/modules/catalog/masters-cs-advanced-u1-external";
+import { MastersCsIntroU1ExternalModule } from "@/lib/modules/catalog/masters-cs-intro-u1-external";
+import { MastersEconometricsU1ExternalModule } from "@/lib/modules/catalog/masters-econometrics-u1-external";
+import { MastersEuropeanHistoryU1ExternalModule } from "@/lib/modules/catalog/masters-european-history-u1-external";
+import { MastersFormalLogicU1ExternalModule } from "@/lib/modules/catalog/masters-formal-logic-u1-external";
+import { MastersGeneralKnowledgeU1ExternalModule } from "@/lib/modules/catalog/masters-general-knowledge-u1-external";
+import { MastersGeographyMmluU1ExternalModule } from "@/lib/modules/catalog/masters-geography-mmlu-u1-external";
+import { MastersGlobalFactsU1ExternalModule } from "@/lib/modules/catalog/masters-global-facts-u1-external";
+import { MastersGovernmentPoliticsU1ExternalModule } from "@/lib/modules/catalog/masters-government-politics-u1-external";
+import { MastersHumanAgingU1ExternalModule } from "@/lib/modules/catalog/masters-human-aging-u1-external";
+import { MastersHumanSexualityU1ExternalModule } from "@/lib/modules/catalog/masters-human-sexuality-u1-external";
+import { MastersLogicalFallaciesU1ExternalModule } from "@/lib/modules/catalog/masters-logical-fallacies-u1-external";
+import { MastersMachineLearningU1ExternalModule } from "@/lib/modules/catalog/masters-machine-learning-u1-external";
+import { MastersMathAdvancedU1ExternalModule } from "@/lib/modules/catalog/masters-math-advanced-u1-external";
+import { MastersMathematicsMmluU1ExternalModule } from "@/lib/modules/catalog/masters-mathematics-mmlu-u1-external";
+import { MastersMedicalGeneticsMmluU1ExternalModule } from "@/lib/modules/catalog/masters-medical-genetics-mmlu-u1-external";
+import { MastersMoralDisputesU1ExternalModule } from "@/lib/modules/catalog/masters-moral-disputes-u1-external";
+import { MastersMoralScenariosU1ExternalModule } from "@/lib/modules/catalog/masters-moral-scenarios-u1-external";
+import { MastersNutritionMmluU1ExternalModule } from "@/lib/modules/catalog/masters-nutrition-mmlu-u1-external";
+import { MastersPhilosophyMmluU1ExternalModule } from "@/lib/modules/catalog/masters-philosophy-mmlu-u1-external";
+import { MastersPhysicsAdvancedU1ExternalModule } from "@/lib/modules/catalog/masters-physics-advanced-u1-external";
+import { MastersPhysicsMmluU1ExternalModule } from "@/lib/modules/catalog/masters-physics-mmlu-u1-external";
+import { MastersPrehistoryU1ExternalModule } from "@/lib/modules/catalog/masters-prehistory-u1-external";
+import { MastersProfessionalMedicineU1ExternalModule } from "@/lib/modules/catalog/masters-professional-medicine-u1-external";
+import { MastersProfessionalPsychologyU1ExternalModule } from "@/lib/modules/catalog/masters-professional-psychology-u1-external";
+import { MastersPsychologyAdvancedU1ExternalModule } from "@/lib/modules/catalog/masters-psychology-advanced-u1-external";
+import { MastersPsychologyMmluU1ExternalModule } from "@/lib/modules/catalog/masters-psychology-mmlu-u1-external";
+import { MastersPublicRelationsU1ExternalModule } from "@/lib/modules/catalog/masters-public-relations-u1-external";
+import { MastersSecurityStudiesU1ExternalModule } from "@/lib/modules/catalog/masters-security-studies-u1-external";
+import { MastersSociologyU1ExternalModule } from "@/lib/modules/catalog/masters-sociology-u1-external";
+import { MastersStatisticsMmluU1ExternalModule } from "@/lib/modules/catalog/masters-statistics-mmlu-u1-external";
+import { MastersUsForeignPolicyU1ExternalModule } from "@/lib/modules/catalog/masters-us-foreign-policy-u1-external";
+import { MastersUsHistoryU1ExternalModule } from "@/lib/modules/catalog/masters-us-history-u1-external";
+import { MastersVirologyU1ExternalModule } from "@/lib/modules/catalog/masters-virology-u1-external";
+import { MastersWorldHistoryMmluU1ExternalModule } from "@/lib/modules/catalog/masters-world-history-mmlu-u1-external";
+import { MastersWorldReligionsU1ExternalModule } from "@/lib/modules/catalog/masters-world-religions-u1-external";
 import { math101Module } from "@/lib/modules/catalog/math-101";
 import { Math201Module } from "@/lib/modules/catalog/math-201";
 import { Math301Module } from "@/lib/modules/catalog/math-301";
 import { Math401Module } from "@/lib/modules/catalog/math-401";
 import { Math501Module } from "@/lib/modules/catalog/math-501";
 import { Math601Module } from "@/lib/modules/catalog/math-601";
+import { MbaBusinessAdvancedU1ExternalModule } from "@/lib/modules/catalog/mba-business-advanced-u1-external";
+import { MbaBusinessCaseStudiesU1ExternalModule } from "@/lib/modules/catalog/mba-business-case-studies-u1-external";
+import { MbaBusinessEthicsU1ExternalModule } from "@/lib/modules/catalog/mba-business-ethics-u1-external";
+import { MbaEconomicsAdvancedU1ExternalModule } from "@/lib/modules/catalog/mba-economics-advanced-u1-external";
+import { MbaMacroeconomicsU1ExternalModule } from "@/lib/modules/catalog/mba-macroeconomics-u1-external";
+import { MbaManagementU1ExternalModule } from "@/lib/modules/catalog/mba-management-u1-external";
+import { MbaMarketingU1ExternalModule } from "@/lib/modules/catalog/mba-marketing-u1-external";
+import { MbaMicroeconomicsU1ExternalModule } from "@/lib/modules/catalog/mba-microeconomics-u1-external";
+import { MbaProfessionalAccountingU1ExternalModule } from "@/lib/modules/catalog/mba-professional-accounting-u1-external";
 import { MediaLiteracy101Module } from "@/lib/modules/catalog/media-literacy-101";
 import { MediaLiteracy201Module } from "@/lib/modules/catalog/media-literacy-201";
 import { MediaLiteracy301Module } from "@/lib/modules/catalog/media-literacy-301";
@@ -471,6 +547,36 @@ import { Medicine301Module } from "@/lib/modules/catalog/medicine-301";
 import { Medicine401Module } from "@/lib/modules/catalog/medicine-401";
 import { Medicine501Module } from "@/lib/modules/catalog/medicine-501";
 import { Medicine601Module } from "@/lib/modules/catalog/medicine-601";
+import { MedicineAnatomyPhysiologyU1ExternalModule } from "@/lib/modules/catalog/medicine-anatomy-physiology-u1-external";
+import { MedicineAnesthesiaU1ExternalModule } from "@/lib/modules/catalog/medicine-anesthesia-u1-external";
+import { MedicineBiochemistryU1ExternalModule } from "@/lib/modules/catalog/medicine-biochemistry-u1-external";
+import { MedicineCardiologyU1ExternalModule } from "@/lib/modules/catalog/medicine-cardiology-u1-external";
+import { MedicineDentalU1ExternalModule } from "@/lib/modules/catalog/medicine-dental-u1-external";
+import { MedicineDermatologyU1ExternalModule } from "@/lib/modules/catalog/medicine-dermatology-u1-external";
+import { MedicineEntU1ExternalModule } from "@/lib/modules/catalog/medicine-ent-u1-external";
+import { MedicineForensicMedicineU1ExternalModule } from "@/lib/modules/catalog/medicine-forensic-medicine-u1-external";
+import { MedicineGeneralMedicalU1ExternalModule } from "@/lib/modules/catalog/medicine-general-medical-u1-external";
+import { MedicineGeriatricMedicineU1ExternalModule } from "@/lib/modules/catalog/medicine-geriatric-medicine-u1-external";
+import { MedicineInternalMedicineU1ExternalModule } from "@/lib/modules/catalog/medicine-internal-medicine-u1-external";
+import { MedicineMedicalGeneticsU1ExternalModule } from "@/lib/modules/catalog/medicine-medical-genetics-u1-external";
+import { MedicineMicrobiologyU1ExternalModule } from "@/lib/modules/catalog/medicine-microbiology-u1-external";
+import { MedicineNeurologyU1ExternalModule } from "@/lib/modules/catalog/medicine-neurology-u1-external";
+import { MedicineNursingU1ExternalModule } from "@/lib/modules/catalog/medicine-nursing-u1-external";
+import { MedicineNutritionU1ExternalModule } from "@/lib/modules/catalog/medicine-nutrition-u1-external";
+import { MedicineObGynU1ExternalModule } from "@/lib/modules/catalog/medicine-ob-gyn-u1-external";
+import { MedicineOncologyU1ExternalModule } from "@/lib/modules/catalog/medicine-oncology-u1-external";
+import { MedicineOphthalmologyU1ExternalModule } from "@/lib/modules/catalog/medicine-ophthalmology-u1-external";
+import { MedicineOrthopedicsU1ExternalModule } from "@/lib/modules/catalog/medicine-orthopedics-u1-external";
+import { MedicinePathologyU1ExternalModule } from "@/lib/modules/catalog/medicine-pathology-u1-external";
+import { MedicinePediatricsU1ExternalModule } from "@/lib/modules/catalog/medicine-pediatrics-u1-external";
+import { MedicinePharmacologyU1ExternalModule } from "@/lib/modules/catalog/medicine-pharmacology-u1-external";
+import { MedicinePreventiveMedicineU1ExternalModule } from "@/lib/modules/catalog/medicine-preventive-medicine-u1-external";
+import { MedicinePsychiatryU1ExternalModule } from "@/lib/modules/catalog/medicine-psychiatry-u1-external";
+import { MedicinePublicHealthU1ExternalModule } from "@/lib/modules/catalog/medicine-public-health-u1-external";
+import { MedicineRadiologyU1ExternalModule } from "@/lib/modules/catalog/medicine-radiology-u1-external";
+import { MedicineRareDiseasesU1ExternalModule } from "@/lib/modules/catalog/medicine-rare-diseases-u1-external";
+import { MedicineSurgeryU1ExternalModule } from "@/lib/modules/catalog/medicine-surgery-u1-external";
+import { MedicineUsmlePrepU1ExternalModule } from "@/lib/modules/catalog/medicine-usmle-prep-u1-external";
 import { MentalHealthLiteracy101Module } from "@/lib/modules/catalog/mental-health-literacy-101";
 import { MentalHealthLiteracy201Module } from "@/lib/modules/catalog/mental-health-literacy-201";
 import { MentalHealthLiteracy301Module } from "@/lib/modules/catalog/mental-health-literacy-301";
@@ -892,6 +998,8 @@ export const generatedModuleRegistry: LearningModule[] = [
   Economics401Module,
   Economics501Module,
   Economics601Module,
+  EeElectricalEngineeringU1ExternalModule,
+  EeEngineeringAdvancedU1ExternalModule,
   ElectricalEngineering101Module,
   ElectricalEngineering201Module,
   ElectricalEngineering301Module,
@@ -904,6 +1012,14 @@ export const generatedModuleRegistry: LearningModule[] = [
   ElectricianElectricity401Module,
   ElectricianElectricity501Module,
   ElectricianElectricity601Module,
+  EnrichmentBiomedicalBiomedicalResearchQaU1ExternalModule,
+  EnrichmentGeneralCommonsenseReasoningU1ExternalModule,
+  EnrichmentMathAlgebraWordProblemsU1ExternalModule,
+  EnrichmentMathCompetitionMathU1ExternalModule,
+  EnrichmentMathGradeSchoolMathSolutionsU1ExternalModule,
+  EnrichmentScienceScienceConceptsU1ExternalModule,
+  EnrichmentScienceScienceReasoningChallengeU1ExternalModule,
+  EnrichmentScienceScienceReasoningEasyU1ExternalModule,
   Entrepreneurship101Module,
   Entrepreneurship201Module,
   Entrepreneurship301Module,
@@ -1058,6 +1174,7 @@ export const generatedModuleRegistry: LearningModule[] = [
   FinancialLiteracy401Module,
   FinancialLiteracy501Module,
   FinancialLiteracy601Module,
+  FoodScience101Module,
   GaokaoPrep101Module,
   Gardening101Module,
   Gardening201Module,
@@ -1141,6 +1258,10 @@ export const generatedModuleRegistry: LearningModule[] = [
   LanguageArts401Module,
   LanguageArts501Module,
   LanguageArts601Module,
+  LawCaseLawHoldingsU1ExternalModule,
+  LawInternationalLawU1ExternalModule,
+  LawJurisprudenceU1ExternalModule,
+  LawProfessionalLawU1ExternalModule,
   LawStudies101Module,
   LawStudies201Module,
   LawStudies301Module,
@@ -1171,12 +1292,73 @@ export const generatedModuleRegistry: LearningModule[] = [
   MarketingManagement401Module,
   MarketingManagement501Module,
   MarketingManagement601Module,
+  MastersAbstractAlgebraU1ExternalModule,
+  MastersAnatomyU1ExternalModule,
+  MastersAstronomyU1ExternalModule,
+  MastersBiologyAdvancedU1ExternalModule,
+  MastersBiologyMmluU1ExternalModule,
+  MastersChemistryAdvancedU1ExternalModule,
+  MastersChemistryMmluU1ExternalModule,
+  MastersClinicalKnowledgeU1ExternalModule,
+  MastersCollegeBiologyU1ExternalModule,
+  MastersCollegeChemistryU1ExternalModule,
+  MastersCollegeComputerScienceU1ExternalModule,
+  MastersCollegeMathematicsU1ExternalModule,
+  MastersCollegeMedicineU1ExternalModule,
+  MastersCollegePhysicsU1ExternalModule,
+  MastersComputerSecurityU1ExternalModule,
+  MastersConceptualPhysicsU1ExternalModule,
+  MastersCsAdvancedU1ExternalModule,
+  MastersCsIntroU1ExternalModule,
+  MastersEconometricsU1ExternalModule,
+  MastersEuropeanHistoryU1ExternalModule,
+  MastersFormalLogicU1ExternalModule,
+  MastersGeneralKnowledgeU1ExternalModule,
+  MastersGeographyMmluU1ExternalModule,
+  MastersGlobalFactsU1ExternalModule,
+  MastersGovernmentPoliticsU1ExternalModule,
+  MastersHumanAgingU1ExternalModule,
+  MastersHumanSexualityU1ExternalModule,
+  MastersLogicalFallaciesU1ExternalModule,
+  MastersMachineLearningU1ExternalModule,
+  MastersMathAdvancedU1ExternalModule,
+  MastersMathematicsMmluU1ExternalModule,
+  MastersMedicalGeneticsMmluU1ExternalModule,
+  MastersMoralDisputesU1ExternalModule,
+  MastersMoralScenariosU1ExternalModule,
+  MastersNutritionMmluU1ExternalModule,
+  MastersPhilosophyMmluU1ExternalModule,
+  MastersPhysicsAdvancedU1ExternalModule,
+  MastersPhysicsMmluU1ExternalModule,
+  MastersPrehistoryU1ExternalModule,
+  MastersProfessionalMedicineU1ExternalModule,
+  MastersProfessionalPsychologyU1ExternalModule,
+  MastersPsychologyAdvancedU1ExternalModule,
+  MastersPsychologyMmluU1ExternalModule,
+  MastersPublicRelationsU1ExternalModule,
+  MastersSecurityStudiesU1ExternalModule,
+  MastersSociologyU1ExternalModule,
+  MastersStatisticsMmluU1ExternalModule,
+  MastersUsForeignPolicyU1ExternalModule,
+  MastersUsHistoryU1ExternalModule,
+  MastersVirologyU1ExternalModule,
+  MastersWorldHistoryMmluU1ExternalModule,
+  MastersWorldReligionsU1ExternalModule,
   math101Module,
   Math201Module,
   Math301Module,
   Math401Module,
   Math501Module,
   Math601Module,
+  MbaBusinessAdvancedU1ExternalModule,
+  MbaBusinessCaseStudiesU1ExternalModule,
+  MbaBusinessEthicsU1ExternalModule,
+  MbaEconomicsAdvancedU1ExternalModule,
+  MbaMacroeconomicsU1ExternalModule,
+  MbaManagementU1ExternalModule,
+  MbaMarketingU1ExternalModule,
+  MbaMicroeconomicsU1ExternalModule,
+  MbaProfessionalAccountingU1ExternalModule,
   MediaLiteracy101Module,
   MediaLiteracy201Module,
   MediaLiteracy301Module,
@@ -1189,6 +1371,36 @@ export const generatedModuleRegistry: LearningModule[] = [
   Medicine401Module,
   Medicine501Module,
   Medicine601Module,
+  MedicineAnatomyPhysiologyU1ExternalModule,
+  MedicineAnesthesiaU1ExternalModule,
+  MedicineBiochemistryU1ExternalModule,
+  MedicineCardiologyU1ExternalModule,
+  MedicineDentalU1ExternalModule,
+  MedicineDermatologyU1ExternalModule,
+  MedicineEntU1ExternalModule,
+  MedicineForensicMedicineU1ExternalModule,
+  MedicineGeneralMedicalU1ExternalModule,
+  MedicineGeriatricMedicineU1ExternalModule,
+  MedicineInternalMedicineU1ExternalModule,
+  MedicineMedicalGeneticsU1ExternalModule,
+  MedicineMicrobiologyU1ExternalModule,
+  MedicineNeurologyU1ExternalModule,
+  MedicineNursingU1ExternalModule,
+  MedicineNutritionU1ExternalModule,
+  MedicineObGynU1ExternalModule,
+  MedicineOncologyU1ExternalModule,
+  MedicineOphthalmologyU1ExternalModule,
+  MedicineOrthopedicsU1ExternalModule,
+  MedicinePathologyU1ExternalModule,
+  MedicinePediatricsU1ExternalModule,
+  MedicinePharmacologyU1ExternalModule,
+  MedicinePreventiveMedicineU1ExternalModule,
+  MedicinePsychiatryU1ExternalModule,
+  MedicinePublicHealthU1ExternalModule,
+  MedicineRadiologyU1ExternalModule,
+  MedicineRareDiseasesU1ExternalModule,
+  MedicineSurgeryU1ExternalModule,
+  MedicineUsmlePrepU1ExternalModule,
   MentalHealthLiteracy101Module,
   MentalHealthLiteracy201Module,
   MentalHealthLiteracy301Module,

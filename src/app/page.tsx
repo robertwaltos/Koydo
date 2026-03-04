@@ -11,7 +11,7 @@ import {
 } from "@/lib/i18n/translations";
 import { ASSETS } from "@/lib/config/assets";
 import VoicePicker from "@/app/explore/_components/voice-picker";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import LandingCompanion from "@/app/components/landing-companion";
 
 export const metadata: Metadata = {
   title: "Koydo — Learn Anything, Any Age, Any Language",
@@ -83,7 +83,7 @@ export default async function Home() {
         <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col px-4 py-16 sm:py-24">
           <div className="flex flex-1 flex-col justify-center">
             <div className="max-w-[580px]">
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-600">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
                 {t("home_hero_eyebrow")}
               </p>
               <h1
@@ -118,14 +118,300 @@ export default async function Home() {
                 <VoicePicker />
               </div>
             </div>
+
+            {/* Right column: companion avatar */}
+            <div className="hidden lg:flex lg:items-center lg:justify-center">
+              <LandingCompanion />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════
-           LOWER PAGE — single continuous background
-      ════════════════════════════════════════════════════════ */}
-      <div className="relative overflow-hidden">
+      {/* ── Education stage navigation strip ── */}
+      <div className="relative border-y border-zinc-200/60 bg-white/70 backdrop-blur-sm">
+        <div
+          className="mx-auto flex max-w-7xl items-center gap-3 overflow-x-auto px-4 py-4"
+          style={{ scrollbarWidth: "none" }}
+        >
+          {stages.map((stage) => (
+            <Link
+              key={stage.id}
+              href={`/explore?stage=${stage.id}`}
+              className="flex flex-shrink-0 items-center gap-2 rounded-full border border-zinc-200/80 bg-white/80 px-5 py-2.5 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-50 hover:text-emerald-700"
+            >
+              <span className="text-base" aria-hidden="true">{stage.badge}</span>
+              {locale === "es" ? stage.labelEs : stage.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* ── Stats bar ── */}
+      <section className="landing-section relative mx-auto max-w-7xl px-4 py-10 sm:py-14">
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+          {[
+            { value: "200+",   label: "Learning Modules",   icon: "📚" },
+            { value: "3–100",  label: "All Ages Welcome",   icon: "🎓" },
+            { value: "2",      label: "Languages",          icon: "🌍" },
+            { value: "100%",   label: "Free to Start",      icon: "✨" },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="flex flex-col items-center gap-1 rounded-2xl border border-zinc-200/60 bg-white/60 px-4 py-6 text-center shadow-sm backdrop-blur-sm"
+            >
+              <span className="text-3xl" aria-hidden="true">{stat.icon}</span>
+              <span
+                className="mt-1 text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
+                style={{ fontFamily: "var(--font-display-sans)" }}
+              >
+                {stat.value}
+              </span>
+              <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── How it works ── */}
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
+        <h2
+          className="text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+          style={{ fontFamily: "var(--font-display-sans)" }}
+        >
+          Learning made simple
+        </h2>
+        <p className="mx-auto mt-2 max-w-md text-center text-sm text-zinc-500">
+          Three steps from zero to unstoppable
+        </p>
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {[
+            {
+              step: "01",
+              icon: "🧭",
+              title: "Pick Your Path",
+              desc: "Choose your age stage and subject — from Pre-K phonics to college calculus. No placement test needed.",
+              accent: "emerald",
+            },
+            {
+              step: "02",
+              icon: "🎧",
+              title: "Learn Interactively",
+              desc: "Watch, listen, and do. Every lesson combines video narration, interactive exercises, and instant feedback.",
+              accent: "sky",
+            },
+            {
+              step: "03",
+              icon: "📈",
+              title: "Track Your Progress",
+              desc: "See exactly what you know and what's next. Parents can monitor progress and set goals.",
+              accent: "violet",
+            },
+          ].map((card, i) => (
+            <div
+              key={i}
+              className="group relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-300 hover:bg-white/90 hover:shadow-md"
+            >
+              <div className="flex items-start gap-4">
+                <span
+                  className="shrink-0 text-[11px] font-black tabular-nums tracking-widest text-zinc-600"
+                  aria-hidden="true"
+                >
+                  {card.step}
+                </span>
+                <div>
+                  <span className="text-3xl" aria-hidden="true">{card.icon}</span>
+                  <h3 className="mt-2 text-base font-bold text-zinc-900">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-500">{card.desc}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 flex justify-center">
+          <Link
+            href="/explore"
+            className="inline-flex min-h-12 items-center rounded-full border border-zinc-200/80 bg-white/80 px-7 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-50 hover:text-emerald-700"
+          >
+            Browse all subjects →
+          </Link>
+        </div>
+      </section>
+
+      {/* ── Popular Subjects — interactive glass cubes ── */}
+      <section className="landing-section relative mx-auto max-w-7xl px-4 py-16 sm:py-20">
+        <h2
+          className="text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+          style={{ fontFamily: "var(--font-display-sans)" }}
+        >
+          Popular Subjects
+        </h2>
+        <p className="mx-auto mt-2 max-w-md text-center text-sm text-zinc-500">
+          Tap a subject to start exploring — interactive modules across every
+          learning area
+        </p>
+        <div className="mt-10">
+          <SubjectShowcase />
+        </div>
+      </section>
+
+      {/* ── Feature highlights ── */}
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {[
+            {
+              icon: "🎙️",
+              title: t("home_features_hear_title"),
+              desc: t("home_features_hear_desc"),
+            },
+            {
+              icon: "🎨",
+              title: t("home_features_do_title"),
+              desc: t("home_features_do_desc"),
+            },
+            {
+              icon: "🎓",
+              title: t("home_features_span_title"),
+              desc: t("home_features_span_desc"),
+            },
+          ].map((feature, i) => (
+            <div
+              key={i}
+              className="group relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-300 hover:bg-white/90 hover:shadow-md"
+            >
+              <span className="text-4xl" aria-hidden="true">
+                {feature.icon}
+              </span>
+              <h3 className="mt-3 text-base font-bold text-zinc-900">
+                {feature.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
+                {feature.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── For Parents — trust section ── */}
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
+        <div className="overflow-hidden rounded-3xl border border-zinc-200/60 bg-white/70 shadow-sm backdrop-blur-sm">
+          {/* Header strip */}
+          <div className="border-b border-zinc-100 px-6 py-8 text-center sm:px-10 sm:py-10">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
+              For Parents & Educators
+            </p>
+            <h2
+              className="mt-3 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+              style={{ fontFamily: "var(--font-display-sans)" }}
+            >
+              Built for families. Trusted by{" "}
+              <span
+                className="bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
+                }}
+              >
+                educators.
+              </span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-[52ch] text-sm leading-relaxed text-zinc-500">
+              Koydo is designed from the ground up to be safe, private, and genuinely
+              educational — with full parent visibility and control.
+            </p>
+          </div>
+
+          {/* Trust grid */}
+          <div className="grid grid-cols-2 gap-px bg-zinc-100/50 sm:grid-cols-4">
+            {[
+              {
+                icon: "🛡️",
+                title: "COPPA Compliant",
+                desc: "No data sold. Children's privacy protected by design.",
+              },
+              {
+                icon: "🚫",
+                title: "Zero Ads",
+                desc: "No advertising, no tracking pixels, no third-party marketing.",
+              },
+              {
+                icon: "👁️",
+                title: "Parent Dashboard",
+                desc: "See exactly what your child is learning and how they're progressing.",
+              },
+              {
+                icon: "🎓",
+                title: "Educator Reviewed",
+                desc: "Every module is aligned to grade-level learning standards.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="group flex flex-col gap-2 bg-white/80 px-5 py-6 transition-colors duration-300 hover:bg-emerald-50/60"
+              >
+                <span className="text-2xl" aria-hidden="true">{item.icon}</span>
+                <h3 className="text-sm font-bold text-zinc-900">{item.title}</h3>
+                <p className="text-xs leading-relaxed text-zinc-500">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Feature list */}
+          <div className="grid grid-cols-1 gap-4 border-t border-zinc-100 p-6 sm:grid-cols-3 sm:p-8">
+            {[
+              {
+                icon: "📊",
+                text: "Track lessons completed, streaks, and quiz scores per learner",
+              },
+              {
+                icon: "🔒",
+                text: "Set content restrictions by age stage and subject area",
+              },
+              {
+                icon: "👨‍👩‍👧‍👦",
+                text: "Manage multiple child profiles under one parent account",
+              },
+              {
+                icon: "📱",
+                text: "Works on any device — phone, tablet, or desktop",
+              },
+              {
+                icon: "🌍",
+                text: "English and Spanish interfaces for bilingual families",
+              },
+              {
+                icon: "💰",
+                text: "Core curriculum is completely free — forever",
+              },
+            ].map((item) => (
+              <div key={item.text} className="flex items-start gap-3">
+                <span className="mt-0.5 shrink-0 text-lg" aria-hidden="true">{item.icon}</span>
+                <p className="text-sm leading-relaxed text-zinc-500">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA strip */}
+          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-zinc-100 px-6 py-5 sm:px-8">
+            <p className="text-sm text-zinc-500">
+              Questions? Email{" "}
+              <a href="mailto:support@koydo.app" className="text-emerald-700 hover:underline">
+                support@koydo.app
+              </a>
+            </p>
+            <Link
+              href="/parent/dashboard"
+              className="inline-flex min-h-10 items-center rounded-full border border-emerald-500/30 bg-emerald-50 px-6 py-2 text-sm font-semibold text-emerald-700 transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-100 hover:text-emerald-800"
+            >
+              Open Parent Dashboard →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Bottom banner ── */}
+      <section className="relative min-h-105 overflow-hidden">
         <Image
           src={ASSETS.bgBottom}
           alt=""
@@ -135,7 +421,38 @@ export default async function Home() {
           aria-hidden="true"
           quality={85}
         />
-        <div className="absolute inset-0 bg-white/40 pointer-events-none" aria-hidden="true" />
+        <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-4 py-24 text-center">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
+            Your journey starts here
+          </p>
+          <h2
+            className="mt-4 text-3xl font-black leading-tight tracking-tight text-zinc-900 sm:text-4xl md:text-5xl"
+            style={{ fontFamily: "var(--font-display-sans)" }}
+          >
+            Every great learner{" "}
+            <span
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
+              }}
+            >
+              starts with one lesson.
+            </span>
+          </h2>
+          <p className="mt-5 max-w-[44ch] text-base leading-relaxed text-zinc-600">
+            Free interactive learning for ages 3 to adult — 200+ modules, every subject, every language.
+          </p>
+          <Link
+            href="/explore"
+            className="mt-8 inline-flex min-h-14 items-center rounded-full px-10 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/25 transition-all duration-200 hover:brightness-110 hover:shadow-xl hover:shadow-emerald-500/35 active:scale-95"
+            style={{
+              background: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
+            }}
+          >
+            Start Exploring Free →
+          </Link>
+        </div>
+      </section>
 
         <div className="relative z-10">
 

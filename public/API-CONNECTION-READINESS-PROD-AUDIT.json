@@ -1,0 +1,227 @@
+{
+  "generatedAt": "2026-03-04T00:34:35.388Z",
+  "sourceFile": "D:\\PythonProjects\\Koydo\\.env.production.audit.example",
+  "modes": {
+    "billingMode": "stripe_external",
+    "translationProvider": "auto",
+    "ttsProvider": "openai"
+  },
+  "totals": {
+    "ready": 2,
+    "needs_keys": 4,
+    "optional_pending": 2,
+    "not_required": 1,
+    "total": 9
+  },
+  "checks": [
+    {
+      "id": "supabase_core",
+      "label": "Supabase Core",
+      "requiredForLaunch": true,
+      "required": [
+        [
+          "NEXT_PUBLIC_SUPABASE_URL",
+          "EXPO_PUBLIC_SUPABASE_URL"
+        ],
+        [
+          "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+          "EXPO_PUBLIC_SUPABASE_KEY"
+        ],
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ],
+      "detailContext": "Auth, database, and server-side admin operations.",
+      "status": "needs_keys",
+      "detail": "Auth, database, and server-side admin operations. Placeholder values detected: NEXT_PUBLIC_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY. Ready for user-supplied keys: NEXT_PUBLIC_SUPABASE_ANON_KEY | EXPO_PUBLIC_SUPABASE_KEY, SUPABASE_SERVICE_ROLE_KEY.",
+      "presentKeys": [
+        "NEXT_PUBLIC_SUPABASE_URL"
+      ],
+      "missingKeys": [
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY | EXPO_PUBLIC_SUPABASE_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ],
+      "placeholderKeys": [
+        "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ]
+    },
+    {
+      "id": "stripe_billing",
+      "label": "Stripe Billing",
+      "requiredForLaunch": true,
+      "notRequired": false,
+      "required": [
+        "STRIPE_SECRET_KEY",
+        "STRIPE_WEBHOOK_SECRET"
+      ],
+      "optional": [
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"
+      ],
+      "detailContext": "Billing provider mode: stripe_external.",
+      "status": "needs_keys",
+      "detail": "Billing provider mode: stripe_external. Placeholder values detected: STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY. Ready for user-supplied keys: STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET.",
+      "presentKeys": [],
+      "missingKeys": [
+        "STRIPE_SECRET_KEY",
+        "STRIPE_WEBHOOK_SECRET",
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"
+      ],
+      "placeholderKeys": [
+        "STRIPE_SECRET_KEY",
+        "STRIPE_WEBHOOK_SECRET",
+        "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"
+      ]
+    },
+    {
+      "id": "revenuecat_native",
+      "label": "RevenueCat Native Billing",
+      "requiredForLaunch": false,
+      "notRequired": true,
+      "required": [
+        [
+          "NEXT_PUBLIC_REVENUECAT_API_KEY",
+          "NEXT_PUBLIC_REVENUECAT_APPLE_KEY",
+          "NEXT_PUBLIC_REVENUECAT_GOOGLE_KEY"
+        ]
+      ],
+      "optional": [
+        "REVENUECAT_WEBHOOK_SECRET",
+        "REVENUECAT_API_SECRET_KEY"
+      ],
+      "detailContext": "Billing provider mode: stripe_external.",
+      "status": "not_required",
+      "detail": "Not required in current mode. Billing provider mode: stripe_external.",
+      "presentKeys": [],
+      "missingKeys": [],
+      "placeholderKeys": []
+    },
+    {
+      "id": "upstash_rate_limit",
+      "label": "Upstash Redis Rate Limiting",
+      "requiredForLaunch": true,
+      "required": [
+        "UPSTASH_REDIS_REST_URL",
+        "UPSTASH_REDIS_REST_TOKEN"
+      ],
+      "detailContext": "Distributed rate limiting and shared abuse throttling.",
+      "status": "needs_keys",
+      "detail": "Distributed rate limiting and shared abuse throttling. Placeholder values detected: UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN. Ready for user-supplied keys: UPSTASH_REDIS_REST_URL, UPSTASH_REDIS_REST_TOKEN.",
+      "presentKeys": [],
+      "missingKeys": [
+        "UPSTASH_REDIS_REST_URL",
+        "UPSTASH_REDIS_REST_TOKEN"
+      ],
+      "placeholderKeys": [
+        "UPSTASH_REDIS_REST_URL",
+        "UPSTASH_REDIS_REST_TOKEN"
+      ]
+    },
+    {
+      "id": "ai_model_provider",
+      "label": "AI Model Provider Access",
+      "requiredForLaunch": false,
+      "required": [
+        [
+          "OPENAI_API_KEY",
+          "GROK_API_KEY",
+          "ANTHROPIC_API_KEY",
+          "GEMINI_API_KEY"
+        ]
+      ],
+      "optional": [
+        "OPENAI_MEDIA_API_KEY"
+      ],
+      "detailContext": "AI tutor/remediation/media generation providers.",
+      "status": "ready",
+      "detail": "AI tutor/remediation/media generation providers. Optional keys not set: OPENAI_MEDIA_API_KEY.",
+      "presentKeys": [
+        "OPENAI_API_KEY"
+      ],
+      "missingKeys": [
+        "OPENAI_MEDIA_API_KEY"
+      ],
+      "placeholderKeys": []
+    },
+    {
+      "id": "tts_primary_provider",
+      "label": "TTS Primary Provider",
+      "requiredForLaunch": false,
+      "notRequired": false,
+      "required": [
+        [
+          "OPENAI_API_KEY",
+          "OPENAI_MEDIA_API_KEY"
+        ]
+      ],
+      "detailContext": "Primary TTS provider: openai.",
+      "status": "ready",
+      "detail": "Primary TTS provider: openai. Configured.",
+      "presentKeys": [
+        "OPENAI_API_KEY"
+      ],
+      "missingKeys": [],
+      "placeholderKeys": []
+    },
+    {
+      "id": "translation_provider",
+      "label": "Translation Provider",
+      "requiredForLaunch": false,
+      "notRequired": false,
+      "required": [
+        [
+          "DEEPL_API_KEY",
+          "GOOGLE_TRANSLATE_API_KEY"
+        ]
+      ],
+      "detailContext": "Translation provider: auto.",
+      "status": "optional_pending",
+      "detail": "Translation provider: auto. Ready for user-supplied keys: DEEPL_API_KEY | GOOGLE_TRANSLATE_API_KEY.",
+      "presentKeys": [],
+      "missingKeys": [
+        "DEEPL_API_KEY | GOOGLE_TRANSLATE_API_KEY"
+      ],
+      "placeholderKeys": []
+    },
+    {
+      "id": "parent_consent_email",
+      "label": "Parent Consent Email Delivery",
+      "requiredForLaunch": true,
+      "required": [
+        "RESEND_API_KEY",
+        "PARENT_CONSENT_FROM_EMAIL"
+      ],
+      "detailContext": "Compliance consent links and parent communication flow.",
+      "status": "needs_keys",
+      "detail": "Compliance consent links and parent communication flow. Placeholder values detected: RESEND_API_KEY. Ready for user-supplied keys: RESEND_API_KEY.",
+      "presentKeys": [
+        "PARENT_CONSENT_FROM_EMAIL"
+      ],
+      "missingKeys": [
+        "RESEND_API_KEY"
+      ],
+      "placeholderKeys": [
+        "RESEND_API_KEY"
+      ]
+    },
+    {
+      "id": "signup_email",
+      "label": "Signup Welcome Email Delivery",
+      "requiredForLaunch": false,
+      "required": [
+        "RESEND_API_KEY",
+        "SIGNUP_FROM_EMAIL"
+      ],
+      "detailContext": "Post-signup welcome email with legal attachments.",
+      "status": "optional_pending",
+      "detail": "Post-signup welcome email with legal attachments. Placeholder values detected: RESEND_API_KEY. Ready for user-supplied keys: RESEND_API_KEY.",
+      "presentKeys": [
+        "SIGNUP_FROM_EMAIL"
+      ],
+      "missingKeys": [
+        "RESEND_API_KEY"
+      ],
+      "placeholderKeys": [
+        "RESEND_API_KEY"
+      ]
+    }
+  ]
+}

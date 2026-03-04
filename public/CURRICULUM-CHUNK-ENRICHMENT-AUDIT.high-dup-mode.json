@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-03-03T16:58:31.395Z",
+  "note": "Conservative pipeline: do not force enrichment unless warning, explicit high-dup mode, or very short chunk.",
+  "optionsInState": {
+    "apply": true,
+    "model": "gpt-4o-mini",
+    "concurrency": 4,
+    "batchSize": 12,
+    "minMultiplier": 1.7,
+    "mode": "agent-local",
+    "retryFailedOnly": false,
+    "retryWarningModules": false,
+    "minChunkWords": 90,
+    "maxChunkWordsForExpansion": 1800,
+    "highDupThreshold": 0.25,
+    "retryHighDupModules": false,
+    "noForceEnrichment": true
+  },
+  "totals": {
+    "modulesProcessed": 812,
+    "lessonsTouched": 4001,
+    "chunksTouched": 12754,
+    "chunksLengthPassed": 12754,
+    "chunksAgeFlagged": 0,
+    "lessonFailures": 0
+  },
+  "warningModulesRemaining": 0,
+  "incompleteCoverageModulesRemaining": 0
+}

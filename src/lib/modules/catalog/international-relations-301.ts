@@ -47,19 +47,19 @@ export const InternationalRelations301Module: LearningModule = {
           "id": "international-relations-301-l01-c1",
           "kind": "concept",
           "title": "Scope and Shared Vocabulary",
-          "content": "This lesson defines the scope of International Relations, key terms, and how state and non-state actors and strategic bargaining interact in practical contexts."
+          "content": "In this lesson, we will explore the important field of International Relations. We will define what this field covers, introduce key vocabulary, and discuss the roles of different actors, including both countries and non-governmental organizations. Additionally, we will examine how these actors engage in strategic negotiations and decision-making processes in real-world situations. Understanding these concepts is essential for grasping how global interactions shape our world.\nContext recap: In this lesson, we will explore the important field of International Relations. We will define what this field covers, introduce key vocabulary, and discuss the roles of different actors, including both countries and non-governmental organizations. Additionally, we will examine how these actors engage in strategic negotiations and decision-making processes in real-world situations. Understanding these concepts is essential for grasping how global interactions shape our world."
         },
         {
           "id": "international-relations-301-l01-c2",
           "kind": "concept",
           "title": "Causal Structure and Constraints",
-          "content": "Learners map causal pathways and test hidden assumptions before selecting interventions."
+          "content": "In this part of the lesson, students will learn how to identify and map out causal pathways. This means understanding how different events or actions can lead to specific outcomes. Before deciding on any interventions or actions, it is crucial to test our assumptions and consider what might happen as a result. This process helps ensure that our decisions are well-informed and based on logical reasoning.\nContext recap: In this part of the lesson, students will learn how to identify and map out causal pathways. This means understanding how different events or actions can lead to specific outcomes. Before deciding on any interventions or actions, it is crucial to test our assumptions and consider what might happen as a result. This process helps ensure that our decisions are well-informed and based on logical reasoning."
         },
         {
           "id": "international-relations-301-l01-c3",
           "kind": "recap",
           "title": "Evidence Discipline",
-          "content": "Claims are tied to observable indicators, uncertainty notes, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of grounding our claims in observable evidence. This means that any statements we make should be supported by clear indicators that we can see or measure. Additionally, we will discuss the significance of noting uncertainties and establishing review checkpoints to ensure that our conclusions are accurate and reliable.\nContext recap: In this recap, we will emphasize the importance of grounding our claims in observable evidence. This means that any statements we make should be supported by clear indicators that we can see or measure. Additionally, we will discuss the significance of noting uncertainties and establishing review checkpoints to ensure that our conclusions are accurate and reliable."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const InternationalRelations301Module: LearningModule = {
           "id": "international-relations-301-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction and Test",
-          "content": "Learners design a workflow emphasizing system tradeoff analysis, metrics-governance integration, and cross-functional coordination, then stress-test reliability under uncertainty."
+          "content": "In this interactive activity, learners will have the opportunity to design a workflow that focuses on analyzing trade-offs within a system. This includes integrating metrics for governance and ensuring that different teams work together effectively. After creating their workflows, students will test their designs to see how reliable they are when faced with uncertainty. This hands-on experience will help them understand the complexities of managing international relations.\nContext recap: In this interactive activity, learners will have the opportunity to design a workflow that focuses on analyzing trade-offs within a system. This includes integrating metrics for governance and ensuring that different teams work together effectively. After creating their workflows, students will test their designs to see how reliable they are when faced with uncertainty. This hands-on experience will help them understand the complexities of managing international relations."
         },
         {
           "id": "international-relations-301-l02-c2",
           "kind": "recap",
           "title": "Control Gates and Readiness",
-          "content": "Readiness requires owner mapping, gate criteria, rollback conditions, and verification signals."
+          "content": "In this recap, we will discuss the concept of readiness in project management. To be ready, it is essential to map out who is responsible for what, establish criteria for decision-making gates, outline conditions for reverting to previous steps, and identify signals that indicate when to verify progress. Understanding these elements is crucial for ensuring that projects are well-prepared and can adapt to changes.\nContext recap: In this recap, we will discuss the concept of readiness in project management. To be ready, it is essential to map out who is responsible for what, establish criteria for decision-making gates, outline conditions for reverting to previous steps, and identify signals that indicate when to verify progress. Understanding these elements is crucial for ensuring that projects are well-prepared and can adapt to changes."
         }
       ],
       "interactiveActivities": [
@@ -322,19 +322,19 @@ export const InternationalRelations301Module: LearningModule = {
           "id": "international-relations-301-l04-c1",
           "kind": "example",
           "title": "Case Context and Decision Stakes",
-          "content": "Case focus: a regional crisis requiring diplomacy, alliance management, and multilateral institution engagement. Learners map high-impact risks and competing constraints."
+          "content": "In this case study, we will focus on a regional crisis that requires effective diplomacy, managing alliances, and engaging with international institutions. Students will work on mapping out the significant risks involved and the various constraints that may affect decision-making. This exercise will help them understand the real-world implications of international relations and the importance of strategic thinking in crisis situations.\nContext recap: In this case study, we will focus on a regional crisis that requires effective diplomacy, managing alliances, and engaging with international institutions. Students will work on mapping out the significant risks involved and the various constraints that may affect decision-making. This exercise will help them understand the real-world implications of international relations and the importance of strategic thinking in crisis situations."
         },
         {
           "id": "international-relations-301-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix",
-          "content": "Intervention options are scored across effectiveness, reliability, equity, and implementation feasibility."
+          "content": "In this section, we will introduce the concept of a tradeoff matrix. This tool allows us to evaluate different intervention options based on several criteria, including their effectiveness, reliability, fairness, and how feasible they are to implement. By scoring these options, students will learn how to make informed decisions that balance various factors in international relations.\nContext recap: In this section, we will introduce the concept of a tradeoff matrix. This tool allows us to evaluate different intervention options based on several criteria, including their effectiveness, reliability, fairness, and how feasible they are to implement. By scoring these options, students will learn how to make informed decisions that balance various factors in international relations."
         },
         {
           "id": "international-relations-301-l04-c3",
           "kind": "recap",
           "title": "Failure Learning and Recovery",
-          "content": "The lesson transforms failure patterns into safeguards, response playbooks, and monitoring updates."
+          "content": "In this recap, we will discuss how to learn from failures in international relations. Instead of viewing failures as setbacks, we will transform them into valuable lessons. This includes creating safeguards, developing response playbooks, and updating monitoring processes to prevent similar issues in the future. This proactive approach is essential for continuous improvement in international governance.\nContext recap: In this recap, we will discuss how to learn from failures in international relations. Instead of viewing failures as setbacks, we will transform them into valuable lessons. This includes creating safeguards, developing response playbooks, and updating monitoring processes to prevent similar issues in the future. This proactive approach is essential for continuous improvement in international governance."
         }
       ],
       "flashcards": [
@@ -373,13 +373,13 @@ export const InternationalRelations301Module: LearningModule = {
           "id": "international-relations-301-l05-c1",
           "kind": "practice",
           "title": "Simulation Setup",
-          "content": "Learners configure intervention scenarios, uncertainty parameters, and measurable success thresholds."
+          "content": "In this interactive session, learners will set up various intervention scenarios. They will define parameters of uncertainty and establish measurable success thresholds to evaluate the outcomes of their interventions. This practical exercise will help students understand how to prepare for different situations and assess the effectiveness of their strategies in international relations.\nContext recap: In this interactive session, learners will set up various intervention scenarios. They will define parameters of uncertainty and establish measurable success thresholds to evaluate the outcomes of their interventions. This practical exercise will help students understand how to prepare for different situations and assess the effectiveness of their strategies in international relations."
         },
         {
           "id": "international-relations-301-l05-c2",
           "kind": "recap",
           "title": "Simulation Debrief",
-          "content": "Post-run review evaluates outcomes, side effects, and alignment with governance constraints."
+          "content": "In this recap, we will conduct a review after running our simulations. This will involve evaluating the outcomes, identifying any side effects, and checking how well our actions aligned with governance constraints. This debriefing process is crucial for understanding what worked, what didn’t, and how we can improve future interventions.\nContext recap: In this recap, we will conduct a review after running our simulations. This will involve evaluating the outcomes, identifying any side effects, and checking how well our actions aligned with governance constraints. This debriefing process is crucial for understanding what worked, what didn’t, and how we can improve future interventions."
         }
       ],
       "interactiveActivities": [
@@ -579,19 +579,19 @@ export const InternationalRelations301Module: LearningModule = {
           "id": "international-relations-301-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Mapping",
-          "content": "Learners examine how benefits and burdens are distributed across stakeholders and time horizons."
+          "content": "In this part of the lesson, learners will explore how the benefits and burdens of decisions in international relations are distributed among different stakeholders. They will consider how these impacts may vary over time and across various groups. Understanding this distribution is essential for making ethical and fair decisions in policy-making.\nContext recap: In this part of the lesson, learners will explore how the benefits and burdens of decisions in international relations are distributed among different stakeholders. They will consider how these impacts may vary over time and across various groups. Understanding this distribution is essential for making ethical and fair decisions in policy-making."
         },
         {
           "id": "international-relations-301-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Accountability is framed through traceability, review rights, and remediation obligations."
+          "content": "In this section, we will discuss the concept of accountability in international relations. This includes understanding how actions can be traced back to their sources, the rights of stakeholders to review decisions, and the obligations to correct any issues that arise. Establishing a clear accountability framework is vital for maintaining trust and integrity in governance.\nContext recap: In this section, we will discuss the concept of accountability in international relations. This includes understanding how actions can be traced back to their sources, the rights of stakeholders to review decisions, and the obligations to correct any issues that arise. Establishing a clear accountability framework is vital for maintaining trust and integrity in governance."
         },
         {
           "id": "international-relations-301-l07-c3",
           "kind": "recap",
           "title": "Responsible Execution Checklist",
-          "content": "A final checklist links technical performance with policy, ethics, and stakeholder trust outcomes."
+          "content": "At the end of our lesson, we will create a helpful checklist that connects how well we perform our tasks with important ideas about policy, ethics, and the trust of everyone involved. This checklist will guide us in making responsible decisions that consider the impact on all stakeholders.\nContext recap: At the end of our lesson, we will create a helpful checklist that connects how well we perform our tasks with important ideas about policy, ethics, and the trust of everyone involved. This checklist will guide us in making responsible decisions that consider the impact on all stakeholders."
         }
       ],
       "flashcards": [
@@ -630,13 +630,13 @@ export const InternationalRelations301Module: LearningModule = {
           "id": "international-relations-301-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter",
-          "content": "Learners draft capstone objective, constraints, metrics, and governance gates in one decision charter."
+          "content": "In this interactive activity, you will have the opportunity to draft a comprehensive capstone charter. This document will outline your main objectives, the constraints you might face, the metrics you will use to measure success, and the governance gates that will help guide your decisions throughout the project.\nContext recap: In this interactive activity, you will have the opportunity to draft a comprehensive capstone charter. This document will outline your main objectives, the constraints you might face, the metrics you will use to measure success, and the governance gates that will help guide your decisions throughout the project."
         },
         {
           "id": "international-relations-301-l08-c2",
           "kind": "recap",
           "title": "Defense Readiness",
-          "content": "Learners prepare evidence-backed defenses for technical, policy, and stakeholder critiques."
+          "content": "As part of our recap, you will prepare well-researched defenses to address critiques related to technical aspects, policy considerations, and stakeholder perspectives. This exercise will help you build strong arguments supported by evidence, enhancing your ability to engage in thoughtful discussions.\nContext recap: As part of our recap, you will prepare well-researched defenses to address critiques related to technical aspects, policy considerations, and stakeholder perspectives. This exercise will help you build strong arguments supported by evidence, enhancing your ability to engage in thoughtful discussions."
         }
       ],
       "interactiveActivities": [

@@ -7,6 +7,10 @@ import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-prim
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import {
+    createLegacySessionId,
+    emitLegacyGameComplete,
+} from "@/lib/games/legacy-runtime-events";
 
 /* --- Orbital Types --- */
 type Body = {
@@ -19,6 +23,10 @@ type Body = {
     type: "earth" | "satellite" | "debris";
 };
 
+const getTimestampMs = () => new Date().getTime();
+
+const getElapsedMs = (startedAtMs: number) => Math.max(0, getTimestampMs() - startedAtMs);
+
 export default function OrbitOperator() {
     const { setMessage, setMood } = useMascot();
     const [satellite, setSatellite] = useState<Body | null>(null);
@@ -27,6 +35,10 @@ export default function OrbitOperator() {
     const [score, setScore] = useState(0);
     const [attempts, setAttempts] = useState(3);
     const containerRef = useRef<HTMLDivElement>(null);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const runStartedAtRef = useRef<number>(getTimestampMs());
+    const interactionCountRef = useRef<number>(0);
+    const completionEmittedRef = useRef<boolean>(false);
 
     const earth: Body = { x: 50, y: 50, vx: 0, vy: 0, mass: 5000, radius: 10, type: "earth" };
 
@@ -34,7 +46,30 @@ export default function OrbitOperator() {
     const G = 0.5;
     const DT = 0.1;
 
+    const resetRunTracking = useCallback(() => {
+        sessionIdRef.current = createLegacySessionId();
+        runStartedAtRef.current = getTimestampMs();
+        interactionCountRef.current = 0;
+        completionEmittedRef.current = false;
+    }, []);
+
+    const emitCompletion = useCallback((finalScore: number) => {
+        if (completionEmittedRef.current) return;
+        completionEmittedRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "orbit",
+            elapsedMs: getElapsedMs(runStartedAtRef.current),
+            interactions: Math.max(1, interactionCountRef.current),
+            score: Math.max(0, Math.round(finalScore)),
+            maxScore: 6000,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, []);
+
     const resetGame = useCallback(() => {
+        resetRunTracking();
         setSatellite(null);
         setLaunchVector(null);
         setGameState("IDLE");
@@ -42,10 +77,11 @@ export default function OrbitOperator() {
         setAttempts(3);
         setMood("thinking");
         setMessage("Mission Control: Launch the satellite into the stable green orbit. Watch your trajectory! 🌍");
-    }, [setMessage, setMood]);
+    }, [resetRunTracking, setMessage, setMood]);
 
     const handleMouseDown = (e: React.MouseEvent | React.TouchEvent) => {
         if (gameState !== "IDLE" || attempts <= 0) return;
+        interactionCountRef.current += 1;
         const rect = containerRef.current?.getBoundingClientRect();
         if (!rect) return;
 
@@ -73,6 +109,7 @@ export default function OrbitOperator() {
 
     const launch = (e: React.MouseEvent | React.TouchEvent) => {
         if (!launchVector || gameState !== "IDLE") return;
+        interactionCountRef.current += 1;
 
         const rect = containerRef.current?.getBoundingClientRect();
         if (!rect) return;
@@ -117,6 +154,7 @@ export default function OrbitOperator() {
 
                 // Collision Check
                 if (dist < earth.radius + prev.radius) {
+                    emitCompletion(score);
                     setGameState("CRASHED");
                     hapticError();
                     setMessage("Atmospheric reentry failed. The satellite burned up! Try a higher trajectory. 🔥");
@@ -125,6 +163,7 @@ export default function OrbitOperator() {
 
                 // Out of Bounds
                 if (prev.x < -50 || prev.x > 150 || prev.y < -50 || prev.y > 150) {
+                    emitCompletion(score);
                     setGameState("LOST");
                     setMessage("Escape velocity reached. The satellite is lost in deep space. 🛰️");
                     return prev;
@@ -145,6 +184,8 @@ export default function OrbitOperator() {
                 const targetDist = 35; // Target orbit radius
                 if (Math.abs(dist - targetDist) < 5 && Math.abs(speed - 3.8) < 0.5) {
                     if (gameState !== "ORBITING") {
+                        const nextScore = score + 5000;
+                        emitCompletion(nextScore);
                         setGameState("ORBITING");
                         setScore(s => s + 5000);
                         hapticSuccess();
@@ -157,7 +198,7 @@ export default function OrbitOperator() {
         }, 16);
 
         return () => clearInterval(interval);
-    }, [satellite, gameState, setMessage]);
+    }, [emitCompletion, gameState, satellite, score, setMessage]);
 
     return (
         <div

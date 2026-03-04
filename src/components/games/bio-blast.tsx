@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Shield, Zap, Activity, Heart, Target, ChevronRight, Droplets, Microscope, Crosshair, Thermometer, FlaskConical, AlertTriangle, ShieldAlert, ShieldCheck } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
+import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
 /* --- Bio Blast Types --- */
 type CellType = "MACROPHAGE" | "T_CELL" | "B_CELL";
@@ -27,6 +28,9 @@ export default function BioBlast() {
     const [biomass, setBiomass] = useState(100);
     const [activeCell, setActiveCell] = useState<CellType>("MACROPHAGE");
     const [wave, setWave] = useState(1);
+    const sessionIdRef = useRef<string>(createLegacySessionId());
+    const completionSentRef = useRef(false);
+    const runStartedAtRef = useRef<number>(0);
 
     const spawnPathogen = useCallback(() => {
         const id = Math.random().toString();
@@ -73,6 +77,25 @@ export default function BioBlast() {
             setMessage("Immune system breached. Pathogens have successfully colonized the host. 🧬");
         }
     }, [immuneHealth, gameState, setMessage, setMood]);
+
+    useEffect(() => {
+        if (gameState !== "GAMEOVER" || completionSentRef.current) return;
+        if (runStartedAtRef.current === 0) {
+            runStartedAtRef.current = Date.now();
+        }
+        completionSentRef.current = true;
+        emitLegacyGameComplete({
+            sessionId: sessionIdRef.current,
+            gameId: "bio-blast",
+            difficulty: "medium",
+            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            interactions: Math.max(1, biomass),
+            score: biomass,
+            maxScore: 200,
+            source: "component",
+            occurredAt: new Date().toISOString(),
+        });
+    }, [gameState, biomass]);
 
     const attack = (pathogenId: string) => {
         if (gameState !== "PLAYING") return;

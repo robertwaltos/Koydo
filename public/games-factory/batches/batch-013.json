@@ -1,0 +1,452 @@
+{
+  "generatedAt": "2026-03-04T05:55:40.970Z",
+  "batchId": "batch-013",
+  "batchNumber": 13,
+  "totalBatches": 63,
+  "throttle": {
+    "pauseMs": 180,
+    "sequential": true
+  },
+  "games": [
+    {
+      "id": "arcade-032",
+      "title": "Comet Quest",
+      "shortName": "Comet Quest",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🎨",
+      "ageMin": 4,
+      "ageMax": 6,
+      "ageBand": "kindergarten",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-033",
+      "title": "Aurora Quest",
+      "shortName": "Aurora Quest",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🌠",
+      "ageMin": 4,
+      "ageMax": 6,
+      "ageBand": "kindergarten",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-034",
+      "title": "Orbit Quest",
+      "shortName": "Orbit Quest",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "🏁",
+      "ageMin": 4,
+      "ageMax": 6,
+      "ageBand": "kindergarten",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "stack-lab",
+        "label": "Stack Lab",
+        "subject": "logic",
+        "tags": [
+          "tetris-style",
+          "spatial-reasoning",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "javascript-tetris",
+        "integrationTrack": "port-core-mechanic",
+        "license": "MIT-like",
+        "remote": "https://github.com/jakesgordon/javascript-tetris.git",
+        "commit": "e5c0c42"
+      }
+    },
+    {
+      "id": "arcade-035",
+      "title": "Pixel Quest",
+      "shortName": "Pixel Quest",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "arcade",
+      "ageMin": 4,
+      "ageMax": 6,
+      "ageBand": "kindergarten",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": "MIT",
+        "remote": "https://github.com/louis-e/openstreetguesser.git",
+        "commit": "6620d77"
+      }
+    },
+    {
+      "id": "arcade-036",
+      "title": "Clover Quest",
+      "shortName": "Clover Quest",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "adventure",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "world-detective",
+        "label": "World Detective",
+        "subject": "geography",
+        "tags": [
+          "carmen-style",
+          "map-clues",
+          "educational"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": true,
+        "sourceRepoName": "openstreetguesser",
+        "integrationTrack": "adapt-with-safe-map-mode",
+        "license": "MIT",
+        "remote": "https://github.com/louis-e/openstreetguesser.git",
+        "commit": "6620d77"
+      }
+    },
+    {
+      "id": "arcade-037",
+      "title": "Harbor Quest",
+      "shortName": "Harbor Quest",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "logic",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "maze-chase",
+        "label": "Maze Chase",
+        "subject": "logic",
+        "tags": [
+          "pacman-style",
+          "timing",
+          "fun"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-maze-runtime",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-038",
+      "title": "Meadow Quest",
+      "shortName": "Meadow Quest",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "creative",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "pure-fun",
+        "label": "Pure Fun",
+        "subject": "fun",
+        "tags": [
+          "plain-fun",
+          "arcade",
+          "reward-loop"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-fun-loop",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    },
+    {
+      "id": "arcade-039",
+      "title": "Dawn Quest",
+      "shortName": "Dawn Quest",
+      "description": "Build Explore Learn",
+      "mode": "arcade",
+      "category": "science",
+      "ageMin": 7,
+      "ageMax": 11,
+      "ageBand": "elementary",
+      "graphicsTier": "4k-ready",
+      "track": {
+        "key": "subject-mastery",
+        "label": "Subject Mastery",
+        "subject": "cross-subject",
+        "tags": [
+          "educational",
+          "assessment",
+          "adaptive-difficulty"
+        ]
+      },
+      "gameplay": {
+        "levelModel": "infinite",
+        "progressionMode": "adaptive-and-endless",
+        "immersionStyle": "cinematic-4k"
+      },
+      "performance": {
+        "targetFps": 60,
+        "frameBudgetMs": 16.67,
+        "maxInputLatencyMs": 45,
+        "antiLagStrategy": "sequential-batching+rAF+object-pooling"
+      },
+      "engine": {
+        "runtimeProfile": "immersive-arcade-engine",
+        "webgpuReady": true,
+        "webxrReady": true,
+        "visionGlassesReady": true,
+        "metaGlassesReady": true,
+        "inputAbstraction": [
+          "touch",
+          "keyboard",
+          "gamepad",
+          "gesture",
+          "xr-controller"
+        ]
+      },
+      "attribution": {
+        "required": false,
+        "sourceRepoName": null,
+        "integrationTrack": "internal-quiz-factory",
+        "license": null,
+        "remote": null,
+        "commit": null
+      }
+    }
+  ]
+}

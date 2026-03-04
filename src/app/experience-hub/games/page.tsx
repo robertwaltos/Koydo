@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MascotHost from "@/components/experience/MascotHost";
 import {
@@ -50,7 +50,7 @@ import {
     HistoryHacker,
     NanoNexus,
     MarsColony,
-    QuantumSupremacy,
+    QuantumCascade,
     SyntheticArchitect,
     GlobalHarmony,
     EvolutionPrime,
@@ -65,13 +65,41 @@ import {
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { Sparkles, Brain, Flame, Rocket, ArrowLeft, Palette, ShieldCheck, Beaker, Zap, Cpu, Box, Search, Leaf, Atom, TrendingUp, Globe, TreePine, Music, Mountain, Bot, Wind, History as HistoryIcon, Microscope, Navigation, Grid3X3, Scale, Compass, Construction, Lock, BookOpen, CircuitBoard, Orbit, Dna, Languages, Clock, Binary, Heart, FlaskConical, Camera, Waves } from "lucide-react";
 import Link from "next/link";
+import ComingSoonBanner from "@/app/components/coming-soon-banner";
+import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
 
-type GameId = "neural" | "fraction" | "vocabulary" | "artistic" | "ethical" | "synthesis" | "velocity" | "logic" | "canvas" | "chronicle" | "syntax" | "genetic" | "quantum" | "market" | "orbit" | "cipher" | "biome" | "rhythm" | "tectonic" | "flora" | "bot" | "eco" | "aero" | "histo" | "nano" | "quantum-quirk" | "star-steer" | "logic-labyrinth" | "bio-blast" | "ethos-engine" | "echo-expedition" | "terra-trek" | "spark-quest" | "pixel-path" | "luna-legend" | "circuit-crusader" | "gravity-goliath" | "protein-painter" | "linguist-lookout" | "fusion-founder" | "stellar-state" | "neural-net" | "climate-commander" | "history-hacker" | "nano-nexus" | "mars-colony" | "quantum-supremacy" | "synthetic-architect" | "global-harmony" | "evolution-prime" | "word-woods" | "story-smith" | "alphabet-airship" | "sentence-safari" | "rhyme-river" | "count-constellations" | "fraction-factory";
+type GameId = "neural" | "fraction" | "vocabulary" | "artistic" | "ethical" | "synthesis" | "velocity" | "logic" | "canvas" | "chronicle" | "syntax" | "genetic" | "quantum" | "market" | "orbit" | "cipher" | "biome" | "rhythm" | "tectonic" | "flora" | "bot" | "eco" | "aero" | "histo" | "nano" | "quantum-quirk" | "star-steer" | "logic-labyrinth" | "bio-blast" | "ethos-engine" | "echo-expedition" | "terra-trek" | "spark-quest" | "pixel-path" | "luna-legend" | "circuit-crusader" | "gravity-goliath" | "protein-painter" | "linguist-lookout" | "fusion-founder" | "stellar-state" | "neural-net" | "climate-commander" | "history-hacker" | "nano-nexus" | "mars-colony" | "quantum-cascade" | "synthetic-architect" | "global-harmony" | "evolution-prime" | "word-woods" | "story-smith" | "alphabet-airship" | "sentence-safari" | "rhyme-river" | "count-constellations" | "fraction-factory";
+type GameCard = {
+    id: GameId;
+    title: string;
+    mascot: string;
+    description: string;
+    icon: React.ComponentType<{ className?: string }>;
+    color: string;
+    bg: string;
+    border: string;
+};
 
 export default function NextGenGameGallery() {
     const [activeGame, setActiveGame] = useState<GameId | null>(null);
+    const gamesLaunchPending = isLaunchFeaturePending("experience-hub-games");
 
-    const games = [
+    if (gamesLaunchPending) {
+        return (
+            <main className="min-h-screen px-6 py-10">
+                <ComingSoonBanner
+                    title="New Experience"
+                    description="More exciting features coming soon. Stay tuned!"
+                    primaryHref="/games"
+                    primaryLabel="Play available games"
+                    secondaryHref="/dashboard"
+                    secondaryLabel="Back to dashboard"
+                />
+            </main>
+        );
+    }
+
+    const games: GameCard[] = [
         {
             id: "neural",
             title: "Neural Navigator",
@@ -533,8 +561,8 @@ export default function NextGenGameGallery() {
             border: "border-orange-500/20"
         },
         {
-            id: "quantum-supremacy",
-            title: "Quantum Supremacy",
+            id: "quantum-cascade",
+            title: "Quantum Cascade",
             mascot: "pixel",
             description: "Master subatomic logic gates in a cinematic neon circuit lab.",
             icon: Cpu,
@@ -692,7 +720,7 @@ export default function NextGenGameGallery() {
                                                                                                                                                                                         activeGame === "history-hacker" ? "echo" :
                                                                                                                                                                                             activeGame === "nano-nexus" ? "pixel" :
                                                                                                                                                                                                 activeGame === "mars-colony" ? "echo" :
-                                                                                                                                                                                                    activeGame === "quantum-supremacy" ? "pixel" :
+                                                                                                                                                                                                    activeGame === "quantum-cascade" ? "pixel" :
                                                                                                                                                                                                         activeGame === "synthetic-architect" ? "terra" :
                                                                                                                                                                                                             activeGame === "global-harmony" ? "echo" :
                                                                                                                                                                                                                 activeGame === "evolution-prime" ? "spark" :
@@ -751,11 +779,11 @@ export default function NextGenGameGallery() {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: idx * 0.05 }}
                                         className={`relative group h-full p-8 rounded-[3rem] border-2 ${game.bg} ${game.border} backdrop-blur-xl overflow-hidden cursor-pointer hover:border-white/30 transition-all`}
-                                        onClick={() => setActiveGame(game.id as any)}
+                                        onClick={() => setActiveGame(game.id)}
                                     >
                                         <div className="relative z-10 flex flex-col items-center text-center space-y-6">
                                             <div className={`p-6 rounded-3xl ${game.bg} border-2 ${game.border}`}>
-                                                {React.createElement(game.icon as any, { className: `${game.color} w-16 h-16` })}
+                                                {React.createElement(game.icon, { className: `${game.color} w-16 h-16` })}
                                             </div>
                                             <div>
                                                 <h3 className="text-3xl font-black text-white italic">{game.title}</h3>
@@ -837,7 +865,7 @@ export default function NextGenGameGallery() {
                                 {activeGame === "history-hacker" && <HistoryHacker />}
                                 {activeGame === "nano-nexus" && <NanoNexus />}
                                 {activeGame === "mars-colony" && <MarsColony />}
-                                {activeGame === "quantum-supremacy" && <QuantumSupremacy />}
+                                {activeGame === "quantum-cascade" && <QuantumCascade />}
                                 {activeGame === "synthetic-architect" && <SyntheticArchitect />}
                                 {activeGame === "global-harmony" && <GlobalHarmony />}
                                 {activeGame === "evolution-prime" && <EvolutionPrime />}
@@ -856,3 +884,4 @@ export default function NextGenGameGallery() {
         </MascotHost>
     );
 }
+

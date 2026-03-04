@@ -1,0 +1,113 @@
+{
+  "verifiedAt": "2026-03-03T16:30:17.290Z",
+  "targetCount": 13,
+  "unresolvedCount": 0,
+  "missingCount": 0,
+  "allResolved": true,
+  "rows": [
+    {
+      "moduleId": "medicine-neurology-u1-external",
+      "warnings": 0,
+      "passCoverage": "500/500",
+      "chunksTouched": 500,
+      "chunksLengthPassed": 500,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "medicine-medical-genetics-u1-external",
+      "warnings": 0,
+      "passCoverage": "500/500",
+      "chunksTouched": 500,
+      "chunksLengthPassed": 500,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "medicine-rare-diseases-u1-external",
+      "warnings": 0,
+      "passCoverage": "500/500",
+      "chunksTouched": 500,
+      "chunksLengthPassed": 500,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "medicine-oncology-u1-external",
+      "warnings": 0,
+      "passCoverage": "500/500",
+      "chunksTouched": 500,
+      "chunksLengthPassed": 500,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "mba-business-case-studies-u1-external",
+      "warnings": 0,
+      "passCoverage": "500/500",
+      "chunksTouched": 500,
+      "chunksLengthPassed": 500,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "medicine-cardiology-u1-external",
+      "warnings": 0,
+      "passCoverage": "446/446",
+      "chunksTouched": 446,
+      "chunksLengthPassed": 446,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "medicine-geriatric-medicine-u1-external",
+      "warnings": 0,
+      "passCoverage": "228/228",
+      "chunksTouched": 228,
+      "chunksLengthPassed": 228,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "strategic-management-101",
+      "warnings": 0,
+      "passCoverage": "15/15",
+      "chunksTouched": 15,
+      "chunksLengthPassed": 15,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "physics-201",
+      "warnings": 0,
+      "passCoverage": "16/16",
+      "chunksTouched": 16,
+      "chunksLengthPassed": 16,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "pre-k-financial-literacy-101",
+      "warnings": 0,
+      "passCoverage": "18/18",
+      "chunksTouched": 18,
+      "chunksLengthPassed": 18,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "project-management-601",
+      "warnings": 0,
+      "passCoverage": "15/15",
+      "chunksTouched": 15,
+      "chunksLengthPassed": 15,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "philosophy-101",
+      "warnings": 0,
+      "passCoverage": "21/21",
+      "chunksTouched": 21,
+      "chunksLengthPassed": 21,
+      "sampleWarning": null
+    },
+    {
+      "moduleId": "strategic-management-401",
+      "warnings": 0,
+      "passCoverage": "15/15",
+      "chunksTouched": 15,
+      "chunksLengthPassed": 15,
+      "sampleWarning": null
+    }
+  ]
+}

@@ -47,19 +47,19 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Climate Science, with focus on climate system attribution modeling and risk projection and adaptation planning."
+          "content": "In this lesson, we will explore the advanced boundaries of Climate Science. We will focus on important concepts such as climate system attribution modeling, which helps us understand how different factors contribute to climate change. Additionally, we will discuss risk projection and adaptation planning, which are essential for preparing for and responding to the impacts of climate change. By the end of this lesson, you will have a clearer understanding of how these elements work together to shape our approach to climate science.\nContext recap: In this lesson, we will explore the advanced boundaries of Climate Science. We will focus on important concepts such as climate system attribution modeling, which helps us understand how different factors contribute to climate change. Additionally, we will discuss risk projection and adaptation planning, which are essential for preparing for and responding to the impacts of climate change. By the end of this lesson, you will have a clearer understanding of how these elements work together to shape our approach to climate science."
         },
         {
           "id": "climate-science-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence climate change. We will also look at uncertainty ranges, which help us understand the limits of our knowledge in climate science. Additionally, we will examine system dependencies, which are the ways in which different components of the climate system interact with each other. This foundational knowledge is crucial for effective intervention planning, allowing us to make informed decisions about how to address climate challenges.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence climate change. We will also look at uncertainty ranges, which help us understand the limits of our knowledge in climate science. Additionally, we will examine system dependencies, which are the ways in which different components of the climate system interact with each other. This foundational knowledge is crucial for effective intervention planning, allowing us to make informed decisions about how to address climate challenges."
         },
         {
           "id": "climate-science-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In this recap, we will emphasize the importance of evidence thresholds in climate science. Every claim we make must be supported by measurable indicators, which are specific data points that we can observe and analyze. We will also discuss confidence bounds, which indicate how certain we are about our findings. Lastly, we will highlight the need for review checkpoints, which are critical moments for evaluating our progress and ensuring that our conclusions are based on solid evidence. This approach helps maintain the integrity of our scientific work.\nContext recap: In this recap, we will emphasize the importance of evidence thresholds in climate science. Every claim we make must be supported by measurable indicators, which are specific data points that we can observe and analyze. We will also discuss confidence bounds, which indicate how certain we are about our findings. Lastly, we will highlight the need for review checkpoints, which are critical moments for evaluating our progress and ensuring that our conclusions are based on solid evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive segment, learners will have the opportunity to design specialized workflows that are tailored to specific climate science tasks. These workflows will be put to the test through stress-testing, where we will simulate adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding how to create effective strategies that can withstand real-world challenges in climate science.\nContext recap: In this interactive segment, learners will have the opportunity to design specialized workflows that are tailored to specific climate science tasks. These workflows will be put to the test through stress-testing, where we will simulate adverse scenarios to see how well they perform under pressure. This hands-on experience is vital for understanding how to create effective strategies that can withstand real-world challenges in climate science."
         },
         {
           "id": "climate-science-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In this recap, we will discuss the architecture of control gates within our workflows. These control gates are essential for integrating various checkpoints, which are points where we assess our progress and make necessary adjustments. We will also cover rollback criteria, which allow us to revert to a previous state if something goes wrong. Additionally, we will explore threshold-based escalation, which helps us determine when to take further action based on specific indicators. Understanding these components is crucial for effective workflow management in climate science.\nContext recap: In this recap, we will discuss the architecture of control gates within our workflows. These control gates are essential for integrating various checkpoints, which are points where we assess our progress and make necessary adjustments. We will also cover rollback criteria, which allow us to revert to a previous state if something goes wrong. Additionally, we will explore threshold-based escalation, which helps us determine when to take further action based on specific indicators."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in climate system attribution modeling and mitigation pathway and policy analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints involved in climate system attribution modeling. This involves analyzing how different factors contribute to climate change and understanding the various mitigation pathways available. We will also delve into policy analysis, which is the examination of different strategies and their potential impacts on climate action. By exploring these complex interactions, learners will gain insights into the challenges and opportunities in addressing climate change.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints involved in climate system attribution modeling. This involves analyzing how different factors contribute to climate change and understanding the various mitigation pathways available. We will also delve into policy analysis, which is the examination of different strategies and their potential impacts on climate action. By exploring these complex interactions, learners will gain insights into the challenges and opportunities in addressing climate change."
         },
         {
           "id": "climate-science-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice section, learners will engage in comparing different options across several important dimensions. These dimensions include safety, which ensures that our choices do not pose risks to people or the environment; reliability, which assesses how consistently our options perform; cost, which considers the financial implications; equity, which examines fairness in the distribution of benefits and burdens; and governance, which looks at how decisions are made and implemented. This comparative analysis is essential for making informed decisions in climate science.\nContext recap: In this practice section, learners will engage in comparing different options across several important dimensions. These dimensions include safety, which ensures that our choices do not pose risks to people or the environment; reliability, which assesses how consistently our options perform; cost, which considers the financial implications; equity, which examines fairness in the distribution of benefits and burdens; and governance, which looks at how decisions are made and implemented. This comparative analysis is essential for making informed decisions in climate science."
         },
         {
           "id": "climate-science-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In this recap, we will outline the key components of a decision memo pattern. Each recommendation made in climate science must include several critical elements: assumptions, which are the underlying beliefs that inform our decisions; evidence, which is the data and information that support our claims; risk controls, which are strategies to mitigate potential negative outcomes; and fallback plans, which are alternative strategies to implement if the initial plan does not succeed. Understanding these components is vital for effective decision-making in climate science.\nContext recap: In this recap, we will outline the key components of a decision memo pattern. Each recommendation made in climate science must include several critical elements: assumptions, which are the underlying beliefs that inform our decisions; evidence, which is the data and information that support our claims; risk controls, which are strategies to mitigate potential negative outcomes; and fallback plans, which are alternative strategies to implement if the initial plan does not succeed. Understanding these components is vital for effective decision-making in climate science."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will operate scenario controls, which are tools that allow us to manage different climate scenarios. While doing this, it is important to balance performance, which refers to how well our strategies achieve desired outcomes, with governance constraints, which are the rules and guidelines that ensure our actions are responsible and ethical. This balance is crucial for effective climate management and decision-making.\nContext recap: In this interactive practice, learners will operate scenario controls, which are tools that allow us to manage different climate scenarios. While doing this, it is important to balance performance, which refers to how well our strategies achieve desired outcomes, with governance constraints, which are the rules and guidelines that ensure our actions are responsible and ethical. This balance is crucial for effective climate management and decision-making."
         },
         {
           "id": "climate-science-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In this recap, we will discuss the importance of adaptive response design in climate science. Effective responses to climate challenges must be able to update control gates, which are mechanisms that help us manage our strategies, without losing traceability or accountability. This means that we should be able to track our decisions and ensure that we are responsible for our actions. Understanding how to design adaptive responses is essential for navigating the complexities of climate science.\nContext recap: In this recap, we will discuss the importance of adaptive response design in climate science. Effective responses to climate challenges must be able to update control gates, which are mechanisms that help us manage our strategies, without losing traceability or accountability. This means that we should be able to track our decisions and ensure that we are responsible for our actions. Understanding how to design adaptive responses is essential for navigating the complexities of climate science."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This involves identifying the benefits that some groups may receive, the burdens that others may face, and any delayed effects that might occur over time. Understanding these dynamics is crucial for ensuring that climate actions are equitable and just, as it helps us recognize who is affected by our decisions and how.\nContext recap: In this lesson, learners will explore how to map the distribution of impacts among different stakeholders. This involves identifying the benefits that some groups may receive, the burdens that others may face, and any delayed effects that might occur over time. Understanding these dynamics is crucial for ensuring that climate actions are equitable and just, as it helps us recognize who is affected by our decisions and how."
         },
         {
           "id": "climate-science-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will delve into the concept of accountability architecture in climate science. This involves ensuring that there is clear traceability of decisions made, which means we can track who made what decision and why. We will also discuss review rights, which allow stakeholders to assess and challenge decisions, and remediation obligations, which are responsibilities to address any negative impacts caused by those decisions. Integrating these elements is essential for fostering trust and transparency in climate governance.\nContext recap: In this section, we will delve into the concept of accountability architecture in climate science. This involves ensuring that there is clear traceability of decisions made, which means we can track who made what decision and why. We will also discuss review rights, which allow stakeholders to assess and challenge decisions, and remediation obligations, which are responsibilities to address any negative impacts caused by those decisions. Integrating these elements is essential for fostering trust and transparency in climate governance."
         },
         {
           "id": "climate-science-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we will review a comprehensive checklist that connects important outcomes, ethical considerations, adherence to policies, and strategies for building resilience in our communities. This checklist will help ensure that we are making responsible decisions in climate science governance.\nContext recap: At the end of our lesson, we will review a comprehensive checklist that connects important outcomes, ethical considerations, adherence to policies, and strategies for building resilience in our communities. This checklist will help ensure that we are making responsible decisions in climate science governance."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const ClimateScience601Module: LearningModule = {
           "id": "climate-science-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this interactive activity, you will work together to create a detailed brief. This brief will include your claims about climate science, the evidence that supports those claims, the uncertainties you recognize, and the pathways for remediation that you propose. This exercise will help you practice organizing your thoughts and presenting them clearly.\nContext recap: In this interactive activity, you will work together to create a detailed brief. This brief will include your claims about climate science, the evidence that supports those claims, the uncertainties you recognize, and the pathways for remediation that you propose. This exercise will help you practice organizing your thoughts and presenting them clearly."
         },
         {
           "id": "climate-science-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, you will have the opportunity to practice your responses to questions and critiques that may come from experts in the field, governance representatives, and various stakeholders. This rehearsal will prepare you to confidently defend your ideas and engage in meaningful discussions about climate science.\nContext recap: During this session, you will have the opportunity to practice your responses to questions and critiques that may come from experts in the field, governance representatives, and various stakeholders. This rehearsal will prepare you to confidently defend your ideas and engage in meaningful discussions about climate science."
         }
       ],
       "interactiveActivities": [

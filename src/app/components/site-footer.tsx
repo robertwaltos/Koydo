@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ASSETS } from "@/lib/config/assets";
+import { isLaunchRouteLocked, resolveLaunchHref } from "@/lib/platform/launch-readiness";
 
 const PRODUCT_LINKS = [
   { href: "/explore",                label: "Explore Learning" },
@@ -28,6 +29,7 @@ const COMPANY_LINKS = [
   { href: "/legal/privacy",          label: "Privacy Policy" },
   { href: "/legal/terms",            label: "Terms of Use" },
   { href: "/legal/refunds",          label: "Refund Policy" },
+  { href: "/account-deletion",       label: "Account Deletion" },
   { href: "/legal/accessibility",    label: "Accessibility" },
   { href: "/legal/dsa",              label: "DSA Transparency" },
   { href: "/auth/sign-up",           label: "Create Free Account" },
@@ -138,13 +140,18 @@ export default function SiteFooter() {
           </p>
           <ul className="space-y-0.5">
             {PRODUCT_LINKS.map((l) => (
-              <li key={l.href}>
+              <li key={l.href} className="flex items-center gap-2">
                 <Link
-                  href={l.href}
+                  href={resolveLaunchHref(l.href)}
                   className={`inline-flex min-h-11 items-center transition-colors hover:underline ${isHomePage ? "hover:text-white" : "hover:text-zinc-900 dark:hover:text-foreground"}`}
                 >
                   {l.label}
                 </Link>
+                {isLaunchRouteLocked(l.href) ? (
+                  <span className="rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-900">
+                    Soon
+                  </span>
+                ) : null}
               </li>
             ))}
           </ul>
@@ -199,6 +206,7 @@ export default function SiteFooter() {
             <Link href="/legal/privacy" className="inline-flex min-h-11 items-center hover:underline">Privacy</Link>
             <Link href="/legal/terms"   className="inline-flex min-h-11 items-center hover:underline">Terms</Link>
             <Link href="/legal/refunds" className="inline-flex min-h-11 items-center hover:underline">Refunds</Link>
+            <Link href="/account-deletion" className="inline-flex min-h-11 items-center hover:underline">Delete Account</Link>
             <Link href="/support"       className="inline-flex min-h-11 items-center hover:underline">Support</Link>
           </div>
         </div>

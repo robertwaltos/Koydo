@@ -20,6 +20,7 @@ import { AUDIOBOOK_LANGUAGES, type AudiobookLanguage } from "@/lib/audiobooks/ty
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 import { requirePaidTier } from "@/lib/forge/tier-gate";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const requestSchema = z.object({
   bookSlug: z
@@ -55,6 +56,15 @@ export async function POST(req: NextRequest) {
         { error: "Too many audiobook TTS requests. Please retry shortly." },
         { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
       );
+    }
+
+    const supabase = await createSupabaseServerClient();
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser();
+    if (authError || !user) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     /* ── Validate ──────────────────────────────────────────────── */

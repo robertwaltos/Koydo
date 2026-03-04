@@ -46,19 +46,19 @@ export const UxDesign201Module: LearningModule = {
           "id": "ux-design-201-l01-c1",
           "kind": "concept",
           "title": "Operating Vocabulary and Scope",
-          "content": "UX Design at level 201 requires precise language. We define scope boundaries, identify the operating unit of analysis, and align terminology so decisions can be compared across teams."
+          "content": "In UX Design at level 201, using clear and specific language is super important! This means we need to learn how to set clear boundaries for our projects, which helps us understand what we are focusing on. We will also identify the specific things we are analyzing, like user behavior or design elements. Additionally, it's crucial that everyone on our team understands the terms we are using. When everyone is on the same page, it helps us make better decisions and allows us to compare our work effectively with other teams. This way, we can all work together more smoothly and create amazing user experiences!\nContext recap: In UX Design at level 201, using clear and specific language is super important! This means we need to learn how to set clear boundaries for our projects, which helps us understand what we are focusing on. We will also identify the specific things we are analyzing, like user behavior or design elements. Additionally, it's crucial that everyone on our team understands the terms we are using.\nWhy this matters: Operating Vocabulary and Scope helps learners in UX Design connect ideas from UX Design Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "ux-design-201-l01-c2",
           "kind": "concept",
           "title": "Causal Thinking and Constraints",
-          "content": "Strong performance in UX Design depends on understanding causes, not just outcomes. This lesson maps assumptions, dependencies, and constraints so interventions target root causes rather than symptoms."
+          "content": "To become really good at UX Design, it's important to look deeper than just the results we see. We need to understand why things happen in the first place. In this lesson, we will learn how to identify our assumptions—what we think is true, our dependencies—how different elements rely on each other, and our constraints—what limits us in our designs. By doing this, we can create better solutions that tackle the real problems at their source, rather than just fixing the surface issues that we notice. This approach helps us design experiences that truly meet the needs of users and improve their overall satisfaction.\nContext recap: To become really good at UX Design, it's important to look deeper than just the results we see. We need to understand why things happen in the first place. In this lesson, we will learn how to identify our assumptions—what we think is true, our dependencies—how different elements rely on each other, and our constraints—what limits us in our designs. By doing this, we can create better solutions that tackle the real problems at their source, rather than just fixing the surface issues that we notice."
         },
         {
           "id": "ux-design-201-l01-c3",
           "kind": "recap",
           "title": "Evidence and Accountability",
-          "content": "Evidence standards, logging discipline, and explicit accountability loops are introduced as non-negotiable practices for reliable execution."
+          "content": "In this section, we will introduce some important practices that are essential for successful execution in UX Design. We will discuss the importance of having clear evidence standards, maintaining a disciplined approach to logging our work, and establishing accountability loops. These practices help ensure that our projects are reliable and effective.\nContext recap: In this section, we will introduce some important practices that are essential for successful execution in UX Design. We will discuss the importance of having clear evidence standards, maintaining a disciplined approach to logging our work, and establishing accountability loops. These practices help ensure that our projects are reliable and effective."
         }
       ],
       "flashcards": [
@@ -97,13 +97,13 @@ export const UxDesign201Module: LearningModule = {
           "id": "ux-design-201-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "Learners build a complete workflow for user research and interaction modeling, including inputs, checkpoints, outputs, and rollback triggers."
+          "content": "In this hands-on activity, you will create a complete workflow for conducting user research and modeling interactions. This will include identifying the necessary inputs, setting up checkpoints to monitor progress, defining the expected outputs, and establishing rollback triggers in case we need to revert to a previous step. This exercise will help you understand how to structure your design process effectively.\nContext recap: In this hands-on activity, you will create a complete workflow for conducting user research and modeling interactions. This will include identifying the necessary inputs, setting up checkpoints to monitor progress, defining the expected outputs, and establishing rollback triggers in case we need to revert to a previous step. This exercise will help you understand how to structure your design process effectively."
         },
         {
           "id": "ux-design-201-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "Every decision is paired with rationale, expected effect, and a verification point to enable post-run analysis."
+          "content": "In this recap, we will emphasize the importance of logging every decision made during the design process. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice allows us to analyze our decisions after the project is completed, helping us learn and improve for future projects.\nContext recap: In this recap, we will emphasize the importance of logging every decision made during the design process. Each decision should be accompanied by a clear rationale, an expected effect, and a point for verification. This practice allows us to analyze our decisions after the project is completed, helping us learn and improve for future projects."
         }
       ],
       "interactiveActivities": [
@@ -296,19 +296,19 @@ export const UxDesign201Module: LearningModule = {
           "id": "ux-design-201-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "Method selection is based on constraints, information quality, and cost of error. Learners compare alternatives and justify method fit for UX Design scenarios."
+          "content": "When we choose methods for UX Design, it's important to think about several key factors. First, we need to look at any constraints we might have, such as time or resources. Next, we should evaluate the quality of the information we have; is it reliable and useful? Finally, we must consider the potential cost of making mistakes—what could go wrong if we choose the wrong method? In this lesson, you will practice comparing different methods and explaining why a specific one is the best choice for certain UX Design situations. Developing this skill is essential for making smart and informed decisions in your design projects.\nContext recap: When we choose methods for UX Design, it's important to think about several key factors. First, we need to look at any constraints we might have, such as time or resources. Next, we should evaluate the quality of the information we have; is it reliable and useful? Finally, we must consider the potential cost of making mistakes—what could go wrong if we choose the wrong method?\nWhy this matters: Method Selection helps learners in UX Design connect ideas from UX Design Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "ux-design-201-l04-c2",
           "kind": "example",
           "title": "Metric Architecture",
-          "content": "A metric architecture links leading indicators, lagging outcomes, and diagnostic measures so that teams can detect drift early and respond deliberately."
+          "content": "A well-organized metric architecture is like a roadmap for teams working in UX Design. It connects three important types of measurements: leading indicators, which help us predict future success; lagging outcomes, which show us the results of our past actions; and diagnostic measures, which help us understand why things are happening. By using this framework, teams can spot any changes or problems early on and make informed decisions to stay on track. In this lesson, we will learn how to build a strong metric architecture that can improve our UX Design processes and help us achieve our goals more effectively.\nContext recap: A well-organized metric architecture is like a roadmap for teams working in UX Design. It connects three important types of measurements: leading indicators, which help us predict future success; lagging outcomes, which show us the results of our past actions; and diagnostic measures, which help us understand why things are happening. By using this framework, teams can spot any changes or problems early on and make informed decisions to stay on track. In this lesson, we will learn how to build a strong metric architecture that can improve our UX Design processes and help us achieve our goals more effectively.\nContext recap: A well-organized metric architecture is like a roadmap for teams working in UX Design. It connects three important types of measurements: leading indicators, which help us predict future success; lagging outcomes, which show us the results of our past actions; and diagnostic measures, which help us understand why things are happening. By using this framework, teams can spot any changes or problems early on and make informed decisions to stay on track. In this lesson, we will learn how to build a strong metric architecture that can improve our UX Design processes and help us achieve our goals more effectively.\nWhy this matters: Metric Architecture helps learners in UX Design connect ideas from UX Design Applied Practice to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "ux-design-201-l04-c3",
           "kind": "recap",
           "title": "Failure Taxonomy",
-          "content": "Failures are grouped by data, process, execution, and governance so mitigation plans are specific rather than generic."
+          "content": "In this recap, we will categorize different types of failures that can occur in UX Design. These failures can be related to data, processes, execution, or governance. By grouping them this way, we can create specific plans to address each type of failure, making our approach to problem-solving more effective and tailored.\nContext recap: In this recap, we will categorize different types of failures that can occur in UX Design. These failures can be related to data, processes, execution, or governance. By grouping them this way, we can create specific plans to address each type of failure, making our approach to problem-solving more effective and tailored."
         }
       ],
       "flashcards": [
@@ -347,13 +347,13 @@ export const UxDesign201Module: LearningModule = {
           "id": "ux-design-201-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "A realistic case is decomposed into objective, context, constraints, and intervention options with explicit tradeoff notes."
+          "content": "In this interactive case study, you will break down a realistic scenario into its key components, including the objective, context, constraints, and possible intervention options. You will also note the trade-offs involved in each option. This exercise will help you develop critical thinking skills and understand the complexities of UX Design.\nContext recap: In this interactive case study, you will break down a realistic scenario into its key components, including the objective, context, constraints, and possible intervention options. You will also note the trade-offs involved in each option. This exercise will help you develop critical thinking skills and understand the complexities of UX Design."
         },
         {
           "id": "ux-design-201-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "Learners deliver a staged improvement proposal with success criteria, owner mapping, and follow-up timeline."
+          "content": "In this recap, you will present a staged improvement proposal based on the case study you worked on. Your proposal should include clear success criteria, a mapping of who will be responsible for each part of the project, and a timeline for follow-up actions. This will help you practice how to communicate your ideas effectively and plan for successful implementation.\nContext recap: In this recap, you will present a staged improvement proposal based on the case study you worked on. Your proposal should include clear success criteria, a mapping of who will be responsible for each part of the project, and a timeline for follow-up actions. This will help you practice how to communicate your ideas effectively and plan for successful implementation."
         }
       ],
       "interactiveActivities": [

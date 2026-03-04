@@ -47,19 +47,19 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "This lesson defines advanced scope boundaries for Strategic Management, with focus on business systems diagnostics and business operations and execution design."
+          "content": "In this lesson, we will dive into the important idea of advanced scope boundaries in Strategic Management. This means we will learn how to carefully examine and diagnose the various systems within a business. We will also discuss how to design operations that allow these systems to work together smoothly. By concentrating on these key areas, we can develop a clearer framework that helps businesses run more efficiently and adapt to any changes in their environment. Understanding these concepts is crucial for anyone looking to succeed in the field of business management.\nContext recap: In this lesson, we will dive into the important idea of advanced scope boundaries in Strategic Management. This means we will learn how to carefully examine and diagnose the various systems within a business. We will also discuss how to design operations that allow these systems to work together smoothly. By concentrating on these key areas, we can develop a clearer framework that helps businesses run more efficiently and adapt to any changes in their environment."
         },
         {
           "id": "strategic-management-501-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "Learners map causal pathways, uncertainty ranges, and system dependencies before intervention planning."
+          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence outcomes. Additionally, we will look at uncertainty ranges and how various system dependencies can affect our plans. This foundational understanding is crucial for effective intervention planning, allowing us to anticipate challenges and make informed decisions.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different factors that influence outcomes. Additionally, we will look at uncertainty ranges and how various system dependencies can affect our plans. This foundational understanding is crucial for effective intervention planning, allowing us to anticipate challenges and make informed decisions."
         },
         {
           "id": "strategic-management-501-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "All claims map to measurable indicators, confidence bounds, and review checkpoints."
+          "content": "In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our strategies are on track. By doing so, we can maintain a high level of accountability and ensure that our decisions are based on solid evidence.\nContext recap: In our recap, we emphasize that every claim we make should be supported by measurable indicators. This means we need to establish confidence bounds and set up review checkpoints to ensure our strategies are on track. By doing so, we can maintain a high level of accountability and ensure that our decisions are based on solid evidence."
         }
       ],
       "flashcards": [
@@ -98,13 +98,13 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "Learners design specialist workflows and stress-test them across adverse scenarios."
+          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. After creating these workflows, they will stress-test them by simulating adverse scenarios. This hands-on experience will help learners understand how to prepare for unexpected challenges and ensure their designs are robust and effective.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific tasks. After creating these workflows, they will stress-test them by simulating adverse scenarios. This hands-on experience will help learners understand how to prepare for unexpected challenges and ensure their designs are robust and effective."
         },
         {
           "id": "strategic-management-501-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "Workflows integrate checkpoints, rollback criteria, and threshold-based escalation."
+          "content": "In our recap, we will discuss the importance of integrating control gates into workflows. These gates serve as checkpoints that help us monitor progress and ensure that we can roll back to previous states if necessary. Additionally, we will explore how threshold-based escalation can be used to manage risks effectively, ensuring that we respond appropriately to any issues that arise.\nContext recap: In our recap, we will discuss the importance of integrating control gates into workflows. These gates serve as checkpoints that help us monitor progress and ensure that we can roll back to previous states if necessary. Additionally, we will explore how threshold-based escalation can be used to manage risks effectively, ensuring that we respond appropriately to any issues that arise."
         }
       ],
       "interactiveActivities": [
@@ -368,19 +368,19 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "The case frames competing constraints in business systems diagnostics and business impact and tradeoff analysis."
+          "content": "In this lesson, we will frame a case that highlights the competing constraints within business systems diagnostics. We will analyze how these constraints impact business decisions and the importance of tradeoff analysis. By understanding these dynamics, learners will be better equipped to navigate complex business environments and make informed choices.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints within business systems diagnostics. We will analyze how these constraints impact business decisions and the importance of tradeoff analysis. By understanding these dynamics, learners will be better equipped to navigate complex business environments and make informed choices."
         },
         {
           "id": "strategic-management-501-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "Learners compare options across safety, reliability, cost, equity, and governance dimensions."
+          "content": "In this practice session, learners will compare different options available to them, focusing on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the tradeoffs involved in decision-making and the importance of considering multiple factors before arriving at a conclusion.\nContext recap: In this practice session, learners will compare different options available to them, focusing on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help them understand the tradeoffs involved in decision-making and the importance of considering multiple factors before arriving at a conclusion."
         },
         {
           "id": "strategic-management-501-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "Each recommendation includes assumptions, evidence, risk controls, and fallback plans."
+          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation should clearly include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of the decision-making process are transparent and well-documented.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation should clearly include the underlying assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that all aspects of the decision-making process are transparent and well-documented."
         }
       ]
     },
@@ -402,13 +402,13 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "Learners operate scenario controls while balancing performance and governance constraints."
+          "content": "In this interactive practice, learners will take charge of scenario controls, balancing the need for performance with governance constraints. This exercise will help them understand how to manage competing priorities effectively and make decisions that align with both operational goals and regulatory requirements.\nContext recap: In this interactive practice, learners will take charge of scenario controls, balancing the need for performance with governance constraints. This exercise will help them understand how to manage competing priorities effectively and make decisions that align with both operational goals and regulatory requirements.\nContext recap: In this interactive practice, learners will take charge of scenario controls, balancing the need for performance with governance constraints. This exercise will help them understand how to manage competing priorities effectively and make decisions that align with both operational goals and regulatory requirements. Context recap: In this interactive practice, learners will take charge of scenario controls, balancing the need for performance with governance constraints. This exercise will help them understand how to manage competing priorities effectively and make decisions that align with both operational goals and regulatory requirements."
         },
         {
           "id": "strategic-management-501-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "Effective responses update control gates without losing traceability or accountability."
+          "content": "In our recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates while maintaining traceability and accountability. This ensures that all actions taken are documented and can be reviewed later, which is crucial for maintaining trust and transparency.\nContext recap: In our recap, we will discuss the importance of designing effective responses that can adapt to changing circumstances. These responses should update control gates while maintaining traceability and accountability. This ensures that all actions taken are documented and can be reviewed later, which is crucial for maintaining trust and transparency."
         }
       ],
       "interactiveActivities": [
@@ -654,19 +654,19 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "Learners map benefits, burdens, and delayed effects across stakeholder groups."
+          "content": "In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is essential for recognizing the impact of decisions on various parties involved, which helps in making more equitable and informed choices.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is essential for recognizing the impact of decisions on various parties involved, which helps in making more equitable and informed choices.\nContext recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is essential for recognizing the impact of decisions on various parties involved, which helps in making more equitable and informed choices. Context recap: In this lesson, learners will map out how benefits, burdens, and delayed effects are distributed among different stakeholder groups. Understanding this distribution is essential for recognizing the impact of decisions on various parties involved, which helps in making more equitable and informed choices."
         },
         {
           "id": "strategic-management-501-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "Decision traceability, review rights, and remediation obligations are integrated."
+          "content": "In this section, we will explore the concept of accountability architecture. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. By establishing clear lines of accountability, we can enhance trust and ensure that all stakeholders are aware of their responsibilities.\nContext recap: In this section, we will explore the concept of accountability architecture. This includes ensuring that decision traceability, review rights, and remediation obligations are integrated into our processes. By establishing clear lines of accountability, we can enhance trust and ensure that all stakeholders are aware of their responsibilities."
         },
         {
           "id": "strategic-management-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A final checklist links outcomes, ethics, policy compliance, and resilience."
+          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist serves as a guide to make sure we are making responsible decisions.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist serves as a guide to make sure we are making responsible decisions.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist serves as a guide to make sure we are making responsible decisions. Context recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds resilience in our leadership approach. This checklist serves as a guide to make sure we are making responsible decisions."
         }
       ],
       "flashcards": [
@@ -705,13 +705,13 @@ export const StrategicManagement501Module: LearningModule = {
           "id": "strategic-management-501-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "Learners assemble a brief with claims, evidence, uncertainty bounds, and remediation pathways."
+          "content": "In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims supported by evidence, outline areas of uncertainty, and suggest pathways for remediation. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims supported by evidence, outline areas of uncertainty, and suggest pathways for remediation. This exercise helps develop critical thinking and communication skills.\nContext recap: In this activity, learners will work together to create a comprehensive brief. This brief will include clear claims supported by evidence, outline areas of uncertainty, and suggest pathways for remediation. This exercise helps develop critical thinking and communication skills. Context recap: In this activity, learners will work together to create a comprehensive brief.\nWhy this matters: Defense Brief Assembly helps learners in Business connect ideas from Strategic Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         },
         {
           "id": "strategic-management-501-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "Learners rehearse responses to technical, governance, and stakeholder critiques."
+          "content": "During this session, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and stakeholder perspectives. This rehearsal is crucial for building confidence and preparing for real-world discussions.\nContext recap: During this session, learners will practice their responses to various critiques that may come from experts in technical fields, governance issues, and stakeholder perspectives. This rehearsal is crucial for building confidence and preparing for real-world discussions.\nWhy this matters: Expert Panel Rehearsal helps learners in Business connect ideas from Strategic Management Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
         }
       ],
       "interactiveActivities": [
