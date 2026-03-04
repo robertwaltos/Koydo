@@ -9,42 +9,43 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 132",
   title: "Comet Circuit",
   mascot: "spark",
-  startMessage: "Spark: stay adaptive and pick evidence-backed actions as pressure scales in Comet Circuit.",
-  winMessage: "Spark: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Spark: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Spark: hold trajectory math together and route each correction with precision in Comet Circuit.",
+  winMessage: "Spark: vector corridor synchronized. Excellent orbital control.",
+  failMessage: "Spark: trajectory drift exceeded limits. Re-enter with cleaner calculations.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "trajectory lane",
+    "vector node",
+    "burn ring",
+    "guidance rail",
+    "orbit grid",
+    "correction core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Navigation variance detected on",
+    "Choose the correction that preserves orbit for",
+    "Only one move keeps stable heading in",
+    "Rapid burn decision required for"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
+    "Vectorize",
     "Calibrate",
+    "Trim",
+    "Normalize",
     "Secure",
     "Balance"
   ],
   decoyActions: [
-    "Rush",
+    "Overshoot",
+    "Drift",
     "Spike",
     "Skip",
-    "Bypass",
-    "Overload"
+    "Distort"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Precision burns beat reactive corrections.",
+    "Small vector errors compound quickly.",
+    "Balanced sequencing preserves control.",
+    "Check heading before committing thrust."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_18%,rgba(251,191,36,0.24),transparent_46%),radial-gradient(circle_at_82%_82%,rgba(245,158,11,0.2),transparent_52%)]",
@@ -61,6 +62,8 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "double",
+  targetBestCombo: 7,
 };
 
 export default function Arcade132CometCircuit() {

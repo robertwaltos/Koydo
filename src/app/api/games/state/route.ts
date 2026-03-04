@@ -26,6 +26,7 @@ import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { getRegisteredGame } from "@/lib/games/catalog";
 import { isPremiumUserWithClient } from "@/lib/billing/premium-access";
+import { computeRewardRealmMasteryFromEvents } from "@/lib/games/reward-realm";
 
 /** Accept both legacy 8 types and catalog IDs (e.g. "math-quiz-001") */
 const gameTypeSchema = z.string().refine(isValidGameId, {
@@ -593,6 +594,47 @@ export async function POST(request: NextRequest) {
     let guardianOverrideApplied = false;
     const registeredGame = getRegisteredGame(gameLookupId);
     if (registeredGame) {
+      if (registeredGame?.track === "Reward Realm") {
+        const masteryEventQuery = supabase
+          .from("gamification_events")
+          .select("metadata")
+          .eq("user_id", user.id)
+          .eq("event_type", "points_awarded")
+          .order("created_at", { ascending: false })
+          .limit(500);
+
+        if (payload.studentProfileId) {
+          masteryEventQuery.eq("student_profile_id", payload.studentProfileId);
+        }
+
+        const { data: masteryEvents, error: masteryEventsError } = await masteryEventQuery;
+        if (masteryEventsError) {
+          if (isMissingTableError(masteryEventsError.message)) {
+            return NextResponse.json(
+              { error: "Gamification tables not migrated yet." },
+              { status: 503 },
+            );
+          }
+          return NextResponse.json(
+            { error: "Failed to verify Reward Realm educational mastery." },
+            { status: 500 },
+          );
+        }
+
+        const mastery = computeRewardRealmMasteryFromEvents(masteryEvents ?? []);
+        if (!mastery.unlocked) {
+          return NextResponse.json(
+            {
+              error: "Reward Realm is locked. Complete educational mastery milestones first.",
+              requiresEducationalMastery: true,
+              mastery,
+              gameId: registeredGame.id,
+            },
+            { status: 403 },
+          );
+        }
+      }
+
       if (!ownership.profile) {
         return NextResponse.json(
           {

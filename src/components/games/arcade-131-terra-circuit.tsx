@@ -9,42 +9,42 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 131",
   title: "Terra Circuit",
   mascot: "pixel",
-  startMessage: "Pixel: stay adaptive and pick evidence-backed actions as pressure scales in Terra Circuit.",
-  winMessage: "Pixel: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Pixel: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Pixel: keep telemetry lanes coherent and choose the cleanest routing move in Terra Circuit.",
+  winMessage: "Pixel: telemetry network stabilized. Strong signal discipline.",
+  failMessage: "Pixel: noise cascade slipped through. Re-enter with tighter validation.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "signal lane",
+    "checksum relay",
+    "sync ring",
+    "packet rail",
+    "routing matrix",
+    "diagnostic core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Integrity drift detected on",
+    "Choose the most reliable correction for",
+    "Only one option preserves clean throughput in",
+    "Noise surge incoming: stabilize"
   ],
   correctActions: [
-    "Stabilize",
-    "Align",
-    "Calibrate",
-    "Secure",
-    "Balance"
+    "Verify",
+    "Validate",
+    "Anchor",
+    "Normalize",
+    "Secure"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
+    "Guess",
     "Bypass",
-    "Overload"
+    "Flood",
+    "Skip",
+    "Overtrust"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Reliable checks prevent cascading faults.",
+    "Validation beats speed under noisy input.",
+    "Coherent routing improves system recovery.",
+    "Reset quickly after false-signal branches."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_18%_18%,rgba(56,189,248,0.26),transparent_46%),radial-gradient(circle_at_84%_80%,rgba(14,165,233,0.2),transparent_52%)]",
@@ -58,9 +58,12 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
     "secondaryButton": "bg-zinc-800 text-white",
     "textSoft": "text-sky-100"
   },
-  baseRoundMs: 5400,
-  minRoundMs: 2850,
-  roundDecayMs: 330,
+  baseRoundMs: 5500,
+  minRoundMs: 3000,
+  roundDecayMs: 340,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 7,
 };
 
 export default function Arcade131TerraCircuit() {
