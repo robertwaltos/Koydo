@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { Cpu, Play, Square, RotateCcw, Code, Zap, Settings, Activity, ShieldCheck, ChevronRight, Terminal, Bot } from "lucide-react";
+import { useState, useEffect, useCallback, useMemo, useRef, type ReactNode } from "react";
+import { Cpu, Play, Square, RotateCcw, Code, Zap, Settings, Activity, ShieldCheck, ChevronRight, Terminal, Bot, type LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -19,7 +19,7 @@ type BotState = {
     inventory: number;
 };
 
-const COMMAND_DATA: Record<Command, { label: string, icon: any, color: string }> = {
+const COMMAND_DATA: Record<Command, { label: string, icon: LucideIcon, color: string }> = {
     MOVE_FORWARD: { label: "Move Forward", icon: ChevronRight, color: "bg-blue-500" },
     TURN_LEFT: { label: "Turn Left", icon: RotateCcw, color: "bg-purple-500" },
     TURN_RIGHT: { label: "Turn Right", icon: RotateCcw, color: "bg-indigo-500" },
@@ -58,7 +58,7 @@ export default function BotBuilder() {
         setMood("thinking");
         hapticSelection();
 
-        let currentBot = { ...bot };
+        const currentBot = { ...bot };
 
         for (let i = 0; i < program.length; i++) {
             setExecIndex(i);
@@ -71,9 +71,9 @@ export default function BotBuilder() {
                 if (currentBot.dir === 180) currentBot.x = Math.max(0, currentBot.x - 1);
                 if (currentBot.dir === 270) currentBot.y = Math.max(0, currentBot.y - 1);
             } else if (cmd === "TURN_LEFT") {
-                currentBot.dir = (currentBot.dir + 270) % 360 as any;
+                currentBot.dir = ((currentBot.dir + 270) % 360) as BotState["dir"];
             } else if (cmd === "TURN_RIGHT") {
-                currentBot.dir = (currentBot.dir + 90) % 360 as any;
+                currentBot.dir = ((currentBot.dir + 90) % 360) as BotState["dir"];
             } else if (cmd === "COLLECT") {
                 if (currentBot.x === target.x && currentBot.y === target.y) {
                     currentBot.inventory += 1;
@@ -301,7 +301,7 @@ function CommandIcon({ cmd }: { cmd: Command }) {
     return <Icon className="w-5 h-5 text-white" />;
 }
 
-function StatRow({ label, value, icon: Icon, color }: { label: string, value: any, icon: any, color: string }) {
+function StatRow({ label, value, icon: Icon, color }: { label: string, value: ReactNode, icon: LucideIcon, color: string }) {
     return (
         <div className="flex justify-between items-center bg-white/5 p-4 rounded-2xl border border-white/5">
             <div className="flex items-center gap-2">

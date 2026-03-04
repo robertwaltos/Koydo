@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -43,6 +45,7 @@ const DIFF: Record<Difficulty, { timeLimit: number; showOrder: boolean; toleranc
   medium: { timeLimit: 150_000, showOrder: false, tolerance: 1 },
   hard:   { timeLimit: 120_000, showOrder: false, tolerance: 0 },
 };
+
 
 export function ConnectDotsEngine({ config, difficulty, onComplete }: Props) {
   const settings = DIFF[difficulty];
@@ -268,3 +271,6 @@ export function ConnectDotsEngine({ config, difficulty, onComplete }: Props) {
     </div>
   );
 }
+
+
+

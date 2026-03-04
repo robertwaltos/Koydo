@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -41,6 +43,7 @@ const DIFF: Record<Difficulty, { timeLimit: number; hintCost: number; targetDisc
   medium: { timeLimit: 240_000, hintCost: 40, targetDiscover: 10 },
   hard:   { timeLimit: 180_000, hintCost: 60, targetDiscover: 15 },
 };
+
 
 export function ElementLabEngine({ config, difficulty, onComplete }: Props) {
   const settings = DIFF[difficulty];
@@ -266,3 +269,6 @@ export function ElementLabEngine({ config, difficulty, onComplete }: Props) {
     </div>
   );
 }
+
+
+

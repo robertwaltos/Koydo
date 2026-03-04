@@ -314,7 +314,7 @@ export function LetterCatcher({ difficulty, onComplete }: LetterCatcherProps) {
             >
               <p className="text-stone-500 font-bold uppercase tracking-tighter text-sm mb-1">Catch the Letter for</p>
               <h3 className="text-4xl font-black text-sky-600 dark:text-sky-300 italic flex items-center justify-center gap-3">
-                "{state.target.word}" {state.target.emoji}
+                &ldquo;{state.target.word}&rdquo; {state.target.emoji}
               </h3>
             </motion.div>
           )}

@@ -48,12 +48,29 @@ export default function TectonicTrek() {
             // Collision / Tension Logic
             const dist = Math.abs(next[0].pos.x - next[1].pos.x);
             if (dist < 10) {
-                setStats(s => ({
-                    ...s,
-                    tension: Math.min(100, s.tension + 1),
-                    elevation: s.elevation + 0.1,
-                    volcanic: s.volcanic + 0.05
-                }));
+                setStats((state) => {
+                    const nextTension = Math.min(100, state.tension + 1);
+                    if (state.tension <= 90 && nextTension > 90 && gameState === "SIMULATING") {
+                        setGameState("EARTHQUAKE");
+                        hapticError();
+                        setMood("surprised");
+                        setMessage("Tectonic tension reached critical limit! seismic event detected! 🌋");
+
+                        setTimeout(() => {
+                            setStats((latest) => ({ ...latest, tension: 0, elevation: latest.elevation + 5 }));
+                            setGameState("SIMULATING");
+                            setMood("happy");
+                            setMessage("Tension released. A new mountain range has formed. Nature's power is immense! 🏔️");
+                            hapticSuccess();
+                        }, 3000);
+                    }
+                    return {
+                        ...state,
+                        tension: nextTension,
+                        elevation: state.elevation + 0.1,
+                        volcanic: state.volcanic + 0.05
+                    };
+                });
             } else {
                 setStats(s => ({ ...s, tension: Math.max(0, s.tension - 0.5) }));
             }
@@ -61,30 +78,12 @@ export default function TectonicTrek() {
             return next;
         });
 
-    }, [gameState]);
+    }, [gameState, setMessage, setMood]);
 
     useEffect(() => {
         const interval = setInterval(updateSimulation, 100);
         return () => clearInterval(interval);
     }, [updateSimulation]);
-
-    // Tension Release (Earthquake)
-    useEffect(() => {
-        if (stats.tension > 90) {
-            setGameState("EARTHQUAKE");
-            hapticError();
-            setMood("surprised");
-            setMessage("Tectonic tension reached critical limit! seismic event detected! 🌋");
-
-            setTimeout(() => {
-                setStats(s => ({ ...s, tension: 0, elevation: s.elevation + 5 }));
-                setGameState("SIMULATING");
-                setMood("happy");
-                setMessage("Tension released. A new mountain range has formed. Nature's power is immense! 🏔️");
-                hapticSuccess();
-            }, 3000);
-        }
-    }, [stats.tension, setMood, setMessage]);
 
     useEffect(() => {
         const stabilized = gameState === "SIMULATING" && stats.elevation >= 20 && stats.tension < 40;

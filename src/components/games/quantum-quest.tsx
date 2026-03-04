@@ -254,7 +254,7 @@ export default function QuantumQuest() {
                             </div>
                             <h3 className="text-4xl font-black italic tracking-tighter text-white mb-4 uppercase">Quantum Linkage</h3>
                             <p className="text-zinc-400 text-sm max-w-sm mb-12">
-                                Launch specialized particles into the gravity wells to stabilize the local quantum field. Don't let the energy core deplete!
+                                Launch specialized particles into the gravity wells to stabilize the local quantum field. Don&apos;t let the energy core deplete!
                             </p>
                             <PhysicalButton onClick={startGame} className="bg-sky-500 h-20 px-16 rounded-[2.5rem] text-xl">
                                 INITIALIZE REACTOR ⚛️

@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { Zap, Sun, Wind, Battery, Activity, ShieldCheck, Thermometer, Info, ChevronRight, Leaf, Trash2, CloudRain } from "lucide-react";
+import { Zap, Sun, Wind, Battery, Activity, ShieldCheck, Thermometer, Info, ChevronRight, Leaf, Trash2, CloudRain, type LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -301,7 +301,17 @@ function StatBox({ label, value, color, unit = "%" }: { label: string, value: nu
     );
 }
 
-function InfraCard({ type, count, cost, icon: Icon, color, onBuild, onDec }: any) {
+type InfraCardProps = {
+    type: EnergySource;
+    count: number;
+    cost: number;
+    icon: LucideIcon;
+    color: string;
+    onBuild: () => void;
+    onDec: () => void;
+};
+
+function InfraCard({ type, count, cost, icon: Icon, color, onBuild, onDec }: InfraCardProps) {
     return (
         <div className="bg-white/5 border border-white/5 p-5 rounded-3xl flex flex-col gap-4 group hover:bg-zinc-800/60 transition-all">
             <div className="flex justify-between items-start">

@@ -333,6 +333,17 @@ function clampHistoryLimit(value: string | null) {
   return Math.min(MAX_HISTORY_FETCH, Math.max(1, Math.round(parsed)));
 }
 
+function mapUsageToLegacy(result: AiUsageResult): TutorUsage {
+  const usageTracked = Number.isFinite(result.remaining);
+  return {
+    dailyLimit: result.limit,
+    usedToday: result.used,
+    remainingToday: usageTracked ? result.remaining : Math.max(0, result.limit - result.used),
+    usageTracked,
+    limitReached: !result.allowed,
+  };
+}
+
 async function getTutorUsageLegacy(
   userId: string,
   supabase: Awaited<ReturnType<typeof createSupabaseServerClient>>,
@@ -604,11 +615,22 @@ export async function POST(request: Request) {
       summary,
       snippet,
     });
+    const groundingPipeline = lessonLookup
+      ? runGroundingPipeline({
+          lesson: lessonLookup.lesson,
+          learningModule: lessonLookup.learningModule,
+          question,
+        })
+      : null;
+    const groundingContext: GroundingContext | null = groundingPipeline?.context ?? null;
+    const groundingUsed = Boolean(groundingContext && groundingContext.sources.length > 0);
 
     let answer = baselineAnswer;
     let source: "openai" | "rule_based" = "rule_based";
     let warning: string | null = null;
     let contradictionBlocked = false;
+    let citations: Citation[] = [];
+    let contradictionDetected = false;
 
     if (serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY) {
       const openAiResponse = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -625,6 +647,7 @@ export async function POST(request: Request) {
             {
               role: "system",
               content:
+                groundingPipeline?.systemPrompt ??
                 "You are a concise, child-friendly teaching assistant. Stay aligned to provided lesson context. If context is missing, explicitly say you are uncertain and ask a clarifying question. Keep answers under 180 words.",
             },
             {
@@ -709,6 +732,7 @@ export async function POST(request: Request) {
       source,
       groundingScore,
     });
+    const confidenceScore = confidence;
     const clarifyingQuestion = shouldAskClarifyingQuestion({
       question,
       lessonLookup,
@@ -796,6 +820,11 @@ export async function POST(request: Request) {
         citationCount: citations.length,
         contradictionDetected,
         sourceCount: groundingContext?.sources.length ?? 0,
+        citation,
+        snippet,
+        groundingScore: Number(groundingScore.toFixed(3)),
+        contradictionBlocked,
+        clarifyingQuestionAsked: Boolean(clarifyingQuestion),
       },
       citations: citations.map((c) => ({
         sourceId: c.sourceId,
@@ -808,14 +837,6 @@ export async function POST(request: Request) {
         lessonTitle: lessonLookup?.lesson.title ?? null,
         moduleTitle: lessonLookup?.learningModule.title ?? null,
         focusSkills,
-      },
-      grounding: {
-        citation,
-        snippet,
-        confidence,
-        groundingScore: Number(groundingScore.toFixed(3)),
-        contradictionBlocked,
-        clarifyingQuestionAsked: Boolean(clarifyingQuestion),
       },
     });
   } catch (error) {

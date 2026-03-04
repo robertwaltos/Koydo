@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { serverEnv } from "@/lib/config/env";
@@ -22,6 +23,55 @@ import { loadSupportRuntimeConfig } from "@/lib/support/config";
 
 export const dynamic = "force-dynamic";
 
+type SubscriptionRow = {
+  status: string | null;
+  cancel_at_period_end: boolean | null;
+  current_period_end: string | null;
+};
+
+function isMissingTableError(message: string) {
+  const normalized = message.toLowerCase();
+  return (
+    normalized.includes("could not find the table") ||
+    (normalized.includes("relation") && normalized.includes("does not exist"))
+  );
+}
+
+function monthKeyFromDate(date: Date) {
+  const year = date.getUTCFullYear();
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  return `${year}-${month}`;
+}
+
+function formatLastUpdated(
+  value: string | null,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+  locale: Locale,
+) {
+  if (!value) return t("parent_dashboard_not_available");
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return t("parent_dashboard_not_available");
+  return formatDate(date, locale, {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function formatCompactDate(
+  value: string | null,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+  locale: Locale,
+) {
+  if (!value) return t("parent_dashboard_not_available");
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return t("parent_dashboard_not_available");
+  return formatDate(date, locale, {
+    month: "short",
+    day: "numeric",
+  });
+}
+
 export default async function ParentDashboardPage() {
   const supabase = await createSupabaseServerClient();
   const {
@@ -34,15 +84,42 @@ export default async function ParentDashboardPage() {
   }
 
   // Verify this is actually a parent
-  const { data: profile } = await supabase
+  const { data: parentProfile } = await supabase
     .from("user_profiles")
     .select("is_parent")
     .eq("user_id", user.id)
     .maybeSingle();
 
-  if (!profile?.is_parent) {
+  if (!parentProfile?.is_parent) {
     redirect("/dashboard");
   }
+
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get("koydo.locale")?.value ?? "en";
+  const locale: Locale = isSupportedLocale(localeCookie) ? localeCookie : "en";
+  const t = (key: string, vars?: Record<string, string | number>) => translate(locale, key, vars);
+
+  const { data: profileRows, error: profilesError } = await supabase
+    .from("student_profiles")
+    .select("id, display_name, grade_level, age_years, initial_assessment_status, updated_at")
+    .eq("account_id", user.id)
+    .order("display_name", { ascending: true });
+  if (profilesError) {
+    console.error("Parent dashboard profiles query failed:", profilesError);
+  }
+  const profiles = (profileRows ?? []) as StudentProfile[];
+
+  const { data: subscriptionData, error: subscriptionError } = await supabase
+    .from("subscriptions")
+    .select("status, cancel_at_period_end, current_period_end")
+    .eq("user_id", user.id)
+    .order("updated_at", { ascending: false })
+    .limit(1)
+    .maybeSingle<SubscriptionRow>();
+  if (subscriptionError) {
+    console.error("Parent dashboard subscription query failed:", subscriptionError);
+  }
+  const subscription = subscriptionData;
 
   const learnerProfiles = (profiles ?? []) as StudentProfile[];
   const supportConfig = await loadSupportRuntimeConfig();

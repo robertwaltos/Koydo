@@ -2,10 +2,13 @@ import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { validateOwnerStepUpSession } from "@/lib/admin/owner-security";
 
+type AdminAccessLevel = "full_access" | "read_only";
+
 type ProfileRow = {
   is_admin: boolean;
   is_owner: boolean;
   data_mode: "live" | "beta";
+  admin_access_level: AdminAccessLevel | null;
 };
 
 function hasMissingOwnerColumnError(message: string) {
@@ -31,7 +34,7 @@ async function authenticateAdminUser() {
 
   const profileResult = await supabase
     .from("user_profiles")
-    .select("is_admin,is_owner,data_mode")
+    .select("is_admin,is_owner,data_mode,admin_access_level")
     .eq("user_id", user.id)
     .maybeSingle<ProfileRow>();
 
@@ -46,6 +49,7 @@ async function authenticateAdminUser() {
         is_admin: true,
         is_owner: false,
         data_mode: "live",
+        admin_access_level: "full_access",
       };
     }
   } else if (!profileResult.error && profileResult.data) {
@@ -58,9 +62,6 @@ async function authenticateAdminUser() {
       response: NextResponse.json({ error: "Forbidden" }, { status: 403 }),
     };
   }
-
-  const accessLevel: AdminAccessLevel =
-    (profile.admin_access_level as AdminAccessLevel | null) ?? "full_access";
 
   return {
     ok: true as const,

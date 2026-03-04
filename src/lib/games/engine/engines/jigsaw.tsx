@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -34,6 +36,7 @@ const DIFF: Record<Difficulty, { extraShuffle: number; timeLimit: number; showNu
   hard:   { extraShuffle: 40,  timeLimit: 120_000, showNumbers: false },
 };
 
+
 export function JigsawEngine({ config, difficulty, onComplete }: Props) {
   const settings = DIFF[difficulty];
 
@@ -48,7 +51,7 @@ export function JigsawEngine({ config, difficulty, onComplete }: Props) {
   const [board, setBoard] = useState<number[]>(() => {
     const indices = tiles.map((_, i) => i);
     // Fisher-Yates shove that guarantees not already solved
-    let arr = shuffle(indices);
+    const arr = shuffle(indices);
     // Do more random swaps based on difficulty
     for (let s = 0; s < settings.extraShuffle; s++) {
       const a = Math.floor(Math.random() * arr.length);
@@ -116,7 +119,7 @@ export function JigsawEngine({ config, difficulty, onComplete }: Props) {
             setLevel((l) => l + 1);
             setTimeout(() => {
               const indices = tiles.map((_, i) => i);
-              let arr = shuffle(indices);
+              const arr = shuffle(indices);
               for (let s = 0; s < settings.extraShuffle + level * 5; s++) {
                 const a = Math.floor(Math.random() * arr.length);
                 const b = Math.floor(Math.random() * arr.length);
@@ -237,3 +240,6 @@ export function JigsawEngine({ config, difficulty, onComplete }: Props) {
     </div>
   );
 }
+
+
+

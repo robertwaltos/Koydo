@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { Zap, Cpu, Activity, ShieldCheck, Info, ChevronRight, Target, Atom, Sparkles, Binary, Layers, RotateCcw } from "lucide-react";
+import { Zap, Cpu, Activity, ShieldCheck, Info, ChevronRight, Target, Atom, Sparkles, Binary, Layers, RotateCcw, type LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -314,7 +314,15 @@ export default function QuantumQuirk() {
     );
 }
 
-function GateButton({ label, icon: Icon, color, desc, onClick }: any) {
+type GateButtonProps = {
+    label: string;
+    icon: LucideIcon;
+    color: string;
+    desc: string;
+    onClick: () => void;
+};
+
+function GateButton({ label, icon: Icon, color, desc, onClick }: GateButtonProps) {
     return (
         <motion.button
             whileHover={{ x: 8 }}

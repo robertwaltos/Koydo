@@ -979,21 +979,6 @@ export default function GamePlayerPage() {
 
   const nextClaimableSeasonTier = premiumSeasonPass?.tiers.find((tier) => tier.unlocked && !tier.claimed) ?? null;
 
-  /* ── Playing state ─────────────────────────────────────────────────── */
-  if (playing && Engine) {
-    return (
-      <main className="mx-auto max-w-4xl px-4 py-4">
-        <Engine
-          game={game}
-          difficulty={difficulty}
-          level={level}
-          onComplete={handleComplete}
-          onExit={handleExit}
-        />
-      </main>
-    );
-  }
-
   /* ── Lobby (default) ───────────────────────────────────────────────── */
   return (
     <main className="mx-auto max-w-5xl px-4 py-8">

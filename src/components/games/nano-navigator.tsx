@@ -3,11 +3,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Activity, ShieldCheck, Info, ChevronRight, Zap, Target, Microscope, Atom, Dna, Waves, Thermometer, Wind } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
+
+const randomUnit = () => Math.random();
 
 /* --- Microbiology Types --- */
 type CellStructure = "NUCLEUS" | "MITOCHONDRIA" | "RIBOSOME" | "MEMBRANE";
@@ -52,7 +55,7 @@ export default function NanoNavigator() {
             setMessage("Energy reserves critical. Atomic propulsion failing. 🔋");
             setMood("thinking");
         }
-    }, [gameState, stats.energy]);
+    }, [gameState, setMessage, setMood, stats.energy]);
 
     useEffect(() => {
         const handleKeys = (e: KeyboardEvent) => {
@@ -114,11 +117,11 @@ export default function NanoNavigator() {
                     <motion.div
                         key={i}
                         animate={{
-                            x: [Math.random() * 1000, Math.random() * 1000],
-                            y: [Math.random() * 700, Math.random() * 700],
+                            x: [randomUnit() * 1000, randomUnit() * 1000],
+                            y: [randomUnit() * 700, randomUnit() * 700],
                             opacity: [0.1, 0.3, 0.1]
                         }}
-                        transition={{ duration: 10 + Math.random() * 20, repeat: Infinity }}
+                        transition={{ duration: 10 + randomUnit() * 20, repeat: Infinity }}
                         className="absolute w-2 h-2 rounded-full bg-indigo-400/20 blur-sm"
                     />
                 ))}
@@ -270,7 +273,15 @@ function HudMeter({ label, value, color }: { label: string, value: number, color
     );
 }
 
-function SensorCard({ label, value, icon: Icon }: any) {
+function SensorCard({
+    label,
+    value,
+    icon: Icon,
+}: {
+    label: string;
+    value: string;
+    icon: LucideIcon;
+}) {
     return (
         <div className="bg-white/5 border border-white/5 p-4 rounded-2xl flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -284,7 +295,21 @@ function SensorCard({ label, value, icon: Icon }: any) {
     );
 }
 
-function StructureNode({ name, x, y, icon: Icon, color, onCollect }: any) {
+function StructureNode({
+    name,
+    x,
+    y,
+    icon: Icon,
+    color,
+    onCollect,
+}: {
+    name: string;
+    x: number;
+    y: number;
+    icon: LucideIcon;
+    color: string;
+    onCollect: () => void;
+}) {
     return (
         <motion.button
             onClick={onCollect}

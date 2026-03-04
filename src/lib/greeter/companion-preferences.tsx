@@ -24,15 +24,16 @@ const CompanionPreferencesContext = createContext<CompanionPreferencesContextVal
 const LOCAL_KEY = "koydo.companion.avatar-style";
 
 export function CompanionPreferencesProvider({ children }: { children: ReactNode }) {
-  const [avatarStyle, setAvatarStyleState] = useState<CompanionAvatarStyle>("human");
+  const [avatarStyle, setAvatarStyleState] = useState<CompanionAvatarStyle>(() => {
+    if (typeof window === "undefined") {
+      return "human";
+    }
+    const stored = localStorage.getItem(LOCAL_KEY);
+    return stored === "human" || stored === "animated" ? stored : "human";
+  });
 
   // Load from localStorage on mount, then try server preferences
   useEffect(() => {
-    const stored = localStorage.getItem(LOCAL_KEY);
-    if (stored === "human" || stored === "animated") {
-      setAvatarStyleState(stored);
-    }
-
     // Try to load from server preferences
     fetch("/api/user/preferences")
       .then((r) => (r.ok ? r.json() : null))

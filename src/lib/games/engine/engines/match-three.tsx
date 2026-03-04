@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -294,3 +296,6 @@ export function MatchThreeEngine({ config, difficulty, onComplete }: Props) {
     </div>
   );
 }
+
+
+

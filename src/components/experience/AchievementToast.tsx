@@ -5,6 +5,8 @@ import { Trophy, Star, Zap } from "lucide-react";
 import { useEffect, useState } from "react";
 import { hapticCelebration } from "@/lib/platform/haptics";
 
+const randomUnit = () => Math.random();
+
 interface AchievementToastProps {
     show: boolean;
     title: string;
@@ -109,8 +111,8 @@ export default function AchievementToast({
                                         initial={{ scale: 0, x: "50%", y: "50%" }}
                                         animate={{
                                             scale: [0, 1, 0],
-                                            x: [`${50 + (Math.random() - 0.5) * 40}%`, `${50 + (Math.random() - 0.5) * 80}%`],
-                                            y: [`${50 + (Math.random() - 0.5) * 40}%`, `${50 + (Math.random() - 0.5) * 80}%`],
+                                            x: [`${50 + (randomUnit() - 0.5) * 40}%`, `${50 + (randomUnit() - 0.5) * 80}%`],
+                                            y: [`${50 + (randomUnit() - 0.5) * 40}%`, `${50 + (randomUnit() - 0.5) * 80}%`],
                                         }}
                                         transition={{ duration: 1, repeat: Infinity, delay: i * 0.5 }}
                                         className={`absolute w-2 h-2 rounded-full bg-gradient-to-r ${current.color}`}

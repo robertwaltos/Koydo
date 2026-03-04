@@ -5,20 +5,20 @@ import { useRef, useState, useEffect } from "react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import MascotFriend from "./KoydoMascotFriends";
 import { hapticSelection, hapticSuccess } from "@/lib/platform/haptics";
-import { Brain, Flame, Atom, Palette, Cpu, Rocket, ShieldCheck, Beaker, Zap, Box, Search, ChevronRight, Code, Leaf, TrendingUp, Globe, TreePine, Music, Mountain, Bot, Wind, History as HistoryIcon, Microscope, Navigation, Grid3X3, ShieldAlert, Scale, Compass, Building2, Construction, Lock, BookOpen, CircuitBoard } from "lucide-react";
+import { Brain, Flame, Atom, Palette, Cpu, Rocket, ShieldCheck, Beaker, Zap, Box, Search, ChevronRight, Code, Leaf, TrendingUp, Globe, TreePine, Music, Mountain, Bot, Wind, History as HistoryIcon, Microscope, Navigation, Grid3X3, ShieldAlert, Scale, Compass, Building2, Construction, Lock, BookOpen, CircuitBoard, type LucideIcon } from "lucide-react";
 import Link from "next/link";
 
 interface PlanetNode {
     id: string;
     name: string;
-    icon: any;
+    icon: LucideIcon;
     color: string;
     accent: string;
     x: number;
     y: number;
     mascot: "pixel" | "spark" | "echo" | "luna" | "terra";
     progress: number;
-    games: { id: string; title: string; icon: any }[];
+    games: { id: string; title: string; icon: LucideIcon }[];
 }
 
 const PLANETS: PlanetNode[] = [

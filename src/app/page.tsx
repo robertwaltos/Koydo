@@ -4,6 +4,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { getAllEducationStages } from "@/lib/explorer/scenes";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
 import {
   isSupportedLocale,
   type Locale,
@@ -12,6 +13,7 @@ import {
 import { ASSETS } from "@/lib/config/assets";
 import VoicePicker from "@/app/explore/_components/voice-picker";
 import LandingCompanion from "@/app/components/landing-companion";
+import SubjectShowcase from "@/app/components/subject-showcase";
 
 export const metadata: Metadata = {
   title: "Koydo — Learn Anything, Any Age, Any Language",
@@ -724,7 +726,6 @@ export default async function Home() {
           </section>
 
         </div>
-      </div>
     </div>
   );
 }

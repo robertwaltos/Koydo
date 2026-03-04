@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { Shield, Zap, Activity, Heart, Target, ChevronRight, Droplets, Microscope, Crosshair, Thermometer, FlaskConical, AlertTriangle, ShieldAlert, ShieldCheck } from "lucide-react";
+import { Shield, Zap, Activity, Heart, Target, ChevronRight, Droplets, Microscope, Crosshair, Thermometer, FlaskConical, AlertTriangle, ShieldAlert, ShieldCheck, type LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -58,7 +58,15 @@ export default function BioBlast() {
                 const next = prev.map(p => ({ ...p, x: p.x - p.speed }))
                     .filter(p => {
                         if (p.x <= 0) {
-                            setImmuneHealth(h => Math.max(0, h - 10));
+                            setImmuneHealth((health) => {
+                                const nextHealth = Math.max(0, health - 10);
+                                if (health > 0 && nextHealth <= 0 && gameState === "PLAYING") {
+                                    setGameState("GAMEOVER");
+                                    setMood("sad");
+                                    setMessage("Immune system breached. Pathogens have successfully colonized the host. 🧬");
+                                }
+                                return nextHealth;
+                            });
                             hapticError();
                             return false;
                         }
@@ -68,15 +76,7 @@ export default function BioBlast() {
             });
         }, 50);
         return () => clearInterval(moveInterval);
-    }, [gameState]);
-
-    useEffect(() => {
-        if (immuneHealth <= 0 && gameState === "PLAYING") {
-            setGameState("GAMEOVER");
-            setMood("sad");
-            setMessage("Immune system breached. Pathogens have successfully colonized the host. 🧬");
-        }
-    }, [immuneHealth, gameState, setMessage, setMood]);
+    }, [gameState, setMessage, setMood]);
 
     useEffect(() => {
         if (gameState !== "GAMEOVER" || completionSentRef.current) return;
@@ -155,7 +155,6 @@ export default function BioBlast() {
                     </h3>
 
                     <DeploymentButton
-                        type="MACROPHAGE"
                         active={activeCell === "MACROPHAGE"}
                         label="Macrophage"
                         desc="Phagocyte / Heavy"
@@ -164,7 +163,6 @@ export default function BioBlast() {
                         onClick={() => setActiveCell("MACROPHAGE")}
                     />
                     <DeploymentButton
-                        type="T_CELL"
                         active={activeCell === "T_CELL"}
                         label="Cytotoxic T"
                         desc="Precision Strike"
@@ -173,7 +171,6 @@ export default function BioBlast() {
                         onClick={() => setActiveCell("T_CELL")}
                     />
                     <DeploymentButton
-                        type="B_CELL"
                         active={activeCell === "B_CELL"}
                         label="B-Lymphocyte"
                         desc="Antibody Production"
@@ -292,7 +289,7 @@ export default function BioBlast() {
     );
 }
 
-function StatusBox({ label, value, color, icon: Icon }: { label: string, value: string | number, color: string, icon: any }) {
+function StatusBox({ label, value, color, icon: Icon }: { label: string, value: string | number, color: string, icon: LucideIcon }) {
     return (
         <div className="bg-white/5 border border-white/5 px-6 py-2 rounded-2xl flex items-center gap-4 min-w-[160px]">
             <div className={`w-10 h-10 rounded-xl bg-zinc-900 border border-white/10 flex items-center justify-center ${color}`}>
@@ -306,7 +303,16 @@ function StatusBox({ label, value, color, icon: Icon }: { label: string, value: 
     );
 }
 
-function DeploymentButton({ label, desc, icon: Icon, color, active, onClick }: any) {
+type DeploymentButtonProps = {
+    label: string;
+    desc: string;
+    icon: LucideIcon;
+    color: string;
+    active: boolean;
+    onClick: () => void;
+};
+
+function DeploymentButton({ label, desc, icon: Icon, color, active, onClick }: DeploymentButtonProps) {
     return (
         <motion.button
             whileHover={{ x: 8 }}

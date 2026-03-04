@@ -44,12 +44,18 @@ export default function MascotHost({
 
     // Persistence: Load mascot "memory"
     useEffect(() => {
+        let syncFrame = 0;
         const saved = localStorage.getItem(`${persistenceKey}_${friendId}`);
         if (saved) {
-            const data = JSON.parse(saved);
-            setInteractionCount(data.interactions || 0);
-            setFriendshipLevel(Math.floor((data.interactions || 0) / 10) + 1);
+            const data = JSON.parse(saved) as { interactions?: number };
+            const interactions = typeof data.interactions === "number" ? data.interactions : 0;
+            const level = Math.floor(interactions / 10) + 1;
+            syncFrame = requestAnimationFrame(() => {
+                setInteractionCount(interactions);
+                setFriendshipLevel(level);
+            });
         }
+        return () => cancelAnimationFrame(syncFrame);
     }, [friendId, persistenceKey]);
 
     // Save mascot "memory"

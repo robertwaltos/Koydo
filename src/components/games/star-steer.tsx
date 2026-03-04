@@ -3,11 +3,15 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Navigation, Compass, Star, Map as MapIcon, Info, ChevronRight, Target, Move, Rocket, Sparkles, Crosshair, ZoomIn } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
+
+const nowMs = () => Date.now();
+const randomUnit = () => Math.random();
 
 /* --- Star Steer Types --- */
 type Constellation = "ORION" | "LYRA" | "CYGNUS" | "CASSIOPEIA";
@@ -42,14 +46,14 @@ export default function StarSteer() {
     useEffect(() => {
         if (gameState !== "SUCCESS" || completionSentRef.current) return;
         if (runStartedAtRef.current === 0) {
-            runStartedAtRef.current = Date.now();
+            runStartedAtRef.current = nowMs();
         }
         completionSentRef.current = true;
         emitLegacyGameComplete({
             sessionId: sessionIdRef.current,
             gameId: "star-steer",
             difficulty: "medium",
-            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            elapsedMs: Math.max(0, nowMs() - runStartedAtRef.current),
             interactions: Math.max(1, targets.length),
             score: targets.length,
             maxScore: STARS.length,
@@ -96,12 +100,12 @@ export default function StarSteer() {
                     <motion.div
                         key={i}
                         animate={{ opacity: [0.2, 0.8, 0.2] }}
-                        transition={{ duration: 2 + Math.random() * 4, repeat: Infinity }}
+                        transition={{ duration: 2 + randomUnit() * 4, repeat: Infinity }}
                         className="absolute w-0.5 h-0.5 bg-white rounded-full"
                         style={{
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                            transform: `scale(${Math.random()})`
+                            left: `${randomUnit() * 100}%`,
+                            top: `${randomUnit() * 100}%`,
+                            transform: `scale(${randomUnit()})`
                         }}
                     />
                 ))}
@@ -250,7 +254,7 @@ export default function StarSteer() {
     );
 }
 
-function HudValue({ label, value, icon: Icon }: { label: string, value: string, icon: any }) {
+function HudValue({ label, value, icon: Icon }: { label: string, value: string, icon: LucideIcon }) {
     return (
         <div className="flex flex-col items-end gap-1">
             <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest flex items-center gap-1">
@@ -261,7 +265,17 @@ function HudValue({ label, value, icon: Icon }: { label: string, value: string, 
     );
 }
 
-function ControlPad({ onMoveUp, onMoveDown, onMoveLeft, onMoveRight }: any) {
+function ControlPad({
+    onMoveUp,
+    onMoveDown,
+    onMoveLeft,
+    onMoveRight,
+}: {
+    onMoveUp: () => void;
+    onMoveDown: () => void;
+    onMoveLeft: () => void;
+    onMoveRight: () => void;
+}) {
     return (
         <div className="grid grid-cols-3 gap-2 w-full max-w-[200px] mx-auto mb-4">
             <div />
@@ -277,7 +291,15 @@ function ControlPad({ onMoveUp, onMoveDown, onMoveLeft, onMoveRight }: any) {
     );
 }
 
-function ControlButton({ icon: Icon, className, onClick }: any) {
+function ControlButton({
+    icon: Icon,
+    className,
+    onClick,
+}: {
+    icon: LucideIcon;
+    className?: string;
+    onClick: () => void;
+}) {
     return (
         <button
             onClick={onClick}
@@ -299,7 +321,7 @@ function StarNode({ star, isIdentified, onClick }: { star: StarData, isIdentifie
             <div className="relative">
                 <motion.div
                     animate={{ scale: [1, 1.2, 1], opacity: [0.6, 1, 0.6] }}
-                    transition={{ duration: 2 + Math.random(), repeat: Infinity }}
+                    transition={{ duration: 2 + randomUnit(), repeat: Infinity }}
                     className={`rounded-full shadow-[0_0_20px_rgba(255,255,255,0.4)]
                         ${star.magnitude < 1.3 ? 'w-4 h-4 bg-white' : 'w-3 h-3 bg-blue-100'}
                     `}

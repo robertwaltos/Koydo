@@ -36,8 +36,12 @@ export default function JuicyConfetti({
     const startTime = useRef<number>(0);
 
     useEffect(() => {
+        let visibilityFrame = 0;
+
         if (active) {
-            setShouldRender(true);
+            visibilityFrame = requestAnimationFrame(() => {
+                setShouldRender(true);
+            });
             startTime.current = Date.now();
 
             const canvas = canvasRef.current;
@@ -101,10 +105,13 @@ export default function JuicyConfetti({
 
             animationFrame.current = requestAnimationFrame(animate);
         } else {
-            setShouldRender(false);
+            visibilityFrame = requestAnimationFrame(() => {
+                setShouldRender(false);
+            });
         }
 
         return () => {
+            cancelAnimationFrame(visibilityFrame);
             cancelAnimationFrame(animationFrame.current);
         };
     }, [active, durationMs, onComplete, particleCount]);

@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import ConsoleAiChatbox from "./console-ai-chatbox";
 
 type SupportTicket = {
@@ -384,6 +385,15 @@ const CONSOLE_NAV: ConsoleCategoryDef[] = [
       { id: "role-management", title: "Role Management",
         description: "Change what a user is allowed to do: grant or remove admin access and parent-portal access for any existing account.",
         tip: "Type UPDATE_ROLES exactly in the confirmation box to prevent accidental changes. Be careful not to remove your own admin access — you would be locked out of this console." },
+      { id: "owner-security", title: "Owner Security (MFA + Step-Up)",
+        description: "Configure and verify owner-level protection, including authenticator app, backup email, and YubiKey OTP step-up requirements.",
+        tip: "Use this before sensitive operations and revoke step-up sessions after any security incident." },
+      { id: "factory-reset", title: "Factory Reset + Module Baselines",
+        description: "Capture and compare baseline snapshots, then execute owner-controlled recovery workflows when the platform must be reset safely.",
+        tip: "Review baseline drift and confirmation checkpoints before running destructive reset workflows." },
+      { id: "ownership-transfer", title: "Ownership Transfer Playbooks",
+        description: "Prepare and execute ownership transfer playbooks with explicit confirmation and secure handoff records.",
+        tip: "Validate prerequisites with playbook mode first, then execute with transfer credentials only after final verification." },
       { id: "account-recovery", title: "Account Recovery",
         description: "Generate a secure password-reset link for a user who is locked out of their account. The link will appear in the result — copy and send it to the user by email.",
         tip: "The link is single-use and expires quickly. If the user misses it, simply generate a new one here at any time." },
@@ -2315,6 +2325,8 @@ export default function OperationsConsole({
       ) : null}
       <ConsoleAiChatbox />
 
+
+      {selectedSectionId === "system-health" && (<Section title="System Health" description="An all-in-one view of platform health. Use this first whenever anything seems broken — it combines environment, database, and payment signals in one summary." tip="Green means healthy. Yellow indicates warnings that may degrade behavior. Red indicates a blocking issue requiring urgent attention.">
         <div
           className={`mb-3 rounded-md border px-3 py-2 text-sm ${
             systemBlockingIssues > 0
@@ -2992,7 +3004,7 @@ export default function OperationsConsole({
         </form>
       </Section>
       )}
-
+      {selectedSectionId === "owner-security" && (
       <Section title="Owner Security (MFA + Step-Up)">
         <div className="mb-3 rounded-md border border-indigo-300 bg-indigo-50 px-3 py-2 text-sm text-indigo-900">
           Password sign-in is required first; owner-sensitive actions require step-up via authenticator, secondary email, or YubiKey OTP.
@@ -3230,7 +3242,9 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      )}
 
+      {selectedSectionId === "factory-reset" && (
       <Section title="Factory Reset + Module Baselines">
         {factoryResetMessage ? <p className="mb-3 text-sm text-zinc-700">{factoryResetMessage}</p> : null}
 
@@ -3374,7 +3388,9 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      )}
 
+      {selectedSectionId === "ownership-transfer" && (
       <Section title="Ownership Transfer Playbooks">
         {transferMessage ? <p className="mb-3 text-sm text-zinc-700">{transferMessage}</p> : null}
 
@@ -3473,7 +3489,9 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      )}
 
+      {selectedSectionId === "account-recovery" && (
       <Section title="Account Recovery">
         <form onSubmit={handleResetPassword} className="flex flex-wrap gap-3">
           <input name="email" type="email" placeholder="User email" className="min-w-80 ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
@@ -4100,8 +4118,6 @@ export default function OperationsConsole({
         </div>
       </Section>
       )}
-        </div>
-      </div>
     </div>
   );
 }

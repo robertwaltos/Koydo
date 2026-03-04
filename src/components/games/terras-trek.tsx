@@ -227,7 +227,7 @@ export default function TerrasTrek() {
                             <div className="flex-grow">
                                 <h3 className="text-emerald-400 font-black text-xs tracking-widest uppercase mb-1 flex items-center gap-2">
                                     <Leaf className="w-4 h-4" />
-                                    Terra's Field Guide
+                                    Terra&apos;s Field Guide
                                 </h3>
                                 <p className="text-white text-2xl font-medium leading-tight">
                                     {isCapturing ? `Checking the ${currentPoint.species}... Success!` : currentPoint.description}
@@ -279,7 +279,7 @@ export default function TerrasTrek() {
                                 Survey <br /> Secured
                             </h2>
                             <p className="text-white/60 text-lg mb-10 px-8">
-                                You've successfully cataloged the endangered flora of the Emerald Biome.
+                                You&apos;ve successfully cataloged the endangered flora of the Emerald Biome.
                             </p>
 
                             <motion.button

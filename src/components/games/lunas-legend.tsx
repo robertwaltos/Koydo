@@ -18,6 +18,8 @@ import { hapticSuccess, hapticSelection } from "@/lib/platform/haptics";
 import MascotFriend from "../experience/KoydoMascotFriends";
 import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
+const randomUnit = () => Math.random();
+
 /**
  * LUNA'S LEGEND - Phase 9 (Explorer Batch)
  * A 4K advanced storytelling quest with multi-branching narratives.
@@ -268,10 +270,10 @@ export default function LunasLegend() {
                     key={i}
                     className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
                     style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        opacity: Math.random() * 0.5,
-                        animationDelay: `${Math.random() * 5}s`
+                        left: `${randomUnit() * 100}%`,
+                        top: `${randomUnit() * 100}%`,
+                        opacity: randomUnit() * 0.5,
+                        animationDelay: `${randomUnit() * 5}s`
                     }}
                 />
             ))}

@@ -69,6 +69,13 @@ const DEFAULT_CONTEXT: DeviceGatewayContextValue = {
   capabilities: null,
 };
 
+const DISABLED_CONTEXT: DeviceGatewayContextValue = {
+  canSpatial: false,
+  isReady: true,
+  tier: 0,
+  capabilities: null,
+};
+
 const DeviceGatewayContext = createContext<DeviceGatewayContextValue>(DEFAULT_CONTEXT);
 
 /* ── Provider ── */
@@ -264,16 +271,12 @@ export function DeviceGatewayProvider({
   children: ReactNode;
   enabled?: boolean;
 }) {
-  const [state, setState] = useState<DeviceGatewayContextValue>(DEFAULT_CONTEXT);
+  const [state, setState] = useState<DeviceGatewayContextValue>(() =>
+    enabled ? DEFAULT_CONTEXT : DISABLED_CONTEXT,
+  );
 
   useEffect(() => {
     if (!enabled) {
-      setState({
-        canSpatial: false,
-        isReady: true,
-        tier: 0,
-        capabilities: null,
-      });
       return;
     }
 
@@ -447,8 +450,10 @@ export function DeviceGatewayProvider({
     void detect();
   }, [enabled]);
 
+  const contextValue = enabled ? state : DISABLED_CONTEXT;
+
   return (
-    <DeviceGatewayContext.Provider value={state}>
+    <DeviceGatewayContext.Provider value={contextValue}>
       {children}
     </DeviceGatewayContext.Provider>
   );

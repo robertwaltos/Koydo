@@ -215,7 +215,7 @@ export default function ClimateCommander() {
                                 Planet <br /> Stabilized!
                             </h2>
                             <p className="text-emerald-300/60 mb-10 text-lg">
-                                You've maintained the delicate balance of the planetary systems. The ecosystem is thriving under your command.
+                                You&apos;ve maintained the delicate balance of the planetary systems. The ecosystem is thriving under your command.
                             </p>
                             <button
                                 onClick={() => setIsSuccess(false)}

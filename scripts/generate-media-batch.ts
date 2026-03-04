@@ -450,7 +450,7 @@ async function runIllustrations(args: Args, supabase: SupabaseClient, pack: Prom
       const result = await generateImage({
         prompt,
         model: "imagen-4.0-fast-generate-001",
-        aspectRatio: "3:2",
+        aspectRatio: "16:9",
         numberOfImages: 1,
         personGeneration: "allow_all",
         metadata: { moduleId: mod.moduleId, lessonId: lesson.lessonId, promptType: "illustration" },

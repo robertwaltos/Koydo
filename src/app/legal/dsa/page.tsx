@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import SoftCard from "@/app/components/ui/soft-card";
 
 export const metadata: Metadata = {
@@ -131,13 +132,13 @@ export default function DsaTransparencyPage() {
           and subject preferences. This recommendation is deterministic (not AI-driven profiling)
           and based solely on curriculum mapping. No user profiling for advertising purposes is
           performed. Users can browse all available content via the{" "}
-          <a href="/explore" className="text-accent underline hover:no-underline">
+          <Link href="/explore" className="text-accent underline hover:no-underline">
             Explore
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="/modules" className="text-accent underline hover:no-underline">
+          <Link href="/modules" className="text-accent underline hover:no-underline">
             Modules
-          </a>{" "}
+          </Link>{" "}
           pages without relying on recommendations.
         </p>
       </SoftCard>

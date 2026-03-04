@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import CompanionAvatarSVG from "@/components/experience/CompanionAvatarSVG";
 import {
@@ -9,6 +9,19 @@ import {
 } from "@/lib/greeter/companion-config";
 
 const SESSION_KEY = "koydo.landing.companion";
+
+function resolveSessionCompanion(): CompanionGender | null {
+  if (typeof window === "undefined") {
+    return null;
+  }
+  const stored = sessionStorage.getItem(SESSION_KEY) as CompanionGender | null;
+  if (stored === "female" || stored === "male") {
+    return stored;
+  }
+  const pick: CompanionGender = Math.random() < 0.5 ? "female" : "male";
+  sessionStorage.setItem(SESSION_KEY, pick);
+  return pick;
+}
 
 /**
  * LandingCompanion
@@ -19,22 +32,10 @@ const SESSION_KEY = "koydo.landing.companion";
  * and can be carried over to post-signup companion assignment.
  */
 export default function LandingCompanion() {
-  const [gender, setGender] = useState<CompanionGender | null>(null);
+  const [gender] = useState<CompanionGender | null>(() => resolveSessionCompanion());
   const [hasInteracted, setHasInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const router = useRouter();
-
-  useEffect(() => {
-    // Check for existing pick in sessionStorage
-    const stored = sessionStorage.getItem(SESSION_KEY) as CompanionGender | null;
-    if (stored === "female" || stored === "male") {
-      setGender(stored);
-    } else {
-      const pick: CompanionGender = Math.random() < 0.5 ? "female" : "male";
-      sessionStorage.setItem(SESSION_KEY, pick);
-      setGender(pick);
-    }
-  }, []);
 
   if (!gender) return null;
 

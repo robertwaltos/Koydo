@@ -11,7 +11,6 @@ import AiCoachCard from "./ai-coach-card";
 import AiTutorPanel from "./ai-tutor-panel";
 import AiWeeklyPlanCard from "./ai-weekly-plan-card";
 import AiRemediationWorksheetCard from "./ai-remediation-worksheet-card";
-import AdaptiveNextLessons from "./adaptive-next-lessons";
 import ModuleCoverImage from "@/app/components/module-cover-image";
 import { resolveLanguageUsageEntitlement } from "@/lib/language-learning";
 import { toLessonPath } from "@/lib/routing/paths";

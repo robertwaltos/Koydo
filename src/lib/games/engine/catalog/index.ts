@@ -107,7 +107,6 @@ export function useCatalog(): CatalogState {
 
   useEffect(() => {
     if (_catalog) {
-      setState({ catalog: _catalog, loading: false });
       return;
     }
     let cancelled = false;

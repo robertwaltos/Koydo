@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -39,6 +41,7 @@ const DIFF: Record<Difficulty, { puzzleCount: number; timeLimit: number; seqLeng
   medium: { puzzleCount: 10, timeLimit: 120_000, seqLength: 6 },
   hard:   { puzzleCount: 15, timeLimit: 120_000, seqLength: 8 },
 };
+
 
 export function PatternCompleteEngine({ config, difficulty, onComplete }: Props) {
   const settings = DIFF[difficulty];
@@ -259,3 +262,6 @@ function generatePuzzles(items: PatternItem[], count: number, seqLen: number): P
   }
   return puzzles;
 }
+
+
+

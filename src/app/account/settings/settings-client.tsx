@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import SoftCard from "@/app/components/ui/soft-card";
 import { getAllLearningPaths } from "@/lib/explorer/learning-paths";
@@ -772,12 +772,13 @@ function CompanionSettingsCard({
   avatarStyle: CompanionAvatarStyle;
   setAvatarStyle: (style: CompanionAvatarStyle) => void;
 }) {
-  const [currentGender, setCurrentGender] = useState<CompanionGender | null>(null);
-
-  useEffect(() => {
+  const [currentGender, setCurrentGender] = useState<CompanionGender | null>(() => {
+    if (typeof window === "undefined") {
+      return null;
+    }
     const stored = localStorage.getItem(COMPANION_STORAGE_KEY) as CompanionGender | null;
-    if (stored === "female" || stored === "male") setCurrentGender(stored);
-  }, []);
+    return stored === "female" || stored === "male" ? stored : null;
+  });
 
   const companion = currentGender ? COMPANIONS[currentGender] : null;
 

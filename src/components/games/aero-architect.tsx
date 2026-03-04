@@ -31,10 +31,10 @@ export default function AeroArchitect() {
     const runStartedAtRef = useRef<number>(0);
 
     const stats = useMemo((): AirframeStats => {
-        let lift = (wingSpan * 0.8) + (wingShape === "DELTA" ? 20 : wingShape === "ELLIPTICAL" ? 30 : 10);
-        let drag = (wingSpan * 0.4) + (wingShape === "RECTANGULAR" ? 40 : 10);
-        let stability = wingShape === "SWEPT" ? 80 : 50;
-        let speed = (enginePower * 1.5) - (drag * 0.5);
+        const lift = (wingSpan * 0.8) + (wingShape === "DELTA" ? 20 : wingShape === "ELLIPTICAL" ? 30 : 10);
+        const drag = (wingSpan * 0.4) + (wingShape === "RECTANGULAR" ? 40 : 10);
+        const stability = wingShape === "SWEPT" ? 80 : 50;
+        const speed = (enginePower * 1.5) - (drag * 0.5);
 
         return { lift, drag, stability, speed: Math.max(0, speed) };
     }, [wingShape, wingSpan, enginePower]);

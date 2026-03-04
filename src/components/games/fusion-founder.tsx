@@ -228,7 +228,7 @@ export default function FusionFounder() {
                                 Fusion <br /> Ignited!
                             </h2>
                             <p className="text-cyan-300/60 mb-10 text-lg">
-                                You've maintained a stable magnetic bottle. Net energy gain achieved.
+                                You&apos;ve maintained a stable magnetic bottle. Net energy gain achieved.
                                 Infinite power for the experience hub unlocked!
                             </p>
                             <button

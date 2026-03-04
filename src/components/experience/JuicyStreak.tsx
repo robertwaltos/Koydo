@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Flame } from "lucide-react";
 import { useEffect, useState } from "react";
 
+const randomUnit = () => Math.random();
+
 interface JuicyStreakProps {
     count: number;
     className?: string;
@@ -17,11 +19,13 @@ export default function JuicyStreak({ count, className = "" }: JuicyStreakProps)
     const [isHot, setIsHot] = useState(false);
 
     useEffect(() => {
-        if (count > 0) {
-            setIsHot(true);
-            const timer = setTimeout(() => setIsHot(false), 500);
-            return () => clearTimeout(timer);
-        }
+        if (count <= 0) return;
+        const heatTimer = setTimeout(() => setIsHot(true), 0);
+        const coolTimer = setTimeout(() => setIsHot(false), 500);
+        return () => {
+            clearTimeout(heatTimer);
+            clearTimeout(coolTimer);
+        };
     }, [count]);
 
     if (count <= 0) return null;
@@ -85,9 +89,9 @@ export default function JuicyStreak({ count, className = "" }: JuicyStreakProps)
                                 initial={{ x: 0, y: 0, scale: 1 }}
                                 animate={{
                                     x: (i - 2.5) * 20,
-                                    y: -40 - Math.random() * 40,
+                                    y: -40 - randomUnit() * 40,
                                     scale: 0,
-                                    rotate: Math.random() * 360
+                                    rotate: randomUnit() * 360
                                 }}
                                 className="absolute left-1/2 top-1/2 h-2 w-2 rounded-full bg-orange-400"
                             />

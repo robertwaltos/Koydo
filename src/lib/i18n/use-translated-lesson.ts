@@ -17,23 +17,22 @@ export function useTranslatedLesson(
   moduleTitle: string,
   locale: Locale | string,
 ): { lesson: Lesson; moduleTitle: string; loading: boolean } {
-  const [fields, setFields] = useState<Record<string, string> | null>(null);
-  const [loading, setLoading] = useState(locale !== "en");
+  const [loaded, setLoaded] = useState<{
+    moduleId: string;
+    locale: string;
+    fields: Record<string, string> | null;
+  } | null>(null);
 
   useEffect(() => {
     if (locale === "en") {
-      setFields(null);
-      setLoading(false);
       return;
     }
 
     let cancelled = false;
-    setLoading(true);
 
     loadModuleTranslations(moduleId, locale).then((result) => {
       if (!cancelled) {
-        setFields(result);
-        setLoading(false);
+        setLoaded({ moduleId, locale, fields: result });
       }
     });
 
@@ -42,15 +41,24 @@ export function useTranslatedLesson(
     };
   }, [moduleId, locale]);
 
+  const activeFields =
+    locale === "en"
+      ? null
+      : loaded && loaded.moduleId === moduleId && loaded.locale === locale
+        ? loaded.fields
+        : null;
+
+  const loading = locale !== "en" && activeFields === null;
+
   const translated = useMemo(() => {
-    if (!fields) return { lesson, moduleTitle };
+    if (!activeFields) return { lesson, moduleTitle };
 
     const lid = lesson.id || "l0";
-    const tLesson = translateLesson(lesson, lid, fields);
-    const tModuleTitle = fields["_:title"] ?? moduleTitle;
+    const tLesson = translateLesson(lesson, lid, activeFields);
+    const tModuleTitle = activeFields["_:title"] ?? moduleTitle;
 
     return { lesson: tLesson, moduleTitle: tModuleTitle };
-  }, [lesson, moduleTitle, fields]);
+  }, [activeFields, lesson, moduleTitle]);
 
   return { ...translated, loading };
 }

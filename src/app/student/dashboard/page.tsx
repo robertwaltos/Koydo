@@ -210,42 +210,14 @@ export default function StudentDashboardPage() {
   useEffect(() => {
     if (!selectedWorldId || !profile?.path_allowlist || profile.path_allowlist.length === 0) return;
     if (profile.path_allowlist.includes(selectedWorldId)) return;
-    setSelectedWorldId(null);
-    setSelectedWorldLabel(null);
+
+    const resetTimer = window.setTimeout(() => {
+      setSelectedWorldId(null);
+      setSelectedWorldLabel(null);
+    }, 0);
+
+    return () => window.clearTimeout(resetTimer);
   }, [profile?.path_allowlist, selectedWorldId]);
-
-  useEffect(() => {
-    if (!profile || profile.module_assignment_mode !== "random" || selectedWorldId) return;
-
-    const { paths } = getLearningPathsForLearner({
-      age_years: profile.age_years,
-      gradeLevel: profile.grade_level,
-      interestPathIds,
-    });
-    const allowedSet =
-      Array.isArray(profile.path_allowlist) && profile.path_allowlist.length > 0
-        ? new Set(profile.path_allowlist)
-        : null;
-    const candidatePaths = allowedSet
-      ? paths.filter((entry) => allowedSet.has(entry.id))
-      : paths;
-
-    if (candidatePaths.length === 0) return;
-
-    const dayStamp = new Date().toISOString().slice(0, 10);
-    const seed = `${profile.id}:${dayStamp}`;
-    const hash = [...seed].reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const selected = candidatePaths[hash % candidatePaths.length] ?? candidatePaths[0];
-
-    if (!selected) return;
-    // In random mode, auto-generate immediately so learners don't need to
-    // interact with the selector at all.
-    void handleWorldSelected(selected.id, selected.label);
-  }, [
-    interestPathIds,
-    profile,
-    selectedWorldId,
-  ]);
 
   /**
    * Triggered when a learner taps a world card or when random mode
@@ -279,6 +251,39 @@ export default function StudentDashboardPage() {
     },
     [profile, router],
   );
+
+  useEffect(() => {
+    if (!profile || profile.module_assignment_mode !== "random" || selectedWorldId) return;
+
+    const { paths } = getLearningPathsForLearner({
+      age_years: profile.age_years,
+      gradeLevel: profile.grade_level,
+      interestPathIds,
+    });
+    const allowedSet =
+      Array.isArray(profile.path_allowlist) && profile.path_allowlist.length > 0
+        ? new Set(profile.path_allowlist)
+        : null;
+    const candidatePaths = allowedSet
+      ? paths.filter((entry) => allowedSet.has(entry.id))
+      : paths;
+
+    if (candidatePaths.length === 0) return;
+
+    const dayStamp = new Date().toISOString().slice(0, 10);
+    const seed = `${profile.id}:${dayStamp}`;
+    const hash = [...seed].reduce((acc, char) => acc + char.charCodeAt(0), 0);
+    const selected = candidatePaths[hash % candidatePaths.length] ?? candidatePaths[0];
+
+    if (!selected) return;
+    // In random mode, auto-generate immediately so learners don't need to
+    // interact with the selector at all.
+    const synthTimer = window.setTimeout(() => {
+      void handleWorldSelected(selected.id, selected.label);
+    }, 0);
+
+    return () => window.clearTimeout(synthTimer);
+  }, [handleWorldSelected, interestPathIds, profile, selectedWorldId]);
 
   if (loading) {
     return (

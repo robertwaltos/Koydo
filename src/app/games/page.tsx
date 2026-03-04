@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
 import { DailyChallengeCard } from "@/components/gamification";
 import { GAME_CATALOG, type GameCategory } from "@/lib/games/catalog";
 import type { GameDifficulty, GameType } from "@/lib/games/types";
@@ -17,7 +16,6 @@ const CATEGORY_META: Record<
   adventure: { label: "Adventure", icon: "🧭" },
   literacy: { label: "Literacy", icon: "📚" },
   math: { label: "Math", icon: "🔢" },
-  literacy: { label: "Literacy", icon: "📚" },
   science: { label: "Science", icon: "🔬" },
   geography: { label: "Geography", icon: "🌍" },
   chemistry: { label: "Chemistry", icon: "⚗️" },
@@ -28,7 +26,6 @@ const CATEGORY_META: Record<
   logic: { label: "Logic", icon: "🧩" },
   language: { label: "Language", icon: "🌐" },
   creative: { label: "Creative", icon: "🎨" },
-  science: { label: "Science", icon: "🧪" },
 };
 
 type LearnerProfile = {
@@ -56,14 +53,23 @@ export default function GamesHubPage() {
   const [dailyCompleted, setDailyCompleted] = useState(false);
   const [dailyStatus, setDailyStatus] = useState<string>("");
   const [isDailyLoading, setIsDailyLoading] = useState<boolean>(true);
+  const catalog = GAME_CATALOG;
+  const categories = useMemo(() => {
+    const discovered = new Set<GameCategory>(catalog.map((game) => game.category));
+    return ["all", ...Array.from(discovered)] as string[];
+  }, [catalog]);
+
+  const handleCategoryChange = useCallback((category: string) => {
+    setActiveCategory(category);
+  }, []);
 
   const filtered = useMemo(
     () => (
       activeCategory === "all"
-        ? GAME_CATALOG
-        : GAME_CATALOG.filter((g) => g.category === (activeCategory as GameCategory))
+        ? catalog
+        : catalog.filter((g) => g.category === (activeCategory as GameCategory))
     ),
-    [activeCategory],
+    [activeCategory, catalog],
   );
 
   useEffect(() => {
@@ -220,7 +226,7 @@ export default function GamesHubPage() {
         style={{ scrollbarWidth: "none" }}
       >
         {categories.map((key) => {
-          const meta = CATEGORY_LABELS[key] ?? { label: key, icon: "📦" };
+          const meta = CATEGORY_META[key] ?? { label: key, icon: "📦" };
           const count =
             key === "all"
               ? catalog.length

@@ -3,11 +3,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { Search, Map, ShieldCheck, Info, ChevronRight, Zap, Target, History, Hammer, Brush, Box, Globe } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
+
+const randomUnit = () => Math.random();
 
 /* --- Archeology Types --- */
 type Artifact = {
@@ -45,8 +48,8 @@ export default function HistoHunt() {
         hapticSelection();
 
         // Random chance to find artifact
-        if (Math.random() > 0.8 && !currentDiscovery) {
-            const artifact = ARTIFACTS[Math.floor(Math.random() * ARTIFACTS.length)];
+        if (randomUnit() > 0.8 && !currentDiscovery) {
+            const artifact = ARTIFACTS[Math.floor(randomUnit() * ARTIFACTS.length)];
             setCurrentDiscovery(artifact);
             setGameState("ANALYSIS");
             setMessage(`Discovery confirmed! We've unearthed something significant from the ${artifact.era}. 🏺`);
@@ -238,7 +241,7 @@ export default function HistoHunt() {
     );
 }
 
-function StatBox({ label, value, icon: Icon, color }: { label: string, value: number, icon: any, color: string }) {
+function StatBox({ label, value, icon: Icon, color }: { label: string, value: number, icon: LucideIcon, color: string }) {
     return (
         <div className="bg-white/5 border border-white/5 px-6 py-3 rounded-2xl flex flex-col items-end min-w-[140px]">
             <span className="text-[9px] font-black text-zinc-500 uppercase tracking-widest mb-1">{label}</span>
@@ -250,7 +253,17 @@ function StatBox({ label, value, icon: Icon, color }: { label: string, value: nu
     );
 }
 
-function ToolButton({ icon: Icon, label, desc, active = false }: any) {
+function ToolButton({
+    icon: Icon,
+    label,
+    desc,
+    active = false,
+}: {
+    icon: LucideIcon;
+    label: string;
+    desc: string;
+    active?: boolean;
+}) {
     return (
         <button className={`w-full p-4 rounded-2xl border transition-all text-left flex items-start gap-4 group
             ${active ? 'bg-amber-500/10 border-amber-500/30' : 'bg-white/5 border-white/5 hover:bg-white/10'}`}>

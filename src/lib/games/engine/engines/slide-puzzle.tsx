@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef, useMemo } from "react";
 import { motion } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -33,6 +35,7 @@ const DIFF: Record<Difficulty, { size: number; timeLimit: number; shuffleMoves: 
   medium: { size: 4, timeLimit: 300_000, shuffleMoves: 50 },
   hard:   { size: 5, timeLimit: 420_000, shuffleMoves: 100 },
 };
+
 
 function createSolvedBoard(size: number): number[] {
   const board: number[] = [];
@@ -238,3 +241,6 @@ export function SlidePuzzleEngine({ config, difficulty, onComplete }: Props) {
     </div>
   );
 }
+
+
+

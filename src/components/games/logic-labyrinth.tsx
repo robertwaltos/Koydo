@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { Zap, Cpu, Activity, ShieldCheck, Info, ChevronRight, Target, Move, Grid3X3, Play, RotateCcw, Boxes, Split, Repeat } from "lucide-react";
+import { Zap, Cpu, Activity, ShieldCheck, Info, ChevronRight, Target, Move, Grid3X3, Play, RotateCcw, Boxes, Split, Repeat, type LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -158,11 +158,11 @@ export default function LogicLabyrinth() {
                         <Boxes className="w-3 h-3 text-fuchsia-400" /> Logic Blocks
                     </h3>
 
-                    <BlockButton type="MOVE" label="Step Forward" icon={Move} color="bg-fuchsia-500" onClick={() => addCommand("MOVE")} />
-                    <BlockButton type="TURN_L" label="Rotate Left" icon={RotateCcw} color="bg-indigo-500" onClick={() => addCommand("TURN_L")} />
-                    <BlockButton type="TURN_R" label="Rotate Right" icon={RotateCcw} color="bg-indigo-500" className="rotate-180" onClick={() => addCommand("TURN_R")} />
-                    <BlockButton type="LOOP" label="Loop Logic" icon={Repeat} color="bg-emerald-500" onClick={() => addCommand("LOOP")} />
-                    <BlockButton type="IF_CLEAR" label="Condition" icon={Split} color="bg-amber-500" onClick={() => addCommand("IF_CLEAR")} />
+                    <BlockButton label="Step Forward" icon={Move} color="bg-fuchsia-500" onClick={() => addCommand("MOVE")} />
+                    <BlockButton label="Rotate Left" icon={RotateCcw} color="bg-indigo-500" onClick={() => addCommand("TURN_L")} />
+                    <BlockButton label="Rotate Right" icon={RotateCcw} color="bg-indigo-500" className="rotate-180" onClick={() => addCommand("TURN_R")} />
+                    <BlockButton label="Loop Logic" icon={Repeat} color="bg-emerald-500" onClick={() => addCommand("LOOP")} />
+                    <BlockButton label="Condition" icon={Split} color="bg-amber-500" onClick={() => addCommand("IF_CLEAR")} />
 
                     <div className="mt-auto pt-6 border-t border-white/5">
                         <button
@@ -300,7 +300,15 @@ function StatusBox({ label, value, color }: { label: string, value: string, colo
     );
 }
 
-function BlockButton({ label, icon: Icon, color, className, onClick }: any) {
+type BlockButtonProps = {
+    label: string;
+    icon: LucideIcon;
+    color: string;
+    className?: string;
+    onClick: () => void;
+};
+
+function BlockButton({ label, icon: Icon, color, className, onClick }: BlockButtonProps) {
     return (
         <motion.button
             whileHover={{ x: 8 }}

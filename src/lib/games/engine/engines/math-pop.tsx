@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -43,6 +45,7 @@ const DIFF: Record<Difficulty, { bubbleCount: number; speed: number; duration: n
   medium: { bubbleCount: 6, speed: 0.8, duration: 90_000,  problemCount: 15 },
   hard:   { bubbleCount: 8, speed: 1.2, duration: 90_000,  problemCount: 20 },
 };
+
 
 let _mpk = 0;
 
@@ -260,3 +263,6 @@ export function MathPopEngine({ config, difficulty, onComplete }: Props) {
     </div>
   );
 }
+
+
+

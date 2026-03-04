@@ -187,7 +187,7 @@ export default function SparksSparkQuest() {
                                     {currentSector.name} Grid Link
                                 </h3>
                                 <p className="text-white/90 text-2xl font-light leading-tight italic">
-                                    "{currentSector.description}"
+                                    &ldquo;{currentSector.description}&rdquo;
                                 </p>
                             </div>
 

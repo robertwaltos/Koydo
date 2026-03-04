@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -32,6 +34,7 @@ const DIFF: Record<Difficulty, { problemCount: number; timeLimit: number }> = {
   medium: { problemCount: 10, timeLimit: 120_000 },
   hard:   { problemCount: 15, timeLimit: 120_000 },
 };
+
 
 export function BalanceScaleEngine({ config, difficulty, onComplete }: Props) {
   const settings = DIFF[difficulty];
@@ -250,3 +253,6 @@ export function BalanceScaleEngine({ config, difficulty, onComplete }: Props) {
     </div>
   );
 }
+
+
+

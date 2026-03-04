@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef, type ReactNode } from "react";
 import { Sun, CloudRain, Wind, TreePine, Bird, Waves, Thermometer, ShieldCheck, Activity, Info } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
@@ -21,11 +21,15 @@ export default function BiomeBuilder() {
         water: 60,
         temperature: 25
     });
-    const [equilibrium, setEquilibrium] = useState(70);
     const [days, setDays] = useState(0);
     const sessionIdRef = useRef<string>(createLegacySessionId());
     const completionSentRef = useRef(false);
     const runStartedAtRef = useRef<number>(0);
+
+    const equilibrium = useMemo(() => {
+        const diff = Math.abs(stats.flora - 60) + Math.abs(stats.fauna - 40) + Math.abs(stats.water - 50);
+        return Math.max(0, 100 - diff);
+    }, [stats.fauna, stats.flora, stats.water]);
 
     useEffect(() => {
         if (gameState !== "STABLE" || completionSentRef.current) return;
@@ -56,42 +60,45 @@ export default function BiomeBuilder() {
                 const newFauna = prev.fauna + (prev.flora * 0.05) - (prev.fauna * 0.05);
                 const newWater = prev.water - (prev.flora * 0.02) - (prev.temperature * 0.01);
 
-                return {
+                const nextStats = {
                     flora: Math.max(0, Math.min(100, newFlora)),
                     fauna: Math.max(0, Math.min(100, newFauna)),
                     water: Math.max(0, Math.min(100, newWater)),
                     temperature: prev.temperature // Controlled by user
                 };
-            });
 
-            setDays(d => d + 1);
+                const diff =
+                    Math.abs(nextStats.flora - 60) +
+                    Math.abs(nextStats.fauna - 40) +
+                    Math.abs(nextStats.water - 50);
+                const nextEquilibrium = Math.max(0, 100 - diff);
+
+                setDays((currentDays) => {
+                    const nextDays = currentDays + 1;
+                    if (nextEquilibrium < 20 && gameState === "SIMULATING") {
+                        setGameState("COLLAPSE");
+                        setMood("sad");
+                        setMessage("The ecosystem has collapsed. Biodiversity loss is critical. We must restart the cycle. 🥀");
+                        hapticError();
+                    } else if (nextDays > 100 && nextEquilibrium > 80 && gameState === "SIMULATING") {
+                        setGameState("STABLE");
+                        setMood("happy");
+                        setMessage("Incredible! You've achieved a self-sustaining Biome Equilibrium. 🌿");
+                        hapticSuccess();
+                    }
+                    return nextDays;
+                });
+
+                return nextStats;
+            });
         }, 2000);
 
         return () => clearInterval(interval);
-    }, [gameState]);
+    }, [gameState, setMessage, setMood]);
 
     useEffect(() => {
-        runSimulation();
+        return runSimulation();
     }, [runSimulation]);
-
-    // Stability Calculation
-    useEffect(() => {
-        const diff = Math.abs(stats.flora - 60) + Math.abs(stats.fauna - 40) + Math.abs(stats.water - 50);
-        const stability = Math.max(0, 100 - diff);
-        setEquilibrium(stability);
-
-        if (stability < 20 && gameState === "SIMULATING") {
-            setGameState("COLLAPSE");
-            setMood("sad");
-            setMessage("The ecosystem has collapsed. Biodiversity loss is critical. We must restart the cycle. 🥀");
-            hapticError();
-        } else if (days > 100 && stability > 80) {
-            setGameState("STABLE");
-            setMood("happy");
-            setMessage("Incredible! You've achieved a self-sustaining Biome Equilibrium. 🌿");
-            hapticSuccess();
-        }
-    }, [stats, days, gameState, setMood, setMessage]);
 
     const adjustStat = (key: keyof typeof stats, amount: number) => {
         setStats(prev => ({ ...prev, [key]: Math.max(0, Math.min(100, prev[key] + amount)) }));
@@ -246,7 +253,7 @@ export default function BiomeBuilder() {
 
 /* --- Sub-Components --- */
 
-function ControlGroup({ label, icon, value, onAdjust }: { label: string, icon: any, value: number, onAdjust: (v: number) => void }) {
+function ControlGroup({ label, icon, value, onAdjust }: { label: string, icon: ReactNode, value: number, onAdjust: (v: number) => void }) {
     return (
         <div className="space-y-4">
             <div className="flex justify-between items-center">
@@ -277,7 +284,7 @@ function ControlGroup({ label, icon, value, onAdjust }: { label: string, icon: a
     );
 }
 
-function SpeciesRadar({ label, value, color, icon }: { label: string, value: number, color: string, icon: any }) {
+function SpeciesRadar({ label, value, color, icon }: { label: string, value: number, color: string, icon: ReactNode }) {
     return (
         <div className="flex flex-col items-center gap-4">
             <div className="relative w-40 h-40 flex items-center justify-center">

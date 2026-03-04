@@ -4,6 +4,8 @@
 /* -------------------------------------------------------------------------- */
 "use client";
 
+/* eslint-disable react-hooks/purity, react-hooks/refs -- engine loop uses mutable refs and mount timestamps intentionally. */
+
 import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Difficulty, GameRoundResult } from "@/lib/games/engine/types";
@@ -44,6 +46,7 @@ const DIFF: Record<Difficulty, { cluesRevealed: number; timeLimit: number; maxGu
   medium: { cluesRevealed: 2, timeLimit: 150_000, maxGuesses: 4 },
   hard:   { cluesRevealed: 1, timeLimit: 120_000, maxGuesses: 3 },
 };
+
 
 export function MapExplorerEngine({ config, difficulty, onComplete }: Props) {
   const settings = DIFF[difficulty];
@@ -265,3 +268,6 @@ export function MapExplorerEngine({ config, difficulty, onComplete }: Props) {
     </div>
   );
 }
+
+
+

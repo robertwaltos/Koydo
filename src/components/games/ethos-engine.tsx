@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useMemo, useRef } from "react";
 import { Scale, Zap, Globe, Users, ChevronRight, MessageSquare, Info, ShieldCheck, TrendingUp, Heart, AlertCircle, History, Sparkles } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -199,7 +200,7 @@ export default function EthosEngine() {
                                     Transmission: {currentNode.speaker}
                                 </span>
                                 <h3 className="text-2xl font-black italic leading-tight mb-12 text-white">
-                                    "{currentNode.text}"
+                                    &ldquo;{currentNode.text}&rdquo;
                                 </h3>
 
                                 <div className="grid grid-cols-1 gap-4">
@@ -226,7 +227,7 @@ export default function EthosEngine() {
                             </div>
                             <h3 className="text-6xl font-black italic tracking-tighter text-white mb-4 uppercase leading-none">Epoch Defined</h3>
                             <p className="text-zinc-500 text-lg mb-12 italic max-w-xl mx-auto">
-                                "{currentNode.text}"
+                                &ldquo;{currentNode.text}&rdquo;
                             </p>
 
                             <div className="bg-white/5 border border-white/5 p-8 rounded-3xl mb-12 text-left">
@@ -289,7 +290,7 @@ export default function EthosEngine() {
     );
 }
 
-function PillarBox({ label, value, color, icon: Icon }: { label: string, value: number, color: string, icon: any }) {
+function PillarBox({ label, value, color, icon: Icon }: { label: string, value: number, color: string, icon: LucideIcon }) {
     return (
         <div className="bg-white/5 border border-white/5 px-6 py-2 rounded-2xl flex items-center gap-4 min-w-[160px]">
             <div className={`w-10 h-10 rounded-xl bg-zinc-900 border border-white/10 flex items-center justify-center ${color}`}>

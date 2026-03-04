@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
-import { Leaf, Beaker, Zap, Thermometer, Droplets, Sun, Activity, ShieldCheck, Info, ChevronRight, Sparkles } from "lucide-react";
+import { Leaf, Beaker, Zap, Thermometer, Droplets, Sun, Activity, ShieldCheck, Info, ChevronRight, Sparkles, type LucideIcon } from "lucide-react";
 import { JUICY_SPRINGS, JUICY_VARIANTS } from "@/lib/experience/interaction-primitives";
 import { hapticSelection, hapticSuccess, hapticError } from "@/lib/platform/haptics";
 import PhysicalButton from "@/components/experience/PhysicalButton";
@@ -20,7 +20,7 @@ type Plant = {
     color: string;
 };
 
-const TRAIT_DATA: Record<Trait, { icon: any, color: string, effect: string }> = {
+const TRAIT_DATA: Record<Trait, { icon: LucideIcon, color: string, effect: string }> = {
     GLOW: { icon: Sparkles, color: "text-emerald-400", effect: "Bioluminescence +50" },
     THORNS: { icon: Activity, color: "text-rose-400", effect: "Detergent +30" },
     HEALING: { icon: ShieldCheck, color: "text-sky-400", effect: "Regen +20" },
@@ -267,7 +267,7 @@ export default function FloraFusion() {
     );
 }
 
-function EnvControl({ icon: Icon, label, value, unit }: { icon: any, label: string, value: number, unit: string }) {
+function EnvControl({ icon: Icon, label, value, unit }: { icon: LucideIcon, label: string, value: number, unit: string }) {
     return (
         <div className="bg-white/5 border border-white/5 px-4 py-2 rounded-xl flex items-center gap-3">
             <Icon className="w-4 h-4 text-emerald-400/60" />

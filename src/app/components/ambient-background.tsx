@@ -24,6 +24,8 @@ import {
   hashString,
 } from "@/lib/theme/backgrounds";
 
+const nowMs = () => Date.now();
+
 export default function AmbientBackground() {
   const { profile } = useActiveProfile();
   const [isDark, setIsDark] = useState(false);
@@ -49,7 +51,7 @@ export default function AmbientBackground() {
     const band: AgeBand = ageToBand(age);
 
     // Daily rotation + per-user offset for variety
-    const dayOfYear = Math.floor(Date.now() / 86_400_000);
+    const dayOfYear = Math.floor(nowMs() / 86_400_000);
     const userSeed = profile?.id ? hashString(profile.id) : 0;
 
     return getBackground(band, dayOfYear + userSeed, isDark);

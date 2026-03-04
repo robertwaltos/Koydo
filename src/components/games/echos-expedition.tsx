@@ -274,7 +274,7 @@ export default function EchosExpedition() {
                             </h2>
 
                             <p className="text-white/60 text-lg mb-8">
-                                You've archived the fragments of history. Your legacy is secured in the 4K archives.
+                                You&apos;ve archived the fragments of history. Your legacy is secured in the 4K archives.
                             </p>
 
                             <div className="grid grid-cols-2 gap-4">

@@ -264,22 +264,27 @@ export async function generateCurriculumModules(
   // If no API key, return specific mock based on grade or world
   if (!(serverEnv.OPENAI_MEDIA_API_KEY ?? serverEnv.OPENAI_API_KEY)) {
      if (worldId) {
-        return { modules: mockModulesByPath[worldId] ?? createDomainMockModules(worldId), source: "mock" };
+        return {
+          modules: mockModulesByPath[worldId] ?? createDomainMockModules(worldId),
+          sessionId: null,
+          source: "mock",
+        };
      }
      
      const isYoung = ["K", "1", "2"].includes(profile.grade_level || "");
      return {
        modules: isYoung ? [
-         { title: "Number Safari", desc: "Count animals in the jungle.", icon: "🦁" },
-         { title: "Shape Detectives", desc: "Find triangles and squares.", icon: "🔍" },
-         { title: "Color Magic", desc: "Mixing colors to make new ones.", icon: "🎨" }
-       ] : [
-         { title: "Quantum Logic", desc: "Understanding 0 and 1 simultaneously.", icon: "⚛️" },
-         { title: "Cyber-Civics", desc: "Ethics in the digital frontier.", icon: "🌐" },
-         { title: "Bio-Engineering", desc: "Designing plant DNA.", icon: "🧬" }
-       ],
-       source: "mock"
-     };
+          { title: "Number Safari", desc: "Count animals in the jungle.", icon: "🦁" },
+          { title: "Shape Detectives", desc: "Find triangles and squares.", icon: "🔍" },
+          { title: "Color Magic", desc: "Mixing colors to make new ones.", icon: "🎨" }
+        ] : [
+          { title: "Quantum Logic", desc: "Understanding 0 and 1 simultaneously.", icon: "⚛️" },
+          { title: "Cyber-Civics", desc: "Ethics in the digital frontier.", icon: "🌐" },
+          { title: "Bio-Engineering", desc: "Designing plant DNA.", icon: "🧬" }
+        ],
+        sessionId: null,
+        source: "mock"
+      };
   }
 
   /* ── Step 3: AI generation ── */

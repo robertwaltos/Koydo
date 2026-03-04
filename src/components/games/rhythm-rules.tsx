@@ -9,6 +9,8 @@ import PhysicalButton from "@/components/experience/PhysicalButton";
 import { useMascot } from "@/components/experience/MascotHost";
 import { createLegacySessionId, emitLegacyGameComplete } from "@/lib/games/legacy-runtime-events";
 
+const nowMs = () => Date.now();
+
 /* --- Rhythm Types --- */
 type Note = {
     id: string;
@@ -46,14 +48,14 @@ export default function RhythmRules() {
     useEffect(() => {
         if (gameState !== "RESULT" || completionSentRef.current) return;
         if (runStartedAtRef.current === 0) {
-            runStartedAtRef.current = Date.now();
+            runStartedAtRef.current = nowMs();
         }
         completionSentRef.current = true;
         emitLegacyGameComplete({
             sessionId: sessionIdRef.current,
             gameId: "rhythm",
             difficulty: "medium",
-            elapsedMs: Math.max(0, Date.now() - runStartedAtRef.current),
+            elapsedMs: Math.max(0, nowMs() - runStartedAtRef.current),
             interactions: Math.max(1, activeNotes.length),
             score,
             maxScore: levelData.length * 100,
@@ -69,7 +71,7 @@ export default function RhythmRules() {
         setMultiplier(1);
         setCurrentTime(0);
         setActiveNotes([]);
-        startTimeRef.current = Date.now();
+        startTimeRef.current = nowMs();
         setMood("happy");
         setMessage("Feel the beat! Tap the syllables in rhythm to unlock the linguistic flow. 🎵");
         hapticSuccess();
@@ -79,7 +81,7 @@ export default function RhythmRules() {
         if (gameState !== "PLAYING") return;
 
         const hitWindow = 300; // ms
-        const now = Date.now() - startTimeRef.current;
+        const now = nowMs() - startTimeRef.current;
 
         const targetNote = levelData.find(n =>
             n.lane === lane &&
@@ -105,7 +107,7 @@ export default function RhythmRules() {
         if (gameState !== "PLAYING") return;
 
         const loop = () => {
-            const now = Date.now() - startTimeRef.current;
+            const now = nowMs() - startTimeRef.current;
             setCurrentTime(now);
 
             if (now > 12000) { // End of song
