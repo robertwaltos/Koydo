@@ -1,0 +1,69 @@
+{
+  "generatedAt": "2026-03-03T20:46:30.511Z",
+  "totalFiles": 44,
+  "routes": {
+    "dashboard": {
+      "messageCount": 3,
+      "genders": [
+        "female",
+        "male"
+      ]
+    },
+    "lessons": {
+      "messageCount": 3,
+      "genders": [
+        "female",
+        "male"
+      ]
+    },
+    "explore": {
+      "messageCount": 3,
+      "genders": [
+        "female",
+        "male"
+      ]
+    },
+    "experience-hub": {
+      "messageCount": 3,
+      "genders": [
+        "female",
+        "male"
+      ]
+    },
+    "profile": {
+      "messageCount": 2,
+      "genders": [
+        "female",
+        "male"
+      ]
+    },
+    "exams": {
+      "messageCount": 2,
+      "genders": [
+        "female",
+        "male"
+      ]
+    },
+    "audiobooks": {
+      "messageCount": 2,
+      "genders": [
+        "female",
+        "male"
+      ]
+    },
+    "default": {
+      "messageCount": 3,
+      "genders": [
+        "female",
+        "male"
+      ]
+    },
+    "landing": {
+      "messageCount": 1,
+      "genders": [
+        "female",
+        "male"
+      ]
+    }
+  }
+}

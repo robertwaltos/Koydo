@@ -135,6 +135,8 @@ public/*-COVERAGE-*.json
 public/*-STATE-*.json
 public/*-QUEUE*.json
 public/*-MANIFEST*.json
+!public/manifest.json
+!public/audio/greetings/manifest.json
 public/*-PLAN*.json
 public/*-BACKLOG*.json
 public/*-SIGNOFF*.json
