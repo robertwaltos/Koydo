@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-04T15:43:38.131Z",
+  "generatedAt": "2026-03-04T16:30:11.398Z",
   "status": "pass",
   "totals": {
     "catalogTotal": 500,
@@ -20,12 +20,41 @@
       "pattern-scan",
       "precision-choice",
       "sequence-recall",
+      "signal-balance",
+      "timed-equation"
+    ]
+  },
+  "distribution": {
+    "byMechanic": {
+      "core": 8,
+      "lane-sort": 82,
+      "pattern-scan": 81,
+      "precision-choice": 83,
+      "sequence-recall": 84,
+      "signal-balance": 81,
+      "timed-equation": 81
+    },
+    "rewardRealmByMechanic": {
+      "lane-sort": 17,
+      "pattern-scan": 16,
+      "precision-choice": 17,
+      "sequence-recall": 17,
+      "signal-balance": 16,
+      "timed-equation": 17
+    },
+    "rewardRealmUniqueMechanics": [
+      "lane-sort",
+      "pattern-scan",
+      "precision-choice",
+      "sequence-recall",
+      "signal-balance",
       "timed-equation"
     ]
   },
   "issues": {
     "unresolved": [],
-    "arcadeCollisionIds": []
+    "arcadeCollisionIds": [],
+    "coverage": []
   },
   "outputs": {
     "json": "public/GAMES-500-PLAYABILITY-AUDIT.json",

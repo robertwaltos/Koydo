@@ -14,6 +14,14 @@ const GAME_PLAYER_PATH = path.join(ROOT, "src", "app", "games", "[gameId]", "pag
 const TEMPLATE_PATH = path.join(ROOT, "src", "components", "games", "immersive-arcade-template.tsx");
 const REPORT_JSON_PATH = path.join(ROOT, "public", "GAMES-500-PLAYABILITY-AUDIT.json");
 const REPORT_MD_PATH = path.join(ROOT, "GAMES-500-PLAYABILITY-AUDIT.md");
+const EXPECTED_NON_CORE_MECHANICS = [
+  "precision-choice",
+  "sequence-recall",
+  "lane-sort",
+  "timed-equation",
+  "pattern-scan",
+  "signal-balance",
+];
 
 function relativeFromRoot(targetPath) {
   return path.relative(ROOT, targetPath).replaceAll("\\", "/");
@@ -77,8 +85,22 @@ function parseMapBlock(source, declarationPrefix) {
 }
 
 function parseTemplateMechanics(templateSource) {
-  const matches = Array.from(templateSource.matchAll(/mechanic:\s*"([^"]+)"/g));
-  return new Set(matches.map((entry) => entry[1]).filter(Boolean));
+  const mechanics = new Set();
+  const patterns = [/mechanic:\s*"([^"]+)"/g, /mechanic\s*===\s*"([^"]+)"/g];
+
+  for (const pattern of patterns) {
+    const matches = Array.from(templateSource.matchAll(pattern));
+    for (const match of matches) {
+      const mechanic = match?.[1];
+      if (mechanic) mechanics.add(mechanic);
+    }
+  }
+
+  return mechanics;
+}
+
+function incrementCount(map, key) {
+  map.set(key, (map.get(key) ?? 0) + 1);
 }
 
 function renderSummaryMarkdown(report) {
@@ -89,6 +111,16 @@ function renderSummaryMarkdown(report) {
   const collisionRows = report.issues.arcadeCollisionIds
     .slice(0, 80)
     .map((entry) => `| ${entry.id} | ${entry.mode} | ${entry.componentType} |`)
+    .join("\n");
+  const mechanicRows = Object.entries(report.distribution.byMechanic)
+    .map(([mechanic, count]) => `| ${mechanic} | ${count} |`)
+    .join("\n");
+  const rewardRows = Object.entries(report.distribution.rewardRealmByMechanic)
+    .map(([mechanic, count]) => `| ${mechanic} | ${count} |`)
+    .join("\n");
+  const coverageIssueRows = report.issues.coverage
+    .slice(0, 40)
+    .map((entry) => `- ${entry}`)
     .join("\n");
 
   return [
@@ -107,6 +139,16 @@ function renderSummaryMarkdown(report) {
     `- Legacy routes validated: ${report.coverage.legacyValidated}`,
     `- Arcade template routes validated: ${report.coverage.arcadeTemplateValidated}`,
     "",
+    "## Mechanic Distribution",
+    "| Mechanic | Games |",
+    "|---|---:|",
+    mechanicRows || "| none | 0 |",
+    "",
+    "### Reward Realm Mechanic Distribution",
+    "| Mechanic | Games |",
+    "|---|---:|",
+    rewardRows || "| none | 0 |",
+    "",
     "## Template Capability",
     `- Template mechanics discovered: ${report.template.mechanics.join(", ") || "(none)"}`,
     `- Template fallback path present: ${report.template.hasFallback}`,
@@ -114,6 +156,10 @@ function renderSummaryMarkdown(report) {
     "## Issues",
     `- Unresolved routes: ${report.issues.unresolved.length}`,
     `- Arcade IDs colliding with direct component maps: ${report.issues.arcadeCollisionIds.length}`,
+    `- Coverage issues: ${report.issues.coverage.length}`,
+    "",
+    "### Coverage Issue Samples",
+    coverageIssueRows || "- none",
     "",
     "### Unresolved Route Samples",
     "| gameId | mode | reason |",
@@ -168,11 +214,14 @@ async function main() {
 
   const unresolved = [];
   const arcadeCollisionIds = [];
+  const coverageIssues = [];
 
   let playableRoutes = 0;
   let coreValidated = 0;
   let legacyValidated = 0;
   let arcadeTemplateValidated = 0;
+  const mechanicCounts = new Map();
+  const rewardRealmMechanicCounts = new Map();
 
   for (const game of games) {
     if (!game || typeof game.id !== "string" || typeof game.mode !== "string") {
@@ -193,6 +242,10 @@ async function main() {
         });
         continue;
       }
+      if (game.mechanic !== "core") {
+        coverageIssues.push(`Core game ${game.id} must use mechanic "core", found "${String(game.mechanic)}".`);
+      }
+      incrementCount(mechanicCounts, String(game.mechanic));
       coreValidated += 1;
       playableRoutes += 1;
       continue;
@@ -206,6 +259,13 @@ async function main() {
           reason: "Missing legacy component mapping.",
         });
         continue;
+      }
+      if (game.mechanic === "core") {
+        coverageIssues.push(`Legacy game ${game.id} must not use mechanic "core".`);
+      }
+      incrementCount(mechanicCounts, String(game.mechanic));
+      if (game.track === "Reward Realm") {
+        incrementCount(rewardRealmMechanicCounts, String(game.mechanic));
       }
       legacyValidated += 1;
       playableRoutes += 1;
@@ -246,7 +306,14 @@ async function main() {
         });
         continue;
       }
+      if (mechanic === "core") {
+        coverageIssues.push(`Arcade game ${game.id} must not use mechanic "core".`);
+      }
 
+      incrementCount(mechanicCounts, mechanic);
+      if (game.track === "Reward Realm") {
+        incrementCount(rewardRealmMechanicCounts, mechanic);
+      }
       arcadeTemplateValidated += 1;
       playableRoutes += 1;
       continue;
@@ -259,9 +326,32 @@ async function main() {
     });
   }
 
+  const byMechanic = Object.fromEntries(Array.from(mechanicCounts.entries()).sort((a, b) => a[0].localeCompare(b[0])));
+  const rewardRealmByMechanic = Object.fromEntries(
+    Array.from(rewardRealmMechanicCounts.entries()).sort((a, b) => a[0].localeCompare(b[0])),
+  );
+  const missingExpectedMechanics = EXPECTED_NON_CORE_MECHANICS.filter(
+    (mechanic) => (mechanicCounts.get(mechanic) ?? 0) === 0,
+  );
+  const missingTemplateMechanics = Array.from(templateMechanics)
+    .filter((mechanic) => (mechanicCounts.get(mechanic) ?? 0) === 0)
+    .sort();
+  const rewardRealmUniqueMechanics = Array.from(rewardRealmMechanicCounts.keys()).filter((mechanic) => mechanic !== "core");
+  if (missingExpectedMechanics.length > 0) {
+    coverageIssues.push(`Missing expected mechanics in catalog runtime: ${missingExpectedMechanics.join(", ")}.`);
+  }
+  if (missingTemplateMechanics.length > 0) {
+    coverageIssues.push(`Template mechanics discovered but not used by any game: ${missingTemplateMechanics.join(", ")}.`);
+  }
+  if (rewardRealmUniqueMechanics.length < 3) {
+    coverageIssues.push(
+      `Reward Realm mechanic diversity too low: expected >= 3 mechanics, found ${rewardRealmUniqueMechanics.length}.`,
+    );
+  }
+
   const report = {
     generatedAt: new Date().toISOString(),
-    status: unresolved.length === 0 ? "pass" : "fail",
+    status: unresolved.length === 0 && coverageIssues.length === 0 ? "pass" : "fail",
     totals: {
       catalogTotal: games.length,
       playableRoutes,
@@ -278,9 +368,15 @@ async function main() {
       hasFallback: templateHasFallback,
       mechanics: Array.from(templateMechanics).sort(),
     },
+    distribution: {
+      byMechanic,
+      rewardRealmByMechanic,
+      rewardRealmUniqueMechanics: rewardRealmUniqueMechanics.sort(),
+    },
     issues: {
       unresolved,
       arcadeCollisionIds,
+      coverage: coverageIssues,
     },
     outputs: {
       json: relativeFromRoot(REPORT_JSON_PATH),
@@ -307,4 +403,3 @@ main().catch((error) => {
   console.error("[games500-playability-audit] failed:", error);
   process.exitCode = 1;
 });
-
