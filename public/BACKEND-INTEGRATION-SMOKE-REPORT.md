@@ -1,39 +1,34 @@
 # Backend Integration Smoke Report
 
-Generated: 2026-03-04T06:28:47.949Z
-Duration: 450711ms
+Generated: 2026-03-04T08:13:20.669Z
+Duration: 563173ms
 
 ## Summary
 
-- Pass: 13
-- Warn: 1
-- Fail: 1
+- Pass: 15
+- Warn: 0
+- Fail: 0
 - Total checks: 15
 
 ## Checks
 
 | Check | Status | Duration (ms) | Detail |
 | --- | --- | ---: | --- |
-| Ops preflight (env/db/webhook/auth-billing) | WARN | 32882 | pass=3 warn=1 fail=0 skip=0 |
-| Route smoke (launch-critical paths + /api/health) | FAIL | 405019 | No prebuilt .next output was available; reran route smoke with build but failed: ⨯ Unable to acquire lock at D:\PythonProjects\Koydo\.next\lock, is another instance of next build running? |
-| Placement diagnostic scoring contract | PASS | 686 | Command passed. |
-| Placement diagnostic flow contract | PASS | 788 | Command passed. |
-| Audiobook checkpoint contract | PASS | 729 | Command passed. |
-| Device gateway confidence contract | PASS | 713 | Command passed. |
-| Review queue contract | PASS | 753 | Command passed. |
-| Remediation tasking contract | PASS | 785 | Command passed. |
-| Offline progress sync contract | PASS | 768 | Command passed. |
-| Social cohorts and challenges contract | PASS | 774 | Command passed. |
-| Creator pipeline contract | PASS | 691 | Command passed. |
-| StoryForge cinema contract | PASS | 816 | Command passed. |
-| Teacher access contract | PASS | 909 | Command passed. |
-| Billing webhook processing lock contract | PASS | 757 | Command passed. |
-| RevenueCat offerings resolution contract | PASS | 736 | Command passed. |
-
-## Attention Items
-
-- Ops preflight (env/db/webhook/auth-billing): pass=3 warn=1 fail=0 skip=0
-- Route smoke (launch-critical paths + /api/health): No prebuilt .next output was available; reran route smoke with build but failed: ⨯ Unable to acquire lock at D:\PythonProjects\Koydo\.next\lock, is another instance of next build running?
+| Ops preflight (env/db/webhook/auth-billing) | PASS | 26616 | pass=4 warn=0 fail=0 skip=0 |
+| Route smoke (launch-critical paths + /api/health) | PASS | 523794 | No prebuilt .next output was available; reran route smoke with build and passed. |
+| Placement diagnostic scoring contract | PASS | 740 | Command passed. |
+| Placement diagnostic flow contract | PASS | 819 | Command passed. |
+| Audiobook checkpoint contract | PASS | 740 | Command passed. |
+| Device gateway confidence contract | PASS | 693 | Command passed. |
+| Review queue contract | PASS | 750 | Command passed. |
+| Remediation tasking contract | PASS | 742 | Command passed. |
+| Offline progress sync contract | PASS | 745 | Command passed. |
+| Social cohorts and challenges contract | PASS | 684 | Command passed. |
+| Creator pipeline contract | PASS | 704 | Command passed. |
+| StoryForge cinema contract | PASS | 739 | Command passed. |
+| Teacher access contract | PASS | 875 | Command passed. |
+| Billing webhook processing lock contract | PASS | 709 | Command passed. |
+| RevenueCat offerings resolution contract | PASS | 772 | Command passed. |
 
 ## Commands
 

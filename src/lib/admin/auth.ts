@@ -2,10 +2,13 @@ import { NextResponse } from "next/server";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { validateOwnerStepUpSession } from "@/lib/admin/owner-security";
 
+type AdminAccessLevel = "full_access" | "read_only";
+
 type ProfileRow = {
   is_admin: boolean;
   is_owner: boolean;
   data_mode: "live" | "beta";
+  admin_access_level?: string | null;
 };
 
 function hasMissingOwnerColumnError(message: string) {

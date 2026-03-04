@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-03-04T06:28:48.076Z",
-  "durationMs": 656583,
+  "generatedAt": "2026-03-04T08:13:20.787Z",
+  "durationMs": 715236,
   "sourceFile": "D:\\PythonProjects\\Koydo\\.env.production.audit",
   "strictLiveMode": true,
-  "overall": "blocked",
+  "overall": "green",
   "totals": {
-    "pass": 4,
+    "pass": 6,
     "warn": 0,
-    "fail": 2,
+    "fail": 0,
     "total": 6
   },
   "steps": [
@@ -15,13 +15,13 @@
       "id": "build",
       "name": "Production Build",
       "command": "npm run build",
-      "exitCode": 4294967295,
-      "status": "fail",
-      "detail": "Next.js build worker exited with code: 4294967295 and signal: null",
-      "durationMs": 198164,
+      "exitCode": 0,
+      "status": "pass",
+      "detail": "Production build completed.",
+      "durationMs": 144725,
       "outputPreview": {
-        "stdout": "> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 820 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 821 catalog .ts files\n  Extracted 821 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\modules\\generated\\catalog-data.json\n  Modules: 821\n  Size: 91.1 MB\n\n> koydo-web@0.1.0 build\n> node --max-old-space-size=8192 ./node_modules/next/dist/bin/next build --webpack\n\n▲ Next.js 16.1.6 (webpack)\n- Environments: .env.local, .env\n- Experiments (use with caution):\n  · optimizePackageImports\n\n  Creating an optimized production build ...",
-        "stderr": "Next.js build worker exited with code: 4294967295 and signal: null"
+        "stdout": "> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 821 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 822 catalog .ts files\n  Extracted 822 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\modules\\generated\\catalog-data.json\n  Modules: 822\n  Size: 91.1 MB\n\n> koydo-web@0.1.0 build\n> node --max-old-space-size=6144 ./node_modules/next/dist/bin/next build --webpack\n\n▲ Next.js 16.1.6 (webpack)\n- Environments: .env.local, .env\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 58s\n  Skipping validation of types\n  Collecting page data using 31 workers ...\n  Generating static pages using 31 workers (0/417) ...\n  Generating static pages using 31 workers (104/417) \r\n  Generating static pages using 31 workers (208/417) \r\n  Generating static pages using 31 workers (312/417) \r\n✓ Generating static pages using 31 workers (417/417) in 6.0s\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ƒ /\n├ ○ /_not-found\n├ ƒ /account-deletion\n├ ƒ /account/privacy\n├ ƒ /account/settings\n├ ƒ /admin/alerts\n├ ƒ /admin/audit\n├ ƒ /admin/compliance\n├ ƒ /admin/costs\n├ ƒ /admin/curriculum\n├ ƒ /admin/finance\n├ ƒ /admin/media\n├ ƒ /admin/operations\n├ ƒ /admin/overview\n├ ƒ /admin/partners\n├ ƒ /admin/provisioning\n├ ƒ /admin/reports\n├ ƒ /admin/settings\n├ ƒ /api/account/delete\n├ ƒ /api/account/purge-deleted\n├ ƒ /api/account/security/change-confirmation/challenge\n├ ƒ /api/account/security/change-confirmation/totp/provision\n├ ƒ /api/account/security/change-confirmation/verify\n├ ƒ /api/account/settings/learner-paths\n├ ƒ /api/admin/access-grants\n├ ƒ /api/admin/ai/console-chat\n├ ƒ /api/admin/ai/remediation-usage\n├ ƒ /api/admin/ai/remediation-usage/export\n├ ƒ /api/admin/ai/remediation-usage/timeseries\n├ ƒ /api/admin/ai/tutor-usage\n├ ƒ /api/admin/alerts\n├ ƒ /api/admin/alerts/notif",
+        "stderr": ""
       },
       "payload": null
     },
@@ -32,13 +32,13 @@
       "exitCode": 0,
       "status": "pass",
       "detail": "pass=20 warn=0 fail=0 runtime=production",
-      "durationMs": 94,
+      "durationMs": 87,
       "outputPreview": {
-        "stdout": "{\n  \"generatedAt\": \"2026-03-04T06:21:09.737Z\",\n  \"source\": \"D:\\\\PythonProjects\\\\Koydo\\\\.env.production.audit\",\n  \"options\": {\n    \"runtimeOverride\": \"production\",\n    \"envFile\": \".env.production.audit\",\n    \"failOnWarn\": true\n  },\n  \"runtime\": {\n    \"runtime\": \"production\",\n    \"isProduction\": true,\n    \"overrideApplied\": true\n  },\n  \"totals\": {\n    \"pass\": 20,\n    \"warn\": 0,\n    \"fail\": 0,\n    \"total\": 20\n  },\n  \"checks\": [\n    {\n      \"label\": \"Env Source File\",\n      \"status\": \"pass\",\n      \"detail\": \"Loaded D:\\\\PythonProjects\\\\Koydo\\\\.env.production.audit\"\n    },\n    {\n      \"label\": \"Public App URL\",\n      \"status\": \"pass\",\n      \"detail\": \"https://koydo.app\"\n    },\n    {\n      \"label\": \"Supabase URL\",\n      \"status\": \"pass\",\n      \"detail\": \"https://osnxbuusohdzzcrakavn.supabase.co\"\n    },\n    {\n      \"label\": \"Supabase Anon Key\",\n      \"status\": \"pass\",\n      \"detail\": \"Present\"\n    },\n    {\n      \"label\": \"Supabase Service Role Key\",\n      \"status\": \"pass\",\n      \"detail\": \"Present\"\n    },\n    {\n      \"label\": \"Upstash Redis Rate Limit Backend\",\n      \"status\": \"pass\",\n      \"detail\": \"Configured\"\n    },\n    {\n      \"label\": \"Billing Provider Mode\",\n      \"status\": \"pass\",\n      \"detail\": \"stripe_external\"\n    },\n    {\n      \"label\": \"Billing Mode Consistency\",\n      \"status\": \"pass\",\n      \"detail\": \"Both set to stripe_external.\"\n    },\n    {\n      \"label\": \"Stripe Secret + Webhook\",\n      \"status\": \"pass\",\n      \"detail\": \"Both present\"\n    },\n    {\n      \"label\": \"Stripe Publishable Key\",\n      \"status\": \"pass\",\n      \"detail\": \"Present\"\n    },\n    {\n      \"label\": \"RevenueCat Client Keys\",\n      \"status\": \"pass\",\n      \"detail\": \"Not required (BILLING_PROVIDER_MODE=stripe_external).\"\n    },\n    {\n      \"label\": \"RevenueCat Webhook Secret\",\n      \"status\": \"pass\",\n      \"detail\": \"Not required (BILLING_PROVIDER_MODE=stripe_external).\"\n    },\n    {\n      \"label\": \"Admin Approval Enforcement\",\n      \"status\": \"pass\",\n      \"detail\": \"REQUIRE_ADMIN_APPROVALS",
+        "stdout": "{\n  \"generatedAt\": \"2026-03-04T08:03:50.352Z\",\n  \"source\": \"D:\\\\PythonProjects\\\\Koydo\\\\.env.production.audit\",\n  \"options\": {\n    \"runtimeOverride\": \"production\",\n    \"envFile\": \".env.production.audit\",\n    \"failOnWarn\": true\n  },\n  \"runtime\": {\n    \"runtime\": \"production\",\n    \"isProduction\": true,\n    \"overrideApplied\": true\n  },\n  \"totals\": {\n    \"pass\": 20,\n    \"warn\": 0,\n    \"fail\": 0,\n    \"total\": 20\n  },\n  \"checks\": [\n    {\n      \"label\": \"Env Source File\",\n      \"status\": \"pass\",\n      \"detail\": \"Loaded D:\\\\PythonProjects\\\\Koydo\\\\.env.production.audit\"\n    },\n    {\n      \"label\": \"Public App URL\",\n      \"status\": \"pass\",\n      \"detail\": \"https://koydo.app\"\n    },\n    {\n      \"label\": \"Supabase URL\",\n      \"status\": \"pass\",\n      \"detail\": \"https://osnxbuusohdzzcrakavn.supabase.co\"\n    },\n    {\n      \"label\": \"Supabase Anon Key\",\n      \"status\": \"pass\",\n      \"detail\": \"Present\"\n    },\n    {\n      \"label\": \"Supabase Service Role Key\",\n      \"status\": \"pass\",\n      \"detail\": \"Present\"\n    },\n    {\n      \"label\": \"Upstash Redis Rate Limit Backend\",\n      \"status\": \"pass\",\n      \"detail\": \"Configured\"\n    },\n    {\n      \"label\": \"Billing Provider Mode\",\n      \"status\": \"pass\",\n      \"detail\": \"stripe_external\"\n    },\n    {\n      \"label\": \"Billing Mode Consistency\",\n      \"status\": \"pass\",\n      \"detail\": \"Both set to stripe_external.\"\n    },\n    {\n      \"label\": \"Stripe Secret + Webhook\",\n      \"status\": \"pass\",\n      \"detail\": \"Both present\"\n    },\n    {\n      \"label\": \"Stripe Publishable Key\",\n      \"status\": \"pass\",\n      \"detail\": \"Present\"\n    },\n    {\n      \"label\": \"RevenueCat Client Keys\",\n      \"status\": \"pass\",\n      \"detail\": \"Not required (BILLING_PROVIDER_MODE=stripe_external).\"\n    },\n    {\n      \"label\": \"RevenueCat Webhook Secret\",\n      \"status\": \"pass\",\n      \"detail\": \"Not required (BILLING_PROVIDER_MODE=stripe_external).\"\n    },\n    {\n      \"label\": \"Admin Approval Enforcement\",\n      \"status\": \"pass\",\n      \"detail\": \"REQUIRE_ADMIN_APPROVALS",
         "stderr": ""
       },
       "payload": {
-        "generatedAt": "2026-03-04T06:21:09.737Z",
+        "generatedAt": "2026-03-04T08:03:50.352Z",
         "source": "D:\\PythonProjects\\Koydo\\.env.production.audit",
         "options": {
           "runtimeOverride": "production",
@@ -167,20 +167,20 @@
       "exitCode": 0,
       "status": "pass",
       "detail": "pass=20 warn=0 fail=0",
-      "durationMs": 161,
+      "durationMs": 175,
       "outputPreview": {
         "stdout": "Wrote D:\\PythonProjects\\Koydo\\PRODUCTION-ENV-CHECKLIST.md\nWrote D:\\PythonProjects\\Koydo\\public\\PRODUCTION-ENV-CHECKLIST.json\nSummary: pass=20 warn=0 fail=0",
         "stderr": ""
       },
       "payload": {
-        "generatedAt": "2026-03-04T06:21:09.902Z",
+        "generatedAt": "2026-03-04T08:03:50.528Z",
         "command": "node scripts/check-env.mjs --json --runtime production --source-file .env.production.audit --fail-on-warn",
         "commandExitCode": 0,
         "sourceFile": ".env.production.audit",
         "sourceFallbackNote": "",
         "runtime": "production",
         "envReport": {
-          "generatedAt": "2026-03-04T06:21:09.886Z",
+          "generatedAt": "2026-03-04T08:03:50.510Z",
           "source": "D:\\PythonProjects\\Koydo\\.env.production.audit",
           "options": {
             "runtimeOverride": "production",
@@ -310,13 +310,13 @@
       "exitCode": 0,
       "status": "pass",
       "detail": "pass=3 warn=0 fail=0 skip=1",
-      "durationMs": 7246,
+      "durationMs": 6881,
       "outputPreview": {
-        "stdout": "{\n  \"generatedAt\": \"2026-03-04T06:21:17.149Z\",\n  \"baseUrl\": \"http://localhost:3000\",\n  \"resolvedBaseUrl\": \"http://localhost:3000\",\n  \"strictWarn\": true,\n  \"requireLiveBase\": false,\n  \"skipAuthBillingSmoke\": true,\n  \"startServerIfNeeded\": false,\n  \"envRuntime\": \"production\",\n  \"envSourceFile\": \".env.production.audit\",\n  \"baseProbe\": {\n    \"reachable\": false,\n    \"detail\": \"fetch failed\",\n    \"status\": null\n  },\n  \"serverStartup\": {\n    \"attempted\": false,\n    \"started\": false,\n    \"detail\": \"\",\n    \"port\": null,\n    \"waitMs\": 25000\n  },\n  \"totals\": {\n    \"pass\": 3,\n    \"warn\": 0,\n    \"fail\": 0,\n    \"skip\": 1,\n    \"total\": 4\n  },\n  \"checks\": [\n    {\n      \"name\": \"Environment\",\n      \"level\": \"pass\",\n      \"detail\": \"pass=20 warn=0 fail=0 runtime=production\",\n      \"passCount\": 20,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"DB readiness\",\n      \"level\": \"pass\",\n      \"detail\": \"present=77 missing=0 error=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Webhook health\",\n      \"level\": \"pass\",\n      \"detail\": \"healthy=yes tracking=on failed=0 stale=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Auth/Billing smoke\",\n      \"level\": \"skip\",\n      \"detail\": \"Skipped by --skip-auth-billing-smoke flag.\",\n      \"passCount\": 0,\n      \"warnCount\": 0,\n      \"failCount\": 0,\n      \"skipCount\": 1,\n      \"failures\": [],\n      \"warnings\": [],\n      \"skips\": []\n    }\n  ]\n}",
+        "stdout": "{\n  \"generatedAt\": \"2026-03-04T08:03:57.408Z\",\n  \"baseUrl\": \"http://localhost:3000\",\n  \"resolvedBaseUrl\": \"http://localhost:3000\",\n  \"strictWarn\": true,\n  \"requireLiveBase\": false,\n  \"skipAuthBillingSmoke\": true,\n  \"startServerIfNeeded\": false,\n  \"envRuntime\": \"production\",\n  \"envSourceFile\": \".env.production.audit\",\n  \"baseProbe\": {\n    \"reachable\": false,\n    \"detail\": \"fetch failed\",\n    \"status\": null\n  },\n  \"serverStartup\": {\n    \"attempted\": false,\n    \"started\": false,\n    \"detail\": \"\",\n    \"port\": null,\n    \"waitMs\": 25000\n  },\n  \"totals\": {\n    \"pass\": 3,\n    \"warn\": 0,\n    \"fail\": 0,\n    \"skip\": 1,\n    \"total\": 4\n  },\n  \"checks\": [\n    {\n      \"name\": \"Environment\",\n      \"level\": \"pass\",\n      \"detail\": \"pass=20 warn=0 fail=0 runtime=production\",\n      \"passCount\": 20,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"DB readiness\",\n      \"level\": \"pass\",\n      \"detail\": \"present=77 missing=0 error=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Webhook health\",\n      \"level\": \"pass\",\n      \"detail\": \"healthy=yes tracking=on failed=0 stale=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Auth/Billing smoke\",\n      \"level\": \"skip\",\n      \"detail\": \"Skipped by --skip-auth-billing-smoke flag.\",\n      \"passCount\": 0,\n      \"warnCount\": 0,\n      \"failCount\": 0,\n      \"skipCount\": 1,\n      \"failures\": [],\n      \"warnings\": [],\n      \"skips\": []\n    }\n  ]\n}",
         "stderr": ""
       },
       "payload": {
-        "generatedAt": "2026-03-04T06:21:17.149Z",
+        "generatedAt": "2026-03-04T08:03:57.408Z",
         "baseUrl": "http://localhost:3000",
         "resolvedBaseUrl": "http://localhost:3000",
         "strictWarn": true,
@@ -388,38 +388,38 @@
       "id": "backend_integration",
       "name": "Backend Integration Smoke (Full)",
       "command": "node scripts/backend-integration-smoke.mjs --include-route-smoke --json",
-      "exitCode": 1,
-      "status": "fail",
-      "detail": "pass=13 warn=1 fail=1",
-      "durationMs": 450801,
+      "exitCode": 0,
+      "status": "pass",
+      "detail": "pass=15 warn=0 fail=0",
+      "durationMs": 563263,
       "outputPreview": {
-        "stdout": "[WARN] Ops preflight (env/db/webhook/auth-billing) - pass=3 warn=1 fail=0 skip=0 (32882ms)\n[FAIL] Route smoke (launch-critical paths + /api/health) - No prebuilt .next output was available; reran route smoke with build but failed: ⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running? (405019ms)\n[PASS] Placement diagnostic scoring contract - Command passed. (686ms)\n[PASS] Placement diagnostic flow contract - Command passed. (788ms)\n[PASS] Audiobook checkpoint contract - Command passed. (729ms)\n[PASS] Device gateway confidence contract - Command passed. (713ms)\n[PASS] Review queue contract - Command passed. (753ms)\n[PASS] Remediation tasking contract - Command passed. (785ms)\n[PASS] Offline progress sync contract - Command passed. (768ms)\n[PASS] Social cohorts and challenges contract - Command passed. (774ms)\n[PASS] Creator pipeline contract - Command passed. (691ms)\n[PASS] StoryForge cinema contract - Command passed. (816ms)\n[PASS] Teacher access contract - Command passed. (909ms)\n[PASS] Billing webhook processing lock contract - Command passed. (757ms)\n[PASS] RevenueCat offerings resolution contract - Command passed. (736ms)\nWrote public\\BACKEND-INTEGRATION-SMOKE-REPORT.json\nWrote public\\BACKEND-INTEGRATION-SMOKE-REPORT.md\n{\n  \"generatedAt\": \"2026-03-04T06:28:47.949Z\",\n  \"totalDurationMs\": 450711,\n  \"totals\": {\n    \"pass\": 13,\n    \"warn\": 1,\n    \"fail\": 1,\n    \"total\": 15\n  },\n  \"checks\": [\n    {\n      \"id\": \"ops_preflight\",\n      \"name\": \"Ops preflight (env/db/webhook/auth-billing)\",\n      \"status\": \"warn\",\n      \"detail\": \"pass=3 warn=1 fail=0 skip=0\",\n      \"durationMs\": 32882,\n      \"command\": \"node scripts/ops-preflight.mjs --json --start-server-if-needed\",\n      \"exitCode\": 0,\n      \"outputPreview\": {\n        \"stdout\": \"{\\n  \\\"generatedAt\\\": \\\"2026-03-04T06:21:49.710Z\\\",\\n  \\\"baseUrl\\\": \\\"http://localhost:3000\\\",\\n  \\\"resolvedBaseUrl\\\": \\\"http://localhost:3000\\\",\\n  \\\"strictWarn\\\": false,\\n  \\\"requireLiveBas",
+        "stdout": "[PASS] Ops preflight (env/db/webhook/auth-billing) - pass=4 warn=0 fail=0 skip=0 (26616ms)\n[PASS] Route smoke (launch-critical paths + /api/health) - No prebuilt .next output was available; reran route smoke with build and passed. (523794ms)\n[PASS] Placement diagnostic scoring contract - Command passed. (740ms)\n[PASS] Placement diagnostic flow contract - Command passed. (819ms)\n[PASS] Audiobook checkpoint contract - Command passed. (740ms)\n[PASS] Device gateway confidence contract - Command passed. (693ms)\n[PASS] Review queue contract - Command passed. (750ms)\n[PASS] Remediation tasking contract - Command passed. (742ms)\n[PASS] Offline progress sync contract - Command passed. (745ms)\n[PASS] Social cohorts and challenges contract - Command passed. (684ms)\n[PASS] Creator pipeline contract - Command passed. (704ms)\n[PASS] StoryForge cinema contract - Command passed. (739ms)\n[PASS] Teacher access contract - Command passed. (875ms)\n[PASS] Billing webhook processing lock contract - Command passed. (709ms)\n[PASS] RevenueCat offerings resolution contract - Command passed. (772ms)\nWrote public\\BACKEND-INTEGRATION-SMOKE-REPORT.json\nWrote public\\BACKEND-INTEGRATION-SMOKE-REPORT.md\n{\n  \"generatedAt\": \"2026-03-04T08:13:20.669Z\",\n  \"totalDurationMs\": 563173,\n  \"totals\": {\n    \"pass\": 15,\n    \"warn\": 0,\n    \"fail\": 0,\n    \"total\": 15\n  },\n  \"checks\": [\n    {\n      \"id\": \"ops_preflight\",\n      \"name\": \"Ops preflight (env/db/webhook/auth-billing)\",\n      \"status\": \"pass\",\n      \"detail\": \"pass=4 warn=0 fail=0 skip=0\",\n      \"durationMs\": 26616,\n      \"command\": \"node scripts/ops-preflight.mjs --json --start-server-if-needed\",\n      \"exitCode\": 0,\n      \"outputPreview\": {\n        \"stdout\": \"{\\n  \\\"generatedAt\\\": \\\"2026-03-04T08:04:23.660Z\\\",\\n  \\\"baseUrl\\\": \\\"http://localhost:3000\\\",\\n  \\\"resolvedBaseUrl\\\": \\\"http://localhost:3000\\\",\\n  \\\"strictWarn\\\": false,\\n  \\\"requireLiveBase\\\": false,\\n  \\\"skipAuthBillingSmoke\\\": false,\\n  \\\"startServerIfNeeded\\\": true,\\n  \\\"envRuntime\\\": null,\\",
         "stderr": ""
       },
       "payload": {
-        "generatedAt": "2026-03-04T06:28:47.949Z",
-        "totalDurationMs": 450711,
+        "generatedAt": "2026-03-04T08:13:20.669Z",
+        "totalDurationMs": 563173,
         "totals": {
-          "pass": 13,
-          "warn": 1,
-          "fail": 1,
+          "pass": 15,
+          "warn": 0,
+          "fail": 0,
           "total": 15
         },
         "checks": [
           {
             "id": "ops_preflight",
             "name": "Ops preflight (env/db/webhook/auth-billing)",
-            "status": "warn",
-            "detail": "pass=3 warn=1 fail=0 skip=0",
-            "durationMs": 32882,
+            "status": "pass",
+            "detail": "pass=4 warn=0 fail=0 skip=0",
+            "durationMs": 26616,
             "command": "node scripts/ops-preflight.mjs --json --start-server-if-needed",
             "exitCode": 0,
             "outputPreview": {
-              "stdout": "{\n  \"generatedAt\": \"2026-03-04T06:21:49.710Z\",\n  \"baseUrl\": \"http://localhost:3000\",\n  \"resolvedBaseUrl\": \"http://localhost:3000\",\n  \"strictWarn\": false,\n  \"requireLiveBase\": false,\n  \"skipAuthBillingSmoke\": false,\n  \"startServerIfNeeded\": true,\n  \"envRuntime\": null,\n  \"envSourceFile\": null,\n  \"baseProbe\": {\n    \"reachable\": false,\n    \"detail\": \"fetch failed\",\n    \"status\": null\n  },\n  \"serverStartup\": {\n    \"attempted\": true,\n    \"started\": false,\n    \"detail\": \"Local server did not become reachable: fetch failed\\nRecent server logs:\\n> koydo-web@0.1.0 start\\n> next start -p 3000\\n▲ Next.js 16.1.6\\n- Local:         http://localhost:3000\\n- Network:       http://100.81.11.56:3000\\n\\n✓ Starting...\\nError: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id\\n    at ignore-listed frames\",\n    \"port\": 3000,\n    \"waitMs\": 25000\n  },\n  \"totals\": {\n    \"pass\": 3,\n    \"warn\": 1,\n    \"fail\": 0,\n    \"skip\": 0,\n    \"total\": 4\n  },\n  \"checks\": [\n    {\n      \"name\": \"Environment\",\n      \"level\": \"pass\",\n      \"detail\": \"pass=20 warn=0 fail=0 runtime=development\",\n      \"passCount\": 20,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"DB readiness\",\n      \"level\": \"pass\",\n      \"detail\": \"present=77 missing=0 error=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Webhook health\",\n      \"level\": \"pass\",\n      \"detail\": \"healthy=yes tracking=on failed=0 stale=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Auth/Billing smoke\",\n      \"level\": \"warn\",\n      \"detail\": \"Skipped smoke check because base URL is unreachable (fetch failed). Use --require-live-base to fail this condition.\",\n      \"passCount\": 0,\n      \"warnCount\": 1,\n      \"failCount\": 0,\n      \"skipCount\": 0,\n      \"failures\": [],\n      \"warnings\": [],\n      ",
+              "stdout": "{\n  \"generatedAt\": \"2026-03-04T08:04:23.660Z\",\n  \"baseUrl\": \"http://localhost:3000\",\n  \"resolvedBaseUrl\": \"http://localhost:3000\",\n  \"strictWarn\": false,\n  \"requireLiveBase\": false,\n  \"skipAuthBillingSmoke\": false,\n  \"startServerIfNeeded\": true,\n  \"envRuntime\": null,\n  \"envSourceFile\": null,\n  \"baseProbe\": {\n    \"reachable\": true,\n    \"detail\": \"base responded with /api/health status=200\",\n    \"status\": 200\n  },\n  \"serverStartup\": {\n    \"attempted\": true,\n    \"started\": true,\n    \"detail\": \"Local Next.js server auto-started successfully.\",\n    \"port\": 3000,\n    \"waitMs\": 25000\n  },\n  \"totals\": {\n    \"pass\": 4,\n    \"warn\": 0,\n    \"fail\": 0,\n    \"skip\": 0,\n    \"total\": 4\n  },\n  \"checks\": [\n    {\n      \"name\": \"Environment\",\n      \"level\": \"pass\",\n      \"detail\": \"pass=20 warn=0 fail=0 runtime=development\",\n      \"passCount\": 20,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"DB readiness\",\n      \"level\": \"pass\",\n      \"detail\": \"present=77 missing=0 error=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Webhook health\",\n      \"level\": \"pass\",\n      \"detail\": \"healthy=yes tracking=on failed=0 stale=0\",\n      \"passCount\": 1,\n      \"warnCount\": 0,\n      \"failCount\": 0\n    },\n    {\n      \"name\": \"Auth/Billing smoke\",\n      \"level\": \"pass\",\n      \"detail\": \"pass=16 warn=0 fail=0 skip=0\",\n      \"passCount\": 16,\n      \"warnCount\": 0,\n      \"failCount\": 0,\n      \"skipCount\": 0,\n      \"failures\": [],\n      \"warnings\": [],\n      \"skips\": []\n    }\n  ]\n}",
               "stderr": ""
             },
             "payload": {
-              "generatedAt": "2026-03-04T06:21:49.710Z",
+              "generatedAt": "2026-03-04T08:04:23.660Z",
               "baseUrl": "http://localhost:3000",
               "resolvedBaseUrl": "http://localhost:3000",
               "strictWarn": false,
@@ -429,20 +429,20 @@
               "envRuntime": null,
               "envSourceFile": null,
               "baseProbe": {
-                "reachable": false,
-                "detail": "fetch failed",
-                "status": null
+                "reachable": true,
+                "detail": "base responded with /api/health status=200",
+                "status": 200
               },
               "serverStartup": {
                 "attempted": true,
-                "started": false,
-                "detail": "Local server did not become reachable: fetch failed\nRecent server logs:\n> koydo-web@0.1.0 start\n> next start -p 3000\n▲ Next.js 16.1.6\n- Local:         http://localhost:3000\n- Network:       http://100.81.11.56:3000\n\n✓ Starting...\nError: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id\n    at ignore-listed frames",
+                "started": true,
+                "detail": "Local Next.js server auto-started successfully.",
                 "port": 3000,
                 "waitMs": 25000
               },
               "totals": {
-                "pass": 3,
-                "warn": 1,
+                "pass": 4,
+                "warn": 0,
                 "fail": 0,
                 "skip": 0,
                 "total": 4
@@ -474,10 +474,10 @@
                 },
                 {
                   "name": "Auth/Billing smoke",
-                  "level": "warn",
-                  "detail": "Skipped smoke check because base URL is unreachable (fetch failed). Use --require-live-base to fail this condition.",
-                  "passCount": 0,
-                  "warnCount": 1,
+                  "level": "pass",
+                  "detail": "pass=16 warn=0 fail=0 skip=0",
+                  "passCount": 16,
+                  "warnCount": 0,
                   "failCount": 0,
                   "skipCount": 0,
                   "failures": [],
@@ -490,14 +490,14 @@
           {
             "id": "route_smoke",
             "name": "Route smoke (launch-critical paths + /api/health)",
-            "status": "fail",
-            "detail": "No prebuilt .next output was available; reran route smoke with build but failed: ⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running?",
-            "durationMs": 405019,
+            "status": "pass",
+            "detail": "No prebuilt .next output was available; reran route smoke with build and passed.",
+            "durationMs": 523794,
             "command": "node scripts/smoke-test.mjs",
-            "exitCode": 1,
+            "exitCode": 0,
             "outputPreview": {
-              "stdout": "1/3 Building app (next build)...\n\n> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 820 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 821 catalog .ts files\n  Extracted 821 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\modules\\generated\\catalog-data.json\n  Modules: 821\n  Size: 91.1 MB\n\n> koydo-web@0.1.0 build\n> node --max-old-space-size=8192 ./node_modules/next/dist/bin/next build --webpack\n\n  Suggestion: If you intended to restart next build, terminate the other process, and then try again.\nBuild attempt 1/4 failed (Command failed: npm run build (exit 1)). Clearing .next and retrying...\n\n> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 820 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 821 catalog .ts files\n  Extracted 821 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\modules\\generated\\catalog-data.json\n  Modules: 821\n  Size: 91.1 MB\n\n> koydo-web@0.1.0 build\n> node --max-old-space-size=8192 ./node_modules/next/dist/bin/next build --webpack\n\n▲ Next.js 16.1.6 (webpack)\n- Environments: .env.local, .env\n- Experiments (use with caution):\n  · optimizePackageImports\n\n  Creating an optimized production build ...\nBuild attempt 2/4 failed (Command failed: npm run build (exit 4294967295)). Clearing .next and retrying...\n\n> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 820 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 821 catalog .ts files\n  Extracted 821 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\m",
-              "stderr": "⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running?\nNext.js build worker exited with code: 4294967295 and signal: null\n⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running?\n⨯ Unable to acquire lock at D:\\PythonProjects\\Koydo\\.next\\lock, is another instance of next build running?"
+              "stdout": "1/3 Building app (next build)...\n\n> koydo-web@0.1.0 prebuild\n> npm run modules:sync && node scripts/compile-catalog-json.mjs\n\n\n> koydo-web@0.1.0 modules:sync\n> node scripts/sync-modules.mjs\n\nSynced 821 module(s) to src\\lib\\modules\\generated\\registry.ts\ncompile-catalog-json: Scanning catalog directory...\n  Found 822 catalog .ts files\n  Extracted 822 modules successfully\n\n✓ Wrote D:\\PythonProjects\\Koydo\\src\\lib\\modules\\generated\\catalog-data.json\n  Modules: 822\n  Size: 91.1 MB\n\n> koydo-web@0.1.0 build\n> node --max-old-space-size=6144 ./node_modules/next/dist/bin/next build --webpack\n\n▲ Next.js 16.1.6 (webpack)\n- Environments: .env.local, .env\n\n  Creating an optimized production build ...\n✓ Compiled successfully in 7.1min\n  Skipping validation of types\n\n  We detected TypeScript in your project and reconfigured your tsconfig.json file for you.\n  The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:\n\n  \t- include was updated to add '.next-smoke-60312/types/**/*.ts'\n  \t- include was updated to add '.next-smoke-60312/dev/types/**/*.ts'\n\n  Collecting page data using 31 workers ...\n  Generating static pages using 31 workers (0/417) ...\n  Generating static pages using 31 workers (104/417) \r\n  Generating static pages using 31 workers (208/417) \r\n  Generating static pages using 31 workers (312/417) \r\n✓ Generating static pages using 31 workers (417/417) in 6.3s\n  Finalizing page optimization ...\n  Collecting build traces ...\n\nRoute (app)\n┌ ƒ /\n├ ○ /_not-found\n├ ƒ /account-deletion\n├ ƒ /account/privacy\n├ ƒ /account/settings\n├ ƒ /admin/alerts\n├ ƒ /admin/audit\n├ ƒ /admin/compliance\n├ ƒ /admin/costs\n├ ƒ /admin/curriculum\n├ ƒ /admin/finance\n├ ƒ /admin/media\n├ ƒ /admin/operations\n├ ƒ /admin/overview\n├ ƒ /admin/partners\n├ ƒ /admin/provisioning\n├ ƒ /admin/reports\n├ ƒ /admin/settings\n├ ƒ /api/account/delete\n├ ƒ /api/account/purge-deleted\n├ ƒ /api/account/security/change-confirmation/challenge\n├ ƒ /api/account/security/ch",
+              "stderr": ""
             },
             "payload": null
           },
@@ -506,7 +506,7 @@
             "name": "Placement diagnostic scoring contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 686,
+            "durationMs": 740,
             "command": "node scripts/test-placement-diagnostic-scoring.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -520,7 +520,7 @@
             "name": "Placement diagnostic flow contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 788,
+            "durationMs": 819,
             "command": "node scripts/test-placement-diagnostic-flow-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -534,7 +534,7 @@
             "name": "Audiobook checkpoint contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 729,
+            "durationMs": 740,
             "command": "node scripts/test-audiobook-checkpoint-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -548,7 +548,7 @@
             "name": "Device gateway confidence contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 713,
+            "durationMs": 693,
             "command": "node scripts/test-device-gateway-confidence-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -562,7 +562,7 @@
             "name": "Review queue contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 753,
+            "durationMs": 750,
             "command": "node scripts/test-review-queue-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -576,7 +576,7 @@
             "name": "Remediation tasking contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 785,
+            "durationMs": 742,
             "command": "node scripts/test-remediation-tasking-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -590,7 +590,7 @@
             "name": "Offline progress sync contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 768,
+            "durationMs": 745,
             "command": "node scripts/test-offline-progress-sync-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -604,7 +604,7 @@
             "name": "Social cohorts and challenges contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 774,
+            "durationMs": 684,
             "command": "node scripts/test-social-cohorts-challenges-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -618,7 +618,7 @@
             "name": "Creator pipeline contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 691,
+            "durationMs": 704,
             "command": "node scripts/test-creator-pipeline-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -632,7 +632,7 @@
             "name": "StoryForge cinema contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 816,
+            "durationMs": 739,
             "command": "node scripts/test-storyforge-cinema-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -646,7 +646,7 @@
             "name": "Teacher access contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 909,
+            "durationMs": 875,
             "command": "node scripts/test-teacher-access-contract.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -660,7 +660,7 @@
             "name": "Billing webhook processing lock contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 757,
+            "durationMs": 709,
             "command": "node scripts/test-billing-webhook-processing-lock.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -674,7 +674,7 @@
             "name": "RevenueCat offerings resolution contract",
             "status": "pass",
             "detail": "Command passed.",
-            "durationMs": 736,
+            "durationMs": 772,
             "command": "node scripts/test-revenuecat-offerings-resolution.mjs",
             "exitCode": 0,
             "outputPreview": {
@@ -693,13 +693,13 @@
       "exitCode": 0,
       "status": "pass",
       "detail": "ready=7 needs_keys=0 optional_pending=0 not_required=2",
-      "durationMs": 110,
+      "durationMs": 98,
       "outputPreview": {
-        "stdout": "[PASS] Supabase Core - Auth, database, and server-side admin operations. Configured.\n[PASS] Stripe Billing - Billing provider mode: stripe_external. Configured.\n[INFO] RevenueCat Native Billing - Not required in current mode. Billing provider mode: stripe_external.\n[PASS] Upstash Redis Rate Limiting - Distributed rate limiting and shared abuse throttling. Configured.\n[PASS] AI Model Provider Access - AI tutor/remediation/media generation providers. Optional keys not set: OPENAI_MEDIA_API_KEY.\n[PASS] TTS Primary Provider - Primary TTS provider: openai. Configured.\n[INFO] Translation Provider - Not required in current mode. Translation provider: mock.\n[PASS] Parent Consent Email Delivery - Compliance consent links and parent communication flow. Configured.\n[PASS] Signup Welcome Email Delivery - Post-signup welcome email with legal attachments. Configured.\nWrote public\\API-CONNECTION-READINESS-PROD-LIVE.json\nWrote public\\API-CONNECTION-READINESS-PROD-LIVE.md\n{\n  \"generatedAt\": \"2026-03-04T06:28:48.053Z\",\n  \"sourceFile\": \"D:\\\\PythonProjects\\\\Koydo\\\\.env.production.audit\",\n  \"modes\": {\n    \"runtime\": \"production\",\n    \"billingMode\": \"stripe_external\",\n    \"translationProvider\": \"mock\",\n    \"ttsProvider\": \"openai\"\n  },\n  \"totals\": {\n    \"ready\": 7,\n    \"needs_keys\": 0,\n    \"optional_pending\": 0,\n    \"not_required\": 2,\n    \"total\": 9\n  },\n  \"checks\": [\n    {\n      \"id\": \"supabase_core\",\n      \"label\": \"Supabase Core\",\n      \"requiredForLaunch\": true,\n      \"required\": [\n        [\n          \"NEXT_PUBLIC_SUPABASE_URL\",\n          \"EXPO_PUBLIC_SUPABASE_URL\"\n        ],\n        [\n          \"NEXT_PUBLIC_SUPABASE_ANON_KEY\",\n          \"EXPO_PUBLIC_SUPABASE_KEY\"\n        ],\n        \"SUPABASE_SERVICE_ROLE_KEY\"\n      ],\n      \"detailContext\": \"Auth, database, and server-side admin operations.\",\n      \"status\": \"ready\",\n      \"detail\": \"Auth, database, and server-side admin operations. Configured.\",\n      \"presentKeys\": [\n        \"NEXT_PUBLIC_SUPABASE_URL\",\n        \"NEXT_PUBLIC_SUPABASE",
+        "stdout": "[PASS] Supabase Core - Auth, database, and server-side admin operations. Configured.\n[PASS] Stripe Billing - Billing provider mode: stripe_external. Configured.\n[INFO] RevenueCat Native Billing - Not required in current mode. Billing provider mode: stripe_external.\n[PASS] Upstash Redis Rate Limiting - Distributed rate limiting and shared abuse throttling. Configured.\n[PASS] AI Model Provider Access - AI tutor/remediation/media generation providers. Optional keys not set: OPENAI_MEDIA_API_KEY.\n[PASS] TTS Primary Provider - Primary TTS provider: openai. Configured.\n[INFO] Translation Provider - Not required in current mode. Translation provider: mock.\n[PASS] Parent Consent Email Delivery - Compliance consent links and parent communication flow. Configured.\n[PASS] Signup Welcome Email Delivery - Post-signup welcome email with legal attachments. Configured.\nWrote public\\API-CONNECTION-READINESS-PROD-LIVE.json\nWrote public\\API-CONNECTION-READINESS-PROD-LIVE.md\n{\n  \"generatedAt\": \"2026-03-04T08:13:20.764Z\",\n  \"sourceFile\": \"D:\\\\PythonProjects\\\\Koydo\\\\.env.production.audit\",\n  \"modes\": {\n    \"runtime\": \"production\",\n    \"billingMode\": \"stripe_external\",\n    \"translationProvider\": \"mock\",\n    \"ttsProvider\": \"openai\"\n  },\n  \"totals\": {\n    \"ready\": 7,\n    \"needs_keys\": 0,\n    \"optional_pending\": 0,\n    \"not_required\": 2,\n    \"total\": 9\n  },\n  \"checks\": [\n    {\n      \"id\": \"supabase_core\",\n      \"label\": \"Supabase Core\",\n      \"requiredForLaunch\": true,\n      \"required\": [\n        [\n          \"NEXT_PUBLIC_SUPABASE_URL\",\n          \"EXPO_PUBLIC_SUPABASE_URL\"\n        ],\n        [\n          \"NEXT_PUBLIC_SUPABASE_ANON_KEY\",\n          \"EXPO_PUBLIC_SUPABASE_KEY\"\n        ],\n        \"SUPABASE_SERVICE_ROLE_KEY\"\n      ],\n      \"detailContext\": \"Auth, database, and server-side admin operations.\",\n      \"status\": \"ready\",\n      \"detail\": \"Auth, database, and server-side admin operations. Configured.\",\n      \"presentKeys\": [\n        \"NEXT_PUBLIC_SUPABASE_URL\",\n        \"NEXT_PUBLIC_SUPABASE",
         "stderr": ""
       },
       "payload": {
-        "generatedAt": "2026-03-04T06:28:48.053Z",
+        "generatedAt": "2026-03-04T08:13:20.764Z",
         "sourceFile": "D:\\PythonProjects\\Koydo\\.env.production.audit",
         "modes": {
           "runtime": "production",

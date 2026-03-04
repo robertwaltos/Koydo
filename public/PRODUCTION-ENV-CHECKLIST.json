@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-03-04T06:21:09.902Z",
+  "generatedAt": "2026-03-04T08:03:50.528Z",
   "command": "node scripts/check-env.mjs --json --runtime production --source-file .env.production.audit --fail-on-warn",
   "commandExitCode": 0,
   "sourceFile": ".env.production.audit",
   "sourceFallbackNote": "",
   "runtime": "production",
   "envReport": {
-    "generatedAt": "2026-03-04T06:21:09.886Z",
+    "generatedAt": "2026-03-04T08:03:50.510Z",
     "source": "D:\\PythonProjects\\Koydo\\.env.production.audit",
     "options": {
       "runtimeOverride": "production",

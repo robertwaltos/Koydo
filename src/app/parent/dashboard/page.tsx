@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { serverEnv } from "@/lib/config/env";
@@ -22,6 +23,39 @@ import { loadSupportRuntimeConfig } from "@/lib/support/config";
 
 export const dynamic = "force-dynamic";
 
+function isMissingTableError(message: string) {
+  const lower = message.toLowerCase();
+  return lower.includes("could not find the table") || (lower.includes("relation") && lower.includes("does not exist"));
+}
+
+function monthKeyFromDate(date: Date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  return `${y}-${m}`;
+}
+
+function formatLastUpdated(
+  value: string | null,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+  locale: Locale,
+) {
+  if (!value) return t("parent_dashboard_never");
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return t("parent_dashboard_never");
+  return formatDate(date, locale, { month: "short", day: "numeric" });
+}
+
+function formatCompactDate(
+  value: string | null,
+  t: (key: string, vars?: Record<string, string | number>) => string,
+  locale: Locale,
+) {
+  if (!value) return t("parent_dashboard_not_available");
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return t("parent_dashboard_not_available");
+  return formatDate(date, locale, { month: "short", day: "numeric" });
+}
+
 export default async function ParentDashboardPage() {
   const supabase = await createSupabaseServerClient();
   const {
@@ -44,7 +78,27 @@ export default async function ParentDashboardPage() {
     redirect("/dashboard");
   }
 
-  const learnerProfiles = (profiles ?? []) as StudentProfile[];
+  const cookieStore = await cookies();
+  const localeCookie = cookieStore.get("koydo.locale")?.value ?? "en";
+  const locale: Locale = isSupportedLocale(localeCookie) ? localeCookie : "en";
+  const t = (key: string, vars?: Record<string, string | number>) => translate(locale, key, vars);
+
+  const [{ data: studentProfiles }, { data: subscription }] = await Promise.all([
+    supabase
+      .from("student_profiles")
+      .select("id, display_name, grade_level, age_years, initial_assessment_status, updated_at")
+      .eq("account_id", user.id)
+      .order("display_name", { ascending: true }),
+    supabase
+      .from("subscriptions")
+      .select("status, cancel_at_period_end, current_period_end")
+      .eq("user_id", user.id)
+      .order("updated_at", { ascending: false })
+      .limit(1)
+      .maybeSingle(),
+  ]);
+
+  const learnerProfiles = (studentProfiles ?? []) as StudentProfile[];
   const supportConfig = await loadSupportRuntimeConfig();
   const learnerProfileIds = learnerProfiles.map((profile) => profile.id);
   const currentMonthKey = monthKeyFromDate(new Date());
