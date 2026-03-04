@@ -473,58 +473,6 @@ function InfoTip({ tip }: { tip: string }) {
   );
 }
 
-// ── Console secondary nav category ───────────────────────────────────────────
-
-function ConsoleNavCategory({
-  category, selectedId, onSelect, badges,
-}: {
-  category: ConsoleCategoryDef;
-  selectedId: string;
-  onSelect: (id: string) => void;
-  badges: Record<string, number>;
-}) {
-  const hasActive = category.sections.some((s) => s.id === selectedId);
-  const [open, setOpen] = useState(hasActive);
-  return (
-    <div className="mb-1">
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between rounded-md px-2.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-500 hover:bg-slate-100 hover:text-slate-700 transition-colors"
-        aria-expanded={open}
-      >
-        <span className="flex items-center gap-1.5"><span aria-hidden="true">{category.icon}</span>{category.label}</span>
-        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" aria-hidden="true" className={`shrink-0 transition-transform duration-150 ${open ? "rotate-180" : ""}`}>
-          <path d="M1 2.5 4 5.5 7 2.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </button>
-      {open && (
-        <div className="mt-0.5 space-y-0.5 pl-1 pb-1">
-          {category.sections.map((section) => {
-            const isActive = section.id === selectedId;
-            const badge = badges[section.id] ?? 0;
-            return (
-              <button
-                key={section.id}
-                type="button"
-                onClick={() => onSelect(section.id)}
-                className={`flex w-full items-center justify-between rounded-md px-3 py-1.5 text-left text-[12px] font-medium transition-colors ${
-                  isActive ? "bg-blue-100 text-blue-900" : "text-slate-600 hover:bg-slate-100 hover:text-slate-800"
-                }`}
-              >
-                <span className="truncate">{section.title}</span>
-                {badge > 0 && (
-                  <span className="ml-1.5 flex h-3.5 min-w-3.5 items-center justify-center rounded-full bg-amber-400 px-1 text-[9px] font-bold text-white">{badge}</span>
-                )}
-              </button>
-            );
-          })}
-        </div>
-      )}
-    </div>
-  );
-}
-
 // ── Section card ──────────────────────────────────────────────────────────────
 
 function Section({

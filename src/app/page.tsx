@@ -26,18 +26,6 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── Subject grid data ── */
-const SUBJECTS = [
-  { icon: "🔢", i18nKey: "home_subjects_math",        href: "/modules?subject=Mathematics",      color: "#f59e0b" },
-  { icon: "⚛️", i18nKey: "home_subjects_science",     href: "/modules?subject=Science",          color: "#10b981" },
-  { icon: "📖", i18nKey: "home_subjects_reading",     href: "/modules?subject=Reading",          color: "#f97316" },
-  { icon: "💻", i18nKey: "home_subjects_coding",      href: "/modules?subject=Computer Science", color: "#6366f1" },
-  { icon: "⏳", i18nKey: "home_subjects_history",     href: "/modules?subject=History",          color: "#a855f7" },
-  { icon: "🏗️", i18nKey: "home_subjects_engineering", href: "/modules?subject=Engineering",      color: "#ef4444" },
-  { icon: "🩺", i18nKey: "home_subjects_medicine",    href: "/modules?subject=Medicine",         color: "#14b8a6" },
-  { icon: "💼", i18nKey: "home_subjects_business",    href: "/modules?subject=Business",         color: "#0ea5e9" },
-] as const;
-
 export default async function Home() {
   try {
     const supabase = await createSupabaseServerClient();
