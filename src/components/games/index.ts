@@ -140,6 +140,11 @@ export { default as Arcade057SparkRelaySpiral } from "./arcade-057-spark-relay-s
 export { default as Arcade058EchoCredenceSurge } from "./arcade-058-echo-credence-surge";
 export { default as Arcade059LunaResonanceLane } from "./arcade-059-luna-resonance-lane";
 export { default as Arcade060TerraBloomCircuit } from "./arcade-060-terra-bloom-circuit";
+export { default as Arcade061PixelPrismPatrol } from "./arcade-061-pixel-prism-patrol";
+export { default as Arcade062SparkFactorFurnace } from "./arcade-062-spark-factor-furnace";
+export { default as Arcade063EchoClaimCascade } from "./arcade-063-echo-claim-cascade";
+export { default as Arcade064LunaSequenceSymphony } from "./arcade-064-luna-sequence-symphony";
+export { default as Arcade065TerraEcosystemRescue } from "./arcade-065-terra-ecosystem-rescue";
 export { default as Zone041SignalRescue } from "./zone-041-signal-rescue";
 export { default as Zone042MathRailCommander } from "./zone-042-math-rail-commander";
 export { default as Zone043EchoStorySignal } from "./zone-043-echo-story-signal";

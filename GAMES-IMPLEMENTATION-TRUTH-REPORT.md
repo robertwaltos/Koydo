@@ -1,6 +1,6 @@
 # Games Implementation Truth Report
 
-Generated: 2026-03-04T19:03:21.400Z
+Generated: 2026-03-04T19:10:27.585Z
 
 ## Verified Snapshot
 - Catalog entries: 500 (core=8, legacy=57, arcade=200, expansion=235).

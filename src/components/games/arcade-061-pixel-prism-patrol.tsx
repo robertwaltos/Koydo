@@ -149,7 +149,7 @@ export default function Arcade061PixelPrismPatrol() {
 
   const restart = () => start();
 
-  const useScan = () => {
+  const triggerScan = () => {
     if (phase !== "playing" || scans <= 0 || scanReveal || settlingRef.current) return;
     setScans((value) => value - 1);
     setScanReveal(true);
@@ -255,7 +255,7 @@ export default function Arcade061PixelPrismPatrol() {
       }
       if (lower === "x") {
         event.preventDefault();
-        useScan();
+        triggerScan();
         return;
       }
       if (lower === "p") {
@@ -270,7 +270,7 @@ export default function Arcade061PixelPrismPatrol() {
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [phase, resolveLane, restart, useScan]);
+  }, [phase, resolveLane, restart, triggerScan]);
 
   return (
     <div className="relative w-full overflow-hidden rounded-[2.25rem] border border-cyan-200/25 bg-slate-950 text-white">
@@ -349,7 +349,7 @@ export default function Arcade061PixelPrismPatrol() {
               </div>
 
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <PhysicalButton onClick={useScan} disabled={scans <= 0 || scanReveal} className="h-10 bg-cyan-300 text-xs font-black text-slate-950 disabled:opacity-40">
+                <PhysicalButton onClick={triggerScan} disabled={scans <= 0 || scanReveal} className="h-10 bg-cyan-300 text-xs font-black text-slate-950 disabled:opacity-40">
                   <span className="inline-flex items-center gap-1">
                     <Radar className="h-4 w-4" />
                     Scan Pulse [X]

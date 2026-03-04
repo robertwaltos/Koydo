@@ -162,7 +162,7 @@ export default function Arcade063EchoClaimCascade() {
 
   const restart = () => start();
 
-  const useReveal = () => {
+  const triggerReveal = () => {
     if (phase !== "playing" || !round || reveals <= 0 || settlingRef.current) return;
     setReveals((value) => value - 1);
     setInteractions((value) => value + 1);
@@ -269,7 +269,7 @@ export default function Arcade063EchoClaimCascade() {
         resolve("noise");
       } else if (lower === "h") {
         event.preventDefault();
-        useReveal();
+        triggerReveal();
       } else if (lower === "p") {
         event.preventDefault();
         setPhase((value) => (value === "playing" ? "paused" : "playing"));
@@ -280,7 +280,7 @@ export default function Arcade063EchoClaimCascade() {
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [phase, resolve, restart, useReveal]);
+  }, [phase, resolve, restart, triggerReveal]);
 
   return (
     <div className="relative w-full overflow-hidden rounded-[2.25rem] border border-indigo-200/25 bg-slate-950 text-white">
@@ -351,7 +351,7 @@ export default function Arcade063EchoClaimCascade() {
               </div>
 
               <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <PhysicalButton onClick={useReveal} disabled={reveals <= 0} className="h-10 bg-indigo-300 text-xs font-black text-slate-950 disabled:opacity-40">
+                <PhysicalButton onClick={triggerReveal} disabled={reveals <= 0} className="h-10 bg-indigo-300 text-xs font-black text-slate-950 disabled:opacity-40">
                   Hint Reveal [H]
                 </PhysicalButton>
                 <PhysicalButton onClick={() => setPhase("paused")} className="h-10 bg-zinc-800 text-xs font-black text-white">
