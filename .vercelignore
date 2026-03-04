@@ -1,0 +1,14 @@
+# Exclude nested workspaces and local artifacts from deployment uploads.
+eduforge-web/
+External_AI_Agents/
+data/
+logs/
+.next/
+node_modules/
+storybook-static/
+out/
+android/
+ios/
+tailwindcss-*.log
+*.tsbuildinfo
+supabase/.temp/
