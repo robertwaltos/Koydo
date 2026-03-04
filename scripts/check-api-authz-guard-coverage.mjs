@@ -29,6 +29,7 @@ const AUTHZ_GUARD_PATTERNS = [
   { name: "owner-email-challenge-check", pattern: /verifyOwnerEmailChallengeAndIssueStepUp\(/ },
   { name: "owner-totp-check", pattern: /verifyOwnerTotpAndIssueStepUp\(/ },
   { name: "owner-yubikey-check", pattern: /verifyOwnerYubikeyAndIssueStepUp\(/ },
+  { name: "parent-gate-challenge-check", pattern: /verifyParentGateAnswer\(/ },
   { name: "parent-consent-token-check", pattern: /verifyParentConsentVerificationToken\(/ },
   { name: "stripe-webhook-signature-check", pattern: /stripe\.webhooks\.constructEvent\(/ },
   { name: "cron-secret-check", pattern: /process\.env\.CRON_SECRET/ },

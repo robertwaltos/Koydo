@@ -24,8 +24,30 @@ type TokenPayload = {
 
 const GATE_TTL_SECONDS = 120; // 2 minutes to solve
 
+const DEV_FALLBACK_SECRET = "dev-parent-gate-secret-min16chars";
+
+function isDevelopmentRuntime() {
+  const runtime = (process.env.APP_ENV || process.env.VERCEL_ENV || process.env.NODE_ENV || "").toLowerCase();
+  return runtime === "development" || runtime === "dev" || runtime === "local" || runtime === "test";
+}
+
+export function isParentGateConfigured() {
+  const secret = process.env.PARENT_CONSENT_TOKEN_SECRET?.trim();
+  if (secret && secret.length >= 16) {
+    return true;
+  }
+  return isDevelopmentRuntime();
+}
+
 function getSecret(): string {
-  return process.env.PARENT_CONSENT_TOKEN_SECRET ?? "dev-parent-gate-secret-min16chars";
+  const configured = process.env.PARENT_CONSENT_TOKEN_SECRET?.trim();
+  if (configured && configured.length >= 16) {
+    return configured;
+  }
+  if (isDevelopmentRuntime()) {
+    return DEV_FALLBACK_SECRET;
+  }
+  throw new Error("PARENT_CONSENT_TOKEN_SECRET must be configured with at least 16 characters.");
 }
 
 function signPayload(payload: string, secret: string): string {
