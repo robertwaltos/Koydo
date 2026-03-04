@@ -9,42 +9,43 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 145",
   title: "Coral Circuit",
   mascot: "terra",
-  startMessage: "Terra: stay adaptive and pick evidence-backed actions as pressure scales in Coral Circuit.",
-  winMessage: "Terra: mission complete. You balanced speed, accuracy, and control.",
-  failMessage: "Terra: mission dropped. Re-enter with steadier choices.",
+  startMessage: "Terra: protect systems resilience and choose interventions that reduce cascade risk in Coral Circuit.",
+  winMessage: "Terra: resilience corridor secured. Strong engineering judgment.",
+  failMessage: "Terra: failure cascade initiated. Retry with safer tradeoffs.",
   objectiveNouns: [
-    "mission lane",
-    "signal node",
-    "control ring",
-    "challenge rail",
-    "objective grid",
-    "momentum core"
+    "stability lane",
+    "sensor node",
+    "safety ring",
+    "control rail",
+    "resilience grid",
+    "systems core"
   ],
   promptLeads: [
-    "Multi-skill challenge detected on",
-    "Choose the strongest all-around move for",
-    "Only one option maintains clean momentum in",
-    "Pressure rising fast: stabilize"
+    "Load variance detected on",
+    "Choose the intervention that limits cascade risk in",
+    "Only one response preserves safety margin in",
+    "Critical systems alert for"
   ],
   correctActions: [
     "Stabilize",
-    "Align",
+    "Regulate",
+    "Buffer",
+    "Reinforce",
     "Calibrate",
-    "Secure",
-    "Balance"
+    "Secure"
   ],
   decoyActions: [
-    "Rush",
-    "Spike",
-    "Skip",
+    "Overheat",
     "Bypass",
-    "Overload"
+    "Drain",
+    "Spike",
+    "Strip"
   ],
   learningSprinkles: [
-    "Blend speed with evidence.",
-    "Adaptive pacing improves outcomes.",
-    "Consistent choices build momentum.",
-    "Recover early after mistakes."
+    "Safety margins protect complex systems.",
+    "Early mitigation reduces cascade risk.",
+    "Reliable models beat risky shortcuts.",
+    "Engineering tradeoffs require evidence."
   ],
   theme: {
     "aura": "bg-[radial-gradient(circle_at_14%_16%,rgba(74,222,128,0.24),transparent_46%),radial-gradient(circle_at_82%_84%,rgba(34,197,94,0.18),transparent_52%)]",
@@ -61,6 +62,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5400,
   minRoundMs: 2850,
   roundDecayMs: 330,
+  roundMode: "single",
+  allowTrapDecoys: true,
+  targetBestCombo: 9,
 };
 
 export default function Arcade145CoralCircuit() {

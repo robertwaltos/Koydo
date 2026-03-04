@@ -9,9 +9,9 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   shortLabel: "Arcade 142",
   title: "Marble Circuit",
   mascot: "spark",
-  startMessage: "Spark: Spark: hold stable logic under pressure and keep each calculation lane consistent in Marble Circuit.",
-  winMessage: "Spark: Spark: matrix synchronized. Great precision and pacing.",
-  failMessage: "Spark: Spark: signal drifted. Re-enter with cleaner math decisions.",
+  startMessage: "Spark: hold stable logic under pressure and keep each calculation lane consistent in Marble Circuit.",
+  winMessage: "Spark: matrix synchronized. Great precision and pacing.",
+  failMessage: "Spark: signal drifted. Re-enter with cleaner math decisions.",
   objectiveNouns: [
     "ratio node",
     "sum relay",
@@ -61,6 +61,8 @@ const CONFIG: RewardRealmCharacterGauntletConfig = {
   baseRoundMs: 5300,
   minRoundMs: 2800,
   roundDecayMs: 330,
+  roundMode: "double",
+  targetBestCombo: 7,
 };
 
 export default function Arcade142MarbleCircuit() {

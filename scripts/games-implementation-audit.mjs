@@ -96,6 +96,14 @@ function parseMapBlock(source, declarationPrefix) {
   return out;
 }
 
+function parseMapBlockWithFallback(source, declarationPrefixes) {
+  for (const declarationPrefix of declarationPrefixes) {
+    if (!source.includes(declarationPrefix)) continue;
+    return parseMapBlock(source, declarationPrefix);
+  }
+  throw new Error(`Missing start token: ${declarationPrefixes[0]}`);
+}
+
 function parseComponentFileMap(indexSource) {
   const out = new Map();
   const defaultExports = Array.from(
@@ -213,13 +221,21 @@ async function main() {
   const arcadeCount = parseGeneratedCount(catalogSource, "ARCADE_GAMES");
   const expansionCount = parseGeneratedCount(catalogSource, "EXPANSION_ARCADE_GAMES");
 
-  const coreComponentMap = parseMapBlock(
+  const coreComponentMap = parseMapBlockWithFallback(
     gamePageSource,
-    "const CORE_COMPONENTS: Record<GameType, (props: CoreGameComponentProps) => React.JSX.Element> = {",
+    [
+      "const CORE_COMPONENTS: Record<GameType, (props: CoreGameComponentProps) => React.JSX.Element> = {",
+      "const CORE_COMPONENTS: Record<GameType, React.ComponentType<CoreGameComponentProps>> = {",
+      "const CORE_COMPONENTS: Record<GameType, React.ComponentType<any>> = {",
+    ],
   );
-  const legacyComponentMap = parseMapBlock(
+  const legacyComponentMap = parseMapBlockWithFallback(
     gamePageSource,
-    "const LEGACY_COMPONENTS: Record<string, () => React.JSX.Element> = {",
+    [
+      "const LEGACY_COMPONENTS: Record<string, () => React.JSX.Element> = {",
+      "const LEGACY_COMPONENTS: Record<string, React.ComponentType<any>> = {",
+      "const LEGACY_COMPONENTS: Record<string, React.ComponentType> = {",
+    ],
   );
   const componentFileMap = parseComponentFileMap(indexSource);
 
