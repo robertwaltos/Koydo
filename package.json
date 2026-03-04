@@ -149,6 +149,7 @@
     "games:audit:spec500": "node scripts/games500-spec-audit.mjs",
     "games:audit:playability500": "node scripts/games500-playability-audit.mjs",
     "games:audit:games1-contract": "node scripts/games1-contract-audit.mjs",
+    "games:reward-realm:contract:test": "node scripts/test-games-reward-realm-contract.mjs",
     "games:research:audit": "node scripts/audit-open-source-game-repos.mjs",
     "games:pipeline:plan": "node scripts/build-500-games-factory-plan.mjs",
     "games:pipeline:plan:dry": "node scripts/build-500-games-factory-plan.mjs --dry-run",
@@ -299,4 +300,5 @@
     "typescript": "^5.9.3"
   }
 }
+
 

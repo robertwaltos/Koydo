@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { enforceIpRateLimit } from "@/lib/security/ip-rate-limit";
 import { serverEnv } from "@/lib/config/env";
@@ -108,7 +109,7 @@ export async function POST(req: NextRequest) {
     const res = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${apiKey}`,
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -159,7 +160,7 @@ export async function POST(req: NextRequest) {
       console.error("[companion/chat] Failed to log conversation:", logErr);
     }
 
-    return NextResponse.json({ reply, usage: { ...usage, used: usage.used + 1, remaining: usage.remaining - 1 } });
+    return NextResponse.json({ reply, usage: { remaining: rateLimit.remaining } });
   } catch (err) {
     console.error("[companion/chat] Fetch failed.", toSafeErrorRecord(err));
     return NextResponse.json(

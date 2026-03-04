@@ -93,6 +93,16 @@ type TutorUsage = {
 
 type LessonLookup = NonNullable<ReturnType<typeof getLessonById>>;
 
+function mapUsageToLegacy(result: AiUsageResult): TutorUsage {
+  return {
+    dailyLimit: result.limit,
+    usedToday: result.used,
+    remainingToday: result.remaining,
+    usageTracked: true,
+    limitReached: !result.allowed,
+  };
+}
+
 function isMissingTableError(params: { message: string | undefined; table: string }) {
   const { message, table } = params;
   if (!message) return false;
@@ -605,6 +615,22 @@ export async function POST(request: Request) {
       snippet,
     });
 
+    // ── Grounding pipeline ──
+    let groundingUsed = false;
+    let groundingContext: GroundingContext | null = null;
+    let citations: Citation[] = [];
+    let contradictionDetected = false;
+
+    if (lessonLookup) {
+      const pipeline = runGroundingPipeline({
+        lesson: lessonLookup.lesson,
+        learningModule: lessonLookup.learningModule,
+        question,
+      });
+      groundingUsed = true;
+      groundingContext = pipeline.context;
+    }
+
     let answer = baselineAnswer;
     let source: "openai" | "rule_based" = "rule_based";
     let warning: string | null = null;
@@ -792,12 +818,18 @@ export async function POST(request: Request) {
       usage: responseUsage,
       grounding: {
         used: groundingUsed,
-        confidenceScore,
+        confidenceScore: confidence,
         citationCount: citations.length,
         contradictionDetected,
         sourceCount: groundingContext?.sources.length ?? 0,
+        citation,
+        snippet,
+        confidence,
+        groundingScore: Number(groundingScore.toFixed(3)),
+        contradictionBlocked,
+        clarifyingQuestionAsked: Boolean(clarifyingQuestion),
       },
-      citations: citations.map((c) => ({
+      citations: citations.map((c: Citation) => ({
         sourceId: c.sourceId,
         kind: c.kind,
         title: c.title,
@@ -808,14 +840,6 @@ export async function POST(request: Request) {
         lessonTitle: lessonLookup?.lesson.title ?? null,
         moduleTitle: lessonLookup?.learningModule.title ?? null,
         focusSkills,
-      },
-      grounding: {
-        citation,
-        snippet,
-        confidence,
-        groundingScore: Number(groundingScore.toFixed(3)),
-        contradictionBlocked,
-        clarifyingQuestionAsked: Boolean(clarifyingQuestion),
       },
     });
   } catch (error) {

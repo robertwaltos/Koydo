@@ -9,7 +9,8 @@ const PORT = Number(process.env.SMOKE_TEST_PORT ?? (4200 + Math.floor(Math.rando
 const BASE_URL = `http://127.0.0.1:${PORT}`;
 const STARTUP_TIMEOUT_MS = 120_000;
 const NPM_COMMAND = "npm";
-const DIST_DIR = process.env.SMOKE_TEST_DIST_DIR ?? ".next-smoke";
+const DIST_DIR = process.env.SMOKE_TEST_DIST_DIR ?? `.next-smoke-${process.pid}`;
+const TSCONFIG_PATH = path.resolve("tsconfig.json");
 const SKIP_BUILD =
   process.argv.includes("--skip-build")
   || process.env.npm_config_skip_build === "true"
@@ -68,6 +69,27 @@ function clearNextBuildOutput() {
   const buildDir = path.resolve(DIST_DIR);
   if (!fs.existsSync(buildDir)) return;
   fs.rmSync(buildDir, { recursive: true, force: true });
+}
+
+function readTsConfigSnapshot() {
+  try {
+    return fs.readFileSync(TSCONFIG_PATH, "utf8");
+  } catch {
+    return null;
+  }
+}
+
+function restoreTsConfigSnapshot(snapshot) {
+  if (snapshot === null) return;
+  try {
+    const current = fs.readFileSync(TSCONFIG_PATH, "utf8");
+    if (current !== snapshot) {
+      fs.writeFileSync(TSCONFIG_PATH, snapshot, "utf8");
+      log("Restored tsconfig.json after smoke build.");
+    }
+  } catch {
+    // Best-effort cleanup only.
+  }
 }
 
 async function buildWithRecovery() {
@@ -171,11 +193,13 @@ async function checkHealthEndpoint() {
 }
 
 async function main() {
+  const tsconfigSnapshot = readTsConfigSnapshot();
   if (SKIP_BUILD) {
     log("1/3 Skipping build (using existing build output)...");
   } else {
     log("1/3 Building app (next build)...");
     await buildWithRecovery();
+    restoreTsConfigSnapshot(tsconfigSnapshot);
   }
 
   log(`2/3 Starting Next server on port ${PORT}...`);
@@ -256,6 +280,7 @@ async function main() {
     log("Smoke test passed.");
   } finally {
     cleanup();
+    restoreTsConfigSnapshot(tsconfigSnapshot);
   }
 }
 
