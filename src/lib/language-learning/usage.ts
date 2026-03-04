@@ -1,5 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { isBillableSubscription } from "@/lib/billing/subscription";
+import type { ClassroomAccessDecision } from "@/lib/organizations/classroom-access";
 import { LANGUAGE_AI_BUDGET_LIMITS } from "./policy";
 import { getLanguageRuntimeConfig } from "./runtime-config";
 import {
@@ -53,6 +54,20 @@ export type LanguageUsageEntitlement = {
   geoTier: string;
   utteranceP50Seconds: number;
   utteranceP90Seconds: number;
+  classroomAccess: {
+    active: boolean;
+    reason: ClassroomAccessDecision["reason"] | "not_checked";
+    organizationId: string | null;
+    organizationName: string | null;
+    accountClass: ClassroomAccessDecision["accountClass"];
+    timeZone: string | null;
+    requestCountry: string | null;
+    requestTimeZone: string | null;
+    windowStartHourLocal: number | null;
+    windowEndHourLocal: number | null;
+    localHour: number | null;
+    localMinute: number | null;
+  };
   mode: "graded" | "practice_only";
   reason:
     | "eligible"
@@ -68,6 +83,7 @@ export type LanguageUsageRecordResult = {
 type ResolveEntitlementInput = {
   userId: string;
   studentProfileId?: string;
+  classroomAccess?: ClassroomAccessDecision | null;
 };
 
 type RecordUsageInput = {
@@ -296,6 +312,8 @@ export async function resolveLanguageUsageEntitlement(
   const monthKey = monthKeyFromDate(new Date());
   const learner = resolveLearnerKey(input);
   const runtimeConfig = await getLanguageRuntimeConfig();
+  const classroomAccess = input.classroomAccess ?? null;
+  const classroomAccessActive = Boolean(classroomAccess?.granted);
 
   const { data: subscription } = await supabase
     .from("subscriptions")
@@ -305,10 +323,12 @@ export async function resolveLanguageUsageEntitlement(
     .limit(1)
     .maybeSingle();
 
-  const inferredPlanTier = inferPlanTierFromSubscription(
-    (subscription as SubscriptionRow | null) ?? null,
-    runtimeConfig.pricingProfile,
-  );
+  const inferredPlanTier = classroomAccessActive
+    ? "language_school_annual"
+    : inferPlanTierFromSubscription(
+        (subscription as SubscriptionRow | null) ?? null,
+        runtimeConfig.pricingProfile,
+      );
 
   const { row: usageRow } = await fetchUsageTrackingRow(
     supabase,
@@ -316,7 +336,9 @@ export async function resolveLanguageUsageEntitlement(
     monthKey,
   );
 
-  const planTier = parseLanguagePlanId(usageRow?.plan_tier ?? inferredPlanTier);
+  const planTier = classroomAccessActive
+    ? "language_school_annual"
+    : parseLanguagePlanId(usageRow?.plan_tier ?? inferredPlanTier);
   const plan = getLanguagePlanById(planTier) ?? getLanguagePlanById("core_practice");
   const planScoredAttemptLimit = getScoredAttemptLimitForPlan(planTier);
   const rowAttemptCap = Math.max(0, toFiniteNumber(usageRow?.attempt_cap));
@@ -378,6 +400,35 @@ export async function resolveLanguageUsageEntitlement(
     geoTier,
     utteranceP50Seconds,
     utteranceP90Seconds,
+    classroomAccess: classroomAccess
+      ? {
+          active: classroomAccess.granted,
+          reason: classroomAccess.reason,
+          organizationId: classroomAccess.organizationId,
+          organizationName: classroomAccess.organizationName,
+          accountClass: classroomAccess.accountClass,
+          timeZone: classroomAccess.timeZone,
+          requestCountry: classroomAccess.requestCountry,
+          requestTimeZone: classroomAccess.requestTimeZone,
+          windowStartHourLocal: classroomAccess.window?.startHourLocal ?? null,
+          windowEndHourLocal: classroomAccess.window?.endHourLocal ?? null,
+          localHour: classroomAccess.localHour,
+          localMinute: classroomAccess.localMinute,
+        }
+      : {
+          active: false,
+          reason: "not_checked",
+          organizationId: null,
+          organizationName: null,
+          accountClass: null,
+          timeZone: null,
+          requestCountry: null,
+          requestTimeZone: null,
+          windowStartHourLocal: null,
+          windowEndHourLocal: null,
+          localHour: null,
+          localMinute: null,
+        },
     mode: modeInfo.mode,
     reason: modeInfo.reason,
   };
