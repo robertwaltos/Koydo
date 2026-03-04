@@ -1,6 +1,7 @@
-﻿"use client";
+"use client";
 
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import ConsoleAiChatbox from "./console-ai-chatbox";
 
 type SupportTicket = {
@@ -384,6 +385,15 @@ const CONSOLE_NAV: ConsoleCategoryDef[] = [
       { id: "role-management", title: "Role Management",
         description: "Change what a user is allowed to do: grant or remove admin access and parent-portal access for any existing account.",
         tip: "Type UPDATE_ROLES exactly in the confirmation box to prevent accidental changes. Be careful not to remove your own admin access — you would be locked out of this console." },
+      { id: "owner-security", title: "Owner Security (MFA + Step-Up)",
+        description: "Configure and verify owner-level protection, including authenticator app, backup email, and YubiKey OTP step-up requirements.",
+        tip: "Use this before touching highly sensitive operations. Revoke existing step-up sessions if you suspect any credential exposure." },
+      { id: "factory-reset", title: "Factory Reset + Module Baselines",
+        description: "Capture and compare baseline snapshots and execute full owner-controlled recovery workflows when the platform must be reset safely.",
+        tip: "Always review baseline drift and confirmation checkpoints before running destructive reset workflows." },
+      { id: "ownership-transfer", title: "Ownership Transfer Playbooks",
+        description: "Prepare and execute ownership transfer playbooks with explicit confirmation and secure handoff records.",
+        tip: "Use playbook mode first to validate all prerequisites, then execute with transfer credentials only after final verification." },
       { id: "account-recovery", title: "Account Recovery",
         description: "Generate a secure password-reset link for a user who is locked out of their account. The link will appear in the result — copy and send it to the user by email.",
         tip: "The link is single-use and expires quickly. If the user misses it, simply generate a new one here at any time." },
@@ -2315,6 +2325,7 @@ export default function OperationsConsole({
       ) : null}
       <ConsoleAiChatbox />
 
+      {selectedSectionId === "system-health" && (<Section title="System Health" description="An all-in-one view of platform health. Use this first whenever anything seems broken — it combines environment, database, and payment signals in one summary." tip="Green means healthy. Yellow indicates warnings that may degrade behavior. Red indicates a blocking issue requiring urgent attention.">
         <div
           className={`mb-3 rounded-md border px-3 py-2 text-sm ${
             systemBlockingIssues > 0
@@ -2380,38 +2391,43 @@ export default function OperationsConsole({
         ) : (
           <div className="mt-4 space-y-2">
             <p className="text-sm font-semibold">Runbook Hints</p>
-            {runbookHints.map((hint) => (
-              <div
-                key={hint.id}
-                className={`rounded-2xl border p-3 text-xs ${
-                  hint.severity === "critical" ? "border-rose-200 bg-rose-50" : "border-amber-200 bg-amber-50"
-                }`}
-              >
-                <p className="font-semibold">
-                  {hint.title} | {hint.severity}
-                </p>
-                <p className="mt-1 text-zinc-700">{hint.description}</p>
-                <div className="mt-2 space-y-1">
-                  {hint.commands.map((command) => (
-                    <code key={command} className="block rounded border border-border bg-white px-2 py-1 text-[11px]">
-                      {command}
-                    </code>
-                  ))}
-                </div>
-                {hint.href && hint.hrefLabel ? (
-                  <div className="mt-2">
-                    <a
-                      href={hint.href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="ui-soft-button ui-focus-ring rounded border border-border bg-surface px-2 py-1 text-[11px]"
-                    >
-                      {hint.hrefLabel}
-                    </a>
+            {runbookHints.map((hint) => {
+              const hintContainerClass =
+                hint.severity === "critical"
+                  ? "rounded-2xl border border-rose-200 bg-rose-50 p-3 text-xs"
+                  : "rounded-2xl border border-amber-200 bg-amber-50 p-3 text-xs";
+
+              return (
+                <div key={hint.id} className={hintContainerClass}>
+                  <p className="font-semibold">
+                    {hint.title} | {hint.severity}
+                  </p>
+                  <p className="mt-1 text-zinc-700">{hint.description}</p>
+                  <div className="mt-2 space-y-1">
+                    {hint.commands.map((command) => (
+                      <code
+                        key={command}
+                        className="block rounded border border-border bg-white px-2 py-1 text-[11px]"
+                      >
+                        {command}
+                      </code>
+                    ))}
                   </div>
-                ) : null}
-              </div>
-            ))}
+                  {hint.href && hint.hrefLabel ? (
+                    <div className="mt-2">
+                      <a
+                        href={hint.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="ui-soft-button ui-focus-ring rounded border border-border bg-surface px-2 py-1 text-[11px]"
+                      >
+                        {hint.hrefLabel}
+                      </a>
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
           </div>
         )}
       </Section>
@@ -2993,7 +3009,7 @@ export default function OperationsConsole({
       </Section>
       )}
 
-      <Section title="Owner Security (MFA + Step-Up)">
+      {selectedSectionId === "owner-security" ? (<Section title="Owner Security (MFA + Step-Up)" description="Password sign-in is required first; owner-sensitive actions require step-up via authenticator, secondary email, or YubiKey OTP." tip="Enable at least two factors so owners are never locked out. Revoke active step-up sessions after any security incident.">
         <div className="mb-3 rounded-md border border-indigo-300 bg-indigo-50 px-3 py-2 text-sm text-indigo-900">
           Password sign-in is required first; owner-sensitive actions require step-up via authenticator, secondary email, or YubiKey OTP.
         </div>
@@ -3230,8 +3246,9 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      ) : null}
 
-      <Section title="Factory Reset + Module Baselines">
+      {selectedSectionId === "factory-reset" ? (<Section title="Factory Reset + Module Baselines" description="Capture baselines and validate owner-only reset readiness before executing recovery workflows." tip="Treat reset actions as high-risk: validate baseline captures and follow approval steps before executing.">
         {factoryResetMessage ? <p className="mb-3 text-sm text-zinc-700">{factoryResetMessage}</p> : null}
 
         <div className="mb-4 flex flex-wrap gap-2">
@@ -3374,8 +3391,9 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      ) : null}
 
-      <Section title="Ownership Transfer Playbooks">
+      {selectedSectionId === "ownership-transfer" ? (<Section title="Ownership Transfer Playbooks" description="Manage ownership transfer playbooks and execute verified handoff workflows with explicit confirmation." tip="Never execute transfer flows without validated playbook prerequisites and a known-good recovery path.">
         {transferMessage ? <p className="mb-3 text-sm text-zinc-700">{transferMessage}</p> : null}
 
         <div className="mb-4 flex flex-wrap gap-2">
@@ -3473,14 +3491,16 @@ export default function OperationsConsole({
           </div>
         ) : null}
       </Section>
+      ) : null}
 
+      {selectedSectionId === "account-recovery" ? (
       <Section title="Account Recovery">
         <form onSubmit={handleResetPassword} className="flex flex-wrap gap-3">
           <input name="email" type="email" placeholder="User email" className="min-w-80 ui-focus-ring rounded-md border border-border bg-surface px-3 py-2 text-sm" required />
           <button type="submit" className="ui-soft-button ui-focus-ring rounded-md border border-border bg-surface-muted px-4 py-2 text-sm">Generate Password Reset Link</button>
         </form>
       </Section>
-      )}
+      ) : null}
 
       {selectedSectionId === "account-reset" && (<Section title="Account Reset / Deletion" description="Reset a learner's progress data, or permanently delete an account. These actions cannot be undone — always verify the correct user ID before proceeding." tip="Soft delete hides the account but keeps data for compliance reporting. Hard delete permanently removes everything. For a GDPR erasure request, use hard delete alongside a DSAR record in Compliance.">
         <form onSubmit={handleResetProgress} className="mb-4 flex flex-wrap gap-3">
@@ -4100,8 +4120,6 @@ export default function OperationsConsole({
         </div>
       </Section>
       )}
-        </div>
-      </div>
     </div>
   );
 }
