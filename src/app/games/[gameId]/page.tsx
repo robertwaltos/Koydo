@@ -153,7 +153,23 @@ const LEGACY_COMPONENTS: Record<string, () => React.JSX.Element> = {
   "zone-100": Games.Zone100SparkVaultThrust,
   "zone-101": Games.Zone101SparkReactorConvoy,
   "zone-102": Games.Zone102EchoSignalTribunal,
-  "zone-103": Games.Zone103TerraFrontlineWardens,
+  "zone-104": Games.Zone104SparkReactorConvoy,
+  "zone-105": Games.Zone105EchoSignalTribunal,
+  "zone-106": Games.Zone106TerraFrontlineWardens,
+  "zone-107": Games.Zone107LunaSkylineSet,
+  "zone-108": Games.Zone108PixelSentinelLattice,
+  "zone-109": Games.Zone109SparkVaultThrust,
+  "zone-110": Games.Zone110SparkReactorConvoy,
+  "zone-111": Games.Zone111EchoSignalTribunal,
+  "zone-112": Games.Zone112TerraFrontlineWardens,
+  "zone-113": Games.Zone113LunaSkylineSet,
+  "zone-114": Games.Zone114PixelSentinelLattice,
+  "zone-115": Games.Zone115SparkVaultThrust,
+  "zone-116": Games.Zone116SparkReactorConvoy,
+  "zone-117": Games.Zone117EchoSignalTribunal,
+  "zone-118": Games.Zone118TerraFrontlineWardens,
+  "zone-119": Games.Zone119LunaSkylineSet,
+  "zone-120": Games.Zone120PixelSentinelLattice,
 };
 
 function friendForCategory(category: string): "pixel" | "spark" | "echo" | "luna" | "terra" {
@@ -1562,5 +1578,6 @@ export default function GamePlayerPage() {
     </main>
   );
 }
+
 
 
