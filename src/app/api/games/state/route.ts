@@ -44,15 +44,31 @@ const querySchema = z.object({
   limit: z.coerce.number().int().min(1).max(200).default(50),
 });
 
+const MAX_GAME_SCORE = 10_000;
+
 const postSchema = z.object({
   gameType: gameTypeSchema,
   difficulty: z.enum(GAME_DIFFICULTIES),
-  score: z.number().int().min(0),
-  maxScore: z.number().int().min(1),
+  score: z.number().int().min(0).max(MAX_GAME_SCORE),
+  maxScore: z.number().int().min(1).max(MAX_GAME_SCORE),
   timeMs: z.number().int().min(0).max(30 * 60 * 1000),
-  customGameId: z.string().min(3).max(64).regex(/^[a-z0-9-]+$/).optional(),
+  customGameId: z
+    .string()
+    .min(3)
+    .max(64)
+    .regex(/^[a-z0-9-]+$/)
+    .refine(isValidGameId, "Invalid custom game ID")
+    .optional(),
   studentProfileId: z.string().uuid().optional(),
   guardianUnlockPhrase: z.string().min(3).max(64).optional(),
+}).superRefine((payload, context) => {
+  if (payload.score > payload.maxScore) {
+    context.addIssue({
+      code: z.ZodIssueCode.custom,
+      message: "Score cannot exceed maxScore.",
+      path: ["score"],
+    });
+  }
 });
 
 const metadataGameResultSchema = z.object({

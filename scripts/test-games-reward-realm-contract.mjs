@@ -186,6 +186,26 @@ function main() {
     "Reward Realm is locked. Complete educational mastery milestones first.",
     "Expected /api/games/state locked error message contract.",
   );
+  assertSourceContains(
+    GAMES_STATE_ROUTE_PATH,
+    /score:\s*z\.number\(\)\.int\(\)\.min\(0\)\.max\(MAX_GAME_SCORE\)/,
+    "Expected /api/games/state to cap incoming score payloads.",
+  );
+  assertSourceContains(
+    GAMES_STATE_ROUTE_PATH,
+    /maxScore:\s*z\.number\(\)\.int\(\)\.min\(1\)\.max\(MAX_GAME_SCORE\)/,
+    "Expected /api/games/state to cap incoming maxScore payloads.",
+  );
+  assertSourceContains(
+    GAMES_STATE_ROUTE_PATH,
+    /customGameId:[\s\S]*?refine\(isValidGameId,\s*"Invalid custom game ID"\)/,
+    "Expected /api/games/state to validate customGameId against game ID policy.",
+  );
+  assertSourceContains(
+    GAMES_STATE_ROUTE_PATH,
+    "Score cannot exceed maxScore.",
+    "Expected /api/games/state to reject score payloads that exceed maxScore.",
+  );
   console.log("PASS: API route enforces Reward Realm mastery contract");
 
   assertSourceContains(
@@ -231,4 +251,3 @@ try {
   console.error(error);
   process.exitCode = 1;
 }
-
