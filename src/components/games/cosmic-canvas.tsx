@@ -129,14 +129,8 @@ export default function CosmicCanvas() {
 
     return (
         <div className="relative min-h-[750px] w-full flex flex-col items-center justify-center p-8 bg-zinc-950 overflow-hidden rounded-[3rem] border-4 border-slate-900 shadow-2xl">
-            {/* 4K Zen Background */}
-            <div className="absolute inset-0 opacity-50">
-                <img
-                    src="/cosmic_canvas_zen_space_bg_1772427760520.png"
-                    alt="Zen Space"
-                    className="w-full h-full object-cover scale-110 blur-[1px]"
-                />
-            </div>
+            {/* Zen Background */}
+            <div className="absolute inset-0 opacity-50 bg-gradient-to-br from-indigo-950 via-purple-900 to-slate-950" />
 
             {/* Floating Toolbar */}
             <div className="absolute top-8 left-8 flex flex-col gap-4 z-20">

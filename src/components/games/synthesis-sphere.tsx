@@ -213,14 +213,8 @@ export default function SynthesisSphere() {
 
     return (
         <div className="relative min-h-[700px] w-full flex flex-col items-center justify-center p-8 bg-black overflow-hidden rounded-[3rem] border-4 border-slate-800 shadow-2xl">
-            {/* 4K Background Image */}
-            <div className="absolute inset-0 opacity-40">
-                <img
-                    src="/neural_synthesis_lab_bg_1772427420316.png"
-                    alt="Synthesis Lab"
-                    className="w-full h-full object-cover blur-sm"
-                />
-            </div>
+            {/* Neural Background */}
+            <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-sky-950 via-slate-900 to-emerald-950" />
 
             {/* Glass Overlays */}
             <div className="absolute inset-x-8 top-8 flex justify-between items-start z-10">
