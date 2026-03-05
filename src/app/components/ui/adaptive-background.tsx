@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import type { AgeGroupTheme } from "@/lib/theme/provider";
 
 interface AdaptiveBackgroundProps {
-  ageGroup: AgeGroupTheme;
+  ageGroup?: AgeGroupTheme;
   className?: string;
 }
 
