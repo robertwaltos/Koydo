@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import type { Metadata, Viewport } from "next";
 import { Fredoka, JetBrains_Mono, Nunito_Sans, Sora } from "next/font/google";
 import "./globals.css";
@@ -100,11 +101,16 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = await cookies();
+  const locale = cookieStore.get("koydo.locale")?.value ?? "en";
+  const isRtl = locale === "ar";
+  const dir = isRtl ? "rtl" : "ltr";
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
@@ -133,7 +139,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en">
+    <html lang={locale} dir={dir}>
       <head>
         <link rel="preconnect" href="https://osnxbuusohdzzcrakavn.supabase.co" />
         <link rel="preconnect" href="https://js.stripe.com" crossOrigin="anonymous" />
@@ -165,3 +171,4 @@ export default function RootLayout({
     </html>
   );
 }
+
