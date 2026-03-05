@@ -8,6 +8,7 @@ import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { setActiveProfile } from "@/lib/profiles/active-profile";
 import { sanitizeNextPath } from "@/lib/routing/next-path";
 import type { StudentProfile } from "@/lib/profiles/types";
+import AdaptiveBackground from "@/app/components/ui/adaptive-background";
 
 type SupabaseErrorLike = {
   code?: string;
@@ -71,8 +72,9 @@ export default function SelectProfilePage() {
   const { t } = useI18n();
   return (
     <Suspense fallback={
-      <main className="flex min-h-screen items-center justify-center bg-background">
-        <div className="family-orbit-spinner" role="status" aria-label={t("select_profile_loading_aria")} />
+      <main className="flex min-h-screen items-center justify-center bg-background relative overflow-hidden">
+        <AdaptiveBackground ageGroup="standard" />
+        <div className="family-orbit-spinner z-10" role="status" aria-label={t("select_profile_loading_aria")} />
       </main>
     }>
       <SelectProfilePageInner />
@@ -91,41 +93,25 @@ function SelectProfilePageInner() {
   const nextPath = sanitizeNextPath(searchParams.get("next"));
 
   useEffect(() => {
-    let retryCount = 0;
-
-    const resolveUser = async () => {
-      // Use getSession() first (reads local storage — no network round-trip).
-      // If it returns null (e.g. token refresh race), fall back to getUser()
-      // to avoid a false redirect-to-sign-in that would cause a loading loop.
-      const {
-        data: { session },
-        error: sessionError,
-      } = await supabase.auth.getSession();
-      if (sessionError) {
-        console.error("Error fetching session for profile selection:", formatSupabaseError(sessionError));
-      }
-      let user = session?.user ?? null;
-
-      if (!user) {
-        // Fallback: validate via network (covers post-OAuth / token-refresh races)
-        const { data: { user: networkUser } } = await supabase.auth.getUser();
-        user = networkUser;
-      }
-
-      return user;
-    };
-
     const fetchProfiles = async () => {
       setFetchError(null);
       try {
-        let user = await resolveUser();
+        // Use getSession() first (reads local storage — no network round-trip).
+        // If it returns null (e.g. token refresh race), fall back to getUser()
+        // to avoid a false redirect-to-sign-in that would cause a loading loop.
+        const {
+          data: { session },
+          error: sessionError,
+        } = await supabase.auth.getSession();
+        if (sessionError) {
+          console.error("Error fetching session for profile selection:", formatSupabaseError(sessionError));
+        }
+        let user = session?.user ?? null;
 
-        // Post-OAuth race: session cookies may not have synced yet.
-        // Retry up to 2 times with a short delay before giving up.
-        while (!user && retryCount < 2) {
-          retryCount++;
-          await new Promise((r) => setTimeout(r, 1000));
-          user = await resolveUser();
+        if (!user) {
+          // Fallback: validate via network (covers post-OAuth / token-refresh races)
+          const { data: { user: networkUser } } = await supabase.auth.getUser();
+          user = networkUser;
         }
 
         if (!user) {
@@ -170,21 +156,20 @@ function SelectProfilePageInner() {
 
   const handleSelectProfile = (profileId: string) => {
     setActiveProfile(profileId);
-    // Full page load so middleware sees the fresh active_profile_id cookie
     if (nextPath && nextPath.startsWith("/student")) {
-      window.location.href = nextPath;
+      router.push(nextPath);
       return;
     }
 
-    window.location.href = "/student/dashboard";
+    router.push("/student/dashboard");
   };
 
   if (loading) {
     return (
-      <main className="relative flex min-h-screen flex-col items-center justify-center bg-background">
-        <div className="family-ambient-bg" aria-hidden="true" />
-        <div className="family-orbit-spinner" role="status" aria-label={t("select_profile_loading_profiles_aria")} />
-        <p className="mt-4 text-sm text-zinc-500">{t("select_profile_loading_text")}</p>
+      <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden">
+        <AdaptiveBackground ageGroup="standard" />
+        <div className="family-orbit-spinner z-10" role="status" aria-label={t("select_profile_loading_profiles_aria")} />
+        <p className="mt-4 text-sm font-semibold text-zinc-600 z-10 drop-shadow-sm">{t("select_profile_loading_text")}</p>
       </main>
     );
   }
@@ -193,20 +178,20 @@ function SelectProfilePageInner() {
 
   return (
     <main
-      className="relative flex min-h-screen flex-col items-center overflow-hidden bg-background px-4 py-12 sm:px-6 sm:justify-center"
+      className="relative flex min-h-screen flex-col items-center overflow-hidden px-4 py-12 sm:px-6 sm:justify-center"
       aria-labelledby="profile-heading"
     >
-      <div className="family-ambient-bg" aria-hidden="true" />
+      <AdaptiveBackground ageGroup="standard" />
 
       {/* Header */}
-      <header className="family-card-enter relative mb-8 text-center sm:mb-10">
+      <header className="family-card-enter relative z-10 mb-8 text-center sm:mb-12">
         <h1
           id="profile-heading"
-          className="ui-type-display-lg font-extrabold tracking-tight text-zinc-900"
+          className="text-4xl sm:text-5xl font-black tracking-tight text-zinc-900 drop-shadow-md"
         >
           {t("select_profile_heading")}
         </h1>
-        <p className="ui-type-body-md mt-2 text-zinc-500">
+        <p className="mt-3 text-base sm:text-lg font-medium text-zinc-700 drop-shadow-sm">
           {hasProfiles ? t("select_profile_subtitle_has_profiles") : t("select_profile_subtitle_no_profiles")}
         </p>
       </header>
@@ -215,10 +200,10 @@ function SelectProfilePageInner() {
       {fetchError && (
         <div
           role="alert"
-          className="family-banner relative mb-6 w-full max-w-2xl rounded-xl border border-amber-200 bg-amber-50 px-5 py-4 text-sm text-amber-900"
+          className="family-banner relative z-10 mb-6 w-full max-w-2xl rounded-2xl border border-amber-200 bg-amber-50/90 backdrop-blur-xl px-6 py-5 text-sm font-semibold text-amber-900 shadow-sm"
         >
-          <p className="flex items-start gap-2.5">
-            <span className="mt-0.5 shrink-0 text-base" aria-hidden="true">&#9888;</span>
+          <p className="flex items-start gap-3">
+            <span className="mt-0.5 shrink-0 text-lg" aria-hidden="true">&#9888;</span>
             <span>{fetchError}</span>
           </p>
         </div>
@@ -226,11 +211,11 @@ function SelectProfilePageInner() {
 
       {/* Profile grid — primary CTA zone */}
       <div
-        className="relative w-full max-w-2xl"
+        className="relative z-10 w-full max-w-3xl"
         role="group"
         aria-label={t("select_profile_group_aria")}
       >
-        <ul className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-3">
+        <ul className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3">
           {profiles.map((profile, i) => {
             const theme = getTheme(i);
             return (
@@ -244,36 +229,36 @@ function SelectProfilePageInner() {
                       ? t("select_profile_grade_suffix", { grade: profile.grade_level })
                       : "",
                   })}
-                  className="family-profile-card ui-focus-ring flex w-full flex-col items-center gap-3 rounded-2xl border border-white/60 bg-white/80 p-5 backdrop-blur-sm"
+                  className="family-profile-card ui-focus-ring flex w-full flex-col items-center gap-4 rounded-[2rem] border border-white/60 bg-white/40 p-6 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_16px_48px_rgba(0,0,0,0.12)] active:scale-[0.98]"
                   style={{ "--glow": `${theme.glow}40` } as React.CSSProperties}
                 >
                   {/* Avatar */}
                   <div
-                    className={`flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br ${theme.gradient} shadow-md sm:h-24 sm:w-24`}
-                    style={{ boxShadow: `0 6px 20px ${theme.glow}30` }}
+                    className={`flex h-24 w-24 items-center justify-center rounded-[1.5rem] bg-gradient-to-br ${theme.gradient} shadow-lg sm:h-28 sm:w-28 transition-transform duration-300`}
+                    style={{ boxShadow: `0 8px 24px ${theme.glow}40` }}
                   >
                     {profile.avatar_url ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={profile.avatar_url}
-                        alt={`${profile.display_name}'s profile picture`}
-                        className="h-full w-full rounded-2xl object-cover"
+                        alt=""
+                        className="h-full w-full rounded-[1.5rem] object-cover"
                       />
                     ) : (
-                      <span className="text-3xl font-bold text-white sm:text-4xl" aria-hidden="true">
+                      <span className="text-4xl font-bold text-white sm:text-5xl drop-shadow-sm" aria-hidden="true">
                         {profile.display_name[0]?.toUpperCase() ?? "?"}
                       </span>
                     )}
                   </div>
 
                   {/* Name & grade */}
-                  <div className="text-center">
-                    <span className="block text-base font-bold text-zinc-800 sm:text-lg">
+                  <div className="text-center w-full">
+                    <span className="block text-lg font-black tracking-tight text-zinc-900 sm:text-xl truncate">
                       {profile.display_name}
                     </span>
                     {profile.grade_level && (
                       <span
-                        className="mt-1 inline-block rounded-full px-2.5 py-0.5 text-xs font-semibold text-white"
+                        className="mt-1.5 inline-block rounded-full px-3 py-1 text-[11px] font-black uppercase tracking-widest text-white shadow-sm"
                         style={{ backgroundColor: theme.glow }}
                       >
                         {t("select_profile_grade_chip", { grade: profile.grade_level })}
@@ -288,8 +273,8 @@ function SelectProfilePageInner() {
 
         {/* Empty state */}
         {!hasProfiles && !fetchError && (
-          <div className="family-card-enter mx-auto max-w-sm rounded-2xl border border-emerald-200 bg-emerald-50/80 px-6 py-6 text-center backdrop-blur-sm">
-            <p className="text-sm font-medium text-emerald-800">
+          <div className="family-card-enter mx-auto max-w-sm rounded-[2rem] border border-emerald-200/60 bg-emerald-50/60 backdrop-blur-xl px-8 py-8 text-center shadow-sm">
+            <p className="text-base font-bold text-emerald-800">
               {t("select_profile_empty_state")}
             </p>
           </div>
@@ -297,17 +282,17 @@ function SelectProfilePageInner() {
       </div>
 
       {/* Secondary actions — visually subordinate */}
-      <div className="relative mt-8 flex flex-col items-center gap-3 sm:mt-10 sm:flex-row sm:gap-4">
+      <div className="relative z-10 mt-10 flex flex-col items-center gap-4 sm:mt-12 sm:flex-row">
         <Link
           href="/student/onboarding"
-          className="ui-soft-button ui-focus-ring inline-flex min-h-11 items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-white shadow-sm"
+          className="ui-soft-button ui-focus-ring inline-flex min-h-[3.5rem] items-center gap-2 rounded-full bg-indigo-600 px-8 py-3 text-sm font-black uppercase tracking-widest text-white shadow-lg transition-transform hover:scale-105 hover:bg-indigo-500 active:scale-95"
         >
-          <span aria-hidden="true">+</span>
+          <span aria-hidden="true" className="text-lg leading-none">+</span>
           {t("select_profile_add_learner")}
         </Link>
         <Link
           href="/parent/dashboard"
-          className="ui-focus-ring inline-flex min-h-11 items-center gap-2 rounded-full border border-zinc-200 bg-white/80 px-5 py-2.5 text-sm font-semibold text-zinc-500 backdrop-blur-sm transition-colors duration-200 hover:border-zinc-300 hover:text-zinc-700"
+          className="ui-focus-ring inline-flex min-h-[3.5rem] items-center gap-2 rounded-full border border-white/80 bg-white/50 backdrop-blur-xl px-6 py-3 text-sm font-bold text-zinc-700 shadow-sm transition-all hover:bg-white hover:text-zinc-900 hover:scale-105 active:scale-95"
         >
           {t("select_profile_parent_settings")}
         </Link>
@@ -315,3 +300,4 @@ function SelectProfilePageInner() {
     </main>
   );
 }
+

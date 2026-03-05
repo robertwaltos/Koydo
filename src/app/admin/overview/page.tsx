@@ -466,30 +466,30 @@ export default async function AdminOverviewPage() {
 
       {/* ── Metric grid ──────────────────────────────────────────────────── */}
       <section
-        className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         aria-label="Platform metrics"
       >
         {cards.map((card) => (
           <Link
             key={card.title}
             href={card.href}
-            className="group rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm transition-all hover:border-[#c4cdd8] hover:shadow-md ui-focus-ring"
+            className="group rounded-[1.5rem] border border-white/60 bg-white/60 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.03)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/80 hover:shadow-[0_16px_48px_rgba(0,0,0,0.06)] ui-focus-ring"
           >
-            <p className="text-[11px] font-medium uppercase tracking-wider text-[#697386]">
+            <p className="text-[11px] font-bold uppercase tracking-widest text-zinc-500">
               {card.title}
             </p>
-            <p className="mt-2 text-[26px] font-semibold leading-none text-[#1a1f36]">
+            <p className="mt-3 text-3xl font-black tracking-tight leading-none text-zinc-900">
               {card.value}
             </p>
-            <p className="mt-2 text-[12px] text-[#697386] line-clamp-2">{card.subtext}</p>
+            <p className="mt-2 text-xs font-semibold text-zinc-400 line-clamp-2">{card.subtext}</p>
           </Link>
         ))}
       </section>
 
       {/* ── Quick actions ─────────────────────────────────────────────────── */}
-      <section className="mt-6 rounded-xl border border-[#e3e8ee] bg-white p-5">
-        <h2 className="text-[13px] font-semibold text-[#1a1f36]">Quick Actions</h2>
-        <div className="mt-3 flex flex-wrap gap-2">
+      <section className="mt-8 rounded-[2rem] border border-white/60 bg-white/60 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.03)] backdrop-blur-xl">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-zinc-900">Quick Actions</h2>
+        <div className="mt-4 flex flex-wrap gap-3">
           {[
             { href: "/admin/alerts",                                           label: "Review Alerts" },
             { href: "/admin/media",                                            label: "Media Queue" },
@@ -506,7 +506,7 @@ export default async function AdminOverviewPage() {
             <Link
               key={href}
               href={href}
-              className="ui-focus-ring rounded-md border border-[#e3e8ee] bg-white px-3 py-2 text-[13px] font-medium text-[#3c4257] shadow-sm transition hover:border-[#c4cdd8] hover:bg-[#f6f9fc]"
+              className="ui-focus-ring rounded-xl border border-white bg-white/80 px-4 py-2.5 text-xs font-bold text-zinc-700 shadow-sm transition-all hover:scale-105 hover:bg-white hover:text-indigo-600 active:scale-95"
             >
               {label}
             </Link>
@@ -516,3 +516,4 @@ export default async function AdminOverviewPage() {
     </div>
   );
 }
+
