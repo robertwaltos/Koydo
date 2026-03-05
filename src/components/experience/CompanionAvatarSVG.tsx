@@ -38,20 +38,24 @@ export default function CompanionAvatarSVG({
 
   if (showImg) {
     return (
-      <img
-        src={previewImageUrl}
-        alt={gender === "female" ? "Aria" : "Kai"}
-        width={size}
-        height={size}
-        className={`object-cover mix-blend-multiply dark:mix-blend-screen drop-shadow-sm ${pulseClass} ${className}`}
+      <div 
+        className={`relative overflow-hidden ${pulseClass} ${className}`}
         style={{
           width: size,
           height: size,
-          // Removed border and rounded-full to allow natural HeyGen silhouette 
+          borderRadius: "1rem", // Use a soft square/bento box feel instead of a hard circle
         }}
-        onError={() => setImgFailed(true)}
-        draggable={false}
-      />
+      >
+        <img
+          src={previewImageUrl}
+          alt={gender === "female" ? "Aria" : "Kai"}
+          className="h-full w-full object-cover"
+          onError={() => setImgFailed(true)}
+          draggable={false}
+        />
+        {/* Subtle inner shadow to make it pop without a harsh border */}
+        <div className="absolute inset-0 rounded-[1rem] ring-1 ring-inset ring-black/10 pointer-events-none" />
+      </div>
     );
   }
 
@@ -115,4 +119,5 @@ export default function CompanionAvatarSVG({
     </svg>
   );
 }
+
 
