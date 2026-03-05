@@ -14,6 +14,7 @@ import OfflineRuntimeProvider from "./components/offline-runtime-provider";
 import { ExperienceProvider } from "@/lib/gamification/experience-context";
 import { CompanionPreferencesProvider } from "@/lib/greeter/companion-preferences";
 import GreeterCompanion from "@/components/experience/GreeterCompanion";
+import GlobalSearch from "./components/global-search";
 
 export default function AppProviders({ children }: { children: ReactNode }) {
   return (
@@ -33,6 +34,7 @@ export default function AppProviders({ children }: { children: ReactNode }) {
                   <CompanionPreferencesProvider>
                   <MixpanelProvider>
                     {children}
+                    <GlobalSearch />
                     <GreeterCompanion />
                   </MixpanelProvider>
                   </CompanionPreferencesProvider>
