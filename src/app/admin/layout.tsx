@@ -3,6 +3,28 @@ import type { ReactNode } from "react";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import DashShell, { type DashNavGroup } from "@/app/components/ui/dash-shell";
 
+const SUPPORT_NAV: DashNavGroup[] = [
+  {
+    label: "Dashboard",
+    items: [
+      { href: "/admin/overview",    label: "Overview",          icon: "◉" },
+    ],
+  },
+  {
+    label: "Support",
+    items: [
+      { href: "/admin/operations?s=support-queue", label: "Support Queue",       icon: "✉" },
+      { href: "/admin/operations?s=role-management", label: "Account Lookup",    icon: "🔑" },
+    ],
+  },
+  {
+    label: "Intelligence",
+    items: [
+      { href: "/admin/reports",     label: "Reports & Analytics", icon: "↗" },
+    ],
+  },
+];
+
 const ADMIN_NAV: DashNavGroup[] = [
   {
     label: "Dashboard",
@@ -91,24 +113,31 @@ export default async function AdminLayout({ children }: { children: ReactNode })
 
   const { data: profile } = await supabase
     .from("user_profiles")
-    .select("is_admin, admin_access_level")
+    .select("is_admin, is_support, admin_access_level")
     .eq("user_id", user.id)
     .maybeSingle();
 
-  // Non-admins land on the student dashboard, not a broken shell.
-  if (!profile?.is_admin) {
+  const isAdmin = Boolean(profile?.is_admin);
+  const isSupport = Boolean((profile as { is_support?: boolean } | null)?.is_support);
+
+  // Non-admins and non-support land on the student dashboard, not a broken shell.
+  if (!isAdmin && !isSupport) {
     redirect("/dashboard");
   }
 
-  const accessLevel = (profile.admin_access_level as string | null) ?? "full_access";
-  const productSubtitle = accessLevel === "read_only"
-    ? "View Only Access"
-    : "Developer Tools";
+  const accessLevel = (profile?.admin_access_level as string | null) ?? "full_access";
+  const isSupportOnly = isSupport && !isAdmin;
+  const productName = isSupportOnly ? "Support Console" : "Admin Console";
+  const productSubtitle = isSupportOnly
+    ? "Support Access"
+    : accessLevel === "read_only"
+      ? "View Only Access"
+      : "Developer Tools";
 
   return (
     <DashShell
-      navGroups={ADMIN_NAV}
-      productName="Admin Console"
+      navGroups={isSupportOnly ? SUPPORT_NAV : ADMIN_NAV}
+      productName={productName}
       productSubtitle={productSubtitle}
       userLabel={user.email ?? "Admin"}
     >

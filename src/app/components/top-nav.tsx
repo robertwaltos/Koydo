@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useMemo, useRef, useState, type MutableRefObject, type RefObject } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { useI18n } from "@/lib/i18n/provider";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
@@ -14,62 +14,18 @@ import LanguageSwitcher from "./language-switcher";
 import ThemeControls from "./theme-controls";
 import { ASSETS } from "@/lib/config/assets";
 import { isLaunchRouteLocked, resolveLaunchHref } from "@/lib/platform/launch-readiness";
-
-type NavItem = {
-  href: string;
-  labelKey?: string;
-  label?: string;
-  icon: string;
-};
-
-const authenticatedNavItems = [
-  { href: "/dashboard", labelKey: "nav_dashboard", icon: "📈" },
-  { href: "/experience-hub", label: "Experience", icon: "🏆" },
-  { href: "/support", labelKey: "nav_support", icon: "🛟" },
-  { href: "/account/privacy", labelKey: "nav_privacy_center", icon: "🛡️" },
-  { href: "/account/settings", labelKey: "nav_account", icon: "👤" },
-] as const satisfies readonly NavItem[];
-
-const parentNavItems = [
-  { href: "/parent/dashboard", labelKey: "nav_parent_dashboard", icon: "👨‍👩‍👧" },
-  { href: "/parent/reports", labelKey: "nav_parent_reports", icon: "📝" },
-  { href: "/parent/compliance", labelKey: "nav_parent_compliance", icon: "✅" },
-] as const satisfies readonly NavItem[];
-
-const adminNavItems = [
-  { href: "/admin/overview", labelKey: "nav_admin_overview", icon: "🧭" },
-  { href: "/admin/operations", labelKey: "nav_owner_ops", icon: "⚙️" },
-  { href: "/admin/curriculum", labelKey: "nav_curriculum", icon: "🗂️" },
-  { href: "/admin/media", labelKey: "nav_media_ops", icon: "🎬" },
-  { href: "/admin/reports", labelKey: "nav_reports", icon: "📊" },
-  { href: "/admin/alerts", labelKey: "nav_alerts", icon: "🚨" },
-  { href: "/admin/audit", labelKey: "nav_audit", icon: "🧾" },
-  { href: "/admin/compliance", labelKey: "nav_compliance", icon: "🔐" },
-] as const satisfies readonly NavItem[];
-
-const teacherNavItems = [
-  { href: "/organizations", labelKey: "top_nav_teacher_console", icon: "📐" },
-] as const satisfies readonly NavItem[];
-
-const schoolNavItems = [
-  { href: "/organizations", labelKey: "top_nav_school_console", icon: "🏫" },
-] as const satisfies readonly NavItem[];
-
-const partnerNavItems = [
-  { href: "/partner", labelKey: "top_nav_partner_portal", icon: "🤝" },
-] as const satisfies readonly NavItem[];
-
-const DROPDOWN_POINTER_TOLERANCE_PX = 50;
-const DROPDOWN_CLOSE_DELAY_MS = 120;
-type DropdownCloseTimerRef = MutableRefObject<ReturnType<typeof setTimeout> | null>;
+import PinGate, { isPinVerified } from "@/components/pin-gate";
 
 type AuthContext = {
   isAuthenticated: boolean;
   isAdmin: boolean;
+  isOwner: boolean;
   isParent: boolean;
   isTeacher: boolean;
   isSchool: boolean;
   isPartner: boolean;
+  isInvestor: boolean;
+  isSupport: boolean;
 };
 
 type ActiveLearner = {
@@ -77,47 +33,7 @@ type ActiveLearner = {
   grade_level: string | null;
 };
 
-function uniqueByHref(items: readonly NavItem[]) {
-  const seen = new Set<string>();
-  return items.filter((item) => {
-    if (seen.has(item.href)) return false;
-    seen.add(item.href);
-    return true;
-  });
-}
-
-function isPointerWithinTolerance(
-  ref: RefObject<HTMLElement | null>,
-  x: number,
-  y: number,
-  tolerance = DROPDOWN_POINTER_TOLERANCE_PX,
-) {
-  const element = ref.current;
-  if (!element) return false;
-
-  const bounds = element.getBoundingClientRect();
-  return (
-    x >= bounds.left - tolerance &&
-    x <= bounds.right + tolerance &&
-    y >= bounds.top - tolerance &&
-    y <= bounds.bottom + tolerance
-  );
-}
-
-function clearCloseTimer(timerRef: DropdownCloseTimerRef) {
-  if (timerRef.current) {
-    clearTimeout(timerRef.current);
-    timerRef.current = null;
-  }
-}
-
-function scheduleClose(timerRef: DropdownCloseTimerRef, closeFn: () => void) {
-  if (timerRef.current) return;
-  timerRef.current = setTimeout(() => {
-    timerRef.current = null;
-    closeFn();
-  }, DROPDOWN_CLOSE_DELAY_MS);
-}
+type PortalType = "parent" | "admin" | "investor" | "partner" | "teacher" | "school" | "support";
 
 function openCommandPalette() {
   window.dispatchEvent(new Event("koydo:command-palette-open"));
@@ -133,20 +49,19 @@ export default function TopNav() {
   const [authContext, setAuthContext] = useState<AuthContext>({
     isAuthenticated: false,
     isAdmin: false,
+    isOwner: false,
     isParent: false,
     isTeacher: false,
     isSchool: false,
     isPartner: false,
+    isInvestor: false,
+    isSupport: false,
   });
   const [activeLearner, setActiveLearner] = useState<ActiveLearner | null>(null);
-  const [isMainMenuOpen, setMainMenuOpen] = useState(false);
-  const [isExploreToolsOpen, setExploreToolsOpen] = useState(false);
-  const mainMenuRef = useRef<HTMLDivElement | null>(null);
-  const exploreToolsRef = useRef<HTMLDivElement | null>(null);
-  const mainMenuPanelRef = useRef<HTMLDivElement | null>(null);
-  const exploreToolsPanelRef = useRef<HTMLDivElement | null>(null);
-  const mainMenuCloseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const exploreToolsCloseTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [pinGatePortal, setPinGatePortal] = useState<PortalType | null>(null);
+  const [pinGateTarget, setPinGateTarget] = useState<string | null>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   const nextTypographyDensity =
     typographyDensity === "comfortable"
@@ -174,20 +89,26 @@ export default function TopNav() {
         const data = (await response.json()) as {
           isAuthenticated?: boolean;
           isAdmin?: boolean;
+          isOwner?: boolean;
           isParent?: boolean;
           isTeacher?: boolean;
           isSchool?: boolean;
           isPartner?: boolean;
+          isInvestor?: boolean;
+          isSupport?: boolean;
         };
         if (!response.ok) return;
 
         setAuthContext({
           isAuthenticated: Boolean(data.isAuthenticated),
           isAdmin: Boolean(data.isAdmin),
+          isOwner: Boolean(data.isOwner),
           isParent: Boolean(data.isParent),
           isTeacher: Boolean(data.isTeacher),
           isSchool: Boolean(data.isSchool),
           isPartner: Boolean(data.isPartner),
+          isInvestor: Boolean(data.isInvestor),
+          isSupport: Boolean(data.isSupport),
         });
       } catch {
         // Keep public-safe defaults on request failure.
@@ -247,24 +168,12 @@ export default function TopNav() {
     const onPointerDown = (event: MouseEvent) => {
       const target = event.target as Node | null;
       if (!target) return;
-
-      if (mainMenuRef.current && !mainMenuRef.current.contains(target)) {
-        clearCloseTimer(mainMenuCloseTimerRef);
-        setMainMenuOpen(false);
-      }
-      if (exploreToolsRef.current && !exploreToolsRef.current.contains(target)) {
-        clearCloseTimer(exploreToolsCloseTimerRef);
-        setExploreToolsOpen(false);
+      if (menuRef.current && !menuRef.current.contains(target)) {
+        setMenuOpen(false);
       }
     };
-
     const onEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        clearCloseTimer(mainMenuCloseTimerRef);
-        clearCloseTimer(exploreToolsCloseTimerRef);
-        setMainMenuOpen(false);
-        setExploreToolsOpen(false);
-      }
+      if (event.key === "Escape") setMenuOpen(false);
     };
 
     document.addEventListener("mousedown", onPointerDown);
@@ -275,142 +184,40 @@ export default function TopNav() {
     };
   }, []);
 
-  useEffect(() => {
-    if (!isMainMenuOpen && !isExploreToolsOpen) return;
-
-    const onPointerMove = (event: MouseEvent) => {
-      const x = event.clientX;
-      const y = event.clientY;
-
-      if (isMainMenuOpen) {
-        const pointerNearMainMenu =
-          isPointerWithinTolerance(mainMenuRef, x, y) ||
-          isPointerWithinTolerance(mainMenuPanelRef, x, y);
-        if (pointerNearMainMenu) {
-          clearCloseTimer(mainMenuCloseTimerRef);
-        } else {
-          scheduleClose(mainMenuCloseTimerRef, () => setMainMenuOpen(false));
-        }
-      }
-
-      if (isExploreToolsOpen) {
-        const pointerNearExploreTools =
-          isPointerWithinTolerance(exploreToolsRef, x, y) ||
-          isPointerWithinTolerance(exploreToolsPanelRef, x, y);
-        if (pointerNearExploreTools) {
-          clearCloseTimer(exploreToolsCloseTimerRef);
-        } else {
-          scheduleClose(exploreToolsCloseTimerRef, () => setExploreToolsOpen(false));
-        }
-      }
-    };
-
-    document.addEventListener("mousemove", onPointerMove);
-    return () => {
-      clearCloseTimer(mainMenuCloseTimerRef);
-      clearCloseTimer(exploreToolsCloseTimerRef);
-      document.removeEventListener("mousemove", onPointerMove);
-    };
-  }, [isMainMenuOpen, isExploreToolsOpen]);
-
-  const closeMenus = () => {
-    if (mainMenuCloseTimerRef.current) {
-      clearTimeout(mainMenuCloseTimerRef.current);
-      mainMenuCloseTimerRef.current = null;
-    }
-    if (exploreToolsCloseTimerRef.current) {
-      clearTimeout(exploreToolsCloseTimerRef.current);
-      exploreToolsCloseTimerRef.current = null;
-    }
-    setMainMenuOpen(false);
-    setExploreToolsOpen(false);
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   const handleSignOut = async () => {
     const supabase = createSupabaseBrowserClient();
     await supabase.auth.signOut();
-    setAuthContext({ isAuthenticated: false, isAdmin: false, isParent: false, isTeacher: false, isSchool: false, isPartner: false });
+    setAuthContext({
+      isAuthenticated: false,
+      isAdmin: false,
+      isOwner: false,
+      isParent: false,
+      isTeacher: false,
+      isSchool: false,
+      isPartner: false,
+      isInvestor: false,
+      isSupport: false,
+    });
     setActiveLearner(null);
-    closeMenus();
+    closeMenu();
     router.push("/");
     router.refresh();
   };
 
-  const primaryNavItems = useMemo(() => {
-    const learnerLabel = activeLearner
-      ? activeLearner.grade_level
-        ? t("top_nav_active_learner_grade", {
-          name: activeLearner.display_name,
-          grade: activeLearner.grade_level,
-        })
-        : activeLearner.display_name
-      : t("top_nav_switch_learner");
-
-    const items: NavItem[] = authContext.isAuthenticated
-      ? [
-        { href: "/explore", labelKey: "nav_explore", icon: "🌍" },
-        { href: "/who-is-learning", label: learnerLabel, icon: activeLearner ? "👤" : "🧠" },
-      ]
-      : [
-        { href: "/explore", labelKey: "nav_explore", icon: "🌍" },
-        { href: "/auth/sign-in", labelKey: "nav_sign_in", icon: "🔐" },
-      ];
-
-    return uniqueByHref(items);
-  }, [activeLearner, authContext.isAuthenticated, t]);
-
-  const secondaryNavItems = useMemo(() => {
-    const secondary: NavItem[] = [
-      { href: "/modules", labelKey: "nav_modules", icon: "📚" },
-      { href: "/language/speaking-lab", labelKey: "top_nav_speaking_lab", icon: "🎙️" },
-      { href: "/testing", labelKey: "top_nav_testing", icon: "🧪" },
-      { href: "/exam-prep", labelKey: "nav_exam_prep", icon: "🎯" },
-      { href: "/science-lab", labelKey: "nav_science_lab", icon: "🧪" },
-      ...(authContext.isAuthenticated ? authenticatedNavItems : []),
-      ...(authContext.isParent ? parentNavItems : []),
-      ...(authContext.isAdmin ? adminNavItems : []),
-      ...(authContext.isTeacher ? teacherNavItems : []),
-      ...(authContext.isSchool ? schoolNavItems : []),
-      ...(authContext.isPartner ? partnerNavItems : []),
-      ...(!authContext.isAuthenticated
-        ? [{ href: "/auth/sign-up", labelKey: "nav_sign_up", icon: "✨" } satisfies NavItem]
-        : []),
-    ];
-
-    const primaryHrefs = new Set(primaryNavItems.map((item) => item.href));
-    return uniqueByHref(secondary.filter((item) => !primaryHrefs.has(item.href)));
-  }, [authContext.isAdmin, authContext.isAuthenticated, authContext.isParent, authContext.isTeacher, authContext.isSchool, authContext.isPartner, primaryNavItems]);
-
-  const mobileQuickNavItems = useMemo(() => {
-    if (!authContext.isAuthenticated) {
-      return [] as NavItem[];
+  const handlePortalClick = (portalType: PortalType, href: string) => {
+    if (isPinVerified(portalType)) {
+      closeMenu();
+      router.push(href);
+    } else {
+      setPinGatePortal(portalType);
+      setPinGateTarget(href);
     }
+  };
 
-    return uniqueByHref([
-      { href: "/explore", labelKey: "nav_explore", icon: "🌍" },
-      { href: "/modules", labelKey: "nav_modules", icon: "📚" },
-      { href: "/dashboard", labelKey: "nav_dashboard", icon: "📈" },
-      { href: "/language/speaking-lab", labelKey: "top_nav_speaking_lab", icon: "🎙️" },
-      { href: "/testing", labelKey: "top_nav_testing", icon: "🧪" },
-      { href: "/account/settings", labelKey: "nav_account", icon: "👤" },
-    ]);
-  }, [authContext.isAuthenticated]);
-
-  const isAdminRoute = pathname?.startsWith("/admin") ?? false;
   const isHomePage = pathname === "/";
   const brandHref = authContext.isAuthenticated ? "/dashboard" : "/";
-  const parentPortalHref = authContext.isAuthenticated
-    ? "/parent/dashboard"
-    : "/auth/sign-in?next=%2Fparent%2Fdashboard";
-  const parentPortalLabel = authContext.isAuthenticated
-    ? t("top_nav_parent_portal")
-    : t("top_nav_parent_sign_in");
-  const isItemActive = (href: string) => {
-    if (!pathname) return false;
-    if (href === "/") return pathname === "/";
-    return pathname === href || pathname.startsWith(`${href}/`);
-  };
-  const resolveLabel = (item: NavItem) => (item.label ? item.label : item.labelKey ? t(item.labelKey) : item.href);
   const resolveNavHref = (href: string) => resolveLaunchHref(href);
 
   // Admin and parent routes use DashShell for navigation — hide the student TopNav.
@@ -418,138 +225,91 @@ export default function TopNav() {
     return null;
   }
 
+  const learnItems = [
+    { href: "/explore", label: t("nav_explore"), icon: "🌍" },
+    { href: "/modules", label: t("nav_modules"), icon: "📚" },
+    { href: "/language/speaking-lab", label: t("top_nav_speaking_lab"), icon: "🎙️" },
+    { href: "/science-lab", label: t("nav_science_lab"), icon: "🧬" },
+    { href: "/exam-prep", label: t("nav_exam_prep"), icon: "🎯" },
+    { href: "/games", label: t("top_nav_games") || "Games", icon: "🎮" },
+    { href: "/testing", label: t("top_nav_testing"), icon: "🧪" },
+    { href: "/experience-hub", label: "Experience Hub", icon: "🏆" },
+  ];
+
+  const portalItems = useMemo(() => {
+    const items: { portalType: PortalType; href: string; icon: string; label: string; badge: string; badgeColor: string; visible: boolean }[] = [
+      { portalType: "parent", href: "/parent/dashboard", icon: "👨‍👩‍👧", label: t("top_nav_parent_portal"), badge: "Family", badgeColor: "violet", visible: true },
+      { portalType: "admin", href: "/admin/overview", icon: "👑", label: t("nav_owner_console") || "Owner Console", badge: "Admin", badgeColor: "amber", visible: authContext.isAdmin || authContext.isOwner },
+      { portalType: "investor", href: "/investor", icon: "💰", label: t("nav_investor_portal") || "Investor Portal", badge: "Investor", badgeColor: "emerald", visible: authContext.isInvestor },
+      { portalType: "partner", href: "/partner", icon: "🤝", label: t("top_nav_partner_portal") || "Partner Portal", badge: "Partner", badgeColor: "emerald", visible: authContext.isPartner },
+      { portalType: "teacher", href: "/organizations", icon: "📐", label: t("top_nav_teacher_console") || "Teacher Console", badge: "Teacher", badgeColor: "sky", visible: authContext.isTeacher },
+      { portalType: "school", href: "/organizations", icon: "🏫", label: t("top_nav_school_console") || "Institution Portal", badge: "School", badgeColor: "indigo", visible: authContext.isSchool },
+      { portalType: "support", href: "/admin/overview", icon: "🛟", label: t("nav_support_portal") || "Support Portal", badge: "Support", badgeColor: "rose", visible: authContext.isSupport },
+    ];
+    return items.filter((item) => item.visible);
+  }, [authContext, t]);
+
+  const portalBadgeClasses: Record<string, string> = {
+    violet: "bg-violet-200/80 text-violet-700 dark:bg-violet-800/50 dark:text-violet-200",
+    amber: "bg-amber-200/80 text-amber-800 dark:bg-amber-800/50 dark:text-amber-200",
+    emerald: "bg-emerald-200/80 text-emerald-800 dark:bg-emerald-800/50 dark:text-emerald-200",
+    sky: "bg-sky-200/80 text-sky-800 dark:bg-sky-800/50 dark:text-sky-200",
+    indigo: "bg-indigo-200/80 text-indigo-800 dark:bg-indigo-800/50 dark:text-indigo-200",
+    rose: "bg-rose-200/80 text-rose-800 dark:bg-rose-800/50 dark:text-rose-200",
+  };
+
+  const portalBorderClasses: Record<string, string> = {
+    violet: "border-violet-200/80 bg-violet-50 text-violet-800 hover:bg-violet-100 dark:border-violet-700/35 dark:bg-violet-900/18 dark:text-violet-200 dark:hover:bg-violet-900/28",
+    amber: "border-amber-200/80 bg-amber-50 text-amber-800 hover:bg-amber-100 dark:border-amber-700/35 dark:bg-amber-900/18 dark:text-amber-200 dark:hover:bg-amber-900/28",
+    emerald: "border-emerald-200/80 bg-emerald-50 text-emerald-800 hover:bg-emerald-100 dark:border-emerald-700/35 dark:bg-emerald-900/18 dark:text-emerald-200 dark:hover:bg-emerald-900/28",
+    sky: "border-sky-200/80 bg-sky-50 text-sky-800 hover:bg-sky-100 dark:border-sky-700/35 dark:bg-sky-900/18 dark:text-sky-200 dark:hover:bg-sky-900/28",
+    indigo: "border-indigo-200/80 bg-indigo-50 text-indigo-800 hover:bg-indigo-100 dark:border-indigo-700/35 dark:bg-indigo-900/18 dark:text-indigo-200 dark:hover:bg-indigo-900/28",
+    rose: "border-rose-200/80 bg-rose-50 text-rose-800 hover:bg-rose-100 dark:border-rose-700/35 dark:bg-rose-900/18 dark:text-rose-200 dark:hover:bg-rose-900/28",
+  };
+
+  const menuItemClass = "ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70";
+  const sectionLabelClass = "mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40";
+
   return (
-    <header
-      className={`safe-area-top sticky top-0 z-50 w-full border-b backdrop-blur-xl header-glow-border relative ${isHomePage
-          ? "border-white/8 bg-slate-950/50"
-          : isAdminRoute
-            ? "border-zinc-200/80 bg-white/90 border-border/40 dark:bg-background/85"
+    <>
+      <header
+        className={`safe-area-top sticky top-0 z-50 w-full border-b backdrop-blur-xl header-glow-border relative ${isHomePage
+            ? "border-white/8 bg-slate-950/50"
             : "border-zinc-200/70 bg-[linear-gradient(92deg,rgba(255,251,242,0.93),rgba(236,253,245,0.9),rgba(239,246,255,0.92))] border-border/40 dark:bg-background/92"
-        }`}
-    >
-      <div className="mx-auto w-full max-w-7xl px-4 py-3">
-        <div className="flex items-center gap-2 sm:gap-3">
-          <Link
-            href={brandHref}
-            title={authContext.isAuthenticated ? t("top_nav_go_to_dashboard") : t("top_nav_go_to_home")}
-            className={`ui-focus-ring inline-flex min-h-12 items-center gap-2.5 rounded-2xl border px-3.5 py-2 shadow-sm backdrop-blur-sm transition-colors ${isHomePage
-                ? "border-white/60 bg-white/78 hover:bg-white/88"
-                : "border-white/80 bg-white/80 hover:bg-white border-border/55 dark:bg-surface/70 dark:hover:bg-surface/90"
-              }`}
-            onClick={closeMenus}
-          >
-            <div
-              aria-hidden="true"
-              className="inline-flex size-10 flex-shrink-0 overflow-hidden rounded-full"
+          }`}
+      >
+        <div className="mx-auto w-full max-w-7xl px-4 py-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* ── Logo ── */}
+            <Link
+              href={brandHref}
+              title={authContext.isAuthenticated ? t("top_nav_go_to_dashboard") : t("top_nav_go_to_home")}
+              className={`ui-focus-ring inline-flex min-h-12 items-center gap-2.5 rounded-2xl border px-3.5 py-2 shadow-sm backdrop-blur-sm transition-colors ${isHomePage
+                  ? "border-white/60 bg-white/78 hover:bg-white/88"
+                  : "border-white/80 bg-white/80 hover:bg-white border-border/55 dark:bg-surface/70 dark:hover:bg-surface/90"
+                }`}
+              onClick={closeMenu}
             >
-              <Image
-                src={ASSETS.logo}
-                alt="Koydo logo"
-                width={40}
-                height={40}
-                className="size-full object-cover"
-              />
-            </div>
-            <span className={`ui-type-display text-lg font-extrabold tracking-tight ${isHomePage ? "text-zinc-900" : "text-zinc-900 dark:text-foreground"}`}>
-              Koydo
-            </span>
-          </Link>
+              <div aria-hidden="true" className="inline-flex size-10 flex-shrink-0 overflow-hidden rounded-full">
+                <Image src={ASSETS.logo} alt="Koydo logo" width={40} height={40} className="size-full object-cover" />
+              </div>
+              <span className={`ui-type-display text-lg font-extrabold tracking-tight ${isHomePage ? "text-zinc-900" : "text-zinc-900 dark:text-foreground"}`}>
+                Koydo
+              </span>
+            </Link>
 
-          {/* Authenticated: show primary nav inline on md+ */}
-          {authContext.isAuthenticated ? (
-            <nav className="ml-1 hidden flex-1 items-center gap-2 md:flex">
-              {primaryNavItems.map((item) => (
-                (() => {
-                  const locked = isLaunchRouteLocked(item.href);
-                  const href = resolveNavHref(item.href);
-                  return (
-                <Link
-                  key={item.href}
-                  href={href}
-                  title={
-                    item.href === "/explore"
-                      ? t("top_nav_explore_tooltip")
-                      : locked
-                        ? undefined
-                        : undefined
-                  }
-                  className={`ui-soft-button ui-focus-ring ui-type-body-sm inline-flex min-h-10 items-center gap-1.5 rounded-full border px-3.5 py-1.5 font-semibold tracking-[0.01em] transition-all ${isItemActive(item.href)
-                      ? isHomePage
-                        ? "border-amber-200 bg-amber-300 text-amber-950 shadow-sm"
-                        : "border-zinc-900 bg-zinc-900 text-white shadow-sm border-border/60 dark:bg-white/14 dark:text-foreground"
-                      : isHomePage
-                        ? "border-white/12 bg-white/8 text-slate-200 hover:border-white/22 hover:bg-white/15"
-                        : "border-zinc-200/80 bg-white/80 text-zinc-700 hover:border-zinc-300 hover:bg-white border-border/50 dark:bg-surface/58 dark:text-foreground/90 dark:hover:border-border/40 dark:hover:bg-surface/82"
-                    }`}
-                  aria-current={isItemActive(item.href) ? "page" : undefined}
-                  onClick={closeMenus}
-                >
-                  <span aria-hidden="true" className="text-base leading-none">
-                    {item.icon}
-                  </span>
-                  {resolveLabel(item)}
-                  {locked ? <span className="rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
-                </Link>
-                  );
-                })()
-              ))}
-            </nav>
-          ) : (
             <div className="flex-1" />
-          )}
 
-          {/* Unauthenticated: Sign In + Sign Up on the right */}
-          {!authContext.isAuthenticated ? (
-            <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
-              {!isHomePage && (
+            {/* ── Search button ── */}
+            {!isHomePage && (
               <button
                 type="button"
                 onClick={openCommandPalette}
-                className={`ui-soft-button ui-focus-ring hidden min-h-10 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold shadow-sm transition hover:brightness-110 sm:inline-flex ${isHomePage
-                    ? "border-white/60 bg-white/78 text-zinc-900 hover:bg-white/88"
-                    : "border-zinc-300 bg-white text-zinc-700 hover:bg-surface-muted border-border/65 dark:bg-surface/60 dark:text-foreground dark:hover:bg-surface/80"
-                  }`}
-                title="Search navigation (Ctrl/Cmd+K)"
-              >
-                <span aria-hidden="true">🔎</span>
-                <span>{t("top_nav_search")}</span>
-                <kbd className="rounded border border-zinc-400 bg-white/90 px-1.5 py-0.5 text-[10px] text-zinc-700 dark:border-border dark:text-foreground/70">
-                  ⌘K
-                </kbd>
-              </button>
-              )}
-              <Link
-                href="/auth/sign-in"
-                className={`ui-soft-button ui-focus-ring inline-flex min-h-10 items-center rounded-full border px-3 py-1.5 text-sm font-semibold shadow-sm transition hover:brightness-110 sm:px-4 ${isHomePage
-                    ? "border-amber-300/70 bg-transparent text-amber-200 hover:bg-amber-300/10"
-                    : "border-zinc-300 bg-white text-zinc-800 hover:bg-surface-muted border-border/65 dark:bg-surface/60 dark:text-foreground dark:hover:bg-surface/80"
-                  }`}
-              >
-                {t("nav_sign_in")}
-              </Link>
-              <Link
-                href="/auth/sign-up"
-                className={`ui-soft-button ui-focus-ring inline-flex min-h-10 items-center rounded-full px-3 py-1.5 text-sm font-semibold shadow-sm transition hover:brightness-110 max-[360px]:hidden sm:px-4 ${isHomePage
-                    ? "bg-gradient-to-r from-amber-400 to-amber-500 font-bold text-stone-950"
-                    : "bg-zinc-900 text-white dark:bg-foreground dark:text-background"
-                  }`}
-              >
-                {t("nav_sign_up")}
-              </Link>
-            </div>
-          ) : null}
-
-          {/* Authenticated: Menu + Explore Tools */}
-          {authContext.isAuthenticated && (
-            <div className="ml-auto flex items-center gap-2">
-              <button
-                type="button"
-                className={`ui-soft-button ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm font-semibold shadow-sm transition ${isHomePage
+                className={`ui-soft-button ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm font-semibold shadow-sm transition hover:brightness-110 ${isHomePage
                     ? "border-white/12 bg-white/8 text-slate-200 hover:bg-white/15"
                     : "border-zinc-200/80 bg-white/80 text-zinc-700 hover:bg-white border-border/50 dark:bg-surface/68 dark:text-foreground dark:hover:bg-surface/88"
                   }`}
                 title="Search navigation (Ctrl/Cmd+K)"
-                onClick={openCommandPalette}
               >
                 <span aria-hidden="true">🔎</span>
                 <span className="hidden sm:inline">{t("top_nav_search")}</span>
@@ -557,424 +317,232 @@ export default function TopNav() {
                   ⌘K
                 </kbd>
               </button>
-              <div
-                ref={mainMenuRef}
-                className="relative"
-              >
-                <button
-                  type="button"
-                  className={`ui-soft-button ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm font-semibold shadow-sm transition ${isHomePage
-                      ? "border-white/12 bg-white/8 text-slate-200 hover:bg-white/15"
-                      : "border-zinc-200/80 bg-white/80 text-zinc-700 hover:bg-white border-border/50 dark:bg-surface/68 dark:text-foreground dark:hover:bg-surface/88"
-                    }`}
-                  aria-haspopup="true"
-                  aria-expanded={isMainMenuOpen}
-                  onClick={() => {
-                    if (mainMenuCloseTimerRef.current) {
-                      clearTimeout(mainMenuCloseTimerRef.current);
-                      mainMenuCloseTimerRef.current = null;
-                    }
-                    if (exploreToolsCloseTimerRef.current) {
-                      clearTimeout(exploreToolsCloseTimerRef.current);
-                      exploreToolsCloseTimerRef.current = null;
-                    }
-                    setMainMenuOpen((prev) => !prev);
-                    setExploreToolsOpen(false);
-                  }}
-                >
-                  <span aria-hidden="true">☰</span>
-                  {t("top_nav_menu")}
-                </button>
-                {isMainMenuOpen && (
-                  <div
-                    ref={mainMenuPanelRef}
-                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,26rem)] p-2.5 max-h-[85vh] overflow-y-auto"
-                  >
-                    {/* ── NAVIGATE ── */}
-                    <div className="px-1 pt-1.5 pb-1">
-                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
-                        {t("top_nav_section_navigate")}
-                      </p>
-                      <div className="grid grid-cols-2 gap-1.5">
-                        {primaryNavItems.map((item) => {
-                          const locked = isLaunchRouteLocked(item.href);
-                          const href = resolveNavHref(item.href);
-                          return (
-                            <Link
-                              key={item.href}
-                              href={href}
-                              className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
-                              onClick={closeMenus}
-                            >
-                              <span aria-hidden="true">{item.icon}</span>
-                              <span className="truncate">{resolveLabel(item)}</span>
-                              {locked ? <span className="ml-auto shrink-0 rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
+            )}
 
-                    <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
-
-                    {/* ── LEARN ── */}
-                    <div className="px-1 py-1">
-                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
-                        {t("top_nav_section_learn")}
-                      </p>
-                      <div className="grid grid-cols-2 gap-1.5">
-                        {(
-                          [
-                            { href: "/modules", label: t("nav_modules"), icon: "📚" },
-                            { href: "/language/speaking-lab", label: t("top_nav_speaking_lab"), icon: "🎙️" },
-                            { href: "/exam-prep", label: t("nav_exam_prep"), icon: "🎯" },
-                            { href: "/science-lab", label: t("nav_science_lab"), icon: "🧬" },
-                            { href: "/testing", label: t("top_nav_testing"), icon: "🧪" },
-                            { href: "/experience-hub", label: "Experience", icon: "🏆" },
-                          ]
-                        ).map((item) => {
-                          const locked = isLaunchRouteLocked(item.href);
-                          const href = resolveNavHref(item.href);
-                          return (
-                            <Link
-                              key={item.href}
-                              href={href}
-                              className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
-                              onClick={closeMenus}
-                            >
-                              <span aria-hidden="true">{item.icon}</span>
-                              <span className="truncate">{item.label}</span>
-                              {locked ? <span className="ml-auto shrink-0 rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
-
-                    {/* ── PORTALS: Parent Portal always + role-specific consoles ── */}
-                    <div className="px-1 py-1">
-                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
-                        {t("top_nav_section_portals")}
-                      </p>
-                      <div className="grid gap-1.5">
-                        {/* Parent Portal — always visible for any authenticated user */}
-                        <Link
-                          href={parentPortalHref}
-                          className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-violet-200/80 bg-violet-50 px-3.5 py-2.5 text-sm font-semibold text-violet-800 hover:bg-violet-100 transition-colors dark:border-violet-700/35 dark:bg-violet-900/18 dark:text-violet-200 dark:hover:bg-violet-900/28"
-                          onClick={closeMenus}
-                        >
-                          <span aria-hidden="true">👨‍👩‍👧</span>
-                          {parentPortalLabel}
-                          <span className="ml-auto rounded-full bg-violet-200/80 px-2 py-0.5 text-[10px] font-bold text-violet-700 dark:bg-violet-800/50 dark:text-violet-200">Family</span>
-                        </Link>
-                        {/* Owner Console — admin only */}
-                        {authContext.isAdmin ? (() => {
-                          const href = resolveNavHref("/admin/overview");
-                          const locked = isLaunchRouteLocked("/admin/overview");
-                          return (
-                            <Link
-                              href={href}
-                              className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-amber-200/80 bg-amber-50 px-3.5 py-2.5 text-sm font-semibold text-amber-800 hover:bg-amber-100 transition-colors dark:border-amber-700/35 dark:bg-amber-900/18 dark:text-amber-200 dark:hover:bg-amber-900/28"
-                              onClick={closeMenus}
-                            >
-                              <span aria-hidden="true">👑</span>
-                              {t("nav_owner_console")}
-                              {locked
-                                ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
-                                : <span className="ml-auto rounded-full bg-amber-200/80 px-2 py-0.5 text-[10px] font-bold text-amber-800 dark:bg-amber-800/50 dark:text-amber-200">Admin</span>}
-                            </Link>
-                          );
-                        })() : null}
-                        {/* Teacher Console — teacher role only */}
-                        {authContext.isTeacher ? (() => {
-                          const href = resolveNavHref("/organizations");
-                          const locked = isLaunchRouteLocked("/organizations");
-                          return (
-                            <Link
-                              href={href}
-                              className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-sky-200/80 bg-sky-50 px-3.5 py-2.5 text-sm font-semibold text-sky-800 hover:bg-sky-100 transition-colors dark:border-sky-700/35 dark:bg-sky-900/18 dark:text-sky-200 dark:hover:bg-sky-900/28"
-                              onClick={closeMenus}
-                            >
-                              <span aria-hidden="true">📐</span>
-                              {t("top_nav_teacher_console")}
-                              {locked
-                                ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
-                                : <span className="ml-auto rounded-full bg-sky-200/80 px-2 py-0.5 text-[10px] font-bold text-sky-800 dark:bg-sky-800/50 dark:text-sky-200">Teacher</span>}
-                            </Link>
-                          );
-                        })() : null}
-                        {/* School Console — school role only */}
-                        {authContext.isSchool ? (() => {
-                          const href = resolveNavHref("/organizations");
-                          const locked = isLaunchRouteLocked("/organizations");
-                          return (
-                            <Link
-                              href={href}
-                              className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-indigo-200/80 bg-indigo-50 px-3.5 py-2.5 text-sm font-semibold text-indigo-800 hover:bg-indigo-100 transition-colors dark:border-indigo-700/35 dark:bg-indigo-900/18 dark:text-indigo-200 dark:hover:bg-indigo-900/28"
-                              onClick={closeMenus}
-                            >
-                              <span aria-hidden="true">🏫</span>
-                              {t("top_nav_school_console")}
-                              {locked
-                                ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
-                                : <span className="ml-auto rounded-full bg-indigo-200/80 px-2 py-0.5 text-[10px] font-bold text-indigo-800 dark:bg-indigo-800/50 dark:text-indigo-200">School</span>}
-                            </Link>
-                          );
-                        })() : null}
-                        {/* Partner Portal — partner role only */}
-                        {authContext.isPartner ? (() => {
-                          const href = resolveNavHref("/partner");
-                          const locked = isLaunchRouteLocked("/partner");
-                          return (
-                            <Link
-                              href={href}
-                              className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-emerald-200/80 bg-emerald-50 px-3.5 py-2.5 text-sm font-semibold text-emerald-800 hover:bg-emerald-100 transition-colors dark:border-emerald-700/35 dark:bg-emerald-900/18 dark:text-emerald-200 dark:hover:bg-emerald-900/28"
-                              onClick={closeMenus}
-                            >
-                              <span aria-hidden="true">🤝</span>
-                              {t("top_nav_partner_portal")}
-                              {locked
-                                ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
-                                : <span className="ml-auto rounded-full bg-emerald-200/80 px-2 py-0.5 text-[10px] font-bold text-emerald-800 dark:bg-emerald-800/50 dark:text-emerald-200">Partner</span>}
-                            </Link>
-                          );
-                        })() : null}
-                      </div>
-                    </div>
-
-                    <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
-
-                    {/* ── ACCOUNT ── */}
-                    <div className="px-1 py-1">
-                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
-                        {t("top_nav_section_account")}
-                      </p>
-                      <div className="grid grid-cols-2 gap-1.5">
-                        {(
-                          [
-                            { href: "/account/settings", labelKey: "nav_account", icon: "👤" },
-                            { href: "/account/privacy", labelKey: "nav_privacy_center", icon: "🛡️" },
-                            { href: "/support", labelKey: "nav_support", icon: "🛟" },
-                            { href: "/dashboard", labelKey: "nav_dashboard", icon: "📈" },
-                          ]
-                        ).map((item) => {
-                          const locked = isLaunchRouteLocked(item.href);
-                          const href = resolveNavHref(item.href);
-                          return (
-                            <Link
-                              key={item.href}
-                              href={href}
-                              className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
-                              onClick={closeMenus}
-                            >
-                              <span aria-hidden="true">{item.icon}</span>
-                              <span className="truncate">{t(item.labelKey)}</span>
-                              {locked ? <span className="ml-auto shrink-0 rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* ── PREFERENCES & SIGN OUT — unified card with internal dividers ── */}
-                    <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
-                    <div className="px-1 pb-1.5">
-                      <div className="overflow-hidden rounded-xl border border-zinc-200/70 bg-white dark:border-border/40 dark:bg-surface-muted/55">
-                        {/* Top row: Theme + Language — equal-width segments */}
-                        <div className="flex items-stretch">
-                          <div className="flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5">
-                            <ThemeControls compact />
-                          </div>
-                          <div className="w-px self-stretch bg-zinc-200/60 dark:bg-border/25" />
-                          <div className="flex flex-1 items-center justify-center px-2 py-2.5">
-                            <LanguageSwitcher compact />
-                          </div>
-                        </div>
-                        {/* Horizontal divider */}
-                        <div className="h-px bg-zinc-200/60 dark:bg-border/25" />
-                        {/* Bottom row: Sign Out — full width, centered */}
-                        <button
-                          type="button"
-                          onClick={handleSignOut}
-                          className="ui-focus-ring flex min-h-10 w-full items-center justify-center gap-2 px-3 py-2.5 text-sm font-semibold text-rose-600 hover:bg-rose-50 transition-colors dark:text-rose-300 dark:hover:bg-rose-900/20"
-                        >
-                          <span aria-hidden="true">↩️</span>
-                          {t("top_nav_log_out")}
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <div
-                ref={exploreToolsRef}
-                className="relative"
-              >
-                <button
-                  type="button"
-                  className={`ui-soft-button ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm font-semibold shadow-sm transition ${isHomePage
-                      ? "border-white/12 bg-white/8 text-slate-200 hover:bg-white/15"
-                      : "border-zinc-200/80 bg-white/80 text-zinc-700 hover:bg-white border-border/50 dark:bg-surface/68 dark:text-foreground dark:hover:bg-surface/88"
-                    }`}
-                  aria-haspopup="true"
-                  aria-expanded={isExploreToolsOpen}
-                  onClick={() => {
-                    if (mainMenuCloseTimerRef.current) {
-                      clearTimeout(mainMenuCloseTimerRef.current);
-                      mainMenuCloseTimerRef.current = null;
-                    }
-                    if (exploreToolsCloseTimerRef.current) {
-                      clearTimeout(exploreToolsCloseTimerRef.current);
-                      exploreToolsCloseTimerRef.current = null;
-                    }
-                    setExploreToolsOpen((prev) => !prev);
-                    setMainMenuOpen(false);
-                  }}
-                >
-                  <span aria-hidden="true">🧭</span>
-                  {t("top_nav_explore_tools")}
-                </button>
-                {isExploreToolsOpen && (
-                  <div
-                    ref={exploreToolsPanelRef}
-                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,22rem)] p-2.5"
-                  >
-                    {/* ── EXPLORE ── */}
-                    <div className="px-1 pt-1.5 pb-1">
-                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
-                        {t("top_nav_section_explore")}
-                      </p>
-                      <div className="grid gap-1.5">
-                        <Link
-                          href="/explore"
-                          className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
-                          onClick={closeMenus}
-                        >
-                          <span aria-hidden="true">🌍</span>
-                          {t("top_nav_worlds")}
-                        </Link>
-                        <Link
-                          href="/modules"
-                          className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
-                          onClick={closeMenus}
-                        >
-                          <span aria-hidden="true">📚</span>
-                          {t("top_nav_all_modules")}
-                        </Link>
-                        <Link
-                          href="/language/speaking-lab"
-                          className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
-                          onClick={closeMenus}
-                        >
-                          <span aria-hidden="true">🎙️</span>
-                          {t("top_nav_speaking_lab")}
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="my-2 border-t border-zinc-200/80 dark:border-border/30" />
-
-                    {/* ── DISPLAY ── */}
-                    <div className="px-1 py-1">
-                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
-                        {t("top_nav_section_display")}
-                      </p>
-                      <div className="grid grid-cols-2 gap-1.5">
-                        <button
-                          type="button"
-                          onClick={togglePreReaderMode}
-                          className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
-                        >
-                          <span aria-hidden="true">{isPreReaderMode ? "👶" : "🔤"}</span>
-                          <span className="truncate">{isPreReaderMode ? t("top_nav_reader_mode_off") : t("top_nav_reader_mode_on")}</span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setTypographyDensity(nextTypographyDensity)}
-                          className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
-                        >
-                          <span aria-hidden="true">{typographyIcon}</span>
-                          <span className="truncate">{typographyLabel}</span>
-                        </button>
-                      </div>
-                    </div>
-
-                    <div className="my-2 border-t border-zinc-200/80 dark:border-border/30" />
-
-                    {/* ── NARRATOR VOICE ── */}
-                    <div className="px-1 py-1 pb-1.5">
-                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
-                        🎙️ {t("top_nav_section_narrator")}
-                      </p>
-                      <div className="grid grid-cols-2 gap-1">
-                        {VOICES.map((v) => (
-                          <button
-                            key={v.id}
-                            type="button"
-                            onClick={() => setVoice(v.id)}
-                            className={`ui-focus-ring flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-medium transition ${
-                              v.id === voice
-                                ? "border border-indigo-300 bg-indigo-100 text-indigo-900 dark:border-accent/60 dark:bg-indigo-900/40 dark:text-indigo-100"
-                                : "border border-transparent text-slate-600 hover:bg-slate-100 dark:text-foreground/70 dark:hover:bg-surface-muted/50"
-                            }`}
-                          >
-                            <span className="text-sm">{v.emoji}</span>
-                            <span className="truncate">{v.label}</span>
-                            {v.id === voice && (
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-auto h-3.5 w-3.5 flex-shrink-0 text-indigo-600 dark:text-indigo-300">
-                                <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                              </svg>
-                            )}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-
-        {mobileQuickNavItems.length > 0 ? (
-          <nav
-            aria-label="Quick navigation"
-            className="mt-2.5 flex items-center gap-2 overflow-x-auto pb-1 md:hidden"
-          >
-            {mobileQuickNavItems.map((item) => (
-              (() => {
-                const locked = isLaunchRouteLocked(item.href);
-                const href = resolveNavHref(item.href);
-                return (
-              <Link
-                key={item.href}
-                href={href}
-                className={`ui-soft-button ui-focus-ring inline-flex min-h-9 shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold transition ${isItemActive(item.href)
-                    ? isHomePage
-                      ? "border-amber-200 bg-amber-300 text-amber-950"
-                      : "border-zinc-900 bg-zinc-900 text-white border-border/60 dark:bg-white/14 dark:text-foreground"
-                    : isHomePage
-                      ? "border-white/14 bg-white/10 text-slate-200 hover:border-white/24 hover:bg-white/16"
-                      : "border-zinc-200/80 bg-white/80 text-zinc-700 hover:border-zinc-300 hover:bg-white border-border/50 dark:bg-surface/58 dark:text-foreground/90 dark:hover:border-border/40 dark:hover:bg-surface/82"
+            {/* ── Hamburger (icon-only) ── */}
+            <div ref={menuRef} className="relative">
+              <button
+                type="button"
+                className={`ui-soft-button ui-focus-ring inline-flex min-h-10 items-center justify-center rounded-full border px-3 py-1.5 shadow-sm transition ${isHomePage
+                    ? "border-white/12 bg-white/8 text-slate-200 hover:bg-white/15"
+                    : "border-zinc-200/80 bg-white/80 text-zinc-700 hover:bg-white border-border/50 dark:bg-surface/68 dark:text-foreground dark:hover:bg-surface/88"
                   }`}
-                aria-current={isItemActive(item.href) ? "page" : undefined}
-                onClick={closeMenus}
+                aria-haspopup="true"
+                aria-expanded={isMenuOpen}
+                aria-label="Menu"
+                onClick={() => setMenuOpen((prev) => !prev)}
               >
-                <span aria-hidden="true" className="text-sm leading-none">
-                  {item.icon}
-                </span>
-                {resolveLabel(item)}
-                {locked ? <span className="rounded-full bg-amber-200 px-1.5 py-0.5 text-[9px] font-bold text-amber-900">Soon</span> : null}
-              </Link>
-                );
-              })()
-            ))}
-          </nav>
-        ) : null}
-      </div>
-    </header>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+              </button>
+
+              {isMenuOpen && (
+                <div className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,26rem)] max-h-[85vh] overflow-y-auto p-2.5">
+                  {/* ── LEARN ── */}
+                  <div className="px-1 pt-1.5 pb-1">
+                    <p className={sectionLabelClass}>{t("top_nav_section_learn")}</p>
+                    <div className="grid grid-cols-2 gap-1.5">
+                      {learnItems.map((item) => {
+                        const locked = isLaunchRouteLocked(item.href);
+                        const href = resolveNavHref(item.href);
+                        return (
+                          <Link key={item.href} href={href} className={menuItemClass} onClick={closeMenu}>
+                            <span aria-hidden="true">{item.icon}</span>
+                            <span className="truncate">{item.label}</span>
+                            {locked ? <span className="ml-auto shrink-0 rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* ── AUTH ACTIONS (unauthenticated) ── */}
+                  {!authContext.isAuthenticated && (
+                    <>
+                      <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+                      <div className="px-1 py-1">
+                        <div className="grid grid-cols-2 gap-1.5">
+                          <Link href="/auth/sign-in" className={menuItemClass} onClick={closeMenu}>
+                            <span aria-hidden="true">🔐</span>
+                            <span className="truncate">{t("nav_sign_in")}</span>
+                          </Link>
+                          <Link
+                            href="/auth/sign-up"
+                            className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl bg-zinc-900 px-3 py-2 text-sm font-semibold text-white hover:bg-zinc-800 transition-colors dark:bg-foreground dark:text-background"
+                            onClick={closeMenu}
+                          >
+                            <span aria-hidden="true">✨</span>
+                            <span className="truncate">{t("nav_sign_up")}</span>
+                          </Link>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* ── PORTALS (authenticated) ── */}
+                  {authContext.isAuthenticated && portalItems.length > 0 && (
+                    <>
+                      <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+                      <div className="px-1 py-1">
+                        <p className={sectionLabelClass}>{t("top_nav_section_portals")}</p>
+                        <div className="grid gap-1.5">
+                          {portalItems.map((item) => {
+                            const locked = isLaunchRouteLocked(item.href);
+                            return (
+                              <button
+                                key={item.portalType}
+                                type="button"
+                                className={`ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border px-3.5 py-2.5 text-sm font-semibold transition-colors ${portalBorderClasses[item.badgeColor] ?? ""}`}
+                                onClick={() => handlePortalClick(item.portalType, resolveNavHref(item.href))}
+                              >
+                                <span aria-hidden="true">{item.icon}</span>
+                                {item.label}
+                                {locked
+                                  ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
+                                  : <span className={`ml-auto rounded-full px-2 py-0.5 text-[10px] font-bold ${portalBadgeClasses[item.badgeColor] ?? ""}`}>{item.badge}</span>}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* ── ACCOUNT (authenticated) ── */}
+                  {authContext.isAuthenticated && (
+                    <>
+                      <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+                      <div className="px-1 py-1">
+                        <p className={sectionLabelClass}>{t("top_nav_section_account")}</p>
+                        <div className="grid grid-cols-2 gap-1.5">
+                          {[
+                            { href: "/dashboard", label: t("nav_dashboard"), icon: "📈" },
+                            { href: "/who-is-learning", label: activeLearner ? activeLearner.display_name : t("top_nav_switch_learner"), icon: activeLearner ? "👤" : "🧠" },
+                            { href: "/account/settings", label: t("nav_account"), icon: "⚙️" },
+                            { href: "/who-is-learning", label: t("top_nav_whos_learning") || "Who's Learning", icon: "👥" },
+                          ].filter((item, index, arr) => arr.findIndex((i) => i.href === item.href) === index).map((item) => {
+                            const locked = isLaunchRouteLocked(item.href);
+                            const href = resolveNavHref(item.href);
+                            return (
+                              <Link key={`${item.href}-${item.icon}`} href={href} className={menuItemClass} onClick={closeMenu}>
+                                <span aria-hidden="true">{item.icon}</span>
+                                <span className="truncate">{item.label}</span>
+                                {locked ? <span className="ml-auto shrink-0 rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* ── DISPLAY (authenticated) ── */}
+                  {authContext.isAuthenticated && (
+                    <>
+                      <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+                      <div className="px-1 py-1">
+                        <p className={sectionLabelClass}>{t("top_nav_section_display")}</p>
+                        <div className="grid grid-cols-2 gap-1.5">
+                          <button type="button" onClick={togglePreReaderMode} className={menuItemClass}>
+                            <span aria-hidden="true">{isPreReaderMode ? "👶" : "🔤"}</span>
+                            <span className="truncate">{isPreReaderMode ? t("top_nav_reader_mode_off") : t("top_nav_reader_mode_on")}</span>
+                          </button>
+                          <button type="button" onClick={() => setTypographyDensity(nextTypographyDensity)} className={menuItemClass}>
+                            <span aria-hidden="true">{typographyIcon}</span>
+                            <span className="truncate">{typographyLabel}</span>
+                          </button>
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* ── NARRATOR VOICE (authenticated) ── */}
+                  {authContext.isAuthenticated && (
+                    <>
+                      <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+                      <div className="px-1 py-1 pb-1.5">
+                        <p className={sectionLabelClass}>🎙️ {t("top_nav_section_narrator")}</p>
+                        <div className="grid grid-cols-2 gap-1">
+                          {VOICES.map((v) => (
+                            <button
+                              key={v.id}
+                              type="button"
+                              onClick={() => setVoice(v.id)}
+                              className={`ui-focus-ring flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-medium transition ${
+                                v.id === voice
+                                  ? "border border-indigo-300 bg-indigo-100 text-indigo-900 dark:border-accent/60 dark:bg-indigo-900/40 dark:text-indigo-100"
+                                  : "border border-transparent text-slate-600 hover:bg-slate-100 dark:text-foreground/70 dark:hover:bg-surface-muted/50"
+                              }`}
+                            >
+                              <span className="text-sm">{v.emoji}</span>
+                              <span className="truncate">{v.label}</span>
+                              {v.id === voice && (
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-auto h-3.5 w-3.5 flex-shrink-0 text-indigo-600 dark:text-indigo-300">
+                                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                                </svg>
+                              )}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* ── PREFERENCES ── */}
+                  <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+                  <div className="px-1 pb-1.5">
+                    <div className="overflow-hidden rounded-xl border border-zinc-200/70 bg-white dark:border-border/40 dark:bg-surface-muted/55">
+                      <div className="flex items-stretch">
+                        <div className="flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5">
+                          <ThemeControls compact />
+                        </div>
+                        <div className="w-px self-stretch bg-zinc-200/60 dark:bg-border/25" />
+                        <div className="flex flex-1 items-center justify-center px-2 py-2.5">
+                          <LanguageSwitcher compact />
+                        </div>
+                      </div>
+                      {authContext.isAuthenticated && (
+                        <>
+                          <div className="h-px bg-zinc-200/60 dark:bg-border/25" />
+                          <button
+                            type="button"
+                            onClick={handleSignOut}
+                            className="ui-focus-ring flex min-h-10 w-full items-center justify-center gap-2 px-3 py-2.5 text-sm font-semibold text-rose-600 hover:bg-rose-50 transition-colors dark:text-rose-300 dark:hover:bg-rose-900/20"
+                          >
+                            <span aria-hidden="true">↩️</span>
+                            {t("top_nav_log_out")}
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* PIN Gate Modal */}
+      {pinGatePortal && pinGateTarget && (
+        <PinGate
+          portalType={pinGatePortal}
+          onVerified={() => {
+            const target = pinGateTarget;
+            setPinGatePortal(null);
+            setPinGateTarget(null);
+            closeMenu();
+            router.push(target);
+          }}
+          onCancel={() => {
+            setPinGatePortal(null);
+            setPinGateTarget(null);
+          }}
+        />
+      )}
+    </>
   );
 }

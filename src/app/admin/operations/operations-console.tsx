@@ -1202,6 +1202,11 @@ export default function OperationsConsole({
         isAdmin: form.get("setIsAdmin") === "on",
         isOwner: form.get("setIsOwner") === "on",
         isParent: form.get("setIsParent") === "on",
+        isTeacher: form.get("setIsTeacher") === "on",
+        isSchool: form.get("setIsSchool") === "on",
+        isPartner: form.get("setIsPartner") === "on",
+        isInvestor: form.get("setIsInvestor") === "on",
+        isSupport: form.get("setIsSupport") === "on",
         dataMode: form.get("setDataMode"),
         confirmText,
       });
@@ -2932,6 +2937,26 @@ export default function OperationsConsole({
           <label className="flex items-center gap-2 text-sm">
             <input name="setIsParent" type="checkbox" />
             Set parent role
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input name="setIsTeacher" type="checkbox" />
+            Set teacher role
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input name="setIsSchool" type="checkbox" />
+            Set school/institution role
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input name="setIsPartner" type="checkbox" />
+            Set partner role
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input name="setIsInvestor" type="checkbox" />
+            Set investor role
+          </label>
+          <label className="flex items-center gap-2 text-sm">
+            <input name="setIsSupport" type="checkbox" />
+            Set support role
           </label>
           <label className="flex flex-col gap-1 text-xs text-zinc-600 md:col-span-2">
             <span className="font-semibold text-zinc-700">Data mode</span>
