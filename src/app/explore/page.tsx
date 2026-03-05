@@ -13,6 +13,7 @@ import ExplorerViewTracker from "./_components/explorer-view-tracker";
 import StageModuleGrid from "./_components/stage-module-grid";
 import UpgradeBanner from "./_components/upgrade-banner";
 import ContextualBreadcrumbs from "@/app/components/contextual-breadcrumbs";
+import AdaptiveBackground from "@/app/components/ui/adaptive-background";
 
 export const metadata: Metadata = {
   title: "Explore Learning Levels",
@@ -68,39 +69,28 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
   }
 
   return (
-    <div className="flex min-h-[calc(100vh-52px)] flex-col">
+    <div className="relative flex min-h-[calc(100vh-52px)] flex-col">
+      <AdaptiveBackground />
       <ExplorerViewTracker surface="lobby" />
 
-      <header className="relative overflow-hidden px-4 pb-6 pt-8 text-center sm:pb-8 sm:pt-10">
-        <div
-          className="absolute inset-0 opacity-35 dark:opacity-20"
-          style={{
-            background: `
-              radial-gradient(ellipse at 20% 50%, #a7f3d0 0%, transparent 50%),
-              radial-gradient(ellipse at 80% 20%, #c4b5fd 0%, transparent 50%),
-              radial-gradient(ellipse at 50% 80%, #fde68a 0%, transparent 50%)
-            `,
-          }}
-          aria-hidden="true"
-        />
-
+      <header className="relative z-10 overflow-hidden px-4 pb-6 pt-8 text-center sm:pb-8 sm:pt-10">
         <ContextualBreadcrumbs
-          className="relative mb-3 inline-flex rounded-full border border-zinc-200 bg-white/80 px-3 py-1 backdrop-blur-sm"
+          className="relative mb-3 inline-flex rounded-full border border-white/60 bg-white/40 px-3 py-1 backdrop-blur-xl shadow-sm"
           items={[
             { label: "Dashboard", href: "/dashboard" },
             { label: t("explore_hero_title") },
           ]}
         />
 
-        <h1 className="relative text-3xl font-black tracking-tight text-zinc-900 dark:text-foreground sm:text-4xl">
+        <h1 className="relative text-4xl font-black tracking-tight text-zinc-900 dark:text-white sm:text-5xl drop-shadow-md">
           {t("explore_hero_title")}
         </h1>
-        <p className="relative mt-2 text-sm text-zinc-600 dark:text-foreground/70">
+        <p className="relative mt-3 text-base text-zinc-700 dark:text-zinc-200 drop-shadow-sm font-medium">
           {t("explore_hero_subtitle")}
         </p>
 
-        <div className="relative mt-3 flex items-center justify-center gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white/80 px-3 py-1 text-xs font-bold text-zinc-600 backdrop-blur-sm">
+        <div className="relative mt-4 flex flex-wrap items-center justify-center gap-3">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/40 px-4 py-1.5 text-xs font-bold text-zinc-800 backdrop-blur-xl shadow-sm">
             {t("explore_chip_span")}
           </span>
           <SpeakButton text={t("explore_auto_narration_text")} label={t("common_hear_it")} />
@@ -108,11 +98,13 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
         </div>
       </header>
 
-      <UpgradeBanner />
+      <div className="relative z-10">
+        <UpgradeBanner />
+      </div>
 
       <section
         aria-label={t("explore_levels_aria")}
-        className="mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 gap-5 px-4 pb-10 sm:grid-cols-2 sm:gap-6 sm:px-6 md:grid-cols-2 lg:grid-cols-3"
+        className="relative z-10 mx-auto grid w-full max-w-7xl flex-1 grid-cols-1 gap-5 px-4 pb-10 sm:grid-cols-2 sm:gap-6 sm:px-6 md:grid-cols-2 lg:grid-cols-3"
       >
         {stages.map((stage, index) => (
           <StageLinkCard
@@ -126,3 +118,4 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
     </div>
   );
 }
+
