@@ -47,6 +47,18 @@ const adminNavItems = [
   { href: "/admin/compliance", labelKey: "nav_compliance", icon: "🔐" },
 ] as const satisfies readonly NavItem[];
 
+const teacherNavItems = [
+  { href: "/organizations", labelKey: "top_nav_teacher_console", icon: "📐" },
+] as const satisfies readonly NavItem[];
+
+const schoolNavItems = [
+  { href: "/organizations", labelKey: "top_nav_school_console", icon: "🏫" },
+] as const satisfies readonly NavItem[];
+
+const partnerNavItems = [
+  { href: "/partner", labelKey: "top_nav_partner_portal", icon: "🤝" },
+] as const satisfies readonly NavItem[];
+
 const DROPDOWN_POINTER_TOLERANCE_PX = 50;
 const DROPDOWN_CLOSE_DELAY_MS = 120;
 type DropdownCloseTimerRef = MutableRefObject<ReturnType<typeof setTimeout> | null>;
@@ -357,6 +369,9 @@ export default function TopNav() {
       ...(authContext.isAuthenticated ? authenticatedNavItems : []),
       ...(authContext.isParent ? parentNavItems : []),
       ...(authContext.isAdmin ? adminNavItems : []),
+      ...(authContext.isTeacher ? teacherNavItems : []),
+      ...(authContext.isSchool ? schoolNavItems : []),
+      ...(authContext.isPartner ? partnerNavItems : []),
       ...(!authContext.isAuthenticated
         ? [{ href: "/auth/sign-up", labelKey: "nav_sign_up", icon: "✨" } satisfies NavItem]
         : []),
@@ -364,7 +379,7 @@ export default function TopNav() {
 
     const primaryHrefs = new Set(primaryNavItems.map((item) => item.href));
     return uniqueByHref(secondary.filter((item) => !primaryHrefs.has(item.href)));
-  }, [authContext.isAdmin, authContext.isAuthenticated, authContext.isParent, primaryNavItems]);
+  }, [authContext.isAdmin, authContext.isAuthenticated, authContext.isParent, authContext.isTeacher, authContext.isSchool, authContext.isPartner, primaryNavItems]);
 
   const mobileQuickNavItems = useMemo(() => {
     if (!authContext.isAuthenticated) {
@@ -761,25 +776,32 @@ export default function TopNav() {
                       </div>
                     </div>
 
-                    {/* ── BOTTOM: symmetric 2-col Theme + Language, then full-width Sign Out ── */}
+                    {/* ── PREFERENCES & SIGN OUT — unified card with internal dividers ── */}
                     <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
                     <div className="px-1 pb-1.5">
-                      <div className="grid grid-cols-2 gap-2 mb-2">
-                        <div className="rounded-xl border border-zinc-200/80 bg-surface-muted/90 p-2.5 dark:border-border/40 dark:bg-surface/72">
-                          <ThemeControls compact />
+                      <div className="overflow-hidden rounded-xl border border-zinc-200/70 bg-white dark:border-border/40 dark:bg-surface-muted/55">
+                        {/* Top row: Theme + Language — equal-width segments */}
+                        <div className="flex items-stretch">
+                          <div className="flex flex-1 items-center justify-center gap-1.5 px-3 py-2.5">
+                            <ThemeControls compact />
+                          </div>
+                          <div className="w-px self-stretch bg-zinc-200/60 dark:bg-border/25" />
+                          <div className="flex flex-1 items-center justify-center px-2 py-2.5">
+                            <LanguageSwitcher compact />
+                          </div>
                         </div>
-                        <div className="rounded-xl border border-zinc-200/80 bg-surface-muted/90 p-2.5 dark:border-border/40 dark:bg-surface/72">
-                          <LanguageSwitcher compact />
-                        </div>
+                        {/* Horizontal divider */}
+                        <div className="h-px bg-zinc-200/60 dark:bg-border/25" />
+                        {/* Bottom row: Sign Out — full width, centered */}
+                        <button
+                          type="button"
+                          onClick={handleSignOut}
+                          className="ui-focus-ring flex min-h-10 w-full items-center justify-center gap-2 px-3 py-2.5 text-sm font-semibold text-rose-600 hover:bg-rose-50 transition-colors dark:text-rose-300 dark:hover:bg-rose-900/20"
+                        >
+                          <span aria-hidden="true">↩️</span>
+                          {t("top_nav_log_out")}
+                        </button>
                       </div>
-                      <button
-                        type="button"
-                        onClick={handleSignOut}
-                        className="ui-focus-ring inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-xl border border-rose-200/80 bg-rose-50 px-3 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-100 transition-colors dark:border-danger/40 dark:bg-rose-900/22 dark:text-rose-200 dark:hover:bg-rose-900/32"
-                      >
-                        <span aria-hidden="true">↩️</span>
-                        {t("top_nav_log_out")}
-                      </button>
                     </div>
                   </div>
                 )}

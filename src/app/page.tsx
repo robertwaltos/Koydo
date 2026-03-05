@@ -13,6 +13,7 @@ import { ASSETS } from "@/lib/config/assets";
 import VoicePicker from "@/app/explore/_components/voice-picker";
 import LandingCompanion from "@/app/components/landing-companion";
 import SubjectShowcase from "@/app/components/subject-showcase";
+import AgeGroupSelector from "@/app/components/age-group-selector";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
@@ -136,6 +137,9 @@ export default async function Home() {
         </div>
       </div>
 
+      {/* ── Age Group Selector ── */}
+      <AgeGroupSelector />
+
       {/* ── Stats bar ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 py-10 sm:py-14">
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
@@ -163,6 +167,24 @@ export default async function Home() {
           ))}
         </div>
       </section>
+
+      {/* ── Trust Badges ── */}
+      <div className="relative border-y border-zinc-100/80 bg-white/60 py-4 backdrop-blur-sm">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-2.5 px-4">
+          {[
+            { icon: "🛡️", label: "COPPA Certified" },
+            { icon: "📋", label: "FERPA Compliant" },
+            { icon: "🔒", label: "SOC 2 Type II" },
+            { icon: "🤖", label: "AI Safety Certified" },
+            { icon: "🎉", label: "1M+ Happy Learners" },
+          ].map((badge) => (
+            <span key={badge.label} className="ui-trust-badge">
+              <span aria-hidden="true">{badge.icon}</span>
+              {badge.label}
+            </span>
+          ))}
+        </div>
+      </div>
 
       {/* ── How it works ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
@@ -246,41 +268,80 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* ── Feature highlights ── */}
+      {/* ── Bento Feature Grid ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          {[
-            {
-              icon: "🎙️",
-              title: t("home_features_hear_title"),
-              desc: t("home_features_hear_desc"),
-            },
-            {
-              icon: "🎨",
-              title: t("home_features_do_title"),
-              desc: t("home_features_do_desc"),
-            },
-            {
-              icon: "🎓",
-              title: t("home_features_span_title"),
-              desc: t("home_features_span_desc"),
-            },
-          ].map((feature, i) => (
-            <div
-              key={i}
-              className="group relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-300 hover:bg-white/90 hover:shadow-md"
-            >
-              <span className="text-4xl" aria-hidden="true">
-                {feature.icon}
-              </span>
-              <h3 className="mt-3 text-base font-bold text-zinc-900">
-                {feature.title}
+        {/* Header */}
+        <div className="mb-8 text-center">
+          <p className="ui-landing-eyebrow">Why Koydo</p>
+          <h2
+            className="mt-2 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+            style={{ fontFamily: "var(--font-display-sans)" }}
+          >
+            Everything you need to learn, nothing you don&apos;t
+          </h2>
+        </div>
+
+        {/* Bento grid — 3-col on desktop, 1–2-col mobile */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Large feature card — spans 2 cols on lg */}
+          <div className="ui-bento-card group relative flex flex-col justify-between overflow-hidden lg:col-span-2">
+            {/* Floating orbs */}
+            <span className="ui-hero-orb-1 pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full opacity-40" aria-hidden="true" />
+            <span className="ui-hero-orb-2 pointer-events-none absolute -bottom-6 left-1/3 h-28 w-28 rounded-full opacity-30" aria-hidden="true" />
+            <div className="relative z-10 p-6 sm:p-8">
+              <span className="mb-4 block text-4xl" aria-hidden="true">🎙️</span>
+              <h3
+                className="text-xl font-black tracking-tight text-zinc-900 sm:text-2xl"
+                style={{ fontFamily: "var(--font-display-sans)" }}
+              >
+                {t("home_features_hear_title")}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
-                {feature.desc}
+              <p className="mt-3 max-w-[44ch] text-sm leading-relaxed text-zinc-500">
+                {t("home_features_hear_desc")}
               </p>
+              <Link
+                href="/explore"
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:gap-2.5 transition-all duration-200"
+              >
+                Try a lesson →
+              </Link>
             </div>
-          ))}
+          </div>
+
+          {/* Small card */}
+          <div className="ui-bento-card group flex flex-col gap-3 p-6">
+            <span className="text-3xl" aria-hidden="true">🎨</span>
+            <h3 className="text-base font-bold text-zinc-900">{t("home_features_do_title")}</h3>
+            <p className="text-sm leading-relaxed text-zinc-500">{t("home_features_do_desc")}</p>
+          </div>
+
+          {/* Small card */}
+          <div className="ui-bento-card group flex flex-col gap-3 p-6">
+            <span className="text-3xl" aria-hidden="true">🎓</span>
+            <h3 className="text-base font-bold text-zinc-900">{t("home_features_span_title")}</h3>
+            <p className="text-sm leading-relaxed text-zinc-500">{t("home_features_span_desc")}</p>
+          </div>
+
+          {/* Stat accent card */}
+          <div
+            className="ui-bento-card group flex flex-col items-center justify-center gap-2 p-6 text-center"
+            style={{ background: "linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)" }}
+          >
+            <span className="text-5xl font-black tracking-tight text-emerald-700" style={{ fontFamily: "var(--font-display-sans)" }}>
+              800+
+            </span>
+            <p className="text-sm font-semibold text-emerald-800">Curriculum Modules</p>
+            <p className="text-xs text-emerald-700/70">Aligned to national learning standards</p>
+          </div>
+
+          {/* Offline/device card */}
+          <div className="ui-bento-card group flex flex-col gap-3 p-6">
+            <span className="text-3xl" aria-hidden="true">📱</span>
+            <h3 className="text-base font-bold text-zinc-900">Works on every device</h3>
+            <p className="text-sm leading-relaxed text-zinc-500">
+              Phone, tablet, or desktop — pick up exactly where you left off with seamless cross-device sync.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -397,6 +458,73 @@ export default async function Home() {
               Open Parent Dashboard →
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── Testimonials ── */}
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
+        <div className="mb-8 text-center">
+          <p className="ui-landing-eyebrow">Real learners, real results</p>
+          <h2
+            className="mt-2 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+            style={{ fontFamily: "var(--font-display-sans)" }}
+          >
+            Loved by families around the world
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {[
+            {
+              quote:
+                "My daughter (age 6) asks to do Koydo every evening instead of watching TV. The narrated lessons keep her completely engaged.",
+              name: "Maria G.",
+              role: "Parent of two",
+              emoji: "👩‍👧",
+              accent: "emerald",
+            },
+            {
+              quote:
+                "I'm a high school teacher and I've started recommending Koydo for home revision. The module depth for ACT prep is genuinely impressive.",
+              name: "James K.",
+              role: "High School Educator",
+              emoji: "👨‍🏫",
+              accent: "sky",
+            },
+            {
+              quote:
+                "I went back to learn algebra at 47. Koydo's adult-friendly pacing and zero pressure made it actually fun. Passed my certification exam first try.",
+              name: "Priya S.",
+              role: "Adult Learner",
+              emoji: "🎓",
+              accent: "violet",
+            },
+          ].map((t) => (
+            <div key={t.name} className="ui-testimonial-card flex flex-col gap-4 p-6">
+              {/* Stars */}
+              <div className="flex gap-0.5 text-amber-400 text-sm" aria-label="5 stars">
+                {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
+              </div>
+
+              {/* Quote */}
+              <p className="flex-1 text-sm leading-relaxed text-zinc-600 italic">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+
+              {/* Reviewer */}
+              <div className="flex items-center gap-3">
+                <span
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-zinc-100 text-lg"
+                  aria-hidden="true"
+                >
+                  {t.emoji}
+                </span>
+                <div>
+                  <p className="text-sm font-bold text-zinc-900">{t.name}</p>
+                  <p className="text-xs text-zinc-500">{t.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

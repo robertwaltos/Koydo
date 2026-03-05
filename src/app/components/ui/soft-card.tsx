@@ -7,6 +7,10 @@ type SoftCardProps = HTMLAttributes<HTMLElement> & {
   interactive?: boolean;
   glass?: boolean;
   organicCorners?: boolean;
+  /** Glassmorphism bento-grid cell with rounded-[var(--radius-bento-lg)] */
+  bento?: boolean;
+  /** Clean Stripe-style white card — thin 1px border, no shadow, flat bg */
+  stripeRow?: boolean;
   children?: ReactNode;
 };
 
@@ -19,6 +23,8 @@ export default function SoftCard({
   interactive = false,
   glass = false,
   organicCorners = false,
+  bento = false,
+  stripeRow = false,
   className,
   style,
   children,
@@ -32,6 +38,9 @@ export default function SoftCard({
         "ui-soft-card",
         interactive && "ui-soft-card--interactive",
         glass && "ui-soft-card--glass",
+        bento && "ui-bento-card",
+        stripeRow &&
+          "rounded-xl border border-zinc-200/80 bg-white shadow-none",
         className,
       )}
       style={{

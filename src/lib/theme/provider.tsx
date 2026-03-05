@@ -20,8 +20,6 @@ export type TypographyDensity = "comfortable" | "compact" | "spacious";
 const MODE_STORAGE_KEY = "koydo.theme.mode";
 const PACK_STORAGE_KEY = "koydo.theme.pack";
 const TYPOGRAPHY_DENSITY_STORAGE_KEY = "koydo.typography.density";
-const LOCKED_THEME_MODE: ThemeMode = "light";
-const LOCKED_THEME_RESOLVED: ThemeResolved = "light";
 
 type ThemeContextValue = {
   themeMode: ThemeMode;
@@ -38,7 +36,10 @@ type ThemeContextValue = {
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 function getStoredMode(): ThemeMode {
-  return LOCKED_THEME_MODE;
+  if (typeof window === "undefined") return "system";
+  const stored = window.localStorage.getItem(MODE_STORAGE_KEY);
+  if (stored === "light" || stored === "dark" || stored === "system") return stored;
+  return "system";
 }
 
 function getStoredPack(): ThemePack {
@@ -70,12 +71,18 @@ function getStoredTypographyDensity(): TypographyDensity {
   return "comfortable";
 }
 
-function normalizeThemeMode(): ThemeMode {
-  return LOCKED_THEME_MODE;
+function normalizeThemeMode(mode: ThemeMode): ThemeMode {
+  return mode;
 }
 
-function resolveTheme(): ThemeResolved {
-  return LOCKED_THEME_RESOLVED;
+function resolveTheme(mode: ThemeMode): ThemeResolved {
+  if (mode === "dark") return "dark";
+  if (mode === "light") return "light";
+  // system: detect OS preference
+  if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+  return "light";
 }
 
 function resolveMotionDatasetValue() {
@@ -109,12 +116,29 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [typographyDensity, setTypographyDensity] = useState<TypographyDensity>(() =>
     getStoredTypographyDensity(),
   );
-  const setThemeMode = useCallback(() => {
-    setThemeModeState(LOCKED_THEME_MODE);
+  const [systemDark, setSystemDark] = useState<boolean>(() =>
+    typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches,
+  );
+
+  // Track OS dark mode preference reactively
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = (e: MediaQueryListEvent) => setSystemDark(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
+  const setThemeMode = useCallback((value: ThemeMode) => {
+    setThemeModeState(value);
   }, []);
   const motionPreference: MotionPreference = "standard";
   const contrastPreference: ContrastPreference = "standard";
-  const resolvedTheme = useMemo(() => resolveTheme(), []);
+  const resolvedTheme = useMemo((): ThemeResolved => {
+    if (themeMode === "dark") return "dark";
+    if (themeMode === "light") return "light";
+    return systemDark ? "dark" : "light";
+  }, [themeMode, systemDark]);
 
   useEffect(() => {
     let active = true;
@@ -142,7 +166,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
           || payload.preferences.theme_mode === "dark"
           || payload.preferences.theme_mode === "system"
         ) {
-          setThemeModeState(normalizeThemeMode());
+          setThemeModeState(normalizeThemeMode(payload.preferences.theme_mode));
         }
 
         if (
@@ -172,10 +196,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (typeof window === "undefined") {
       return;
     }
-    window.localStorage.setItem(MODE_STORAGE_KEY, LOCKED_THEME_MODE);
+    window.localStorage.setItem(MODE_STORAGE_KEY, themeMode);
     window.localStorage.setItem(PACK_STORAGE_KEY, themePack);
     window.localStorage.setItem(TYPOGRAPHY_DENSITY_STORAGE_KEY, typographyDensity);
-    applyTheme(LOCKED_THEME_RESOLVED, LOCKED_THEME_MODE, themePack, typographyDensity);
+    applyTheme(resolvedTheme, themeMode, themePack, typographyDensity);
   }, [themeMode, themePack, typographyDensity, resolvedTheme]);
 
   useEffect(() => {
