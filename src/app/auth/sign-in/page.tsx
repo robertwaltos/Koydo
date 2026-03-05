@@ -78,7 +78,6 @@ function SignInPageContent() {
 
       setStatus(t("auth_sign_in_status_success"));
       router.push(nextPath);
-      router.refresh();
     } catch {
       setStatus(t("auth_sign_in_status_unable"));
     } finally {
@@ -170,7 +169,6 @@ function SignInPageContent() {
 
       setPhoneStatus(t("auth_sign_in_phone_verified_redirect"));
       router.push(nextPath);
-      router.refresh();
     } catch {
       setPhoneStatus(t("auth_sign_in_phone_unable_verify"));
     } finally {

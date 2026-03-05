@@ -55,6 +55,9 @@ type AuthContext = {
   isAuthenticated: boolean;
   isAdmin: boolean;
   isParent: boolean;
+  isTeacher: boolean;
+  isSchool: boolean;
+  isPartner: boolean;
 };
 
 type ActiveLearner = {
@@ -119,6 +122,9 @@ export default function TopNav() {
     isAuthenticated: false,
     isAdmin: false,
     isParent: false,
+    isTeacher: false,
+    isSchool: false,
+    isPartner: false,
   });
   const [activeLearner, setActiveLearner] = useState<ActiveLearner | null>(null);
   const [isMainMenuOpen, setMainMenuOpen] = useState(false);
@@ -157,6 +163,9 @@ export default function TopNav() {
           isAuthenticated?: boolean;
           isAdmin?: boolean;
           isParent?: boolean;
+          isTeacher?: boolean;
+          isSchool?: boolean;
+          isPartner?: boolean;
         };
         if (!response.ok) return;
 
@@ -164,6 +173,9 @@ export default function TopNav() {
           isAuthenticated: Boolean(data.isAuthenticated),
           isAdmin: Boolean(data.isAdmin),
           isParent: Boolean(data.isParent),
+          isTeacher: Boolean(data.isTeacher),
+          isSchool: Boolean(data.isSchool),
+          isPartner: Boolean(data.isPartner),
         });
       } catch {
         // Keep public-safe defaults on request failure.
@@ -305,7 +317,7 @@ export default function TopNav() {
   const handleSignOut = async () => {
     const supabase = createSupabaseBrowserClient();
     await supabase.auth.signOut();
-    setAuthContext({ isAuthenticated: false, isAdmin: false, isParent: false });
+    setAuthContext({ isAuthenticated: false, isAdmin: false, isParent: false, isTeacher: false, isSchool: false, isPartner: false });
     setActiveLearner(null);
     closeMenus();
     router.push("/");
@@ -559,73 +571,215 @@ export default function TopNav() {
                 {isMainMenuOpen && (
                   <div
                     ref={mainMenuPanelRef}
-                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,24rem)] p-3"
+                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,26rem)] p-2.5 max-h-[85vh] overflow-y-auto"
                   >
-                    <div className="grid gap-2">
-                      {primaryNavItems.map((item) => (
-                        (() => {
+                    {/* ── NAVIGATE ── */}
+                    <div className="px-1 pt-1.5 pb-1">
+                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
+                        {t("top_nav_section_navigate")}
+                      </p>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        {primaryNavItems.map((item) => {
                           const locked = isLaunchRouteLocked(item.href);
                           const href = resolveNavHref(item.href);
                           return (
-                        <Link
-                          key={item.href}
-                          href={href}
-                          className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-surface-muted px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100 border-border/50 dark:bg-surface/72 dark:text-foreground dark:hover:bg-surface-muted/72"
-                          onClick={closeMenus}
-                        >
-                          <span aria-hidden="true">{item.icon}</span>
-                          {resolveLabel(item)}
-                          {locked ? <span className="ml-auto rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-900">Coming Soon</span> : null}
-                        </Link>
-                          );
-                        })()
-                      ))}
-                    </div>
-
-                    {secondaryNavItems.length > 0 ? (
-                      <>
-                        <div className="my-3 border-t border-zinc-200/80 border-border/45" />
-                        <div className="grid gap-2">
-                          {secondaryNavItems.map((item) => (
-                            (() => {
-                              const locked = isLaunchRouteLocked(item.href);
-                              const href = resolveNavHref(item.href);
-                              return (
                             <Link
                               key={item.href}
                               href={href}
-                              className="ui-focus-ring inline-flex min-h-10 items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-surface-muted border-border/45 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                              className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
                               onClick={closeMenus}
                             >
                               <span aria-hidden="true">{item.icon}</span>
-                              {resolveLabel(item)}
-                              {locked ? <span className="ml-auto rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-900">Coming Soon</span> : null}
+                              <span className="truncate">{resolveLabel(item)}</span>
+                              {locked ? <span className="ml-auto shrink-0 rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
                             </Link>
-                              );
-                            })()
-                          ))}
-                        </div>
-                      </>
-                    ) : null}
+                          );
+                        })}
+                      </div>
+                    </div>
 
-                    {authContext.isAuthenticated ? (
-                      <div className="mt-3 border-t border-zinc-200/80 pt-3 border-border/45">
-                        <button
-                          type="button"
-                          onClick={handleSignOut}
-                          className="ui-focus-ring inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-xl border border-rose-200 bg-rose-50 px-3 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-100 border-danger/55 dark:bg-rose-900/25 dark:text-rose-200 dark:hover:bg-rose-900/35"
+                    <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+
+                    {/* ── LEARN ── */}
+                    <div className="px-1 py-1">
+                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
+                        {t("top_nav_section_learn")}
+                      </p>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        {(
+                          [
+                            { href: "/modules", label: t("nav_modules"), icon: "📚" },
+                            { href: "/language/speaking-lab", label: t("top_nav_speaking_lab"), icon: "🎙️" },
+                            { href: "/exam-prep", label: t("nav_exam_prep"), icon: "🎯" },
+                            { href: "/science-lab", label: t("nav_science_lab"), icon: "🧬" },
+                            { href: "/testing", label: t("top_nav_testing"), icon: "🧪" },
+                            { href: "/experience-hub", label: "Experience", icon: "🏆" },
+                          ]
+                        ).map((item) => {
+                          const locked = isLaunchRouteLocked(item.href);
+                          const href = resolveNavHref(item.href);
+                          return (
+                            <Link
+                              key={item.href}
+                              href={href}
+                              className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                              onClick={closeMenus}
+                            >
+                              <span aria-hidden="true">{item.icon}</span>
+                              <span className="truncate">{item.label}</span>
+                              {locked ? <span className="ml-auto shrink-0 rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+
+                    <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+
+                    {/* ── PORTALS: Parent Portal always + role-specific consoles ── */}
+                    <div className="px-1 py-1">
+                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
+                        {t("top_nav_section_portals")}
+                      </p>
+                      <div className="grid gap-1.5">
+                        {/* Parent Portal — always visible for any authenticated user */}
+                        <Link
+                          href={parentPortalHref}
+                          className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-violet-200/80 bg-violet-50 px-3.5 py-2.5 text-sm font-semibold text-violet-800 hover:bg-violet-100 transition-colors dark:border-violet-700/35 dark:bg-violet-900/18 dark:text-violet-200 dark:hover:bg-violet-900/28"
+                          onClick={closeMenus}
                         >
-                          <span aria-hidden="true">↩️</span>
-                          {t("top_nav_log_out")}
-                        </button>
+                          <span aria-hidden="true">👨‍👩‍👧</span>
+                          {parentPortalLabel}
+                          <span className="ml-auto rounded-full bg-violet-200/80 px-2 py-0.5 text-[10px] font-bold text-violet-700 dark:bg-violet-800/50 dark:text-violet-200">Family</span>
+                        </Link>
+                        {/* Owner Console — admin only */}
+                        {authContext.isAdmin ? (() => {
+                          const href = resolveNavHref("/admin/overview");
+                          const locked = isLaunchRouteLocked("/admin/overview");
+                          return (
+                            <Link
+                              href={href}
+                              className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-amber-200/80 bg-amber-50 px-3.5 py-2.5 text-sm font-semibold text-amber-800 hover:bg-amber-100 transition-colors dark:border-amber-700/35 dark:bg-amber-900/18 dark:text-amber-200 dark:hover:bg-amber-900/28"
+                              onClick={closeMenus}
+                            >
+                              <span aria-hidden="true">👑</span>
+                              {t("nav_owner_console")}
+                              {locked
+                                ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
+                                : <span className="ml-auto rounded-full bg-amber-200/80 px-2 py-0.5 text-[10px] font-bold text-amber-800 dark:bg-amber-800/50 dark:text-amber-200">Admin</span>}
+                            </Link>
+                          );
+                        })() : null}
+                        {/* Teacher Console — teacher role only */}
+                        {authContext.isTeacher ? (() => {
+                          const href = resolveNavHref("/organizations");
+                          const locked = isLaunchRouteLocked("/organizations");
+                          return (
+                            <Link
+                              href={href}
+                              className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-sky-200/80 bg-sky-50 px-3.5 py-2.5 text-sm font-semibold text-sky-800 hover:bg-sky-100 transition-colors dark:border-sky-700/35 dark:bg-sky-900/18 dark:text-sky-200 dark:hover:bg-sky-900/28"
+                              onClick={closeMenus}
+                            >
+                              <span aria-hidden="true">📐</span>
+                              {t("top_nav_teacher_console")}
+                              {locked
+                                ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
+                                : <span className="ml-auto rounded-full bg-sky-200/80 px-2 py-0.5 text-[10px] font-bold text-sky-800 dark:bg-sky-800/50 dark:text-sky-200">Teacher</span>}
+                            </Link>
+                          );
+                        })() : null}
+                        {/* School Console — school role only */}
+                        {authContext.isSchool ? (() => {
+                          const href = resolveNavHref("/organizations");
+                          const locked = isLaunchRouteLocked("/organizations");
+                          return (
+                            <Link
+                              href={href}
+                              className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-indigo-200/80 bg-indigo-50 px-3.5 py-2.5 text-sm font-semibold text-indigo-800 hover:bg-indigo-100 transition-colors dark:border-indigo-700/35 dark:bg-indigo-900/18 dark:text-indigo-200 dark:hover:bg-indigo-900/28"
+                              onClick={closeMenus}
+                            >
+                              <span aria-hidden="true">🏫</span>
+                              {t("top_nav_school_console")}
+                              {locked
+                                ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
+                                : <span className="ml-auto rounded-full bg-indigo-200/80 px-2 py-0.5 text-[10px] font-bold text-indigo-800 dark:bg-indigo-800/50 dark:text-indigo-200">School</span>}
+                            </Link>
+                          );
+                        })() : null}
+                        {/* Partner Portal — partner role only */}
+                        {authContext.isPartner ? (() => {
+                          const href = resolveNavHref("/partner");
+                          const locked = isLaunchRouteLocked("/partner");
+                          return (
+                            <Link
+                              href={href}
+                              className="ui-focus-ring inline-flex min-h-10 w-full items-center gap-2.5 rounded-xl border border-emerald-200/80 bg-emerald-50 px-3.5 py-2.5 text-sm font-semibold text-emerald-800 hover:bg-emerald-100 transition-colors dark:border-emerald-700/35 dark:bg-emerald-900/18 dark:text-emerald-200 dark:hover:bg-emerald-900/28"
+                              onClick={closeMenus}
+                            >
+                              <span aria-hidden="true">🤝</span>
+                              {t("top_nav_partner_portal")}
+                              {locked
+                                ? <span className="ml-auto rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span>
+                                : <span className="ml-auto rounded-full bg-emerald-200/80 px-2 py-0.5 text-[10px] font-bold text-emerald-800 dark:bg-emerald-800/50 dark:text-emerald-200">Partner</span>}
+                            </Link>
+                          );
+                        })() : null}
                       </div>
-                    ) : null}
+                    </div>
 
-                    <div className="mt-3 border-t border-zinc-200/80 pt-3 border-border/45">
-                      <div className="space-y-3 rounded-xl border border-zinc-200/80 bg-surface-muted/90 p-3 border-border/45 dark:bg-surface/72">
-                        <ThemeControls compact />
-                        <LanguageSwitcher compact />
+                    <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+
+                    {/* ── ACCOUNT ── */}
+                    <div className="px-1 py-1">
+                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
+                        {t("top_nav_section_account")}
+                      </p>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        {(
+                          [
+                            { href: "/account/settings", labelKey: "nav_account", icon: "👤" },
+                            { href: "/account/privacy", labelKey: "nav_privacy_center", icon: "🛡️" },
+                            { href: "/support", labelKey: "nav_support", icon: "🛟" },
+                            { href: "/dashboard", labelKey: "nav_dashboard", icon: "📈" },
+                          ]
+                        ).map((item) => {
+                          const locked = isLaunchRouteLocked(item.href);
+                          const href = resolveNavHref(item.href);
+                          return (
+                            <Link
+                              key={item.href}
+                              href={href}
+                              className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                              onClick={closeMenus}
+                            >
+                              <span aria-hidden="true">{item.icon}</span>
+                              <span className="truncate">{t(item.labelKey)}</span>
+                              {locked ? <span className="ml-auto shrink-0 rounded-full bg-amber-200 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">Soon</span> : null}
+                            </Link>
+                          );
+                        })}
                       </div>
+                    </div>
+
+                    {/* ── BOTTOM: symmetric 2-col Theme + Language, then full-width Sign Out ── */}
+                    <div className="my-2 border-t border-zinc-100 dark:border-border/30" />
+                    <div className="px-1 pb-1.5">
+                      <div className="grid grid-cols-2 gap-2 mb-2">
+                        <div className="rounded-xl border border-zinc-200/80 bg-surface-muted/90 p-2.5 dark:border-border/40 dark:bg-surface/72">
+                          <ThemeControls compact />
+                        </div>
+                        <div className="rounded-xl border border-zinc-200/80 bg-surface-muted/90 p-2.5 dark:border-border/40 dark:bg-surface/72">
+                          <LanguageSwitcher compact />
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={handleSignOut}
+                        className="ui-focus-ring inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-xl border border-rose-200/80 bg-rose-50 px-3 py-2 text-sm font-semibold text-rose-700 hover:bg-rose-100 transition-colors dark:border-danger/40 dark:bg-rose-900/22 dark:text-rose-200 dark:hover:bg-rose-900/32"
+                      >
+                        <span aria-hidden="true">↩️</span>
+                        {t("top_nav_log_out")}
+                      </button>
                     </div>
                   </div>
                 )}
@@ -662,84 +816,96 @@ export default function TopNav() {
                 {isExploreToolsOpen && (
                   <div
                     ref={exploreToolsPanelRef}
-                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,20rem)] p-3"
+                    className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,22rem)] p-2.5"
                   >
-                    <div className="grid gap-2">
-                      <Link
-                        href="/explore"
-                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
-                        onClick={closeMenus}
-                      >
-                        <span aria-hidden="true">🌍</span>
-                        {t("top_nav_worlds")}
-                      </Link>
-                      <Link
-                        href="/modules"
-                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
-                        onClick={closeMenus}
-                      >
-                        <span aria-hidden="true">📚</span>
-                        {t("top_nav_all_modules")}
-                      </Link>
-                      <Link
-                        href="/language/speaking-lab"
-                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
-                        onClick={closeMenus}
-                      >
-                        <span aria-hidden="true">🎙️</span>
-                        {t("top_nav_speaking_lab")}
-                      </Link>
-                      <Link
-                        href={parentPortalHref}
-                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
-                        onClick={closeMenus}
-                      >
-                        <span aria-hidden="true">👨‍👩‍👧</span>
-                        {parentPortalLabel}
-                      </Link>
-                      <button
-                        type="button"
-                        onClick={togglePreReaderMode}
-                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground/90"
-                      >
-                        <span aria-hidden="true">{isPreReaderMode ? "👶" : "🔤"}</span>
-                        {isPreReaderMode ? t("top_nav_reader_mode_off") : t("top_nav_reader_mode_on")}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setTypographyDensity(nextTypographyDensity)}
-                        className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground/90"
-                      >
-                        <span aria-hidden="true">{typographyIcon}</span>
-                        {typographyLabel}
-                      </button>
+                    {/* ── EXPLORE ── */}
+                    <div className="px-1 pt-1.5 pb-1">
+                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
+                        {t("top_nav_section_explore")}
+                      </p>
+                      <div className="grid gap-1.5">
+                        <Link
+                          href="/explore"
+                          className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
+                          onClick={closeMenus}
+                        >
+                          <span aria-hidden="true">🌍</span>
+                          {t("top_nav_worlds")}
+                        </Link>
+                        <Link
+                          href="/modules"
+                          className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
+                          onClick={closeMenus}
+                        >
+                          <span aria-hidden="true">📚</span>
+                          {t("top_nav_all_modules")}
+                        </Link>
+                        <Link
+                          href="/language/speaking-lab"
+                          className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
+                          onClick={closeMenus}
+                        >
+                          <span aria-hidden="true">🎙️</span>
+                          {t("top_nav_speaking_lab")}
+                        </Link>
+                      </div>
+                    </div>
 
-                      {/* ── Narrator voice selector ── */}
-                      <div className="mt-2 border-t border-zinc-200/80 pt-2 border-border/45">
-                        <p className="mb-1.5 px-1 text-[11px] font-semibold uppercase tracking-wide text-slate-500 dark:text-foreground/60">
-                          🎙️ Narrator Voice
-                        </p>
-                        <div className="grid grid-cols-2 gap-1">
-                          {VOICES.map((v) => (
-                            <button
-                              key={v.id}
-                              type="button"
-                              onClick={() => setVoice(v.id)}
-                              className={`ui-focus-ring flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-medium transition ${v.id === voice
-                                  ? "border border-indigo-300 bg-indigo-100 text-indigo-900 border-accent/60 dark:bg-indigo-900/40 dark:text-indigo-100"
-                                  : "border border-transparent text-slate-600 hover:bg-slate-100 dark:text-foreground/70 dark:hover:bg-surface-muted/50"
-                                }`}
-                            >
-                              <span className="text-sm">{v.emoji}</span>
-                              <span className="truncate">{v.label}</span>
-                              {v.id === voice && (
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-auto h-3.5 w-3.5 flex-shrink-0 text-indigo-600 dark:text-indigo-300">
-                                  <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                                </svg>
-                              )}
-                            </button>
-                          ))}
-                        </div>
+                    <div className="my-2 border-t border-zinc-200/80 dark:border-border/30" />
+
+                    {/* ── DISPLAY ── */}
+                    <div className="px-1 py-1">
+                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
+                        {t("top_nav_section_display")}
+                      </p>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        <button
+                          type="button"
+                          onClick={togglePreReaderMode}
+                          className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                        >
+                          <span aria-hidden="true">{isPreReaderMode ? "👶" : "🔤"}</span>
+                          <span className="truncate">{isPreReaderMode ? t("top_nav_reader_mode_off") : t("top_nav_reader_mode_on")}</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setTypographyDensity(nextTypographyDensity)}
+                          className="ui-focus-ring inline-flex min-h-10 items-center gap-1.5 rounded-xl border border-zinc-200/70 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-50 transition-colors dark:border-border/40 dark:bg-surface-muted/55 dark:text-foreground/90 dark:hover:bg-surface-muted/70"
+                        >
+                          <span aria-hidden="true">{typographyIcon}</span>
+                          <span className="truncate">{typographyLabel}</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="my-2 border-t border-zinc-200/80 dark:border-border/30" />
+
+                    {/* ── NARRATOR VOICE ── */}
+                    <div className="px-1 py-1 pb-1.5">
+                      <p className="mb-1.5 px-1 text-[10px] font-bold uppercase tracking-widest text-slate-400/80 dark:text-foreground/40">
+                        🎙️ {t("top_nav_section_narrator")}
+                      </p>
+                      <div className="grid grid-cols-2 gap-1">
+                        {VOICES.map((v) => (
+                          <button
+                            key={v.id}
+                            type="button"
+                            onClick={() => setVoice(v.id)}
+                            className={`ui-focus-ring flex items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs font-medium transition ${
+                              v.id === voice
+                                ? "border border-indigo-300 bg-indigo-100 text-indigo-900 dark:border-accent/60 dark:bg-indigo-900/40 dark:text-indigo-100"
+                                : "border border-transparent text-slate-600 hover:bg-slate-100 dark:text-foreground/70 dark:hover:bg-surface-muted/50"
+                            }`}
+                          >
+                            <span className="text-sm">{v.emoji}</span>
+                            <span className="truncate">{v.label}</span>
+                            {v.id === voice && (
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="ml-auto h-3.5 w-3.5 flex-shrink-0 text-indigo-600 dark:text-indigo-300">
+                                <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                              </svg>
+                            )}
+                          </button>
+                        ))}
                       </div>
                     </div>
                   </div>

@@ -1,9 +1,8 @@
 "use client";
 
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { redirect } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { useI18n } from "@/lib/i18n/provider";
 import { sanitizeNextPath } from "@/lib/routing/next-path";
 
@@ -23,11 +22,21 @@ export default function WhoIsLearningPage() {
 function WhoIsLearningInner() {
   const { t } = useI18n();
   const searchParams = useSearchParams();
+  const router = useRouter();
   const nextPath = sanitizeNextPath(searchParams.get("next"));
 
-  // When called with ?next, preserve redirect behavior for middleware flow
+  // When called with ?next, preserve redirect behavior for middleware flow.
+  // Use useEffect + router.replace() instead of redirect() to avoid leaving
+  // the Suspense fallback spinner showing indefinitely in a client component.
+  useEffect(() => {
+    if (nextPath) {
+      router.replace(`/select-profile?next=${encodeURIComponent(nextPath)}`);
+    }
+  }, [nextPath, router]);
+
   if (nextPath) {
-    redirect(`/select-profile?next=${encodeURIComponent(nextPath)}`);
+    // Render nothing while the redirect is in-flight.
+    return null;
   }
 
   return (

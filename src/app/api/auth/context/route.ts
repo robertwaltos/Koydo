@@ -68,7 +68,7 @@ export async function GET() {
 
     const { data: profile } = await supabase
       .from("user_profiles")
-      .select("is_admin, is_parent, admin_access_level")
+      .select("is_admin, is_parent, is_teacher, is_school, is_partner, admin_access_level")
       .eq("user_id", user.id)
       .maybeSingle();
 
@@ -94,13 +94,19 @@ export async function GET() {
     }
 
     const isParent = Boolean(profile?.is_parent);
-    const role = isAdmin ? "admin" : isParent ? "parent" : "learner";
+    const isTeacher = Boolean((profile as { is_teacher?: boolean } | null)?.is_teacher);
+    const isSchool = Boolean((profile as { is_school?: boolean } | null)?.is_school);
+    const isPartner = Boolean((profile as { is_partner?: boolean } | null)?.is_partner);
+    const role = isAdmin ? "admin" : isParent ? "parent" : isTeacher ? "teacher" : isSchool ? "school" : isPartner ? "partner" : "learner";
 
     return NextResponse.json({
       user: { id: user.id, email: user.email ?? null },
       isAuthenticated: true,
       isAdmin,
       isParent,
+      isTeacher,
+      isSchool,
+      isPartner,
       role,
       adminAccessLevel,
     });

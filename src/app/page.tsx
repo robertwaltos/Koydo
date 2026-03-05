@@ -18,11 +18,11 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 export const metadata: Metadata = {
   title: "Koydo — Learn Anything, Any Age, Any Language",
   description:
-    "Free interactive learning for ages 3 to adult. 850+ modules, 600K+ practice questions across math, science, coding, medicine, and career skills.",
+    "Free interactive learning for ages 3 to adult. 800+ modules, 600K+ practice questions across math, science, coding, medicine, and career skills.",
   openGraph: {
     title: "Koydo — Learn Anything, Any Age, Any Language",
     description:
-      "Free interactive learning from Pre-K through College — 850+ modules powered by NASA, OpenStax, and leading open datasets.",
+      "Free interactive learning from Pre-K through College — 800+ modules powered by NASA, OpenStax, and leading open datasets.",
   },
 };
 
@@ -140,7 +140,7 @@ export default async function Home() {
       <section className="landing-section relative mx-auto max-w-7xl px-4 py-10 sm:py-14">
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
           {[
-            { value: "200+",   label: "Learning Modules",   icon: "📚" },
+            { value: "800+",   label: "Learning Modules",   icon: "📚" },
             { value: "3–100",  label: "All Ages Welcome",   icon: "🎓" },
             { value: "2",      label: "Languages",          icon: "🌍" },
             { value: "100%",   label: "Free to Start",      icon: "✨" },
@@ -430,7 +430,7 @@ export default async function Home() {
             </span>
           </h2>
           <p className="mt-5 max-w-[44ch] text-base leading-relaxed text-zinc-600">
-            Free interactive learning for ages 3 to adult — 200+ modules, every subject, every language.
+            Free interactive learning for ages 3 to adult — 800+ modules, every subject, every language.
           </p>
           <Link
             href="/explore"
