@@ -225,16 +225,31 @@ export default function TopNav() {
     return null;
   }
 
-  const learnItems = [
+  const sharedLearnItems = [
     { href: "/explore", label: t("nav_explore"), icon: "🌍" },
     { href: "/modules", label: t("nav_modules"), icon: "📚" },
-    { href: "/language/speaking-lab", label: t("top_nav_speaking_lab"), icon: "🎙️" },
     { href: "/science-lab", label: t("nav_science_lab"), icon: "🧬" },
-    { href: "/exam-prep", label: t("nav_exam_prep"), icon: "🎯" },
-    { href: "/games", label: t("top_nav_games") || "Games", icon: "🎮" },
-    { href: "/testing", label: t("top_nav_testing"), icon: "🧪" },
-    { href: "/experience-hub", label: "Experience Hub", icon: "🏆" },
   ];
+
+  const learnItemsAuth = [
+    ...sharedLearnItems,
+    { href: "/language/speaking-lab", label: t("top_nav_speaking_lab"), icon: "🎙️" },
+    { href: "/games", label: t("nav_learning_games") || "Learning Games", icon: "🎮" },
+    { href: "/testing", label: t("top_nav_testing"), icon: "🧪" },
+    { href: "/exam-prep", label: t("nav_exam_prep"), icon: "🎯" },
+    { href: "/experience-hub", label: t("nav_experience_hub") || "Experience Hub", icon: "🏆" },
+  ];
+
+  const learnItemsPublic = [
+    ...sharedLearnItems,
+    { href: "/speaking-lab", label: t("top_nav_speaking_lab"), icon: "🎙️" },
+    { href: "/learning-games", label: t("nav_learning_games") || "Learning Games", icon: "🎮" },
+    { href: "/testing-center", label: t("top_nav_testing"), icon: "🧪" },
+    { href: "/exam-prep-info", label: t("nav_exam_prep"), icon: "🎯" },
+    { href: "/experience-hub-info", label: t("nav_experience_hub") || "Experience Hub", icon: "🏆" },
+  ];
+
+  const learnItems = authContext.isAuthenticated ? learnItemsAuth : learnItemsPublic;
 
   const portalItems = useMemo(() => {
     const items: { portalType: PortalType; href: string; icon: string; label: string; badge: string; badgeColor: string; visible: boolean }[] = [

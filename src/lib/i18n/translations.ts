@@ -6311,12 +6311,18 @@ const launchSupplementalTranslations: Record<ActiveLocale, TranslationDictionary
   },
   zh: {},
   pl: {},
+  fr: {},
+  de: {},
+  ar: {},
+  hi: {},
+  ja: {},
+  ko: {},
+  ru: {},
 };
 
-Object.assign(translations.en, launchSupplementalTranslations.en);
-Object.assign(translations.es, launchSupplementalTranslations.es);
-Object.assign(translations.zh, launchSupplementalTranslations.zh);
-Object.assign(translations.pl, launchSupplementalTranslations.pl);
+for (const locale of ACTIVE_LOCALES) {
+  Object.assign(translations[locale], launchSupplementalTranslations[locale]);
+}
 
 export function isSupportedLocale(value: string): value is Locale {
   return (ACTIVE_LOCALES as readonly string[]).includes(value);
