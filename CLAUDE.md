@@ -1,5 +1,13 @@
 # Koydo Game Library — Claude Code Context
 
+## CRITICAL: Branch Safety Rule
+**ALL commits MUST land on the `master` branch.** Before every commit:
+1. Run `git branch --show-current` to verify you are on `master`
+2. If NOT on master, run `git checkout master` first
+3. If you have uncommitted changes on a non-master branch, stash them, checkout master, then pop
+4. NEVER create or switch to feature branches unless explicitly instructed by the user
+5. Multiple agents share this working directory — another agent may have switched branches
+
 ## Project Stack
 - React 18, TypeScript, Tailwind CSS
 - Each game is a React component at `src/games/[game-slug]/index.tsx`
