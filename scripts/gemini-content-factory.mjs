@@ -44,8 +44,8 @@ if (!GOOGLE_API_KEY) {
 
 const GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta";
 const TEXT_MODEL = "gemini-3.1-pro-preview"; // Flagship high-context model
-const IMAGE_MODEL = "imagen-3.0-generate-001"; // Or imagen-4.0-fast-generate-001
-const VIDEO_MODEL = "veo-3.1-fast-generate-preview";
+const IMAGE_MODEL = "imagen-4.0-ultra-generate-001"; // Flagship high-fidelity image model
+const VIDEO_MODEL = "veo-3.1-generate-preview"; // Highest fidelity video model (non-fast)
 
 // --- CLI Argument Parsing ---
 const args = process.argv.slice(2);
@@ -284,4 +284,5 @@ async function main() {
 }
 
 main();
+
 
