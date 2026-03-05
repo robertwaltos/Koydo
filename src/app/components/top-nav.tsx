@@ -273,9 +273,9 @@ export default function TopNav() {
   return (
     <>
       <header
-        className={`safe-area-top sticky top-0 z-50 w-full border-b backdrop-blur-xl header-glow-border relative ${isHomePage
-            ? "border-white/8 bg-slate-950/50"
-            : "border-zinc-200/70 bg-[linear-gradient(92deg,rgba(255,251,242,0.93),rgba(236,253,245,0.9),rgba(239,246,255,0.92))] border-border/40 dark:bg-background/92"
+        className={`safe-area-top sticky top-0 z-50 w-full border-b backdrop-blur-2xl transition-all duration-300 relative ${isHomePage
+            ? "border-white/20 bg-white/10 shadow-sm"
+            : "border-white/60 bg-white/40 shadow-[0_4px_24px_rgba(0,0,0,0.02)] dark:bg-black/40 dark:border-white/10"
           }`}
       >
         <div className="mx-auto w-full max-w-7xl px-4 py-3">
@@ -340,7 +340,7 @@ export default function TopNav() {
               </button>
 
               {isMenuOpen && (
-                <div className="ui-glass-dropdown absolute right-0 mt-2 w-[min(92vw,26rem)] max-h-[85vh] overflow-y-auto p-2.5">
+                <div className="ui-glass-dropdown absolute right-0 mt-3 w-[min(92vw,26rem)] max-h-[85vh] overflow-y-auto p-2.5 rounded-[1.5rem] border border-white/60 bg-white/60 backdrop-blur-2xl shadow-[0_16px_48px_rgba(0,0,0,0.12)] dark:bg-black/60 dark:border-white/10">
                   {/* ── LEARN ── */}
                   <div className="px-1 pt-1.5 pb-1">
                     <p className={sectionLabelClass}>{t("top_nav_section_learn")}</p>
