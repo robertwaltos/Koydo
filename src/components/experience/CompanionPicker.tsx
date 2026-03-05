@@ -42,7 +42,7 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
               return (
                 <div key={type} className="flex flex-col items-center gap-1.5">
                   <CompanionAvatarSVG
-                    gender={type as any}
+                    gender={type}
                     size={52}
                     previewImageUrl={companion.previewImageUrl}
                   />
@@ -74,7 +74,7 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
                   aria-label={`Choose ${companion.name}`}
                 >
                   <CompanionAvatarSVG
-                    gender={type as any}
+                    gender={type}
                     size={44}
                     previewImageUrl={companion.previewImageUrl}
                   />

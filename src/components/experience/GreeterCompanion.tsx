@@ -321,7 +321,7 @@ export default function GreeterCompanion() {
       {showIntro && companionType && introVideoUrl && (
         <div className="fixed bottom-5 right-5 z-50">
           <CompanionIntroVideo
-            gender={companionType as any}
+            gender={companionType}
             videoUrl={introVideoUrl}
             onClose={handleIntroClose}
           />
@@ -333,7 +333,7 @@ export default function GreeterCompanion() {
             {uiMode === "chat" && companion && (
               <motion.div key="chat-panel" initial={{ opacity: 0, y: 16, scale: 0.92 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 12, scale: 0.94 }} transition={{ type: "spring", stiffness: 300, damping: 24 }} className={`w-72 overflow-hidden rounded-2xl border shadow-2xl ${colorScheme?.border} bg-white`}>
                 <div className={`flex items-center gap-2 px-4 py-3 ${colorScheme?.bg}`}>
-                  <CompanionAvatarSVG gender={companionType as any} size={32} pulse={isChatLoading} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
+                  <CompanionAvatarSVG gender={companionType} size={32} pulse={isChatLoading} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
                   <div className="flex-1 min-w-0">
                     <p className={`text-sm font-bold leading-none ${colorScheme?.text}`}>{companion.name}</p>
                     <p className="text-xs text-zinc-400 truncate">Koydo learning companion</p>
@@ -348,13 +348,13 @@ export default function GreeterCompanion() {
                 <div className="flex h-56 flex-col gap-2 overflow-y-auto p-3 scroll-smooth">
                   {chatHistory.length === 0 && (
                     <div className="flex h-full flex-col items-center justify-center gap-2 text-center">
-                      <CompanionAvatarSVG gender={companionType as any} size={44} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
+                      <CompanionAvatarSVG gender={companionType} size={44} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
                       <p className="text-xs text-zinc-400 max-w-45">Hi, I am {companion.name}! Ask me anything about what you are learning on Koydo! 🌟</p>
                     </div>
                   )}
                   {chatHistory.map((msg, i) => (
                     <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} gap-1.5`}>
-                      {msg.role === "assistant" && <CompanionAvatarSVG gender={companionType as any} size={22} className="mt-0.5 shrink-0" previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />}
+                      {msg.role === "assistant" && <CompanionAvatarSVG gender={companionType} size={22} className="mt-0.5 shrink-0" previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />}
                       <div className={`max-w-[78%] rounded-2xl px-3 py-2 text-xs leading-snug ${msg.role === "user" ? "rounded-br-sm bg-zinc-100 text-zinc-800" : `rounded-bl-sm text-white ${companionType === "female" ? "bg-violet-500" : companionType === "dragon" ? "bg-orange-500" : "bg-cyan-600"}`}`}>
                         {msg.content}
                         {msg.role === "assistant" && speakEnabled && (
@@ -365,7 +365,7 @@ export default function GreeterCompanion() {
                   ))}
                   {isChatLoading && (
                     <div className="flex justify-start gap-1.5">
-                      <CompanionAvatarSVG gender={companionType as any} size={22} pulse className="mt-0.5" previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
+                      <CompanionAvatarSVG gender={companionType} size={22} pulse className="mt-0.5" previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
                       <div className={`flex items-center gap-1 rounded-2xl rounded-bl-sm px-3 py-2 text-white ${companionType === "female" ? "bg-violet-500" : companionType === "dragon" ? "bg-orange-500" : "bg-cyan-600"}`}>
                         <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white [animation-delay:0ms]" />
                         <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white [animation-delay:150ms]" />
@@ -409,7 +409,7 @@ export default function GreeterCompanion() {
               )}
             </AnimatePresence>
             <motion.button onClick={handleAvatarClick} whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.93 }} className={`rounded-full shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${companionType === "female" ? "shadow-violet-200/60 focus-visible:ring-violet-400" : companionType === "dragon" ? "shadow-orange-200/60 focus-visible:ring-orange-400" : "shadow-cyan-200/60 focus-visible:ring-cyan-400"}`} aria-label={uiMode === "minimized" ? `Open ${companion?.name}` : `${companion?.name}`}>
-              <CompanionAvatarSVG gender={companionType as any} size={uiMode === "minimized" ? 44 : 60} pulse={isChatLoading} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
+              <CompanionAvatarSVG gender={companionType} size={uiMode === "minimized" ? 44 : 60} pulse={isChatLoading} previewImageUrl={companion?.previewImageUrl} avatarStyle={avatarStyle} />
             </motion.button>
           </div>
         </div>
