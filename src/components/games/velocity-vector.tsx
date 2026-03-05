@@ -160,14 +160,8 @@ export default function VelocityVector() {
 
     return (
         <div className="relative min-h-[600px] w-full flex flex-col items-center justify-center p-8 bg-zinc-950 overflow-hidden rounded-[3rem] border-4 border-slate-900 shadow-2xl">
-            {/* 4K Background Image */}
-            <div className="absolute inset-0 opacity-40">
-                <img
-                    src="/neon_velocity_track_bg_1772427504324.png"
-                    alt="Velocity Track"
-                    className="w-full h-full object-cover"
-                />
-            </div>
+            {/* Neon Background */}
+            <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-orange-950 via-zinc-900 to-violet-950" />
 
             {/* Scanline / Velocity Grid Overlay */}
             <div className="absolute inset-0 pointer-events-none opacity-20 bg-[linear-gradient(to_right,#888_1px,transparent_1px),linear-gradient(to_bottom,#888_1px,transparent_1px)] bg-[size:40px_40px]" />
