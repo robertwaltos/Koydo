@@ -26,8 +26,8 @@ import { useCompanionPreferences } from "@/lib/greeter/companion-preferences";
 
 const DISMISSED_KEY = "koydo.greeter.dismissed";
 const MINIMIZED_KEY = "koydo.greeter.minimized";
-const EXCLUDED_PREFIXES = ["/auth", "/api"];
-const EXCLUDED_EXACT = ["/"];
+const EXCLUDED_PREFIXES = ["/api"];
+const EXCLUDED_EXACT: string[] = [];
 const GREETING_SHOW_DELAY = 1_200;
 const GREETING_AUTO_HIDE = 7_000;
 const GREETING_COOLDOWN = 25_000;
@@ -38,7 +38,7 @@ export default function GreeterCompanion() {
   const pathname = usePathname();
   const { avatarStyle } = useCompanionPreferences();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [displayName, setDisplayName] = useState("");
+  const [displayName, setDisplayName] = useState("Friend");
   const [companionGender, setCompanionGender] = useState<CompanionGender | null>(null);
   const [showPicker, setShowPicker] = useState(false);
   const [isDismissed, setIsDismissed] = useState(true);
@@ -119,16 +119,23 @@ export default function GreeterCompanion() {
     const supabase = createSupabaseBrowserClient();
     const extractName = (meta?: Record<string, unknown>, email?: string) =>
       (meta?.display_name as string) || (meta?.full_name as string) || (meta?.name as string) || email?.split("@")[0] || "";
+    
+    // Default to false, allow local storage companion to show up for unauthenticated users
+    setIsAuthenticated(false);
+
     supabase.auth.getSession().then(({ data: { session } }) => {
-      if (!mounted || !session?.user) return;
-      setIsAuthenticated(true);
-      setDisplayName(extractName(session.user.user_metadata, session.user.email ?? ""));
+      if (!mounted) return;
+      if (session?.user) {
+        setIsAuthenticated(true);
+        setDisplayName(extractName(session.user.user_metadata, session.user.email ?? "") || "Friend");
+      }
     });
+    
     const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
       if (!mounted) return;
       if (session?.user) {
         setIsAuthenticated(true);
-        setDisplayName(extractName(session.user.user_metadata, session.user.email ?? ""));
+        setDisplayName(extractName(session.user.user_metadata, session.user.email ?? "") || "Friend");
         if (_event === "SIGNED_IN") {
           localStorage.removeItem(DISMISSED_KEY);
           setIsDismissed(false);
@@ -145,7 +152,7 @@ export default function GreeterCompanion() {
           }
         }
       } else {
-        setIsAuthenticated(false); setDisplayName(""); setUiMode("hidden"); setChatHistory([]);
+        setIsAuthenticated(false); setDisplayName("Friend"); setChatHistory([]);
       }
     });
     return () => { mounted = false; listener.subscription.unsubscribe(); };
@@ -156,34 +163,39 @@ export default function GreeterCompanion() {
     const minimized = localStorage.getItem(MINIMIZED_KEY) === "true";
     const gender = localStorage.getItem(COMPANION_STORAGE_KEY) as CompanionGender | null;
     const savedChat = localStorage.getItem(COMPANION_CHAT_KEY);
-    setIsDismissed(dismissed);
+    
+    // We want the companion on the landing page even if dismissed previously, 
+    // unless they specifically dismissed it in this session.
+    const isLobbyOrAuth = pathname === "/" || pathname?.startsWith("/auth");
+    setIsDismissed(isLobbyOrAuth ? false : dismissed);
+
     if (gender === "female" || gender === "male") setCompanionGender(gender);
     if (savedChat) { try { setChatHistory(JSON.parse(savedChat)); } catch { /* */ } }
-    if (!dismissed && gender) setUiMode(minimized ? "minimized" : "hidden");
-  }, []);
+    if ((!dismissed || isLobbyOrAuth) && gender) setUiMode(minimized ? "minimized" : "hidden");
+  }, [pathname]);
 
   useEffect(() => {
-    if (!isAuthenticated || isDismissed || isExcluded(pathname)) return;
+    if (isDismissed || isExcluded(pathname)) return;
     if (companionGender === null) {
-      const t = setTimeout(() => setShowPicker(true), 1_500);
+      const t = setTimeout(() => setShowPicker(true), 2_500); // Wait longer on landing
       return () => clearTimeout(t);
     }
-  }, [isAuthenticated, isDismissed, companionGender, pathname, isExcluded]);
+  }, [isDismissed, companionGender, pathname, isExcluded]);
 
   useEffect(() => {
-    if (!isAuthenticated || !companionGender || isDismissed || isExcluded(pathname)) return;
+    if (!companionGender || isDismissed || isExcluded(pathname)) return;
     const { message } = getGreeterConfig(pathname, displayName);
     setGreetingMessage(message);
-  }, [pathname, displayName, isAuthenticated, companionGender, isDismissed, isExcluded]);
+  }, [pathname, displayName, companionGender, isDismissed, isExcluded]);
 
   useEffect(() => {
-    if (!isAuthenticated || !companionGender || isDismissed || uiMode === "chat" || isExcluded(pathname)) return;
+    if (!companionGender || isDismissed || uiMode === "chat" || isExcluded(pathname)) return;
     const sinceLastGreet = Date.now() - lastGreetedAt.current;
     if (sinceLastGreet < GREETING_COOLDOWN) return;
     clearTimers();
     showTimer.current = setTimeout(showGreeting, GREETING_SHOW_DELAY);
     return () => clearTimers();
-  }, [pathname, isAuthenticated, companionGender, isDismissed]);
+  }, [pathname, companionGender, isDismissed]);
 
   useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: "smooth" }); }, [chatHistory]);
   useEffect(() => { if (uiMode === "chat") setTimeout(() => inputRef.current?.focus(), 100); }, [uiMode]);
@@ -260,7 +272,7 @@ export default function GreeterCompanion() {
     } finally { setIsChatLoading(false); }
   }, [chatInput, isChatLoading, companionGender, chatHistory]);
 
-  if (isExcluded(pathname) || !isAuthenticated) return null;
+  if (isExcluded(pathname)) return null;
   const colorScheme = companion?.colorScheme;
 
   return (
@@ -360,7 +372,7 @@ export default function GreeterCompanion() {
       )}
 
       <AnimatePresence>
-        {isDismissed && isAuthenticated && !isExcluded(pathname) && (
+        {isDismissed && !isExcluded(pathname) && (
           <motion.button key="reopen" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} onClick={() => { localStorage.removeItem(DISMISSED_KEY); setIsDismissed(false); setUiMode("hidden"); if (!companionGender) setShowPicker(true); }} className="fixed bottom-5 right-5 z-50 flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 shadow-md hover:bg-zinc-50 hover:text-zinc-700" aria-label="Open learning companion" title="Bring back your learning companion"><CompanionIcon /></motion.button>
         )}
       </AnimatePresence>
@@ -377,3 +389,5 @@ function CompanionIcon() { return <svg width="20" height="20" viewBox="0 0 20 20
 function SpeakerIcon() { return <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden><path d="M2 4.5h2l3-2.5v7.5L4 7H2a.5.5 0 01-.5-.5v-2A.5.5 0 012 4.5z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" /><path d="M9 3.5a3.5 3.5 0 010 5M7.5 4.5a2 2 0 010 3" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" /></svg>; }
 function SpeakerMutedIcon() { return <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden><path d="M2 4.5h2l3-2.5v7.5L4 7H2a.5.5 0 01-.5-.5v-2A.5.5 0 012 4.5z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" /><path d="M8 4.5l3 3m0-3l-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" /></svg>; }
 function SpeakerSmallIcon() { return <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden><path d="M1.5 3.75h1.5l2.5-2v4.5L3 6.25H1.5a.4.4 0 01-.4-.4V4.15a.4.4 0 01.4-.4z" stroke="currentColor" strokeWidth="1.1" strokeLinejoin="round" /><path d="M7.5 3a2.5 2.5 0 010 4" stroke="currentColor" strokeWidth="1" strokeLinecap="round" /></svg>; }
+
+

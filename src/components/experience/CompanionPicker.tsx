@@ -3,12 +3,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import CompanionAvatarSVG from "@/components/experience/CompanionAvatarSVG";
 import { COMPANIONS, type CompanionGender } from "@/lib/greeter/companion-config";
+import { useCompanionPreferences } from "@/lib/greeter/companion-preferences";
 
 interface CompanionPickerProps {
   onSelect: (gender: CompanionGender) => void;
 }
 
 export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
+  const { avatarStyle } = useCompanionPreferences();
+
   return (
     <AnimatePresence>
       <motion.div
@@ -45,6 +48,7 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
                     gender={gender}
                     size={52}
                     previewImageUrl={companion.previewImageUrl}
+                    avatarStyle={avatarStyle}
                   />
                   <span className={`text-xs font-bold ${gender === "female" ? "text-violet-700" : "text-cyan-700"}`}>
                     {companion.name}
@@ -74,6 +78,7 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
                     gender={gender}
                     size={44}
                     previewImageUrl={companion.previewImageUrl}
+                    avatarStyle={avatarStyle}
                   />
                   <div className="flex-1 min-w-0">
                     <p className={`text-sm font-black ${isViolet ? "text-violet-800" : "text-cyan-800"}`}>
@@ -97,3 +102,5 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
     </AnimatePresence>
   );
 }
+
+

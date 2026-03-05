@@ -43,11 +43,11 @@ export default function CompanionAvatarSVG({
         alt={gender === "female" ? "Aria" : "Kai"}
         width={size}
         height={size}
-        className={`rounded-full object-cover ${pulseClass} ${className}`}
+        className={`object-cover mix-blend-multiply dark:mix-blend-screen drop-shadow-sm ${pulseClass} ${className}`}
         style={{
           width: size,
           height: size,
-          border: `2px solid ${borderColor}`,
+          // Removed border and rounded-full to allow natural HeyGen silhouette 
         }}
         onError={() => setImgFailed(true)}
         draggable={false}
@@ -115,3 +115,4 @@ export default function CompanionAvatarSVG({
     </svg>
   );
 }
+
