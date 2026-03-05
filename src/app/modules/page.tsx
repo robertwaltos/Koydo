@@ -12,6 +12,7 @@ import PageHeader from "@/app/components/page-header";
 import ModuleCatalogBrowser, {
   type CatalogModule,
 } from "./module-catalog-browser";
+import AdaptiveBackground from "@/app/components/ui/adaptive-background";
 
 type ModuleCatalogSearchParams = {
   q?: string | string[];
@@ -85,20 +86,9 @@ export default async function ModulesPage({ searchParams }: ModulesPageProps) {
 
   return (
     <main className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-10">
-      {/* Background glow */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-35 dark:opacity-20"
-        style={{
-          background: `
-            radial-gradient(ellipse at 15% 20%, #a7f3d0 0%, transparent 45%),
-            radial-gradient(ellipse at 85% 10%, #bfdbfe 0%, transparent 42%),
-            radial-gradient(ellipse at 20% 85%, #fde68a 0%, transparent 42%)
-          `,
-        }}
-        aria-hidden="true"
-      />
+      <AdaptiveBackground />
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-7xl">
         <PageHeader
           className="mb-8"
           breadcrumbs={[
@@ -141,3 +131,4 @@ export default async function ModulesPage({ searchParams }: ModulesPageProps) {
     </main>
   );
 }
+

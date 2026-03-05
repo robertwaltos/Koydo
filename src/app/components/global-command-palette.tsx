@@ -14,12 +14,23 @@ type CommandItem = {
   requiresAuth?: boolean;
   requiresParent?: boolean;
   requiresAdmin?: boolean;
+  requiresInvestor?: boolean;
+  requiresSupport?: boolean;
+  requiresTeacher?: boolean;
+  requiresSchool?: boolean;
+  requiresPartner?: boolean;
 };
 
 type AuthContext = {
   isAuthenticated: boolean;
   isAdmin: boolean;
+  isOwner: boolean;
   isParent: boolean;
+  isTeacher: boolean;
+  isSchool: boolean;
+  isPartner: boolean;
+  isInvestor: boolean;
+  isSupport: boolean;
 };
 
 const RECENT_COMMAND_IDS_STORAGE_KEY = "koydo.command_palette.recent_ids";
@@ -161,6 +172,51 @@ const commandCatalog: readonly CommandItem[] = [
     keywords: ["admin", "operations", "console"],
     requiresAdmin: true,
   },
+  {
+    id: "investor-portal",
+    label: "Investor Portal",
+    href: "/investor",
+    icon: "💰",
+    description: "Open investor portal and financial insights.",
+    keywords: ["investor", "finance", "portfolio"],
+    requiresInvestor: true,
+  },
+  {
+    id: "support-portal",
+    label: "Support Portal",
+    href: "/admin/overview",
+    icon: "🛟",
+    description: "Open support console for ticket management.",
+    keywords: ["support", "help", "tickets"],
+    requiresSupport: true,
+  },
+  {
+    id: "teacher-console",
+    label: "Teacher Console",
+    href: "/organizations",
+    icon: "📐",
+    description: "Open teacher console for classroom management.",
+    keywords: ["teacher", "classroom", "education"],
+    requiresTeacher: true,
+  },
+  {
+    id: "school-portal",
+    label: "Institution Portal",
+    href: "/organizations",
+    icon: "🏫",
+    description: "Open institution portal for school administration.",
+    keywords: ["school", "institution", "education"],
+    requiresSchool: true,
+  },
+  {
+    id: "partner-portal",
+    label: "Partner Portal",
+    href: "/partner",
+    icon: "🤝",
+    description: "Open partner portal for collaboration tools.",
+    keywords: ["partner", "collaboration", "affiliate"],
+    requiresPartner: true,
+  },
 ];
 const staticCommandIds = new Set(commandCatalog.map((command) => command.id));
 
@@ -213,7 +269,13 @@ export default function GlobalCommandPalette() {
   const [authContext, setAuthContext] = useState<AuthContext>({
     isAuthenticated: false,
     isAdmin: false,
+    isOwner: false,
     isParent: false,
+    isTeacher: false,
+    isSchool: false,
+    isPartner: false,
+    isInvestor: false,
+    isSupport: false,
   });
   const [moduleSearchResults, setModuleSearchResults] = useState<ModuleSearchResult[]>([]);
 
@@ -226,7 +288,13 @@ export default function GlobalCommandPalette() {
         setAuthContext({
           isAuthenticated: Boolean(payload.isAuthenticated),
           isAdmin: Boolean(payload.isAdmin),
+          isOwner: Boolean(payload.isOwner),
           isParent: Boolean(payload.isParent),
+          isTeacher: Boolean(payload.isTeacher),
+          isSchool: Boolean(payload.isSchool),
+          isPartner: Boolean(payload.isPartner),
+          isInvestor: Boolean(payload.isInvestor),
+          isSupport: Boolean(payload.isSupport),
         });
       } catch {
         // Keep default public-safe context.
@@ -328,6 +396,11 @@ export default function GlobalCommandPalette() {
       if (command.requiresAdmin && !authContext.isAdmin) return false;
       if (command.requiresParent && !authContext.isParent) return false;
       if (command.requiresAuth && !authContext.isAuthenticated) return false;
+      if (command.requiresInvestor && !authContext.isInvestor) return false;
+      if (command.requiresSupport && !authContext.isSupport) return false;
+      if (command.requiresTeacher && !authContext.isTeacher) return false;
+      if (command.requiresSchool && !authContext.isSchool) return false;
+      if (command.requiresPartner && !authContext.isPartner) return false;
       return true;
     });
     return filtered.slice().sort((left, right) => {
@@ -340,7 +413,7 @@ export default function GlobalCommandPalette() {
       if (rightRank != null) return 1;
       return left.label.localeCompare(right.label);
     });
-  }, [authContext.isAdmin, authContext.isAuthenticated, authContext.isParent, recentCommandIds]);
+  }, [authContext, recentCommandIds]);
 
   const dynamicModuleSearchCommand = useMemo<CommandItem | null>(() => {
     const trimmedQuery = query.trim();

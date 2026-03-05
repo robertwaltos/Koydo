@@ -5,6 +5,7 @@ import {
   setConsentState,
   shouldShowConsentBanner,
 } from "@/lib/consent/tracking-consent";
+import { useActiveProfile } from "@/lib/profiles/active-profile-context";
 
 /**
  * GDPR / ePrivacy cookie-consent banner.
@@ -16,8 +17,17 @@ import {
  */
 export default function CookieConsentBanner() {
   const [visible, setVisible] = useState(false);
+  const { profile } = useActiveProfile();
+  const isChild = Boolean(profile?.age_years != null && profile.age_years < 13);
 
   useEffect(() => {
+    // COPPA: children cannot consent to analytics — suppress banner entirely
+    // and auto-deny tracking for under-13 users.
+    if (isChild) {
+      setConsentState(false);
+      return;
+    }
+
     // On native Capacitor builds, skip the web consent banner
     const isNative =
       typeof window !== "undefined" &&
@@ -30,7 +40,7 @@ export default function CookieConsentBanner() {
       const t = setTimeout(() => setVisible(true), 1200);
       return () => clearTimeout(t);
     }
-  }, []);
+  }, [isChild]);
 
   const accept = useCallback((analytics: boolean) => {
     const state = setConsentState(analytics);

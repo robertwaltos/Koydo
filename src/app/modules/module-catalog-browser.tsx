@@ -405,7 +405,7 @@ export default function ModuleCatalogBrowser({
 
       {/* ── Module Grid ── */}
       {filtered.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-zinc-300 bg-surface-muted p-12 text-center">
+        <div className="rounded-[2rem] border border-dashed border-white/60 bg-white/40 backdrop-blur-xl p-12 text-center shadow-sm">
           <p className="text-lg font-semibold text-zinc-600">No modules found</p>
           <p className="mt-1 text-sm text-zinc-500">
             Try adjusting your search or filters
@@ -417,82 +417,77 @@ export default function ModuleCatalogBrowser({
               setActiveSubject("All");
               setActiveDifficulty("All");
             }}
-            className="ui-focus-ring mt-4 inline-flex items-center rounded-full border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-surface-muted"
+            className="ui-focus-ring mt-4 inline-flex items-center rounded-full border border-white/80 bg-white/60 px-5 py-2.5 text-sm font-semibold text-zinc-700 shadow-sm transition hover:bg-white/80"
           >
             Clear all filters
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((mod) => {
             const meta = getSubjectMeta(mod.subject);
             const age = formatAge(mod.minAge, mod.maxAge);
             return (
               <article
                 key={mod.id}
-                className={`group relative overflow-hidden rounded-2xl border bg-white/90 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${meta.borderClass}`}
+                className={`group relative overflow-hidden rounded-[2.5rem] border-2 bg-white/50 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_48px_rgba(0,0,0,0.1)] ${meta.borderClass}`}
               >
                 {/* Halo */}
                 <div
-                  className="pointer-events-none absolute inset-x-0 top-0 h-20 opacity-60"
+                  className="pointer-events-none absolute inset-x-0 top-0 h-32 opacity-80 mix-blend-multiply"
                   style={{ background: `radial-gradient(ellipse at top, ${meta.halo}, transparent 70%)` }}
                   aria-hidden="true"
                 />
 
                 {/* Cover */}
-                <div className="relative h-36 overflow-hidden">
+                <div className="relative h-44 overflow-hidden m-2 rounded-[2rem] border border-white/40 shadow-inner">
                   <ModuleCoverImage
                     moduleId={mod.id}
                     moduleTitle={mod.title}
                     fallbackSrc={mod.thumbnail}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   {/* Subject chip overlay */}
                   <span
-                    className={`absolute left-3 top-3 inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] font-bold backdrop-blur-sm ${meta.chipClass}`}
+                    className={`absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-[10px] uppercase tracking-widest font-black backdrop-blur-md shadow-sm ${meta.chipClass}`}
                   >
                     <span aria-hidden="true">{meta.icon}</span>
                     {mod.subject}
                   </span>
                   {/* Lesson count overlay */}
-                  <span className="absolute right-3 top-3 rounded-full border border-white/60 bg-white/80 px-2 py-0.5 text-[11px] font-semibold text-zinc-700 backdrop-blur-sm">
+                  <span className="absolute right-4 top-4 rounded-full border border-white/60 bg-white/80 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-zinc-800 backdrop-blur-md shadow-sm">
                     {mod.lessonCount} {mod.lessonCount === 1 ? "lesson" : "lessons"}
                   </span>
                 </div>
 
                 {/* Content */}
-                <div className="relative p-4">
-                  <h3 className="text-base font-bold leading-snug text-zinc-900 line-clamp-2">
+                <div className="relative p-6 pt-4">
+                  <h3 className="text-xl font-black tracking-tight leading-snug text-zinc-900 line-clamp-2 drop-shadow-sm">
                     {mod.title}
                   </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-zinc-600 line-clamp-2">
+                  <p className="mt-2 text-sm font-medium leading-relaxed text-zinc-600 line-clamp-2">
                     {mod.description}
                   </p>
 
                   {/* Metadata row */}
-                  <div className="mt-3 flex flex-wrap items-center gap-1.5">
+                  <div className="mt-5 flex flex-wrap items-center gap-2">
                     {age ? (
-                      <span className="rounded-full border border-zinc-200 bg-surface-muted px-2 py-0.5 text-[10px] font-semibold text-zinc-600">
+                      <span className="rounded-full border border-white/60 bg-white/50 px-3 py-1.5 text-[10px] font-bold text-zinc-700 shadow-sm backdrop-blur-sm">
                         {age}
                       </span>
                     ) : null}
                     {mod.difficultyBand ? (
-                      <span className="rounded-full border border-zinc-200 bg-surface-muted px-2 py-0.5 text-[10px] font-semibold capitalize text-zinc-600">
+                      <span className="rounded-full border border-white/60 bg-white/50 px-3 py-1.5 text-[10px] font-bold capitalize text-zinc-700 shadow-sm backdrop-blur-sm">
                         {difficultyLabel(mod.difficultyBand)}
-                      </span>
-                    ) : null}
-                    {mod.version ? (
-                      <span className="rounded-full border border-zinc-200 bg-surface-muted px-2 py-0.5 text-[10px] font-semibold text-zinc-500">
-                        v{mod.version}
                       </span>
                     ) : null}
                   </div>
 
                   {/* Single CTA */}
-                  <div className="mt-4">
+                  <div className="mt-6">
                     <Link
                       href={mod.moduleHref}
-                      className={`ui-focus-ring inline-flex w-full min-h-10 items-center justify-center rounded-xl border px-4 py-2 text-sm font-bold transition-colors ${meta.btnClass}`}
+                      className={`ui-focus-ring inline-flex w-full min-h-12 items-center justify-center rounded-[1.5rem] border-2 px-5 py-3 text-sm font-black uppercase tracking-widest transition-all hover:scale-[1.02] active:scale-[0.98] shadow-sm backdrop-blur-md ${meta.btnClass}`}
                     >
                       Open Module →
                     </Link>
@@ -506,3 +501,4 @@ export default function ModuleCatalogBrowser({
     </div>
   );
 }
+

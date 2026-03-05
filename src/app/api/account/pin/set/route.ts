@@ -1,0 +1,54 @@
+import { NextResponse } from "next/server";
+import { z } from "zod";
+import crypto from "node:crypto";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+
+const PORTAL_TYPES = ["parent", "admin", "investor", "partner", "teacher", "school", "support"] as const;
+
+const requestSchema = z.object({
+  portalType: z.enum(PORTAL_TYPES),
+  pin: z.string().regex(/^\d{6,8}$/, "PIN must be 6-8 digits"),
+});
+
+function hashPin(pin: string, salt: string): string {
+  return crypto.pbkdf2Sync(pin, salt, 100_000, 64, "sha512").toString("hex");
+}
+
+export async function POST(request: Request) {
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const body = await request.json().catch(() => null);
+  const parsed = requestSchema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json({ error: "Invalid payload", details: parsed.error.flatten() }, { status: 400 });
+  }
+
+  const salt = crypto.randomBytes(32).toString("hex");
+  const pinHash = `${salt}:${hashPin(parsed.data.pin, salt)}`;
+
+  const { error } = await supabase
+    .from("portal_pins")
+    .upsert(
+      {
+        user_id: user.id,
+        portal_type: parsed.data.portalType,
+        pin_hash: pinHash,
+        updated_at: new Date().toISOString(),
+      },
+      { onConflict: "user_id,portal_type" },
+    );
+
+  if (error) {
+    return NextResponse.json({ error: "Failed to set PIN" }, { status: 500 });
+  }
+
+  return NextResponse.json({ success: true });
+}

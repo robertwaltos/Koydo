@@ -16,7 +16,7 @@ const LAUNCH_FEATURES: readonly LaunchFeatureConfig[] = [
   {
     id: "experience-hub",
     envVar: "NEXT_PUBLIC_EXPERIENCE_HUB_LAUNCH_PENDING",
-    defaultPending: true,
+    defaultPending: false,
     href: "/experience-hub",
     title: "New Experience",
     description: "More exciting features coming soon. Stay tuned!",
@@ -24,7 +24,7 @@ const LAUNCH_FEATURES: readonly LaunchFeatureConfig[] = [
   {
     id: "experience-hub-games",
     envVar: "NEXT_PUBLIC_EXPERIENCE_HUB_GAMES_LAUNCH_PENDING",
-    defaultPending: true,
+    defaultPending: false,
     href: "/experience-hub/games",
     title: "New Experience",
     description: "More exciting features coming soon. Stay tuned!",
@@ -32,7 +32,7 @@ const LAUNCH_FEATURES: readonly LaunchFeatureConfig[] = [
   {
     id: "science-lab-immersive",
     envVar: "NEXT_PUBLIC_SCIENCE_LAB_IMMERSIVE_PENDING",
-    defaultPending: true,
+    defaultPending: false,
     href: "/science-lab",
     title: "New Experience",
     description: "More exciting features coming soon. Stay tuned!",

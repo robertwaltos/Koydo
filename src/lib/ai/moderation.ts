@@ -74,8 +74,10 @@ class OpenAIModerationProvider implements ModerationProvider {
       };
     } catch (err) {
       console.error("[moderation] OpenAI moderation failed:", err);
-      // Fail open — don't block on moderation service failure
-      return { flagged: false, categories: {}, provider: this.name, action: "none" };
+      // Fail CLOSED — block content when moderation service is unavailable.
+      // For a children's EdTech app, it is safer to reject content than to
+      // allow unmoderated content through (COPPA / Families Policy).
+      return { flagged: true, categories: {}, provider: this.name, action: "blocked" };
     }
   }
 }

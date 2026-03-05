@@ -31,6 +31,14 @@
 # misc
 .DS_Store
 *.pem
+*.p8
+
+# Service account keys / secrets (NEVER commit)
+koydo-*.json
+*-service-account*.json
+
+# Build output artifacts
+build_output.txt
 
 # debug
 npm-debug.log*
@@ -85,7 +93,7 @@ public/Grok Assets/
 # Claude/agent temp files
 tmpclaude*
 tmp_resume*
-consensus.docx
+*.docx
 cleanup.md
 object_info.json
 nul
@@ -153,3 +161,6 @@ public/GAMES-*.json
 public/GAMES-*.md
 public/OPEN-SOURCE-*.json
 
+
+.gemini/
+gha-creds-*.json

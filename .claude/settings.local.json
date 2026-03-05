@@ -14,7 +14,18 @@
       "Bash(comm -23 /tmp/actual_scripts.txt /tmp/referenced_scripts.txt)",
       "Bash(xargs:*)",
       "Bash(du:*)",
-      "Bash(tr:*)"
+      "Bash(tr:*)",
+      "Bash(mkdir:*)",
+      "Bash(node:*)",
+      "Bash(npx tsc:*)",
+      "WebSearch",
+      "Bash(gh api:*)",
+      "Bash(gh repo:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "Bash(gh run:*)",
+      "mcp__plugin_playwright_playwright__browser_console_messages"
     ]
   }
 }

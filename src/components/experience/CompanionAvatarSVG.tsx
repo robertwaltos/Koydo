@@ -33,25 +33,29 @@ export default function CompanionAvatarSVG({
   const showImg = previewImageUrl && !imgFailed && !forceAnimated;
 
   const pulseClass = pulse ? "animate-pulse" : "";
-  const borderColor = gender === "female" ? "#7c3aed" : "#0891b2";
-  const bgColor = gender === "female" ? "#ede9fe" : "#cffafe";
+  const borderColor = gender === "female" ? "#7c3aed" : gender === "dragon" ? "#ea580c" : "#0891b2";
+  const bgColor = gender === "female" ? "#ede9fe" : gender === "dragon" ? "#ffedd5" : "#cffafe";
 
   if (showImg) {
     return (
-      <img
-        src={previewImageUrl}
-        alt={gender === "female" ? "Aria" : "Kai"}
-        width={size}
-        height={size}
-        className={`object-cover mix-blend-multiply dark:mix-blend-screen drop-shadow-sm ${pulseClass} ${className}`}
+      <div 
+        className={`relative overflow-hidden ${pulseClass} ${className}`}
         style={{
           width: size,
           height: size,
-          // Removed border and rounded-full to allow natural HeyGen silhouette 
+          borderRadius: "1rem", // Use a soft square/bento box feel instead of a hard circle
         }}
-        onError={() => setImgFailed(true)}
-        draggable={false}
-      />
+      >
+        <img
+          src={previewImageUrl}
+          alt={gender === "female" ? "Aria" : gender === "dragon" ? "Ignis" : "Kai"}
+          className="h-full w-full object-cover"
+          onError={() => setImgFailed(true)}
+          draggable={false}
+        />
+        {/* Subtle inner shadow to make it pop without a harsh border */}
+        <div className="absolute inset-0 rounded-[1rem] ring-1 ring-inset ring-black/10 pointer-events-none" />
+      </div>
     );
   }
 
@@ -92,6 +96,32 @@ export default function CompanionAvatarSVG({
           {/* Border ring */}
           <circle cx="24" cy="24" r="23" stroke="#7c3aed" strokeWidth="2" fill="none" />
         </>
+      ) : gender === "dragon" ? (
+        /* Ignis — fiery dragon */
+        <>
+          {/* Wings */}
+          <path d="M12 24 Q6 16 10 10 Q14 18 16 22 Z" fill="#fb923c" />
+          <path d="M36 24 Q42 16 38 10 Q34 18 32 22 Z" fill="#fb923c" />
+          {/* Head */}
+          <ellipse cx="24" cy="20" rx="10" ry="12" fill="#ea580c" />
+          <path d="M18 12 L16 4 L20 8 Z" fill="#fde047" />
+          <path d="M30 12 L32 4 L28 8 Z" fill="#fde047" />
+          {/* Snout */}
+          <ellipse cx="24" cy="26" rx="8" ry="6" fill="#f97316" />
+          <circle cx="21" cy="25" r="1" fill="#7c2d12" />
+          <circle cx="27" cy="25" r="1" fill="#7c2d12" />
+          {/* Eyes */}
+          <ellipse cx="20" cy="18" rx="2" ry="3" fill="#fde047" />
+          <ellipse cx="28" cy="18" rx="2" ry="3" fill="#fde047" />
+          <circle cx="20" cy="18" r="1" fill="#1f2937" />
+          <circle cx="28" cy="18" r="1" fill="#1f2937" />
+          {/* Body */}
+          <path d="M16 38 Q16 28 24 28 Q32 28 32 38" fill="#ea580c" />
+          {/* Belly scale */}
+          <path d="M20 38 Q20 30 24 30 Q28 30 28 38" fill="#fde047" />
+          {/* Border ring */}
+          <circle cx="24" cy="24" r="23" stroke="#ea580c" strokeWidth="2" fill="none" />
+        </>
       ) : (
         /* Kai — cool cyan cartoon */
         <>
@@ -115,4 +145,6 @@ export default function CompanionAvatarSVG({
     </svg>
   );
 }
+
+
 

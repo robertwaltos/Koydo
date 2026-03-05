@@ -1,0 +1,2443 @@
+{
+  "locale": "es",
+  "generatedAt": "2026-03-04T00:58:11.808Z",
+  "recoveredFrom": "state-file",
+  "modules": {
+    "a-level-prep-101": {
+      "fields": 371
+    },
+    "accounting-finance-101": {
+      "fields": 253
+    },
+    "accounting-finance-201": {
+      "fields": 107
+    },
+    "accounting-finance-301": {
+      "fields": 107
+    },
+    "accounting-finance-401": {
+      "fields": 107
+    },
+    "accounting-finance-501": {
+      "fields": 189
+    },
+    "accounting-finance-601": {
+      "fields": 189
+    },
+    "act-prep-101": {
+      "fields": 371
+    },
+    "advanced-math-101": {
+      "fields": 151
+    },
+    "advanced-math-201": {
+      "fields": 254
+    },
+    "advanced-math-301": {
+      "fields": 281
+    },
+    "advanced-math-401": {
+      "fields": 281
+    },
+    "advanced-math-501": {
+      "fields": 189
+    },
+    "advanced-math-601": {
+      "fields": 189
+    },
+    "ai-machine-learning-101": {
+      "fields": 273
+    },
+    "ai-machine-learning-201": {
+      "fields": 107
+    },
+    "ai-machine-learning-301": {
+      "fields": 107
+    },
+    "ai-machine-learning-401": {
+      "fields": 107
+    },
+    "ai-machine-learning-501": {
+      "fields": 222
+    },
+    "ai-machine-learning-601": {
+      "fields": 222
+    },
+    "ai-safety-alignment-101": {
+      "fields": 186
+    },
+    "ai-safety-alignment-201": {
+      "fields": 186
+    },
+    "ai-safety-alignment-301": {
+      "fields": 168
+    },
+    "ai-safety-alignment-401": {
+      "fields": 166
+    },
+    "ai-safety-alignment-501": {
+      "fields": 153
+    },
+    "ai-safety-alignment-601": {
+      "fields": 153
+    },
+    "ai-workflows-101": {
+      "fields": 121
+    },
+    "ai-workflows-201": {
+      "fields": 94
+    },
+    "ai-workflows-301": {
+      "fields": 94
+    },
+    "ai-workflows-401": {
+      "fields": 94
+    },
+    "ai-workflows-501": {
+      "fields": 184
+    },
+    "ai-workflows-601": {
+      "fields": 184
+    },
+    "ap-prep-101": {
+      "fields": 58
+    },
+    "science-vision-lab": {
+      "fields": 83
+    },
+    "arts-101": {
+      "fields": 200
+    },
+    "arts-201": {
+      "fields": 228
+    },
+    "arts-301": {
+      "fields": 228
+    },
+    "arts-401": {
+      "fields": 98
+    },
+    "arts-501": {
+      "fields": 153
+    },
+    "arts-601": {
+      "fields": 153
+    },
+    "astronomy-101": {
+      "fields": 171
+    },
+    "astronomy-201": {
+      "fields": 228
+    },
+    "astronomy-301": {
+      "fields": 228
+    },
+    "astronomy-401": {
+      "fields": 96
+    },
+    "astronomy-501": {
+      "fields": 153
+    },
+    "astronomy-601": {
+      "fields": 153
+    },
+    "atar-prep-101": {
+      "fields": 288
+    },
+    "basic-math-101": {
+      "fields": 179
+    },
+    "basic-math-1112-u1-external": {
+      "fields": 196
+    },
+    "basic-math-201": {
+      "fields": 228
+    },
+    "basic-math-301": {
+      "fields": 228
+    },
+    "basic-math-35-u1-external": {
+      "fields": 198
+    },
+    "basic-math-401": {
+      "fields": 228
+    },
+    "basic-math-501": {
+      "fields": 153
+    },
+    "basic-math-601": {
+      "fields": 153
+    },
+    "basic-math-68-u1-external": {
+      "fields": 260
+    },
+    "basic-math-910-u1-external": {
+      "fields": 197
+    },
+    "basic-math-k2-u1-external": {
+      "fields": 238
+    },
+    "basic-math-prek-u1-external": {
+      "fields": 207
+    },
+    "biology-101": {
+      "fields": 181
+    },
+    "biology-201": {
+      "fields": 250
+    },
+    "biology-301": {
+      "fields": 281
+    },
+    "biology-401": {
+      "fields": 279
+    },
+    "biology-501": {
+      "fields": 189
+    },
+    "biology-601": {
+      "fields": 189
+    },
+    "biotechnology-101": {
+      "fields": 321
+    },
+    "biotechnology-201": {
+      "fields": 116
+    },
+    "biotechnology-301": {
+      "fields": 116
+    },
+    "biotechnology-401": {
+      "fields": 116
+    },
+    "biotechnology-501": {
+      "fields": 222
+    },
+    "biotechnology-601": {
+      "fields": 222
+    },
+    "business-analytics-101": {
+      "fields": 151
+    },
+    "business-analytics-201": {
+      "fields": 152
+    },
+    "business-analytics-301": {
+      "fields": 152
+    },
+    "business-analytics-401": {
+      "fields": 152
+    },
+    "business-analytics-501": {
+      "fields": 189
+    },
+    "business-analytics-601": {
+      "fields": 189
+    },
+    "business-ethics-101": {
+      "fields": 152
+    },
+    "business-ethics-201": {
+      "fields": 140
+    },
+    "business-ethics-301": {
+      "fields": 84
+    },
+    "business-ethics-401": {
+      "fields": 92
+    },
+    "business-ethics-501": {
+      "fields": 169
+    },
+    "business-ethics-601": {
+      "fields": 169
+    },
+    "capstone-climate-and-economy-501": {
+      "fields": 117
+    },
+    "capstone-climate-and-economy-601": {
+      "fields": 117
+    },
+    "capstone-human-health-ai-501": {
+      "fields": 116
+    },
+    "capstone-human-health-ai-601": {
+      "fields": 119
+    },
+    "capstone-media-and-democracy-501": {
+      "fields": 144
+    },
+    "capstone-media-and-democracy-601": {
+      "fields": 138
+    },
+    "capstone-smart-city-systems-501": {
+      "fields": 116
+    },
+    "capstone-smart-city-systems-601": {
+      "fields": 116
+    },
+    "chemistry-101": {
+      "fields": 178
+    },
+    "chemistry-201": {
+      "fields": 228
+    },
+    "chemistry-301": {
+      "fields": 228
+    },
+    "chemistry-401": {
+      "fields": 243
+    },
+    "chemistry-501": {
+      "fields": 189
+    },
+    "chemistry-601": {
+      "fields": 189
+    },
+    "civil-engineering-101": {
+      "fields": 239
+    },
+    "civil-engineering-201": {
+      "fields": 107
+    },
+    "civil-engineering-301": {
+      "fields": 107
+    },
+    "civil-engineering-401": {
+      "fields": 107
+    },
+    "civil-engineering-501": {
+      "fields": 189
+    },
+    "civil-engineering-601": {
+      "fields": 189
+    },
+    "climate-science-101": {
+      "fields": 186
+    },
+    "climate-science-201": {
+      "fields": 186
+    },
+    "climate-science-301": {
+      "fields": 184
+    },
+    "climate-science-401": {
+      "fields": 184
+    },
+    "climate-science-501": {
+      "fields": 189
+    },
+    "climate-science-601": {
+      "fields": 189
+    },
+    "cloud-computing-101": {
+      "fields": 289
+    },
+    "cloud-computing-201": {
+      "fields": 184
+    },
+    "cloud-computing-301": {
+      "fields": 158
+    },
+    "cloud-computing-401": {
+      "fields": 160
+    },
+    "cloud-computing-501": {
+      "fields": 220
+    },
+    "cloud-computing-601": {
+      "fields": 220
+    },
+    "coding-101": {
+      "fields": 300
+    },
+    "coding-201": {
+      "fields": 281
+    },
+    "coding-301": {
+      "fields": 281
+    },
+    "coding-401": {
+      "fields": 281
+    },
+    "coding-501": {
+      "fields": 189
+    },
+    "coding-601": {
+      "fields": 189
+    },
+    "comparative-politics-101": {
+      "fields": 153
+    },
+    "comparative-politics-201": {
+      "fields": 153
+    },
+    "comparative-politics-301": {
+      "fields": 153
+    },
+    "comparative-politics-401": {
+      "fields": 153
+    },
+    "comparative-politics-501": {
+      "fields": 198
+    },
+    "comparative-politics-601": {
+      "fields": 198
+    },
+    "cpu-gpu-memory-design-101": {
+      "fields": 271
+    },
+    "cpu-gpu-memory-design-201": {
+      "fields": 107
+    },
+    "cpu-gpu-memory-design-301": {
+      "fields": 107
+    },
+    "cpu-gpu-memory-design-401": {
+      "fields": 107
+    },
+    "cpu-gpu-memory-design-501": {
+      "fields": 189
+    },
+    "cpu-gpu-memory-design-601": {
+      "fields": 189
+    },
+    "cuet-prep-101": {
+      "fields": 371
+    },
+    "cybersecurity-101": {
+      "fields": 155
+    },
+    "cybersecurity-201": {
+      "fields": 91
+    },
+    "cybersecurity-301": {
+      "fields": 91
+    },
+    "cybersecurity-401": {
+      "fields": 91
+    },
+    "cybersecurity-501": {
+      "fields": 184
+    },
+    "cybersecurity-601": {
+      "fields": 184
+    },
+    "data-engineering-101": {
+      "fields": 151
+    },
+    "data-engineering-201": {
+      "fields": 151
+    },
+    "data-engineering-301": {
+      "fields": 149
+    },
+    "data-engineering-401": {
+      "fields": 149
+    },
+    "data-engineering-501": {
+      "fields": 153
+    },
+    "data-engineering-601": {
+      "fields": 153
+    },
+    "data-science-101": {
+      "fields": 142
+    },
+    "data-science-201": {
+      "fields": 91
+    },
+    "data-science-301": {
+      "fields": 91
+    },
+    "data-science-401": {
+      "fields": 91
+    },
+    "data-science-501": {
+      "fields": 184
+    },
+    "data-science-601": {
+      "fields": 184
+    },
+    "developer-tools-devops-101": {
+      "fields": 121
+    },
+    "developer-tools-devops-201": {
+      "fields": 121
+    },
+    "developer-tools-devops-301": {
+      "fields": 121
+    },
+    "developer-tools-devops-401": {
+      "fields": 121
+    },
+    "developer-tools-devops-501": {
+      "fields": 159
+    },
+    "developer-tools-devops-601": {
+      "fields": 159
+    },
+    "digital-marketing-101": {
+      "fields": 147
+    },
+    "digital-marketing-201": {
+      "fields": 94
+    },
+    "digital-marketing-301": {
+      "fields": 94
+    },
+    "digital-marketing-401": {
+      "fields": 94
+    },
+    "digital-marketing-501": {
+      "fields": 169
+    },
+    "digital-marketing-601": {
+      "fields": 169
+    },
+    "distributed-systems-101": {
+      "fields": 123
+    },
+    "distributed-systems-201": {
+      "fields": 123
+    },
+    "distributed-systems-301": {
+      "fields": 123
+    },
+    "distributed-systems-401": {
+      "fields": 123
+    },
+    "distributed-systems-501": {
+      "fields": 157
+    },
+    "distributed-systems-601": {
+      "fields": 157
+    },
+    "economics-101": {
+      "fields": 211
+    },
+    "economics-201": {
+      "fields": 208
+    },
+    "economics-301": {
+      "fields": 226
+    },
+    "economics-401": {
+      "fields": 218
+    },
+    "economics-501": {
+      "fields": 169
+    },
+    "economics-601": {
+      "fields": 169
+    },
+    "ee-electrical-engineering-u1-external": {
+      "fields": 663
+    },
+    "ee-engineering-advanced-u1-external": {
+      "fields": 8857
+    },
+    "electrical-engineering-101": {
+      "fields": 147
+    },
+    "electrical-engineering-201": {
+      "fields": 91
+    },
+    "electrical-engineering-301": {
+      "fields": 91
+    },
+    "electrical-engineering-401": {
+      "fields": 91
+    },
+    "electrical-engineering-501": {
+      "fields": 153
+    },
+    "electrical-engineering-601": {
+      "fields": 153
+    },
+    "electrician-electricity-101": {
+      "fields": 111
+    },
+    "electrician-electricity-201": {
+      "fields": 91
+    },
+    "electrician-electricity-301": {
+      "fields": 91
+    },
+    "electrician-electricity-401": {
+      "fields": 91
+    },
+    "electrician-electricity-501": {
+      "fields": 153
+    },
+    "electrician-electricity-601": {
+      "fields": 153
+    },
+    "entrepreneurship-101": {
+      "fields": 206
+    },
+    "entrepreneurship-201": {
+      "fields": 116
+    },
+    "entrepreneurship-301": {
+      "fields": 116
+    },
+    "entrepreneurship-401": {
+      "fields": 116
+    },
+    "entrepreneurship-501": {
+      "fields": 222
+    },
+    "entrepreneurship-601": {
+      "fields": 222
+    },
+    "59-seconds-think-a-little-change-a-lot-richard-wis": {
+      "fields": 167
+    },
+    "a-course-in-miracles-dr-helen-schucman": {
+      "fields": 146
+    },
+    "a-history-of-god-the-4000-year-quest-of-judaism-ch": {
+      "fields": 279
+    },
+    "a-history-of-zionism-walter-laqueur": {
+      "fields": 167
+    },
+    "a-short-history-of-nearly-everything-bill-bryson": {
+      "fields": 167
+    },
+    "a-wholly-different-way-of-living-jiddu-krishnamurt": {
+      "fields": 55
+    },
+    "access-2013-for-dummies-laurie-ulrich-fuller-and-k": {
+      "fields": 251
+    },
+    "adventures-in-raspberry-pi-philbin-carrie-anne": {
+      "fields": 314
+    },
+    "alice-in-quantumland-robert-gilmore": {
+      "fields": 167
+    },
+    "alone-together-sherry-turkle": {
+      "fields": 168
+    },
+    "america-bewitched-witchcraft-after-salem-owen-davi": {
+      "fields": 147
+    },
+    "an-environmental-history-of-ancient-greece-and-rom": {
+      "fields": 237
+    },
+    "animal-oppression-and-human-violence-domesecration": {
+      "fields": 237
+    },
+    "apache-security-ivan-ristic": {
+      "fields": 167
+    },
+    "bash-cookbook-carl-albing": {
+      "fields": 195
+    },
+    "batman-and-philosophy-mark-d-white": {
+      "fields": 307
+    },
+    "batman-and-philosophy-the-dark-knight-of-the-soul-": {
+      "fields": 307
+    },
+    "beginning-lua-programming-kurt-jung": {
+      "fields": 237
+    },
+    "beginnings-of-learning-jiddu-krishnamurti": {
+      "fields": 168
+    },
+    "being-the-best-man-for-dummies-bliss-dominic": {
+      "fields": 237
+    },
+    "blood-and-rage-a-cultural-history-of-terrorism-mic": {
+      "fields": 168
+    },
+    "bones-would-rain-from-the-sky-deepening-our-relati": {
+      "fields": 61
+    },
+    "breathing-lessons-1989-pulitzer-prize-anne-tyler": {
+      "fields": 146
+    },
+    "business-analysis-for-dummies-kupe-kupersmith": {
+      "fields": 185
+    },
+    "cannibal-capitalism-michael-c-hill": {
+      "fields": 151
+    },
+    "capitalism-the-unknown-ideal-ayn-rand": {
+      "fields": 168
+    },
+    "case-studies-and-theory-development-in-the-social-": {
+      "fields": 181
+    },
+    "catching-fire-how-cooking-made-us-human-richard-wr": {
+      "fields": 167
+    },
+    "citizen-soldiers-stephen-e-ambrose": {
+      "fields": 168
+    },
+    "collider-paul-halpern": {
+      "fields": 145
+    },
+    "complete-electronics-self-teaching-guide-with-proj": {
+      "fields": 264
+    },
+    "confessions-of-an-event-planner-case-studies-from-": {
+      "fields": 120
+    },
+    "cosmos-carl-sagan": {
+      "fields": 88
+    },
+    "creating-web-sites-bible-david-a-crowder-andrew-ba": {
+      "fields": 184
+    },
+    "dear-mr-buffett-what-an-investor-learns-1-269-mile": {
+      "fields": 144
+    },
+    "death-by-black-hole-neil-degrasse-tyson": {
+      "fields": 167
+    },
+    "debt-free-u-how-i-paid-for-an-outstanding-college-": {
+      "fields": 229
+    },
+    "denialism-how-irrational-thinking-hinders-scientif": {
+      "fields": 169
+    },
+    "detect-deceit-how-to-become-a-human-lie-detector-i": {
+      "fields": 223
+    },
+    "disciplined-entrepreneurship-bill-aulet": {
+      "fields": 167
+    },
+    "don-quixote-miguel-de-cervantes": {
+      "fields": 167
+    },
+    "dreamweaver-cc-for-dummies-janine-warner": {
+      "fields": 304
+    },
+    "drive-the-surprising-truth-about-what-motivates-us": {
+      "fields": 181
+    },
+    "essential-snmp-2nd-edition-douglas-mauro-kevin-sch": {
+      "fields": 300
+    },
+    "even-faster-web-sites-steve-souders": {
+      "fields": 268
+    },
+    "excel-formulas-and-functions-for-dummies-3rd-editi": {
+      "fields": 314
+    },
+    "excel-vba-programming-for-dummies-3rd-edition-john": {
+      "fields": 335
+    },
+    "exploring-quantum-mechanics-kogan-vladimir-galitsk": {
+      "fields": 160
+    },
+    "frankenstein-mary-wollstonecraft-shelley": {
+      "fields": 152
+    },
+    "freakonomics-steven-d-levitt": {
+      "fields": 167
+    },
+    "from-eternity-to-here-sean-carroll": {
+      "fields": 167
+    },
+    "frommer-s-arizona-and-the-grand-canyon-2011-karl-s": {
+      "fields": 349
+    },
+    "frommer-s-india-pippa-de-bruyn": {
+      "fields": 279
+    },
+    "frommer-s-seattle-2010-karl-samson": {
+      "fields": 333
+    },
+    "genius-the-life-and-science-of-richard-feynman-jam": {
+      "fields": 168
+    },
+    "good-business-leadership-flow-and-the-making-of-me": {
+      "fields": 168
+    },
+    "gulliver-s-travels-jonathan-swift": {
+      "fields": 132
+    },
+    "handbook-of-electrical-engineering-for-practitione": {
+      "fields": 194
+    },
+    "hegel-elements-of-the-philosophy-of-right-cambridg": {
+      "fields": 265
+    },
+    "how-to-eat-the-pleasures-and-principles-of-good-fo": {
+      "fields": 83
+    },
+    "how-to-talk-to-anyone-leil-lowndes": {
+      "fields": 181
+    },
+    "i-o-u-s-a-addison-wiggin": {
+      "fields": 167
+    },
+    "i-robot-short-stories-isaac-asimov": {
+      "fields": 162
+    },
+    "illustrated-theory-of-everything-stephen-hawking": {
+      "fields": 168
+    },
+    "introduction-to-objectivist-epistemology-ayn-rand": {
+      "fields": 96
+    },
+    "it-s-the-customer-stupid-michael-a-aun": {
+      "fields": 65
+    },
+    "jquery-cookbook-cody-lindley": {
+      "fields": 121
+    },
+    "kitchen-mysteries-revealing-the-science-of-cooking": {
+      "fields": 85
+    },
+    "kneadlessly-simple-fabulous-fuss-free-no-knead-bre": {
+      "fields": 174
+    },
+    "life-ahead-on-learning-and-the-search-for-meaning-": {
+      "fields": 51
+    },
+    "linchpin-are-you-indispensable-seth-godin": {
+      "fields": 79
+    },
+    "man-from-the-south-and-other-stories-roald-dahl": {
+      "fields": 95
+    },
+    "marxism-routledge-revivals-thomas-sowell": {
+      "fields": 188
+    },
+    "mental-floss-presents-instant-knowledge-will-pears": {
+      "fields": 133
+    },
+    "metaphysics-aristotle": {
+      "fields": 84
+    },
+    "microeconomics-4th-edition-david-besanko": {
+      "fields": 81
+    },
+    "microreactors-in-organic-chemistry-and-catalysis-w": {
+      "fields": 193
+    },
+    "money-mischief-milton-friedman": {
+      "fields": 167
+    },
+    "network-warrior-gary-a-donahue": {
+      "fields": 168
+    },
+    "niubi-the-real-chinese-you-were-never-taught-in-sc": {
+      "fields": 187
+    },
+    "no-logo-naomi-klein": {
+      "fields": 168
+    },
+    "notebooks-leonardo-da-vinci-irma-anne-richter-ther": {
+      "fields": 278
+    },
+    "numbers-rule-your-world-the-hidden-influence-of-pr": {
+      "fields": 127
+    },
+    "paper-money-collapse-detlev-s-schlichter": {
+      "fields": 167
+    },
+    "phenomenology-of-spirit-g-w-f-hegel": {
+      "fields": 159
+    },
+    "postmodernism-or-the-cultural-logic-of-late-capita": {
+      "fields": 152
+    },
+    "prescription-alternatives-hundreds-of-safe-natural": {
+      "fields": 180
+    },
+    "principal-writings-on-religion-david-hume": {
+      "fields": 167
+    },
+    "quantum-theory-cannot-hurt-you-marcus-chown": {
+      "fields": 167
+    },
+    "raspberry-pi-projects-for-the-evil-genius-donald-n": {
+      "fields": 251
+    },
+    "red-capitalism-carl-e-walter": {
+      "fields": 168
+    },
+    "resurrecting-pompeii-estelle-lazer": {
+      "fields": 168
+    },
+    "rights-of-man-thomas-paine-mark-philp": {
+      "fields": 169
+    },
+    "schaum-s-outline-of-latin-grammar-alan-fishbone": {
+      "fields": 146
+    },
+    "school-choice-or-best-systems-what-improves-educat": {
+      "fields": 228
+    },
+    "seven-habits-of-highly-effective-people-stephen-r": {
+      "fields": 167
+    },
+    "smuggler-nation-how-illicit-trade-made-america-and": {
+      "fields": 321
+    },
+    "social-engineering-the-art-of-human-hacking-christ": {
+      "fields": 145
+    },
+    "strange-case-of-dr-jekyll-and-mr-hyde-and-other-ta": {
+      "fields": 168
+    },
+    "tcp-ip-illustrated-volume-1-the-protocols-w-richar": {
+      "fields": 167
+    },
+    "the-accidental-tourist-anne-tyler-jennifer-bassett": {
+      "fields": 250
+    },
+    "the-american-civil-war-and-the-wars-of-the-industr": {
+      "fields": 168
+    },
+    "the-civil-war-for-dummies-keith-d-dickson": {
+      "fields": 167
+    },
+    "the-complete-social-media-community-manager-s-guid": {
+      "fields": 321
+    },
+    "the-day-the-universe-changed-james-burke": {
+      "fields": 168
+    },
+    "the-demon-haunted-world-science-as-a-candle-in-the": {
+      "fields": 169
+    },
+    "the-elegant-universe-brian-greene": {
+      "fields": 167
+    },
+    "the-endurance-shackleton-s-legendary-antarctic-exp": {
+      "fields": 114
+    },
+    "the-federalist-papers-alexander-hamilton-james-mad": {
+      "fields": 65
+    },
+    "the-forgotten-presidents-their-untold-constitution": {
+      "fields": 228
+    },
+    "the-four-pillars-of-investing-lessons-for-building": {
+      "fields": 65
+    },
+    "the-god-delusion-richard-dawkins": {
+      "fields": 87
+    },
+    "the-history-of-the-decline-and-fall-of-the-roman-e": {
+      "fields": 84
+    },
+    "the-indian-ocean-michael-pearson": {
+      "fields": 203
+    },
+    "the-interpretation-of-dreams-sigmund-freud": {
+      "fields": 82
+    },
+    "the-lean-entrepreneur-brant-cooper": {
+      "fields": 88
+    },
+    "the-little-book-of-economics-how-the-economy-works": {
+      "fields": 56
+    },
+    "the-marne-1914-holger-h-herwig": {
+      "fields": 87
+    },
+    "the-omnivore-s-dilemma-michael-pollan": {
+      "fields": 85
+    },
+    "the-origin-of-species-charles-darwin": {
+      "fields": 89
+    },
+    "the-original-curse-did-the-cubs-throw-the-1918-wor": {
+      "fields": 203
+    },
+    "the-oxford-dictionary-of-modern-quotations-tony-au": {
+      "fields": 161
+    },
+    "the-pleasure-instinct-why-we-crave-adventure-choco": {
+      "fields": 157
+    },
+    "the-prince-niccol-machiavelli-peter-e-bondanella": {
+      "fields": 65
+    },
+    "the-selfish-gene-richard-dawkins": {
+      "fields": 77
+    },
+    "the-unlikely-disciple-a-sinner-s-semester-at-ameri": {
+      "fields": 206
+    },
+    "the-woman-in-white-wilkie-collins-john-sutherland": {
+      "fields": 158
+    },
+    "treasure-island-robert-louis-stevenson": {
+      "fields": 153
+    },
+    "visions-of-awakening-space-and-time-dogen-and-the-": {
+      "fields": 242
+    },
+    "wisdom-as-a-practice-margolis-karen-sloterdijk-pet": {
+      "fields": 94
+    },
+    "ethics-of-technology-101": {
+      "fields": 123
+    },
+    "ethics-of-technology-201": {
+      "fields": 123
+    },
+    "ethics-of-technology-301": {
+      "fields": 123
+    },
+    "ethics-of-technology-401": {
+      "fields": 123
+    },
+    "ethics-of-technology-501": {
+      "fields": 153
+    },
+    "ethics-of-technology-601": {
+      "fields": 153
+    },
+    "farming-101": {
+      "fields": 229
+    },
+    "farming-201": {
+      "fields": 228
+    },
+    "farming-301": {
+      "fields": 228
+    },
+    "farming-401": {
+      "fields": 97
+    },
+    "farming-501": {
+      "fields": 153
+    },
+    "farming-601": {
+      "fields": 153
+    },
+    "financial-literacy-101": {
+      "fields": 81
+    },
+    "financial-literacy-201": {
+      "fields": 228
+    },
+    "financial-literacy-301": {
+      "fields": 228
+    },
+    "financial-literacy-401": {
+      "fields": 228
+    },
+    "financial-literacy-501": {
+      "fields": 153
+    },
+    "financial-literacy-601": {
+      "fields": 153
+    },
+    "gaokao-prep-101": {
+      "fields": 289
+    },
+    "gardening-101": {
+      "fields": 58
+    },
+    "gardening-201": {
+      "fields": 95
+    },
+    "gardening-301": {
+      "fields": 95
+    },
+    "gardening-401": {
+      "fields": 95
+    },
+    "gardening-501": {
+      "fields": 153
+    },
+    "gardening-601": {
+      "fields": 153
+    },
+    "gcse-prep-101": {
+      "fields": 293
+    },
+    "gen-science-1112-u1-external": {
+      "fields": 196
+    },
+    "gen-science-35-u1-external": {
+      "fields": 197
+    },
+    "gen-science-68-u1-external": {
+      "fields": 197
+    },
+    "gen-science-910-u1-external": {
+      "fields": 236
+    },
+    "gen-science-k2-u1-external": {
+      "fields": 235
+    },
+    "gen-science-prek-u1-external": {
+      "fields": 324
+    },
+    "general-relativity-101": {
+      "fields": 281
+    },
+    "general-relativity-201": {
+      "fields": 281
+    },
+    "general-relativity-301": {
+      "fields": 281
+    },
+    "general-relativity-401": {
+      "fields": 130
+    },
+    "general-relativity-501": {
+      "fields": 153
+    },
+    "general-relativity-601": {
+      "fields": 153
+    },
+    "general-science-101": {
+      "fields": 233
+    },
+    "general-science-201": {
+      "fields": 228
+    },
+    "general-science-301": {
+      "fields": 228
+    },
+    "general-science-401": {
+      "fields": 233
+    },
+    "general-science-501": {
+      "fields": 153
+    },
+    "general-science-601": {
+      "fields": 153
+    },
+    "geography-101": {
+      "fields": 171
+    },
+    "geography-201": {
+      "fields": 228
+    },
+    "geography-301": {
+      "fields": 233
+    },
+    "geography-401": {
+      "fields": 273
+    },
+    "geography-501": {
+      "fields": 189
+    },
+    "geography-601": {
+      "fields": 181
+    },
+    "geoscience-101": {
+      "fields": 121
+    },
+    "geoscience-201": {
+      "fields": 121
+    },
+    "geoscience-301": {
+      "fields": 121
+    },
+    "geoscience-401": {
+      "fields": 121
+    },
+    "geoscience-501": {
+      "fields": 163
+    },
+    "geoscience-601": {
+      "fields": 163
+    },
+    "household-management-101": {
+      "fields": 228
+    },
+    "household-management-201": {
+      "fields": 228
+    },
+    "household-management-301": {
+      "fields": 228
+    },
+    "household-management-401": {
+      "fields": 96
+    },
+    "household-management-501": {
+      "fields": 153
+    },
+    "household-management-601": {
+      "fields": 153
+    },
+    "human-resource-management-101": {
+      "fields": 69
+    },
+    "human-resource-management-201": {
+      "fields": 68
+    },
+    "human-resource-management-301": {
+      "fields": 68
+    },
+    "human-resource-management-401": {
+      "fields": 68
+    },
+    "human-resource-management-501": {
+      "fields": 185
+    },
+    "human-resource-management-601": {
+      "fields": 188
+    },
+    "hvac-101": {
+      "fields": 274
+    },
+    "hvac-201": {
+      "fields": 107
+    },
+    "hvac-301": {
+      "fields": 107
+    },
+    "hvac-401": {
+      "fields": 107
+    },
+    "hvac-501": {
+      "fields": 189
+    },
+    "hvac-601": {
+      "fields": 174
+    },
+    "ib-prep-101": {
+      "fields": 291
+    },
+    "ielts-prep-101": {
+      "fields": 289
+    },
+    "international-business-101": {
+      "fields": 66
+    },
+    "international-business-201": {
+      "fields": 69
+    },
+    "international-business-301": {
+      "fields": 67
+    },
+    "international-business-401": {
+      "fields": 80
+    },
+    "international-business-501": {
+      "fields": 189
+    },
+    "international-business-601": {
+      "fields": 182
+    },
+    "international-relations-101": {
+      "fields": 124
+    },
+    "international-relations-201": {
+      "fields": 124
+    },
+    "international-relations-301": {
+      "fields": 124
+    },
+    "international-relations-401": {
+      "fields": 124
+    },
+    "international-relations-501": {
+      "fields": 161
+    },
+    "international-relations-601": {
+      "fields": 161
+    },
+    "jee-neet-prep-101": {
+      "fields": 289
+    },
+    "lang-arts-1112-u1-external": {
+      "fields": 196
+    },
+    "lang-arts-35-u1-external": {
+      "fields": 198
+    },
+    "lang-arts-68-u1-external": {
+      "fields": 196
+    },
+    "lang-arts-910-u1-external": {
+      "fields": 197
+    },
+    "lang-arts-k2-u1-external": {
+      "fields": 198
+    },
+    "lang-arts-prek-u1-external": {
+      "fields": 202
+    },
+    "language-arts-101": {
+      "fields": 178
+    },
+    "language-arts-201": {
+      "fields": 157
+    },
+    "language-arts-301": {
+      "fields": 228
+    },
+    "language-arts-401": {
+      "fields": 228
+    },
+    "language-arts-501": {
+      "fields": 153
+    },
+    "language-arts-601": {
+      "fields": 153
+    },
+    "law-case-law-holdings-u1-external": {
+      "fields": 6246
+    },
+    "law-international-law-u1-external": {
+      "fields": 566
+    },
+    "law-jurisprudence-u1-external": {
+      "fields": 490
+    },
+    "law-professional-law-u1-external": {
+      "fields": 6054
+    },
+    "law-studies-101": {
+      "fields": 119
+    },
+    "law-studies-201": {
+      "fields": 91
+    },
+    "law-studies-301": {
+      "fields": 91
+    },
+    "law-studies-401": {
+      "fields": 91
+    },
+    "law-studies-501": {
+      "fields": 153
+    },
+    "law-studies-601": {
+      "fields": 153
+    },
+    "leadership-101": {
+      "fields": 72
+    },
+    "leadership-201": {
+      "fields": 69
+    },
+    "leadership-301": {
+      "fields": 66
+    },
+    "leadership-401": {
+      "fields": 67
+    },
+    "leadership-501": {
+      "fields": 169
+    },
+    "leadership-601": {
+      "fields": 170
+    },
+    "linux-101": {
+      "fields": 148
+    },
+    "linux-201": {
+      "fields": 90
+    },
+    "linux-301": {
+      "fields": 90
+    },
+    "linux-401": {
+      "fields": 100
+    },
+    "linux-501": {
+      "fields": 153
+    },
+    "linux-601": {
+      "fields": 153
+    },
+    "macos-101": {
+      "fields": 56
+    },
+    "macos-201": {
+      "fields": 90
+    },
+    "macos-301": {
+      "fields": 88
+    },
+    "macos-401": {
+      "fields": 100
+    },
+    "macos-501": {
+      "fields": 182
+    },
+    "macos-601": {
+      "fields": 184
+    },
+    "marketing-management-101": {
+      "fields": 152
+    },
+    "marketing-management-201": {
+      "fields": 146
+    },
+    "marketing-management-301": {
+      "fields": 137
+    },
+    "marketing-management-401": {
+      "fields": 125
+    },
+    "marketing-management-501": {
+      "fields": 189
+    },
+    "marketing-management-601": {
+      "fields": 189
+    },
+    "masters-abstract-algebra-u1-external": {
+      "fields": 573
+    },
+    "masters-anatomy-u1-external": {
+      "fields": 765
+    },
+    "masters-astronomy-u1-external": {
+      "fields": 824
+    },
+    "masters-biology-advanced-u1-external": {
+      "fields": 4551
+    },
+    "masters-biology-mmlu-u1-external": {
+      "fields": 1738
+    },
+    "masters-chemistry-advanced-u1-external": {
+      "fields": 10437
+    },
+    "masters-chemistry-mmlu-u1-external": {
+      "fields": 1120
+    },
+    "masters-clinical-knowledge-u1-external": {
+      "fields": 1470
+    },
+    "masters-college-biology-u1-external": {
+      "fields": 821
+    },
+    "masters-college-chemistry-u1-external": {
+      "fields": 548
+    },
+    "masters-college-computer-science-u1-external": {
+      "fields": 573
+    },
+    "masters-college-mathematics-u1-external": {
+      "fields": 568
+    },
+    "masters-college-medicine-u1-external": {
+      "fields": 548
+    },
+    "masters-college-physics-u1-external": {
+      "fields": 461
+    },
+    "masters-computer-security-u1-external": {
+      "fields": 573
+    },
+    "masters-conceptual-physics-u1-external": {
+      "fields": 1308
+    },
+    "masters-cs-advanced-u1-external": {
+      "fields": 1499
+    },
+    "masters-cs-intro-u1-external": {
+      "fields": 558
+    },
+    "masters-econometrics-u1-external": {
+      "fields": 647
+    },
+    "masters-european-history-u1-external": {
+      "fields": 743
+    },
+    "masters-formal-logic-u1-external": {
+      "fields": 573
+    },
+    "masters-general-knowledge-u1-external": {
+      "fields": 3528
+    },
+    "masters-geography-mmlu-u1-external": {
+      "fields": 903
+    },
+    "masters-global-facts-u1-external": {
+      "fields": 456
+    },
+    "masters-government-politics-u1-external": {
+      "fields": 915
+    },
+    "masters-human-aging-u1-external": {
+      "fields": 1257
+    },
+    "masters-human-sexuality-u1-external": {
+      "fields": 735
+    },
+    "masters-logical-fallacies-u1-external": {
+      "fields": 922
+    },
+    "masters-machine-learning-u1-external": {
+      "fields": 624
+    },
+    "masters-math-advanced-u1-external": {
+      "fields": 8082
+    },
+    "masters-mathematics-mmlu-u1-external": {
+      "fields": 1196
+    },
+    "masters-medical-genetics-mmlu-u1-external": {
+      "fields": 460
+    },
+    "masters-moral-disputes-u1-external": {
+      "fields": 1606
+    },
+    "masters-moral-scenarios-u1-external": {
+      "fields": 4055
+    },
+    "masters-nutrition-mmlu-u1-external": {
+      "fields": 1608
+    },
+    "masters-philosophy-mmlu-u1-external": {
+      "fields": 1758
+    },
+    "masters-physics-advanced-u1-external": {
+      "fields": 9806
+    },
+    "masters-physics-mmlu-u1-external": {
+      "fields": 852
+    },
+    "masters-prehistory-u1-external": {
+      "fields": 1824
+    },
+    "masters-professional-medicine-u1-external": {
+      "fields": 1546
+    },
+    "masters-professional-psychology-u1-external": {
+      "fields": 2744
+    },
+    "masters-psychology-advanced-u1-external": {
+      "fields": 2878
+    },
+    "masters-psychology-mmlu-u1-external": {
+      "fields": 2457
+    },
+    "masters-public-relations-u1-external": {
+      "fields": 488
+    },
+    "masters-security-studies-u1-external": {
+      "fields": 702
+    },
+    "masters-sociology-u1-external": {
+      "fields": 911
+    },
+    "masters-statistics-mmlu-u1-external": {
+      "fields": 958
+    },
+    "masters-us-foreign-policy-u1-external": {
+      "fields": 492
+    },
+    "masters-us-history-u1-external": {
+      "fields": 1050
+    },
+    "masters-virology-u1-external": {
+      "fields": 943
+    },
+    "masters-world-history-mmlu-u1-external": {
+      "fields": 1343
+    },
+    "masters-world-religions-u1-external": {
+      "fields": 844
+    },
+    "math-101": {
+      "fields": 146
+    },
+    "math-201": {
+      "fields": 88
+    },
+    "math-301": {
+      "fields": 89
+    },
+    "math-401": {
+      "fields": 94
+    },
+    "math-501": {
+      "fields": 153
+    },
+    "math-601": {
+      "fields": 153
+    },
+    "mba-business-advanced-u1-external": {
+      "fields": 6246
+    },
+    "mba-business-case-studies-u1-external": {
+      "fields": 608
+    },
+    "mba-business-ethics-u1-external": {
+      "fields": 460
+    },
+    "mba-economics-advanced-u1-external": {
+      "fields": 3652
+    },
+    "mba-macroeconomics-u1-external": {
+      "fields": 1742
+    },
+    "mba-management-u1-external": {
+      "fields": 467
+    },
+    "mba-marketing-u1-external": {
+      "fields": 1058
+    },
+    "mba-microeconomics-u1-external": {
+      "fields": 1049
+    },
+    "mba-professional-accounting-u1-external": {
+      "fields": 1275
+    },
+    "media-literacy-101": {
+      "fields": 151
+    },
+    "media-literacy-201": {
+      "fields": 151
+    },
+    "media-literacy-301": {
+      "fields": 149
+    },
+    "media-literacy-401": {
+      "fields": 149
+    },
+    "media-literacy-501": {
+      "fields": 157
+    },
+    "media-literacy-601": {
+      "fields": 157
+    },
+    "medicine-101": {
+      "fields": 148
+    },
+    "medicine-201": {
+      "fields": 91
+    },
+    "medicine-301": {
+      "fields": 91
+    },
+    "medicine-401": {
+      "fields": 91
+    },
+    "medicine-501": {
+      "fields": 153
+    },
+    "medicine-601": {
+      "fields": 153
+    },
+    "medicine-anatomy-physiology-u1-external": {
+      "fields": 7252
+    },
+    "medicine-anesthesia-u1-external": {
+      "fields": 7400
+    },
+    "medicine-biochemistry-u1-external": {
+      "fields": 6964
+    },
+    "medicine-cardiology-u1-external": {
+      "fields": 109
+    },
+    "medicine-dental-u1-external": {
+      "fields": 6361
+    },
+    "medicine-dermatology-u1-external": {
+      "fields": 7454
+    },
+    "medicine-ent-u1-external": {
+      "fields": 6987
+    },
+    "medicine-forensic-medicine-u1-external": {
+      "fields": 7680
+    },
+    "medicine-general-medical-u1-external": {
+      "fields": 6676
+    },
+    "medicine-geriatric-medicine-u1-external": {
+      "fields": 65
+    },
+    "medicine-internal-medicine-u1-external": {
+      "fields": 7077
+    },
+    "medicine-medical-genetics-u1-external": {
+      "fields": 3112
+    },
+    "medicine-microbiology-u1-external": {
+      "fields": 8408
+    },
+    "medicine-neurology-u1-external": {
+      "fields": 476
+    },
+    "medicine-nursing-u1-external": {
+      "fields": 14
+    },
+    "medicine-nutrition-u1-external": {
+      "fields": 14
+    },
+    "medicine-ob-gyn-u1-external": {
+      "fields": 7557
+    },
+    "medicine-oncology-u1-external": {
+      "fields": 119
+    },
+    "medicine-ophthalmology-u1-external": {
+      "fields": 7056
+    },
+    "medicine-orthopedics-u1-external": {
+      "fields": 7888
+    },
+    "medicine-pathology-u1-external": {
+      "fields": 6965
+    },
+    "medicine-pediatrics-u1-external": {
+      "fields": 7991
+    },
+    "medicine-pharmacology-u1-external": {
+      "fields": 7267
+    },
+    "medicine-preventive-medicine-u1-external": {
+      "fields": 6871
+    },
+    "medicine-psychiatry-u1-external": {
+      "fields": 8023
+    },
+    "medicine-public-health-u1-external": {
+      "fields": 12
+    },
+    "medicine-radiology-u1-external": {
+      "fields": 6709
+    },
+    "medicine-rare-diseases-u1-external": {
+      "fields": 120
+    },
+    "medicine-surgery-u1-external": {
+      "fields": 6947
+    },
+    "medicine-usmle-prep-u1-external": {
+      "fields": 6104
+    },
+    "mental-health-literacy-101": {
+      "fields": 121
+    },
+    "mental-health-literacy-201": {
+      "fields": 130
+    },
+    "mental-health-literacy-301": {
+      "fields": 139
+    },
+    "mental-health-literacy-401": {
+      "fields": 136
+    },
+    "mental-health-literacy-501": {
+      "fields": 159
+    },
+    "mental-health-literacy-601": {
+      "fields": 159
+    },
+    "meteorology-101": {
+      "fields": 150
+    },
+    "meteorology-201": {
+      "fields": 91
+    },
+    "meteorology-301": {
+      "fields": 91
+    },
+    "meteorology-401": {
+      "fields": 91
+    },
+    "meteorology-501": {
+      "fields": 153
+    },
+    "meteorology-601": {
+      "fields": 153
+    },
+    "micro-circuits-101": {
+      "fields": 150
+    },
+    "micro-circuits-201": {
+      "fields": 91
+    },
+    "micro-circuits-301": {
+      "fields": 91
+    },
+    "micro-circuits-401": {
+      "fields": 95
+    },
+    "micro-circuits-501": {
+      "fields": 153
+    },
+    "micro-circuits-601": {
+      "fields": 153
+    },
+    "microelectronics-101": {
+      "fields": 189
+    },
+    "microelectronics-201": {
+      "fields": 91
+    },
+    "microelectronics-301": {
+      "fields": 91
+    },
+    "microelectronics-401": {
+      "fields": 91
+    },
+    "microelectronics-501": {
+      "fields": 153
+    },
+    "microelectronics-601": {
+      "fields": 153
+    },
+    "music-history-101": {
+      "fields": 214
+    },
+    "music-history-201": {
+      "fields": 94
+    },
+    "music-history-301": {
+      "fields": 94
+    },
+    "music-history-401": {
+      "fields": 94
+    },
+    "music-history-501": {
+      "fields": 153
+    },
+    "music-history-601": {
+      "fields": 153
+    },
+    "music-production-101": {
+      "fields": 219
+    },
+    "music-production-201": {
+      "fields": 95
+    },
+    "music-production-301": {
+      "fields": 95
+    },
+    "music-production-401": {
+      "fields": 95
+    },
+    "music-production-501": {
+      "fields": 153
+    },
+    "music-production-601": {
+      "fields": 153
+    },
+    "music-theory-101": {
+      "fields": 215
+    },
+    "music-theory-201": {
+      "fields": 384
+    },
+    "music-theory-301": {
+      "fields": 380
+    },
+    "music-theory-401": {
+      "fields": 372
+    },
+    "music-theory-501": {
+      "fields": 159
+    },
+    "music-theory-601": {
+      "fields": 162
+    },
+    "negotiation-conflict-resolution-101": {
+      "fields": 155
+    },
+    "negotiation-conflict-resolution-201": {
+      "fields": 155
+    },
+    "negotiation-conflict-resolution-301": {
+      "fields": 155
+    },
+    "negotiation-conflict-resolution-401": {
+      "fields": 155
+    },
+    "negotiation-conflict-resolution-501": {
+      "fields": 176
+    },
+    "negotiation-conflict-resolution-601": {
+      "fields": 186
+    },
+    "network-engineering-101": {
+      "fields": 230
+    },
+    "network-engineering-201": {
+      "fields": 95
+    },
+    "network-engineering-301": {
+      "fields": 81
+    },
+    "network-engineering-401": {
+      "fields": 92
+    },
+    "network-engineering-501": {
+      "fields": 153
+    },
+    "network-engineering-601": {
+      "fields": 153
+    },
+    "neuroscience-101": {
+      "fields": 152
+    },
+    "neuroscience-201": {
+      "fields": 152
+    },
+    "neuroscience-301": {
+      "fields": 150
+    },
+    "neuroscience-401": {
+      "fields": 150
+    },
+    "neuroscience-501": {
+      "fields": 157
+    },
+    "neuroscience-601": {
+      "fields": 157
+    },
+    "nursing-101": {
+      "fields": 137
+    },
+    "nursing-201": {
+      "fields": 107
+    },
+    "nursing-301": {
+      "fields": 107
+    },
+    "nursing-401": {
+      "fields": 107
+    },
+    "nursing-501": {
+      "fields": 176
+    },
+    "nursing-601": {
+      "fields": 176
+    },
+    "nutrition-science-101": {
+      "fields": 153
+    },
+    "nutrition-science-201": {
+      "fields": 135
+    },
+    "nutrition-science-301": {
+      "fields": 138
+    },
+    "nutrition-science-401": {
+      "fields": 138
+    },
+    "nutrition-science-501": {
+      "fields": 159
+    },
+    "nutrition-science-601": {
+      "fields": 159
+    },
+    "oceanography-101": {
+      "fields": 124
+    },
+    "oceanography-201": {
+      "fields": 124
+    },
+    "oceanography-301": {
+      "fields": 124
+    },
+    "oceanography-401": {
+      "fields": 124
+    },
+    "oceanography-501": {
+      "fields": 161
+    },
+    "oceanography-601": {
+      "fields": 161
+    },
+    "operations-management-101": {
+      "fields": 69
+    },
+    "operations-management-201": {
+      "fields": 68
+    },
+    "operations-management-301": {
+      "fields": 66
+    },
+    "operations-management-401": {
+      "fields": 66
+    },
+    "operations-management-501": {
+      "fields": 169
+    },
+    "operations-management-601": {
+      "fields": 169
+    },
+    "organizational-behavior-101": {
+      "fields": 68
+    },
+    "organizational-behavior-201": {
+      "fields": 69
+    },
+    "organizational-behavior-301": {
+      "fields": 66
+    },
+    "organizational-behavior-401": {
+      "fields": 66
+    },
+    "organizational-behavior-501": {
+      "fields": 169
+    },
+    "organizational-behavior-601": {
+      "fields": 169
+    },
+    "philosophy-101": {
+      "fields": 102
+    },
+    "philosophy-201": {
+      "fields": 95
+    },
+    "philosophy-301": {
+      "fields": 95
+    },
+    "philosophy-401": {
+      "fields": 95
+    },
+    "philosophy-501": {
+      "fields": 166
+    },
+    "philosophy-601": {
+      "fields": 166
+    },
+    "physics-101": {
+      "fields": 202
+    },
+    "physics-201": {
+      "fields": 228
+    },
+    "physics-301": {
+      "fields": 228
+    },
+    "physics-401": {
+      "fields": 233
+    },
+    "physics-501": {
+      "fields": 153
+    },
+    "physics-601": {
+      "fields": 153
+    },
+    "plumbing-101": {
+      "fields": 148
+    },
+    "plumbing-201": {
+      "fields": 91
+    },
+    "plumbing-301": {
+      "fields": 91
+    },
+    "plumbing-401": {
+      "fields": 91
+    },
+    "plumbing-501": {
+      "fields": 153
+    },
+    "plumbing-601": {
+      "fields": 153
+    },
+    "pre-k-advanced-math-101": {
+      "fields": 86
+    },
+    "pre-k-arts-101": {
+      "fields": 94
+    },
+    "pre-k-astronomy-101": {
+      "fields": 122
+    },
+    "pre-k-basic-math-101": {
+      "fields": 93
+    },
+    "pre-k-biology-101": {
+      "fields": 201
+    },
+    "pre-k-chemistry-101": {
+      "fields": 114
+    },
+    "pre-k-coding-101": {
+      "fields": 118
+    },
+    "pre-k-farming-101": {
+      "fields": 85
+    },
+    "pre-k-financial-literacy-101": {
+      "fields": 86
+    },
+    "pre-k-general-relativity-101": {
+      "fields": 86
+    },
+    "pre-k-general-science-101": {
+      "fields": 177
+    },
+    "pre-k-geography-101": {
+      "fields": 153
+    },
+    "pre-k-household-management-101": {
+      "fields": 85
+    },
+    "pre-k-language-arts-101": {
+      "fields": 90
+    },
+    "pre-k-physics-101": {
+      "fields": 114
+    },
+    "pre-k-social-studies-us-101": {
+      "fields": 85
+    },
+    "pre-k-social-studies-world-101": {
+      "fields": 86
+    },
+    "pre-k-world-history-101": {
+      "fields": 85
+    },
+    "project-management-101": {
+      "fields": 137
+    },
+    "project-management-201": {
+      "fields": 91
+    },
+    "project-management-301": {
+      "fields": 91
+    },
+    "project-management-401": {
+      "fields": 91
+    },
+    "project-management-501": {
+      "fields": 153
+    },
+    "project-management-601": {
+      "fields": 153
+    },
+    "psychology-101": {
+      "fields": 131
+    },
+    "psychology-201": {
+      "fields": 94
+    },
+    "psychology-301": {
+      "fields": 94
+    },
+    "psychology-401": {
+      "fields": 94
+    },
+    "psychology-501": {
+      "fields": 153
+    },
+    "psychology-601": {
+      "fields": 153
+    },
+    "public-health-101": {
+      "fields": 152
+    },
+    "public-health-201": {
+      "fields": 153
+    },
+    "public-health-301": {
+      "fields": 153
+    },
+    "public-health-401": {
+      "fields": 153
+    },
+    "public-health-501": {
+      "fields": 179
+    },
+    "public-health-601": {
+      "fields": 179
+    },
+    "quantum-computing-101": {
+      "fields": 143
+    },
+    "quantum-computing-201": {
+      "fields": 143
+    },
+    "quantum-computing-301": {
+      "fields": 143
+    },
+    "quantum-computing-401": {
+      "fields": 143
+    },
+    "quantum-computing-501": {
+      "fields": 172
+    },
+    "quantum-computing-601": {
+      "fields": 172
+    },
+    "reading-101": {
+      "fields": 99
+    },
+    "reading-201": {
+      "fields": 87
+    },
+    "reading-301": {
+      "fields": 90
+    },
+    "reading-401": {
+      "fields": 92
+    },
+    "reading-501": {
+      "fields": 153
+    },
+    "reading-601": {
+      "fields": 153
+    },
+    "renewable-energy-systems-101": {
+      "fields": 111
+    },
+    "renewable-energy-systems-201": {
+      "fields": 91
+    },
+    "renewable-energy-systems-301": {
+      "fields": 91
+    },
+    "renewable-energy-systems-401": {
+      "fields": 91
+    },
+    "renewable-energy-systems-501": {
+      "fields": 153
+    },
+    "renewable-energy-systems-601": {
+      "fields": 153
+    },
+    "robotics-101": {
+      "fields": 145
+    },
+    "robotics-201": {
+      "fields": 91
+    },
+    "robotics-301": {
+      "fields": 91
+    },
+    "robotics-401": {
+      "fields": 91
+    },
+    "robotics-501": {
+      "fields": 153
+    },
+    "robotics-601": {
+      "fields": 153
+    },
+    "sat-prep-101": {
+      "fields": 76
+    },
+    "science-101": {
+      "fields": 134
+    },
+    "science-201": {
+      "fields": 91
+    },
+    "science-301": {
+      "fields": 89
+    },
+    "science-401": {
+      "fields": 93
+    },
+    "science-501": {
+      "fields": 153
+    },
+    "science-601": {
+      "fields": 153
+    },
+    "social-studies-us-101": {
+      "fields": 159
+    },
+    "social-studies-us-201": {
+      "fields": 229
+    },
+    "social-studies-us-301": {
+      "fields": 228
+    },
+    "social-studies-us-401": {
+      "fields": 228
+    },
+    "social-studies-us-501": {
+      "fields": 153
+    },
+    "social-studies-us-601": {
+      "fields": 153
+    },
+    "social-studies-world-101": {
+      "fields": 229
+    },
+    "social-studies-world-201": {
+      "fields": 228
+    },
+    "social-studies-world-301": {
+      "fields": 228
+    },
+    "social-studies-world-401": {
+      "fields": 228
+    },
+    "social-studies-world-501": {
+      "fields": 153
+    },
+    "social-studies-world-601": {
+      "fields": 153
+    },
+    "space-missions-engineering-101": {
+      "fields": 125
+    },
+    "space-missions-engineering-201": {
+      "fields": 125
+    },
+    "space-missions-engineering-301": {
+      "fields": 125
+    },
+    "space-missions-engineering-401": {
+      "fields": 125
+    },
+    "space-missions-engineering-501": {
+      "fields": 153
+    },
+    "space-missions-engineering-601": {
+      "fields": 153
+    },
+    "sports-science-101": {
+      "fields": 142
+    },
+    "sports-science-201": {
+      "fields": 143
+    },
+    "sports-science-301": {
+      "fields": 143
+    },
+    "sports-science-401": {
+      "fields": 143
+    },
+    "sports-science-501": {
+      "fields": 179
+    },
+    "sports-science-601": {
+      "fields": 179
+    },
+    "strategic-management-101": {
+      "fields": 77
+    },
+    "strategic-management-201": {
+      "fields": 63
+    },
+    "strategic-management-301": {
+      "fields": 67
+    },
+    "strategic-management-401": {
+      "fields": 65
+    },
+    "strategic-management-501": {
+      "fields": 169
+    },
+    "strategic-management-601": {
+      "fields": 169
+    },
+    "supply-chain-management-101": {
+      "fields": 68
+    },
+    "supply-chain-management-201": {
+      "fields": 67
+    },
+    "supply-chain-management-301": {
+      "fields": 68
+    },
+    "supply-chain-management-401": {
+      "fields": 68
+    },
+    "supply-chain-management-501": {
+      "fields": 169
+    },
+    "supply-chain-management-601": {
+      "fields": 169
+    },
+    "sustainability-policy-101": {
+      "fields": 136
+    },
+    "sustainability-policy-201": {
+      "fields": 136
+    },
+    "sustainability-policy-301": {
+      "fields": 136
+    },
+    "sustainability-policy-401": {
+      "fields": 136
+    },
+    "sustainability-policy-501": {
+      "fields": 157
+    },
+    "sustainability-policy-601": {
+      "fields": 157
+    },
+    "toefl-prep-101": {
+      "fields": 289
+    },
+    "us-civics-101": {
+      "fields": 94
+    },
+    "us-civics-201": {
+      "fields": 156
+    },
+    "us-civics-301": {
+      "fields": 94
+    },
+    "us-civics-401": {
+      "fields": 94
+    },
+    "us-civics-501": {
+      "fields": 157
+    },
+    "us-civics-601": {
+      "fields": 157
+    },
+    "ux-design-101": {
+      "fields": 142
+    },
+    "ux-design-201": {
+      "fields": 95
+    },
+    "ux-design-301": {
+      "fields": 95
+    },
+    "ux-design-401": {
+      "fields": 95
+    },
+    "ux-design-501": {
+      "fields": 184
+    },
+    "ux-design-601": {
+      "fields": 184
+    },
+    "windows-101": {
+      "fields": 150
+    },
+    "windows-201": {
+      "fields": 96
+    },
+    "windows-301": {
+      "fields": 123
+    },
+    "windows-401": {
+      "fields": 101
+    },
+    "windows-501": {
+      "fields": 153
+    },
+    "windows-601": {
+      "fields": 153
+    },
+    "world-history-101": {
+      "fields": 168
+    },
+    "world-history-201": {
+      "fields": 228
+    },
+    "world-history-301": {
+      "fields": 228
+    },
+    "world-history-401": {
+      "fields": 228
+    },
+    "world-history-501": {
+      "fields": 153
+    },
+    "world-history-601": {
+      "fields": 153
+    }
+  }
+}

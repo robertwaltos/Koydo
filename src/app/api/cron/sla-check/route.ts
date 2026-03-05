@@ -42,7 +42,7 @@ export async function GET(request: Request) {
         .update({ sla_breached_at: now })
         .in("id", ids);
 
-      await createAdminAlert(admin, {
+      await createAdminAlert({
         severity: "critical",
         category: "support_sla_breach",
         message: `${breached.length} support ticket(s) have breached their first-response SLA.`,
@@ -61,7 +61,7 @@ export async function GET(request: Request) {
       .lt("created_at", reportStaleCutoff);
 
     if (staleReportCount && staleReportCount > 0) {
-      await createAdminAlert(admin, {
+      await createAdminAlert({
         severity: "warning",
         category: "report_queue_stale",
         message: `${staleReportCount} report job(s) have been pending for more than 6 hours.`,

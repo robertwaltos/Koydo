@@ -11,6 +11,11 @@ const requestSchema = z.object({
   isAdmin: z.boolean().optional(),
   isOwner: z.boolean().optional(),
   isParent: z.boolean().optional(),
+  isTeacher: z.boolean().optional(),
+  isSchool: z.boolean().optional(),
+  isPartner: z.boolean().optional(),
+  isInvestor: z.boolean().optional(),
+  isSupport: z.boolean().optional(),
   dataMode: z.enum(["live", "beta"]).optional(),
   confirmText: z.literal("UPDATE_ROLES"),
 });
@@ -56,6 +61,21 @@ export async function POST(request: Request) {
   }
   if (typeof parsed.data.isParent === "boolean") {
     updatePayload.is_parent = parsed.data.isParent;
+  }
+  if (typeof parsed.data.isTeacher === "boolean") {
+    updatePayload.is_teacher = parsed.data.isTeacher;
+  }
+  if (typeof parsed.data.isSchool === "boolean") {
+    updatePayload.is_school = parsed.data.isSchool;
+  }
+  if (typeof parsed.data.isPartner === "boolean") {
+    updatePayload.is_partner = parsed.data.isPartner;
+  }
+  if (typeof parsed.data.isInvestor === "boolean") {
+    updatePayload.is_investor = parsed.data.isInvestor;
+  }
+  if (typeof parsed.data.isSupport === "boolean") {
+    updatePayload.is_support = parsed.data.isSupport;
   }
   if (parsed.data.dataMode) {
     updatePayload.data_mode = parsed.data.dataMode;
@@ -109,6 +129,11 @@ export async function POST(request: Request) {
       isAdmin: parsed.data.isAdmin ?? null,
       isOwner: parsed.data.isOwner ?? null,
       isParent: parsed.data.isParent ?? null,
+      isTeacher: parsed.data.isTeacher ?? null,
+      isSchool: parsed.data.isSchool ?? null,
+      isPartner: parsed.data.isPartner ?? null,
+      isInvestor: parsed.data.isInvestor ?? null,
+      isSupport: parsed.data.isSupport ?? null,
       dataMode: parsed.data.dataMode ?? null,
     },
   });

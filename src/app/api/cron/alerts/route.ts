@@ -30,7 +30,7 @@ export async function GET(request: Request) {
       .lt("created_at", urgentCutoff);
 
     if (urgentCount && urgentCount > 0) {
-      await createAdminAlert(admin, {
+      await createAdminAlert({
         severity: "critical",
         category: "support_urgent_backlog",
         message: `${urgentCount} urgent support ticket(s) open for more than 24 hours.`,
@@ -48,7 +48,7 @@ export async function GET(request: Request) {
       .lt("created_at", dsarCutoff);
 
     if (dsarCount && dsarCount > 0) {
-      await createAdminAlert(admin, {
+      await createAdminAlert({
         severity: "warning",
         category: "dsar_backlog",
         message: `${dsarCount} DSAR request(s) unresolved for more than 7 days.`,
@@ -66,7 +66,7 @@ export async function GET(request: Request) {
       .lt("created_at", mediaCutoff);
 
     if (staleMediaCount && staleMediaCount > 0) {
-      await createAdminAlert(admin, {
+      await createAdminAlert({
         severity: "warning",
         category: "media_queue_stale",
         message: `${staleMediaCount} media job(s) queued for more than 6 hours.`,

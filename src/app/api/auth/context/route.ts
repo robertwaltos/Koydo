@@ -70,7 +70,7 @@ export async function GET() {
 
     const { data: profile } = await supabase
       .from("user_profiles")
-      .select("is_admin, is_parent, is_support, admin_access_level")
+      .select("is_admin, is_parent, is_teacher, is_school, is_partner, is_owner, is_investor, is_support, admin_access_level")
       .eq("user_id", user.id)
       .maybeSingle();
 
@@ -96,14 +96,24 @@ export async function GET() {
     }
 
     const isParent = Boolean(profile?.is_parent);
-    const isSupport = Boolean(profile?.is_support);
-    const role = isAdmin ? "admin" : isSupport ? "support" : isParent ? "parent" : "learner";
+    const isOwner = Boolean((profile as { is_owner?: boolean } | null)?.is_owner);
+    const isTeacher = Boolean((profile as { is_teacher?: boolean } | null)?.is_teacher);
+    const isSchool = Boolean((profile as { is_school?: boolean } | null)?.is_school);
+    const isPartner = Boolean((profile as { is_partner?: boolean } | null)?.is_partner);
+    const isInvestor = Boolean((profile as { is_investor?: boolean } | null)?.is_investor);
+    const isSupport = Boolean((profile as { is_support?: boolean } | null)?.is_support);
+    const role = isOwner ? "owner" : isAdmin ? "admin" : isSupport ? "support" : isParent ? "parent" : isTeacher ? "teacher" : isSchool ? "school" : isPartner ? "partner" : isInvestor ? "investor" : "learner";
 
     return NextResponse.json({
       user: { id: user.id, email: user.email ?? null },
       isAuthenticated: true,
       isAdmin,
+      isOwner,
       isParent,
+      isTeacher,
+      isSchool,
+      isPartner,
+      isInvestor,
       isSupport,
       role,
       adminAccessLevel,

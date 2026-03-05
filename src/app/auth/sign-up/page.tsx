@@ -9,7 +9,6 @@ import { sanitizeNextPath } from "@/lib/routing/next-path";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { ASSETS } from "@/lib/config/assets";
 import OAuthButtons from "@/app/auth/sign-in/oauth-buttons";
-import SoftCard from "@/app/components/ui/soft-card";
 import { useI18n } from "@/lib/i18n/provider";
 import { usStateOptions } from "@/lib/legal/us-states";
 
@@ -21,8 +20,45 @@ export default function SignUpPage() {
   );
 }
 
+type SignUpRole = "parent" | "student" | "teacher";
+
+const ROLE_CARDS: {
+  id: SignUpRole;
+  emoji: string;
+  title: string;
+  desc: string;
+  accentClass: string;
+  borderClass: string;
+}[] = [
+  {
+    id: "parent",
+    emoji: "👨‍👩‍👧‍👦",
+    title: "Parent / Guardian",
+    desc: "Manage kids' learning, set goals, and track progress from one dashboard.",
+    accentClass: "text-emerald-700",
+    borderClass: "border-emerald-400",
+  },
+  {
+    id: "student",
+    emoji: "🎓",
+    title: "Student (13+)",
+    desc: "Self-directed learning across every subject — from basics to college-level.",
+    accentClass: "text-violet-700",
+    borderClass: "border-violet-400",
+  },
+  {
+    id: "teacher",
+    emoji: "🏫",
+    title: "Educator",
+    desc: "Assign modules, monitor class progress, and integrate with your curriculum.",
+    accentClass: "text-sky-700",
+    borderClass: "border-sky-400",
+  },
+];
+
 function SignUpPageInner() {
   const { t } = useI18n();
+  const [selectedRole, setSelectedRole] = useState<SignUpRole | null>(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [billingState, setBillingState] = useState("");
@@ -76,10 +112,7 @@ function SignUpPageInner() {
         const acceptanceResponse = await fetch("/api/compliance/policy-acceptance", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            policyType: "terms",
-            billingState,
-          }),
+          body: JSON.stringify({ policyType: "terms", billingState }),
         });
 
         if (!acceptanceResponse.ok) {
@@ -91,7 +124,7 @@ function SignUpPageInner() {
         const completionResponse = await fetch("/api/auth/signup-complete", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ billingState }),
+          body: JSON.stringify({ billingState, role: selectedRole }),
         });
 
         if (!completionResponse.ok) {
@@ -109,7 +142,8 @@ function SignUpPageInner() {
           nextPath && (nextPath.startsWith("/billing") || nextPath.startsWith("/account"))
             ? nextPath
             : "/student/onboarding";
-        router.push(`/auth/age-gate?next=${encodeURIComponent(postAgeGateNextPath)}`);
+        // Full page load to guarantee fresh server-side session cookies
+        window.location.href = `/auth/age-gate?next=${encodeURIComponent(postAgeGateNextPath)}`;
       } else {
         const signInPath = nextPath
           ? `/auth/sign-in?next=${encodeURIComponent(nextPath)}`
@@ -124,72 +158,106 @@ function SignUpPageInner() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden pb-14">
-      {/* Page background - same as sign-in */}
-      <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <Image
-          src={ASSETS.bgAuth}
-          alt=""
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        <div className="absolute inset-0 bg-white/55" />
-      </div>
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-12 w-full">
+      <div className="w-full max-w-lg p-8 sm:p-10">
+        {/* ══════════════════════════════════════
+            STEP 1: Role selector
+        ══════════════════════════════════════ */}
+        {!selectedRole ? (
+          <>
+            <div className="mb-6 text-center">
+              <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
+                {t("auth_sign_up_hero_eyebrow")}
+              </p>
+              <h1
+                className="mt-1 text-2xl font-black tracking-tight text-zinc-900"
+                style={{ fontFamily: "var(--font-display-sans)" }}
+              >
+                Who&apos;s joining today?
+              </h1>
+              <p className="mt-1.5 text-sm text-zinc-500">
+                We&apos;ll personalise your experience based on your role
+              </p>
+            </div>
 
-      <section className="relative isolate overflow-hidden px-4 pb-20 pt-12 sm:px-6 sm:pb-24 sm:pt-16">
-        <div className="relative mx-auto grid w-full max-w-5xl gap-8 lg:grid-cols-[1.35fr_0.9fr] lg:gap-10">
+            <div className="space-y-3">
+              {ROLE_CARDS.map((role) => (
+                <button
+                  key={role.id}
+                  type="button"
+                  onClick={() => setSelectedRole(role.id)}
+                  className={[
+                    "group flex w-full items-center gap-4 rounded-2xl border bg-white/80 px-5 py-4 text-left transition-all duration-200 hover:border-current hover:bg-white hover:shadow-md",
+                    role.borderClass,
+                  ].join(" ")}
+                >
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-zinc-50 text-2xl shadow-sm group-hover:bg-white">
+                    {role.emoji}
+                  </span>
+                  <div>
+                    <p className={`text-sm font-bold ${role.accentClass}`}>{role.title}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-zinc-500">{role.desc}</p>
+                  </div>
+                  <span className="ml-auto text-zinc-300 group-hover:text-zinc-500">›</span>
+                </button>
+              ))}
+            </div>
 
-          {/* Left column: hero image */}
-          <div>
-            <div className="relative overflow-hidden rounded-3xl shadow-xl">
-              <Image
-                src={ASSETS.heroSignUp}
-                alt="Learners of all ages walking a bridge of books toward knowledge"
-                width={800}
-                height={533}
-                className="w-full object-cover"
-                priority
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-5 pb-5 pt-14">
-                <p className="text-xs font-bold uppercase tracking-widest text-emerald-300">
-                  {t("auth_sign_up_hero_eyebrow")}
+            <p className="mt-5 text-center text-sm text-zinc-500">
+              Already have an account?{" "}
+              <Link
+                href={nextPath ? `/auth/sign-in?next=${encodeURIComponent(nextPath)}` : "/auth/sign-in"}
+                className="font-semibold text-emerald-700 hover:underline"
+              >
+                Sign in
+              </Link>
+            </p>
+          </>
+        ) : (
+          /* ══════════════════════════════════════
+              STEP 2: Registration form
+          ══════════════════════════════════════ */
+          <>
+            {/* Back + role badge header */}
+            <div className="mb-5 flex items-center gap-3">
+              <button
+                type="button"
+                onClick={() => setSelectedRole(null)}
+                className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-200 bg-zinc-50 text-sm text-zinc-500 hover:bg-zinc-100"
+                aria-label="Back to role selector"
+              >
+                ←
+              </button>
+              <div>
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
+                  Signing up as
                 </p>
-                <h1 className="mt-1 text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
-                  {t("auth_sign_up_hero_title")}
-                </h1>
+                <p className="text-sm font-bold text-zinc-900">
+                  {ROLE_CARDS.find((r) => r.id === selectedRole)?.emoji}{" "}
+                  {ROLE_CARDS.find((r) => r.id === selectedRole)?.title}
+                </p>
               </div>
             </div>
-          </div>
 
-          {/* Right column: sign-up form */}
-          <SoftCard
-            as="section"
-            organicCorners
-            className="self-start border-zinc-200/60 p-6 backdrop-blur-sm"
-            style={{ background: "rgba(255,255,255,0.92)" }}
-          >
-            <h2 className="ui-type-heading-xl text-zinc-900">
+            <h2
+              className="text-xl font-black tracking-tight text-zinc-900"
+              style={{ fontFamily: "var(--font-display-sans)" }}
+            >
               {t("auth_sign_up_title")}
             </h2>
-            <p className="mt-2 ui-type-body-sm text-zinc-600">
-              {t("auth_sign_up_subtitle")}
-            </p>
+            <p className="mt-1 text-sm text-zinc-500">{t("auth_sign_up_subtitle")}</p>
 
             <OAuthButtons intent="up" nextPath={nextPath} className="mt-5" />
 
-            <div className="relative mt-6">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-zinc-200" />
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="bg-white/80 px-2 text-zinc-500">
-                  {t("auth_sign_up_divider_or")}
-                </span>
-              </div>
+            <div className="my-5 flex items-center gap-3">
+              <div className="h-px flex-1 bg-zinc-200/70" />
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
+                {t("auth_sign_up_divider_or")}
+              </span>
+              <div className="h-px flex-1 bg-zinc-200/70" />
             </div>
 
-            <form onSubmit={onSubmit} className="mt-5 space-y-4">
+            <form onSubmit={onSubmit} className="space-y-4">
               <div>
                 <label htmlFor="email" className="mb-1 block text-sm font-medium">
                   {t("auth_sign_up_label_email")}
@@ -198,9 +266,10 @@ function SignUpPageInner() {
                   id="email"
                   type="email"
                   value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3.5 py-2.5 text-sm shadow-sm"
                   required
+                  aria-required="true"
                 />
               </div>
 
@@ -212,10 +281,11 @@ function SignUpPageInner() {
                   id="password"
                   type="password"
                   value={password}
-                  onChange={(event) => setPassword(event.target.value)}
-                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm shadow-sm"
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3.5 py-2.5 text-sm shadow-sm"
                   minLength={8}
                   required
+                  aria-required="true"
                 />
               </div>
 
@@ -226,8 +296,8 @@ function SignUpPageInner() {
                 <select
                   id="billing-state"
                   value={billingState}
-                  onChange={(event) => setBillingState(event.target.value)}
-                  className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm"
+                  onChange={(e) => setBillingState(e.target.value)}
+                  className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3.5 py-2.5 text-sm"
                   required
                 >
                   <option value="">Select billing state</option>
@@ -239,11 +309,11 @@ function SignUpPageInner() {
                 </select>
               </div>
 
-              <label className="flex items-start gap-2 rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2 text-sm text-zinc-700">
+              <label className="flex items-start gap-2 rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2.5 text-sm text-zinc-700">
                 <input
                   type="checkbox"
                   checked={acceptedTerms}
-                  onChange={(event) => setAcceptedTerms(event.target.checked)}
+                  onChange={(e) => setAcceptedTerms(e.target.checked)}
                   className="mt-1 h-4 w-4 rounded border-zinc-300 text-emerald-600"
                   required
                 />
@@ -259,52 +329,48 @@ function SignUpPageInner() {
               <button
                 type="submit"
                 disabled={isSubmitting || !hasSupabaseConfig}
-                className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white disabled:opacity-70"
+                className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-full border-transparent bg-accent px-4 py-2 text-sm font-bold text-white hover:opacity-95 disabled:opacity-60"
               >
                 {isSubmitting ? t("auth_sign_up_button_creating") : t("auth_sign_up_button_create")}
               </button>
 
-              {status ? (
-                <p role="status" className="text-sm text-zinc-600">{status}</p>
-              ) : null}
+              {status ? <p role="status" className="text-sm text-zinc-600">{status}</p> : null}
               {!hasSupabaseConfig ? (
-                <p role="status" className="text-xs text-amber-700">
-                  {t("auth_sign_up_missing_supabase")}
-                </p>
+                <p className="text-xs text-amber-700">{t("auth_sign_up_missing_supabase")}</p>
               ) : null}
             </form>
 
-            <p className="mt-5 text-sm text-zinc-600">
+            <p className="mt-5 text-center text-sm text-zinc-500">
               {t("auth_sign_up_footer_have_account")}{" "}
               <Link
                 href={nextPath ? `/auth/sign-in?next=${encodeURIComponent(nextPath)}` : "/auth/sign-in"}
-                className="font-semibold underline decoration-2 underline-offset-2"
+                className="font-semibold text-emerald-700 hover:underline"
               >
                 {t("auth_sign_up_footer_sign_in")}
               </Link>
             </p>
 
-            {/* Trust badges — subtle social proof */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 border-t border-zinc-100 pt-5">
+            {/* Trust pills */}
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-2 border-t border-zinc-100/80 pt-4">
               {[
-                { icon: "🛡️", text: "COPPA\u00A0Compliant" },
-                { icon: "🚫", text: "Zero\u00A0Ads" },
-                { icon: "🔒", text: "No\u00A0Tracking" },
-                { icon: "✨", text: "Free\u00A0to\u00A0Start" },
-              ].map((badge) => (
+                { icon: "🛡️", text: "COPPA" },
+                { icon: "🚫", text: "Zero Ads" },
+                { icon: "🔒", text: "No Tracking" },
+                { icon: "✨", text: "Free" },
+              ].map((b) => (
                 <span
-                  key={badge.text}
-                  className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-zinc-400"
+                  key={b.text}
+                  className="flex items-center gap-1 rounded-full border border-zinc-200/60 bg-zinc-50 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-zinc-400"
                 >
-                  <span aria-hidden="true">{badge.icon}</span>
-                  {badge.text}
+                  <span aria-hidden="true">{b.icon}</span>
+                  {b.text}
                 </span>
               ))}
             </div>
-          </SoftCard>
-
-        </div>
-      </section>
+          </>
+        )}
+      </div>
     </main>
   );
 }
+

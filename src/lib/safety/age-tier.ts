@@ -46,7 +46,7 @@ export const AGE_TIER_CONFIGS: Record<AgeTier, AgeTierConfig> = {
     maxAge: 10,
     maxLexile: 800,
     allowExternalLinks: false,
-    allowFreeformChat: true,
+    allowFreeformChat: false,
     allowPurchases: false,
     contentFilter: 2,
   },

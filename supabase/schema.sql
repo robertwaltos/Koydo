@@ -14,6 +14,11 @@ create table if not exists public.user_profiles (
   parental_consent_status text not null default 'not_required',
   is_admin boolean not null default false,
   is_parent boolean not null default false,
+  is_teacher boolean not null default false,
+  is_school boolean not null default false,
+  is_partner boolean not null default false,
+  is_investor boolean not null default false,
+  is_support boolean not null default false,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   constraint user_profiles_consent_status_check

@@ -16,7 +16,6 @@ export default function AdaptiveBackground({ ageGroup: propAgeGroup, className =
   const ageGroup = propAgeGroup || themeCtx.ageGroup || "standard";
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
   }, []);
 

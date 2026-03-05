@@ -176,11 +176,19 @@ export default function GreeterCompanion() {
 
   useEffect(() => {
     if (isDismissed || isExcluded(pathname)) return;
+
+    // For unauthenticated landing/auth pages, set a default companion so the picker doesn't pop up and confuse them
+    const isLobbyOrAuth = pathname === "/" || pathname?.startsWith("/auth");
+    if (isLobbyOrAuth && !isAuthenticated && companionGender === null) {
+      setCompanionGender("female"); // Default marketing greeter
+      return;
+    }
+
     if (companionGender === null) {
-      const t = setTimeout(() => setShowPicker(true), 2_500); // Wait longer on landing
+      const t = setTimeout(() => setShowPicker(true), 2_500);
       return () => clearTimeout(t);
     }
-  }, [isDismissed, companionGender, pathname, isExcluded]);
+  }, [isDismissed, companionGender, pathname, isExcluded, isAuthenticated]);
 
   useEffect(() => {
     if (!companionGender || isDismissed || isExcluded(pathname)) return;
@@ -209,6 +217,7 @@ export default function GreeterCompanion() {
     if (!hasSeenIntro) {
       try {
         const videoId = COMPANIONS[gender].introVideoId;
+        if (!videoId) return;
         const res = await fetch(`/api/companion/intro-video?videoId=${encodeURIComponent(videoId)}`);
         const data = await res.json() as { videoUrl?: string };
         if (data.videoUrl) {
@@ -389,5 +398,7 @@ function CompanionIcon() { return <svg width="20" height="20" viewBox="0 0 20 20
 function SpeakerIcon() { return <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden><path d="M2 4.5h2l3-2.5v7.5L4 7H2a.5.5 0 01-.5-.5v-2A.5.5 0 012 4.5z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" /><path d="M9 3.5a3.5 3.5 0 010 5M7.5 4.5a2 2 0 010 3" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" /></svg>; }
 function SpeakerMutedIcon() { return <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden><path d="M2 4.5h2l3-2.5v7.5L4 7H2a.5.5 0 01-.5-.5v-2A.5.5 0 012 4.5z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" /><path d="M8 4.5l3 3m0-3l-3 3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" /></svg>; }
 function SpeakerSmallIcon() { return <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden><path d="M1.5 3.75h1.5l2.5-2v4.5L3 6.25H1.5a.4.4 0 01-.4-.4V4.15a.4.4 0 01.4-.4z" stroke="currentColor" strokeWidth="1.1" strokeLinejoin="round" /><path d="M7.5 3a2.5 2.5 0 010 4" stroke="currentColor" strokeWidth="1" strokeLinecap="round" /></svg>; }
+
+
 
 

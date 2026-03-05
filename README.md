@@ -509,7 +509,7 @@ Once registered, the module automatically appears in:
   - Stars earned + accuracy
 - Raw grading still exists for analytics, reporting, and admin/parent workflows.
 
-Session cookie refresh proxy is configured in `src/proxy.ts`.
+Session cookie refresh middleware is configured in `src/middleware.ts`.
 
 Current sign-in methods on `/auth/sign-in`:
 

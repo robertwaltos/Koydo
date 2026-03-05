@@ -20,6 +20,7 @@ import { isSupportedLocale, translate, type Locale } from "@/lib/i18n/translatio
 import { formatDate } from "@/lib/i18n/format";
 import PageHeader from "@/app/components/page-header";
 import { isLaunchFeaturePending, resolveLaunchHref } from "@/lib/platform/launch-readiness";
+import DashboardAgeShellBanner from "./age-shell-banner";
 
 export const dynamic = "force-dynamic";
 
@@ -213,6 +214,7 @@ export default async function DashboardPage() {
 
   return (
     <main className="mx-auto flex w-full max-w-4xl flex-col gap-6 px-6 py-12 tablet:max-w-5xl tablet:px-8">
+      <DashboardAgeShellBanner />
       <PageHeader
         breadcrumbs={[
           { label: "Home", href: "/" },

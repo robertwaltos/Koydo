@@ -15,7 +15,7 @@ export default function StudyTimer() {
   const [totalSeconds, setTotalSeconds] = useState(1500); // 25 min default
   const [remaining, setRemaining] = useState(1500);
   const [todayMinutes, setTodayMinutes] = useState(0);
-  const intervalRef = useRef<ReturnType<typeof setInterval>>();
+  const intervalRef = useRef<ReturnType<typeof setInterval>>(undefined);
 
   // Fetch today's study time
   useEffect(() => {

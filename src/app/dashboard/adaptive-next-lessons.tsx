@@ -45,10 +45,10 @@ const KIND_TONES: Record<RecommendationItem["kind"], "neutral" | "info" | "succe
 };
 
 const KIND_BORDER: Record<RecommendationItem["kind"], string> = {
-  review:    "border-amber-200 bg-amber-50/50 dark:border-amber-800/40 dark:bg-amber-950/20",
-  continue:  "border-sky-200 bg-sky-50/50 dark:border-sky-800/40 dark:bg-sky-950/20",
-  new:       "border-emerald-200 bg-emerald-50/50 dark:border-emerald-800/40 dark:bg-emerald-950/20",
-  remediate: "border-rose-200 bg-rose-50/50 dark:border-rose-800/40 dark:bg-rose-950/20",
+  review:    "border-amber-200/60 bg-gradient-to-br from-amber-50/80 to-amber-100/40 dark:border-amber-800/40 dark:from-amber-950/40 dark:to-amber-900/20 backdrop-blur-xl shadow-[0_8px_24px_rgba(245,158,11,0.05)]",
+  continue:  "border-sky-200/60 bg-gradient-to-br from-sky-50/80 to-sky-100/40 dark:border-sky-800/40 dark:from-sky-950/40 dark:to-sky-900/20 backdrop-blur-xl shadow-[0_8px_24px_rgba(14,165,233,0.05)]",
+  new:       "border-emerald-200/60 bg-gradient-to-br from-emerald-50/80 to-emerald-100/40 dark:border-emerald-800/40 dark:from-emerald-950/40 dark:to-emerald-900/20 backdrop-blur-xl shadow-[0_8px_24px_rgba(16,185,129,0.05)]",
+  remediate: "border-rose-200/60 bg-gradient-to-br from-rose-50/80 to-rose-100/40 dark:border-rose-800/40 dark:from-rose-950/40 dark:to-rose-900/20 backdrop-blur-xl shadow-[0_8px_24px_rgba(244,63,94,0.05)]",
 };
 
 /* ─── Component ───────────────────────────────────────────────── */
@@ -179,3 +179,4 @@ export default function AdaptiveNextLessons() {
     </section>
   );
 }
+

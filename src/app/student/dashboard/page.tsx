@@ -336,7 +336,7 @@ export default function StudentDashboardPage() {
             <div className="inline-flex items-center gap-3 mb-2">
               {profile.avatar_url ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={profile.avatar_url} alt="" className="size-12 rounded-full ring-2 ring-accent/20" />
+                <img src={profile.avatar_url} alt={`${profile.display_name ?? "Learner"}'s avatar`} className="size-12 rounded-full ring-2 ring-accent/20" />
               ) : (
                 <span className="flex size-12 items-center justify-center rounded-full bg-accent/10 text-2xl">🧠</span>
               )}

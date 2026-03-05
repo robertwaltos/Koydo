@@ -98,12 +98,15 @@ export async function POST(req: NextRequest) {
 
   if (body.action === "join") {
     const { gameId } = body;
-    await supabase.rpc("increment_player_count", { game_id: gameId }).catch(() => {
-      // Fallback: direct update
-      supabase.from("quiz_games").update({
-        player_count: body.currentCount ? body.currentCount + 1 : 2,
-      }).eq("id", gameId);
-    });
+    // Increment player count directly (RPC not required)
+    const { data: game } = await supabase
+      .from("quiz_games")
+      .select("player_count")
+      .eq("id", gameId)
+      .single();
+    await supabase.from("quiz_games").update({
+      player_count: (game?.player_count ?? 1) + 1,
+    }).eq("id", gameId);
     return NextResponse.json({ ok: true });
   }
 

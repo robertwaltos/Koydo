@@ -1,10 +1,12 @@
 import dynamic from "next/dynamic";
+import type { ComponentType } from "react";
 
 /**
  * Lazy-loaded game registry — each game is code-split into its own chunk.
  * Used by the [gameId] page to avoid bundling all 225+ games into one mega-chunk.
  */
-const lazyGames: Record<string, ReturnType<typeof dynamic>> = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any -- heterogeneous props across 225+ games
+const lazyGames: Record<string, ComponentType<any>> = {
   "AeroArchitect": dynamic(() => import("./aero-architect"), { ssr: false }),
   "AlphabetAirship": dynamic(() => import("./alphabet-airship"), { ssr: false }),
   "ArtisticAlgorithms": dynamic(() => import("./artistic-algorithms"), { ssr: false }),

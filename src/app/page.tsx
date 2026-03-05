@@ -3,26 +3,25 @@ import Link from "next/link";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import { getAllEducationStages } from "@/lib/explorer/scenes";
+import { ASSETS } from "@/lib/config/assets";
 import {
   isSupportedLocale,
   type Locale,
   translate,
 } from "@/lib/i18n/translations";
-import { ASSETS } from "@/lib/config/assets";
 import VoicePicker from "@/app/explore/_components/voice-picker";
-import LandingCompanion from "@/app/components/landing-companion";
 import SubjectShowcase from "@/app/components/subject-showcase";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import LandingHeroInteractive from "@/app/components/ui/landing-hero-interactive";
 
 export const metadata: Metadata = {
   title: "Koydo — Learn Anything, Any Age, Any Language",
   description:
-    "Free interactive learning for ages 3 to adult. 850+ modules, 600K+ practice questions across math, science, coding, medicine, and career skills.",
+    "Free interactive learning for ages 3 to adult. 800+ modules, 600K+ practice questions across math, science, coding, medicine, and career skills.",
   openGraph: {
     title: "Koydo — Learn Anything, Any Age, Any Language",
     description:
-      "Free interactive learning from Pre-K through College — 850+ modules powered by NASA, OpenStax, and leading open datasets.",
+      "Free interactive learning from Pre-K through College — 800+ modules powered by NASA, OpenStax, and leading open datasets.",
   },
 };
 
@@ -41,122 +40,34 @@ export default async function Home() {
   const t = (key: string, vars?: Record<string, string | number>) =>
     translate(locale, key, vars);
 
-  const stages = getAllEducationStages();
-
   return (
-    <div className="relative font-sans">
+    <div className="relative font-sans overflow-x-hidden">
       {/* ════════════════════════════════════════════════════════
-           SECTION 1 — HERO
-           Full-viewport cinematic hero with single CTA
+           SECTION 1 — HERO (Interactive Adaptive Hero)
       ════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[calc(100svh-72px)] overflow-hidden">
-        <Image
-          src={ASSETS.heroHome}
-          alt="A vibrant daytime landscape — families and learners on a golden path toward knowledge"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-
-        {/* Readable overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: [
-              "linear-gradient(to right, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.42) 35%, transparent 60%)",
-              "linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(255,255,255,0.55) 88%, rgba(255,255,255,0.85) 100%)",
-            ].join(", "),
-          }}
-        />
-
-        <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col px-4 py-16 sm:py-24">
-          <div className="flex flex-1 flex-col justify-center">
-            <div className="max-w-[580px]">
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
-                {t("home_hero_eyebrow")}
-              </p>
-              <h1
-                className="mt-4 text-4xl font-black leading-[1.07] tracking-[-0.02em] text-zinc-900 sm:text-5xl md:text-6xl lg:text-7xl"
-                style={{ fontFamily: "var(--font-display-sans)" }}
-              >
-                {t("home_hero_title_prefix")}{" "}
-                <span
-                  className="bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(105deg, #059669 0%, #10b981 45%, #34d399 100%)",
-                  }}
-                >
-                  {t("home_hero_title_highlight")}
-                </span>
-              </h1>
-              <p className="mt-5 max-w-[48ch] text-base leading-relaxed text-zinc-600 sm:text-lg">
-                {t("home_hero_body")}
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link
-                  href="/explore"
-                  className="inline-flex min-h-[3.5rem] items-center rounded-full px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/25 transition-all duration-200 hover:brightness-110 hover:shadow-xl hover:shadow-emerald-500/35 active:scale-[0.97]"
-                  style={{
-                    background:
-                      "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
-                  }}
-                >
-                  {t("home_hero_cta")}
-                </Link>
-                <VoicePicker />
-              </div>
-            </div>
-
-            {/* Right column: companion avatar */}
-            <div className="hidden lg:flex lg:items-center lg:justify-center">
-              <LandingCompanion />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Education stage navigation strip ── */}
-      <div className="relative border-y border-zinc-200/60 bg-white/70 backdrop-blur-sm">
-        <div
-          className="mx-auto flex max-w-7xl items-center gap-3 overflow-x-auto px-4 py-4"
-          style={{ scrollbarWidth: "none" }}
-        >
-          {stages.map((stage) => (
-            <Link
-              key={stage.id}
-              href={`/explore?stage=${stage.id}`}
-              className="flex flex-shrink-0 items-center gap-2 rounded-full border border-zinc-200/80 bg-white/80 px-5 py-2.5 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-50 hover:text-emerald-700"
-            >
-              <span className="text-base" aria-hidden="true">{stage.badge}</span>
-              {locale === "es" ? stage.labelEs : stage.label}
-            </Link>
-          ))}
-        </div>
-      </div>
+      <LandingHeroInteractive t={t} />
 
       {/* ── Stats bar ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 py-10 sm:py-14">
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
           {[
-            { value: "200+",   label: "Learning Modules",   icon: "📚" },
-            { value: "3–100",  label: "All Ages Welcome",   icon: "🎓" },
-            { value: "2",      label: "Languages",          icon: "🌍" },
-            { value: "100%",   label: "Free to Start",      icon: "✨" },
+            { value: "800+",   label: t("home_stat_modules"),    icon: "📚" },
+            { value: "3–100",  label: t("home_stat_ages"),       icon: "🎓" },
+            { value: "2",      label: t("home_stat_languages"),  icon: "🌍" },
+            { value: "100%",   label: t("home_stat_free"),       icon: "✨" },
           ].map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col items-center gap-1 rounded-2xl border border-zinc-200/60 bg-white/60 px-4 py-6 text-center shadow-sm backdrop-blur-sm"
+              className="flex flex-col items-center gap-1 rounded-[2rem] border border-white/50 bg-white/30 px-4 py-8 text-center shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/50 hover:shadow-[0_16px_48px_rgba(0,0,0,0.08)]"
             >
-              <span className="text-3xl" aria-hidden="true">{stat.icon}</span>
+              <span className="text-3xl mb-1" aria-hidden="true">{stat.icon}</span>
               <span
                 className="mt-1 text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
                 style={{ fontFamily: "var(--font-display-sans)" }}
               >
                 {stat.value}
               </span>
-              <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+              <span className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">
                 {stat.label}
               </span>
             </div>
@@ -164,18 +75,37 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ── Trust Badges ── */}
+      <div className="relative border-y border-white/40 bg-white/20 py-5 backdrop-blur-lg shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4">
+          {[
+            { icon: "🛡️", label: t("home_trust_coppa") },
+            { icon: "📋", label: t("home_badge_ferpa") },
+            { icon: "🚫", label: t("home_trust_ads") },
+            { icon: "🔒", label: t("home_badge_no_tracking") },
+            { icon: "🤖", label: t("home_badge_ai_safety") },
+            { icon: "✨", label: t("home_stats_free") },
+          ].map((badge) => (
+            <span key={badge.label} className="ui-trust-badge flex items-center gap-2 rounded-full border border-white/60 bg-white/40 px-4 py-2 text-xs font-semibold text-zinc-600 shadow-sm backdrop-blur-md transition-all hover:bg-white/60">
+              <span aria-hidden="true">{badge.icon}</span>
+              {badge.label}
+            </span>
+          ))}
+        </div>
+      </div>
+
       {/* ── How it works ── */}
-      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20 mt-12">
         <h2
-          className="text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+          className="text-center text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
           style={{ fontFamily: "var(--font-display-sans)" }}
         >
           Learning made simple
         </h2>
-        <p className="mx-auto mt-2 max-w-md text-center text-sm text-zinc-500">
+        <p className="mx-auto mt-3 max-w-md text-center text-base text-zinc-500">
           Three steps from zero to unstoppable
         </p>
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {[
             {
               step: "01",
@@ -201,30 +131,33 @@ export default async function Home() {
           ].map((card, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-300 hover:bg-white/90 hover:shadow-md"
+              className="group relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/30 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-white hover:bg-white/60 hover:shadow-[0_20px_48px_rgba(0,0,0,0.08)]"
             >
-              <div className="flex items-start gap-4">
-                <span
-                  className="shrink-0 text-[11px] font-black tabular-nums tracking-widest text-zinc-600"
-                  aria-hidden="true"
-                >
-                  {card.step}
-                </span>
+              <div className="flex flex-col items-start gap-4">
+                <div className="flex w-full items-center justify-between">
+                  <span className="text-4xl drop-shadow-sm" aria-hidden="true">{card.icon}</span>
+                  <span
+                    className="shrink-0 text-xs font-black tabular-nums tracking-[0.2em] text-zinc-400 group-hover:text-emerald-500 transition-colors"
+                    aria-hidden="true"
+                  >
+                    STEP {card.step}
+                  </span>
+                </div>
                 <div>
-                  <span className="text-3xl" aria-hidden="true">{card.icon}</span>
-                  <h3 className="mt-2 text-base font-bold text-zinc-900">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-500">{card.desc}</p>
+                  <h3 className="text-xl font-bold text-zinc-900">{card.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600">{card.desc}</p>
                 </div>
               </div>
+              <div className="absolute inset-x-0 bottom-0 h-1 w-full scale-x-0 bg-gradient-to-r from-emerald-400 to-teal-400 transition-transform duration-500 group-hover:scale-x-100" />
             </div>
           ))}
         </div>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <Link
             href="/explore"
-            className="inline-flex min-h-12 items-center rounded-full border border-zinc-200/80 bg-white/80 px-7 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-50 hover:text-emerald-700"
+            className="inline-flex min-h-12 items-center rounded-full border border-white/80 bg-white/50 px-8 py-3.5 text-sm font-bold text-zinc-700 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-700 hover:shadow-md"
           >
-            Browse all subjects →
+            {t("home_how_browse_cta")}
           </Link>
         </div>
       </section>
@@ -235,168 +168,202 @@ export default async function Home() {
           className="text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
           style={{ fontFamily: "var(--font-display-sans)" }}
         >
-          Popular Subjects
+          {t("home_subjects_title")}
         </h2>
         <p className="mx-auto mt-2 max-w-md text-center text-sm text-zinc-500">
-          Tap a subject to start exploring — interactive modules across every
-          learning area
+          {t("home_subjects_subtitle")}
         </p>
         <div className="mt-10">
           <SubjectShowcase />
         </div>
       </section>
 
-      {/* ── Feature highlights ── */}
+      {/* ── Bento Feature Grid ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {/* Header */}
+        <div className="mb-8 text-center">
+          <p className="ui-landing-eyebrow">{t("home_bento_eyebrow")}</p>
+          <h2
+            className="mt-2 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+            style={{ fontFamily: "var(--font-display-sans)" }}
+          >
+            {t("home_bento_title")}
+          </h2>
+        </div>
+
+        {/* Bento grid — 3-col on desktop, 1–2-col mobile */}
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Large feature card — spans 2 cols on lg */}
+          <div className="ui-bento-card group relative flex flex-col justify-between overflow-hidden lg:col-span-2">
+            {/* Floating orbs */}
+            <span className="ui-hero-orb-1 pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full opacity-40" aria-hidden="true" />
+            <span className="ui-hero-orb-2 pointer-events-none absolute -bottom-6 left-1/3 h-28 w-28 rounded-full opacity-30" aria-hidden="true" />
+            <div className="relative z-10 p-6 sm:p-8">
+              <span className="mb-4 block text-4xl" aria-hidden="true">🎙️</span>
+              <h3
+                className="text-xl font-black tracking-tight text-zinc-900 sm:text-2xl"
+                style={{ fontFamily: "var(--font-display-sans)" }}
+              >
+                {t("home_features_hear_title")}
+              </h3>
+              <p className="mt-3 max-w-[44ch] text-sm leading-relaxed text-zinc-500">
+                {t("home_features_hear_desc")}
+              </p>
+              <Link
+                href="/explore"
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:gap-2.5 transition-all duration-200"
+              >
+                {t("home_bento_try_cta")}
+              </Link>
+            </div>
+          </div>
+
+          {/* Small card */}
+          <div className="ui-bento-card group flex flex-col gap-3 p-6">
+            <span className="text-3xl" aria-hidden="true">🎨</span>
+            <h3 className="text-base font-bold text-zinc-900">{t("home_features_do_title")}</h3>
+            <p className="text-sm leading-relaxed text-zinc-500">{t("home_features_do_desc")}</p>
+          </div>
+
+          {/* Small card */}
+          <div className="ui-bento-card group flex flex-col gap-3 p-6">
+            <span className="text-3xl" aria-hidden="true">🎓</span>
+            <h3 className="text-base font-bold text-zinc-900">{t("home_features_span_title")}</h3>
+            <p className="text-sm leading-relaxed text-zinc-500">{t("home_features_span_desc")}</p>
+          </div>
+
+          {/* Stat accent card */}
+          <div
+            className="ui-bento-card group flex flex-col items-center justify-center gap-2 p-6 text-center"
+            style={{ background: "linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)" }}
+          >
+            <span className="text-5xl font-black tracking-tight text-emerald-700" style={{ fontFamily: "var(--font-display-sans)" }}>
+              800+
+            </span>
+            <p className="text-sm font-semibold text-emerald-800">{t("home_bento_modules_label")}</p>
+            <p className="text-xs text-emerald-700/70">{t("home_bento_modules_note")}</p>
+          </div>
+
+          {/* Offline/device card */}
+          <div className="ui-bento-card group flex flex-col gap-3 p-6">
+            <span className="text-3xl" aria-hidden="true">📱</span>
+            <h3 className="text-base font-bold text-zinc-900">{t("home_bento_device_title")}</h3>
+            <p className="text-sm leading-relaxed text-zinc-500">
+              {t("home_bento_device_desc")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why Families Choose Koydo ── */}
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20 mt-12">
+        <div className="mb-10 text-center">
+          <p className="ui-landing-eyebrow tracking-[0.2em] font-bold text-emerald-600 mb-2 uppercase text-xs">{t("home_trust_eyebrow")}</p>
+          <h2
+            className="mt-2 text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
+            style={{ fontFamily: "var(--font-display-sans)" }}
+          >
+            {t("home_why_koydo_title")}
+          </h2>
+          <p className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-zinc-500">
+            {t("home_why_koydo_subtitle")}
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {[
             {
-              icon: "🎙️",
-              title: t("home_features_hear_title"),
-              desc: t("home_features_hear_desc"),
+              icon: "🧠",
+              title: t("home_why_adaptive_title"),
+              desc: t("home_why_adaptive_desc"),
             },
             {
-              icon: "🎨",
-              title: t("home_features_do_title"),
-              desc: t("home_features_do_desc"),
+              icon: "🌍",
+              title: t("home_why_multilingual_title"),
+              desc: t("home_why_multilingual_desc"),
             },
             {
-              icon: "🎓",
-              title: t("home_features_span_title"),
-              desc: t("home_features_span_desc"),
+              icon: "📊",
+              title: t("home_why_progress_title"),
+              desc: t("home_why_progress_desc"),
             },
-          ].map((feature, i) => (
+          ].map((card) => (
             <div
-              key={i}
-              className="group relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-300 hover:bg-white/90 hover:shadow-md"
+              key={card.title}
+              className="group relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/30 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-white hover:bg-white/60 hover:shadow-[0_20px_48px_rgba(0,0,0,0.08)]"
             >
-              <span className="text-4xl" aria-hidden="true">
-                {feature.icon}
-              </span>
-              <h3 className="mt-3 text-base font-bold text-zinc-900">
-                {feature.title}
+              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/50 shadow-inner backdrop-blur-md">
+                <span className="text-3xl drop-shadow-sm" aria-hidden="true">{card.icon}</span>
+              </div>
+              <h3
+                className="text-xl font-bold text-zinc-900"
+              >
+                {card.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-500">
-                {feature.desc}
-              </p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600">{card.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── For Parents — trust section ── */}
-      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
-        <div className="overflow-hidden rounded-3xl border border-zinc-200/60 bg-white/70 shadow-sm backdrop-blur-sm">
-          {/* Header strip */}
-          <div className="border-b border-zinc-100 px-6 py-8 text-center sm:px-10 sm:py-10">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
-              For Parents & Educators
-            </p>
-            <h2
-              className="mt-3 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
-              style={{ fontFamily: "var(--font-display-sans)" }}
-            >
-              Built for families. Trusted by{" "}
-              <span
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
-                }}
-              >
-                educators.
-              </span>
-            </h2>
-            <p className="mx-auto mt-3 max-w-[52ch] text-sm leading-relaxed text-zinc-500">
-              Koydo is designed from the ground up to be safe, private, and genuinely
-              educational — with full parent visibility and control.
-            </p>
-          </div>
-
-          {/* Trust grid */}
-          <div className="grid grid-cols-2 gap-px bg-zinc-100/50 sm:grid-cols-4">
-            {[
-              {
-                icon: "🛡️",
-                title: "COPPA Compliant",
-                desc: "No data sold. Children's privacy protected by design.",
-              },
-              {
-                icon: "🚫",
-                title: "Zero Ads",
-                desc: "No advertising, no tracking pixels, no third-party marketing.",
-              },
-              {
-                icon: "👁️",
-                title: "Parent Dashboard",
-                desc: "See exactly what your child is learning and how they're progressing.",
-              },
-              {
-                icon: "🎓",
-                title: "Educator Reviewed",
-                desc: "Every module is aligned to grade-level learning standards.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="group flex flex-col gap-2 bg-white/80 px-5 py-6 transition-colors duration-300 hover:bg-emerald-50/60"
-              >
-                <span className="text-2xl" aria-hidden="true">{item.icon}</span>
-                <h3 className="text-sm font-bold text-zinc-900">{item.title}</h3>
-                <p className="text-xs leading-relaxed text-zinc-500">{item.desc}</p>
+      {/* ── Testimonials ── */}
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-20 sm:pb-24 mt-12">
+        <div className="mb-10 text-center">
+          <p className="ui-landing-eyebrow tracking-[0.2em] font-bold text-emerald-600 mb-2 uppercase text-xs">{t("home_testimonials_eyebrow")}</p>
+          <h2
+            className="mt-2 text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
+            style={{ fontFamily: "var(--font-display-sans)" }}
+          >
+            {t("home_testimonials_title")}
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {[
+            {
+              quote: t("home_testimonial_1_quote"),
+              name: "Maria G.",
+              role: t("home_testimonial_1_role"),
+              emoji: "👩‍👧",
+              accent: "emerald",
+            },
+            {
+              quote: t("home_testimonial_2_quote"),
+              name: "James K.",
+              role: t("home_testimonial_2_role"),
+              emoji: "👨‍🏫",
+              accent: "sky",
+            },
+            {
+              quote: t("home_testimonial_3_quote"),
+              name: "Priya S.",
+              role: t("home_testimonial_3_role"),
+              emoji: "🎓",
+              accent: "violet",
+            },
+          ].map((testimonial) => (
+            <div key={testimonial.name} className="ui-testimonial-card relative flex flex-col gap-5 rounded-[2rem] border border-white/60 bg-white/40 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.03)] backdrop-blur-xl transition-all duration-300 hover:bg-white/60 hover:shadow-[0_16px_40px_rgba(0,0,0,0.06)]">
+              {/* Stars */}
+              <div className="flex gap-1 text-amber-400 text-sm" aria-label="5 stars">
+                {"★★★★★".split("").map((s, i) => <span key={i} className="drop-shadow-sm">{s}</span>)}
               </div>
-            ))}
-          </div>
-
-          {/* Feature list */}
-          <div className="grid grid-cols-1 gap-4 border-t border-zinc-100 p-6 sm:grid-cols-3 sm:p-8">
-            {[
-              {
-                icon: "📊",
-                text: "Track lessons completed, streaks, and quiz scores per learner",
-              },
-              {
-                icon: "🔒",
-                text: "Set content restrictions by age stage and subject area",
-              },
-              {
-                icon: "👨‍👩‍👧‍👦",
-                text: "Manage multiple child profiles under one parent account",
-              },
-              {
-                icon: "📱",
-                text: "Works on any device — phone, tablet, or desktop",
-              },
-              {
-                icon: "🌍",
-                text: "English and Spanish interfaces for bilingual families",
-              },
-              {
-                icon: "💰",
-                text: "Core curriculum is completely free — forever",
-              },
-            ].map((item) => (
-              <div key={item.text} className="flex items-start gap-3">
-                <span className="mt-0.5 shrink-0 text-lg" aria-hidden="true">{item.icon}</span>
-                <p className="text-sm leading-relaxed text-zinc-500">{item.text}</p>
+              {/* Quote */}
+              <p className="flex-1 text-base leading-relaxed text-zinc-700 font-medium">
+                &ldquo;{testimonial.quote}&rdquo;
+              </p>
+              {/* Reviewer */}
+              <div className="flex items-center gap-4 border-t border-zinc-200/50 pt-5 mt-2">
+                <span
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/80 text-2xl shadow-sm border border-white"
+                  aria-hidden="true"
+                >
+                  {testimonial.emoji}
+                </span>
+                <div>
+                  <p className="text-sm font-black text-zinc-900">{testimonial.name}</p>
+                  <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wide mt-0.5">{testimonial.role}</p>
+                </div>
               </div>
-            ))}
-          </div>
-
-          {/* CTA strip */}
-          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-zinc-100 px-6 py-5 sm:px-8">
-            <p className="text-sm text-zinc-500">
-              Questions? Email{" "}
-              <a href="mailto:support@koydo.app" className="text-emerald-700 hover:underline">
-                support@koydo.app
-              </a>
-            </p>
-            <Link
-              href="/parent/dashboard"
-              className="inline-flex min-h-10 items-center rounded-full border border-emerald-500/30 bg-emerald-50 px-6 py-2 text-sm font-semibold text-emerald-700 transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-100 hover:text-emerald-800"
-            >
-              Open Parent Dashboard →
-            </Link>
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -413,24 +380,24 @@ export default async function Home() {
         />
         <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-4 py-24 text-center">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
-            Your journey starts here
+            {t("home_banner_eyebrow")}
           </p>
           <h2
             className="mt-4 text-3xl font-black leading-tight tracking-tight text-zinc-900 sm:text-4xl md:text-5xl"
             style={{ fontFamily: "var(--font-display-sans)" }}
           >
-            Every great learner{" "}
+            {t("home_banner_title_prefix")}{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
               }}
             >
-              starts with one lesson.
+              {t("home_banner_title_highlight")}
             </span>
           </h2>
           <p className="mt-5 max-w-[44ch] text-base leading-relaxed text-zinc-600">
-            Free interactive learning for ages 3 to adult — 200+ modules, every subject, every language.
+            {t("home_banner_body")}
           </p>
           <Link
             href="/explore"
@@ -439,7 +406,7 @@ export default async function Home() {
               background: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
             }}
           >
-            Start Exploring Free →
+            {t("home_banner_cta")}
           </Link>
         </div>
       </section>

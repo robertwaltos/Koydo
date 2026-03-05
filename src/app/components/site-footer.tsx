@@ -1,10 +1,13 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ASSETS } from "@/lib/config/assets";
 import { isLaunchRouteLocked, resolveLaunchHref } from "@/lib/platform/launch-readiness";
+import { useActiveProfile } from "@/lib/profiles/active-profile-context";
+import ParentalGate from "@/components/parental-gate";
 
 const PRODUCT_LINKS = [
   { href: "/explore",                label: "Explore Learning" },
@@ -67,6 +70,19 @@ const SOCIAL_LINKS = [
 
 export default function SiteFooter() {
   const pathname = usePathname();
+  const { profile } = useActiveProfile();
+  const isChild = Boolean(profile?.age_years != null && profile.age_years < 13);
+  const [gatedHref, setGatedHref] = useState<string | null>(null);
+
+  const handleExternalClick = useCallback(
+    (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      if (!isChild) return; // adults pass through normally
+      e.preventDefault();
+      setGatedHref(href);
+    },
+    [isChild],
+  );
+
   if (pathname.startsWith("/admin") || pathname.startsWith("/parent")) return null;
 
   const isHomePage = pathname === "/";
@@ -112,7 +128,7 @@ export default function SiteFooter() {
           <p className="mt-3 max-w-[22ch] leading-relaxed">
             Free interactive learning for every age, every language, every dream.
           </p>
-          {/* Social icons */}
+          {/* Social icons — gated for child accounts (Apple Kids Category §1.3) */}
           <div className="mt-5 flex items-center gap-3">
             {SOCIAL_LINKS.map((s) => (
               <a
@@ -121,6 +137,7 @@ export default function SiteFooter() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
+                onClick={(e) => handleExternalClick(e, s.href)}
                 className={`inline-flex size-11 items-center justify-center rounded-full border transition-colors ${
                   isHomePage
                     ? "border-white/15 text-slate-400 hover:border-white/30 hover:text-white"
@@ -140,18 +157,13 @@ export default function SiteFooter() {
           </p>
           <ul className="space-y-0.5">
             {PRODUCT_LINKS.map((l) => (
-              <li key={l.href} className="flex items-center gap-2">
+              <li key={l.href}>
                 <Link
                   href={resolveLaunchHref(l.href)}
                   className={`inline-flex min-h-11 items-center transition-colors hover:underline ${isHomePage ? "hover:text-white" : "hover:text-zinc-900 dark:hover:text-foreground"}`}
                 >
                   {l.label}
                 </Link>
-                {isLaunchRouteLocked(l.href) ? (
-                  <span className="rounded-full bg-amber-200 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-900">
-                    Soon
-                  </span>
-                ) : null}
               </li>
             ))}
           </ul>
@@ -211,6 +223,17 @@ export default function SiteFooter() {
           </div>
         </div>
       </div>
+
+      {/* Parental gate overlay for child accounts clicking external links */}
+      {gatedHref && (
+        <ParentalGate
+          onVerified={() => {
+            window.open(gatedHref, "_blank", "noopener,noreferrer");
+            setGatedHref(null);
+          }}
+          onCancel={() => setGatedHref(null)}
+        />
+      )}
     </footer>
   );
 }

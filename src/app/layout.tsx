@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { JetBrains_Mono, Nunito_Sans, Sora } from "next/font/google";
+import { Fredoka, JetBrains_Mono, Nunito_Sans, Sora } from "next/font/google";
 import "./globals.css";
 import AppProviders from "./app-providers";
 import OfflineBanner from "./components/offline-banner";
@@ -26,6 +26,15 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-code-mono",
   subsets: ["latin"],
   display: "swap",
+});
+
+/** Rounded display font for young-age UI (Ages 1-11). Loaded with font-display: optional
+ *  so it never delays paint — falls back to Sora if not cached yet. */
+const fredokaDisplay = Fredoka({
+  variable: "--font-display-round",
+  subsets: ["latin"],
+  display: "optional",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const viewport: Viewport = {
@@ -135,7 +144,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${nunitoSans.variable} ${soraDisplay.variable} ${jetBrainsMono.variable} antialiased`}
+        className={`${nunitoSans.variable} ${soraDisplay.variable} ${jetBrainsMono.variable} ${fredokaDisplay.variable} antialiased`}
       >
         <AppProviders>
           <SkipLinkKeyboardHelper />

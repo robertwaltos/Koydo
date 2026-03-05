@@ -3,6 +3,7 @@
 import { useEffect, useCallback } from "react";
 import { initMixpanel } from "@/lib/analytics/mixpanel";
 import { isAnalyticsAllowed } from "@/lib/consent/tracking-consent";
+import { useActiveProfile } from "@/lib/profiles/active-profile-context";
 import {
   deleteSyncedProgress,
   deleteQueuedProgressByIds,
@@ -109,13 +110,18 @@ export default function MixpanelProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const { profile } = useActiveProfile();
+  const isChild = Boolean(
+    profile?.age_years != null && profile.age_years < 13,
+  );
+
   const tryInitAnalytics = useCallback(() => {
     // Native builds intentionally keep web Mixpanel tracking disabled.
     if (isNativeCapacitorPlatform()) return;
-    if (isAnalyticsAllowed()) {
-      initMixpanel();
+    if (isAnalyticsAllowed(isChild)) {
+      initMixpanel({ isChildAccount: isChild });
     }
-  }, []);
+  }, [isChild]);
 
   useEffect(() => {
     // Only initialize Mixpanel if the user has consented to analytics tracking.

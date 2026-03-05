@@ -53,6 +53,9 @@ jobs:
       - name: Verify billing webhook hardening guard coverage
         run: npm run security:billing-webhook-hardening:check
 
+      - name: TypeScript type check
+        run: npx tsc --noEmit
+
       - name: Lint changed JS/TS files
         shell: bash
         run: |

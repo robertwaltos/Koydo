@@ -144,14 +144,8 @@ export default function LogicalLink() {
 
     return (
         <div className="relative min-h-[700px] w-full flex flex-col items-center justify-center p-8 bg-black overflow-hidden rounded-[3rem] border-4 border-slate-900 shadow-2xl">
-            {/* 4K Background */}
-            <div className="absolute inset-0 opacity-40">
-                <img
-                    src="/cyber_logic_matching_bg_1772427624067.png"
-                    alt="Cyber Logic"
-                    className="w-full h-full object-cover"
-                />
-            </div>
+            {/* Cyber Background */}
+            <div className="absolute inset-0 opacity-40 bg-gradient-to-br from-fuchsia-950 via-slate-900 to-cyan-950" />
 
             {/* Header */}
             <div className="absolute top-8 left-8 right-8 flex justify-between items-start z-10">
