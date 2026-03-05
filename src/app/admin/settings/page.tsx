@@ -18,13 +18,27 @@ type GrantEntry = {
   metadata: Record<string, unknown> | null;
   created_at: string;
 };
+type FeatureEntry = {
+  id: string;
+  description: string;
+  enabled: boolean;
+  tier: string;
+  min_age_tier: string;
+  max_age_tier: string;
+  app_variants: string[];
+  category: string;
+  source: "db" | "default";
+  updated_by: string | null;
+  updated_at: string | null;
+};
 
-type Tab = "settings" | "overrides" | "access";
+type Tab = "settings" | "overrides" | "access" | "features";
 
 const TABS: Array<{ id: Tab; label: string }> = [
   { id: "settings", label: "App Settings" },
   { id: "overrides", label: "User Overrides" },
   { id: "access", label: "Access Grants" },
+  { id: "features", label: "Feature Manager" },
 ];
 
 const GRANT_TYPES = [
@@ -37,6 +51,25 @@ const GRANT_TYPES = [
   "employee",
 ] as const;
 
+const CATEGORY_LABELS: Record<string, string> = {
+  classroom: "Classroom",
+  integration: "Integrations",
+  content: "Content",
+  learning: "Learning",
+  social: "Social & Multiplayer",
+  gamification: "Gamification & Rewards",
+  advanced: "Advanced Learning",
+  operational: "Operational",
+};
+
+const TIER_COLORS: Record<string, string> = {
+  free: "bg-emerald-100 text-emerald-800",
+  premium: "bg-amber-100 text-amber-800",
+  parent_opt_in: "bg-violet-100 text-violet-800",
+};
+
+const CATEGORY_ORDER = ["classroom", "integration", "content", "learning", "social", "gamification", "advanced", "operational"];
+
 /* ================================================================== */
 export default function AdminSettingsPage() {
   const [tab, setTab] = useState<Tab>("settings");
@@ -48,6 +81,8 @@ export default function AdminSettingsPage() {
   const [grantType, setGrantType] = useState<string>("beta_tester");
   const [grants, setGrants] = useState<GrantEntry[]>([]);
   const [newGrant, setNewGrant] = useState({ userId: "", grantType: "beta_tester", reason: "" });
+  const [features, setFeatures] = useState<FeatureEntry[]>([]);
+  const [featureFilter, setFeatureFilter] = useState<string>("all");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState("");
 
@@ -177,9 +212,68 @@ export default function AdminSettingsPage() {
     if (res.ok) { flash("Revoked"); loadGrants(); } else flash("Revoke failed");
   };
 
+  /* ---------- Features ---------- */
+  const loadFeatures = useCallback(async () => {
+    setLoading(true);
+    try {
+      const res = await fetch("/api/admin/features");
+      if (!res.ok) throw new Error("Failed to load features");
+      const data = await res.json();
+      setFeatures(data.features ?? []);
+    } catch {
+      flash("Error loading features");
+    } finally {
+      setLoading(false);
+    }
+  }, [flash]);
+
+  const toggleFeature = async (id: string, enabled: boolean) => {
+    const res = await fetch("/api/admin/features", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id, enabled }),
+    });
+    if (res.ok) {
+      flash(`${id} ${enabled ? "enabled" : "disabled"}`);
+      setFeatures((prev) => prev.map((f) => f.id === id ? { ...f, enabled, source: "db" } : f));
+    } else {
+      flash("Toggle failed");
+    }
+  };
+
+  const updateFeatureTier = async (id: string, tier: string) => {
+    const res = await fetch("/api/admin/features", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id, tier }),
+    });
+    if (res.ok) {
+      flash(`${id} tier → ${tier}`);
+      setFeatures((prev) => prev.map((f) => f.id === id ? { ...f, tier, source: "db" } : f));
+    } else {
+      flash("Update failed");
+    }
+  };
+
+  const flushFeatureCache = async () => {
+    await fetch("/api/admin/features", { method: "DELETE" });
+    flash("Feature cache flushed");
+  };
+
   /* ---------- Auto-load on tab change ---------- */
   useEffect(() => { if (tab === "settings") loadSettings(); }, [tab, loadSettings]);
   useEffect(() => { if (tab === "access") loadGrants(); }, [tab, grantType, loadGrants]);
+  useEffect(() => { if (tab === "features") loadFeatures(); }, [tab, loadFeatures]);
+
+  const filteredFeatures = featureFilter === "all"
+    ? features
+    : features.filter((f) => f.category === featureFilter);
+
+  const groupedFeatures = CATEGORY_ORDER.reduce<Record<string, FeatureEntry[]>>((acc, cat) => {
+    const items = filteredFeatures.filter((f) => f.category === cat);
+    if (items.length > 0) acc[cat] = items;
+    return acc;
+  }, {});
 
   return (
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-12">
@@ -192,7 +286,7 @@ export default function AdminSettingsPage() {
 
       <SoftCard as="header" className="border-accent/20 bg-[var(--gradient-hero)] p-6">
         <h1 className="text-3xl font-semibold tracking-tight">Settings &amp; Access</h1>
-        <p className="mt-2 text-sm text-zinc-700">Runtime application settings, per-user overrides, and access grants.</p>
+        <p className="mt-2 text-sm text-zinc-700">Runtime application settings, per-user overrides, access grants, and feature management.</p>
       </SoftCard>
 
       <SoftTabBar value={tab} tabs={TABS} onChange={setTab} ariaLabel="Settings sections" />
@@ -308,6 +402,106 @@ export default function AdminSettingsPage() {
             <input placeholder="Reason (optional)" className="rounded-xl border border-border bg-surface-muted px-3 py-1.5 text-sm" value={newGrant.reason} onChange={(e) => setNewGrant((n) => ({ ...n, reason: e.target.value }))} />
           </div>
           <SoftButton variant="accent" onClick={createGrant}>Grant Access</SoftButton>
+        </SoftCard>
+      )}
+
+      {/* ===== Feature Manager Tab ===== */}
+      {tab === "features" && (
+        <SoftCard as="section" className="space-y-4 p-5">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-semibold">Feature Manager</h2>
+            <SoftButton variant="ghost" onClick={flushFeatureCache}>Flush Cache</SoftButton>
+          </div>
+
+          {/* Category filter */}
+          <div className="flex flex-wrap gap-2">
+            <SoftButton variant={featureFilter === "all" ? "accent" : "neutral"} onClick={() => setFeatureFilter("all")}>
+              All ({features.length})
+            </SoftButton>
+            {CATEGORY_ORDER.map((cat) => {
+              const count = features.filter((f) => f.category === cat).length;
+              if (count === 0) return null;
+              return (
+                <SoftButton key={cat} variant={featureFilter === cat ? "accent" : "neutral"} onClick={() => setFeatureFilter(cat)}>
+                  {CATEGORY_LABELS[cat]} ({count})
+                </SoftButton>
+              );
+            })}
+          </div>
+
+          {loading ? <p className="text-sm text-zinc-500">Loading…</p> : (
+            <div className="space-y-6">
+              {Object.entries(groupedFeatures).map(([category, items]) => (
+                <div key={category}>
+                  <h3 className="mb-3 text-sm font-semibold text-zinc-600 uppercase tracking-wider">
+                    {CATEGORY_LABELS[category] ?? category}
+                  </h3>
+                  <div className="divide-y divide-border rounded-xl border border-border">
+                    {items.map((f) => (
+                      <div key={f.id} className="flex flex-wrap items-center gap-3 px-4 py-3">
+                        {/* Toggle */}
+                        <button
+                          onClick={() => toggleFeature(f.id, !f.enabled)}
+                          className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full transition-colors ${
+                            f.enabled ? "bg-emerald-500" : "bg-zinc-300"
+                          }`}
+                          aria-label={`Toggle ${f.id}`}
+                        >
+                          <span
+                            className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow transition-transform ${
+                              f.enabled ? "translate-x-5" : "translate-x-0.5"
+                            } mt-0.5`}
+                          />
+                        </button>
+
+                        {/* ID + description */}
+                        <div className="min-w-[200px] flex-1">
+                          <code className="text-sm font-medium">{f.id}</code>
+                          <p className="text-xs text-zinc-500">{f.description}</p>
+                        </div>
+
+                        {/* Tier badge */}
+                        <select
+                          value={f.tier}
+                          onChange={(e) => updateFeatureTier(f.id, e.target.value)}
+                          className={`rounded-lg px-2 py-1 text-xs font-medium ${TIER_COLORS[f.tier] ?? "bg-zinc-100"}`}
+                        >
+                          <option value="free">Free</option>
+                          <option value="premium">Premium</option>
+                          <option value="parent_opt_in">Parent Opt-in</option>
+                        </select>
+
+                        {/* Age range */}
+                        <span className="text-xs text-zinc-500">
+                          {f.min_age_tier}–{f.max_age_tier}
+                        </span>
+
+                        {/* Variant pills */}
+                        <div className="flex gap-1">
+                          {f.app_variants.slice(0, 3).map((v) => (
+                            <span key={v} className="rounded-md bg-zinc-100 px-1.5 py-0.5 text-[10px] font-medium text-zinc-600">
+                              {v}
+                            </span>
+                          ))}
+                          {f.app_variants.length > 3 && (
+                            <span className="text-[10px] text-zinc-400">+{f.app_variants.length - 3}</span>
+                          )}
+                        </div>
+
+                        {/* Source indicator */}
+                        {f.source === "db" && (
+                          <span className="text-[10px] text-blue-500 font-medium">DB</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+              {filteredFeatures.length === 0 && (
+                <p className="py-4 text-center text-sm text-zinc-500">No features found.</p>
+              )}
+            </div>
+          )}
         </SoftCard>
       )}
     </main>

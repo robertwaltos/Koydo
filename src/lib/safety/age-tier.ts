@@ -27,6 +27,9 @@ export interface AgeTierConfig {
   contentFilter: 0 | 1 | 2;
 }
 
+/** Ordered from youngest to oldest — used for range comparisons */
+export const AGE_TIER_ORDER: AgeTier[] = ["little", "explorer", "teen", "senior", "adult"];
+
 export const AGE_TIER_CONFIGS: Record<AgeTier, AgeTierConfig> = {
   little: {
     tier: "little",

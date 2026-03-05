@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import { useFeature } from "@/lib/platform/use-feature";
 import SoftCard from "@/app/components/ui/soft-card";
 
 type Question = { question: string; options: string[]; answer: number };
@@ -18,6 +19,7 @@ type Game = {
 const SUBJECTS = ["math", "science", "history", "english"];
 
 export default function QuizLivePage() {
+  const { allowed: featureAllowed, isLoading: featureLoading } = useFeature("quiz_live_multiplayer");
   const [games, setGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeGame, setActiveGame] = useState<Game | null>(null);
@@ -171,6 +173,16 @@ export default function QuizLivePage() {
             </Link>
           </div>
         </SoftCard>
+      </main>
+    );
+  }
+
+  // Feature gate
+  if (featureLoading) return null;
+  if (!featureAllowed) {
+    return (
+      <main className="flex min-h-[60vh] items-center justify-center">
+        <p className="text-sm text-foreground/50">Live Quiz is not available for your account.</p>
       </main>
     );
   }

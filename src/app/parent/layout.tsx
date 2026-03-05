@@ -11,6 +11,7 @@ const PARENT_NAV: DashNavGroup[] = [
       { href: "/parent/reports",         label: "Progress Reports", icon: "↗" },
       { href: "/parent/devices",         label: "Devices",          icon: "📱" },
       { href: "/parent/airplane-mode",   label: "Airplane Mode",    icon: "✈️" },
+      { href: "/parent/features",        label: "Feature Controls", icon: "⚡" },
     ],
   },
   {
