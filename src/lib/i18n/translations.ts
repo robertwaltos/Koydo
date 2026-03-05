@@ -225,6 +225,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "Unexpected error loading learner profiles. Please reload and try again.",
 
     who_learning_loading_aria: "Loading",
+    who_learning_redirecting_text: "Setting up your session…",
     who_learning_heading: "Welcome back!",
     who_learning_subtitle: "Pick a learner profile to continue, or add a new one.",
     who_learning_choose_learner: "Choose a Learner",
@@ -796,6 +797,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
       "Error inesperado al cargar perfiles. Recarga e inténtalo de nuevo.",
 
     who_learning_loading_aria: "Cargando",
+    who_learning_redirecting_text: "Preparando tu sesión…",
     who_learning_heading: "¡Bienvenido de nuevo!",
     who_learning_subtitle:
       "Elige un perfil de estudiante para continuar o agrega uno nuevo.",
