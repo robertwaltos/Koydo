@@ -484,6 +484,8 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
 
       <CompanionSettingsCard avatarStyle={avatarStyle} setAvatarStyle={setAvatarStyle} />
 
+      <AccessibilityPreferencesCard />
+
       <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Parent Security Verification</h2>
         <p className="mt-2 text-sm text-zinc-600">
@@ -773,10 +775,14 @@ function CompanionSettingsCard({
   setAvatarStyle: (style: CompanionAvatarStyle) => void;
 }) {
   const [currentGender, setCurrentGender] = useState<CompanionGender | null>(null);
+  const [skinTone, setSkinTone] = useState<"light" | "medium" | "dark">("medium");
 
   useEffect(() => {
     const stored = localStorage.getItem(COMPANION_STORAGE_KEY) as CompanionGender | null;
-    if (stored === "female" || stored === "male") setCurrentGender(stored);
+    if (stored === "female" || stored === "male") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setCurrentGender(stored);
+    }
   }, []);
 
   const companion = currentGender ? COMPANIONS[currentGender] : null;
@@ -787,21 +793,28 @@ function CompanionSettingsCard({
     localStorage.setItem(COMPANION_STORAGE_KEY, next);
   };
 
+  type SkinTone = "light" | "medium" | "dark";
+  const skinTones: { id: SkinTone; label: string; color: string }[] = [
+    { id: "light", label: "Light", color: "bg-orange-100" },
+    { id: "medium", label: "Medium", color: "bg-orange-300" },
+    { id: "dark", label: "Dark", color: "bg-amber-800" },
+  ];
+
   return (
     <SoftCard as="section" className="p-5">
-      <h2 className="text-lg font-semibold">Companion Settings</h2>
+      <h2 className="text-lg font-semibold">Companion Appearance</h2>
       <p className="mt-2 text-sm text-zinc-600">
-        Customize your child&apos;s learning companion appearance.
+        Customize your child&apos;s learning companion to best suit their learning style.
       </p>
 
-      <div className="mt-4 space-y-4">
+      <div className="mt-5 space-y-6">
         <div>
-          <p className="text-sm font-medium text-zinc-700">Companion Avatar Style</p>
+          <p className="text-sm font-medium text-zinc-700">Display Style</p>
           <div className="mt-2 flex gap-3">
             <label
               className={`flex cursor-pointer items-center gap-2 rounded-xl border px-4 py-3 text-sm transition-colors ${
                 avatarStyle === "human"
-                  ? "border-emerald-400 bg-emerald-50 text-emerald-800"
+                  ? "border-indigo-400 bg-indigo-50 text-indigo-800"
                   : "border-zinc-200 bg-white text-zinc-600 hover:border-zinc-300"
               }`}
             >
@@ -811,14 +824,14 @@ function CompanionSettingsCard({
                 value="human"
                 checked={avatarStyle === "human"}
                 onChange={() => setAvatarStyle("human")}
-                className="h-4 w-4 accent-emerald-600"
+                className="h-4 w-4 accent-indigo-600"
               />
-              Human photo
+              Photorealistic Human
             </label>
             <label
               className={`flex cursor-pointer items-center gap-2 rounded-xl border px-4 py-3 text-sm transition-colors ${
                 avatarStyle === "animated"
-                  ? "border-emerald-400 bg-emerald-50 text-emerald-800"
+                  ? "border-indigo-400 bg-indigo-50 text-indigo-800"
                   : "border-zinc-200 bg-white text-zinc-600 hover:border-zinc-300"
               }`}
             >
@@ -828,18 +841,35 @@ function CompanionSettingsCard({
                 value="animated"
                 checked={avatarStyle === "animated"}
                 onChange={() => setAvatarStyle("animated")}
-                className="h-4 w-4 accent-emerald-600"
+                className="h-4 w-4 accent-indigo-600"
               />
-              Animated cartoon
+              Animated Cartoon
             </label>
           </div>
         </div>
 
+        <div>
+          <p className="text-sm font-medium text-zinc-700">Skin Tone Preference</p>
+          <p className="mt-1 text-xs text-zinc-500 mb-2">We are adding diverse representations soon! Select your preference for the upcoming human avatars.</p>
+          <div className="flex gap-3">
+            {skinTones.map((tone) => (
+              <button
+                key={tone.id}
+                onClick={() => setSkinTone(tone.id)}
+                className={`flex h-10 w-10 items-center justify-center rounded-full border-2 transition-all hover:scale-110 ${
+                  skinTone === tone.id ? "border-indigo-600 shadow-md scale-110" : "border-transparent shadow-sm"
+                } ${tone.color}`}
+                aria-label={`Select ${tone.label} skin tone`}
+              />
+            ))}
+          </div>
+        </div>
+
         {companion && currentGender && (
-          <div className="flex items-center gap-4 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3">
+          <div className="flex items-center gap-4 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 mt-6">
             <CompanionAvatarSVG
               gender={currentGender}
-              size={48}
+              size={56}
               previewImageUrl={companion.previewImageUrl}
               avatarStyle={avatarStyle}
             />
@@ -862,3 +892,137 @@ function CompanionSettingsCard({
     </SoftCard>
   );
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Accessibility & Preferences Section
+// ─────────────────────────────────────────────────────────────────────────────
+
+function AccessibilityPreferencesCard() {
+  const [soundEffects, setSoundEffects] = useState<"on" | "off">("on");
+  const [motionPref, setMotionPref] = useState<"standard" | "reduced">("standard");
+  const [contrastPref, setContrastPref] = useState<"standard" | "high">("standard");
+  const [dailyGoalXp, setDailyGoalXp] = useState(0);
+  const [saving, setSaving] = useState(false);
+  const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    fetch("/api/user/preferences")
+      .then((res) => res.json())
+      .then((data) => {
+        const p = data.preferences ?? {};
+        setSoundEffects(p.sound_effects ?? "on");
+        setMotionPref(p.motion_pref ?? "standard");
+        setContrastPref(p.contrast_pref ?? "standard");
+        setDailyGoalXp(p.daily_goal_xp ?? 0);
+      })
+      .catch(() => {});
+  }, []);
+
+  const save = async () => {
+    setSaving(true);
+    setStatus("");
+    try {
+      const res = await fetch("/api/user/preferences", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sound_effects: soundEffects,
+          motion_pref: motionPref,
+          contrast_pref: contrastPref,
+          daily_goal_xp: dailyGoalXp,
+        }),
+      });
+      setStatus(res.ok ? "Preferences saved." : "Failed to save.");
+    } catch {
+      setStatus("Failed to save.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const goalOptions = [
+    { value: 0, label: "No goal" },
+    { value: 10, label: "10 XP (Casual)" },
+    { value: 20, label: "20 XP (Regular)" },
+    { value: 30, label: "30 XP (Serious)" },
+    { value: 50, label: "50 XP (Intense)" },
+  ];
+
+  return (
+    <SoftCard as="section" className="p-5">
+      <h2 className="text-lg font-semibold">Accessibility & Preferences</h2>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-foreground/70">
+        Customize your learning experience and accessibility settings.
+      </p>
+
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {/* Sound Effects */}
+        <label className="flex flex-col gap-1 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Sound Effects</span>
+          <select
+            value={soundEffects}
+            onChange={(e) => setSoundEffects(e.target.value as "on" | "off")}
+            className="ui-focus-ring rounded-xl border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            <option value="on">On</option>
+            <option value="off">Off</option>
+          </select>
+        </label>
+
+        {/* Motion */}
+        <label className="flex flex-col gap-1 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Motion & Animations</span>
+          <select
+            value={motionPref}
+            onChange={(e) => setMotionPref(e.target.value as "standard" | "reduced")}
+            className="ui-focus-ring rounded-xl border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            <option value="standard">Standard</option>
+            <option value="reduced">Reduced motion</option>
+          </select>
+        </label>
+
+        {/* Contrast */}
+        <label className="flex flex-col gap-1 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Contrast Mode</span>
+          <select
+            value={contrastPref}
+            onChange={(e) => setContrastPref(e.target.value as "standard" | "high")}
+            className="ui-focus-ring rounded-xl border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            <option value="standard">Standard</option>
+            <option value="high">High contrast</option>
+          </select>
+        </label>
+
+        {/* Daily Goal */}
+        <label className="flex flex-col gap-1 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Daily Learning Goal</span>
+          <select
+            value={dailyGoalXp}
+            onChange={(e) => setDailyGoalXp(Number(e.target.value))}
+            className="ui-focus-ring rounded-xl border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            {goalOptions.map((opt) => (
+              <option key={opt.value} value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <div className="mt-4 flex items-center gap-3">
+        <button
+          type="button"
+          onClick={save}
+          disabled={saving}
+          className="ui-soft-button ui-focus-ring rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-100 dark:border-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300"
+        >
+          {saving ? "Saving…" : "Save Preferences"}
+        </button>
+        {status && <p className="text-sm text-zinc-600">{status}</p>}
+      </div>
+    </SoftCard>
+  );
+}
+
+
