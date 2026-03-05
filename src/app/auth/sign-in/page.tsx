@@ -74,7 +74,8 @@ function SignInPageContent() {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) { setStatus(error.message); return; }
       setStatus(t("auth_sign_in_status_success"));
-      router.push(nextPath);
+      // Full page load to guarantee fresh server-side session cookies
+      window.location.href = nextPath;
     } catch { setStatus(t("auth_sign_in_status_unable")); }
     finally { setIsSubmittingPassword(false); }
   };
@@ -123,7 +124,8 @@ function SignInPageContent() {
       const { error } = await supabase.auth.verifyOtp({ phone, token: phoneToken, type: "sms" });
       if (error) { setPhoneStatus(error.message); return; }
       setPhoneStatus(t("auth_sign_in_phone_verified_redirect"));
-      router.push(nextPath);
+      // Full page load to guarantee fresh server-side session cookies
+      window.location.href = nextPath;
     } catch { setPhoneStatus(t("auth_sign_in_phone_unable_verify")); }
     finally { setIsVerifyingPhoneOtp(false); }
   };
@@ -224,6 +226,9 @@ function SignInPageContent() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="ui-focus-ring w-full rounded-xl border border-zinc-300/80 bg-white px-3.5 py-2.5 text-sm shadow-sm"
                 required
+                aria-required="true"
+                aria-invalid={!!status || undefined}
+                aria-describedby={status ? "sign-in-error" : undefined}
               />
             </div>
             <div>
@@ -237,9 +242,12 @@ function SignInPageContent() {
                 onChange={(e) => setPassword(e.target.value)}
                 className="ui-focus-ring w-full rounded-xl border border-zinc-300/80 bg-white px-3.5 py-2.5 text-sm shadow-sm"
                 required
+                aria-required="true"
+                aria-invalid={!!status || undefined}
+                aria-describedby={status ? "sign-in-error" : undefined}
               />
             </div>
-            {status && <p role="status" className="text-sm text-red-600">{status}</p>}
+            {status && <p id="sign-in-error" role="alert" className="text-sm text-red-600">{status}</p>}
             <button
               type="submit"
               disabled={isSubmittingPassword || !hasSupabaseConfig}

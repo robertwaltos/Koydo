@@ -55,7 +55,8 @@ export default function AgeGateClient() {
         route = `${parentConsentUrl.pathname}${parentConsentUrl.search}`;
       }
 
-      router.push(route);
+      // Full page load to guarantee fresh server-side session after profile update
+      window.location.href = route;
     } catch {
       setStatus("Unable to continue. Try again.");
     } finally {

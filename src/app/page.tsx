@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
-import { getAllEducationStages } from "@/lib/explorer/scenes";
 import {
   isSupportedLocale,
   type Locale,
@@ -11,9 +10,7 @@ import {
 } from "@/lib/i18n/translations";
 import { ASSETS } from "@/lib/config/assets";
 import VoicePicker from "@/app/explore/_components/voice-picker";
-import LandingCompanion from "@/app/components/landing-companion";
 import SubjectShowcase from "@/app/components/subject-showcase";
-import AgeGroupSelector from "@/app/components/age-group-selector";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = {
@@ -41,8 +38,6 @@ export default async function Home() {
   const locale: Locale = isSupportedLocale(localeCookie) ? localeCookie : "en";
   const t = (key: string, vars?: Record<string, string | number>) =>
     translate(locale, key, vars);
-
-  const stages = getAllEducationStages();
 
   return (
     <div className="relative font-sans">
@@ -110,44 +105,20 @@ export default async function Home() {
               </div>
             </div>
 
-            {/* Right column: companion avatar */}
-            <div className="hidden lg:flex lg:items-center lg:justify-center">
-              <LandingCompanion />
-            </div>
           </div>
         </div>
       </section>
 
-      {/* ── Education stage navigation strip ── */}
-      <div className="relative border-y border-zinc-200/60 bg-white/70 backdrop-blur-sm">
-        <div
-          className="mx-auto flex max-w-7xl items-center gap-3 overflow-x-auto px-4 py-4"
-          style={{ scrollbarWidth: "none" }}
-        >
-          {stages.map((stage) => (
-            <Link
-              key={stage.id}
-              href={`/explore?stage=${stage.id}`}
-              className="flex flex-shrink-0 items-center gap-2 rounded-full border border-zinc-200/80 bg-white/80 px-5 py-2.5 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-50 hover:text-emerald-700"
-            >
-              <span className="text-base" aria-hidden="true">{stage.badge}</span>
-              {locale === "es" ? stage.labelEs : stage.label}
-            </Link>
-          ))}
-        </div>
-      </div>
 
-      {/* ── Age Group Selector ── */}
-      <AgeGroupSelector />
 
       {/* ── Stats bar ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 py-10 sm:py-14">
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
           {[
-            { value: "800+",   label: "Learning Modules",   icon: "📚" },
-            { value: "3–100",  label: "All Ages Welcome",   icon: "🎓" },
-            { value: "2",      label: "Languages",          icon: "🌍" },
-            { value: "100%",   label: "Free to Start",      icon: "✨" },
+            { value: "800+",   label: t("home_stat_modules"),    icon: "📚" },
+            { value: "3–100",  label: t("home_stat_ages"),       icon: "🎓" },
+            { value: "2",      label: t("home_stat_languages"),  icon: "🌍" },
+            { value: "100%",   label: t("home_stat_free"),       icon: "✨" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -172,11 +143,12 @@ export default async function Home() {
       <div className="relative border-y border-zinc-100/80 bg-white/60 py-4 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-2.5 px-4">
           {[
-            { icon: "🛡️", label: "COPPA Certified" },
-            { icon: "📋", label: "FERPA Compliant" },
-            { icon: "🔒", label: "SOC 2 Type II" },
-            { icon: "🤖", label: "AI Safety Certified" },
-            { icon: "🎉", label: "1M+ Happy Learners" },
+            { icon: "🛡️", label: t("home_trust_coppa") },
+            { icon: "📋", label: t("home_badge_ferpa") },
+            { icon: "🚫", label: t("home_trust_ads") },
+            { icon: "🔒", label: t("home_badge_no_tracking") },
+            { icon: "🤖", label: t("home_badge_ai_safety") },
+            { icon: "✨", label: t("home_stats_free") },
           ].map((badge) => (
             <span key={badge.label} className="ui-trust-badge">
               <span aria-hidden="true">{badge.icon}</span>
@@ -246,7 +218,7 @@ export default async function Home() {
             href="/explore"
             className="inline-flex min-h-12 items-center rounded-full border border-zinc-200/80 bg-white/80 px-7 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-50 hover:text-emerald-700"
           >
-            Browse all subjects →
+            {t("home_how_browse_cta")}
           </Link>
         </div>
       </section>
@@ -257,11 +229,10 @@ export default async function Home() {
           className="text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
           style={{ fontFamily: "var(--font-display-sans)" }}
         >
-          Popular Subjects
+          {t("home_subjects_title")}
         </h2>
         <p className="mx-auto mt-2 max-w-md text-center text-sm text-zinc-500">
-          Tap a subject to start exploring — interactive modules across every
-          learning area
+          {t("home_subjects_subtitle")}
         </p>
         <div className="mt-10">
           <SubjectShowcase />
@@ -272,12 +243,12 @@ export default async function Home() {
       <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
         {/* Header */}
         <div className="mb-8 text-center">
-          <p className="ui-landing-eyebrow">Why Koydo</p>
+          <p className="ui-landing-eyebrow">{t("home_bento_eyebrow")}</p>
           <h2
             className="mt-2 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
             style={{ fontFamily: "var(--font-display-sans)" }}
           >
-            Everything you need to learn, nothing you don&apos;t
+            {t("home_bento_title")}
           </h2>
         </div>
 
@@ -303,7 +274,7 @@ export default async function Home() {
                 href="/explore"
                 className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 hover:gap-2.5 transition-all duration-200"
               >
-                Try a lesson →
+                {t("home_bento_try_cta")}
               </Link>
             </div>
           </div>
@@ -330,197 +301,125 @@ export default async function Home() {
             <span className="text-5xl font-black tracking-tight text-emerald-700" style={{ fontFamily: "var(--font-display-sans)" }}>
               800+
             </span>
-            <p className="text-sm font-semibold text-emerald-800">Curriculum Modules</p>
-            <p className="text-xs text-emerald-700/70">Aligned to national learning standards</p>
+            <p className="text-sm font-semibold text-emerald-800">{t("home_bento_modules_label")}</p>
+            <p className="text-xs text-emerald-700/70">{t("home_bento_modules_note")}</p>
           </div>
 
           {/* Offline/device card */}
           <div className="ui-bento-card group flex flex-col gap-3 p-6">
             <span className="text-3xl" aria-hidden="true">📱</span>
-            <h3 className="text-base font-bold text-zinc-900">Works on every device</h3>
+            <h3 className="text-base font-bold text-zinc-900">{t("home_bento_device_title")}</h3>
             <p className="text-sm leading-relaxed text-zinc-500">
-              Phone, tablet, or desktop — pick up exactly where you left off with seamless cross-device sync.
+              {t("home_bento_device_desc")}
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── For Parents — trust section ── */}
+      {/* ── Why Families Choose Koydo ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
-        <div className="overflow-hidden rounded-3xl border border-zinc-200/60 bg-white/70 shadow-sm backdrop-blur-sm">
-          {/* Header strip */}
-          <div className="border-b border-zinc-100 px-6 py-8 text-center sm:px-10 sm:py-10">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
-              For Parents & Educators
-            </p>
-            <h2
-              className="mt-3 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
-              style={{ fontFamily: "var(--font-display-sans)" }}
+        <div className="mb-8 text-center">
+          <p className="ui-landing-eyebrow">{t("home_trust_eyebrow")}</p>
+          <h2
+            className="mt-2 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+            style={{ fontFamily: "var(--font-display-sans)" }}
+          >
+            {t("home_why_koydo_title")}
+          </h2>
+          <p className="mx-auto mt-3 max-w-[52ch] text-sm leading-relaxed text-zinc-500">
+            {t("home_why_koydo_subtitle")}
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {[
+            {
+              icon: "🧠",
+              title: t("home_why_adaptive_title"),
+              desc: t("home_why_adaptive_desc"),
+            },
+            {
+              icon: "🌍",
+              title: t("home_why_multilingual_title"),
+              desc: t("home_why_multilingual_desc"),
+            },
+            {
+              icon: "📊",
+              title: t("home_why_progress_title"),
+              desc: t("home_why_progress_desc"),
+            },
+          ].map((card) => (
+            <div
+              key={card.title}
+              className="group relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-300 hover:bg-white/90 hover:shadow-md"
             >
-              Built for families. Trusted by{" "}
-              <span
-                className="bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
-                }}
+              <span className="mb-3 block text-4xl" aria-hidden="true">{card.icon}</span>
+              <h3
+                className="text-base font-bold text-zinc-900"
+                style={{ fontFamily: "var(--font-display-sans)" }}
               >
-                educators.
-              </span>
-            </h2>
-            <p className="mx-auto mt-3 max-w-[52ch] text-sm leading-relaxed text-zinc-500">
-              Koydo is designed from the ground up to be safe, private, and genuinely
-              educational — with full parent visibility and control.
-            </p>
-          </div>
-
-          {/* Trust grid */}
-          <div className="grid grid-cols-2 gap-px bg-zinc-100/50 sm:grid-cols-4">
-            {[
-              {
-                icon: "🛡️",
-                title: "COPPA Compliant",
-                desc: "No data sold. Children's privacy protected by design.",
-              },
-              {
-                icon: "🚫",
-                title: "Zero Ads",
-                desc: "No advertising, no tracking pixels, no third-party marketing.",
-              },
-              {
-                icon: "👁️",
-                title: "Parent Dashboard",
-                desc: "See exactly what your child is learning and how they're progressing.",
-              },
-              {
-                icon: "🎓",
-                title: "Educator Reviewed",
-                desc: "Every module is aligned to grade-level learning standards.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="group flex flex-col gap-2 bg-white/80 px-5 py-6 transition-colors duration-300 hover:bg-emerald-50/60"
-              >
-                <span className="text-2xl" aria-hidden="true">{item.icon}</span>
-                <h3 className="text-sm font-bold text-zinc-900">{item.title}</h3>
-                <p className="text-xs leading-relaxed text-zinc-500">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Feature list */}
-          <div className="grid grid-cols-1 gap-4 border-t border-zinc-100 p-6 sm:grid-cols-3 sm:p-8">
-            {[
-              {
-                icon: "📊",
-                text: "Track lessons completed, streaks, and quiz scores per learner",
-              },
-              {
-                icon: "🔒",
-                text: "Set content restrictions by age stage and subject area",
-              },
-              {
-                icon: "👨‍👩‍👧‍👦",
-                text: "Manage multiple child profiles under one parent account",
-              },
-              {
-                icon: "📱",
-                text: "Works on any device — phone, tablet, or desktop",
-              },
-              {
-                icon: "🌍",
-                text: "English and Spanish interfaces for bilingual families",
-              },
-              {
-                icon: "💰",
-                text: "Core curriculum is completely free — forever",
-              },
-            ].map((item) => (
-              <div key={item.text} className="flex items-start gap-3">
-                <span className="mt-0.5 shrink-0 text-lg" aria-hidden="true">{item.icon}</span>
-                <p className="text-sm leading-relaxed text-zinc-500">{item.text}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA strip */}
-          <div className="flex flex-wrap items-center justify-between gap-4 border-t border-zinc-100 px-6 py-5 sm:px-8">
-            <p className="text-sm text-zinc-500">
-              Questions? Email{" "}
-              <a href="mailto:support@koydo.app" className="text-emerald-700 hover:underline">
-                support@koydo.app
-              </a>
-            </p>
-            <Link
-              href="/parent/dashboard"
-              className="inline-flex min-h-10 items-center rounded-full border border-emerald-500/30 bg-emerald-50 px-6 py-2 text-sm font-semibold text-emerald-700 transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-100 hover:text-emerald-800"
-            >
-              Open Parent Dashboard →
-            </Link>
-          </div>
+                {card.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-zinc-500">{card.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* ── Testimonials ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
         <div className="mb-8 text-center">
-          <p className="ui-landing-eyebrow">Real learners, real results</p>
+          <p className="ui-landing-eyebrow">{t("home_testimonials_eyebrow")}</p>
           <h2
             className="mt-2 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
             style={{ fontFamily: "var(--font-display-sans)" }}
           >
-            Loved by families around the world
+            {t("home_testimonials_title")}
           </h2>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {[
             {
-              quote:
-                "My daughter (age 6) asks to do Koydo every evening instead of watching TV. The narrated lessons keep her completely engaged.",
+              quote: t("home_testimonial_1_quote"),
               name: "Maria G.",
-              role: "Parent of two",
+              role: t("home_testimonial_1_role"),
               emoji: "👩‍👧",
               accent: "emerald",
             },
             {
-              quote:
-                "I'm a high school teacher and I've started recommending Koydo for home revision. The module depth for ACT prep is genuinely impressive.",
+              quote: t("home_testimonial_2_quote"),
               name: "James K.",
-              role: "High School Educator",
+              role: t("home_testimonial_2_role"),
               emoji: "👨‍🏫",
               accent: "sky",
             },
             {
-              quote:
-                "I went back to learn algebra at 47. Koydo's adult-friendly pacing and zero pressure made it actually fun. Passed my certification exam first try.",
+              quote: t("home_testimonial_3_quote"),
               name: "Priya S.",
-              role: "Adult Learner",
+              role: t("home_testimonial_3_role"),
               emoji: "🎓",
               accent: "violet",
             },
-          ].map((t) => (
-            <div key={t.name} className="ui-testimonial-card flex flex-col gap-4 p-6">
+          ].map((testimonial) => (
+            <div key={testimonial.name} className="ui-testimonial-card flex flex-col gap-4 p-6">
               {/* Stars */}
               <div className="flex gap-0.5 text-amber-400 text-sm" aria-label="5 stars">
                 {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
               </div>
-
               {/* Quote */}
               <p className="flex-1 text-sm leading-relaxed text-zinc-600 italic">
-                &ldquo;{t.quote}&rdquo;
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
-
               {/* Reviewer */}
               <div className="flex items-center gap-3">
                 <span
                   className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-zinc-100 text-lg"
                   aria-hidden="true"
                 >
-                  {t.emoji}
+                  {testimonial.emoji}
                 </span>
                 <div>
-                  <p className="text-sm font-bold text-zinc-900">{t.name}</p>
-                  <p className="text-xs text-zinc-500">{t.role}</p>
+                  <p className="text-sm font-bold text-zinc-900">{testimonial.name}</p>
+                  <p className="text-xs text-zinc-500">{testimonial.role}</p>
                 </div>
               </div>
             </div>
@@ -541,24 +440,24 @@ export default async function Home() {
         />
         <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-4 py-24 text-center">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
-            Your journey starts here
+            {t("home_banner_eyebrow")}
           </p>
           <h2
             className="mt-4 text-3xl font-black leading-tight tracking-tight text-zinc-900 sm:text-4xl md:text-5xl"
             style={{ fontFamily: "var(--font-display-sans)" }}
           >
-            Every great learner{" "}
+            {t("home_banner_title_prefix")}{" "}
             <span
               className="bg-clip-text text-transparent"
               style={{
                 backgroundImage: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
               }}
             >
-              starts with one lesson.
+              {t("home_banner_title_highlight")}
             </span>
           </h2>
           <p className="mt-5 max-w-[44ch] text-base leading-relaxed text-zinc-600">
-            Free interactive learning for ages 3 to adult — 800+ modules, every subject, every language.
+            {t("home_banner_body")}
           </p>
           <Link
             href="/explore"
@@ -567,7 +466,7 @@ export default async function Home() {
               background: "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
             }}
           >
-            Start Exploring Free →
+            {t("home_banner_cta")}
           </Link>
         </div>
       </section>

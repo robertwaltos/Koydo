@@ -16,6 +16,8 @@ test.describe.configure({ retries: 1 });
 const PUBLIC_PAGES = [
   { name: "landing", path: "/" },
   { name: "explore", path: "/explore" },
+  { name: "games", path: "/games" },
+  { name: "science-lab", path: "/science-lab" },
   { name: "sign-in", path: "/auth/sign-in" },
   { name: "sign-up", path: "/auth/sign-up" },
   { name: "privacy", path: "/legal/privacy" },

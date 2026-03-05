@@ -470,7 +470,7 @@ export default function TopNav() {
                     item.href === "/explore"
                       ? t("top_nav_explore_tooltip")
                       : locked
-                        ? "More exciting features coming soon"
+                        ? undefined
                         : undefined
                   }
                   className={`ui-soft-button ui-focus-ring ui-type-body-sm inline-flex min-h-10 items-center gap-1.5 rounded-full border px-3.5 py-1.5 font-semibold tracking-[0.01em] transition-all ${isItemActive(item.href)
@@ -501,6 +501,7 @@ export default function TopNav() {
           {/* Unauthenticated: Sign In + Sign Up on the right */}
           {!authContext.isAuthenticated ? (
             <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
+              {!isHomePage && (
               <button
                 type="button"
                 onClick={openCommandPalette}
@@ -516,10 +517,11 @@ export default function TopNav() {
                   ⌘K
                 </kbd>
               </button>
+              )}
               <Link
                 href="/auth/sign-in"
                 className={`ui-soft-button ui-focus-ring inline-flex min-h-10 items-center rounded-full border px-3 py-1.5 text-sm font-semibold shadow-sm transition hover:brightness-110 sm:px-4 ${isHomePage
-                    ? "border-amber-200 bg-amber-300 text-amber-950 hover:bg-amber-200"
+                    ? "border-amber-300/70 bg-transparent text-amber-200 hover:bg-amber-300/10"
                     : "border-zinc-300 bg-white text-zinc-800 hover:bg-surface-muted border-border/65 dark:bg-surface/60 dark:text-foreground dark:hover:bg-surface/80"
                   }`}
               >

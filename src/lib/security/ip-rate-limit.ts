@@ -1,7 +1,21 @@
 import { NextRequest } from "next/server";
-import { isIP } from "node:net";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
+
+/**
+ * Lightweight IP address validator that replaces node:net isIP()
+ * to avoid webpack "node:" scheme errors in edge/client bundles.
+ */
+function isIP(input: string): 0 | 4 | 6 {
+  // IPv4: basic dotted-decimal check
+  if (/^(\d{1,3}\.){3}\d{1,3}$/.test(input)) {
+    const parts = input.split(".").map(Number);
+    if (parts.every((p) => p >= 0 && p <= 255)) return 4;
+  }
+  // IPv6: must contain at least two colons (handles ::, full, and mixed forms)
+  if (/^[0-9a-fA-F:]+$/.test(input) && input.includes(":")) return 6;
+  return 0;
+}
 
 type RateLimitOptions = {
   max: number;

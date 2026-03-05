@@ -103,7 +103,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_why_adaptive_title: "Adaptive Learning Paths",
     home_why_adaptive_desc: "Intelligent modules adjust difficulty in real time so every learner stays challenged — never frustrated, never bored.",
     home_why_multilingual_title: "Learn in Any Language",
-    home_why_multilingual_desc: "Full English and Spanish support with audio narration on every screen — more languages coming soon.",
+    home_why_multilingual_desc: "Full English, Spanish, Chinese, and Polish support with audio narration on every screen — 50 languages planned.",
     home_why_progress_title: "Real-Time Progress Tracking",
     home_why_progress_desc: "Parents and educators get detailed dashboards showing skills mastered, time spent, and what to focus on next.",
 
@@ -112,6 +112,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_stat_questions: "Practice Questions",
     home_stat_languages: "Languages",
     home_stat_free: "Free to Start",
+    home_stat_ages: "All Ages Welcome",
 
     // ── Section 4: How It Works ──
     home_how_title: "Learning made simple",
@@ -122,6 +123,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_how_step2_desc: "Every lesson combines narration, interactive exercises, and instant feedback.",
     home_how_step3_title: "Track & Grow",
     home_how_step3_desc: "See what you know and what's next. Parents can monitor progress and set goals.",
+    home_how_browse_cta: "Browse all subjects →",
 
     // ── Section 5: Explore Subjects ──
     home_subjects_title: "Explore Every Subject",
@@ -145,6 +147,20 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_sources_stat_code: "Programming languages",
     home_sources_stat_visual: "Visual learning assets",
 
+    // ── Section 6b: Bento Feature Grid ──
+    home_bento_eyebrow: "Why Koydo",
+    home_bento_title: "Everything you need to learn, nothing you don't",
+    home_bento_try_cta: "Try a lesson →",
+    home_bento_modules_label: "Curriculum Modules",
+    home_bento_modules_note: "Aligned to national learning standards",
+    home_bento_device_title: "Works on every device",
+    home_bento_device_desc: "Phone, tablet, or desktop — pick up exactly where you left off with seamless cross-device sync.",
+
+    // ── Section 6c: Trust badges ──
+    home_badge_ferpa: "FERPA Compliant",
+    home_badge_no_tracking: "No Tracking",
+    home_badge_ai_safety: "AI Safety Certified",
+
     // ── Section 7: Trust & Safety ──
     home_trust_eyebrow: "For Parents & Educators",
     home_trust_title: "Built for families. Trusted by educators.",
@@ -158,7 +174,22 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_trust_educator: "Educator Reviewed",
     home_trust_educator_desc: "Aligned to grade-level learning standards",
 
+    // ── Section 7b: Testimonials ──
+    home_testimonials_eyebrow: "Real learners, real results",
+    home_testimonials_title: "Loved by families around the world",
+    home_testimonial_1_quote: "My daughter (age 6) asks to do Koydo every evening instead of watching TV. The narrated lessons keep her completely engaged.",
+    home_testimonial_1_role: "Parent of two",
+    home_testimonial_2_quote: "I'm a high school teacher and I've started recommending Koydo for home revision. The module depth for ACT prep is genuinely impressive.",
+    home_testimonial_2_role: "High School Educator",
+    home_testimonial_3_quote: "I went back to learn algebra at 47. Koydo's adult-friendly pacing and zero pressure made it actually fun. Passed my certification exam first try.",
+    home_testimonial_3_role: "Adult Learner",
+
     // ── Section 8: Final CTA ──
+    home_banner_eyebrow: "Your journey starts here",
+    home_banner_title_prefix: "Every great learner",
+    home_banner_title_highlight: "starts with one lesson.",
+    home_banner_body: "Free interactive learning for ages 3 to adult — 800+ modules, every subject, every language.",
+    home_banner_cta: "Start Exploring Free →",
     home_cta_title_prefix: "Every great learner ",
     home_cta_title_highlight: "starts with one lesson.",
     home_cta_body: "Free interactive learning for ages 3 to adult — 850+ modules, every subject, every language.",
@@ -468,6 +499,26 @@ export const translations: Record<Locale, TranslationDictionary> = {
     auth_sign_up_status_created: "Account created. Starting onboarding...",
     auth_sign_up_status_unable:
       "Unable to sign up. Check environment configuration and try again.",
+
+    // Age gate
+    auth_age_gate_title: "How Old Are You?",
+    auth_age_gate_subtitle: "We need your date of birth to personalise your learning experience and comply with child safety regulations.",
+    auth_age_gate_label_dob: "Date of Birth",
+    auth_age_gate_button_continue: "Continue",
+    auth_age_gate_button_saving: "Saving…",
+    auth_age_gate_error_required: "Please enter your date of birth.",
+    auth_age_gate_error_save: "Unable to save. Please try again.",
+    auth_age_gate_error_no_session: "Session not found. Please sign in again.",
+
+    // Parent consent
+    auth_parent_consent_title: "Parent / Guardian Consent Required",
+    auth_parent_consent_subtitle: "Because this learner is under 13, a parent or guardian must grant permission before they can continue.",
+    auth_parent_consent_cta: "I am the parent / guardian — Grant Consent",
+    auth_parent_consent_button_granting: "Granting…",
+    auth_parent_consent_info: "A verification email will be sent to the account owner.",
+    auth_parent_consent_error: "Unable to grant consent. Please try again.",
+    auth_parent_consent_error_no_session: "Session not found. Please sign in again.",
+
     auth_sign_up_hero_eyebrow: "Start Your Journey",
     auth_sign_up_hero_title: "Every step forward is built on knowledge.",
     auth_sign_up_title: "Create Account",
@@ -679,6 +730,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_stat_questions: "Preguntas de práctica",
     home_stat_languages: "Idiomas",
     home_stat_free: "Gratis para empezar",
+    home_stat_ages: "Todas las edades",
 
     // ── Section 4: How It Works ──
     home_how_title: "Aprender es fácil",
@@ -689,6 +741,7 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_how_step2_desc: "Cada lección combina narración, ejercicios interactivos y retroalimentación instantánea.",
     home_how_step3_title: "Sigue y crece",
     home_how_step3_desc: "Mira lo que sabes y lo que viene. Los padres pueden monitorear el progreso y establecer metas.",
+    home_how_browse_cta: "Ver todas las materias →",
 
     // ── Section 5: Explore Subjects ──
     home_subjects_title: "Explora cada materia",
@@ -712,6 +765,20 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_sources_stat_code: "Lenguajes de programación",
     home_sources_stat_visual: "Recursos visuales de aprendizaje",
 
+    // ── Section 6b: Bento Feature Grid ──
+    home_bento_eyebrow: "Por qué Koydo",
+    home_bento_title: "Todo lo que necesitas para aprender, nada que no",
+    home_bento_try_cta: "Prueba una lección →",
+    home_bento_modules_label: "Módulos curriculares",
+    home_bento_modules_note: "Alineados con estándares nacionales de aprendizaje",
+    home_bento_device_title: "Funciona en cualquier dispositivo",
+    home_bento_device_desc: "Teléfono, tableta o escritorio — retoma exactamente donde lo dejaste con sincronización entre dispositivos.",
+
+    // ── Section 6c: Trust badges ──
+    home_badge_ferpa: "Compatible con FERPA",
+    home_badge_no_tracking: "Sin rastreo",
+    home_badge_ai_safety: "IA segura certificada",
+
     // ── Section 7: Trust & Safety ──
     home_trust_eyebrow: "Para padres y educadores",
     home_trust_title: "Hecho para familias. Confiado por educadores.",
@@ -725,7 +792,22 @@ export const translations: Record<Locale, TranslationDictionary> = {
     home_trust_educator: "Revisado por educadores",
     home_trust_educator_desc: "Alineado con estándares de aprendizaje por grado",
 
+    // ── Section 7b: Testimonials ──
+    home_testimonials_eyebrow: "Estudiantes reales, resultados reales",
+    home_testimonials_title: "Querido por familias en todo el mundo",
+    home_testimonial_1_quote: "Mi hija (6 años) pide hacer Koydo cada noche en vez de ver televisión. Las lecciones narradas la mantienen completamente involucrada.",
+    home_testimonial_1_role: "Madre de dos",
+    home_testimonial_2_quote: "Soy profesor de secundaria y he empezado a recomendar Koydo para repasar en casa. La profundidad del módulo para preparación de exámenes es genuinamente impresionante.",
+    home_testimonial_2_role: "Educador de secundaria",
+    home_testimonial_3_quote: "Volví a aprender álgebra a los 47. El ritmo amigable para adultos de Koydo y la cero presión lo hicieron realmente divertido. Aprobé mi examen de certificación al primer intento.",
+    home_testimonial_3_role: "Estudiante adulto",
+
     // ── Section 8: Final CTA ──
+    home_banner_eyebrow: "Tu viaje comienza aquí",
+    home_banner_title_prefix: "Todo gran estudiante",
+    home_banner_title_highlight: "comienza con una lección.",
+    home_banner_body: "Aprendizaje interactivo gratuito para edades de 3 a adulto — 800+ módulos, cada materia, cada idioma.",
+    home_banner_cta: "Empieza a explorar gratis →",
     home_cta_title_prefix: "Todo gran estudiante ",
     home_cta_title_highlight: "comienza con una lección.",
     home_cta_body: "Aprendizaje interactivo gratuito para edades de 3 a adulto — 850+ módulos, cada materia, cada idioma.",
@@ -1051,6 +1133,26 @@ export const translations: Record<Locale, TranslationDictionary> = {
     auth_sign_up_status_created: "Cuenta creada. Iniciando onboarding...",
     auth_sign_up_status_unable:
       "No se pudo crear la cuenta. Revisa la configuración e inténtalo de nuevo.",
+
+    // Age gate
+    auth_age_gate_title: "¿Cuántos años tienes?",
+    auth_age_gate_subtitle: "Necesitamos tu fecha de nacimiento para personalizar tu experiencia de aprendizaje y cumplir con las regulaciones de seguridad infantil.",
+    auth_age_gate_label_dob: "Fecha de nacimiento",
+    auth_age_gate_button_continue: "Continuar",
+    auth_age_gate_button_saving: "Guardando…",
+    auth_age_gate_error_required: "Por favor, ingresa tu fecha de nacimiento.",
+    auth_age_gate_error_save: "No se pudo guardar. Inténtalo de nuevo.",
+    auth_age_gate_error_no_session: "Sesión no encontrada. Inicia sesión de nuevo.",
+
+    // Parent consent
+    auth_parent_consent_title: "Se requiere consentimiento del padre / tutor",
+    auth_parent_consent_subtitle: "Dado que este estudiante es menor de 13 años, un padre o tutor debe otorgar permiso antes de continuar.",
+    auth_parent_consent_cta: "Soy el padre / tutor — Otorgar consentimiento",
+    auth_parent_consent_button_granting: "Otorgando…",
+    auth_parent_consent_info: "Se enviará un correo de verificación al propietario de la cuenta.",
+    auth_parent_consent_error: "No se pudo otorgar el consentimiento. Inténtalo de nuevo.",
+    auth_parent_consent_error_no_session: "Sesión no encontrada. Inicia sesión de nuevo.",
+
     auth_sign_up_hero_eyebrow: "Empieza tu viaje",
     auth_sign_up_hero_title: "Cada paso adelante se construye sobre el conocimiento.",
     auth_sign_up_title: "Crear cuenta",

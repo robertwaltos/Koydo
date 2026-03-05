@@ -154,12 +154,13 @@ function SelectProfilePageInner() {
 
   const handleSelectProfile = (profileId: string) => {
     setActiveProfile(profileId);
+    // Full page load so middleware sees the fresh active_profile_id cookie
     if (nextPath && nextPath.startsWith("/student")) {
-      router.push(nextPath);
+      window.location.href = nextPath;
       return;
     }
 
-    router.push("/student/dashboard");
+    window.location.href = "/student/dashboard";
   };
 
   if (loading) {
@@ -239,7 +240,7 @@ function SelectProfilePageInner() {
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={profile.avatar_url}
-                        alt=""
+                        alt={`${profile.display_name}'s profile picture`}
                         className="h-full w-full rounded-2xl object-cover"
                       />
                     ) : (

@@ -142,7 +142,8 @@ function SignUpPageInner() {
           nextPath && (nextPath.startsWith("/billing") || nextPath.startsWith("/account"))
             ? nextPath
             : "/student/onboarding";
-        router.push(`/auth/age-gate?next=${encodeURIComponent(postAgeGateNextPath)}`);
+        // Full page load to guarantee fresh server-side session cookies
+        window.location.href = `/auth/age-gate?next=${encodeURIComponent(postAgeGateNextPath)}`;
       } else {
         const signInPath = nextPath
           ? `/auth/sign-in?next=${encodeURIComponent(nextPath)}`
@@ -284,6 +285,7 @@ function SignUpPageInner() {
                   onChange={(e) => setEmail(e.target.value)}
                   className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3.5 py-2.5 text-sm shadow-sm"
                   required
+                  aria-required="true"
                 />
               </div>
 
@@ -299,6 +301,7 @@ function SignUpPageInner() {
                   className="ui-focus-ring w-full rounded-xl border border-zinc-300 bg-white px-3.5 py-2.5 text-sm shadow-sm"
                   minLength={8}
                   required
+                  aria-required="true"
                 />
               </div>
 

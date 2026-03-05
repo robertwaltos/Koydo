@@ -15,7 +15,10 @@
       "Bash(xargs:*)",
       "Bash(du:*)",
       "Bash(tr:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(node:*)",
+      "Bash(npx tsc:*)",
+      "WebSearch"
     ]
   }
 }
