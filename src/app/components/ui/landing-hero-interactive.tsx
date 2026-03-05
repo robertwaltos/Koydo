@@ -8,7 +8,13 @@ import VoicePicker from "@/app/explore/_components/voice-picker";
 import type { AgeGroupTheme } from "@/lib/theme/provider";
 
 interface LandingHeroInteractiveProps {
-  t: (key: string, vars?: any) => string;
+  strings: {
+    eyebrow: string;
+    titlePrefix: string;
+    titleHighlight: string;
+    body: string;
+    cta: string;
+  };
 }
 
 const AGE_SLIDER_STAGES = [
@@ -18,7 +24,7 @@ const AGE_SLIDER_STAGES = [
   { id: "adult-pro", label: "Educators & Parents", icon: "📊" },
 ] as const;
 
-export default function LandingHeroInteractive({ t }: LandingHeroInteractiveProps) {
+export default function LandingHeroInteractive({ strings }: LandingHeroInteractiveProps) {
   const [activeTheme, setActiveTheme] = useState<AgeGroupTheme>("tiny-explorer");
 
   const getThemeStyles = (theme: AgeGroupTheme) => {
@@ -77,18 +83,18 @@ export default function LandingHeroInteractive({ t }: LandingHeroInteractiveProp
                 className="max-w-[580px]"
               >
                 <p className={`text-[11px] font-extrabold uppercase tracking-[0.26em] ${activeTheme === 'teen-mode' ? 'text-cyan-400' : 'text-emerald-700'} mb-4`}>
-                  The Living Learning World
+                  {strings.eyebrow}
                 </p>
                 <h1 className={currentStyles.h1}>
-                  Education that adapts to your <span className={activeTheme === 'teen-mode' ? 'text-purple-400' : 'text-emerald-500'}>heartbeat.</span>
+                  {strings.titlePrefix} <span className={activeTheme === 'teen-mode' ? 'text-purple-400' : 'text-emerald-500'}>{strings.titleHighlight}</span>
                 </h1>
                 <p className={`mt-6 max-w-[48ch] leading-relaxed ${currentStyles.sub}`}>
-                  The first AI-native learning ecosystem that senses cognitive load, adapts to every age, and makes mastering new skills feel like magic.
+                  {strings.body}
                 </p>
                 
                 <div className="mt-10 flex flex-wrap items-center gap-4">
                   <Link href="/explore" className={currentStyles.button}>
-                    Start Free Journey
+                    {strings.cta}
                   </Link>
                   <VoicePicker />
                 </div>
@@ -158,3 +164,4 @@ export default function LandingHeroInteractive({ t }: LandingHeroInteractiveProp
     </section>
   );
 }
+

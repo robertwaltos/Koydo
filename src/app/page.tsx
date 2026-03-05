@@ -45,7 +45,13 @@ export default async function Home() {
       {/* ════════════════════════════════════════════════════════
            SECTION 1 — HERO (Interactive Adaptive Hero)
       ════════════════════════════════════════════════════════ */}
-      <LandingHeroInteractive t={t} />
+      <LandingHeroInteractive strings={{
+        eyebrow: t("home_hero_eyebrow"),
+        titlePrefix: t("home_hero_title_prefix"),
+        titleHighlight: t("home_hero_title_highlight"),
+        body: t("home_hero_body"),
+        cta: t("home_hero_cta"),
+      }} />
 
       {/* ── Stats bar ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 py-10 sm:py-14">
@@ -414,4 +420,5 @@ export default async function Home() {
     </div>
   );
 }
+
 
