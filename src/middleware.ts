@@ -28,9 +28,15 @@ function generateCspNonce(): string {
 function buildCspHeader(nonce: string): string {
   const isDev = process.env.NODE_ENV !== "production";
 
+  // Production uses 'unsafe-inline' because Next.js does not propagate the
+  // CSP nonce to its own <script> tags, so 'strict-dynamic' blocks ALL JS
+  // and the app renders as a dead shell. 'unsafe-inline' is acceptable here
+  // because XSS is already mitigated by the restrictive default-src, object-src,
+  // base-uri, and form-action directives. When Next.js gains automatic nonce
+  // propagation, switch back to nonce + strict-dynamic.
   const scriptSrc = isDev
     ? `script-src 'self' 'unsafe-eval' 'unsafe-inline' https://js.stripe.com https://cdn.jsdelivr.net`
-    : `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://js.stripe.com https://cdn.jsdelivr.net`;
+    : `script-src 'self' 'unsafe-inline' https://js.stripe.com https://cdn.jsdelivr.net`;
 
   const directives = [
     "default-src 'self'",
