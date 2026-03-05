@@ -2,10 +2,10 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import CompanionAvatarSVG from "@/components/experience/CompanionAvatarSVG";
-import { COMPANIONS, type CompanionGender } from "@/lib/greeter/companion-config";
+import { COMPANIONS, type CompanionType } from "@/lib/greeter/companion-config";
 
 interface CompanionPickerProps {
-  onSelect: (gender: CompanionGender) => void;
+  onSelect: (gender: CompanionType) => void;
 }
 
 export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
@@ -16,7 +16,7 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4 overflow-y-auto"
         aria-modal
         role="dialog"
         aria-label="Choose your learning companion"
@@ -26,7 +26,7 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.92, y: 16 }}
           transition={{ type: "spring", stiffness: 320, damping: 28 }}
-          className="w-full max-w-sm rounded-3xl border border-zinc-200 bg-white p-6 shadow-2xl"
+          className="w-full max-w-sm rounded-3xl border border-zinc-200 bg-white p-6 shadow-2xl my-8"
         >
           <div className="mb-6 text-center">
             <h2 className="text-2xl font-black text-zinc-900">Meet your guide! 🌟</h2>
@@ -37,16 +37,16 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
 
           {/* Side-by-side comparison header */}
           <div className="mb-5 flex justify-around">
-            {(["female", "male"] as CompanionGender[]).map((gender) => {
-              const companion = COMPANIONS[gender];
+            {(["female", "male", "dragon"] as CompanionType[]).map((type) => {
+              const companion = COMPANIONS[type];
               return (
-                <div key={gender} className="flex flex-col items-center gap-1.5">
+                <div key={type} className="flex flex-col items-center gap-1.5">
                   <CompanionAvatarSVG
-                    gender={gender}
+                    gender={type as any}
                     size={52}
                     previewImageUrl={companion.previewImageUrl}
                   />
-                  <span className={`text-xs font-bold ${gender === "female" ? "text-violet-700" : "text-cyan-700"}`}>
+                  <span className={`text-xs font-bold ${type === "female" ? "text-violet-700" : type === "dragon" ? "text-orange-700" : "text-cyan-700"}`}>
                     {companion.name}
                   </span>
                 </div>
@@ -56,34 +56,37 @@ export default function CompanionPicker({ onSelect }: CompanionPickerProps) {
 
           {/* Choice cards */}
           <div className="flex flex-col gap-3">
-            {(["female", "male"] as CompanionGender[]).map((gender) => {
-              const companion = COMPANIONS[gender];
-              const isViolet = gender === "female";
+            {(["female", "male", "dragon"] as CompanionType[]).map((type) => {
+              const companion = COMPANIONS[type];
+              const isViolet = type === "female";
+              const isOrange = type === "dragon";
               return (
                 <button
-                  key={gender}
-                  onClick={() => onSelect(gender)}
+                  key={type}
+                  onClick={() => onSelect(type)}
                   className={`flex items-center gap-4 rounded-2xl border-2 p-4 text-left transition-all hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus-visible:ring-2 ${
                     isViolet
                       ? "border-violet-200 bg-violet-50 hover:border-violet-400 focus-visible:ring-violet-400"
+                      : isOrange
+                      ? "border-orange-200 bg-orange-50 hover:border-orange-400 focus-visible:ring-orange-400"
                       : "border-cyan-200 bg-cyan-50 hover:border-cyan-400 focus-visible:ring-cyan-400"
                   }`}
                   aria-label={`Choose ${companion.name}`}
                 >
                   <CompanionAvatarSVG
-                    gender={gender}
+                    gender={type as any}
                     size={44}
                     previewImageUrl={companion.previewImageUrl}
                   />
                   <div className="flex-1 min-w-0">
-                    <p className={`text-sm font-black ${isViolet ? "text-violet-800" : "text-cyan-800"}`}>
+                    <p className={`text-sm font-black ${isViolet ? "text-violet-800" : isOrange ? "text-orange-800" : "text-cyan-800"}`}>
                       {companion.name}
                     </p>
-                    <p className={`text-xs mt-0.5 ${isViolet ? "text-violet-600" : "text-cyan-600"}`}>
+                    <p className={`text-xs mt-0.5 ${isViolet ? "text-violet-600" : isOrange ? "text-orange-600" : "text-cyan-600"}`}>
                       {companion.tagline}
                     </p>
                   </div>
-                  <span className={`text-lg ${isViolet ? "text-violet-400" : "text-cyan-400"}`}>→</span>
+                  <span className={`text-lg ${isViolet ? "text-violet-400" : isOrange ? "text-orange-400" : "text-cyan-400"}`}>→</span>
                 </button>
               );
             })}

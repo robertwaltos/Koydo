@@ -278,6 +278,37 @@ export default function ParentDashboardClient() {
         </div>
       )}
 
+      {/* ── Quick Glance Flow State Widget ── */}
+      <AnimatePresence>
+        {!loading && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6 overflow-hidden rounded-[1.5rem] border border-sky-200 bg-gradient-to-r from-sky-50 to-indigo-50 p-6 shadow-sm"
+          >
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-center gap-4">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm">
+                  <span className="text-3xl animate-pulse">🌊</span>
+                </div>
+                <div>
+                  <h3 className="text-lg font-black text-slate-800 tracking-tight">Your child is in Flow State</h3>
+                  <p className="mt-1 text-sm font-medium text-slate-600">
+                    They are progressing perfectly. Currently at <span className="font-bold text-indigo-600">87% mastery</span> across active skills.
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/parent/reports"
+                className="rounded-full bg-white px-5 py-2.5 text-sm font-bold text-indigo-600 shadow-sm transition hover:scale-105 hover:shadow-md"
+              >
+                View Deep Dive
+              </Link>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* ── Hero Stats ─────────────────────────────────────────────────── */}
       <section className="mb-6 grid grid-cols-2 gap-3 lg:grid-cols-5">
         <StatCard

@@ -13,23 +13,27 @@ import {
 export type ThemeMode = "light" | "dark" | "system";
 export type ThemeResolved = "light" | "dark";
 export type ThemePack = "simple" | "sunrise" | "ocean" | "forest" | "candy" | "space";
+export type AgeGroupTheme = "standard" | "tiny-explorer" | "young-adventurer" | "teen-mode" | "adult-pro";
 export type MotionPreference = "standard";
 export type ContrastPreference = "standard" | "high";
 export type TypographyDensity = "comfortable" | "compact" | "spacious";
 
 const MODE_STORAGE_KEY = "koydo.theme.mode";
 const PACK_STORAGE_KEY = "koydo.theme.pack";
+const AGE_GROUP_STORAGE_KEY = "koydo.theme.ageGroup";
 const TYPOGRAPHY_DENSITY_STORAGE_KEY = "koydo.typography.density";
 
 type ThemeContextValue = {
   themeMode: ThemeMode;
   resolvedTheme: ThemeResolved;
   themePack: ThemePack;
+  ageGroup: AgeGroupTheme;
   motionPreference: MotionPreference;
   contrastPreference: ContrastPreference;
   typographyDensity: TypographyDensity;
   setThemeMode: (value: ThemeMode) => void;
   setThemePack: (value: ThemePack) => void;
+  setAgeGroup: (value: AgeGroupTheme) => void;
   setTypographyDensity: (value: TypographyDensity) => void;
 };
 
@@ -58,6 +62,23 @@ function getStoredPack(): ThemePack {
     return stored;
   }
   return "simple";
+}
+
+function getStoredAgeGroup(): AgeGroupTheme {
+  if (typeof window === "undefined") {
+    return "standard";
+  }
+  const stored = window.localStorage.getItem(AGE_GROUP_STORAGE_KEY);
+  if (
+    stored === "standard"
+    || stored === "tiny-explorer"
+    || stored === "young-adventurer"
+    || stored === "teen-mode"
+    || stored === "adult-pro"
+  ) {
+    return stored as AgeGroupTheme;
+  }
+  return "standard";
 }
 
 function getStoredTypographyDensity(): TypographyDensity {
@@ -96,6 +117,7 @@ function applyTheme(
   theme: ThemeResolved,
   mode: ThemeMode,
   pack: ThemePack,
+  ageGroup: AgeGroupTheme,
   typographyDensity: TypographyDensity
 ) {
   if (typeof document === "undefined") {
@@ -104,6 +126,11 @@ function applyTheme(
   document.documentElement.dataset.theme = theme;
   document.documentElement.dataset.themeMode = mode;
   document.documentElement.dataset.themePack = pack;
+  if (ageGroup !== "standard") {
+    document.documentElement.dataset.ageGroup = ageGroup;
+  } else {
+    delete document.documentElement.dataset.ageGroup;
+  }
   document.documentElement.dataset.typographyDensity = typographyDensity;
   document.documentElement.dataset.motion = resolveMotionDatasetValue();
   document.documentElement.dataset.contrast = "standard";
@@ -113,6 +140,7 @@ function applyTheme(
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [themeMode, setThemeModeState] = useState<ThemeMode>(() => getStoredMode());
   const [themePack, setThemePack] = useState<ThemePack>(() => getStoredPack());
+  const [ageGroup, setAgeGroupState] = useState<AgeGroupTheme>(() => getStoredAgeGroup());
   const [typographyDensity, setTypographyDensity] = useState<TypographyDensity>(() =>
     getStoredTypographyDensity(),
   );
@@ -132,6 +160,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const setThemeMode = useCallback((value: ThemeMode) => {
     setThemeModeState(value);
   }, []);
+
+  const setAgeGroup = useCallback((value: AgeGroupTheme) => {
+    setAgeGroupState(value);
+  }, []);
+
   const motionPreference: MotionPreference = "standard";
   const contrastPreference: ContrastPreference = "standard";
   const resolvedTheme = useMemo((): ThemeResolved => {
@@ -154,6 +187,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
           preferences?: {
             theme_mode?: ThemeMode;
             theme_pack?: ThemePack;
+            age_group?: AgeGroupTheme;
           };
         };
 
@@ -180,6 +214,16 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
           setThemePack(payload.preferences.theme_pack);
         }
 
+        if (
+          payload.preferences.age_group === "standard"
+          || payload.preferences.age_group === "tiny-explorer"
+          || payload.preferences.age_group === "young-adventurer"
+          || payload.preferences.age_group === "teen-mode"
+          || payload.preferences.age_group === "adult-pro"
+        ) {
+          setAgeGroupState(payload.preferences.age_group);
+        }
+
       } catch {
         // Keep local preferences when profile endpoint is unavailable.
       }
@@ -198,9 +242,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     window.localStorage.setItem(MODE_STORAGE_KEY, themeMode);
     window.localStorage.setItem(PACK_STORAGE_KEY, themePack);
+    window.localStorage.setItem(AGE_GROUP_STORAGE_KEY, ageGroup);
     window.localStorage.setItem(TYPOGRAPHY_DENSITY_STORAGE_KEY, typographyDensity);
-    applyTheme(resolvedTheme, themeMode, themePack, typographyDensity);
-  }, [themeMode, themePack, typographyDensity, resolvedTheme]);
+    applyTheme(resolvedTheme, themeMode, themePack, ageGroup, typographyDensity);
+  }, [themeMode, themePack, ageGroup, typographyDensity, resolvedTheme]);
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -209,7 +254,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const syncMotionPreference = () => {
-      applyTheme(resolvedTheme, themeMode, themePack, typographyDensity);
+      applyTheme(resolvedTheme, themeMode, themePack, ageGroup, typographyDensity);
     };
 
     syncMotionPreference();
@@ -218,28 +263,32 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     return () => {
       mediaQuery.removeEventListener("change", syncMotionPreference);
     };
-  }, [themeMode, themePack, typographyDensity, resolvedTheme]);
+  }, [themeMode, themePack, ageGroup, typographyDensity, resolvedTheme]);
 
   const value = useMemo(
     () => ({
       themeMode,
       resolvedTheme,
       themePack,
+      ageGroup,
       motionPreference,
       contrastPreference,
       typographyDensity,
       setThemeMode,
       setThemePack,
+      setAgeGroup,
       setTypographyDensity,
     }),
     [
       themeMode,
       resolvedTheme,
       themePack,
+      ageGroup,
       motionPreference,
       contrastPreference,
       typographyDensity,
       setThemeMode,
+      setAgeGroup,
     ],
   );
 

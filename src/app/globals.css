@@ -245,6 +245,10 @@
   --radius-pill: 999px;
   --shadow-soft-raised: -6px -6px 14px rgba(255,255,255,0.95),
     8px 8px 16px rgba(255, 107, 53, 0.14);
+  --font-display-sans: var(--font-display-round);
+  --font-body-sans: var(--font-display-round);
+  --type-body-md: 1.15rem;
+  --type-body-sm: 1.05rem;
 }
 
 /* Ages 6–11: Adventurer violet, quest energy */
@@ -260,6 +264,7 @@
   --radius-card: 20px;
   --shadow-soft-raised: -7px -7px 15px rgba(255,255,255,0.94),
     8px 8px 17px rgba(124, 58, 237, 0.15);
+  --font-display-sans: var(--font-display-round);
 }
 
 /* Ages 12–17: Dark-native indigo, cool gradient */

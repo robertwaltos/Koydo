@@ -33,6 +33,7 @@ import {
   useState,
 } from "react";
 import type { ReactNode } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import JuicyConfetti from "@/components/experience/JuicyConfetti";
 import AchievementToast from "@/components/experience/AchievementToast";
 
@@ -44,6 +45,13 @@ export type BadgeEntry = {
   id: string;
   label?: string;
   earnedAt: string;
+};
+
+export type FloatingXP = {
+  id: string;
+  amount: number;
+  x: number;
+  y: number;
 };
 
 export type ExperienceState = {
@@ -83,6 +91,8 @@ type ExperienceActions = {
        * and only local UI state should be updated.
        */
       persist?: boolean;
+      /** Optional coordinates for the floating XP animation. */
+      coordinates?: { x: number; y: number };
     },
   ) => Promise<void>;
   /** Award a badge by id. Pass a human-readable label for display. */
@@ -176,6 +186,7 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
   const [pendingReward, setPendingReward] = useState<PendingReward>(null);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [floatingXPs, setFloatingXPs] = useState<FloatingXP[]>([]);
 
   // Track previous level to detect level-up after optimistic update
   const prevLevelRef = useRef<number>(1);
@@ -261,9 +272,19 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
   const awardXP = useCallback(async (
     amount: number,
     source = "general",
-    options?: { persist?: boolean },
+    options?: { persist?: boolean; coordinates?: { x: number; y: number } },
   ) => {
     if (state.isUnavailable || amount <= 0) return;
+
+    // Trigger Floating XP Animation
+    const id = Math.random().toString(36).substring(2, 9);
+    const x = options?.coordinates?.x ?? (typeof window !== "undefined" ? window.innerWidth / 2 : 0);
+    const y = options?.coordinates?.y ?? (typeof window !== "undefined" ? window.innerHeight / 2 : 0);
+    
+    setFloatingXPs((prev) => [...prev, { id, amount, x, y }]);
+    setTimeout(() => {
+      setFloatingXPs((prev) => prev.filter((fxp) => fxp.id !== id));
+    }, 1500);
 
     // Optimistic update
     dispatch({ type: "AWARD_XP_OPTIMISTIC", amount });
@@ -374,6 +395,27 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
   return (
     <ExperienceContext.Provider value={value}>
       {children}
+
+      {/* Floating XP animations */}
+      <AnimatePresence>
+        {floatingXPs.map((fxp) => (
+          <motion.div
+            key={fxp.id}
+            initial={{ opacity: 1, y: fxp.y, x: fxp.x, scale: 0.8 }}
+            animate={{ opacity: 0, y: fxp.y - 120, scale: 1.5 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="fixed z-[9999] pointer-events-none font-bold text-3xl text-amber-400 drop-shadow-lg"
+            style={{
+              left: 0,
+              top: 0,
+              WebkitTextStroke: "1.5px #b45309",
+            }}
+          >
+            +{fxp.amount} XP
+          </motion.div>
+        ))}
+      </AnimatePresence>
 
       {/* Global celebration overlays — rendered once at app root */}
       <JuicyConfetti

@@ -161,3 +161,6 @@ public/GAMES-*.json
 public/GAMES-*.md
 public/OPEN-SOURCE-*.json
 
+
+.gemini/
+gha-creds-*.json

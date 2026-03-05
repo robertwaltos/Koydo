@@ -122,16 +122,16 @@ export default async function Home() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col items-center gap-1 rounded-2xl border border-zinc-200/60 bg-white/60 px-4 py-6 text-center shadow-sm backdrop-blur-sm"
+              className="flex flex-col items-center gap-1 rounded-[2rem] border border-white/50 bg-white/30 px-4 py-8 text-center shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1.5 hover:bg-white/50 hover:shadow-[0_16px_48px_rgba(0,0,0,0.08)]"
             >
-              <span className="text-3xl" aria-hidden="true">{stat.icon}</span>
+              <span className="text-3xl mb-1" aria-hidden="true">{stat.icon}</span>
               <span
                 className="mt-1 text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
                 style={{ fontFamily: "var(--font-display-sans)" }}
               >
                 {stat.value}
               </span>
-              <span className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+              <span className="mt-1 text-xs font-bold uppercase tracking-[0.2em] text-zinc-500">
                 {stat.label}
               </span>
             </div>
@@ -140,8 +140,8 @@ export default async function Home() {
       </section>
 
       {/* ── Trust Badges ── */}
-      <div className="relative border-y border-zinc-100/80 bg-white/60 py-4 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-2.5 px-4">
+      <div className="relative border-y border-white/40 bg-white/20 py-5 backdrop-blur-lg shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4">
           {[
             { icon: "🛡️", label: t("home_trust_coppa") },
             { icon: "📋", label: t("home_badge_ferpa") },
@@ -150,7 +150,7 @@ export default async function Home() {
             { icon: "🤖", label: t("home_badge_ai_safety") },
             { icon: "✨", label: t("home_stats_free") },
           ].map((badge) => (
-            <span key={badge.label} className="ui-trust-badge">
+            <span key={badge.label} className="ui-trust-badge flex items-center gap-2 rounded-full border border-white/60 bg-white/40 px-4 py-2 text-xs font-semibold text-zinc-600 shadow-sm backdrop-blur-md transition-all hover:bg-white/60">
               <span aria-hidden="true">{badge.icon}</span>
               {badge.label}
             </span>
@@ -159,17 +159,17 @@ export default async function Home() {
       </div>
 
       {/* ── How it works ── */}
-      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20 mt-12">
         <h2
-          className="text-center text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+          className="text-center text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
           style={{ fontFamily: "var(--font-display-sans)" }}
         >
           Learning made simple
         </h2>
-        <p className="mx-auto mt-2 max-w-md text-center text-sm text-zinc-500">
+        <p className="mx-auto mt-3 max-w-md text-center text-base text-zinc-500">
           Three steps from zero to unstoppable
         </p>
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {[
             {
               step: "01",
@@ -195,28 +195,31 @@ export default async function Home() {
           ].map((card, i) => (
             <div
               key={i}
-              className="group relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-300 hover:bg-white/90 hover:shadow-md"
+              className="group relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/30 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-white hover:bg-white/60 hover:shadow-[0_20px_48px_rgba(0,0,0,0.08)]"
             >
-              <div className="flex items-start gap-4">
-                <span
-                  className="shrink-0 text-[11px] font-black tabular-nums tracking-widest text-zinc-600"
-                  aria-hidden="true"
-                >
-                  {card.step}
-                </span>
+              <div className="flex flex-col items-start gap-4">
+                <div className="flex w-full items-center justify-between">
+                  <span className="text-4xl drop-shadow-sm" aria-hidden="true">{card.icon}</span>
+                  <span
+                    className="shrink-0 text-xs font-black tabular-nums tracking-[0.2em] text-zinc-400 group-hover:text-emerald-500 transition-colors"
+                    aria-hidden="true"
+                  >
+                    STEP {card.step}
+                  </span>
+                </div>
                 <div>
-                  <span className="text-3xl" aria-hidden="true">{card.icon}</span>
-                  <h3 className="mt-2 text-base font-bold text-zinc-900">{card.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-500">{card.desc}</p>
+                  <h3 className="text-xl font-bold text-zinc-900">{card.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600">{card.desc}</p>
                 </div>
               </div>
+              <div className="absolute inset-x-0 bottom-0 h-1 w-full scale-x-0 bg-gradient-to-r from-emerald-400 to-teal-400 transition-transform duration-500 group-hover:scale-x-100" />
             </div>
           ))}
         </div>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <Link
             href="/explore"
-            className="inline-flex min-h-12 items-center rounded-full border border-zinc-200/80 bg-white/80 px-7 py-3 text-sm font-semibold text-zinc-700 shadow-sm backdrop-blur-sm transition-all duration-200 hover:border-emerald-400/50 hover:bg-emerald-50 hover:text-emerald-700"
+            className="inline-flex min-h-12 items-center rounded-full border border-white/80 bg-white/50 px-8 py-3.5 text-sm font-bold text-zinc-700 shadow-sm backdrop-blur-xl transition-all duration-300 hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-700 hover:shadow-md"
           >
             {t("home_how_browse_cta")}
           </Link>
@@ -317,20 +320,20 @@ export default async function Home() {
       </section>
 
       {/* ── Why Families Choose Koydo ── */}
-      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
-        <div className="mb-8 text-center">
-          <p className="ui-landing-eyebrow">{t("home_trust_eyebrow")}</p>
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20 mt-12">
+        <div className="mb-10 text-center">
+          <p className="ui-landing-eyebrow tracking-[0.2em] font-bold text-emerald-600 mb-2 uppercase text-xs">{t("home_trust_eyebrow")}</p>
           <h2
-            className="mt-2 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+            className="mt-2 text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
             style={{ fontFamily: "var(--font-display-sans)" }}
           >
             {t("home_why_koydo_title")}
           </h2>
-          <p className="mx-auto mt-3 max-w-[52ch] text-sm leading-relaxed text-zinc-500">
+          <p className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-zinc-500">
             {t("home_why_koydo_subtitle")}
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {[
             {
               icon: "🧠",
@@ -350,33 +353,34 @@ export default async function Home() {
           ].map((card) => (
             <div
               key={card.title}
-              className="group relative overflow-hidden rounded-2xl border border-zinc-200/60 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-zinc-300 hover:bg-white/90 hover:shadow-md"
+              className="group relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/30 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-white hover:bg-white/60 hover:shadow-[0_20px_48px_rgba(0,0,0,0.08)]"
             >
-              <span className="mb-3 block text-4xl" aria-hidden="true">{card.icon}</span>
+              <div className="mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/50 shadow-inner backdrop-blur-md">
+                <span className="text-3xl drop-shadow-sm" aria-hidden="true">{card.icon}</span>
+              </div>
               <h3
-                className="text-base font-bold text-zinc-900"
-                style={{ fontFamily: "var(--font-display-sans)" }}
+                className="text-xl font-bold text-zinc-900"
               >
                 {card.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-zinc-500">{card.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600">{card.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* ── Testimonials ── */}
-      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-16 sm:pb-20">
-        <div className="mb-8 text-center">
-          <p className="ui-landing-eyebrow">{t("home_testimonials_eyebrow")}</p>
+      <section className="landing-section relative mx-auto max-w-7xl px-4 pb-20 sm:pb-24 mt-12">
+        <div className="mb-10 text-center">
+          <p className="ui-landing-eyebrow tracking-[0.2em] font-bold text-emerald-600 mb-2 uppercase text-xs">{t("home_testimonials_eyebrow")}</p>
           <h2
-            className="mt-2 text-2xl font-black tracking-tight text-zinc-900 sm:text-3xl"
+            className="mt-2 text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl"
             style={{ fontFamily: "var(--font-display-sans)" }}
           >
             {t("home_testimonials_title")}
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
           {[
             {
               quote: t("home_testimonial_1_quote"),
@@ -400,26 +404,26 @@ export default async function Home() {
               accent: "violet",
             },
           ].map((testimonial) => (
-            <div key={testimonial.name} className="ui-testimonial-card flex flex-col gap-4 p-6">
+            <div key={testimonial.name} className="ui-testimonial-card relative flex flex-col gap-5 rounded-[2rem] border border-white/60 bg-white/40 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.03)] backdrop-blur-xl transition-all duration-300 hover:bg-white/60 hover:shadow-[0_16px_40px_rgba(0,0,0,0.06)]">
               {/* Stars */}
-              <div className="flex gap-0.5 text-amber-400 text-sm" aria-label="5 stars">
-                {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
+              <div className="flex gap-1 text-amber-400 text-sm" aria-label="5 stars">
+                {"★★★★★".split("").map((s, i) => <span key={i} className="drop-shadow-sm">{s}</span>)}
               </div>
               {/* Quote */}
-              <p className="flex-1 text-sm leading-relaxed text-zinc-600 italic">
+              <p className="flex-1 text-base leading-relaxed text-zinc-700 font-medium">
                 &ldquo;{testimonial.quote}&rdquo;
               </p>
               {/* Reviewer */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4 border-t border-zinc-200/50 pt-5 mt-2">
                 <span
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-zinc-100 text-lg"
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/80 text-2xl shadow-sm border border-white"
                   aria-hidden="true"
                 >
                   {testimonial.emoji}
                 </span>
                 <div>
-                  <p className="text-sm font-bold text-zinc-900">{testimonial.name}</p>
-                  <p className="text-xs text-zinc-500">{testimonial.role}</p>
+                  <p className="text-sm font-black text-zinc-900">{testimonial.name}</p>
+                  <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wide mt-0.5">{testimonial.role}</p>
                 </div>
               </div>
             </div>

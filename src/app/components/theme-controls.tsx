@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { useTheme } from "@/lib/theme/provider";
+import { useTheme, type AgeGroupTheme } from "@/lib/theme/provider";
 
 export default function ThemeControls({ compact = false }: { compact?: boolean }) {
   const {
     themePack,
+    ageGroup,
+    setAgeGroup,
     typographyDensity,
     setTypographyDensity,
   } = useTheme();
@@ -27,6 +29,7 @@ export default function ThemeControls({ compact = false }: { compact?: boolean }
           body: JSON.stringify({
             theme_mode: "light",
             theme_pack: themePack,
+            age_group: ageGroup,
             motion_pref: "standard",
             contrast_pref: "standard",
           }),
@@ -39,19 +42,28 @@ export default function ThemeControls({ compact = false }: { compact?: boolean }
 
     void persist();
     return () => controller.abort();
-  }, [themePack]);
+  }, [themePack, ageGroup]);
 
   return (
-    <div className="flex items-center gap-2 text-xs">
-      <div className="flex items-center gap-1">
-        <span className="text-foreground">Theme</span>
-        <span className="inline-flex min-h-9 min-w-24 items-center justify-center rounded-full border border-border bg-surface px-3 py-1 font-medium text-foreground shadow-sm">
-          Light
-        </span>
-      </div>
+    <div className="flex flex-col items-center gap-2 text-xs w-full sm:flex-row sm:w-auto">
+      <label className="flex items-center gap-1.5 w-full sm:w-auto">
+        <span className="text-foreground sr-only">Age</span>
+        <select
+          value={ageGroup}
+          onChange={(event) => setAgeGroup(event.target.value as AgeGroupTheme)}
+          className="ui-focus-ring min-h-9 w-full rounded-full border border-border bg-surface px-3 py-1 text-foreground shadow-sm sm:w-auto"
+        >
+          <option value="standard">Standard Theme</option>
+          <option value="tiny-explorer">Ages 1-5 (Tiny Explorer)</option>
+          <option value="young-adventurer">Ages 6-11 (Young Adventurer)</option>
+          <option value="teen-mode">Ages 12-17 (Teen Mode)</option>
+          <option value="adult-pro">Ages 18+ (Adult Pro)</option>
+        </select>
+      </label>
+      
       {!compact ? (
-        <label className="flex items-center gap-1">
-          <span className="text-foreground">Type</span>
+        <label className="flex items-center gap-1.5 w-full sm:w-auto">
+          <span className="text-foreground sr-only">Type</span>
           <select
             value={typographyDensity}
             onChange={(event) =>
@@ -63,7 +75,7 @@ export default function ThemeControls({ compact = false }: { compact?: boolean }
                     : "comfortable",
               )
             }
-            className="ui-focus-ring min-h-9 rounded-full border border-border bg-surface px-3 py-1 text-foreground shadow-sm"
+            className="ui-focus-ring min-h-9 w-full rounded-full border border-border bg-surface px-3 py-1 text-foreground shadow-sm sm:w-auto"
           >
             <option value="comfortable">Comfortable</option>
             <option value="compact">Compact</option>
