@@ -76,18 +76,18 @@ function StatCard({
     <motion.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
-      className="rounded-xl border border-[#e3e8ee] bg-white p-5 shadow-sm"
+      className="rounded-[1.5rem] border border-white/60 bg-white/60 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.03)] backdrop-blur-xl transition-all hover:-translate-y-1 hover:shadow-[0_16px_48px_rgba(0,0,0,0.06)]"
     >
       <div className="flex items-center gap-2">
-        <span className="text-[18px]">{icon}</span>
-        <p className="text-[11px] font-medium uppercase tracking-wider text-[#697386]">
+        <span className="text-[18px] drop-shadow-sm">{icon}</span>
+        <p className="text-[11px] font-bold uppercase tracking-widest text-zinc-500">
           {label}
         </p>
       </div>
-      <p className={`mt-2 text-[28px] font-bold leading-none ${color}`}>
+      <p className={`mt-3 text-3xl font-black tracking-tight leading-none ${color}`}>
         {value}
       </p>
-      {sub && <p className="mt-1.5 text-[11px] text-[#697386]">{sub}</p>}
+      {sub && <p className="mt-2 text-xs font-semibold text-zinc-400">{sub}</p>}
     </motion.div>
   );
 }
@@ -102,28 +102,28 @@ function ChildQuickCard({ child }: { child: ChildSummary }) {
     <motion.article
       initial={{ opacity: 0, scale: 0.96 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="rounded-xl border border-[#e3e8ee] bg-white p-4 shadow-sm transition hover:border-[#c4cdd8] hover:shadow-md"
+      className="rounded-[1.5rem] border border-white/60 bg-white/60 p-5 shadow-[0_8px_32px_rgba(0,0,0,0.03)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:bg-white/80 hover:shadow-[0_16px_48px_rgba(0,0,0,0.06)]"
     >
-      <div className="flex items-center gap-3">
-        <div className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-gradient-to-br from-violet-400 to-sky-400 text-base font-bold text-white">
+      <div className="flex items-center gap-4">
+        <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-indigo-400 to-cyan-400 text-xl font-black text-white shadow-lg">
           {initial}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between">
-            <h3 className="truncate text-[14px] font-semibold text-[#1a1f36]">
+            <h3 className="truncate text-base font-black tracking-tight text-zinc-900">
               {child.displayName}
             </h3>
             <span
-              className={`ml-2 shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+              className={`ml-2 shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest shadow-sm ${
                 statusComplete
-                  ? "bg-emerald-100 text-emerald-700"
-                  : "bg-amber-100 text-amber-700"
+                  ? "bg-emerald-100 text-emerald-800"
+                  : "bg-amber-100 text-amber-800"
               }`}
             >
               {statusComplete ? "Ready" : "Setup needed"}
             </span>
           </div>
-          <p className="text-[11px] text-[#697386]">
+          <p className="text-xs font-semibold text-zinc-500 mt-0.5">
             {child.gradeLevel ? `Grade ${child.gradeLevel}` : "No grade"}
             {child.ageYears ? ` · Age ${child.ageYears}` : ""}
           </p>
@@ -131,7 +131,7 @@ function ChildQuickCard({ child }: { child: ChildSummary }) {
       </div>
 
       {/* Mini stats */}
-      <div className="mt-3 grid grid-cols-4 gap-2">
+      <div className="mt-5 grid grid-cols-4 gap-3">
         {[
           { label: "Sessions", value: child.totalSessions },
           { label: "Minutes", value: child.totalMinutes },
@@ -140,12 +140,12 @@ function ChildQuickCard({ child }: { child: ChildSummary }) {
         ].map(({ label, value }) => (
           <div
             key={label}
-            className="rounded-lg bg-[#f6f9fc] px-2 py-1.5 text-center"
+            className="rounded-xl border border-white bg-white/40 p-2 text-center shadow-sm"
           >
-            <p className="text-[9px] uppercase tracking-wider text-[#697386]">
+            <p className="text-[9px] font-bold uppercase tracking-widest text-zinc-500">
               {label}
             </p>
-            <p className="mt-0.5 text-[13px] font-semibold text-[#1a1f36]">
+            <p className="mt-1 text-sm font-black text-zinc-900">
               {value}
             </p>
           </div>
@@ -153,16 +153,16 @@ function ChildQuickCard({ child }: { child: ChildSummary }) {
       </div>
 
       {/* Actions */}
-      <div className="mt-3 flex gap-2">
+      <div className="mt-5 flex gap-3">
         <Link
           href={`/parent/analytics/${child.id}`}
-          className="ui-focus-ring flex-1 rounded-lg border border-[#e3e8ee] bg-[#f6f9fc] py-1.5 text-center text-[11px] font-semibold text-[#635bff] hover:bg-[#eef0ff]"
+          className="ui-focus-ring flex-1 rounded-xl border border-indigo-200 bg-indigo-50 py-2.5 text-center text-xs font-bold text-indigo-700 shadow-sm transition-colors hover:bg-indigo-100"
         >
           Detailed Analytics →
         </Link>
         <Link
           href={`/parent/reports?student=${child.id}`}
-          className="ui-focus-ring rounded-lg border border-[#e3e8ee] bg-[#f6f9fc] px-3 py-1.5 text-[11px] font-semibold text-[#3c4257] hover:bg-[#edf0f7]"
+          className="ui-focus-ring rounded-xl border border-zinc-200 bg-white/80 px-4 py-2.5 text-xs font-bold text-zinc-700 shadow-sm transition-colors hover:bg-white"
         >
           Reports
         </Link>
@@ -424,3 +424,5 @@ export default function ParentDashboardClient() {
     </div>
   );
 }
+
+
