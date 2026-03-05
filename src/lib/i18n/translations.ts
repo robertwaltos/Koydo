@@ -16,7 +16,19 @@ export const SUPPORTED_LOCALES = [
  * Launch languages — full functionality enabled.
  * All other SUPPORTED_LOCALES are prepared but locked in the UI.
  */
-export const LAUNCH_LOCALES = ["en", "es", "zh", "pl", "fr"] as const;
+export const LAUNCH_LOCALES = [
+  "en",
+  "es",
+  "fr",
+  "de",
+  "ar",
+  "hi",
+  "zh",
+  "ja",
+  "ko",
+  "ru",
+  "pl",
+] as const;
 
 export const ACTIVE_LOCALES = LAUNCH_LOCALES;
 
@@ -6329,3 +6341,4 @@ export function translate(
   const template = translations[locale][key] ?? translations.en[key] ?? key;
   return formatTranslation(template, vars);
 }
+
