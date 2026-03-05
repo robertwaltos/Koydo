@@ -307,15 +307,15 @@ export default function LessonExperience({
         />
 
         {activeTab === "learn" ? (
-          <div className="lesson-tab-panel space-y-4">
-            <SoftCard as="section" className="p-4 sm:p-6">
+          <div className="lesson-tab-panel space-y-6">
+            <div className="overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/40 backdrop-blur-2xl shadow-[0_16px_48px_rgba(0,0,0,0.08)] p-4 sm:p-6">
               <LessonImage prompt={lessonImagePrompt} moduleId={moduleId} lessonId={lesson.id} />
-            </SoftCard>
+            </div>
 
-            <section className="grid gap-4 lg:grid-cols-[260px_1fr]">
-              <SoftCard as="aside" className="border-sky-200 bg-sky-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">Lesson Chunks</p>
-                <div className="mt-3 space-y-2">
+            <section className="grid gap-6 lg:grid-cols-[280px_1fr]">
+              <aside className="rounded-[2rem] border border-white/60 bg-white/40 backdrop-blur-xl shadow-sm p-5">
+                <p className="text-xs font-black uppercase tracking-widest text-indigo-700">Lesson Map</p>
+                <div className="mt-4 space-y-3">
                   {chunks.map((chunk, index) => {
                     const isSelected = activeChunk?.id === chunk.id;
                     return (
@@ -323,38 +323,47 @@ export default function LessonExperience({
                         key={chunk.id}
                         type="button"
                         onClick={() => setActiveChunkId(chunk.id)}
-                        className={`ui-focus-ring ui-soft-button w-full min-h-11 rounded-xl border px-3 py-2 text-left text-sm ${isSelected
-                          ? "border-sky-300 bg-white text-sky-900"
-                          : "border-sky-200 bg-sky-50 text-zinc-700 hover:bg-white"
+                        className={`ui-focus-ring ui-soft-button w-full min-h-12 rounded-[1.5rem] border-2 px-4 py-3 text-left text-sm transition-all duration-300 hover:-translate-y-0.5 ${isSelected
+                          ? "border-indigo-400 bg-white shadow-md text-indigo-900 scale-[1.02]"
+                          : "border-transparent bg-white/50 text-zinc-600 hover:bg-white/80 hover:shadow-sm"
                           }`}
                       >
-                        <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">Chunk {index + 1}</p>
-                        <p className="mt-1 font-semibold">{chunk.title}</p>
+                        <p className={`text-[10px] font-black uppercase tracking-widest ${isSelected ? 'text-indigo-500' : 'text-zinc-400'}`}>Part {index + 1}</p>
+                        <p className={`mt-1 font-bold leading-snug ${isSelected ? 'text-indigo-900' : 'text-zinc-700'}`}>{chunk.title}</p>
                       </button>
                     );
                   })}
                 </div>
-              </SoftCard>
+              </aside>
 
-              <SoftCard as="article" className="border-sky-200 p-5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-sky-700">
-                  {activeChunk?.kind ?? "lesson chunk"}
-                </p>
-                <h2 className="mt-1 text-2xl font-extrabold text-zinc-900">{activeChunk?.title}</h2>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-700">{activeChunk?.content}</p>
-                {lesson.type === "video" ? (
-                  <div className="mt-5">
-                    <VideoLessonPlayer
-                      moduleId={moduleId}
-                      lessonId={lesson.id}
-                      lessonTitle={lesson.title}
-                      subject={subject}
-                      durationMinutes={lesson.duration}
-                      learningAids={lesson.learningAids ?? []}
-                    />
-                  </div>
-                ) : null}
-              </SoftCard>
+              <article className="rounded-[2.5rem] border border-white/60 bg-white/60 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-8 sm:p-10 relative overflow-hidden">
+                {/* Decorative background glow */}
+                <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-300/20 rounded-full blur-[80px] pointer-events-none" />
+                
+                <div className="relative z-10">
+                  <p className="inline-flex items-center rounded-full bg-white/80 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-indigo-600 shadow-sm border border-white">
+                    {activeChunk?.kind ?? "Lesson Chunk"}
+                  </p>
+                  <h2 className="mt-4 text-3xl font-black tracking-tight text-zinc-900 sm:text-4xl leading-tight">
+                    {activeChunk?.title}
+                  </h2>
+                  <p className="mt-5 text-base sm:text-lg font-medium leading-relaxed text-zinc-700">
+                    {activeChunk?.content}
+                  </p>
+                  {lesson.type === "video" ? (
+                    <div className="mt-8 overflow-hidden rounded-[2rem] border-4 border-white shadow-xl">
+                      <VideoLessonPlayer
+                        moduleId={moduleId}
+                        lessonId={lesson.id}
+                        lessonTitle={lesson.title}
+                        subject={subject}
+                        durationMinutes={lesson.duration}
+                        learningAids={lesson.learningAids ?? []}
+                      />
+                    </div>
+                  ) : null}
+                </div>
+              </article>
             </section>
           </div>
         ) : null}

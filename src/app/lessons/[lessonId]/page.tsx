@@ -6,8 +6,6 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { toLessonPath } from "@/lib/routing/paths";
 import LessonSessionTracker from "./lesson-session-tracker";
 import LessonExperience from "./lesson-experience";
-import SoftCard from "@/app/components/ui/soft-card";
-import ProgressChip from "@/app/components/ui/progress-chip";
 import OfflineLessonPackPill from "@/app/components/offline-lesson-pack-pill";
 
 export default function LessonPage({
@@ -65,37 +63,52 @@ async function LessonPageContent({
   const seedanceAnimationPrompt = buildSeedanceAnimationPrompt(learningModule, lesson);
 
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-5 py-8 sm:px-6 sm:py-10">
+    <main className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
       <LessonSessionTracker moduleId={learningModule.id} lessonId={lesson.id} />
-      <SoftCard as="header" organicCorners className="overflow-hidden bg-[var(--gradient-hero)] p-6 sm:p-8">
-        <Link
-          href="/dashboard"
-          className="ui-soft-button ui-focus-ring inline-flex min-h-11 items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-sm font-medium text-zinc-700 hover:bg-white"
-        >
-          <span aria-hidden>🧭</span>
-          <span>Back to Dashboard</span>
-        </Link>
-        <p className="mt-4 text-xs font-semibold uppercase tracking-wide text-zinc-600">
-          Adventure Path: {learningModule.subject}
-        </p>
-        <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">
-          {lesson.title} ✨
-        </h1>
-        <div className="mt-3 flex flex-wrap items-center gap-2">
-          <ProgressChip label="Subject" value={learningModule.subject} tone="info" />
-          <ProgressChip label="Duration" value={`${lesson.duration} min`} tone="warning" />
-          <OfflineLessonPackPill routes={offlinePackRoutes} compact />
+      
+      <header className="relative overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/40 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.04)] p-6 sm:p-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-100/40 to-cyan-100/40 pointer-events-none" />
+        
+        <div className="relative z-10">
+          <Link
+            href="/dashboard"
+            className="ui-focus-ring inline-flex min-h-11 items-center gap-2 rounded-full border border-white/80 bg-white/60 backdrop-blur-md px-4 py-2 text-sm font-bold text-zinc-700 shadow-sm transition hover:bg-white hover:scale-[1.02]"
+          >
+            <span aria-hidden>🧭</span>
+            <span>Back to Dashboard</span>
+          </Link>
+          
+          <p className="mt-6 text-[10px] font-black uppercase tracking-widest text-indigo-600">
+            Adventure Path: {learningModule.subject}
+          </p>
+          <h1 className="mt-2 text-4xl font-black tracking-tight text-zinc-900 sm:text-5xl lg:text-6xl drop-shadow-sm">
+            {lesson.title} ✨
+          </h1>
+          
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <span className="inline-flex items-center rounded-full bg-white/80 border border-white px-3 py-1.5 text-xs font-bold text-indigo-700 shadow-sm">
+              📚 {learningModule.subject}
+            </span>
+            <span className="inline-flex items-center rounded-full bg-white/80 border border-white px-3 py-1.5 text-xs font-bold text-amber-700 shadow-sm">
+              ⏳ {lesson.duration} min
+            </span>
+            <OfflineLessonPackPill routes={offlinePackRoutes} compact />
+          </div>
         </div>
-      </SoftCard>
-      <LessonExperience
-        moduleId={learningModule.id}
-        subject={learningModule.subject}
-        lesson={lesson}
-        isAdmin={isAdmin}
-        lessonImagePrompt={lessonImagePrompt}
-        seedanceVideoPrompt={seedanceVideoPrompt}
-        seedanceAnimationPrompt={seedanceAnimationPrompt}
-      />
+      </header>
+
+      <div className="w-full">
+        <LessonExperience
+          moduleId={learningModule.id}
+          subject={learningModule.subject}
+          lesson={lesson}
+          isAdmin={isAdmin}
+          lessonImagePrompt={lessonImagePrompt}
+          seedanceVideoPrompt={seedanceVideoPrompt}
+          seedanceAnimationPrompt={seedanceAnimationPrompt}
+        />
+      </div>
     </main>
   );
 }
+
