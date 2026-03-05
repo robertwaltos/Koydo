@@ -91,25 +91,41 @@ function SelectProfilePageInner() {
   const nextPath = sanitizeNextPath(searchParams.get("next"));
 
   useEffect(() => {
+    let retryCount = 0;
+
+    const resolveUser = async () => {
+      // Use getSession() first (reads local storage — no network round-trip).
+      // If it returns null (e.g. token refresh race), fall back to getUser()
+      // to avoid a false redirect-to-sign-in that would cause a loading loop.
+      const {
+        data: { session },
+        error: sessionError,
+      } = await supabase.auth.getSession();
+      if (sessionError) {
+        console.error("Error fetching session for profile selection:", formatSupabaseError(sessionError));
+      }
+      let user = session?.user ?? null;
+
+      if (!user) {
+        // Fallback: validate via network (covers post-OAuth / token-refresh races)
+        const { data: { user: networkUser } } = await supabase.auth.getUser();
+        user = networkUser;
+      }
+
+      return user;
+    };
+
     const fetchProfiles = async () => {
       setFetchError(null);
       try {
-        // Use getSession() first (reads local storage — no network round-trip).
-        // If it returns null (e.g. token refresh race), fall back to getUser()
-        // to avoid a false redirect-to-sign-in that would cause a loading loop.
-        const {
-          data: { session },
-          error: sessionError,
-        } = await supabase.auth.getSession();
-        if (sessionError) {
-          console.error("Error fetching session for profile selection:", formatSupabaseError(sessionError));
-        }
-        let user = session?.user ?? null;
+        let user = await resolveUser();
 
-        if (!user) {
-          // Fallback: validate via network (covers post-OAuth / token-refresh races)
-          const { data: { user: networkUser } } = await supabase.auth.getUser();
-          user = networkUser;
+        // Post-OAuth race: session cookies may not have synced yet.
+        // Retry up to 2 times with a short delay before giving up.
+        while (!user && retryCount < 2) {
+          retryCount++;
+          await new Promise((r) => setTimeout(r, 1000));
+          user = await resolveUser();
         }
 
         if (!user) {

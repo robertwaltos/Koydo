@@ -35,8 +35,12 @@ function WhoIsLearningInner() {
   }, [nextPath, router]);
 
   if (nextPath) {
-    // Render nothing while the redirect is in-flight.
-    return null;
+    return (
+      <main className="flex min-h-screen flex-col items-center justify-center bg-background">
+        <div className="family-orbit-spinner" role="status" aria-label={t("who_learning_loading_aria")} />
+        <p className="mt-4 text-sm text-zinc-500">{t("who_learning_redirecting_text")}</p>
+      </main>
+    );
   }
 
   return (
