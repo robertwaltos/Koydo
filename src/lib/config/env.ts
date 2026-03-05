@@ -106,6 +106,7 @@ const serverEnvSchema = z.object({
   ANTHROPIC_API_KEY: z.string().optional(),
   ANTHROPIC_MODEL: z.string().default("claude-3-7-sonnet-latest"),
   GEMINI_API_KEY: z.string().optional(),
+  GOOGLE_API_KEY: z.string().optional(),
   GEMINI_MODEL: z.string().default("gemini-2.5-pro"),
   HEYGEN_API_KEY: z.string().optional(),
   OPENAI_MODERATION_REVIEW_MODEL: z.string().default("gpt-4.1-mini"),
@@ -126,11 +127,11 @@ const serverEnvSchema = z.object({
     .transform((value) => value === "true"),
   // ── TTS (Text-to-Speech) ──
   TTS_PRIMARY_PROVIDER: z
-    .enum(["openai", "elevenlabs", "local", "browser"])
-    .default("openai"),
+    .enum(["gemini", "openai", "elevenlabs", "local", "browser"])
+    .default("gemini"),
   TTS_FALLBACK_PROVIDER: z
-    .enum(["openai", "elevenlabs", "local", "browser"])
-    .default("elevenlabs"),
+    .enum(["gemini", "openai", "elevenlabs", "local", "browser"])
+    .default("openai"),
   ELEVENLABS_API_KEY: z.string().optional(),
   TTS_OPENAI_MODEL: z.string().default("tts-1"),
   TTS_OPENAI_DEFAULT_VOICE: z.string().default("nova"),

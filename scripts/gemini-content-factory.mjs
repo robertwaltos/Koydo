@@ -262,11 +262,11 @@ async function main() {
       minAge: moduleData.minAge,
       maxAge: moduleData.maxAge,
       difficultyBand: "intermediate",
-      version: 1,
+      version: "1",
       thumbnail: moduleData.thumbnailUrl || "/placeholders/module-thumb.jpg",
       lessons: moduleData.lessons.map(l => ({
-        lessonId: l.lessonId,
-        lessonTitle: l.title,
+        id: l.lessonId,
+        title: l.title,
         duration: l.durationMinutes
       }))
     };
@@ -284,5 +284,6 @@ async function main() {
 }
 
 main();
+
 
 
