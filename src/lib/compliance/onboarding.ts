@@ -11,6 +11,10 @@ export function getOnboardingRedirect(profile: UserOnboardingProfile) {
     return "/auth/age-gate";
   }
 
+  if (profile.parental_consent_required && profile.parental_consent_status === "denied") {
+    return "/auth/consent-denied";
+  }
+
   if (profile.parental_consent_required && profile.parental_consent_status !== "verified") {
     return "/auth/parent-consent";
   }

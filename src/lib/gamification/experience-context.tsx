@@ -350,17 +350,28 @@ export function ExperienceProvider({ children }: { children: ReactNode }) {
     }
   }, [pendingReward]);
 
-  // ── Streak milestone detection ────────────────────────────────────────────
+  // ── Streak milestone detection + freeze earning ──────────────────────────
   useEffect(() => {
     if (!state.isLoading && isStreakMilestone(state.streaks.daily)) {
       setPendingReward((prev) =>
         prev ? prev : {
           type: "streak_milestone",
           title: `${state.streaks.daily}-Day Streak!`,
-          description: "You're on fire. Keep the learning going!",
+          description: state.streaks.daily >= 7
+            ? "You earned a Streak Freeze! 🛡️ Keep the learning going!"
+            : "You're on fire. Keep the learning going!",
           showConfetti: state.streaks.daily >= 7,
         },
       );
+
+      // Award a streak freeze at every 7-day milestone
+      if (state.streaks.daily >= 7 && state.streaks.daily % 7 === 0) {
+        fetch("/api/gamification/streak-freeze", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "earn" }),
+        }).catch(() => {/* non-critical */});
+      }
     }
     // Only react to streaks change, not every render
     // eslint-disable-next-line react-hooks/exhaustive-deps

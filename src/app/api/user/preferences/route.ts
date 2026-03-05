@@ -6,8 +6,10 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 const preferencePatchSchema = z.object({
   theme_pack: z.enum(["simple", "sunrise", "ocean", "forest", "candy", "space"]).optional(),
   theme_mode: z.enum(["system", "light", "dark"]).optional().transform((value) => (value ? "light" : undefined)),
-  motion_pref: z.enum(["standard"]).optional(),
+  motion_pref: z.enum(["standard", "reduced"]).optional(),
   contrast_pref: z.enum(["standard", "high"]).optional(),
+  sound_effects: z.enum(["on", "off"]).optional(),
+  daily_goal_xp: z.number().int().min(0).max(200).optional(),
   companion_avatar_style: z.enum(["human", "animated"]).optional(),
 });
 
@@ -23,7 +25,7 @@ export async function GET() {
 
   const { data, error } = await supabase
     .from("user_profiles")
-    .select("theme_pack, theme_mode, motion_pref, contrast_pref, companion_avatar_style")
+    .select("theme_pack, theme_mode, motion_pref, contrast_pref, sound_effects, daily_goal_xp, companion_avatar_style")
     .eq("user_id", user.id)
     .maybeSingle();
 
@@ -38,6 +40,8 @@ export async function GET() {
       theme_mode: "light",
       motion_pref: data?.motion_pref ?? "standard",
       contrast_pref: data?.contrast_pref ?? "standard",
+      sound_effects: data?.sound_effects ?? "on",
+      daily_goal_xp: data?.daily_goal_xp ?? 0,
       companion_avatar_style: data?.companion_avatar_style ?? "human",
     },
   });

@@ -36,6 +36,18 @@ export default async function ParentLayout({ children }: { children: ReactNode }
     redirect("/auth/sign-in");
   }
 
+  // Verify user actually has the parent role
+  const { data: profile } = await supabase
+    .from("user_profiles")
+    .select("is_parent, is_admin")
+    .eq("user_id", user.id)
+    .maybeSingle();
+
+  // Allow parents and admins (admins may need to inspect parent portal)
+  if (!profile?.is_parent && !profile?.is_admin) {
+    redirect("/dashboard");
+  }
+
   return (
     <DashShell
       navGroups={PARENT_NAV}

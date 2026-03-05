@@ -51,6 +51,16 @@ export default async function SupportPage() {
         </div>
       </SoftCard>
       
+      <SoftCard className="p-4">
+        <Link
+          href="/support/faq"
+          className="ui-focus-ring flex items-center gap-3 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-semibold text-blue-700 transition hover:bg-blue-100 dark:border-blue-800 dark:bg-blue-950/30 dark:text-blue-300"
+        >
+          <span aria-hidden="true" className="text-xl">❓</span>
+          <span>Help Center &amp; FAQ — Find answers to common questions</span>
+        </Link>
+      </SoftCard>
+
       <SoftCard className="p-5 space-y-2">
         <h2 className="text-lg font-semibold">Contact &amp; FAQ / Contacto y Preguntas Frecuentes</h2>
         <p className="text-sm text-foreground">

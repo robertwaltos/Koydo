@@ -365,7 +365,16 @@ export async function proxy(request: NextRequest) {
   const requiresComplianceGate = pathname.startsWith("/student")
     || pathname.startsWith("/dashboard")
     || pathname.startsWith("/select-profile")
-    || pathname.startsWith("/who-is-learning");
+    || pathname.startsWith("/who-is-learning")
+    || pathname.startsWith("/games")
+    || pathname.startsWith("/explore")
+    || pathname.startsWith("/modules")
+    || pathname.startsWith("/language")
+    || pathname.startsWith("/testing")
+    || pathname.startsWith("/experience-hub")
+    || pathname.startsWith("/exam-prep")
+    || pathname.startsWith("/parent")
+    || pathname.startsWith("/admin");
 
   if (user && requiresComplianceGate) {
     const { data: profile, error: profileError } = await supabase

@@ -12,6 +12,7 @@ import { usePreReaderMode } from "@/app/explore/_components/pre-reader-mode";
 import { VOICES, useVoicePreference } from "@/app/explore/_components/voice-preference";
 import LanguageSwitcher from "./language-switcher";
 import ThemeControls from "./theme-controls";
+import NotificationBell from "./notification-bell";
 import { ASSETS } from "@/lib/config/assets";
 import { isLaunchRouteLocked, resolveLaunchHref } from "@/lib/platform/launch-readiness";
 
@@ -336,12 +337,28 @@ export default function TopNav() {
   }, [activeLearner, authContext.isAuthenticated, t]);
 
   const secondaryNavItems = useMemo(() => {
+    const learnItems: NavItem[] = authContext.isAuthenticated
+      ? [
+        { href: "/modules", labelKey: "nav_modules", icon: "📚" },
+        { href: "/language/speaking-lab", labelKey: "top_nav_speaking_lab", icon: "🎙️" },
+        { href: "/science-lab", labelKey: "nav_science_lab", icon: "🧬" },
+        { href: "/exam-prep", labelKey: "nav_exam_prep", icon: "🎯" },
+        { href: "/games", labelKey: "nav_learning_games", icon: "🎮" },
+        { href: "/testing", labelKey: "top_nav_testing", icon: "🧪" },
+        { href: "/experience-hub", label: "Experience Hub", icon: "🏆" },
+      ]
+      : [
+        { href: "/modules", labelKey: "nav_modules", icon: "📚" },
+        { href: "/speaking-lab", labelKey: "top_nav_speaking_lab", icon: "🎙️" },
+        { href: "/science-lab", labelKey: "nav_science_lab", icon: "🧬" },
+        { href: "/exam-prep-info", labelKey: "nav_exam_prep", icon: "🎯" },
+        { href: "/learning-games", labelKey: "nav_learning_games", icon: "🎮" },
+        { href: "/testing-center", labelKey: "top_nav_testing", icon: "🧪" },
+        { href: "/experience-hub-info", label: "Experience Hub", icon: "🏆" },
+      ];
+
     const secondary: NavItem[] = [
-      { href: "/modules", labelKey: "nav_modules", icon: "📚" },
-      { href: "/language/speaking-lab", labelKey: "top_nav_speaking_lab", icon: "🎙️" },
-      { href: "/testing", labelKey: "top_nav_testing", icon: "🧪" },
-      { href: "/exam-prep", labelKey: "nav_exam_prep", icon: "🎯" },
-      { href: "/science-lab", labelKey: "nav_science_lab", icon: "🧪" },
+      ...learnItems,
       ...(authContext.isAuthenticated ? authenticatedNavItems : []),
       ...(authContext.isParent ? parentNavItems : []),
       ...(authContext.isAdmin ? adminNavItems : []),
@@ -528,6 +545,7 @@ export default function TopNav() {
                   ⌘K
                 </kbd>
               </button>
+              <NotificationBell isHomePage={isHomePage} />
               <div
                 ref={mainMenuRef}
                 className="relative"
@@ -682,7 +700,7 @@ export default function TopNav() {
                         {t("top_nav_all_modules")}
                       </Link>
                       <Link
-                        href="/language/speaking-lab"
+                        href={authContext.isAuthenticated ? "/language/speaking-lab" : "/speaking-lab"}
                         className="ui-glass-item ui-focus-ring inline-flex min-h-10 items-center gap-2 text-sm font-semibold text-zinc-700 dark:text-foreground"
                         onClick={closeMenus}
                       >

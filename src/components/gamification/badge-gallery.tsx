@@ -44,6 +44,28 @@ function formatDate(iso: string) {
   }
 }
 
+async function shareAchievement(badge: Badge) {
+  const text = `I earned the "${badge.label ?? badge.id}" badge on KOYDO! ${getBadgeIcon(badge.id)}`;
+  const url = typeof window !== "undefined" ? window.location.origin : "";
+
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: "KOYDO Achievement", text, url });
+      return;
+    } catch {
+      // User cancelled or share failed, fall through to clipboard
+    }
+  }
+
+  // Fallback: copy to clipboard
+  try {
+    await navigator.clipboard.writeText(`${text}\n${url}`);
+    // Brief visual feedback would be nice but keeping it simple
+  } catch {
+    // ignore
+  }
+}
+
 export function BadgeGallery({ badges, maxVisible = 8 }: BadgeGalleryProps) {
   const [expanded, setExpanded] = useState(false);
   const visible = expanded ? badges : badges.slice(0, maxVisible);
@@ -64,22 +86,35 @@ export function BadgeGallery({ badges, maxVisible = 8 }: BadgeGalleryProps) {
     <div>
       <div className="grid grid-cols-4 gap-3 sm:grid-cols-6 md:grid-cols-8">
         {visible.map((badge) => (
-          <button
+          <div
             key={badge.id}
-            type="button"
-            className="group flex flex-col items-center gap-1 rounded-xl p-2 transition-colors hover:bg-stone-50"
-            title={badge.label ?? badge.id}
+            className="group relative flex flex-col items-center gap-1 rounded-xl p-2 transition-colors hover:bg-stone-50"
           >
-            <span className="text-2xl transition-transform group-hover:scale-110">
-              {getBadgeIcon(badge.id)}
-            </span>
-            <span className="line-clamp-1 text-[10px] font-medium text-stone-500">
-              {badge.label ?? badge.id}
-            </span>
-            <span className="text-[9px] text-stone-300">
-              {formatDate(badge.earnedAt)}
-            </span>
-          </button>
+            <button
+              type="button"
+              className="flex flex-col items-center gap-1"
+              title={badge.label ?? badge.id}
+            >
+              <span className="text-2xl transition-transform group-hover:scale-110">
+                {getBadgeIcon(badge.id)}
+              </span>
+              <span className="line-clamp-1 text-[10px] font-medium text-stone-500">
+                {badge.label ?? badge.id}
+              </span>
+              <span className="text-[9px] text-stone-300">
+                {formatDate(badge.earnedAt)}
+              </span>
+            </button>
+            <button
+              type="button"
+              onClick={() => shareAchievement(badge)}
+              className="absolute -right-1 -top-1 hidden h-5 w-5 items-center justify-center rounded-full bg-blue-500 text-[10px] text-white shadow-sm group-hover:flex"
+              title="Share achievement"
+              aria-label={`Share ${badge.label ?? badge.id} achievement`}
+            >
+              ↗
+            </button>
+          </div>
         ))}
       </div>
       {hasMore && (

@@ -484,6 +484,8 @@ export default function SettingsClient({ subscription, learnerProfiles }: Settin
 
       <CompanionSettingsCard avatarStyle={avatarStyle} setAvatarStyle={setAvatarStyle} />
 
+      <AccessibilityPreferencesCard />
+
       <SoftCard as="section" className="p-5">
         <h2 className="text-lg font-semibold">Parent Security Verification</h2>
         <p className="mt-2 text-sm text-zinc-600">
@@ -858,6 +860,138 @@ function CompanionSettingsCard({
             </button>
           </div>
         )}
+      </div>
+    </SoftCard>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Accessibility & Preferences Section
+// ─────────────────────────────────────────────────────────────────────────────
+
+function AccessibilityPreferencesCard() {
+  const [soundEffects, setSoundEffects] = useState<"on" | "off">("on");
+  const [motionPref, setMotionPref] = useState<"standard" | "reduced">("standard");
+  const [contrastPref, setContrastPref] = useState<"standard" | "high">("standard");
+  const [dailyGoalXp, setDailyGoalXp] = useState(0);
+  const [saving, setSaving] = useState(false);
+  const [status, setStatus] = useState("");
+
+  useEffect(() => {
+    fetch("/api/user/preferences")
+      .then((res) => res.json())
+      .then((data) => {
+        const p = data.preferences ?? {};
+        setSoundEffects(p.sound_effects ?? "on");
+        setMotionPref(p.motion_pref ?? "standard");
+        setContrastPref(p.contrast_pref ?? "standard");
+        setDailyGoalXp(p.daily_goal_xp ?? 0);
+      })
+      .catch(() => {});
+  }, []);
+
+  const save = async () => {
+    setSaving(true);
+    setStatus("");
+    try {
+      const res = await fetch("/api/user/preferences", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          sound_effects: soundEffects,
+          motion_pref: motionPref,
+          contrast_pref: contrastPref,
+          daily_goal_xp: dailyGoalXp,
+        }),
+      });
+      setStatus(res.ok ? "Preferences saved." : "Failed to save.");
+    } catch {
+      setStatus("Failed to save.");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const goalOptions = [
+    { value: 0, label: "No goal" },
+    { value: 10, label: "10 XP (Casual)" },
+    { value: 20, label: "20 XP (Regular)" },
+    { value: 30, label: "30 XP (Serious)" },
+    { value: 50, label: "50 XP (Intense)" },
+  ];
+
+  return (
+    <SoftCard as="section" className="p-5">
+      <h2 className="text-lg font-semibold">Accessibility & Preferences</h2>
+      <p className="mt-2 text-sm text-zinc-600 dark:text-foreground/70">
+        Customize your learning experience and accessibility settings.
+      </p>
+
+      <div className="mt-4 grid gap-4 sm:grid-cols-2">
+        {/* Sound Effects */}
+        <label className="flex flex-col gap-1 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Sound Effects</span>
+          <select
+            value={soundEffects}
+            onChange={(e) => setSoundEffects(e.target.value as "on" | "off")}
+            className="ui-focus-ring rounded-xl border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            <option value="on">On</option>
+            <option value="off">Off</option>
+          </select>
+        </label>
+
+        {/* Motion */}
+        <label className="flex flex-col gap-1 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Motion & Animations</span>
+          <select
+            value={motionPref}
+            onChange={(e) => setMotionPref(e.target.value as "standard" | "reduced")}
+            className="ui-focus-ring rounded-xl border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            <option value="standard">Standard</option>
+            <option value="reduced">Reduced motion</option>
+          </select>
+        </label>
+
+        {/* Contrast */}
+        <label className="flex flex-col gap-1 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Contrast Mode</span>
+          <select
+            value={contrastPref}
+            onChange={(e) => setContrastPref(e.target.value as "standard" | "high")}
+            className="ui-focus-ring rounded-xl border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            <option value="standard">Standard</option>
+            <option value="high">High contrast</option>
+          </select>
+        </label>
+
+        {/* Daily Goal */}
+        <label className="flex flex-col gap-1 text-sm">
+          <span className="text-xs font-semibold uppercase tracking-wide text-zinc-500">Daily Learning Goal</span>
+          <select
+            value={dailyGoalXp}
+            onChange={(e) => setDailyGoalXp(Number(e.target.value))}
+            className="ui-focus-ring rounded-xl border border-border bg-surface-muted px-3 py-2 text-sm"
+          >
+            {goalOptions.map((opt) => (
+              <option key={opt.value} value={opt.value}>{opt.label}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <div className="mt-4 flex items-center gap-3">
+        <button
+          type="button"
+          onClick={save}
+          disabled={saving}
+          className="ui-soft-button ui-focus-ring rounded-xl border border-emerald-300 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-100 dark:border-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300"
+        >
+          {saving ? "Saving…" : "Save Preferences"}
+        </button>
+        {status && <p className="text-sm text-zinc-600">{status}</p>}
       </div>
     </SoftCard>
   );

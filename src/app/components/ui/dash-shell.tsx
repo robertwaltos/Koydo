@@ -17,7 +17,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useMemo, useState, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import LanguageSwitcher from "@/app/components/language-switcher";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -82,13 +82,13 @@ function SidebarNavLink({ item }: { item: DashNavItem }) {
 
 // ── Sidebar group (collapsible) ────────────────────────────────────────────────
 
-function SidebarNavGroup({ group }: { group: DashNavGroup }) {
+function SidebarNavGroup({ group, defaultOpen = false }: { group: DashNavGroup; defaultOpen?: boolean }) {
   const pathname = usePathname();
-  // Auto-open the group that contains the active page
+  // Auto-open the group that contains the active page, or default open on wide screens
   const hasActive = group.items.some(
     (item) => pathname === item.href || pathname.startsWith(item.href + "/"),
   );
-  const [open, setOpen] = useState(hasActive);
+  const [open, setOpen] = useState(hasActive || defaultOpen);
 
   return (
     <div>
@@ -137,6 +137,16 @@ function SidebarContent({
   navGroups: DashNavGroup[];
   productSubtitle: string;
 }) {
+  // On ultra-wide screens (2xl+), expand all groups by default
+  const [isWideScreen, setIsWideScreen] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1536px)");
+    setIsWideScreen(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsWideScreen(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   return (
     <div
       className="flex h-full flex-col safe-area-top safe-area-left safe-area-bottom ui-glass-sidebar"
@@ -164,7 +174,7 @@ function SidebarContent({
         aria-label="Dashboard navigation"
       >
         {navGroups.map((group) => (
-          <SidebarNavGroup key={group.label} group={group} />
+          <SidebarNavGroup key={group.label} group={group} defaultOpen={isWideScreen} />
         ))}
       </nav>
 
@@ -232,10 +242,10 @@ export default function DashShell({
         />
       )}
 
-      {/* ── Sidebar — fixed 240px on md+, off-canvas on mobile ── */}
+      {/* ── Sidebar — fixed width, responsive: 256px md, 288px lg, 320px 2xl ── */}
       <aside
         className={[
-          "fixed inset-y-0 left-0 z-30 w-64 transition-transform duration-200 ease-out md:w-72",
+          "fixed inset-y-0 left-0 z-30 w-64 transition-transform duration-200 ease-out md:w-72 2xl:w-80",
           sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0",
         ].join(" ")}
         aria-label="Sidebar"
@@ -247,7 +257,7 @@ export default function DashShell({
       </aside>
 
       {/* ── Main column ── */}
-      <div className="flex min-w-0 flex-1 flex-col md:pl-72">
+      <div className="flex min-w-0 flex-1 flex-col md:pl-72 2xl:pl-80">
         {/* ── Top bar ── */}
         <header
           className="safe-area-top sticky top-0 z-10 flex h-14 shrink-0 items-center justify-between border-b border-border/20 bg-surface/90 backdrop-blur-sm px-4 md:px-6 dark:bg-background/90"

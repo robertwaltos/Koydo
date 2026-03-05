@@ -7,6 +7,7 @@ type AdminAccessLevel = "full_access" | "read_only";
 type ProfileRow = {
   is_admin: boolean;
   is_owner: boolean;
+  is_support?: boolean;
   data_mode: "live" | "beta";
   admin_access_level?: string | null;
 };
@@ -34,7 +35,7 @@ async function authenticateAdminUser() {
 
   const profileResult = await supabase
     .from("user_profiles")
-    .select("is_admin,is_owner,data_mode")
+    .select("is_admin,is_owner,is_support,data_mode")
     .eq("user_id", user.id)
     .maybeSingle<ProfileRow>();
 
@@ -161,6 +162,52 @@ export async function requireOwnerForApi(options?: {
     userEmail: auth.user.email ?? null,
     supabase: auth.supabase,
     profile: auth.profile,
+  };
+}
+
+/**
+ * Authenticate a support staff member OR admin.
+ * Support staff can access tickets, alerts, and support-related API routes only.
+ * Admins retain full access. This allows hiring support without giving full admin.
+ */
+export async function requireSupportOrAdminForApi() {
+  const supabase = await createSupabaseServerClient();
+  const {
+    data: { user },
+    error: authError,
+  } = await supabase.auth.getUser();
+
+  if (authError || !user) {
+    return {
+      isAuthorized: false as const,
+      response: NextResponse.json({ error: "Unauthorized" }, { status: 401 }),
+    };
+  }
+
+  const { data: profile } = await supabase
+    .from("user_profiles")
+    .select("is_admin, is_owner, is_support, admin_access_level")
+    .eq("user_id", user.id)
+    .maybeSingle();
+
+  const isAdmin = Boolean(profile?.is_admin);
+  const isSupport = Boolean(profile?.is_support);
+
+  if (!isAdmin && !isSupport) {
+    return {
+      isAuthorized: false as const,
+      response: NextResponse.json({ error: "Forbidden" }, { status: 403 }),
+    };
+  }
+
+  return {
+    isAuthorized: true as const,
+    userId: user.id,
+    userEmail: user.email ?? null,
+    supabase,
+    isAdmin,
+    isSupport,
+    profile: profile as ProfileRow,
   };
 }
 

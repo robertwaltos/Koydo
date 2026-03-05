@@ -24,12 +24,14 @@ async function claimAdminProvision(userId: string, email: string | undefined) {
 
     if (!provision) return;
 
-    // Grant admin on user_profiles
+    // Grant admin or support on user_profiles based on provision access_level
+    const isSupport = provision.access_level === "support";
     await admin
       .from("user_profiles")
       .update({
-        is_admin: true,
-        admin_access_level: provision.access_level,
+        is_admin: isSupport ? false : true,
+        is_support: isSupport ? true : false,
+        admin_access_level: isSupport ? null : provision.access_level,
       })
       .eq("user_id", userId);
 
@@ -68,7 +70,7 @@ export async function GET() {
 
     const { data: profile } = await supabase
       .from("user_profiles")
-      .select("is_admin, is_parent, admin_access_level")
+      .select("is_admin, is_parent, is_support, admin_access_level")
       .eq("user_id", user.id)
       .maybeSingle();
 
@@ -94,13 +96,15 @@ export async function GET() {
     }
 
     const isParent = Boolean(profile?.is_parent);
-    const role = isAdmin ? "admin" : isParent ? "parent" : "learner";
+    const isSupport = Boolean(profile?.is_support);
+    const role = isAdmin ? "admin" : isSupport ? "support" : isParent ? "parent" : "learner";
 
     return NextResponse.json({
       user: { id: user.id, email: user.email ?? null },
       isAuthenticated: true,
       isAdmin,
       isParent,
+      isSupport,
       role,
       adminAccessLevel,
     });

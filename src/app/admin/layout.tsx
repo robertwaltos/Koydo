@@ -4,76 +4,98 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import DashShell, { type DashNavGroup } from "@/app/components/ui/dash-shell";
 
 const ADMIN_NAV: DashNavGroup[] = [
+  // ── Core ──────────────────────────────────────────────────────────────────
   {
     label: "Dashboard",
     items: [
-      { href: "/admin/overview",    label: "Overview",          icon: "◉" },
-      { href: "/admin/alerts",      label: "Alerts",            icon: "⚡" },
+      { href: "/admin/overview",   label: "Overview",         icon: "◉" },
+      { href: "/admin/alerts",     label: "Alerts",           icon: "⚡" },
+      { href: "/admin/operations", label: "Operations Console", icon: "⚙" },
     ],
   },
-  {
-    label: "Operations",
-    items: [
-      { href: "/admin/operations",                label: "Console",             icon: "⚙" },
-      { href: "/admin/operations?s=system-health", label: "System Health",       icon: "♥" },
-      { href: "/admin/operations?s=support-queue", label: "Support Queue",       icon: "✉" },
-      { href: "/admin/operations?s=exam-maintenance", label: "Exam Maintenance", icon: "✎" },
-    ],
-  },
+
+  // ── Users & Access ────────────────────────────────────────────────────────
   {
     label: "User Management",
     items: [
-      { href: "/admin/operations?s=create-account",  label: "Create Account",    icon: "➕" },
-      { href: "/admin/operations?s=role-management",  label: "Role Management",   icon: "🔑" },
-      { href: "/admin/provisioning",                  label: "Admin Provisioning",icon: "📧" },
-      { href: "/admin/operations?s=approvals",        label: "Approvals",         icon: "✓" },
-      { href: "/admin/operations?s=account-recovery", label: "Account Recovery",  icon: "🔓" },
-      { href: "/admin/operations?s=account-reset",    label: "Reset / Deletion",  icon: "⌫" },
+      { href: "/admin/operations?s=create-account",  label: "Create Account",      icon: "➕" },
+      { href: "/admin/operations?s=role-management",  label: "Role Management",     icon: "🔑" },
+      { href: "/admin/provisioning",                  label: "Admin Provisioning",  icon: "📧" },
+      { href: "/admin/operations?s=approvals",        label: "Pending Approvals",   icon: "✓" },
+      { href: "/admin/operations?s=account-recovery", label: "Account Recovery",    icon: "🔓" },
+      { href: "/admin/operations?s=account-reset",    label: "Reset / Deletion",    icon: "⌫" },
     ],
   },
+
+  // ── Support ───────────────────────────────────────────────────────────────
   {
-    label: "Content & Media",
+    label: "Support",
     items: [
-      { href: "/admin/compliance",  label: "Compliance",     icon: "◎" },
-      { href: "/admin/finance",     label: "Finance",        icon: "¤" },
-      { href: "/admin/partners",    label: "Partners",       icon: "∞" },
-      { href: "/admin/costs",       label: "Costs",          icon: "$" },
-      { href: "/admin/audit",       label: "Audit Log",      icon: "☰" },
+      { href: "/admin/operations?s=support-queue",    label: "Ticket Queue",        icon: "✉" },
+      { href: "/admin/operations?s=support-sla",      label: "SLA Monitor",         icon: "⏱" },
     ],
   },
+
+  // ── Content & Curriculum ──────────────────────────────────────────────────
+  {
+    label: "Content & Curriculum",
+    items: [
+      { href: "/admin/curriculum",                     label: "Curriculum Manager",  icon: "🗂" },
+      { href: "/admin/media",                          label: "Media Pipeline",      icon: "🎬" },
+      { href: "/admin/operations?s=exam-maintenance",  label: "Exam Maintenance",    icon: "✎" },
+    ],
+  },
+
+  // ── Finance & Billing ─────────────────────────────────────────────────────
   {
     label: "Finance & Billing",
     items: [
-      { href: "/admin/costs",                          label: "Costs & Budget",    icon: "$" },
-      { href: "/admin/operations?s=pricing",           label: "Pricing Config",    icon: "💰" },
-      { href: "/admin/operations?s=refunds",           label: "Refunds",           icon: "↩" },
-      { href: "/admin/operations?s=promotions",        label: "Promotions",        icon: "🏷" },
-      { href: "/admin/operations?s=lang-price-map",    label: "Language Prices",   icon: "🌐" },
-      { href: "/admin/operations?s=lang-runtime",      label: "Language Config",   icon: "⚡" },
-      { href: "/admin/operations?s=lang-pricing-ladders", label: "Unlock Pricing", icon: "🪜" },
-      { href: "/admin/operations?s=lang-reconciliation", label: "Reconciliation",  icon: "⚖" },
+      { href: "/admin/finance",                             label: "Finance Overview",  icon: "¤" },
+      { href: "/admin/costs",                               label: "Costs & Budget",    icon: "$" },
+      { href: "/admin/operations?s=pricing",                label: "Pricing Config",    icon: "💰" },
+      { href: "/admin/operations?s=refunds",                label: "Refunds",           icon: "↩" },
+      { href: "/admin/operations?s=promotions",             label: "Promotions",        icon: "🏷" },
+      { href: "/admin/operations?s=lang-price-map",         label: "Language Prices",   icon: "🌐" },
+      { href: "/admin/operations?s=lang-pricing-ladders",   label: "Unlock Pricing",    icon: "🪜" },
+      { href: "/admin/operations?s=lang-reconciliation",    label: "Reconciliation",    icon: "⚖" },
+      { href: "/admin/operations?s=lang-runtime",           label: "Language Runtime",  icon: "⚡" },
     ],
   },
+
+  // ── Partners & Organizations ──────────────────────────────────────────────
+  {
+    label: "Partners & Orgs",
+    items: [
+      { href: "/admin/partners",   label: "Partner Portal",    icon: "∞" },
+    ],
+  },
+
+  // ── Compliance & Legal ────────────────────────────────────────────────────
   {
     label: "Compliance & Legal",
     items: [
-      { href: "/admin/compliance",  label: "Compliance Center", icon: "◎" },
-      { href: "/admin/audit",       label: "Audit Log",         icon: "☰" },
+      { href: "/admin/compliance", label: "Compliance Center", icon: "◎" },
+      { href: "/admin/audit",      label: "Audit Log",         icon: "☰" },
     ],
   },
-  {
-    label: "System Config",
-    items: [
-      { href: "/admin/settings",                            label: "Settings",       icon: "⛭" },
-      { href: "/admin/operations?s=env-checks",             label: "Environment",    icon: "🖥" },
-      { href: "/admin/operations?s=db-status",              label: "Database",       icon: "🗄" },
-      { href: "/admin/operations?s=stripe-webhooks",        label: "Webhooks",       icon: "🔌" },
-    ],
-  },
+
+  // ── Intelligence & Analytics ──────────────────────────────────────────────
   {
     label: "Intelligence",
     items: [
-      { href: "/admin/reports",     label: "Reports & Analytics", icon: "↗" },
+      { href: "/admin/reports",    label: "Reports & Analytics", icon: "↗" },
+    ],
+  },
+
+  // ── System ────────────────────────────────────────────────────────────────
+  {
+    label: "System",
+    items: [
+      { href: "/admin/settings",                       label: "App Settings",    icon: "⛭" },
+      { href: "/admin/operations?s=env-checks",        label: "Environment",     icon: "🖥" },
+      { href: "/admin/operations?s=db-status",         label: "Database Status", icon: "🗄" },
+      { href: "/admin/operations?s=stripe-webhooks",   label: "Webhooks",        icon: "🔌" },
+      { href: "/admin/operations?s=system-health",     label: "System Health",   icon: "♥" },
     ],
   },
 ];
