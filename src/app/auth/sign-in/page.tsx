@@ -137,25 +137,9 @@ function SignInPageContent() {
   ];
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-12">
-      {/* Ambient background */}
-      <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <Image
-          src={ASSETS.bgAuth}
-          alt=""
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        <div className="absolute inset-0 bg-white/55 backdrop-blur-[2px]" />
-      </div>
-
-      {/* Floating orbs for depth */}
-      <span className="ui-hero-orb-1 pointer-events-none fixed left-1/4 top-1/4 h-64 w-64 rounded-full opacity-20" aria-hidden="true" />
-      <span className="ui-hero-orb-3 pointer-events-none fixed bottom-1/4 right-1/4 h-48 w-48 rounded-full opacity-20" aria-hidden="true" />
-
-      {/* Glass card */}
-      <div className="ui-auth-card ui-page-enter w-full max-w-md">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-12 w-full">
+      {/* Glass card - the background is handled by the layout */}
+      <div className="w-full max-w-md p-8 sm:p-10">
         {/* Logo / wordmark */}
         <div className="mb-6 text-center">
           <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">

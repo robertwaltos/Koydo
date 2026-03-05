@@ -158,24 +158,8 @@ function SignUpPageInner() {
   };
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-12">
-      {/* Ambient background */}
-      <div className="absolute inset-0 -z-10" aria-hidden="true">
-        <Image
-          src={ASSETS.bgAuth}
-          alt=""
-          fill
-          className="object-cover object-center"
-          priority
-        />
-        <div className="absolute inset-0 bg-white/55 backdrop-blur-[2px]" />
-      </div>
-
-      {/* Floating orbs */}
-      <span className="ui-hero-orb-2 pointer-events-none fixed right-1/4 top-1/4 h-56 w-56 rounded-full opacity-20" aria-hidden="true" />
-      <span className="ui-hero-orb-1 pointer-events-none fixed bottom-1/3 left-1/4 h-40 w-40 rounded-full opacity-20" aria-hidden="true" />
-
-      <div className="ui-auth-card ui-page-enter w-full max-w-lg">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-12 w-full">
+      <div className="w-full max-w-lg p-8 sm:p-10">
         {/* ══════════════════════════════════════
             STEP 1: Role selector
         ══════════════════════════════════════ */}

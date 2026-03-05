@@ -3,15 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { ASSETS } from "@/lib/config/assets";
 import {
   isSupportedLocale,
   type Locale,
   translate,
 } from "@/lib/i18n/translations";
-import { ASSETS } from "@/lib/config/assets";
 import VoicePicker from "@/app/explore/_components/voice-picker";
 import SubjectShowcase from "@/app/components/subject-showcase";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import LandingHeroInteractive from "@/app/components/ui/landing-hero-interactive";
 
 export const metadata: Metadata = {
   title: "Koydo — Learn Anything, Any Age, Any Language",
@@ -40,76 +41,11 @@ export default async function Home() {
     translate(locale, key, vars);
 
   return (
-    <div className="relative font-sans">
+    <div className="relative font-sans overflow-x-hidden">
       {/* ════════════════════════════════════════════════════════
-           SECTION 1 — HERO
-           Full-viewport cinematic hero with single CTA
+           SECTION 1 — HERO (Interactive Adaptive Hero)
       ════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[calc(100svh-72px)] overflow-hidden">
-        <Image
-          src={ASSETS.heroHome}
-          alt="A vibrant daytime landscape — families and learners on a golden path toward knowledge"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-
-        {/* Readable overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: [
-              "linear-gradient(to right, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.42) 35%, transparent 60%)",
-              "linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(255,255,255,0.55) 88%, rgba(255,255,255,0.85) 100%)",
-            ].join(", "),
-          }}
-        />
-
-        <div className="relative mx-auto flex min-h-[calc(100svh-72px)] max-w-7xl flex-col px-4 py-16 sm:py-24">
-          <div className="flex flex-1 flex-col justify-center">
-            <div className="max-w-[580px]">
-              <p className="text-[11px] font-extrabold uppercase tracking-[0.26em] text-emerald-700">
-                {t("home_hero_eyebrow")}
-              </p>
-              <h1
-                className="mt-4 text-4xl font-black leading-[1.07] tracking-[-0.02em] text-zinc-900 sm:text-5xl md:text-6xl lg:text-7xl"
-                style={{ fontFamily: "var(--font-display-sans)" }}
-              >
-                {t("home_hero_title_prefix")}{" "}
-                <span
-                  className="bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(105deg, #059669 0%, #10b981 45%, #34d399 100%)",
-                  }}
-                >
-                  {t("home_hero_title_highlight")}
-                </span>
-              </h1>
-              <p className="mt-5 max-w-[48ch] text-base leading-relaxed text-zinc-600 sm:text-lg">
-                {t("home_hero_body")}
-              </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link
-                  href="/explore"
-                  className="inline-flex min-h-[3.5rem] items-center rounded-full px-8 py-3.5 text-base font-bold text-white shadow-lg shadow-emerald-500/25 transition-all duration-200 hover:brightness-110 hover:shadow-xl hover:shadow-emerald-500/35 active:scale-[0.97]"
-                  style={{
-                    background:
-                      "linear-gradient(105deg, #059669 0%, #10b981 55%, #34d399 100%)",
-                  }}
-                >
-                  {t("home_hero_cta")}
-                </Link>
-                <VoicePicker />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-
+      <LandingHeroInteractive t={t} />
 
       {/* ── Stats bar ── */}
       <section className="landing-section relative mx-auto max-w-7xl px-4 py-10 sm:py-14">
