@@ -3,7 +3,7 @@ import { z } from "zod";
 import { toSafeErrorRecord } from "@/lib/logging/safe-error";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
-import { normalizeUSStateCode } from "@/lib/legal/us-states";
+import { normalizeJurisdictionCode } from "@/lib/legal/jurisdictions";
 import { resolveTermsDocumentForState } from "@/lib/legal/terms-of-service";
 import { sendSignupThankYouEmail } from "@/lib/email/signup-thank-you-email";
 
@@ -37,7 +37,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid payload." }, { status: 400 });
   }
 
-  const billingState = normalizeUSStateCode(parsed.data.billingState);
+  const billingState = normalizeJurisdictionCode(parsed.data.billingState);
   if (!billingState) {
     return NextResponse.json({ error: "Invalid billing state." }, { status: 400 });
   }
@@ -108,3 +108,4 @@ export async function POST(request: Request) {
     );
   }
 }
+

@@ -1,8 +1,8 @@
 import { createHash } from "crypto";
 import {
-  normalizeUSStateCode,
-  type USStateCode,
-} from "@/lib/legal/us-states";
+  normalizeJurisdictionCode,
+  type JurisdictionCode,
+} from "@/lib/legal/jurisdictions";
 
 export const TERMS_VERSION = "2026-03-03";
 export const TERMS_EFFECTIVE_DATE = "2026-03-03";
@@ -13,8 +13,8 @@ type TermsSection = {
   paragraphs: readonly string[];
 };
 
-type StateAddendum = {
-  stateCode: string;
+type JurisdictionAddendum = {
+  jurisdictionCode: string;
   title: string;
   paragraphs: readonly string[];
 };
@@ -22,11 +22,11 @@ type StateAddendum = {
 export type ResolvedTermsDocument = {
   version: string;
   effectiveDate: string;
-  stateCode: string;
+  stateCode: string; // Kept as 'stateCode' for database backward compatibility
   documentKey: string;
   documentHash: string;
   sections: readonly TermsSection[];
-  stateAddendum: StateAddendum;
+  stateAddendum: JurisdictionAddendum;
 };
 
 const BASE_TERMS_SECTIONS: readonly TermsSection[] = [
@@ -43,7 +43,7 @@ const BASE_TERMS_SECTIONS: readonly TermsSection[] = [
     id: "account-security",
     title: "2. Account Security and Accurate Information",
     paragraphs: [
-      "You must provide accurate, current, and complete registration and billing information, including your billing state when requested for legal and tax compliance.",
+      "You must provide accurate, current, and complete registration and billing information, including your billing region when requested for legal and tax compliance.",
       "You are responsible for maintaining credential confidentiality and for activity performed through your account, unless caused by our material security failure.",
       "You must promptly notify us at support@koydo.app if you suspect unauthorized use.",
     ],
@@ -55,7 +55,7 @@ const BASE_TERMS_SECTIONS: readonly TermsSection[] = [
       "Paid plans renew automatically at the disclosed interval unless canceled before the next renewal date. Price, cycle, and cancellation terms are presented at checkout and in your account billing view.",
       "For direct web billing, you authorize recurring charges until canceled. Cancellation stops future renewal charges and does not retroactively refund prior periods unless required by applicable law or an express written policy.",
       "For Apple App Store and Google Play purchases, payment, cancellation, and refund workflows are controlled by the applicable store terms and platform billing policies. When store terms conflict with direct-web language in these Terms, store terms control for that purchase channel.",
-      "We provide clear renewal disclosures and consent capture intended to align with federal negative option requirements (including ROSCA for covered transactions) and applicable state auto-renewal statutes.",
+      "We provide clear renewal disclosures and consent capture intended to align with federal negative option requirements (including ROSCA for covered transactions) and applicable regional auto-renewal statutes.",
     ],
   },
   {
@@ -73,7 +73,7 @@ const BASE_TERMS_SECTIONS: readonly TermsSection[] = [
     paragraphs: [
       "Koydo and its licensors retain all rights in software, content, curriculum, designs, logos, marks, and related materials, except for rights expressly granted to you.",
       "You receive a limited, revocable, non-exclusive, non-transferable license to access and use the Service for personal, household, classroom, or permitted organizational educational use.",
-      "You may not resell, repackage, redistribute, or create derivative commercial products from Service content without prior written authorization.",
+      "You may not resell, repackage, redistribute, scrape for AI training, or create derivative commercial products from Service content without prior written authorization.",
     ],
   },
   {
@@ -99,9 +99,9 @@ const BASE_TERMS_SECTIONS: readonly TermsSection[] = [
     title: "8. Dispute Resolution, Arbitration, and Class Action Waiver",
     paragraphs: [
       "Please contact support@koydo.app first so we can attempt informal resolution.",
-      "Except where prohibited by applicable law, disputes arising from these Terms or the Service are resolved by binding individual arbitration and not by jury trial or class/representative proceeding.",
+      "Except where prohibited by applicable law (such as in the EU/UK), disputes arising from these Terms or the Service are resolved by binding individual arbitration and not by jury trial or class/representative proceeding.",
       "You may opt out of arbitration within 30 days of initial acceptance by sending your account email and a clear opt-out request to legal@koydo.app.",
-      "If your state law limits arbitration or class waiver enforcement for your claim type, that limitation applies only to the extent required by law.",
+      "If your regional law limits arbitration or class waiver enforcement for your claim type, that limitation applies only to the extent required by law.",
     ],
   },
   {
@@ -120,24 +120,44 @@ const BASE_TERMS_SECTIONS: readonly TermsSection[] = [
     paragraphs: [
       "We may update these Terms for legal, security, operational, or product reasons. Material changes are communicated through in-app notice, account notice, or email, and become effective on the posted effective date unless law requires a different process.",
       "By continuing to use the Service after changes become effective, you accept the revised Terms.",
-      "Unless a non-waivable consumer law requires otherwise, these Terms are governed by the laws of the State of Delaware, excluding conflict-of-law principles.",
+      "Unless a non-waivable consumer law requires otherwise (see Regional Addendums), these Terms are governed by the laws of the State of Delaware, excluding conflict-of-law principles.",
       "Contact: support@koydo.app for support and legal@koydo.app for legal notices.",
     ],
   },
 ] as const;
 
-const DEFAULT_STATE_ADDENDUM: StateAddendum = {
-  stateCode: "US",
-  title: "State Addendum (General U.S. Terms)",
+const DEFAULT_GLOBAL_ADDENDUM: JurisdictionAddendum = {
+  jurisdictionCode: "GLOBAL",
+  title: "Global Addendum",
   paragraphs: [
-    "Your rights may vary by state. If a state consumer protection law cannot be waived, these Terms are interpreted to preserve that non-waivable right.",
-    "If a term in these Terms is unenforceable in your billing state, that term is modified only as needed to be enforceable, and all remaining terms stay in effect.",
+    "Your rights may vary by jurisdiction. If a local consumer protection law cannot be waived, these Terms are interpreted to preserve that non-waivable right.",
+    "If a term in these Terms is unenforceable in your billing region, that term is modified only as needed to be enforceable, and all remaining terms stay in effect.",
   ],
 };
 
-const STATE_ADDENDA: Partial<Record<USStateCode, StateAddendum>> = {
+const JURISDICTION_ADDENDA: Partial<Record<JurisdictionCode, JurisdictionAddendum>> = {
+  EU: {
+    jurisdictionCode: "EU",
+    title: "European Union Addendum",
+    paragraphs: [
+      "For consumers residing in the European Union, nothing in these Terms deprives you of the protection afforded by mandatory provisions of your country of residence.",
+      "The binding arbitration and class action waiver provisions in Section 8 do not apply to EU consumers. You have the right to bring legal proceedings in the competent courts of your country of residence.",
+      "If you reside in the EU, you have a statutory right to withdraw from a paid subscription within 14 days without giving any reason, unless you expressly consented to immediate performance and acknowledged the loss of the withdrawal right. Contact support to exercise this right.",
+      "To the extent required by EU law, the governing law of Delaware is superseded by the laws of your member state of residence for consumer protection matters.",
+      "The European Commission provides an Online Dispute Resolution (ODR) platform, accessible at http://ec.europa.eu/consumers/odr."
+    ],
+  },
+  UK: {
+    jurisdictionCode: "UK",
+    title: "United Kingdom Addendum",
+    paragraphs: [
+      "For consumers residing in the United Kingdom, nothing in these Terms limits your statutory rights under the Consumer Rights Act 2015.",
+      "The binding arbitration provision in Section 8 is not mandatory for UK consumers. You may bring proceedings in the courts of England, Wales, Scotland, or Northern Ireland depending on your residence.",
+      "You have a statutory right to cancel a paid subscription within 14 days, subject to your consent to begin digital service delivery immediately.",
+    ],
+  },
   CA: {
-    stateCode: "CA",
+    jurisdictionCode: "CA",
     title: "California Addendum",
     paragraphs: [
       "For California subscribers, automatic renewal disclosures, affirmative consent, and cancellation access are intended to align with California Business and Professions Code sections 17600-17606.",
@@ -146,7 +166,7 @@ const STATE_ADDENDA: Partial<Record<USStateCode, StateAddendum>> = {
     ],
   },
   NY: {
-    stateCode: "NY",
+    jurisdictionCode: "NY",
     title: "New York Addendum",
     paragraphs: [
       "For New York subscribers, automatic renewal terms are presented clearly before purchase and in post-purchase confirmation communications.",
@@ -155,7 +175,7 @@ const STATE_ADDENDA: Partial<Record<USStateCode, StateAddendum>> = {
     ],
   },
   WA: {
-    stateCode: "WA",
+    jurisdictionCode: "WA",
     title: "Washington Addendum",
     paragraphs: [
       "For Washington subscribers, recurring charge disclosures are shown before purchase and account cancellation methods are maintained in account settings or support channels.",
@@ -163,7 +183,7 @@ const STATE_ADDENDA: Partial<Record<USStateCode, StateAddendum>> = {
     ],
   },
   VA: {
-    stateCode: "VA",
+    jurisdictionCode: "VA",
     title: "Virginia Addendum",
     paragraphs: [
       "For Virginia subscribers, recurring plan disclosures and cancellation controls are provided in purchase and account workflows.",
@@ -171,7 +191,7 @@ const STATE_ADDENDA: Partial<Record<USStateCode, StateAddendum>> = {
     ],
   },
   CO: {
-    stateCode: "CO",
+    jurisdictionCode: "CO",
     title: "Colorado Addendum",
     paragraphs: [
       "For Colorado subscribers, recurring billing authorization and cancellation pathways are provided as part of checkout and account workflows.",
@@ -179,7 +199,7 @@ const STATE_ADDENDA: Partial<Record<USStateCode, StateAddendum>> = {
     ],
   },
   CT: {
-    stateCode: "CT",
+    jurisdictionCode: "CT",
     title: "Connecticut Addendum",
     paragraphs: [
       "For Connecticut subscribers, recurring subscription disclosures are presented before purchase and cancellation access is provided through account controls or support.",
@@ -187,7 +207,7 @@ const STATE_ADDENDA: Partial<Record<USStateCode, StateAddendum>> = {
     ],
   },
   VT: {
-    stateCode: "VT",
+    jurisdictionCode: "VT",
     title: "Vermont Addendum",
     paragraphs: [
       "For Vermont subscribers, recurring charge disclosures and cancellation methods are provided with the objective of plain-language consumer notice.",
@@ -196,20 +216,20 @@ const STATE_ADDENDA: Partial<Record<USStateCode, StateAddendum>> = {
   },
 };
 
-function resolveStateAddendum(stateCode: USStateCode | null): StateAddendum {
-  if (!stateCode) {
-    return DEFAULT_STATE_ADDENDUM;
+function resolveJurisdictionAddendum(jurisdictionCode: JurisdictionCode | null): JurisdictionAddendum {
+  if (!jurisdictionCode) {
+    return DEFAULT_GLOBAL_ADDENDUM;
   }
 
-  const stateSpecific = STATE_ADDENDA[stateCode];
-  if (stateSpecific) {
-    return stateSpecific;
+  const specific = JURISDICTION_ADDENDA[jurisdictionCode];
+  if (specific) {
+    return specific;
   }
 
   return {
-    ...DEFAULT_STATE_ADDENDUM,
-    stateCode,
-    title: `${stateCode} Addendum`,
+    ...DEFAULT_GLOBAL_ADDENDUM,
+    jurisdictionCode,
+    title: `${jurisdictionCode} Addendum`,
   };
 }
 
@@ -218,13 +238,13 @@ export function buildTermsPlainText(document: {
   effectiveDate: string;
   stateCode: string;
   sections: readonly TermsSection[];
-  stateAddendum: StateAddendum;
+  stateAddendum: JurisdictionAddendum;
 }): string {
   const blocks: string[] = [
     "Koydo Terms of Service",
     `Version: ${document.version}`,
     `Effective Date: ${document.effectiveDate}`,
-    `Billing State: ${document.stateCode}`,
+    `Billing Region: ${document.stateCode}`,
     "",
   ];
 
@@ -247,9 +267,9 @@ export function buildTermsPlainText(document: {
 export function resolveTermsDocumentForState(
   billingState: string | null | undefined,
 ): ResolvedTermsDocument {
-  const normalizedState = normalizeUSStateCode(billingState);
-  const stateCode = normalizedState ?? "US";
-  const stateAddendum = resolveStateAddendum(normalizedState);
+  const normalizedJurisdiction = normalizeJurisdictionCode(billingState);
+  const stateCode = normalizedJurisdiction ?? "GLOBAL";
+  const stateAddendum = resolveJurisdictionAddendum(normalizedJurisdiction);
 
   const payload = {
     version: TERMS_VERSION,

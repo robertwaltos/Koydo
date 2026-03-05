@@ -6,7 +6,7 @@ import { policyRegistry, type PolicyType } from "@/lib/compliance/policies";
 import {
   resolveTermsDocumentForState,
 } from "@/lib/legal/terms-of-service";
-import { normalizeUSStateCode } from "@/lib/legal/us-states";
+import { normalizeJurisdictionCode } from "@/lib/legal/jurisdictions";
 
 const requestSchema = z.object({
   policyType: z.enum(["privacy", "terms", "refunds"]),
@@ -43,7 +43,7 @@ export async function GET(request: Request) {
   }
 
   const policyType = parseResult.data.policyType as PolicyType;
-  const normalizedBillingState = normalizeUSStateCode(parseResult.data.billingState);
+  const normalizedBillingState = normalizeJurisdictionCode(parseResult.data.billingState);
   const termsDocument =
     policyType === "terms"
       ? resolveTermsDocumentForState(normalizedBillingState)
@@ -91,7 +91,7 @@ export async function POST(request: Request) {
   }
 
   const policyType = parsed.data.policyType as PolicyType;
-  const normalizedBillingState = normalizeUSStateCode(parsed.data.billingState);
+  const normalizedBillingState = normalizeJurisdictionCode(parsed.data.billingState);
 
   if (policyType === "terms" && !normalizedBillingState) {
     return NextResponse.json(
@@ -148,3 +148,5 @@ export async function POST(request: Request) {
     documentKey: termsDocument?.documentKey ?? null,
   });
 }
+
+

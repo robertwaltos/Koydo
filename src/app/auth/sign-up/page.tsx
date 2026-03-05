@@ -10,7 +10,7 @@ import { createSupabaseBrowserClient } from "@/lib/supabase/client";
 import { ASSETS } from "@/lib/config/assets";
 import OAuthButtons from "@/app/auth/sign-in/oauth-buttons";
 import { useI18n } from "@/lib/i18n/provider";
-import { usStateOptions } from "@/lib/legal/us-states";
+import { usStateOptions, internationalOptions } from "@/lib/legal/jurisdictions";
 
 export default function SignUpPage() {
   return (
@@ -300,12 +300,21 @@ function SignUpPageInner() {
                   className="ui-focus-ring w-full rounded-xl border border-zinc-200 bg-white px-3.5 py-2.5 text-sm"
                   required
                 >
-                  <option value="">Select billing state</option>
-                  {usStateOptions.map((state) => (
-                    <option key={state.code} value={state.code}>
-                      {state.name}
-                    </option>
-                  ))}
+                  <option value="">Select billing region</option>
+                  <optgroup label="United States">
+                    {usStateOptions.map((state) => (
+                      <option key={state.value} value={state.value}>
+                        {state.label}
+                      </option>
+                    ))}
+                  </optgroup>
+                  <optgroup label="International">
+                    {internationalOptions.map((opt) => (
+                      <option key={opt.value} value={opt.value}>
+                        {opt.label}
+                      </option>
+                    ))}
+                  </optgroup>
                 </select>
               </div>
 
@@ -373,4 +382,5 @@ function SignUpPageInner() {
     </main>
   );
 }
+
 
