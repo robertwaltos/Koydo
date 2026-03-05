@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import MascotHost from "@/components/experience/MascotHost";
@@ -24,6 +24,7 @@ import { DeviceGatewayProvider, useDeviceGateway } from "@/components/experience
 import { isVoyagerZeroPremiumPending } from "@/lib/platform/features";
 import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
 import ComingSoonBanner from "@/app/components/coming-soon-banner";
+import AdaptiveBackground from "@/app/components/ui/adaptive-background";
 
 const SpatialExperienceHub = dynamic(
     () => import("@/components/experience/SpatialExperienceHub").then((mod) => mod.SpatialExperienceHub),
@@ -34,8 +35,43 @@ const SpatialExperienceHub = dynamic(
 export default function ExperienceHubPage() {
     const [selectedMascot, setSelectedMascot] = useState<FriendId>("pixel");
     const [showToast, setShowToast] = useState(false);
-    const voyagerZeroPremiumPending = isVoyagerZeroPremiumPending();
+    const [voyagerAccess, setVoyagerAccess] = useState<{
+        fullAccess: boolean;
+        matchedClasses: string[];
+    } | null>(null);
+    const [isAccessLoading, setIsAccessLoading] = useState(true);
+    const voyagerZeroPremiumPending = isVoyagerZeroPremiumPending() && !voyagerAccess?.fullAccess;
     const experienceHubLaunchPending = isLaunchFeaturePending("experience-hub");
+
+    useEffect(() => {
+        let cancelled = false;
+
+        const loadAccess = async () => {
+            try {
+                const response = await fetch("/api/vr/access");
+                const payload = await response.json().catch(() => null);
+                if (cancelled) return;
+                setVoyagerAccess({
+                    fullAccess: Boolean(payload?.access?.fullAccess),
+                    matchedClasses: Array.isArray(payload?.access?.matchedClasses) ? payload.access.matchedClasses as string[] : [],
+                });
+            } catch {
+                if (!cancelled) {
+                    setVoyagerAccess({ fullAccess: false, matchedClasses: [] });
+                }
+            } finally {
+                if (!cancelled) {
+                    setIsAccessLoading(false);
+                }
+            }
+        };
+
+        void loadAccess();
+
+        return () => {
+            cancelled = true;
+        };
+    }, []);
 
     if (experienceHubLaunchPending) {
         return (
@@ -52,8 +88,31 @@ export default function ExperienceHubPage() {
         );
     }
 
+    if (isAccessLoading) {
+        return (
+            <main className="min-h-screen px-6 py-10">
+                <p className="text-sm text-foreground/60">Checking immersive beta access...</p>
+            </main>
+        );
+    }
+
+    if (!voyagerAccess?.fullAccess) {
+        return (
+            <main className="min-h-screen px-6 py-10">
+                <ComingSoonBanner
+                    title="Experience Hub"
+                    description="Experience Hub immersive mode is currently open to Beta Tester, Admin, Support, Teacher, School, and Partner classes."
+                    primaryHref="/dashboard"
+                    primaryLabel="Back to dashboard"
+                    secondaryHref="/support"
+                    secondaryLabel="Request beta access"
+                />
+            </main>
+        );
+    }
+
     return (
-        <DeviceGatewayProvider enabled={!voyagerZeroPremiumPending}>
+        <DeviceGatewayProvider enabled>
             <MascotHost friendId={selectedMascot} initialMood="happy">
                 <ExperienceHubContent
                     selectedMascot={selectedMascot}
@@ -61,6 +120,7 @@ export default function ExperienceHubPage() {
                     showToast={showToast}
                     setShowToast={setShowToast}
                     voyagerZeroPremiumPending={voyagerZeroPremiumPending}
+                    matchedAccessClasses={voyagerAccess.matchedClasses}
                 />
             </MascotHost>
         </DeviceGatewayProvider>
@@ -73,6 +133,7 @@ type ExperienceHubContentProps = {
     showToast: boolean;
     setShowToast: (show: boolean) => void;
     voyagerZeroPremiumPending: boolean;
+    matchedAccessClasses: string[];
 };
 
 function ExperienceHubContent({
@@ -81,13 +142,16 @@ function ExperienceHubContent({
     showToast,
     setShowToast,
     voyagerZeroPremiumPending,
+    matchedAccessClasses,
 }: ExperienceHubContentProps) {
     const { friendshipLevel, interactionCount } = useMascot();
     const { canSpatial, isReady, tier, capabilities } = useDeviceGateway();
     const canRenderSpatial = !voyagerZeroPremiumPending && canSpatial;
 
     return (
-        <main className="min-h-screen bg-background text-foreground selection:bg-indigo-500/30 overflow-x-hidden">
+        <main className="min-h-screen relative text-foreground selection:bg-indigo-500/30 overflow-x-hidden">
+            <AdaptiveBackground />
+
             {/* Spatial Computing / VR Background — DORMANT until Tier 2+ */}
             {canRenderSpatial ? (
                 <div className="fixed inset-0 pointer-events-auto z-0 opacity-80 mix-blend-screen mix-blend-plus-lighter">
@@ -95,81 +159,45 @@ function ExperienceHubContent({
                 </div>
             ) : (
                 /* Graceful Fallback for Tier 0/1 */
-                <div className="fixed inset-0 z-0 bg-gradient-to-br from-slate-950 via-indigo-950/50 to-slate-950">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.15),transparent_50%)]" />
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(52,211,153,0.1),transparent_50%)]" />
+                <div className="fixed inset-0 z-0 bg-transparent">
                     {voyagerZeroPremiumPending ? (
-                        <div className="absolute bottom-6 left-6 z-50 bg-white/5 backdrop-blur-xl border border-amber-400/30 rounded-2xl p-4 max-w-xs text-xs text-zinc-300">
-                            <p className="font-bold text-amber-300 mb-1 flex items-center gap-2">
-                                <Lock className="h-3.5 w-3.5" />
-                                Premium Pending Feature
+                        <div className="absolute bottom-6 left-6 z-50 bg-white/10 backdrop-blur-2xl border border-amber-400/30 rounded-3xl p-6 max-w-xs text-xs text-zinc-300 shadow-xl">
+                            <p className="font-bold text-amber-300 mb-2 flex items-center gap-2 text-sm uppercase tracking-widest">
+                                <Lock className="h-4 w-4" />
+                                Premium Feature
                             </p>
-                            <p>
+                            <p className="text-sm font-medium leading-relaxed">
                                 Voyager Zero Spatial Mode is temporarily locked while premium rollout
                                 and device certification are pending.
                             </p>
-                            <p className="mt-2 text-zinc-400">
+                            <p className="mt-3 text-zinc-400">
                                 Core Experience Hub content remains available.
                             </p>
                             <Link
                                 href="/billing/paywall"
-                                className="mt-3 inline-flex items-center rounded-full bg-amber-400/20 border border-amber-300/40 px-3 py-1.5 text-[11px] font-semibold text-amber-200 hover:bg-amber-400/30 transition"
+                                className="mt-4 w-full inline-flex items-center justify-center rounded-full bg-amber-400 text-zinc-900 px-4 py-2 text-sm font-black transition-transform hover:scale-105"
                             >
-                                Join Premium Waitlist
+                                Join Waitlist
                             </Link>
                         </div>
                     ) : isReady && tier < 2 && (
-                        <div className="absolute bottom-6 left-6 z-50 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-4 max-w-xs text-xs text-zinc-400">
-                            <p className="font-bold text-cyan-300 mb-1">✨ Upgrade Available</p>
-                            <p>Your device is running in <strong className="text-white">{capabilities?.tierLabel}</strong> mode. Connect a VR headset or use a more powerful GPU to unlock the full 3D spatial experience.</p>
-                            <div className="mt-2 space-y-1">
-                                <p className="text-zinc-300/90">
+                        <div className="absolute bottom-6 left-6 z-50 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-3xl p-6 max-w-xs text-xs text-zinc-300 shadow-xl">
+                            <p className="font-bold text-cyan-300 mb-2 text-sm uppercase tracking-widest">✨ Upgrade Available</p>
+                            <p className="text-sm font-medium leading-relaxed">Your device is in <strong className="text-white">{capabilities?.tierLabel}</strong> mode. Connect a VR headset to unlock the full 3D spatial experience.</p>
+                            <div className="mt-4 space-y-2">
+                                <p className="flex items-center gap-2 text-zinc-300/90">
+                                    <span className="h-1 w-1 rounded-full bg-cyan-400" />
                                     GPU profile: Tier {capabilities?.gpuTier ?? 0}
-                                    {capabilities?.hasWebGPU ? " • WebGPU ready" : " • WebGPU unavailable"}
                                 </p>
-                                <p className="text-zinc-300/90">
-                                    Detection confidence: {Math.round((capabilities?.discoveryConfidence ?? 0) * 100)}%
-                                    {" • "}
-                                    {(capabilities?.discoveryConfidenceBand ?? "low").toUpperCase()}
+                                <p className="flex items-center gap-2 text-zinc-300/90">
+                                    <span className="h-1 w-1 rounded-full bg-cyan-400" />
+                                    Confidence: {Math.round((capabilities?.discoveryConfidence ?? 0) * 100)}%
                                 </p>
-                                {capabilities?.lowPowerModeLikely && (
-                                    <p className="text-amber-300/90">🔋 Low-power conditions detected; fidelity auto-scaled down.</p>
-                                )}
-                                {capabilities?.canCast ? (
-                                    <p className="text-emerald-300/80">
-                                        📺 Remote streaming fallback available
-                                        {capabilities?.streamingTargets.chromecast ? " • Chromecast" : ""}
-                                        {capabilities?.streamingTargets.airplay ? " • AirPlay" : ""}
-                                        {capabilities?.streamingTargets.dlna ? " • DLNA" : ""}
-                                    </p>
-                                ) : (
-                                    <p className="text-zinc-500">📺 No remote streaming target detected.</p>
-                                )}
                             </div>
-                            {capabilities?.upgradePath.length ? (
-                                <ul className="mt-3 space-y-1 text-[11px] text-zinc-300/85">
-                                    {capabilities.upgradePath.slice(0, 3).map((item) => (
-                                        <li key={item} className="flex gap-2">
-                                            <span className="text-cyan-300">•</span>
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                            ) : null}
-                            {capabilities?.detectionVersion && (
-                                <p className="mt-2 text-[10px] text-zinc-500">Detection {capabilities.detectionVersion}</p>
-                            )}
                         </div>
                     )}
                 </div>
             )}
-
-            {/* Top UI Overlay Context */}
-            <div className="fixed inset-0 pointer-events-none z-10">
-                <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px]" />
-                <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-emerald-600/10 rounded-full blur-[150px]" />
-                <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-            </div>
 
             {/* --- Top Navigation / Overview --- */}
             <header className="relative z-20 px-6 pt-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-8">
@@ -179,20 +207,25 @@ function ExperienceHubContent({
                     className="flex flex-col gap-2"
                 >
                     <div className="flex items-center gap-3">
-                        <div className="bg-indigo-500/20 p-2 rounded-xl border border-indigo-500/30">
-                            <Trophy className="text-indigo-400 w-6 h-6" />
+                        <div className="bg-white/10 backdrop-blur-xl p-2.5 rounded-2xl border border-white/20 shadow-sm">
+                            <Trophy className="text-amber-400 w-6 h-6 drop-shadow-sm" />
                         </div>
-                        <span className="text-sm font-black tracking-widest uppercase text-indigo-400">Level {friendshipLevel + 11} Pioneer</span>
+                        <span className="text-xs font-black tracking-[0.3em] uppercase text-zinc-500">Level {friendshipLevel + 11} Pioneer</span>
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/40 leading-none">
-                        EXPERIENCE <br /> HUB
+                    <h1 className="text-6xl md:text-8xl font-black italic tracking-tighter text-zinc-900 leading-[0.9] drop-shadow-sm">
+                        EXPERIENCE <br /> <span className="text-indigo-600">HUB</span>
                     </h1>
+                    {matchedAccessClasses.length > 0 ? (
+                        <p className="mt-2 text-xs font-black uppercase tracking-widest text-emerald-600">
+                            Beta class access: {matchedAccessClasses.join(", ")}
+                        </p>
+                    ) : null}
                 </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="flex items-center gap-12 bg-white/5 backdrop-blur-2xl border border-border/40 p-8 rounded-[3.5rem] shadow-2xl relative overflow-hidden"
+                    className="flex items-center gap-12 bg-white/40 backdrop-blur-3xl border border-white/60 p-8 rounded-[3.5rem] shadow-2xl relative overflow-hidden"
                 >
                     <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -201,12 +234,12 @@ function ExperienceHubContent({
                     <div className="flex flex-col gap-6">
                         <div className="flex items-center gap-6">
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black uppercase text-zinc-500">Global Score</span>
-                                <span className="text-4xl font-black italic tracking-tighter">14,250</span>
+                                <span className="text-[10px] font-black uppercase text-zinc-500 tracking-widest">Global Score</span>
+                                <span className="text-4xl font-black italic tracking-tighter text-zinc-900">14,250</span>
                             </div>
-                            <div className="w-px h-12 bg-white/10" />
+                            <div className="w-px h-12 bg-black/5" />
                             <div className="flex flex-col">
-                                <span className="text-[10px] font-black uppercase text-zinc-500">Day Streak</span>
+                                <span className="text-[10px] font-black uppercase text-zinc-500 tracking-widest">Day Streak</span>
                                 <JuicyStreak count={7} />
                             </div>
                         </div>
@@ -217,7 +250,7 @@ function ExperienceHubContent({
                                 setShowToast(true);
                                 setTimeout(() => setShowToast(false), 3000);
                             }}
-                            className="bg-indigo-600 h-16 px-10 rounded-[1.5rem]"
+                            className="bg-indigo-600 h-16 px-10 rounded-[1.5rem] font-black italic tracking-wide"
                         >
                             CLAIM DAILY BONUS 🎁
                         </PhysicalButton>
@@ -230,11 +263,11 @@ function ExperienceHubContent({
                 {/* --- left Column: Progress Galaxy --- */}
                 <div className="lg:col-span-8 space-y-8">
                     <div className="flex items-center justify-between">
-                        <h2 className="text-2xl font-black italic tracking-tight flex items-center gap-3">
-                            <Compass className="text-emerald-400" /> YOUR PROGRESS GALAXY
+                        <h2 className="text-2xl font-black italic tracking-tight flex items-center gap-3 text-zinc-900">
+                            <Compass className="text-indigo-600" /> YOUR PROGRESS GALAXY
                         </h2>
                         <div className="flex gap-4">
-                            <span className="text-[10px] font-black text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20 uppercase tracking-widest animate-pulse">
+                            <span className="text-[10px] font-black text-indigo-600 bg-indigo-500/5 px-3 py-1 rounded-full border border-indigo-500/10 uppercase tracking-widest animate-pulse">
                                 Reality Sync: 100%
                             </span>
                         </div>
@@ -245,35 +278,36 @@ function ExperienceHubContent({
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2 }}
+                        className="rounded-[3rem] border border-white/60 bg-white/30 backdrop-blur-2xl shadow-xl overflow-hidden"
                     >
                         <GalaxyMap />
                     </motion.div>
 
                     {/* Global Quest System (New Feature) */}
-                    <div className="bg-gradient-to-r from-indigo-900/20 to-purple-900/20 border border-border/40 rounded-[2.5rem] p-8 relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none" />
+                    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 border border-white/20 rounded-[3rem] p-10 relative overflow-hidden shadow-2xl">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-[100px] pointer-events-none" />
 
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                            <div className="space-y-2 text-center md:text-left">
+                        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+                            <div className="space-y-3 text-center md:text-left">
                                 <div className="flex items-center justify-center md:justify-start gap-3">
-                                    <Sparkles className="text-amber-400 w-6 h-6 animate-spin-slow" />
-                                    <h3 className="text-2xl font-black italic tracking-tight">GLOBAL QUEST: THE NEBULA ARCHIVE</h3>
+                                    <Sparkles className="text-amber-300 w-8 h-8 animate-spin-slow" />
+                                    <h3 className="text-3xl font-black italic tracking-tight text-white">THE NEBULA ARCHIVE</h3>
                                 </div>
-                                <p className="text-zinc-400 text-sm font-medium">
-                                    Coordinate with <span className="text-indigo-400">Echo</span> to retrieve lost 4K data nodes from the History Constellation.
+                                <p className="text-indigo-100 text-base font-medium max-w-md">
+                                    Coordinate with <span className="text-amber-300 font-bold">Echo</span> to retrieve lost 4K data nodes from the History Constellation.
                                 </p>
                             </div>
                             <PhysicalButton
-                                className="bg-white text-slate-950 px-8 rounded-2xl h-14"
+                                className="bg-white text-indigo-600 px-10 rounded-[1.5rem] h-16 font-black italic"
                                 onClick={() => void hapticSuccess()}
                             >
                                 START QUEST ⚡
                             </PhysicalButton>
                         </div>
 
-                        <div className="mt-8 grid grid-cols-3 gap-4">
+                        <div className="mt-10 grid grid-cols-3 gap-4">
                             {[1, 2, 3].map(i => (
-                                <div key={i} className={`h-2 rounded-full ${i === 1 ? 'bg-indigo-500 shadow-[0_0_10px_#6366f1]' : 'bg-white/5'}`} />
+                                <div key={i} className={`h-2 rounded-full ${i === 1 ? 'bg-amber-300 shadow-[0_0_15px_#fcd34d]' : 'bg-white/10'}`} />
                             ))}
                         </div>
                     </div>
@@ -281,26 +315,26 @@ function ExperienceHubContent({
 
                 {/* --- Right Column: Social & Mascots --- */}
                 <div className="lg:col-span-4 space-y-8">
-                    <div className="bg-gradient-to-b from-indigo-500/20 to-transparent border border-border/40 rounded-[3rem] p-8 relative flex flex-col items-center text-center">
-                        <div className="absolute top-4 right-6 flex flex-col items-center">
-                            <span className="text-[8px] font-black text-white/40 uppercase tracking-widest mb-1">Affinity</span>
-                            <div className="w-16 h-1 bg-white/10 rounded-full overflow-hidden">
-                                <div className="h-full bg-indigo-400" style={{ width: `${(interactionCount % 10) * 10}%` }} />
+                    <div className="bg-white/40 backdrop-blur-2xl border border-white/60 rounded-[3rem] p-10 relative flex flex-col items-center text-center shadow-xl">
+                        <div className="absolute top-6 right-8 flex flex-col items-center">
+                            <span className="text-[9px] font-black text-zinc-400 uppercase tracking-widest mb-1.5">Affinity</span>
+                            <div className="w-20 h-1.5 bg-black/5 rounded-full overflow-hidden shadow-inner">
+                                <div className="h-full bg-indigo-500" style={{ width: `${(interactionCount % 10) * 10}%` }} />
                             </div>
                         </div>
 
-                        <div className="bg-indigo-500/20 px-3 py-1 rounded-full border border-indigo-500/30 text-[9px] font-black uppercase mb-6">
+                        <div className="bg-indigo-500/10 px-4 py-1.5 rounded-full border border-indigo-500/20 text-[10px] font-black uppercase mb-8 text-indigo-600 shadow-sm">
                             Level {friendshipLevel} Companion
                         </div>
                         <MascotFriend id={selectedMascot} mood="happy" size="xl" />
-                        <h3 className="mt-6 text-2xl font-black uppercase italic tracking-tighter">
-                            {selectedMascot} <span className="text-indigo-400">The Guide</span>
+                        <h3 className="mt-8 text-3xl font-black uppercase italic tracking-tighter text-zinc-900">
+                            {selectedMascot} <span className="text-indigo-600">The Guide</span>
                         </h3>
-                        <p className="mt-2 text-sm text-zinc-400 font-medium px-4">
+                        <p className="mt-3 text-sm text-zinc-600 font-medium px-4 leading-relaxed">
                             &ldquo;You&apos;re doing amazing! Our bond is growing stronger with every mission we complete together.&rdquo;
                         </p>
 
-                        <div className="mt-8 flex gap-3 overflow-x-auto pb-2 w-full justify-center">
+                        <div className="mt-10 flex gap-4 overflow-x-auto pb-2 w-full justify-center">
                             {(["pixel", "echo", "spark", "luna", "terra"] as FriendId[]).map(mid => (
                                 <button
                                     key={mid}
@@ -308,9 +342,9 @@ function ExperienceHubContent({
                                         void hapticSelection();
                                         setSelectedMascot(mid);
                                     }}
-                                    className={`w-12 h-12 rounded-2xl border transition-all ${selectedMascot === mid
-                                        ? "bg-white border-white scale-110 shadow-xl"
-                                        : "bg-white/5 border-border/40 hover:bg-white/10"
+                                    className={`w-14 h-14 rounded-2xl border-2 transition-all flex items-center justify-center ${selectedMascot === mid
+                                        ? "bg-white border-indigo-500 scale-110 shadow-lg"
+                                        : "bg-white/20 border-white/40 hover:bg-white/60 hover:border-white"
                                         }`}
                                 >
                                     <MascotFriend id={mid} mood="happy" size="sm" />
@@ -321,20 +355,20 @@ function ExperienceHubContent({
 
                     <div className="space-y-4">
                         <div className="flex items-center gap-3">
-                            <Sparkles className="text-amber-400 w-5 h-5" />
-                            <h3 className="text-xl font-black italic">ACTIVE STREAK</h3>
+                            <Sparkles className="text-amber-500 w-6 h-6" />
+                            <h3 className="text-2xl font-black italic text-zinc-900">ACTIVE STREAK</h3>
                         </div>
-                        <div className="bg-white/5 p-6 rounded-[2.5rem] border border-border/40 text-center">
-                            <p className="text-4xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500">7 DAYS</p>
-                            <p className="text-[10px] uppercase font-black text-zinc-500 tracking-widest mt-2">Personal Record Smashed!</p>
+                        <div className="bg-white/40 backdrop-blur-xl p-8 rounded-[3rem] border border-white/60 text-center shadow-xl">
+                            <p className="text-5xl font-black italic text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-rose-600 drop-shadow-sm">7 DAYS</p>
+                            <p className="text-[11px] uppercase font-black text-zinc-500 tracking-[0.2em] mt-3">Personal Record Smashed!</p>
                         </div>
                     </div>
 
                     <PhysicalButton
-                        className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 h-20 text-xl font-black italic rounded-[2rem]"
+                        className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 h-24 text-2xl font-black italic rounded-[2.5rem] shadow-xl"
                         onClick={() => void hapticSuccess()}
                     >
-                        LAUNCH NEW MISSION 🚀
+                        LAUNCH MISSION 🚀
                     </PhysicalButton>
                 </div>
             </section>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import ScrollReveal from "@/app/explore/_components/scroll-reveal";
+import AdaptiveBackground from "@/app/components/ui/adaptive-background";
 
 export const metadata: Metadata = {
   title: "Exam Prep — Koydo",
@@ -42,44 +43,33 @@ export default async function ExamPrepInfoPage() {
 
   return (
     <main className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-12">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-30 dark:opacity-20"
-        style={{
-          background: `
-            radial-gradient(ellipse at 10% 15%, rgba(139,92,246,0.4) 0%, transparent 50%),
-            radial-gradient(ellipse at 85% 5%, rgba(99,102,241,0.35) 0%, transparent 45%),
-            radial-gradient(ellipse at 50% 85%, rgba(168,85,247,0.2) 0%, transparent 45%)
-          `,
-        }}
-        aria-hidden="true"
-      />
+      <AdaptiveBackground ageGroup="teen-mode" />
 
       <div className="relative mx-auto max-w-6xl">
         <header className="mb-10 text-center">
-          <span className="ui-glass-panel inline-flex items-center rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest" style={{ color: "var(--foreground)" }}>
+          <span className="inline-flex items-center rounded-full border border-white/60 bg-white/40 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.2em] text-indigo-700 backdrop-blur-xl shadow-sm">
             Exam Prep
           </span>
-          <h1 className="mt-5 text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl" style={{ color: "var(--foreground)" }}>
+          <h1 className="mt-6 text-4xl font-black tracking-tight text-zinc-900 sm:text-5xl lg:text-7xl drop-shadow-md">
             Prepare with{" "}
-            <span className="bg-gradient-to-r from-violet-500 to-indigo-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
               confidence
             </span>
           </h1>
-          <p className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed" style={{ color: "color-mix(in srgb, var(--foreground) 70%, transparent)" }}>
+          <p className="mx-auto mt-6 max-w-[52ch] text-lg font-medium text-zinc-700 leading-relaxed drop-shadow-sm">
             Certification tracks, AI-generated study plans, and thousands of practice questions —
             everything you need to walk into exam day ready.
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/auth/sign-up"
-              className="inline-flex min-h-11 items-center rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-7 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet-500/25 transition-all duration-200 hover:shadow-xl hover:shadow-violet-500/30 hover:brightness-110"
+              className="inline-flex min-h-[3.5rem] items-center rounded-full bg-indigo-600 px-8 py-3 text-base font-black text-white shadow-lg shadow-indigo-500/25 transition-all duration-200 hover:shadow-xl hover:bg-indigo-500 active:scale-[0.98] uppercase tracking-widest"
             >
               Start Learning Free →
             </Link>
             <Link
               href="/auth/sign-in"
-              className="inline-flex min-h-11 items-center rounded-full border border-white/50 bg-white/30 px-6 py-2.5 text-sm font-semibold backdrop-blur-xl transition-colors hover:bg-white/50 dark:border-white/15 dark:bg-white/10 dark:hover:bg-white/20"
-              style={{ color: "var(--foreground)" }}
+              className="inline-flex min-h-[3.5rem] items-center rounded-full border-2 border-white/80 bg-white/50 px-8 py-3 text-base font-bold text-zinc-700 backdrop-blur-xl transition-all hover:bg-white hover:scale-105 active:scale-95 shadow-sm"
             >
               Sign In
             </Link>
@@ -87,12 +77,12 @@ export default async function ExamPrepInfoPage() {
         </header>
 
         <section aria-label="Exam prep tracks" className="mb-16">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
             {HERO_FEATURES.map((f) => (
-              <div key={f.title} className="ui-bento-card flex flex-col gap-3 p-6">
-                <span className="text-4xl">{f.emoji}</span>
-                <h3 className="text-lg font-bold" style={{ color: "var(--foreground)" }}>{f.title}</h3>
-                <p className="text-sm leading-relaxed" style={{ color: "color-mix(in srgb, var(--foreground) 65%, transparent)" }}>
+              <div key={f.title} className="group relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/40 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_48px_rgba(0,0,0,0.08)]">
+                <span className="text-5xl drop-shadow-sm" aria-hidden="true">{f.emoji}</span>
+                <h3 className="mt-4 text-xl font-black text-zinc-900">{f.title}</h3>
+                <p className="mt-3 text-sm font-medium leading-relaxed text-zinc-600">
                   {f.desc}
                 </p>
               </div>
@@ -102,15 +92,15 @@ export default async function ExamPrepInfoPage() {
 
         <ScrollReveal>
           <section className="mb-16">
-            <h2 className="mb-6 text-xl font-bold" style={{ color: "var(--foreground)" }}>
+            <h2 className="mb-8 text-2xl font-black text-zinc-900 tracking-tight text-center sm:text-left">
               Study smarter
             </h2>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               {SECONDARY_FEATURES.map((f) => (
-                <div key={f.title} className="ui-bento-card flex flex-col gap-2 p-4">
-                  <span className="text-2xl">{f.icon}</span>
-                  <h3 className="text-sm font-bold" style={{ color: "var(--foreground)" }}>{f.title}</h3>
-                  <p className="text-xs leading-relaxed" style={{ color: "color-mix(in srgb, var(--foreground) 55%, transparent)" }}>{f.desc}</p>
+                <div key={f.title} className="rounded-[1.5rem] border border-white/60 bg-white/30 p-6 backdrop-blur-lg shadow-sm transition-all hover:bg-white/50">
+                  <span className="text-3xl drop-shadow-sm" aria-hidden="true">{f.icon}</span>
+                  <h3 className="mt-3 text-sm font-black text-zinc-900 leading-tight">{f.title}</h3>
+                  <p className="mt-2 text-xs font-medium leading-relaxed text-zinc-500">{f.desc}</p>
                 </div>
               ))}
             </div>
@@ -118,19 +108,22 @@ export default async function ExamPrepInfoPage() {
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
-          <section className="ui-glass-panel rounded-2xl p-8 text-center" style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.12) 0%, rgba(99,102,241,0.12) 100%)" }}>
-            <h2 className="text-2xl font-black" style={{ color: "var(--foreground)" }}>
-              Your exam prep starts here
-            </h2>
-            <p className="mx-auto mt-2 max-w-[44ch] text-sm" style={{ color: "color-mix(in srgb, var(--foreground) 65%, transparent)" }}>
-              Get a personalized study plan and start practicing — completely free.
-            </p>
-            <Link
-              href="/auth/sign-up"
-              className="mt-5 inline-flex min-h-11 items-center rounded-full bg-gradient-to-r from-violet-600 to-indigo-600 px-7 py-2.5 text-sm font-bold text-white shadow-lg shadow-violet-500/25 transition-all duration-200 hover:shadow-xl hover:brightness-110"
-            >
-              Get Started →
-            </Link>
+          <section className="rounded-[2.5rem] border border-white/60 bg-white/40 backdrop-blur-2xl p-10 sm:p-12 text-center shadow-[0_16px_48px_rgba(0,0,0,0.06)] relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 to-indigo-500/10 pointer-events-none" />
+            <div className="relative z-10">
+              <h2 className="text-3xl font-black text-zinc-900 tracking-tight sm:text-4xl">
+                Your exam prep starts here
+              </h2>
+              <p className="mx-auto mt-4 max-w-[44ch] text-base font-medium text-zinc-600 leading-relaxed">
+                Get a personalized study plan and start practicing — completely free.
+              </p>
+              <Link
+                href="/auth/sign-up"
+                className="mt-8 inline-flex min-h-[3.5rem] items-center rounded-full bg-indigo-600 px-10 py-3 text-base font-black text-white shadow-lg shadow-indigo-500/25 transition-all hover:scale-105 hover:bg-indigo-500 active:scale-95 uppercase tracking-widest"
+              >
+                Get Started →
+              </Link>
+            </div>
           </section>
         </ScrollReveal>
       </div>

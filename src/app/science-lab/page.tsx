@@ -3,6 +3,8 @@ import Link from "next/link";
 import AppleVisionLab from "./apple-vision-lab";
 import ComingSoonBanner from "@/app/components/coming-soon-banner";
 import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
+import { resolveVoyagerAccessForServerRequest } from "@/lib/experience/voyager-access";
+import AdaptiveBackground from "@/app/components/ui/adaptive-background";
 
 export const metadata: Metadata = {
   title: "Science Lab — Koydo",
@@ -84,48 +86,41 @@ const FEATURES = [
   },
 ] as const;
 
-export default function ScienceLabPage() {
+export default async function ScienceLabPage() {
+  const voyagerAccess = await resolveVoyagerAccessForServerRequest();
   const immersiveSciencePending = isLaunchFeaturePending("science-lab-immersive");
+  const immersiveScienceBlocked = immersiveSciencePending || !voyagerAccess.fullAccess;
 
   return (
     <main className="relative min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-12">
-      {/* Background glow */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-30"
-        style={{
-          background: `
-            radial-gradient(ellipse at 10% 15%, #a7f3d0 0%, transparent 45%),
-            radial-gradient(ellipse at 85% 5%,  #bfdbfe 0%, transparent 42%),
-            radial-gradient(ellipse at 50% 90%, #d8b4fe 0%, transparent 42%)
-          `,
-        }}
-        aria-hidden="true"
-      />
+      <AdaptiveBackground ageGroup="young-adventurer" />
 
       <div className="relative mx-auto max-w-6xl">
         {/* Header */}
         <header className="mb-10 text-center">
-          <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-700 dark:border-emerald-800/40 dark:bg-emerald-900/20 dark:text-emerald-300">
+          <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-widest text-emerald-700 backdrop-blur-xl shadow-sm">
             Interactive Science Lab
           </span>
-          <h1 className="mt-4 text-4xl font-black tracking-tight text-zinc-900 dark:text-foreground sm:text-5xl">
+          <h1 className="mt-6 text-4xl font-black tracking-tight text-zinc-900 sm:text-5xl lg:text-7xl drop-shadow-md">
             Science made{" "}
-            <span className="text-emerald-600 dark:text-emerald-400">unforgettable</span>
+            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+              unforgettable
+            </span>
           </h1>
-          <p className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-zinc-600 dark:text-foreground/70">
+          <p className="mx-auto mt-6 max-w-[52ch] text-lg font-medium text-zinc-700 leading-relaxed drop-shadow-sm">
             From a toddler&apos;s first look at a caterpillar to college-level quantum mechanics —
             every Koydo science module is hands-on, visual, and built to spark curiosity.
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/modules?subject=Science"
-              className="inline-flex min-h-11 items-center rounded-full bg-emerald-600 px-7 py-2.5 text-sm font-bold text-white shadow-sm transition-all duration-200 hover:bg-emerald-500"
+              className="inline-flex min-h-[3.5rem] items-center rounded-full bg-emerald-600 px-8 py-3 text-base font-black text-white shadow-lg shadow-emerald-500/25 transition-all duration-200 hover:shadow-xl hover:bg-emerald-500 active:scale-[0.98] uppercase tracking-widest"
             >
               Browse Science Modules →
             </Link>
             <Link
               href="/explore"
-              className="inline-flex min-h-11 items-center rounded-full border border-zinc-200 bg-white/80 px-6 py-2.5 text-sm font-semibold text-zinc-600 backdrop-blur-sm transition-colors hover:border-zinc-300 hover:text-zinc-800 dark:border-border dark:bg-surface dark:text-foreground/80"
+              className="inline-flex min-h-[3.5rem] items-center rounded-full border-2 border-white/80 bg-white/50 px-8 py-3 text-base font-bold text-zinc-700 backdrop-blur-xl transition-all hover:bg-white hover:scale-105 active:scale-95 shadow-sm"
             >
               Find my level
             </Link>
@@ -133,41 +128,42 @@ export default function ScienceLabPage() {
         </header>
 
         {/* Science tracks grid */}
-        <section aria-label="Science subject tracks" className="mb-12">
-          <h2 className="mb-6 text-xl font-bold text-zinc-900 dark:text-foreground">
+        <section aria-label="Science subject tracks" className="mb-16">
+          <h2 className="mb-8 text-2xl font-black text-zinc-900 tracking-tight text-center sm:text-left">
             Explore by subject
           </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {SCIENCE_TRACKS.map((track) => (
               <Link
                 key={track.title}
                 href={track.href}
-                className="group relative flex flex-col gap-3 overflow-hidden rounded-2xl border border-zinc-200 bg-white/80 p-5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-border dark:bg-surface/80"
+                className="group relative flex flex-col gap-4 overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/40 p-8 shadow-[0_8px_32px_rgba(0,0,0,0.04)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/60 hover:shadow-[0_20px_48px_rgba(0,0,0,0.08)]"
               >
                 {/* hover glow */}
                 <div
-                  className="absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  className="absolute inset-0 rounded-[2.5rem] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                   style={{
-                    background: `radial-gradient(ellipse at 0% 0%, rgba(${track.color}, 0.08) 0%, transparent 60%)`,
+                    background: `radial-gradient(ellipse at 0% 0%, rgba(${track.color}, 0.12) 0%, transparent 60%)`,
                   }}
                   aria-hidden="true"
                 />
-                <div className="relative flex items-center gap-3">
-                  <span className="text-4xl">{track.emoji}</span>
-                  <h3 className="text-lg font-bold text-zinc-900 dark:text-foreground">
+                <div className="relative flex items-center gap-4">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/50 shadow-inner backdrop-blur-md">
+                    <span className="text-4xl drop-shadow-sm">{track.emoji}</span>
+                  </div>
+                  <h3 className="text-xl font-black text-zinc-900 leading-tight">
                     {track.title}
                   </h3>
                 </div>
-                <p className="relative text-sm leading-relaxed text-zinc-600 dark:text-foreground/70">
+                <p className="relative text-sm font-medium leading-relaxed text-zinc-600">
                   {track.desc}
                 </p>
-                <div className="relative mt-auto flex flex-wrap gap-1.5">
+                <div className="relative mt-auto flex flex-wrap gap-2 pt-2">
                   {track.levels.map((level) => (
                     <span
                       key={level}
-                      className="rounded-full px-2 py-0.5 text-[11px] font-semibold"
+                      className="rounded-full border border-white/60 bg-white/50 px-3 py-1 text-[10px] font-bold uppercase tracking-widest shadow-sm"
                       style={{
-                        background: `rgba(${track.color}, 0.12)`,
                         color: `rgb(${track.color})`,
                       }}
                     >
@@ -181,30 +177,32 @@ export default function ScienceLabPage() {
         </section>
 
         {/* How it works */}
-        <section className="mb-12">
-          <h2 className="mb-6 text-xl font-bold text-zinc-900 dark:text-foreground">
+        <section className="mb-16">
+          <h2 className="mb-8 text-2xl font-black text-zinc-900 tracking-tight text-center sm:text-left">
             How Science Lab works
           </h2>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {FEATURES.map((f) => (
               <div
                 key={f.title}
-                className="flex flex-col gap-2 rounded-2xl border border-zinc-200 bg-white/60 p-4 backdrop-blur-sm dark:border-border dark:bg-surface/60"
+                className="flex flex-col gap-3 rounded-[1.5rem] border border-white/60 bg-white/30 p-6 backdrop-blur-lg shadow-sm transition-all hover:bg-white/50"
               >
-                <span className="text-2xl">{f.icon}</span>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-foreground">{f.title}</h3>
-                <p className="text-xs leading-relaxed text-zinc-500 dark:text-foreground/60">{f.desc}</p>
+                <span className="text-3xl drop-shadow-sm" aria-hidden="true">{f.icon}</span>
+                <h3 className="text-sm font-black text-zinc-900 leading-tight">{f.title}</h3>
+                <p className="text-xs font-medium leading-relaxed text-zinc-500">{f.desc}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Immersive XR is launch-gated */}
-        <section className="mb-8">
-          {immersiveSciencePending ? (
+        <section className="mb-12">
+          {immersiveScienceBlocked ? (
             <ComingSoonBanner
               title="New Experience"
-              description="More exciting features coming soon. Stay tuned!"
+              description={immersiveSciencePending
+                ? "Immersive Science is temporarily unavailable while launch checks finish."
+                : "Immersive Science is currently open to Beta Tester, Admin, Support, Teacher, School, and Partner classes."}
               primaryHref="/modules?subject=Science"
               primaryLabel="Use science modules now"
               secondaryHref="/support"
@@ -212,18 +210,20 @@ export default function ScienceLabPage() {
             />
           ) : (
             <>
-              <div className="mb-4 flex items-center gap-2">
-                <h2 className="text-xl font-bold text-zinc-900 dark:text-foreground">
+              <div className="mb-6 flex items-center gap-3">
+                <h2 className="text-2xl font-black text-zinc-900 tracking-tight">
                   Immersive Science
                 </h2>
-                <span className="rounded-full border border-violet-200 bg-violet-50 px-2.5 py-0.5 text-[11px] font-bold text-violet-700 dark:border-violet-800/50 dark:bg-violet-900/20 dark:text-violet-300">
-                  XR
+                <span className="rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-violet-700 shadow-sm">
+                  XR Mode
                 </span>
               </div>
-              <p className="mb-5 max-w-prose text-sm text-zinc-600 dark:text-foreground/70">
+              <p className="mb-8 max-w-prose text-base font-medium text-zinc-600 leading-relaxed">
                 Explore immersive AR science experiences for Apple Vision Pro and compatible devices.
               </p>
-              <AppleVisionLab />
+              <div className="rounded-[3rem] border border-white/60 overflow-hidden shadow-2xl">
+                <AppleVisionLab />
+              </div>
             </>
           )}
         </section>
