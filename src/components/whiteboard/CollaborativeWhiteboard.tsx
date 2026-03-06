@@ -85,7 +85,7 @@ export default function CollaborativeWhiteboard({
         const state = channel.presenceState();
         const cursors: Presence[] = [];
         for (const [, presences] of Object.entries(state)) {
-          for (const p of presences as Presence[]) {
+          for (const p of presences as unknown as Presence[]) {
             if (p.userId !== userId) cursors.push(p);
           }
         }
