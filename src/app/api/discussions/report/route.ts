@@ -15,16 +15,23 @@ export async function POST(request: Request) {
 
   const admin = createSupabaseAdminClient();
 
-  // Increment report count
-  await admin
-    .from("discussion_posts")
-    .update({ report_count: admin.rpc ? undefined : 1 })
-    .eq("id", postId);
+  // Increment report count using raw SQL via rpc, fallback to manual increment
+  const { error: rpcError } = await admin.rpc("increment_report_count", { post_id_arg: postId });
 
-  // Auto-hide posts with 3+ reports
-  await admin.rpc("increment_report_count", { post_id_arg: postId }).catch(() => {
-    // Fallback: just mark as reported
-  });
+  if (rpcError) {
+    // Fallback: fetch current count and increment manually
+    const { data: post } = await admin
+      .from("discussion_posts")
+      .select("report_count")
+      .eq("id", postId)
+      .maybeSingle();
+
+    const newCount = (post?.report_count ?? 0) + 1;
+    await admin
+      .from("discussion_posts")
+      .update({ report_count: newCount, ...(newCount >= 3 ? { is_hidden: true } : {}) })
+      .eq("id", postId);
+  }
 
   return NextResponse.json({ reported: true });
 }
