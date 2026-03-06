@@ -206,6 +206,7 @@ export type Lesson = {
     description?: LocalizedText;
   };
   external?: Record<string, unknown>;
+  lessonImagePrompt?: string;
 };
 
 export type Subject =

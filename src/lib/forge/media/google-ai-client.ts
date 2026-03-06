@@ -241,7 +241,11 @@ export async function pollVideoOperation(
       response?: {
         generateVideoResponse?: {
           generatedSamples?: Array<{
-            video?: { bytesBase64Encoded: string; mimeType: string };
+            video?: {
+              bytesBase64Encoded?: string;
+              mimeType?: string;
+              uri?: string;
+            };
             videoMetadata?: { videoDuration: string };
           }>;
         };
@@ -251,15 +255,35 @@ export async function pollVideoOperation(
     if (data.done) {
       const sample =
         data.response?.generateVideoResponse?.generatedSamples?.[0];
+      const encoded = sample?.video?.bytesBase64Encoded;
+      let videoData: string | undefined;
+      let mimeType = sample?.video?.mimeType ?? "video/mp4";
+
+      if (encoded) {
+        videoData = encoded;
+      } else if (sample?.video?.uri) {
+        let mediaRes = await fetch(sample.video.uri);
+        if (!mediaRes.ok && !sample.video.uri.includes("key=")) {
+          const separator = sample.video.uri.includes("?") ? "&" : "?";
+          mediaRes = await fetch(`${sample.video.uri}${separator}key=${getApiKey()}`);
+        }
+        if (!mediaRes.ok) {
+          throw new Error(`Failed to download Veo output: ${mediaRes.status}`);
+        }
+        mimeType = mediaRes.headers.get("content-type") ?? mimeType;
+        const arrayBuffer = await mediaRes.arrayBuffer();
+        videoData = Buffer.from(arrayBuffer).toString("base64");
+      }
+
       return {
         operationName,
         done: true,
-        video: sample?.video
+        video: videoData
           ? {
-              videoData: sample.video.bytesBase64Encoded,
-              mimeType: sample.video.mimeType ?? "video/mp4",
+              videoData,
+              mimeType,
               durationSeconds: parseFloat(
-                sample.videoMetadata?.videoDuration ?? "8",
+                sample?.videoMetadata?.videoDuration ?? "8",
               ),
             }
           : undefined,
