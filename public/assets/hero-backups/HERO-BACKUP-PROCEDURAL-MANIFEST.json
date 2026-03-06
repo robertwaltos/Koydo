@@ -1,0 +1,698 @@
+{
+  "generatedAt": "2026-03-06T03:28:59.337Z",
+  "provider": "procedural-svg-sharp",
+  "size": "1536x1024",
+  "outputRoot": "D:/PythonProjects/Koydo/public/assets/hero-backups",
+  "totals": {
+    "planned": 68,
+    "attempts": 68,
+    "completed": 68,
+    "skippedExisting": 0,
+    "failed": 0,
+    "dryRunPlanned": 0
+  },
+  "stopReason": "completed_or_skipped_all",
+  "items": [
+    {
+      "id": "set-01-organic-watercolor::core::hero-home",
+      "setId": "set-01-organic-watercolor",
+      "scope": "core",
+      "slot": "hero-home",
+      "appId": null,
+      "outputPath": "set-01-organic-watercolor/core/hero-home.png",
+      "status": "completed",
+      "bytes": 52341
+    },
+    {
+      "id": "set-01-organic-watercolor::core::bg-lower-page",
+      "setId": "set-01-organic-watercolor",
+      "scope": "core",
+      "slot": "bg-lower-page",
+      "appId": null,
+      "outputPath": "set-01-organic-watercolor/core/bg-lower-page.png",
+      "status": "completed",
+      "bytes": 60930
+    },
+    {
+      "id": "set-01-organic-watercolor::core::bg-auth-page",
+      "setId": "set-01-organic-watercolor",
+      "scope": "core",
+      "slot": "bg-auth-page",
+      "appId": null,
+      "outputPath": "set-01-organic-watercolor/core/bg-auth-page.png",
+      "status": "completed",
+      "bytes": 58463
+    },
+    {
+      "id": "set-01-organic-watercolor::core::hero-auth-card",
+      "setId": "set-01-organic-watercolor",
+      "scope": "core",
+      "slot": "hero-auth-card",
+      "appId": null,
+      "outputPath": "set-01-organic-watercolor/core/hero-auth-card.png",
+      "status": "completed",
+      "bytes": 64673
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_main",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_main",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_main/hero-home.png",
+      "status": "completed",
+      "bytes": 54158
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_junior",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_junior",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_junior/hero-home.png",
+      "status": "completed",
+      "bytes": 60573
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_sat",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_sat",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_sat/hero-home.png",
+      "status": "completed",
+      "bytes": 55835
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_finance",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_finance",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_finance/hero-home.png",
+      "status": "completed",
+      "bytes": 55043
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_math",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_math/hero-home.png",
+      "status": "completed",
+      "bytes": 54571
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_arena",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_arena",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_arena/hero-home.png",
+      "status": "completed",
+      "bytes": 58018
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_math_es",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math_es",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_math_es/hero-home.png",
+      "status": "completed",
+      "bytes": 59363
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_exam_jp",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_exam_jp",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_exam_jp/hero-home.png",
+      "status": "completed",
+      "bytes": 57013
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_junior_de",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_junior_de",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_junior_de/hero-home.png",
+      "status": "completed",
+      "bytes": 58130
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_ar",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_ar",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_ar/hero-home.png",
+      "status": "completed",
+      "bytes": 57345
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_kr",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_kr",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_kr/hero-home.png",
+      "status": "completed",
+      "bytes": 55331
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_hi",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_hi",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_hi/hero-home.png",
+      "status": "completed",
+      "bytes": 63088
+    },
+    {
+      "id": "set-01-organic-watercolor::microapp::koydo_math_zh",
+      "setId": "set-01-organic-watercolor",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math_zh",
+      "outputPath": "set-01-organic-watercolor/microapps/koydo_math_zh/hero-home.png",
+      "status": "completed",
+      "bytes": 54403
+    },
+    {
+      "id": "set-02-neon-future-stem::core::hero-home",
+      "setId": "set-02-neon-future-stem",
+      "scope": "core",
+      "slot": "hero-home",
+      "appId": null,
+      "outputPath": "set-02-neon-future-stem/core/hero-home.png",
+      "status": "completed",
+      "bytes": 41588
+    },
+    {
+      "id": "set-02-neon-future-stem::core::bg-lower-page",
+      "setId": "set-02-neon-future-stem",
+      "scope": "core",
+      "slot": "bg-lower-page",
+      "appId": null,
+      "outputPath": "set-02-neon-future-stem/core/bg-lower-page.png",
+      "status": "completed",
+      "bytes": 50119
+    },
+    {
+      "id": "set-02-neon-future-stem::core::bg-auth-page",
+      "setId": "set-02-neon-future-stem",
+      "scope": "core",
+      "slot": "bg-auth-page",
+      "appId": null,
+      "outputPath": "set-02-neon-future-stem/core/bg-auth-page.png",
+      "status": "completed",
+      "bytes": 48773
+    },
+    {
+      "id": "set-02-neon-future-stem::core::hero-auth-card",
+      "setId": "set-02-neon-future-stem",
+      "scope": "core",
+      "slot": "hero-auth-card",
+      "appId": null,
+      "outputPath": "set-02-neon-future-stem/core/hero-auth-card.png",
+      "status": "completed",
+      "bytes": 52419
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_main",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_main",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_main/hero-home.png",
+      "status": "completed",
+      "bytes": 46520
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_junior",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_junior",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_junior/hero-home.png",
+      "status": "completed",
+      "bytes": 47601
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_sat",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_sat",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_sat/hero-home.png",
+      "status": "completed",
+      "bytes": 48538
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_finance",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_finance",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_finance/hero-home.png",
+      "status": "completed",
+      "bytes": 41966
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_math",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_math/hero-home.png",
+      "status": "completed",
+      "bytes": 43908
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_arena",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_arena",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_arena/hero-home.png",
+      "status": "completed",
+      "bytes": 55094
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_math_es",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math_es",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_math_es/hero-home.png",
+      "status": "completed",
+      "bytes": 49983
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_exam_jp",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_exam_jp",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_exam_jp/hero-home.png",
+      "status": "completed",
+      "bytes": 50831
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_junior_de",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_junior_de",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_junior_de/hero-home.png",
+      "status": "completed",
+      "bytes": 46394
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_ar",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_ar",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_ar/hero-home.png",
+      "status": "completed",
+      "bytes": 43920
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_kr",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_kr",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_kr/hero-home.png",
+      "status": "completed",
+      "bytes": 50046
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_hi",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_hi",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_hi/hero-home.png",
+      "status": "completed",
+      "bytes": 48916
+    },
+    {
+      "id": "set-02-neon-future-stem::microapp::koydo_math_zh",
+      "setId": "set-02-neon-future-stem",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math_zh",
+      "outputPath": "set-02-neon-future-stem/microapps/koydo_math_zh/hero-home.png",
+      "status": "completed",
+      "bytes": 49910
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::core::hero-home",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "core",
+      "slot": "hero-home",
+      "appId": null,
+      "outputPath": "set-03-minimal-geo-editorial/core/hero-home.png",
+      "status": "completed",
+      "bytes": 45424
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::core::bg-lower-page",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "core",
+      "slot": "bg-lower-page",
+      "appId": null,
+      "outputPath": "set-03-minimal-geo-editorial/core/bg-lower-page.png",
+      "status": "completed",
+      "bytes": 50617
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::core::bg-auth-page",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "core",
+      "slot": "bg-auth-page",
+      "appId": null,
+      "outputPath": "set-03-minimal-geo-editorial/core/bg-auth-page.png",
+      "status": "completed",
+      "bytes": 52143
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::core::hero-auth-card",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "core",
+      "slot": "hero-auth-card",
+      "appId": null,
+      "outputPath": "set-03-minimal-geo-editorial/core/hero-auth-card.png",
+      "status": "completed",
+      "bytes": 58083
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_main",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_main",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_main/hero-home.png",
+      "status": "completed",
+      "bytes": 50583
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_junior",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_junior",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_junior/hero-home.png",
+      "status": "completed",
+      "bytes": 54656
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_sat",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_sat",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_sat/hero-home.png",
+      "status": "completed",
+      "bytes": 52950
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_finance",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_finance",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_finance/hero-home.png",
+      "status": "completed",
+      "bytes": 54492
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_math",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_math/hero-home.png",
+      "status": "completed",
+      "bytes": 52442
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_arena",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_arena",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_arena/hero-home.png",
+      "status": "completed",
+      "bytes": 52293
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_math_es",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math_es",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_math_es/hero-home.png",
+      "status": "completed",
+      "bytes": 50038
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_exam_jp",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_exam_jp",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_exam_jp/hero-home.png",
+      "status": "completed",
+      "bytes": 50877
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_junior_de",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_junior_de",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_junior_de/hero-home.png",
+      "status": "completed",
+      "bytes": 51545
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_ar",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_ar",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_ar/hero-home.png",
+      "status": "completed",
+      "bytes": 53560
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_kr",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_kr",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_kr/hero-home.png",
+      "status": "completed",
+      "bytes": 49212
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_hi",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_hi",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_hi/hero-home.png",
+      "status": "completed",
+      "bytes": 53956
+    },
+    {
+      "id": "set-03-minimal-geo-editorial::microapp::koydo_math_zh",
+      "setId": "set-03-minimal-geo-editorial",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math_zh",
+      "outputPath": "set-03-minimal-geo-editorial/microapps/koydo_math_zh/hero-home.png",
+      "status": "completed",
+      "bytes": 51982
+    },
+    {
+      "id": "set-04-tactile-papercraft::core::hero-home",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "core",
+      "slot": "hero-home",
+      "appId": null,
+      "outputPath": "set-04-tactile-papercraft/core/hero-home.png",
+      "status": "completed",
+      "bytes": 27791
+    },
+    {
+      "id": "set-04-tactile-papercraft::core::bg-lower-page",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "core",
+      "slot": "bg-lower-page",
+      "appId": null,
+      "outputPath": "set-04-tactile-papercraft/core/bg-lower-page.png",
+      "status": "completed",
+      "bytes": 23642
+    },
+    {
+      "id": "set-04-tactile-papercraft::core::bg-auth-page",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "core",
+      "slot": "bg-auth-page",
+      "appId": null,
+      "outputPath": "set-04-tactile-papercraft/core/bg-auth-page.png",
+      "status": "completed",
+      "bytes": 28724
+    },
+    {
+      "id": "set-04-tactile-papercraft::core::hero-auth-card",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "core",
+      "slot": "hero-auth-card",
+      "appId": null,
+      "outputPath": "set-04-tactile-papercraft/core/hero-auth-card.png",
+      "status": "completed",
+      "bytes": 28649
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_main",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_main",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_main/hero-home.png",
+      "status": "completed",
+      "bytes": 30187
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_junior",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_junior",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_junior/hero-home.png",
+      "status": "completed",
+      "bytes": 28381
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_sat",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_sat",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_sat/hero-home.png",
+      "status": "completed",
+      "bytes": 27716
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_finance",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_finance",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_finance/hero-home.png",
+      "status": "completed",
+      "bytes": 29128
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_math",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_math/hero-home.png",
+      "status": "completed",
+      "bytes": 29150
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_arena",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_arena",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_arena/hero-home.png",
+      "status": "completed",
+      "bytes": 28997
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_math_es",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math_es",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_math_es/hero-home.png",
+      "status": "completed",
+      "bytes": 28886
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_exam_jp",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_exam_jp",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_exam_jp/hero-home.png",
+      "status": "completed",
+      "bytes": 27032
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_junior_de",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_junior_de",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_junior_de/hero-home.png",
+      "status": "completed",
+      "bytes": 28199
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_ar",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_ar",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_ar/hero-home.png",
+      "status": "completed",
+      "bytes": 27959
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_kr",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_kr",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_kr/hero-home.png",
+      "status": "completed",
+      "bytes": 28128
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_hi",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_hi",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_hi/hero-home.png",
+      "status": "completed",
+      "bytes": 27986
+    },
+    {
+      "id": "set-04-tactile-papercraft::microapp::koydo_math_zh",
+      "setId": "set-04-tactile-papercraft",
+      "scope": "microapp",
+      "slot": "hero-home",
+      "appId": "koydo_math_zh",
+      "outputPath": "set-04-tactile-papercraft/microapps/koydo_math_zh/hero-home.png",
+      "status": "completed",
+      "bytes": 27867
+    }
+  ],
+  "errors": []
+}

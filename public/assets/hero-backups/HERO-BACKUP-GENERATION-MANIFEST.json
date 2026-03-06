@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-03-06T03:25:10.381Z",
+  "outputRoot": "D:/PythonProjects/Koydo/public/assets/hero-backups",
+  "apiKey": "sk-pro...1dMA",
+  "runner": {
+    "model": "gpt-image-1",
+    "quality": "low",
+    "size": "1536x1024",
+    "maxRequests": 120,
+    "delayMs": 350,
+    "dryRun": false
+  },
+  "sets": [
+    {
+      "id": "set-01-organic-watercolor",
+      "title": "Organic Watercolor Storyworld",
+      "styleDirection": "hand-painted watercolor storyworld with soft brush texture, natural gradients, and emotionally warm scenes",
+      "palette": "honey gold, moss green, powder blue, and coral accents",
+      "composition": "curved organic flow, layered depth haze, gentle pathways and open breathing room",
+      "lighting": "diffuse golden-hour sunlight with low contrast shadows",
+      "energy": "calm wonder and inclusive discovery"
+    },
+    {
+      "id": "set-02-neon-future-stem",
+      "title": "Neon Future STEM City",
+      "styleDirection": "futuristic cinematic STEM cityscape with clean architectural lines, holographic motifs, and dynamic atmosphere",
+      "palette": "electric cyan, magenta, deep navy, and chrome highlights",
+      "composition": "strong perspective lines, parallax depth, and deliberate focal hierarchy",
+      "lighting": "night scene with neon rim lighting and volumetric fog",
+      "energy": "high-energy innovation and momentum"
+    },
+    {
+      "id": "set-03-minimal-geo-editorial",
+      "title": "Minimal Geometric Editorial",
+      "styleDirection": "bold editorial illustration using geometric forms, minimal detail density, and premium publication-style framing",
+      "palette": "sand, terracotta, muted teal, charcoal, and warm cream",
+      "composition": "asymmetric balance, large negative space, and disciplined shape language",
+      "lighting": "soft studio lighting with clean tonal separation",
+      "energy": "focused confidence and clarity"
+    },
+    {
+      "id": "set-04-tactile-papercraft",
+      "title": "Tactile Papercraft Collage",
+      "styleDirection": "layered paper-cut collage aesthetic with tactile edges, stacked shapes, and handcrafted dimensionality",
+      "palette": "playful primaries with warm neutral paper tones",
+      "composition": "layered planes, cast paper shadows, and clear visual landmarks",
+      "lighting": "softbox overhead with subtle paper depth shadows",
+      "energy": "playful curiosity and hands-on creativity"
+    }
+  ],
+  "appProfiles": [
+    {
+      "appId": "koydo_main",
+      "displayName": "Koydo",
+      "focus": "all subjects for all ages",
+      "audience": "children, teens, adults, teachers, and families",
+      "region": "global",
+      "locales": [
+        "en"
+      ],
+      "culturalCue": "globally inclusive and non-region-specific visual language"
+    },
+    {
+      "appId": "koydo_junior",
+      "displayName": "Koydo Junior",
+      "focus": "early math, reading, and science",
+      "audience": "ages 3-8",
+      "region": "global",
+      "locales": [
+        "en",
+        "es",
+        "fr",
+        "de"
+      ],
+      "culturalCue": "friendly playful shapes and age-appropriate exploration"
+    },
+    {
+      "appId": "koydo_sat",
+      "displayName": "Koydo SAT Prep",
+      "focus": "SAT readiness in math, reading, and science reasoning",
+      "audience": "ages 14-19",
+      "region": "us",
+      "locales": [
+        "en"
+      ],
+      "culturalCue": "focused academic confidence and exam preparation energy"
+    },
+    {
+      "appId": "koydo_finance",
+      "displayName": "Koydo Finance Pro",
+      "focus": "finance and accounting mastery",
+      "audience": "older teens and adults",
+      "region": "global",
+      "locales": [
+        "en",
+        "es",
+        "de",
+        "ja",
+        "zh"
+      ],
+      "culturalCue": "professional, structured, analytical visual motifs"
+    },
+    {
+      "appId": "koydo_math",
+      "displayName": "Koydo Math Forge",
+      "focus": "math skill-building from fundamentals to advanced",
+      "audience": "ages 8-18",
+      "region": "global",
+      "locales": [
+        "en",
+        "es",
+        "fr",
+        "de",
+        "zh",
+        "ja",
+        "ko"
+      ],
+      "culturalCue": "visualized formulas, geometry, and problem-solving momentum"
+    },
+    {
+      "appId": "koydo_arena",
+      "displayName": "Koydo Arena",
+      "focus": "game-based learning across subjects",
+      "audience": "ages 5+",
+      "region": "global",
+      "locales": [
+        "all"
+      ],
+      "culturalCue": "competitive but positive learning challenge atmosphere"
+    },
+    {
+      "appId": "koydo_math_es",
+      "displayName": "Koydo Matematicas",
+      "focus": "math for Spanish-speaking learners",
+      "audience": "ages 8-18",
+      "region": "latam",
+      "locales": [
+        "es"
+      ],
+      "culturalCue": "latam-friendly classroom ambiance with modern urban warmth"
+    },
+    {
+      "appId": "koydo_exam_jp",
+      "displayName": "Koydo Exam JP",
+      "focus": "Japan exam preparation",
+      "audience": "ages 15-19",
+      "region": "jp",
+      "locales": [
+        "ja"
+      ],
+      "culturalCue": "disciplined study atmosphere with clean Japanese contemporary design cues"
+    },
+    {
+      "appId": "koydo_junior_de",
+      "displayName": "Koydo Junior DE",
+      "focus": "early learning for German-speaking families",
+      "audience": "ages 3-8",
+      "region": "dach",
+      "locales": [
+        "de"
+      ],
+      "culturalCue": "playful but tidy kindergarten-like visual structure"
+    },
+    {
+      "appId": "koydo_ar",
+      "displayName": "Koydo Arabic",
+      "focus": "full curriculum for Arabic-speaking learners",
+      "audience": "all ages",
+      "region": "mena",
+      "locales": [
+        "ar"
+      ],
+      "culturalCue": "warm geometric motifs inspired by contemporary MENA design language"
+    },
+    {
+      "appId": "koydo_kr",
+      "displayName": "Koydo KR",
+      "focus": "math, science, and coding",
+      "audience": "ages 8-18",
+      "region": "kr",
+      "locales": [
+        "ko"
+      ],
+      "culturalCue": "high-focus STEM lab aesthetic with clean modern Korean visual rhythm"
+    },
+    {
+      "appId": "koydo_hi",
+      "displayName": "Koydo Hindi",
+      "focus": "full curriculum for Hindi-speaking learners",
+      "audience": "all ages",
+      "region": "in",
+      "locales": [
+        "hi",
+        "en"
+      ],
+      "culturalCue": "vibrant but balanced Indian contemporary educational mood"
+    },
+    {
+      "appId": "koydo_math_zh",
+      "displayName": "Koydo Math ZH",
+      "focus": "math-focused learning for Chinese-speaking learners",
+      "audience": "ages 8-18",
+      "region": "cn",
+      "locales": [
+        "zh"
+      ],
+      "culturalCue": "precise high-discipline math environment with modern East Asian visual precision"
+    }
+  ],
+  "totals": {
+    "planned": 68,
+    "attempts": 1,
+    "completed": 0,
+    "skippedExisting": 0,
+    "failed": 1,
+    "dryRunPlanned": 0
+  },
+  "stopReason": "openai_quota_exhausted",
+  "errors": [
+    {
+      "id": "set-01-organic-watercolor::core::hero-home",
+      "statusCode": 400,
+      "errorCode": "billing_hard_limit_reached",
+      "errorType": "billing_limit_user_error",
+      "message": "OpenAI 400: Billing hard limit has been reached.",
+      "quotaLike": true
+    }
+  ],
+  "items": [
+    {
+      "id": "set-01-organic-watercolor::core::hero-home",
+      "setId": "set-01-organic-watercolor",
+      "scope": "core",
+      "slot": "hero-home",
+      "appId": null,
+      "appName": null,
+      "outputPath": "set-01-organic-watercolor/core/hero-home.png",
+      "promptHash": "d917a984d37cbd1c7e417e9028f5c31016eb2ef9",
+      "status": "failed",
+      "error": "OpenAI 400: Billing hard limit has been reached."
+    }
+  ]
+}
