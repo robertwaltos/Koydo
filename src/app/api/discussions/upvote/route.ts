@@ -26,12 +26,26 @@ export async function POST(request: Request) {
   if (existing) {
     // Remove upvote
     await admin.from("discussion_upvotes").delete().eq("id", existing.id);
-    await admin.rpc("decrement_upvote_count", { post_id_arg: postId }).catch(() => {});
+    // Decrement count; ignore errors if rpc doesn't exist yet
+    const { error: decErr } = await admin.rpc("decrement_upvote_count", { post_id_arg: postId });
+    if (decErr) {
+      await admin
+        .from("discussion_posts")
+        .update({ upvote_count: Math.max(0, ((await admin.from("discussion_posts").select("upvote_count").eq("id", postId).maybeSingle()).data?.upvote_count ?? 1) - 1) })
+        .eq("id", postId);
+    }
     return NextResponse.json({ upvoted: false });
   }
 
   // Add upvote
   await admin.from("discussion_upvotes").insert({ post_id: postId, user_id: user.id });
-  await admin.rpc("increment_upvote_count", { post_id_arg: postId }).catch(() => {});
+  const { error: incErr } = await admin.rpc("increment_upvote_count", { post_id_arg: postId });
+  if (incErr) {
+    const { data: post } = await admin.from("discussion_posts").select("upvote_count").eq("id", postId).maybeSingle();
+    await admin
+      .from("discussion_posts")
+      .update({ upvote_count: (post?.upvote_count ?? 0) + 1 })
+      .eq("id", postId);
+  }
   return NextResponse.json({ upvoted: true });
 }
