@@ -1,0 +1,80 @@
+{
+  "name": "koydo-trades",
+  "description": "Industrial, high-contrast, practical theme for vocational/trade learners ages 16+.",
+  "palette": {
+    "safety_orange": "#e67e22",
+    "rust": "#d35400",
+    "steel_blue": "#2c3e50",
+    "concrete_gray": "#636e72",
+    "safety_yellow": "#f1c40f",
+    "white_smoke": "#fdf6ee",
+    "bolt_green": "#27ae60",
+    "wire_red": "#e74c3c"
+  },
+  "night_palette": {
+    "bg_dark": "#1a1a2e",
+    "surface_dark": "#16213e",
+    "text_light": "#e8e8e8",
+    "accent_orange": "#f39c12"
+  },
+  "typography": {
+    "display": "'Inter', 'Roboto', system-ui, sans-serif",
+    "body": "'Inter', 'Roboto', system-ui, sans-serif",
+    "mono": "'Roboto Mono', 'Fira Code', monospace",
+    "letter_spacing": "0em",
+    "line_height": 1.55
+  },
+  "spacing": {
+    "touch_target_min": "48px",
+    "padding_xl": "24px",
+    "padding_lg": "20px",
+    "padding_md": "16px",
+    "padding_sm": "12px",
+    "gap_xl": "20px",
+    "gap_lg": "16px"
+  },
+  "radii": {
+    "card": "12px",
+    "pill": "999px",
+    "badge": "6px"
+  },
+  "components": {
+    "button": {
+      "height": "52px",
+      "font_weight": 700,
+      "radius": "10px"
+    },
+    "card": {
+      "radius": "12px",
+      "border_width": "1px"
+    }
+  },
+  "css_variables": {
+    "--background": "#fdf6ee",
+    "--foreground": "#2c3e50",
+    "--surface": "#ffffff",
+    "--surface-muted": "#fef3e2",
+    "--border": "#e8d5b7",
+    "--accent": "#e67e22",
+    "--success": "#27ae60",
+    "--warn": "#f1c40f",
+    "--danger": "#e74c3c",
+    "--radius-card": "12px",
+    "--radius-pill": "999px",
+    "--font-display-sans": "'Inter', system-ui, sans-serif",
+    "--font-body-sans": "'Inter', system-ui, sans-serif",
+    "--type-body-md": "1rem",
+    "--type-body-sm": "0.875rem"
+  },
+  "dark_mode": {
+    "--background": "#1a1a2e",
+    "--foreground": "#e8e8e8",
+    "--surface": "#16213e",
+    "--surface-muted": "#1f2f4d",
+    "--border": "#2a3f5f",
+    "--accent": "#f39c12",
+    "--success": "#2ecc71",
+    "--warn": "#f1c40f",
+    "--danger": "#ff6b6b"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "koydo-cdl",
+  "description": "Professional, road-focused theme for CDL license study and test simulation.",
+  "palette": {
+    "highway_blue": "#1e3a5f",
+    "road_gray": "#4a5568",
+    "stop_red": "#e53e3e",
+    "caution_yellow": "#ecc94b",
+    "go_green": "#38a169",
+    "sky_blue": "#4299e1",
+    "asphalt": "#2d3748",
+    "line_white": "#f7fafc"
+  },
+  "night_palette": {
+    "bg_dark": "#0f1923",
+    "surface_dark": "#1a2738",
+    "text_light": "#e2e8f0",
+    "accent_blue": "#63b3ed"
+  },
+  "typography": {
+    "display": "'Inter', 'Roboto', system-ui, sans-serif",
+    "body": "'Inter', system-ui, sans-serif",
+    "mono": "'Roboto Mono', monospace",
+    "letter_spacing": "0em",
+    "line_height": 1.6
+  },
+  "spacing": {
+    "touch_target_min": "48px",
+    "padding_xl": "24px",
+    "padding_lg": "20px",
+    "padding_md": "16px",
+    "padding_sm": "12px"
+  },
+  "radii": {
+    "card": "14px",
+    "pill": "999px",
+    "badge": "8px"
+  },
+  "components": {
+    "button": {
+      "height": "52px",
+      "font_weight": 700,
+      "radius": "12px"
+    },
+    "card": {
+      "radius": "14px",
+      "border_width": "1px"
+    }
+  },
+  "css_variables": {
+    "--background": "#f7fafc",
+    "--foreground": "#1a202c",
+    "--surface": "#ffffff",
+    "--surface-muted": "#edf2f7",
+    "--border": "#e2e8f0",
+    "--accent": "#1e3a5f",
+    "--success": "#38a169",
+    "--warn": "#ecc94b",
+    "--danger": "#e53e3e",
+    "--radius-card": "14px",
+    "--radius-pill": "999px",
+    "--font-display-sans": "'Inter', system-ui, sans-serif",
+    "--font-body-sans": "'Inter', system-ui, sans-serif",
+    "--type-body-md": "1rem",
+    "--type-body-sm": "0.875rem"
+  },
+  "dark_mode": {
+    "--background": "#0f1923",
+    "--foreground": "#e2e8f0",
+    "--surface": "#1a2738",
+    "--surface-muted": "#243447",
+    "--border": "#2d3f55",
+    "--accent": "#63b3ed",
+    "--success": "#48bb78",
+    "--warn": "#ecc94b",
+    "--danger": "#fc8181"
+  }
+}

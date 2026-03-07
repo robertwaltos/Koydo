@@ -38,12 +38,13 @@ Build any app: `npm run build-microapp --app=koydo_junior`
 
 | # | App ID | Display Name | Audience | Age | Bundle ID | Pricing | Status |
 |---|--------|-------------|----------|-----|-----------|---------|--------|
-| 5 | `koydo_trades` | Koydo Trades | Vocational/trade skills | 16+ | `com.koydo.trades` | $7.99/mo | NEW — needs manifest + tenant |
-| 6 | `koydo_sat` | Koydo SAT Prep | US college-bound students | 14-19 | `com.koydo.sat` | $19.99/mo | Manifest defined |
-| 7 | `koydo_finance` | Koydo Finance Pro | Finance/business learners | 16+ | `com.koydo.finance` | $19.99/mo | Manifest defined |
-| 8 | `koydo_math` | Koydo Math Forge | Math-focused learners | 8-18 | `com.koydo.math` | Freemium | Manifest defined |
-| 9 | `koydo_stem` | Koydo STEM Lab | Science/tech/engineering | 10-25 | `com.koydo.stem` | $7.99/mo | NEW — needs manifest + tenant |
-| 10 | `koydo_neuro` | Koydo Neuro | Neurodiverse learners | 5-18 | `com.koydo.neuro` | $6.99/mo + B2B | NEW — needs everything |
+| 5 | `koydo_trades` | Koydo Trades | Vocational/trade skills | 16+ | `com.koydo.trades` | $7.99/mo | Tenant built, manifest defined |
+| 6 | `koydo_cdl` | Koydo CDL Prep | CDL license candidates | 18+ | `com.koydo.cdl` | Freemium | Tenant built, 9 modules, manifest defined |
+| 7 | `koydo_sat` | Koydo SAT Prep | US college-bound students | 14-19 | `com.koydo.sat` | $19.99/mo | Manifest defined |
+| 8 | `koydo_finance` | Koydo Finance Pro | Finance/business learners | 16+ | `com.koydo.finance` | $19.99/mo | Manifest defined |
+| 9 | `koydo_math` | Koydo Math Forge | Math-focused learners | 8-18 | `com.koydo.math` | Freemium | Manifest defined |
+| 10 | `koydo_stem` | Koydo STEM Lab | Science/tech/engineering | 10-25 | `com.koydo.stem` | $7.99/mo | Tenant built, manifest defined |
+| 11 | `koydo_neuro` | Koydo Neuro | Neurodiverse learners | 5-18 | `com.koydo.neuro` | $6.99/mo + B2B | NEW — needs everything |
 
 ### Tier C — Regional Brands (Distinct language + curriculum)
 

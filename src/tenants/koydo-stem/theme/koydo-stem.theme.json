@@ -1,0 +1,80 @@
+{
+  "name": "koydo-stem",
+  "description": "Clean, technical, modern theme for science/tech/engineering learners ages 10-25.",
+  "palette": {
+    "teal": "#00b894",
+    "cyan": "#00cec9",
+    "deep_navy": "#0c2461",
+    "electric_blue": "#0984e3",
+    "code_green": "#55efc4",
+    "warning_amber": "#fdcb6e",
+    "surface_light": "#f0fdf9",
+    "ink": "#1e272e"
+  },
+  "night_palette": {
+    "bg_dark": "#0a1628",
+    "surface_dark": "#112240",
+    "text_light": "#ccd6f6",
+    "accent_cyan": "#64ffda"
+  },
+  "typography": {
+    "display": "'Inter', 'JetBrains Mono', 'Fira Code', system-ui, sans-serif",
+    "body": "'Inter', system-ui, sans-serif",
+    "mono": "'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace",
+    "letter_spacing": "-0.01em",
+    "line_height": 1.6
+  },
+  "spacing": {
+    "touch_target_min": "44px",
+    "padding_xl": "24px",
+    "padding_lg": "20px",
+    "padding_md": "16px",
+    "padding_sm": "12px",
+    "gap_xl": "20px",
+    "gap_lg": "16px"
+  },
+  "radii": {
+    "card": "16px",
+    "pill": "999px",
+    "code_block": "12px"
+  },
+  "components": {
+    "button": {
+      "height": "48px",
+      "font_weight": 600,
+      "radius": "12px"
+    },
+    "card": {
+      "radius": "16px",
+      "border_width": "1px"
+    }
+  },
+  "css_variables": {
+    "--background": "#f0fdf9",
+    "--foreground": "#1e272e",
+    "--surface": "#ffffff",
+    "--surface-muted": "#e8f8f5",
+    "--border": "#b2dfdb",
+    "--accent": "#00b894",
+    "--success": "#00b894",
+    "--warn": "#fdcb6e",
+    "--danger": "#e17055",
+    "--radius-card": "16px",
+    "--radius-pill": "999px",
+    "--font-display-sans": "'Inter', system-ui, sans-serif",
+    "--font-body-sans": "'Inter', system-ui, sans-serif",
+    "--type-body-md": "1rem",
+    "--type-body-sm": "0.875rem"
+  },
+  "dark_mode": {
+    "--background": "#0a1628",
+    "--foreground": "#ccd6f6",
+    "--surface": "#112240",
+    "--surface-muted": "#1a3358",
+    "--border": "#233554",
+    "--accent": "#64ffda",
+    "--success": "#64ffda",
+    "--warn": "#fdcb6e",
+    "--danger": "#ff7675"
+  }
+}

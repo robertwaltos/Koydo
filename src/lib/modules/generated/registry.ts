@@ -1,54 +1,54 @@
-import { ALevelPrep101Module } from "@/lib/modules/catalog/a-level-prep-101";
-import { AccountingFinance101Module } from "@/lib/modules/catalog/accounting-finance-101";
-import { AccountingFinance201Module } from "@/lib/modules/catalog/accounting-finance-201";
-import { AccountingFinance301Module } from "@/lib/modules/catalog/accounting-finance-301";
-import { AccountingFinance401Module } from "@/lib/modules/catalog/accounting-finance-401";
-import { AccountingFinance501Module } from "@/lib/modules/catalog/accounting-finance-501";
-import { AccountingFinance601Module } from "@/lib/modules/catalog/accounting-finance-601";
-import { ActPrep101Module } from "@/lib/modules/catalog/act-prep-101";
-import { AdvancedMath101Module } from "@/lib/modules/catalog/advanced-math-101";
-import { AdvancedMath201Module } from "@/lib/modules/catalog/advanced-math-201";
-import { AdvancedMath301Module } from "@/lib/modules/catalog/advanced-math-301";
-import { AdvancedMath401Module } from "@/lib/modules/catalog/advanced-math-401";
-import { AdvancedMath501Module } from "@/lib/modules/catalog/advanced-math-501";
-import { AdvancedMath601Module } from "@/lib/modules/catalog/advanced-math-601";
-import { AiMachineLearning101Module } from "@/lib/modules/catalog/ai-machine-learning-101";
-import { AiMachineLearning201Module } from "@/lib/modules/catalog/ai-machine-learning-201";
-import { AiMachineLearning301Module } from "@/lib/modules/catalog/ai-machine-learning-301";
-import { AiMachineLearning401Module } from "@/lib/modules/catalog/ai-machine-learning-401";
-import { AiMachineLearning501Module } from "@/lib/modules/catalog/ai-machine-learning-501";
-import { AiMachineLearning601Module } from "@/lib/modules/catalog/ai-machine-learning-601";
-import { AiSafetyAlignment101Module } from "@/lib/modules/catalog/ai-safety-alignment-101";
-import { AiSafetyAlignment201Module } from "@/lib/modules/catalog/ai-safety-alignment-201";
-import { AiSafetyAlignment301Module } from "@/lib/modules/catalog/ai-safety-alignment-301";
-import { AiSafetyAlignment401Module } from "@/lib/modules/catalog/ai-safety-alignment-401";
-import { AiSafetyAlignment501Module } from "@/lib/modules/catalog/ai-safety-alignment-501";
-import { AiSafetyAlignment601Module } from "@/lib/modules/catalog/ai-safety-alignment-601";
-import { AiWorkflows101Module } from "@/lib/modules/catalog/ai-workflows-101";
-import { AiWorkflows201Module } from "@/lib/modules/catalog/ai-workflows-201";
-import { AiWorkflows301Module } from "@/lib/modules/catalog/ai-workflows-301";
-import { AiWorkflows401Module } from "@/lib/modules/catalog/ai-workflows-401";
-import { AiWorkflows501Module } from "@/lib/modules/catalog/ai-workflows-501";
-import { AiWorkflows601Module } from "@/lib/modules/catalog/ai-workflows-601";
-import { ApPrep101Module } from "@/lib/modules/catalog/ap-prep-101";
-import { appleVisionScienceLabModule } from "@/lib/modules/catalog/apple-vision-science-lab";
-import { Arts101Module } from "@/lib/modules/catalog/arts-101";
-import { Arts201Module } from "@/lib/modules/catalog/arts-201";
-import { Arts301Module } from "@/lib/modules/catalog/arts-301";
-import { Arts401Module } from "@/lib/modules/catalog/arts-401";
-import { Arts501Module } from "@/lib/modules/catalog/arts-501";
-import { Arts601Module } from "@/lib/modules/catalog/arts-601";
-import { Astronomy101Module } from "@/lib/modules/catalog/astronomy-101";
+import { a_level_prep_101_Module } from "@/lib/modules/catalog/a-level-prep-101";
+import { accounting_finance_101_Module } from "@/lib/modules/catalog/accounting-finance-101";
+import { accounting_finance_201_Module } from "@/lib/modules/catalog/accounting-finance-201";
+import { accounting_finance_301_Module } from "@/lib/modules/catalog/accounting-finance-301";
+import { accounting_finance_401_Module } from "@/lib/modules/catalog/accounting-finance-401";
+import { accounting_finance_501_Module } from "@/lib/modules/catalog/accounting-finance-501";
+import { accounting_finance_601_Module } from "@/lib/modules/catalog/accounting-finance-601";
+import { act_prep_101_Module } from "@/lib/modules/catalog/act-prep-101";
+import { advanced_math_101_Module } from "@/lib/modules/catalog/advanced-math-101";
+import { advanced_math_201_Module } from "@/lib/modules/catalog/advanced-math-201";
+import { advanced_math_301_Module } from "@/lib/modules/catalog/advanced-math-301";
+import { advanced_math_401_Module } from "@/lib/modules/catalog/advanced-math-401";
+import { advanced_math_501_Module } from "@/lib/modules/catalog/advanced-math-501";
+import { advanced_math_601_Module } from "@/lib/modules/catalog/advanced-math-601";
+import { ai_machine_learning_101_Module } from "@/lib/modules/catalog/ai-machine-learning-101";
+import { ai_machine_learning_201_Module } from "@/lib/modules/catalog/ai-machine-learning-201";
+import { ai_machine_learning_301_Module } from "@/lib/modules/catalog/ai-machine-learning-301";
+import { ai_machine_learning_401_Module } from "@/lib/modules/catalog/ai-machine-learning-401";
+import { ai_machine_learning_501_Module } from "@/lib/modules/catalog/ai-machine-learning-501";
+import { ai_machine_learning_601_Module } from "@/lib/modules/catalog/ai-machine-learning-601";
+import { ai_safety_alignment_101_Module } from "@/lib/modules/catalog/ai-safety-alignment-101";
+import { ai_safety_alignment_201_Module } from "@/lib/modules/catalog/ai-safety-alignment-201";
+import { ai_safety_alignment_301_Module } from "@/lib/modules/catalog/ai-safety-alignment-301";
+import { ai_safety_alignment_401_Module } from "@/lib/modules/catalog/ai-safety-alignment-401";
+import { ai_safety_alignment_501_Module } from "@/lib/modules/catalog/ai-safety-alignment-501";
+import { ai_safety_alignment_601_Module } from "@/lib/modules/catalog/ai-safety-alignment-601";
+import { ai_workflows_101_Module } from "@/lib/modules/catalog/ai-workflows-101";
+import { ai_workflows_201_Module } from "@/lib/modules/catalog/ai-workflows-201";
+import { ai_workflows_301_Module } from "@/lib/modules/catalog/ai-workflows-301";
+import { ai_workflows_401_Module } from "@/lib/modules/catalog/ai-workflows-401";
+import { ai_workflows_501_Module } from "@/lib/modules/catalog/ai-workflows-501";
+import { ai_workflows_601_Module } from "@/lib/modules/catalog/ai-workflows-601";
+import { ap_prep_101_Module } from "@/lib/modules/catalog/ap-prep-101";
+import { apple_vision_science_lab_Module } from "@/lib/modules/catalog/apple-vision-science-lab";
+import { arts_101_Module } from "@/lib/modules/catalog/arts-101";
+import { arts_201_Module } from "@/lib/modules/catalog/arts-201";
+import { arts_301_Module } from "@/lib/modules/catalog/arts-301";
+import { arts_401_Module } from "@/lib/modules/catalog/arts-401";
+import { arts_501_Module } from "@/lib/modules/catalog/arts-501";
+import { arts_601_Module } from "@/lib/modules/catalog/arts-601";
+import { astronomy_101_Module } from "@/lib/modules/catalog/astronomy-101";
 import { Astronomy201Module } from "@/lib/modules/catalog/astronomy-201";
 import { Astronomy301Module } from "@/lib/modules/catalog/astronomy-301";
 import { Astronomy401Module } from "@/lib/modules/catalog/astronomy-401";
 import { Astronomy501Module } from "@/lib/modules/catalog/astronomy-501";
-import { Astronomy601Module } from "@/lib/modules/catalog/astronomy-601";
-import { AtarPrep101Module } from "@/lib/modules/catalog/atar-prep-101";
-import { BasicMath101Module } from "@/lib/modules/catalog/basic-math-101";
+import { astronomy_601_Module } from "@/lib/modules/catalog/astronomy-601";
+import { atar_prep_101_Module } from "@/lib/modules/catalog/atar-prep-101";
+import { basic_math_101_Module } from "@/lib/modules/catalog/basic-math-101";
 import { BasicMath1112U1ExternalModule } from "@/lib/modules/catalog/basic-math-1112-u1-external";
 import { BasicMath201Module } from "@/lib/modules/catalog/basic-math-201";
-import { BasicMath301Module } from "@/lib/modules/catalog/basic-math-301";
+import { basic_math_301_Module } from "@/lib/modules/catalog/basic-math-301";
 import { BasicMath35U1ExternalModule } from "@/lib/modules/catalog/basic-math-35-u1-external";
 import { BasicMath401Module } from "@/lib/modules/catalog/basic-math-401";
 import { BasicMath501Module } from "@/lib/modules/catalog/basic-math-501";
@@ -75,119 +75,128 @@ import { BusinessAnalytics301Module } from "@/lib/modules/catalog/business-analy
 import { BusinessAnalytics401Module } from "@/lib/modules/catalog/business-analytics-401";
 import { BusinessAnalytics501Module } from "@/lib/modules/catalog/business-analytics-501";
 import { BusinessAnalytics601Module } from "@/lib/modules/catalog/business-analytics-601";
-import { BusinessEthics101Module } from "@/lib/modules/catalog/business-ethics-101";
-import { BusinessEthics201Module } from "@/lib/modules/catalog/business-ethics-201";
-import { BusinessEthics301Module } from "@/lib/modules/catalog/business-ethics-301";
-import { BusinessEthics401Module } from "@/lib/modules/catalog/business-ethics-401";
-import { BusinessEthics501Module } from "@/lib/modules/catalog/business-ethics-501";
-import { BusinessEthics601Module } from "@/lib/modules/catalog/business-ethics-601";
-import { CapstoneClimateAndEconomy501Module } from "@/lib/modules/catalog/capstone-climate-and-economy-501";
-import { CapstoneClimateAndEconomy601Module } from "@/lib/modules/catalog/capstone-climate-and-economy-601";
-import { CapstoneHumanHealthAi501Module } from "@/lib/modules/catalog/capstone-human-health-ai-501";
-import { CapstoneHumanHealthAi601Module } from "@/lib/modules/catalog/capstone-human-health-ai-601";
-import { CapstoneMediaAndDemocracy501Module } from "@/lib/modules/catalog/capstone-media-and-democracy-501";
-import { CapstoneMediaAndDemocracy601Module } from "@/lib/modules/catalog/capstone-media-and-democracy-601";
-import { CapstoneSmartCitySystems501Module } from "@/lib/modules/catalog/capstone-smart-city-systems-501";
-import { CapstoneSmartCitySystems601Module } from "@/lib/modules/catalog/capstone-smart-city-systems-601";
-import { Chemistry101Module } from "@/lib/modules/catalog/chemistry-101";
-import { Chemistry201Module } from "@/lib/modules/catalog/chemistry-201";
-import { Chemistry301Module } from "@/lib/modules/catalog/chemistry-301";
-import { Chemistry401Module } from "@/lib/modules/catalog/chemistry-401";
-import { Chemistry501Module } from "@/lib/modules/catalog/chemistry-501";
-import { Chemistry601Module } from "@/lib/modules/catalog/chemistry-601";
-import { CivilEngineering101Module } from "@/lib/modules/catalog/civil-engineering-101";
-import { CivilEngineering201Module } from "@/lib/modules/catalog/civil-engineering-201";
-import { CivilEngineering301Module } from "@/lib/modules/catalog/civil-engineering-301";
-import { CivilEngineering401Module } from "@/lib/modules/catalog/civil-engineering-401";
-import { CivilEngineering501Module } from "@/lib/modules/catalog/civil-engineering-501";
-import { CivilEngineering601Module } from "@/lib/modules/catalog/civil-engineering-601";
-import { ClimateScience101Module } from "@/lib/modules/catalog/climate-science-101";
-import { ClimateScience201Module } from "@/lib/modules/catalog/climate-science-201";
-import { ClimateScience301Module } from "@/lib/modules/catalog/climate-science-301";
-import { ClimateScience401Module } from "@/lib/modules/catalog/climate-science-401";
-import { ClimateScience501Module } from "@/lib/modules/catalog/climate-science-501";
-import { ClimateScience601Module } from "@/lib/modules/catalog/climate-science-601";
-import { CloudComputing101Module } from "@/lib/modules/catalog/cloud-computing-101";
-import { CloudComputing201Module } from "@/lib/modules/catalog/cloud-computing-201";
-import { CloudComputing301Module } from "@/lib/modules/catalog/cloud-computing-301";
-import { CloudComputing401Module } from "@/lib/modules/catalog/cloud-computing-401";
-import { CloudComputing501Module } from "@/lib/modules/catalog/cloud-computing-501";
-import { CloudComputing601Module } from "@/lib/modules/catalog/cloud-computing-601";
-import { Coding101Module } from "@/lib/modules/catalog/coding-101";
-import { Coding201Module } from "@/lib/modules/catalog/coding-201";
-import { Coding301Module } from "@/lib/modules/catalog/coding-301";
-import { Coding401Module } from "@/lib/modules/catalog/coding-401";
-import { Coding501Module } from "@/lib/modules/catalog/coding-501";
-import { Coding601Module } from "@/lib/modules/catalog/coding-601";
-import { ComparativePolitics101Module } from "@/lib/modules/catalog/comparative-politics-101";
-import { ComparativePolitics201Module } from "@/lib/modules/catalog/comparative-politics-201";
-import { ComparativePolitics301Module } from "@/lib/modules/catalog/comparative-politics-301";
-import { ComparativePolitics401Module } from "@/lib/modules/catalog/comparative-politics-401";
-import { ComparativePolitics501Module } from "@/lib/modules/catalog/comparative-politics-501";
-import { ComparativePolitics601Module } from "@/lib/modules/catalog/comparative-politics-601";
-import { CpuGpuMemoryDesign101Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-101";
-import { CpuGpuMemoryDesign201Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-201";
-import { CpuGpuMemoryDesign301Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-301";
-import { CpuGpuMemoryDesign401Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-401";
-import { CpuGpuMemoryDesign501Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-501";
-import { CpuGpuMemoryDesign601Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-601";
-import { CuetPrep101Module } from "@/lib/modules/catalog/cuet-prep-101";
-import { Cybersecurity101Module } from "@/lib/modules/catalog/cybersecurity-101";
-import { Cybersecurity201Module } from "@/lib/modules/catalog/cybersecurity-201";
-import { Cybersecurity301Module } from "@/lib/modules/catalog/cybersecurity-301";
-import { Cybersecurity401Module } from "@/lib/modules/catalog/cybersecurity-401";
-import { Cybersecurity501Module } from "@/lib/modules/catalog/cybersecurity-501";
-import { Cybersecurity601Module } from "@/lib/modules/catalog/cybersecurity-601";
-import { DataEngineering101Module } from "@/lib/modules/catalog/data-engineering-101";
-import { DataEngineering201Module } from "@/lib/modules/catalog/data-engineering-201";
-import { DataEngineering301Module } from "@/lib/modules/catalog/data-engineering-301";
-import { DataEngineering401Module } from "@/lib/modules/catalog/data-engineering-401";
-import { DataEngineering501Module } from "@/lib/modules/catalog/data-engineering-501";
-import { DataEngineering601Module } from "@/lib/modules/catalog/data-engineering-601";
-import { DataScience101Module } from "@/lib/modules/catalog/data-science-101";
-import { DataScience201Module } from "@/lib/modules/catalog/data-science-201";
-import { DataScience301Module } from "@/lib/modules/catalog/data-science-301";
-import { DataScience401Module } from "@/lib/modules/catalog/data-science-401";
-import { DataScience501Module } from "@/lib/modules/catalog/data-science-501";
-import { DataScience601Module } from "@/lib/modules/catalog/data-science-601";
-import { DeveloperToolsDevops101Module } from "@/lib/modules/catalog/developer-tools-devops-101";
-import { DeveloperToolsDevops201Module } from "@/lib/modules/catalog/developer-tools-devops-201";
-import { DeveloperToolsDevops301Module } from "@/lib/modules/catalog/developer-tools-devops-301";
-import { DeveloperToolsDevops401Module } from "@/lib/modules/catalog/developer-tools-devops-401";
-import { DeveloperToolsDevops501Module } from "@/lib/modules/catalog/developer-tools-devops-501";
-import { DeveloperToolsDevops601Module } from "@/lib/modules/catalog/developer-tools-devops-601";
-import { DigitalMarketing101Module } from "@/lib/modules/catalog/digital-marketing-101";
-import { DigitalMarketing201Module } from "@/lib/modules/catalog/digital-marketing-201";
-import { DigitalMarketing301Module } from "@/lib/modules/catalog/digital-marketing-301";
-import { DigitalMarketing401Module } from "@/lib/modules/catalog/digital-marketing-401";
-import { DigitalMarketing501Module } from "@/lib/modules/catalog/digital-marketing-501";
-import { DigitalMarketing601Module } from "@/lib/modules/catalog/digital-marketing-601";
-import { DistributedSystems101Module } from "@/lib/modules/catalog/distributed-systems-101";
-import { DistributedSystems201Module } from "@/lib/modules/catalog/distributed-systems-201";
-import { DistributedSystems301Module } from "@/lib/modules/catalog/distributed-systems-301";
-import { DistributedSystems401Module } from "@/lib/modules/catalog/distributed-systems-401";
-import { DistributedSystems501Module } from "@/lib/modules/catalog/distributed-systems-501";
-import { DistributedSystems601Module } from "@/lib/modules/catalog/distributed-systems-601";
-import { Economics101Module } from "@/lib/modules/catalog/economics-101";
-import { Economics201Module } from "@/lib/modules/catalog/economics-201";
-import { Economics301Module } from "@/lib/modules/catalog/economics-301";
-import { Economics401Module } from "@/lib/modules/catalog/economics-401";
-import { Economics501Module } from "@/lib/modules/catalog/economics-501";
-import { Economics601Module } from "@/lib/modules/catalog/economics-601";
-import { EeElectricalEngineeringU1ExternalModule } from "@/lib/modules/catalog/ee-electrical-engineering-u1-external";
+import { business_ethics_101_Module } from "@/lib/modules/catalog/business-ethics-101";
+import { business_ethics_201_Module } from "@/lib/modules/catalog/business-ethics-201";
+import { business_ethics_301_Module } from "@/lib/modules/catalog/business-ethics-301";
+import { business_ethics_401_Module } from "@/lib/modules/catalog/business-ethics-401";
+import { business_ethics_501_Module } from "@/lib/modules/catalog/business-ethics-501";
+import { business_ethics_601_Module } from "@/lib/modules/catalog/business-ethics-601";
+import { capstone_climate_and_economy_501_Module } from "@/lib/modules/catalog/capstone-climate-and-economy-501";
+import { capstone_climate_and_economy_601_Module } from "@/lib/modules/catalog/capstone-climate-and-economy-601";
+import { capstone_human_health_ai_501_Module } from "@/lib/modules/catalog/capstone-human-health-ai-501";
+import { capstone_human_health_ai_601_Module } from "@/lib/modules/catalog/capstone-human-health-ai-601";
+import { capstone_media_and_democracy_501_Module } from "@/lib/modules/catalog/capstone-media-and-democracy-501";
+import { capstone_media_and_democracy_601_Module } from "@/lib/modules/catalog/capstone-media-and-democracy-601";
+import { capstone_smart_city_systems_501_Module } from "@/lib/modules/catalog/capstone-smart-city-systems-501";
+import { capstone_smart_city_systems_601_Module } from "@/lib/modules/catalog/capstone-smart-city-systems-601";
+import { cdl_air_brakes_101_Module } from "@/lib/modules/catalog/cdl-air-brakes-101";
+import { cdl_combination_vehicles_101_Module } from "@/lib/modules/catalog/cdl-combination-vehicles-101";
+import { cdl_doubles_triples_endorsement_101_Module } from "@/lib/modules/catalog/cdl-doubles-triples-endorsement-101";
+import { cdl_general_knowledge_101_Module } from "@/lib/modules/catalog/cdl-general-knowledge-101";
+import { cdl_hazmat_endorsement_101_Module } from "@/lib/modules/catalog/cdl-hazmat-endorsement-101";
+import { cdl_passenger_endorsement_101_Module } from "@/lib/modules/catalog/cdl-passenger-endorsement-101";
+import { cdl_pre_trip_inspection_101_Module } from "@/lib/modules/catalog/cdl-pre-trip-inspection-101";
+import { cdl_school_bus_endorsement_101_Module } from "@/lib/modules/catalog/cdl-school-bus-endorsement-101";
+import { cdl_tanker_endorsement_101_Module } from "@/lib/modules/catalog/cdl-tanker-endorsement-101";
+import { chemistry_101_Module } from "@/lib/modules/catalog/chemistry-101";
+import { chemistry_201_Module } from "@/lib/modules/catalog/chemistry-201";
+import { chemistry_301_Module } from "@/lib/modules/catalog/chemistry-301";
+import { chemistry_401_Module } from "@/lib/modules/catalog/chemistry-401";
+import { chemistry_501_Module } from "@/lib/modules/catalog/chemistry-501";
+import { chemistry_601_Module } from "@/lib/modules/catalog/chemistry-601";
+import { civil_engineering_101_Module } from "@/lib/modules/catalog/civil-engineering-101";
+import { civil_engineering_201_Module } from "@/lib/modules/catalog/civil-engineering-201";
+import { civil_engineering_301_Module } from "@/lib/modules/catalog/civil-engineering-301";
+import { civil_engineering_401_Module } from "@/lib/modules/catalog/civil-engineering-401";
+import { civil_engineering_501_Module } from "@/lib/modules/catalog/civil-engineering-501";
+import { civil_engineering_601_Module } from "@/lib/modules/catalog/civil-engineering-601";
+import { climate_science_101_Module } from "@/lib/modules/catalog/climate-science-101";
+import { climate_science_201_Module } from "@/lib/modules/catalog/climate-science-201";
+import { climate_science_301_Module } from "@/lib/modules/catalog/climate-science-301";
+import { climate_science_401_Module } from "@/lib/modules/catalog/climate-science-401";
+import { climate_science_501_Module } from "@/lib/modules/catalog/climate-science-501";
+import { climate_science_601_Module } from "@/lib/modules/catalog/climate-science-601";
+import { cloud_computing_101_Module } from "@/lib/modules/catalog/cloud-computing-101";
+import { cloud_computing_201_Module } from "@/lib/modules/catalog/cloud-computing-201";
+import { cloud_computing_301_Module } from "@/lib/modules/catalog/cloud-computing-301";
+import { cloud_computing_401_Module } from "@/lib/modules/catalog/cloud-computing-401";
+import { cloud_computing_501_Module } from "@/lib/modules/catalog/cloud-computing-501";
+import { cloud_computing_601_Module } from "@/lib/modules/catalog/cloud-computing-601";
+import { coding_101_Module } from "@/lib/modules/catalog/coding-101";
+import { coding_201_Module } from "@/lib/modules/catalog/coding-201";
+import { coding_301_Module } from "@/lib/modules/catalog/coding-301";
+import { coding_401_Module } from "@/lib/modules/catalog/coding-401";
+import { coding_501_Module } from "@/lib/modules/catalog/coding-501";
+import { coding_601_Module } from "@/lib/modules/catalog/coding-601";
+import { comparative_politics_101_Module } from "@/lib/modules/catalog/comparative-politics-101";
+import { comparative_politics_201_Module } from "@/lib/modules/catalog/comparative-politics-201";
+import { comparative_politics_301_Module } from "@/lib/modules/catalog/comparative-politics-301";
+import { comparative_politics_401_Module } from "@/lib/modules/catalog/comparative-politics-401";
+import { comparative_politics_501_Module } from "@/lib/modules/catalog/comparative-politics-501";
+import { comparative_politics_601_Module } from "@/lib/modules/catalog/comparative-politics-601";
+import { cpu_gpu_memory_design_101_Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-101";
+import { cpu_gpu_memory_design_201_Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-201";
+import { cpu_gpu_memory_design_301_Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-301";
+import { cpu_gpu_memory_design_401_Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-401";
+import { cpu_gpu_memory_design_501_Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-501";
+import { cpu_gpu_memory_design_601_Module } from "@/lib/modules/catalog/cpu-gpu-memory-design-601";
+import { cuet_prep_101_Module } from "@/lib/modules/catalog/cuet-prep-101";
+import { cybersecurity_101_Module } from "@/lib/modules/catalog/cybersecurity-101";
+import { cybersecurity_201_Module } from "@/lib/modules/catalog/cybersecurity-201";
+import { cybersecurity_301_Module } from "@/lib/modules/catalog/cybersecurity-301";
+import { cybersecurity_401_Module } from "@/lib/modules/catalog/cybersecurity-401";
+import { cybersecurity_501_Module } from "@/lib/modules/catalog/cybersecurity-501";
+import { cybersecurity_601_Module } from "@/lib/modules/catalog/cybersecurity-601";
+import { data_engineering_101_Module } from "@/lib/modules/catalog/data-engineering-101";
+import { data_engineering_201_Module } from "@/lib/modules/catalog/data-engineering-201";
+import { data_engineering_301_Module } from "@/lib/modules/catalog/data-engineering-301";
+import { data_engineering_401_Module } from "@/lib/modules/catalog/data-engineering-401";
+import { data_engineering_501_Module } from "@/lib/modules/catalog/data-engineering-501";
+import { data_engineering_601_Module } from "@/lib/modules/catalog/data-engineering-601";
+import { data_science_101_Module } from "@/lib/modules/catalog/data-science-101";
+import { data_science_201_Module } from "@/lib/modules/catalog/data-science-201";
+import { data_science_301_Module } from "@/lib/modules/catalog/data-science-301";
+import { data_science_401_Module } from "@/lib/modules/catalog/data-science-401";
+import { data_science_501_Module } from "@/lib/modules/catalog/data-science-501";
+import { data_science_601_Module } from "@/lib/modules/catalog/data-science-601";
+import { developer_tools_devops_101_Module } from "@/lib/modules/catalog/developer-tools-devops-101";
+import { developer_tools_devops_201_Module } from "@/lib/modules/catalog/developer-tools-devops-201";
+import { developer_tools_devops_301_Module } from "@/lib/modules/catalog/developer-tools-devops-301";
+import { developer_tools_devops_401_Module } from "@/lib/modules/catalog/developer-tools-devops-401";
+import { developer_tools_devops_501_Module } from "@/lib/modules/catalog/developer-tools-devops-501";
+import { developer_tools_devops_601_Module } from "@/lib/modules/catalog/developer-tools-devops-601";
+import { digital_marketing_101_Module } from "@/lib/modules/catalog/digital-marketing-101";
+import { digital_marketing_201_Module } from "@/lib/modules/catalog/digital-marketing-201";
+import { digital_marketing_301_Module } from "@/lib/modules/catalog/digital-marketing-301";
+import { digital_marketing_401_Module } from "@/lib/modules/catalog/digital-marketing-401";
+import { digital_marketing_501_Module } from "@/lib/modules/catalog/digital-marketing-501";
+import { digital_marketing_601_Module } from "@/lib/modules/catalog/digital-marketing-601";
+import { distributed_systems_101_Module } from "@/lib/modules/catalog/distributed-systems-101";
+import { distributed_systems_201_Module } from "@/lib/modules/catalog/distributed-systems-201";
+import { distributed_systems_301_Module } from "@/lib/modules/catalog/distributed-systems-301";
+import { distributed_systems_401_Module } from "@/lib/modules/catalog/distributed-systems-401";
+import { distributed_systems_501_Module } from "@/lib/modules/catalog/distributed-systems-501";
+import { distributed_systems_601_Module } from "@/lib/modules/catalog/distributed-systems-601";
+import { economics_101_Module } from "@/lib/modules/catalog/economics-101";
+import { economics_201_Module } from "@/lib/modules/catalog/economics-201";
+import { economics_301_Module } from "@/lib/modules/catalog/economics-301";
+import { economics_401_Module } from "@/lib/modules/catalog/economics-401";
+import { economics_501_Module } from "@/lib/modules/catalog/economics-501";
+import { economics_601_Module } from "@/lib/modules/catalog/economics-601";
+import { ee_electrical_engineering_u1_external_Module } from "@/lib/modules/catalog/ee-electrical-engineering-u1-external";
 import { EeEngineeringAdvancedU1ExternalModule } from "@/lib/modules/catalog/ee-engineering-advanced-u1-external";
-import { ElectricalEngineering101Module } from "@/lib/modules/catalog/electrical-engineering-101";
-import { ElectricalEngineering201Module } from "@/lib/modules/catalog/electrical-engineering-201";
-import { ElectricalEngineering301Module } from "@/lib/modules/catalog/electrical-engineering-301";
-import { ElectricalEngineering401Module } from "@/lib/modules/catalog/electrical-engineering-401";
-import { ElectricalEngineering501Module } from "@/lib/modules/catalog/electrical-engineering-501";
-import { ElectricalEngineering601Module } from "@/lib/modules/catalog/electrical-engineering-601";
-import { ElectricianElectricity101Module } from "@/lib/modules/catalog/electrician-electricity-101";
-import { ElectricianElectricity201Module } from "@/lib/modules/catalog/electrician-electricity-201";
-import { ElectricianElectricity301Module } from "@/lib/modules/catalog/electrician-electricity-301";
-import { ElectricianElectricity401Module } from "@/lib/modules/catalog/electrician-electricity-401";
-import { ElectricianElectricity501Module } from "@/lib/modules/catalog/electrician-electricity-501";
-import { ElectricianElectricity601Module } from "@/lib/modules/catalog/electrician-electricity-601";
+import { electrical_engineering_101_Module } from "@/lib/modules/catalog/electrical-engineering-101";
+import { electrical_engineering_201_Module } from "@/lib/modules/catalog/electrical-engineering-201";
+import { electrical_engineering_301_Module } from "@/lib/modules/catalog/electrical-engineering-301";
+import { electrical_engineering_401_Module } from "@/lib/modules/catalog/electrical-engineering-401";
+import { electrical_engineering_501_Module } from "@/lib/modules/catalog/electrical-engineering-501";
+import { electrical_engineering_601_Module } from "@/lib/modules/catalog/electrical-engineering-601";
+import { electrician_electricity_101_Module } from "@/lib/modules/catalog/electrician-electricity-101";
+import { electrician_electricity_201_Module } from "@/lib/modules/catalog/electrician-electricity-201";
+import { electrician_electricity_301_Module } from "@/lib/modules/catalog/electrician-electricity-301";
+import { electrician_electricity_401_Module } from "@/lib/modules/catalog/electrician-electricity-401";
+import { electrician_electricity_501_Module } from "@/lib/modules/catalog/electrician-electricity-501";
+import { electrician_electricity_601_Module } from "@/lib/modules/catalog/electrician-electricity-601";
 import { EnrichmentBiomedicalBiomedicalResearchQaU1ExternalModule } from "@/lib/modules/catalog/enrichment-biomedical-biomedical-research-qa-u1-external";
 import { EnrichmentGeneralCommonsenseReasoningU1ExternalModule } from "@/lib/modules/catalog/enrichment-general-commonsense-reasoning-u1-external";
 import { EnrichmentMathAlgebraWordProblemsU1ExternalModule } from "@/lib/modules/catalog/enrichment-math-algebra-word-problems-u1-external";
@@ -196,12 +205,12 @@ import { EnrichmentMathGradeSchoolMathSolutionsU1ExternalModule } from "@/lib/mo
 import { EnrichmentScienceScienceConceptsU1ExternalModule } from "@/lib/modules/catalog/enrichment-science-science-concepts-u1-external";
 import { EnrichmentScienceScienceReasoningChallengeU1ExternalModule } from "@/lib/modules/catalog/enrichment-science-science-reasoning-challenge-u1-external";
 import { EnrichmentScienceScienceReasoningEasyU1ExternalModule } from "@/lib/modules/catalog/enrichment-science-science-reasoning-easy-u1-external";
-import { Entrepreneurship101Module } from "@/lib/modules/catalog/entrepreneurship-101";
-import { Entrepreneurship201Module } from "@/lib/modules/catalog/entrepreneurship-201";
-import { Entrepreneurship301Module } from "@/lib/modules/catalog/entrepreneurship-301";
-import { Entrepreneurship401Module } from "@/lib/modules/catalog/entrepreneurship-401";
-import { Entrepreneurship501Module } from "@/lib/modules/catalog/entrepreneurship-501";
-import { Entrepreneurship601Module } from "@/lib/modules/catalog/entrepreneurship-601";
+import { entrepreneurship_101_Module } from "@/lib/modules/catalog/entrepreneurship-101";
+import { entrepreneurship_201_Module } from "@/lib/modules/catalog/entrepreneurship-201";
+import { entrepreneurship_301_Module } from "@/lib/modules/catalog/entrepreneurship-301";
+import { entrepreneurship_401_Module } from "@/lib/modules/catalog/entrepreneurship-401";
+import { entrepreneurship_501_Module } from "@/lib/modules/catalog/entrepreneurship-501";
+import { entrepreneurship_601_Module } from "@/lib/modules/catalog/entrepreneurship-601";
 import { N59SecondsThinkALittleChangeALotRichardWisModule } from "@/lib/modules/catalog/epub-generated/59-seconds-think-a-little-change-a-lot-richard-wis";
 import { ACourseInMiraclesDrHelenSchucmanModule } from "@/lib/modules/catalog/epub-generated/a-course-in-miracles-dr-helen-schucman";
 import { AHistoryOfGodThe4000YearQuestOfJudaismChModule } from "@/lib/modules/catalog/epub-generated/a-history-of-god-the-4000-year-quest-of-judaism-ch";
@@ -332,25 +341,25 @@ import { TheWomanInWhiteWilkieCollinsJohnSutherlandModule } from "@/lib/modules/
 import { TreasureIslandRobertLouisStevensonModule } from "@/lib/modules/catalog/epub-generated/treasure-island-robert-louis-stevenson";
 import { VisionsOfAwakeningSpaceAndTimeDogenAndTheModule } from "@/lib/modules/catalog/epub-generated/visions-of-awakening-space-and-time-dogen-and-the-";
 import { WisdomAsAPracticeMargolisKarenSloterdijkPetModule } from "@/lib/modules/catalog/epub-generated/wisdom-as-a-practice-margolis-karen-sloterdijk-pet";
-import { EthicsOfTechnology101Module } from "@/lib/modules/catalog/ethics-of-technology-101";
-import { EthicsOfTechnology201Module } from "@/lib/modules/catalog/ethics-of-technology-201";
-import { EthicsOfTechnology301Module } from "@/lib/modules/catalog/ethics-of-technology-301";
-import { EthicsOfTechnology401Module } from "@/lib/modules/catalog/ethics-of-technology-401";
-import { EthicsOfTechnology501Module } from "@/lib/modules/catalog/ethics-of-technology-501";
-import { EthicsOfTechnology601Module } from "@/lib/modules/catalog/ethics-of-technology-601";
+import { ethics_of_technology_101_Module } from "@/lib/modules/catalog/ethics-of-technology-101";
+import { ethics_of_technology_201_Module } from "@/lib/modules/catalog/ethics-of-technology-201";
+import { ethics_of_technology_301_Module } from "@/lib/modules/catalog/ethics-of-technology-301";
+import { ethics_of_technology_401_Module } from "@/lib/modules/catalog/ethics-of-technology-401";
+import { ethics_of_technology_501_Module } from "@/lib/modules/catalog/ethics-of-technology-501";
+import { ethics_of_technology_601_Module } from "@/lib/modules/catalog/ethics-of-technology-601";
 import { Farming101Module } from "@/lib/modules/catalog/farming-101";
 import { Farming201Module } from "@/lib/modules/catalog/farming-201";
 import { Farming301Module } from "@/lib/modules/catalog/farming-301";
-import { Farming401Module } from "@/lib/modules/catalog/farming-401";
-import { Farming501Module } from "@/lib/modules/catalog/farming-501";
-import { Farming601Module } from "@/lib/modules/catalog/farming-601";
-import { FinancialLiteracy101Module } from "@/lib/modules/catalog/financial-literacy-101";
+import { farming_401_Module } from "@/lib/modules/catalog/farming-401";
+import { farming_501_Module } from "@/lib/modules/catalog/farming-501";
+import { farming_601_Module } from "@/lib/modules/catalog/farming-601";
+import { financial_literacy_101_Module } from "@/lib/modules/catalog/financial-literacy-101";
 import { FinancialLiteracy201Module } from "@/lib/modules/catalog/financial-literacy-201";
 import { FinancialLiteracy301Module } from "@/lib/modules/catalog/financial-literacy-301";
 import { FinancialLiteracy401Module } from "@/lib/modules/catalog/financial-literacy-401";
-import { FinancialLiteracy501Module } from "@/lib/modules/catalog/financial-literacy-501";
-import { FinancialLiteracy601Module } from "@/lib/modules/catalog/financial-literacy-601";
-import { FoodScience101Module } from "@/lib/modules/catalog/food-science-101";
+import { financial_literacy_501_Module } from "@/lib/modules/catalog/financial-literacy-501";
+import { financial_literacy_601_Module } from "@/lib/modules/catalog/financial-literacy-601";
+import { food_science_101_Module } from "@/lib/modules/catalog/food-science-101";
 import { GaokaoPrep101Module } from "@/lib/modules/catalog/gaokao-prep-101";
 import { Gardening101Module } from "@/lib/modules/catalog/gardening-101";
 import { Gardening201Module } from "@/lib/modules/catalog/gardening-201";
@@ -358,7 +367,7 @@ import { Gardening301Module } from "@/lib/modules/catalog/gardening-301";
 import { Gardening401Module } from "@/lib/modules/catalog/gardening-401";
 import { Gardening501Module } from "@/lib/modules/catalog/gardening-501";
 import { Gardening601Module } from "@/lib/modules/catalog/gardening-601";
-import { GcsePrep101Module } from "@/lib/modules/catalog/gcse-prep-101";
+import { gcse_prep_101_Module } from "@/lib/modules/catalog/gcse-prep-101";
 import { GenScience1112U1ExternalModule } from "@/lib/modules/catalog/gen-science-1112-u1-external";
 import { GenScience35U1ExternalModule } from "@/lib/modules/catalog/gen-science-35-u1-external";
 import { GenScience68U1ExternalModule } from "@/lib/modules/catalog/gen-science-68-u1-external";
@@ -368,106 +377,106 @@ import { GenSciencePrekU1ExternalModule } from "@/lib/modules/catalog/gen-scienc
 import { GeneralRelativity101Module } from "@/lib/modules/catalog/general-relativity-101";
 import { GeneralRelativity201Module } from "@/lib/modules/catalog/general-relativity-201";
 import { GeneralRelativity301Module } from "@/lib/modules/catalog/general-relativity-301";
-import { GeneralRelativity401Module } from "@/lib/modules/catalog/general-relativity-401";
-import { GeneralRelativity501Module } from "@/lib/modules/catalog/general-relativity-501";
-import { GeneralRelativity601Module } from "@/lib/modules/catalog/general-relativity-601";
+import { general_relativity_401_Module } from "@/lib/modules/catalog/general-relativity-401";
+import { general_relativity_501_Module } from "@/lib/modules/catalog/general-relativity-501";
+import { general_relativity_601_Module } from "@/lib/modules/catalog/general-relativity-601";
 import { GeneralScience101Module } from "@/lib/modules/catalog/general-science-101";
 import { GeneralScience201Module } from "@/lib/modules/catalog/general-science-201";
 import { GeneralScience301Module } from "@/lib/modules/catalog/general-science-301";
 import { GeneralScience401Module } from "@/lib/modules/catalog/general-science-401";
-import { GeneralScience501Module } from "@/lib/modules/catalog/general-science-501";
-import { GeneralScience601Module } from "@/lib/modules/catalog/general-science-601";
-import { Geography101Module } from "@/lib/modules/catalog/geography-101";
+import { general_science_501_Module } from "@/lib/modules/catalog/general-science-501";
+import { general_science_601_Module } from "@/lib/modules/catalog/general-science-601";
+import { geography_101_Module } from "@/lib/modules/catalog/geography-101";
 import { Geography201Module } from "@/lib/modules/catalog/geography-201";
 import { Geography301Module } from "@/lib/modules/catalog/geography-301";
 import { Geography401Module } from "@/lib/modules/catalog/geography-401";
-import { Geography501Module } from "@/lib/modules/catalog/geography-501";
-import { Geography601Module } from "@/lib/modules/catalog/geography-601";
-import { Geoscience101Module } from "@/lib/modules/catalog/geoscience-101";
-import { Geoscience201Module } from "@/lib/modules/catalog/geoscience-201";
-import { Geoscience301Module } from "@/lib/modules/catalog/geoscience-301";
-import { Geoscience401Module } from "@/lib/modules/catalog/geoscience-401";
-import { Geoscience501Module } from "@/lib/modules/catalog/geoscience-501";
-import { Geoscience601Module } from "@/lib/modules/catalog/geoscience-601";
+import { geography_501_Module } from "@/lib/modules/catalog/geography-501";
+import { geography_601_Module } from "@/lib/modules/catalog/geography-601";
+import { geoscience_101_Module } from "@/lib/modules/catalog/geoscience-101";
+import { geoscience_201_Module } from "@/lib/modules/catalog/geoscience-201";
+import { geoscience_301_Module } from "@/lib/modules/catalog/geoscience-301";
+import { geoscience_401_Module } from "@/lib/modules/catalog/geoscience-401";
+import { geoscience_501_Module } from "@/lib/modules/catalog/geoscience-501";
+import { geoscience_601_Module } from "@/lib/modules/catalog/geoscience-601";
 import { HouseholdManagement101Module } from "@/lib/modules/catalog/household-management-101";
 import { HouseholdManagement201Module } from "@/lib/modules/catalog/household-management-201";
 import { HouseholdManagement301Module } from "@/lib/modules/catalog/household-management-301";
-import { HouseholdManagement401Module } from "@/lib/modules/catalog/household-management-401";
-import { HouseholdManagement501Module } from "@/lib/modules/catalog/household-management-501";
-import { HouseholdManagement601Module } from "@/lib/modules/catalog/household-management-601";
-import { HumanResourceManagement101Module } from "@/lib/modules/catalog/human-resource-management-101";
-import { HumanResourceManagement201Module } from "@/lib/modules/catalog/human-resource-management-201";
-import { HumanResourceManagement301Module } from "@/lib/modules/catalog/human-resource-management-301";
-import { HumanResourceManagement401Module } from "@/lib/modules/catalog/human-resource-management-401";
-import { HumanResourceManagement501Module } from "@/lib/modules/catalog/human-resource-management-501";
-import { HumanResourceManagement601Module } from "@/lib/modules/catalog/human-resource-management-601";
-import { Hvac101Module } from "@/lib/modules/catalog/hvac-101";
-import { Hvac201Module } from "@/lib/modules/catalog/hvac-201";
-import { Hvac301Module } from "@/lib/modules/catalog/hvac-301";
-import { Hvac401Module } from "@/lib/modules/catalog/hvac-401";
-import { Hvac501Module } from "@/lib/modules/catalog/hvac-501";
-import { Hvac601Module } from "@/lib/modules/catalog/hvac-601";
-import { IbPrep101Module } from "@/lib/modules/catalog/ib-prep-101";
-import { IeltsPrep101Module } from "@/lib/modules/catalog/ielts-prep-101";
-import { InternationalBusiness101Module } from "@/lib/modules/catalog/international-business-101";
-import { InternationalBusiness201Module } from "@/lib/modules/catalog/international-business-201";
-import { InternationalBusiness301Module } from "@/lib/modules/catalog/international-business-301";
-import { InternationalBusiness401Module } from "@/lib/modules/catalog/international-business-401";
-import { InternationalBusiness501Module } from "@/lib/modules/catalog/international-business-501";
-import { InternationalBusiness601Module } from "@/lib/modules/catalog/international-business-601";
-import { InternationalRelations101Module } from "@/lib/modules/catalog/international-relations-101";
-import { InternationalRelations201Module } from "@/lib/modules/catalog/international-relations-201";
-import { InternationalRelations301Module } from "@/lib/modules/catalog/international-relations-301";
-import { InternationalRelations401Module } from "@/lib/modules/catalog/international-relations-401";
-import { InternationalRelations501Module } from "@/lib/modules/catalog/international-relations-501";
-import { InternationalRelations601Module } from "@/lib/modules/catalog/international-relations-601";
-import { JeeNeetPrep101Module } from "@/lib/modules/catalog/jee-neet-prep-101";
+import { household_management_401_Module } from "@/lib/modules/catalog/household-management-401";
+import { household_management_501_Module } from "@/lib/modules/catalog/household-management-501";
+import { household_management_601_Module } from "@/lib/modules/catalog/household-management-601";
+import { human_resource_management_101_Module } from "@/lib/modules/catalog/human-resource-management-101";
+import { human_resource_management_201_Module } from "@/lib/modules/catalog/human-resource-management-201";
+import { human_resource_management_301_Module } from "@/lib/modules/catalog/human-resource-management-301";
+import { human_resource_management_401_Module } from "@/lib/modules/catalog/human-resource-management-401";
+import { human_resource_management_501_Module } from "@/lib/modules/catalog/human-resource-management-501";
+import { human_resource_management_601_Module } from "@/lib/modules/catalog/human-resource-management-601";
+import { hvac_101_Module } from "@/lib/modules/catalog/hvac-101";
+import { hvac_201_Module } from "@/lib/modules/catalog/hvac-201";
+import { hvac_301_Module } from "@/lib/modules/catalog/hvac-301";
+import { hvac_401_Module } from "@/lib/modules/catalog/hvac-401";
+import { hvac_501_Module } from "@/lib/modules/catalog/hvac-501";
+import { hvac_601_Module } from "@/lib/modules/catalog/hvac-601";
+import { ib_prep_101_Module } from "@/lib/modules/catalog/ib-prep-101";
+import { ielts_prep_101_Module } from "@/lib/modules/catalog/ielts-prep-101";
+import { international_business_101_Module } from "@/lib/modules/catalog/international-business-101";
+import { international_business_201_Module } from "@/lib/modules/catalog/international-business-201";
+import { international_business_301_Module } from "@/lib/modules/catalog/international-business-301";
+import { international_business_401_Module } from "@/lib/modules/catalog/international-business-401";
+import { international_business_501_Module } from "@/lib/modules/catalog/international-business-501";
+import { international_business_601_Module } from "@/lib/modules/catalog/international-business-601";
+import { international_relations_101_Module } from "@/lib/modules/catalog/international-relations-101";
+import { international_relations_201_Module } from "@/lib/modules/catalog/international-relations-201";
+import { international_relations_301_Module } from "@/lib/modules/catalog/international-relations-301";
+import { international_relations_401_Module } from "@/lib/modules/catalog/international-relations-401";
+import { international_relations_501_Module } from "@/lib/modules/catalog/international-relations-501";
+import { international_relations_601_Module } from "@/lib/modules/catalog/international-relations-601";
+import { jee_neet_prep_101_Module } from "@/lib/modules/catalog/jee-neet-prep-101";
 import { LangArts1112U1ExternalModule } from "@/lib/modules/catalog/lang-arts-1112-u1-external";
 import { LangArts35U1ExternalModule } from "@/lib/modules/catalog/lang-arts-35-u1-external";
 import { LangArts68U1ExternalModule } from "@/lib/modules/catalog/lang-arts-68-u1-external";
 import { LangArts910U1ExternalModule } from "@/lib/modules/catalog/lang-arts-910-u1-external";
 import { LangArtsK2U1ExternalModule } from "@/lib/modules/catalog/lang-arts-k2-u1-external";
 import { LangArtsPrekU1ExternalModule } from "@/lib/modules/catalog/lang-arts-prek-u1-external";
-import { LanguageArts101Module } from "@/lib/modules/catalog/language-arts-101";
-import { LanguageArts201Module } from "@/lib/modules/catalog/language-arts-201";
+import { language_arts_101_Module } from "@/lib/modules/catalog/language-arts-101";
+import { language_arts_201_Module } from "@/lib/modules/catalog/language-arts-201";
 import { LanguageArts301Module } from "@/lib/modules/catalog/language-arts-301";
 import { LanguageArts401Module } from "@/lib/modules/catalog/language-arts-401";
-import { LanguageArts501Module } from "@/lib/modules/catalog/language-arts-501";
-import { LanguageArts601Module } from "@/lib/modules/catalog/language-arts-601";
+import { language_arts_501_Module } from "@/lib/modules/catalog/language-arts-501";
+import { language_arts_601_Module } from "@/lib/modules/catalog/language-arts-601";
 import { LawCaseLawHoldingsU1ExternalModule } from "@/lib/modules/catalog/law-case-law-holdings-u1-external";
 import { LawInternationalLawU1ExternalModule } from "@/lib/modules/catalog/law-international-law-u1-external";
 import { LawJurisprudenceU1ExternalModule } from "@/lib/modules/catalog/law-jurisprudence-u1-external";
 import { LawProfessionalLawU1ExternalModule } from "@/lib/modules/catalog/law-professional-law-u1-external";
-import { LawStudies101Module } from "@/lib/modules/catalog/law-studies-101";
-import { LawStudies201Module } from "@/lib/modules/catalog/law-studies-201";
-import { LawStudies301Module } from "@/lib/modules/catalog/law-studies-301";
-import { LawStudies401Module } from "@/lib/modules/catalog/law-studies-401";
-import { LawStudies501Module } from "@/lib/modules/catalog/law-studies-501";
-import { LawStudies601Module } from "@/lib/modules/catalog/law-studies-601";
-import { Leadership101Module } from "@/lib/modules/catalog/leadership-101";
-import { Leadership201Module } from "@/lib/modules/catalog/leadership-201";
-import { Leadership301Module } from "@/lib/modules/catalog/leadership-301";
-import { Leadership401Module } from "@/lib/modules/catalog/leadership-401";
-import { Leadership501Module } from "@/lib/modules/catalog/leadership-501";
-import { Leadership601Module } from "@/lib/modules/catalog/leadership-601";
-import { Linux101Module } from "@/lib/modules/catalog/linux-101";
-import { Linux201Module } from "@/lib/modules/catalog/linux-201";
-import { Linux301Module } from "@/lib/modules/catalog/linux-301";
-import { Linux401Module } from "@/lib/modules/catalog/linux-401";
-import { Linux501Module } from "@/lib/modules/catalog/linux-501";
-import { Linux601Module } from "@/lib/modules/catalog/linux-601";
-import { Macos101Module } from "@/lib/modules/catalog/macos-101";
-import { Macos201Module } from "@/lib/modules/catalog/macos-201";
-import { Macos301Module } from "@/lib/modules/catalog/macos-301";
-import { Macos401Module } from "@/lib/modules/catalog/macos-401";
-import { Macos501Module } from "@/lib/modules/catalog/macos-501";
-import { Macos601Module } from "@/lib/modules/catalog/macos-601";
-import { MarketingManagement101Module } from "@/lib/modules/catalog/marketing-management-101";
-import { MarketingManagement201Module } from "@/lib/modules/catalog/marketing-management-201";
-import { MarketingManagement301Module } from "@/lib/modules/catalog/marketing-management-301";
-import { MarketingManagement401Module } from "@/lib/modules/catalog/marketing-management-401";
-import { MarketingManagement501Module } from "@/lib/modules/catalog/marketing-management-501";
-import { MarketingManagement601Module } from "@/lib/modules/catalog/marketing-management-601";
+import { law_studies_101_Module } from "@/lib/modules/catalog/law-studies-101";
+import { law_studies_201_Module } from "@/lib/modules/catalog/law-studies-201";
+import { law_studies_301_Module } from "@/lib/modules/catalog/law-studies-301";
+import { law_studies_401_Module } from "@/lib/modules/catalog/law-studies-401";
+import { law_studies_501_Module } from "@/lib/modules/catalog/law-studies-501";
+import { law_studies_601_Module } from "@/lib/modules/catalog/law-studies-601";
+import { leadership_101_Module } from "@/lib/modules/catalog/leadership-101";
+import { leadership_201_Module } from "@/lib/modules/catalog/leadership-201";
+import { leadership_301_Module } from "@/lib/modules/catalog/leadership-301";
+import { leadership_401_Module } from "@/lib/modules/catalog/leadership-401";
+import { leadership_501_Module } from "@/lib/modules/catalog/leadership-501";
+import { leadership_601_Module } from "@/lib/modules/catalog/leadership-601";
+import { linux_101_Module } from "@/lib/modules/catalog/linux-101";
+import { linux_201_Module } from "@/lib/modules/catalog/linux-201";
+import { linux_301_Module } from "@/lib/modules/catalog/linux-301";
+import { linux_401_Module } from "@/lib/modules/catalog/linux-401";
+import { linux_501_Module } from "@/lib/modules/catalog/linux-501";
+import { linux_601_Module } from "@/lib/modules/catalog/linux-601";
+import { macos_101_Module } from "@/lib/modules/catalog/macos-101";
+import { macos_201_Module } from "@/lib/modules/catalog/macos-201";
+import { macos_301_Module } from "@/lib/modules/catalog/macos-301";
+import { macos_401_Module } from "@/lib/modules/catalog/macos-401";
+import { macos_501_Module } from "@/lib/modules/catalog/macos-501";
+import { macos_601_Module } from "@/lib/modules/catalog/macos-601";
+import { marketing_management_101_Module } from "@/lib/modules/catalog/marketing-management-101";
+import { marketing_management_201_Module } from "@/lib/modules/catalog/marketing-management-201";
+import { marketing_management_301_Module } from "@/lib/modules/catalog/marketing-management-301";
+import { marketing_management_401_Module } from "@/lib/modules/catalog/marketing-management-401";
+import { marketing_management_501_Module } from "@/lib/modules/catalog/marketing-management-501";
+import { marketing_management_601_Module } from "@/lib/modules/catalog/marketing-management-601";
 import { MastersAbstractAlgebraU1ExternalModule } from "@/lib/modules/catalog/masters-abstract-algebra-u1-external";
 import { MastersAnatomyU1ExternalModule } from "@/lib/modules/catalog/masters-anatomy-u1-external";
 import { MastersAstronomyU1ExternalModule } from "@/lib/modules/catalog/masters-astronomy-u1-external";
@@ -520,12 +529,12 @@ import { MastersUsHistoryU1ExternalModule } from "@/lib/modules/catalog/masters-
 import { MastersVirologyU1ExternalModule } from "@/lib/modules/catalog/masters-virology-u1-external";
 import { MastersWorldHistoryMmluU1ExternalModule } from "@/lib/modules/catalog/masters-world-history-mmlu-u1-external";
 import { MastersWorldReligionsU1ExternalModule } from "@/lib/modules/catalog/masters-world-religions-u1-external";
-import { math101Module } from "@/lib/modules/catalog/math-101";
-import { Math201Module } from "@/lib/modules/catalog/math-201";
-import { Math301Module } from "@/lib/modules/catalog/math-301";
-import { Math401Module } from "@/lib/modules/catalog/math-401";
-import { Math501Module } from "@/lib/modules/catalog/math-501";
-import { Math601Module } from "@/lib/modules/catalog/math-601";
+import { math_101_Module } from "@/lib/modules/catalog/math-101";
+import { math_201_Module } from "@/lib/modules/catalog/math-201";
+import { math_301_Module } from "@/lib/modules/catalog/math-301";
+import { math_401_Module } from "@/lib/modules/catalog/math-401";
+import { math_501_Module } from "@/lib/modules/catalog/math-501";
+import { math_601_Module } from "@/lib/modules/catalog/math-601";
 import { MbaBusinessAdvancedU1ExternalModule } from "@/lib/modules/catalog/mba-business-advanced-u1-external";
 import { MbaBusinessCaseStudiesU1ExternalModule } from "@/lib/modules/catalog/mba-business-case-studies-u1-external";
 import { MbaBusinessEthicsU1ExternalModule } from "@/lib/modules/catalog/mba-business-ethics-u1-external";
@@ -535,18 +544,18 @@ import { MbaManagementU1ExternalModule } from "@/lib/modules/catalog/mba-managem
 import { MbaMarketingU1ExternalModule } from "@/lib/modules/catalog/mba-marketing-u1-external";
 import { MbaMicroeconomicsU1ExternalModule } from "@/lib/modules/catalog/mba-microeconomics-u1-external";
 import { MbaProfessionalAccountingU1ExternalModule } from "@/lib/modules/catalog/mba-professional-accounting-u1-external";
-import { MediaLiteracy101Module } from "@/lib/modules/catalog/media-literacy-101";
-import { MediaLiteracy201Module } from "@/lib/modules/catalog/media-literacy-201";
-import { MediaLiteracy301Module } from "@/lib/modules/catalog/media-literacy-301";
-import { MediaLiteracy401Module } from "@/lib/modules/catalog/media-literacy-401";
-import { MediaLiteracy501Module } from "@/lib/modules/catalog/media-literacy-501";
-import { MediaLiteracy601Module } from "@/lib/modules/catalog/media-literacy-601";
-import { Medicine101Module } from "@/lib/modules/catalog/medicine-101";
-import { Medicine201Module } from "@/lib/modules/catalog/medicine-201";
-import { Medicine301Module } from "@/lib/modules/catalog/medicine-301";
-import { Medicine401Module } from "@/lib/modules/catalog/medicine-401";
-import { Medicine501Module } from "@/lib/modules/catalog/medicine-501";
-import { Medicine601Module } from "@/lib/modules/catalog/medicine-601";
+import { media_literacy_101_Module } from "@/lib/modules/catalog/media-literacy-101";
+import { media_literacy_201_Module } from "@/lib/modules/catalog/media-literacy-201";
+import { media_literacy_301_Module } from "@/lib/modules/catalog/media-literacy-301";
+import { media_literacy_401_Module } from "@/lib/modules/catalog/media-literacy-401";
+import { media_literacy_501_Module } from "@/lib/modules/catalog/media-literacy-501";
+import { media_literacy_601_Module } from "@/lib/modules/catalog/media-literacy-601";
+import { medicine_101_Module } from "@/lib/modules/catalog/medicine-101";
+import { medicine_201_Module } from "@/lib/modules/catalog/medicine-201";
+import { medicine_301_Module } from "@/lib/modules/catalog/medicine-301";
+import { medicine_401_Module } from "@/lib/modules/catalog/medicine-401";
+import { medicine_501_Module } from "@/lib/modules/catalog/medicine-501";
+import { medicine_601_Module } from "@/lib/modules/catalog/medicine-601";
 import { MedicineAnatomyPhysiologyU1ExternalModule } from "@/lib/modules/catalog/medicine-anatomy-physiology-u1-external";
 import { MedicineAnesthesiaU1ExternalModule } from "@/lib/modules/catalog/medicine-anesthesia-u1-external";
 import { MedicineBiochemistryU1ExternalModule } from "@/lib/modules/catalog/medicine-biochemistry-u1-external";
@@ -577,228 +586,228 @@ import { MedicineRadiologyU1ExternalModule } from "@/lib/modules/catalog/medicin
 import { MedicineRareDiseasesU1ExternalModule } from "@/lib/modules/catalog/medicine-rare-diseases-u1-external";
 import { MedicineSurgeryU1ExternalModule } from "@/lib/modules/catalog/medicine-surgery-u1-external";
 import { MedicineUsmlePrepU1ExternalModule } from "@/lib/modules/catalog/medicine-usmle-prep-u1-external";
-import { MentalHealthLiteracy101Module } from "@/lib/modules/catalog/mental-health-literacy-101";
-import { MentalHealthLiteracy201Module } from "@/lib/modules/catalog/mental-health-literacy-201";
-import { MentalHealthLiteracy301Module } from "@/lib/modules/catalog/mental-health-literacy-301";
-import { MentalHealthLiteracy401Module } from "@/lib/modules/catalog/mental-health-literacy-401";
-import { MentalHealthLiteracy501Module } from "@/lib/modules/catalog/mental-health-literacy-501";
-import { MentalHealthLiteracy601Module } from "@/lib/modules/catalog/mental-health-literacy-601";
-import { Meteorology101Module } from "@/lib/modules/catalog/meteorology-101";
-import { Meteorology201Module } from "@/lib/modules/catalog/meteorology-201";
-import { Meteorology301Module } from "@/lib/modules/catalog/meteorology-301";
-import { Meteorology401Module } from "@/lib/modules/catalog/meteorology-401";
-import { Meteorology501Module } from "@/lib/modules/catalog/meteorology-501";
-import { Meteorology601Module } from "@/lib/modules/catalog/meteorology-601";
-import { MicroCircuits101Module } from "@/lib/modules/catalog/micro-circuits-101";
-import { MicroCircuits201Module } from "@/lib/modules/catalog/micro-circuits-201";
-import { MicroCircuits301Module } from "@/lib/modules/catalog/micro-circuits-301";
-import { MicroCircuits401Module } from "@/lib/modules/catalog/micro-circuits-401";
-import { MicroCircuits501Module } from "@/lib/modules/catalog/micro-circuits-501";
-import { MicroCircuits601Module } from "@/lib/modules/catalog/micro-circuits-601";
-import { Microelectronics101Module } from "@/lib/modules/catalog/microelectronics-101";
-import { Microelectronics201Module } from "@/lib/modules/catalog/microelectronics-201";
-import { Microelectronics301Module } from "@/lib/modules/catalog/microelectronics-301";
-import { Microelectronics401Module } from "@/lib/modules/catalog/microelectronics-401";
-import { Microelectronics501Module } from "@/lib/modules/catalog/microelectronics-501";
-import { Microelectronics601Module } from "@/lib/modules/catalog/microelectronics-601";
-import { MusicHistory101Module } from "@/lib/modules/catalog/music-history-101";
-import { MusicHistory201Module } from "@/lib/modules/catalog/music-history-201";
-import { MusicHistory301Module } from "@/lib/modules/catalog/music-history-301";
-import { MusicHistory401Module } from "@/lib/modules/catalog/music-history-401";
-import { MusicHistory501Module } from "@/lib/modules/catalog/music-history-501";
-import { MusicHistory601Module } from "@/lib/modules/catalog/music-history-601";
-import { MusicProduction101Module } from "@/lib/modules/catalog/music-production-101";
-import { MusicProduction201Module } from "@/lib/modules/catalog/music-production-201";
-import { MusicProduction301Module } from "@/lib/modules/catalog/music-production-301";
-import { MusicProduction401Module } from "@/lib/modules/catalog/music-production-401";
-import { MusicProduction501Module } from "@/lib/modules/catalog/music-production-501";
-import { MusicProduction601Module } from "@/lib/modules/catalog/music-production-601";
-import { MusicTheory101Module } from "@/lib/modules/catalog/music-theory-101";
-import { MusicTheory201Module } from "@/lib/modules/catalog/music-theory-201";
-import { MusicTheory301Module } from "@/lib/modules/catalog/music-theory-301";
-import { MusicTheory401Module } from "@/lib/modules/catalog/music-theory-401";
-import { MusicTheory501Module } from "@/lib/modules/catalog/music-theory-501";
-import { MusicTheory601Module } from "@/lib/modules/catalog/music-theory-601";
-import { NegotiationConflictResolution101Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-101";
-import { NegotiationConflictResolution201Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-201";
-import { NegotiationConflictResolution301Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-301";
-import { NegotiationConflictResolution401Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-401";
-import { NegotiationConflictResolution501Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-501";
-import { NegotiationConflictResolution601Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-601";
-import { NetworkEngineering101Module } from "@/lib/modules/catalog/network-engineering-101";
-import { NetworkEngineering201Module } from "@/lib/modules/catalog/network-engineering-201";
-import { NetworkEngineering301Module } from "@/lib/modules/catalog/network-engineering-301";
-import { NetworkEngineering401Module } from "@/lib/modules/catalog/network-engineering-401";
-import { NetworkEngineering501Module } from "@/lib/modules/catalog/network-engineering-501";
-import { NetworkEngineering601Module } from "@/lib/modules/catalog/network-engineering-601";
-import { Neuroscience101Module } from "@/lib/modules/catalog/neuroscience-101";
-import { Neuroscience201Module } from "@/lib/modules/catalog/neuroscience-201";
-import { Neuroscience301Module } from "@/lib/modules/catalog/neuroscience-301";
-import { Neuroscience401Module } from "@/lib/modules/catalog/neuroscience-401";
-import { Neuroscience501Module } from "@/lib/modules/catalog/neuroscience-501";
-import { Neuroscience601Module } from "@/lib/modules/catalog/neuroscience-601";
-import { Nursing101Module } from "@/lib/modules/catalog/nursing-101";
-import { Nursing201Module } from "@/lib/modules/catalog/nursing-201";
-import { Nursing301Module } from "@/lib/modules/catalog/nursing-301";
-import { Nursing401Module } from "@/lib/modules/catalog/nursing-401";
-import { Nursing501Module } from "@/lib/modules/catalog/nursing-501";
-import { Nursing601Module } from "@/lib/modules/catalog/nursing-601";
-import { NutritionScience101Module } from "@/lib/modules/catalog/nutrition-science-101";
-import { NutritionScience201Module } from "@/lib/modules/catalog/nutrition-science-201";
-import { NutritionScience301Module } from "@/lib/modules/catalog/nutrition-science-301";
-import { NutritionScience401Module } from "@/lib/modules/catalog/nutrition-science-401";
-import { NutritionScience501Module } from "@/lib/modules/catalog/nutrition-science-501";
-import { NutritionScience601Module } from "@/lib/modules/catalog/nutrition-science-601";
-import { Oceanography101Module } from "@/lib/modules/catalog/oceanography-101";
-import { Oceanography201Module } from "@/lib/modules/catalog/oceanography-201";
-import { Oceanography301Module } from "@/lib/modules/catalog/oceanography-301";
-import { Oceanography401Module } from "@/lib/modules/catalog/oceanography-401";
-import { Oceanography501Module } from "@/lib/modules/catalog/oceanography-501";
-import { Oceanography601Module } from "@/lib/modules/catalog/oceanography-601";
-import { OperationsManagement101Module } from "@/lib/modules/catalog/operations-management-101";
-import { OperationsManagement201Module } from "@/lib/modules/catalog/operations-management-201";
-import { OperationsManagement301Module } from "@/lib/modules/catalog/operations-management-301";
-import { OperationsManagement401Module } from "@/lib/modules/catalog/operations-management-401";
-import { OperationsManagement501Module } from "@/lib/modules/catalog/operations-management-501";
-import { OperationsManagement601Module } from "@/lib/modules/catalog/operations-management-601";
-import { OrganizationalBehavior101Module } from "@/lib/modules/catalog/organizational-behavior-101";
-import { OrganizationalBehavior201Module } from "@/lib/modules/catalog/organizational-behavior-201";
-import { OrganizationalBehavior301Module } from "@/lib/modules/catalog/organizational-behavior-301";
-import { OrganizationalBehavior401Module } from "@/lib/modules/catalog/organizational-behavior-401";
-import { OrganizationalBehavior501Module } from "@/lib/modules/catalog/organizational-behavior-501";
-import { OrganizationalBehavior601Module } from "@/lib/modules/catalog/organizational-behavior-601";
-import { Philosophy101Module } from "@/lib/modules/catalog/philosophy-101";
-import { Philosophy201Module } from "@/lib/modules/catalog/philosophy-201";
-import { Philosophy301Module } from "@/lib/modules/catalog/philosophy-301";
-import { Philosophy401Module } from "@/lib/modules/catalog/philosophy-401";
-import { Philosophy501Module } from "@/lib/modules/catalog/philosophy-501";
-import { Philosophy601Module } from "@/lib/modules/catalog/philosophy-601";
-import { Physics101Module } from "@/lib/modules/catalog/physics-101";
+import { mental_health_literacy_101_Module } from "@/lib/modules/catalog/mental-health-literacy-101";
+import { mental_health_literacy_201_Module } from "@/lib/modules/catalog/mental-health-literacy-201";
+import { mental_health_literacy_301_Module } from "@/lib/modules/catalog/mental-health-literacy-301";
+import { mental_health_literacy_401_Module } from "@/lib/modules/catalog/mental-health-literacy-401";
+import { mental_health_literacy_501_Module } from "@/lib/modules/catalog/mental-health-literacy-501";
+import { mental_health_literacy_601_Module } from "@/lib/modules/catalog/mental-health-literacy-601";
+import { meteorology_101_Module } from "@/lib/modules/catalog/meteorology-101";
+import { meteorology_201_Module } from "@/lib/modules/catalog/meteorology-201";
+import { meteorology_301_Module } from "@/lib/modules/catalog/meteorology-301";
+import { meteorology_401_Module } from "@/lib/modules/catalog/meteorology-401";
+import { meteorology_501_Module } from "@/lib/modules/catalog/meteorology-501";
+import { meteorology_601_Module } from "@/lib/modules/catalog/meteorology-601";
+import { micro_circuits_101_Module } from "@/lib/modules/catalog/micro-circuits-101";
+import { micro_circuits_201_Module } from "@/lib/modules/catalog/micro-circuits-201";
+import { micro_circuits_301_Module } from "@/lib/modules/catalog/micro-circuits-301";
+import { micro_circuits_401_Module } from "@/lib/modules/catalog/micro-circuits-401";
+import { micro_circuits_501_Module } from "@/lib/modules/catalog/micro-circuits-501";
+import { micro_circuits_601_Module } from "@/lib/modules/catalog/micro-circuits-601";
+import { microelectronics_101_Module } from "@/lib/modules/catalog/microelectronics-101";
+import { microelectronics_201_Module } from "@/lib/modules/catalog/microelectronics-201";
+import { microelectronics_301_Module } from "@/lib/modules/catalog/microelectronics-301";
+import { microelectronics_401_Module } from "@/lib/modules/catalog/microelectronics-401";
+import { microelectronics_501_Module } from "@/lib/modules/catalog/microelectronics-501";
+import { microelectronics_601_Module } from "@/lib/modules/catalog/microelectronics-601";
+import { music_history_101_Module } from "@/lib/modules/catalog/music-history-101";
+import { music_history_201_Module } from "@/lib/modules/catalog/music-history-201";
+import { music_history_301_Module } from "@/lib/modules/catalog/music-history-301";
+import { music_history_401_Module } from "@/lib/modules/catalog/music-history-401";
+import { music_history_501_Module } from "@/lib/modules/catalog/music-history-501";
+import { music_history_601_Module } from "@/lib/modules/catalog/music-history-601";
+import { music_production_101_Module } from "@/lib/modules/catalog/music-production-101";
+import { music_production_201_Module } from "@/lib/modules/catalog/music-production-201";
+import { music_production_301_Module } from "@/lib/modules/catalog/music-production-301";
+import { music_production_401_Module } from "@/lib/modules/catalog/music-production-401";
+import { music_production_501_Module } from "@/lib/modules/catalog/music-production-501";
+import { music_production_601_Module } from "@/lib/modules/catalog/music-production-601";
+import { music_theory_101_Module } from "@/lib/modules/catalog/music-theory-101";
+import { music_theory_201_Module } from "@/lib/modules/catalog/music-theory-201";
+import { music_theory_301_Module } from "@/lib/modules/catalog/music-theory-301";
+import { music_theory_401_Module } from "@/lib/modules/catalog/music-theory-401";
+import { music_theory_501_Module } from "@/lib/modules/catalog/music-theory-501";
+import { music_theory_601_Module } from "@/lib/modules/catalog/music-theory-601";
+import { negotiation_conflict_resolution_101_Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-101";
+import { negotiation_conflict_resolution_201_Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-201";
+import { negotiation_conflict_resolution_301_Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-301";
+import { negotiation_conflict_resolution_401_Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-401";
+import { negotiation_conflict_resolution_501_Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-501";
+import { negotiation_conflict_resolution_601_Module } from "@/lib/modules/catalog/negotiation-conflict-resolution-601";
+import { network_engineering_101_Module } from "@/lib/modules/catalog/network-engineering-101";
+import { network_engineering_201_Module } from "@/lib/modules/catalog/network-engineering-201";
+import { network_engineering_301_Module } from "@/lib/modules/catalog/network-engineering-301";
+import { network_engineering_401_Module } from "@/lib/modules/catalog/network-engineering-401";
+import { network_engineering_501_Module } from "@/lib/modules/catalog/network-engineering-501";
+import { network_engineering_601_Module } from "@/lib/modules/catalog/network-engineering-601";
+import { neuroscience_101_Module } from "@/lib/modules/catalog/neuroscience-101";
+import { neuroscience_201_Module } from "@/lib/modules/catalog/neuroscience-201";
+import { neuroscience_301_Module } from "@/lib/modules/catalog/neuroscience-301";
+import { neuroscience_401_Module } from "@/lib/modules/catalog/neuroscience-401";
+import { neuroscience_501_Module } from "@/lib/modules/catalog/neuroscience-501";
+import { neuroscience_601_Module } from "@/lib/modules/catalog/neuroscience-601";
+import { nursing_101_Module } from "@/lib/modules/catalog/nursing-101";
+import { nursing_201_Module } from "@/lib/modules/catalog/nursing-201";
+import { nursing_301_Module } from "@/lib/modules/catalog/nursing-301";
+import { nursing_401_Module } from "@/lib/modules/catalog/nursing-401";
+import { nursing_501_Module } from "@/lib/modules/catalog/nursing-501";
+import { nursing_601_Module } from "@/lib/modules/catalog/nursing-601";
+import { nutrition_science_101_Module } from "@/lib/modules/catalog/nutrition-science-101";
+import { nutrition_science_201_Module } from "@/lib/modules/catalog/nutrition-science-201";
+import { nutrition_science_301_Module } from "@/lib/modules/catalog/nutrition-science-301";
+import { nutrition_science_401_Module } from "@/lib/modules/catalog/nutrition-science-401";
+import { nutrition_science_501_Module } from "@/lib/modules/catalog/nutrition-science-501";
+import { nutrition_science_601_Module } from "@/lib/modules/catalog/nutrition-science-601";
+import { oceanography_101_Module } from "@/lib/modules/catalog/oceanography-101";
+import { oceanography_201_Module } from "@/lib/modules/catalog/oceanography-201";
+import { oceanography_301_Module } from "@/lib/modules/catalog/oceanography-301";
+import { oceanography_401_Module } from "@/lib/modules/catalog/oceanography-401";
+import { oceanography_501_Module } from "@/lib/modules/catalog/oceanography-501";
+import { oceanography_601_Module } from "@/lib/modules/catalog/oceanography-601";
+import { operations_management_101_Module } from "@/lib/modules/catalog/operations-management-101";
+import { operations_management_201_Module } from "@/lib/modules/catalog/operations-management-201";
+import { operations_management_301_Module } from "@/lib/modules/catalog/operations-management-301";
+import { operations_management_401_Module } from "@/lib/modules/catalog/operations-management-401";
+import { operations_management_501_Module } from "@/lib/modules/catalog/operations-management-501";
+import { operations_management_601_Module } from "@/lib/modules/catalog/operations-management-601";
+import { organizational_behavior_101_Module } from "@/lib/modules/catalog/organizational-behavior-101";
+import { organizational_behavior_201_Module } from "@/lib/modules/catalog/organizational-behavior-201";
+import { organizational_behavior_301_Module } from "@/lib/modules/catalog/organizational-behavior-301";
+import { organizational_behavior_401_Module } from "@/lib/modules/catalog/organizational-behavior-401";
+import { organizational_behavior_501_Module } from "@/lib/modules/catalog/organizational-behavior-501";
+import { organizational_behavior_601_Module } from "@/lib/modules/catalog/organizational-behavior-601";
+import { philosophy_101_Module } from "@/lib/modules/catalog/philosophy-101";
+import { philosophy_201_Module } from "@/lib/modules/catalog/philosophy-201";
+import { philosophy_301_Module } from "@/lib/modules/catalog/philosophy-301";
+import { philosophy_401_Module } from "@/lib/modules/catalog/philosophy-401";
+import { philosophy_501_Module } from "@/lib/modules/catalog/philosophy-501";
+import { philosophy_601_Module } from "@/lib/modules/catalog/philosophy-601";
+import { physics_101_Module } from "@/lib/modules/catalog/physics-101";
 import { Physics201Module } from "@/lib/modules/catalog/physics-201";
 import { Physics301Module } from "@/lib/modules/catalog/physics-301";
 import { Physics401Module } from "@/lib/modules/catalog/physics-401";
-import { Physics501Module } from "@/lib/modules/catalog/physics-501";
-import { Physics601Module } from "@/lib/modules/catalog/physics-601";
-import { Plumbing101Module } from "@/lib/modules/catalog/plumbing-101";
-import { Plumbing201Module } from "@/lib/modules/catalog/plumbing-201";
-import { Plumbing301Module } from "@/lib/modules/catalog/plumbing-301";
-import { Plumbing401Module } from "@/lib/modules/catalog/plumbing-401";
-import { Plumbing501Module } from "@/lib/modules/catalog/plumbing-501";
-import { Plumbing601Module } from "@/lib/modules/catalog/plumbing-601";
-import { PreKAdvancedMath101Module } from "@/lib/modules/catalog/pre-k-advanced-math-101";
-import { PreKArts101Module } from "@/lib/modules/catalog/pre-k-arts-101";
-import { PreKAstronomy101Module } from "@/lib/modules/catalog/pre-k-astronomy-101";
-import { PreKBasicMath101Module } from "@/lib/modules/catalog/pre-k-basic-math-101";
-import { PreKBiology101Module } from "@/lib/modules/catalog/pre-k-biology-101";
-import { PreKChemistry101Module } from "@/lib/modules/catalog/pre-k-chemistry-101";
-import { PreKCoding101Module } from "@/lib/modules/catalog/pre-k-coding-101";
-import { PreKFarming101Module } from "@/lib/modules/catalog/pre-k-farming-101";
-import { PreKFinancialLiteracy101Module } from "@/lib/modules/catalog/pre-k-financial-literacy-101";
-import { PreKGeneralRelativity101Module } from "@/lib/modules/catalog/pre-k-general-relativity-101";
-import { PreKGeneralScience101Module } from "@/lib/modules/catalog/pre-k-general-science-101";
-import { PreKGeography101Module } from "@/lib/modules/catalog/pre-k-geography-101";
-import { PreKHouseholdManagement101Module } from "@/lib/modules/catalog/pre-k-household-management-101";
-import { PreKLanguageArts101Module } from "@/lib/modules/catalog/pre-k-language-arts-101";
-import { PreKPhysics101Module } from "@/lib/modules/catalog/pre-k-physics-101";
-import { PreKSocialStudiesUs101Module } from "@/lib/modules/catalog/pre-k-social-studies-us-101";
-import { PreKSocialStudiesWorld101Module } from "@/lib/modules/catalog/pre-k-social-studies-world-101";
-import { PreKWorldHistory101Module } from "@/lib/modules/catalog/pre-k-world-history-101";
-import { ProjectManagement101Module } from "@/lib/modules/catalog/project-management-101";
-import { ProjectManagement201Module } from "@/lib/modules/catalog/project-management-201";
-import { ProjectManagement301Module } from "@/lib/modules/catalog/project-management-301";
-import { ProjectManagement401Module } from "@/lib/modules/catalog/project-management-401";
-import { ProjectManagement501Module } from "@/lib/modules/catalog/project-management-501";
-import { ProjectManagement601Module } from "@/lib/modules/catalog/project-management-601";
-import { Psychology101Module } from "@/lib/modules/catalog/psychology-101";
-import { Psychology201Module } from "@/lib/modules/catalog/psychology-201";
-import { Psychology301Module } from "@/lib/modules/catalog/psychology-301";
-import { Psychology401Module } from "@/lib/modules/catalog/psychology-401";
-import { Psychology501Module } from "@/lib/modules/catalog/psychology-501";
-import { Psychology601Module } from "@/lib/modules/catalog/psychology-601";
-import { PublicHealth101Module } from "@/lib/modules/catalog/public-health-101";
-import { PublicHealth201Module } from "@/lib/modules/catalog/public-health-201";
-import { PublicHealth301Module } from "@/lib/modules/catalog/public-health-301";
-import { PublicHealth401Module } from "@/lib/modules/catalog/public-health-401";
-import { PublicHealth501Module } from "@/lib/modules/catalog/public-health-501";
-import { PublicHealth601Module } from "@/lib/modules/catalog/public-health-601";
-import { QuantumComputing101Module } from "@/lib/modules/catalog/quantum-computing-101";
-import { QuantumComputing201Module } from "@/lib/modules/catalog/quantum-computing-201";
-import { QuantumComputing301Module } from "@/lib/modules/catalog/quantum-computing-301";
-import { QuantumComputing401Module } from "@/lib/modules/catalog/quantum-computing-401";
-import { QuantumComputing501Module } from "@/lib/modules/catalog/quantum-computing-501";
-import { QuantumComputing601Module } from "@/lib/modules/catalog/quantum-computing-601";
-import { Reading101Module } from "@/lib/modules/catalog/reading-101";
-import { Reading201Module } from "@/lib/modules/catalog/reading-201";
-import { Reading301Module } from "@/lib/modules/catalog/reading-301";
-import { Reading401Module } from "@/lib/modules/catalog/reading-401";
-import { Reading501Module } from "@/lib/modules/catalog/reading-501";
-import { Reading601Module } from "@/lib/modules/catalog/reading-601";
-import { RenewableEnergySystems101Module } from "@/lib/modules/catalog/renewable-energy-systems-101";
-import { RenewableEnergySystems201Module } from "@/lib/modules/catalog/renewable-energy-systems-201";
-import { RenewableEnergySystems301Module } from "@/lib/modules/catalog/renewable-energy-systems-301";
-import { RenewableEnergySystems401Module } from "@/lib/modules/catalog/renewable-energy-systems-401";
-import { RenewableEnergySystems501Module } from "@/lib/modules/catalog/renewable-energy-systems-501";
-import { RenewableEnergySystems601Module } from "@/lib/modules/catalog/renewable-energy-systems-601";
-import { Robotics101Module } from "@/lib/modules/catalog/robotics-101";
-import { Robotics201Module } from "@/lib/modules/catalog/robotics-201";
-import { Robotics301Module } from "@/lib/modules/catalog/robotics-301";
-import { Robotics401Module } from "@/lib/modules/catalog/robotics-401";
-import { Robotics501Module } from "@/lib/modules/catalog/robotics-501";
-import { Robotics601Module } from "@/lib/modules/catalog/robotics-601";
-import { SatPrep101Module } from "@/lib/modules/catalog/sat-prep-101";
-import { science101Module } from "@/lib/modules/catalog/science-101";
-import { Science201Module } from "@/lib/modules/catalog/science-201";
-import { Science301Module } from "@/lib/modules/catalog/science-301";
-import { Science401Module } from "@/lib/modules/catalog/science-401";
-import { Science501Module } from "@/lib/modules/catalog/science-501";
-import { Science601Module } from "@/lib/modules/catalog/science-601";
-import { SocialStudiesUs101Module } from "@/lib/modules/catalog/social-studies-us-101";
+import { physics_501_Module } from "@/lib/modules/catalog/physics-501";
+import { physics_601_Module } from "@/lib/modules/catalog/physics-601";
+import { plumbing_101_Module } from "@/lib/modules/catalog/plumbing-101";
+import { plumbing_201_Module } from "@/lib/modules/catalog/plumbing-201";
+import { plumbing_301_Module } from "@/lib/modules/catalog/plumbing-301";
+import { plumbing_401_Module } from "@/lib/modules/catalog/plumbing-401";
+import { plumbing_501_Module } from "@/lib/modules/catalog/plumbing-501";
+import { plumbing_601_Module } from "@/lib/modules/catalog/plumbing-601";
+import { pre_k_advanced_math_101_Module } from "@/lib/modules/catalog/pre-k-advanced-math-101";
+import { pre_k_arts_101_Module } from "@/lib/modules/catalog/pre-k-arts-101";
+import { pre_k_astronomy_101_Module } from "@/lib/modules/catalog/pre-k-astronomy-101";
+import { pre_k_basic_math_101_Module } from "@/lib/modules/catalog/pre-k-basic-math-101";
+import { pre_k_biology_101_Module } from "@/lib/modules/catalog/pre-k-biology-101";
+import { pre_k_chemistry_101_Module } from "@/lib/modules/catalog/pre-k-chemistry-101";
+import { pre_k_coding_101_Module } from "@/lib/modules/catalog/pre-k-coding-101";
+import { pre_k_farming_101_Module } from "@/lib/modules/catalog/pre-k-farming-101";
+import { pre_k_financial_literacy_101_Module } from "@/lib/modules/catalog/pre-k-financial-literacy-101";
+import { pre_k_general_relativity_101_Module } from "@/lib/modules/catalog/pre-k-general-relativity-101";
+import { pre_k_general_science_101_Module } from "@/lib/modules/catalog/pre-k-general-science-101";
+import { pre_k_geography_101_Module } from "@/lib/modules/catalog/pre-k-geography-101";
+import { pre_k_household_management_101_Module } from "@/lib/modules/catalog/pre-k-household-management-101";
+import { pre_k_language_arts_101_Module } from "@/lib/modules/catalog/pre-k-language-arts-101";
+import { pre_k_physics_101_Module } from "@/lib/modules/catalog/pre-k-physics-101";
+import { pre_k_social_studies_us_101_Module } from "@/lib/modules/catalog/pre-k-social-studies-us-101";
+import { pre_k_social_studies_world_101_Module } from "@/lib/modules/catalog/pre-k-social-studies-world-101";
+import { pre_k_world_history_101_Module } from "@/lib/modules/catalog/pre-k-world-history-101";
+import { project_management_101_Module } from "@/lib/modules/catalog/project-management-101";
+import { project_management_201_Module } from "@/lib/modules/catalog/project-management-201";
+import { project_management_301_Module } from "@/lib/modules/catalog/project-management-301";
+import { project_management_401_Module } from "@/lib/modules/catalog/project-management-401";
+import { project_management_501_Module } from "@/lib/modules/catalog/project-management-501";
+import { project_management_601_Module } from "@/lib/modules/catalog/project-management-601";
+import { psychology_101_Module } from "@/lib/modules/catalog/psychology-101";
+import { psychology_201_Module } from "@/lib/modules/catalog/psychology-201";
+import { psychology_301_Module } from "@/lib/modules/catalog/psychology-301";
+import { psychology_401_Module } from "@/lib/modules/catalog/psychology-401";
+import { psychology_501_Module } from "@/lib/modules/catalog/psychology-501";
+import { psychology_601_Module } from "@/lib/modules/catalog/psychology-601";
+import { public_health_101_Module } from "@/lib/modules/catalog/public-health-101";
+import { public_health_201_Module } from "@/lib/modules/catalog/public-health-201";
+import { public_health_301_Module } from "@/lib/modules/catalog/public-health-301";
+import { public_health_401_Module } from "@/lib/modules/catalog/public-health-401";
+import { public_health_501_Module } from "@/lib/modules/catalog/public-health-501";
+import { public_health_601_Module } from "@/lib/modules/catalog/public-health-601";
+import { quantum_computing_101_Module } from "@/lib/modules/catalog/quantum-computing-101";
+import { quantum_computing_201_Module } from "@/lib/modules/catalog/quantum-computing-201";
+import { quantum_computing_301_Module } from "@/lib/modules/catalog/quantum-computing-301";
+import { quantum_computing_401_Module } from "@/lib/modules/catalog/quantum-computing-401";
+import { quantum_computing_501_Module } from "@/lib/modules/catalog/quantum-computing-501";
+import { quantum_computing_601_Module } from "@/lib/modules/catalog/quantum-computing-601";
+import { reading_101_Module } from "@/lib/modules/catalog/reading-101";
+import { reading_201_Module } from "@/lib/modules/catalog/reading-201";
+import { reading_301_Module } from "@/lib/modules/catalog/reading-301";
+import { reading_401_Module } from "@/lib/modules/catalog/reading-401";
+import { reading_501_Module } from "@/lib/modules/catalog/reading-501";
+import { reading_601_Module } from "@/lib/modules/catalog/reading-601";
+import { renewable_energy_systems_101_Module } from "@/lib/modules/catalog/renewable-energy-systems-101";
+import { renewable_energy_systems_201_Module } from "@/lib/modules/catalog/renewable-energy-systems-201";
+import { renewable_energy_systems_301_Module } from "@/lib/modules/catalog/renewable-energy-systems-301";
+import { renewable_energy_systems_401_Module } from "@/lib/modules/catalog/renewable-energy-systems-401";
+import { renewable_energy_systems_501_Module } from "@/lib/modules/catalog/renewable-energy-systems-501";
+import { renewable_energy_systems_601_Module } from "@/lib/modules/catalog/renewable-energy-systems-601";
+import { robotics_101_Module } from "@/lib/modules/catalog/robotics-101";
+import { robotics_201_Module } from "@/lib/modules/catalog/robotics-201";
+import { robotics_301_Module } from "@/lib/modules/catalog/robotics-301";
+import { robotics_401_Module } from "@/lib/modules/catalog/robotics-401";
+import { robotics_501_Module } from "@/lib/modules/catalog/robotics-501";
+import { robotics_601_Module } from "@/lib/modules/catalog/robotics-601";
+import { sat_prep_101_Module } from "@/lib/modules/catalog/sat-prep-101";
+import { science_101_Module } from "@/lib/modules/catalog/science-101";
+import { science_201_Module } from "@/lib/modules/catalog/science-201";
+import { science_301_Module } from "@/lib/modules/catalog/science-301";
+import { science_401_Module } from "@/lib/modules/catalog/science-401";
+import { science_501_Module } from "@/lib/modules/catalog/science-501";
+import { science_601_Module } from "@/lib/modules/catalog/science-601";
+import { social_studies_us_101_Module } from "@/lib/modules/catalog/social-studies-us-101";
 import { SocialStudiesUs201Module } from "@/lib/modules/catalog/social-studies-us-201";
 import { SocialStudiesUs301Module } from "@/lib/modules/catalog/social-studies-us-301";
 import { SocialStudiesUs401Module } from "@/lib/modules/catalog/social-studies-us-401";
-import { SocialStudiesUs501Module } from "@/lib/modules/catalog/social-studies-us-501";
-import { SocialStudiesUs601Module } from "@/lib/modules/catalog/social-studies-us-601";
+import { social_studies_us_501_Module } from "@/lib/modules/catalog/social-studies-us-501";
+import { social_studies_us_601_Module } from "@/lib/modules/catalog/social-studies-us-601";
 import { SocialStudiesWorld101Module } from "@/lib/modules/catalog/social-studies-world-101";
 import { SocialStudiesWorld201Module } from "@/lib/modules/catalog/social-studies-world-201";
 import { SocialStudiesWorld301Module } from "@/lib/modules/catalog/social-studies-world-301";
 import { SocialStudiesWorld401Module } from "@/lib/modules/catalog/social-studies-world-401";
-import { SocialStudiesWorld501Module } from "@/lib/modules/catalog/social-studies-world-501";
-import { SocialStudiesWorld601Module } from "@/lib/modules/catalog/social-studies-world-601";
-import { SpaceMissionsEngineering101Module } from "@/lib/modules/catalog/space-missions-engineering-101";
-import { SpaceMissionsEngineering201Module } from "@/lib/modules/catalog/space-missions-engineering-201";
-import { SpaceMissionsEngineering301Module } from "@/lib/modules/catalog/space-missions-engineering-301";
-import { SpaceMissionsEngineering401Module } from "@/lib/modules/catalog/space-missions-engineering-401";
-import { SpaceMissionsEngineering501Module } from "@/lib/modules/catalog/space-missions-engineering-501";
-import { SpaceMissionsEngineering601Module } from "@/lib/modules/catalog/space-missions-engineering-601";
-import { SportsScience101Module } from "@/lib/modules/catalog/sports-science-101";
-import { SportsScience201Module } from "@/lib/modules/catalog/sports-science-201";
-import { SportsScience301Module } from "@/lib/modules/catalog/sports-science-301";
-import { SportsScience401Module } from "@/lib/modules/catalog/sports-science-401";
-import { SportsScience501Module } from "@/lib/modules/catalog/sports-science-501";
-import { SportsScience601Module } from "@/lib/modules/catalog/sports-science-601";
-import { StrategicManagement101Module } from "@/lib/modules/catalog/strategic-management-101";
-import { StrategicManagement201Module } from "@/lib/modules/catalog/strategic-management-201";
-import { StrategicManagement301Module } from "@/lib/modules/catalog/strategic-management-301";
-import { StrategicManagement401Module } from "@/lib/modules/catalog/strategic-management-401";
-import { StrategicManagement501Module } from "@/lib/modules/catalog/strategic-management-501";
-import { StrategicManagement601Module } from "@/lib/modules/catalog/strategic-management-601";
-import { SupplyChainManagement101Module } from "@/lib/modules/catalog/supply-chain-management-101";
-import { SupplyChainManagement201Module } from "@/lib/modules/catalog/supply-chain-management-201";
-import { SupplyChainManagement301Module } from "@/lib/modules/catalog/supply-chain-management-301";
-import { SupplyChainManagement401Module } from "@/lib/modules/catalog/supply-chain-management-401";
-import { SupplyChainManagement501Module } from "@/lib/modules/catalog/supply-chain-management-501";
-import { SupplyChainManagement601Module } from "@/lib/modules/catalog/supply-chain-management-601";
-import { SustainabilityPolicy101Module } from "@/lib/modules/catalog/sustainability-policy-101";
-import { SustainabilityPolicy201Module } from "@/lib/modules/catalog/sustainability-policy-201";
-import { SustainabilityPolicy301Module } from "@/lib/modules/catalog/sustainability-policy-301";
-import { SustainabilityPolicy401Module } from "@/lib/modules/catalog/sustainability-policy-401";
-import { SustainabilityPolicy501Module } from "@/lib/modules/catalog/sustainability-policy-501";
-import { SustainabilityPolicy601Module } from "@/lib/modules/catalog/sustainability-policy-601";
-import { ToeflPrep101Module } from "@/lib/modules/catalog/toefl-prep-101";
-import { UsCivics101Module } from "@/lib/modules/catalog/us-civics-101";
+import { social_studies_world_501_Module } from "@/lib/modules/catalog/social-studies-world-501";
+import { social_studies_world_601_Module } from "@/lib/modules/catalog/social-studies-world-601";
+import { space_missions_engineering_101_Module } from "@/lib/modules/catalog/space-missions-engineering-101";
+import { space_missions_engineering_201_Module } from "@/lib/modules/catalog/space-missions-engineering-201";
+import { space_missions_engineering_301_Module } from "@/lib/modules/catalog/space-missions-engineering-301";
+import { space_missions_engineering_401_Module } from "@/lib/modules/catalog/space-missions-engineering-401";
+import { space_missions_engineering_501_Module } from "@/lib/modules/catalog/space-missions-engineering-501";
+import { space_missions_engineering_601_Module } from "@/lib/modules/catalog/space-missions-engineering-601";
+import { sports_science_101_Module } from "@/lib/modules/catalog/sports-science-101";
+import { sports_science_201_Module } from "@/lib/modules/catalog/sports-science-201";
+import { sports_science_301_Module } from "@/lib/modules/catalog/sports-science-301";
+import { sports_science_401_Module } from "@/lib/modules/catalog/sports-science-401";
+import { sports_science_501_Module } from "@/lib/modules/catalog/sports-science-501";
+import { sports_science_601_Module } from "@/lib/modules/catalog/sports-science-601";
+import { strategic_management_101_Module } from "@/lib/modules/catalog/strategic-management-101";
+import { strategic_management_201_Module } from "@/lib/modules/catalog/strategic-management-201";
+import { strategic_management_301_Module } from "@/lib/modules/catalog/strategic-management-301";
+import { strategic_management_401_Module } from "@/lib/modules/catalog/strategic-management-401";
+import { strategic_management_501_Module } from "@/lib/modules/catalog/strategic-management-501";
+import { strategic_management_601_Module } from "@/lib/modules/catalog/strategic-management-601";
+import { supply_chain_management_101_Module } from "@/lib/modules/catalog/supply-chain-management-101";
+import { supply_chain_management_201_Module } from "@/lib/modules/catalog/supply-chain-management-201";
+import { supply_chain_management_301_Module } from "@/lib/modules/catalog/supply-chain-management-301";
+import { supply_chain_management_401_Module } from "@/lib/modules/catalog/supply-chain-management-401";
+import { supply_chain_management_501_Module } from "@/lib/modules/catalog/supply-chain-management-501";
+import { supply_chain_management_601_Module } from "@/lib/modules/catalog/supply-chain-management-601";
+import { sustainability_policy_101_Module } from "@/lib/modules/catalog/sustainability-policy-101";
+import { sustainability_policy_201_Module } from "@/lib/modules/catalog/sustainability-policy-201";
+import { sustainability_policy_301_Module } from "@/lib/modules/catalog/sustainability-policy-301";
+import { sustainability_policy_401_Module } from "@/lib/modules/catalog/sustainability-policy-401";
+import { sustainability_policy_501_Module } from "@/lib/modules/catalog/sustainability-policy-501";
+import { sustainability_policy_601_Module } from "@/lib/modules/catalog/sustainability-policy-601";
+import { toefl_prep_101_Module } from "@/lib/modules/catalog/toefl-prep-101";
+import { us_civics_101_Module } from "@/lib/modules/catalog/us-civics-101";
 import { UsCivics201Module } from "@/lib/modules/catalog/us-civics-201";
-import { UsCivics301Module } from "@/lib/modules/catalog/us-civics-301";
-import { UsCivics401Module } from "@/lib/modules/catalog/us-civics-401";
+import { us_civics_301_Module } from "@/lib/modules/catalog/us-civics-301";
+import { us_civics_401_Module } from "@/lib/modules/catalog/us-civics-401";
 import { UsCivics501Module } from "@/lib/modules/catalog/us-civics-501";
 import { UsCivics601Module } from "@/lib/modules/catalog/us-civics-601";
 import { UxDesign101Module } from "@/lib/modules/catalog/ux-design-101";
@@ -822,57 +831,57 @@ import { WorldHistory601Module } from "@/lib/modules/catalog/world-history-601";
 import type { LearningModule } from "@/lib/modules/types";
 
 export const generatedModuleRegistry: LearningModule[] = [
-  ALevelPrep101Module,
-  AccountingFinance101Module,
-  AccountingFinance201Module,
-  AccountingFinance301Module,
-  AccountingFinance401Module,
-  AccountingFinance501Module,
-  AccountingFinance601Module,
-  ActPrep101Module,
-  AdvancedMath101Module,
-  AdvancedMath201Module,
-  AdvancedMath301Module,
-  AdvancedMath401Module,
-  AdvancedMath501Module,
-  AdvancedMath601Module,
-  AiMachineLearning101Module,
-  AiMachineLearning201Module,
-  AiMachineLearning301Module,
-  AiMachineLearning401Module,
-  AiMachineLearning501Module,
-  AiMachineLearning601Module,
-  AiSafetyAlignment101Module,
-  AiSafetyAlignment201Module,
-  AiSafetyAlignment301Module,
-  AiSafetyAlignment401Module,
-  AiSafetyAlignment501Module,
-  AiSafetyAlignment601Module,
-  AiWorkflows101Module,
-  AiWorkflows201Module,
-  AiWorkflows301Module,
-  AiWorkflows401Module,
-  AiWorkflows501Module,
-  AiWorkflows601Module,
-  ApPrep101Module,
-  appleVisionScienceLabModule,
-  Arts101Module,
-  Arts201Module,
-  Arts301Module,
-  Arts401Module,
-  Arts501Module,
-  Arts601Module,
-  Astronomy101Module,
+  a_level_prep_101_Module,
+  accounting_finance_101_Module,
+  accounting_finance_201_Module,
+  accounting_finance_301_Module,
+  accounting_finance_401_Module,
+  accounting_finance_501_Module,
+  accounting_finance_601_Module,
+  act_prep_101_Module,
+  advanced_math_101_Module,
+  advanced_math_201_Module,
+  advanced_math_301_Module,
+  advanced_math_401_Module,
+  advanced_math_501_Module,
+  advanced_math_601_Module,
+  ai_machine_learning_101_Module,
+  ai_machine_learning_201_Module,
+  ai_machine_learning_301_Module,
+  ai_machine_learning_401_Module,
+  ai_machine_learning_501_Module,
+  ai_machine_learning_601_Module,
+  ai_safety_alignment_101_Module,
+  ai_safety_alignment_201_Module,
+  ai_safety_alignment_301_Module,
+  ai_safety_alignment_401_Module,
+  ai_safety_alignment_501_Module,
+  ai_safety_alignment_601_Module,
+  ai_workflows_101_Module,
+  ai_workflows_201_Module,
+  ai_workflows_301_Module,
+  ai_workflows_401_Module,
+  ai_workflows_501_Module,
+  ai_workflows_601_Module,
+  ap_prep_101_Module,
+  apple_vision_science_lab_Module,
+  arts_101_Module,
+  arts_201_Module,
+  arts_301_Module,
+  arts_401_Module,
+  arts_501_Module,
+  arts_601_Module,
+  astronomy_101_Module,
   Astronomy201Module,
   Astronomy301Module,
   Astronomy401Module,
   Astronomy501Module,
-  Astronomy601Module,
-  AtarPrep101Module,
-  BasicMath101Module,
+  astronomy_601_Module,
+  atar_prep_101_Module,
+  basic_math_101_Module,
   BasicMath1112U1ExternalModule,
   BasicMath201Module,
-  BasicMath301Module,
+  basic_math_301_Module,
   BasicMath35U1ExternalModule,
   BasicMath401Module,
   BasicMath501Module,
@@ -899,119 +908,128 @@ export const generatedModuleRegistry: LearningModule[] = [
   BusinessAnalytics401Module,
   BusinessAnalytics501Module,
   BusinessAnalytics601Module,
-  BusinessEthics101Module,
-  BusinessEthics201Module,
-  BusinessEthics301Module,
-  BusinessEthics401Module,
-  BusinessEthics501Module,
-  BusinessEthics601Module,
-  CapstoneClimateAndEconomy501Module,
-  CapstoneClimateAndEconomy601Module,
-  CapstoneHumanHealthAi501Module,
-  CapstoneHumanHealthAi601Module,
-  CapstoneMediaAndDemocracy501Module,
-  CapstoneMediaAndDemocracy601Module,
-  CapstoneSmartCitySystems501Module,
-  CapstoneSmartCitySystems601Module,
-  Chemistry101Module,
-  Chemistry201Module,
-  Chemistry301Module,
-  Chemistry401Module,
-  Chemistry501Module,
-  Chemistry601Module,
-  CivilEngineering101Module,
-  CivilEngineering201Module,
-  CivilEngineering301Module,
-  CivilEngineering401Module,
-  CivilEngineering501Module,
-  CivilEngineering601Module,
-  ClimateScience101Module,
-  ClimateScience201Module,
-  ClimateScience301Module,
-  ClimateScience401Module,
-  ClimateScience501Module,
-  ClimateScience601Module,
-  CloudComputing101Module,
-  CloudComputing201Module,
-  CloudComputing301Module,
-  CloudComputing401Module,
-  CloudComputing501Module,
-  CloudComputing601Module,
-  Coding101Module,
-  Coding201Module,
-  Coding301Module,
-  Coding401Module,
-  Coding501Module,
-  Coding601Module,
-  ComparativePolitics101Module,
-  ComparativePolitics201Module,
-  ComparativePolitics301Module,
-  ComparativePolitics401Module,
-  ComparativePolitics501Module,
-  ComparativePolitics601Module,
-  CpuGpuMemoryDesign101Module,
-  CpuGpuMemoryDesign201Module,
-  CpuGpuMemoryDesign301Module,
-  CpuGpuMemoryDesign401Module,
-  CpuGpuMemoryDesign501Module,
-  CpuGpuMemoryDesign601Module,
-  CuetPrep101Module,
-  Cybersecurity101Module,
-  Cybersecurity201Module,
-  Cybersecurity301Module,
-  Cybersecurity401Module,
-  Cybersecurity501Module,
-  Cybersecurity601Module,
-  DataEngineering101Module,
-  DataEngineering201Module,
-  DataEngineering301Module,
-  DataEngineering401Module,
-  DataEngineering501Module,
-  DataEngineering601Module,
-  DataScience101Module,
-  DataScience201Module,
-  DataScience301Module,
-  DataScience401Module,
-  DataScience501Module,
-  DataScience601Module,
-  DeveloperToolsDevops101Module,
-  DeveloperToolsDevops201Module,
-  DeveloperToolsDevops301Module,
-  DeveloperToolsDevops401Module,
-  DeveloperToolsDevops501Module,
-  DeveloperToolsDevops601Module,
-  DigitalMarketing101Module,
-  DigitalMarketing201Module,
-  DigitalMarketing301Module,
-  DigitalMarketing401Module,
-  DigitalMarketing501Module,
-  DigitalMarketing601Module,
-  DistributedSystems101Module,
-  DistributedSystems201Module,
-  DistributedSystems301Module,
-  DistributedSystems401Module,
-  DistributedSystems501Module,
-  DistributedSystems601Module,
-  Economics101Module,
-  Economics201Module,
-  Economics301Module,
-  Economics401Module,
-  Economics501Module,
-  Economics601Module,
-  EeElectricalEngineeringU1ExternalModule,
+  business_ethics_101_Module,
+  business_ethics_201_Module,
+  business_ethics_301_Module,
+  business_ethics_401_Module,
+  business_ethics_501_Module,
+  business_ethics_601_Module,
+  capstone_climate_and_economy_501_Module,
+  capstone_climate_and_economy_601_Module,
+  capstone_human_health_ai_501_Module,
+  capstone_human_health_ai_601_Module,
+  capstone_media_and_democracy_501_Module,
+  capstone_media_and_democracy_601_Module,
+  capstone_smart_city_systems_501_Module,
+  capstone_smart_city_systems_601_Module,
+  cdl_air_brakes_101_Module,
+  cdl_combination_vehicles_101_Module,
+  cdl_doubles_triples_endorsement_101_Module,
+  cdl_general_knowledge_101_Module,
+  cdl_hazmat_endorsement_101_Module,
+  cdl_passenger_endorsement_101_Module,
+  cdl_pre_trip_inspection_101_Module,
+  cdl_school_bus_endorsement_101_Module,
+  cdl_tanker_endorsement_101_Module,
+  chemistry_101_Module,
+  chemistry_201_Module,
+  chemistry_301_Module,
+  chemistry_401_Module,
+  chemistry_501_Module,
+  chemistry_601_Module,
+  civil_engineering_101_Module,
+  civil_engineering_201_Module,
+  civil_engineering_301_Module,
+  civil_engineering_401_Module,
+  civil_engineering_501_Module,
+  civil_engineering_601_Module,
+  climate_science_101_Module,
+  climate_science_201_Module,
+  climate_science_301_Module,
+  climate_science_401_Module,
+  climate_science_501_Module,
+  climate_science_601_Module,
+  cloud_computing_101_Module,
+  cloud_computing_201_Module,
+  cloud_computing_301_Module,
+  cloud_computing_401_Module,
+  cloud_computing_501_Module,
+  cloud_computing_601_Module,
+  coding_101_Module,
+  coding_201_Module,
+  coding_301_Module,
+  coding_401_Module,
+  coding_501_Module,
+  coding_601_Module,
+  comparative_politics_101_Module,
+  comparative_politics_201_Module,
+  comparative_politics_301_Module,
+  comparative_politics_401_Module,
+  comparative_politics_501_Module,
+  comparative_politics_601_Module,
+  cpu_gpu_memory_design_101_Module,
+  cpu_gpu_memory_design_201_Module,
+  cpu_gpu_memory_design_301_Module,
+  cpu_gpu_memory_design_401_Module,
+  cpu_gpu_memory_design_501_Module,
+  cpu_gpu_memory_design_601_Module,
+  cuet_prep_101_Module,
+  cybersecurity_101_Module,
+  cybersecurity_201_Module,
+  cybersecurity_301_Module,
+  cybersecurity_401_Module,
+  cybersecurity_501_Module,
+  cybersecurity_601_Module,
+  data_engineering_101_Module,
+  data_engineering_201_Module,
+  data_engineering_301_Module,
+  data_engineering_401_Module,
+  data_engineering_501_Module,
+  data_engineering_601_Module,
+  data_science_101_Module,
+  data_science_201_Module,
+  data_science_301_Module,
+  data_science_401_Module,
+  data_science_501_Module,
+  data_science_601_Module,
+  developer_tools_devops_101_Module,
+  developer_tools_devops_201_Module,
+  developer_tools_devops_301_Module,
+  developer_tools_devops_401_Module,
+  developer_tools_devops_501_Module,
+  developer_tools_devops_601_Module,
+  digital_marketing_101_Module,
+  digital_marketing_201_Module,
+  digital_marketing_301_Module,
+  digital_marketing_401_Module,
+  digital_marketing_501_Module,
+  digital_marketing_601_Module,
+  distributed_systems_101_Module,
+  distributed_systems_201_Module,
+  distributed_systems_301_Module,
+  distributed_systems_401_Module,
+  distributed_systems_501_Module,
+  distributed_systems_601_Module,
+  economics_101_Module,
+  economics_201_Module,
+  economics_301_Module,
+  economics_401_Module,
+  economics_501_Module,
+  economics_601_Module,
+  ee_electrical_engineering_u1_external_Module,
   EeEngineeringAdvancedU1ExternalModule,
-  ElectricalEngineering101Module,
-  ElectricalEngineering201Module,
-  ElectricalEngineering301Module,
-  ElectricalEngineering401Module,
-  ElectricalEngineering501Module,
-  ElectricalEngineering601Module,
-  ElectricianElectricity101Module,
-  ElectricianElectricity201Module,
-  ElectricianElectricity301Module,
-  ElectricianElectricity401Module,
-  ElectricianElectricity501Module,
-  ElectricianElectricity601Module,
+  electrical_engineering_101_Module,
+  electrical_engineering_201_Module,
+  electrical_engineering_301_Module,
+  electrical_engineering_401_Module,
+  electrical_engineering_501_Module,
+  electrical_engineering_601_Module,
+  electrician_electricity_101_Module,
+  electrician_electricity_201_Module,
+  electrician_electricity_301_Module,
+  electrician_electricity_401_Module,
+  electrician_electricity_501_Module,
+  electrician_electricity_601_Module,
   EnrichmentBiomedicalBiomedicalResearchQaU1ExternalModule,
   EnrichmentGeneralCommonsenseReasoningU1ExternalModule,
   EnrichmentMathAlgebraWordProblemsU1ExternalModule,
@@ -1020,12 +1038,12 @@ export const generatedModuleRegistry: LearningModule[] = [
   EnrichmentScienceScienceConceptsU1ExternalModule,
   EnrichmentScienceScienceReasoningChallengeU1ExternalModule,
   EnrichmentScienceScienceReasoningEasyU1ExternalModule,
-  Entrepreneurship101Module,
-  Entrepreneurship201Module,
-  Entrepreneurship301Module,
-  Entrepreneurship401Module,
-  Entrepreneurship501Module,
-  Entrepreneurship601Module,
+  entrepreneurship_101_Module,
+  entrepreneurship_201_Module,
+  entrepreneurship_301_Module,
+  entrepreneurship_401_Module,
+  entrepreneurship_501_Module,
+  entrepreneurship_601_Module,
   N59SecondsThinkALittleChangeALotRichardWisModule,
   ACourseInMiraclesDrHelenSchucmanModule,
   AHistoryOfGodThe4000YearQuestOfJudaismChModule,
@@ -1156,25 +1174,25 @@ export const generatedModuleRegistry: LearningModule[] = [
   TreasureIslandRobertLouisStevensonModule,
   VisionsOfAwakeningSpaceAndTimeDogenAndTheModule,
   WisdomAsAPracticeMargolisKarenSloterdijkPetModule,
-  EthicsOfTechnology101Module,
-  EthicsOfTechnology201Module,
-  EthicsOfTechnology301Module,
-  EthicsOfTechnology401Module,
-  EthicsOfTechnology501Module,
-  EthicsOfTechnology601Module,
+  ethics_of_technology_101_Module,
+  ethics_of_technology_201_Module,
+  ethics_of_technology_301_Module,
+  ethics_of_technology_401_Module,
+  ethics_of_technology_501_Module,
+  ethics_of_technology_601_Module,
   Farming101Module,
   Farming201Module,
   Farming301Module,
-  Farming401Module,
-  Farming501Module,
-  Farming601Module,
-  FinancialLiteracy101Module,
+  farming_401_Module,
+  farming_501_Module,
+  farming_601_Module,
+  financial_literacy_101_Module,
   FinancialLiteracy201Module,
   FinancialLiteracy301Module,
   FinancialLiteracy401Module,
-  FinancialLiteracy501Module,
-  FinancialLiteracy601Module,
-  FoodScience101Module,
+  financial_literacy_501_Module,
+  financial_literacy_601_Module,
+  food_science_101_Module,
   GaokaoPrep101Module,
   Gardening101Module,
   Gardening201Module,
@@ -1182,7 +1200,7 @@ export const generatedModuleRegistry: LearningModule[] = [
   Gardening401Module,
   Gardening501Module,
   Gardening601Module,
-  GcsePrep101Module,
+  gcse_prep_101_Module,
   GenScience1112U1ExternalModule,
   GenScience35U1ExternalModule,
   GenScience68U1ExternalModule,
@@ -1192,106 +1210,106 @@ export const generatedModuleRegistry: LearningModule[] = [
   GeneralRelativity101Module,
   GeneralRelativity201Module,
   GeneralRelativity301Module,
-  GeneralRelativity401Module,
-  GeneralRelativity501Module,
-  GeneralRelativity601Module,
+  general_relativity_401_Module,
+  general_relativity_501_Module,
+  general_relativity_601_Module,
   GeneralScience101Module,
   GeneralScience201Module,
   GeneralScience301Module,
   GeneralScience401Module,
-  GeneralScience501Module,
-  GeneralScience601Module,
-  Geography101Module,
+  general_science_501_Module,
+  general_science_601_Module,
+  geography_101_Module,
   Geography201Module,
   Geography301Module,
   Geography401Module,
-  Geography501Module,
-  Geography601Module,
-  Geoscience101Module,
-  Geoscience201Module,
-  Geoscience301Module,
-  Geoscience401Module,
-  Geoscience501Module,
-  Geoscience601Module,
+  geography_501_Module,
+  geography_601_Module,
+  geoscience_101_Module,
+  geoscience_201_Module,
+  geoscience_301_Module,
+  geoscience_401_Module,
+  geoscience_501_Module,
+  geoscience_601_Module,
   HouseholdManagement101Module,
   HouseholdManagement201Module,
   HouseholdManagement301Module,
-  HouseholdManagement401Module,
-  HouseholdManagement501Module,
-  HouseholdManagement601Module,
-  HumanResourceManagement101Module,
-  HumanResourceManagement201Module,
-  HumanResourceManagement301Module,
-  HumanResourceManagement401Module,
-  HumanResourceManagement501Module,
-  HumanResourceManagement601Module,
-  Hvac101Module,
-  Hvac201Module,
-  Hvac301Module,
-  Hvac401Module,
-  Hvac501Module,
-  Hvac601Module,
-  IbPrep101Module,
-  IeltsPrep101Module,
-  InternationalBusiness101Module,
-  InternationalBusiness201Module,
-  InternationalBusiness301Module,
-  InternationalBusiness401Module,
-  InternationalBusiness501Module,
-  InternationalBusiness601Module,
-  InternationalRelations101Module,
-  InternationalRelations201Module,
-  InternationalRelations301Module,
-  InternationalRelations401Module,
-  InternationalRelations501Module,
-  InternationalRelations601Module,
-  JeeNeetPrep101Module,
+  household_management_401_Module,
+  household_management_501_Module,
+  household_management_601_Module,
+  human_resource_management_101_Module,
+  human_resource_management_201_Module,
+  human_resource_management_301_Module,
+  human_resource_management_401_Module,
+  human_resource_management_501_Module,
+  human_resource_management_601_Module,
+  hvac_101_Module,
+  hvac_201_Module,
+  hvac_301_Module,
+  hvac_401_Module,
+  hvac_501_Module,
+  hvac_601_Module,
+  ib_prep_101_Module,
+  ielts_prep_101_Module,
+  international_business_101_Module,
+  international_business_201_Module,
+  international_business_301_Module,
+  international_business_401_Module,
+  international_business_501_Module,
+  international_business_601_Module,
+  international_relations_101_Module,
+  international_relations_201_Module,
+  international_relations_301_Module,
+  international_relations_401_Module,
+  international_relations_501_Module,
+  international_relations_601_Module,
+  jee_neet_prep_101_Module,
   LangArts1112U1ExternalModule,
   LangArts35U1ExternalModule,
   LangArts68U1ExternalModule,
   LangArts910U1ExternalModule,
   LangArtsK2U1ExternalModule,
   LangArtsPrekU1ExternalModule,
-  LanguageArts101Module,
-  LanguageArts201Module,
+  language_arts_101_Module,
+  language_arts_201_Module,
   LanguageArts301Module,
   LanguageArts401Module,
-  LanguageArts501Module,
-  LanguageArts601Module,
+  language_arts_501_Module,
+  language_arts_601_Module,
   LawCaseLawHoldingsU1ExternalModule,
   LawInternationalLawU1ExternalModule,
   LawJurisprudenceU1ExternalModule,
   LawProfessionalLawU1ExternalModule,
-  LawStudies101Module,
-  LawStudies201Module,
-  LawStudies301Module,
-  LawStudies401Module,
-  LawStudies501Module,
-  LawStudies601Module,
-  Leadership101Module,
-  Leadership201Module,
-  Leadership301Module,
-  Leadership401Module,
-  Leadership501Module,
-  Leadership601Module,
-  Linux101Module,
-  Linux201Module,
-  Linux301Module,
-  Linux401Module,
-  Linux501Module,
-  Linux601Module,
-  Macos101Module,
-  Macos201Module,
-  Macos301Module,
-  Macos401Module,
-  Macos501Module,
-  Macos601Module,
-  MarketingManagement101Module,
-  MarketingManagement201Module,
-  MarketingManagement301Module,
-  MarketingManagement401Module,
-  MarketingManagement501Module,
-  MarketingManagement601Module,
+  law_studies_101_Module,
+  law_studies_201_Module,
+  law_studies_301_Module,
+  law_studies_401_Module,
+  law_studies_501_Module,
+  law_studies_601_Module,
+  leadership_101_Module,
+  leadership_201_Module,
+  leadership_301_Module,
+  leadership_401_Module,
+  leadership_501_Module,
+  leadership_601_Module,
+  linux_101_Module,
+  linux_201_Module,
+  linux_301_Module,
+  linux_401_Module,
+  linux_501_Module,
+  linux_601_Module,
+  macos_101_Module,
+  macos_201_Module,
+  macos_301_Module,
+  macos_401_Module,
+  macos_501_Module,
+  macos_601_Module,
+  marketing_management_101_Module,
+  marketing_management_201_Module,
+  marketing_management_301_Module,
+  marketing_management_401_Module,
+  marketing_management_501_Module,
+  marketing_management_601_Module,
   MastersAbstractAlgebraU1ExternalModule,
   MastersAnatomyU1ExternalModule,
   MastersAstronomyU1ExternalModule,
@@ -1344,12 +1362,12 @@ export const generatedModuleRegistry: LearningModule[] = [
   MastersVirologyU1ExternalModule,
   MastersWorldHistoryMmluU1ExternalModule,
   MastersWorldReligionsU1ExternalModule,
-  math101Module,
-  Math201Module,
-  Math301Module,
-  Math401Module,
-  Math501Module,
-  Math601Module,
+  math_101_Module,
+  math_201_Module,
+  math_301_Module,
+  math_401_Module,
+  math_501_Module,
+  math_601_Module,
   MbaBusinessAdvancedU1ExternalModule,
   MbaBusinessCaseStudiesU1ExternalModule,
   MbaBusinessEthicsU1ExternalModule,
@@ -1359,18 +1377,18 @@ export const generatedModuleRegistry: LearningModule[] = [
   MbaMarketingU1ExternalModule,
   MbaMicroeconomicsU1ExternalModule,
   MbaProfessionalAccountingU1ExternalModule,
-  MediaLiteracy101Module,
-  MediaLiteracy201Module,
-  MediaLiteracy301Module,
-  MediaLiteracy401Module,
-  MediaLiteracy501Module,
-  MediaLiteracy601Module,
-  Medicine101Module,
-  Medicine201Module,
-  Medicine301Module,
-  Medicine401Module,
-  Medicine501Module,
-  Medicine601Module,
+  media_literacy_101_Module,
+  media_literacy_201_Module,
+  media_literacy_301_Module,
+  media_literacy_401_Module,
+  media_literacy_501_Module,
+  media_literacy_601_Module,
+  medicine_101_Module,
+  medicine_201_Module,
+  medicine_301_Module,
+  medicine_401_Module,
+  medicine_501_Module,
+  medicine_601_Module,
   MedicineAnatomyPhysiologyU1ExternalModule,
   MedicineAnesthesiaU1ExternalModule,
   MedicineBiochemistryU1ExternalModule,
@@ -1401,228 +1419,228 @@ export const generatedModuleRegistry: LearningModule[] = [
   MedicineRareDiseasesU1ExternalModule,
   MedicineSurgeryU1ExternalModule,
   MedicineUsmlePrepU1ExternalModule,
-  MentalHealthLiteracy101Module,
-  MentalHealthLiteracy201Module,
-  MentalHealthLiteracy301Module,
-  MentalHealthLiteracy401Module,
-  MentalHealthLiteracy501Module,
-  MentalHealthLiteracy601Module,
-  Meteorology101Module,
-  Meteorology201Module,
-  Meteorology301Module,
-  Meteorology401Module,
-  Meteorology501Module,
-  Meteorology601Module,
-  MicroCircuits101Module,
-  MicroCircuits201Module,
-  MicroCircuits301Module,
-  MicroCircuits401Module,
-  MicroCircuits501Module,
-  MicroCircuits601Module,
-  Microelectronics101Module,
-  Microelectronics201Module,
-  Microelectronics301Module,
-  Microelectronics401Module,
-  Microelectronics501Module,
-  Microelectronics601Module,
-  MusicHistory101Module,
-  MusicHistory201Module,
-  MusicHistory301Module,
-  MusicHistory401Module,
-  MusicHistory501Module,
-  MusicHistory601Module,
-  MusicProduction101Module,
-  MusicProduction201Module,
-  MusicProduction301Module,
-  MusicProduction401Module,
-  MusicProduction501Module,
-  MusicProduction601Module,
-  MusicTheory101Module,
-  MusicTheory201Module,
-  MusicTheory301Module,
-  MusicTheory401Module,
-  MusicTheory501Module,
-  MusicTheory601Module,
-  NegotiationConflictResolution101Module,
-  NegotiationConflictResolution201Module,
-  NegotiationConflictResolution301Module,
-  NegotiationConflictResolution401Module,
-  NegotiationConflictResolution501Module,
-  NegotiationConflictResolution601Module,
-  NetworkEngineering101Module,
-  NetworkEngineering201Module,
-  NetworkEngineering301Module,
-  NetworkEngineering401Module,
-  NetworkEngineering501Module,
-  NetworkEngineering601Module,
-  Neuroscience101Module,
-  Neuroscience201Module,
-  Neuroscience301Module,
-  Neuroscience401Module,
-  Neuroscience501Module,
-  Neuroscience601Module,
-  Nursing101Module,
-  Nursing201Module,
-  Nursing301Module,
-  Nursing401Module,
-  Nursing501Module,
-  Nursing601Module,
-  NutritionScience101Module,
-  NutritionScience201Module,
-  NutritionScience301Module,
-  NutritionScience401Module,
-  NutritionScience501Module,
-  NutritionScience601Module,
-  Oceanography101Module,
-  Oceanography201Module,
-  Oceanography301Module,
-  Oceanography401Module,
-  Oceanography501Module,
-  Oceanography601Module,
-  OperationsManagement101Module,
-  OperationsManagement201Module,
-  OperationsManagement301Module,
-  OperationsManagement401Module,
-  OperationsManagement501Module,
-  OperationsManagement601Module,
-  OrganizationalBehavior101Module,
-  OrganizationalBehavior201Module,
-  OrganizationalBehavior301Module,
-  OrganizationalBehavior401Module,
-  OrganizationalBehavior501Module,
-  OrganizationalBehavior601Module,
-  Philosophy101Module,
-  Philosophy201Module,
-  Philosophy301Module,
-  Philosophy401Module,
-  Philosophy501Module,
-  Philosophy601Module,
-  Physics101Module,
+  mental_health_literacy_101_Module,
+  mental_health_literacy_201_Module,
+  mental_health_literacy_301_Module,
+  mental_health_literacy_401_Module,
+  mental_health_literacy_501_Module,
+  mental_health_literacy_601_Module,
+  meteorology_101_Module,
+  meteorology_201_Module,
+  meteorology_301_Module,
+  meteorology_401_Module,
+  meteorology_501_Module,
+  meteorology_601_Module,
+  micro_circuits_101_Module,
+  micro_circuits_201_Module,
+  micro_circuits_301_Module,
+  micro_circuits_401_Module,
+  micro_circuits_501_Module,
+  micro_circuits_601_Module,
+  microelectronics_101_Module,
+  microelectronics_201_Module,
+  microelectronics_301_Module,
+  microelectronics_401_Module,
+  microelectronics_501_Module,
+  microelectronics_601_Module,
+  music_history_101_Module,
+  music_history_201_Module,
+  music_history_301_Module,
+  music_history_401_Module,
+  music_history_501_Module,
+  music_history_601_Module,
+  music_production_101_Module,
+  music_production_201_Module,
+  music_production_301_Module,
+  music_production_401_Module,
+  music_production_501_Module,
+  music_production_601_Module,
+  music_theory_101_Module,
+  music_theory_201_Module,
+  music_theory_301_Module,
+  music_theory_401_Module,
+  music_theory_501_Module,
+  music_theory_601_Module,
+  negotiation_conflict_resolution_101_Module,
+  negotiation_conflict_resolution_201_Module,
+  negotiation_conflict_resolution_301_Module,
+  negotiation_conflict_resolution_401_Module,
+  negotiation_conflict_resolution_501_Module,
+  negotiation_conflict_resolution_601_Module,
+  network_engineering_101_Module,
+  network_engineering_201_Module,
+  network_engineering_301_Module,
+  network_engineering_401_Module,
+  network_engineering_501_Module,
+  network_engineering_601_Module,
+  neuroscience_101_Module,
+  neuroscience_201_Module,
+  neuroscience_301_Module,
+  neuroscience_401_Module,
+  neuroscience_501_Module,
+  neuroscience_601_Module,
+  nursing_101_Module,
+  nursing_201_Module,
+  nursing_301_Module,
+  nursing_401_Module,
+  nursing_501_Module,
+  nursing_601_Module,
+  nutrition_science_101_Module,
+  nutrition_science_201_Module,
+  nutrition_science_301_Module,
+  nutrition_science_401_Module,
+  nutrition_science_501_Module,
+  nutrition_science_601_Module,
+  oceanography_101_Module,
+  oceanography_201_Module,
+  oceanography_301_Module,
+  oceanography_401_Module,
+  oceanography_501_Module,
+  oceanography_601_Module,
+  operations_management_101_Module,
+  operations_management_201_Module,
+  operations_management_301_Module,
+  operations_management_401_Module,
+  operations_management_501_Module,
+  operations_management_601_Module,
+  organizational_behavior_101_Module,
+  organizational_behavior_201_Module,
+  organizational_behavior_301_Module,
+  organizational_behavior_401_Module,
+  organizational_behavior_501_Module,
+  organizational_behavior_601_Module,
+  philosophy_101_Module,
+  philosophy_201_Module,
+  philosophy_301_Module,
+  philosophy_401_Module,
+  philosophy_501_Module,
+  philosophy_601_Module,
+  physics_101_Module,
   Physics201Module,
   Physics301Module,
   Physics401Module,
-  Physics501Module,
-  Physics601Module,
-  Plumbing101Module,
-  Plumbing201Module,
-  Plumbing301Module,
-  Plumbing401Module,
-  Plumbing501Module,
-  Plumbing601Module,
-  PreKAdvancedMath101Module,
-  PreKArts101Module,
-  PreKAstronomy101Module,
-  PreKBasicMath101Module,
-  PreKBiology101Module,
-  PreKChemistry101Module,
-  PreKCoding101Module,
-  PreKFarming101Module,
-  PreKFinancialLiteracy101Module,
-  PreKGeneralRelativity101Module,
-  PreKGeneralScience101Module,
-  PreKGeography101Module,
-  PreKHouseholdManagement101Module,
-  PreKLanguageArts101Module,
-  PreKPhysics101Module,
-  PreKSocialStudiesUs101Module,
-  PreKSocialStudiesWorld101Module,
-  PreKWorldHistory101Module,
-  ProjectManagement101Module,
-  ProjectManagement201Module,
-  ProjectManagement301Module,
-  ProjectManagement401Module,
-  ProjectManagement501Module,
-  ProjectManagement601Module,
-  Psychology101Module,
-  Psychology201Module,
-  Psychology301Module,
-  Psychology401Module,
-  Psychology501Module,
-  Psychology601Module,
-  PublicHealth101Module,
-  PublicHealth201Module,
-  PublicHealth301Module,
-  PublicHealth401Module,
-  PublicHealth501Module,
-  PublicHealth601Module,
-  QuantumComputing101Module,
-  QuantumComputing201Module,
-  QuantumComputing301Module,
-  QuantumComputing401Module,
-  QuantumComputing501Module,
-  QuantumComputing601Module,
-  Reading101Module,
-  Reading201Module,
-  Reading301Module,
-  Reading401Module,
-  Reading501Module,
-  Reading601Module,
-  RenewableEnergySystems101Module,
-  RenewableEnergySystems201Module,
-  RenewableEnergySystems301Module,
-  RenewableEnergySystems401Module,
-  RenewableEnergySystems501Module,
-  RenewableEnergySystems601Module,
-  Robotics101Module,
-  Robotics201Module,
-  Robotics301Module,
-  Robotics401Module,
-  Robotics501Module,
-  Robotics601Module,
-  SatPrep101Module,
-  science101Module,
-  Science201Module,
-  Science301Module,
-  Science401Module,
-  Science501Module,
-  Science601Module,
-  SocialStudiesUs101Module,
+  physics_501_Module,
+  physics_601_Module,
+  plumbing_101_Module,
+  plumbing_201_Module,
+  plumbing_301_Module,
+  plumbing_401_Module,
+  plumbing_501_Module,
+  plumbing_601_Module,
+  pre_k_advanced_math_101_Module,
+  pre_k_arts_101_Module,
+  pre_k_astronomy_101_Module,
+  pre_k_basic_math_101_Module,
+  pre_k_biology_101_Module,
+  pre_k_chemistry_101_Module,
+  pre_k_coding_101_Module,
+  pre_k_farming_101_Module,
+  pre_k_financial_literacy_101_Module,
+  pre_k_general_relativity_101_Module,
+  pre_k_general_science_101_Module,
+  pre_k_geography_101_Module,
+  pre_k_household_management_101_Module,
+  pre_k_language_arts_101_Module,
+  pre_k_physics_101_Module,
+  pre_k_social_studies_us_101_Module,
+  pre_k_social_studies_world_101_Module,
+  pre_k_world_history_101_Module,
+  project_management_101_Module,
+  project_management_201_Module,
+  project_management_301_Module,
+  project_management_401_Module,
+  project_management_501_Module,
+  project_management_601_Module,
+  psychology_101_Module,
+  psychology_201_Module,
+  psychology_301_Module,
+  psychology_401_Module,
+  psychology_501_Module,
+  psychology_601_Module,
+  public_health_101_Module,
+  public_health_201_Module,
+  public_health_301_Module,
+  public_health_401_Module,
+  public_health_501_Module,
+  public_health_601_Module,
+  quantum_computing_101_Module,
+  quantum_computing_201_Module,
+  quantum_computing_301_Module,
+  quantum_computing_401_Module,
+  quantum_computing_501_Module,
+  quantum_computing_601_Module,
+  reading_101_Module,
+  reading_201_Module,
+  reading_301_Module,
+  reading_401_Module,
+  reading_501_Module,
+  reading_601_Module,
+  renewable_energy_systems_101_Module,
+  renewable_energy_systems_201_Module,
+  renewable_energy_systems_301_Module,
+  renewable_energy_systems_401_Module,
+  renewable_energy_systems_501_Module,
+  renewable_energy_systems_601_Module,
+  robotics_101_Module,
+  robotics_201_Module,
+  robotics_301_Module,
+  robotics_401_Module,
+  robotics_501_Module,
+  robotics_601_Module,
+  sat_prep_101_Module,
+  science_101_Module,
+  science_201_Module,
+  science_301_Module,
+  science_401_Module,
+  science_501_Module,
+  science_601_Module,
+  social_studies_us_101_Module,
   SocialStudiesUs201Module,
   SocialStudiesUs301Module,
   SocialStudiesUs401Module,
-  SocialStudiesUs501Module,
-  SocialStudiesUs601Module,
+  social_studies_us_501_Module,
+  social_studies_us_601_Module,
   SocialStudiesWorld101Module,
   SocialStudiesWorld201Module,
   SocialStudiesWorld301Module,
   SocialStudiesWorld401Module,
-  SocialStudiesWorld501Module,
-  SocialStudiesWorld601Module,
-  SpaceMissionsEngineering101Module,
-  SpaceMissionsEngineering201Module,
-  SpaceMissionsEngineering301Module,
-  SpaceMissionsEngineering401Module,
-  SpaceMissionsEngineering501Module,
-  SpaceMissionsEngineering601Module,
-  SportsScience101Module,
-  SportsScience201Module,
-  SportsScience301Module,
-  SportsScience401Module,
-  SportsScience501Module,
-  SportsScience601Module,
-  StrategicManagement101Module,
-  StrategicManagement201Module,
-  StrategicManagement301Module,
-  StrategicManagement401Module,
-  StrategicManagement501Module,
-  StrategicManagement601Module,
-  SupplyChainManagement101Module,
-  SupplyChainManagement201Module,
-  SupplyChainManagement301Module,
-  SupplyChainManagement401Module,
-  SupplyChainManagement501Module,
-  SupplyChainManagement601Module,
-  SustainabilityPolicy101Module,
-  SustainabilityPolicy201Module,
-  SustainabilityPolicy301Module,
-  SustainabilityPolicy401Module,
-  SustainabilityPolicy501Module,
-  SustainabilityPolicy601Module,
-  ToeflPrep101Module,
-  UsCivics101Module,
+  social_studies_world_501_Module,
+  social_studies_world_601_Module,
+  space_missions_engineering_101_Module,
+  space_missions_engineering_201_Module,
+  space_missions_engineering_301_Module,
+  space_missions_engineering_401_Module,
+  space_missions_engineering_501_Module,
+  space_missions_engineering_601_Module,
+  sports_science_101_Module,
+  sports_science_201_Module,
+  sports_science_301_Module,
+  sports_science_401_Module,
+  sports_science_501_Module,
+  sports_science_601_Module,
+  strategic_management_101_Module,
+  strategic_management_201_Module,
+  strategic_management_301_Module,
+  strategic_management_401_Module,
+  strategic_management_501_Module,
+  strategic_management_601_Module,
+  supply_chain_management_101_Module,
+  supply_chain_management_201_Module,
+  supply_chain_management_301_Module,
+  supply_chain_management_401_Module,
+  supply_chain_management_501_Module,
+  supply_chain_management_601_Module,
+  sustainability_policy_101_Module,
+  sustainability_policy_201_Module,
+  sustainability_policy_301_Module,
+  sustainability_policy_401_Module,
+  sustainability_policy_501_Module,
+  sustainability_policy_601_Module,
+  toefl_prep_101_Module,
+  us_civics_101_Module,
   UsCivics201Module,
-  UsCivics301Module,
-  UsCivics401Module,
+  us_civics_301_Module,
+  us_civics_401_Module,
   UsCivics501Module,
   UsCivics601Module,
   UxDesign101Module,
