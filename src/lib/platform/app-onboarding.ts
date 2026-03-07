@@ -102,6 +102,13 @@ const APP_ONBOARDING: Record<string, OnboardingConfig> = {
     heroSubtitle: "Challenge yourself with educational games",
     skipAllowed: true,
   },
+  koydo_neuro: {
+    steps: ["welcome", "age_check", "skill_level", "diagnostic"],
+    theme: "focused",
+    heroTitle: "Train Your Brain",
+    heroSubtitle: "Science-backed exercises for memory, logic, and focus",
+    skipAllowed: true,
+  },
 
   // ── Regional variants ──────────────────────────────────────────────────────
   koydo_math_es: {
@@ -171,6 +178,10 @@ const APP_NAV_LAYOUTS: Record<string, AppNavLayout> = {
   koydo_university: "sidebar",
   koydo_math: "full",
   koydo_arena: "game_grid",
+  koydo_cdl: "sidebar",
+  koydo_trades: "sidebar",
+  koydo_stem: "sidebar",
+  koydo_neuro: "sidebar",
   // Regional variants inherit parent layout
   koydo_math_es: "full",
   koydo_exam_jp: "exam_dashboard",
@@ -250,6 +261,14 @@ const APP_HERO_CONFIGS: Record<string, AppHeroConfig> = {
     subtitle: "Educational games that make learning irresistible",
     ctaLabel: "Play Now",
     ctaHref: "/games",
+    showVoicePicker: false,
+    showStageNav: false,
+  },
+  koydo_neuro: {
+    title: "Train Your Brain",
+    subtitle: "Science-backed exercises for memory, logic, and focus",
+    ctaLabel: "Start Training",
+    ctaHref: "/dashboard",
     showVoicePicker: false,
     showStageNav: false,
   },

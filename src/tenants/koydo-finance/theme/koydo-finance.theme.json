@@ -1,0 +1,52 @@
+{
+  "id": "koydo-finance",
+  "displayName": "Koydo Finance Pro",
+  "palette": {
+    "primary": "#065f46",
+    "primary_light": "#059669",
+    "primary_dark": "#064e3b",
+    "secondary": "#0d9488",
+    "accent": "#f59e0b",
+    "bull_green": "#22c55e",
+    "bear_red": "#ef4444",
+    "gold": "#eab308",
+    "background": "#fafaf9",
+    "surface": "#ffffff",
+    "surface_raised": "#f5f5f4",
+    "text_primary": "#1c1917",
+    "text_secondary": "#57534e",
+    "text_muted": "#a8a29e",
+    "border": "#e7e5e4",
+    "success": "#16a34a",
+    "warning": "#d97706",
+    "error": "#dc2626"
+  },
+  "darkPalette": {
+    "primary": "#059669",
+    "primary_light": "#34d399",
+    "primary_dark": "#065f46",
+    "secondary": "#14b8a6",
+    "accent": "#fbbf24",
+    "background": "#0c0a09",
+    "surface": "#1c1917",
+    "surface_raised": "#292524",
+    "text_primary": "#fafaf9",
+    "text_secondary": "#a8a29e",
+    "text_muted": "#78716c",
+    "border": "#292524"
+  },
+  "typography": {
+    "fontFamily": "'Inter', 'SF Pro', system-ui, sans-serif",
+    "fontFamilyHeading": "'Inter', system-ui, sans-serif",
+    "baseFontSize": "16px"
+  },
+  "spacing": {
+    "borderRadius": "0.75rem",
+    "cardPadding": "1.25rem"
+  },
+  "motion": {
+    "spring": false,
+    "reducedMotion": false,
+    "transitionSpeed": "normal"
+  }
+}

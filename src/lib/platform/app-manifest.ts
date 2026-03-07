@@ -15,6 +15,10 @@ import koydoTradesTheme from "@/tenants/koydo-trades/theme/koydo-trades.theme.js
 import koydoStemTheme from "@/tenants/koydo-stem/theme/koydo-stem.theme.json";
 import koydoCdlTheme from "@/tenants/koydo-cdl/theme/koydo-cdl.theme.json";
 import koydoArenaTheme from "@/tenants/koydo-arena/theme/koydo-arena.theme.json";
+import koydoSatTheme from "@/tenants/koydo-sat/theme/koydo-sat.theme.json";
+import koydoFinanceTheme from "@/tenants/koydo-finance/theme/koydo-finance.theme.json";
+import koydoMathTheme from "@/tenants/koydo-math/theme/koydo-math.theme.json";
+import koydoNeuroTheme from "@/tenants/koydo-neuro/theme/koydo-neuro.theme.json";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -208,6 +212,18 @@ const CDL_DARK_THEME_CONFIG = cdlThemeConfig.dark;
 const arenaThemeConfig = buildTenantThemeConfig(koydoArenaTheme as TenantThemeSchema, "#7c3aed");
 const ARENA_THEME_CONFIG = arenaThemeConfig.light;
 const ARENA_DARK_THEME_CONFIG = arenaThemeConfig.dark;
+const satThemeConfig = buildTenantThemeConfig(koydoSatTheme as TenantThemeSchema, "#1d4ed8");
+const SAT_THEME_CONFIG = satThemeConfig.light;
+const SAT_DARK_THEME_CONFIG = satThemeConfig.dark;
+const financeThemeConfig = buildTenantThemeConfig(koydoFinanceTheme as TenantThemeSchema, "#065f46");
+const FINANCE_THEME_CONFIG = financeThemeConfig.light;
+const FINANCE_DARK_THEME_CONFIG = financeThemeConfig.dark;
+const mathThemeConfig = buildTenantThemeConfig(koydoMathTheme as TenantThemeSchema, "#6c5ce7");
+const MATH_THEME_CONFIG = mathThemeConfig.light;
+const MATH_DARK_THEME_CONFIG = mathThemeConfig.dark;
+const neuroThemeConfig = buildTenantThemeConfig(koydoNeuroTheme as TenantThemeSchema, "#0891b2");
+const NEURO_THEME_CONFIG = neuroThemeConfig.light;
+const NEURO_DARK_THEME_CONFIG = neuroThemeConfig.dark;
 
 /**
  * Fetch manifest from `app_manifests` table via the admin API.
@@ -297,7 +313,8 @@ export const STATIC_MANIFESTS: Record<string, AppManifest> = {
   koydo_sat: {
     appId: "koydo_sat",
     displayName: "Koydo SAT Prep",
-    themeConfig: { "--color-primary": "#1a5276" },
+    themeConfig: SAT_THEME_CONFIG,
+    darkThemeConfig: SAT_DARK_THEME_CONFIG,
     enabledSubjects: ["Math", "Reading", "Science", "Languages"],
     minAge: 14, maxAge: 19, isActive: true,
     supportedLocales: ["en"],
@@ -305,18 +322,35 @@ export const STATIC_MANIFESTS: Record<string, AppManifest> = {
     region: "us",
     defaultCurrency: "USD",
     pricingTier: "premium_19.99",
+    storeListing: {
+      en: {
+        title: "Koydo SAT Prep",
+        subtitle: "Personalized SAT study plans and practice tests",
+        description: "Ace your Digital SAT with adaptive practice tests, score tracking, and AI-powered study plans. Covers Math (Algebra, Advanced Math, Problem Solving, Geometry & Trig) and Reading & Writing (Craft & Structure, Information & Ideas, Standard English, Expression of Ideas).",
+        keywords: ["SAT prep", "SAT practice test", "college prep", "SAT math", "SAT reading", "digital SAT", "test prep", "college admission"],
+      },
+    },
   },
   koydo_finance: {
     appId: "koydo_finance",
     displayName: "Koydo Finance Pro",
-    themeConfig: { "--color-primary": "#0d6efd" },
-    enabledSubjects: ["Finance", "Accounting"],
+    themeConfig: FINANCE_THEME_CONFIG,
+    darkThemeConfig: FINANCE_DARK_THEME_CONFIG,
+    enabledSubjects: ["Finance", "Accounting", "Economics", "Entrepreneurship"],
     minAge: 16, maxAge: 99, isActive: true,
     supportedLocales: ["en", "es", "de", "ja", "zh"],
     defaultLocale: "en",
     region: "global",
     defaultCurrency: "USD",
     pricingTier: "premium_19.99",
+    storeListing: {
+      en: {
+        title: "Koydo Finance Pro",
+        subtitle: "Master finance, accounting, and economics",
+        description: "Professional-grade finance education from fundamentals to CPA-level content. 16 courses covering Accounting & Finance, Economics, Entrepreneurship, and Financial Literacy with certification tracking.",
+        keywords: ["finance", "accounting", "CPA", "economics", "financial literacy", "business", "investing", "budgeting"],
+      },
+    },
   },
   koydo_university: {
     appId: "koydo_university",
@@ -336,7 +370,8 @@ export const STATIC_MANIFESTS: Record<string, AppManifest> = {
   koydo_math: {
     appId: "koydo_math",
     displayName: "Koydo Math Forge",
-    themeConfig: { "--color-primary": "#6c5ce7" },
+    themeConfig: MATH_THEME_CONFIG,
+    darkThemeConfig: MATH_DARK_THEME_CONFIG,
     enabledSubjects: ["Math"],
     minAge: 8, maxAge: 18, isActive: true,
     supportedLocales: ["en", "es", "fr", "de", "zh", "ja", "ko"],
@@ -344,6 +379,35 @@ export const STATIC_MANIFESTS: Record<string, AppManifest> = {
     region: "global",
     defaultCurrency: "USD",
     pricingTier: "freemium",
+    storeListing: {
+      en: {
+        title: "Koydo Math Forge",
+        subtitle: "Build unshakeable math skills from K-12 and beyond",
+        description: "Master math from basic arithmetic to calculus with interactive lessons, practice problems, and a graphing calculator. Tracks covering Number Sense, Algebra, Geometry, Trigonometry, and Calculus.",
+        keywords: ["math", "algebra", "geometry", "calculus", "math practice", "math tutor", "K-12 math", "STEM"],
+      },
+    },
+  },
+  koydo_neuro: {
+    appId: "koydo_neuro",
+    displayName: "Koydo Neuro",
+    themeConfig: NEURO_THEME_CONFIG,
+    darkThemeConfig: NEURO_DARK_THEME_CONFIG,
+    enabledSubjects: ["Neuroscience", "Psychology", "Brain Training"],
+    minAge: 12, maxAge: 99, isActive: true,
+    supportedLocales: ["en", "es", "de", "ja"],
+    defaultLocale: "en",
+    region: "global",
+    defaultCurrency: "USD",
+    pricingTier: "freemium",
+    storeListing: {
+      en: {
+        title: "Koydo Neuro",
+        subtitle: "Train your brain with science-backed exercises",
+        description: "Brain training app with exercises targeting Memory, Logic, Processing Speed, Attention, and Verbal skills. Includes neuroscience courses on brain health, cognitive psychology, and sleep science. Track your Brain Performance Index over time.",
+        keywords: ["brain training", "neuroscience", "memory", "cognitive", "brain games", "mental fitness", "focus", "attention"],
+      },
+    },
   },
   koydo_arena: {
     appId: "koydo_arena",
@@ -611,6 +675,7 @@ export const APP_ID_TO_VARIANT: Record<string, AppVariant> = {
   koydo_trades: "adult",
   koydo_stem: "teen",
   koydo_cdl: "adult",
+  koydo_neuro: "teen",
   // Regional variants
   koydo_math_es: "teen",
   koydo_exam_jp: "teen",

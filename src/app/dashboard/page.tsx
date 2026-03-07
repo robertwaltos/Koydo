@@ -28,6 +28,10 @@ import CdlDashboard from "@/tenants/koydo-cdl/components/CdlDashboard";
 import TradesDashboard from "@/tenants/koydo-trades/components/TradesDashboard";
 import StemDashboard from "@/tenants/koydo-stem/components/StemDashboard";
 import ArenaDashboard from "@/tenants/koydo-arena/components/ArenaDashboard";
+import SatDashboard from "@/tenants/koydo-sat/components/SatDashboard";
+import FinanceDashboard from "@/tenants/koydo-finance/components/FinanceDashboard";
+import MathDashboard from "@/tenants/koydo-math/components/MathDashboard";
+import NeuroDashboard from "@/tenants/koydo-neuro/components/NeuroDashboard";
 import { getActiveProfileId } from "@/lib/profiles/active-profile-server";
 import { Play } from "lucide-react";
 
@@ -205,6 +209,22 @@ export default async function DashboardPage() {
 
   if (appId === "koydo_arena") {
     return <ArenaDashboard />;
+  }
+
+  if (appId === "koydo_sat") {
+    return <SatDashboard />;
+  }
+
+  if (appId === "koydo_finance") {
+    return <FinanceDashboard />;
+  }
+
+  if (appId === "koydo_math") {
+    return <MathDashboard />;
+  }
+
+  if (appId === "koydo_neuro") {
+    return <NeuroDashboard />;
   }
 
   if (isJuniorApp) {

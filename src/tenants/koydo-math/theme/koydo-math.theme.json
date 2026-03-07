@@ -1,0 +1,49 @@
+{
+  "id": "koydo-math",
+  "displayName": "Koydo Math Forge",
+  "palette": {
+    "primary": "#6c5ce7",
+    "primary_light": "#a29bfe",
+    "primary_dark": "#5b4cdb",
+    "secondary": "#00cec9",
+    "accent": "#fdcb6e",
+    "background": "#fafafa",
+    "surface": "#ffffff",
+    "surface_raised": "#f5f3ff",
+    "text_primary": "#1e1b4b",
+    "text_secondary": "#4c1d95",
+    "text_muted": "#a78bfa",
+    "border": "#e9e5ff",
+    "success": "#10b981",
+    "warning": "#f59e0b",
+    "error": "#ef4444"
+  },
+  "darkPalette": {
+    "primary": "#a29bfe",
+    "primary_light": "#c4b5fd",
+    "primary_dark": "#6c5ce7",
+    "secondary": "#00cec9",
+    "accent": "#fbbf24",
+    "background": "#0f0d1a",
+    "surface": "#1e1b2e",
+    "surface_raised": "#2d2844",
+    "text_primary": "#f5f3ff",
+    "text_secondary": "#a29bfe",
+    "text_muted": "#6c5ce7",
+    "border": "#2d2844"
+  },
+  "typography": {
+    "fontFamily": "'Inter', system-ui, sans-serif",
+    "fontFamilyHeading": "'Inter', system-ui, sans-serif",
+    "baseFontSize": "16px"
+  },
+  "spacing": {
+    "borderRadius": "0.75rem",
+    "cardPadding": "1.25rem"
+  },
+  "motion": {
+    "spring": false,
+    "reducedMotion": false,
+    "transitionSpeed": "normal"
+  }
+}

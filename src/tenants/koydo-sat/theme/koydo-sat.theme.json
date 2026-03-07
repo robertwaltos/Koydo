@@ -1,0 +1,51 @@
+{
+  "id": "koydo-sat",
+  "displayName": "Koydo SAT Prep",
+  "palette": {
+    "primary": "#1d4ed8",
+    "primary_light": "#3b82f6",
+    "primary_dark": "#1e3a8a",
+    "secondary": "#7c3aed",
+    "accent": "#f59e0b",
+    "focus_green": "#059669",
+    "alert_red": "#dc2626",
+    "background": "#f8fafc",
+    "surface": "#ffffff",
+    "surface_raised": "#f1f5f9",
+    "text_primary": "#0f172a",
+    "text_secondary": "#475569",
+    "text_muted": "#94a3b8",
+    "border": "#e2e8f0",
+    "success": "#059669",
+    "warning": "#d97706",
+    "error": "#dc2626"
+  },
+  "darkPalette": {
+    "primary": "#3b82f6",
+    "primary_light": "#60a5fa",
+    "primary_dark": "#1d4ed8",
+    "secondary": "#a78bfa",
+    "accent": "#fbbf24",
+    "background": "#0f172a",
+    "surface": "#1e293b",
+    "surface_raised": "#334155",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "text_muted": "#64748b",
+    "border": "#334155"
+  },
+  "typography": {
+    "fontFamily": "'Inter', system-ui, sans-serif",
+    "fontFamilyHeading": "'Inter', system-ui, sans-serif",
+    "baseFontSize": "16px"
+  },
+  "spacing": {
+    "borderRadius": "0.75rem",
+    "cardPadding": "1.25rem"
+  },
+  "motion": {
+    "spring": false,
+    "reducedMotion": false,
+    "transitionSpeed": "normal"
+  }
+}
