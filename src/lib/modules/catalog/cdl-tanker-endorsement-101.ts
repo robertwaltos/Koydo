@@ -11,7 +11,7 @@ export const cdl_tanker_endorsement_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": ["en"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/tanker-liquid-surge.png",
   "learningObjectives": [
     "Explain liquid surge and its effects on vehicle handling during braking, turning, and lane changes",
     "Differentiate between smooth bore, baffled, and compartmented tanks",

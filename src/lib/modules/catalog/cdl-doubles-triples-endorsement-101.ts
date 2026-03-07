@@ -11,7 +11,7 @@ export const cdl_doubles_triples_endorsement_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "intermediate",
   "localeSupport": ["en"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/doubles-triples-coupling.png",
   "learningObjectives": [
     "Couple and uncouple double and triple trailer combinations safely",
     "Connect and inspect converter dollies",

@@ -24,6 +24,10 @@ import { isLaunchFeaturePending, resolveLaunchHref } from "@/lib/platform/launch
 import DashboardAgeShellBanner from "./age-shell-banner";
 import UniversityDashboard from "@/tenants/koydo-university/components/UniversityDashboard";
 import JuniorDashboard, { type JuniorWorld } from "@/tenants/koydo-junior/components/JuniorDashboard";
+import CdlDashboard from "@/tenants/koydo-cdl/components/CdlDashboard";
+import TradesDashboard from "@/tenants/koydo-trades/components/TradesDashboard";
+import StemDashboard from "@/tenants/koydo-stem/components/StemDashboard";
+import ArenaDashboard from "@/tenants/koydo-arena/components/ArenaDashboard";
 import { getActiveProfileId } from "@/lib/profiles/active-profile-server";
 import { Play } from "lucide-react";
 
@@ -185,6 +189,22 @@ export default async function DashboardPage() {
 
   if (appId === "koydo_university") {
     return <UniversityDashboard />;
+  }
+
+  if (appId === "koydo_cdl") {
+    return <CdlDashboard />;
+  }
+
+  if (appId === "koydo_trades") {
+    return <TradesDashboard />;
+  }
+
+  if (appId === "koydo_stem") {
+    return <StemDashboard />;
+  }
+
+  if (appId === "koydo_arena") {
+    return <ArenaDashboard />;
   }
 
   if (isJuniorApp) {

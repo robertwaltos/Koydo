@@ -10,13 +10,16 @@ import {
   WordBuilder,
   NumberCrunch,
   PatternTrain,
+  GardenPatchPlanner,
+  BugTrailBalancer,
+  CloudCrewForecast,
   StorySequencer,
   MemoryMatch,
   ColorMixer,
   ShapeSafari,
 } from "@/components/games";
 import lazyGames from "@/components/games/lazy-registry";
-import ImmersiveArcadeTemplate from "@/components/games/immersive-arcade-template";
+
 import MascotHost from "@/components/experience/MascotHost";
 import { useExperience } from "@/lib/gamification/experience-context";
 import { useGameResult } from "@/lib/gamification/use-game-result";
@@ -37,6 +40,9 @@ const CORE_COMPONENTS: Record<GameType, (props: CoreGameComponentProps) => React
   "word-builder": WordBuilder,
   "number-crunch": NumberCrunch,
   "pattern-train": PatternTrain,
+  "garden-patch-planner": GardenPatchPlanner,
+  "bug-trail-balancer": BugTrailBalancer,
+  "cloud-crew-forecast": CloudCrewForecast,
   "story-sequencer": StorySequencer,
   "memory-match": MemoryMatch,
   "color-mixer": ColorMixer,
@@ -103,6 +109,9 @@ const LEGACY_COMPONENTS: Record<string, React.ComponentType> = {
   "rhyme-river": lazyGames["RhymeRiver"],
   "count-constellations": lazyGames["CountConstellations"],
   "fraction-factory": lazyGames["FractionFactory"],
+  "garden-glow-lab": lazyGames["GardenGlowLab"],
+  "firefly-word-weave": lazyGames["FireflyWordWeave"],
+  "river-route-rangers": lazyGames["RiverRouteRangers"],
   // Arcade (061-070)
   "arcade-061": lazyGames["Arcade061PixelPrismPatrol"],
   "arcade-062": lazyGames["Arcade062SparkFactorFurnace"],
@@ -263,7 +272,39 @@ const LEGACY_COMPONENTS: Record<string, React.ComponentType> = {
   "zone-123": lazyGames["Zone123TerraColonyEvac"],
   "zone-124": lazyGames["Zone124LunaNovaCadence"],
   "zone-125": lazyGames["Zone125PixelContainmentMatrix"],
+  // Handcrafted educational games
+  "tangram-builder": lazyGames["GameTangramBuilder"],
+  "pipe-flow": lazyGames["GamePipeFlow"],
+  "fossil-dig": lazyGames["GameFossilDig"],
+  "lemonade-stand": lazyGames["GameLemonadeStand"],
+  "mirror-draw": lazyGames["GameMirrorDraw"],
+  "tiny-chef": lazyGames["GameTinyChef"],
+  // Pipeline games (2026-03)
+  "flag-dash": lazyGames["GameFlagDash"],
+  "element-match": lazyGames["GameElementMatch"],
+  "timeline-dash": lazyGames["GameTimelineDash"],
+  "body-atlas": lazyGames["GameBodyAtlas"],
+  "debug-detective": lazyGames["GameDebugDetective"],
+  "note-hunter": lazyGames["GameNoteHunter"],
+  "chord-builder": lazyGames["GameChordBuilder"],
+  "beat-lab": lazyGames["GameBeatLab"],
+  "budget-hero": lazyGames["GameBudgetHero"],
+  "stock-sprint": lazyGames["GameStockSprint"],
+  "nutrition-lab": lazyGames["GameNutritionLab"],
+  "code-blocks": lazyGames["GameCodeBlocks"],
+  "bridges-builder": lazyGames["GameBridgesBuilder"],
+  "light-towers": lazyGames["GameLightTowers"],
+  "capital-quest": lazyGames["GameCapitalQuest"],
+  "truck-highway": lazyGames["TruckHighway"],
 };
+
+function reportAsCoreType(gameId: string): GameType {
+  const hash = gameId
+    .split("")
+    .reduce((acc, char) => ((acc * 33) ^ char.charCodeAt(0)) >>> 0, 5381);
+  const keys = Object.keys(CORE_COMPONENTS) as GameType[];
+  return keys[hash % keys.length] ?? "memory-match";
+}
 
 function friendForCategory(category: string): "pixel" | "spark" | "echo" | "luna" | "terra" {
   if (category === "creative") return "luna";
@@ -273,13 +314,6 @@ function friendForCategory(category: string): "pixel" | "spark" | "echo" | "luna
   return "pixel";
 }
 
-function reportAsCoreType(gameId: string): GameType {
-  const hash = gameId
-    .split("")
-    .reduce((acc, char) => ((acc * 33) ^ char.charCodeAt(0)) >>> 0, 5381);
-  const keys = Object.keys(CORE_COMPONENTS) as GameType[];
-  return keys[hash % keys.length] ?? "memory-match";
-}
 
 const LEGACY_MIN_SUBMIT_MS = 12_000;
 const LEGACY_MIN_INTERACTIONS = 6;
@@ -937,41 +971,6 @@ export default function GamePlayerPage() {
     );
   };
 
-  const handleArcadeComplete = (outcome: {
-    score: number;
-    maxScore: number;
-    stars: 0 | 1 | 2 | 3;
-    timeMs: number;
-  }) => {
-    if (rewardRealmLocked) {
-      setResultMessage("Reward Realm is locked. Complete educational mastery milestones first.");
-      return;
-    }
-
-    const mappedCore = reportAsCoreType(game.id);
-    void submitResult({
-      gameType: mappedCore,
-      customGameId: game.id,
-      difficulty,
-      score: outcome.score,
-      maxScore: outcome.maxScore,
-      timeMs: outcome.timeMs,
-      studentProfileId: selectedProfileId || undefined,
-      guardianUnlockPhrase: guardianUnlocked ? "GUARDIAN UNLOCK" : undefined,
-    }).then((submitOutcome) => {
-      if (submitOutcome.error) {
-        setResultMessage(
-          `Mission complete (${outcome.score}/${outcome.maxScore}, ${outcome.stars} stars). ` +
-          `Telemetry sync warning: ${submitOutcome.error}`,
-        );
-        return;
-      }
-      setResultMessage(
-        `Mission complete (${outcome.score}/${outcome.maxScore}, ${outcome.stars} stars). ` +
-        `Awarded ${submitOutcome.pointsAwarded} XP via ${mappedCore} + custom tag ${game.id}.`,
-      );
-    });
-  };
 
   const handleLegacyInteraction = () => {
     if (legacyAutoEventSentRef.current && !legacySubmissionInFlightRef.current) {
@@ -1650,13 +1649,13 @@ export default function GamePlayerPage() {
               </div>
             </>
           ) : (
-            <ImmersiveArcadeTemplate
-              key={`${game.id}:${difficulty}`}
-              game={game}
-              difficulty={difficulty}
-              renderPreset={premiumStatus?.premium ? renderPreset : "standard"}
-              onComplete={handleArcadeComplete}
-            />
+            <div className="flex flex-col items-center justify-center py-12 text-center">
+              <p className="text-4xl">🚧</p>
+              <h2 className="mt-4 text-lg font-bold text-stone-800">Game Not Available</h2>
+              <p className="mt-2 text-sm text-stone-500">
+                This game does not have a playable component yet.
+              </p>
+            </div>
           )}
         </section>
       ) : null}
@@ -1669,3 +1668,6 @@ export default function GamePlayerPage() {
     </main>
   );
 }
+
+
+

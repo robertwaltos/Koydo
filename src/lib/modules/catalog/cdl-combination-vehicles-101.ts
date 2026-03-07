@@ -11,7 +11,7 @@ export const cdl_combination_vehicles_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": ["en", "es"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/coupling-system.png",
   "learningObjectives": [
     "Perform the proper coupling and uncoupling procedure for tractor-trailer combinations",
     "Inspect trailer coupling systems including fifth wheel, kingpin, and glad hands",

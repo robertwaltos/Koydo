@@ -11,7 +11,7 @@ export const cdl_hazmat_endorsement_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "intermediate",
   "localeSupport": ["en"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/hazmat-placards.png",
   "learningObjectives": [
     "Identify the 9 hazard classes and their associated placard designs",
     "Read and interpret hazmat shipping papers and the Hazmat Table",

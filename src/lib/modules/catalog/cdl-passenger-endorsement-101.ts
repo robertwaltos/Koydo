@@ -11,7 +11,7 @@ export const cdl_passenger_endorsement_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": ["en"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/truck-lighting.png",
   "learningObjectives": [
     "Perform a complete pre-trip inspection specific to passenger vehicles",
     "Apply safe passenger loading and unloading procedures",

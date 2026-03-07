@@ -25,9 +25,11 @@ const lazyGames: Record<string, ComponentType<any>> = {
   "EthosEngine": dynamic(() => import("./ethos-engine"), { ssr: false }),
   "EvolutionPrime": dynamic(() => import("./evolution-prime"), { ssr: false }),
   "FloraFusion": dynamic(() => import("./flora-fusion"), { ssr: false }),
+  "FireflyWordWeave": dynamic(() => import("./firefly-word-weave"), { ssr: false }),
   "FractionFactory": dynamic(() => import("./fraction-factory"), { ssr: false }),
   "FractionForge": dynamic(() => import("./fraction-forge"), { ssr: false }),
   "FusionFounder": dynamic(() => import("./fusion-founder"), { ssr: false }),
+  "GardenGlowLab": dynamic(() => import("./garden-glow-lab"), { ssr: false }),
   "GeneticGarden": dynamic(() => import("./genetic-garden"), { ssr: false }),
   "GlobalHarmony": dynamic(() => import("./global-harmony"), { ssr: false }),
   "GravityGoliath": dynamic(() => import("./gravity-goliath"), { ssr: false }),
@@ -51,6 +53,7 @@ const lazyGames: Record<string, ComponentType<any>> = {
   "QuantumQuirk": dynamic(() => import("./quantum-quirk"), { ssr: false }),
   "RhymeRiver": dynamic(() => import("./rhyme-river"), { ssr: false }),
   "RhythmRules": dynamic(() => import("./rhythm-rules"), { ssr: false }),
+  "RiverRouteRangers": dynamic(() => import("./river-route-rangers"), { ssr: false }),
   "SentenceSafari": dynamic(() => import("./sentence-safari"), { ssr: false }),
   "SparksSparkQuest": dynamic(() => import("./sparks-spark-quest"), { ssr: false }),
   "StarSteer": dynamic(() => import("./star-steer"), { ssr: false }),
@@ -64,7 +67,7 @@ const lazyGames: Record<string, ComponentType<any>> = {
   "VelocityVector": dynamic(() => import("./velocity-vector"), { ssr: false }),
   "VocabularyVoyager": dynamic(() => import("./vocabulary-voyager"), { ssr: false }),
   "WordWoods": dynamic(() => import("./word-woods"), { ssr: false }),
-  "ImmersiveArcadeTemplate": dynamic(() => import("./immersive-arcade-template"), { ssr: false }),
+
   "QuizAdventureFactory": dynamic(() => import("./quiz-adventure-factory"), { ssr: false }),
   "QuizAdventureGame": dynamic(() => import("./quiz-adventure-game"), { ssr: false }),
   "RewardRealmCharacterGauntlet": dynamic(() => import("./reward-realm-character-gauntlet"), { ssr: false }),
@@ -222,6 +225,32 @@ const lazyGames: Record<string, ComponentType<any>> = {
   "Zone123TerraColonyEvac": dynamic(() => import("./zone-123-terra-colony-evac"), { ssr: false }),
   "Zone124LunaNovaCadence": dynamic(() => import("./zone-124-luna-nova-cadence"), { ssr: false }),
   "Zone125PixelContainmentMatrix": dynamic(() => import("./zone-125-pixel-containment-matrix"), { ssr: false }),
+  // Handcrafted educational games
+  "GameTangramBuilder": dynamic(() => import("./game-tangram-builder"), { ssr: false }),
+  "GamePipeFlow": dynamic(() => import("./game-pipe-flow"), { ssr: false }),
+  "GameFossilDig": dynamic(() => import("./game-fossil-dig"), { ssr: false }),
+  "GameLemonadeStand": dynamic(() => import("./game-lemonade-stand"), { ssr: false }),
+  "GameMirrorDraw": dynamic(() => import("./game-mirror-draw"), { ssr: false }),
+  "GameTinyChef": dynamic(() => import("./game-tiny-chef"), { ssr: false }),
+  // ── New Pipeline Games (2026-03) ──
+  "GameFlagDash": dynamic(() => import("./game-flag-dash"), { ssr: false }),
+  "GameElementMatch": dynamic(() => import("./game-element-match"), { ssr: false }),
+  "GameTimelineDash": dynamic(() => import("./game-timeline-dash"), { ssr: false }),
+  "GameBodyAtlas": dynamic(() => import("./game-body-atlas"), { ssr: false }),
+  "GameDebugDetective": dynamic(() => import("./game-debug-detective"), { ssr: false }),
+  "GameNoteHunter": dynamic(() => import("./game-note-hunter"), { ssr: false }),
+  "GameChordBuilder": dynamic(() => import("./game-chord-builder"), { ssr: false }),
+  "GameBeatLab": dynamic(() => import("./game-beat-lab"), { ssr: false }),
+  "GameBudgetHero": dynamic(() => import("./game-budget-hero"), { ssr: false }),
+  "GameStockSprint": dynamic(() => import("./game-stock-sprint"), { ssr: false }),
+  "GameNutritionLab": dynamic(() => import("./game-nutrition-lab"), { ssr: false }),
+  "GameCodeBlocks": dynamic(() => import("./game-code-blocks"), { ssr: false }),
+  "GameBridgesBuilder": dynamic(() => import("./game-bridges-builder"), { ssr: false }),
+  "GameLightTowers": dynamic(() => import("./game-light-towers"), { ssr: false }),
+  "GameCapitalQuest": dynamic(() => import("./game-capital-quest"), { ssr: false }),
+  "TruckHighway": dynamic(() => import("./game-truck-highway"), { ssr: false }),
 };
 
 export default lazyGames;
+
+

@@ -1,0 +1,52 @@
+{
+  "id": "koydo-arena",
+  "displayName": "Koydo Arena",
+  "palette": {
+    "primary": "#7c3aed",
+    "primary_light": "#a78bfa",
+    "primary_dark": "#5b21b6",
+    "secondary": "#06b6d4",
+    "accent": "#f59e0b",
+    "neon_green": "#22d3ee",
+    "hot_pink": "#ec4899",
+    "electric_blue": "#3b82f6",
+    "background": "#0f0f23",
+    "surface": "#1a1a3e",
+    "surface_raised": "#252550",
+    "text_primary": "#f1f5f9",
+    "text_secondary": "#94a3b8",
+    "text_muted": "#64748b",
+    "border": "#334155",
+    "success": "#22c55e",
+    "warning": "#f59e0b",
+    "error": "#ef4444"
+  },
+  "darkPalette": {
+    "primary": "#a78bfa",
+    "primary_light": "#c4b5fd",
+    "primary_dark": "#7c3aed",
+    "secondary": "#22d3ee",
+    "accent": "#fbbf24",
+    "background": "#050510",
+    "surface": "#0f0f23",
+    "surface_raised": "#1a1a3e",
+    "text_primary": "#f8fafc",
+    "text_secondary": "#cbd5e1",
+    "text_muted": "#64748b",
+    "border": "#1e293b"
+  },
+  "typography": {
+    "fontFamily": "'Space Grotesk', 'Inter', system-ui, sans-serif",
+    "fontFamilyHeading": "'Space Grotesk', 'Inter', system-ui, sans-serif",
+    "baseFontSize": "16px"
+  },
+  "spacing": {
+    "borderRadius": "1rem",
+    "cardPadding": "1.25rem"
+  },
+  "motion": {
+    "spring": true,
+    "reducedMotion": false,
+    "transitionSpeed": "fast"
+  }
+}

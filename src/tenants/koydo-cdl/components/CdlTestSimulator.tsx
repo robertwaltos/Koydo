@@ -3,21 +3,16 @@
 import { useCallback, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import CdlButton from "./CdlButton";
+import {
+  CDL_QUESTION_BANK,
+  CDL_SECTION_META,
+  type CdlQuestion,
+  type CdlTestSection,
+} from "../questions/question-bank";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 type TestMode = "study" | "exam";
-
-type CdlQuestion = {
-  id: string;
-  question: string;
-  options: string[];
-  correctIndex: number;
-  explanation: string;
-  section: string;
-  /** Optional image description for visual questions (road signs, diagrams) */
-  imagePrompt?: string;
-};
 
 type AnswerRecord = {
   questionIndex: number;
@@ -40,105 +35,22 @@ type CdlTestSimulatorProps = {
   onComplete?: (score: number, passed: boolean, answers: AnswerRecord[]) => void;
 };
 
-// ── Sample question bank (General Knowledge) ─────────────────────────────────
+// ── Question bank is imported from ../data/question-bank ──────────────────────
+// 250+ questions across 8 sections: General Knowledge, Air Brakes,
+// Combination Vehicles, Hazmat, Tanker, Doubles/Triples, Passenger, School Bus
 
-const SAMPLE_QUESTIONS: CdlQuestion[] = [
-  {
-    id: "gk-001",
-    question: "You are driving a 60-foot truck at 55 mph. What is the minimum safe following distance?",
-    options: ["4 seconds", "5 seconds", "6 seconds", "7 seconds"],
-    correctIndex: 3,
-    explanation: "At speeds above 40 mph, use the formula: 1 second per 10 feet of vehicle length, plus 1 extra second. For a 60-foot truck: 6 + 1 = 7 seconds.",
-    section: "Safe Driving",
-  },
-  {
-    id: "gk-002",
-    question: "The most common cause of truck rollovers is:",
-    options: ["Tire blowout", "Excessive speed in curves", "Brake failure", "Wind gusts"],
-    correctIndex: 1,
-    explanation: "The number one cause of truck rollovers is entering a curve or ramp too fast. Loaded trucks have a high center of gravity that makes them especially vulnerable to lateral forces in turns.",
-    section: "Safe Driving",
-  },
-  {
-    id: "gk-003",
-    question: "During a pre-trip inspection, what is the minimum tread depth for steer tires?",
-    options: ["2/32 inch", "3/32 inch", "4/32 inch", "6/32 inch"],
-    correctIndex: 2,
-    explanation: "Federal regulations require a minimum tread depth of 4/32 inch on steer (front) tires. All other tires require a minimum of 2/32 inch.",
-    section: "Vehicle Inspection",
-  },
-  {
-    id: "gk-004",
-    question: "How often must you stop and check your cargo securement during a trip?",
-    options: [
-      "Every 100 miles or 2 hours",
-      "Within the first 50 miles, then every 150 miles or 3 hours",
-      "Every 200 miles or 4 hours",
-      "Only at the beginning and end of the trip",
-    ],
-    correctIndex: 1,
-    explanation: "You must check cargo within the first 50 miles of a trip, and then every 150 miles or 3 hours (whichever comes first) thereafter.",
-    section: "Transporting Cargo",
-  },
-  {
-    id: "gk-005",
-    question: "What is the maximum number of hours a property-carrying CMV driver can drive after 10 consecutive hours off duty?",
-    options: ["8 hours", "10 hours", "11 hours", "14 hours"],
-    correctIndex: 2,
-    explanation: "Property-carrying drivers may drive a maximum of 11 hours after 10 consecutive hours off duty. All driving must occur within a 14-hour on-duty window.",
-    section: "Regulations",
-  },
-  {
-    id: "gk-006",
-    question: "The BAC (Blood Alcohol Concentration) limit for CDL drivers is:",
-    options: ["0.02%", "0.04%", "0.06%", "0.08%"],
-    correctIndex: 1,
-    explanation: "The BAC limit for commercial drivers is 0.04% — half the limit for regular passenger vehicle drivers (0.08%).",
-    section: "Regulations",
-  },
-  {
-    id: "gk-007",
-    question: "If you are driving in heavy rain, you should reduce your speed by at least:",
-    options: ["10 mph", "1/4 of the speed limit", "1/3 of the speed limit", "1/2 of the speed limit"],
-    correctIndex: 2,
-    explanation: "In heavy rain, reduce your speed by at least 1/3. On packed snow, reduce by 1/2. On ice, slow to a crawl.",
-    section: "Hazardous Conditions",
-  },
-  {
-    id: "gk-008",
-    question: "After an emergency stop, where should you place your three reflective triangles?",
-    options: [
-      "All three behind the vehicle, evenly spaced",
-      "Within 10 feet, at 100 feet, and at 200 feet behind the vehicle",
-      "At 50 feet, 100 feet, and 150 feet behind the vehicle",
-      "One in front and two behind",
-    ],
-    correctIndex: 1,
-    explanation: "Place triangles within 10 feet of the rear of the vehicle, at 100 feet behind, and at 200 feet behind. On a curve or near a hill crest, place the farthest triangle before the obstruction to give drivers warning.",
-    section: "Emergency Procedures",
-  },
-  {
-    id: "gk-009",
-    question: "During a tire blowout, you should:",
-    options: [
-      "Brake hard immediately",
-      "Hold the wheel firmly, do NOT brake, and gradually slow down",
-      "Steer onto the shoulder immediately",
-      "Downshift quickly to engine brake",
-    ],
-    correctIndex: 1,
-    explanation: "During a blowout: grip the steering wheel firmly, do NOT brake (braking can cause loss of control), accelerate slightly to stabilize if needed, then gradually reduce speed and pull over safely.",
-    section: "Emergency Procedures",
-  },
-  {
-    id: "gk-010",
-    question: "Which side of a commercial vehicle has the largest blind spot (No-Zone)?",
-    options: ["The front", "The left side", "The right side", "The rear"],
-    correctIndex: 2,
-    explanation: "The right-side No-Zone extends approximately two full lanes, making it the largest and most dangerous blind spot. Always check your right mirror carefully before turning right.",
-    section: "Safe Driving",
-  },
-];
+/** Get questions for a specific section, or all General Knowledge if none specified */
+function getQuestionsForSection(section?: CdlTestSection): CdlQuestion[] {
+  if (section && CDL_QUESTION_BANK[section]) {
+    return CDL_QUESTION_BANK[section];
+  }
+  return CDL_QUESTION_BANK["General Knowledge"];
+}
+
+/** Get section metadata (pass score, time limit, question count) */
+function getSectionMeta(section: CdlTestSection) {
+  return CDL_SECTION_META[section];
+}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -426,7 +338,7 @@ export default function CdlTestSimulator({ config, onExit, onComplete }: CdlTest
   const [timeRemaining, setTimeRemaining] = useState(config.timeLimitMinutes * 60);
 
   const questions = useMemo(() => {
-    return config.questions.length > 0 ? shuffleArray(config.questions) : shuffleArray(SAMPLE_QUESTIONS);
+    return config.questions.length > 0 ? shuffleArray(config.questions) : shuffleArray(getQuestionsForSection());
   }, [config.questions]);
 
   const currentQuestion = questions[currentIndex];

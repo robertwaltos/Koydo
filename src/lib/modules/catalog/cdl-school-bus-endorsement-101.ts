@@ -11,7 +11,7 @@ export const cdl_school_bus_endorsement_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": ["en"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/school-bus-danger-zones.png",
   "learningObjectives": [
     "Identify the danger zones around a school bus where children are at greatest risk",
     "Apply proper loading and unloading procedures at bus stops",

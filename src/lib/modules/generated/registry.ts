@@ -92,11 +92,13 @@ import { capstone_smart_city_systems_601_Module } from "@/lib/modules/catalog/ca
 import { cdl_air_brakes_101_Module } from "@/lib/modules/catalog/cdl-air-brakes-101";
 import { cdl_combination_vehicles_101_Module } from "@/lib/modules/catalog/cdl-combination-vehicles-101";
 import { cdl_doubles_triples_endorsement_101_Module } from "@/lib/modules/catalog/cdl-doubles-triples-endorsement-101";
+import { cdl_eldt_theory_101_Module } from "@/lib/modules/catalog/cdl-eldt-theory-101";
 import { cdl_general_knowledge_101_Module } from "@/lib/modules/catalog/cdl-general-knowledge-101";
 import { cdl_hazmat_endorsement_101_Module } from "@/lib/modules/catalog/cdl-hazmat-endorsement-101";
 import { cdl_passenger_endorsement_101_Module } from "@/lib/modules/catalog/cdl-passenger-endorsement-101";
 import { cdl_pre_trip_inspection_101_Module } from "@/lib/modules/catalog/cdl-pre-trip-inspection-101";
 import { cdl_school_bus_endorsement_101_Module } from "@/lib/modules/catalog/cdl-school-bus-endorsement-101";
+import { cdl_skills_test_walkthrough_101_Module } from "@/lib/modules/catalog/cdl-skills-test-walkthrough-101";
 import { cdl_tanker_endorsement_101_Module } from "@/lib/modules/catalog/cdl-tanker-endorsement-101";
 import { chemistry_101_Module } from "@/lib/modules/catalog/chemistry-101";
 import { chemistry_201_Module } from "@/lib/modules/catalog/chemistry-201";
@@ -805,24 +807,24 @@ import { sustainability_policy_501_Module } from "@/lib/modules/catalog/sustaina
 import { sustainability_policy_601_Module } from "@/lib/modules/catalog/sustainability-policy-601";
 import { toefl_prep_101_Module } from "@/lib/modules/catalog/toefl-prep-101";
 import { us_civics_101_Module } from "@/lib/modules/catalog/us-civics-101";
-import { UsCivics201Module } from "@/lib/modules/catalog/us-civics-201";
+import { us_civics_201_Module } from "@/lib/modules/catalog/us-civics-201";
 import { us_civics_301_Module } from "@/lib/modules/catalog/us-civics-301";
 import { us_civics_401_Module } from "@/lib/modules/catalog/us-civics-401";
-import { UsCivics501Module } from "@/lib/modules/catalog/us-civics-501";
-import { UsCivics601Module } from "@/lib/modules/catalog/us-civics-601";
-import { UxDesign101Module } from "@/lib/modules/catalog/ux-design-101";
-import { UxDesign201Module } from "@/lib/modules/catalog/ux-design-201";
-import { UxDesign301Module } from "@/lib/modules/catalog/ux-design-301";
-import { UxDesign401Module } from "@/lib/modules/catalog/ux-design-401";
-import { UxDesign501Module } from "@/lib/modules/catalog/ux-design-501";
-import { UxDesign601Module } from "@/lib/modules/catalog/ux-design-601";
-import { Windows101Module } from "@/lib/modules/catalog/windows-101";
-import { Windows201Module } from "@/lib/modules/catalog/windows-201";
-import { Windows301Module } from "@/lib/modules/catalog/windows-301";
-import { Windows401Module } from "@/lib/modules/catalog/windows-401";
-import { Windows501Module } from "@/lib/modules/catalog/windows-501";
-import { Windows601Module } from "@/lib/modules/catalog/windows-601";
-import { WorldHistory101Module } from "@/lib/modules/catalog/world-history-101";
+import { us_civics_501_Module } from "@/lib/modules/catalog/us-civics-501";
+import { us_civics_601_Module } from "@/lib/modules/catalog/us-civics-601";
+import { ux_design_101_Module } from "@/lib/modules/catalog/ux-design-101";
+import { ux_design_201_Module } from "@/lib/modules/catalog/ux-design-201";
+import { ux_design_301_Module } from "@/lib/modules/catalog/ux-design-301";
+import { ux_design_401_Module } from "@/lib/modules/catalog/ux-design-401";
+import { ux_design_501_Module } from "@/lib/modules/catalog/ux-design-501";
+import { ux_design_601_Module } from "@/lib/modules/catalog/ux-design-601";
+import { windows_101_Module } from "@/lib/modules/catalog/windows-101";
+import { windows_201_Module } from "@/lib/modules/catalog/windows-201";
+import { windows_301_Module } from "@/lib/modules/catalog/windows-301";
+import { windows_401_Module } from "@/lib/modules/catalog/windows-401";
+import { windows_501_Module } from "@/lib/modules/catalog/windows-501";
+import { windows_601_Module } from "@/lib/modules/catalog/windows-601";
+import { world_history_101_Module } from "@/lib/modules/catalog/world-history-101";
 import { WorldHistory201Module } from "@/lib/modules/catalog/world-history-201";
 import { WorldHistory301Module } from "@/lib/modules/catalog/world-history-301";
 import { WorldHistory401Module } from "@/lib/modules/catalog/world-history-401";
@@ -925,11 +927,13 @@ export const generatedModuleRegistry: LearningModule[] = [
   cdl_air_brakes_101_Module,
   cdl_combination_vehicles_101_Module,
   cdl_doubles_triples_endorsement_101_Module,
+  cdl_eldt_theory_101_Module,
   cdl_general_knowledge_101_Module,
   cdl_hazmat_endorsement_101_Module,
   cdl_passenger_endorsement_101_Module,
   cdl_pre_trip_inspection_101_Module,
   cdl_school_bus_endorsement_101_Module,
+  cdl_skills_test_walkthrough_101_Module,
   cdl_tanker_endorsement_101_Module,
   chemistry_101_Module,
   chemistry_201_Module,
@@ -1638,24 +1642,24 @@ export const generatedModuleRegistry: LearningModule[] = [
   sustainability_policy_601_Module,
   toefl_prep_101_Module,
   us_civics_101_Module,
-  UsCivics201Module,
+  us_civics_201_Module,
   us_civics_301_Module,
   us_civics_401_Module,
-  UsCivics501Module,
-  UsCivics601Module,
-  UxDesign101Module,
-  UxDesign201Module,
-  UxDesign301Module,
-  UxDesign401Module,
-  UxDesign501Module,
-  UxDesign601Module,
-  Windows101Module,
-  Windows201Module,
-  Windows301Module,
-  Windows401Module,
-  Windows501Module,
-  Windows601Module,
-  WorldHistory101Module,
+  us_civics_501_Module,
+  us_civics_601_Module,
+  ux_design_101_Module,
+  ux_design_201_Module,
+  ux_design_301_Module,
+  ux_design_401_Module,
+  ux_design_501_Module,
+  ux_design_601_Module,
+  windows_101_Module,
+  windows_201_Module,
+  windows_301_Module,
+  windows_401_Module,
+  windows_501_Module,
+  windows_601_Module,
+  world_history_101_Module,
   WorldHistory201Module,
   WorldHistory301Module,
   WorldHistory401Module,

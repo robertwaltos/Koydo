@@ -14,6 +14,7 @@ import koydoUniversityTheme from "@/tenants/koydo-university/theme/koydo-univers
 import koydoTradesTheme from "@/tenants/koydo-trades/theme/koydo-trades.theme.json";
 import koydoStemTheme from "@/tenants/koydo-stem/theme/koydo-stem.theme.json";
 import koydoCdlTheme from "@/tenants/koydo-cdl/theme/koydo-cdl.theme.json";
+import koydoArenaTheme from "@/tenants/koydo-arena/theme/koydo-arena.theme.json";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -204,6 +205,9 @@ const STEM_DARK_THEME_CONFIG = stemThemeConfig.dark;
 const cdlThemeConfig = buildTenantThemeConfig(koydoCdlTheme as TenantThemeSchema, "#1e3a5f");
 const CDL_THEME_CONFIG = cdlThemeConfig.light;
 const CDL_DARK_THEME_CONFIG = cdlThemeConfig.dark;
+const arenaThemeConfig = buildTenantThemeConfig(koydoArenaTheme as TenantThemeSchema, "#7c3aed");
+const ARENA_THEME_CONFIG = arenaThemeConfig.light;
+const ARENA_DARK_THEME_CONFIG = arenaThemeConfig.dark;
 
 /**
  * Fetch manifest from `app_manifests` table via the admin API.
@@ -344,7 +348,8 @@ export const STATIC_MANIFESTS: Record<string, AppManifest> = {
   koydo_arena: {
     appId: "koydo_arena",
     displayName: "Koydo Arena",
-    themeConfig: { "--color-primary": "#e17055" },
+    themeConfig: ARENA_THEME_CONFIG,
+    darkThemeConfig: ARENA_DARK_THEME_CONFIG,
     enabledSubjects: ["*"],
     minAge: 5, maxAge: 99, isActive: true,
     supportedLocales: ["*"],
@@ -352,6 +357,14 @@ export const STATIC_MANIFESTS: Record<string, AppManifest> = {
     region: "global",
     defaultCurrency: "USD",
     pricingTier: "free",
+    storeListing: {
+      en: {
+        title: "Koydo Arena",
+        subtitle: "231 educational games — play, learn, compete",
+        description: "The ultimate educational gaming hub. 231 games covering math, science, language arts, coding, music, strategy, and more. Daily challenges, leaderboards, and social competition make learning addictive.",
+        keywords: ["educational games", "learning games", "trivia", "math games", "science games", "kids games", "brain training"],
+      },
+    },
   },
 
   // ── Vertical micro-apps ──────────────────────────────────────────────────

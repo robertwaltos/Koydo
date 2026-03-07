@@ -11,7 +11,7 @@ export const cdl_air_brakes_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": ["en", "es"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/air-brake-system.png",
   "learningObjectives": [
     "Identify all major components of a commercial vehicle air brake system",
     "Explain how dual air brake systems provide redundancy and safety",

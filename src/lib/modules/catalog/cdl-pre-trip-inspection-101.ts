@@ -11,7 +11,7 @@ export const cdl_pre_trip_inspection_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": ["en", "es"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/engine-compartment.png",
   "learningObjectives": [
     "Perform a complete CDL pre-trip inspection in the correct sequence",
     "Identify and name all inspectable components during the walk-around",

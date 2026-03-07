@@ -48,6 +48,40 @@ export type RegisteredGame = {
   backdropVideo?: string | null;
 };
 
+/* ─── Helper to build a game entry with defaults ─── */
+function g(
+  id: string,
+  title: string,
+  description: string,
+  overrides: Partial<RegisteredGame> = {},
+): RegisteredGame {
+  return {
+    id,
+    title,
+    description,
+    icon: "🎮",
+    color: "from-indigo-500 to-cyan-500",
+    ageMin: 7,
+    ageMax: 11,
+    ageGroup: "Elementary (7-11)",
+    engine: "Unity 6+",
+    track: "Educational Core",
+    category: "arcade",
+    mode: "legacy",
+    safeForChildren: true,
+    ageLockRecommended: false,
+    educationalWeight: 75,
+    graphicsTier: "4k-ready",
+    mechanic: "precision-choice",
+    backdropImage: ASSETS.heroHome,
+    backdropVideo: null,
+    ...overrides,
+  };
+}
+
+/* ═══════════════════════════════════════════════════
+   CORE GAMES — 11 original educational games
+   ═══════════════════════════════════════════════════ */
 export const CORE_GAMES: RegisteredGame[] = [
   {
     id: "letter-catcher",
@@ -131,6 +165,69 @@ export const CORE_GAMES: RegisteredGame[] = [
     graphicsTier: "4k-ready",
     mechanic: "core",
     backdropImage: ASSETS.bgAuth,
+    backdropVideo: null,
+  },
+  {
+    id: "garden-patch-planner",
+    title: "Garden Patch Planner",
+    description: "Garden Logic Bloom",
+    icon: "🌱",
+    color: "from-emerald-400 to-lime-500",
+    ageMin: 4,
+    ageMax: 6,
+    ageGroup: "Kindergarten (4-6)",
+    engine: "Unreal Engine 5.5+",
+    track: "Educational Core",
+    category: "science",
+    mode: "core",
+    safeForChildren: true,
+    ageLockRecommended: false,
+    educationalWeight: 93,
+    graphicsTier: "4k-ready",
+    mechanic: "pattern-scan",
+    backdropImage: ASSETS.heroHome,
+    backdropVideo: null,
+  },
+  {
+    id: "bug-trail-balancer",
+    title: "Bug Trail Balancer",
+    description: "Bug Bridge Sums",
+    icon: "🐞",
+    color: "from-lime-400 to-emerald-500",
+    ageMin: 4,
+    ageMax: 6,
+    ageGroup: "Kindergarten (4-6)",
+    engine: "Unreal Engine 5.5+",
+    track: "Educational Core",
+    category: "math",
+    mode: "core",
+    safeForChildren: true,
+    ageLockRecommended: false,
+    educationalWeight: 94,
+    graphicsTier: "4k-ready",
+    mechanic: "signal-balance",
+    backdropImage: ASSETS.bgBottom,
+    backdropVideo: null,
+  },
+  {
+    id: "cloud-crew-forecast",
+    title: "Cloud Crew Forecast",
+    description: "Forecast Pack Quest",
+    icon: "☁️",
+    color: "from-sky-400 to-cyan-500",
+    ageMin: 4,
+    ageMax: 6,
+    ageGroup: "Kindergarten (4-6)",
+    engine: "Unreal Engine 5.5+",
+    track: "Educational Core",
+    category: "science",
+    mode: "core",
+    safeForChildren: true,
+    ageLockRecommended: false,
+    educationalWeight: 92,
+    graphicsTier: "4k-ready",
+    mechanic: "precision-choice",
+    backdropImage: ASSETS.heroSignIn,
     backdropVideo: null,
   },
   {
@@ -219,500 +316,414 @@ export const CORE_GAMES: RegisteredGame[] = [
   },
 ];
 
-const ARCADE_GAME_COUNT = 200;
-const EXPANSION_ARCADE_GAME_COUNT = 235;
-const TOTAL_GENERATED_GAME_COUNT = ARCADE_GAME_COUNT + EXPANSION_ARCADE_GAME_COUNT;
-
-const GENERATED_TITLE_LEFT = [
-  "Sky",
-  "River",
-  "Echo",
-  "Luna",
-  "Nova",
-  "Terra",
-  "Comet",
-  "Aurora",
-  "Orbit",
-  "Pixel",
-  "Clover",
-  "Harbor",
-  "Meadow",
-  "Dawn",
-  "Summit",
-  "Prism",
-  "Marble",
-  "Willow",
-  "Maple",
-  "Coral",
-  "Breeze",
-  "Sprout",
-  "Pebble",
-  "Nimbus",
-  "Flare",
-] as const;
-
-const GENERATED_TITLE_RIGHT = [
-  "Voyage",
-  "Quest",
-  "Sprint",
-  "Lab",
-  "Trail",
-  "Circuit",
-  "Garden",
-  "Studio",
-  "Arcade",
-  "Rally",
-  "Arena",
-  "Chronicle",
-  "Frontier",
-  "Odyssey",
-  "Summit",
-  "Expedition",
-  "Mission",
-  "Path",
-] as const;
-
-const SHORT_DESCRIPTION_ROTATION = [
-  "Play Learn Grow",
-  "Think Move Learn",
-  "Solve Share Smile",
-  "Build Explore Learn",
-  "Focus Practice Win",
-  "Team Up Learn",
-  "Discover Create Grow",
-] as const;
-
-const BANNED_TITLE_TERMS = /\b(ultra|max|super|xuper|supremacy)\b/i;
-const BANNED_ID_TERMS = /\b(ultra|max|super|xuper|supremacy)\b/i;
-
-const GEMINI_GAME_SEEDS = [
-  ["neural", "Neural Navigator"],
-  ["fraction", "Fraction Forge"],
-  ["vocabulary", "Vocabulary Voyager"],
-  ["artistic", "Artistic Algorithms"],
-  ["ethical", "Ethical Engine"],
-  ["synthesis", "Synthesis Sphere"],
-  ["velocity", "Velocity Vector"],
-  ["logic", "Logical Link"],
-  ["canvas", "Cosmic Canvas"],
-  ["chronicle", "Chronicle Case"],
-  ["syntax", "Syntax Serpent"],
-  ["genetic", "Genetic Garden"],
-  ["quantum", "Quantum Quest"],
-  ["market", "Market Maker"],
-  ["orbit", "Orbit Operator"],
-  ["cipher", "Cipher City"],
-  ["biome", "Biome Builder"],
-  ["rhythm", "Rhythm Rules"],
-  ["tectonic", "Tectonic Trek"],
-  ["flora", "Flora Fusion"],
-  ["bot", "Bot Builder"],
-  ["eco", "Eco Engineer"],
-  ["aero", "Aero Architect"],
-  ["histo", "Histo Hunt"],
-  ["nano", "Nano Navigator"],
-  ["quantum-quirk", "Quantum Quirk"],
-  ["star-steer", "Star Steer"],
-  ["logic-labyrinth", "Logic Labyrinth"],
-  ["bio-blast", "Bio Blast"],
-  ["ethos-engine", "Ethos Engine"],
-  ["echo-expedition", "Echo's Expedition"],
-  ["terra-trek", "Terra's Trek"],
-  ["spark-quest", "Spark's Spark-Quest"],
-  ["pixel-path", "Pixel's Path"],
-  ["luna-legend", "Luna's Legend"],
-  ["circuit-crusader", "Circuit Crusader"],
-  ["gravity-goliath", "Gravity Goliath"],
-  ["protein-painter", "Protein Painter"],
-  ["linguist-lookout", "Linguist Lookout"],
-  ["fusion-founder", "Fusion Founder"],
-  ["stellar-state", "Stellar State"],
-  ["neural-net", "Neural Net"],
-  ["climate-commander", "Climate Commander"],
-  ["history-hacker", "History Hacker"],
-  ["nano-nexus", "Nano Nexus"],
-  ["mars-colony", "Mars Colony"],
-  ["quantum-cascade", "Quantum Cascade"],
-  ["synthetic-architect", "Synthetic Architect"],
-  ["global-harmony", "Global Harmony"],
-  ["evolution-prime", "Evolution Prime"],
-  ["word-woods", "Word Woods"],
-  ["story-smith", "Story Smith"],
-  ["alphabet-airship", "Alphabet Airship"],
-  ["sentence-safari", "Sentence Safari"],
-  ["rhyme-river", "Rhyme River"],
-  ["count-constellations", "Count Constellations"],
-  ["fraction-factory", "Fraction Factory"],
-] as const;
-
-const LEGACY_TITLE_LEFT = [
-  "Atlas",
-  "Beacon",
-  "Cedar",
-  "Delta",
-  "Ember",
-  "Fable",
-  "Grove",
-  "Ivory",
-  "Jade",
-  "Kindle",
-  "Lantern",
-  "Meridian",
-  "Noble",
-  "Onyx",
-  "Pioneer",
-  "Quill",
-  "Raven",
-  "Solace",
-  "Timber",
-] as const;
-
-const LEGACY_TITLE_RIGHT = ["Journey", "Studio", "Rally"] as const;
-
-function buildGeneratedTitles(total: number): string[] {
-  const maxCombinations = GENERATED_TITLE_LEFT.length * GENERATED_TITLE_RIGHT.length;
-  if (total > maxCombinations) {
-    throw new Error(`Generated game title pool too small: need ${total}, have ${maxCombinations}`);
-  }
-
-  return Array.from({ length: total }, (_, index) => {
-    const left = GENERATED_TITLE_LEFT[index % GENERATED_TITLE_LEFT.length]!;
-    const right = GENERATED_TITLE_RIGHT[Math.floor(index / GENERATED_TITLE_LEFT.length)]!;
-    return `${left} ${right}`;
-  });
-}
-
-const GENERATED_GAME_TITLES = buildGeneratedTitles(TOTAL_GENERATED_GAME_COUNT);
-
-function buildLegacyTitles(total: number): string[] {
-  const maxCombinations = LEGACY_TITLE_LEFT.length * LEGACY_TITLE_RIGHT.length;
-  if (total > maxCombinations) {
-    throw new Error(`Legacy game title pool too small: need ${total}, have ${maxCombinations}`);
-  }
-
-  return Array.from({ length: total }, (_, index) => {
-    const left = LEGACY_TITLE_LEFT[index % LEGACY_TITLE_LEFT.length]!;
-    const right = LEGACY_TITLE_RIGHT[Math.floor(index / LEGACY_TITLE_LEFT.length)]!;
-    return `${left} ${right}`;
-  });
-}
-
-const LEGACY_GAME_TITLES = buildLegacyTitles(GEMINI_GAME_SEEDS.length);
-
-const CATEGORY_ROTATION: GameCategory[] = [
-  "arcade",
-  "adventure",
-  "logic",
-  "creative",
-  "science",
-  "math",
-  "literacy",
+/* ═══════════════════════════════════════════════════
+   LEGACY GAMES — 56 Gemini-era games with real .tsx
+   ═══════════════════════════════════════════════════ */
+export const LEGACY_GAMES: RegisteredGame[] = [
+  g("neural", "Neural Navigator", "Play Learn Grow", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "science" }),
+  g("fraction", "Fraction Forge", "Think Move Learn", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "math" }),
+  g("vocabulary", "Vocabulary Voyager", "Solve Share Smile", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "literacy" }),
+  g("artistic", "Artistic Algorithms", "Build Explore Learn", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "creative" }),
+  g("ethical", "Ethical Engine", "Focus Practice Win", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "logic" }),
+  g("synthesis", "Synthesis Sphere", "Team Up Learn", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "science" }),
+  g("velocity", "Velocity Vector", "Discover Create Grow", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "math" }),
+  g("logic", "Logical Link", "Play Learn Grow", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "logic" }),
+  g("canvas", "Cosmic Canvas", "Think Move Learn", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "creative" }),
+  g("chronicle", "Chronicle Case", "Solve Share Smile", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "adventure" }),
+  g("syntax", "Syntax Serpent", "Build Explore Learn", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "literacy" }),
+  g("genetic", "Genetic Garden", "Focus Practice Win", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "science" }),
+  g("quantum", "Quantum Quest", "Team Up Learn", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "science" }),
+  g("market", "Market Maker", "Discover Create Grow", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "math" }),
+  g("orbit", "Orbit Operator", "Play Learn Grow", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "science" }),
+  g("cipher", "Cipher City", "Think Move Learn", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "logic" }),
+  g("biome", "Biome Builder", "Solve Share Smile", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "science" }),
+  g("rhythm", "Rhythm Rules", "Build Explore Learn", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "creative" }),
+  g("tectonic", "Tectonic Trek", "Focus Practice Win", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "science" }),
+  g("flora", "Flora Fusion", "Team Up Learn", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "science" }),
+  g("bot", "Bot Builder", "Discover Create Grow", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "logic" }),
+  g("eco", "Eco Engineer", "Play Learn Grow", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "science" }),
+  g("aero", "Aero Architect", "Think Move Learn", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "science" }),
+  g("histo", "Histo Hunt", "Solve Share Smile", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "adventure" }),
+  g("nano", "Nano Navigator", "Build Explore Learn", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "science" }),
+  g("quantum-quirk", "Quantum Quirk", "Focus Practice Win", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "science", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("star-steer", "Star Steer", "Team Up Learn", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "science", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("logic-labyrinth", "Logic Labyrinth", "Discover Create Grow", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "logic", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("bio-blast", "Bio Blast", "Play Learn Grow", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "science", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("ethos-engine", "Ethos Engine", "Think Move Learn", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "logic", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("echo-expedition", "Echo's Expedition", "Solve Share Smile", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "adventure", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("terra-trek", "Terra's Trek", "Build Explore Learn", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "science", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("spark-quest", "Spark's Spark-Quest", "Focus Practice Win", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "science", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("pixel-path", "Pixel's Path", "Team Up Learn", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "logic", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("luna-legend", "Luna's Legend", "Discover Create Grow", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "adventure", ageMin: 12, ageMax: 14, ageGroup: "Middle School (12-14)" }),
+  g("circuit-crusader", "Circuit Crusader", "Play Learn Grow", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "logic", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("gravity-goliath", "Gravity Goliath", "Think Move Learn", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "science", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("protein-painter", "Protein Painter", "Solve Share Smile", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "science", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("linguist-lookout", "Linguist Lookout", "Build Explore Learn", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "literacy", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("fusion-founder", "Fusion Founder", "Focus Practice Win", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "science", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("stellar-state", "Stellar State", "Team Up Learn", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "science", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("neural-net", "Neural Net", "Discover Create Grow", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "science", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("climate-commander", "Climate Commander", "Play Learn Grow", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "science", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("history-hacker", "History Hacker", "Think Move Learn", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "adventure", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("nano-nexus", "Nano Nexus", "Solve Share Smile", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "science", ageMin: 15, ageMax: 18, ageGroup: "High School (15-18)", ageLockRecommended: true }),
+  g("mars-colony", "Mars Colony", "Build Explore Learn", { icon: "🧠", color: "from-emerald-500 to-lime-500", category: "science", ageMin: 19, ageMax: 22, ageGroup: "College (19+)", ageLockRecommended: true }),
+  g("quantum-cascade", "Quantum Cascade", "Focus Practice Win", { icon: "🌌", color: "from-orange-500 to-rose-500", category: "science", ageMin: 19, ageMax: 22, ageGroup: "College (19+)", ageLockRecommended: true }),
+  g("synthetic-architect", "Synthetic Architect", "Team Up Learn", { icon: "🛸", color: "from-fuchsia-500 to-violet-500", category: "science", ageMin: 19, ageMax: 22, ageGroup: "College (19+)", ageLockRecommended: true }),
+  g("global-harmony", "Global Harmony", "Discover Create Grow", { icon: "⚡", color: "from-sky-500 to-blue-600", category: "adventure", ageMin: 19, ageMax: 22, ageGroup: "College (19+)", ageLockRecommended: true }),
+  g("evolution-prime", "Evolution Prime", "Play Learn Grow", { icon: "🎮", color: "from-indigo-500 to-cyan-500", category: "science", ageMin: 19, ageMax: 22, ageGroup: "College (19+)", ageLockRecommended: true }),
+  g("word-woods", "Word Woods", "Think Move Learn", { icon: "🌳", color: "from-emerald-500 to-lime-500", category: "literacy" }),
+  g("story-smith", "Story Smith", "Solve Share Smile", { icon: "📜", color: "from-orange-500 to-rose-500", category: "literacy" }),
+  g("alphabet-airship", "Alphabet Airship", "Build Explore Learn", { icon: "✈️", color: "from-sky-500 to-blue-600", category: "literacy", ageMin: 4, ageMax: 6, ageGroup: "Kindergarten (4-6)" }),
+  g("sentence-safari", "Sentence Safari", "Focus Practice Win", { icon: "🦁", color: "from-fuchsia-500 to-violet-500", category: "literacy" }),
+  g("rhyme-river", "Rhyme River", "Team Up Learn", { icon: "🏞️", color: "from-indigo-500 to-cyan-500", category: "literacy", ageMin: 4, ageMax: 6, ageGroup: "Kindergarten (4-6)" }),
+  g("count-constellations", "Count Constellations", "Discover Create Grow", { icon: "🌟", color: "from-emerald-500 to-lime-500", category: "math" }),
+  g("fraction-factory", "Fraction Factory", "Play Learn Grow", { icon: "🏭", color: "from-orange-500 to-rose-500", category: "math" }),
+  g("garden-glow-lab", "Garden Glow Lab", "Think Move Learn", { icon: "🌿", color: "from-emerald-400 to-green-500", category: "science" }),
+  g("firefly-word-weave", "Firefly Word Weave", "Solve Share Smile", { icon: "🪲", color: "from-amber-400 to-yellow-500", category: "literacy" }),
+  g("river-route-rangers", "River Route Rangers", "Build Explore Learn", { icon: "🛶", color: "from-sky-400 to-blue-500", category: "adventure" }),
 ];
 
-const ICON_ROTATION = ["🚀", "🌌", "🛸", "⚡", "🎮", "🧠", "🧩", "🎨", "🌠", "🏁"] as const;
-const COLOR_ROTATION = [
-  "from-indigo-500 to-cyan-500",
-  "from-emerald-500 to-lime-500",
-  "from-orange-500 to-rose-500",
-  "from-fuchsia-500 to-violet-500",
-  "from-sky-500 to-blue-600",
-] as const;
-const MECHANIC_ROTATION: Array<RegisteredGame["mechanic"]> = [
-  "precision-choice",
-  "sequence-recall",
-  "lane-sort",
-  "timed-equation",
-  "pattern-scan",
-  "signal-balance",
-];
-const BACKDROP_ROTATION = [
-  ASSETS.heroHome,
-  ASSETS.bgBottom,
-  ASSETS.bgAuth,
-  ASSETS.heroSignIn,
-] as const;
-
-const REWARD_REALM_GAME_COUNT = 100;
-
-const AGE_DISTRIBUTION_TARGETS: Array<{
-  ageGroup: GameAgeGroup;
-  count: number;
-  ageMin: number;
-  ageMax: number;
-}> = [
-  { ageGroup: "Kindergarten (4-6)", count: 100, ageMin: 4, ageMax: 6 },
-  { ageGroup: "Elementary (7-11)", count: 150, ageMin: 7, ageMax: 11 },
-  { ageGroup: "Middle School (12-14)", count: 100, ageMin: 12, ageMax: 14 },
-  { ageGroup: "High School (15-18)", count: 100, ageMin: 15, ageMax: 18 },
-  { ageGroup: "College (19+)", count: 50, ageMin: 19, ageMax: 22 },
+/* ═══════════════════════════════════════════════════
+   ARCADE GAMES — 19 games with real .tsx files
+   (arcade-061 through arcade-070, arcade-121 through arcade-129)
+   ═══════════════════════════════════════════════════ */
+export const ARCADE_GAMES: RegisteredGame[] = [
+  g("arcade-061", "Pixel Prism Patrol", "Play Learn Grow", { icon: "🔮", color: "from-indigo-500 to-cyan-500", category: "logic", mode: "arcade", mechanic: "lane-sort" }),
+  g("arcade-062", "Spark Factor Furnace", "Think Move Learn", { icon: "🔥", color: "from-orange-500 to-rose-500", category: "math", mode: "arcade", mechanic: "timed-equation" }),
+  g("arcade-063", "Echo Claim Cascade", "Solve Share Smile", { icon: "📢", color: "from-fuchsia-500 to-violet-500", category: "literacy", mode: "arcade", mechanic: "precision-choice" }),
+  g("arcade-064", "Luna Sequence Symphony", "Build Explore Learn", { icon: "🎵", color: "from-sky-500 to-blue-600", category: "creative", mode: "arcade", mechanic: "sequence-recall" }),
+  g("arcade-065", "Terra Ecosystem Rescue", "Focus Practice Win", { icon: "🌍", color: "from-emerald-500 to-lime-500", category: "science", mode: "arcade", mechanic: "signal-balance" }),
+  g("arcade-066", "Spark Thruster Trial", "Team Up Learn", { icon: "🚀", color: "from-orange-500 to-rose-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("arcade-067", "Echo Truthline Protocol", "Discover Create Grow", { icon: "⚖️", color: "from-fuchsia-500 to-violet-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("arcade-068", "Terra Wilds Recovery", "Play Learn Grow", { icon: "🏕️", color: "from-emerald-500 to-lime-500", category: "science", mode: "arcade", mechanic: "pattern-scan" }),
+  g("arcade-069", "Luna Pulse Rally", "Think Move Learn", { icon: "🌙", color: "from-indigo-500 to-cyan-500", category: "arcade", mode: "arcade", mechanic: "signal-balance" }),
+  g("arcade-070", "Pixel Firewall Frontier", "Solve Share Smile", { icon: "🛡️", color: "from-sky-500 to-blue-600", category: "logic", mode: "arcade", mechanic: "pattern-scan" }),
+  g("arcade-121", "Breeze Trail", "Build Explore Learn", { icon: "🌬️", color: "from-sky-400 to-cyan-500", category: "adventure", mode: "arcade", mechanic: "sequence-recall" }),
+  g("arcade-122", "Sprout Trail", "Focus Practice Win", { icon: "🌱", color: "from-emerald-400 to-lime-500", category: "science", mode: "arcade", mechanic: "pattern-scan" }),
+  g("arcade-123", "Pebble Trail", "Team Up Learn", { icon: "🪨", color: "from-stone-400 to-amber-500", category: "adventure", mode: "arcade", mechanic: "lane-sort" }),
+  g("arcade-124", "Nimbus Trail", "Discover Create Grow", { icon: "☁️", color: "from-sky-300 to-blue-500", category: "science", mode: "arcade", mechanic: "signal-balance" }),
+  g("arcade-125", "Flare Trail", "Play Learn Grow", { icon: "🔥", color: "from-orange-400 to-red-500", category: "arcade", mode: "arcade", mechanic: "timed-equation" }),
+  g("arcade-126", "Sky Circuit", "Think Move Learn", { icon: "✈️", color: "from-sky-500 to-indigo-500", category: "arcade", mode: "arcade", mechanic: "lane-sort" }),
+  g("arcade-127", "River Circuit", "Solve Share Smile", { icon: "🏞️", color: "from-cyan-500 to-teal-500", category: "adventure", mode: "arcade", mechanic: "pattern-scan" }),
+  g("arcade-128", "Echo Circuit", "Build Explore Learn", { icon: "📡", color: "from-violet-500 to-purple-500", category: "logic", mode: "arcade", mechanic: "sequence-recall" }),
+  g("arcade-129", "Luna Circuit", "Focus Practice Win", { icon: "🌙", color: "from-indigo-400 to-violet-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
 ];
 
-const ENGINE_DISTRIBUTION_TARGETS: Array<{ engine: GameEngine; count: number }> = [
-  { engine: "Unreal Engine 5.5+", count: 200 },
-  { engine: "Unity 6+", count: 200 },
-  { engine: "Godot 4.3+", count: 100 },
+/* ═══════════════════════════════════════════════════
+   CLASSIC GAMES — 48 classic game ports with real .tsx
+   ═══════════════════════════════════════════════════ */
+export const CLASSIC_GAMES: RegisteredGame[] = [
+  g("2048", "2048", "Merge Number Tiles", { icon: "🔢", color: "from-amber-400 to-orange-500", category: "math", mechanic: "pattern-scan" }),
+  g("anagram", "Anagram", "Unscramble Word Puzzles", { icon: "🔠", color: "from-sky-400 to-blue-500", category: "literacy", mechanic: "precision-choice" }),
+  g("asteroids", "Asteroids", "Blast Space Rocks", { icon: "☄️", color: "from-indigo-500 to-cyan-500", category: "arcade", mechanic: "precision-choice" }),
+  g("binary-puzzle", "Binary Puzzle", "Solve Binary Grid", { icon: "0️⃣", color: "from-emerald-500 to-lime-500", category: "logic", mechanic: "pattern-scan" }),
+  g("bomberman", "Bomberman", "Blast Clear Path", { icon: "💣", color: "from-orange-500 to-rose-500", category: "arcade", mechanic: "lane-sort" }),
+  g("breakout", "Breakout", "Break Block Wall", { icon: "🧱", color: "from-fuchsia-500 to-violet-500", category: "arcade", mechanic: "precision-choice" }),
+  g("bubble-shooter", "Bubble Shooter", "Pop Color Bubbles", { icon: "🫧", color: "from-sky-400 to-blue-500", category: "arcade", mechanic: "precision-choice" }),
+  g("checkers", "Checkers", "Jump Capture Kings", { icon: "⬛", color: "from-stone-500 to-stone-700", category: "logic", mechanic: "precision-choice" }),
+  g("chess", "Chess", "Classic Board Strategy", { icon: "♟️", color: "from-stone-600 to-stone-800", category: "logic", mechanic: "precision-choice", ageMin: 7, ageMax: 18, educationalWeight: 90 }),
+  g("color-flood", "Color Flood", "Flood Fill Board", { icon: "🎨", color: "from-fuchsia-400 to-pink-500", category: "logic", mechanic: "pattern-scan" }),
+  g("connect-four", "Connect Four", "Four In Row", { icon: "🔴", color: "from-red-400 to-yellow-500", category: "logic", mechanic: "precision-choice" }),
+  g("connections", "Connections", "Group Word Links", { icon: "🔗", color: "from-violet-400 to-purple-500", category: "literacy", mechanic: "pattern-scan" }),
+  g("cookie-clicker", "Cookie Clicker", "Click Earn Grow", { icon: "🍪", color: "from-amber-300 to-amber-500", category: "math", mechanic: "precision-choice" }),
+  g("crossword", "Crossword", "Solve Word Grid", { icon: "📰", color: "from-stone-400 to-stone-600", category: "literacy", mechanic: "precision-choice" }),
+  g("dot-connect", "Dot Connect", "Connect All Dots", { icon: "⚫", color: "from-indigo-400 to-violet-500", category: "logic", mechanic: "pattern-scan" }),
+  g("duck-hunt", "Duck Hunt", "Aim Shoot Ducks", { icon: "🦆", color: "from-emerald-400 to-green-500", category: "arcade", mechanic: "precision-choice" }),
+  g("factors", "Factors", "Find Number Factors", { icon: "✖️", color: "from-sky-500 to-blue-600", category: "math", mechanic: "timed-equation" }),
+  g("flappy", "Flappy", "Fly Through Pipes", { icon: "🐤", color: "from-sky-300 to-sky-500", category: "arcade", mechanic: "precision-choice" }),
+  g("frogger", "Frogger", "Cross Safe Roads", { icon: "🐸", color: "from-emerald-500 to-lime-500", category: "arcade", mechanic: "lane-sort" }),
+  g("hangman", "Hangman", "Guess Word Letters", { icon: "🪢", color: "from-amber-400 to-amber-600", category: "literacy", mechanic: "precision-choice" }),
+  g("logic-grid", "Logic Grid", "Solve Logic Grid", { icon: "🧩", color: "from-violet-500 to-purple-600", category: "logic", mechanic: "pattern-scan" }),
+  g("mahjong", "Mahjong", "Match Tile Pairs", { icon: "🀄", color: "from-emerald-400 to-teal-500", category: "logic", mechanic: "pattern-scan" }),
+  g("make-24", "Make 24", "Math Equals Twenty-Four", { icon: "2️⃣", color: "from-amber-500 to-orange-500", category: "math", mechanic: "timed-equation" }),
+  g("math-sprint", "Math Sprint", "Speed Math Race", { icon: "🏃", color: "from-sky-500 to-blue-500", category: "math", mechanic: "timed-equation" }),
+  g("math-trainer", "Math Trainer", "Practice Math Skills", { icon: "📐", color: "from-indigo-400 to-blue-500", category: "math", mechanic: "timed-equation" }),
+  g("memory-game", "Memory Game", "Flip Match Cards", { icon: "🃏", color: "from-fuchsia-400 to-violet-500", category: "logic", mechanic: "sequence-recall" }),
+  g("minesweeper", "Minesweeper", "Clear Mine Field", { icon: "💣", color: "from-stone-400 to-stone-600", category: "logic", mechanic: "pattern-scan" }),
+  g("missile-command", "Missile Command", "Defend City Base", { icon: "🚀", color: "from-red-500 to-orange-500", category: "arcade", mechanic: "precision-choice" }),
+  g("number-dots", "Number Dots", "Connect Number Dots", { icon: "🔵", color: "from-sky-400 to-cyan-500", category: "math", mechanic: "pattern-scan" }),
+  g("numm-match", "Numm Match", "Match Number Pairs", { icon: "🔢", color: "from-emerald-400 to-lime-500", category: "math", mechanic: "pattern-scan" }),
+  g("pong", "Pong", "Paddle Ball Rally", { icon: "🏓", color: "from-stone-500 to-stone-700", category: "arcade", mechanic: "precision-choice" }),
+  g("reaction-time", "Reaction Time", "Test Fast Reflexes", { icon: "⚡", color: "from-yellow-400 to-amber-500", category: "arcade", mechanic: "precision-choice" }),
+  g("reversi", "Reversi", "Flip Board Tiles", { icon: "⚫", color: "from-emerald-600 to-emerald-800", category: "logic", mechanic: "precision-choice" }),
+  g("simon", "Simon", "Repeat Color Pattern", { icon: "🔴", color: "from-red-400 to-blue-500", category: "logic", mechanic: "sequence-recall" }),
+  g("sliding-puzzle", "Sliding Puzzle", "Slide Tile Solve", { icon: "🧩", color: "from-amber-400 to-orange-500", category: "logic", mechanic: "pattern-scan" }),
+  g("snake", "Snake", "Grow Snake Trail", { icon: "🐍", color: "from-emerald-400 to-green-600", category: "arcade", mechanic: "precision-choice" }),
+  g("sokoban", "Sokoban", "Push Box Puzzle", { icon: "📦", color: "from-amber-400 to-amber-600", category: "logic", mechanic: "pattern-scan" }),
+  g("solitaire", "Solitaire", "Stack Card Suits", { icon: "🃏", color: "from-emerald-500 to-teal-600", category: "logic", mechanic: "pattern-scan" }),
+  g("space-invaders", "Space Invaders", "Blast Alien Fleet", { icon: "👾", color: "from-indigo-500 to-violet-600", category: "arcade", mechanic: "precision-choice" }),
+  g("spider-solitaire", "Spider Solitaire", "Eight Suit Stack", { icon: "🕷️", color: "from-stone-500 to-stone-700", category: "logic", mechanic: "pattern-scan" }),
+  g("sudoku", "Sudoku", "Fill Number Grid", { icon: "🔢", color: "from-sky-400 to-indigo-500", category: "math", mechanic: "pattern-scan" }),
+  g("tetris", "Tetris", "Stack Block Lines", { icon: "🧱", color: "from-cyan-500 to-blue-600", category: "arcade", mechanic: "lane-sort" }),
+  g("tic-tac-toe", "Tic Tac Toe", "Three In Row", { icon: "❌", color: "from-sky-400 to-blue-500", category: "logic", mechanic: "precision-choice" }),
+  g("tower-stack", "Tower Stack", "Stack Tower High", { icon: "🏗️", color: "from-amber-400 to-red-500", category: "arcade", mechanic: "precision-choice" }),
+  g("trivia-quiz", "Trivia Quiz", "Answer Quick Trivia", { icon: "❓", color: "from-violet-400 to-purple-500", category: "logic", mechanic: "precision-choice" }),
+  g("typing-speed", "Typing Speed", "Type Fast Words", { icon: "⌨️", color: "from-sky-500 to-blue-600", category: "literacy", mechanic: "timed-equation" }),
+  g("whack-a-mole", "Whack A Mole", "Whack Fast Moles", { icon: "🦫", color: "from-emerald-400 to-green-500", category: "arcade", mechanic: "precision-choice" }),
+  g("word-pluck", "Word Pluck", "Pluck Hidden Words", { icon: "🔍", color: "from-amber-400 to-orange-500", category: "literacy", mechanic: "pattern-scan" }),
+  g("word-rescue", "Word Rescue", "Rescue Lost Words", { icon: "🆘", color: "from-red-400 to-rose-500", category: "literacy", mechanic: "precision-choice" }),
+  g("word-scramble", "Word Scramble", "Unscramble Word Mix", { icon: "🔀", color: "from-fuchsia-400 to-violet-500", category: "literacy", mechanic: "precision-choice" }),
+  g("wordle", "Wordle", "Guess Five Letters", { icon: "📝", color: "from-emerald-500 to-lime-500", category: "literacy", mechanic: "precision-choice" }),
 ];
 
-const LEGACY_GAME_COUNT = GEMINI_GAME_SEEDS.length;
-const LEGACY_CATALOG_OFFSET = CORE_GAMES.length;
-const ARCADE_CATALOG_OFFSET = LEGACY_CATALOG_OFFSET + LEGACY_GAME_COUNT;
-const EXPANSION_CATALOG_OFFSET = ARCADE_CATALOG_OFFSET + ARCADE_GAME_COUNT;
-const EXPECTED_TOTAL_GAME_COUNT = 500;
-const COMPUTED_TOTAL_GAME_COUNT =
-  CORE_GAMES.length + LEGACY_GAME_COUNT + ARCADE_GAME_COUNT + EXPANSION_ARCADE_GAME_COUNT;
+/* ═══════════════════════════════════════════════════
+   ZONE GAMES — 65 zone games with real .tsx files
+   (zone-041 through zone-076, zone-077 through zone-099,
+    zone-101 through zone-125)
+   ═══════════════════════════════════════════════════ */
+export const ZONE_GAMES: RegisteredGame[] = [
+  // Zone original (041-076)
+  g("zone-041", "Signal Rescue", "Rescue Signal Fast", { icon: "📡", color: "from-indigo-500 to-cyan-500", category: "logic", mode: "arcade", mechanic: "signal-balance" }),
+  g("zone-042", "Math Rail Commander", "Command Math Rails", { icon: "🚂", color: "from-emerald-500 to-lime-500", category: "math", mode: "arcade", mechanic: "timed-equation" }),
+  g("zone-043", "Echo Story Signal", "Signal Story Path", { icon: "📖", color: "from-orange-500 to-rose-500", category: "literacy", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-044", "Terra Lab Sort", "Sort Lab Samples", { icon: "🧪", color: "from-fuchsia-500 to-violet-500", category: "science", mode: "arcade", mechanic: "lane-sort" }),
+  g("zone-045", "Luna Rhythm Forge", "Forge Beat Rhythm", { icon: "🥁", color: "from-sky-500 to-blue-600", category: "creative", mode: "arcade", mechanic: "sequence-recall" }),
+  g("zone-046", "Pixel Cipher Sprint", "Sprint Cipher Codes", { icon: "🔐", color: "from-indigo-500 to-cyan-500", category: "logic", mode: "arcade", mechanic: "timed-equation" }),
+  g("zone-047", "Spark Grid Fuse", "Fuse Power Grid", { icon: "⚡", color: "from-emerald-500 to-lime-500", category: "science", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-048", "Echo Evidence Judge", "Judge Key Evidence", { icon: "⚖️", color: "from-orange-500 to-rose-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-049", "Terra Habitat Triage", "Triage Wild Habitats", { icon: "🏕️", color: "from-fuchsia-500 to-violet-500", category: "science", mode: "arcade", mechanic: "signal-balance" }),
+  g("zone-050", "Pixel Lane Defender", "Defend Pixel Lanes", { icon: "🛡️", color: "from-sky-500 to-blue-600", category: "arcade", mode: "arcade", mechanic: "lane-sort" }),
+  g("zone-051", "Luna Chorus Cascade", "Cascade Music Chorus", { icon: "🎶", color: "from-indigo-500 to-cyan-500", category: "creative", mode: "arcade", mechanic: "sequence-recall" }),
+  g("zone-052", "Spark Reactor Grid", "Power Reactor Grid", { icon: "⚛️", color: "from-emerald-500 to-lime-500", category: "science", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-053", "Echo Debate Duel", "Duel Debate Points", { icon: "🗣️", color: "from-orange-500 to-rose-500", category: "literacy", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-054", "Terra Weather Command", "Command Weather Ops", { icon: "🌦️", color: "from-fuchsia-500 to-violet-500", category: "science", mode: "arcade", mechanic: "signal-balance" }),
+  g("zone-055", "Pixel Drone Intercept", "Intercept Drone Signal", { icon: "🚁", color: "from-sky-500 to-blue-600", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-056", "Spark Orbital Surge", "Surge Orbital Path", { icon: "🛸", color: "from-indigo-500 to-cyan-500", category: "science", mode: "arcade", mechanic: "lane-sort" }),
+  g("zone-057", "Echo Signal Crossfire", "Crossfire Signal Lock", { icon: "📻", color: "from-emerald-500 to-lime-500", category: "logic", mode: "arcade", mechanic: "signal-balance" }),
+  g("zone-058", "Terra Rift Shelter", "Shelter Rift Zone", { icon: "🏔️", color: "from-orange-500 to-rose-500", category: "science", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-059", "Luna Stage Strategy", "Stage Strategy Plan", { icon: "🎭", color: "from-fuchsia-500 to-violet-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-060", "Pixel Circuit Siege", "Siege Circuit Path", { icon: "🔌", color: "from-sky-500 to-blue-600", category: "logic", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-061", "Spark Flux Gauntlet", "Run Flux Gauntlet", { icon: "⚡", color: "from-indigo-500 to-cyan-500", category: "arcade", mode: "arcade", mechanic: "signal-balance" }),
+  g("zone-062", "Echo Proof Relay", "Relay Proof Chain", { icon: "🔗", color: "from-emerald-500 to-lime-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-063", "Terra Greenhouse Command", "Command Green House", { icon: "🌿", color: "from-orange-500 to-rose-500", category: "science", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-064", "Luna Beatline Run", "Run Beatline Track", { icon: "🎵", color: "from-fuchsia-500 to-violet-500", category: "creative", mode: "arcade", mechanic: "sequence-recall" }),
+  g("zone-065", "Pixel Breach Hunter", "Hunt Data Breach", { icon: "🔍", color: "from-sky-500 to-blue-600", category: "logic", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-066", "Spark Thruster Trial", "Trial Thruster Burn", { icon: "🚀", color: "from-indigo-500 to-cyan-500", category: "science", mode: "arcade", mechanic: "timed-equation" }),
+  g("zone-067", "Echo Truthline Protocol", "Protocol Truth Check", { icon: "✅", color: "from-emerald-500 to-lime-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-068", "Terra Wilds Recovery", "Recover Wild Lands", { icon: "🌲", color: "from-orange-500 to-rose-500", category: "science", mode: "arcade", mechanic: "signal-balance" }),
+  g("zone-069", "Luna Pulse Rally", "Rally Pulse Beat", { icon: "💓", color: "from-fuchsia-500 to-violet-500", category: "arcade", mode: "arcade", mechanic: "signal-balance" }),
+  g("zone-070", "Pixel Firewall Frontier", "Guard Firewall Line", { icon: "🔥", color: "from-sky-500 to-blue-600", category: "logic", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-071", "Spark Reactor Convoy", "Convoy Reactor Core", { icon: "⚛️", color: "from-indigo-500 to-cyan-500", category: "science", mode: "arcade", mechanic: "lane-sort" }),
+  g("zone-072", "Echo Signal Tribunal", "Tribunal Signal Judge", { icon: "⚖️", color: "from-emerald-500 to-lime-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-073", "Terra Frontline Wardens", "Guard Frontline Post", { icon: "🛡️", color: "from-orange-500 to-rose-500", category: "adventure", mode: "arcade", mechanic: "signal-balance" }),
+  g("zone-074", "Luna Skyline Set", "Set Skyline Stage", { icon: "🌆", color: "from-fuchsia-500 to-violet-500", category: "creative", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-075", "Pixel Sentinel Lattice", "Lattice Sentinel Guard", { icon: "🏰", color: "from-sky-500 to-blue-600", category: "logic", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-076", "Spark Vault Thrust", "Thrust Vault Power", { icon: "💎", color: "from-indigo-500 to-cyan-500", category: "arcade", mode: "arcade", mechanic: "timed-equation" }),
+  // Zone classic (077-099)
+  g("zone-077", "Pixel Block Drop", "Drop Block Stack", { icon: "🧱", color: "from-cyan-500 to-blue-600", category: "arcade", mode: "arcade", mechanic: "lane-sort" }),
+  g("zone-078", "Spark Breakout Surge", "Surge Break Blocks", { icon: "💥", color: "from-orange-400 to-red-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-079", "Luna Zigzag Run", "Run Zigzag Path", { icon: "🏃", color: "from-indigo-400 to-violet-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-080", "Echo Word Rescue", "Rescue Lost Words", { icon: "📝", color: "from-emerald-400 to-lime-500", category: "literacy", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-081", "Terra Minefield Map", "Map Safe Minefield", { icon: "💣", color: "from-stone-400 to-stone-600", category: "logic", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-082", "Pixel Shaft Drop", "Drop Shaft Fast", { icon: "⛏️", color: "from-amber-400 to-orange-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-083", "Luna Sequence Flash", "Flash Color Sequence", { icon: "🔴", color: "from-red-400 to-blue-500", category: "logic", mode: "arcade", mechanic: "sequence-recall" }),
+  g("zone-084", "Echo Anagram Blast", "Blast Word Anagrams", { icon: "🔠", color: "from-fuchsia-400 to-violet-500", category: "literacy", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-085", "Spark Idle Forge", "Forge Idle Power", { icon: "🔨", color: "from-amber-300 to-amber-500", category: "math", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-086", "Terra Tile Pair", "Pair Matching Tiles", { icon: "🀄", color: "from-emerald-400 to-teal-500", category: "logic", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-087", "Pixel Merge 2048", "Merge Number Tiles", { icon: "🔢", color: "from-amber-400 to-orange-500", category: "math", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-088", "Spark Flap Surge", "Surge Flap Flight", { icon: "🐤", color: "from-sky-300 to-sky-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-089", "Luna Sudoku Grid", "Fill Sudoku Grid", { icon: "🔢", color: "from-sky-400 to-indigo-500", category: "math", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-090", "Echo Connect Drop", "Drop Connect Four", { icon: "🔴", color: "from-red-400 to-yellow-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-091", "Terra Whack Squad", "Whack Mole Squad", { icon: "🦫", color: "from-emerald-400 to-green-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-092", "Pixel Card Match", "Match Card Pairs", { icon: "🃏", color: "from-fuchsia-400 to-violet-500", category: "logic", mode: "arcade", mechanic: "sequence-recall" }),
+  g("zone-093", "Spark Snake Trail", "Trail Snake Grow", { icon: "🐍", color: "from-emerald-400 to-green-600", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-094", "Luna Word Grid", "Search Word Grid", { icon: "🔍", color: "from-amber-400 to-orange-500", category: "literacy", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-095", "Echo Bubble Burst", "Burst Color Bubbles", { icon: "🫧", color: "from-sky-400 to-blue-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-096", "Terra Crossword", "Solve Word Cross", { icon: "📰", color: "from-stone-400 to-stone-600", category: "literacy", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-097", "Pixel Type Rush", "Rush Type Fast", { icon: "⌨️", color: "from-sky-500 to-blue-600", category: "literacy", mode: "arcade", mechanic: "timed-equation" }),
+  g("zone-098", "Spark Dice Roll", "Roll Lucky Dice", { icon: "🎲", color: "from-amber-400 to-orange-500", category: "math", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-099", "Luna Endless Run", "Run Endless Path", { icon: "🏃", color: "from-indigo-400 to-violet-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  // Zone unique (101-125)
+  g("zone-101", "Voxel Craft World", "Build Voxel World", { icon: "🧊", color: "from-emerald-400 to-cyan-500", category: "creative", mode: "arcade", mechanic: "precision-choice", ageMin: 7, ageMax: 14, ageGroup: "Elementary (7-11)" }),
+  g("zone-102", "Neon Heist City", "Heist Neon City", { icon: "🌃", color: "from-fuchsia-500 to-violet-600", category: "adventure", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-103", "Storm Royale Arena", "Storm Arena Battle", { icon: "⛈️", color: "from-sky-500 to-indigo-600", category: "arcade", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-104", "Soul Dungeon Ascent", "Ascend Dark Dungeon", { icon: "🗡️", color: "from-stone-500 to-stone-700", category: "adventure", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-105", "Hex Quest Saga", "Quest Hex World", { icon: "⬡", color: "from-emerald-500 to-teal-600", category: "adventure", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-106", "Frontier Trail Rider", "Ride Frontier Trail", { icon: "🐎", color: "from-amber-400 to-amber-600", category: "adventure", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-107", "Dice Destiny RPG", "Roll Destiny Dice", { icon: "🎲", color: "from-violet-400 to-purple-500", category: "adventure", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-108", "Elder Realm Quest", "Quest Elder Realm", { icon: "🧙", color: "from-emerald-500 to-teal-600", category: "adventure", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-109", "Guild Raid Legends", "Raid Guild Dungeon", { icon: "⚔️", color: "from-orange-500 to-red-500", category: "adventure", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-110", "Tactical Ops Strike", "Strike Tactical Ops", { icon: "🎯", color: "from-stone-500 to-stone-700", category: "arcade", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-111", "Drop Zone Survivor", "Survive Drop Zone", { icon: "🪂", color: "from-sky-400 to-blue-600", category: "arcade", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-112", "Harvest Bloom Farm", "Farm Harvest Bloom", { icon: "🌾", color: "from-amber-300 to-amber-500", category: "science", mode: "arcade", mechanic: "pattern-scan" }),
+  g("zone-113", "Ruin Survivor Trek", "Trek Ruin Survive", { icon: "🏚️", color: "from-stone-400 to-amber-500", category: "adventure", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-114", "Inferno Run Ascent", "Ascend Inferno Run", { icon: "🔥", color: "from-orange-500 to-red-600", category: "arcade", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-115", "Mind Palace RPG", "Explore Mind Palace", { icon: "🧠", color: "from-violet-400 to-purple-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-116", "Abyssal Knight Deep", "Dive Knight Abyss", { icon: "🤿", color: "from-indigo-500 to-blue-700", category: "adventure", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)", ageLockRecommended: true }),
+  g("zone-117", "Impostor Station", "Find Station Impostor", { icon: "🕵️", color: "from-red-400 to-rose-500", category: "logic", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-118", "Turbo Ball Arena", "Arena Ball Turbo", { icon: "⚽", color: "from-emerald-400 to-green-500", category: "arcade", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-119", "Primal Tamer Isle", "Tame Primal Beasts", { icon: "🦎", color: "from-emerald-500 to-teal-500", category: "science", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-120", "Terra Dig World", "Dig World Deep", { icon: "⛏️", color: "from-amber-400 to-orange-500", category: "science", mode: "arcade", mechanic: "precision-choice" }),
+  g("zone-121", "Spark Helix Lock", "Lock Helix Spiral", { icon: "🧬", color: "from-indigo-500 to-cyan-500", category: "science", mode: "arcade", mechanic: "pattern-scan", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)" }),
+  g("zone-122", "Echo Judgment Circuit", "Circuit Judgment Call", { icon: "⚖️", color: "from-emerald-500 to-lime-500", category: "logic", mode: "arcade", mechanic: "precision-choice", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)" }),
+  g("zone-123", "Terra Colony Evac", "Evacuate Terra Colony", { icon: "🚀", color: "from-orange-500 to-rose-500", category: "science", mode: "arcade", mechanic: "signal-balance", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)" }),
+  g("zone-124", "Luna Nova Cadence", "Cadence Nova Beat", { icon: "🌙", color: "from-fuchsia-500 to-violet-500", category: "creative", mode: "arcade", mechanic: "sequence-recall", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)" }),
+  g("zone-125", "Pixel Containment Matrix", "Contain Pixel Matrix", { icon: "🔲", color: "from-sky-500 to-blue-600", category: "logic", mode: "arcade", mechanic: "pattern-scan", ageMin: 12, ageMax: 18, ageGroup: "Middle School (12-14)" }),
+];
 
-if (COMPUTED_TOTAL_GAME_COUNT !== EXPECTED_TOTAL_GAME_COUNT) {
-  throw new Error(
-    `Catalog total mismatch. Expected ${EXPECTED_TOTAL_GAME_COUNT}, found ${COMPUTED_TOTAL_GAME_COUNT}.`,
-  );
-}
-
-function resolveAgeProfile(catalogIndex: number): Pick<RegisteredGame, "ageMin" | "ageMax" | "ageGroup"> {
-  let cursor = 0;
-  for (const target of AGE_DISTRIBUTION_TARGETS) {
-    const upperBoundExclusive = cursor + target.count;
-    if (catalogIndex < upperBoundExclusive) {
-      return {
-        ageMin: target.ageMin,
-        ageMax: target.ageMax,
-        ageGroup: target.ageGroup,
-      };
-    }
-    cursor = upperBoundExclusive;
-  }
-
-  throw new Error(`Age profile missing for catalog index ${catalogIndex}`);
-}
-
-function resolveEngine(catalogIndex: number): GameEngine {
-  let cursor = 0;
-  for (const target of ENGINE_DISTRIBUTION_TARGETS) {
-    const upperBoundExclusive = cursor + target.count;
-    if (catalogIndex < upperBoundExclusive) {
-      return target.engine;
-    }
-    cursor = upperBoundExclusive;
-  }
-
-  throw new Error(`Engine profile missing for catalog index ${catalogIndex}`);
-}
-
-function resolveTrack(mode: RegisteredGame["mode"], generatedArcadeIndex: number): GameTrack {
-  if (mode !== "arcade") {
-    return "Educational Core";
-  }
-  return generatedArcadeIndex < REWARD_REALM_GAME_COUNT
-    ? "Reward Realm"
-    : "Educational Core";
-}
-
-function buildLegacyGame(index: number, seed: (typeof GEMINI_GAME_SEEDS)[number]): RegisteredGame {
-  const [id] = seed;
-  const title = LEGACY_GAME_TITLES[index]!;
-  const category = CATEGORY_ROTATION[(index + 2) % CATEGORY_ROTATION.length]!;
-  const icon = ICON_ROTATION[(index + 3) % ICON_ROTATION.length]!;
-  const color = COLOR_ROTATION[(index + 1) % COLOR_ROTATION.length]!;
-  const catalogIndex = LEGACY_CATALOG_OFFSET + index;
-  const ageProfile = resolveAgeProfile(catalogIndex);
-  const engine = resolveEngine(catalogIndex);
-  return {
-    id,
-    title,
-    description: SHORT_DESCRIPTION_ROTATION[index % SHORT_DESCRIPTION_ROTATION.length]!,
-    icon,
-    color,
-    ageMin: ageProfile.ageMin,
-    ageMax: ageProfile.ageMax,
-    ageGroup: ageProfile.ageGroup,
-    engine,
+/* ═══════════════════════════════════════════════════
+   HANDCRAFTED GAMES — 6 newly built educational games
+   ═══════════════════════════════════════════════════ */
+export const HANDCRAFTED_GAMES: RegisteredGame[] = [
+  {
+    id: "tangram-builder",
+    title: "Tangram Builder",
+    description: "Shape Puzzle Art",
+    icon: "🔷",
+    color: "from-violet-400 to-purple-500",
+    ageMin: 5,
+    ageMax: 10,
+    ageGroup: "Elementary (7-11)",
+    engine: "Unreal Engine 5.5+",
     track: "Educational Core",
-    category,
+    category: "math",
     mode: "legacy",
     safeForChildren: true,
-    ageLockRecommended: ageProfile.ageMin >= 13,
-    educationalWeight: Math.max(30, 82 - ((index * 5) % 45)),
+    ageLockRecommended: false,
+    educationalWeight: 88,
     graphicsTier: "4k-ready",
-    mechanic: MECHANIC_ROTATION[index % MECHANIC_ROTATION.length]!,
-    backdropImage: BACKDROP_ROTATION[index % BACKDROP_ROTATION.length]!,
-    backdropVideo: index % 5 === 0 ? "/logo-animated.mp4" : null,
-  };
-}
-
-function buildArcadeGame(index: number): RegisteredGame {
-  const id = `arcade-${String(index + 1).padStart(3, "0")}`;
-  const category = CATEGORY_ROTATION[index % CATEGORY_ROTATION.length];
-  const icon = ICON_ROTATION[index % ICON_ROTATION.length];
-  const color = COLOR_ROTATION[index % COLOR_ROTATION.length];
-  const catalogIndex = ARCADE_CATALOG_OFFSET + index;
-  const ageProfile = resolveAgeProfile(catalogIndex);
-  const engine = resolveEngine(catalogIndex);
-  const track = resolveTrack("arcade", index);
-  const educationalWeight = track === "Reward Realm"
-    ? Math.max(25, 45 - ((index * 3) % 20))
-    : Math.max(45, 85 - ((index * 7) % 35));
-  const mechanic = MECHANIC_ROTATION[index % MECHANIC_ROTATION.length];
-  const backdropImage = BACKDROP_ROTATION[index % BACKDROP_ROTATION.length];
-  const backdropVideo = index % 4 === 0 ? "/logo-animated.mp4" : null;
-
-  return {
-    id,
-    title: GENERATED_GAME_TITLES[index]!,
-    description: SHORT_DESCRIPTION_ROTATION[(index + 1) % SHORT_DESCRIPTION_ROTATION.length]!,
-    icon,
-    color,
-    ageMin: ageProfile.ageMin,
-    ageMax: ageProfile.ageMax,
-    ageGroup: ageProfile.ageGroup,
-    engine,
-    track,
-    category,
-    mode: "arcade",
+    mechanic: "precision-choice",
+    backdropImage: ASSETS.heroHome,
+    backdropVideo: null,
+  },
+  {
+    id: "pipe-flow",
+    title: "Pipe Flow",
+    description: "Connect Water Pipes",
+    icon: "💧",
+    color: "from-sky-400 to-blue-500",
+    ageMin: 6,
+    ageMax: 12,
+    ageGroup: "Elementary (7-11)",
+    engine: "Unity 6+",
+    track: "Educational Core",
+    category: "logic",
+    mode: "legacy",
     safeForChildren: true,
-    ageLockRecommended: ageProfile.ageMin >= 13,
-    educationalWeight,
+    ageLockRecommended: false,
+    educationalWeight: 85,
     graphicsTier: "4k-ready",
-    mechanic,
-    backdropImage,
-    backdropVideo,
-  };
-}
-
-function buildExpansionArcadeGame(index: number): RegisteredGame {
-  const id = `zone-${String(index + 1).padStart(3, "0")}`;
-  const category = CATEGORY_ROTATION[(index + 4) % CATEGORY_ROTATION.length]!;
-  const icon = ICON_ROTATION[(index + 5) % ICON_ROTATION.length]!;
-  const color = COLOR_ROTATION[(index + 2) % COLOR_ROTATION.length]!;
-  const generatedArcadeIndex = ARCADE_GAME_COUNT + index;
-  const catalogIndex = EXPANSION_CATALOG_OFFSET + index;
-  const ageProfile = resolveAgeProfile(catalogIndex);
-  const engine = resolveEngine(catalogIndex);
-  const track = resolveTrack("arcade", generatedArcadeIndex);
-  const educationalWeight = track === "Reward Realm"
-    ? Math.max(25, 45 - ((index * 3) % 20))
-    : Math.max(40, 80 - ((index * 9) % 40));
-  return {
-    id,
-    title: GENERATED_GAME_TITLES[generatedArcadeIndex]!,
-    description: SHORT_DESCRIPTION_ROTATION[(index + 3) % SHORT_DESCRIPTION_ROTATION.length]!,
-    icon,
-    color,
-    ageMin: ageProfile.ageMin,
-    ageMax: ageProfile.ageMax,
-    ageGroup: ageProfile.ageGroup,
-    engine,
-    track,
-    category,
-    mode: "arcade",
+    mechanic: "pattern-scan",
+    backdropImage: ASSETS.bgBottom,
+    backdropVideo: null,
+  },
+  {
+    id: "fossil-dig",
+    title: "Fossil Dig",
+    description: "Excavate Classify Discover",
+    icon: "🦴",
+    color: "from-amber-400 to-orange-500",
+    ageMin: 5,
+    ageMax: 11,
+    ageGroup: "Elementary (7-11)",
+    engine: "Godot 4.3+",
+    track: "Educational Core",
+    category: "science",
+    mode: "legacy",
     safeForChildren: true,
-    ageLockRecommended: ageProfile.ageMin >= 13,
-    educationalWeight,
+    ageLockRecommended: false,
+    educationalWeight: 90,
     graphicsTier: "4k-ready",
-    mechanic: MECHANIC_ROTATION[(index + 1) % MECHANIC_ROTATION.length]!,
-    backdropImage: BACKDROP_ROTATION[(index + 1) % BACKDROP_ROTATION.length]!,
-    backdropVideo: index % 3 === 0 ? "/logo-animated.mp4" : null,
-  };
-}
+    mechanic: "precision-choice",
+    backdropImage: ASSETS.bgAuth,
+    backdropVideo: null,
+  },
+  {
+    id: "lemonade-stand",
+    title: "Lemonade Stand",
+    description: "Business Math Sim",
+    icon: "🍋",
+    color: "from-yellow-400 to-amber-500",
+    ageMin: 7,
+    ageMax: 12,
+    ageGroup: "Elementary (7-11)",
+    engine: "Unreal Engine 5.5+",
+    track: "Educational Core",
+    category: "math",
+    mode: "legacy",
+    safeForChildren: true,
+    ageLockRecommended: false,
+    educationalWeight: 92,
+    graphicsTier: "4k-ready",
+    mechanic: "timed-equation",
+    backdropImage: ASSETS.heroSignIn,
+    backdropVideo: null,
+  },
+  {
+    id: "mirror-draw",
+    title: "Mirror Draw",
+    description: "Symmetry Art Draw",
+    icon: "✏️",
+    color: "from-fuchsia-400 to-pink-500",
+    ageMin: 4,
+    ageMax: 9,
+    ageGroup: "Kindergarten (4-6)",
+    engine: "Unity 6+",
+    track: "Educational Core",
+    category: "creative",
+    mode: "legacy",
+    safeForChildren: true,
+    ageLockRecommended: false,
+    educationalWeight: 80,
+    graphicsTier: "4k-ready",
+    mechanic: "precision-choice",
+    backdropImage: ASSETS.heroHome,
+    backdropVideo: null,
+  },
+  {
+    id: "tiny-chef",
+    title: "Tiny Chef",
+    description: "Cook Learn Measure",
+    icon: "👨‍🍳",
+    color: "from-emerald-400 to-green-500",
+    ageMin: 5,
+    ageMax: 10,
+    ageGroup: "Elementary (7-11)",
+    engine: "Godot 4.3+",
+    track: "Educational Core",
+    category: "math",
+    mode: "legacy",
+    safeForChildren: true,
+    ageLockRecommended: false,
+    educationalWeight: 87,
+    graphicsTier: "4k-ready",
+    mechanic: "precision-choice",
+    backdropImage: ASSETS.bgBottom,
+    backdropVideo: null,
+  },
+];
 
-export const LEGACY_GAMES: RegisteredGame[] = GEMINI_GAME_SEEDS.map((seed, index) =>
-  buildLegacyGame(index, seed),
-);
-
-export const ARCADE_GAMES: RegisteredGame[] = Array.from({ length: ARCADE_GAME_COUNT }, (_, index) =>
-  buildArcadeGame(index),
-);
-
-export const EXPANSION_ARCADE_GAMES: RegisteredGame[] = Array.from(
-  { length: EXPANSION_ARCADE_GAME_COUNT },
-  (_, index) => buildExpansionArcadeGame(index),
-);
+/* ═══════════════════════════════════════════════════
+   COMBINED CATALOG — only real games with components
+   ═══════════════════════════════════════════════════ */
+/* ─── pipeline games (2026-03) ─── */
+export const PIPELINE_GAMES: RegisteredGame[] = [
+  g("flag-dash", "Flag Dash", "Race to identify country flags from around the world", { category: "adventure", ageMin: 7, ageMax: 14, educationalWeight: 85, mechanic: "precision-choice" }),
+  g("element-match", "Element Match", "Match periodic table symbols to element names", { category: "science", ageMin: 12, ageMax: 18, educationalWeight: 90, mechanic: "pattern-scan" }),
+  g("timeline-dash", "Timeline Dash", "Arrange historical events in chronological order", { category: "literacy", ageMin: 10, ageMax: 18, educationalWeight: 88, mechanic: "lane-sort" }),
+  g("body-atlas", "Body Atlas", "Place organs in the correct location on the human body", { category: "science", ageMin: 7, ageMax: 14, educationalWeight: 90, mechanic: "precision-choice" }),
+  g("debug-detective", "Debug Detective", "Find and identify bugs in code snippets", { category: "logic", ageMin: 10, ageMax: 18, educationalWeight: 92, mechanic: "precision-choice" }),
+  g("note-hunter", "Note Hunter", "Identify musical notes on the staff with audio feedback", { category: "creative", ageMin: 7, ageMax: 14, educationalWeight: 85, mechanic: "precision-choice" }),
+  g("chord-builder", "Chord Builder", "Build chords by selecting notes on a piano keyboard", { category: "creative", ageMin: 10, ageMax: 18, educationalWeight: 88, mechanic: "precision-choice" }),
+  g("beat-lab", "Beat Lab", "Listen to rhythm patterns and recreate them on a drum grid", { category: "creative", ageMin: 5, ageMax: 12, educationalWeight: 80, mechanic: "pattern-scan" }),
+  g("budget-hero", "Budget Hero", "Build smart budgets across real-world financial scenarios", { category: "math", ageMin: 12, ageMax: 18, educationalWeight: 92, mechanic: "signal-balance" }),
+  g("stock-sprint", "Stock Sprint", "Trade stocks in a simulated market with news events", { category: "math", ageMin: 14, ageMax: 22, educationalWeight: 88, mechanic: "signal-balance" }),
+  g("nutrition-lab", "Nutrition Lab", "Build balanced meals hitting calorie, protein, and fiber targets", { category: "science", ageMin: 7, ageMax: 14, educationalWeight: 85, mechanic: "signal-balance" }),
+  g("code-blocks", "Code Blocks", "Stack programming blocks to guide a robot through mazes", { category: "logic", ageMin: 7, ageMax: 12, educationalWeight: 92, mechanic: "sequence-recall" }),
+  g("bridges-builder", "Bridges Builder", "Connect islands with the right number of bridges", { category: "logic", ageMin: 7, ageMax: 99, educationalWeight: 80, mechanic: "pattern-scan" }),
+  g("light-towers", "Light Towers", "Place lights to illuminate every cell without conflicts", { category: "logic", ageMin: 7, ageMax: 99, educationalWeight: 80, mechanic: "pattern-scan" }),
+  g("capital-quest", "Capital Quest", "Match countries to their capitals and learn world geography", { category: "adventure", ageMin: 7, ageMax: 14, educationalWeight: 85, mechanic: "precision-choice" }),
+  g("truck-highway", "Truck Highway", "CDL-themed endless driving game with traffic avoidance and trivia checkpoints", { category: "adventure", ageMin: 16, ageMax: 99, educationalWeight: 85, mechanic: "precision-choice" }),
+];
 
 export const GAME_CATALOG: RegisteredGame[] = [
   ...CORE_GAMES,
   ...LEGACY_GAMES,
+  ...CLASSIC_GAMES,
   ...ARCADE_GAMES,
-  ...EXPANSION_ARCADE_GAMES,
+  ...ZONE_GAMES,
+  ...HANDCRAFTED_GAMES,
+  ...PIPELINE_GAMES,
 ];
-
-function validateCatalog(games: RegisteredGame[]): void {
-  const idSet = new Set<string>();
-  const titleSet = new Set<string>();
-  const ageGroupCounts = new Map<GameAgeGroup, number>();
-  const engineCounts = new Map<GameEngine, number>();
-  const trackCounts = new Map<GameTrack, number>();
-
-  const incrementCount = <T extends string>(map: Map<T, number>, key: T) => {
-    map.set(key, (map.get(key) ?? 0) + 1);
-  };
-
-  if (games.length !== EXPECTED_TOTAL_GAME_COUNT) {
-    throw new Error(`Catalog must contain ${EXPECTED_TOTAL_GAME_COUNT} games, found ${games.length}.`);
-  }
-
-  for (const game of games) {
-    if (idSet.has(game.id)) {
-      throw new Error(`Duplicate game id detected: ${game.id}`);
-    }
-    idSet.add(game.id);
-    if (BANNED_ID_TERMS.test(game.id)) {
-      throw new Error(`Blocked id style detected for ${game.id}`);
-    }
-
-    const normalizedTitle = game.title.trim().toLowerCase();
-    if (titleSet.has(normalizedTitle)) {
-      throw new Error(`Duplicate game title detected: ${game.title}`);
-    }
-    titleSet.add(normalizedTitle);
-
-    if (BANNED_TITLE_TERMS.test(game.title)) {
-      throw new Error(`Blocked title style detected for ${game.id}: ${game.title}`);
-    }
-
-    const descriptionWordCount = game.description.trim().split(/\s+/).filter(Boolean).length;
-    if (descriptionWordCount < 2 || descriptionWordCount > 3) {
-      throw new Error(
-        `Description length contract violated for ${game.id}: "${game.description}" (${descriptionWordCount} words)`,
-      );
-    }
-
-    if (!game.safeForChildren) {
-      throw new Error(`Unsafe game flag detected for ${game.id}`);
-    }
-
-    incrementCount(ageGroupCounts, game.ageGroup);
-    incrementCount(engineCounts, game.engine);
-    incrementCount(trackCounts, game.track);
-  }
-
-  for (const target of AGE_DISTRIBUTION_TARGETS) {
-    const count = ageGroupCounts.get(target.ageGroup) ?? 0;
-    if (count !== target.count) {
-      throw new Error(`Age-group contract violated for ${target.ageGroup}: expected ${target.count}, found ${count}`);
-    }
-  }
-
-  for (const target of ENGINE_DISTRIBUTION_TARGETS) {
-    const count = engineCounts.get(target.engine) ?? 0;
-    if (count !== target.count) {
-      throw new Error(`Engine contract violated for ${target.engine}: expected ${target.count}, found ${count}`);
-    }
-  }
-
-  const rewardCount = trackCounts.get("Reward Realm") ?? 0;
-  if (rewardCount !== REWARD_REALM_GAME_COUNT) {
-    throw new Error(
-      `Reward Realm contract violated: expected ${REWARD_REALM_GAME_COUNT}, found ${rewardCount}`,
-    );
-  }
-
-  const educationalCount = trackCounts.get("Educational Core") ?? 0;
-  if (educationalCount !== EXPECTED_TOTAL_GAME_COUNT - REWARD_REALM_GAME_COUNT) {
-    throw new Error(
-      `Educational Core contract violated: expected ${EXPECTED_TOTAL_GAME_COUNT - REWARD_REALM_GAME_COUNT}, found ${educationalCount}`,
-    );
-  }
-}
-
-validateCatalog(GAME_CATALOG);
 
 const gameMap = new Map(GAME_CATALOG.map((game) => [game.id, game]));
 

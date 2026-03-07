@@ -11,7 +11,7 @@ export const cdl_general_knowledge_101_Module: LearningModule = {
   "version": "1.0.0",
   "difficultyBand": "beginner",
   "localeSupport": ["en", "es"],
-  "thumbnail": "/placeholders/lesson-robot.svg",
+  "thumbnail": "/assets/cdl/cab-dashboard.png",
   "learningObjectives": [
     "Identify the components inspected during a CDL pre-trip vehicle inspection",
     "Apply safe driving techniques for commercial motor vehicles in varied conditions",

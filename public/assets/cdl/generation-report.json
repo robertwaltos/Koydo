@@ -1,0 +1,82 @@
+{
+  "generatedAt": "2026-03-07T17:32:00.605Z",
+  "api": "Imagen",
+  "total": 12,
+  "ok": 12,
+  "skipped": 0,
+  "failed": 0,
+  "results": [
+    {
+      "id": "engine-compartment",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\engine-compartment.png",
+      "size": 1054512
+    },
+    {
+      "id": "cab-dashboard",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\cab-dashboard.png",
+      "size": 2112485
+    },
+    {
+      "id": "truck-lighting",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\truck-lighting.png",
+      "size": 755700
+    },
+    {
+      "id": "steering-system",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\steering-system.png",
+      "size": 1084745
+    },
+    {
+      "id": "leaf-spring-suspension",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\leaf-spring-suspension.png",
+      "size": 865705
+    },
+    {
+      "id": "brake-wheel-assembly",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\brake-wheel-assembly.png",
+      "size": 1090562
+    },
+    {
+      "id": "air-brake-system",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\air-brake-system.png",
+      "size": 848625
+    },
+    {
+      "id": "coupling-system",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\coupling-system.png",
+      "size": 1108526
+    },
+    {
+      "id": "hazmat-placards",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\hazmat-placards.png",
+      "size": 733323
+    },
+    {
+      "id": "tanker-liquid-surge",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\tanker-liquid-surge.png",
+      "size": 893724
+    },
+    {
+      "id": "doubles-triples-coupling",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\doubles-triples-coupling.png",
+      "size": 860496
+    },
+    {
+      "id": "school-bus-danger-zones",
+      "status": "ok",
+      "path": "D:\\Pythonprojects\\koydo\\public\\assets\\cdl\\school-bus-danger-zones.png",
+      "size": 1227763
+    }
+  ]
+}
