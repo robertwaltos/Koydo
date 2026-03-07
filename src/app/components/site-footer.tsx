@@ -220,6 +220,16 @@ export default function SiteFooter() {
             <Link href="/legal/refunds" className="inline-flex min-h-11 items-center hover:underline">Refunds</Link>
             <Link href="/account-deletion" className="inline-flex min-h-11 items-center hover:underline">Delete Account</Link>
             <Link href="/support"       className="inline-flex min-h-11 items-center hover:underline">Support</Link>
+            <button
+              type="button"
+              onClick={() => {
+                try { localStorage.removeItem("koydo.trackingConsent"); } catch {}
+                window.location.reload();
+              }}
+              className="inline-flex min-h-11 items-center hover:underline"
+            >
+              Manage Cookies
+            </button>
           </div>
         </div>
       </div>

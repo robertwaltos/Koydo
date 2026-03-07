@@ -60,8 +60,10 @@ export default function CookieConsentBanner() {
     >
       <div className="max-w-xl w-full rounded-2xl border border-border bg-surface shadow-xl p-5 dark:bg-[var(--surface)]">
         <p className="text-sm text-foreground leading-relaxed">
-          We use cookies and similar technologies for analytics to improve your
-          learning experience. You can accept all or use only necessary cookies.{" "}
+          We store and access information on your device (cookies and similar
+          technologies) to provide analytics that improve your learning
+          experience. You can accept all or limit to strictly necessary
+          cookies.{" "}
           <a
             href="/legal/privacy"
             className="underline text-accent hover:text-accent/80"

@@ -1,6 +1,7 @@
 "use client";
 
 import type { LearningEventInput } from "@/lib/analytics/learning-events";
+import { isAnalyticsAllowed } from "@/lib/consent/tracking-consent";
 
 type TelemetryRequestBody = {
   events: LearningEventInput[];
@@ -140,6 +141,8 @@ export function getQueuedLearningEventCount() {
 
 export async function flushLearningEventQueue() {
   if (!hasWindow()) return;
+  // Do not flush telemetry if consent has not been granted
+  if (!isAnalyticsAllowed()) return;
   installQueueListeners();
 
   if (!flushInFlight) {
@@ -153,12 +156,17 @@ export async function flushLearningEventQueue() {
   await flushInFlight;
 }
 
-export async function trackLearningEvent(event: LearningEventInput) {
+export async function trackLearningEvent(event: LearningEventInput, isChildAccount?: boolean) {
   if (!event.lessonId || !event.eventType) {
     return;
   }
 
   if (!hasWindow()) {
+    return;
+  }
+
+  // COPPA / ePrivacy: do not queue or send telemetry without consent
+  if (!isAnalyticsAllowed(isChildAccount)) {
     return;
   }
 

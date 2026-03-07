@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { getAllLearningModules } from "@/lib/modules";
+import { getAllLearningModules, getModulesForApp } from "@/lib/modules";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { fetchManifest, getAppId } from "@/lib/platform/app-manifest";
 import { getOnboardingRedirect } from "@/lib/compliance/onboarding";
 import SignOutButton from "./sign-out-button";
 import RecommendedLesson from "./recommended-lesson";
@@ -21,6 +22,10 @@ import { formatDate } from "@/lib/i18n/format";
 import PageHeader from "@/app/components/page-header";
 import { isLaunchFeaturePending, resolveLaunchHref } from "@/lib/platform/launch-readiness";
 import DashboardAgeShellBanner from "./age-shell-banner";
+import UniversityDashboard from "@/tenants/koydo-university/components/UniversityDashboard";
+import JuniorDashboard, { type JuniorWorld } from "@/tenants/koydo-junior/components/JuniorDashboard";
+import { getActiveProfileId } from "@/lib/profiles/active-profile-server";
+import { Play } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -78,17 +83,35 @@ function describeUsageState(
 }
 
 export default async function DashboardPage() {
+  const appId = getAppId();
+  const appManifest = await fetchManifest(appId);
+  const isJuniorApp = appId === "koydo_junior" || appId === "koydo_junior_de";
+
   const cookieStore = await cookies();
   const localeCookie = cookieStore.get("koydo.locale")?.value ?? "en";
   const locale: Locale = isSupportedLocale(localeCookie) ? localeCookie : "en";
   const t = (key: string, vars?: Record<string, string | number>) => translate(locale, key, vars);
 
-  const learningModules = getAllLearningModules();
+  const learningModules = isJuniorApp
+    ? getModulesForApp(appManifest)
+    : getAllLearningModules();
   const supabase = await createSupabaseServerClient();
   const { data, error } = await supabase.auth.getUser();
 
   if (error || !data.user) {
     redirect("/auth/sign-in");
+  }
+
+  const activeProfileId = await getActiveProfileId();
+
+  let studentProfileRow = null;
+  if (activeProfileId) {
+    const { data } = await supabase
+      .from("student_profiles")
+      .select("last_checkpoint_url, last_module_title")
+      .eq("id", activeProfileId)
+      .single();
+    studentProfileRow = data;
   }
 
   const [
@@ -141,10 +164,73 @@ export default async function DashboardPage() {
   const progressData = progressResult.data ?? [];
   const masteryData = masteryResult.data ?? [];
   const openExamErrors = Math.max(0, Number(examErrorResult.count ?? 0));
+  const progressMap = new Map(progressData.map((item) => [item.lesson_id, item]));
+  const completedLessons = progressMap.size;
+  const averageMasteryRaw =
+    masteryData.length > 0
+      ? masteryData.reduce((acc, row) => acc + Number(row.mastery_level ?? 0), 0) / masteryData.length
+      : 0;
+  const averageMasteryPercent = Math.round(averageMasteryRaw * 100);
+  const grade = letterGrade(averageMasteryPercent);
+  const level = achievementLevel(averageMasteryPercent, t);
+  const totalAttempts = masteryData.reduce((acc, row) => acc + Number(row.attempts ?? 0), 0);
+  const totalCorrect = masteryData.reduce((acc, row) => acc + Number(row.correct_attempts ?? 0), 0);
+  const accuracyPercent = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+  const starsEarned = completedLessons * 3 + Math.floor(averageMasteryPercent / 10);
 
   const onboardingRedirect = getOnboardingRedirect(profile ?? null);
   if (onboardingRedirect) {
     redirect(onboardingRedirect);
+  }
+
+  if (appId === "koydo_university") {
+    return <UniversityDashboard />;
+  }
+
+  if (isJuniorApp) {
+    const juniorFallbackImages = [
+      "/assets/modules/dalle3-00715e20.png",
+      "/assets/modules/dalle3-07350b3f.png",
+      "/assets/modules/dalle3-107a49c7.png",
+      "/assets/modules/dalle3-1ce6817f.png",
+      "/assets/modules/dalle3-2c9fbde9.png",
+      "/assets/modules/dalle3-39054a32.png",
+    ];
+
+    const juniorWorlds: JuniorWorld[] = learningModules.slice(0, 12).map((module, index) => {
+      const totalLessons = Math.max(1, module.lessons.length);
+      const completedCount = module.lessons.filter((lesson) => progressMap.has(lesson.id)).length;
+      const starProgress = Math.max(0, Math.min(5, Math.round((completedCount / totalLessons) * 5)));
+      const normalizedThumbnail =
+        typeof module.thumbnail === "string" &&
+        (module.thumbnail.startsWith("/") || module.thumbnail.startsWith("http"))
+          ? module.thumbnail
+          : undefined;
+
+      return {
+        id: module.id,
+        title: module.title,
+        imageSrc: normalizedThumbnail ?? juniorFallbackImages[index % juniorFallbackImages.length] ?? "/explorer/storybook.svg",
+        progress: starProgress,
+        badge: completedCount === totalLessons ? "Mastered" : completedCount === 0 ? (index < 3 ? "New" : undefined) : undefined,
+      };
+    });
+
+    const normalizedStreak = Math.max(
+      1,
+      Number(gamificationStateResult.data?.quests_completed ?? 0) > 0
+        ? Number(gamificationStateResult.data?.quests_completed)
+        : 1,
+    );
+
+    return (
+      <JuniorDashboard
+        worlds={juniorWorlds}
+        completedLessons={completedLessons}
+        starsEarned={starsEarned}
+        streakDays={normalizedStreak}
+      />
+    );
   }
 
   let usageEntitlement: Awaited<ReturnType<typeof resolveLanguageUsageEntitlement>> | null =
@@ -183,19 +269,6 @@ export default async function DashboardPage() {
     }
   }
 
-  const progressMap = new Map(progressData?.map((p) => [p.lesson_id, p]) ?? []);
-  const completedLessons = progressMap.size;
-  const averageMasteryRaw =
-    masteryData.length > 0
-      ? masteryData.reduce((acc, row) => acc + Number(row.mastery_level ?? 0), 0) / masteryData.length
-      : 0;
-  const averageMasteryPercent = Math.round(averageMasteryRaw * 100);
-  const grade = letterGrade(averageMasteryPercent);
-  const level = achievementLevel(averageMasteryPercent, t);
-  const totalAttempts = masteryData.reduce((acc, row) => acc + Number(row.attempts ?? 0), 0);
-  const totalCorrect = masteryData.reduce((acc, row) => acc + Number(row.correct_attempts ?? 0), 0);
-  const accuracyPercent = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
-  const starsEarned = completedLessons * 3 + Math.floor(averageMasteryPercent / 10);
   const languageProgress = summarizeLanguageProgress(
     hasMissingLanguageTables ? [] : pronunciationAttemptsResult.data ?? [],
     hasMissingLanguageTables ? null : gamificationStateResult.data ?? null,
@@ -226,20 +299,47 @@ export default async function DashboardPage() {
       />
 
       <section className="flex flex-col gap-8">
-        <Link href={experienceHubHref} className="group relative overflow-hidden bg-indigo-600 rounded-[2rem] p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 transition-transform hover:scale-[1.01] active:scale-[0.99] shadow-2xl">
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-50" />
+
+        {studentProfileRow?.last_checkpoint_url && (
+          <Link
+            href={studentProfileRow.last_checkpoint_url}
+            className="group relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 rounded-3xl bg-indigo-600 p-8 text-white shadow-2xl transition-transform hover:scale-[1.01] active:scale-[0.99] border-4 border-indigo-400"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-indigo-700 opacity-80" />
+            <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10 blur-2xl group-hover:bg-white/20 transition-colors" />
+
+            <div className="relative z-10 flex flex-col gap-2">
+              <span className="text-sm font-black uppercase tracking-widest text-indigo-200">
+                Quick Resume
+              </span>
+              <h2 className="text-3xl font-black italic tracking-tight lg:text-4xl">
+                {studentProfileRow.last_module_title || "Jump Back In"}
+              </h2>
+              <p className="text-indigo-100 font-medium">
+                Pick up exactly where you left off.
+              </p>
+            </div>
+
+            <div className="relative z-10 flex items-center gap-3 rounded-full bg-white px-6 py-4 text-indigo-600 font-black italic text-xl group-hover:bg-indigo-50 transition-colors shadow-lg">
+              <Play className="h-6 w-6 fill-current" />
+              CONTINUE
+            </div>
+          </Link>
+        )}
+
+        <Link href={experienceHubHref} className="group relative overflow-hidden bg-indigo-600 rounded-[2rem] p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 transition-transform hover:scale-[1.01] active:scale-[0.99] shadow-2xl">          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-600 opacity-50" />
           <div className="absolute -right-20 -top-20 w-64 h-64 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-all" />
 
           <div className="relative z-10 flex flex-col gap-1 text-center md:text-left">
             <span className="text-xs font-black uppercase tracking-widest text-indigo-200">
-              {experienceHubPending ? "Coming Soon" : "New Feature"}
+              {experienceHubPending ? "Preview" : "New Feature"}
             </span>
             <h2 className="text-3xl font-black italic tracking-tighter">
               {experienceHubPending ? "MORE TO EXPLORE" : "ENTER EXPERIENCE HUB"}
             </h2>
             <p className="text-indigo-100 font-medium">
               {experienceHubPending
-                ? "More exciting features coming soon. Stay tuned!"
+                ? "New experiences are being prepared for you!"
                 : "Your progress galaxy, trophies, and companions await!"}
             </p>
           </div>

@@ -9,8 +9,8 @@ type ComingSoonPageProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Coming Soon — Koydo",
-  description: "More exciting features coming soon.",
+  title: "Feature Preview — Koydo",
+  description: "This feature is currently in preview. Explore available experiences now.",
 };
 
 export default async function ComingSoonPage({ searchParams }: ComingSoonPageProps) {
@@ -20,8 +20,8 @@ export default async function ComingSoonPage({ searchParams }: ComingSoonPagePro
   return (
     <main className="mx-auto flex min-h-[70vh] w-full max-w-5xl flex-col justify-center px-6 py-12">
       <ComingSoonBanner
-        title="New Experience"
-        description="More exciting features coming soon. Stay tuned!"
+        title="Feature Preview"
+        description="This experience is currently in preview. Explore available features while we finalize this one."
         primaryHref="/explore"
         primaryLabel="Explore available experiences"
         secondaryHref={fallbackHref}
@@ -37,4 +37,3 @@ export default async function ComingSoonPage({ searchParams }: ComingSoonPagePro
     </main>
   );
 }
-

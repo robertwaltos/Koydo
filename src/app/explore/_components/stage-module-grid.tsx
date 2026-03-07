@@ -172,7 +172,7 @@ export default async function StageModuleGrid({ stage }: StageModuleGridProps) {
           <div className="flex min-h-[40vh] flex-col items-center justify-center text-center">
             <span className="text-5xl" aria-hidden="true">{stage.badge}</span>
             <p className="mt-4 text-lg font-semibold text-zinc-600 dark:text-foreground/80">
-              {t("stage_grid_modules_coming_soon", { stage: stageLabel })}
+              {t("stage_grid_no_modules", { stage: stageLabel })}
             </p>
           </div>
         )}

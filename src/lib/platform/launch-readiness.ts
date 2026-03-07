@@ -19,7 +19,7 @@ const LAUNCH_FEATURES: readonly LaunchFeatureConfig[] = [
     defaultPending: false,
     href: "/experience-hub",
     title: "New Experience",
-    description: "More exciting features coming soon. Stay tuned!",
+    description: "New experiences are being prepared for you!",
   },
   {
     id: "experience-hub-games",
@@ -27,7 +27,7 @@ const LAUNCH_FEATURES: readonly LaunchFeatureConfig[] = [
     defaultPending: false,
     href: "/experience-hub/games",
     title: "New Experience",
-    description: "More exciting features coming soon. Stay tuned!",
+    description: "New experiences are being prepared for you!",
   },
   {
     id: "science-lab-immersive",
@@ -35,7 +35,7 @@ const LAUNCH_FEATURES: readonly LaunchFeatureConfig[] = [
     defaultPending: false,
     href: "/science-lab",
     title: "New Experience",
-    description: "More exciting features coming soon. Stay tuned!",
+    description: "New experiences are being prepared for you!",
   },
 ] as const;
 
