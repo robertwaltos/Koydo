@@ -78,7 +78,7 @@ export default function DigitalLibrary() {
               className="group rounded-xl border border-border p-3 transition-colors hover:border-accent/30"
             >
               {item.cover_url ? (
-                <img src={item.cover_url} alt="" className="mb-2 h-32 w-full rounded-lg object-cover" />
+                <img src={item.cover_url} alt={`Cover of ${item.title}`} className="mb-2 h-32 w-full rounded-lg object-cover" />
               ) : (
                 <div className="mb-2 flex h-32 w-full items-center justify-center rounded-lg bg-zinc-100 text-2xl text-zinc-400">
                   📄

@@ -241,7 +241,7 @@ function SelectProfilePageInner() {
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
                         src={profile.avatar_url}
-                        alt=""
+                        alt={`${profile.display_name ?? "Learner"}'s avatar`}
                         className="h-full w-full rounded-[1.5rem] object-cover"
                       />
                     ) : (

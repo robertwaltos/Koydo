@@ -3,57 +3,61 @@ import { generatedModuleRegistry } from "@/lib/modules/generated/registry";
 import { GENERATED_MEDIA_ASSETS } from "@/lib/media/generated-media-assets";
 import type { AppManifest } from "@/lib/platform/app-manifest";
 
-// Registry is already type-checked at compile time (every catalog file
-// is typed as LearningModule). Runtime Zod validation moved to the
-// build-time sync-modules script to avoid parsing 300+ modules on startup.
-const moduleRegistry: LearningModule[] = generatedModuleRegistry;
+// Lazy-initialized module registry — defers the post-processing cost
+// (draft marking, media injection, etc.) until first access.
+let moduleRegistry: LearningModule[] | null = null;
 
-// Auto-mark template/scaffold modules as draft
-// and fix inflated localeSupport (templates claim 10 locales but only have English)
-for (const mod of moduleRegistry) {
-  if (!mod.status && mod.version === "1.0.0") {
-    mod.status = "draft";
-    // Templates only contain English content
-    if (mod.localeSupport && mod.localeSupport.length > 2) {
-      mod.localeSupport = ["en"];
+function getModuleRegistry(): LearningModule[] {
+  if (moduleRegistry) return moduleRegistry;
+
+  moduleRegistry = generatedModuleRegistry as LearningModule[];
+
+  // Auto-mark template/scaffold modules as draft
+  for (const mod of moduleRegistry) {
+    if (!mod.status && mod.version === "1.0.0") {
+      mod.status = "draft";
+      if (mod.localeSupport && mod.localeSupport.length > 2) {
+        mod.localeSupport = ["en"];
+      }
     }
   }
-}
 
-const generatedMediaAssets = GENERATED_MEDIA_ASSETS as Record<
-  string,
-  { url: string; type: string; alt: string }
->;
+  // Inject generated media assets into the curriculum
+  const mediaAssets = GENERATED_MEDIA_ASSETS as Record<
+    string,
+    { url: string; type: string; alt: string }
+  >;
+  if (typeof mediaAssets === "object" && mediaAssets !== null) {
+    for (const mod of moduleRegistry) {
+      if (mod.lessons) {
+        for (const les of mod.lessons) {
+          if (Object.prototype.hasOwnProperty.call(mediaAssets, les.id)) {
+            const asset = mediaAssets[les.id];
+            if (!les.contentTiers) les.contentTiers = {};
+            if (!les.contentTiers.tier1Essential) les.contentTiers.tier1Essential = {};
 
-// Autonomously inject generated media assets into the curriculum
-if (typeof generatedMediaAssets === "object" && generatedMediaAssets !== null) {
-  for (const mod of moduleRegistry) {
-    if (mod.lessons) {
-      for (const les of mod.lessons) {
-        if (Object.prototype.hasOwnProperty.call(generatedMediaAssets, les.id)) {
-          const asset = generatedMediaAssets[les.id];
-          if (!les.contentTiers) les.contentTiers = {};
-          if (!les.contentTiers.tier1Essential) les.contentTiers.tier1Essential = {};
-          
-          const newAsset = {
-            assetId: "gen-" + les.id,
-            url: asset.url,
-            type: asset.type,
-            purpose: "immersive_hero",
-            altText: { en: asset.alt },
-          };
-          
-          if (asset.type.includes("video")) {
-            if (!les.contentTiers.tier1Essential.videos) les.contentTiers.tier1Essential.videos = [];
-            les.contentTiers.tier1Essential.videos.unshift(newAsset);
-          } else {
-            if (!les.contentTiers.tier1Essential.staticImages) les.contentTiers.tier1Essential.staticImages = [];
-            les.contentTiers.tier1Essential.staticImages.unshift(newAsset);
+            const newAsset = {
+              assetId: "gen-" + les.id,
+              url: asset.url,
+              type: asset.type,
+              purpose: "immersive_hero",
+              altText: { en: asset.alt },
+            };
+
+            if (asset.type.includes("video")) {
+              if (!les.contentTiers.tier1Essential.videos) les.contentTiers.tier1Essential.videos = [];
+              les.contentTiers.tier1Essential.videos.unshift(newAsset);
+            } else {
+              if (!les.contentTiers.tier1Essential.staticImages) les.contentTiers.tier1Essential.staticImages = [];
+              les.contentTiers.tier1Essential.staticImages.unshift(newAsset);
+            }
           }
         }
       }
     }
   }
+
+  return moduleRegistry;
 }
 
 
@@ -79,7 +83,7 @@ let lessonByIdMap: Map<string, { lesson: Lesson; learningModule: LearningModule 
 function getLessonByIdMap() {
   if (!lessonByIdMap) {
     lessonByIdMap = new Map();
-    for (const learningModule of moduleRegistry) {
+    for (const learningModule of getModuleRegistry()) {
       for (const lesson of learningModule.lessons) {
         lessonByIdMap.set(lesson.id, { lesson, learningModule });
         // Also index by normalized key for fast lookup
@@ -94,7 +98,7 @@ function getLessonByIdMap() {
 }
 
 export function getAllLearningModules() {
-  return moduleRegistry.filter((m) => m.status !== "draft");
+  return getModuleRegistry().filter((m) => m.status !== "draft");
 }
 
 /**
@@ -121,19 +125,19 @@ export function getModulesForApp(manifest: AppManifest): LearningModule[] {
   });
 }
 
-/** Returns every module, including drafts – for admin/debug use only */
+/** Returns every module, including drafts -- for admin/debug use only */
 export function getAllModulesUnfiltered() {
-  return moduleRegistry;
+  return getModuleRegistry();
 }
 
 export function getLearningModuleById(moduleId: string) {
-  return moduleRegistry.find((learningModule) => learningModule.id === moduleId) ?? null;
+  return getModuleRegistry().find((learningModule) => learningModule.id === moduleId) ?? null;
 }
 
 export function getLearningModuleByLookupKey(moduleKey: string) {
   const normalizedLookup = normalizeLookupKey(moduleKey);
   return (
-    moduleRegistry.find((learningModule) => {
+    getModuleRegistry().find((learningModule) => {
       const normalizedId = normalizeLookupKey(learningModule.id);
       const normalizedTitle = normalizeLookupKey(learningModule.title);
       const titleSlug = slugify(learningModule.title);
@@ -147,7 +151,7 @@ export function getLearningModuleByLookupKey(moduleKey: string) {
 }
 
 export function getAllLessons() {
-  return moduleRegistry.flatMap((learningModule) => learningModule.lessons);
+  return getModuleRegistry().flatMap((learningModule) => learningModule.lessons);
 }
 
 export function getLessonById(lessonId: string): {
@@ -171,7 +175,7 @@ export function getLessonByLookupKey(lessonKey: string): {
   if (scopedMatch) {
     const scopedModuleId = scopedMatch[1];
     const scopedLessonLookup = scopedMatch[2];
-    const targetModule = moduleRegistry.find(
+    const targetModule = getModuleRegistry().find(
       (learningModule) => normalizeLookupKey(learningModule.id) === scopedModuleId,
     );
     if (targetModule) {
@@ -192,7 +196,7 @@ export function getLessonByLookupKey(lessonKey: string): {
   }
 
   const plainTitleMatches: Array<{ lesson: Lesson; learningModule: LearningModule }> = [];
-  for (const learningModule of moduleRegistry) {
+  for (const learningModule of getModuleRegistry()) {
     for (const lesson of learningModule.lessons) {
       const normalizedTitle = normalizeLookupKey(lesson.title);
       const titleSlug = slugify(lesson.title);
@@ -205,7 +209,7 @@ export function getLessonByLookupKey(lessonKey: string): {
     return plainTitleMatches[0] ?? null;
   }
 
-  for (const learningModule of moduleRegistry) {
+  for (const learningModule of getModuleRegistry()) {
     const normalizedModuleId = normalizeLookupKey(learningModule.id);
     for (const lesson of learningModule.lessons) {
       const normalizedId = normalizeLookupKey(lesson.id);
@@ -232,7 +236,7 @@ export function getLessonByLookupKey(lessonKey: string): {
 }
 
 export function getModuleRegistryCount() {
-  return moduleRegistry.length;
+  return getModuleRegistry().length;
 }
 
 export type { LearningModule, Lesson } from "@/lib/modules/types";
