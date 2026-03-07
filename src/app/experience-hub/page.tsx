@@ -23,7 +23,6 @@ import { useMascot } from "@/components/experience/MascotHost";
 import { DeviceGatewayProvider, useDeviceGateway } from "@/components/experience/DeviceGatewayProvider";
 import { isVoyagerZeroPremiumPending } from "@/lib/platform/features";
 import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
-import ComingSoonBanner from "@/app/components/coming-soon-banner";
 import AdaptiveBackground from "@/app/components/ui/adaptive-background";
 
 const SpatialExperienceHub = dynamic(
@@ -75,15 +74,19 @@ export default function ExperienceHubPage() {
 
     if (experienceHubLaunchPending) {
         return (
-            <main className="min-h-screen px-6 py-10">
-                <ComingSoonBanner
-                    title="New Experience"
-                    description="More exciting features coming soon. Stay tuned!"
-                    primaryHref="/dashboard"
-                    primaryLabel="Back to dashboard"
-                    secondaryHref="/explore"
-                    secondaryLabel="Continue learning"
-                />
+            <main className="min-h-screen px-6 py-10 flex flex-col items-center justify-center text-center">
+                <h1 className="text-2xl font-bold text-foreground">Experience Hub</h1>
+                <p className="mt-3 max-w-md text-sm text-foreground/70">
+                    This feature is currently available for approved beta classes only.
+                </p>
+                <div className="mt-6 flex gap-3">
+                    <Link href="/dashboard" className="inline-flex min-h-11 items-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900">
+                        Back to dashboard
+                    </Link>
+                    <Link href="/explore" className="inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-800 hover:bg-zinc-50 dark:border-zinc-600 dark:bg-transparent dark:text-foreground">
+                        Continue learning
+                    </Link>
+                </div>
             </main>
         );
     }
@@ -98,15 +101,19 @@ export default function ExperienceHubPage() {
 
     if (!voyagerAccess?.fullAccess) {
         return (
-            <main className="min-h-screen px-6 py-10">
-                <ComingSoonBanner
-                    title="Experience Hub"
-                    description="Experience Hub immersive mode is currently open to Beta Tester, Admin, Support, Teacher, School, and Partner classes."
-                    primaryHref="/dashboard"
-                    primaryLabel="Back to dashboard"
-                    secondaryHref="/support"
-                    secondaryLabel="Request beta access"
-                />
+            <main className="min-h-screen px-6 py-10 flex flex-col items-center justify-center text-center">
+                <h1 className="text-2xl font-bold text-foreground">Experience Hub</h1>
+                <p className="mt-3 max-w-md text-sm text-foreground/70">
+                    Immersive mode is currently open to approved Beta Tester, Admin, Support, Teacher, School, and Partner classes.
+                </p>
+                <div className="mt-6 flex gap-3">
+                    <Link href="/dashboard" className="inline-flex min-h-11 items-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900">
+                        Back to dashboard
+                    </Link>
+                    <Link href="/support" className="inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-800 hover:bg-zinc-50 dark:border-zinc-600 dark:bg-transparent dark:text-foreground">
+                        Request beta access
+                    </Link>
+                </div>
             </main>
         );
     }

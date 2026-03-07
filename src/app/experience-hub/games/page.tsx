@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MascotHost from "@/components/experience/MascotHost";
 import {
@@ -65,7 +65,6 @@ import {
 import PhysicalButton from "@/components/experience/PhysicalButton";
 import { Sparkles, Brain, Flame, Rocket, ArrowLeft, Palette, ShieldCheck, Beaker, Zap, Cpu, Box, Search, Leaf, Atom, TrendingUp, Globe, TreePine, Music, Mountain, Bot, Wind, History as HistoryIcon, Microscope, Navigation, Grid3X3, Scale, Compass, Construction, Lock, BookOpen, CircuitBoard, Orbit, Dna, Languages, Clock, Binary, Heart, FlaskConical, Camera, Waves } from "lucide-react";
 import Link from "next/link";
-import ComingSoonBanner from "@/app/components/coming-soon-banner";
 import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
 
 type GameId = "neural" | "fraction" | "vocabulary" | "artistic" | "ethical" | "synthesis" | "velocity" | "logic" | "canvas" | "chronicle" | "syntax" | "genetic" | "quantum" | "market" | "orbit" | "cipher" | "biome" | "rhythm" | "tectonic" | "flora" | "bot" | "eco" | "aero" | "histo" | "nano" | "quantum-quirk" | "star-steer" | "logic-labyrinth" | "bio-blast" | "ethos-engine" | "echo-expedition" | "terra-trek" | "spark-quest" | "pixel-path" | "luna-legend" | "circuit-crusader" | "gravity-goliath" | "protein-painter" | "linguist-lookout" | "fusion-founder" | "stellar-state" | "neural-net" | "climate-commander" | "history-hacker" | "nano-nexus" | "mars-colony" | "quantum-cascade" | "synthetic-architect" | "global-harmony" | "evolution-prime" | "word-woods" | "story-smith" | "alphabet-airship" | "sentence-safari" | "rhyme-river" | "count-constellations" | "fraction-factory";
@@ -82,18 +81,73 @@ type GameCard = {
 
 export default function NextGenGameGallery() {
     const [activeGame, setActiveGame] = useState<GameId | null>(null);
+    const [hasFullVoyagerAccess, setHasFullVoyagerAccess] = useState(false);
+    const [isAccessLoading, setIsAccessLoading] = useState(true);
     const gamesLaunchPending = isLaunchFeaturePending("experience-hub-games");
+
+    useEffect(() => {
+        let cancelled = false;
+
+        const loadAccess = async () => {
+            try {
+                const response = await fetch("/api/vr/access");
+                const payload = await response.json().catch(() => null);
+                if (cancelled) return;
+                setHasFullVoyagerAccess(Boolean(payload?.access?.fullAccess));
+            } catch {
+                if (!cancelled) {
+                    setHasFullVoyagerAccess(false);
+                }
+            } finally {
+                if (!cancelled) {
+                    setIsAccessLoading(false);
+                }
+            }
+        };
+
+        void loadAccess();
+        return () => {
+            cancelled = true;
+        };
+    }, []);
 
     if (gamesLaunchPending) {
         return (
+            <main className="min-h-screen px-6 py-10 flex flex-col items-center justify-center text-center">
+                <h1 className="text-2xl font-bold text-foreground">Experience Games</h1>
+                <p className="mt-3 max-w-md text-sm text-foreground/70">
+                    This feature is currently available for approved beta classes.
+                </p>
+                <div className="mt-6 flex gap-3">
+                    <Link href="/games" className="inline-flex min-h-11 items-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900">
+                        Play available games
+                    </Link>
+                    <Link href="/dashboard" className="inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-800 hover:bg-zinc-50 dark:border-zinc-600 dark:bg-transparent dark:text-foreground">
+                        Back to dashboard
+                    </Link>
+                </div>
+            </main>
+        );
+    }
+
+    if (isAccessLoading) {
+        return (
+            <main className="min-h-screen px-6 py-10">
+                <p className="text-sm text-foreground/60">Checking immersive beta access...</p>
+            </main>
+        );
+    }
+
+    if (!hasFullVoyagerAccess) {
+        return (
             <main className="min-h-screen px-6 py-10">
                 <ComingSoonBanner
-                    title="New Experience"
-                    description="More exciting features coming soon. Stay tuned!"
-                    primaryHref="/games"
-                    primaryLabel="Play available games"
-                    secondaryHref="/dashboard"
-                    secondaryLabel="Back to dashboard"
+                    title="Experience Hub Games"
+                    description="This immersive experience is currently open to Beta Tester, Admin, Support, Teacher, School, and Partner classes."
+                    primaryHref="/dashboard"
+                    primaryLabel="Back to dashboard"
+                    secondaryHref="/support"
+                    secondaryLabel="Request beta access"
                 />
             </main>
         );

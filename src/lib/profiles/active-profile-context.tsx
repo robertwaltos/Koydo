@@ -49,20 +49,24 @@ export const ActiveProfileProvider = ({ children }: { children: React.ReactNode 
     return () => clearTimeout(timer);
   }, [fetchProfile, profileId]);
 
-  const handleSetProfile = (newProfile: StudentProfile) => {
+  const handleSetProfile = useCallback((newProfile: StudentProfile) => {
     setProfile(newProfile);
     setProfileId(newProfile.id);
     persistActiveProfile(newProfile.id);
-  };
+  }, []);
 
-  const handleClearProfile = () => {
+  const handleClearProfile = useCallback(() => {
     setProfile(null);
     setProfileId(null);
     clearPersistedActiveProfile();
-  };
+  }, []);
+
+  const contextValue = useMemo(() => ({
+    profile, profileId, setProfile: handleSetProfile, clearProfile: handleClearProfile, isLoading,
+  }), [profile, profileId, handleSetProfile, handleClearProfile, isLoading]);
 
   return (
-    <ActiveProfileContext.Provider value={{ profile, profileId, setProfile: handleSetProfile, clearProfile: handleClearProfile, isLoading }}>
+    <ActiveProfileContext.Provider value={contextValue}>
       {children}
     </ActiveProfileContext.Provider>
   );

@@ -336,7 +336,8 @@ export const FORGE_CAPABILITIES: ForgeCapability[] = [
     freeTierFallback: "Pre-generated cached avatar videos only",
     apiRoutes: [],
     seedScripts: ["scripts/generate-media-batch.ts"],
-    status: "ready",
+    status: "deprecated",
+    deprecationNote: "HeyGen client removed. Use Google AI video pipeline instead.",
   },
 
   {

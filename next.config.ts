@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   distDir: process.env.NEXT_DIST_DIR || ".next",
 
-  // TypeScript errors are caught in CI (tsc --noEmit) — skip during Vercel builds for speed.
+  // TypeScript errors are enforced in CI (tsc --noEmit) and at build time.
   typescript: { ignoreBuildErrors: false },
 
   turbopack: {

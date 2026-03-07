@@ -1,4 +1,7 @@
 import { NextResponse } from "next/server";
+import fs from "node:fs";
+import path from "node:path";
+import { resolveVoyagerAccessForServerRequest } from "@/lib/experience/voyager-access";
 
 /**
  * VR/AR Simulations API — Voyager Zero
@@ -16,7 +19,7 @@ const VR_SIMULATIONS = [
     difficulty: "Beginner",
     duration: "15 min",
     requirements: ["WebXR-compatible browser or VR headset"],
-    status: "coming_soon",
+    status: "beta_preview",
     previewImage: null,
   },
   {
@@ -27,7 +30,7 @@ const VR_SIMULATIONS = [
     difficulty: "Intermediate",
     duration: "20 min",
     requirements: ["WebXR-compatible browser or VR headset"],
-    status: "coming_soon",
+    status: "beta_preview",
     previewImage: null,
   },
   {
@@ -38,7 +41,7 @@ const VR_SIMULATIONS = [
     difficulty: "Beginner",
     duration: "25 min",
     requirements: ["WebXR-compatible browser or VR headset"],
-    status: "coming_soon",
+    status: "beta_preview",
     previewImage: null,
   },
   {
@@ -49,7 +52,7 @@ const VR_SIMULATIONS = [
     difficulty: "Intermediate",
     duration: "30 min",
     requirements: ["WebXR-compatible browser or VR headset"],
-    status: "coming_soon",
+    status: "beta_preview",
     previewImage: null,
   },
   {
@@ -60,7 +63,7 @@ const VR_SIMULATIONS = [
     difficulty: "Beginner",
     duration: "20 min",
     requirements: ["WebXR-compatible browser or VR headset"],
-    status: "coming_soon",
+    status: "beta_preview",
     previewImage: null,
   },
   {
@@ -71,20 +74,80 @@ const VR_SIMULATIONS = [
     difficulty: "Advanced",
     duration: "15 min",
     requirements: ["WebXR-compatible browser or VR headset"],
-    status: "coming_soon",
+    status: "beta_preview",
     previewImage: null,
   },
 ];
 
+type ShowcaseManifest = {
+  items?: Array<{
+    id?: string;
+    title?: string;
+    category?: string;
+    description?: string;
+    imagePath?: string;
+    status?: string;
+  }>;
+};
+
+// Cached showcase items — loaded once at module init, not per-request
+let cachedShowcaseItems: ReturnType<typeof parseShowcaseManifest> | null = null;
+
+function parseShowcaseManifest() {
+  const manifestPath = path.resolve(
+    process.cwd(),
+    "public/assets/experience/showcase/diverse/voyager-diverse-showcase.manifest.json",
+  );
+
+  if (!fs.existsSync(manifestPath)) return [];
+
+  try {
+    const raw = fs.readFileSync(manifestPath, "utf8");
+    const parsed = JSON.parse(raw) as ShowcaseManifest;
+
+    return (parsed.items ?? [])
+      .filter((item) => item.status === "completed" && item.imagePath && item.id && item.title)
+      .map((item) => ({
+        id: String(item.id),
+        title: String(item.title),
+        category: item.category ? String(item.category) : "Immersive",
+        description: item.description ? String(item.description) : "Generated immersive showcase scene.",
+        imagePath: String(item.imagePath),
+      }));
+  } catch {
+    return [];
+  }
+}
+
+function loadDiverseShowcaseItems() {
+  if (!cachedShowcaseItems) {
+    cachedShowcaseItems = parseShowcaseManifest();
+  }
+  return cachedShowcaseItems;
+}
+
 /** GET /api/vr — list VR/AR simulations */
 export async function GET() {
+  const access = await resolveVoyagerAccessForServerRequest();
+  const showcase = loadDiverseShowcaseItems();
+  const simulations = access.fullAccess
+    ? VR_SIMULATIONS
+    : VR_SIMULATIONS.map((simulation) => ({
+      ...simulation,
+      status: "beta_locked",
+    }));
+
   return NextResponse.json({
-    simulations: VR_SIMULATIONS,
+    simulations,
+    showcase,
+    access,
     platformInfo: {
       name: "Voyager Zero",
       version: "0.1.0-alpha",
       supported: ["WebXR", "Meta Quest", "Apple Vision Pro"],
-      note: "VR simulations are coming soon. Hardware and WebXR support required.",
+      note: access.fullAccess
+        ? "Beta access enabled for your class. Hardware and WebXR support still apply."
+        : "Immersive mode is currently available for approved beta classes only.",
     },
   });
 }

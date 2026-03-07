@@ -108,9 +108,8 @@ export async function GET(request: Request) {
       score,
     }));
 
-  return NextResponse.json({
-    query,
-    count: results.length,
-    results,
-  });
+  return NextResponse.json(
+    { query, count: results.length, results },
+    { headers: { "Cache-Control": "private, max-age=300, stale-while-revalidate=600" } },
+  );
 }

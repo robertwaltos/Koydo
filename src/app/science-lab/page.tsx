@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AppleVisionLab from "./apple-vision-lab";
-import ComingSoonBanner from "@/app/components/coming-soon-banner";
 import { isLaunchFeaturePending } from "@/lib/platform/launch-readiness";
 import { resolveVoyagerAccessForServerRequest } from "@/lib/experience/voyager-access";
 import AdaptiveBackground from "@/app/components/ui/adaptive-background";
@@ -198,16 +197,22 @@ export default async function ScienceLabPage() {
         {/* Immersive XR is launch-gated */}
         <section className="mb-12">
           {immersiveScienceBlocked ? (
-            <ComingSoonBanner
-              title="New Experience"
-              description={immersiveSciencePending
-                ? "Immersive Science is temporarily unavailable while launch checks finish."
-                : "Immersive Science is currently open to Beta Tester, Admin, Support, Teacher, School, and Partner classes."}
-              primaryHref="/modules?subject=Science"
-              primaryLabel="Use science modules now"
-              secondaryHref="/support"
-              secondaryLabel="Request beta access"
-            />
+            <div className="mx-auto my-8 w-full max-w-3xl rounded-3xl border border-zinc-200/60 bg-zinc-50/90 p-8 text-zinc-900 shadow-sm dark:border-zinc-700/40 dark:bg-zinc-950/30 dark:text-foreground">
+              <h3 className="text-lg font-bold">Immersive Science</h3>
+              <p className="mt-2 text-sm text-zinc-600 dark:text-foreground/70">
+                {immersiveSciencePending
+                  ? "Immersive Science is temporarily unavailable while launch checks finish."
+                  : "Immersive Science is currently open to approved Beta Tester, Admin, Support, Teacher, School, and Partner classes."}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                <Link href="/modules?subject=Science" className="inline-flex min-h-11 items-center rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900">
+                  Use science modules now
+                </Link>
+                <Link href="/support" className="inline-flex min-h-11 items-center rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-800 hover:bg-zinc-50 dark:border-zinc-600 dark:bg-transparent dark:text-foreground">
+                  Request beta access
+                </Link>
+              </div>
+            </div>
           ) : (
             <>
               <div className="mb-6 flex items-center gap-3">

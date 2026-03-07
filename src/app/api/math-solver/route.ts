@@ -44,7 +44,15 @@ Keep explanations clear and concise. Use at most 6 steps.`,
     });
 
     const content = completion.choices[0]?.message?.content ?? "";
-    const result = JSON.parse(content);
+    let result: unknown;
+    try {
+      result = JSON.parse(content);
+    } catch {
+      return NextResponse.json({ error: "AI returned invalid response format" }, { status: 502 });
+    }
+    if (!result || typeof result !== "object") {
+      return NextResponse.json({ error: "AI returned unexpected response structure" }, { status: 502 });
+    }
     return NextResponse.json(result);
   } catch (err) {
     console.error("[math-solver] Error:", err);

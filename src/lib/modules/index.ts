@@ -1,6 +1,7 @@
 import type { LearningModule, Lesson } from "@/lib/modules/types";
 import { generatedModuleRegistry } from "@/lib/modules/generated/registry";
 import { GENERATED_MEDIA_ASSETS } from "@/lib/media/generated-media-assets";
+import type { AppManifest } from "@/lib/platform/app-manifest";
 
 // Registry is already type-checked at compile time (every catalog file
 // is typed as LearningModule). Runtime Zod validation moved to the
@@ -72,8 +73,52 @@ function slugify(value: string) {
     .replace(/(^-|-$)/g, "");
 }
 
+// O(1) lesson lookup map — built once at module init, avoids O(n^2) scans
+let lessonByIdMap: Map<string, { lesson: Lesson; learningModule: LearningModule }> | null = null;
+
+function getLessonByIdMap() {
+  if (!lessonByIdMap) {
+    lessonByIdMap = new Map();
+    for (const learningModule of moduleRegistry) {
+      for (const lesson of learningModule.lessons) {
+        lessonByIdMap.set(lesson.id, { lesson, learningModule });
+        // Also index by normalized key for fast lookup
+        const normalized = normalizeLookupKey(lesson.id);
+        if (normalized !== lesson.id) {
+          lessonByIdMap.set(normalized, { lesson, learningModule });
+        }
+      }
+    }
+  }
+  return lessonByIdMap;
+}
+
 export function getAllLearningModules() {
   return moduleRegistry.filter((m) => m.status !== "draft");
+}
+
+/**
+ * Filter modules by micro-app manifest constraints.
+ * - `enabledSubjects`: ["*"] passes all; otherwise match module.subject
+ * - `minAge` / `maxAge`: module age range must overlap manifest age range
+ */
+export function getModulesForApp(manifest: AppManifest): LearningModule[] {
+  const all = getAllLearningModules();
+  const allSubjects = manifest.enabledSubjects.includes("*");
+
+  return all.filter((mod) => {
+    // Subject filter
+    if (!allSubjects && !manifest.enabledSubjects.includes(mod.subject)) {
+      return false;
+    }
+    // Age overlap filter: module age range must overlap manifest age range
+    const modMin = mod.minAge ?? 0;
+    const modMax = mod.maxAge ?? 99;
+    if (modMax < manifest.minAge || modMin > manifest.maxAge) {
+      return false;
+    }
+    return true;
+  });
 }
 
 /** Returns every module, including drafts – for admin/debug use only */
@@ -109,14 +154,7 @@ export function getLessonById(lessonId: string): {
   lesson: Lesson;
   learningModule: LearningModule;
 } | null {
-  for (const learningModule of moduleRegistry) {
-    const lesson = learningModule.lessons.find((entry) => entry.id === lessonId);
-    if (lesson) {
-      return { lesson, learningModule };
-    }
-  }
-
-  return null;
+  return getLessonByIdMap().get(lessonId) ?? null;
 }
 
 export function getLessonByLookupKey(lessonKey: string): {
@@ -125,13 +163,9 @@ export function getLessonByLookupKey(lessonKey: string): {
 } | null {
   const normalizedLookup = normalizeLookupKey(lessonKey);
 
-  for (const learningModule of moduleRegistry) {
-    for (const lesson of learningModule.lessons) {
-      if (normalizeLookupKey(lesson.id) === normalizedLookup) {
-        return { lesson, learningModule };
-      }
-    }
-  }
+  // Fast path: O(1) lookup by exact or normalized ID
+  const fastMatch = getLessonByIdMap().get(lessonKey) ?? getLessonByIdMap().get(normalizedLookup);
+  if (fastMatch) return fastMatch;
 
   const scopedMatch = normalizedLookup.match(/^([^:\/]+)[:\/]([\s\S]+)$/);
   if (scopedMatch) {
