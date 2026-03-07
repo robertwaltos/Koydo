@@ -218,7 +218,7 @@ export default function VisualFlashcards({
             <div className="flex justify-center bg-white/50 px-4 pt-6">
               <Image
                 src={cardImageSource.src}
-                alt={card.imageAlt ?? ""}
+                alt={card.imageAlt || card.front}
                 width={320}
                 height={220}
                 sizes="(max-width: 640px) 160px, 220px"
