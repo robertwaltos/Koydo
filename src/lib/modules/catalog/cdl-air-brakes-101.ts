@@ -5,107 +5,165 @@ export const cdl_air_brakes_101_Module: LearningModule = {
   "title": "CDL Air Brakes",
   "description": "Complete study guide for the CDL Air Brakes endorsement test. Covers air brake system components, dual air brake systems, inspecting air brakes, using air brakes properly, and the critical air brake tests (applied pressure, low-pressure warning, air loss rate, spring brake pop-out). Required knowledge for all Class A CDL and any vehicle equipped with air brakes. Based on the FMCSA CDL Manual Section 5.",
   "subject": "CDL",
-  "tags": ["core", "curriculum", "cdl", "trades", "exam-prep", "air-brakes"],
+  "tags": [
+    "core",
+    "curriculum",
+    "cdl",
+    "trades",
+    "exam-prep",
+    "air-brakes"
+  ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
-  "localeSupport": ["en", "es"],
+  "localeSupport": [
+    "en",
+    "es"
+  ],
   "thumbnail": "/assets/cdl/air-brake-system.png",
   "learningObjectives": [
-    "Identify all major components of a commercial vehicle air brake system",
-    "Explain how dual air brake systems provide redundancy and safety",
-    "Perform proper air brake inspection and testing procedures",
-    "Describe the function of spring brakes and when they activate automatically",
-    "Apply correct braking techniques to prevent brake fade and jackknifing",
-    "Pass the CDL Air Brakes knowledge test with 80% or higher"
+    "Identify all major components of a commercial vehicle air brake system and their functions.",
+    "Explain how a dual air brake system works and why it's a critical safety feature.",
+    "Perform the complete, required in-cab air brake inspection and testing procedures.",
+    "Describe the function of spring brakes and the conditions under which they activate automatically.",
+    "Apply correct braking techniques for normal stops, emergency stops, and long downgrades to prevent brake fade.",
+    "Pass the CDL Air Brakes knowledge test with 80% or higher."
   ],
   "lessons": [
     {
       "id": "cdl-ab-101-l01",
-      "title": "Air Brake System Components",
+      "title": "The Air Brake System: How It Works",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "chunks": [
         {
           "id": "cdl-ab-101-l01-c1",
-          "title": "The Air Compressor and Reservoirs",
-          "content": "Air brakes use compressed air instead of hydraulic fluid to apply braking force. [Visual Prompt: Cutaway diagram of a complete air brake system showing the air compressor (gear-driven from engine), governor, wet tank, dry tanks, safety relief valve, one-way check valves, and drain cocks, with arrows showing airflow direction.] The air compressor is gear-driven or belt-driven by the engine and pumps air into the storage tanks. The governor controls when the compressor pumps air — it cuts in at about 100 psi and cuts out at about 125 psi. Air first enters the wet (supply) tank where moisture and oil are separated. From there, one-way check valves direct air into the dry (service) tanks. If the wet tank develops a leak, the check valves prevent air from escaping the dry tanks — this is a critical safety feature. Each tank has a drain valve at the bottom. You must drain the tanks daily to remove accumulated moisture, which can freeze in cold weather and block air lines, causing brake failure."
+          "title": "Air Generation and Storage",
+          "content": "Air brakes use compressed air to apply braking force. The system starts with the engine-driven air compressor, which pumps air into the storage tanks. The governor controls the compressor, telling it to cut-in (start pumping) at around 100 psi and cut-out (stop pumping) at around 125 psi. Air passes through an air dryer to remove moisture and oil, then into the primary storage tanks, often called 'wet' and 'dry' tanks. A safety relief valve on the first tank is set to open at 150 psi to prevent over-pressurization. You must drain your air tanks daily to remove any collected moisture, which can freeze in cold weather and cause brake failure. [Visual Prompt: Animated diagram showing the engine running, the compressor pumping, and air flowing through the air dryer into the tanks. The air pressure gauge rises from 100 psi to 125 psi, at which point the compressor animation stops and a 'cut-out' text appears. A safety valve is shown popping off at 150 psi in a separate animation.]"
         },
         {
           "id": "cdl-ab-101-l01-c2",
-          "title": "Brake Chambers, Slack Adjusters, and S-Cam",
-          "content": "The brake chamber converts air pressure into mechanical force. [Visual Prompt: Exploded view diagram showing the sequence: brake pedal → foot valve → air line → brake chamber (diaphragm pushing rod) → slack adjuster (lever arm) → S-cam (rotating cam) → brake shoes (pressed against drum), with labels and force direction arrows.] When you press the brake pedal, the foot valve sends compressed air through the air lines to the brake chambers at each wheel. Inside the chamber, a diaphragm pushes a push rod outward. The push rod connects to the slack adjuster, which is a lever arm that rotates the S-cam (a cam shaped like the letter S). As the S-cam turns, it forces the brake shoes outward against the inside of the brake drum, creating friction to stop the wheel. Automatic slack adjusters maintain the correct push rod stroke as brake linings wear down. Manual slack adjusters require periodic adjustment — excessive push rod travel means reduced braking force."
+          "title": "Applying the Service Brakes",
+          "content": "When you press the brake pedal (also called the treadle valve), it sends compressed air from the tanks through air lines to the brake chambers at each wheel. Inside the chamber, air pressure pushes on a diaphragm, which moves a pushrod. The pushrod is connected to a slack adjuster, a lever that rotates an S-cam. The S-cam forces the brake shoes against the inside of the brake drum, creating friction to slow the vehicle. The distance the pushrod moves is critical; with the brakes released, it should not move more than about one inch when you pull on it by hand. Automatic slack adjusters maintain this distance, but they must still be checked. [Visual Prompt: An animated, exploded view showing the sequence: foot presses treadle valve -> air rushes through lines -> brake chamber diaphragm expands -> pushrod extends -> slack adjuster rotates -> S-cam turns -> brake shoes press against the drum. A second visual compares a properly adjusted slack adjuster (90-degree angle when applied) to one with excessive travel.]"
         },
         {
           "id": "cdl-ab-101-l01-c3",
-          "title": "Spring Brakes and Parking Brake",
-          "content": "Spring brakes are the fail-safe mechanism in air brake systems. [Visual Prompt: Cross-section of a spring brake chamber showing two compartments: the service side (air pushes diaphragm to apply brakes) and the spring side (powerful spring held back by air pressure), with labels showing both released and applied states.] Spring brakes have a powerful spring held compressed by air pressure during normal driving. If air pressure drops below about 60 psi, the springs begin to overcome the air pressure. At approximately 20-45 psi, the springs fully apply the brakes automatically — this is your emergency braking system. The parking brake control (yellow diamond-shaped button in the cab) releases air from the spring brake chambers, allowing the springs to apply. Never try to drive with the parking brake partially applied — it can overheat and damage the brakes. If your air pressure drops to about 60 psi while driving, pull over immediately. Below 20 psi, you will have NO service brakes and only the spring brakes working."
+          "title": "Parking and Emergency Brakes",
+          "content": "Spring brakes are used for parking and emergency braking. They are a fail-safe system. Powerful springs are held back by air pressure while you are driving. When you pull the yellow, diamond-shaped parking brake valve in the cab, you release the air pressure, allowing the springs to expand and mechanically apply the brakes. This is why you hear a loud 'pssh' of air. If your system loses air pressure while driving, the springs will begin to apply the brakes automatically around 60 psi and will fully apply them between 20-45 psi, stopping the vehicle. The red, octagon-shaped valve is the trailer air supply; pulling it applies the trailer's emergency brakes. Never push in the parking brake valve to release the brakes unless you have enough air pressure to stop safely. [Visual Prompt: A cross-section animation of a spring brake chamber. Show air pressure holding the spring compressed. Then, show the air being released, allowing the powerful spring to expand and push the rod, applying the brake. Also show the yellow diamond and red octagon knobs on a dashboard being pulled and pushed.]"
         }
       ],
       "flashcards": [
-        { "id": "cdl-ab-101-l01-f1", "front": "At what pressure does the governor cut in and cut out?", "back": "Cut in: approximately 100 psi. Cut out: approximately 125 psi." },
-        { "id": "cdl-ab-101-l01-f2", "front": "What happens when air pressure drops below 20-45 psi?", "back": "Spring brakes automatically apply fully, stopping the vehicle." },
-        { "id": "cdl-ab-101-l01-f3", "front": "Why must air tanks be drained daily?", "back": "To remove accumulated moisture that can freeze in cold weather and block air lines, causing brake failure." },
-        { "id": "cdl-ab-101-l01-f4", "front": "What does the S-cam do in the braking system?", "back": "It rotates and forces the brake shoes outward against the brake drum to create friction." }
+        {
+          "id": "cdl-ab-101-l01-f1",
+          "front": "What are the typical cut-in and cut-out pressures for the air compressor governor?",
+          "back": "The governor tells the compressor to cut-in (start pumping) at approximately 100 psi and cut-out (stop pumping) at approximately 125 psi."
+        },
+        {
+          "id": "cdl-ab-101-l01-f2",
+          "front": "What happens if air pressure drops to the 20-45 psi range?",
+          "back": "The spring brakes will automatically apply fully, acting as an emergency stop."
+        },
+        {
+          "id": "cdl-ab-101-l01-f3",
+          "front": "What is the function of the S-cam?",
+          "back": "When rotated by the slack adjuster, the S-cam forces the brake shoes apart and against the inside of the brake drum."
+        },
+        {
+          "id": "cdl-ab-101-l01-f4",
+          "front": "Why is it critical to drain air tanks daily?",
+          "back": "To remove water and oil, which can freeze in cold weather or damage brake components, leading to brake failure."
+        }
       ]
     },
     {
       "id": "cdl-ab-101-l02",
-      "title": "Dual Air Brake Systems and Inspection",
+      "title": "Dual Systems and Air Brake Inspection",
       "type": "video",
-      "duration": 12,
+      "duration": 14,
       "chunks": [
         {
           "id": "cdl-ab-101-l02-c1",
-          "title": "Dual Air Brake System Design",
-          "content": "Modern trucks use dual air brake systems for safety redundancy. [Visual Prompt: Schematic diagram showing two independent brake circuits — primary (rear brakes) and secondary (front brakes/trailer) — each with its own air tank, with a tractor protection valve and trailer supply valve labeled.] The primary system operates the rear axle brakes. The secondary system operates the front axle brakes and possibly the trailer brakes. Each system has its own air tank, lines, and components. If one system fails (leak, line break), the other system still provides partial braking. The low air pressure warning activator must come on before pressure drops below 60 psi. Most systems have both a warning light and an audible buzzer. The tractor protection valve automatically disconnects the trailer air supply if tractor air pressure gets too low, preventing the trailer from draining all the tractor's air."
+          "title": "The Dual Air Brake System",
+          "content": "Modern heavy vehicles use a dual air brake system for safety. This is essentially two separate air brake systems that use a single set of brake controls. One system typically operates the rear axles (the primary system), and the other operates the front axle (the secondary system). Each system has its own air tanks, hoses, and lines. This provides redundancy; if one system develops a major leak, the other can still provide braking power to stop the vehicle. Your dashboard will have two air pressure gauges, one for each system. Both gauges should show normal pressure before driving. The low air pressure warning must come on when pressure in either tank drops below 60 psi. [Visual Prompt: A color-coded schematic of a truck chassis. The primary system (rear brakes) is highlighted in green, and the secondary system (front brakes) is highlighted in blue. An animation shows a leak in the green system, but the blue system remains pressurized and functional. Show a dashboard with two air gauges, labeled 'Primary' and 'Secondary'.]"
         },
         {
           "id": "cdl-ab-101-l02-c2",
-          "title": "Air Brake Inspection Procedures",
-          "content": "A thorough air brake inspection is critical and tested during the CDL skills test. [Visual Prompt: Step-by-step checklist overlaid on a truck undercarriage showing inspection points: brake chambers, hoses, slack adjusters, drums, brake linings, and air lines.] Check brake drums/rotors for cracks, excessive wear, or contamination (oil or grease on braking surfaces). Inspect brake linings — minimum thickness is usually 1/4 inch, and they should be evenly worn. Check brake hoses and tubing for cracks, bulges, or signs of wear from rubbing. Inspect brake chambers for air leaks — listen for hissing sounds with brakes applied. Check slack adjusters for proper angle (approximately 90 degrees when brakes are applied). Look for air line connections that are secure and not leaking. Check for missing or loose parts. Inspect spring brake chambers for damage or cracks in the housing."
+          "title": "Walk-Around Air Brake Inspection",
+          "content": "During your pre-trip inspection, you must visually inspect the brake components. Check brake chambers to ensure they are securely mounted and not cracked or damaged. Check slack adjusters and pushrods; if you can pull a pushrod more than one inch by hand on a drum brake, it likely needs adjustment. Check brake drums for cracks, dents, or holes. Look for signs of overheating like a bluish discoloration. Check brake linings (pads/shoes) for thickness—they should not be worn thinner than 1/4 inch. Ensure there are no contaminants like oil or grease on the braking surfaces. Check all air hoses and lines for cracks, chafing, or audible leaks. [Visual Prompt: A first-person view of a driver performing a walk-around. As they point to each component (brake chamber, slack adjuster, drum, hoses), a text box appears with key inspection points and pass/fail criteria, like a 1/4 inch minimum lining thickness indicator.]"
         },
         {
           "id": "cdl-ab-101-l02-c3",
-          "title": "Critical Air Brake Tests",
-          "content": "You must perform and pass these tests during the CDL skills exam. [Visual Prompt: Dashboard air gauge showing pressure readings for each test, with pass/fail thresholds clearly marked in green and red zones.] Test 1 — Air Leakage Rate: With a fully charged system (125 psi), turn off the engine, release the parking brake, and apply full foot brake. Air loss should not exceed 3 psi per minute for single vehicles or 4 psi per minute for combination vehicles. Test 2 — Low Pressure Warning: With the engine off, pump the brake pedal repeatedly to reduce air pressure. The low-pressure warning light and buzzer must activate before pressure drops below 60 psi. Test 3 — Spring Brake Activation: Continue pumping. The parking brake valve (tractor protection valve on combination vehicles) must pop out between 20-45 psi. Test 4 — Air Pressure Build-Up: Start the engine. Air pressure should build from 85 to 100 psi within 45 seconds. If any test fails, the vehicle must not be driven."
+          "title": "The In-Cab Air Brake Check (The 'Big 5' Tests)",
+          "content": "This sequence of tests is mandatory for your CDL exam. With the engine on, build air pressure to full (around 125 psi). Then, turn the engine off, chock the wheels, and release all brakes. The 5 steps are: 1. Applied Leakage Test: Apply firm pressure to the brake pedal and hold for one minute. The air loss rate should be less than 3 psi for a straight truck or 4 psi for a combination vehicle. 2. Low Air Warning Test: Turn the key to the 'on' position (engine off) and pump the brake pedal to lower the air pressure. The low air warning light and/or buzzer must come on before pressure drops below 60 psi. 3. Spring Brake Pop-Out Test: Continue pumping the brake pedal. The parking brake valve (and trailer supply valve) must pop out between 20 and 45 psi. 4. Air Pressure Build-Up Test: Start the engine. Time how long it takes for pressure to build from 85 to 100 psi. It must do so within 45 seconds. 5. Governor Cut-Out Test: Let the engine run to observe the air pressure gauge. The governor must stop the compressor (cut-out) at or before 130 psi. You'll hear the air dryer purge. [Visual Prompt: A split screen showing a driver in the cab performing the actions on the left, and a close-up of the air gauges on the right. Each test is labeled, and the acceptable pressure ranges are highlighted in green on the gauge.]"
         }
       ],
       "flashcards": [
-        { "id": "cdl-ab-101-l02-f1", "front": "What is the maximum allowable air loss rate for a combination vehicle with brakes applied?", "back": "4 psi per minute (3 psi for a single vehicle)." },
-        { "id": "cdl-ab-101-l02-f2", "front": "At what pressure must the low air pressure warning activate?", "back": "Before pressure drops below 60 psi." },
-        { "id": "cdl-ab-101-l02-f3", "front": "How quickly should air pressure build from 85 to 100 psi?", "back": "Within 45 seconds with the engine at operating RPM." },
-        { "id": "cdl-ab-101-l02-f4", "front": "What does the tractor protection valve do?", "back": "It automatically disconnects the trailer air supply if tractor air pressure drops too low, preventing the trailer from draining all the tractor's air." }
+        {
+          "id": "cdl-ab-101-l02-f1",
+          "front": "What is the maximum allowable air loss rate for a combination vehicle during the applied leakage test?",
+          "back": "4 psi in one minute. (3 psi for a straight truck or bus)."
+        },
+        {
+          "id": "cdl-ab-101-l02-f2",
+          "front": "The low air pressure warning must activate before pressure drops below what level?",
+          "back": "60 psi."
+        },
+        {
+          "id": "cdl-ab-101-l02-f3",
+          "front": "During the air pressure build-up test, how quickly should pressure rise from 85 to 100 psi?",
+          "back": "Within 45 seconds."
+        },
+        {
+          "id": "cdl-ab-101-l02-f4",
+          "front": "What is the main advantage of a dual air brake system?",
+          "back": "Redundancy. If one system fails, the other can still provide braking power to stop the vehicle."
+        }
       ]
     },
     {
       "id": "cdl-ab-101-l03",
-      "title": "Using Air Brakes and Preventing Failures",
+      "title": "Using Air Brakes Safely",
       "type": "video",
       "duration": 12,
       "chunks": [
         {
           "id": "cdl-ab-101-l03-c1",
-          "title": "Proper Braking Technique",
-          "content": "Air brakes have a slight delay compared to hydraulic brakes — called brake lag. [Visual Prompt: Timeline showing brake application sequence: foot presses pedal (0 sec) → air travels through lines (0.4 sec brake lag) → brakes begin to apply (0.4 sec) → full braking force (0.7-1.0 sec total), compared to hydraulic brakes with near-instant response.] Brake lag is the time it takes for air to travel through the lines to the brake chambers — typically 0.4 seconds. This means you need more following distance with air brakes. At 55 mph, brake lag adds about 32 feet to your stopping distance. For controlled braking, apply the brakes as hard as you can without locking the wheels. If wheels lock, release the brake pedal, let them roll, and re-apply with less pressure. Many modern trucks have ABS (Anti-lock Braking Systems), which automatically prevent wheel lockup. With ABS, apply steady brake pressure and let the system work — do not pump the brakes."
+          "title": "Normal and Emergency Stopping",
+          "content": "Air brakes have a built-in delay called 'brake lag,' which is the time it takes for air to travel to the brakes after you press the pedal. This can add 30-40 feet to your total stopping distance at highway speeds. Total Stopping Distance = Perception Distance + Reaction Distance + Brake Lag + Braking Distance. You must maintain a greater following distance than in a car. For normal stops, apply smooth, steady pressure. For emergency stops, you can brake as hard as possible without locking the wheels. If your vehicle has ABS (Anti-lock Braking System), hold the pedal down firmly and let the system work—do not pump the brakes. [Visual Prompt: An animation comparing two trucks stopping. The air brake truck has a visible 'lag' bar on its timeline, resulting in a longer total stopping distance. A second animation shows a driver's foot holding steady pressure on the pedal during an ABS stop, with the wheels pulsing but not locking.]"
         },
         {
           "id": "cdl-ab-101-l03-c2",
-          "title": "Brake Fade and Downgrade Braking",
-          "content": "Brake fade is the number one cause of runaway trucks on downgrades. [Visual Prompt: Temperature gauge showing brake drum temperature rising from 200°F (normal) through 500°F (reduced effectiveness) to 800°F+ (brake fade - critical failure), with color gradient from green to red.] Brake fade occurs when brakes overheat from excessive use. As drum brakes heat up, the drums expand away from the shoes, requiring more air pressure to achieve the same braking force. Eventually, even full air pressure cannot push the shoes firmly enough against the expanded drums. Prevention: use the correct gear BEFORE descending a grade. The proper technique is the snub braking method — apply brakes to reduce speed by 5 mph below your target speed, then release completely to let brakes cool, then repeat. Never ride the brakes continuously. If you smell brakes or see smoke, stop immediately and let them cool. Know the location of runaway truck ramps and do not hesitate to use them."
+          "title": "Mountain Driving and Brake Fade",
+          "content": "Brakes can fail from overheating, a condition known as brake fade. This is the number one cause of runaway trucks on long downgrades. As brakes get too hot, they become less effective, eventually losing all stopping power. The correct way to descend a steep grade is to use your engine brake (or 'Jake Brake') as your primary tool for speed control. Select a low gear before you start down the hill. Use your service brakes sparingly. The 'snub braking' technique is to apply the brakes firmly to slow down about 5 mph below your safe speed, then release them completely to cool, and repeat as needed. Never ride your brakes down a grade. [Visual Prompt: A diagram showing a truck on a steep grade. An icon for the engine brake is lit up. A temperature gauge on the brake drum rises into the red 'FADE' zone when the brakes are ridden, but stays in the green 'COOL' zone when the snub braking technique is used. Show a runaway truck ramp as a safety option.]"
         },
         {
           "id": "cdl-ab-101-l03-c3",
-          "title": "Jackknifing and Loss of Control",
-          "content": "Jackknifing occurs when drive wheels lose traction and the rear of the tractor swings out. [Visual Prompt: Aerial diagram showing three stages of a jackknife: (1) tractor and trailer aligned, (2) drive wheels skid, tractor begins to swing, (3) full jackknife with tractor at 90 degrees to trailer, with correction arrows showing steering into the skid.] Most jackknife situations are caused by braking on slippery surfaces, taking curves too fast, or over-acceleration. Drive wheels skid first because they have the greatest braking force. Once the tractor starts to swing, the trailer pushes it further around. To recover: immediately release the brake pedal, do not use the trailer hand valve (this can make it worse), and steer in the direction of the skid. Prevention is key: reduce speed before curves, use gentle braking on slippery roads, and avoid sudden steering inputs. ABS helps prevent jackknifing but does not eliminate the risk entirely."
+          "title": "Braking on Slippery Surfaces",
+          "content": "Braking too hard on a slippery surface can cause your wheels to lock up, leading to a skid. A tractor-trailer jackknife happens when the drive wheels lock and skid, causing the trailer to push the tractor around. To prevent this, reduce your speed before you encounter slippery conditions. Brake gently and avoid sudden steering movements. Never use the trailer hand brake (trolley valve) to stop, especially on slippery roads, as it only applies the trailer brakes and can easily cause a trailer skid and jackknife. If you do start to skid, release the brakes to allow the wheels to regain traction, and steer in the direction you want to go. [Visual Prompt: An overhead animation of a truck jackknifing on an icy road after the driver brakes too hard. Then, replay the scenario showing the driver braking gently and maintaining control. A separate icon shows the trailer hand brake with a large red 'X' over it for normal stopping.]"
         }
       ],
       "flashcards": [
-        { "id": "cdl-ab-101-l03-f1", "front": "What is brake lag and how long does it typically last?", "back": "Brake lag is the delay for air to travel from the foot valve to the brakes. It typically takes about 0.4 seconds." },
-        { "id": "cdl-ab-101-l03-f2", "front": "What is the snub braking method?", "back": "Apply brakes to reduce speed by 5 mph below target, release completely to let brakes cool, then repeat. Used on long downgrades." },
-        { "id": "cdl-ab-101-l03-f3", "front": "What causes jackknifing?", "back": "Drive wheels losing traction — usually from braking on slippery surfaces, excessive speed in curves, or over-acceleration." },
-        { "id": "cdl-ab-101-l03-f4", "front": "With ABS, should you pump the brake pedal?", "back": "No. Apply steady brake pressure and let the ABS system prevent wheel lockup automatically." }
+        {
+          "id": "cdl-ab-101-l03-f1",
+          "front": "What is 'brake lag'?",
+          "back": "The time it takes for air to travel from the brake pedal to the brake chambers, which adds to your total stopping distance."
+        },
+        {
+          "id": "cdl-ab-101-l03-f2",
+          "front": "What is the proper braking technique for a long, steep downgrade?",
+          "back": "Use a low gear and the engine brake. Use service brakes sparingly with the 'snub braking' method (apply firmly, slow 5 mph, release fully)."
+        },
+        {
+          "id": "cdl-ab-101-l03-f3",
+          "front": "What is the primary cause of a jackknife skid?",
+          "back": "The drive wheels locking up and losing traction, usually from braking too hard on a slippery surface."
+        },
+        {
+          "id": "cdl-ab-101-l03-f4",
+          "front": "How should you brake in an emergency if your vehicle has ABS?",
+          "back": "Apply and hold firm, steady pressure on the brake pedal. Do not pump the brakes. Let the ABS system work."
+        }
       ]
     },
     {
@@ -116,8 +174,8 @@ export const cdl_air_brakes_101_Module: LearningModule = {
       "chunks": [
         {
           "id": "cdl-ab-101-l04-c1",
-          "title": "Air Brakes Practice Test",
-          "content": "This practice exam simulates the CDL Air Brakes knowledge test. The real exam typically has 25 multiple-choice questions and you need 80% (20 correct) to pass. If you fail this endorsement, you will receive an Air Brake Restriction on your CDL, meaning you cannot drive any vehicle equipped with air brakes. Topics covered: system components, dual systems, inspection procedures, proper use, emergency situations, and the four critical air brake tests. Review the air brake system diagram before starting — many questions reference specific components and their functions."
+          "title": "Test Your Knowledge",
+          "content": "This practice exam is designed to mirror the official CDL Air Brakes knowledge test. The real exam typically consists of 25 multiple-choice questions, and a score of 80% (20 correct answers) is required to pass. Failing this endorsement test will result in an 'L' restriction on your CDL, meaning you cannot legally operate any vehicle equipped with air brakes. This test will cover all the topics we've discussed: system components, dual systems, the complete inspection process, safe braking techniques, and emergency situations. Take your time, read each question carefully, and review the system diagrams if you need a refresher. Good luck!"
         }
       ],
       "flashcards": []

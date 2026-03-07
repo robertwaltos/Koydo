@@ -84,6 +84,14 @@ export default function AdminOverviewPage() {
           </section>
         )}
 
+        {activeView === "Classical Audience" && (
+          <section className="grid gap-6 lg:grid-cols-3">
+            <MetricCard title="Avg. Listen Time" value="54m" sub="Deep engagement" />
+            <MetricCard title="Top Era" value="Romantic" sub="Chopin dominates" />
+            <MetricCard title="HQ Streams" value="84k" sub="Hi-Res FLAC usage" />
+          </section>
+        )}
+
         {/* Fallback for other views */}
         {activeView !== "Platform Overview" && !["Focus Session Metrics", "Translation Usage", "Trivia Engagement"].includes(activeView) && (
           <section className="rounded-[3rem] border-2 border-dashed border-zinc-200 p-24 flex flex-col items-center justify-center text-center">

@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Biotechnology401Module: LearningModule = {
+export const biotechnology_401_Module: LearningModule = {
   "id": "biotechnology-401",
   "title": "Biotechnology Mastery and Leadership",
   "description": "Level 401 curriculum in Biotechnology, emphasizing genetic engineering, bioprocess systems, clinical translation, bioethics, and real-world decision quality through structured practice and assessment.",
@@ -14,51 +14,51 @@ export const Biotechnology401Module: LearningModule = {
   ],
   "minAge": 16,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
   ],
   "learningObjectives": [
-    "Develop rigorous mental models for genetic engineering and bioprocess systems",
-    "Apply structured methods to plan, execute, and review clinical translation tasks",
-    "Interpret evidence using metrics, constraints, and context",
-    "Diagnose common failure modes and design recovery actions",
-    "Communicate tradeoffs clearly to technical and non-technical audiences",
-    "Build repeatable systems for sustained improvement in Biotechnology"
+    "Develop rigorous mental models for genetic engineering and bioprocess systems.",
+    "Apply structured methods to plan, execute, and review clinical translation tasks.",
+    "Interpret evidence using metrics, constraints, and context.",
+    "Diagnose common failure modes and design recovery actions.",
+    "Communicate tradeoffs clearly to technical and non-technical audiences.",
+    "Build repeatable systems for sustained improvement in Biotechnology."
   ],
   "lessons": [
     {
       "id": "biotechnology-401-l01",
-      "title": "Core Models for Biotechnology",
+      "title": "A Framework for Biotechnology Decisions",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "biotechnology-401-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Structured Thinking Template",
+          "content": "A visual of a template with sections for 'Objective,' 'Key Assumptions,' 'Potential Constraints,' and 'Evidence Needed' to guide your reasoning."
         }
       ],
       "chunks": [
         {
           "id": "biotechnology-401-l01-c1",
           "kind": "concept",
-          "title": "Operating Vocabulary and Scope",
-          "content": "In our advanced Biotechnology course, it's crucial to communicate using clear and precise language. This helps everyone understand the concepts we are discussing. We will learn how to define the boundaries of our study, which means understanding what we will focus on and what we will not. Additionally, we will identify the main focus of our analysis, which is the specific aspect of biotechnology we are examining. To ensure that everyone is on the same page, we will align our terminology, meaning we will agree on the specific words we use. This consistency allows us to make informed decisions that can be easily compared across different teams. By working together effectively, we can achieve better results in our projects and research."
+          "title": "Defining Our Focus: Scope and Terminology",
+          "content": "In advanced biotechnology, clear communication is key. We'll start by learning how to define the scope of our work—what we are focusing on and what is outside our current analysis. We will identify the primary 'unit of analysis,' which is the specific process or entity we are evaluating. To ensure everyone works together effectively, we will agree on common definitions for key terms. This precision helps us make clear, comparable decisions across different projects and teams."
         },
         {
           "id": "biotechnology-401-l01-c2",
           "kind": "concept",
-          "title": "Causal Thinking and Constraints",
-          "content": "To truly excel in the field of Biotechnology, it's essential to grasp the underlying reasons for events, rather than merely focusing on their outcomes. In this lesson, we will explore how to identify our assumptions, which are the beliefs we hold that may influence our understanding. We will also examine the relationships between various factors that play a role in biotechnological processes, as well as any limitations or constraints we might encounter in our work. By concentrating on the root causes of issues, we can develop more effective solutions that address the core problems instead of just treating the symptoms. This approach will not only enhance our problem-solving skills but also lead to more innovative and impactful advancements in Biotechnology."
+          "title": "Understanding Cause and Effect",
+          "content": "To solve problems effectively in biotechnology, we must focus on *why* things happen, not just *what* happens. This involves identifying our assumptions—the beliefs we hold that might influence our conclusions. We will map the relationships between different factors in a system and identify the constraints, or limits, we must work within. By focusing on root causes, we can develop more robust and innovative solutions instead of just addressing symptoms."
         },
         {
           "id": "biotechnology-401-l01-c3",
           "kind": "recap",
-          "title": "Evidence and Accountability",
-          "content": "In this section, we will introduce important practices that are essential for successful Biotechnology projects. These include setting high standards for evidence, maintaining a disciplined approach to logging our work, and creating clear accountability systems. By following these practices, we can ensure that our projects are executed reliably and effectively.\nContext recap: In this section, we will introduce important practices that are essential for successful Biotechnology projects. These include setting high standards for evidence, maintaining a disciplined approach to logging our work, and creating clear accountability systems. By following these practices, we can ensure that our projects are executed reliably and effectively."
+          "title": "Ensuring Quality: Evidence and Accountability",
+          "content": "In this section, we will introduce practices that are essential for successful projects. These include setting high standards for the evidence we accept, keeping disciplined logs of our work, and creating clear systems of accountability. Following these practices ensures our work is reliable, repeatable, and that we learn from both our successes and failures."
         }
       ],
       "flashcards": [
@@ -87,9 +87,9 @@ export const Biotechnology401Module: LearningModule = {
       "learningAids": [
         {
           "id": "biotechnology-401-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Workflow Design Canvas",
+          "content": "A visual of a flowchart template with boxes for 'Inputs,' 'Process Step,' 'Checkpoint,' 'Output,' and 'Rollback Trigger' for you to fill in."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const Biotechnology401Module: LearningModule = {
           "id": "biotechnology-401-l02-c1",
           "kind": "practice",
           "title": "Workflow Construction",
-          "content": "In this interactive lab, you will have the opportunity to design a complete workflow for genetic engineering and bioprocess systems. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, outlining the expected outputs, and creating rollback triggers to address any issues that arise. This hands-on experience will help you understand the complexities of biotechnology workflows.\nContext recap: In this interactive lab, you will have the opportunity to design a complete workflow for genetic engineering and bioprocess systems. This includes identifying the necessary inputs, establishing checkpoints to monitor progress, outlining the expected outputs, and creating rollback triggers to address any issues that arise. This hands-on experience will help you understand the complexities of biotechnology workflows."
+          "content": "In this interactive lab, you will design a complete workflow for a genetic engineering or bioprocess system. This includes defining the necessary inputs, establishing checkpoints to monitor quality and progress, outlining the expected outputs, and creating rollback triggers to correct issues as they arise. This hands-on experience will help you master the design of robust biotechnology processes."
         },
         {
           "id": "biotechnology-401-l02-c2",
           "kind": "recap",
           "title": "Decision Logging",
-          "content": "As part of our recap, we will emphasize the importance of documenting every decision made during the workflow process. Each decision should be accompanied by a clear rationale, an expected outcome, and a point for verification. This practice will enable you to analyze the results after the project is completed, helping you learn and improve for future projects.\nContext recap: As part of our recap, we will emphasize the importance of documenting every decision made during the workflow process. Each decision should be accompanied by a clear rationale, an expected outcome, and a point for verification. This practice will enable you to analyze the results after the project is completed, helping you learn and improve for future projects."
+          "content": "As we conclude the lab, we will emphasize the importance of documenting every key decision. Each entry in your decision log should include the rationale, the expected outcome, and a specific point for verification. This disciplined practice enables powerful post-project analysis, helping you and your team learn and improve for the future."
         }
       ],
       "interactiveActivities": [
@@ -111,7 +111,7 @@ export const Biotechnology401Module: LearningModule = {
           "id": "biotechnology-401-l02-act1",
           "type": "matching_pairs",
           "title": "Workflow Match",
-          "description": "Match each workflow component to its strongest governance function.",
+          "description": "Match each workflow component to its primary purpose.",
           "pairs": [
             {
               "left": "Input audit",
@@ -127,7 +127,7 @@ export const Biotechnology401Module: LearningModule = {
             },
             {
               "left": "Retrospective log",
-              "right": "Captures lessons for next iteration"
+              "right": "Captures lessons for the next iteration"
             }
           ]
         },
@@ -143,19 +143,19 @@ export const Biotechnology401Module: LearningModule = {
           ],
           "items": [
             {
-              "text": "Misaligned goals",
+              "text": "Misaligned project goals",
               "bucket": "Strategic"
             },
             {
-              "text": "Unclear handoff timing",
+              "text": "Unclear handoff timing between teams",
               "bucket": "Operational"
             },
             {
-              "text": "Inconsistent acceptance criteria",
+              "text": "Inconsistent acceptance criteria for results",
               "bucket": "Quality"
             },
             {
-              "text": "No benchmark baseline",
+              "text": "No performance benchmark to compare against",
               "bucket": "Quality"
             }
           ]
@@ -280,15 +280,15 @@ export const Biotechnology401Module: LearningModule = {
     },
     {
       "id": "biotechnology-401-l04",
-      "title": "Methods, Metrics, and Failure Modes in Biotechnology",
+      "title": "Methods, Metrics, and Failure Modes",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "biotechnology-401-l04-a1",
           "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "title": "Method Selection: CQC",
+          "content": "Remember CQC when choosing a method: Constraints (time, budget), Quality of information available, and Cost of error if the decision is wrong."
         }
       ],
       "chunks": [
@@ -296,19 +296,19 @@ export const Biotechnology401Module: LearningModule = {
           "id": "biotechnology-401-l04-c1",
           "kind": "concept",
           "title": "Method Selection",
-          "content": "When we choose methods for our biotechnology projects, it's important to think about several key factors. First, we need to consider any constraints we might face, such as time limits or available resources. Next, we should evaluate the quality of the information we have; is it reliable and accurate? Lastly, we must think about the costs associated with making mistakes—what could go wrong if we choose the wrong method? In this lesson, you will explore different alternatives and explain why some methods are better suited for specific biotechnology scenarios than others. This process of critical thinking will not only help you make informed decisions but also improve your problem-solving skills in the field of biotechnology."
+          "content": "Choosing the right method requires careful thought. We must consider our constraints, like time and resources; evaluate the quality of our available data; and understand the cost of error—the consequences of a mistake. In this lesson, you will practice comparing alternative methods for specific biotechnology scenarios and justifying your choice. This critical thinking is essential for making efficient and effective decisions in the lab and beyond."
         },
         {
           "id": "biotechnology-401-l04-c2",
           "kind": "example",
-          "title": "Metric Architecture",
-          "content": "In this example, we will delve into the concept of metric architecture and how it serves as a framework that links leading indicators, lagging outcomes, and diagnostic measures. By establishing these connections, teams can spot any deviations from expected results at an early stage. This early detection enables them to respond thoughtfully and make informed decisions. Grasping the importance of this architecture is essential for effective monitoring and management in biotechnology projects, ensuring that teams can navigate challenges and achieve their goals successfully.\nContext recap: In this example, we will delve into the concept of metric architecture and how it serves as a framework that links leading indicators, lagging outcomes, and diagnostic measures. By establishing these connections, teams can spot any deviations from expected results at an early stage. This early detection enables them to respond thoughtfully and make informed decisions. Grasping the importance of this architecture is essential for effective monitoring and management in biotechnology projects, ensuring that teams can navigate challenges and achieve their goals successfully."
+          "title": "Building a Measurement System",
+          "content": "A good measurement system connects leading indicators, which are early signals, with lagging outcomes, which are the final results. It also includes diagnostic measures to understand why something happened. This framework allows teams to detect deviations from the plan early, enabling them to respond thoughtfully instead of reacting to a crisis. Understanding how to build this system is key to maintaining control over complex biotechnology projects."
         },
         {
           "id": "biotechnology-401-l04-c3",
           "kind": "recap",
-          "title": "Failure Taxonomy",
-          "content": "In our recap, we will categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures in this way, we can develop specific plans to address each type of issue rather than using generic solutions. This targeted approach will help improve our overall project outcomes.\nContext recap: In our recap, we will categorize failures into four main groups: data-related issues, process problems, execution errors, and governance challenges. By organizing failures in this way, we can develop specific plans to address each type of issue rather than using generic solutions. This targeted approach will help improve our overall project outcomes."
+          "title": "Classifying and Learning from Failures",
+          "content": "We will categorize failures into four main groups: data issues, process problems, execution errors, and governance challenges. By classifying failures this way, we can move beyond generic solutions and develop targeted fixes for each type of problem. This structured approach to failure analysis is a powerful tool for continuous improvement."
         }
       ],
       "flashcards": [
@@ -331,15 +331,15 @@ export const Biotechnology401Module: LearningModule = {
     },
     {
       "id": "biotechnology-401-l05",
-      "title": "Case Studio: Improve a Biotechnology System",
+      "title": "Case Study: Improving a Biotechnology System",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "biotechnology-401-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use the structured prompt and write your reasoning before finalizing answers."
+          "type": "image",
+          "title": "Case Analysis Framework",
+          "content": "A visual template with four quadrants: 'Objectives & Context,' 'Constraints & Resources,' 'Intervention Options,' and 'Trade-offs & Metrics.'"
         }
       ],
       "chunks": [
@@ -347,13 +347,13 @@ export const Biotechnology401Module: LearningModule = {
           "id": "biotechnology-401-l05-c1",
           "kind": "practice",
           "title": "Case Decomposition",
-          "content": "In this interactive case study, you will break down a realistic biotechnology scenario into its key components: objectives, context, constraints, and possible intervention options. You will also take notes on the trade-offs involved in each option. This exercise will help you develop analytical skills and understand the complexities of real-world biotechnology challenges.\nContext recap: In this interactive case study, you will break down a realistic biotechnology scenario into its key components: objectives, context, constraints, and possible intervention options. You will also take notes on the trade-offs involved in each option. This exercise will help you develop analytical skills and understand the complexities of real-world biotechnology challenges."
+          "content": "In this interactive case study, you will analyze a realistic biotechnology scenario. Your task is to break it down into its key components: the main objectives, the surrounding context, the constraints you must work within, and the possible interventions. As you evaluate each option, you will document the trade-offs involved. This exercise sharpens the analytical skills needed to solve complex, real-world challenges."
         },
         {
           "id": "biotechnology-401-l05-c2",
           "kind": "recap",
           "title": "Improvement Proposal",
-          "content": "As a recap of your learning, you will create a structured improvement proposal based on the case study. This proposal should include clear success criteria, a mapping of who will be responsible for each part of the project, and a timeline for follow-up actions. This exercise will help you practice presenting your ideas in a professional manner.\nContext recap: As a recap of your learning, you will create a structured improvement proposal based on the case study. This proposal should include clear success criteria, a mapping of who will be responsible for each part of the project, and a timeline for follow-up actions. This exercise will help you practice presenting your ideas in a professional manner."
+          "content": "To conclude the case study, you will synthesize your analysis into a structured improvement proposal. This proposal must include clear success criteria, a responsibility assignment matrix (who does what), and a timeline for implementation and follow-up. This exercise will give you practice in creating actionable plans that drive real improvement."
         }
       ],
       "interactiveActivities": [
@@ -388,7 +388,7 @@ export const Biotechnology401Module: LearningModule = {
             },
             {
               "left": "Cross-team briefing",
-              "right": "Reduced ambiguity at handoff boundaries"
+              "right": "Clearer responsibilities between teams"
             }
           ]
         }
@@ -410,103 +410,103 @@ export const Biotechnology401Module: LearningModule = {
       "questions": [
         {
           "id": "biotechnology-401-l06-q1",
-          "text": "Which action best improves decisions in genetic engineering work?",
+          "text": "A lab has limited funding and a tight deadline for a gene-editing experiment. Which method selection criterion is most critical?",
           "skillId": "biotechnology-401-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Rely on one unverified example"
+              "text": "Choosing the newest, most advanced technology available."
             },
             {
               "id": "b",
-              "text": "Define criteria, compare alternatives, and test assumptions"
+              "text": "Prioritizing methods that fit within budget and time constraints."
             },
             {
               "id": "c",
-              "text": "Skip metrics and move directly to execution"
+              "text": "Selecting the method used by a competitor lab."
             },
             {
               "id": "d",
-              "text": "Avoid documenting rationale"
+              "text": "Ignoring constraints and focusing only on potential outcomes."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Explicit criteria and testable assumptions improve reliability and transferability."
+          "explanation": "Effective method selection requires balancing ambitious goals with practical constraints like cost and time."
         },
         {
           "id": "biotechnology-401-l06-q2",
-          "text": "In bioprocess systems, what is the strongest indicator of process quality?",
+          "text": "To monitor a fermentation process, your team measures final product yield weekly. To improve control, you add daily pH and temperature checks. These daily checks are examples of:",
           "skillId": "biotechnology-401-skill-process",
           "options": [
             {
               "id": "a",
-              "text": "Output speed only"
+              "text": "Lagging outcomes"
             },
             {
               "id": "b",
-              "text": "Traceable steps, checkpoints, and measurable outcomes"
+              "text": "Leading indicators"
             },
             {
               "id": "c",
-              "text": "Unstructured iteration without logs"
+              "text": "Final success criteria"
             },
             {
               "id": "d",
-              "text": "One-time performance anecdotes"
+              "text": "Retrospective data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality processes are observable, repeatable, and measurable."
+          "explanation": "Leading indicators are early measurements that predict final outcomes, allowing for adjustments before the process is complete."
         },
         {
           "id": "biotechnology-401-l06-q3",
-          "text": "When evaluating clinical translation, which practice supports trustworthy conclusions?",
+          "text": "A batch of engineered cells fails to grow because the wrong nutrient medium was used. According to the failure taxonomy, this is best classified as:",
           "skillId": "biotechnology-401-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Ignore edge cases"
+              "text": "A governance failure"
             },
             {
               "id": "b",
-              "text": "Use baseline comparisons and failure analysis"
+              "text": "A data-related issue"
             },
             {
               "id": "c",
-              "text": "Change targets after results are known"
+              "text": "An execution error"
             },
             {
               "id": "d",
-              "text": "Remove context from findings"
+              "text": "A strategic misalignment"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Baselines and failure analysis prevent overclaiming and improve design quality."
+          "correctOptionId": "c",
+          "explanation": "An execution error is a mistake made while performing a defined task, such as using the incorrect material in a process."
         },
         {
           "id": "biotechnology-401-l06-q4",
-          "text": "A mature bioethics strategy should prioritize:",
+          "text": "What is the most important element to include in a proposal to improve a biotechnology workflow?",
           "skillId": "biotechnology-401-skill-strategy",
           "options": [
             {
               "id": "a",
-              "text": "Single-metric optimization at any cost"
+              "text": "A vague goal to 'make things better'"
             },
             {
               "id": "b",
-              "text": "Balanced outcomes across quality, risk, and sustainability"
+              "text": "A list of problems without any proposed solutions"
             },
             {
               "id": "c",
-              "text": "Decisions based only on intuition"
+              "text": "Clear success criteria and a plan for measuring impact"
             },
             {
               "id": "d",
-              "text": "No post-implementation review"
+              "text": "A decision to change the entire process without any analysis"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Balanced scorecards align long-term performance with accountability."
+          "correctOptionId": "c",
+          "explanation": "A strong improvement proposal defines what success looks like with measurable criteria, ensuring the changes can be evaluated for effectiveness."
         }
       ]
     }

@@ -56,6 +56,33 @@ Output location:
 - `data/music-universe/generated/<genre>/suno-prompts.txt`
 - `data/music-universe/generated/<genre>/elevenlabs-jobs.json`
 
+CC BY / CC0 enrichment:
+
+```bash
+npm run music:universe:cc:enrich
+```
+
+Sample enrichment run:
+
+```bash
+npm run music:universe:cc:enrich:sample
+```
+
+Export attribution files for credits screens:
+
+```bash
+npm run music:universe:cc:credits
+```
+
+CC output location:
+
+- `data/music-universe/cc-enrichment/_summary.json`
+- `data/music-universe/cc-enrichment/<genre>.json`
+- `data/music-universe/tracks.cc.json` (legacy flattened reference)
+- `public/music-universe/credits/_credits-summary.json`
+- `public/music-universe/credits/<genre>.credits.md`
+- `public/music-universe/credits/<genre>.credits.json`
+
 ## Top 20 Genre Priorities
 
 1. Pop
@@ -107,6 +134,10 @@ Primary references:
   - https://newsroom.spotify.com/2025-09-15/viva-latino-10th-anniversary-latin-music-growth/
   - https://newsroom.spotify.com/2025-08-01/spotifys-mother-of-music-campaign-celebrates-the-citys-unmistakable-sound-and-culture/
   - https://newsroom.spotify.com/2023-08-28/corridos-musica-mexicana-peso-pluma-eden-munoz/
+
+CC library research and enrichment runbook:
+
+- `docs/product/MUSIC-CC-LIBRARY-RESEARCH-2026-03-07.md`
 
 ## Additional Product Ideas
 

@@ -1,113 +1,191 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Biology201Module: LearningModule = {
+export const biology_201_Module: LearningModule = {
   "id": "biology-201",
-  "title": "Biology Systems and Change",
-  "description": "Connect cells, genetics, ecosystems, and adaptation through systems-level reasoning.",
+  "title": "Biology: Systems and Change",
+  "description": "Explore the connections between DNA, genetics, ecosystems, and evolution through systems-level thinking.",
   "subject": "Biology",
   "tags": [
     "core",
     "curriculum",
-    "interactive"
+    "interactive",
+    "systems-thinking"
   ],
   "minAge": 7,
   "maxAge": 18,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "learningObjectives": [
-    "Explain how positive and negative feedback loops maintain homeostasis",
-    "Use Punnett squares to predict patterns of inheritance",
-    "Trace energy flow through food chains and food webs",
-    "Describe how natural selection drives population change over time",
-    "Evaluate the impact of human activity on biodiversity"
+    "Explain how positive and negative feedback loops maintain homeostasis.",
+    "Describe the process of protein synthesis from a DNA template.",
+    "Use Punnett squares to predict patterns of inheritance for one and two traits.",
+    "Trace energy flow through trophic levels and explain the 10% rule.",
+    "Describe how natural selection drives population change over time.",
+    "Evaluate the impact of human activity on biodiversity and propose conservation strategies."
   ],
   "lessons": [
     {
       "id": "biology-201-l01",
-      "title": "Homeostasis and Feedback Loops",
+      "title": "Keeping Steady: Homeostasis and Feedback",
       "type": "video",
       "duration": 10,
       "objectives": [
-        "Define homeostasis",
-        "Distinguish negative feedback from positive feedback"
+        "Define homeostasis and provide examples.",
+        "Distinguish between negative and positive feedback loops."
       ],
       "chunks": [
         {
           "id": "biology-201-l01-c1",
-          "title": "What Is Homeostasis?",
+          "title": "What is Homeostasis?",
           "kind": "intro",
-          "content": "Homeostasis is a really interesting process that helps living things, like you and me, keep our insides stable, even when the outside world is changing a lot. Imagine being in a snowstorm, all bundled up, or in a hot desert; your body works hard to keep its temperature around 37 degrees Celsius, no matter what! This ability to stay stable is super important for keeping us healthy. Besides temperature, your body also controls other important things like the amount of sugar in your blood, how acidic your body fluids are (which we call pH), and how much water is in your body. All these processes work together like a team to help you feel good and function properly every day!"
+          "content": "Imagine it's a freezing cold day, but inside your body, you're staying warm! Homeostasis is the amazing ability of living things, like you, to keep their internal environment stable and balanced, no matter what's happening outside. Your body works hard to keep your temperature at about 37°C (98.6°F). It also balances other important things like the amount of sugar in your blood and how much water you have. This internal balance is super important for staying healthy and active."
         },
         {
           "id": "biology-201-l01-c2",
-          "title": "Negative Feedback Loops",
+          "title": "Negative Feedback: The Balancer",
           "kind": "concept",
-          "content": "Our bodies are amazing at keeping everything balanced, and one way they do this is through a process called negative feedback. This means that when something changes in our body, there is a response that works to reverse that change and bring everything back to normal. For example, think about what happens when you eat a meal. After you eat, the sugar levels in your blood can go up. To help with this, your pancreas, which is an important organ, releases a special hormone called insulin. Insulin acts like a helper that tells your body’s cells to absorb the extra sugar, which lowers your blood sugar levels back to where they should be. Once your blood sugar is back to normal, the pancreas knows to slow down the release of insulin. This whole process has three important parts: the sensor, which notices the change in blood sugar; the control center, which figures out what to do; and the effector, which is the part that takes action to restore balance. Understanding how these parts work together helps us appreciate how our bodies maintain health and stability every day."
+          "content": "Most of the time, your body uses negative feedback to stay balanced. Think of it like a thermostat in your house. If it gets too hot, the air conditioner turns on to cool it down. If it gets too cold, the heater turns on. Negative feedback works to reverse a change. For example, after you eat, your blood sugar rises. A special organ called the pancreas releases a hormone called insulin, which tells your cells to take in sugar. This brings your blood sugar back down to normal. Once it's normal, the pancreas stops releasing so much insulin. This system has three parts: a sensor to detect the change, a control center (often your brain) to decide what to do, and an effector (like a muscle or gland) to make the change happen."
         },
         {
           "id": "biology-201-l01-c3",
-          "title": "Positive Feedback Loops",
+          "title": "Positive Feedback: The Amplifier",
           "kind": "concept",
-          "content": "Positive feedback is a fascinating process that makes changes even stronger instead of trying to reverse them. One of the best examples of positive feedback happens during childbirth. When a baby pushes against the cervix, it sends a signal that tells the body to release a special hormone called oxytocin. This hormone makes the muscles in the uterus contract more forcefully, which pushes the baby even harder against the cervix. As the baby continues to push, even more oxytocin is released, creating a cycle that leads to stronger and stronger contractions. This process continues until the baby is finally born. Another example of positive feedback is when you get a cut. If a blood vessel is hurt, tiny cells called platelets rush to the area and stick together. These platelets then attract even more platelets to help seal the wound. Positive feedback always has a specific endpoint, meaning it stops once the goal is achieved, unlike negative feedback, which works to maintain balance."
+          "content": "Sometimes, the body needs to amplify a change instead of reversing it. This is called positive feedback. It pushes a process forward until a specific goal is reached. A great example is childbirth. When the baby pushes on the cervix, it sends a signal that causes the body to release a hormone called oxytocin. Oxytocin makes the uterus contract more strongly, which pushes the baby even more. This creates a loop of stronger and stronger contractions until the baby is born. Another example is blood clotting. When you get a cut, tiny cells called platelets rush to the wound and release chemicals that attract even more platelets, quickly forming a plug to stop the bleeding."
         },
         {
           "id": "biology-201-l01-c4",
-          "title": "Practice: Thermoregulation Diagram",
+          "title": "Practice: Draw a Feedback Loop",
           "kind": "practice",
-          "content": "Let's practice what we've learned about negative feedback by drawing a diagram that illustrates how our bodies regulate temperature. Start by writing 'body temperature rises' at the top. Next, show the sensor, which is the hypothalamus in your brain. Then, include the effectors, which are the sweat glands and the blood vessels that dilate to help cool you down. Finally, show the result of this process, which is cooling down. Don’t forget to add the reverse path for when your body temperature drops, including actions like shivering and blood vessel constriction to help warm you up again. This diagram will help you visualize how your body maintains a stable temperature!"
+          "content": "Let's draw a diagram to show how your body controls its temperature. At the top, write 'Body temperature rises.' Draw an arrow to a box labeled 'Sensor: Brain detects heat.' From there, draw arrows to two 'Effectors': 'Sweat glands produce sweat' and 'Blood vessels in skin widen.' Finally, draw an arrow to the result: 'Body cools down.' Now, try drawing the opposite loop for when your body gets too cold!"
         }
       ],
       "flashcards": [
         {
           "id": "biology-201-l01-f1",
           "front": "What is homeostasis?",
-          "back": "The maintenance of a stable internal environment in an organism, such as constant body temperature, blood pH, and glucose levels."
+          "back": "The process by which an organism maintains a stable internal environment, like constant body temperature or blood sugar levels."
         },
         {
           "id": "biology-201-l01-f2",
-          "front": "How does a negative feedback loop work?",
-          "back": "A change is detected by a sensor → control center activates an effector → the effector reverses the change → the system returns to its set point."
+          "front": "What is negative feedback?",
+          "back": "A response that reverses a change to bring the body back to a stable set point. Example: Sweating to cool down."
         },
         {
           "id": "biology-201-l01-f3",
-          "front": "Give two examples of positive feedback.",
-          "back": "1) Childbirth — oxytocin increases contractions until delivery. 2) Blood clotting — platelets recruit more platelets until the wound is sealed."
-        },
-        {
-          "id": "biology-201-l01-f4",
-          "front": "What are the three parts of a feedback loop?",
-          "back": "Sensor (receptor), control center (integrator, often the brain), and effector (muscle or gland that carries out the response)."
+          "front": "What is positive feedback?",
+          "back": "A response that amplifies or increases a change until a specific endpoint is reached. Example: Contractions during childbirth."
         }
       ],
       "learningAids": [
         {
           "id": "biology-201-l01-a1",
           "type": "image",
-          "title": "Feedback Loop Diagram",
-          "content": "Side-by-side diagrams comparing negative feedback (thermoregulation) and positive feedback (blood clotting), with labeled sensor, control center, and effector."
+          "title": "Feedback Loop Comparison",
+          "content": "A clear, side-by-side diagram comparing a negative feedback loop (thermostat) and a positive feedback loop (dominoes falling), with labels for sensor, control center, and effector."
         },
         {
           "id": "biology-201-l01-a2",
           "type": "animation",
           "title": "Thermoregulation in Action",
-          "content": "Animation showing a person moving from cold to hot environments, with the hypothalamus triggering shivering then sweating."
+          "content": "A short animation showing a cartoon character moving from a cold, snowy environment to a hot, sunny one. Visual cues like shivering and sweating appear as the body's internal 'thermostat' adjusts."
         }
       ]
     },
     {
       "id": "biology-201-l02",
-      "title": "Genetic Patterns and Traits",
+      "title": "The Blueprint of Life: DNA and Proteins",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "Describe the double helix structure of DNA and its base-pairing rules.",
+        "Outline the central dogma: from DNA to RNA to protein."
+      ],
+      "chunks": [
+        {
+          "id": "biology-201-l02-c1",
+          "title": "The Structure of DNA",
+          "kind": "intro",
+          "content": "Inside almost every cell in your body is a special instruction manual called DNA. DNA, or deoxyribonucleic acid, holds all the information needed to build and operate you! Its structure is a famous shape called a double helix, which looks like a twisted ladder. The sides of the ladder are made of sugar and phosphate, and the rungs are made of pairs of chemicals called bases. There are four bases: Adenine (A), Thymine (T), Cytosine (C), and Guanine (G). They have a special rule: A always pairs with T, and C always pairs with G. This rule is key to how DNA copies itself perfectly."
+        },
+        {
+          "id": "biology-201-l02-c2",
+          "title": "From Gene to Protein: The Central Dogma",
+          "kind": "concept",
+          "content": "How does the DNA instruction manual get read? Through a two-step process. First is transcription. Inside the cell's nucleus, a section of DNA (a gene) is copied into a temporary message molecule called messenger RNA (mRNA). Think of it like copying a recipe from a giant cookbook onto a small note card. Second is translation. The mRNA message travels out of the nucleus to a tiny factory called a ribosome. The ribosome reads the message three letters at a time (a 'codon') and builds a protein by linking together building blocks called amino acids. This flow of information—from DNA to RNA to Protein—is called the central dogma of biology."
+        },
+        {
+          "id": "biology-201-l02-c3",
+          "title": "What are Mutations?",
+          "kind": "concept",
+          "content": "A mutation is simply a change in the DNA sequence—like a typo in the instruction manual. Sometimes these typos are harmless and don't change anything (a silent mutation). Other times, they can change an amino acid, which might change how the protein works. While some mutations can cause problems, they are also the source of all genetic variation. These differences are what allow populations to change and adapt over time, a process we'll explore later!"
+        },
+        {
+          "id": "biology-201-l02-c4",
+          "title": "Practice: Transcribe and Translate",
+          "kind": "practice",
+          "content": "Let's try it! If a DNA template strand reads: TAC GGT CAT, what would the mRNA message be? Remember, A pairs with U (uracil) in RNA, and C pairs with G. Once you have the mRNA sequence, use a codon chart to find the amino acids it codes for. This is how your cells build everything they need!"
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "biology-201-l02-f1",
+          "front": "What are the DNA base-pairing rules?",
+          "back": "Adenine (A) pairs with Thymine (T). Cytosine (C) pairs with Guanine (G)."
+        },
+        {
+          "id": "biology-201-l02-f2",
+          "front": "What is transcription?",
+          "back": "The process where a gene's DNA sequence is copied into a messenger RNA (mRNA) molecule inside the nucleus."
+        },
+        {
+          "id": "biology-201-l02-f3",
+          "front": "What is translation?",
+          "back": "The process where a ribosome reads the mRNA message and builds a protein from amino acids."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "biology-201-l02-a1",
+          "type": "image",
+          "title": "The Central Dogma",
+          "content": "A simple, clear flow diagram: DNA (in nucleus) → arrow labeled 'Transcription' → mRNA → arrow labeled 'Translation' (at ribosome) → Protein Chain. Each part is illustrated."
+        },
+        {
+          "id": "biology-201-l02-a2",
+          "type": "animation",
+          "title": "Protein Factory",
+          "content": "An animation showing a ribosome moving along an mRNA strand, with tRNA molecules bringing the correct amino acids to build a colorful, folding protein chain."
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l03",
+      "title": "Passing on Traits: Introduction to Genetics",
       "type": "interactive",
       "duration": 12,
       "objectives": [
-        "Complete a Punnett square for a monohybrid cross",
-        "Distinguish dominant from recessive alleles"
+        "Distinguish between genotype and phenotype, and dominant and recessive alleles.",
+        "Complete a Punnett square for a monohybrid cross to predict offspring ratios."
+      ],
+      "chunks": [
+        {
+          "id": "biology-201-l03-c1",
+          "title": "Alleles, Genotype, and Phenotype",
+          "kind": "concept",
+          "content": "For each gene, you get one copy from each parent. These different versions of a gene are called alleles. Some alleles are dominant (written with a capital letter, like 'B') and will always show their trait if they are present. Other alleles are recessive (written with a lowercase letter, 'b') and will only show their trait if both copies are recessive. The combination of alleles you have is your genotype (e.g., BB, Bb, or bb). The physical trait you see, like brown eyes or blue eyes, is your phenotype."
+        },
+        {
+          "id": "biology-201-l03-c2",
+          "title": "Predicting Traits with Punnett Squares",
+          "kind": "example",
+          "content": "A Punnett square is a simple chart that helps us predict the possible genotypes of offspring. Let's imagine two parents who are both heterozygous for brown eyes (Bb). This means they both have brown eyes but carry the recessive allele for blue eyes. If we draw a Punnett square, we can see the chances for their child: there's a 1 in 4 chance of being BB (homozygous dominant), a 2 in 4 chance of being Bb (heterozygous), and a 1 in 4 chance of being bb (homozygous recessive). This means there is a 3 in 4 chance of having a brown-eyed child and a 1 in 4 chance of having a blue-eyed child!"
+        }
       ],
       "interactiveActivities": [
         {
-          "id": "biology-201-l02-ia1",
+          "id": "biology-201-l03-ia1",
           "type": "drag_and_drop",
           "title": "Build a Punnett Square",
-          "description": "Drag the correct genotypes into the Punnett square for a cross between two heterozygous parents (Bb × Bb).",
+          "description": "Drag the parent alleles and offspring genotypes into the correct places on the Punnett square for a cross between two heterozygous parents (Bb × Bb).",
           "estimatedMinutes": 8,
           "difficultyLevel": "medium",
           "data": {
@@ -137,12 +215,12 @@ export const Biology201Module: LearningModule = {
               },
               {
                 "id": "d2",
-                "label": "Bb (from father's B)",
+                "label": "Bb",
                 "correctTargetId": "tr"
               },
               {
                 "id": "d3",
-                "label": "Bb (from mother's B)",
+                "label": "Bb",
                 "correctTargetId": "bl"
               },
               {
@@ -154,1374 +232,45 @@ export const Biology201Module: LearningModule = {
           }
         }
       ],
-      "chunks": [
-        {
-          "id": "biology-201-l02-c1",
-          "title": "Alleles and Genotypes",
-          "kind": "concept",
-          "content": "In every living thing, genes play a crucial role, and each gene has two copies. One copy comes from your mother, and the other comes from your father. These different versions of a gene are known as alleles. There are two main types of alleles: dominant and recessive. Dominant alleles are represented by capital letters, like 'B', while recessive alleles are shown with lowercase letters, like 'b'. If you have at least one dominant allele, whether it's in the form of 'BB' (two dominant alleles) or 'Bb' (one dominant and one recessive), you will display the dominant trait. On the other hand, you will only show the recessive trait if you have two recessive alleles, which is represented as 'bb'. The specific combination of alleles you have is called your genotype, and the way you look or the traits you express because of this genotype is known as your phenotype. Understanding these concepts helps us learn how traits are passed down from parents to their children, which is a fundamental part of biology."
-        },
-        {
-          "id": "biology-201-l02-c2",
-          "title": "Monohybrid Cross Example",
-          "kind": "example",
-          "content": "Let's look at a fun example of how traits can be passed down from parents to children using a monohybrid cross. Imagine two brown-eyed parents, both of whom carry a gene for blue eyes (Bb). They can have a child with blue eyes! If we create a Punnett square to visualize this, we find the following possibilities: there is a 25% chance of getting BB (brown eyes), a 50% chance of getting Bb (also brown eyes), and a 25% chance of getting bb (blue eyes). This means that the ratio of brown-eyed to blue-eyed children would be 3 brown-eyed to 1 blue-eyed. This classic 3:1 ratio was first discovered by Gregor Mendel when he studied pea plants!"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-201-l02-a1",
-          "type": "practice",
-          "title": "Punnett Square Practice",
-          "content": "Complete three Punnett squares: 1) Bb × bb, 2) BB × Bb, 3) Bb × Bb. Predict phenotype ratios for each."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l03",
-      "title": "Checkpoint: Genetics and Homeostasis",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-201-l03-q1",
-          "text": "A person's body temperature rises. The hypothalamus triggers sweating, which cools the body. What type of feedback is this?",
-          "skillId": "biology-201-skill-homeostasis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Positive feedback, because it amplifies the original change"
-            },
-            {
-              "id": "b",
-              "text": "Negative feedback, because it reverses the original change"
-            },
-            {
-              "id": "c",
-              "text": "No feedback — the body cannot regulate temperature"
-            },
-            {
-              "id": "d",
-              "text": "Positive feedback, because sweating always increases body temperature"
-            }
-          ],
-          "correctOptionId": "b"
-        },
-        {
-          "id": "biology-201-l03-q2",
-          "text": "In a cross between two heterozygous parents (Bb × Bb), what fraction of offspring are expected to show the recessive phenotype?",
-          "skillId": "biology-201-skill-genetics",
-          "options": [
-            {
-              "id": "a",
-              "text": "1/2 (50%)"
-            },
-            {
-              "id": "b",
-              "text": "3/4 (75%)"
-            },
-            {
-              "id": "c",
-              "text": "1/4 (25%)"
-            },
-            {
-              "id": "d",
-              "text": "0% — recessive traits cannot appear"
-            }
-          ],
-          "correctOptionId": "c"
-        },
-        {
-          "id": "biology-201-l03-q3",
-          "text": "Which of the following is an example of positive feedback?",
-          "skillId": "biology-201-skill-homeostasis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Insulin lowering blood sugar after a meal"
-            },
-            {
-              "id": "b",
-              "text": "Shivering when body temperature drops"
-            },
-            {
-              "id": "c",
-              "text": "Oxytocin increasing contractions during childbirth"
-            },
-            {
-              "id": "d",
-              "text": "The kidneys retaining water when you are dehydrated"
-            }
-          ],
-          "correctOptionId": "c"
-        },
-        {
-          "id": "biology-201-l03-q4",
-          "text": "A plant with genotype Rr is crossed with an rr plant. What percentage of offspring will be heterozygous (Rr)?",
-          "skillId": "biology-201-skill-genetics",
-          "options": [
-            {
-              "id": "a",
-              "text": "50%"
-            },
-            {
-              "id": "b",
-              "text": "25%"
-            },
-            {
-              "id": "c",
-              "text": "100%"
-            },
-            {
-              "id": "d",
-              "text": "75%"
-            }
-          ],
-          "correctOptionId": "a"
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-201-l03-ia1",
-          "type": "matching_pairs",
-          "title": "Genetics Vocabulary Match",
-          "description": "Match each genetics term to its correct definition.",
-          "estimatedMinutes": 6,
-          "difficultyLevel": "easy",
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Genotype"
-              },
-              {
-                "id": "l2",
-                "label": "Phenotype"
-              },
-              {
-                "id": "l3",
-                "label": "Heterozygous"
-              },
-              {
-                "id": "l4",
-                "label": "Homozygous"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "The combination of alleles an organism carries (e.g., Bb)"
-              },
-              {
-                "id": "r2",
-                "label": "The observable trait (e.g., brown eyes)"
-              },
-              {
-                "id": "r3",
-                "label": "Having two different alleles for a gene (e.g., Bb)"
-              },
-              {
-                "id": "r4",
-                "label": "Having two identical alleles for a gene (e.g., BB or bb)"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              },
-              {
-                "leftId": "l4",
-                "rightId": "r4"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
       "learningAids": [
         {
           "id": "biology-201-l03-a1",
-          "type": "mnemonic",
-          "title": "Punnett Square Trick",
-          "content": "Remember: capital letter = dominant, lowercase = recessive. Only two lowercase letters (bb) show the recessive phenotype."
+          "type": "image",
+          "title": "Gene, Allele, Chromosome",
+          "content": "A diagram showing a pair of chromosomes. A specific location on each is labeled 'Gene for eye color.' One chromosome has a 'B' allele (for brown) and the other has a 'b' allele (for blue)."
+        },
+        {
+          "id": "biology-201-l03-a2",
+          "type": "practice",
+          "title": "Punnett Square Problems",
+          "content": "Solve three simple Punnett square problems: 1) A homozygous dominant parent (BB) crosses with a heterozygous parent (Bb). 2) A heterozygous parent (Bb) crosses with a homozygous recessive parent (bb). What are the predicted genotype and phenotype ratios for each?"
         }
       ]
     },
     {
       "id": "biology-201-l04",
-      "title": "Energy Flow in Ecosystems",
-      "type": "video",
-      "duration": 11,
+      "title": "Mixing Traits: Dihybrid Crosses",
+      "type": "interactive",
+      "duration": 10,
       "objectives": [
-        "Trace energy flow from producers through consumers",
-        "Explain the 10% rule of energy transfer"
+        "Explain the law of independent assortment.",
+        "Solve a dihybrid cross and predict the 9:3:3:1 phenotypic ratio."
       ],
       "chunks": [
         {
           "id": "biology-201-l04-c1",
-          "title": "Producers and Consumers",
-          "kind": "intro",
-          "content": "In every ecosystem, all energy begins with the sun! Producers, such as plants and algae, play a crucial role by capturing sunlight through a fascinating process called photosynthesis. During photosynthesis, these producers convert sunlight into energy, which they store in the form of glucose, a type of sugar that serves as food. This makes producers the foundation of the food chain, as they provide energy for other living things. Next in line are the primary consumers, which are herbivores that eat the producers to gain energy. After that, we have the secondary consumers, which are animals that eat the herbivores. Finally, at the top of the food chain, we find the tertiary consumers, which are often predators that eat other animals. This entire sequence of energy transfer is known as a food chain, and it beautifully illustrates how energy flows through different levels of living organisms in an ecosystem. Understanding this flow of energy helps us appreciate the interconnectedness of life on Earth!"
-        },
-        {
-          "id": "biology-201-l04-c2",
-          "title": "The 10% Rule",
+          "title": "Tracking Two Traits at Once",
           "kind": "concept",
-          "content": "One of the key ideas we need to understand when we talk about how energy moves through ecosystems is called the 10% rule. This rule helps us see how energy is transferred from one level of the food chain to the next. According to this rule, only about 10% of the energy from one trophic level, or group of organisms, is passed on to the next level. The rest of the energy is lost, mostly as heat, during important processes like cellular respiration, which is how living things convert food into energy.\nLet’s look at an example to make this clearer. Imagine that grass, which is a producer, captures 10,000 kilojoules (kJ) of energy from sunlight. When a grasshopper eats the grass, it only gets about 1,000 kJ of that energy. Then, if a frog eats the grasshopper, it will receive around 100 kJ. Finally, if a hawk catches and eats the frog, it will only get about 10 kJ of energy. This pattern shows us why food chains usually have only 4 to 5 levels; there simply isn’t enough energy available to support more levels! Understanding this helps us appreciate the balance of nature and the importance of each organism in an ecosystem."
-        },
-        {
-          "id": "biology-201-l04-c3",
-          "title": "Food Webs",
-          "kind": "concept",
-          "content": "Ecosystems are fascinating and much more intricate than just a simple food chain. Instead of a straight line, we can think of them as food webs. A food web shows us all the different feeding relationships between various species living in a community. Imagine a big spider web where each strand connects different animals and plants! If one species is taken away, it can cause changes that affect many others in the web. For instance, if frogs were to vanish from the ecosystem, there would be fewer predators to keep insect populations in check. As a result, the number of insects might grow larger. This increase in insects could lead to a decline in the plants that those insects like to eat. These kinds of indirect effects are called trophic cascades, and they remind us how all living things are connected and depend on each other in nature."
-        },
-        {
-          "id": "biology-201-l04-c4",
-          "title": "Energy Pyramid Sketch",
-          "kind": "practice",
-          "content": "Now it's your turn to create an energy pyramid! Draw a pyramid with four levels to represent the different trophic levels in an ecosystem. At the base, label the first level as 'producers,' which are the plants that capture energy from the sun. The next level should be labeled 'primary consumers,' which are the herbivores that eat the producers. The third level is for 'secondary consumers,' which eat the primary consumers, and the top level is for 'tertiary consumers,' which are the top predators. Make sure to write the approximate energy available at each level, starting with 10,000 kJ at the base and decreasing as you move up the pyramid."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "biology-201-l04-f1",
-          "front": "What is the 10% rule?",
-          "back": "Only about 10% of energy at one trophic level is transferred to the next. The rest is lost as heat through cellular respiration."
-        },
-        {
-          "id": "biology-201-l04-f2",
-          "front": "Why are food chains limited to 4–5 levels?",
-          "back": "Energy is lost at each transfer (90% as heat). By the 4th or 5th level, there isn't enough energy left to support another population."
-        },
-        {
-          "id": "biology-201-l04-f3",
-          "front": "What is a trophic cascade?",
-          "back": "An indirect ecological effect caused by adding or removing a species, which ripples through multiple levels of the food web."
-        },
-        {
-          "id": "biology-201-l04-f4",
-          "front": "Producer vs. consumer",
-          "back": "Producers make their own food from sunlight (photosynthesis). Consumers must eat other organisms for energy."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-201-l04-a1",
-          "type": "image",
-          "title": "Energy Pyramid",
-          "content": "A labeled energy pyramid showing 10,000 → 1,000 → 100 → 10 kJ across four trophic levels with percentage losses marked."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l05",
-      "title": "Population Change Drivers",
-      "type": "interactive",
-      "duration": 13,
-      "objectives": [
-        "Identify factors that cause populations to grow or shrink",
-        "Classify limiting factors as density-dependent or density-independent"
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-201-l05-ia1",
-          "type": "sorting_buckets",
-          "title": "Limiting Factor Sort",
-          "description": "Sort each factor into the correct category: density-dependent or density-independent.",
-          "estimatedMinutes": 9,
-          "difficultyLevel": "medium",
-          "data": {
-            "buckets": [
-              {
-                "id": "dd",
-                "label": "Density-Dependent"
-              },
-              {
-                "id": "di",
-                "label": "Density-Independent"
-              }
-            ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "Competition for food in a crowded habitat",
-                "correctBucketId": "dd"
-              },
-              {
-                "id": "i2",
-                "label": "A wildfire destroying a forest",
-                "correctBucketId": "di"
-              },
-              {
-                "id": "i3",
-                "label": "Disease spreading faster in dense populations",
-                "correctBucketId": "dd"
-              },
-              {
-                "id": "i4",
-                "label": "A drought reducing water for all organisms",
-                "correctBucketId": "di"
-              },
-              {
-                "id": "i5",
-                "label": "Predation increasing as prey become abundant",
-                "correctBucketId": "dd"
-              },
-              {
-                "id": "i6",
-                "label": "A volcanic eruption wiping out nearby life",
-                "correctBucketId": "di"
-              }
-            ]
-          }
-        }
-      ],
-      "chunks": [
-        {
-          "id": "biology-201-l05-c1",
-          "title": "What Controls Population Size?",
-          "kind": "concept",
-          "content": "Populations of living organisms, like animals and plants, change over time, and understanding what controls their size is very important. One of the main reasons a population grows is when more babies are born than adults die. This means that if a lot of new individuals are added to a group, the population will get bigger. However, there are limits to how much a population can grow. These limits are called limiting factors, and they can slow down the growth of a population. There are two main types of limiting factors. The first type is called density-dependent factors. These include things like diseases that spread more easily when there are many individuals close together, competition for food and space, and predators that hunt more effectively when there are more prey. The second type is density-independent factors, which can affect populations no matter how big or small they are. Examples of these factors include changes in weather, like storms or droughts, and natural disasters such as earthquakes or floods. Density-dependent factors tend to have a stronger effect as the population grows larger, while density-independent factors can impact any population size. Understanding these factors helps us learn how populations change and adapt in their environments."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-201-l05-a1",
-          "type": "animation",
-          "title": "Population Growth Curves",
-          "content": "Animation comparing exponential growth (J-curve) and logistic growth (S-curve) with carrying capacity labeled."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l06",
-      "title": "Checkpoint: Ecology",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-201-l06-q1",
-          "text": "Grass captures 20,000 kJ of energy. Approximately how much energy is available to secondary consumers?",
-          "skillId": "biology-201-skill-ecology",
-          "options": [
-            {
-              "id": "a",
-              "text": "20,000 kJ"
-            },
-            {
-              "id": "b",
-              "text": "2,000 kJ"
-            },
-            {
-              "id": "c",
-              "text": "200 kJ"
-            },
-            {
-              "id": "d",
-              "text": "20 kJ"
-            }
-          ],
-          "correctOptionId": "c"
-        },
-        {
-          "id": "biology-201-l06-q2",
-          "text": "Which of the following is a density-dependent limiting factor?",
-          "skillId": "biology-201-skill-ecology",
-          "options": [
-            {
-              "id": "a",
-              "text": "Earthquake"
-            },
-            {
-              "id": "b",
-              "text": "Wildfire"
-            },
-            {
-              "id": "c",
-              "text": "Competition for nesting sites"
-            },
-            {
-              "id": "d",
-              "text": "Flood"
-            }
-          ],
-          "correctOptionId": "c"
-        },
-        {
-          "id": "biology-201-l06-q3",
-          "text": "In a food web, removing all the frogs would most likely cause:",
-          "skillId": "biology-201-skill-ecology",
-          "options": [
-            {
-              "id": "a",
-              "text": "No change — other species are unaffected"
-            },
-            {
-              "id": "b",
-              "text": "An increase in the insect population that frogs used to eat"
-            },
-            {
-              "id": "c",
-              "text": "An increase in the hawk population"
-            },
-            {
-              "id": "d",
-              "text": "A decrease in the grass population"
-            }
-          ],
-          "correctOptionId": "b"
-        },
-        {
-          "id": "biology-201-l06-q4",
-          "text": "Why does a population's growth slow as it approaches carrying capacity?",
-          "skillId": "biology-201-skill-ecology",
-          "options": [
-            {
-              "id": "a",
-              "text": "Resources become limited and competition increases"
-            },
-            {
-              "id": "b",
-              "text": "The population starts reproducing faster"
-            },
-            {
-              "id": "c",
-              "text": "Predators disappear from the ecosystem"
-            },
-            {
-              "id": "d",
-              "text": "Temperature always decreases at high population sizes"
-            }
-          ],
-          "correctOptionId": "a"
+          "content": "What if we want to track two different traits at the same time, like seed shape and seed color in pea plants? This is called a dihybrid cross. According to Mendel's law of independent assortment, genes for different traits (if they are on different chromosomes) are inherited separately. This means that having round seeds doesn't make a plant more or less likely to have yellow seeds. When we cross two parents that are heterozygous for both traits (e.g., RrYy × RrYy), we get a predictable and famous ratio of phenotypes in the offspring: 9 (dominant, dominant), 3 (dominant, recessive), 3 (recessive, dominant), and 1 (recessive, recessive)."
         }
       ],
       "interactiveActivities": [
         {
-          "id": "biology-201-l06-ia1",
-          "type": "matching_pairs",
-          "title": "Ecosystem Roles Match",
-          "description": "Match each organism to its role in the food web.",
-          "estimatedMinutes": 5,
-          "difficultyLevel": "easy",
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Oak tree"
-              },
-              {
-                "id": "l2",
-                "label": "Rabbit"
-              },
-              {
-                "id": "l3",
-                "label": "Fox"
-              },
-              {
-                "id": "l4",
-                "label": "Mushroom"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Producer — makes food via photosynthesis"
-              },
-              {
-                "id": "r2",
-                "label": "Primary consumer — eats plants"
-              },
-              {
-                "id": "r3",
-                "label": "Secondary consumer — eats herbivores"
-              },
-              {
-                "id": "r4",
-                "label": "Decomposer — breaks down dead organisms"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              },
-              {
-                "leftId": "l4",
-                "rightId": "r4"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-201-l06-a1",
-          "type": "mnemonic",
-          "title": "Energy Pyramid Shortcut",
-          "content": "Divide by 10 at each step: producers → 1/10 → primary consumers → 1/10 → secondary consumers."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l07",
-      "title": "Natural Selection and Adaptation",
-      "type": "video",
-      "duration": 12,
-      "objectives": [
-        "Describe the four conditions for natural selection",
-        "Explain how adaptations arise over generations"
-      ],
-      "chunks": [
-        {
-          "id": "biology-201-l07-c1",
-          "title": "Darwin's Big Idea",
-          "kind": "intro",
-          "content": "Natural selection is a key idea that helps us understand how living things change over time, a process known as evolution. For natural selection to happen, there are four important conditions that need to be met. First, there must be variation within a population. This means that not all individuals are the same; they have different traits, like color, size, or abilities. Second, some of these traits can be passed down from parents to their young, which is what we call heritable traits. This is important because it allows certain characteristics to continue in future generations. Third, more young are born than can survive to grow up. This creates competition for food, shelter, and other resources. Finally, individuals that have traits that help them survive better in their environment are more likely to live longer and have babies. Over many generations, these helpful traits become more common in the population, leading to changes in the species. This process is how evolution occurs, shaping the diversity of life we see today."
-        },
-        {
-          "id": "biology-201-l07-c2",
-          "title": "Adaptation Through Selection",
-          "kind": "concept",
-          "content": "The peppered moth is a fascinating example of how animals can adapt to their environment over time. Before the Industrial Revolution, most peppered moths had light-colored wings. This light color helped them blend in with the pale tree bark where they liked to rest, making it hard for birds to spot them. However, as factories began to produce more pollution, soot covered the trees and turned them dark. This change made it easier for birds to see the lighter moths against the dark bark. Because of this, the darker moths, which were harder for the birds to see, had a better chance of surviving and reproducing. Over many generations, the number of dark moths increased because they were better suited to their new environment. Later, when pollution was reduced and the trees became lighter again, the lighter moths started to thrive once more. This story of the peppered moth illustrates how natural selection works, showing us that the environment can play a big role in which traits are helpful for survival and reproduction. It teaches us about the importance of adaptation in nature and how living things can change over time to better fit their surroundings."
-        },
-        {
-          "id": "biology-201-l07-c3",
-          "title": "Antibiotic Resistance",
-          "kind": "example",
-          "content": "Bacteria are tiny living organisms that can reproduce very quickly, which means that natural selection can happen rapidly among them. When a doctor prescribes antibiotics to treat an infection, these medications work to kill most of the bacteria causing the illness. However, some bacteria might have a special mutation that makes them resistant to the antibiotic. This means that these resistant bacteria can survive even when the antibiotic is present. Once they survive, they can continue to reproduce, leading to a new generation of bacteria that are all resistant to that antibiotic. This is why it is so important for patients to finish their entire course of antibiotics, even if they start to feel better. If they stop taking the medication too soon, the strongest bacteria may survive and multiply, making the infection harder to treat in the future. By completing the full course, we help ensure that all the harmful bacteria are eliminated, reducing the chance of creating superbugs that are difficult to treat."
-        },
-        {
-          "id": "biology-201-l07-c4",
-          "title": "Selection vs. Intelligent Design of Traits",
-          "kind": "concept",
-          "content": "It's really interesting to learn how living things change over time! First, we need to know that organisms, like plants and animals, don't make a choice to adapt to their surroundings. Instead, changes happen in their DNA, which are called mutations, and these changes occur by chance. This means that sometimes, a random change can give an organism a special trait that helps it survive better in its environment. This process is called natural selection. When an organism has a trait that helps it live longer and have more babies, that trait is more likely to be passed on to the next generation. Over many generations, these helpful traits become more common among the group. This slow change in traits over time is what we call evolution by natural selection. So, while it might look like organisms are 'choosing' to adapt, it's really the environment that helps decide which traits are the most useful!"
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "biology-201-l07-f1",
-          "front": "What are the four conditions for natural selection?",
-          "back": "1) Variation exists, 2) Variation is heritable, 3) Overproduction of offspring, 4) Differential survival and reproduction (fitness)."
-        },
-        {
-          "id": "biology-201-l07-f2",
-          "front": "How did peppered moths demonstrate natural selection?",
-          "back": "Soot darkened trees during industrialization. Dark moths were camouflaged and survived better. When pollution dropped, light moths rebounded. The environment selected the favored color."
-        },
-        {
-          "id": "biology-201-l07-f3",
-          "front": "Why is antibiotic resistance an example of evolution?",
-          "back": "Random mutations give some bacteria resistance. Antibiotics kill non-resistant bacteria, so resistant ones survive and reproduce, passing the trait to the next generation."
-        },
-        {
-          "id": "biology-201-l07-f4",
-          "front": "Do organisms choose to evolve?",
-          "back": "No. Mutations are random. Natural selection favors traits that improve survival in the current environment. Evolution is a population-level process over many generations."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-201-l07-a1",
-          "type": "image",
-          "title": "Peppered Moth Timeline",
-          "content": "Before/during/after Industrial Revolution images showing moth color frequency changes on light and dark trees."
-        },
-        {
-          "id": "biology-201-l07-a2",
-          "type": "practice",
-          "title": "Selection Scenario",
-          "content": "A population of lizards lives on an island. A drought kills most of the plants. Lizards with longer legs can run faster to find remaining food. Predict what happens to the leg-length distribution over 10 generations."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l08",
-      "title": "Human Impact on Biodiversity",
-      "type": "interactive",
-      "duration": 10,
-      "objectives": [
-        "Identify major human threats to biodiversity",
-        "Propose conservation strategies for a given scenario"
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-201-l08-ia1",
-          "type": "matching_pairs",
-          "title": "Threat and Conservation Strategy",
-          "description": "Match each human threat to the most effective conservation response.",
-          "estimatedMinutes": 7,
-          "difficultyLevel": "medium",
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Deforestation for farmland"
-              },
-              {
-                "id": "l2",
-                "label": "Overfishing in the ocean"
-              },
-              {
-                "id": "l3",
-                "label": "Invasive species introduced by shipping"
-              },
-              {
-                "id": "l4",
-                "label": "Climate change from fossil fuels"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Establish protected forest reserves and sustainable agriculture"
-              },
-              {
-                "id": "r2",
-                "label": "Set fishing quotas and create marine protected areas"
-              },
-              {
-                "id": "r3",
-                "label": "Inspect cargo and remove non-native species early"
-              },
-              {
-                "id": "r4",
-                "label": "Reduce greenhouse gas emissions and shift to renewable energy"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              },
-              {
-                "leftId": "l4",
-                "rightId": "r4"
-              }
-            ]
-          }
-        }
-      ],
-      "chunks": [
-        {
-          "id": "biology-201-l08-c1",
-          "title": "Why Biodiversity Matters",
-          "kind": "concept",
-          "content": "Biodiversity is a term that describes the incredible variety of life forms found within an ecosystem. This diversity is not just interesting; it is vital for the health of our planet and all its inhabitants. A rich variety of species contributes to essential services that we all rely on. For example, biodiversity helps provide us with clean air to breathe, filters our water naturally, and even assists in the pollination of crops that we eat. Additionally, many medicines we use come from plants and animals, and biodiversity plays a key role in regulating our climate. When species go extinct, these important services can become weaker, which can lead to serious problems for both the environment and human life. Scientists are very concerned because they estimate that we are losing species at a rate that is 100 to 1,000 times faster than what would happen naturally. This rapid decline is mainly caused by human activities such as destroying habitats, polluting the environment, overfishing, introducing harmful invasive species, and the impacts of climate change. Therefore, protecting biodiversity is crucial for ensuring a healthy and sustainable planet for future generations."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-201-l08-a1",
-          "type": "practice",
-          "title": "Conservation Plan",
-          "content": "Choose a local ecosystem (a park, river, or forest near you). Identify one human threat it faces and design a two-step conservation plan."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l09",
-      "title": "Review: Systems in Biology",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-201-l09-q1",
-          "text": "Which sequence correctly describes a negative feedback loop for blood sugar regulation?",
-          "skillId": "biology-201-skill-homeostasis",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blood sugar rises → glucagon released → cells absorb glucose → blood sugar drops"
-            },
-            {
-              "id": "b",
-              "text": "Blood sugar rises → insulin released → cells absorb glucose → blood sugar drops"
-            },
-            {
-              "id": "c",
-              "text": "Blood sugar drops → insulin released → liver releases glucose → blood sugar rises"
-            },
-            {
-              "id": "d",
-              "text": "Blood sugar drops → adrenaline released → cells absorb glucose → blood sugar drops further"
-            }
-          ],
-          "correctOptionId": "b"
-        },
-        {
-          "id": "biology-201-l09-q2",
-          "text": "A Bb × bb cross produces offspring. What is the expected ratio of dominant to recessive phenotypes?",
-          "skillId": "biology-201-skill-genetics",
-          "options": [
-            {
-              "id": "a",
-              "text": "3:1"
-            },
-            {
-              "id": "b",
-              "text": "1:1"
-            },
-            {
-              "id": "c",
-              "text": "All dominant"
-            },
-            {
-              "id": "d",
-              "text": "All recessive"
-            }
-          ],
-          "correctOptionId": "b"
-        },
-        {
-          "id": "biology-201-l09-q3",
-          "text": "Bacteria exposed to an antibiotic develop resistance over generations. Which condition of natural selection does this BEST illustrate?",
-          "skillId": "biology-201-skill-evolution",
-          "options": [
-            {
-              "id": "a",
-              "text": "Organisms choose to mutate when threatened"
-            },
-            {
-              "id": "b",
-              "text": "Overproduction leads to competition among identical organisms"
-            },
-            {
-              "id": "c",
-              "text": "Individuals with heritable advantageous traits survive and reproduce more"
-            },
-            {
-              "id": "d",
-              "text": "Mutations always make organisms stronger"
-            }
-          ],
-          "correctOptionId": "c"
-        },
-        {
-          "id": "biology-201-l09-q4",
-          "text": "A food chain has four trophic levels. If producers capture 50,000 kJ, approximately how much energy reaches the tertiary consumers?",
-          "skillId": "biology-201-skill-ecology",
-          "options": [
-            {
-              "id": "a",
-              "text": "5,000 kJ"
-            },
-            {
-              "id": "b",
-              "text": "500 kJ"
-            },
-            {
-              "id": "c",
-              "text": "50 kJ"
-            },
-            {
-              "id": "d",
-              "text": "5 kJ"
-            }
-          ],
-          "correctOptionId": "c"
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-201-l09-ia1",
-          "type": "sorting_buckets",
-          "title": "Feedback Loop Sort",
-          "description": "Sort each example into negative feedback or positive feedback.",
-          "estimatedMinutes": 6,
-          "difficultyLevel": "medium",
-          "data": {
-            "buckets": [
-              {
-                "id": "neg",
-                "label": "Negative Feedback"
-              },
-              {
-                "id": "pos",
-                "label": "Positive Feedback"
-              }
-            ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "Insulin lowers blood sugar after eating",
-                "correctBucketId": "neg"
-              },
-              {
-                "id": "i2",
-                "label": "Oxytocin strengthens contractions during labor",
-                "correctBucketId": "pos"
-              },
-              {
-                "id": "i3",
-                "label": "Sweating cools the body when overheated",
-                "correctBucketId": "neg"
-              },
-              {
-                "id": "i4",
-                "label": "Platelets recruit more platelets to a wound",
-                "correctBucketId": "pos"
-              },
-              {
-                "id": "i5",
-                "label": "Shivering warms the body when cold",
-                "correctBucketId": "neg"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-201-l09-a1",
-          "type": "mnemonic",
-          "title": "Negative vs. Positive",
-          "content": "Negative = 'no, go back' (reverses change). Positive = 'yes, keep going' (amplifies change until a stopping event)."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l10",
-      "title": "DNA and Protein Synthesis",
-      "type": "video",
-      "duration": 12,
-      "objectives": [
-        "Describe the structure of DNA",
-        "Outline the steps from DNA to protein"
-      ],
-      "chunks": [
-        {
-          "id": "biology-201-l10-c1",
-          "title": "The Structure of DNA",
-          "kind": "intro",
-          "content": "DNA, which stands for deoxyribonucleic acid, is a fascinating molecule that holds the genetic instructions for every living thing on our planet. Imagine it as a special recipe book that tells our bodies how to grow and function. The structure of DNA is quite unique; it resembles a double helix, which you can think of as a twisted ladder or a spiral staircase. If you look closely at this ladder, you'll see that the sides are made up of sugar and phosphate molecules, which act like the sturdy rails of the staircase. The rungs of the ladder are formed by pairs of nitrogen bases, which are the building blocks of DNA. There are four different nitrogen bases: adenine (A), thymine (T), cytosine (C), and guanine (G). In the world of DNA, adenine always pairs with thymine, and cytosine always pairs with guanine. This special pairing is crucial because it allows one strand of DNA to serve as a template for creating the other strand. This process ensures that genetic information is accurately copied and passed on during cell division, which is essential for growth and reproduction in all living organisms."
-        },
-        {
-          "id": "biology-201-l10-c2",
-          "title": "From Gene to Protein",
-          "kind": "concept",
-          "content": "A gene is a special part of DNA that holds the instructions for creating a specific protein. This process of turning DNA into a protein starts in the nucleus, which is the control center of the cell. Inside the nucleus, the DNA is transcribed, or copied, into a molecule called messenger RNA, or mRNA for short. You can think of this step like copying a recipe from a cookbook, where the DNA is the original recipe and the mRNA is the copied version that you can take to the kitchen. After the mRNA is created, it leaves the nucleus and travels to a ribosome. The ribosome acts like a tiny factory inside the cell, where the real magic happens! Here, the mRNA is translated into a chain of amino acids, which are the building blocks of proteins. Each group of three bases on the mRNA is called a codon, and each codon tells the ribosome which specific amino acid to add next. As these amino acids are linked together, they start to fold into a unique shape. This folding is very important because it determines how the protein will function. Once the protein is fully formed, it can perform various important jobs within the cell, helping to keep the cell healthy and working properly. Understanding this process is crucial because proteins play vital roles in everything from building our muscles to fighting off illnesses, making them essential for life!"
-        },
-        {
-          "id": "biology-201-l10-c3",
-          "title": "Mutations",
-          "kind": "concept",
-          "content": "A mutation is a change that happens in the sequence of bases in DNA, which is like a special code that tells our bodies how to grow and function. Some mutations are harmless and do not change anything about the organism; these are called silent mutations. Other mutations can change the sequence of amino acids, which are the building blocks of proteins, and this can affect how the protein works. These types of mutations are known as missense mutations. Interestingly, some mutations can actually be helpful! For instance, the sickle-cell trait is caused by a mutation and can help protect a person from malaria if they have one copy of the mutated gene. Mutations are really important because they create genetic diversity, which means there are different versions of genes in a population. This diversity is the raw material for natural selection, which is the process that helps organisms adapt to their environments over time. So, mutations can lead to new traits that might help living things survive better in their surroundings."
-        },
-        {
-          "id": "biology-201-l10-c4",
-          "title": "DNA → RNA → Protein Summary",
-          "kind": "practice",
-          "content": "Let's practice what we've learned about DNA and protein synthesis! Given the DNA template strand: TAC GGA CTC ATT, your task is to write the corresponding mRNA sequence. Remember, in RNA, the base thymine (T) is replaced by uracil (U). Once you have the mRNA sequence, use a codon chart to find out which amino acids correspond to each codon. For example, the first codon TAC translates to AUG, which is the start codon and codes for the amino acid Methionine. This exercise will help you understand how genetic information is translated into proteins."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "biology-201-l10-f1",
-          "front": "What are the base-pairing rules in DNA?",
-          "back": "Adenine (A) pairs with Thymine (T). Cytosine (C) pairs with Guanine (G). In RNA, uracil (U) replaces thymine."
-        },
-        {
-          "id": "biology-201-l10-f2",
-          "front": "What is transcription?",
-          "back": "The process of copying a gene's DNA sequence into messenger RNA (mRNA) in the nucleus."
-        },
-        {
-          "id": "biology-201-l10-f3",
-          "front": "What is translation?",
-          "back": "The process of reading mRNA codons at a ribosome to build a chain of amino acids (a protein)."
-        },
-        {
-          "id": "biology-201-l10-f4",
-          "front": "What is a codon?",
-          "back": "A sequence of three mRNA bases that codes for one specific amino acid. For example, AUG codes for methionine (the start signal)."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-201-l10-a1",
-          "type": "image",
-          "title": "Central Dogma Diagram",
-          "content": "A flow diagram showing DNA → (transcription) → mRNA → (translation) → Protein, with labeled steps in nucleus and ribosome."
-        },
-        {
-          "id": "biology-201-l10-a2",
-          "type": "animation",
-          "title": "Protein Synthesis Animation",
-          "content": "Step-by-step animation of mRNA being read by a ribosome, with tRNA molecules bringing amino acids one at a time."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l11",
-      "title": "Ecosystem Disruption Lab",
-      "type": "interactive",
-      "duration": 14,
-      "objectives": [
-        "Predict the effects of removing a species from a food web",
-        "Evaluate strategies for ecological restoration"
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-201-l11-ia1",
-          "type": "sorting_buckets",
-          "title": "Trophic Level Sort",
-          "description": "Sort each organism into the correct trophic level of a grassland food web.",
-          "estimatedMinutes": 9,
-          "difficultyLevel": "medium",
-          "data": {
-            "buckets": [
-              {
-                "id": "producer",
-                "label": "Producer"
-              },
-              {
-                "id": "primary",
-                "label": "Primary Consumer"
-              },
-              {
-                "id": "secondary",
-                "label": "Secondary Consumer"
-              },
-              {
-                "id": "decomposer",
-                "label": "Decomposer"
-              }
-            ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "Prairie grass",
-                "correctBucketId": "producer"
-              },
-              {
-                "id": "i2",
-                "label": "Grasshopper",
-                "correctBucketId": "primary"
-              },
-              {
-                "id": "i3",
-                "label": "Field mouse",
-                "correctBucketId": "primary"
-              },
-              {
-                "id": "i4",
-                "label": "Snake",
-                "correctBucketId": "secondary"
-              },
-              {
-                "id": "i5",
-                "label": "Hawk",
-                "correctBucketId": "secondary"
-              },
-              {
-                "id": "i6",
-                "label": "Soil bacteria",
-                "correctBucketId": "decomposer"
-              }
-            ]
-          }
-        }
-      ],
-      "chunks": [
-        {
-          "id": "biology-201-l11-c1",
-          "title": "Keystone Species",
-          "kind": "concept",
-          "content": "A keystone species is a special type of organism that has a much bigger effect on its ecosystem than you might think just by looking at how many of them there are. For example, sea otters are a keystone species because they help keep their environment healthy. They eat sea urchins, which are small creatures that can eat a lot of kelp if there are too many of them. If sea otters weren't around, the number of sea urchins would grow out of control, and they would destroy the kelp forests. These forests are very important because they provide homes for many other animals and plants. Another example is the wolves in Yellowstone National Park. Wolves are also a keystone species because they help manage the number of elk. When wolves keep elk populations in check, it allows plants along riverbanks to grow back. This helps to stabilize the banks and creates a better environment for many different kinds of living things. Losing a keystone species can lead to big problems for the whole ecosystem, showing just how important they are!"
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-201-l11-a1",
-          "type": "practice",
-          "title": "Keystone Removal Prediction",
-          "content": "In a coral reef, parrotfish eat algae off the coral. If parrotfish are overfished, predict what happens to algae growth, coral health, and fish that depend on coral shelter."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l12",
-      "title": "Checkpoint: Evolution and DNA",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-201-l12-q1",
-          "text": "During transcription, the DNA template strand TAC is copied into which mRNA codon?",
-          "skillId": "biology-201-skill-dna",
-          "options": [
-            {
-              "id": "a",
-              "text": "TAC"
-            },
-            {
-              "id": "b",
-              "text": "AUG"
-            },
-            {
-              "id": "c",
-              "text": "ATG"
-            },
-            {
-              "id": "d",
-              "text": "UAC"
-            }
-          ],
-          "correctOptionId": "b"
-        },
-        {
-          "id": "biology-201-l12-q2",
-          "text": "Which organism is a primary consumer in a grassland food web?",
-          "skillId": "biology-201-skill-ecology",
-          "options": [
-            {
-              "id": "a",
-              "text": "Hawk"
-            },
-            {
-              "id": "b",
-              "text": "Snake"
-            },
-            {
-              "id": "c",
-              "text": "Grasshopper"
-            },
-            {
-              "id": "d",
-              "text": "Soil fungus"
-            }
-          ],
-          "correctOptionId": "c"
-        },
-        {
-          "id": "biology-201-l12-q3",
-          "text": "What happens when a keystone predator like wolves is removed from an ecosystem?",
-          "skillId": "biology-201-skill-ecology",
-          "options": [
-            {
-              "id": "a",
-              "text": "Nothing changes because other predators fill the role"
-            },
-            {
-              "id": "b",
-              "text": "Herbivore populations increase, leading to overgrazing and habitat loss"
-            },
-            {
-              "id": "c",
-              "text": "Plant populations immediately increase"
-            },
-            {
-              "id": "d",
-              "text": "All prey species go extinct"
-            }
-          ],
-          "correctOptionId": "b"
-        },
-        {
-          "id": "biology-201-l12-q4",
-          "text": "A mutation changes one DNA base pair but does not change the amino acid produced. This is called a:",
-          "skillId": "biology-201-skill-dna",
-          "options": [
-            {
-              "id": "a",
-              "text": "Missense mutation"
-            },
-            {
-              "id": "b",
-              "text": "Nonsense mutation"
-            },
-            {
-              "id": "c",
-              "text": "Silent mutation"
-            },
-            {
-              "id": "d",
-              "text": "Frameshift mutation"
-            }
-          ],
-          "correctOptionId": "c"
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-201-l12-ia1",
-          "type": "matching_pairs",
-          "title": "Mutation Types Match",
-          "description": "Match each mutation type to its effect on the protein.",
-          "estimatedMinutes": 6,
-          "difficultyLevel": "medium",
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Silent mutation"
-              },
-              {
-                "id": "l2",
-                "label": "Missense mutation"
-              },
-              {
-                "id": "l3",
-                "label": "Nonsense mutation"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "No change in the amino acid — protein works normally"
-              },
-              {
-                "id": "r2",
-                "label": "One amino acid changes — protein may function differently"
-              },
-              {
-                "id": "r3",
-                "label": "A premature stop codon — protein is truncated and usually nonfunctional"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-201-l12-a1",
-          "type": "mnemonic",
-          "title": "DNA Base Pairs",
-          "content": "Remember 'Apple Tree, Car Garage' — A pairs with T, C pairs with G. In RNA, replace T with U (Uracil)."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l13",
-      "title": "Biology Scenario Lab: Coral Reef Crisis",
-      "type": "video",
-      "duration": 12,
-      "objectives": [
-        "Apply multiple biology concepts to a real-world scenario",
-        "Evaluate trade-offs in conservation decisions"
-      ],
-      "chunks": [
-        {
-          "id": "biology-201-l13-c1",
-          "title": "The Scenario",
-          "kind": "intro",
-          "content": "In this scenario, we are focusing on a tropical coral reef that is facing some serious challenges. You might notice that the coral is becoming bleached, which means it is losing its vibrant colors and health. This is a sign that the reef is not doing well. Additionally, the number of fish living in the reef is decreasing, which can affect the entire ecosystem. At the same time, there is an overgrowth of algae, which can smother the coral and disrupt the balance of life in the reef. Local fishing communities depend on the reef for their livelihoods, as it provides them with food and supports their way of life. Your task is to carefully analyze this situation by using what you have learned about ecosystems, food webs, and how human activities can impact the environment. By understanding how these elements are connected, you will be better equipped to think of possible solutions to help protect the coral reef and support the communities that rely on it."
-        },
-        {
-          "id": "biology-201-l13-c2",
-          "title": "Analyzing the Food Web",
-          "kind": "example",
-          "content": "Let's take a closer look at the food web of the coral reef ecosystem. At the base of this web are the producers, which include algae and coral. These organisms provide energy for the primary consumers, such as parrotfish and sea urchins. The next level includes secondary consumers like grouper and moray eels, which eat the primary consumers. Finally, at the top of the food web are the tertiary consumers, such as reef sharks. Unfortunately, overfishing has led to a significant decline in parrotfish populations, with numbers dropping by 60%. Without enough parrotfish to graze on the algae, the algae can grow uncontrollably and smother the coral. Additionally, coral bleaching, which is caused by rising water temperatures, weakens the coral further, making it more vulnerable to damage."
-        },
-        {
-          "id": "biology-201-l13-c3",
-          "title": "Homeostasis at the Ecosystem Level",
-          "kind": "concept",
-          "content": "Healthy coral reefs are like a well-tuned orchestra, where every part plays its role to create harmony. This balance is similar to homeostasis, which is a term we use to describe how living things maintain stability. In coral reefs, parrotfish are very important; they are known as a keystone species. This means they help keep algae populations under control, which allows coral to grow strong and healthy. However, our planet is facing challenges due to climate change, which is causing ocean temperatures to rise. When the water gets too warm, coral can become stressed and will expel the tiny algae that live inside it. These algae are crucial because they provide food for the coral through photosynthesis. When the coral loses its algae, it turns white in a process called coral bleaching. This makes the coral more vulnerable to diseases and can lead to its death. By learning about these interactions, we can better protect coral reefs and support the health of our oceans, which are vital for many marine creatures and for us too."
-        },
-        {
-          "id": "biology-201-l13-c4",
-          "title": "Your Conservation Plan",
-          "kind": "practice",
-          "content": "Let's create a two-part plan to help protect our precious coral reefs! First, think about an immediate action we can take to safeguard the reef. This could include ideas like setting fishing limits to prevent overfishing, establishing marine protected areas where no fishing is allowed, or focusing on protecting parrotfish, which are important for maintaining the health of the reef. Next, we need a long-term strategy to tackle the root causes of the problems facing the reefs. This might involve reducing harmful emissions that contribute to climate change, improving water quality to ensure a healthy environment for marine life, or working on reef restoration projects to help damaged areas recover. As you develop your plan, be sure to explain the biological reasons behind each of your choices, so we can understand how they will help the coral reefs thrive again."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "biology-201-l13-f1",
-          "front": "What is coral bleaching?",
-          "back": "When stressed by warm water, coral expels its symbiotic algae (zooxanthellae), losing color and its main energy source. Prolonged bleaching kills the coral."
-        },
-        {
-          "id": "biology-201-l13-f2",
-          "front": "Why are parrotfish a keystone species on coral reefs?",
-          "back": "They eat algae that would otherwise smother coral. Without parrotfish, algae overgrows and coral cannot compete for space and light."
-        },
-        {
-          "id": "biology-201-l13-f3",
-          "front": "What is a marine protected area (MPA)?",
-          "back": "A section of ocean where human activities like fishing are limited or banned to protect biodiversity and allow ecosystems to recover."
-        },
-        {
-          "id": "biology-201-l13-f4",
-          "front": "How do food webs connect to conservation?",
-          "back": "Removing one species can cascade through the web. Effective conservation considers the entire web, not just individual species."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-201-l13-a1",
-          "type": "image",
-          "title": "Coral Reef Food Web",
-          "content": "Illustrated food web showing algae, coral, parrotfish, urchins, grouper, eels, and reef sharks with feeding arrows."
-        },
-        {
-          "id": "biology-201-l13-a2",
-          "type": "animation",
-          "title": "Coral Bleaching Process",
-          "content": "Animation showing healthy coral with zooxanthellae, then warming water causing expulsion, bleaching, and eventual recovery or death."
-        }
-      ]
-    },
-    {
-      "id": "biology-201-l14",
-      "title": "Genetics Problem-Solving Workshop",
-      "type": "interactive",
-      "duration": 13,
-      "objectives": [
-        "Solve two-trait Punnett square problems",
-        "Predict inheritance patterns in real-world scenarios"
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-201-l14-ia1",
+          "id": "biology-201-l04-ia1",
           "type": "drag_and_drop",
-          "title": "Dihybrid Cross Organizer",
-          "description": "A plant has round (R) dominant over wrinkled (r) seeds, and yellow (Y) dominant over green (y). Cross RrYy × RrYy. Drag the correct phenotype ratio into each category.",
-          "estimatedMinutes": 10,
+          "title": "Dihybrid Cross Ratios",
+          "description": "A plant has round (R) dominant over wrinkled (r) seeds, and yellow (Y) dominant over green (y). For a RrYy × RrYy cross, drag the correct fraction to each phenotype.",
+          "estimatedMinutes": 7,
           "difficultyLevel": "hard",
           "data": {
             "targets": [
@@ -1545,228 +294,632 @@ export const Biology201Module: LearningModule = {
             "draggables": [
               {
                 "id": "d1",
-                "label": "9 out of 16",
+                "label": "9/16",
                 "correctTargetId": "ry"
               },
               {
                 "id": "d2",
-                "label": "3 out of 16",
+                "label": "3/16",
                 "correctTargetId": "rg"
               },
               {
                 "id": "d3",
-                "label": "3 out of 16",
+                "label": "3/16",
                 "correctTargetId": "wy"
               },
               {
                 "id": "d4",
-                "label": "1 out of 16",
+                "label": "1/16",
                 "correctTargetId": "wg"
               }
             ]
           }
         }
       ],
-      "chunks": [
-        {
-          "id": "biology-201-l14-c1",
-          "title": "Dihybrid Crosses",
-          "kind": "concept",
-          "content": "In our exploration of genetics, we will learn about something called a dihybrid cross, which helps us track two different traits at the same time! According to Mendel's law of independent assortment, genes that are located on different chromosomes are inherited independently from one another. This means that the traits can mix and match in various ways. For example, if both parents have two different traits and are heterozygous (which means they have one dominant and one recessive allele, like RrYy), we can predict the possible combinations of traits in their offspring. When we look at the results of this cross, we find that the expected ratio of different phenotypes is 9:3:3:1. However, this only applies when the genes we are studying are located on different chromosomes, which we call unlinked genes. Understanding these concepts helps us see how traits are passed down through generations!"
-        }
-      ],
       "learningAids": [
         {
-          "id": "biology-201-l14-a1",
-          "type": "practice",
-          "title": "Genetics Case",
-          "content": "In guinea pigs, black fur (B) is dominant over white (b), and rough coat (R) is dominant over smooth (r). Cross BbRr × BbRr. What fraction of offspring will have white, smooth fur?"
+          "id": "biology-201-l04-a1",
+          "type": "image",
+          "title": "Dihybrid Punnett Square",
+          "content": "A large, 4x4 Punnett square for a RrYy x RrYy cross, clearly showing the parental gametes (RY, Ry, rY, ry) and the resulting 16 offspring genotypes, color-coded by phenotype to illustrate the 9:3:3:1 ratio."
         }
       ]
     },
     {
-      "id": "biology-201-l15",
-      "title": "Mastery: Biology Systems and Change",
+      "id": "biology-201-l05",
+      "title": "Checkpoint: Molecules and Heredity",
       "type": "quiz",
-      "duration": 12,
+      "duration": 10,
+      "objectives": [
+        "Assess understanding of homeostasis, DNA, protein synthesis, and genetics."
+      ],
       "questions": [
         {
-          "id": "biology-201-l15-q1",
-          "text": "Blood clotting is an example of positive feedback because:",
+          "id": "biology-201-l05-q1",
+          "text": "When your body gets too cold, you shiver to generate heat. This is an example of:",
           "skillId": "biology-201-skill-homeostasis",
           "options": [
             {
               "id": "a",
-              "text": "It reverses the bleeding by reducing blood flow"
+              "text": "Positive feedback, because it makes you even colder."
             },
             {
               "id": "b",
-              "text": "It amplifies the clotting response — each platelet recruits more platelets"
+              "text": "Negative feedback, because it works to reverse the change (being cold)."
             },
             {
               "id": "c",
-              "text": "The body tries to stop the clotting process"
+              "text": "A genetic mutation."
             },
             {
               "id": "d",
-              "text": "Clotting has no feedback mechanism"
+              "text": "No feedback."
             }
           ],
           "correctOptionId": "b"
         },
         {
-          "id": "biology-201-l15-q2",
-          "text": "In a dihybrid cross of RrYy × RrYy, what is the expected phenotype ratio?",
-          "skillId": "biology-201-skill-genetics",
+          "id": "biology-201-l05-q2",
+          "text": "During transcription, the DNA sequence 'TGC' is copied into what mRNA codon?",
+          "skillId": "biology-201-skill-dna",
           "options": [
             {
               "id": "a",
-              "text": "3:1"
+              "text": "TGC"
             },
             {
               "id": "b",
-              "text": "1:2:1"
+              "text": "UGC"
             },
             {
               "id": "c",
-              "text": "9:3:3:1"
+              "text": "ACG"
             },
             {
               "id": "d",
-              "text": "1:1:1:1"
+              "text": "AGC"
             }
           ],
           "correctOptionId": "c"
         },
         {
-          "id": "biology-201-l15-q3",
-          "text": "The DNA codon TAC is transcribed into the mRNA codon AUG, which codes for methionine. This entire process illustrates:",
-          "skillId": "biology-201-skill-dna",
+          "id": "biology-201-l05-q3",
+          "text": "In pea plants, purple flowers (P) are dominant to white flowers (p). If you cross a Pp plant with a pp plant, what percentage of offspring will have white flowers?",
+          "skillId": "biology-201-skill-genetics",
           "options": [
             {
               "id": "a",
-              "text": "Natural selection"
+              "text": "25%"
             },
             {
               "id": "b",
-              "text": "The central dogma of molecular biology (DNA → RNA → Protein)"
+              "text": "50%"
             },
             {
               "id": "c",
-              "text": "A negative feedback loop"
+              "text": "75%"
             },
             {
               "id": "d",
-              "text": "Homeostasis in the cell"
+              "text": "100%"
             }
           ],
           "correctOptionId": "b"
         },
         {
-          "id": "biology-201-l15-q4",
-          "text": "If wolves are reintroduced to an area with too many deer, what is the most likely long-term outcome?",
+          "id": "biology-201-l05-q4",
+          "text": "The physical expression of a trait, such as having brown eyes, is called the:",
+          "skillId": "biology-201-skill-genetics",
+          "options": [
+            {
+              "id": "a",
+              "text": "Genotype"
+            },
+            {
+              "id": "b",
+              "text": "Phenotype"
+            },
+            {
+              "id": "c",
+              "text": "Allele"
+            },
+            {
+              "id": "d",
+              "text": "Codon"
+            }
+          ],
+          "correctOptionId": "b"
+        }
+      ],
+      "quizBlueprint": {
+        "frequency": "lesson_assessment",
+        "questionsPerCheck": 4,
+        "totalQuestions": 4,
+        "timeLimitMinutes": 10,
+        "questionTypes": [
+          {
+            "type": "mcq_single",
+            "count": 4,
+            "pointsEach": 1,
+            "bloomsLevels": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "difficultyDistribution": {
+          "easy": 1,
+          "medium": 2,
+          "hard": 1
+        },
+        "feedbackMode": "after_submit",
+        "adaptive": false,
+        "masteryThreshold": 0.75
+      },
+      "learningAids": [
+        {
+          "id": "biology-201-l05-a1",
+          "type": "mnemonic",
+          "title": "Genetics Vocabulary",
+          "content": "Geno-type is the gene combination. Pheno-type is the physical observation."
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l06",
+      "title": "Change Over Time: Natural Selection",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "List the four conditions required for natural selection to occur.",
+        "Explain how adaptations arise in a population over many generations."
+      ],
+      "chunks": [
+        {
+          "id": "biology-201-l06-c1",
+          "title": "Darwin's Big Idea",
+          "kind": "intro",
+          "content": "Natural selection is the main process that drives evolution, or how living things change over time. For it to happen, four things must be true. First, there must be variation in a population (not everyone is identical). Second, that variation must be heritable (traits are passed from parents to kids). Third, more offspring are born than can survive, which leads to competition. And fourth, some individuals have traits that give them an advantage in surviving and reproducing. Over many, many generations, these helpful traits become more common in the population."
+        },
+        {
+          "id": "biology-201-l06-c2",
+          "title": "Example: The Peppered Moths",
+          "kind": "example",
+          "content": "A classic example is the peppered moth in England. Before the Industrial Revolution, most moths were light-colored, which camouflaged them on light-colored trees. But when factories covered the trees in black soot, the rare dark-colored moths were suddenly better hidden from birds. They survived more often, had more babies, and passed on their dark color. Over time, almost all the moths in industrial areas became dark. This shows how the environment 'selects' which traits are best for survival."
+        },
+        {
+          "id": "biology-201-l06-c3",
+          "title": "Adaptations are Not Choices",
+          "kind": "concept",
+          "content": "It's important to remember that individual organisms don't choose to adapt. The variations, like the dark color in moths, happen because of random mutations in DNA. Natural selection is the process that favors certain random variations over others in a specific environment. It's not about what an animal 'wants' or 'needs'; it's about which traits happen to work best, leading to more offspring over generations."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "biology-201-l06-f1",
+          "front": "What are the 4 conditions for natural selection?",
+          "back": "1. Variation, 2. Heritability, 3. Overproduction of offspring (competition), 4. Differential survival and reproduction."
+        },
+        {
+          "id": "biology-201-l06-f2",
+          "front": "How is antibiotic resistance an example of natural selection?",
+          "back": "Random mutations make some bacteria resistant. Antibiotics kill the non-resistant ones, so the resistant bacteria survive, reproduce, and become common."
+        },
+        {
+          "id": "biology-201-l06-f3",
+          "front": "Does an individual organism evolve?",
+          "back": "No. Individuals have fixed traits. Populations evolve over many generations as the frequency of heritable traits changes."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "biology-201-l06-a1",
+          "type": "image",
+          "title": "Peppered Moth Camouflage",
+          "content": "A powerful side-by-side image. On the left, a light-colored tree with a well-camouflaged light moth and an easy-to-see dark moth. On the right, a soot-covered tree with a well-camouflaged dark moth and an easy-to-see light moth."
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l07",
+      "title": "The Flow of Energy: Food Chains and Webs",
+      "type": "video",
+      "duration": 11,
+      "objectives": [
+        "Trace the flow of energy from producers to consumers.",
+        "Explain the 10% rule of energy transfer between trophic levels."
+      ],
+      "chunks": [
+        {
+          "id": "biology-201-l07-c1",
+          "title": "Producers and Consumers",
+          "kind": "intro",
+          "content": "In any ecosystem, energy starts with the sun! Producers, like plants, capture sunlight and turn it into food through photosynthesis. They are the foundation of the food chain. Primary consumers (herbivores) get energy by eating producers. Secondary consumers (carnivores or omnivores) get energy by eating primary consumers. And tertiary consumers are often the top predators. This path of energy from one organism to another is a food chain."
+        },
+        {
+          "id": "biology-201-l07-c2",
+          "title": "The 10% Rule",
+          "kind": "concept",
+          "content": "When a grasshopper eats grass, it doesn't get all the energy the grass had. A lot of energy is lost as heat as the organism lives its life. The 10% rule is a simple way to remember this: only about 10% of the energy from one level is stored and passed on to the next level. If grass has 10,000 units of energy, the grasshopper that eats it gets about 1,000 units. The frog that eats the grasshopper gets 100 units, and the hawk that eats the frog gets only 10 units. This is why food chains are usually short!"
+        },
+        {
+          "id": "biology-201-l07-c3",
+          "title": "Food Webs: A Better Picture",
+          "kind": "concept",
+          "content": "In reality, ecosystems are more complex than a single line. Most animals eat more than one thing. A food web shows how many different food chains are interconnected. It gives us a more realistic picture of how energy flows and how species depend on each other. Removing one species from a food web can have surprising effects on many others."
+        },
+        {
+          "id": "biology-201-l07-c4",
+          "title": "Practice: Sketch an Energy Pyramid",
+          "kind": "practice",
+          "content": "Draw a pyramid with four levels. Label the bottom level 'Producers (10,000 kJ)'. Label the next level up 'Primary Consumers (1,000 kJ)'. Continue up with 'Secondary Consumers (100 kJ)' and 'Tertiary Consumers (10 kJ)'. This shape helps you visualize how both energy and the number of organisms decrease as you go up the food chain."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "biology-201-l07-f1",
+          "front": "What is the 10% rule?",
+          "back": "Only about 10% of the energy from one trophic level is transferred to the next level. The rest is lost, mostly as heat."
+        },
+        {
+          "id": "biology-201-l07-f2",
+          "front": "What is the difference between a food chain and a food web?",
+          "back": "A food chain is a single pathway of energy. A food web is a more realistic model showing many interconnected food chains in an ecosystem."
+        },
+        {
+          "id": "biology-201-l07-f3",
+          "front": "Where does almost all energy in an ecosystem originally come from?",
+          "back": "The sun."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "biology-201-l07-a1",
+          "type": "image",
+          "title": "Energy Pyramid",
+          "content": "A colorful, labeled energy pyramid showing the four trophic levels with example organisms (grass, grasshopper, mouse, owl) and the corresponding energy units (10,000 kJ, 1,000 kJ, 100 kJ, 10 kJ) at each level."
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l08",
+      "title": "Populations in Balance: Growth and Limits",
+      "type": "interactive",
+      "duration": 13,
+      "objectives": [
+        "Compare exponential and logistic population growth.",
+        "Classify limiting factors as density-dependent or density-independent."
+      ],
+      "chunks": [
+        {
+          "id": "biology-201-l08-c1",
+          "title": "How Populations Grow",
+          "kind": "concept",
+          "content": "When a population has unlimited resources and no predators, it can grow exponentially, creating a J-shaped curve. But in the real world, resources are limited. As a population grows, it eventually reaches its carrying capacity—the maximum number of individuals the environment can support. Growth slows down and levels off, creating an S-shaped (logistic) growth curve. This is because of limiting factors."
+        },
+        {
+          "id": "biology-201-l08-c2",
+          "title": "What Limits Population Size?",
+          "kind": "concept",
+          "content": "Limiting factors are things that prevent a population from growing forever. Density-dependent factors have a bigger effect as the population gets more crowded. Examples include competition for food, spread of disease, and predation. Density-independent factors affect a population no matter its size. These are often natural disasters like wildfires, floods, or droughts."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "biology-201-l08-ia1",
+          "type": "sorting_buckets",
+          "title": "Limiting Factor Sort",
+          "description": "Sort each environmental factor into the correct category: density-dependent or density-independent.",
+          "estimatedMinutes": 9,
+          "difficultyLevel": "medium",
+          "data": {
+            "buckets": [
+              {
+                "id": "dd",
+                "label": "Density-Dependent"
+              },
+              {
+                "id": "di",
+                "label": "Density-Independent"
+              }
+            ],
+            "items": [
+              {
+                "id": "i1",
+                "label": "Competition for food in a crowded forest",
+                "correctBucketId": "dd"
+              },
+              {
+                "id": "i2",
+                "label": "A volcanic eruption",
+                "correctBucketId": "di"
+              },
+              {
+                "id": "i3",
+                "label": "A disease spreading quickly through a dense herd",
+                "correctBucketId": "dd"
+              },
+              {
+                "id": "i4",
+                "label": "An early, unexpected frost",
+                "correctBucketId": "di"
+              },
+              {
+                "id": "i5",
+                "label": "Increased predation as a rabbit population booms",
+                "correctBucketId": "dd"
+              }
+            ]
+          }
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "biology-201-l08-a1",
+          "type": "animation",
+          "title": "J-Curve vs. S-Curve",
+          "content": "An animation showing two graphs side-by-side. On the left, a population of bacteria grows in a J-curve. On the right, a population of rabbits grows in an S-curve, leveling off at a dotted line labeled 'Carrying Capacity'."
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l09",
+      "title": "Ecosystem Connections: Keystone Species",
+      "type": "video",
+      "duration": 9,
+      "objectives": [
+        "Define a keystone species.",
+        "Predict the effects of removing a keystone species from its ecosystem."
+      ],
+      "chunks": [
+        {
+          "id": "biology-201-l09-c1",
+          "title": "What is a Keystone Species?",
+          "kind": "concept",
+          "content": "Imagine an arch made of stones. If you remove the central keystone, the whole arch collapses. A keystone species is an organism that has an unusually large effect on its ecosystem relative to its abundance. They are not always the biggest or most numerous, but they play a critical role in holding the ecosystem together."
+        },
+        {
+          "id": "biology-201-l09-c2",
+          "title": "Example: Sea Otters and Kelp Forests",
+          "kind": "example",
+          "content": "Sea otters are a classic keystone species. They love to eat sea urchins. Sea urchins, in turn, love to eat kelp. Without sea otters, the sea urchin population would explode and devour entire kelp forests. These underwater forests are vital habitats for countless other fish and invertebrates. By keeping the urchins in check, the small population of sea otters maintains the health of the entire kelp forest ecosystem."
+        },
+        {
+          "id": "biology-201-l09-c3",
+          "title": "Trophic Cascades",
+          "kind": "concept",
+          "content": "When you remove a keystone species (often a top predator), it can cause a chain reaction called a trophic cascade. For example, when wolves were reintroduced to Yellowstone National Park, they preyed on elk. This changed the elks' behavior—they avoided open areas near rivers. As a result, trees like aspen and willow started to grow back along the riverbanks. This stabilized the banks, provided habitat for birds, and even changed the rivers themselves. This shows how one species can indirectly affect the entire landscape."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "biology-201-l09-a1",
+          "type": "image",
+          "title": "The Sea Otter's Role",
+          "content": "A simple infographic showing three panels. Panel 1: Healthy ecosystem with otters, few urchins, and lush kelp. Panel 2: 'No Otters' sign, showing an explosion of urchins. Panel 3: The result, a barren seafloor with no kelp, labeled 'Urchin Barren'."
+        },
+        {
+          "id": "biology-201-l09-a2",
+          "type": "practice",
+          "title": "What if...?",
+          "content": "Bees are a keystone species because they are critical pollinators. Predict what would happen to a meadow ecosystem, including the flowers, the mice that eat seeds, and the hawks that eat mice, if all the bees disappeared."
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l10",
+      "title": "Checkpoint: Evolution and Ecology",
+      "type": "quiz",
+      "duration": 10,
+      "objectives": [
+        "Assess understanding of natural selection, energy flow, population dynamics, and community interactions."
+      ],
+      "questions": [
+        {
+          "id": "biology-201-l10-q1",
+          "text": "In a food chain, grass stores 50,000 kJ of energy. According to the 10% rule, how much energy is available to a secondary consumer, like a snake that eats a grass-eating mouse?",
           "skillId": "biology-201-skill-ecology",
           "options": [
             {
               "id": "a",
-              "text": "Deer population decreases, vegetation recovers, overall biodiversity increases"
+              "text": "5,000 kJ"
             },
             {
               "id": "b",
-              "text": "Deer population increases because wolves attract more deer"
+              "text": "500 kJ"
             },
             {
               "id": "c",
-              "text": "Vegetation decreases because wolves eat plants too"
+              "text": "50 kJ"
             },
             {
               "id": "d",
-              "text": "No change — wolves have no effect on deer behavior"
+              "text": "5 kJ"
             }
           ],
-          "correctOptionId": "a"
+          "correctOptionId": "b"
         },
         {
-          "id": "biology-201-l15-q5",
-          "text": "A species of desert beetle develops a waxy coating that prevents water loss. This trait spread through the population because individuals with the coating survived droughts better. This is an example of:",
+          "id": "biology-201-l10-q2",
+          "text": "A wildfire sweeps through a forest. This is an example of a:",
+          "skillId": "biology-201-skill-ecology",
+          "options": [
+            {
+              "id": "a",
+              "text": "Density-dependent limiting factor"
+            },
+            {
+              "id": "b",
+              "text": "Density-independent limiting factor"
+            },
+            {
+              "id": "c",
+              "text": "Keystone species"
+            },
+            {
+              "id": "d",
+              "text": "Trophic cascade"
+            }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "id": "biology-201-l10-q3",
+          "text": "Which of these is the best example of natural selection?",
           "skillId": "biology-201-skill-evolution",
           "options": [
             {
               "id": "a",
-              "text": "Positive feedback"
+              "text": "A bodybuilder develops large muscles through exercise."
             },
             {
               "id": "b",
-              "text": "Genetic drift"
+              "text": "A giraffe stretches its neck to reach higher leaves."
             },
             {
               "id": "c",
-              "text": "Adaptation through natural selection"
+              "text": "In a cold climate, thicker-furred foxes are more likely to survive and have offspring."
             },
             {
               "id": "d",
-              "text": "An organism choosing to evolve"
+              "text": "A student learns to speak a new language."
+            }
+          ],
+          "correctOptionId": "c"
+        },
+        {
+          "id": "biology-201-l10-q4",
+          "text": "Removing a keystone species from an ecosystem is likely to:",
+          "skillId": "biology-201-skill-ecology",
+          "options": [
+            {
+              "id": "a",
+              "text": "Increase the ecosystem's stability."
+            },
+            {
+              "id": "b",
+              "text": "Have little to no effect on other species."
+            },
+            {
+              "id": "c",
+              "text": "Cause a significant decrease in biodiversity."
+            },
+            {
+              "id": "d",
+              "text": "Increase the amount of energy available to producers."
             }
           ],
           "correctOptionId": "c"
         }
       ],
+      "quizBlueprint": {
+        "frequency": "lesson_assessment",
+        "questionsPerCheck": 4,
+        "totalQuestions": 4,
+        "timeLimitMinutes": 10,
+        "questionTypes": [
+          {
+            "type": "mcq_single",
+            "count": 4,
+            "pointsEach": 1,
+            "bloomsLevels": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "difficultyDistribution": {
+          "easy": 1,
+          "medium": 2,
+          "hard": 1
+        },
+        "feedbackMode": "after_submit",
+        "adaptive": false,
+        "masteryThreshold": 0.75
+      },
+      "learningAids": [
+        {
+          "id": "biology-201-l10-a1",
+          "type": "mnemonic",
+          "title": "Energy Pyramid Shortcut",
+          "content": "To find the energy, just move the decimal point one place to the left for each step you go up the food chain!"
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l11",
+      "title": "Our Planet, Our Impact: Human Effects on Biodiversity",
+      "type": "interactive",
+      "duration": 10,
+      "objectives": [
+        "Identify the major human-caused threats to biodiversity.",
+        "Propose conservation strategies to mitigate these threats."
+      ],
+      "chunks": [
+        {
+          "id": "biology-201-l11-c1",
+          "title": "What is Biodiversity and Why Does it Matter?",
+          "kind": "intro",
+          "content": "Biodiversity is the amazing variety of life on Earth, from the smallest bacteria to the largest whale. This variety is essential for healthy ecosystems. It provides us with clean air and water, pollinates our crops, and is a source for medicines. A healthy, diverse ecosystem is more resilient and can better withstand challenges like disease or climate change."
+        },
+        {
+          "id": "biology-201-l11-c2",
+          "title": "Major Threats to Biodiversity",
+          "kind": "concept",
+          "content": "Unfortunately, human activities are causing species to go extinct at an alarming rate. The biggest threats can be remembered with the acronym HIPPO: Habitat loss (clearing forests for farms or cities), Invasive species (new species that outcompete native ones), Pollution (chemicals in air, water, and soil), human Population growth (leading to more resource use), and Overharvesting (taking too many fish, trees, or animals)."
+        },
+        {
+          "id": "biology-201-l11-c3",
+          "title": "Conservation: How We Can Help",
+          "kind": "concept",
+          "content": "Conservation biology is the science of protecting biodiversity. Strategies include creating protected areas like national parks and marine reserves, passing laws to protect endangered species, restoring damaged habitats, and promoting sustainable practices in farming, fishing, and energy use. Every small action, like reducing waste or planting native flowers, can contribute to a healthier planet."
+        }
+      ],
       "interactiveActivities": [
         {
-          "id": "biology-201-l15-ia1",
+          "id": "biology-201-l11-ia1",
           "type": "matching_pairs",
-          "title": "Biology Concepts Integration",
-          "description": "Match each biology concept to the correct real-world example.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "hard",
-          "instructions": [
-            "Read each concept carefully.",
-            "Find the real-world example that best illustrates it.",
-            "Think about which lesson each example connects to."
-          ],
+          "title": "Threat and Solution",
+          "description": "Match each threat to biodiversity with a corresponding conservation strategy.",
+          "estimatedMinutes": 7,
+          "difficultyLevel": "medium",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Negative feedback loop"
+                "label": "Habitat Loss (Deforestation)"
               },
               {
                 "id": "l2",
-                "label": "Keystone species"
+                "label": "Overharvesting (Overfishing)"
               },
               {
                 "id": "l3",
-                "label": "Natural selection"
+                "label": "Invasive Species"
               },
               {
                 "id": "l4",
-                "label": "10% energy rule"
-              },
-              {
-                "id": "l5",
-                "label": "Dihybrid cross"
+                "label": "Pollution (Climate Change)"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Insulin lowering blood sugar after a meal"
+                "label": "Create protected forest reserves and promote sustainable logging."
               },
               {
                 "id": "r2",
-                "label": "Sea otters preventing urchin overpopulation"
+                "label": "Establish fishing quotas and create no-fish marine protected areas."
               },
               {
                 "id": "r3",
-                "label": "Antibiotic-resistant bacteria surviving treatment"
+                "label": "Implement strict controls at borders and ports to prevent their introduction."
               },
               {
                 "id": "r4",
-                "label": "Hawks receiving only 10 kJ from 10,000 kJ of grass energy"
-              },
-              {
-                "id": "r5",
-                "label": "RrYy × RrYy producing a 9:3:3:1 phenotype ratio"
+                "label": "Reduce greenhouse gas emissions by shifting to renewable energy sources."
               }
             ],
             "pairs": [
@@ -1785,13 +938,209 @@ export const Biology201Module: LearningModule = {
               {
                 "leftId": "l4",
                 "rightId": "r4"
-              },
-              {
-                "leftId": "l5",
-                "rightId": "r5"
               }
             ]
           }
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "biology-201-l11-a1",
+          "type": "image",
+          "title": "HIPPO Threats",
+          "content": "An infographic with five icons, each representing a letter of HIPPO: a bulldozer (Habitat Loss), a foreign beetle (Invasive Species), a smokestack (Pollution), a crowd of people (Population), and a fishing net (Overharvesting)."
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l12",
+      "title": "Scenario Lab: Saving the Coral Reefs",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "Apply concepts of homeostasis, ecology, and human impact to a real-world problem.",
+        "Evaluate the trade-offs involved in conservation decisions."
+      ],
+      "chunks": [
+        {
+          "id": "biology-201-l12-c1",
+          "title": "The Crisis",
+          "kind": "intro",
+          "content": "Welcome to the Coral Reef Rescue Mission! Our patient is a beautiful tropical coral reef that is in trouble. The corals are turning white—a process called bleaching. Fish populations are declining, and slimy algae is starting to take over. Local communities depend on this reef for food and tourism. Your job is to use your biology knowledge to figure out what's wrong and propose a plan to save it."
+        },
+        {
+          "id": "biology-201-l12-c2",
+          "title": "Connecting the Concepts",
+          "kind": "concept",
+          "content": "Let's connect the dots. Coral bleaching is a failure of homeostasis. Rising ocean temperatures (due to climate change) stress the coral, causing it to expel the helpful algae that live inside it and give it food and color. From an ecology perspective, overfishing has removed too many parrotfish. Parrotfish are a keystone species because they eat algae, keeping it from smothering the coral. Without them, the food web is out of balance. This is a classic case of human impact disrupting a delicate ecosystem."
+        },
+        {
+          "id": "biology-201-l12-c3",
+          "title": "Your Conservation Plan",
+          "kind": "practice",
+          "content": "Now, it's your turn. Design a two-part conservation plan. Part 1: What is an immediate, local action you could take? (Hint: Think about the parrotfish). Part 2: What is a long-term, global action that's needed to address the root cause? (Hint: Think about the water temperature). Explain the biological reasoning behind each part of your plan."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "biology-201-l12-f1",
+          "front": "What is coral bleaching?",
+          "back": "When stressed by warm water, coral expels its symbiotic algae, losing its color and main food source. This can lead to the coral's death."
+        },
+        {
+          "id": "biology-201-l12-f2",
+          "front": "Why are parrotfish important for coral reefs?",
+          "back": "They are a keystone species that grazes on algae. Without them, algae can overgrow and kill the coral."
+        },
+        {
+          "id": "biology-201-l12-f3",
+          "front": "What is a marine protected area (MPA)?",
+          "back": "A part of the ocean where human activities like fishing are restricted to protect the ecosystem and allow it to recover."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "biology-201-l12-a1",
+          "type": "image",
+          "title": "Healthy vs. Bleached Reef",
+          "content": "A striking before-and-after photo. The 'before' shot shows a vibrant, colorful coral reef teeming with fish. The 'after' shot shows the same reef, now ghostly white and barren."
+        },
+        {
+          "id": "biology-201-l12-a2",
+          "type": "animation",
+          "title": "Reef Food Web",
+          "content": "An animated food web of a coral reef, showing arrows from algae to parrotfish and urchins, and from them to larger predators. When the parrotfish are clicked and removed, the algae arrow grows and starts to cover the coral icon."
+        }
+      ]
+    },
+    {
+      "id": "biology-201-l13",
+      "title": "Final Mastery Quiz",
+      "type": "quiz",
+      "duration": 12,
+      "objectives": [
+        "Synthesize and apply knowledge from across the entire module."
+      ],
+      "questions": [
+        {
+          "id": "biology-201-l13-q1",
+          "text": "The process of blood clotting, where platelets attract more platelets to seal a wound, is an example of:",
+          "skillId": "biology-201-skill-homeostasis",
+          "options": [
+            {
+              "id": "a",
+              "text": "Negative feedback, because it stops the bleeding."
+            },
+            {
+              "id": "b",
+              "text": "Positive feedback, because it amplifies the clotting response."
+            },
+            {
+              "id": "c",
+              "text": "Natural selection."
+            },
+            {
+              "id": "d",
+              "text": "A trophic cascade."
+            }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "id": "biology-201-l13-q2",
+          "text": "The central dogma of molecular biology describes which flow of information?",
+          "skillId": "biology-201-skill-dna",
+          "options": [
+            {
+              "id": "a",
+              "text": "Protein → RNA → DNA"
+            },
+            {
+              "id": "b",
+              "text": "RNA → Protein → DNA"
+            },
+            {
+              "id": "c",
+              "text": "DNA → RNA → Protein"
+            },
+            {
+              "id": "d",
+              "text": "DNA → Protein → RNA"
+            }
+          ],
+          "correctOptionId": "c"
+        },
+        {
+          "id": "biology-201-l13-q3",
+          "text": "In a dihybrid cross of two parents with genotype RrYy, what fraction of offspring are expected to show both recessive traits (rryy)?",
+          "skillId": "biology-201-skill-genetics",
+          "options": [
+            {
+              "id": "a",
+              "text": "9/16"
+            },
+            {
+              "id": "b",
+              "text": "3/16"
+            },
+            {
+              "id": "c",
+              "text": "1/4"
+            },
+            {
+              "id": "d",
+              "text": "1/16"
+            }
+          ],
+          "correctOptionId": "d"
+        },
+        {
+          "id": "biology-201-l13-q4",
+          "text": "A species of desert beetle evolves a thicker, waxy coating that prevents water loss. This trait spreads through the population over time. This is a clear example of:",
+          "skillId": "biology-201-skill-evolution",
+          "options": [
+            {
+              "id": "a",
+              "text": "A density-dependent limiting factor."
+            },
+            {
+              "id": "b",
+              "text": "Adaptation through natural selection."
+            },
+            {
+              "id": "c",
+              "text": "A learned behavior."
+            },
+            {
+              "id": "d",
+              "text": "A positive feedback loop."
+            }
+          ],
+          "correctOptionId": "b"
+        },
+        {
+          "id": "biology-201-l13-q5",
+          "text": "If wolves (a keystone predator) are reintroduced to an ecosystem where the deer population is too high, what is the most likely long-term result?",
+          "skillId": "biology-201-skill-ecology",
+          "options": [
+            {
+              "id": "a",
+              "text": "The deer population will decrease, allowing vegetation to recover and increasing overall biodiversity."
+            },
+            {
+              "id": "b",
+              "text": "The deer population will increase because the ecosystem is now more balanced."
+            },
+            {
+              "id": "c",
+              "text": "The wolf population will go extinct because there is not enough food."
+            },
+            {
+              "id": "d",
+              "text": "There will be no change in the ecosystem."
+            }
+          ],
+          "correctOptionId": "a"
         }
       ],
       "quizBlueprint": {
@@ -1822,10 +1171,10 @@ export const Biology201Module: LearningModule = {
       },
       "learningAids": [
         {
-          "id": "biology-201-l15-a1",
+          "id": "biology-201-l13-a1",
           "type": "mnemonic",
           "title": "Module Review Chain",
-          "content": "Homeostasis → Genetics → Ecosystems → Evolution → DNA → Human Impact. Each topic builds on the last — feedback loops regulate organisms, genetics drives variation, variation fuels natural selection, and human activity shapes it all."
+          "content": "Homeostasis (balance inside) → DNA (the code) → Genetics (passing the code) → Evolution (changing the code over time) → Ecology (how code-bearers interact) → Human Impact (how we change the system)."
         }
       ]
     }

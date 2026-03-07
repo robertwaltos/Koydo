@@ -24,6 +24,17 @@ type SongSample = {
   karaokeTimeline?: KaraokeLine[];
 };
 
+type CcTrack = {
+  id: string;
+  title: string;
+  creator?: string;
+  source?: string;
+  license?: string;
+  licenseDisplay?: string;
+  audioUrl?: string;
+  foreignLandingUrl?: string;
+};
+
 const MOOD_OPTIONS = [
   "uplifting",
   "anthemic",
@@ -104,6 +115,7 @@ export default function GenreMusicLab({ genre }: { genre: MusicGenre }) {
   const [language, setLanguage] = useState("English");
   const [cleanLyrics, setCleanLyrics] = useState(true);
   const [songSamples, setSongSamples] = useState<SongSample[] | null>(null);
+  const [ccTracks, setCcTracks] = useState<CcTrack[] | null>(null);
   const [samplesError, setSamplesError] = useState<string | null>(null);
   const [loadingSamples, setLoadingSamples] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -190,14 +202,17 @@ export default function GenreMusicLab({ genre }: { genre: MusicGenre }) {
       if (!response.ok) {
         throw new Error("No generated songs found for this genre yet.");
       }
-      const payload = await response.json() as { songs?: SongSample[] };
+      const payload = await response.json() as { songs?: SongSample[]; ccTracks?: CcTrack[] };
       const songs = Array.isArray(payload.songs) ? payload.songs : [];
+      const licensed = Array.isArray(payload.ccTracks) ? payload.ccTracks : [];
       setSongSamples(songs);
+      setCcTracks(licensed);
       setSelectedSongId(songs[0]?.id ?? null);
     } catch (error) {
       const message = error instanceof Error ? error.message : "Failed to load samples.";
       setSamplesError(message);
       setSongSamples([]);
+      setCcTracks([]);
       setSelectedSongId(null);
     } finally {
       setLoadingSamples(false);
@@ -381,6 +396,14 @@ export default function GenreMusicLab({ genre }: { genre: MusicGenre }) {
               >
                 Karaoke Mode
               </button>
+              <a
+                href={`/music-universe/credits/${encodeURIComponent(genre.id)}.credits.md`}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-amber-300/60 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-amber-200 hover:border-amber-200"
+              >
+                Credits File
+              </a>
             </div>
             <p className="mt-3 text-xs text-zinc-400">
               Batch command: <code className="text-zinc-200">node scripts/generate-music-universe-content.mjs --genres {genre.id} --songs-per-genre 200</code>
@@ -419,6 +442,46 @@ export default function GenreMusicLab({ genre }: { genre: MusicGenre }) {
                   </p>
                   <p className="mt-2 line-clamp-2 text-xs text-zinc-300">{song.promptSuno}</p>
                 </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <p className="text-xs uppercase tracking-[0.25em] text-amber-300">CC BY / CC0 Enrichment</p>
+            {!ccTracks && <p className="mt-3 text-sm text-zinc-400">Load samples to fetch licensed reference tracks.</p>}
+            {ccTracks && ccTracks.length === 0 && (
+              <p className="mt-3 text-sm text-zinc-400">No licensed tracks loaded yet for this genre.</p>
+            )}
+            <div className="mt-3 space-y-3">
+              {ccTracks?.map((track) => (
+                <div key={track.id} className="rounded-xl border border-white/10 bg-black/25 p-3">
+                  <p className="text-sm font-semibold text-zinc-100">{track.title}</p>
+                  <p className="mt-1 text-xs text-zinc-400">
+                    {track.creator || "Unknown"} | {(track.licenseDisplay || track.license || "").toUpperCase()} | {(track.source || "").toUpperCase()}
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {track.foreignLandingUrl && (
+                      <a
+                        href={track.foreignLandingUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-amber-300/50 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-amber-200 hover:border-amber-200"
+                      >
+                        Source
+                      </a>
+                    )}
+                    {track.audioUrl && (
+                      <a
+                        href={track.audioUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="rounded-full border border-cyan-300/50 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-cyan-200 hover:border-cyan-200"
+                      >
+                        Audio
+                      </a>
+                    )}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

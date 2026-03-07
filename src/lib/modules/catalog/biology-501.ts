@@ -1,134 +1,134 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Biology501Module: LearningModule = {
+export const biology_501_Module: LearningModule = {
   "id": "biology-501",
-  "title": "Biology Specialization Studio",
-  "description": "Post-401 specialization in Biology, focused on biology systems diagnostics, biology operations and execution design, biology impact and tradeoff analysis, and biology governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "title": "Advanced Biological Systems",
+  "description": "A specialization module for advanced students focusing on the diagnosis, design, and governance of complex biological systems. Through advanced casework, simulation, and proposal defense, learners will master systems diagnostics, intervention design, impact analysis, and scientific leadership.",
   "subject": "Biology",
   "tags": [
-    "core",
-    "curriculum",
-    "interactive",
-    "biology",
+    "systems biology",
+    "bioethics",
+    "experimental design",
+    "advanced",
     "specialization"
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
     "es"
   ],
   "learningObjectives": [
-    "Apply advanced methods for biology systems diagnostics in high-constraint environments",
-    "Design robust systems for biology operations and execution design with measurable control gates",
-    "Evaluate interventions in biology impact and tradeoff analysis with research-grade rigor",
-    "Operationalize biology governance and leadership with accountable governance and escalation pathways",
-    "Lead cross-functional decision reviews with explicit tradeoff communication",
-    "Defend recommendations under expert critique using evidence and uncertainty bounds"
+    "Diagnose disruptions in complex biological systems, such as a coral reef ecosystem or a metabolic pathway, using advanced modeling techniques.",
+    "Design robust biological interventions, like gene therapies or conservation programs, with measurable controls and ethical oversight.",
+    "Evaluate the multifaceted impacts of biological interventions, quantifying tradeoffs between intended benefits and unintended consequences.",
+    "Develop and apply governance frameworks for biological research and application, ensuring accountability and ethical compliance.",
+    "Lead cross-functional scientific reviews, clearly communicating complex data, assumptions, and uncertainty bounds to diverse stakeholders.",
+    "Defend a novel research proposal against expert critique, using evidence-based arguments and rigorous scientific reasoning."
   ],
   "lessons": [
     {
       "id": "biology-501-l01",
-      "title": "Biology Advanced Foundations",
+      "title": "Advanced Biological Principles",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "learningAids": [
         {
           "id": "biology-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Complex Biological System",
+          "content": "A diagram of a complex biological system, like a neural network or a food web, with key components and feedback loops highlighted."
         }
       ],
       "chunks": [
         {
           "id": "biology-501-l01-c1",
           "kind": "concept",
-          "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the advanced boundaries of biology as a fascinating field of study. We will learn how to effectively diagnose biological systems, which involves understanding how different components interact within living organisms. Additionally, we will discuss how to design effective operations and execution strategies that can be applied in real-world biological scenarios. Mastering these concepts is crucial for anyone who wants to enhance their understanding of biology and its practical applications in various fields, such as medicine, environmental science, and biotechnology.\nContext recap: In this lesson, we will dive into the advanced boundaries of biology as a fascinating field of study. We will learn how to effectively diagnose biological systems, which involves understanding how different components interact within living organisms. Additionally, we will discuss how to design effective operations and execution strategies that can be applied in real-world biological scenarios. Mastering these concepts is crucial for anyone who wants to enhance their understanding of biology and its practical applications in various fields, such as medicine, environmental science, and biotechnology."
+          "title": "Defining Biological Systems",
+          "content": "This lesson introduces the advanced study of biology by focusing on how to define and scope complex systems. We will learn to diagnose system health by understanding the interactions between components, from the molecular to the ecosystem level. This is crucial for applications in medicine, environmental science, and biotechnology."
         },
         {
           "id": "biology-501-l01-c2",
           "kind": "concept",
-          "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different biological factors. They will also identify uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning effective interventions in biological systems.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different biological factors. They will also identify uncertainty ranges and system dependencies. This foundational knowledge is crucial for planning effective interventions in biological systems."
+          "title": "Modeling Causal Pathways and Uncertainty",
+          "content": "Learners will map causal pathways that connect biological factors, such as the relationship between a pollutant and algae bloom formation. We will also practice identifying and quantifying uncertainty and system dependencies, which is foundational for planning effective and predictable interventions."
         },
         {
           "id": "biology-501-l01-c3",
           "kind": "recap",
-          "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid.\nContext recap: In our recap, we emphasize that all claims made in our analyses should be linked to measurable indicators. This means we will establish confidence bounds and set up review checkpoints to ensure our findings are reliable and valid."
+          "title": "Establishing Scientific Rigor",
+          "content": "We will recap the importance of linking all claims to measurable, empirical evidence. This involves establishing clear confidence bounds for data and defining checkpoints for peer and ethical review to ensure all findings are reliable and valid."
         }
       ],
       "flashcards": [
         {
           "id": "biology-501-l01-f1",
-          "front": "biology systems diagnostics",
-          "back": "A specialization axis requiring explicit assumptions and measurable constraints."
+          "front": "Systems Diagnostics",
+          "back": "The process of identifying the root causes of malfunction in a complex biological system, like determining why a bee colony is collapsing."
         },
         {
           "id": "biology-501-l01-f2",
-          "front": "biology operations and execution design",
-          "back": "Execution architecture that determines reliability under stress."
+          "front": "Intervention Design",
+          "back": "The planning and architecture of a biological intervention, such as a gene therapy protocol or a reforestation project, ensuring it is robust and scalable."
         },
         {
           "id": "biology-501-l01-f3",
-          "front": "biology impact and tradeoff analysis",
-          "back": "Evaluation discipline for identifying true gains and hidden costs."
+          "front": "Impact & Tradeoff Analysis",
+          "back": "A systematic evaluation of the intended and unintended consequences of a biological intervention, including ecological, ethical, and economic factors."
         }
       ]
     },
     {
       "id": "biology-501-l02",
-      "title": "Biology Specialist Methods Lab",
+      "title": "Experimental Design and Modeling Lab",
       "type": "interactive",
       "duration": 17,
       "learningAids": [
         {
           "id": "biology-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "CRISPR Experiment Designer",
+          "content": "An interactive simulation for designing a CRISPR-based gene editing experiment, where you define target genes, control groups, and success metrics."
         }
       ],
       "chunks": [
         {
           "id": "biology-501-l02-c1",
           "kind": "practice",
-          "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding real-world applications.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows. They will also conduct stress tests on these workflows by simulating adverse scenarios to see how well they hold up under pressure. This hands-on experience is vital for understanding real-world applications."
+          "title": "Designing and Simulating Experiments",
+          "content": "In this interactive lab, learners will design specialized experimental workflows for a biological problem. You will then conduct stress tests by simulating adverse scenarios, such as sample contamination or equipment failure, to evaluate the robustness of your design."
         },
         {
           "id": "biology-501-l02-c2",
           "kind": "recap",
-          "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation procedures based on specific thresholds. This architecture is essential for maintaining control and ensuring the effectiveness of biological methods.\nContext recap: In our recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation procedures based on specific thresholds. This architecture is essential for maintaining control and ensuring the effectiveness of biological methods."
+          "title": "Implementing Controls and Checkpoints",
+          "content": "We will recap how to structure experimental workflows with critical checkpoints, such as positive and negative controls, criteria for halting an experiment (e.g., unexpected animal distress), and procedures for ethical review board escalation."
         }
       ],
       "interactiveActivities": [
         {
           "id": "biology-501-l02-act1",
           "type": "matching_pairs",
-          "title": "Control-to-Outcome Mapping",
-          "description": "Match specialist controls with their strongest reliability and governance effects.",
+          "title": "Match the Control to its Function",
+          "description": "Match the scientific control or governance practice with its primary effect on research reliability and ethics.",
           "pairs": [
             {
-              "left": "Pre-commit gate",
-              "right": "Prevents avoidable downstream failures"
+              "left": "Peer Review Before Funding",
+              "right": "Prevents investment in flawed experimental designs."
             },
             {
-              "left": "Rollback trigger",
-              "right": "Limits blast radius under adverse outcomes"
+              "left": "Halting a Clinical Trial",
+              "right": "Limits harm when adverse effects exceed a predefined threshold."
             },
             {
-              "left": "Baseline dashboard",
-              "right": "Supports defensible impact attribution"
+              "left": "Ecosystem Health Monitoring",
+              "right": "Allows for accurate measurement of an intervention's impact against a control state."
             },
             {
-              "left": "Retrospective loop",
-              "right": "Improves next-cycle decision quality"
+              "left": "Post-Project Analysis",
+              "right": "Uses results, both expected and unexpected, to improve future research designs."
             }
           ]
         }
@@ -136,287 +136,187 @@ export const Biology501Module: LearningModule = {
     },
     {
       "id": "biology-501-l03",
-      "title": "Checkpoint 1: Specialist Methods",
+      "title": "Checkpoint 1: Methods and Experimental Design",
       "type": "quiz",
       "duration": 10,
       "learningAids": [
         {
           "id": "biology-501-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Review Key Concepts",
+          "content": "Review the principles of systems diagnostics, intervention design, and scientific controls before starting the quiz."
         }
       ],
       "questions": [
         {
           "id": "biology-501-l03-q1",
-          "text": "Which practice most improves biology systems diagnostics decision quality?",
+          "text": "When diagnosing a sudden fish die-off in a lake, which practice is most critical for decision quality?",
           "skillId": "biology-501-skill-core",
           "options": [
             {
               "id": "a",
-              "text": "Proceed without baseline or assumptions"
+              "text": "Immediately introduce a new fish species."
             },
             {
               "id": "b",
-              "text": "Define assumptions, constraints, and measurable indicators"
+              "text": "Define assumptions, establish a baseline of water quality, and identify measurable indicators of contamination."
             },
             {
               "id": "c",
-              "text": "Optimize only for speed in every context"
+              "text": "Focus only on the most obvious symptom without considering the broader ecosystem."
             },
             {
               "id": "d",
-              "text": "Ignore uncertainty and edge conditions"
+              "text": "Ignore historical data on the lake's health."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced decisions improve when assumptions, constraints, and metrics are explicit."
+          "explanation": "Advanced diagnostics require making assumptions explicit, defining a baseline for comparison, and using measurable indicators to test hypotheses."
         },
         {
           "id": "biology-501-l03-q2",
-          "text": "At level 501, strong execution for biology operations and execution design requires:",
+          "text": "A robust design for a reforestation project requires:",
           "skillId": "biology-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "Owner mapping, checkpoint cadence, and escalation thresholds"
+              "text": "Clear roles for team members, regular monitoring checkpoints, and thresholds for when to seek expert help."
             },
             {
               "id": "b",
-              "text": "No role clarity and ad-hoc process changes"
+              "text": "Planting trees randomly with no follow-up monitoring."
             },
             {
               "id": "c",
-              "text": "No retrospective or post-run review"
+              "text": "No analysis of the project's success or failure after completion."
             },
             {
               "id": "d",
-              "text": "No rollback or fallback conditions"
+              "text": "No contingency plan for events like drought or disease."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Reliable advanced execution needs ownership clarity and threshold-driven governance."
+          "explanation": "Reliable execution in biology requires clear ownership, scheduled checkpoints, and predefined thresholds for escalating issues."
         },
         {
           "id": "biology-501-l03-q3",
-          "text": "A defensible approach to biology impact and tradeoff analysis includes:",
+          "text": "A defensible analysis of introducing a genetically modified, drought-resistant crop includes:",
           "skillId": "biology-501-skill-eval",
           "options": [
             {
               "id": "a",
-              "text": "Anecdotes without comparison"
+              "text": "Relying on anecdotal farmer testimonials alone."
             },
             {
               "id": "b",
-              "text": "Baseline comparisons, side-effect analysis, and uncertainty bounds"
+              "text": "Comparison to non-GM crops, analysis of potential cross-pollination, and clear bounds on yield uncertainty."
             },
             {
               "id": "c",
-              "text": "Changing success criteria after outcomes"
+              "text": "Changing the definition of 'success' after the harvest data is collected."
             },
             {
               "id": "d",
-              "text": "Excluding difficult scenarios from analysis"
+              "text": "Excluding data from fields where the crop performed poorly."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible analysis combines comparative baselines, side-effect checks, and uncertainty disclosure."
+          "explanation": "Defensible analysis requires a control group (baseline), analysis of side effects, and honest disclosure of uncertainty."
         },
         {
           "id": "biology-501-l03-q4",
-          "text": "Mature governance systems connect:",
+          "text": "Mature governance for a national biobank connects:",
           "skillId": "biology-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy intent, measurable controls, and remediation pathways"
+              "text": "The policy on data privacy, measurable controls on data access, and clear pathways for addressing a data breach."
             },
             {
               "id": "b",
-              "text": "Policy language with no measurable enforcement"
+              "text": "A strong privacy policy with no way to enforce it."
             },
             {
               "id": "c",
-              "text": "Targets without ownership or escalation design"
+              "text": "Data collection targets without assigning responsibility for data security."
             },
             {
               "id": "d",
-              "text": "Operations without transparent accountability"
+              "text": "Operations that lack transparent accountability for how samples are used."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "biology-501-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Biology?",
-          "skillId": "biology-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "biology-501-l03-q6",
-          "text": "In high-stakes Biology Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "biology-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "biology-501-l03-q7",
-          "text": "A mature remediation loop in advanced Biology should prioritize:",
-          "skillId": "biology-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "biology-501-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Biology Specialization Studio?",
-          "skillId": "biology-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance operationally links policy intent, measurable controls, and a plan for remediation."
         }
       ]
     },
     {
       "id": "biology-501-l04",
-      "title": "Biology Advanced Case Analysis",
+      "title": "Case Study: Ecosystem Intervention Analysis",
       "type": "video",
       "duration": 14,
       "learningAids": [
         {
           "id": "biology-501-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Intervention Decision Tree",
+          "content": "A decision tree showing potential interventions for a struggling coral reef, with branches for costs, ecological benefits, and risks."
         }
       ],
       "chunks": [
         {
           "id": "biology-501-l04-c1",
           "kind": "concept",
-          "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints found in biological systems diagnostics. We will also analyze the impacts and trade-offs involved in making decisions within these systems. Understanding these dynamics is crucial for effective problem-solving.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints found in biological systems diagnostics. We will also analyze the impacts and trade-offs involved in making decisions within these systems. Understanding these dynamics is crucial for effective problem-solving."
+          "title": "Framing the Case Study",
+          "content": "We will frame a case study on a declining coral reef ecosystem, highlighting the competing constraints of ecological preservation, tourism revenue, and local fishing rights. We will analyze the impacts and tradeoffs of potential interventions."
         },
         {
           "id": "biology-501-l04-c2",
           "kind": "practice",
-          "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making informed decisions in biology.\nContext recap: In this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparison will help them understand the complexities involved in making informed decisions in biology.\nWhy this matters: Tradeoff Framing helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing Intervention Tradeoffs",
+          "content": "Learners will compare different intervention options, such as creating a no-fishing zone, introducing heat-resistant coral species, or reducing land-based pollution. The comparison will be based on dimensions like ecological impact, cost, social equity, and scientific uncertainty."
         },
         {
           "id": "biology-501-l04-c3",
           "kind": "recap",
-          "title": "Decision Memo Pattern",
-          "content": "In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be revisited if necessary.\nContext recap: In our recap, we will highlight that each recommendation made should include clear assumptions, supporting evidence, risk controls, and fallback plans. This structured approach ensures that decisions are well-informed and can be revisited if necessary.\nWhy this matters: Decision Memo Pattern helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Structuring a Scientific Recommendation",
+          "content": "We will recap a structured pattern for making recommendations. Each proposal must include clear assumptions, supporting data, risk mitigation strategies, and a contingency plan if the intervention does not perform as expected."
         }
       ]
     },
     {
       "id": "biology-501-l05",
-      "title": "Biology Simulation Clinic",
+      "title": "Interactive Simulation: Managing a Viral Outbreak",
       "type": "interactive",
       "duration": 18,
       "learningAids": [
         {
           "id": "biology-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Pandemic Response Dashboard",
+          "content": "A dashboard from a pandemic simulation, showing infection rates, hospital capacity, resource allocation, and public trust metrics."
         }
       ],
       "chunks": [
         {
           "id": "biology-501-l05-c1",
           "kind": "practice",
-          "title": "Live Scenario Controls",
-          "content": "During this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will help them understand how to manage different factors that influence biological systems effectively.\nContext recap: During this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This experience will help them understand how to manage different factors that influence biological systems effectively.\nWhy this matters: Live Scenario Controls helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Real-Time Decision Making",
+          "content": "In this interactive simulation, learners will manage a response to a novel viral outbreak. You will make decisions on resource allocation, public health messaging, and research funding, balancing epidemiological data with economic and social constraints."
         },
         {
           "id": "biology-501-l05-c2",
           "kind": "recap",
-          "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss how effective responses can update control gates while maintaining traceability and accountability. This is important for ensuring that all actions taken are transparent and can be tracked back to their origins.\nContext recap: In our recap, we will discuss how effective responses can update control gates while maintaining traceability and accountability. This is important for ensuring that all actions taken are transparent and can be tracked back to their origins.\nWhy this matters: Adaptive Response Design helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Adapting Strategy Based on New Data",
+          "content": "We will recap how effective crisis response requires adapting strategies as new data emerges, such as a virus mutation or a new treatment becoming available. This involves updating plans while maintaining clear communication and accountability."
         }
       ],
       "interactiveActivities": [
         {
           "id": "biology-501-l05-act1",
           "type": "scenario",
-          "title": "Adverse-Condition Decision Run",
-          "description": "Run a high-pressure biology scenario and tune controls under uncertainty."
+          "title": "Pandemic Response Simulation",
+          "description": "Run a high-pressure simulation of a public health crisis. Make critical decisions about interventions and resource allocation under conditions of uncertainty and time pressure."
         }
       ]
     },
@@ -429,297 +329,197 @@ export const Biology501Module: LearningModule = {
         {
           "id": "biology-501-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Review Case Study",
+          "content": "Review your decisions from the coral reef case study and the pandemic simulation to prepare for the quiz."
         }
       ],
       "questions": [
         {
           "id": "biology-501-l06-q1",
-          "text": "In advanced casework, the first requirement for defensible recommendations is:",
+          "text": "In the coral reef case study, the first requirement for a defensible recommendation is:",
           "skillId": "biology-501-skill-case1",
           "options": [
             {
               "id": "a",
-              "text": "A preferred option without explicit assumptions"
+              "text": "Choosing an option without stating why it's better than others."
             },
             {
               "id": "b",
-              "text": "A clear baseline, explicit constraints, and success criteria"
+              "text": "A clear baseline of reef health, explicit constraints (e.g., budget), and measurable success criteria (e.g., coral cover increase)."
             },
             {
               "id": "c",
-              "text": "High confidence without evidence logs"
+              "text": "High confidence in an outcome without providing supporting data."
             },
             {
               "id": "d",
-              "text": "Single-metric optimization only"
+              "text": "Optimizing only for tourism revenue."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible recommendations begin with explicit assumptions, constraints, and measurable targets."
+          "explanation": "Defensible recommendations begin with an explicit baseline, constraints, and measurable targets."
         },
         {
           "id": "biology-501-l06-q2",
-          "text": "A resilient strategy for biology operations and execution design should include:",
+          "text": "A resilient strategy for managing the simulated viral outbreak should include:",
           "skillId": "biology-501-skill-case2",
           "options": [
             {
               "id": "a",
-              "text": "Checkpointed execution with fallback and escalation criteria"
+              "text": "Checkpoints to review strategy, with fallback plans (e.g., if a vaccine is delayed) and clear criteria for escalating measures."
             },
             {
               "id": "b",
-              "text": "One-way execution with no rollback capability"
+              "text": "A single, unchangeable plan with no ability to adapt to new information."
             },
             {
               "id": "c",
-              "text": "No ownership mapping across teams"
+              "text": "No clear assignment of who is responsible for different parts of the response."
             },
             {
               "id": "d",
-              "text": "Hidden assumptions and undocumented decisions"
+              "text": "Making key decisions without documenting the rationale."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Resilience depends on checkpoints, fallback options, and explicit escalation design."
+          "explanation": "Resilience in a crisis depends on checkpoints for review, fallback options, and explicit escalation design."
         },
         {
           "id": "biology-501-l06-q3",
-          "text": "When evaluating biology impact and tradeoff analysis, which method is most rigorous?",
+          "text": "When evaluating the impact of a public health intervention in the simulation, which method is most rigorous?",
           "skillId": "biology-501-skill-case3",
           "options": [
             {
               "id": "a",
-              "text": "Single success story without controls"
+              "text": "Highlighting one city where it worked well, without mentioning others."
             },
             {
               "id": "b",
-              "text": "Comparative baselines plus side-effect and uncertainty analysis"
+              "text": "Comparing outcomes to a baseline, analyzing side effects (e.g., economic impact), and acknowledging uncertainty in the data."
             },
             {
               "id": "c",
-              "text": "Outcome-only narrative without process evidence"
+              "text": "A narrative of the outcome without providing the underlying data."
             },
             {
               "id": "d",
-              "text": "Retrospective scope changes to fit outcomes"
+              "text": "Changing the metrics for success halfway through the simulation."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Rigorous evaluation requires comparisons, side-effect analysis, and uncertainty disclosure."
+          "explanation": "Rigorous evaluation requires comparisons to a baseline, analysis of side effects, and disclosure of uncertainty."
         },
         {
           "id": "biology-501-l06-q4",
-          "text": "Advanced governance is strongest when it:",
+          "text": "Advanced governance of a pandemic response is strongest when it:",
           "skillId": "biology-501-skill-case4",
           "options": [
             {
               "id": "a",
-              "text": "Aligns authority, measurement, and remediation obligations"
+              "text": "Aligns the authority to make decisions, the data to measure their impact, and the obligation to correct course when they fail."
             },
             {
               "id": "b",
-              "text": "Separates policy from operational controls"
+              "text": "Separates scientific advice from political decision-making entirely."
             },
             {
               "id": "c",
-              "text": "Avoids external review and transparency"
+              "text": "Avoids transparency to prevent public panic."
             },
             {
               "id": "d",
-              "text": "Treats accountability as optional under pressure"
+              "text": "Treats accountability for mistakes as optional during a crisis."
             }
           ],
           "correctOptionId": "a",
-          "explanation": "Mature governance links authority, measurable controls, and corrective action."
-        },
-        {
-          "id": "biology-501-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Biology?",
-          "skillId": "biology-501-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "biology-501-l06-q6",
-          "text": "In high-stakes Biology Specialization Studio execution, which communication protocol is strongest?",
-          "skillId": "biology-501-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "biology-501-l06-q7",
-          "text": "A mature remediation loop in advanced Biology should prioritize:",
-          "skillId": "biology-501-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "biology-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Biology Specialization Studio?",
-          "skillId": "biology-501-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Mature governance links the authority to act, the measurement of impact, and the responsibility for corrective action."
         }
       ]
     },
     {
       "id": "biology-501-l07",
-      "title": "Biology Governance and Public Impact",
+      "title": "Bioethics and Governance",
       "type": "video",
       "duration": 13,
       "learningAids": [
         {
           "id": "biology-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Ethical Review Flowchart",
+          "content": "A flowchart illustrating the ethical review process for a human gene-editing proposal, from initial submission to final approval."
         }
       ],
       "chunks": [
         {
           "id": "biology-501-l07-c1",
           "kind": "concept",
-          "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is essential for recognizing how biological decisions impact various communities.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. This understanding is essential for recognizing how biological decisions impact various communities.\nWhy this matters: Stakeholder Impact Distribution helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Analyzing Societal and Ethical Impacts",
+          "content": "Learners will map the distribution of benefits, burdens, and long-term effects of a biological technology across different stakeholder groups. This is essential for understanding the ethical dimensions and ensuring equitable outcomes."
         },
         {
           "id": "biology-501-l07-c2",
           "kind": "concept",
-          "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. Understanding these elements is crucial for ensuring responsible governance in biological practices.\nContext recap: In this section, we will explore the architecture of accountability, which includes decision traceability, review rights, and obligations for remediation. Understanding these elements is crucial for ensuring responsible governance in biological practices.\nWhy this matters: Accountability Architecture helps learners in Biology connect ideas from Biology Specialization Studio to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "title": "Frameworks for Scientific Accountability",
+          "content": "We will explore frameworks for accountability in science, including decision traceability (audit trails), the rights of research subjects, and the obligations of scientists and institutions for remediation when harm occurs."
         },
         {
           "id": "biology-501-l07-c3",
           "kind": "recap",
-          "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and promotes resilience in our leadership practices. This checklist will serve as a guide to help you reflect on how to be a responsible leader in biology and beyond.\nContext recap: At the end of our lesson, we will provide a helpful checklist that connects important outcomes with ethical considerations, ensures that we are following policies correctly, and promotes resilience in our leadership practices. This checklist will serve as a guide to help you reflect on how to be a responsible leader in biology and beyond."
+          "title": "A Framework for Ethical Leadership in Biology",
+          "content": "We will conclude with a practical checklist for responsible leadership. This guide connects scientific outcomes with ethical principles, policy compliance, and system resilience, serving as a tool for ethical decision-making in your career."
         }
       ],
       "flashcards": [
         {
           "id": "biology-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How outcomes are allocated across populations and timescales."
+          "front": "Equity in Biotechnology",
+          "back": "Assessing how the benefits and risks of a new technology, like personalized medicine, are distributed across different socioeconomic groups."
         },
         {
           "id": "biology-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable record of evidence, ownership, and rationale."
+          "front": "Research Audit Trail",
+          "back": "A verifiable record of a research project's methodology, data, and decisions, crucial for reproducibility and accountability."
         },
         {
           "id": "biology-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision behavior balancing performance, accountability, and ethics."
+          "front": "Ethical Scientific Leadership",
+          "back": "Guiding research and its application in a way that prioritizes scientific integrity, public safety, and social responsibility."
         }
       ]
     },
     {
       "id": "biology-501-l08",
-      "title": "Biology Capstone Defense Lab",
+      "title": "Capstone: Defending a Research Proposal",
       "type": "interactive",
       "duration": 16,
       "learningAids": [
         {
           "id": "biology-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Capstone Defense Slide",
+          "content": "A slide from a capstone defense presentation, showing a complex data visualization and the key takeaway claim it supports."
         }
       ],
       "chunks": [
         {
           "id": "biology-501-l08-c1",
           "kind": "practice",
-          "title": "Defense Brief Assembly",
-          "content": "In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the uncertainties related to your claims, and possible pathways for remediation. This exercise will help you practice how to present your ideas clearly and effectively, preparing you for real-world discussions and decisions in biology.\nContext recap: In this activity, you will work on creating a comprehensive brief. This brief will include your main claims, supporting evidence, the uncertainties related to your claims, and possible pathways for remediation. This exercise will help you practice how to present your ideas clearly and effectively, preparing you for real-world discussions and decisions in biology."
+          "title": "Constructing Your Proposal",
+          "content": "In this activity, you will assemble a comprehensive research proposal. This brief will include your central hypothesis, supporting evidence from literature, experimental design, potential uncertainties, and ethical considerations."
         },
         {
           "id": "biology-501-l08-c2",
           "kind": "recap",
-          "title": "Expert Panel Rehearsal",
-          "content": "During this session, you will have the opportunity to practice your responses to various critiques. These critiques may come from experts in the field, governance representatives, or stakeholders who have an interest in your work. Rehearsing these responses will help you build confidence and improve your ability to communicate effectively under pressure.\nContext recap: During this session, you will have the opportunity to practice your responses to various critiques. These critiques may come from experts in the field, governance representatives, or stakeholders who have an interest in your work. Rehearsing these responses will help you build confidence and improve your ability to communicate effectively under pressure."
+          "title": "Simulating a Peer Review Defense",
+          "content": "You will practice responding to critiques from different perspectives: a skeptical scientific expert, an institutional ethics board representative, and a public stakeholder. This rehearsal will build your ability to communicate and defend your work effectively."
         }
       ],
       "interactiveActivities": [
         {
           "id": "biology-501-l08-act1",
           "type": "debate_simulator",
-          "title": "Expert Defense Panel",
-          "description": "Defend specialization recommendations under adversarial cross-examination."
+          "title": "Mock Grant Proposal Defense",
+          "description": "Present and defend your research proposal to a simulated expert panel. Respond to adversarial cross-examination on your methods, ethics, and potential impact."
         }
       ]
     }

@@ -3,92 +3,135 @@ import type { LearningModule } from "@/lib/modules/types";
 export const cdl_hazmat_endorsement_101_Module: LearningModule = {
   "id": "cdl-hazmat-endorsement-101",
   "title": "CDL Hazmat Endorsement (H)",
-  "description": "Complete study guide for the CDL Hazardous Materials (Hazmat) endorsement. Covers the 9 hazard classes, placarding rules, shipping papers, loading/unloading procedures, emergency response, and the Hazmat Table (49 CFR 172.101). Requires a TSA security threat assessment in addition to passing the knowledge test.",
+  "description": "A comprehensive study guide for the CDL Hazardous Materials (Hazmat) endorsement. This module covers the 9 hazard classes, placarding, shipping papers, loading and segregation, driving rules, emergency response, and the Hazmat Table. It also details the required TSA Security Threat Assessment.",
   "subject": "CDL",
-  "tags": ["core", "curriculum", "cdl", "trades", "exam-prep", "hazmat", "endorsement"],
+  "tags": [
+    "core",
+    "curriculum",
+    "cdl",
+    "trades",
+    "exam-prep",
+    "hazmat",
+    "endorsement"
+  ],
   "minAge": 21,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
-  "localeSupport": ["en"],
+  "localeSupport": [
+    "en"
+  ],
   "thumbnail": "/assets/cdl/hazmat-placards.png",
   "learningObjectives": [
-    "Identify the 9 hazard classes and their associated placard designs",
-    "Read and interpret hazmat shipping papers and the Hazmat Table",
-    "Apply correct placarding rules based on cargo type and quantity",
-    "Describe loading, unloading, and segregation rules for hazardous materials",
-    "Explain emergency response procedures for hazmat incidents",
-    "Understand TSA background check requirements for the H endorsement"
+    "Identify the 9 hazard classes, their divisions, and associated placards.",
+    "Read and interpret hazmat shipping papers and the Hazmat Table.",
+    "Apply correct placarding rules based on material type and aggregate gross weight.",
+    "Describe loading, unloading, and segregation rules for hazardous materials.",
+    "Explain emergency response procedures for hazmat incidents.",
+    "Understand the roles and responsibilities of the shipper and the carrier.",
+    "Outline the process for the TSA Security Threat Assessment required for the H endorsement."
   ],
   "lessons": [
     {
       "id": "cdl-hm-101-l01",
-      "title": "Hazard Classes and Placarding",
+      "title": "Hazard Classes, Placards, and Shipping Papers",
       "type": "video",
-      "duration": 14,
+      "duration": 15,
       "chunks": [
         {
           "id": "cdl-hm-101-l01-c1",
           "title": "The Nine Hazard Classes",
-          "content": "All hazardous materials are classified into 9 classes by the Department of Transportation. [Visual Prompt: Full-color grid showing all 9 DOT hazard class placards with their class numbers, colors, and symbols: Class 1 — Explosives (orange), Class 2 — Gases (red/green/white), Class 3 — Flammable Liquids (red), Class 4 — Flammable Solids (red-white striped), Class 5 — Oxidizers/Organic Peroxides (yellow), Class 6 — Poisons/Infectious Substances (white with skull), Class 7 — Radioactive (yellow-white with trefoil), Class 8 — Corrosives (half black/half white), Class 9 — Miscellaneous (white with black stripes).] Each class has specific rules for handling, loading, and transport. Some classes have divisions — for example, Class 2 has Division 2.1 (flammable gases like propane), Division 2.2 (non-flammable gases like oxygen), and Division 2.3 (poisonous gases like chlorine). You must know these classes to correctly identify placards, read shipping papers, and respond to emergencies."
+          "content": "The Department of Transportation (DOT) organizes all hazardous materials into 9 classes based on their primary danger. Knowing these classes is the foundation of hazmat safety. [Visual Prompt: A full-color, animated grid showing each of the 9 DOT hazard class placards appearing one by one with their class number, name, color, and symbol: Class 1—Explosives (orange), Class 2—Gases (red/green/white), Class 3—Flammable Liquids (red), Class 4—Flammable Solids (red & white stripes/blue/white), Class 5—Oxidizers & Organic Peroxides (yellow), Class 6—Poisons & Infectious Substances (white with skull), Class 7—Radioactive (yellow & white), Class 8—Corrosives (black & white), Class 9—Miscellaneous (white with black stripes).] Some classes are broken into divisions to specify the type of hazard. For example, Class 2 has Division 2.1 (flammable gases), 2.2 (non-flammable gases), and 2.3 (poisonous gases). You must be able to identify these classes to understand shipping papers, placarding, and emergency procedures."
         },
         {
           "id": "cdl-hm-101-l01-c2",
           "title": "Placarding Rules",
-          "content": "Federal law requires diamond-shaped placards on all four sides of a vehicle carrying hazardous materials above certain quantities. [Visual Prompt: Diagram of a truck/trailer showing placard placement positions on front, rear, and both sides, with examples of when placards are required: Table 1 materials (ANY quantity) vs Table 2 materials (1,001 lbs or more aggregate).] Table 1 materials (the most dangerous — explosives 1.1-1.3, poison gas 2.3, danger when wet 4.3, organic peroxide type B 5.2, poison inhalation 6.1, radioactive 7) require placards at ANY quantity. Table 2 materials (less dangerous classes) require placards only when the aggregate weight is 1,001 pounds or more. If carrying 1,001+ lbs of two or more Table 2 materials, you may use DANGEROUS placards instead of individual class placards — EXCEPT you must still show individual placards for any material requiring Table 1 placards."
+          "content": "Placards are diamond-shaped signs placed on all four sides of a vehicle to warn the public and first responders of the hazards inside. [Visual Prompt: A 3D model of a semi-trailer rotating, with placard holders on the front, rear, and both sides highlighted. An animation shows placards for Table 1 materials being applied for a small box, then placards for Table 2 materials being applied only after a scale shows the weight exceeding 1,000 lbs.] Placarding is required based on two tables. Table 1 materials are the most dangerous and require placards for ANY amount. Table 2 materials require placards only when the aggregate gross weight is 1,001 lbs or more. If you carry 1,001+ lbs of two or more Table 2 materials, you may use the 'DANGEROUS' placard. However, you cannot use the 'DANGEROUS' placard for materials that require a Table 1 placard."
         },
         {
           "id": "cdl-hm-101-l01-c3",
-          "title": "Shipping Papers and ERG",
-          "content": "Hazmat shipping papers must contain specific information and be accessible in the cab at all times. [Visual Prompt: Sample hazmat shipping paper showing required fields: proper shipping name (highlighted), hazard class, ID number (UN/NA), packing group, total quantity, and emergency contact phone number, with 'X' or 'RQ' in the HM column.] Required information on shipping papers: proper shipping name, hazard class number, UN/NA identification number, packing group (I, II, or III — I being most dangerous), total quantity, and a 24-hour emergency response phone number. Hazmat entries must be highlighted, printed in a different color, or marked with an 'X' in the HM column. The Emergency Response Guidebook (ERG) is a reference book that should be kept in every CMV transporting hazmat. It provides initial response guidance organized by 4-digit UN/NA number and by placard color/type."
+          "title": "Shipping Papers and the ERG",
+          "content": "The shipper is responsible for preparing the shipping papers, but the driver is responsible for verifying they are correct and accessible. [Visual Prompt: A sample hazmat shipping paper with callout boxes explaining each required field: Proper Shipping Name, Hazard Class, UN/NA ID Number, Packing Group, and Total Quantity. The 'HM' column is shown with an 'X' next to the hazmat entry, and an 'RQ' is highlighted.] Key information includes: the proper shipping name, hazard class, UN/NA identification number, and packing group (I, II, or III, with I being the greatest danger). Hazmat entries must be clearly identified, often with an 'X' or 'RQ' (Reportable Quantity) in the hazmat column. Shipping papers must be within the driver's immediate reach when belted in, and readily visible on the driver's seat or in the door pouch when out of the vehicle. The Emergency Response Guidebook (ERG) uses the UN/NA number to provide critical guidance during the first 30 minutes of an incident."
         }
       ],
       "flashcards": [
-        { "id": "cdl-hm-101-l01-f1", "front": "Name the 9 DOT hazard classes.", "back": "1-Explosives, 2-Gases, 3-Flammable Liquids, 4-Flammable Solids, 5-Oxidizers, 6-Poisons, 7-Radioactive, 8-Corrosives, 9-Miscellaneous." },
-        { "id": "cdl-hm-101-l01-f2", "front": "When are placards required for Table 2 hazmat materials?", "back": "When the aggregate weight is 1,001 pounds or more." },
-        { "id": "cdl-hm-101-l01-f3", "front": "What does packing group I mean?", "back": "Greatest danger. Packing groups indicate danger level: I = great danger, II = medium danger, III = minor danger." },
-        { "id": "cdl-hm-101-l01-f4", "front": "Where must hazmat shipping papers be kept in the cab?", "back": "In a pouch on the driver's door or in clear view within reach while driving. On the seat or in the door pouch when not behind the wheel." }
+        {
+          "id": "cdl-hm-101-l01-f1",
+          "front": "What are the 9 DOT hazard classes?",
+          "back": "1-Explosives, 2-Gases, 3-Flammable Liquids, 4-Flammable Solids, 5-Oxidizers, 6-Poisons, 7-Radioactive, 8-Corrosives, 9-Miscellaneous."
+        },
+        {
+          "id": "cdl-hm-101-l01-f2",
+          "front": "When is a 'DANGEROUS' placard permitted?",
+          "back": "When transporting 1,001 lbs or more aggregate gross weight of two or more categories of Table 2 materials."
+        },
+        {
+          "id": "cdl-hm-101-l01-f3",
+          "front": "What does Packing Group I signify?",
+          "back": "The material poses the greatest danger. Packing Groups are I (great danger), II (medium danger), and III (minor danger)."
+        },
+        {
+          "id": "cdl-hm-101-l01-f4",
+          "front": "Who is responsible for preparing hazmat shipping papers?",
+          "back": "The shipper. The driver is responsible for checking them for accuracy and keeping them accessible."
+        }
       ]
     },
     {
       "id": "cdl-hm-101-l02",
-      "title": "Loading, Unloading, and Emergency Response",
+      "title": "Loading, Transporting, and Emergency Response",
       "type": "video",
       "duration": 12,
       "chunks": [
         {
           "id": "cdl-hm-101-l02-c1",
           "title": "Loading and Segregation Rules",
-          "content": "Certain hazmat classes cannot be loaded together in the same vehicle. [Visual Prompt: Segregation table showing which hazard classes can and cannot be loaded together, with red X marks for prohibited combinations (e.g., Class 1 Explosives cannot be loaded with Class 3 Flammable Liquids) and green checkmarks for permitted combinations.] Key segregation rules: Poison/toxic materials (6.1) must not be loaded in the same vehicle with foodstuffs. Explosives (Class 1) have the most restrictions and cannot be loaded with most other hazard classes. Oxidizers (Class 5) must be separated from flammable materials. Always check the Hazmat Table (49 CFR 172.101) for specific compatibility. When loading: turn off your engine, set the parking brake, and chock wheels. No smoking within 25 feet. Use proper protective equipment as listed on the Safety Data Sheet. Secure all containers so they cannot shift, fall, or leak during transport."
+          "content": "Never load certain classes of hazardous materials together. The driver is responsible for ensuring the load is properly segregated and secured. [Visual Prompt: A clear, color-coded segregation table. An animation shows a forklift attempting to load boxes of Class 6 Poison next to boxes labeled 'FOOD'; a large red 'X' appears over the screen. Then it shows the forklift correctly loading them in separate trailers.] Key rules: Do not load poisons with foodstuffs. Keep oxidizers away from flammables. Explosives have the most stringent restrictions. Always consult the Segregation Table in the regulations. Before loading, turn off the engine and ensure no smoking within 25 feet. All cargo must be braced and blocked to prevent shifting, falling, or leaking."
         },
         {
           "id": "cdl-hm-101-l02-c2",
-          "title": "Driving with Hazmat",
-          "content": "Hazmat drivers have additional responsibilities beyond standard CMV rules. [Visual Prompt: Route map showing a hazmat truck route through a city, avoiding tunnels, residential areas, and crowded areas, with HAZMAT ROUTE signs and restricted zones marked.] You must plan your route to avoid populated areas, tunnels, and narrow roads when possible. Some tunnels and bridges prohibit hazmat vehicles entirely. Never park within 5 feet of the traveled roadway. If you must park near the road, use warning devices. You may never park within 300 feet of a bridge, tunnel, or building with people unless the vehicle is attended or it is necessary for operation. A hazmat vehicle must be attended at all times — meaning the driver is in the vehicle or within 100 feet with clear view of it. Tire checks are required at the beginning of each trip and every time you stop."
+          "title": "Driving and Parking with Hazmat",
+          "content": "Transporting hazmat requires extra vigilance. [Visual Prompt: A map view of a city with a green line showing a designated hazmat route that bypasses tunnels and dense residential areas, which are marked in red. A separate icon shows a truck parked safely away from the road with reflective triangles set up.] You must follow designated hazmat routes and avoid restricted areas like tunnels. When parking, you must be at least 5 feet from the traveled part of the road. Never park within 300 feet of an open fire. A vehicle carrying hazmat must be 'attended' at all times unless parked in a designated safe haven. 'Attended' means you are within 100 feet and have a clear view of the vehicle. You must also have a fire extinguisher with a rating of 10 B:C or more."
         },
         {
           "id": "cdl-hm-101-l02-c3",
           "title": "Hazmat Emergency Response",
-          "content": "In a hazmat emergency, your safety and public safety come first. [Visual Prompt: Emergency response flowchart: Assess → Protect (upwind, uphill, upstream) → Notify (911, carrier, CHEMTREC 1-800-424-9300) → Isolate (keep people away) → Reference ERG → Wait for HazMat team.] Steps in a hazmat emergency: (1) Keep yourself and others away from the material. (2) Move upwind, uphill, and upstream from the spill. (3) Notify local emergency services (911) and your carrier. (4) Call CHEMTREC at 1-800-424-9300 for technical emergency guidance. (5) Have shipping papers available for emergency responders — they contain the product names, hazard classes, and emergency contact numbers. (6) Do NOT attempt to clean up a hazmat spill yourself unless you are trained to the Hazmat Technician level. (7) If the material is on fire, do not fight it unless you know exactly what it is and how it reacts with water — some materials react violently with water."
+          "content": "In a hazmat incident, your first priority is safety. [Visual Prompt: An animated flowchart for emergency response: 1. PULL OVER SAFELY. 2. IDENTIFY HAZARD (shows driver grabbing shipping papers & ERG). 3. NOTIFY (shows driver on phone calling 911, carrier, CHEMTREC). 4. SECURE AREA (shows driver moving people away and positioning himself upwind/uphill).] If an incident occurs: 1. Secure the scene. 2. Identify the material using shipping papers and placards. 3. Notify authorities (911), your carrier, and CHEMTREC (1-800-424-9300). 4. Protect yourself and the public by keeping people away and staying upwind, uphill, and upstream. Provide your shipping papers to first responders. Do not attempt to fight fires or clean up spills unless you are trained and equipped to do so."
         }
       ],
       "flashcards": [
-        { "id": "cdl-hm-101-l02-f1", "front": "What is the CHEMTREC emergency phone number?", "back": "1-800-424-9300 — provides 24/7 technical hazmat emergency guidance." },
-        { "id": "cdl-hm-101-l02-f2", "front": "How far from the traveled roadway must you park a hazmat vehicle?", "back": "At least 5 feet from the traveled portion of the road." },
-        { "id": "cdl-hm-101-l02-f3", "front": "What does 'attended vehicle' mean for hazmat?", "back": "The driver is in the vehicle, or within 100 feet of it with a clear line of sight." },
-        { "id": "cdl-hm-101-l02-f4", "front": "In which direction should you move from a hazmat spill?", "back": "Upwind, uphill, and upstream — to avoid exposure to fumes, runoff, and contamination." }
+        {
+          "id": "cdl-hm-101-l02-f1",
+          "front": "What is the CHEMTREC emergency phone number?",
+          "back": "1-800-424-9300. It provides 24/7 expert guidance for hazmat emergencies."
+        },
+        {
+          "id": "cdl-hm-101-l02-f2",
+          "front": "What is the minimum fire extinguisher rating required for a placarded hazmat vehicle?",
+          "back": "A rating of 10 B:C or more."
+        },
+        {
+          "id": "cdl-hm-101-l02-f3",
+          "front": "What does it mean for a hazmat vehicle to be 'attended'?",
+          "back": "The driver is awake and either in the vehicle or within 100 feet of it with an unobstructed view."
+        },
+        {
+          "id": "cdl-hm-101-l02-f4",
+          "front": "In a hazmat spill, why should you move upwind, uphill, and upstream?",
+          "back": "To avoid inhaling toxic fumes (upwind), and to stay clear of leaking liquids or heavier-than-air gases (uphill and upstream)."
+        }
       ]
     },
     {
       "id": "cdl-hm-101-l03",
-      "title": "CDL Hazmat Endorsement Practice Exam",
+      "title": "TSA Requirements and Practice Exam",
       "type": "quiz",
       "duration": 25,
       "chunks": [
         {
           "id": "cdl-hm-101-l03-c1",
-          "title": "Hazmat Practice Test",
-          "content": "This practice exam simulates the CDL Hazmat endorsement knowledge test. The real exam has 30 questions and you need 80% (24 correct) to pass. Remember: the H endorsement also requires a TSA security threat assessment (background check), which involves fingerprinting at an authorized enrollment center and a fee (approximately $86.50 as of 2026). The background check must be completed before you can take the Hazmat knowledge test at the DMV. Topics covered: hazard classes, placarding, shipping papers, loading/segregation, driving rules, emergency response, and the Hazmat Table."
+          "title": "TSA Security Threat Assessment and Practice Test",
+          "content": "Before you can receive your Hazmat endorsement, you must pass a federal Security Threat Assessment (STA) conducted by the TSA. [Visual Prompt: A simple 3-step graphic: 1. Computer screen showing online application. 2. Fingerprint icon. 3. A driver's license with the 'H' endorsement highlighted.] The process involves an online application, paying a fee, and visiting an enrollment center to provide fingerprints. This background check is valid for five years. You must receive your TSA approval *before* your state will issue the H endorsement. This practice exam will test your knowledge on all key hazmat topics. The official test typically has 30 questions, and you must score at least 80% to pass."
         }
       ],
       "flashcards": []

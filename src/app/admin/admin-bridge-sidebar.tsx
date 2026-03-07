@@ -81,6 +81,13 @@ export default function AdminBridgeSidebar() {
               onClick={() => setActiveView("Lo-Fi Stream Data")}
             />
             <BridgeCard
+              title="Koydo Classical"
+              status="Scaffold"
+              revenue="Musopen CC0"
+              icon="🎻"
+              onClick={() => setActiveView("Classical Audience")}
+            />
+            <BridgeCard
               title="Glass Calculator"
               status="Scaffold"
               revenue="Freemium"

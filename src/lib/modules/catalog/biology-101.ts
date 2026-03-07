@@ -1,1353 +1,134 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Biology101Module: LearningModule = {
+export const biology_101_Module: LearningModule = {
   "id": "biology-101",
   "title": "Biology Essentials",
-  "description": "Discover living systems, cells, ecosystems, and the diversity of life.",
+  "description": "Explore the fundamental principles of life, from the microscopic world of cells and DNA to the vast interconnectedness of ecosystems.",
   "subject": "Biology",
   "tags": [
     "core",
     "curriculum",
     "interactive",
-    "enriched-from-epub"
+    "science"
   ],
-  "minAge": 7,
-  "maxAge": 18,
-  "version": "2.0.0",
+  "minAge": 12,
+  "maxAge": 16,
+  "version": "1.1.0",
   "learningObjectives": [
-    "Describe the structure and function of plant and animal cells",
-    "Explain how body systems work together to maintain homeostasis",
-    "Analyze energy flow and nutrient cycling in ecosystems",
-    "Describe the basic principles of heredity and DNA",
-    "Explain natural selection and adaptation"
+    "Describe the structure of cells and explain their essential life processes.",
+    "Explain how organ systems work together to maintain a stable internal environment (homeostasis).",
+    "Analyze the flow of energy and cycling of nutrients within an ecosystem.",
+    "Describe the structure of DNA and the basic principles of genetic inheritance.",
+    "Explain the theory of natural selection as the mechanism for evolution and adaptation."
   ],
   "lessons": [
     {
       "id": "biology-101-l01",
-      "title": "Cells and Life Processes",
+      "title": "The Cell: Building Block of Life",
       "type": "video",
-      "duration": 10,
+      "duration": 12,
       "objectives": [
-        "Identify the parts of a cell and their functions",
-        "Compare plant and animal cells"
+        "Identify the main organelles in plant and animal cells and their functions.",
+        "Compare and contrast plant and animal cells.",
+        "Describe the hierarchy from cells to organisms."
       ],
       "chunks": [
         {
           "id": "biology-101-l01-c1",
-          "title": "The Cell: Building Block of Life",
+          "title": "What is a Cell?",
           "kind": "intro",
-          "content": "Every living thing, from the tiniest bacteria to the largest whale, is made up of cells. Cells are like tiny building blocks that come together to form all living organisms. Some organisms, like bacteria, consist of just one cell, while humans have about 37 trillion cells working together in harmony! These cells are incredibly important because they are the smallest units of life. They perform all the essential functions that keep us alive. For example, they help us get energy from the food we eat, allow us to grow and develop, enable us to reproduce and create new life, and help us respond to changes in our environment. By understanding cells, we can learn how life works at its most basic level, which is fascinating and essential for studying biology!\nContext recap: Every living thing, from the tiniest bacteria to the largest whale, is made up of cells. Cells are like tiny building blocks that come together to form all living organisms. Some organisms, like bacteria, consist of just one cell, while humans have about 37 trillion cells working together in harmony! These cells are incredibly important because they are the smallest units of life.\nWhy this matters: The Cell: Building Block of Life helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Every living thing, from the smallest bacterium to the largest blue whale, is made of cells. They are the basic building blocks of all organisms. Some life forms are just a single cell, while you are made of about 37 trillion cells working together! Cells carry out all the processes necessary for life: they convert food to energy, help us grow, and allow us to respond to our environment. Understanding cells is the first step to understanding all of biology.",
+          "visualPrompt": "Animation showing a zoom from a person, to their hand, to a skin cell, revealing the bustling activity inside."
         },
         {
           "id": "biology-101-l01-c2",
           "title": "Inside an Animal Cell",
           "kind": "concept",
-          "content": "Inside an animal cell, there are several key parts called organelles that each have important jobs. The nucleus is like the cell's control center; it stores the cell's DNA and directs its activities. Mitochondria are known as the powerhouses of the cell because they convert food into energy that the cell can use, a process called cellular respiration. The cell membrane acts like a gatekeeper, deciding what can enter and exit the cell. Ribosomes are tiny factories that build proteins, which are essential for many cell functions. Additionally, the endoplasmic reticulum and Golgi apparatus work together to process and transport these proteins to where they are needed.\nContext recap: Inside an animal cell, there are several key parts called organelles that each have important jobs. The nucleus is like the cell's control center; it stores the cell's DNA and directs its activities. Mitochondria are known as the powerhouses of the cell because they convert food into energy that the cell can use, a process called cellular respiration. The cell membrane acts like a gatekeeper, deciding what can enter and exit the cell.\nWhy this matters: Inside an Animal Cell helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "An animal cell is like a busy city with many different parts, called organelles, each with a specific job. The nucleus is the 'city hall,' containing the DNA—the master instructions for the cell. The mitochondria are the 'power plants,' generating energy. The cell membrane is the 'city border,' controlling what comes in and out. Ribosomes are tiny 'factories' that build proteins, the essential molecules that do most of the work in the cell.",
+          "visualPrompt": "A labeled 3D model of an animal cell, with each organelle lighting up as it is described."
         },
         {
           "id": "biology-101-l01-c3",
-          "title": "Plant Cells Are Different",
+          "title": "The Unique Plant Cell",
           "kind": "concept",
-          "content": "Plant cells are fascinating and have some unique features that set them apart from animal cells! While both types of cells share many common parts, plant cells have some special additions that help them survive and grow. One of the most important features is the rigid cell wall. This wall acts like a sturdy fence around the cell, giving it extra support and helping the plant maintain its shape.\nAnother amazing part of plant cells is the chloroplasts. These tiny structures are like little solar panels that capture sunlight. The chloroplasts use this sunlight to create food for the plant through a process called photosynthesis. This means that plants can make their own food, which is pretty cool!\nAdditionally, plant cells have a large central vacuole. This vacuole is like a big water balloon inside the cell. It stores water and helps keep the cell firm and strong, which is important for the plant to stand tall and healthy. Thanks to these special features, plants can thrive in their environments and continue to grow, making them essential for life on Earth.\nContext recap: Plant cells are fascinating and have some unique features that set them apart from animal cells! While both types of cells share many common parts, plant cells have some special additions that help them survive and grow. One of the most important features is the rigid cell wall. This wall acts like a sturdy fence around the cell, giving it extra support and helping the plant maintain its shape.\nWhy this matters: Plant Cells Are Different helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Plant cells have everything animal cells do, plus three special structures. A rigid cell wall outside the membrane provides structural support, like a scaffold. Chloroplasts are like tiny 'solar panels' that capture sunlight to make food through photosynthesis. And a large central vacuole acts as a 'water tower,' storing water to keep the plant firm. These features allow plants to make their own food and stand upright.",
+          "visualPrompt": "Side-by-side comparison diagram of a plant and animal cell, with arrows pointing to the cell wall, chloroplasts, and large central vacuole on the plant cell."
         },
         {
           "id": "biology-101-l01-c4",
-          "title": "Try It Yourself",
-          "kind": "practice",
-          "content": "Now it's your turn to get creative and explore the fascinating world of cells! Start by drawing a simple diagram of an animal cell. Make sure to label the important parts: the nucleus, which acts like the control center of the cell; the mitochondria, known as the powerhouse because they produce energy; the cell membrane, which protects the cell and controls what goes in and out; and the ribosomes, which help make proteins. After you finish your animal cell, let's add some extra fun! Include the three special structures that are found in plant cells: the sturdy cell wall that gives the plant its shape, the green chloroplasts that help plants make their food using sunlight, and the large central vacuole that stores water and nutrients. This activity will not only help you visualize the differences between animal and plant cells but also deepen your understanding of how these tiny building blocks of life work together to support living organisms!\nContext recap: Now it's your turn to get creative and explore the fascinating world of cells! Start by drawing a simple diagram of an animal cell. Make sure to label the important parts: the nucleus, which acts like the control center of the cell; the mitochondria, known as the powerhouse because they produce energy; the cell membrane, which protects the cell and controls what goes in and out; and the ribosomes, which help make proteins. After you finish your animal cell, let's add some extra fun!"
+          "title": "From Cells to Organisms",
+          "kind": "concept",
+          "content": "Cells don't just float around randomly; they organize themselves to build complex organisms. Similar cells group together to form tissues, like muscle tissue or nerve tissue. Different tissues work together to form an organ, like the heart or the brain. Organs then team up to create organ systems, such as the circulatory system or the nervous system. Finally, all these systems work in harmony to make a complete organism—like you!",
+          "visualPrompt": "An animated infographic showing the hierarchy: Cell -> Tissue (muscle cells forming muscle tissue) -> Organ (heart) -> Organ System (circulatory system) -> Organism (human)."
         }
       ],
       "flashcards": [
         {
           "id": "biology-101-l01-f1",
-          "front": "What does the nucleus do?",
-          "back": "It stores DNA (genetic instructions) and controls cell activities like growth, metabolism, and reproduction."
+          "front": "What is the function of the nucleus?",
+          "back": "It acts as the cell's control center, storing the genetic material (DNA) and directing all cell activities."
         },
         {
           "id": "biology-101-l01-f2",
-          "front": "What are mitochondria?",
-          "back": "The 'powerhouses' of the cell. They convert glucose and oxygen into ATP (energy) through cellular respiration."
+          "front": "What is the role of mitochondria?",
+          "back": "They are the 'powerhouses' of the cell, converting food (glucose) into usable energy (ATP) through cellular respiration."
         },
         {
           "id": "biology-101-l01-f3",
-          "front": "Name three structures found in plant cells but NOT animal cells.",
-          "back": "Cell wall (rigid support), chloroplasts (photosynthesis), and large central vacuole (water storage)."
-        },
-        {
-          "id": "biology-101-l01-f4",
-          "front": "What does the cell membrane do?",
-          "back": "It acts as a selective barrier, controlling which substances enter and leave the cell through selective permeability."
+          "front": "Name three structures found in plant cells but not animal cells.",
+          "back": "1. Cell wall (for rigid support) 2. Chloroplasts (for photosynthesis) 3. Large central vacuole (for water storage and turgor pressure)."
         }
       ],
       "learningAids": [
         {
           "id": "biology-101-l01-a1",
-          "type": "image",
-          "title": "Cell Comparison Diagram",
-          "content": "Side-by-side labeled diagrams of a typical animal cell and plant cell, highlighting shared and unique organelles."
-        },
-        {
-          "id": "biology-101-l01-a2",
           "type": "animation",
-          "title": "Inside a Cell",
-          "content": "3D animation zooming into a cell, showing the nucleus, mitochondria producing ATP, ribosomes building proteins, and the cell membrane regulating transport."
+          "title": "A Tour of the Cell",
+          "content": "A 3D animated tour that flies through both a plant and animal cell, highlighting the function of each major organelle."
         }
       ]
     },
     {
       "id": "biology-101-l02",
-      "title": "Body Systems Overview",
-      "type": "interactive",
-      "duration": 12,
+      "title": "Energy for Life: Photosynthesis & Respiration",
+      "type": "video",
+      "duration": 10,
       "objectives": [
-        "Name the major body systems and their primary functions",
-        "Explain how systems interact to maintain homeostasis"
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l02-ia1",
-          "type": "matching_pairs",
-          "title": "Match the Body System",
-          "description": "Match each body system to its primary function.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "easy",
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Circulatory system"
-              },
-              {
-                "id": "l2",
-                "label": "Respiratory system"
-              },
-              {
-                "id": "l3",
-                "label": "Digestive system"
-              },
-              {
-                "id": "l4",
-                "label": "Nervous system"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Pumps blood to deliver oxygen and nutrients to cells"
-              },
-              {
-                "id": "r2",
-                "label": "Exchanges oxygen and carbon dioxide with the air"
-              },
-              {
-                "id": "r3",
-                "label": "Breaks food into nutrients the body can absorb"
-              },
-              {
-                "id": "r4",
-                "label": "Sends electrical signals to control body actions and thoughts"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              },
-              {
-                "leftId": "l4",
-                "rightId": "r4"
-              }
-            ]
-          }
-        }
+        "Explain the purpose of photosynthesis and identify its inputs and outputs.",
+        "Explain the purpose of cellular respiration and identify its inputs and outputs.",
+        "Describe how these two processes are interconnected."
       ],
       "chunks": [
         {
           "id": "biology-101-l02-c1",
-          "title": "Systems Working Together",
+          "title": "Photosynthesis: Capturing Sunlight",
           "kind": "concept",
-          "content": "All the systems in your body work together like a well-coordinated team, just like players on a sports team! For example, when you decide to run or play a game, your muscles are hard at work moving your body. At the same time, your respiratory system is busy bringing in more oxygen to fuel those muscles, helping you keep going. The circulatory system plays a vital role too; it pumps blood faster to deliver that oxygen where it's needed most, ensuring your muscles have the energy they need. Meanwhile, the nervous system acts like a coach, helping to coordinate all these actions so everything runs smoothly. This amazing teamwork is essential for keeping your body's internal environment stable, which we call homeostasis. It's like a symphony, where every instrument plays its part to create beautiful music! Just like in a concert, if one part doesn't work well, the whole performance can be affected. So, remember, your body is always working together to keep you healthy and active!\nContext recap: All the systems in your body work together like a well-coordinated team, just like players on a sports team! For example, when you decide to run or play a game, your muscles are hard at work moving your body. At the same time, your respiratory system is busy bringing in more oxygen to fuel those muscles, helping you keep going. The circulatory system plays a vital role too; it pumps blood faster to deliver that oxygen where it's needed most, ensuring your muscles have the energy they need.\nWhy this matters: Systems Working Together helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Photosynthesis is the amazing process plants use to make their own food. Inside the chloroplasts, plants take in carbon dioxide from the air and water from the soil. Using energy from sunlight, they convert these simple ingredients into glucose, a sugar that provides energy for the plant. As a byproduct, they release oxygen into the atmosphere, which most living things need to breathe. Essentially, plants turn light energy into chemical energy.",
+          "visualPrompt": "Animation showing a leaf taking in sunlight, CO₂, and water, with glucose molecules being formed in a chloroplast and oxygen being released."
         },
         {
           "id": "biology-101-l02-c2",
-          "title": "Homeostasis in Action",
-          "kind": "example",
-          "content": "Have you ever felt really hot on a sunny day? Your body has a special way of keeping itself cool, and that's called homeostasis! When your body temperature goes up, your nervous system, which is like your body's communication system, notices this change right away. It sends messages to the blood vessels close to your skin, telling them to widen. This widening allows more heat to escape from your body, helping you cool down. At the same time, your sweat glands kick into action and start making sweat. When sweat evaporates, it takes heat away from your skin, which cools you off even more! Once your body temperature goes back to normal, these cooling actions slow down and eventually stop. This whole process is known as a negative feedback loop, and it’s super important because it helps keep your body temperature around 37°C. That temperature is just right for your organs to work their best and keep you feeling good!\nContext recap: Have you ever felt really hot on a sunny day? Your body has a special way of keeping itself cool, and that's called homeostasis! When your body temperature goes up, your nervous system, which is like your body's communication system, notices this change right away. It sends messages to the blood vessels close to your skin, telling them to widen.\nWhy this matters: Homeostasis in Action helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-101-l02-a1",
-          "type": "practice",
-          "title": "System Interaction Map",
-          "content": "Draw arrows between body systems to show how the respiratory, circulatory, and muscular systems interact during exercise."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l03",
-      "title": "Checkpoint: Cell Biology",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-101-l03-q1",
-          "text": "Which organelle is responsible for producing energy (ATP) in the cell?",
-          "skillId": "biology-101-skill-cells",
-          "options": [
-            {
-              "id": "a",
-              "text": "Nucleus"
-            },
-            {
-              "id": "b",
-              "text": "Ribosome"
-            },
-            {
-              "id": "c",
-              "text": "Mitochondrion"
-            },
-            {
-              "id": "d",
-              "text": "Cell membrane"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "Mitochondria carry out cellular respiration, converting glucose and oxygen into ATP (energy)."
-        },
-        {
-          "id": "biology-101-l03-q2",
-          "text": "Which structure is found in plant cells but NOT in animal cells?",
-          "skillId": "biology-101-skill-cells",
-          "options": [
-            {
-              "id": "a",
-              "text": "Nucleus"
-            },
-            {
-              "id": "b",
-              "text": "Cell membrane"
-            },
-            {
-              "id": "c",
-              "text": "Chloroplast"
-            },
-            {
-              "id": "d",
-              "text": "Ribosome"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "Chloroplasts contain chlorophyll and carry out photosynthesis. They are found only in plant cells (and some protists)."
-        },
-        {
-          "id": "biology-101-l03-q3",
-          "text": "What is homeostasis?",
-          "skillId": "biology-101-skill-systems",
-          "options": [
-            {
-              "id": "a",
-              "text": "The process of cell division"
-            },
-            {
-              "id": "b",
-              "text": "The ability to maintain a stable internal environment"
-            },
-            {
-              "id": "c",
-              "text": "The movement of molecules across a membrane"
-            },
-            {
-              "id": "d",
-              "text": "The conversion of light energy to chemical energy"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Homeostasis is the body's ability to maintain stable internal conditions (temperature, pH, blood sugar) despite external changes."
-        },
-        {
-          "id": "biology-101-l03-q4",
-          "text": "Which body system is primarily responsible for breaking down food into nutrients?",
-          "skillId": "biology-101-skill-systems",
-          "options": [
-            {
-              "id": "a",
-              "text": "Circulatory system"
-            },
-            {
-              "id": "b",
-              "text": "Respiratory system"
-            },
-            {
-              "id": "c",
-              "text": "Nervous system"
-            },
-            {
-              "id": "d",
-              "text": "Digestive system"
-            }
-          ],
-          "correctOptionId": "d",
-          "explanation": "The digestive system breaks food into small nutrient molecules that can be absorbed into the bloodstream."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l03-ia1",
-          "type": "sorting_buckets",
-          "title": "Plant or Animal Cell?",
-          "description": "Sort each organelle into the correct category.",
-          "estimatedMinutes": 5,
-          "difficultyLevel": "easy",
-          "data": {
-            "buckets": [
-              {
-                "id": "both",
-                "label": "Both plant and animal cells"
-              },
-              {
-                "id": "plant-only",
-                "label": "Plant cells only"
-              }
-            ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "Nucleus",
-                "correctBucketId": "both"
-              },
-              {
-                "id": "i2",
-                "label": "Cell wall",
-                "correctBucketId": "plant-only"
-              },
-              {
-                "id": "i3",
-                "label": "Mitochondria",
-                "correctBucketId": "both"
-              },
-              {
-                "id": "i4",
-                "label": "Chloroplasts",
-                "correctBucketId": "plant-only"
-              },
-              {
-                "id": "i5",
-                "label": "Cell membrane",
-                "correctBucketId": "both"
-              },
-              {
-                "id": "i6",
-                "label": "Large central vacuole",
-                "correctBucketId": "plant-only"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-101-l03-a1",
-          "type": "mnemonic",
-          "title": "Cell Memory Trick",
-          "content": "MR. NICE GUY: Membrane, Ribosomes, Nucleus, Includes all cells; Chloroplasts, Extra wall, Grandiose vacuole, Unique to plants, Yep!"
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l04",
-      "title": "Ecosystems and Food Webs",
-      "type": "video",
-      "duration": 11,
-      "objectives": [
-        "Describe the levels of ecological organization",
-        "Trace energy flow through a food chain and food web"
-      ],
-      "chunks": [
-        {
-          "id": "biology-101-l04-c1",
-          "title": "What Is an Ecosystem?",
-          "kind": "intro",
-          "content": "An ecosystem is a wonderful community that includes all living things, which we call biotic factors, as well as the nonliving parts of their environment, known as abiotic factors. The nonliving components can be things like water, sunlight, soil, and temperature. For instance, in a pond ecosystem, you can observe fish swimming gracefully, algae growing, and insects buzzing around. All these living organisms interact with important elements like water, sunlight, and dissolved oxygen, which are crucial for their survival. By studying ecosystems, we can learn how everything in nature is connected and how each part relies on the others to thrive. This understanding helps us appreciate the balance of life and the importance of protecting our environment.\nContext recap: An ecosystem is a wonderful community that includes all living things, which we call biotic factors, as well as the nonliving parts of their environment, known as abiotic factors. The nonliving components can be things like water, sunlight, soil, and temperature. For instance, in a pond ecosystem, you can observe fish swimming gracefully, algae growing, and insects buzzing around. All these living organisms interact with important elements like water, sunlight, and dissolved oxygen, which are crucial for their survival.\nWhy this matters: What Is an Ecosystem? helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "biology-101-l04-c2",
-          "title": "Energy Flow: Producers to Consumers",
+          "title": "Cellular Respiration: Releasing Energy",
           "kind": "concept",
-          "content": "Energy is essential for all living things in an ecosystem, and it all begins with producers, such as plants and algae. These amazing organisms have the ability to capture sunlight through a special process called photosynthesis. During photosynthesis, they convert sunlight into energy that they can use to grow and thrive. After producers, we have primary consumers, which are herbivores like rabbits and deer. These animals eat the plants to get the energy they need to live. Next in line are the secondary consumers, which are carnivores like wolves and eagles. They hunt and eat the herbivores to obtain energy. Finally, we have tertiary consumers, which are carnivores that eat other carnivores. It's fascinating to learn that at each level of this energy transfer, about 90% of the energy is lost as heat. This means that there is less energy available for the animals at the top of the food chain, making it important for each level to work together in the ecosystem.\nContext recap: Energy is essential for all living things in an ecosystem, and it all begins with producers, such as plants and algae. These amazing organisms have the ability to capture sunlight through a special process called photosynthesis. During photosynthesis, they convert sunlight into energy that they can use to grow and thrive. After producers, we have primary consumers, which are herbivores like rabbits and deer.\nWhy this matters: Energy Flow: Producers to Consumers helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "All living cells, including both plant and animal cells, need a constant supply of energy to function. Cellular respiration is the process that unlocks the energy stored in glucose. In the mitochondria, cells use oxygen to break down glucose, releasing a large amount of usable energy in the form of a molecule called ATP. The waste products of this process are carbon dioxide and water. This is why we breathe in oxygen and breathe out carbon dioxide.",
+          "visualPrompt": "Animation showing a mitochondrion taking in glucose and oxygen, with ATP molecules being produced and CO₂ and water being released."
         },
         {
-          "id": "biology-101-l04-c3",
-          "title": "Food Chains vs Food Webs",
-          "kind": "concept",
-          "content": "A food chain is a simple way to show how energy moves through an ecosystem. For example, imagine a food chain that starts with grass, which is eaten by a rabbit. Then, the rabbit is eaten by a fox, and finally, the fox can be eaten by an eagle. This shows a clear path of energy from one organism to another. However, in the real world, most animals and plants do not just eat one thing. This is where food webs come into play! A food web is like a big puzzle made up of many food chains that are all connected. It shows all the different ways that living things interact and depend on each other for food. Food webs are much more realistic because they reflect the true complexity of ecosystems, where many organisms share different food sources and relationships. Understanding food webs helps us appreciate how nature works and how important each organism is to the balance of the environment.\nContext recap: A food chain is a simple way to show how energy moves through an ecosystem. For example, imagine a food chain that starts with grass, which is eaten by a rabbit. Then, the rabbit is eaten by a fox, and finally, the fox can be eaten by an eagle. This shows a clear path of energy from one organism to another.\nWhy this matters: Food Chains vs Food Webs helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "biology-101-l04-c4",
-          "title": "Decomposers Complete the Cycle",
-          "kind": "concept",
-          "content": "Decomposers, which include tiny organisms like bacteria and larger ones like fungi, are essential for keeping our ecosystems healthy. They have a special job: they break down dead plants and animals, as well as waste materials. When they do this, they recycle important nutrients back into the soil. This is super important because these nutrients help new plants grow strong and healthy. If we didn't have decomposers, all those nutrients would stay stuck in dead matter, and plants, which are called producers, wouldn't be able to get what they need to survive. So, you can see how decomposers are like nature's recyclers! They help complete the cycle of life by connecting the end of food chains back to the beginning, making sure that everything in the ecosystem works together smoothly. This balance is what keeps our environment thriving and full of life.\nContext recap: Decomposers, which include tiny organisms like bacteria and larger ones like fungi, are essential for keeping our ecosystems healthy. They have a special job: they break down dead plants and animals, as well as waste materials. When they do this, they recycle important nutrients back into the soil. This is super important because these nutrients help new plants grow strong and healthy.\nWhy this matters: Decomposers Complete the Cycle helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "biology-101-l04-f1",
-          "front": "What is the difference between biotic and abiotic factors?",
-          "back": "Biotic = living (plants, animals, bacteria). Abiotic = nonliving (water, sunlight, temperature, soil, air)."
-        },
-        {
-          "id": "biology-101-l04-f2",
-          "front": "Why is there less energy at higher trophic levels?",
-          "back": "About 90% of energy is lost as heat at each level. Only ~10% is passed on. This is the 10% rule."
-        },
-        {
-          "id": "biology-101-l04-f3",
-          "front": "What role do decomposers play?",
-          "back": "They break down dead organisms and waste, recycling nutrients back into the soil for producers to use."
-        },
-        {
-          "id": "biology-101-l04-f4",
-          "front": "What is a trophic level?",
-          "back": "A feeding level in a food chain. Level 1 = producers, Level 2 = primary consumers, Level 3 = secondary consumers, etc."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-101-l04-a1",
-          "type": "image",
-          "title": "Food Web Diagram",
-          "content": "An illustrated food web of a forest ecosystem showing producers (oak, grass), herbivores (rabbit, deer, caterpillar), carnivores (fox, owl, snake), and decomposers (fungi, bacteria)."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l05",
-      "title": "Adaptation and Survival",
-      "type": "interactive",
-      "duration": 13,
-      "objectives": [
-        "Define adaptation and give examples",
-        "Explain how adaptations help organisms survive in specific environments"
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l05-ia1",
-          "type": "sorting_buckets",
-          "title": "Type of Adaptation",
-          "description": "Classify each example as a structural, behavioral, or physiological adaptation.",
-          "estimatedMinutes": 9,
-          "difficultyLevel": "medium",
-          "data": {
-            "buckets": [
-              {
-                "id": "structural",
-                "label": "Structural (physical body feature)"
-              },
-              {
-                "id": "behavioral",
-                "label": "Behavioral (actions)"
-              },
-              {
-                "id": "physiological",
-                "label": "Physiological (internal process)"
-              }
-            ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "A cactus has thick stems to store water",
-                "correctBucketId": "structural"
-              },
-              {
-                "id": "i2",
-                "label": "Bears hibernate during winter to conserve energy",
-                "correctBucketId": "behavioral"
-              },
-              {
-                "id": "i3",
-                "label": "A camel's kidneys concentrate urine to save water",
-                "correctBucketId": "physiological"
-              },
-              {
-                "id": "i4",
-                "label": "A chameleon changes color to blend with its surroundings",
-                "correctBucketId": "physiological"
-              },
-              {
-                "id": "i5",
-                "label": "Birds migrate south to find warmer climates and food",
-                "correctBucketId": "behavioral"
-              },
-              {
-                "id": "i6",
-                "label": "A polar bear has thick fur and a layer of blubber for insulation",
-                "correctBucketId": "structural"
-              }
-            ]
-          }
-        }
-      ],
-      "chunks": [
-        {
-          "id": "biology-101-l05-c1",
-          "title": "What Is an Adaptation?",
-          "kind": "concept",
-          "content": "An adaptation is a special trait that helps an organism survive and reproduce in its environment. These adaptations develop over many generations through a process called natural selection. This means that the traits that are most helpful for survival are passed down from parents to their offspring. Adaptations can take many forms: they can be structural, which means they involve body parts like the long neck of a giraffe that helps it reach high leaves; behavioral, which refers to the actions an organism takes, such as birds migrating to warmer places during winter; or physiological, which involves internal body processes, like how some animals can store fat to survive when food is scarce. Understanding adaptations helps us see how living things change over time to better fit their surroundings and thrive in different environments.\nContext recap: An adaptation is a special trait that helps an organism survive and reproduce in its environment. These adaptations develop over many generations through a process called natural selection. This means that the traits that are most helpful for survival are passed down from parents to their offspring. Adaptations can take many forms: they can be structural, which means they involve body parts like the long neck of a giraffe that helps it reach high leaves; behavioral, which refers to the actions an organism takes, such as birds migrating to warmer places during winter; or physiological, which involves internal body processes, like how some animals can store fat to survive when food is scarce."
-        },
-        {
-          "id": "biology-101-l05-c2",
-          "title": "Environment Shapes Adaptations",
-          "kind": "example",
-          "content": "Let's look at some examples of how different environments shape adaptations in animals. Take the Arctic fox, for instance. It has white fur in winter to blend in with the snow (this is called camouflage), small ears to reduce heat loss, and a thick tail that keeps it warm while sleeping. On the other hand, the desert fox, known as the fennec fox, has sandy-colored fur for camouflage in the desert, large ears that help release excess heat, and it is nocturnal, meaning it is active at night to avoid the daytime heat. Even though these two foxes belong to the same family, their adaptations are completely different because they live in very different environments.\nContext recap: Let's look at some examples of how different environments shape adaptations in animals. Take the Arctic fox, for instance. It has white fur in winter to blend in with the snow (this is called camouflage), small ears to reduce heat loss, and a thick tail that keeps it warm while sleeping. On the other hand, the desert fox, known as the fennec fox, has sandy-colored fur for camouflage in the desert, large ears that help release excess heat, and it is nocturnal, meaning it is active at night to avoid the daytime heat."
-        },
-        {
-          "id": "biology-101-l05-c3",
-          "title": "Darwin's Theory of Natural Selection",
-          "kind": "concept",
-          "content": "In 1859, a scientist named Charles Darwin wrote an important book called The Origin of Species. This book introduced a fascinating idea: all living things, like plants and animals, change over time. This change happens through a process called evolution, where species develop from earlier forms of life. Darwin made some interesting observations about how different individuals in a group of animals or plants can have different traits, or characteristics. For instance, some animals might be faster, stronger, or better at finding food than others. These traits can help them survive better in their environment. For example, an animal that can run quickly might escape from predators, while a plant with deep roots might find water more easily during a drought. This concept is known as 'survival of the fittest.' It means that those who are better suited to their surroundings are more likely to live longer and have babies, passing on their helpful traits to the next generation.\nOver many generations, these beneficial traits become more common in the population. This gradual change can eventually lead to the creation of new species! Although Darwin's ideas were controversial and sparked many discussions, they completely changed how we understand science and the natural world around us. Later on, another scientist named Richard Dawkins built on Darwin's ideas. He suggested that natural selection also happens at the level of genes, which are the tiny units that carry information about traits. Dawkins described living organisms as 'survival machines' that genes create to ensure they can make copies of themselves. This means that genes work together, just like a team, to help each other survive and thrive, much like a group of friends working together to win a race. Understanding these concepts helps us appreciate the amazing diversity of life on our planet and how everything is connected through the process of evolution.\nContext recap: In 1859, a scientist named Charles Darwin wrote an important book called The Origin of Species. This book introduced a fascinating idea: all living things, like plants and animals, change over time. This change happens through a process called evolution, where species develop from earlier forms of life. Darwin made some interesting observations about how different individuals in a group of animals or plants can have different traits, or characteristics.\nWhy this matters: Darwin's Theory of Natural Selection helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "biology-101-l05-f1",
-          "front": "What is natural selection? (Darwin)",
-          "back": "The process by which organisms with traits better suited to their environment survive and reproduce more successfully, causing beneficial traits to become more common over generations. Darwin described it in The Origin of Species (1859)."
-        },
-        {
-          "id": "biology-101-l05-f2",
-          "front": "What does 'survival of the fittest' actually mean?",
-          "back": "Darwin's phrase meaning that organisms best adapted to their environment are more likely to survive and pass on their genes — 'fittest' refers to reproductive success and environmental fit, not physical strength."
-        },
-        {
-          "id": "biology-101-l05-f3",
-          "front": "What is a 'survival machine'? (Dawkins)",
-          "back": "Richard Dawkins's term from The Selfish Gene for any organism. Bodies are vehicles constructed by cooperating genes to navigate the environment, reproduce, and transmit DNA. The organism is disposable; gene copies persist in offspring."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-101-l05-a1",
-          "type": "animation",
-          "title": "Arctic vs Desert Adaptations",
-          "content": "Side-by-side animation comparing an arctic fox and a fennec fox, highlighting how each adaptation matches its environment."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l06",
-      "title": "Checkpoint: Ecosystem Thinking",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-101-l06-q1",
-          "text": "In a food chain, what happens to energy as it moves from producers to top predators?",
-          "skillId": "biology-101-skill-ecosystems",
-          "options": [
-            {
-              "id": "a",
-              "text": "Energy increases at each level"
-            },
-            {
-              "id": "b",
-              "text": "Energy stays the same at each level"
-            },
-            {
-              "id": "c",
-              "text": "About 90% of energy is lost as heat at each level"
-            },
-            {
-              "id": "d",
-              "text": "Energy is created at each level"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "The 10% rule: only about 10% of energy passes from one trophic level to the next. The rest is lost as heat through metabolism."
-        },
-        {
-          "id": "biology-101-l06-q2",
-          "text": "A cactus stores water in its thick stem. What type of adaptation is this?",
-          "skillId": "biology-101-skill-adaptation",
-          "options": [
-            {
-              "id": "a",
-              "text": "Behavioral"
-            },
-            {
-              "id": "b",
-              "text": "Structural"
-            },
-            {
-              "id": "c",
-              "text": "Physiological"
-            },
-            {
-              "id": "d",
-              "text": "Ecological"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "A thick stem is a physical body feature — a structural adaptation — that helps the cactus survive in dry environments."
-        },
-        {
-          "id": "biology-101-l06-q3",
-          "text": "Which organism is a decomposer?",
-          "skillId": "biology-101-skill-ecosystems",
-          "options": [
-            {
-              "id": "a",
-              "text": "Eagle"
-            },
-            {
-              "id": "b",
-              "text": "Grass"
-            },
-            {
-              "id": "c",
-              "text": "Mushroom"
-            },
-            {
-              "id": "d",
-              "text": "Rabbit"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "Mushrooms (fungi) are decomposers. They break down dead organic matter and return nutrients to the soil."
-        },
-        {
-          "id": "biology-101-l06-q4",
-          "text": "Which is an abiotic factor in a forest ecosystem?",
-          "skillId": "biology-101-skill-ecosystems",
-          "options": [
-            {
-              "id": "a",
-              "text": "Oak tree"
-            },
-            {
-              "id": "b",
-              "text": "Sunlight"
-            },
-            {
-              "id": "c",
-              "text": "Earthworm"
-            },
-            {
-              "id": "d",
-              "text": "Bacteria"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Sunlight is nonliving (abiotic). Trees, earthworms, and bacteria are all living (biotic) factors."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l06-ia1",
-          "type": "drag_and_drop",
-          "title": "Build a Food Chain",
-          "description": "Place each organism at the correct trophic level.",
-          "estimatedMinutes": 5,
-          "difficultyLevel": "medium",
-          "data": {
-            "targets": [
-              {
-                "id": "producer",
-                "label": "Producer (Level 1)"
-              },
-              {
-                "id": "primary",
-                "label": "Primary Consumer (Level 2)"
-              },
-              {
-                "id": "secondary",
-                "label": "Secondary Consumer (Level 3)"
-              },
-              {
-                "id": "tertiary",
-                "label": "Tertiary Consumer (Level 4)"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Grass",
-                "correctTargetId": "producer"
-              },
-              {
-                "id": "d2",
-                "label": "Grasshopper",
-                "correctTargetId": "primary"
-              },
-              {
-                "id": "d3",
-                "label": "Frog",
-                "correctTargetId": "secondary"
-              },
-              {
-                "id": "d4",
-                "label": "Hawk",
-                "correctTargetId": "tertiary"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-101-l06-a1",
-          "type": "mnemonic",
-          "title": "Energy Pyramid",
-          "content": "Think of a pyramid: wide at the bottom (lots of producers), narrow at top (few top predators). Energy decreases going up."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l07",
-      "title": "Genetics Basics",
-      "type": "video",
-      "duration": 12,
-      "objectives": [
-        "Describe the structure of DNA",
-        "Explain how traits are inherited from parents to offspring"
-      ],
-      "chunks": [
-        {
-          "id": "biology-101-l07-c1",
-          "title": "DNA: The Blueprint of Life",
-          "kind": "intro",
-          "content": "DNA, which stands for deoxyribonucleic acid, is a fascinating molecule that can be found inside the nucleus of our cells. You can think of DNA as the instruction manual that tells our bodies how to grow, develop, and function. It has a very special shape that looks like a twisted ladder, and scientists refer to this shape as a double helix. If you imagine a ladder, the sides are made of sugar and phosphate, while the 'rungs' of the ladder are made up of pairs of chemical bases. There are four different types of these bases: adenine (A), thymine (T), cytosine (C), and guanine (G). The way these bases are arranged in a specific order creates a code that determines many of our traits, such as our eye color, hair type, and even our height! This means that DNA plays a vital role in passing on characteristics from parents to their children, making it a key part of genetics and biology. Understanding DNA helps us learn more about ourselves and the living world around us.\nContext recap: DNA, which stands for deoxyribonucleic acid, is a fascinating molecule that can be found inside the nucleus of our cells. You can think of DNA as the instruction manual that tells our bodies how to grow, develop, and function. It has a very special shape that looks like a twisted ladder, and scientists refer to this shape as a double helix. If you imagine a ladder, the sides are made of sugar and phosphate, while the 'rungs' of the ladder are made up of pairs of chemical bases.\nWhy this matters: DNA: The Blueprint of Life helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "biology-101-l07-c2",
-          "title": "Genes and Chromosomes",
-          "kind": "concept",
-          "content": "A gene is a special part of our DNA that has the instructions for making a specific protein. This protein plays an important role in determining traits we might have, like our hair color or whether we can roll our tongues. Think of genes as tiny blueprints that tell our bodies how to build different features. These genes are organized on structures called chromosomes, which are like long strands of DNA that hold many genes together. In humans, we have a total of 46 chromosomes, which are grouped into 23 pairs. One chromosome from each pair comes from our mother, and the other comes from our father. This is why we can share some traits with both parents, such as eye color or height, but we are not exactly the same as either one. Additionally, each gene can have different versions called alleles. These alleles can create variations in traits among different people, making each of us unique in our own way.\nContext recap: A gene is a special part of our DNA that has the instructions for making a specific protein. This protein plays an important role in determining traits we might have, like our hair color or whether we can roll our tongues. Think of genes as tiny blueprints that tell our bodies how to build different features. These genes are organized on structures called chromosomes, which are like long strands of DNA that hold many genes together.\nWhy this matters: Genes and Chromosomes helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "biology-101-l07-c3",
-          "title": "Dominant and Recessive Alleles",
-          "kind": "concept",
-          "content": "Genes are like tiny instruction manuals for our bodies, and they can come in different forms called alleles. Think of alleles as different flavors of ice cream! For instance, if you inherit a dominant allele, which we can show with a capital letter (B), and a recessive allele, which we show with a lowercase letter (b), the dominant trait will be the one that you can see in your appearance. This means that if you have one dominant allele and one recessive allele (Bb), you will show the dominant trait. The recessive trait, on the other hand, will only be visible if you have two recessive alleles (bb). A great example of this is eye color: brown eyes (B) are dominant over blue eyes (b). So, if someone has one brown eye allele and one blue eye allele (Bb), they will have brown eyes. Learning about dominant and recessive alleles helps us understand how traits, like eye color, are passed down from parents to their children through generations, making genetics a fascinating part of biology!\nContext recap: Genes are like tiny instruction manuals for our bodies, and they can come in different forms called alleles. Think of alleles as different flavors of ice cream! For instance, if you inherit a dominant allele, which we can show with a capital letter (B), and a recessive allele, which we show with a lowercase letter (b), the dominant trait will be the one that you can see in your appearance. This means that if you have one dominant allele and one recessive allele (Bb), you will show the dominant trait.\nWhy this matters: Dominant and Recessive Alleles helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "biology-101-l07-c4",
-          "title": "Punnett Square Preview",
-          "kind": "example",
-          "content": "Imagine two parents who both have the genotype Bb. This means they have brown eyes, but they also carry a hidden gene for blue eyes. When these parents have children, we can use a special tool called a Punnett square to help us see the different combinations of genes that their children might inherit. The possible combinations are: BB, which means the child will have brown eyes; Bb, which also results in brown eyes; Bb again, which means another child with brown eyes; and finally, bb, which means the child will have blue eyes. If we look at these combinations, we find that there are three chances for brown eyes for every one chance for blue eyes. This gives us a ratio of 3:1, meaning there is a 75% chance that a child will have brown eyes and a 25% chance that they will have blue eyes. The Punnett square is a fantastic way to visualize how traits are passed down from parents to their children, making the study of genetics much easier and more fun to understand!\nContext recap: Imagine two parents who both have the genotype Bb. This means they have brown eyes, but they also carry a hidden gene for blue eyes. When these parents have children, we can use a special tool called a Punnett square to help us see the different combinations of genes that their children might inherit. The possible combinations are: BB, which means the child will have brown eyes; Bb, which also results in brown eyes; Bb again, which means another child with brown eyes; and finally, bb, which means the child will have blue eyes.\nWhy this matters: Punnett Square Preview helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "biology-101-l07-c5",
-          "title": "The Gene's-Eye View of Evolution",
-          "kind": "concept",
-          "content": "In his book, The Selfish Gene, Richard Dawkins shared a fascinating idea about how life evolves. He suggested that genes, which are tiny units of heredity, are the most important players in the process of natural selection, rather than individual organisms or entire species. When he calls genes 'selfish,' he means that they have a tendency to ensure their own survival and make copies of themselves in future generations. It's important to understand that this doesn't mean genes have feelings or thoughts; it's just a way to describe how they behave in nature.\nThink of organisms, like humans or animals, as 'survival machines' that genes create to help themselves continue to exist. Dawkins used a really helpful analogy to explain this idea: imagine a rowing team. Each rower in the boat has their own goal of helping the team win the race, but they must work together to be successful. Similarly, genes within an organism cooperate with each other to help the organism survive and thrive. This teamwork among genes is what allows living things to flourish, even though each gene is primarily focused on its own success.\nThis concept helps us understand the complex relationships in nature, where cooperation and competition among genes play a crucial role in the evolution of life. By studying these interactions, scientists can learn more about how species adapt and change over time, which is a key part of biology and genetics. Understanding the gene's-eye view of evolution opens up a whole new way of looking at life on Earth and the connections between all living things.\nContext recap: In his book, The Selfish Gene, Richard Dawkins shared a fascinating idea about how life evolves. He suggested that genes, which are tiny units of heredity, are the most important players in the process of natural selection, rather than individual organisms or entire species. When he calls genes 'selfish,' he means that they have a tendency to ensure their own survival and make copies of themselves in future generations. It's important to understand that this doesn't mean genes have feelings or thoughts; it's just a way to describe how they behave in nature.\nWhy this matters: The Gene's-Eye View of Evolution helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "biology-101-l07-f1",
-          "front": "What does DNA stand for?",
-          "back": "Deoxyribonucleic acid. It is the molecule that carries genetic instructions in all living organisms."
-        },
-        {
-          "id": "biology-101-l07-f2",
-          "front": "What are the base pairing rules for DNA?",
-          "back": "Adenine (A) pairs with Thymine (T). Cytosine (C) pairs with Guanine (G). Remember: AT and CG."
-        },
-        {
-          "id": "biology-101-l07-f3",
-          "front": "What is the difference between a gene and an allele?",
-          "back": "A gene is a section of DNA coding for a trait. An allele is a specific version of that gene (e.g., brown eye allele vs blue eye allele)."
-        },
-        {
-          "id": "biology-101-l07-f4",
-          "front": "When does a recessive trait appear?",
-          "back": "Only when an organism has two copies of the recessive allele (homozygous recessive, e.g., bb)."
-        },
-        {
-          "id": "biology-101-l07-f5",
-          "front": "What is the gene's-eye view of evolution? (Dawkins)",
-          "back": "The idea from The Selfish Gene that genes — not organisms or species — are the fundamental units of natural selection. Organisms are 'survival machines' built by cooperating genes to propagate copies of themselves across generations."
-        },
-        {
-          "id": "biology-101-l07-f6",
-          "front": "Three properties of a successful replicator (Dawkins)",
-          "back": "1) Copying fidelity — accuracy of replication. 2) Fecundity — speed of replication. 3) Longevity — survival time of each copy. These three properties determine which replicators dominate over evolutionary time."
-        },
-        {
-          "id": "biology-101-l07-f7",
-          "front": "Why do genes cooperate inside an organism? (Dawkins's rowing-team analogy)",
-          "back": "Like rowers in a boat, genes succeed when the whole 'crew' (genome) works together. Selection favours genes that complement each other within the shared body, producing the extraordinary internal cooperation that builds complex organisms."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-101-l07-a1",
-          "type": "practice",
-          "title": "Punnett Square Practice",
-          "content": "Cross Bb × Bb. Draw a 2×2 grid, fill in the alleles, and determine the probability of each genotype and phenotype."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l08",
-      "title": "Biology Lab Reflection",
-      "type": "interactive",
-      "duration": 10,
-      "objectives": [
-        "Connect cell biology, ecology, and genetics concepts",
-        "Identify personal areas for deeper study"
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l08-ia1",
-          "type": "matching_pairs",
-          "title": "Concept Connection",
-          "description": "Match each biology concept to the correct example.",
-          "estimatedMinutes": 7,
-          "difficultyLevel": "easy",
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Photosynthesis"
-              },
-              {
-                "id": "l2",
-                "label": "Natural selection"
-              },
-              {
-                "id": "l3",
-                "label": "Homeostasis"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Plants convert CO₂ and water into glucose using sunlight"
-              },
-              {
-                "id": "r2",
-                "label": "Darker moths survive better on soot-covered trees"
-              },
-              {
-                "id": "r3",
-                "label": "Shivering to raise body temperature when cold"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              }
-            ]
-          }
-        }
-      ],
-      "chunks": [
-        {
-          "id": "biology-101-l08-c1",
-          "title": "Connecting the Big Ideas",
+          "id": "biology-101-l02-c3",
+          "title": "A Perfect Cycle",
           "kind": "recap",
-          "content": "Biology is an exciting field that helps us understand how life works by connecting many important ideas. At the smallest level, cells are like tiny factories that use energy to function. They can get this energy from food through a process called cellular respiration, which is how they break down nutrients. Alternatively, some cells can capture sunlight to create their own energy through a process known as photosynthesis. This is how plants, for example, make their food!\nIn nature, organisms that have special traits or adaptations that help them survive are more likely to live longer and reproduce. This idea is called natural selection, and it explains how species change over time to better fit their environments. The instructions for these adaptations are stored in a molecule called DNA, which is the foundation of genetics. By learning how these concepts are connected, we can gain a deeper appreciation for the beauty and complexity of life, and understand how different living things interact with one another and their surroundings. Biology helps us see the big picture of life on Earth!\nContext recap: Biology is an exciting field that helps us understand how life works by connecting many important ideas. At the smallest level, cells are like tiny factories that use energy to function. They can get this energy from food through a process called cellular respiration, which is how they break down nutrients. Alternatively, some cells can capture sunlight to create their own energy through a process known as photosynthesis.\nWhy this matters: Connecting the Big Ideas helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-101-l08-a1",
-          "type": "mnemonic",
-          "title": "Biology Big Three",
-          "content": "Cells make life possible. Ecosystems organize life. DNA programs life. Everything in biology connects through energy, information, and evolution."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l09",
-      "title": "Review: Biology Concepts",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-101-l09-q1",
-          "text": "In DNA, adenine (A) always pairs with which base?",
-          "skillId": "biology-101-skill-genetics",
-          "options": [
-            {
-              "id": "a",
-              "text": "Cytosine (C)"
-            },
-            {
-              "id": "b",
-              "text": "Guanine (G)"
-            },
-            {
-              "id": "c",
-              "text": "Thymine (T)"
-            },
-            {
-              "id": "d",
-              "text": "Uracil (U)"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "In DNA, Adenine always pairs with Thymine (A-T), and Cytosine always pairs with Guanine (C-G)."
-        },
-        {
-          "id": "biology-101-l09-q2",
-          "text": "What is the role of chloroplasts?",
-          "skillId": "biology-101-skill-cells",
-          "options": [
-            {
-              "id": "a",
-              "text": "Break down food for energy"
-            },
-            {
-              "id": "b",
-              "text": "Store genetic information"
-            },
-            {
-              "id": "c",
-              "text": "Capture sunlight to make glucose through photosynthesis"
-            },
-            {
-              "id": "d",
-              "text": "Build proteins from amino acids"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "Chloroplasts contain chlorophyll, which captures light energy to convert CO₂ and water into glucose (photosynthesis)."
-        },
-        {
-          "id": "biology-101-l09-q3",
-          "text": "If both parents have genotype Bb, what fraction of offspring are expected to show the recessive phenotype?",
-          "skillId": "biology-101-skill-genetics",
-          "options": [
-            {
-              "id": "a",
-              "text": "0 (none)"
-            },
-            {
-              "id": "b",
-              "text": "1/4 (25%)"
-            },
-            {
-              "id": "c",
-              "text": "1/2 (50%)"
-            },
-            {
-              "id": "d",
-              "text": "3/4 (75%)"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Bb × Bb gives BB, Bb, Bb, bb. Only bb (1 out of 4) shows the recessive phenotype = 25%."
-        },
-        {
-          "id": "biology-101-l09-q4",
-          "text": "Which best describes the relationship between a food chain and a food web?",
-          "skillId": "biology-101-skill-ecosystems",
-          "options": [
-            {
-              "id": "a",
-              "text": "A food web is a single feeding pathway"
-            },
-            {
-              "id": "b",
-              "text": "A food chain includes all organisms in an ecosystem"
-            },
-            {
-              "id": "c",
-              "text": "A food web is made of many interconnected food chains"
-            },
-            {
-              "id": "d",
-              "text": "Food chains and food webs are the same thing"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "A food web is a network of interconnected food chains showing the complex feeding relationships in an ecosystem."
+          "content": "Photosynthesis and cellular respiration are like two sides of the same coin. They are opposite processes that form a beautiful cycle. The products of photosynthesis (glucose and oxygen) are the exact inputs needed for cellular respiration. And the products of cellular respiration (carbon dioxide and water) are the inputs for photosynthesis. This cycle connects nearly all life on Earth, with energy flowing from the sun to plants and then to other organisms.",
+          "visualPrompt": "A circular diagram with the sun at the top. Arrows show photosynthesis (CO₂ + H₂O -> O₂ + Glucose) in a plant and respiration (O₂ + Glucose -> CO₂ + H₂O) in an animal, with the outputs of one feeding into the other."
         }
       ],
       "interactiveActivities": [
         {
-          "id": "biology-101-l09-ia1",
+          "id": "biology-101-l02-ia1",
           "type": "sorting_buckets",
-          "title": "Levels of Organization",
-          "description": "Sort each example into the correct level of biological organization.",
+          "title": "Photosynthesis or Respiration?",
+          "description": "Drag each item into the correct category.",
           "estimatedMinutes": 5,
-          "difficultyLevel": "medium",
-          "data": {
-            "buckets": [
-              {
-                "id": "cell",
-                "label": "Cell level"
-              },
-              {
-                "id": "organism",
-                "label": "Organism level"
-              },
-              {
-                "id": "ecosystem",
-                "label": "Ecosystem level"
-              }
-            ],
-            "items": [
-              {
-                "id": "i1",
-                "label": "A white blood cell attacking bacteria",
-                "correctBucketId": "cell"
-              },
-              {
-                "id": "i2",
-                "label": "A fox hunting rabbits in a meadow",
-                "correctBucketId": "ecosystem"
-              },
-              {
-                "id": "i3",
-                "label": "A person maintaining body temperature at 37°C",
-                "correctBucketId": "organism"
-              },
-              {
-                "id": "i4",
-                "label": "Mitochondria producing ATP",
-                "correctBucketId": "cell"
-              },
-              {
-                "id": "i5",
-                "label": "Nutrients cycling through soil, plants, and animals",
-                "correctBucketId": "ecosystem"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              1,
-              2,
-              3
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 1,
-          "medium": 2,
-          "hard": 1
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-101-l09-a1",
-          "type": "mnemonic",
-          "title": "DNA Base Pairs",
-          "content": "AT the CG (At the City Gate): Adenine-Thymine, Cytosine-Guanine."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l10",
-      "title": "Mastery: Biology",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-101-l10-q1",
-          "text": "A population of beetles includes green and brown individuals. Birds eat green beetles more easily against brown bark. Over generations, what happens?",
-          "skillId": "biology-101-skill-adaptation",
-          "options": [
-            {
-              "id": "a",
-              "text": "Green beetles become more common"
-            },
-            {
-              "id": "b",
-              "text": "Brown beetles become more common"
-            },
-            {
-              "id": "c",
-              "text": "Both colors remain equally common"
-            },
-            {
-              "id": "d",
-              "text": "All beetles turn brown"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Natural selection: brown beetles survive and reproduce more (camouflage), so the brown allele increases in frequency over generations."
-        },
-        {
-          "id": "biology-101-l10-q2",
-          "text": "What would happen to an ecosystem if all decomposers were removed?",
-          "skillId": "biology-101-skill-ecosystems",
-          "options": [
-            {
-              "id": "a",
-              "text": "Nothing would change"
-            },
-            {
-              "id": "b",
-              "text": "Dead matter would accumulate and nutrients would not be recycled"
-            },
-            {
-              "id": "c",
-              "text": "Producers would grow faster"
-            },
-            {
-              "id": "d",
-              "text": "Consumers would become decomposers"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Without decomposers, dead organisms and waste would pile up. Essential nutrients would be locked away, and producers would eventually run out of soil nutrients."
-        },
-        {
-          "id": "biology-101-l10-q3",
-          "text": "Which organelle would you find in BOTH a leaf cell and a muscle cell?",
-          "skillId": "biology-101-skill-cells",
-          "options": [
-            {
-              "id": "a",
-              "text": "Chloroplast"
-            },
-            {
-              "id": "b",
-              "text": "Cell wall"
-            },
-            {
-              "id": "c",
-              "text": "Mitochondrion"
-            },
-            {
-              "id": "d",
-              "text": "Central vacuole"
-            }
-          ],
-          "correctOptionId": "c",
-          "explanation": "Both plant and animal cells have mitochondria for cellular respiration. Chloroplasts, cell walls, and large central vacuoles are plant-only."
-        },
-        {
-          "id": "biology-101-l10-q4",
-          "text": "How many chromosomes does a human body cell contain?",
-          "skillId": "biology-101-skill-genetics",
-          "options": [
-            {
-              "id": "a",
-              "text": "23"
-            },
-            {
-              "id": "b",
-              "text": "46"
-            },
-            {
-              "id": "c",
-              "text": "44"
-            },
-            {
-              "id": "d",
-              "text": "92"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Human body cells have 46 chromosomes (23 pairs). Sex cells (sperm/egg) have 23 — half the full set."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l10-ia1",
-          "type": "matching_pairs",
-          "title": "Organelle Function Match",
-          "description": "Match each organelle to its function.",
-          "estimatedMinutes": 5,
-          "difficultyLevel": "medium",
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Ribosome"
-              },
-              {
-                "id": "l2",
-                "label": "Golgi apparatus"
-              },
-              {
-                "id": "l3",
-                "label": "Endoplasmic reticulum"
-              },
-              {
-                "id": "l4",
-                "label": "Cell membrane"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "Builds proteins from amino acids"
-              },
-              {
-                "id": "r2",
-                "label": "Packages and ships proteins out of the cell"
-              },
-              {
-                "id": "r3",
-                "label": "Network that transports materials within the cell"
-              },
-              {
-                "id": "r4",
-                "label": "Controls what enters and exits the cell"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              },
-              {
-                "leftId": "l4",
-                "rightId": "r4"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              2,
-              3,
-              4
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 0,
-          "medium": 2,
-          "hard": 2
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-101-l10-a1",
-          "type": "mnemonic",
-          "title": "Natural Selection Steps",
-          "content": "VISA: Variation exists → Individuals compete → Selection by environment → Adaptation spreads."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l11",
-      "title": "Applied Biology Challenge Studio",
-      "type": "interactive",
-      "duration": 14,
-      "objectives": [
-        "Apply knowledge of cells, ecosystems, and genetics to novel scenarios",
-        "Analyze cause-and-effect relationships in biological systems"
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l11-ia1",
-          "type": "sorting_buckets",
-          "title": "Photosynthesis vs Cellular Respiration",
-          "description": "Sort each statement into the correct process.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
+          "difficultyLevel": "easy",
           "data": {
             "buckets": [
               {
@@ -1355,386 +136,139 @@ export const Biology101Module: LearningModule = {
                 "label": "Photosynthesis"
               },
               {
-                "id": "respiration",
+                "id": "resp",
                 "label": "Cellular Respiration"
               },
               {
                 "id": "both",
-                "label": "Both processes"
+                "label": "Both"
               }
             ],
             "items": [
               {
                 "id": "i1",
-                "label": "Uses sunlight as energy source",
+                "label": "Occurs in chloroplasts",
                 "correctBucketId": "photo"
               },
               {
                 "id": "i2",
-                "label": "Produces ATP for the cell",
-                "correctBucketId": "respiration"
+                "label": "Occurs in mitochondria",
+                "correctBucketId": "resp"
               },
               {
                 "id": "i3",
-                "label": "Takes in CO₂ and releases O₂",
+                "label": "Produces glucose",
                 "correctBucketId": "photo"
               },
               {
                 "id": "i4",
-                "label": "Takes in O₂ and releases CO₂",
-                "correctBucketId": "respiration"
+                "label": "Breaks down glucose",
+                "correctBucketId": "resp"
               },
               {
                 "id": "i5",
-                "label": "Occurs in living cells",
-                "correctBucketId": "both"
+                "label": "Releases oxygen",
+                "correctBucketId": "photo"
               },
               {
                 "id": "i6",
-                "label": "Involves chemical energy transformations",
+                "label": "Uses oxygen",
+                "correctBucketId": "resp"
+              },
+              {
+                "id": "i7",
+                "label": "Performed by plants",
                 "correctBucketId": "both"
               }
             ]
           }
         }
-      ],
-      "chunks": [
-        {
-          "id": "biology-101-l11-c1",
-          "title": "Two Sides of the Energy Coin",
-          "kind": "concept",
-          "content": "Photosynthesis and cellular respiration are two amazing processes that work together like two sides of a coin, helping to sustain life on Earth. Let's start with photosynthesis! During this process, plants act like little factories. They take in carbon dioxide (CO₂) from the air, water (H₂O) from the ground, and sunlight, which is their energy source. Using these ingredients, plants produce glucose, which is a type of sugar that they use for food, and oxygen (O₂), which they release into the air. Now, let's talk about cellular respiration. This process is like the opposite of photosynthesis. It happens in the cells of animals and plants. Here, glucose and oxygen are used to create energy in the form of ATP, along with carbon dioxide and water as byproducts. The oxygen that plants release is essential for animals to breathe, while the carbon dioxide that animals exhale is what plants need to grow. This creates a beautiful cycle of life where both plants and animals depend on each other for survival, showing how interconnected all living things are in nature.\nContext recap: Photosynthesis and cellular respiration are two amazing processes that work together like two sides of a coin, helping to sustain life on Earth. Let's start with photosynthesis! During this process, plants act like little factories. They take in carbon dioxide (CO₂) from the air, water (H₂O) from the ground, and sunlight, which is their energy source.\nWhy this matters: Two Sides of the Energy Coin helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-101-l11-a1",
-          "type": "practice",
-          "title": "Cycle Diagram",
-          "content": "Draw a diagram showing the inputs and outputs of photosynthesis and cellular respiration, with arrows showing how the products of one process become the reactants of the other."
-        }
       ]
     },
     {
-      "id": "biology-101-l12",
-      "title": "Biology Mastery Applied Retest",
-      "type": "quiz",
-      "duration": 10,
-      "questions": [
-        {
-          "id": "biology-101-l12-q1",
-          "text": "Which is the correct word equation for photosynthesis?",
-          "skillId": "biology-101-skill-cells",
-          "options": [
-            {
-              "id": "a",
-              "text": "Glucose + Oxygen → Carbon dioxide + Water + Energy"
-            },
-            {
-              "id": "b",
-              "text": "Carbon dioxide + Water + Light → Glucose + Oxygen"
-            },
-            {
-              "id": "c",
-              "text": "Glucose + Water → Carbon dioxide + Oxygen + Energy"
-            },
-            {
-              "id": "d",
-              "text": "Oxygen + Glucose + Light → Carbon dioxide + Water"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Photosynthesis: CO₂ + H₂O + light energy → C₆H₁₂O₆ (glucose) + O₂."
-        },
-        {
-          "id": "biology-101-l12-q2",
-          "text": "A Punnett square for Bb × bb gives which offspring ratios?",
-          "skillId": "biology-101-skill-genetics",
-          "options": [
-            {
-              "id": "a",
-              "text": "All Bb"
-            },
-            {
-              "id": "b",
-              "text": "50% Bb, 50% bb"
-            },
-            {
-              "id": "c",
-              "text": "75% Bb, 25% bb"
-            },
-            {
-              "id": "d",
-              "text": "25% Bb, 75% bb"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Bb × bb: Bb, Bb, bb, bb → 50% Bb (dominant phenotype), 50% bb (recessive phenotype)."
-        },
-        {
-          "id": "biology-101-l12-q3",
-          "text": "An invasive plant species blocks sunlight from reaching native plants. What is the most likely first effect on the ecosystem?",
-          "skillId": "biology-101-skill-ecosystems",
-          "options": [
-            {
-              "id": "a",
-              "text": "Top predators immediately decline"
-            },
-            {
-              "id": "b",
-              "text": "Native plant populations decline, reducing food for herbivores"
-            },
-            {
-              "id": "c",
-              "text": "Decomposers stop functioning"
-            },
-            {
-              "id": "d",
-              "text": "Water temperature increases"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Blocking sunlight reduces photosynthesis in native plants. As producer populations decline, herbivores that depend on them are affected next (bottom-up cascade)."
-        },
-        {
-          "id": "biology-101-l12-q4",
-          "text": "Which process converts glucose into usable energy (ATP) in both plant and animal cells?",
-          "skillId": "biology-101-skill-cells",
-          "options": [
-            {
-              "id": "a",
-              "text": "Photosynthesis"
-            },
-            {
-              "id": "b",
-              "text": "Cellular respiration"
-            },
-            {
-              "id": "c",
-              "text": "Fermentation only"
-            },
-            {
-              "id": "d",
-              "text": "Protein synthesis"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Cellular respiration occurs in both plant and animal cells, converting glucose + oxygen into ATP, CO₂, and water."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l12-ia1",
-          "type": "matching_pairs",
-          "title": "Vocabulary Precision",
-          "description": "Match each biology term to its precise definition.",
-          "estimatedMinutes": 5,
-          "difficultyLevel": "medium",
-          "data": {
-            "left": [
-              {
-                "id": "l1",
-                "label": "Gene"
-              },
-              {
-                "id": "l2",
-                "label": "Allele"
-              },
-              {
-                "id": "l3",
-                "label": "Chromosome"
-              }
-            ],
-            "right": [
-              {
-                "id": "r1",
-                "label": "A segment of DNA that codes for a specific trait"
-              },
-              {
-                "id": "r2",
-                "label": "A specific version of a gene (e.g., blue vs brown eye)"
-              },
-              {
-                "id": "r3",
-                "label": "A long strand of DNA coiled around proteins, carrying many genes"
-              }
-            ],
-            "pairs": [
-              {
-                "leftId": "l1",
-                "rightId": "r1"
-              },
-              {
-                "leftId": "l2",
-                "rightId": "r2"
-              },
-              {
-                "leftId": "l3",
-                "rightId": "r3"
-              }
-            ]
-          }
-        }
-      ],
-      "quizBlueprint": {
-        "frequency": "lesson_assessment",
-        "questionsPerCheck": 4,
-        "totalQuestions": 4,
-        "timeLimitMinutes": 10,
-        "questionTypes": [
-          {
-            "type": "mcq_single",
-            "count": 4,
-            "pointsEach": 1,
-            "bloomsLevels": [
-              2,
-              3,
-              4
-            ]
-          }
-        ],
-        "difficultyDistribution": {
-          "easy": 0,
-          "medium": 2,
-          "hard": 2
-        },
-        "feedbackMode": "after_submit",
-        "adaptive": false,
-        "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-101-l12-a1",
-          "type": "mnemonic",
-          "title": "Photo vs Respiration",
-          "content": "Photo = building (stores energy in glucose). Respiration = burning (releases energy from glucose as ATP)."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l13",
-      "title": "Biology Scenario Lab",
-      "type": "video",
+      "id": "biology-101-l03",
+      "title": "Body Systems and Homeostasis",
+      "type": "interactive",
       "duration": 12,
       "objectives": [
-        "Apply biology concepts to a real-world conservation scenario",
-        "Evaluate evidence and propose solutions"
+        "Identify major human body systems and their primary functions.",
+        "Define homeostasis and explain its importance.",
+        "Describe how different body systems interact to maintain homeostasis."
       ],
       "chunks": [
         {
-          "id": "biology-101-l13-c1",
-          "title": "The Coral Reef Crisis",
+          "id": "biology-101-l03-c1",
+          "title": "A Team of Systems",
           "kind": "intro",
-          "content": "Coral reefs are amazing underwater ecosystems that play a crucial role in our oceans. They are home to about 25% of all marine species, which means many fish, sea turtles, and other creatures depend on them for shelter and food. Unfortunately, coral reefs are facing serious problems and are declining in many parts of the world. One of the biggest threats to these reefs is the rising temperature of ocean waters. When the water gets too warm, corals become stressed and can undergo a process known as coral bleaching. During this process, corals expel tiny algae called zooxanthellae that live inside them. These algae are very important because they provide food and give corals their beautiful colors. Without these algae, corals can starve and lose their vibrant hues, turning white instead. The decline of coral reefs can have a big impact on marine life and the overall health of our oceans, making it essential for us to protect these vital ecosystems.\nContext recap: Coral reefs are amazing underwater ecosystems that play a crucial role in our oceans. They are home to about 25% of all marine species, which means many fish, sea turtles, and other creatures depend on them for shelter and food. Unfortunately, coral reefs are facing serious problems and are declining in many parts of the world. One of the biggest threats to these reefs is the rising temperature of ocean waters.\nWhy this matters: The Coral Reef Crisis helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Your body is an incredible machine made of many organ systems, each with a specialized job. The respiratory system brings in oxygen, the digestive system absorbs nutrients, the circulatory system transports them to your cells, and the nervous system coordinates everything. None of these systems work alone. They are all part of a highly coordinated team dedicated to one main goal: keeping you alive and healthy.",
+          "visualPrompt": "An animated human figure with different systems (circulatory, respiratory, digestive, nervous) lighting up in sequence, showing their interconnectedness."
         },
         {
-          "id": "biology-101-l13-c2",
-          "title": "Ecosystem Connections",
+          "id": "biology-101-l03-c2",
+          "title": "Keeping the Balance: Homeostasis",
           "kind": "concept",
-          "content": "Coral reefs are often called the underwater rainforests of the ocean because they are filled with a wide variety of plants and animals. These beautiful ecosystems are not just pretty to look at; they play a crucial role in the ocean's health. Corals, which are tiny animals, have a special relationship with photosynthetic algae. These algae live inside the corals and help them produce food through a process called photosynthesis, where they use sunlight to create energy. In this vibrant community, small fish eat the algae, while larger fish hunt the smaller fish. At the very top of this food chain are powerful predators like sharks and rays. However, if corals face threats such as pollution or climate change and start to die, it can lead to a collapse of the entire food web. This collapse can have serious effects on fisheries, which provide food for many people, coastal protection from storms, and tourism that supports local economies. Millions of people depend on healthy coral reefs for their livelihoods, making it essential to protect these vital ecosystems.\nContext recap: Coral reefs are often called the underwater rainforests of the ocean because they are filled with a wide variety of plants and animals. These beautiful ecosystems are not just pretty to look at; they play a crucial role in the ocean's health. Corals, which are tiny animals, have a special relationship with photosynthetic algae. These algae live inside the corals and help them produce food through a process called photosynthesis, where they use sunlight to create energy.\nWhy this matters: Ecosystem Connections helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "Homeostasis is the body's ability to maintain a stable, constant internal environment, no matter what's happening outside. Think of it like the thermostat in your house. If it gets too cold, the heat kicks on. If it gets too hot, the air conditioning starts. Your body does the same thing to regulate temperature, blood sugar, water levels, and more. This balance is crucial for your cells to function properly.",
+          "visualPrompt": "A split-screen animation: on one side, a thermostat maintaining room temperature; on the other, a person shivering in the cold and sweating in the heat to maintain a body temperature of 37°C."
         },
         {
-          "id": "biology-101-l13-c3",
-          "title": "Adaptation Under Pressure",
+          "id": "biology-101-l03-c3",
+          "title": "Homeostasis in Action: Exercise",
           "kind": "example",
-          "content": "In warmer parts of the ocean, some corals have learned to adapt by developing the ability to withstand higher temperatures. This amazing change is known as adaptation. Scientists are now exploring a fascinating question: can they take genes from these heat-tolerant corals and introduce them into other coral populations that are struggling to survive in warmer waters? This research is really important because it combines the study of genetics with conservation efforts. By helping to protect coral reefs from the harmful effects of climate change, we can work towards ensuring that these beautiful underwater ecosystems thrive for many years to come, benefiting both marine life and people who rely on them.\nContext recap: In warmer parts of the ocean, some corals have learned to adapt by developing the ability to withstand higher temperatures. This amazing change is known as adaptation. Scientists are now exploring a fascinating question: can they take genes from these heat-tolerant corals and introduce them into other coral populations that are struggling to survive in warmer waters? This research is really important because it combines the study of genetics with conservation efforts.\nWhy this matters: Adaptation Under Pressure helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
-        },
-        {
-          "id": "biology-101-l13-c4",
-          "title": "What Can Be Done?",
-          "kind": "practice",
-          "content": "There are several actions we can take to help protect coral reefs and combat climate change. For example, reducing carbon dioxide (CO₂) emissions can help slow down the warming of our oceans. Establishing marine protected areas can reduce other stressors that corals face. Additionally, coral gardening programs aim to regrow damaged reefs by nurturing young corals. When considering these approaches, it's important to think about which ones address the root causes of the problems and which ones only treat the symptoms. Understanding how these strategies can work together is crucial for effective conservation efforts.\nContext recap: There are several actions we can take to help protect coral reefs and combat climate change. For example, reducing carbon dioxide (CO₂) emissions can help slow down the warming of our oceans. Establishing marine protected areas can reduce other stressors that corals face. Additionally, coral gardening programs aim to regrow damaged reefs by nurturing young corals.\nWhy this matters: What Can Be Done? helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical."
+          "content": "When you exercise, your body systems leap into action together. Your muscular system needs more energy, so your cells increase respiration. This requires more oxygen, so your respiratory system makes you breathe faster. Your circulatory system's heart pumps faster to deliver that oxygen and remove carbon dioxide. Your nervous system coordinates all these changes, and your endocrine system releases hormones like adrenaline. It's a perfect example of systems cooperating to maintain homeostasis under stress.",
+          "visualPrompt": "An animation of a person running on a treadmill. Icons appear showing the heart beating faster, lungs breathing deeper, and signals firing from the brain to the muscles."
         }
-      ],
-      "flashcards": [
-        {
-          "id": "biology-101-l13-f1",
-          "front": "What is coral bleaching?",
-          "back": "When stressed by warm water, corals expel symbiotic algae, losing their color and food source. Prolonged bleaching kills the coral."
-        },
-        {
-          "id": "biology-101-l13-f2",
-          "front": "Why are coral reefs called 'rainforests of the sea'?",
-          "back": "They support enormous biodiversity — about 25% of all marine species — despite covering less than 1% of the ocean floor."
-        },
-        {
-          "id": "biology-101-l13-f3",
-          "front": "How does genetics help coral conservation?",
-          "back": "Scientists study heat-tolerant coral varieties and explore assisted gene flow to help vulnerable reefs survive warming waters."
-        },
-        {
-          "id": "biology-101-l13-f4",
-          "front": "What is a keystone species?",
-          "back": "A species whose removal causes major changes to the ecosystem. Corals are keystone species in reef ecosystems."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-101-l13-a1",
-          "type": "image",
-          "title": "Healthy vs Bleached Reef",
-          "content": "Comparison photo showing a vibrant, colorful coral reef alongside a bleached, white reef of the same species."
-        },
-        {
-          "id": "biology-101-l13-a2",
-          "type": "practice",
-          "title": "Conservation Proposal",
-          "content": "Choose one reef conservation strategy. Explain how it connects to at least two biology concepts (ecosystems, cells, genetics, or adaptation)."
-        }
-      ]
-    },
-    {
-      "id": "biology-101-l14",
-      "title": "Biology Coaching Clinic",
-      "type": "interactive",
-      "duration": 13,
-      "objectives": [
-        "Identify personal gaps in biology understanding",
-        "Apply targeted review strategies"
       ],
       "interactiveActivities": [
         {
-          "id": "biology-101-l14-ia1",
+          "id": "biology-101-l03-ia1",
           "type": "matching_pairs",
-          "title": "Misconception Buster",
-          "description": "Match each common biology misconception to the correct scientific understanding.",
-          "estimatedMinutes": 8,
-          "difficultyLevel": "medium",
+          "title": "Match the System to its Function",
+          "description": "Match each body system to its primary role.",
+          "estimatedMinutes": 7,
+          "difficultyLevel": "easy",
           "data": {
             "left": [
               {
                 "id": "l1",
-                "label": "Misconception: Plants get their food from the soil"
+                "label": "Circulatory System"
               },
               {
                 "id": "l2",
-                "label": "Misconception: Evolution means an individual organism changes"
+                "label": "Nervous System"
               },
               {
                 "id": "l3",
-                "label": "Misconception: Dominant alleles are always more common"
+                "label": "Digestive System"
               },
               {
                 "id": "l4",
-                "label": "Misconception: Humans are at the 'top' of evolution"
+                "label": "Respiratory System"
+              },
+              {
+                "id": "l5",
+                "label": "Skeletal System"
               }
             ],
             "right": [
               {
                 "id": "r1",
-                "label": "Plants make glucose from CO₂ and water using sunlight (photosynthesis)"
+                "label": "Transports oxygen, nutrients, and waste via the blood"
               },
               {
                 "id": "r2",
-                "label": "Populations evolve over generations, not individual organisms"
+                "label": "Control center; sends and receives electrical signals"
               },
               {
                 "id": "r3",
-                "label": "Dominant/recessive describes expression, not frequency in a population"
+                "label": "Breaks down food into absorbable nutrients"
               },
               {
                 "id": "r4",
-                "label": "Evolution has no goal or direction; all living species are equally evolved"
+                "label": "Exchanges gases (oxygen and carbon dioxide) with the air"
+              },
+              {
+                "id": "r5",
+                "label": "Provides structure, support, and protection"
               }
             ],
             "pairs": [
@@ -1753,185 +287,121 @@ export const Biology101Module: LearningModule = {
               {
                 "leftId": "l4",
                 "rightId": "r4"
+              },
+              {
+                "leftId": "l5",
+                "rightId": "r5"
               }
             ]
           }
-        }
-      ],
-      "chunks": [
-        {
-          "id": "biology-101-l14-c1",
-          "title": "Common Biology Mistakes",
-          "kind": "recap",
-          "content": "In our exploration of biology, it's important to recognize some common misunderstandings that many students face. Here are a few key points to keep in mind: 1) Photosynthesis and respiration are two different processes. Photosynthesis is how plants make their food using sunlight, while respiration is how they use that food for energy. 2) Evolution happens over long periods of time in populations, not in individual organisms. 3) Genes, alleles, and chromosomes are related but distinct concepts; genes are segments of DNA, alleles are different versions of a gene, and chromosomes are structures that contain genes. 4) Remember that plants also perform cellular respiration, which means they break down food for energy, just like animals do, in addition to making their own food through photosynthesis. By identifying any misconceptions you might have, you can quickly work towards understanding these concepts more clearly.\nContext recap: In our exploration of biology, it's important to recognize some common misunderstandings that many students face. Here are a few key points to keep in mind: 1) Photosynthesis and respiration are two different processes. Photosynthesis is how plants make their food using sunlight, while respiration is how they use that food for energy. 2) Evolution happens over long periods of time in populations, not in individual organisms.\nWhy this matters: Common Biology Mistakes helps learners in Biology connect ideas from Biology Essentials to decisions they make during practice and assessment. Keep the explanation friendly and practical.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        }
-      ],
-      "learningAids": [
-        {
-          "id": "biology-101-l14-a1",
-          "type": "mnemonic",
-          "title": "Fix Your Gap",
-          "content": "Draw two columns: 'What I thought' and 'What is actually true.' Fill in one row for each unit (cells, ecosystems, genetics). This simple exercise clears up the most persistent errors."
         }
       ]
     },
     {
-      "id": "biology-101-l15",
-      "title": "Biology Mastery Sprint",
+      "id": "biology-101-l04",
+      "title": "Checkpoint 1: Cells and Systems",
       "type": "quiz",
       "duration": 10,
       "questions": [
         {
-          "id": "biology-101-l15-q1",
-          "text": "Which statement about photosynthesis and cellular respiration is correct?",
+          "id": "biology-101-l04-q1",
+          "text": "Which organelle is the site of photosynthesis?",
           "skillId": "biology-101-skill-cells",
           "options": [
             {
               "id": "a",
-              "text": "Only animals perform cellular respiration"
+              "text": "Mitochondrion"
             },
             {
               "id": "b",
-              "text": "Photosynthesis and respiration are opposite processes that cycle energy and matter"
+              "text": "Nucleus"
             },
             {
               "id": "c",
-              "text": "Photosynthesis releases ATP directly to the cell"
+              "text": "Chloroplast"
             },
             {
               "id": "d",
-              "text": "Cellular respiration requires sunlight"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Photosynthesis stores energy in glucose; respiration releases it. Their inputs/outputs are complementary, cycling CO₂, O₂, and glucose."
-        },
-        {
-          "id": "biology-101-l15-q2",
-          "text": "Peppered moths in England became darker during the Industrial Revolution because soot darkened tree bark. This is an example of:",
-          "skillId": "biology-101-skill-adaptation",
-          "options": [
-            {
-              "id": "a",
-              "text": "Genetic engineering"
-            },
-            {
-              "id": "b",
-              "text": "Natural selection"
-            },
-            {
-              "id": "c",
-              "text": "Artificial selection"
-            },
-            {
-              "id": "d",
-              "text": "Mutation only"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Dark moths were better camouflaged on sooty trees, so predators ate more light-colored moths. The dark allele increased in frequency — natural selection."
-        },
-        {
-          "id": "biology-101-l15-q3",
-          "text": "If removing one species causes the collapse of an entire community, that species is called a:",
-          "skillId": "biology-101-skill-ecosystems",
-          "options": [
-            {
-              "id": "a",
-              "text": "Pioneer species"
-            },
-            {
-              "id": "b",
-              "text": "Invasive species"
-            },
-            {
-              "id": "c",
-              "text": "Keystone species"
-            },
-            {
-              "id": "d",
-              "text": "Indicator species"
+              "text": "Ribosome"
             }
           ],
           "correctOptionId": "c",
-          "explanation": "A keystone species has a disproportionately large effect on its ecosystem relative to its abundance. Removing it causes major changes."
+          "explanation": "Chloroplasts, found in plant cells, contain chlorophyll and are where photosynthesis occurs."
         },
         {
-          "id": "biology-101-l15-q4",
-          "text": "A cell needs to produce a specific protein. The correct sequence of information flow is:",
-          "skillId": "biology-101-skill-genetics",
+          "id": "biology-101-l04-q2",
+          "text": "What are the main products of cellular respiration?",
+          "skillId": "biology-101-skill-cells",
           "options": [
             {
               "id": "a",
-              "text": "Protein → RNA → DNA"
+              "text": "Glucose and Oxygen"
             },
             {
               "id": "b",
-              "text": "DNA → Protein → RNA"
+              "text": "Carbon Dioxide, Water, and ATP"
             },
             {
               "id": "c",
-              "text": "DNA → RNA → Protein"
+              "text": "Sunlight and Water"
             },
             {
               "id": "d",
-              "text": "RNA → DNA → Protein"
+              "text": "Oxygen and ATP"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Cellular respiration breaks down glucose using oxygen to produce usable energy (ATP), with carbon dioxide and water as waste products."
+        },
+        {
+          "id": "biology-101-l04-q3",
+          "text": "Shivering when you are cold is an example of your body trying to maintain...",
+          "skillId": "biology-101-skill-systems",
+          "options": [
+            {
+              "id": "a",
+              "text": "Photosynthesis"
+            },
+            {
+              "id": "b",
+              "text": "Homeostasis"
+            },
+            {
+              "id": "c",
+              "text": "Respiration"
+            },
+            {
+              "id": "d",
+              "text": "Organization"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Shivering is a mechanism to generate heat and raise body temperature, which is an example of maintaining homeostasis (a stable internal state)."
+        },
+        {
+          "id": "biology-101-l04-q4",
+          "text": "Which level of organization is correctly ordered from simplest to most complex?",
+          "skillId": "biology-101-skill-systems",
+          "options": [
+            {
+              "id": "a",
+              "text": "Organ -> Tissue -> Cell -> Organ System"
+            },
+            {
+              "id": "b",
+              "text": "Cell -> Organ -> Tissue -> Organ System"
+            },
+            {
+              "id": "c",
+              "text": "Cell -> Tissue -> Organ -> Organ System"
+            },
+            {
+              "id": "d",
+              "text": "Tissue -> Cell -> Organ System -> Organ"
             }
           ],
           "correctOptionId": "c",
-          "explanation": "The central dogma of biology: DNA is transcribed into RNA, which is translated into protein. DNA → RNA → Protein."
-        }
-      ],
-      "interactiveActivities": [
-        {
-          "id": "biology-101-l15-ia1",
-          "type": "drag_and_drop",
-          "title": "Energy Flow Order",
-          "description": "Arrange the trophic levels in order of decreasing energy.",
-          "estimatedMinutes": 4,
-          "difficultyLevel": "easy",
-          "data": {
-            "targets": [
-              {
-                "id": "most",
-                "label": "Most Energy"
-              },
-              {
-                "id": "second",
-                "label": "Second Most"
-              },
-              {
-                "id": "third",
-                "label": "Third Most"
-              },
-              {
-                "id": "least",
-                "label": "Least Energy"
-              }
-            ],
-            "draggables": [
-              {
-                "id": "d1",
-                "label": "Producers (plants)",
-                "correctTargetId": "most"
-              },
-              {
-                "id": "d2",
-                "label": "Primary consumers (herbivores)",
-                "correctTargetId": "second"
-              },
-              {
-                "id": "d3",
-                "label": "Secondary consumers (small carnivores)",
-                "correctTargetId": "third"
-              },
-              {
-                "id": "d4",
-                "label": "Tertiary consumers (top predators)",
-                "correctTargetId": "least"
-              }
-            ]
-          }
+          "explanation": "The correct biological hierarchy is: Cells form Tissues, Tissues form Organs, and Organs form Organ Systems."
         }
       ],
       "quizBlueprint": {
@@ -1939,6 +409,729 @@ export const Biology101Module: LearningModule = {
         "questionsPerCheck": 4,
         "totalQuestions": 4,
         "timeLimitMinutes": 10,
+        "questionTypes": [
+          {
+            "type": "mcq_single",
+            "count": 4,
+            "pointsEach": 1,
+            "bloomsLevels": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "difficultyDistribution": {
+          "easy": 1,
+          "medium": 2,
+          "hard": 1
+        },
+        "feedbackMode": "after_submit",
+        "adaptive": false,
+        "masteryThreshold": 0.75
+      }
+    },
+    {
+      "id": "biology-101-l05",
+      "title": "Ecosystems and Energy Flow",
+      "type": "video",
+      "duration": 11,
+      "objectives": [
+        "Distinguish between biotic and abiotic factors in an ecosystem.",
+        "Describe how energy flows through a food chain.",
+        "Explain the difference between a food chain and a food web."
+      ],
+      "chunks": [
+        {
+          "id": "biology-101-l05-c1",
+          "title": "What is an Ecosystem?",
+          "kind": "intro",
+          "content": "An ecosystem is a community of living organisms (biotic factors) interacting with their non-living environment (abiotic factors). Think of a forest: the trees, animals, and bacteria are biotic. The sunlight, water, soil, and temperature are abiotic. Ecology is the study of how all these parts work together in a delicate balance.",
+          "visualPrompt": "A vibrant illustration of a pond ecosystem, with labels pointing to biotic factors (fish, frogs, plants) and abiotic factors (sunlight, water, rocks)."
+        },
+        {
+          "id": "biology-101-l05-c2",
+          "title": "The Flow of Energy",
+          "kind": "concept",
+          "content": "Energy in most ecosystems starts with the sun. Producers, like plants, capture this energy through photosynthesis. When a primary consumer (an herbivore like a rabbit) eats the plant, it gets some of that energy. When a secondary consumer (a carnivore like a fox) eats the rabbit, the energy is transferred again. This one-way path is called a food chain.",
+          "visualPrompt": "A simple animated food chain: Sun -> Grass -> Grasshopper -> Frog -> Snake."
+        },
+        {
+          "id": "biology-101-l05-c3",
+          "title": "The 10% Rule",
+          "kind": "concept",
+          "content": "As energy moves up the food chain, a lot of it is lost. Organisms use most of the energy they consume for their own life processes, like moving and keeping warm. Only about 10% of the energy from one level is stored and passed on to the next. This is why there are far more producers than top predators in an ecosystem. This concept is often shown as an energy pyramid.",
+          "visualPrompt": "An energy pyramid diagram. The bottom layer (Producers) is large (100% energy), the next layer (Primary Consumers) is smaller (10% energy), and so on to the top."
+        },
+        {
+          "id": "biology-101-l05-c4",
+          "title": "Food Webs: The Real Picture",
+          "kind": "concept",
+          "content": "In reality, nature is more complex than a simple chain. Most animals eat more than one type of food. A food web shows all the interconnected food chains in an ecosystem. It gives a much more realistic picture of how energy and matter move through the community and how the organisms depend on one another.",
+          "visualPrompt": "An animated diagram showing several simple food chains (e.g., grass-rabbit-fox, seeds-mouse-owl) gradually connecting with arrows to form a complex forest food web."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "biology-101-l05-f1",
+          "front": "What is the difference between biotic and abiotic factors?",
+          "back": "Biotic factors are the living or once-living parts of an ecosystem (e.g., plants, animals). Abiotic factors are the non-living parts (e.g., sunlight, water, temperature)."
+        },
+        {
+          "id": "biology-101-l05-f2",
+          "front": "What is a producer?",
+          "back": "An organism, usually a plant, that produces its own food using an external energy source, typically sunlight through photosynthesis."
+        },
+        {
+          "id": "biology-101-l05-f3",
+          "front": "What is the role of decomposers?",
+          "back": "Organisms like bacteria and fungi that break down dead organic matter, returning essential nutrients to the soil for producers to use."
+        }
+      ]
+    },
+    {
+      "id": "biology-101-l06",
+      "title": "Adaptation and Natural Selection",
+      "type": "interactive",
+      "duration": 13,
+      "objectives": [
+        "Define adaptation and provide examples of different types.",
+        "Explain Charles Darwin's theory of natural selection.",
+        "Describe how environmental pressures lead to adaptation."
+      ],
+      "chunks": [
+        {
+          "id": "biology-101-l06-c1",
+          "title": "What is an Adaptation?",
+          "kind": "concept",
+          "content": "An adaptation is any inherited trait that helps an organism survive and reproduce in its environment. These can be structural (a physical feature, like a bird's beak), behavioral (an action, like migration), or physiological (an internal process, like making venom). Adaptations are the result of a long, slow process of change over many generations.",
+          "visualPrompt": "A triptych of images showing a structural adaptation (camel's hump), a behavioral adaptation (geese migrating), and a physiological adaptation (chameleon changing color)."
+        },
+        {
+          "id": "biology-101-l06-c2",
+          "title": "Darwin and Natural Selection",
+          "kind": "concept",
+          "content": "Charles Darwin proposed the theory of evolution by natural selection. He observed that there is variation within any population—individuals are not identical. He also knew that organisms produce more offspring than can survive, leading to a 'struggle for existence.' His key insight was that individuals with traits better suited to their environment are more likely to survive, reproduce, and pass those helpful traits to their offspring.",
+          "visualPrompt": "An animated portrait of Charles Darwin, with icons representing his key observations: variation (different colored beetles), overproduction (many eggs), and survival (a bird eating one color of beetle)."
+        },
+        {
+          "id": "biology-101-l06-c3",
+          "title": "Survival of the Fittest",
+          "kind": "example",
+          "content": "This famous phrase doesn't mean the strongest or fastest. 'Fittest' means how well an organism is adapted to its specific environment. A classic example is the peppered moth. Before the Industrial Revolution, light-colored moths blended in with tree bark. When pollution darkened the trees, dark-colored moths had better camouflage and survived to reproduce more often. Over time, the population became mostly dark. The environment 'selected' for the trait that provided a survival advantage.",
+          "visualPrompt": "A side-by-side animation. Left: Light moths on a light tree are hard to see, a bird eats a dark moth. Right: Dark moths on a soot-covered tree are hard to see, the bird eats a light moth."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "biology-101-l06-ia1",
+          "type": "sorting_buckets",
+          "title": "Types of Adaptation",
+          "description": "Classify each example as a structural, behavioral, or physiological adaptation.",
+          "estimatedMinutes": 8,
+          "difficultyLevel": "medium",
+          "data": {
+            "buckets": [
+              {
+                "id": "structural",
+                "label": "Structural (Body Part)"
+              },
+              {
+                "id": "behavioral",
+                "label": "Behavioral (Action)"
+              },
+              {
+                "id": "physiological",
+                "label": "Physiological (Internal Process)"
+              }
+            ],
+            "items": [
+              {
+                "id": "i1",
+                "label": "A polar bear's thick fur",
+                "correctBucketId": "structural"
+              },
+              {
+                "id": "i2",
+                "label": "Bears hibernating in winter",
+                "correctBucketId": "behavioral"
+              },
+              {
+                "id": "i3",
+                "label": "A snake producing venom",
+                "correctBucketId": "physiological"
+              },
+              {
+                "id": "i4",
+                "label": "The long neck of a giraffe",
+                "correctBucketId": "structural"
+              },
+              {
+                "id": "i5",
+                "label": "Birds flying south for the winter",
+                "correctBucketId": "behavioral"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biology-101-l07",
+      "title": "Checkpoint 2: Ecology and Evolution",
+      "type": "quiz",
+      "duration": 10,
+      "questions": [
+        {
+          "id": "biology-101-l07-q1",
+          "text": "In a forest food web, which of the following is an abiotic factor?",
+          "skillId": "biology-101-skill-ecosystems",
+          "options": [
+            {
+              "id": "a",
+              "text": "An oak tree"
+            },
+            {
+              "id": "b",
+              "text": "A deer"
+            },
+            {
+              "id": "c",
+              "text": "A mushroom"
+            },
+            {
+              "id": "d",
+              "text": "The amount of rainfall"
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "Rainfall is a non-living component of the environment, making it an abiotic factor. The tree, deer, and mushroom are all living (biotic) factors."
+        },
+        {
+          "id": "biology-101-l07-q2",
+          "text": "If a plant stores 1,000 units of energy, approximately how much energy would a herbivore that eats the plant receive?",
+          "skillId": "biology-101-skill-ecosystems",
+          "options": [
+            {
+              "id": "a",
+              "text": "1,000 units"
+            },
+            {
+              "id": "b",
+              "text": "500 units"
+            },
+            {
+              "id": "c",
+              "text": "100 units"
+            },
+            {
+              "id": "d",
+              "text": "10 units"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "According to the 10% rule, only about 10% of the energy from one trophic level is transferred to the next. 10% of 1,000 is 100."
+        },
+        {
+          "id": "biology-101-l07-q3",
+          "text": "A cactus having sharp spines to protect it from being eaten is an example of a...",
+          "skillId": "biology-101-skill-adaptation",
+          "options": [
+            {
+              "id": "a",
+              "text": "Structural adaptation"
+            },
+            {
+              "id": "b",
+              "text": "Behavioral adaptation"
+            },
+            {
+              "id": "c",
+              "text": "Physiological adaptation"
+            },
+            {
+              "id": "d",
+              "text": "Food web"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "The spines are a physical feature of the cactus's body, making it a structural adaptation."
+        },
+        {
+          "id": "biology-101-l07-q4",
+          "text": "What is the central idea of natural selection?",
+          "skillId": "biology-101-skill-adaptation",
+          "options": [
+            {
+              "id": "a",
+              "text": "Organisms try to change to fit their environment."
+            },
+            {
+              "id": "b",
+              "text": "Organisms with the most favorable traits are more likely to survive and reproduce."
+            },
+            {
+              "id": "c",
+              "text": "All individuals in a population are identical."
+            },
+            {
+              "id": "d",
+              "text": "Evolution happens within a single generation."
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Natural selection is the process where the environment 'selects' for individuals with inherited traits that provide a survival and reproductive advantage."
+        }
+      ],
+      "quizBlueprint": {
+        "frequency": "lesson_assessment",
+        "questionsPerCheck": 4,
+        "totalQuestions": 4,
+        "timeLimitMinutes": 10,
+        "questionTypes": [
+          {
+            "type": "mcq_single",
+            "count": 4,
+            "pointsEach": 1,
+            "bloomsLevels": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "difficultyDistribution": {
+          "easy": 1,
+          "medium": 2,
+          "hard": 1
+        },
+        "feedbackMode": "after_submit",
+        "adaptive": false,
+        "masteryThreshold": 0.75
+      }
+    },
+    {
+      "id": "biology-101-l08",
+      "title": "Genetics: The Code of Life",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "Describe the basic structure of DNA.",
+        "Explain the relationship between DNA, genes, and chromosomes.",
+        "Distinguish between dominant and recessive alleles."
+      ],
+      "chunks": [
+        {
+          "id": "biology-101-l08-c1",
+          "title": "DNA: The Blueprint of Life",
+          "kind": "intro",
+          "content": "Inside the nucleus of almost every cell in your body is a remarkable molecule called DNA (Deoxyribonucleic acid). DNA contains the instructions for building and operating an entire organism. Its structure is a double helix, which looks like a twisted ladder. The 'rungs' of the ladder are made of four chemical bases: Adenine (A), Thymine (T), Cytosine (C), and Guanine (G). The specific sequence of these bases forms the genetic code.",
+          "visualPrompt": "An animation of a DNA double helix rotating, with close-ups on the base pairs (A-T and C-G) lighting up."
+        },
+        {
+          "id": "biology-101-l08-c2",
+          "title": "Genes and Chromosomes",
+          "kind": "concept",
+          "content": "Your DNA is incredibly long, so it's tightly coiled and packaged into structures called chromosomes. You can think of a chromosome as a volume in an encyclopedia set. A gene is a specific section of DNA on a chromosome that codes for a particular trait, like eye color or hair type. So, a gene is like a single recipe within one of the encyclopedia volumes. Humans have 23 pairs of chromosomes in each cell.",
+          "visualPrompt": "An animation that zooms in on a cell, then its nucleus, then a chromosome. The chromosome unwinds to show the DNA strand, and a specific segment is highlighted and labeled 'Gene'."
+        },
+        {
+          "id": "biology-101-l08-c3",
+          "title": "Dominant and Recessive Alleles",
+          "kind": "concept",
+          "content": "For many genes, you inherit two copies, one from each parent. These different versions of a gene are called alleles. Some alleles are dominant, meaning you only need one copy for the trait to be expressed. Other alleles are recessive, meaning the trait will only show up if you inherit two copies. For example, the allele for brown eyes (B) is dominant over the allele for blue eyes (b). So, a person with the combination Bb will have brown eyes.",
+          "visualPrompt": "A simple chart showing three people. Person 1 (BB) has brown eyes. Person 2 (Bb) has brown eyes. Person 3 (bb) has blue eyes. The dominant 'B' allele is shown as larger and more prominent in the Bb combination."
+        }
+      ],
+      "interactiveActivities": [
+        {
+          "id": "biology-101-l08-ia1",
+          "type": "drag_and_drop",
+          "title": "Punnett Square Practice",
+          "description": "Predict the offspring of two parents who are both heterozygous for brown eyes (Bb). Drag the parent alleles to the correct places and then fill in the offspring genotypes.",
+          "estimatedMinutes": 6,
+          "difficultyLevel": "medium",
+          "data": {
+            "targets": [
+              {
+                "id": "parent1-a1",
+                "label": "Parent 1 Allele 1"
+              },
+              {
+                "id": "parent1-a2",
+                "label": "Parent 1 Allele 2"
+              },
+              {
+                "id": "parent2-a1",
+                "label": "Parent 2 Allele 1"
+              },
+              {
+                "id": "parent2-a2",
+                "label": "Parent 2 Allele 2"
+              },
+              {
+                "id": "child1",
+                "label": "Offspring 1"
+              },
+              {
+                "id": "child2",
+                "label": "Offspring 2"
+              },
+              {
+                "id": "child3",
+                "label": "Offspring 3"
+              },
+              {
+                "id": "child4",
+                "label": "Offspring 4"
+              }
+            ],
+            "draggables": [
+              {
+                "id": "d1",
+                "label": "B",
+                "correctTargetId": "parent1-a1"
+              },
+              {
+                "id": "d2",
+                "label": "b",
+                "correctTargetId": "parent1-a2"
+              },
+              {
+                "id": "d3",
+                "label": "B",
+                "correctTargetId": "parent2-a1"
+              },
+              {
+                "id": "d4",
+                "label": "b",
+                "correctTargetId": "parent2-a2"
+              },
+              {
+                "id": "d5",
+                "label": "BB",
+                "correctTargetId": "child1"
+              },
+              {
+                "id": "d6",
+                "label": "Bb",
+                "correctTargetId": "child2"
+              },
+              {
+                "id": "d7",
+                "label": "Bb",
+                "correctTargetId": "child3"
+              },
+              {
+                "id": "d8",
+                "label": "bb",
+                "correctTargetId": "child4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "biology-101-l09",
+      "title": "Checkpoint 3: Genetics",
+      "type": "quiz",
+      "duration": 10,
+      "questions": [
+        {
+          "id": "biology-101-l09-q1",
+          "text": "In the DNA double helix, Adenine (A) always pairs with...",
+          "skillId": "biology-101-skill-genetics",
+          "options": [
+            {
+              "id": "a",
+              "text": "Guanine (G)"
+            },
+            {
+              "id": "b",
+              "text": "Cytosine (C)"
+            },
+            {
+              "id": "c",
+              "text": "Another Adenine (A)"
+            },
+            {
+              "id": "d",
+              "text": "Thymine (T)"
+            }
+          ],
+          "correctOptionId": "d",
+          "explanation": "The base pairing rule in DNA is that Adenine (A) pairs with Thymine (T), and Cytosine (C) pairs with Guanine (G)."
+        },
+        {
+          "id": "biology-101-l09-q2",
+          "text": "What is a gene?",
+          "skillId": "biology-101-skill-genetics",
+          "options": [
+            {
+              "id": "a",
+              "text": "A structure that contains all of an organism's DNA"
+            },
+            {
+              "id": "b",
+              "text": "A specific version of a trait, like blue eyes"
+            },
+            {
+              "id": "c",
+              "text": "A segment of DNA that provides instructions for a specific trait"
+            },
+            {
+              "id": "d",
+              "text": "A type of protein"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "A gene is a functional unit of heredity; a specific section of DNA that codes for a protein or functional RNA molecule."
+        },
+        {
+          "id": "biology-101-l09-q3",
+          "text": "An organism has the genotype Tt, where T (tall) is dominant to t (short). What is its phenotype?",
+          "skillId": "biology-101-skill-genetics",
+          "options": [
+            {
+              "id": "a",
+              "text": "Tall"
+            },
+            {
+              "id": "b",
+              "text": "Short"
+            },
+            {
+              "id": "c",
+              "text": "Medium height"
+            },
+            {
+              "id": "d",
+              "text": "Tt"
+            }
+          ],
+          "correctOptionId": "a",
+          "explanation": "Because the 'T' allele is dominant, its trait (tall) will be expressed even when paired with a recessive 't' allele. The phenotype is the observable trait."
+        },
+        {
+          "id": "biology-101-l09-q4",
+          "text": "If two parents with genotype Bb have a child, what is the probability that the child will have the genotype bb?",
+          "skillId": "biology-101-skill-genetics",
+          "options": [
+            {
+              "id": "a",
+              "text": "0%"
+            },
+            {
+              "id": "b",
+              "text": "25%"
+            },
+            {
+              "id": "c",
+              "text": "50%"
+            },
+            {
+              "id": "d",
+              "text": "75%"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "A Punnett square for Bb x Bb shows four possible offspring genotypes: BB, Bb, Bb, and bb. Only one of the four is bb, so the probability is 1/4 or 25%."
+        }
+      ],
+      "quizBlueprint": {
+        "frequency": "lesson_assessment",
+        "questionsPerCheck": 4,
+        "totalQuestions": 4,
+        "timeLimitMinutes": 10,
+        "questionTypes": [
+          {
+            "type": "mcq_single",
+            "count": 4,
+            "pointsEach": 1,
+            "bloomsLevels": [
+              1,
+              2,
+              3
+            ]
+          }
+        ],
+        "difficultyDistribution": {
+          "easy": 1,
+          "medium": 2,
+          "hard": 1
+        },
+        "feedbackMode": "after_submit",
+        "adaptive": false,
+        "masteryThreshold": 0.75
+      }
+    },
+    {
+      "id": "biology-101-l10",
+      "title": "Applied Biology: The Coral Reef Crisis",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "Apply concepts of ecology, adaptation, and genetics to a real-world scenario.",
+        "Explain the causes and consequences of coral bleaching.",
+        "Evaluate potential conservation strategies."
+      ],
+      "chunks": [
+        {
+          "id": "biology-101-l10-c1",
+          "title": "Rainforests of the Sea",
+          "kind": "intro",
+          "content": "Coral reefs are one of the most diverse ecosystems on Earth, supporting about 25% of all marine life. But they are in danger. Rising ocean temperatures are causing a phenomenon called coral bleaching. Corals have a symbiotic relationship with tiny algae that live inside them, providing food and color. When the water gets too warm, the corals expel these algae, turn white, and begin to starve.",
+          "visualPrompt": "A dramatic split-screen image: on the left, a vibrant, colorful coral reef teeming with fish; on the right, the same reef, now stark white and barren (bleached)."
+        },
+        {
+          "id": "biology-101-l10-c2",
+          "title": "An Ecosystem Collapse",
+          "kind": "concept",
+          "content": "When corals die, the entire reef food web is affected. Corals are keystone species, meaning many other organisms depend on them for food and shelter. Without the coral, fish populations decline, which in turn affects larger predators. This has a huge impact on the millions of people who rely on reefs for food, income from tourism, and protection from coastal storms. It's a perfect example of how the health of one group of organisms can affect an entire ecosystem.",
+          "visualPrompt": "An animated food web diagram for a coral reef. The coral at the bottom fades away, causing the organisms connected to it (small fish, crabs) to also fade, followed by the larger fish that eat them."
+        },
+        {
+          "id": "biology-101-l10-c3",
+          "title": "Hope Through Science",
+          "kind": "example",
+          "content": "Scientists are racing to find solutions. Some corals have shown a natural adaptation to warmer waters. By studying their genetics, researchers hope to identify the genes responsible for this heat tolerance. This could lead to strategies like breeding more resilient corals in nurseries and transplanting them to damaged reefs, using our understanding of natural selection and heredity to help nature recover.",
+          "visualPrompt": "A short video clip of marine biologists working in an underwater coral nursery, carefully tending to small coral fragments."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "biology-101-l10-f1",
+          "front": "What is coral bleaching?",
+          "back": "The process where corals, stressed by factors like warm water, expel the symbiotic algae living in their tissues, causing them to turn white and lose their main food source."
+        },
+        {
+          "id": "biology-101-l10-f2",
+          "front": "What is a keystone species?",
+          "back": "A species on which other species in an ecosystem largely depend, such that if it were removed the ecosystem would change drastically. Coral is a keystone species."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "biology-101-l10-a1",
+          "type": "practice",
+          "title": "Propose a Solution",
+          "content": "Based on what you've learned, write a short paragraph proposing one strategy to help save coral reefs. Explain how your strategy connects to concepts like ecosystems, adaptation, or genetics."
+        }
+      ]
+    },
+    {
+      "id": "biology-101-l11",
+      "title": "Final Review and Mastery",
+      "type": "quiz",
+      "duration": 15,
+      "questions": [
+        {
+          "id": "biology-101-l11-q1",
+          "text": "Which two organelles are involved in the energy cycle of a plant cell?",
+          "skillId": "biology-101-skill-cells",
+          "options": [
+            {
+              "id": "a",
+              "text": "Nucleus and Ribosome"
+            },
+            {
+              "id": "b",
+              "text": "Chloroplast and Mitochondrion"
+            },
+            {
+              "id": "c",
+              "text": "Cell Wall and Cell Membrane"
+            },
+            {
+              "id": "d",
+              "text": "Vacuole and Nucleus"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "Chloroplasts capture solar energy (photosynthesis), and mitochondria release that stored chemical energy for the cell to use (respiration)."
+        },
+        {
+          "id": "biology-101-l11-q2",
+          "text": "An invasive insect is introduced to a forest and eats the leaves of a specific tree. What is the most likely immediate effect on the food web?",
+          "skillId": "biology-101-skill-ecosystems",
+          "options": [
+            {
+              "id": "a",
+              "text": "The population of top predators will increase."
+            },
+            {
+              "id": "b",
+              "text": "The population of decomposers will decrease."
+            },
+            {
+              "id": "c",
+              "text": "The population of herbivores that also eat that tree will decrease due to competition."
+            },
+            {
+              "id": "d",
+              "text": "The amount of sunlight will increase."
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The new insect competes for the same food source (the tree), reducing the available food for native herbivores and likely causing their population to decline."
+        },
+        {
+          "id": "biology-101-l11-q3",
+          "text": "In pea plants, purple flowers (P) are dominant to white flowers (p). If you cross a PP plant with a pp plant, what will the offspring's phenotype be?",
+          "skillId": "biology-101-skill-genetics",
+          "options": [
+            {
+              "id": "a",
+              "text": "All white flowers"
+            },
+            {
+              "id": "b",
+              "text": "All purple flowers"
+            },
+            {
+              "id": "c",
+              "text": "A mix of purple and white flowers"
+            },
+            {
+              "id": "d",
+              "text": "Pink flowers"
+            }
+          ],
+          "correctOptionId": "b",
+          "explanation": "All offspring will have the genotype Pp. Since P (purple) is dominant, all of them will have the purple flower phenotype."
+        },
+        {
+          "id": "biology-101-l11-q4",
+          "text": "A population of giraffes has individuals with varying neck lengths. In an environment where the only food is on tall trees, giraffes with longer necks are more likely to survive and reproduce. This is an example of:",
+          "skillId": "biology-101-skill-adaptation",
+          "options": [
+            {
+              "id": "a",
+              "text": "Homeostasis"
+            },
+            {
+              "id": "b",
+              "text": "The cell cycle"
+            },
+            {
+              "id": "c",
+              "text": "Natural selection"
+            },
+            {
+              "id": "d",
+              "text": "A food chain"
+            }
+          ],
+          "correctOptionId": "c",
+          "explanation": "The environment is 'selecting' for the trait of longer necks, as it provides a survival advantage, which is the core principle of natural selection."
+        }
+      ],
+      "quizBlueprint": {
+        "frequency": "lesson_assessment",
+        "questionsPerCheck": 4,
+        "totalQuestions": 4,
+        "timeLimitMinutes": 15,
         "questionTypes": [
           {
             "type": "mcq_single",
@@ -1959,15 +1152,7 @@ export const Biology101Module: LearningModule = {
         "feedbackMode": "after_submit",
         "adaptive": false,
         "masteryThreshold": 0.75
-      },
-      "learningAids": [
-        {
-          "id": "biology-101-l15-a1",
-          "type": "mnemonic",
-          "title": "Central Dogma",
-          "content": "DNA makes RNA makes Protein. Think: D → R → P (Don't Ruin Proteins)."
-        }
-      ]
+      }
     }
   ]
 };

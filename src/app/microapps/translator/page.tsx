@@ -12,11 +12,30 @@ import Link from "next/link";
  */
 export default function TranslatorPage() {
   const [query, setQuery] = useState("");
+  const [results, setResults] = useState<any[]>([]);
   const [sourceLang, setSourceLang] = useState("en");
   const [targetLang, setTargetLang] = useState("es");
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [isOfflineReady, setIsOfflineReady] = useState(false);
+
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(async () => {
+      if (query.length > 2) {
+        try {
+          const res = await fetch(`/api/microapps/translator/terms?query=${query}`);
+          const data = await res.json();
+          setResults(data);
+        } catch (err) {
+          console.error("Search error:", err);
+        }
+      } else {
+        setResults([]);
+      }
+    }, 300);
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [query]);
 
   const startDownload = () => {
     setIsDownloading(true);
@@ -110,8 +129,26 @@ export default function TranslatorPage() {
               
               <div className="h-px w-full bg-white/10" />
               
-              <div className="min-h-[140px] text-2xl font-light text-indigo-300">
-                {query ? "Translating technical terminology..." : ""}
+              <div className="min-h-[140px]">
+                <AnimatePresence>
+                  {results.length > 0 ? (
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4">
+                      {results.map((res, i) => (
+                        <div key={i} className="group">
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="text-xs font-bold uppercase tracking-widest text-indigo-400">{res.category}</span>
+                            <span className="text-[10px] font-mono text-white/20">MATCH FOUND</span>
+                          </div>
+                          <p className="text-xl font-light text-white leading-snug">{res.definition}</p>
+                        </div>
+                      ))}
+                    </motion.div>
+                  ) : query.length > 2 ? (
+                    <p className="text-xl font-light text-white/40 italic">Searching knowledgebase...</p>
+                  ) : (
+                    <p className="text-xl font-light text-white/20">Waiting for technical term input...</p>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
 

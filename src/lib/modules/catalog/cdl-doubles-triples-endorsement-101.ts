@@ -5,48 +5,79 @@ export const cdl_doubles_triples_endorsement_101_Module: LearningModule = {
   "title": "CDL Doubles/Triples Endorsement (T)",
   "description": "Study guide for the CDL Doubles/Triples (T) endorsement. Covers coupling and uncoupling doubles and triples, converter dolly connection, rearmost trailer instability (crack-the-whip effect), inspection procedures, and safe driving techniques for multi-trailer combinations.",
   "subject": "CDL",
-  "tags": ["core", "curriculum", "cdl", "trades", "exam-prep", "doubles-triples", "endorsement"],
+  "tags": [
+    "core",
+    "curriculum",
+    "cdl",
+    "trades",
+    "exam-prep",
+    "doubles-triples",
+    "endorsement"
+  ],
   "minAge": 21,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "intermediate",
-  "localeSupport": ["en"],
+  "localeSupport": [
+    "en"
+  ],
   "thumbnail": "/assets/cdl/doubles-triples-coupling.png",
   "learningObjectives": [
-    "Couple and uncouple double and triple trailer combinations safely",
-    "Connect and inspect converter dollies",
-    "Understand the crack-the-whip effect and how to minimize rearmost trailer instability",
-    "Apply safe driving and braking techniques for multi-trailer combinations",
-    "Perform proper pre-trip inspections for doubles and triples"
+    "Couple and uncouple double and triple trailer combinations safely and correctly",
+    "Properly connect, inspect, and position a converter dolly",
+    "Understand rearward amplification (the crack-the-whip effect) and how to prevent it",
+    "Apply safe driving, turning, and braking techniques specific to multi-trailer combinations",
+    "Perform a comprehensive pre-trip inspection for a doubles or triples combination"
   ],
   "lessons": [
     {
       "id": "cdl-dt-101-l01",
-      "title": "Doubles and Triples Operations",
+      "title": "Coupling, Driving, and Inspecting Doubles & Triples",
       "type": "video",
-      "duration": 14,
+      "duration": 18,
       "chunks": [
         {
           "id": "cdl-dt-101-l01-c1",
-          "title": "Coupling Doubles and the Converter Dolly",
-          "content": "Doubles use a converter dolly to connect the second trailer. [Visual Prompt: Step-by-step diagram of coupling doubles: (1) couple tractor to first trailer normally, (2) position converter dolly behind first trailer, (3) couple dolly to first trailer pintle hook, (4) connect dolly air and electric lines to first trailer, (5) back first trailer to second trailer until dolly fifth wheel engages second trailer kingpin, (6) connect second trailer air and electric lines, (7) perform all connection checks.] The converter dolly has its own fifth wheel that couples to the rear trailer's kingpin. It also has a drawbar and eye that connects to the first trailer's pintle hook. Make sure the dolly air tank is charged and brakes are working before coupling. After coupling, perform the same tug test as a standard coupling. Check all glad hand connections between the first trailer and dolly, and between the dolly and second trailer. Verify the safety chains are properly connected and crossed under the drawbar."
+          "title": "Coupling and Uncoupling with a Converter Dolly",
+          "content": "Coupling doubles involves a converter dolly, which is essentially a short trailer axle with a fifth wheel and a drawbar. The process must be done in a specific order. Coupling: 1) Couple the tractor to the lead trailer. 2) Position the converter dolly behind the lead trailer. 3) Back the lead trailer to the dolly, connecting the pintle hook to the dolly's drawbar eye. Lock it and attach safety chains. 4) Connect the dolly's air and electrical lines to the lead trailer and charge its air system. 5) Back the combination to the rear trailer, coupling the dolly's fifth wheel to the kingpin. 6) Perform a tug test. 7) Connect air and electrical lines to the rear trailer and raise its landing gear. 8) Perform a final walk-around inspection of all connections. Uncoupling is the reverse process: 1) Chock the wheels of the rear trailer. 2) Lower the rear trailer's landing gear. 3) Disconnect lines and uncouple the dolly's fifth wheel. 4) Pull the tractor, lead trailer, and dolly clear. [Visual Prompt: A two-part infographic. Part 1: 'Coupling,' showing a numbered sequence of a tractor connecting to a lead trailer, then backing to a converter dolly, connecting it, and finally backing to a rear trailer. Part 2: 'Uncoupling,' showing the reverse process with emphasis on chocking wheels and lowering landing gear.]"
         },
         {
           "id": "cdl-dt-101-l01-c2",
-          "title": "The Crack-the-Whip Effect",
-          "content": "The biggest danger unique to doubles and triples is the crack-the-whip effect. [Visual Prompt: Aerial view of a triple-trailer combination making a lane change, showing how the movement amplifies from tractor (small movement) → first trailer (medium) → second trailer (large) → third trailer (extreme sway), with the rear trailer's arc dramatically wider than the tractor's.] Any steering input or lane change at the tractor is amplified through each successive trailer. What is a gentle lane change for the tractor becomes a violent sway at the last trailer. This effect is worse at higher speeds, in crosswinds, and with lighter rear trailers. To minimize the crack-the-whip effect: make smooth, gradual steering inputs, reduce speed before lane changes, always put the heaviest trailer directly behind the tractor and the lightest trailer last (for doubles), and avoid sudden maneuvers. If the rearmost trailer begins to sway, gently steer in the opposite direction and gradually reduce speed — do NOT brake hard."
+          "title": "Rearward Amplification (The Crack-the-Whip Effect)",
+          "content": "The most significant danger with multi-trailer combinations is rearward amplification, also known as the crack-the-whip effect. Any steering action by the driver is magnified along the length of the combination, causing the last trailer to swing out much more than the tractor. This is especially dangerous during quick lane changes, evasive maneuvers, or on slippery surfaces. Triples are more susceptible than doubles. To prevent this: 1) Make smooth, gradual steering inputs. 2) Slow down for curves and lane changes. 3) Place the heaviest trailer first, directly behind the tractor. In a triple combination, the trailers should be arranged from heaviest to lightest. If sway begins, stop braking, release the accelerator, and make small, smooth counter-steering movements to regain control. [Visual Prompt: Dynamic overhead animation of a triple-trailer truck making a quick lane change. A line traces the path of the tractor's wheels (slight curve) and another line traces the path of the rearmost trailer's wheels (wild, exaggerated S-curve), illustrating 'rearward amplification'.]"
         },
         {
           "id": "cdl-dt-101-l01-c3",
-          "title": "Safe Driving and Inspection",
-          "content": "Doubles and triples require extra vigilance during driving and inspections. [Visual Prompt: Comparison chart showing: single trailer stopping distance (base), doubles (+20% longer), triples (+30% longer), with diagrams showing wider off-tracking for each configuration.] Pre-trip inspection: check all coupling devices on each connection point — fifth wheels, pintle hooks, safety chains, converter dolly, glad hands, and electrical connections. Check air brake operation on each trailer separately using the trailer hand valve. Verify all lights work on all trailers. While driving: increase following distance beyond normal CMV standards (at least 8-10 seconds). Avoid driving beside other vehicles when possible — you need room to maneuver. Take turns and curves even slower than with a single trailer. Remember that backing doubles or triples is extremely difficult — most operations are set up to avoid it. If you must back, disconnect the rear trailer first."
+          "title": "Inspection and Safe Driving Techniques",
+          "content": "Multi-trailer combinations require more space and attention. Inspection: Your pre-trip must include every connection point. Check that all pintle hooks are latched, fifth wheels are locked, safety chains are crossed and secure, and all air and electrical lines are properly connected and not rubbing. Ensure air flows to all trailers and that the brakes on all axles are operational. Driving: Increase your following distance to at least one second for every 10 feet of vehicle length, adding an extra second for speeds over 40 mph. The rear trailer will off-track the most, so you must make wider turns. Braking should be smooth and steady to prevent a push-pull effect between the trailers. Backing up doubles or triples is extremely difficult and often prohibited; the combination will jackknife very quickly. Plan your route to avoid backing. [Visual Prompt: A split-screen visual. Left side: A driver performing a pre-trip inspection, with callouts pointing to the pintle hook, safety chains, and dolly air lines. Right side: A diagram showing the wide turning radius and off-tracking of a double-trailer combination compared to a single trailer.]"
         }
       ],
       "flashcards": [
-        { "id": "cdl-dt-101-l01-f1", "front": "What is the crack-the-whip effect?", "back": "Steering and road inputs are amplified through each successive trailer, causing the rearmost trailer to sway much more than the tractor." },
-        { "id": "cdl-dt-101-l01-f2", "front": "Which trailer should be heaviest in a doubles combination?", "back": "The heaviest trailer goes directly behind the tractor. The lighter trailer is the rear trailer." },
-        { "id": "cdl-dt-101-l01-f3", "front": "What minimum age is required for the Doubles/Triples endorsement?", "back": "21 years old (required for interstate driving of doubles/triples)." },
-        { "id": "cdl-dt-101-l01-f4", "front": "Can you back a doubles or triples combination?", "back": "It is extremely difficult and usually avoided. If necessary, disconnect the rear trailer first." }
+        {
+          "id": "cdl-dt-101-l01-f1",
+          "front": "What is the crack-the-whip effect, or rearward amplification?",
+          "back": "The amplification of steering inputs through each successive trailer, causing the rearmost trailer to sway much more than the tractor."
+        },
+        {
+          "id": "cdl-dt-101-l01-f2",
+          "front": "How should trailers be ordered by weight in a doubles or triples combination?",
+          "back": "The heaviest trailer must be placed first (directly behind the tractor), with trailers getting progressively lighter toward the rear."
+        },
+        {
+          "id": "cdl-dt-101-l01-f3",
+          "front": "What is the federal minimum age to operate a commercial vehicle with a Doubles/Triples endorsement in interstate commerce?",
+          "back": "21 years old."
+        },
+        {
+          "id": "cdl-dt-101-l01-f4",
+          "front": "Why is backing a doubles or triples combination generally avoided?",
+          "back": "It is extremely difficult to control. The combination will jackknife very quickly due to the multiple pivot points."
+        },
+        {
+          "id": "cdl-dt-101-l01-f5",
+          "front": "What are the two main connection points on a converter dolly?",
+          "back": "The drawbar/eye (connects to the lead trailer's pintle hook) and the fifth wheel (connects to the rear trailer's kingpin)."
+        }
       ]
     },
     {

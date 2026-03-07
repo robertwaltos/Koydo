@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Biotechnology501Module: LearningModule = {
+export const biotechnology_501_Module: LearningModule = {
   "id": "biotechnology-501",
   "title": "Biotechnology Specialization Studio",
   "description": "Post-401 specialization in Biotechnology, focused on bioprocess optimization, translational validation, regulatory quality systems, and bioethics governance through advanced casework, simulation, and capstone-level defense.",
@@ -14,7 +14,7 @@ export const Biotechnology501Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en"
@@ -37,8 +37,8 @@ export const Biotechnology501Module: LearningModule = {
         {
           "id": "biotechnology-501-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Core Concepts Framework",
+          "content": "A flowchart illustrating the core concepts: Bioprocess Optimization feeding into Translational Validation, both governed by Regulatory and Ethical frameworks."
         }
       ],
       "chunks": [
@@ -46,36 +46,36 @@ export const Biotechnology501Module: LearningModule = {
           "id": "biotechnology-501-l01-c1",
           "kind": "concept",
           "title": "Advanced Scope and Decision Boundaries",
-          "content": "In this lesson, we will explore the advanced boundaries of Biotechnology. We will learn how bioprocess optimization, which is about improving biological processes, and translational validation, which ensures that scientific discoveries can be applied in real-world settings, work together within complex systems. Understanding these interactions is crucial for making informed decisions in the field of Biotechnology.\nContext recap: In this lesson, we will explore the advanced boundaries of Biotechnology. We will learn how bioprocess optimization, which is about improving biological processes, and translational validation, which ensures that scientific discoveries can be applied in real-world settings, work together within complex systems. Understanding these interactions is crucial for making informed decisions in the field of Biotechnology."
+          "content": "This lesson explores the advanced boundaries of biotechnology, focusing on how bioprocess optimization and translational validation interact within complex systems. Understanding this interplay is crucial for making informed, high-impact decisions in the field."
         },
         {
           "id": "biotechnology-501-l01-c2",
           "kind": "concept",
           "title": "Causal Structure Under Uncertainty",
-          "content": "In this section, learners will engage in modeling causal pathways, which are the connections between causes and effects, while also considering uncertainty ranges and hidden assumptions. This process is essential before designing any interventions, as it helps us understand the potential impacts and outcomes of our actions in Biotechnology.\nContext recap: In this section, learners will engage in modeling causal pathways, which are the connections between causes and effects, while also considering uncertainty ranges and hidden assumptions. This process is essential before designing any interventions, as it helps us understand the potential impacts and outcomes of our actions in Biotechnology."
+          "content": "Before designing interventions, it is essential to model causal pathways—the connections between causes and effects. This section focuses on mapping these pathways while explicitly accounting for uncertainty ranges and hidden assumptions to better predict outcomes."
         },
         {
           "id": "biotechnology-501-l01-c3",
           "kind": "recap",
           "title": "Evidence and Rigor Standards",
-          "content": "In our recap, we emphasize that all advanced claims in Biotechnology must be supported by measurable indicators, which are specific data points that can be tracked. Additionally, we will discuss the importance of confidence bounds, which help us understand the reliability of our data, and review checkpoints, which are critical moments for evaluating our progress and ensuring accuracy.\nContext recap: In our recap, we emphasize that all advanced claims in Biotechnology must be supported by measurable indicators, which are specific data points that can be tracked. Additionally, we will discuss the importance of confidence bounds, which help us understand the reliability of our data, and review checkpoints, which are critical moments for evaluating our progress and ensuring accuracy."
+          "content": "We recap the standards for advanced work in biotechnology. All claims must be supported by measurable indicators and qualified with confidence bounds. Progress must be evaluated at critical review checkpoints to ensure accuracy and integrity."
         }
       ],
       "flashcards": [
         {
           "id": "biotechnology-501-l01-f1",
-          "front": "bioprocess optimization",
-          "back": "A specialization axis in Biotechnology requiring explicit assumptions and measured tradeoff choices."
+          "front": "Bioprocess Optimization",
+          "back": "The systematic improvement of biological processes by defining explicit assumptions, measuring key variables, and making calculated tradeoff decisions."
         },
         {
           "id": "biotechnology-501-l01-f2",
-          "front": "translational validation",
-          "back": "Operational design capability that governs whether complex workflows remain reliable."
+          "front": "Translational Validation",
+          "back": "The process of ensuring that scientific discoveries are effective and reliable when applied in real-world, operational settings."
         },
         {
           "id": "biotechnology-501-l01-f3",
-          "front": "regulatory quality systems",
-          "back": "Evaluation practice for validating outcomes beyond headline metrics."
+          "front": "Regulatory Quality Systems",
+          "back": "The formal systems and processes that ensure biotech products and operations meet safety, efficacy, and compliance standards set by authorities."
         }
       ]
     },
@@ -88,8 +88,8 @@ export const Biotechnology501Module: LearningModule = {
         {
           "id": "biotechnology-501-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Workflow Designer",
+          "content": "An interactive diagram of a bioprocess workflow where users can drag and drop control gates, rollback points, and monitoring alerts."
         }
       ],
       "chunks": [
@@ -97,13 +97,13 @@ export const Biotechnology501Module: LearningModule = {
           "id": "biotechnology-501-l02-c1",
           "kind": "practice",
           "title": "Method Sequence and Stress Test",
-          "content": "In this engaging interactive lab, students will have the opportunity to design a specialized workflow that showcases the execution of advanced methods used in biotechnology. This process will require them to combine knowledge from various fields, promoting a deeper understanding of how different areas of science can work together. Once they have created their workflows, students will put them to the test by facing challenging scenarios, including adversarial situations or edge cases. This testing phase is crucial as it helps ensure that their workflows are not only effective but also resilient in the face of unexpected challenges. By the end of this lab, students will gain valuable insights into the importance of adaptability and problem-solving in the field of biotechnology."
+          "content": "In this interactive lab, you will design a specialized, cross-domain workflow using advanced biotechnology methods. You will then stress-test your design against challenging scenarios, including edge cases and adversarial conditions, to ensure its resilience and effectiveness."
         },
         {
           "id": "biotechnology-501-l02-c2",
           "kind": "recap",
           "title": "Controls and Failure Gates",
-          "content": "In our recap, we will discuss the necessity of having control gates, which are checkpoints that help manage the workflow, rollback criteria that allow us to revert to previous states if needed, and accountability checkpoints that ensure everyone involved is responsible for their actions. These elements are crucial for maintaining the integrity of specialist workflows.\nContext recap: In our recap, we will discuss the necessity of having control gates, which are checkpoints that help manage the workflow, rollback criteria that allow us to revert to previous states if needed, and accountability checkpoints that ensure everyone involved is responsible for their actions. These elements are crucial for maintaining the integrity of specialist workflows."
+          "content": "This recap emphasizes the necessity of embedding controls within specialist workflows. We will review the roles of control gates for process management, rollback criteria for safe failure, and accountability checkpoints for maintaining operational integrity."
         }
       ],
       "interactiveActivities": [
@@ -386,9 +386,9 @@ export const Biotechnology501Module: LearningModule = {
       "learningAids": [
         {
           "id": "biotechnology-501-l04-a1",
-          "type": "mnemonic",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "type": "image",
+          "title": "Tradeoff Matrix Example",
+          "content": "An example of a tradeoff matrix used to evaluate therapeutic candidates. Rows list options (e.g., 'Drug A', 'Gene Therapy B'), and columns list criteria ('Efficacy', 'Safety', 'Cost')."
         }
       ],
       "chunks": [
@@ -396,36 +396,36 @@ export const Biotechnology501Module: LearningModule = {
           "id": "biotechnology-501-l04-c1",
           "kind": "example",
           "title": "Case Stakes and Competing Objectives",
-          "content": "In this engaging case study, we will explore a therapeutic biotechnology program that is making an important transition from early lab-stage results to crucial clinical and regulatory milestones. This process is vital for ensuring that new therapies can be safely and effectively brought to patients. As learners, you will have the opportunity to map out strategic objectives that guide the project, identify potential risks that could lead to failure, and understand the governance constraints that may influence your decisions and actions. This thorough approach is essential for effective project management in the field of Biotechnology, as it helps ensure that all aspects of the program are carefully considered and addressed. By the end of this lesson, you will have a clearer understanding of how to navigate the complexities of biotechnology projects and contribute to their success."
+          "content": "We will analyze a case study of a therapeutic program transitioning from lab-stage results to clinical and regulatory milestones. Learners will map the strategic objectives, critical failure points, and governance constraints that shape decision-making in this high-stakes environment."
         },
         {
           "id": "biotechnology-501-l04-c2",
           "kind": "concept",
           "title": "Tradeoff Matrix and Option Scoring",
-          "content": "In this section, we will learn about scoring options using a tradeoff matrix. This matrix evaluates different options based on criteria such as effectiveness, reliability, equity, feasibility, and long-term maintainability. By understanding how to score these options, learners can make informed decisions that balance various important factors in Biotechnology.\nContext recap: In this section, we will learn about scoring options using a tradeoff matrix. This matrix evaluates different options based on criteria such as effectiveness, reliability, equity, feasibility, and long-term maintainability. By understanding how to score these options, learners can make informed decisions that balance various important factors in Biotechnology."
+          "content": "This section introduces the tradeoff matrix as a tool for scoring competing options. We will evaluate choices against criteria like effectiveness, reliability, equity, and feasibility, enabling a structured and defensible decision-making process."
         },
         {
           "id": "biotechnology-501-l04-c3",
           "kind": "recap",
           "title": "Recovery and Adaptation Design",
-          "content": "In our recap, we will discuss how to translate failure signatures, which are indicators of what went wrong, into effective safeguards, response playbooks, and measurable adaptation loops. This process is vital for ensuring that we can learn from failures and improve our approaches in future projects.\nContext recap: In our recap, we will discuss how to translate failure signatures, which are indicators of what went wrong, into effective safeguards, response playbooks, and measurable adaptation loops. This process is vital for ensuring that we can learn from failures and improve our approaches in future projects."
+          "content": "In this recap, we focus on translating failure signatures—the warning signs of system breakdown—into proactive safeguards. This includes designing response playbooks and measurable adaptation loops to ensure the organization learns from failure and improves resilience."
         }
       ],
       "flashcards": [
         {
           "id": "biotechnology-501-l04-f1",
-          "front": "Tradeoff matrix",
-          "back": "A scoring framework for choosing among competing options under real constraints."
+          "front": "Tradeoff Matrix",
+          "back": "A decision-making tool that scores competing options against a set of weighted criteria to clarify choices and justify outcomes."
         },
         {
           "id": "biotechnology-501-l04-f2",
-          "front": "Failure signature",
-          "back": "A recurrent signal indicating a predictable class of breakdown risk."
+          "front": "Failure Signature",
+          "back": "A specific, recurring pattern of data or events that indicates a known type of system failure is likely to occur."
         },
         {
           "id": "biotechnology-501-l04-f3",
-          "front": "Adaptation loop",
-          "back": "A measured process for converting incident learning into improved future behavior."
+          "front": "Adaptation Loop",
+          "back": "A structured, measurable process for analyzing failures and using the insights to systematically improve future designs and operations."
         }
       ]
     },
@@ -438,8 +438,8 @@ export const Biotechnology501Module: LearningModule = {
         {
           "id": "biotechnology-501-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Simulation Dashboard",
+          "content": "A mock dashboard of the simulation interface, showing real-time data streams, adjustable parameters (e.g., 'resource allocation'), and alert triggers."
         }
       ],
       "chunks": [
@@ -447,13 +447,13 @@ export const Biotechnology501Module: LearningModule = {
           "id": "biotechnology-501-l05-c1",
           "kind": "practice",
           "title": "Scenario Modeling",
-          "content": "In this interactive session, learners will configure simulation assumptions, set thresholds, and outline intervention pathways while working under high-stakes conditions. This hands-on practice will help them understand how to navigate complex scenarios and make decisions based on simulated outcomes.\nContext recap: In this interactive session, learners will configure simulation assumptions, set thresholds, and outline intervention pathways while working under high-stakes conditions. This hands-on practice will help them understand how to navigate complex scenarios and make decisions based on simulated outcomes."
+          "content": "In this interactive simulation, learners will configure model assumptions, set operational thresholds, and design intervention pathways. You will be challenged to make critical decisions under pressure and observe their systemic consequences in real time."
         },
         {
           "id": "biotechnology-501-l05-c2",
           "kind": "recap",
           "title": "Debrief and Decision Quality Review",
-          "content": "After each simulation run, teams will conduct a thorough review to assess how well they met their targets, identify any side effects that occurred, and pinpoint gaps in governance compliance. This debriefing process is crucial for improving decision-making and ensuring that future simulations are even more effective.\nContext recap: After each simulation run, teams will conduct a thorough review to assess how well they met their targets, identify any side effects that occurred, and pinpoint gaps in governance compliance. This debriefing process is crucial for improving decision-making and ensuring that future simulations are even more effective."
+          "content": "After each simulation, teams conduct a structured debrief. The goal is to assess performance against targets, identify unintended side effects, and evaluate compliance with governance protocols, thereby improving future decision-making quality."
         }
       ],
       "interactiveActivities": [
@@ -510,203 +510,203 @@ export const Biotechnology501Module: LearningModule = {
       "questions": [
         {
           "id": "biotechnology-501-l06-q1",
-          "text": "Which practice most improves specialist performance in bioprocess optimization?",
+          "text": "When using a tradeoff matrix in a case analysis, what is the primary goal?",
           "skillId": "biotechnology-501-skill-specialist",
           "options": [
             {
               "id": "a",
-              "text": "Rely on undocumented assumptions"
+              "text": "To prove one option is perfect"
             },
             {
               "id": "b",
-              "text": "Define constraints, monitor leading indicators, and test edge cases"
+              "text": "To systematically evaluate competing options against defined criteria"
             },
             {
               "id": "c",
-              "text": "Avoid post-decision review"
+              "text": "To ignore all constraints"
             },
             {
               "id": "d",
-              "text": "Optimize only for speed"
+              "text": "To focus only on financial cost"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Advanced performance depends on explicit constraints, monitoring, and stress testing."
+          "explanation": "A tradeoff matrix is for structured comparison across multiple criteria, not just cost, to make a defensible decision."
         },
         {
           "id": "biotechnology-501-l06-q2",
-          "text": "At level 501, the curriculum emphasizes:",
+          "text": "In the context of a biotechnology case study, a 'failure signature' refers to:",
           "skillId": "biotechnology-501-skill-level",
           "options": [
             {
               "id": "a",
-              "text": "specialist method execution, cross-domain integration, and high-stakes scenario performance"
+              "text": "A random, unpredictable event"
             },
             {
               "id": "b",
-              "text": "Unbounded iteration with no controls"
+              "text": "A document signed when a project fails"
             },
             {
               "id": "c",
-              "text": "Single-metric decision making"
+              "text": "A recurring pattern of indicators that predicts a specific type of system breakdown"
             },
             {
               "id": "d",
-              "text": "No uncertainty communication"
+              "text": "The final report of a failed clinical trial"
             }
           ],
-          "correctOptionId": "a",
-          "explanation": "The 501 design is built around specialist method execution, cross-domain integration, and high-stakes scenario performance."
+          "correctOptionId": "c",
+          "explanation": "A failure signature is a predictable pattern of signals that warns of a known risk, allowing for proactive intervention."
         },
         {
           "id": "biotechnology-501-l06-q3",
-          "text": "What best strengthens translational validation execution quality?",
+          "text": "What is the key function of an 'adaptation loop' in response to a system failure?",
           "skillId": "biotechnology-501-skill-execution",
           "options": [
             {
               "id": "a",
-              "text": "No owner mapping or escalation path"
+              "text": "To assign blame to a specific team member"
             },
             {
               "id": "b",
-              "text": "Explicit ownership, checkpoints, and governance thresholds"
+              "text": "To convert learnings from an incident into measurable improvements in system design and controls"
             },
             {
               "id": "c",
-              "text": "Ad-hoc process changes without logs"
+              "text": "To ensure the same failure does not happen again by ignoring it"
             },
             {
               "id": "d",
-              "text": "Skipping retrospective review"
+              "text": "To quickly revert to the original, flawed design"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Quality execution needs ownership clarity, checkpoints, and threshold-driven governance."
+          "explanation": "An adaptation loop is a structured process for learning from failures and implementing verified improvements."
         },
         {
           "id": "biotechnology-501-l06-q4",
-          "text": "A rigorous approach to regulatory quality systems should include:",
+          "text": "When configuring a high-stakes simulation, which of the following is most critical to define upfront?",
           "skillId": "biotechnology-501-skill-evaluation",
           "options": [
             {
               "id": "a",
-              "text": "Outcome claims without baselines"
+              "text": "The desired outcome without any metrics"
             },
             {
               "id": "b",
-              "text": "Baseline comparison, side-effect checks, and uncertainty bounds"
+              "text": "The core assumptions, intervention pathways, and success thresholds"
             },
             {
               "id": "c",
-              "text": "Removal of difficult scenarios"
+              "text": "A list of people to blame if the simulation fails"
             },
             {
               "id": "d",
-              "text": "Changing criteria after seeing results"
+              "text": "The color scheme of the user interface"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Baselines, side-effect checks, and uncertainty disclosure make results defensible."
+          "explanation": "A valid simulation requires clearly defined assumptions, possible actions (interventions), and measurable criteria for success or failure."
         },
         {
           "id": "biotechnology-501-l06-q5",
-          "text": "A mature bioethics governance system should connect:",
+          "text": "The primary purpose of a 'Debrief and Decision Quality Review' after a simulation is to:",
           "skillId": "biotechnology-501-skill-governance",
           "options": [
             {
               "id": "a",
-              "text": "Policy and practice without measurement"
+              "text": "Quickly move on to the next task"
             },
             {
               "id": "b",
-              "text": "Policy, measurable thresholds, and remediation pathways"
+              "text": "Analyze performance against targets, identify unintended side effects, and assess governance compliance"
             },
             {
               "id": "c",
-              "text": "Technical delivery with no accountability"
+              "text": "Celebrate success regardless of the outcome"
             },
             {
               "id": "d",
-              "text": "Performance targets with no risk controls"
+              "text": "Only discuss what went right"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Governance quality comes from linking policy intent to measurable controls and action."
+          "explanation": "The debrief is a critical learning step to analyze the entire performance, including outcomes, side effects, and process adherence."
         },
         {
           "id": "biotechnology-501-l06-q6",
-          "text": "In high-stakes Biotechnology Specialization Studio execution, which communication protocol is strongest?",
+          "text": "In the 'High-Stakes Intervention Simulation', justifying your chosen approach requires you to:",
           "skillId": "biotechnology-501-skill-advanced-6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Argue that your choice has no downsides"
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Acknowledge and explain the near-term and long-term tradeoffs involved"
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Select the option that is fastest, regardless of risk"
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Present your conclusion without any supporting data"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "explanation": "A strong justification in a complex system involves transparently explaining the tradeoffs and why your chosen balance of factors is optimal."
         },
         {
           "id": "biotechnology-501-l06-q7",
-          "text": "A mature remediation loop in advanced Biotechnology should prioritize:",
+          "text": "A robust response to a simulated supply chain disruption in a bioprocess would involve:",
           "skillId": "biotechnology-501-skill-advanced-7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Waiting for the disruption to resolve on its own"
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Activating a pre-defined contingency plan while monitoring key performance indicators"
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "Immediately halting all production indefinitely"
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "Switching to an untested supplier without validation"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "explanation": "A mature response relies on planned contingencies and data-driven monitoring, not passive waiting or reckless action."
         },
         {
           "id": "biotechnology-501-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Biotechnology Specialization Studio?",
+          "text": "Connecting case analysis to simulation, how does identifying a 'failure signature' in a past case help in a future simulation?",
           "skillId": "biotechnology-501-skill-advanced-8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "It is irrelevant to future work"
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "It allows you to design the simulation to specifically test the system's resilience against that known failure mode"
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "It guarantees the failure will not happen in the simulation"
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "It proves simulations are unnecessary"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Insights from past failures (case studies) inform the design of simulations, allowing teams to practice and validate their response to known risks."
         }
       ]
     },
@@ -719,8 +719,8 @@ export const Biotechnology501Module: LearningModule = {
         {
           "id": "biotechnology-501-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Stakeholder Impact Map",
+          "content": "An infographic mapping a biotech decision to its stakeholders. The center shows the decision (e.g., 'Launch New Diagnostic Test'), with radiating lines to groups like 'Patients', 'Regulators', 'Insurers', and 'Community', detailing the potential positive and negative impacts on each."
         }
       ],
       "chunks": [
@@ -728,36 +728,36 @@ export const Biotechnology501Module: LearningModule = {
           "id": "biotechnology-501-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will evaluate how the outcomes of Biotechnology projects are distributed among different stakeholders. This includes understanding both the immediate and delayed effects, as well as any indirect impacts that may arise. Recognizing these distributions is important for ensuring fairness and accountability in Biotechnology practices.\nContext recap: In this lesson, learners will evaluate how the outcomes of Biotechnology projects are distributed among different stakeholders. This includes understanding both the immediate and delayed effects, as well as any indirect impacts that may arise. Recognizing these distributions is important for ensuring fairness and accountability in Biotechnology practices."
+          "content": "This lesson focuses on evaluating how the outcomes of biotechnology—both positive and negative—are distributed among different stakeholders. We will analyze immediate, delayed, and indirect effects to ensure a comprehensive and equitable assessment."
         },
         {
           "id": "biotechnology-501-l07-c2",
           "kind": "concept",
           "title": "Accountability System Design",
-          "content": "In this section, we will explore how to design an accountability system that includes traceability standards, which allow us to track decisions and actions, review rights that give stakeholders the ability to assess processes, and remediation obligations that ensure issues are addressed. These components are essential for maintaining trust and integrity in Biotechnology governance.\nContext recap: In this section, we will explore how to design an accountability system that includes traceability standards, which allow us to track decisions and actions, review rights that give stakeholders the ability to assess processes, and remediation obligations that ensure issues are addressed. These components are essential for maintaining trust and integrity in Biotechnology governance."
+          "content": "Here, we explore the architecture of a robust accountability system. Key components include traceability standards to log decisions, review rights for stakeholders to ensure oversight, and remediation obligations to correct for negative outcomes, all of which are essential for building trust."
         },
         {
           "id": "biotechnology-501-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "A responsible leadership checklist is an important tool that helps leaders connect their strategies, ethical considerations, policies, and operational controls. This checklist serves as a comprehensive guide to ensure that all aspects of leadership are reviewed and aligned, promoting accountability and effective decision-making.\nContext recap: A responsible leadership checklist is an important tool that helps leaders connect their strategies, ethical considerations, policies, and operational controls. This checklist serves as a comprehensive guide to ensure that all aspects of leadership are reviewed and aligned, promoting accountability and effective decision-making."
+          "content": "We conclude with a responsible leadership checklist, a practical tool for ensuring alignment between strategy, ethics, policy, and operational controls. This guide helps leaders verify that their decisions are not only effective but also accountable and ethically sound."
         }
       ],
       "flashcards": [
         {
           "id": "biotechnology-501-l07-f1",
-          "front": "Impact distribution",
-          "back": "How benefits and harms are allocated across groups and timeframes."
+          "front": "Impact Distribution",
+          "back": "The analysis of how the benefits, costs, and risks of a technology are spread across different stakeholder groups, both now and in the future."
         },
         {
           "id": "biotechnology-501-l07-f2",
-          "front": "Decision traceability",
-          "back": "An auditable explanation of evidence, rationale, and ownership behind a decision."
+          "front": "Decision Traceability",
+          "back": "The ability to reconstruct the history of a decision, including the data used, the rationale applied, and who was accountable."
         },
         {
           "id": "biotechnology-501-l07-f3",
-          "front": "Responsible leadership",
-          "back": "Decision practice that balances performance, risk, ethics, and accountability."
+          "front": "Responsible Leadership",
+          "back": "A leadership approach that integrates performance goals with ethical principles, risk management, and clear accountability structures."
         }
       ]
     },
@@ -770,8 +770,8 @@ export const Biotechnology501Module: LearningModule = {
         {
           "id": "biotechnology-501-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, log assumptions, and verify conclusions against constraints and metrics."
+          "title": "Capstone Charter Template",
+          "content": "A downloadable Capstone Charter template, including sections for Problem Statement, Objectives, Key Metrics, Constraints, Governance Plan, and Evidence Strategy."
         }
       ],
       "chunks": [
@@ -779,13 +779,13 @@ export const Biotechnology501Module: LearningModule = {
           "id": "biotechnology-501-l08-c1",
           "kind": "practice",
           "title": "Capstone Charter and Evidence Pack",
-          "content": "In this activity, learners will work together to create a capstone charter. This document will outline the main objectives of their project, identify any constraints they might face, establish metrics for success, define governance controls, and develop a plan for gathering evidence. This process helps ensure that their project is well-organized and focused on achieving its goals.\nContext recap: In this activity, learners will work together to create a capstone charter. This document will outline the main objectives of their project, identify any constraints they might face, establish metrics for success, define governance controls, and develop a plan for gathering evidence. This process helps ensure that their project is well-organized and focused on achieving its goals."
+          "content": "In this collaborative activity, learners will construct a capstone charter that defines their project's objectives, constraints, success metrics, and governance controls. You will also develop a plan for gathering the evidence needed to defend your final proposal."
         },
         {
           "id": "biotechnology-501-l08-c2",
           "kind": "recap",
           "title": "Defense Rehearsal",
-          "content": "During the final practice round, learners will have the opportunity to rehearse defending their decisions. This session will prepare them to respond to critiques from technical experts, governance representatives, and stakeholders. By practicing these defense skills, learners will build confidence and improve their ability to communicate their ideas effectively.\nContext recap: During the final practice round, learners will have the opportunity to rehearse defending their decisions. This session will prepare them to respond to critiques from technical experts, governance representatives, and stakeholders. By practicing these defense skills, learners will build confidence and improve their ability to communicate their ideas effectively."
+          "content": "The final practice round is a defense rehearsal. Learners will present their capstone proposals and respond to rigorous critiques from a panel simulating technical experts, governance representatives, and public stakeholders, honing their ability to communicate and defend complex decisions."
         }
       ],
       "interactiveActivities": [

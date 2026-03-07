@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const Biology601Module: LearningModule = {
+export const biology_601_Module: LearningModule = {
   "id": "biology-601",
   "title": "Biology Research and Leadership",
   "description": "Post-401 specialization in Biology, focused on biology systems diagnostics, biology operations and execution design, biology impact and tradeoff analysis, and biology governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
@@ -14,7 +14,7 @@ export const Biology601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Foundational Framework Diagram",
+          "content": "A diagram illustrating the core pillars of the course: Systems Diagnostics, Operations Design, Impact Analysis, and Governance."
         }
       ],
       "chunks": [
@@ -47,35 +47,35 @@ export const Biology601Module: LearningModule = {
           "id": "biology-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will delve into the advanced boundaries of biology as a scientific discipline. We will examine how to effectively diagnose biological systems, which involves understanding the various components and interactions within living organisms. Additionally, we will discuss how to design efficient operations and execution strategies that can be applied in biological research. By grasping these concepts, we will be better equipped to define the limits and possibilities of biological research and its real-world applications, paving the way for innovative discoveries and solutions in the field of biology."
+          "content": "Delve into the advanced boundaries of biology as a scientific discipline. This lesson introduces structured methods for diagnosing complex biological systems, understanding their components and interactions. You will learn to design efficient operational strategies for biological research, defining the limits and possibilities for real-world applications."
         },
         {
           "id": "biology-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will create maps that illustrate causal pathways, which show how different factors influence one another. We will also explore uncertainty ranges and system dependencies, which are important for planning interventions. This mapping process is essential for understanding how to effectively address biological challenges.\nContext recap: In this section, learners will create maps that illustrate causal pathways, which show how different factors influence one another. We will also explore uncertainty ranges and system dependencies, which are important for planning interventions. This mapping process is essential for understanding how to effectively address biological challenges."
+          "content": "Explore how to map causal pathways in biological systems to understand how different factors influence one another. This section covers modeling uncertainty ranges and system dependencies, which are critical for planning effective and robust interventions."
         },
         {
           "id": "biology-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "It is important that all claims we make in biology are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to ensure our findings are reliable. By mapping our claims to these indicators, we can strengthen our conclusions and enhance our research credibility.\nContext recap: It is important that all claims we make in biology are supported by measurable indicators. This lesson emphasizes the need for confidence bounds and regular review checkpoints to ensure our findings are reliable. By mapping our claims to these indicators, we can strengthen our conclusions and enhance our research credibility."
+          "content": "Learn the importance of supporting all biological claims with measurable indicators and evidence. This recap emphasizes using confidence bounds and regular review checkpoints to ensure research findings are reliable and conclusions are credible."
         }
       ],
       "flashcards": [
         {
           "id": "biology-601-l01-f1",
-          "front": "biology systems diagnostics",
+          "front": "Biology Systems Diagnostics",
           "back": "A specialization axis requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "biology-601-l01-f2",
-          "front": "biology operations and execution design",
+          "front": "Biology Operations and Execution Design",
           "back": "Execution architecture that determines reliability under stress."
         },
         {
           "id": "biology-601-l01-f3",
-          "front": "biology impact and tradeoff analysis",
+          "front": "Biology Impact and Tradeoff Analysis",
           "back": "Evaluation discipline for identifying true gains and hidden costs."
         }
       ]
@@ -88,9 +88,9 @@ export const Biology601Module: LearningModule = {
       "learningAids": [
         {
           "id": "biology-601-l02-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Workflow Design Canvas",
+          "content": "A visual template for designing a research workflow, with dedicated sections for checkpoints, rollback criteria, and escalation triggers."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const Biology601Module: LearningModule = {
           "id": "biology-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive lab, learners will design specialized workflows that are tailored to specific biological tasks. After creating these workflows, we will put them to the test by simulating adverse scenarios to see how they perform under stress. This practice will help us identify potential weaknesses and improve our methods.\nContext recap: In this interactive lab, learners will design specialized workflows that are tailored to specific biological tasks. After creating these workflows, we will put them to the test by simulating adverse scenarios to see how they perform under stress. This practice will help us identify potential weaknesses and improve our methods."
+          "content": "In this interactive lab, you will design specialized workflows tailored to specific biological research tasks. After creating a workflow, you will stress-test it by simulating adverse scenarios to evaluate its performance and identify potential weaknesses for improvement."
         },
         {
           "id": "biology-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation based on thresholds. These elements are crucial for ensuring that our processes are robust and can adapt to unexpected challenges while maintaining quality and safety.\nContext recap: In this recap, we will discuss how workflows can be structured to include important checkpoints, rollback criteria, and escalation based on thresholds. These elements are crucial for ensuring that our processes are robust and can adapt to unexpected challenges while maintaining quality and safety."
+          "content": "This recap reviews how to architect robust workflows by integrating critical control gates. Key elements include mandatory checkpoints for quality assurance, clear rollback criteria to contain failures, and threshold-based escalation pathways for significant issues."
         }
       ],
       "interactiveActivities": [
@@ -142,16 +142,16 @@ export const Biology601Module: LearningModule = {
       "learningAids": [
         {
           "id": "biology-601-l03-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Key Concepts Review",
+          "content": "A mind map summarizing the core principles from the first two lessons, connecting diagnostics, causal modeling, and workflow controls."
         }
       ],
       "questions": [
         {
           "id": "biology-601-l03-q1",
           "text": "Which practice most improves biology systems diagnostics decision quality?",
-          "skillId": "biology-601-skill-core",
+          "skillId": "systems-diagnostics",
           "options": [
             {
               "id": "a",
@@ -176,7 +176,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l03-q2",
           "text": "At level 601, strong execution for biology operations and execution design requires:",
-          "skillId": "biology-601-skill-execution",
+          "skillId": "operations-design",
           "options": [
             {
               "id": "a",
@@ -201,7 +201,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l03-q3",
           "text": "A defensible approach to biology impact and tradeoff analysis includes:",
-          "skillId": "biology-601-skill-eval",
+          "skillId": "impact-analysis",
           "options": [
             {
               "id": "a",
@@ -226,7 +226,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l03-q4",
           "text": "Mature governance systems connect:",
-          "skillId": "biology-601-skill-governance",
+          "skillId": "governance-leadership",
           "options": [
             {
               "id": "a",
@@ -251,7 +251,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l03-q5",
           "text": "What is the best way to compare competing interventions in advanced Biology?",
-          "skillId": "biology-601-skill-advanced-5",
+          "skillId": "impact-analysis",
           "options": [
             {
               "id": "a",
@@ -276,7 +276,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l03-q6",
           "text": "In high-stakes Biology Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "biology-601-skill-advanced-6",
+          "skillId": "decision-review",
           "options": [
             {
               "id": "a",
@@ -301,7 +301,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l03-q7",
           "text": "A mature remediation loop in advanced Biology should prioritize:",
-          "skillId": "biology-601-skill-advanced-7",
+          "skillId": "operations-design",
           "options": [
             {
               "id": "a",
@@ -326,7 +326,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l03-q8",
           "text": "Which portfolio decision rule best balances performance and resilience in Biology Research and Leadership?",
-          "skillId": "biology-601-skill-advanced-8",
+          "skillId": "governance-leadership",
           "options": [
             {
               "id": "a",
@@ -359,8 +359,8 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Tradeoff Analysis Matrix",
+          "content": "An example of a decision matrix used to evaluate a new gene therapy, comparing options across criteria like efficacy, safety, cost, and equity."
         }
       ],
       "chunks": [
@@ -368,19 +368,19 @@ export const Biology601Module: LearningModule = {
           "id": "biology-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame cases that highlight the competing constraints found in biological systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions within these systems. Understanding these dynamics is essential for effective case analysis in biology.\nContext recap: In this lesson, we will frame cases that highlight the competing constraints found in biological systems diagnostics. We will analyze the impacts and trade-offs involved in making decisions within these systems. Understanding these dynamics is essential for effective case analysis in biology."
+          "content": "This lesson introduces scenario architecture, a method for framing case studies that highlight the competing constraints in biological systems. You will learn to analyze the complex impacts and trade-offs involved in making high-stakes decisions."
         },
         {
           "id": "biology-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help us understand the trade-offs involved in decision-making and the importance of considering multiple factors.\nContext recap: In this practice session, learners will compare different options based on various dimensions such as safety, reliability, cost, equity, and governance. This comparative analysis will help us understand the trade-offs involved in decision-making and the importance of considering multiple factors."
+          "content": "Practice comparing different strategic options for a given biological challenge. You will frame trade-offs across multiple dimensions, including safety, reliability, cost, equity, and governance, to develop a holistic view of the decision landscape."
         },
         {
           "id": "biology-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In this recap, we will discuss the structure of decision memos. Each recommendation should include key components such as assumptions, supporting evidence, risk controls, and fallback plans. This structure ensures that our decisions are well-informed and prepared for potential challenges.\nContext recap: In this recap, we will discuss the structure of decision memos. Each recommendation should include key components such as assumptions, supporting evidence, risk controls, and fallback plans. This structure ensures that our decisions are well-informed and prepared for potential challenges."
+          "content": "Review the standard structure for a professional decision memo. A strong recommendation must be supported by explicit assumptions, verifiable evidence, predefined risk controls, and viable fallback plans to ensure it is robust and defensible."
         }
       ]
     },
@@ -392,9 +392,9 @@ export const Biology601Module: LearningModule = {
       "learningAids": [
         {
           "id": "biology-601-l05-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Simulation Control Dashboard",
+          "content": "A mock-up of an interactive dashboard for the simulation, showing adjustable parameters for research funding, ethical constraints, and public opinion."
         }
       ],
       "chunks": [
@@ -402,13 +402,13 @@ export const Biology601Module: LearningModule = {
           "id": "biology-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive clinic, learners will have the opportunity to operate scenario controls while balancing performance and governance constraints. This hands-on experience will help us understand the complexities involved in managing biological scenarios effectively.\nContext recap: In this interactive clinic, learners will have the opportunity to operate scenario controls while balancing performance and governance constraints. This hands-on experience will help us understand the complexities involved in managing biological scenarios effectively.\nWhy this matters: Live Scenario Controls helps learners in Biology connect ideas from Biology Research and Leadership to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In this interactive clinic, you will operate controls in a live, dynamic scenario, balancing research performance goals with governance constraints. This hands-on experience demonstrates the complexities of managing biological research and interventions in real time."
         },
         {
           "id": "biology-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In this recap, we will explore how effective responses can update control gates while maintaining traceability and accountability. This is crucial for ensuring that our actions are transparent and that we can track the outcomes of our decisions.\nContext recap: In this recap, we will explore how effective responses can update control gates while maintaining traceability and accountability. This is crucial for ensuring that our actions are transparent and that we can track the outcomes of our decisions."
+          "content": "This recap explores adaptive response design, focusing on how to update control gates and operational plans in response to new data. Learn to maintain full traceability and accountability for all decisions made during an evolving scenario."
         }
       ],
       "interactiveActivities": [
@@ -428,16 +428,16 @@ export const Biology601Module: LearningModule = {
       "learningAids": [
         {
           "id": "biology-601-l06-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Case Mastery Checklist",
+          "content": "A checklist outlining the key components of a masterful case analysis, from problem framing and evidence gathering to recommendation and defense."
         }
       ],
       "questions": [
         {
           "id": "biology-601-l06-q1",
           "text": "In advanced casework, the first requirement for defensible recommendations is:",
-          "skillId": "biology-601-skill-case1",
+          "skillId": "systems-diagnostics",
           "options": [
             {
               "id": "a",
@@ -462,7 +462,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l06-q2",
           "text": "A resilient strategy for biology operations and execution design should include:",
-          "skillId": "biology-601-skill-case2",
+          "skillId": "operations-design",
           "options": [
             {
               "id": "a",
@@ -487,7 +487,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l06-q3",
           "text": "When evaluating biology impact and tradeoff analysis, which method is most rigorous?",
-          "skillId": "biology-601-skill-case3",
+          "skillId": "impact-analysis",
           "options": [
             {
               "id": "a",
@@ -512,7 +512,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l06-q4",
           "text": "Advanced governance is strongest when it:",
-          "skillId": "biology-601-skill-case4",
+          "skillId": "governance-leadership",
           "options": [
             {
               "id": "a",
@@ -537,7 +537,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l06-q5",
           "text": "What is the best way to compare competing interventions in advanced Biology?",
-          "skillId": "biology-601-skill-advanced-5",
+          "skillId": "impact-analysis",
           "options": [
             {
               "id": "a",
@@ -562,7 +562,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l06-q6",
           "text": "In high-stakes Biology Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "biology-601-skill-advanced-6",
+          "skillId": "decision-review",
           "options": [
             {
               "id": "a",
@@ -587,7 +587,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l06-q7",
           "text": "A mature remediation loop in advanced Biology should prioritize:",
-          "skillId": "biology-601-skill-advanced-7",
+          "skillId": "operations-design",
           "options": [
             {
               "id": "a",
@@ -612,7 +612,7 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l06-q8",
           "text": "Which portfolio decision rule best balances performance and resilience in Biology Research and Leadership?",
-          "skillId": "biology-601-skill-advanced-8",
+          "skillId": "governance-leadership",
           "options": [
             {
               "id": "a",
@@ -645,8 +645,8 @@ export const Biology601Module: LearningModule = {
         {
           "id": "biology-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A visual map showing how a new agricultural biotechnology impacts various stakeholders, including farmers, consumers, corporations, and the environment, over short and long-term horizons."
         }
       ],
       "chunks": [
@@ -654,35 +654,35 @@ export const Biology601Module: LearningModule = {
           "id": "biology-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is vital for ensuring that our biological initiatives are equitable and considerate of all parties involved.\nContext recap: In this lesson, learners will map out the distribution of benefits, burdens, and delayed effects across different stakeholder groups. Understanding these impacts is vital for ensuring that our biological initiatives are equitable and considerate of all parties involved."
+          "content": "Learn to map the distribution of benefits, burdens, and delayed effects of a biological initiative across different stakeholder groups. This analysis is vital for ensuring that research and policy are equitable and socially responsible."
         },
         {
           "id": "biology-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. These elements are essential for maintaining trust and responsibility in biological governance.\nContext recap: In this section, we will discuss the architecture of accountability in decision-making. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation. These elements are essential for maintaining trust and responsibility in biological governance."
+          "content": "This section details the architecture of accountability in biological governance. Explore the importance of decision traceability, stakeholder rights for review, and clear obligations for remediation to maintain public trust and institutional responsibility."
         },
         {
           "id": "biology-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and emphasizes the importance of resilience in leadership. This checklist will serve as a valuable tool for evaluating our responsibilities as leaders in the field of biology.\nContext recap: At the end of our lesson, we will provide a comprehensive checklist that connects important outcomes with ethical considerations, ensures compliance with relevant policies, and emphasizes the importance of resilience in leadership. This checklist will serve as a valuable tool for evaluating our responsibilities as leaders in the field of biology."
+          "content": "Review a comprehensive checklist for responsible leadership. This tool connects research outcomes with ethical duties, policy compliance, and system resilience, serving as a guide for making accountable decisions in the field of biology."
         }
       ],
       "flashcards": [
         {
           "id": "biology-601-l07-f1",
-          "front": "Impact distribution",
+          "front": "Impact Distribution",
           "back": "How outcomes are allocated across populations and timescales."
         },
         {
           "id": "biology-601-l07-f2",
-          "front": "Decision traceability",
+          "front": "Decision Traceability",
           "back": "An auditable record of evidence, ownership, and rationale."
         },
         {
           "id": "biology-601-l07-f3",
-          "front": "Responsible leadership",
+          "front": "Responsible Leadership",
           "back": "Decision behavior balancing performance, accountability, and ethics."
         }
       ]
@@ -695,9 +695,9 @@ export const Biology601Module: LearningModule = {
       "learningAids": [
         {
           "id": "biology-601-l08-a1",
-          "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "type": "image",
+          "title": "Capstone Defense Structure",
+          "content": "A graphic organizer outlining the required components for the final defense brief: Central Claim, Supporting Evidence, Uncertainty Analysis, and Remediation Pathways."
         }
       ],
       "chunks": [
@@ -705,13 +705,13 @@ export const Biology601Module: LearningModule = {
           "id": "biology-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, students will work together to create a detailed brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and potential pathways for remediation. This exercise will help students practice organizing their thoughts and presenting their ideas clearly.\nContext recap: In this interactive activity, students will work together to create a detailed brief. This brief will include well-supported claims, evidence to back those claims, an understanding of the uncertainties involved, and potential pathways for remediation. This exercise will help students practice organizing their thoughts and presenting their ideas clearly."
+          "content": "In this lab, you will assemble a capstone defense brief for a complex biological scenario. This involves formulating a well-supported claim, backing it with evidence, quantifying uncertainties, and proposing clear pathways for remediation."
         },
         {
           "id": "biology-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, learners will practice their responses to a variety of critiques that may come from experts, governance bodies, and stakeholders. This rehearsal will help students build confidence in their ability to address challenging questions and defend their ideas effectively. It’s an important step in preparing for real-world discussions.\nContext recap: During this session, learners will practice their responses to a variety of critiques that may come from experts, governance bodies, and stakeholders. This rehearsal will help students build confidence in their ability to address challenging questions and defend their ideas effectively. It’s an important step in preparing for real-world discussions."
+          "content": "Rehearse defending your recommendations against critiques from a simulated expert panel representing scientific, governance, and public stakeholder perspectives. This practice builds confidence and sharpens your ability to address challenging questions effectively."
         }
       ],
       "interactiveActivities": [

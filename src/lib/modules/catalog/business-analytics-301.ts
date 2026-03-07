@@ -1,6 +1,6 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const BusinessAnalytics301Module: LearningModule = {
+export const business_analytics_301_Module: LearningModule = {
   "id": "business-analytics-301",
   "title": "Predictive Analytics & Machine Learning for Business",
   "description": "Harness the power of predictive models and machine learning to anticipate customer behavior, forecast demand, and uncover hidden patterns. Learn classification, clustering, time series, recommendation systems, and text analytics with a business-first approach.",
@@ -14,7 +14,7 @@ export const BusinessAnalytics301Module: LearningModule = {
   ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -23,11 +23,11 @@ export const BusinessAnalytics301Module: LearningModule = {
   "thumbnail": "/placeholders/lesson-robot.svg",
   "learningObjectives": [
     "Build classification models using logistic regression and decision trees",
+    "Evaluate model performance using a confusion matrix, accuracy, precision, and recall",
     "Apply clustering techniques for customer segmentation",
     "Forecast business metrics using time series methods",
     "Explain how recommendation systems generate personalized suggestions",
     "Extract insights from unstructured text using sentiment analysis",
-    "Evaluate model performance using accuracy, precision, and recall",
     "Manage the end-to-end analytics workflow from question to deployment"
   ],
   "lessons": [
@@ -45,42 +45,42 @@ export const BusinessAnalytics301Module: LearningModule = {
         {
           "id": "business-analytics-301-l01-c1",
           "title": "Why Logistic Regression?",
-          "content": "Logistic regression is a unique and important statistical method that helps us predict outcomes that can only have two possible answers. For example, we might want to know if a customer will decide to leave a service (yes or no) or if a loan will be paid back on time (yes or no). In these situations, we need a way to make predictions that fit within these two options. Regular linear regression, which is a common method for making predictions, sometimes gives us results that fall outside the range of 0 and 1. This can be confusing because we want our predictions to clearly indicate one of the two outcomes. That's where logistic regression comes in! It uses a special mathematical function called the logistic function. This function helps to ensure that all of our predictions stay between 0 and 1, which allows us to interpret them as probabilities. For instance, if the logistic regression model predicts a probability score of 0.7 for a customer churning, we can interpret this as a 70% chance that the customer will leave. If this score is greater than a certain threshold, usually set at 0.5, we can confidently say that the outcome is likely to be in the positive category, meaning the event is likely to happen. This makes logistic regression a very useful tool for making informed decisions based on data, helping businesses understand customer behavior and manage risks effectively.\nContext recap: Logistic regression is a unique and important statistical method that helps us predict outcomes that can only have two possible answers. For example, we might want to know if a customer will decide to leave a service (yes or no) or if a loan will be paid back on time (yes or no). In these situations, we need a way to make predictions that fit within these two options. Regular linear regression, which is a common method for making predictions, sometimes gives us results that fall outside the range of 0 and 1.\nWhy this matters: Why Logistic Regression? helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Logistic regression is a statistical method for predicting binary outcomes, like 'yes/no' or 'churn/stay'. Unlike linear regression, which can predict values outside a logical range, logistic regression uses a special S-shaped curve (the sigmoid function) to ensure its output is always a probability between 0 and 1. We can then set a threshold, typically 0.5, to classify the outcome. For example, a predicted probability of 0.8 (80%) for customer churn would be classified as 'churn', providing a clear, actionable prediction."
         },
         {
           "id": "business-analytics-301-l01-c2",
           "title": "Interpreting Coefficients",
-          "content": "In logistic regression, we use coefficients, which are special numbers we calculate, to understand how the odds of a certain outcome change when we increase a predictor variable by one unit. This means that if we have a predictor variable, like the number of complaints a customer makes, the coefficient tells us how much the likelihood of an event, such as a customer leaving, will change. When we exponentiate these coefficients, we get what we call odds ratios. For instance, if we calculate an odds ratio of 1.3, it indicates that increasing our predictor variable by one unit makes the outcome 1.3 times more likely to occur. To illustrate this with a practical example, if we find that for every additional complaint a customer makes to customer service, the odds of them leaving increase by 1.4 times, we can conclude that a customer who has three complaints is significantly more likely to leave than a customer who has no complaints at all. This understanding of coefficients and odds ratios is crucial for businesses, as it helps them make informed decisions on how to enhance customer satisfaction and improve retention rates. By analyzing these relationships, businesses can identify areas where they need to improve their services and ensure that their customers feel valued and heard.\nContext recap: In logistic regression, we use coefficients, which are special numbers we calculate, to understand how the odds of a certain outcome change when we increase a predictor variable by one unit. This means that if we have a predictor variable, like the number of complaints a customer makes, the coefficient tells us how much the likelihood of an event, such as a customer leaving, will change. When we exponentiate these coefficients, we get what we call odds ratios. For instance, if we calculate an odds ratio of 1.3, it indicates that increasing our predictor variable by one unit makes the outcome 1.3 times more likely to occur.\nWhy this matters: Interpreting Coefficients helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "In logistic regression, coefficients tell us how each input variable affects the outcome. By converting these coefficients, we get 'odds ratios.' An odds ratio of 1.4 means that for every one-unit increase in a predictor variable (like an additional customer service call), the odds of the outcome (like churning) increase by 40%. This helps businesses pinpoint the key drivers of behavior and take targeted action to improve retention or mitigate risk."
         },
         {
           "id": "business-analytics-301-l01-c3",
           "title": "Business Applications",
-          "content": "Logistic regression is a powerful tool that many businesses use to make smart decisions. It plays a crucial role in several important areas. For example, in credit scoring, logistic regression helps determine if someone applying for a loan is likely to pay it back or if they might default, which means they won't be able to repay it. This is very important for banks and financial institutions.\nAnother application is customer churn prediction. This means using logistic regression to find out which customers might decide to stop using a service or product. By understanding this, businesses can take steps to keep their customers happy and engaged.\nAdditionally, logistic regression is used in marketing response modeling. This helps businesses identify which customers are most likely to respond positively to a marketing campaign, allowing them to target their efforts more effectively.\nLastly, it is also valuable in fraud detection. Logistic regression can help identify transactions that may be fraudulent, protecting both the business and its customers. One of the best features of logistic regression is its transparency. This means that we can see and understand which factors are influencing the predictions it makes. This clarity is especially important in regulated industries, where businesses must explain how they make decisions based on their models.\nContext recap: Logistic regression is a powerful tool that many businesses use to make smart decisions. It plays a crucial role in several important areas. For example, in credit scoring, logistic regression helps determine if someone applying for a loan is likely to pay it back or if they might default, which means they won't be able to repay it. This is very important for banks and financial institutions.\nWhy this matters: Business Applications helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Logistic regression is a powerful and widely used tool for making smart business decisions. In finance, it's used for credit scoring to predict loan defaults. In marketing, it helps identify which customers are most likely to respond to a campaign. It's also critical for customer churn prediction, allowing companies to proactively retain at-risk customers, and for fraud detection to flag suspicious transactions. A key advantage is its interpretability; because we can see which factors drive predictions, it's highly valued in regulated industries where decisions must be explainable."
         }
       ],
       "flashcards": [
         {
           "id": "business-analytics-301-l01-f1",
-          "front": "Logistic regression",
-          "back": "A classification model that uses the sigmoid function to predict the probability of a binary outcome (0 or 1) — outputs values constrained between 0 and 1"
+          "front": "Logistic Regression",
+          "back": "A classification model that uses the sigmoid function to predict the probability of a binary outcome (0 or 1). Its output is always constrained between 0 and 1."
         },
         {
           "id": "business-analytics-301-l01-f2",
-          "front": "Odds ratio in logistic regression",
-          "back": "The exponentiated coefficient — an odds ratio of 1.4 means a one-unit increase in the predictor makes the outcome 1.4 times more likely"
+          "front": "Odds Ratio",
+          "back": "The exponentiated coefficient in logistic regression. An odds ratio of 1.4 means a one-unit increase in the predictor makes the outcome 40% more likely."
         },
         {
           "id": "business-analytics-301-l01-f3",
-          "front": "Why logistic regression is preferred in regulated industries",
-          "back": "Its coefficients are interpretable — stakeholders and regulators can see which factors drive predictions, unlike black-box models"
+          "front": "Why is logistic regression valued in regulated industries?",
+          "back": "Its coefficients are interpretable, allowing stakeholders and regulators to understand which factors drive predictions, unlike 'black-box' models."
         }
       ],
       "learningAids": [
         {
           "id": "business-analytics-301-l01-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "The Logistic S-Curve",
+          "content": "A diagram showing a logistic (S-shaped) curve mapping inputs (e.g., customer tenure) to a probability between 0 and 1, with a clear decision threshold at 0.5."
         }
       ]
     },
@@ -98,47 +98,100 @@ export const BusinessAnalytics301Module: LearningModule = {
         {
           "id": "business-analytics-301-l02-c1",
           "title": "How Decision Trees Work",
-          "content": "A decision tree is a helpful visual tool that guides us in making decisions by breaking down data into smaller and smaller groups based on specific characteristics. Imagine starting at the top of a tree, where the trunk represents the main question we want to answer. As we move down the branches, each branch represents a decision point that helps us narrow down our options. At each of these points, the algorithm selects the best feature and threshold to separate different classes of data. This selection process uses measures like Gini impurity or information gain, which are like scorecards that tell us how well a feature can split the data into distinct groups. The final result resembles a flowchart. For instance, we might say, 'If a person's annual income is greater than $80,000 and their account has been active for more than two years, then they might be classified as having a low risk of leaving the service.' This means they are less likely to stop using the service. Decision trees are designed to be easy to understand, making them accessible for business users who may not have a background in statistics. This simplicity allows anyone to follow the logic behind the decisions being made, which is crucial in a business setting where clear communication is key to success.\nContext recap: A decision tree is a helpful visual tool that guides us in making decisions by breaking down data into smaller and smaller groups based on specific characteristics. Imagine starting at the top of a tree, where the trunk represents the main question we want to answer. As we move down the branches, each branch represents a decision point that helps us narrow down our options. At each of these points, the algorithm selects the best feature and threshold to separate different classes of data.\nWhy this matters: How Decision Trees Work helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A decision tree makes predictions by splitting data into smaller, more manageable groups based on a series of 'if-then' questions. It starts with the entire dataset at the 'root' and, at each 'branch,' selects the feature that best separates the data into purer subgroups. The process continues until it reaches 'leaf' nodes, which represent the final prediction. For example, a rule might be: 'IF income > $80k AND tenure > 2 years, THEN predict 'low churn risk'.' Their flowchart-like structure makes them highly interpretable for business stakeholders."
         },
         {
           "id": "business-analytics-301-l02-c2",
           "title": "Overfitting and Pruning",
-          "content": "Decision trees are a popular method used in machine learning to make predictions based on data. However, sometimes these trees can become overly complicated, which leads to a problem known as overfitting. Overfitting occurs when a decision tree learns the training data too well, memorizing every detail instead of understanding the underlying patterns. This results in a tree that performs excellently on the training data but struggles to make accurate predictions on new, unseen data. To combat overfitting, we can use a technique called pruning. Pruning helps to simplify the decision tree, making it more generalizable. There are several strategies for pruning a decision tree. One method is to set a maximum depth for the tree, which limits how many levels it can have. Another approach is to ensure that each leaf node contains a minimum number of data points, which helps maintain the tree's reliability. Additionally, cost-complexity pruning can be applied, which introduces a penalty for trees that are too large. The ultimate goal of these pruning techniques is to create a decision tree that is not only simple enough to apply to new data but also complex enough to capture the significant patterns present in the data. By finding the right balance, we can improve the tree's performance and ensure it makes accurate predictions in real-world scenarios.\nContext recap: Decision trees are a popular method used in machine learning to make predictions based on data. However, sometimes these trees can become overly complicated, which leads to a problem known as overfitting. Overfitting occurs when a decision tree learns the training data too well, memorizing every detail instead of understanding the underlying patterns. This results in a tree that performs excellently on the training data but struggles to make accurate predictions on new, unseen data.\nWhy this matters: Overfitting and Pruning helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "A major risk with decision trees is overfitting, where the model becomes too complex and memorizes the training data, including its noise. This leads to excellent performance on known data but poor predictions on new, unseen data. To prevent this, we use pruning techniques. Pruning simplifies the tree by setting limits, such as a maximum tree depth or a minimum number of samples required at a leaf node. The goal is to find the right balance: a model complex enough to capture true patterns but simple enough to generalize to new situations."
         },
         {
           "id": "business-analytics-301-l02-c3",
           "title": "Random Forests",
-          "content": "Random forests are a powerful technique used in predictive analytics that enhances the accuracy of predictions by combining the strengths of many decision trees. Instead of depending on just one decision tree, which might not capture all the complexities of the data, a random forest constructs hundreds of individual trees. Each of these trees is trained on a different random subset of the available data and features, which helps to ensure that the model is robust and less likely to make errors based on peculiarities in the data.\nOnce all the trees are built, the random forest combines their predictions to make a final decision. For classification tasks, this is done through a method called voting, where each tree gets a vote for a particular class, and the class with the most votes is chosen. For regression tasks, the predictions from all the trees are averaged to produce a final output. This ensemble approach is particularly effective because it reduces the risk of overfitting, which occurs when a model learns the noise in the training data rather than the underlying patterns.\nHowever, one challenge with random forests is that they can be difficult to interpret. A single decision tree is straightforward and easy to understand, but when you have a forest of hundreds of trees, it can feel like a black box where it’s hard to see how decisions are made. To address this, we can use feature importance scores. These scores help us identify which variables or features are most influential in the predictions made by the random forest, giving us insight into the model's behavior and helping us understand its decisions better.\nContext recap: Random forests are a powerful technique used in predictive analytics that enhances the accuracy of predictions by combining the strengths of many decision trees. Instead of depending on just one decision tree, which might not capture all the complexities of the data, a random forest constructs hundreds of individual trees. Each of these trees is trained on a different random subset of the available data and features, which helps to ensure that the model is robust and less likely to make errors based on peculiarities in the data. Once all the trees are built, the random forest combines their predictions to make a final decision."
+          "content": "A random forest is an ensemble method that improves upon single decision trees by building hundreds of them. Each tree is trained on a random sample of the data and a random subset of the features. To make a prediction, the random forest aggregates the results from all individual trees—by taking a majority vote for classification or an average for regression. This approach dramatically reduces overfitting and increases accuracy. While a single tree is easy to interpret, a forest is more of a 'black box.' However, we can still measure feature importance to understand which variables are the most influential drivers of the predictions."
         }
       ],
       "flashcards": [
         {
           "id": "business-analytics-301-l02-f1",
-          "front": "Gini impurity",
-          "back": "A metric measuring how often a randomly chosen element would be misclassified — decision trees select splits that minimize Gini impurity to create purer subgroups"
+          "front": "Gini Impurity",
+          "back": "A metric measuring how often a randomly chosen element would be misclassified. Decision trees select splits that minimize Gini impurity to create purer subgroups."
         },
         {
           "id": "business-analytics-301-l02-f2",
-          "front": "Overfitting in decision trees",
-          "back": "When a tree is too deep and memorizes training data noise — it performs well on training data but poorly on unseen data. Prevented by pruning and depth limits."
+          "front": "Overfitting in Decision Trees",
+          "back": "When a tree is too deep and memorizes training data noise. It performs well on training data but poorly on unseen data. Prevented by pruning and setting depth limits."
         },
         {
           "id": "business-analytics-301-l02-f3",
-          "front": "Random forest",
-          "back": "An ensemble of hundreds of decision trees trained on random data and feature subsets — aggregates predictions via voting or averaging to reduce overfitting and improve accuracy"
+          "front": "Random Forest",
+          "back": "An ensemble of hundreds of decision trees trained on random data and feature subsets. It aggregates predictions via voting or averaging to reduce overfitting and improve accuracy."
         }
       ],
       "learningAids": [
         {
           "id": "business-analytics-301-l02-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Decision Tree Split",
+          "content": "An animated flowchart illustrating how a decision tree splits a dataset of customers into 'Churn' and 'No Churn' groups based on features like 'Contract Type' and 'Monthly Charges'."
         }
       ]
     },
     {
       "id": "business-analytics-301-l03",
+      "title": "Evaluating Model Performance",
+      "type": "video",
+      "duration": 12,
+      "objectives": [
+        "Define the components of a confusion matrix",
+        "Calculate and interpret accuracy, precision, and recall",
+        "Explain the tradeoff between precision and recall for different business problems"
+      ],
+      "chunks": [
+        {
+          "id": "business-analytics-301-l03-c1",
+          "title": "The Confusion Matrix",
+          "content": "To evaluate a classification model, we start with a confusion matrix. It's a simple table that compares the model's predictions to the actual outcomes, breaking them down into four categories: True Positives (correctly predicted positive), True Negatives (correctly predicted negative), False Positives (incorrectly predicted positive, a 'false alarm'), and False Negatives (incorrectly predicted negative, a 'miss'). Visualizing performance this way is the first step to understanding where a model succeeds and where it fails."
+        },
+        {
+          "id": "business-analytics-301-l03-c2",
+          "title": "Accuracy and Its Pitfalls",
+          "content": "Accuracy is the most intuitive metric: it's the percentage of total correct predictions (TP + TN) out of all predictions. While simple, accuracy can be misleading, especially with imbalanced datasets. For example, in fraud detection where only 1% of transactions are fraudulent, a model that always predicts 'not fraud' would be 99% accurate but completely useless. This is why we need more nuanced metrics to understand true performance."
+        },
+        {
+          "id": "business-analytics-301-l03-c3",
+          "title": "Precision vs. Recall",
+          "content": "Precision and recall provide a deeper look. Precision answers: 'Of all the positive predictions we made, how many were actually correct?' It measures the cost of false alarms. Recall answers: 'Of all the actual positive cases, how many did we catch?' It measures the cost of misses. There is often a tradeoff: for medical diagnoses, high recall is critical (don't miss a disease), while for marketing campaigns, high precision is better (don't annoy uninterested customers). Choosing the right metric depends on the business cost of each type of error."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "business-analytics-301-l03-f1",
+          "front": "Confusion Matrix",
+          "back": "A 2x2 table that summarizes a classification model's performance by showing True Positives, True Negatives, False Positives, and False Negatives."
+        },
+        {
+          "id": "business-analytics-301-l03-f2",
+          "front": "Precision",
+          "back": "The fraction of positive predictions that were actually correct (TP / (TP + FP)). High precision minimizes false alarms."
+        },
+        {
+          "id": "business-analytics-301-l03-f3",
+          "front": "Recall",
+          "back": "The fraction of actual positive cases that were correctly identified (TP / (TP + FN)). High recall minimizes missed cases."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "business-analytics-301-l03-a1",
+          "type": "image",
+          "title": "Annotated Confusion Matrix",
+          "content": "An annotated 2x2 confusion matrix with clear labels for True Positive, True Negative, False Positive, and False Negative, using a business example like fraud detection."
+        }
+      ]
+    },
+    {
+      "id": "business-analytics-301-l04",
       "title": "Clustering for Customer Segmentation",
       "type": "interactive",
       "duration": 14,
@@ -149,49 +202,49 @@ export const BusinessAnalytics301Module: LearningModule = {
       ],
       "chunks": [
         {
-          "id": "business-analytics-301-l03-c1",
+          "id": "business-analytics-301-l04-c1",
           "title": "K-Means Clustering",
-          "content": "K-means clustering is a powerful technique used to organize data into K distinct groups, or clusters, based on the similarities among the data points. This method falls under the category of unsupervised learning, which means it does not rely on predefined labels to categorize the data. Instead, it allows the algorithm to explore the data and identify natural groupings on its own. The K-means clustering process involves several key steps: First, we begin by randomly selecting K points, known as centroids, which serve as the initial representatives for each cluster. Next, we assign each data point to the nearest centroid based on distance. After all data points have been assigned, we then recalculate the centroids by taking the average of all the points that belong to each cluster. This recalculation helps to refine the position of the centroids. We continue repeating these steps—assigning points to the nearest centroid and recalculating the centroids—until the assignments of data points to centroids stabilize and no longer change. This iterative process is essential for uncovering meaningful patterns in the data, which can provide valuable insights into different customer segments and behaviors, ultimately aiding businesses in making informed decisions.\nContext recap: K-means clustering is a powerful technique used to organize data into K distinct groups, or clusters, based on the similarities among the data points. This method falls under the category of unsupervised learning, which means it does not rely on predefined labels to categorize the data. Instead, it allows the algorithm to explore the data and identify natural groupings on its own. The K-means clustering process involves several key steps: First, we begin by randomly selecting K points, known as centroids, which serve as the initial representatives for each cluster.\nWhy this matters: K-Means Clustering helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "K-means clustering is an unsupervised learning technique that groups data into a pre-defined number of clusters (K) based on similarity. The algorithm works iteratively: 1) It randomly places K initial 'centroids'. 2) It assigns each data point to its nearest centroid. 3) It recalculates each centroid's position as the average of all points assigned to it. Steps 2 and 3 are repeated until the cluster assignments no longer change. This process reveals natural groupings in the data without needing pre-existing labels."
         },
         {
-          "id": "business-analytics-301-l03-c2",
+          "id": "business-analytics-301-l04-c2",
           "title": "Choosing K: The Elbow Method",
-          "content": "When we use K-means clustering, one of the most important choices we need to make is how many clusters, or groups, we want to create. This number is often referred to as K. To help us decide on the best value for K, we can use a technique called the elbow method. This method involves creating a graph where we plot the within-cluster sum of squares (WCSS) against different values of K. As we increase the number of clusters (K), we usually see that the WCSS decreases. This happens because the data points become more closely grouped together within each cluster.\nOn the graph, there will be a point where the decrease in WCSS starts to slow down significantly. This point is known as the 'elbow.' The location of the elbow on the graph helps us identify the optimal number of clusters to use for our analysis.\nIn addition to the elbow method, we can also use the silhouette score as another tool to help us choose K. The silhouette score measures how similar each data point is to its own cluster compared to how similar it is to points in other clusters. A higher silhouette score indicates that the data points are well-clustered.\nFinally, when deciding on the number of clusters, it's crucial to consider the specific business context. For example, having three segments might be more manageable and actionable than having seven, which could complicate decision-making. Therefore, balancing the technical results with practical business needs is essential when determining the right number of clusters for your analysis.\nContext recap: When we use K-means clustering, one of the most important choices we need to make is how many clusters, or groups, we want to create. This number is often referred to as K. To help us decide on the best value for K, we can use a technique called the elbow method. This method involves creating a graph where we plot the within-cluster sum of squares (WCSS) against different values of K.\nWhy this matters: Choosing K: The Elbow Method helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "The most critical decision in K-means is choosing the right number of clusters, K. The elbow method helps with this. We run the algorithm for different values of K and plot a metric called the within-cluster sum of squares (WCSS). As K increases, WCSS will decrease. We look for the 'elbow' point on the plot where the rate of decrease sharply flattens, indicating diminishing returns from adding more clusters. This point suggests the optimal K, balancing model simplicity with its ability to explain the data's variance."
         },
         {
-          "id": "business-analytics-301-l03-c3",
+          "id": "business-analytics-301-l04-c3",
           "title": "From Clusters to Business Segments",
-          "content": "After we identify different clusters of customers, it is essential to interpret these groups in a way that is meaningful for the business. For instance, if we discover that one cluster consists of customers who frequently make purchases, have high average order values, and have been loyal to the company for a long time, we might label this group as 'Loyal High-Value Customers.' This label helps us understand their importance to the business. Conversely, another cluster might include 'Price-Sensitive Bargain Hunters.' These customers may not spend as much on each purchase, but they tend to buy in larger quantities, which can still be very beneficial for the company. By recognizing and understanding these different segments, businesses can develop tailored strategies for each group. For example, they might offer loyalty rewards to encourage high-value customers to continue shopping, create special promotions to attract price-sensitive shoppers, or design onboarding campaigns to help new customers feel welcomed and engaged. Ultimately, the insights gained from analytics are only valuable if they lead to meaningful actions that can improve customer satisfaction and drive business growth.\nContext recap: After we identify different clusters of customers, it is essential to interpret these groups in a way that is meaningful for the business. For instance, if we discover that one cluster consists of customers who frequently make purchases, have high average order values, and have been loyal to the company for a long time, we might label this group as 'Loyal High-Value Customers.' This label helps us understand their importance to the business. Conversely, another cluster might include 'Price-Sensitive Bargain Hunters.' These customers may not spend as much on each purchase, but they tend to buy in larger quantities, which can still be very beneficial for the company. By recognizing and understanding these different segments, businesses can develop tailored strategies for each group."
+          "content": "Once clusters are formed, the final step is to interpret them as actionable business segments. By analyzing the average characteristics of each cluster, we can create descriptive personas. For example, one cluster might be 'High-Value Loyalists' (high frequency, high monetary value), while another could be 'Price-Sensitive Newcomers.' These segments allow businesses to move beyond one-size-fits-all strategies and develop targeted marketing campaigns, product recommendations, and service models for each distinct customer group."
         }
       ],
       "flashcards": [
         {
-          "id": "business-analytics-301-l03-f1",
-          "front": "K-means clustering",
-          "back": "An unsupervised algorithm that partitions data into K groups by iteratively assigning points to the nearest centroid and recalculating centroids until convergence"
+          "id": "business-analytics-301-l04-f1",
+          "front": "K-Means Clustering",
+          "back": "An unsupervised algorithm that partitions data into K groups by iteratively assigning points to the nearest centroid and recalculating centroids until convergence."
         },
         {
-          "id": "business-analytics-301-l03-f2",
-          "front": "Elbow method",
-          "back": "A technique for choosing the optimal K in K-means — plot WCSS vs. K and select the point where additional clusters yield diminishing improvement (the 'elbow')"
+          "id": "business-analytics-301-l04-f2",
+          "front": "Elbow Method",
+          "back": "A technique for choosing the optimal K in K-means. Plot WCSS vs. K and select the 'elbow' point where adding more clusters yields diminishing returns."
         },
         {
-          "id": "business-analytics-301-l03-f3",
-          "front": "Translating clusters to segments",
-          "back": "Interpreting cluster characteristics in business terms (e.g., 'High-Value Loyal' or 'Price-Sensitive') and designing differentiated strategies for each group"
+          "id": "business-analytics-301-l04-f3",
+          "front": "Translating Clusters to Segments",
+          "back": "Interpreting cluster characteristics in business terms (e.g., 'High-Value Loyal' or 'Price-Sensitive') to design differentiated strategies for each group."
         }
       ],
       "learningAids": [
         {
-          "id": "business-analytics-301-l03-a1",
+          "id": "business-analytics-301-l04-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Follow the prompt sequence and document your reasoning."
+          "title": "Interactive Cluster Explorer",
+          "content": "An interactive tool where users can upload a sample dataset, choose the number of clusters (K), and see how the K-means algorithm groups the data points visually."
         }
       ]
     },
     {
-      "id": "business-analytics-301-l04",
+      "id": "business-analytics-301-l05",
       "title": "Time Series Forecasting",
       "type": "video",
       "duration": 13,
@@ -202,55 +255,55 @@ export const BusinessAnalytics301Module: LearningModule = {
       ],
       "chunks": [
         {
-          "id": "business-analytics-301-l04-c1",
+          "id": "business-analytics-301-l05-c1",
           "title": "Time Series Components",
-          "content": "A time series is a collection of data points that are gathered or recorded at specific intervals over time. This data can be analyzed by breaking it down into three key components. The first component is the trend, which indicates the long-term direction of the data—whether it is generally increasing or decreasing over time. The second component is seasonality, which refers to patterns that repeat at regular intervals, such as spikes in sales during the holiday season or increased ice cream sales in the summer months. The third component is the residuals, which are the random fluctuations that occur and cannot be explained by either the trend or the seasonality. By decomposing a time series into these three components, we gain a clearer understanding of its underlying structure. For instance, a retailer might notice a consistent upward trend in sales over several years, significant seasonal peaks in December due to holiday shopping, and unpredictable variations in sales from week to week. Recognizing and understanding these components is crucial for selecting the most effective forecasting method to predict future sales accurately.\nContext recap: A time series is a collection of data points that are gathered or recorded at specific intervals over time. This data can be analyzed by breaking it down into three key components. The first component is the trend, which indicates the long-term direction of the data—whether it is generally increasing or decreasing over time. The second component is seasonality, which refers to patterns that repeat at regular intervals, such as spikes in sales during the holiday season or increased ice cream sales in the summer months.\nWhy this matters: Time Series Components helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
+          "content": "A time series is a sequence of data points collected over time. To understand it, we decompose it into three components: Trend (the long-term upward or downward direction), Seasonality (predictable, repeating patterns at fixed intervals, like holiday sales spikes), and Residuals (the random, unexplained noise left over). By separating these components, we can better understand the underlying structure of our data and choose the right forecasting model. For example, a retailer can see their long-term growth trend separately from their Q4 seasonal peak."
         },
         {
-          "id": "business-analytics-301-l04-c2",
+          "id": "business-analytics-301-l05-c2",
           "title": "Moving Averages and Exponential Smoothing",
-          "content": "Moving averages are a helpful technique used in data analysis to reduce the impact of random fluctuations, or 'noise,' by averaging a specific number of past observations. For example, if we calculate a 12-month moving average, it helps to smooth out the seasonal effects that occur every year, allowing us to better identify the underlying trends in the data. This is particularly useful for businesses that want to understand their sales patterns over time.\nAnother method called exponential smoothing builds on the concept of moving averages. It gives more importance to the most recent observations, which means that the model can react more quickly to changes in the data. The smoothing parameter, often represented by the Greek letter alpha (α), is a crucial part of this method because it determines how fast the model adapts to new information. A higher alpha value means the model will respond more quickly to recent changes, while a lower value will make it more stable and less reactive.\nThe Holt-Winters method takes exponential smoothing a step further by allowing us to account for both trends and seasonal patterns at the same time. This means that businesses can make more accurate forecasts by considering not just the overall direction of the data but also the regular fluctuations that occur throughout the year. Overall, these forecasting methods are not only easy to understand but also surprisingly effective for making informed business predictions, helping companies to plan better for the future.\nContext recap: Moving averages are a helpful technique used in data analysis to reduce the impact of random fluctuations, or 'noise,' by averaging a specific number of past observations. For example, if we calculate a 12-month moving average, it helps to smooth out the seasonal effects that occur every year, allowing us to better identify the underlying trends in the data. This is particularly useful for businesses that want to understand their sales patterns over time. Another method called exponential smoothing builds on the concept of moving averages.\nWhy this matters: Moving Averages and Exponential Smoothing helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "Simple forecasting methods are often highly effective. A moving average smooths out short-term fluctuations by averaging observations from a fixed window of past periods, revealing the underlying trend. Exponential smoothing is an enhancement that gives more weight to recent observations, allowing the forecast to adapt more quickly to changes. A popular extension, the Holt-Winters method, can explicitly model both trend and seasonality, making it a powerful yet intuitive tool for many business forecasting needs."
         },
         {
-          "id": "business-analytics-301-l04-c3",
+          "id": "business-analytics-301-l05-c3",
           "title": "ARIMA Models",
-          "content": "ARIMA, which stands for AutoRegressive Integrated Moving Average, is a powerful tool used in time series forecasting. This model is designed to understand and predict complex patterns that occur over time. The 'AR' part of ARIMA focuses on using past values to forecast future values, meaning it looks back at previous data points to make educated guesses about what will happen next. On the other hand, the 'MA' part deals with the errors from those past predictions, helping to refine future forecasts. The 'I' in ARIMA stands for integrated, which is a special technique that helps manage data that changes over time, known as non-stationary data. This is done through a process called differencing, which adjusts the data to make it more stable. When working with ARIMA, we need to select three key parameters: 'p', which is the order of the autoregressive part; 'd', which tells us how many times we need to difference the data; and 'q', which indicates the order of the moving average part. While ARIMA models can be more effective than simpler forecasting methods, they do require careful testing to ensure the data is stationary and that the parameters are chosen wisely. Fortunately, there are helpful automated tools like auto-ARIMA that can assist in making this process easier and more efficient.\nContext recap: ARIMA, which stands for AutoRegressive Integrated Moving Average, is a powerful tool used in time series forecasting. This model is designed to understand and predict complex patterns that occur over time. The 'AR' part of ARIMA focuses on using past values to forecast future values, meaning it looks back at previous data points to make educated guesses about what will happen next. On the other hand, the 'MA' part deals with the errors from those past predictions, helping to refine future forecasts.\nWhy this matters: ARIMA Models helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
+          "content": "ARIMA (AutoRegressive Integrated Moving Average) is a more advanced class of models for capturing complex time-based patterns. The 'AutoRegressive' (AR) part uses past values to predict future values, while the 'Moving Average' (MA) part uses past forecast errors. The 'Integrated' (I) part involves differencing the data to make it stationary (i.e., its statistical properties don't change over time). While more complex to configure, ARIMA models are powerful for forecasting when the underlying data has dependencies that simpler methods can't capture."
         }
       ],
       "flashcards": [
         {
-          "id": "business-analytics-301-l04-f1",
-          "front": "Three components of a time series",
-          "back": "Trend (long-term direction), seasonality (repeating fixed-interval patterns), and residual (unexplained random variation)"
+          "id": "business-analytics-301-l05-f1",
+          "front": "Three Components of a Time Series",
+          "back": "Trend (long-term direction), Seasonality (repeating fixed-interval patterns), and Residual (unexplained random variation)."
         },
         {
-          "id": "business-analytics-301-l04-f2",
-          "front": "Exponential smoothing",
-          "back": "A forecasting method that weights recent observations more heavily — the smoothing parameter α controls adaptation speed. Holt-Winters extends it to handle trend and seasonality."
+          "id": "business-analytics-301-l05-f2",
+          "front": "Exponential Smoothing",
+          "back": "A forecasting method that weights recent observations more heavily. The Holt-Winters method extends it to handle both trend and seasonality."
         },
         {
-          "id": "business-analytics-301-l04-f3",
+          "id": "business-analytics-301-l05-f3",
           "front": "ARIMA(p,d,q)",
-          "back": "AutoRegressive Integrated Moving Average — p is the AR order (past values), d is differencing (stationarity), q is MA order (past errors). Captures complex temporal patterns."
+          "back": "AutoRegressive Integrated Moving Average. A sophisticated model where p is the AR order (past values), d is differencing (for stationarity), and q is the MA order (past errors)."
         }
       ],
       "learningAids": [
         {
-          "id": "business-analytics-301-l04-a1",
+          "id": "business-analytics-301-l05-a1",
           "type": "image",
-          "title": "Concept Card",
-          "content": "Visual summary of the lesson's main concept."
+          "title": "Time Series Decomposition",
+          "content": "A chart decomposing a single time series (e.g., quarterly sales) into three separate charts stacked vertically: the overall Trend, the repeating Seasonality, and the random Residual noise."
         }
       ]
     },
     {
-      "id": "business-analytics-301-l05",
-      "title": "Checkpoint: Predictive Models",
+      "id": "business-analytics-301-l06",
+      "title": "Checkpoint: Core Predictive Models",
       "type": "quiz",
       "duration": 12,
       "questions": [
         {
-          "id": "business-analytics-301-l05-q1",
+          "id": "business-analytics-301-l06-q1",
           "text": "A bank wants to predict whether a loan applicant will default (yes/no). Which model is MOST appropriate?",
           "options": [
             {
@@ -271,11 +324,11 @@ export const BusinessAnalytics301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Logistic regression is designed for binary classification problems (default/no default). Linear regression is for continuous outcomes, K-means is unsupervised, and moving average is for time series."
+          "explanation": "Logistic regression is designed for binary classification problems (default/no default). Linear regression is for continuous outcomes, K-means is for unsupervised grouping, and moving average is for time series."
         },
         {
-          "id": "business-analytics-301-l05-q2",
-          "text": "A decision tree perfectly classifies the training data but performs poorly on test data. This is likely caused by:",
+          "id": "business-analytics-301-l06-q2",
+          "text": "A decision tree perfectly classifies the training data but performs poorly on test data. This is a classic sign of:",
           "options": [
             {
               "id": "a",
@@ -291,38 +344,38 @@ export const BusinessAnalytics301Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "Using the wrong target variable"
+              "text": "Data leakage"
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Perfect training accuracy but poor test performance is the hallmark of overfitting — the tree has memorized noise in the training data rather than learning generalizable patterns."
+          "explanation": "Perfect training accuracy but poor test performance is the hallmark of overfitting—the model has memorized noise in the training data rather than learning generalizable patterns."
         },
         {
-          "id": "business-analytics-301-l05-q3",
-          "text": "In K-means clustering, the elbow method helps determine:",
+          "id": "business-analytics-301-l06-q3",
+          "text": "A medical screening model is designed to detect a rare but serious disease. Which metric is most critical to maximize?",
           "options": [
             {
               "id": "a",
-              "text": "The best features to include"
+              "text": "Accuracy"
             },
             {
               "id": "b",
-              "text": "The optimal number of clusters (K)"
+              "text": "Precision"
             },
             {
               "id": "c",
-              "text": "Whether the data is normally distributed"
+              "text": "Recall"
             },
             {
               "id": "d",
-              "text": "The correct distance metric to use"
+              "text": "F1-Score"
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "The elbow method plots within-cluster sum of squares against K and identifies the point of diminishing returns — helping select the optimal number of clusters."
+          "correctOptionId": "c",
+          "explanation": "For a serious disease, the cost of a false negative (missing a case) is extremely high. Therefore, maximizing recall (the ability to find all actual positive cases) is the top priority, even if it means accepting more false positives (lower precision)."
         },
         {
-          "id": "business-analytics-301-l05-q4",
+          "id": "business-analytics-301-l06-q4",
           "text": "A retailer's monthly sales show a repeating December spike every year. This pattern is called:",
           "options": [
             {
@@ -343,64 +396,67 @@ export const BusinessAnalytics301Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "Seasonality is a repeating pattern at fixed intervals. A December spike that occurs every year is classic seasonality. Trend refers to long-term direction, not periodic patterns."
-        }
-      ]
-    },
-    {
-      "id": "business-analytics-301-l06",
-      "title": "Recommendation Systems, Text Analytics & Model Evaluation",
-      "type": "interactive",
-      "duration": 15,
-      "objectives": [
-        "Compare collaborative and content-based recommendation approaches",
-        "Apply sentiment analysis to extract insights from customer feedback",
-        "Evaluate classification models using accuracy, precision, and recall"
-      ],
-      "chunks": [
-        {
-          "id": "business-analytics-301-l06-c1",
-          "title": "Recommendation Systems",
-          "content": "Recommendation systems are fascinating tools that help us discover new things we might enjoy based on what we've liked in the past. They use smart techniques to analyze our previous choices and behaviors to make these predictions. One popular method is called collaborative filtering. This technique finds users who have similar tastes and suggests items based on what others with those similar preferences have liked. For example, if many people who watched a specific movie also enjoyed another one, the system might recommend that second movie to you. However, this method can face some challenges, especially when new users join the platform. Since there isn't enough data about their preferences yet, it struggles to make accurate suggestions. This issue is known as the cold-start problem. Another method used is content-based filtering, which focuses on matching the features of products to what users have liked in the past. For instance, if you enjoyed action movies, the system will recommend more action films that fit your taste. Some systems combine both methods, creating what we call hybrid systems, to enhance the quality of recommendations. A great example of this is Netflix, which estimates that its recommendation system drives about 80% of the viewing activity on its platform. This shows just how effective these systems can be in helping users find new content that they will love.\nContext recap: Recommendation systems are fascinating tools that help us discover new things we might enjoy based on what we've liked in the past. They use smart techniques to analyze our previous choices and behaviors to make these predictions. One popular method is called collaborative filtering. This technique finds users who have similar tastes and suggests items based on what others with those similar preferences have liked.\nWhy this matters: Recommendation Systems helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        },
-        {
-          "id": "business-analytics-301-l06-c2",
-          "title": "Text Analytics and Sentiment Analysis",
-          "content": "Text analytics is an exciting area of study that focuses on converting unstructured text—like customer reviews, emails, and social media posts—into organized insights that businesses can effectively use. One key part of text analytics is sentiment analysis. This technique helps us understand the emotions behind the words by classifying them as positive, negative, or neutral. For instance, if many customers express happiness about a product, that’s a positive sentiment, while complaints would indicate a negative sentiment. Understanding these feelings is crucial for businesses to gauge customer satisfaction.\nAnother important technique in text analytics is topic modeling. This method helps identify common themes or topics that appear frequently in large collections of text. By recognizing these themes, businesses can better understand what their customers are talking about.\nAdditionally, named entity recognition is a technique that pulls out specific names of people, organizations, and products from the text. For example, imagine a hotel chain that is analyzing thousands of customer reviews. Through text analytics, they might discover that 'cleanliness' is a major factor that influences customer satisfaction, even more than the amenities they provide. This kind of insight, which might be missed in regular surveys, can guide businesses in making smart decisions to enhance their services and meet customer needs more effectively.\nContext recap: Text analytics is an exciting area of study that focuses on converting unstructured text—like customer reviews, emails, and social media posts—into organized insights that businesses can effectively use. One key part of text analytics is sentiment analysis. This technique helps us understand the emotions behind the words by classifying them as positive, negative, or neutral. For instance, if many customers express happiness about a product, that’s a positive sentiment, while complaints would indicate a negative sentiment.\nWhy this matters: Text Analytics and Sentiment Analysis helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification."
-        },
-        {
-          "id": "business-analytics-301-l06-c3",
-          "title": "Model Evaluation Metrics",
-          "content": "When we want to see how well our predictive models are performing, we need to use the right tools, called metrics, to measure their effectiveness. One of the most common metrics is accuracy. We calculate accuracy by taking the number of correct predictions and dividing it by the total number of predictions made. This gives us a percentage that tells us how often the model is right. However, accuracy can sometimes be misleading, especially when we have imbalanced data. For example, if a model predicts 'no fraud' for 99% of cases that are actually non-fraud, it might show a high accuracy of 99%. But in this case, it would not catch any real fraud cases, which is a significant problem. To get a clearer picture, we also look at precision. Precision tells us what fraction of the positive predictions made by the model were actually correct. This helps us avoid false alarms, where the model says something is true when it is not. Another important metric is recall, which measures how many of the actual positive cases were correctly identified by the model. This helps us avoid missing important instances. The F1 score is a special metric that combines both precision and recall into one number, giving us a balanced view of the model's performance. In situations like fraud detection, having a high recall is very important because we want to catch as many fraud cases as possible. On the other hand, in email marketing, having high precision is key to ensure we don't annoy customers with irrelevant messages. By understanding these metrics, we can make better decisions about how to improve our models and their effectiveness in real-world applications.\nContext recap: When we want to see how well our predictive models are performing, we need to use the right tools, called metrics, to measure their effectiveness. One of the most common metrics is accuracy. We calculate accuracy by taking the number of correct predictions and dividing it by the total number of predictions made. This gives us a percentage that tells us how often the model is right.\nWhy this matters: Model Evaluation Metrics helps learners in Business connect ideas from Predictive Analytics & Machine Learning for Business to decisions they make during practice and assessment. Highlight tradeoffs, assumptions, and verification.\nStep-by-step approach: (1) define the goal in one sentence, (2) identify evidence that supports the goal, (3) explain how each piece of evidence changes your conclusion, and (4) verify the final answer against the original goal and constraints."
-        }
-      ],
-      "flashcards": [
-        {
-          "id": "business-analytics-301-l06-f1",
-          "front": "Cold-start problem",
-          "back": "The challenge collaborative filtering faces with new users or items — no historical interaction data exists to generate recommendations, requiring content-based or popularity-based fallbacks"
-        },
-        {
-          "id": "business-analytics-301-l06-f2",
-          "front": "Sentiment analysis",
-          "back": "An NLP technique that classifies text (reviews, social media, emails) as positive, negative, or neutral — extracts structured insights from unstructured text data"
-        },
-        {
-          "id": "business-analytics-301-l06-f3",
-          "front": "Precision vs. recall",
-          "back": "Precision: fraction of positive predictions that were correct (minimizes false alarms). Recall: fraction of actual positives that were caught (minimizes misses). Choose based on business cost of each error type."
+          "explanation": "Seasonality is a repeating pattern at fixed intervals. A December spike that occurs every year is classic seasonality. Trend refers to the long-term direction, not periodic patterns."
         }
       ]
     },
     {
       "id": "business-analytics-301-l07",
+      "title": "Advanced Applications: Recommendation & Text Analytics",
+      "type": "interactive",
+      "duration": 15,
+      "objectives": [
+        "Compare collaborative and content-based recommendation approaches",
+        "Explain the 'cold-start' problem in recommendation systems",
+        "Apply sentiment analysis to extract insights from customer feedback"
+      ],
+      "chunks": [
+        {
+          "id": "business-analytics-301-l07-c1",
+          "title": "Recommendation Systems",
+          "content": "Recommendation systems predict user preferences to suggest relevant items. The two main types are collaborative filtering and content-based filtering. Collaborative filtering finds users with similar tastes and recommends items that similar users have liked ('people who bought X also bought Y'). Its main challenge is the 'cold-start problem'—it struggles with new users or items that have no interaction history. Content-based filtering recommends items based on their attributes, matching them to a user's profile (e.g., recommending more action movies to a user who rates action movies highly). Many modern systems use a hybrid approach to get the best of both worlds."
+        },
+        {
+          "id": "business-analytics-301-l07-c2",
+          "title": "Text Analytics and Sentiment Analysis",
+          "content": "Text analytics extracts meaningful, structured insights from unstructured text data like customer reviews, emails, and social media posts. A key technique is sentiment analysis, which automatically classifies text as positive, negative, or neutral. This allows businesses to quantify customer satisfaction and track brand perception at scale. Other techniques include topic modeling, which identifies common themes in large volumes of text, and named entity recognition, which extracts key information like product names or locations. These tools can uncover insights that would be impossible to find through manual reading."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "business-analytics-301-l07-f1",
+          "front": "Cold-Start Problem",
+          "back": "The challenge collaborative filtering faces with new users or items. With no historical interaction data, it cannot generate recommendations, requiring content-based or popularity-based fallbacks."
+        },
+        {
+          "id": "business-analytics-301-l07-f2",
+          "front": "Sentiment Analysis",
+          "back": "A Natural Language Processing (NLP) technique that classifies text (reviews, social media, emails) as positive, negative, or neutral to extract structured insights from unstructured data."
+        },
+        {
+          "id": "business-analytics-301-l07-f3",
+          "front": "Collaborative vs. Content-Based Filtering",
+          "back": "Collaborative filtering uses user-item interactions (ratings, purchases). Content-based filtering uses item attributes (genre, brand). Hybrid models combine both."
+        }
+      ],
+      "learningAids": [
+        {
+          "id": "business-analytics-301-l07-a1",
+          "type": "image",
+          "title": "Collaborative vs. Content-Based",
+          "content": "A side-by-side comparison diagram. Collaborative Filtering shows users connected by shared item ratings. Content-Based Filtering shows a user connected to items based on shared attributes (e.g., genre, author)."
+        }
+      ]
+    },
+    {
+      "id": "business-analytics-301-l08",
       "title": "Final Assessment: Predictive Analytics & ML",
       "type": "quiz",
       "duration": 15,
       "questions": [
         {
-          "id": "business-analytics-301-l07-q1",
-          "text": "A fraud detection model catches 95% of fraudulent transactions but also flags 20% of legitimate transactions as fraud. Which metric needs improvement?",
+          "id": "business-analytics-301-l08-q1",
+          "text": "A fraud detection model catches 95% of fraudulent transactions but also flags 20% of legitimate transactions as fraud. This indicates the model has high recall but would benefit from improved:",
           "options": [
             {
               "id": "a",
@@ -416,15 +472,15 @@ export const BusinessAnalytics301Module: LearningModule = {
             },
             {
               "id": "d",
-              "text": "R-squared"
+              "text": "Speed"
             }
           ],
           "correctOptionId": "b",
-          "explanation": "The model has high recall (catches 95% of fraud) but low precision (many false positives among legitimate transactions). Improving precision would reduce false alarms without sacrificing fraud detection."
+          "explanation": "The model has high recall (catches 95% of actual fraud) but low precision (many of its positive predictions are false alarms). Improving precision would reduce the number of legitimate transactions that are incorrectly flagged."
         },
         {
-          "id": "business-analytics-301-l07-q2",
-          "text": "Amazon's 'Customers who bought this also bought...' feature is an example of:",
+          "id": "business-analytics-301-l08-q2",
+          "text": "Amazon's 'Customers who bought this also bought...' feature is a classic example of:",
           "options": [
             {
               "id": "a",
@@ -444,10 +500,10 @@ export const BusinessAnalytics301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Collaborative filtering uses patterns in user behavior ('customers who bought X also bought Y') rather than product attributes. It does not need to understand the products themselves."
+          "explanation": "This approach relies on the collective behavior of users ('customers who...') rather than the attributes of the products themselves, which is the definition of collaborative filtering."
         },
         {
-          "id": "business-analytics-301-l07-q3",
+          "id": "business-analytics-301-l08-q3",
           "text": "A random forest improves on a single decision tree primarily by:",
           "options": [
             {
@@ -468,10 +524,10 @@ export const BusinessAnalytics301Module: LearningModule = {
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Random forests build many trees on random data and feature subsets, then aggregate predictions. This ensemble approach reduces the overfitting that plagues individual deep trees."
+          "explanation": "Random forests build many trees on random data and feature subsets, then aggregate predictions. This ensemble approach reduces the variance and overfitting that can plague individual deep trees."
         },
         {
-          "id": "business-analytics-301-l07-q4",
+          "id": "business-analytics-301-l08-q4",
           "text": "Which step in the analytics workflow should come FIRST?",
           "options": [
             {
@@ -492,7 +548,7 @@ export const BusinessAnalytics301Module: LearningModule = {
             }
           ],
           "correctOptionId": "c",
-          "explanation": "The analytics workflow starts with a clear business question and success criteria. Without knowing what problem you are solving and how you will measure success, data collection and modeling efforts may be wasted."
+          "explanation": "The analytics workflow must start with a clear business question and success criteria. Without knowing what problem you are solving and how you will measure success, all subsequent efforts may be wasted."
         }
       ]
     }

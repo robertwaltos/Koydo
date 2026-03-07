@@ -1,9 +1,9 @@
 import type { LearningModule } from "@/lib/modules/types";
 
-export const BusinessAnalytics601Module: LearningModule = {
+export const business_analytics_601_Module: LearningModule = {
   "id": "business-analytics-601",
   "title": "Business Analytics Research and Leadership",
-  "description": "Post-401 specialization in Business Analytics, focused on business systems diagnostics, business operations and execution design, business impact and tradeoff analysis, and business governance and leadership through advanced casework, simulation, and defense-based checkpoints.",
+  "description": "A specialization in Business Analytics focusing on systems diagnostics, operations design, impact analysis, and leadership. This advanced module uses casework, simulation, and defense-based checkpoints to build expert-level skills.",
   "subject": "Business",
   "tags": [
     "core",
@@ -14,7 +14,7 @@ export const BusinessAnalytics601Module: LearningModule = {
   ],
   "minAge": 17,
   "maxAge": 99,
-  "version": "2.0.0",
+  "version": "1.1.0",
   "difficultyBand": "advanced",
   "localeSupport": [
     "en",
@@ -38,8 +38,8 @@ export const BusinessAnalytics601Module: LearningModule = {
         {
           "id": "business-analytics-601-l01-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Core Analytics Framework",
+          "content": "A diagram showing the interconnectedness of Diagnostics, Operations Design, Impact Analysis, and Governance, forming a continuous improvement loop."
         }
       ],
       "chunks": [
@@ -47,35 +47,35 @@ export const BusinessAnalytics601Module: LearningModule = {
           "id": "business-analytics-601-l01-c1",
           "kind": "concept",
           "title": "Scope and Boundary Design",
-          "content": "In this lesson, we will dive into the important concept of advanced scope boundaries in the field of Business Analytics. We will learn how to effectively diagnose business systems, which means understanding how different parts of a business work together. Additionally, we will discuss how to design operations that improve execution, or how well a business carries out its plans. Grasping these boundaries is essential because it helps ensure that our analytics efforts are focused and effective. This focus leads to better decision-making in various business environments, allowing organizations to thrive and adapt to changes in the market."
+          "content": "Learn to define the scope of business problems. We'll cover how to diagnose complex business systems and design effective operational plans. Mastering these skills ensures your analysis is focused and leads to better strategic decisions."
         },
         {
           "id": "business-analytics-601-l01-c2",
           "kind": "concept",
           "title": "Causal and Uncertainty Modeling",
-          "content": "In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is essential before planning any interventions, as it helps us anticipate potential outcomes and challenges.\nContext recap: In this section, learners will engage in mapping out causal pathways, which are the connections between different events or actions. They will also identify ranges of uncertainty and understand how various systems depend on one another. This foundational knowledge is essential before planning any interventions, as it helps us anticipate potential outcomes and challenges."
+          "content": "Explore how to map cause-and-effect relationships within a business. You'll learn to identify and quantify uncertainty in your models. This is a critical step before recommending any changes, as it helps predict outcomes and manage risks."
         },
         {
           "id": "business-analytics-601-l01-c3",
           "kind": "recap",
           "title": "Evidence Thresholds",
-          "content": "In our recap, we emphasize the importance of ensuring that all claims made in our analyses are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to validate our findings. By doing so, we can ensure that our conclusions are reliable and based on solid evidence.\nContext recap: In our recap, we emphasize the importance of ensuring that all claims made in our analyses are supported by measurable indicators. This means we will establish confidence bounds and set up review checkpoints to validate our findings. By doing so, we can ensure that our conclusions are reliable and based on solid evidence."
+          "content": "Recap the importance of evidence-based claims. We'll review how to establish confidence intervals and use checkpoints to validate your findings, ensuring your conclusions are built on solid, measurable data."
         }
       ],
       "flashcards": [
         {
           "id": "business-analytics-601-l01-f1",
-          "front": "business systems diagnostics",
+          "front": "Business systems diagnostics",
           "back": "A specialization axis requiring explicit assumptions and measurable constraints."
         },
         {
           "id": "business-analytics-601-l01-f2",
-          "front": "business operations and execution design",
+          "front": "Business operations and execution design",
           "back": "Execution architecture that determines reliability under stress."
         },
         {
           "id": "business-analytics-601-l01-f3",
-          "front": "business impact and tradeoff analysis",
+          "front": "Business impact and tradeoff analysis",
           "back": "Evaluation discipline for identifying true gains and hidden costs."
         }
       ]
@@ -89,8 +89,8 @@ export const BusinessAnalytics601Module: LearningModule = {
         {
           "id": "business-analytics-601-l02-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Workflow Stress-Test Simulator",
+          "content": "An interactive dashboard where you can adjust variables like resource allocation and market demand to see how your designed workflow performs under pressure."
         }
       ],
       "chunks": [
@@ -98,13 +98,13 @@ export const BusinessAnalytics601Module: LearningModule = {
           "id": "business-analytics-601-l02-c1",
           "kind": "practice",
           "title": "Method Design and Stress Test",
-          "content": "In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific business needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to prepare for unexpected challenges and ensure that their designs are robust and effective.\nContext recap: In this interactive practice, learners will have the opportunity to design specialized workflows tailored to specific business needs. They will also conduct stress tests on these workflows by simulating adverse scenarios. This hands-on experience will help them understand how to prepare for unexpected challenges and ensure that their designs are robust and effective."
+          "content": "Apply your knowledge in a hands-on lab. You will design a specialized business workflow and then test its resilience by simulating challenging scenarios. This practice builds your ability to create robust systems that can withstand unexpected events."
         },
         {
           "id": "business-analytics-601-l02-c2",
           "kind": "recap",
           "title": "Control Gate Architecture",
-          "content": "In our recap, we will discuss the architecture of control gates within workflows. These gates are essential as they integrate various checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. Understanding this architecture is vital for maintaining control and ensuring that workflows operate smoothly and efficiently.\nContext recap: In our recap, we will discuss the architecture of control gates within workflows. These gates are essential as they integrate various checkpoints, criteria for rolling back decisions, and escalation procedures based on thresholds. Understanding this architecture is vital for maintaining control and ensuring that workflows operate smoothly and efficiently."
+          "content": "Review the concept of control gate architecture. We'll discuss how to integrate checkpoints, rollback criteria, and escalation paths into your workflows. This structure is key to maintaining control and ensuring operational efficiency."
         }
       ],
       "interactiveActivities": [
@@ -143,8 +143,8 @@ export const BusinessAnalytics601Module: LearningModule = {
         {
           "id": "business-analytics-601-l03-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Pre-Quiz Checklist",
+          "content": "A checklist summarizing key concepts from Lessons 1 & 2: Scope Boundaries, Causal Modeling, Evidence Thresholds, and Control Gate Architecture. Review these before you begin."
         }
       ],
       "questions": [
@@ -247,106 +247,6 @@ export const BusinessAnalytics601Module: LearningModule = {
           ],
           "correctOptionId": "a",
           "explanation": "Governance maturity is the operational link between intent, measurement, and corrective action."
-        },
-        {
-          "id": "business-analytics-601-l03-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "business-analytics-601-skill-advanced-5",
-          "options": [
-            {
-              "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
-            },
-            {
-              "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
-            },
-            {
-              "id": "c",
-              "text": "Switch metrics after results arrive"
-            },
-            {
-              "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
-        },
-        {
-          "id": "business-analytics-601-l03-q6",
-          "text": "In high-stakes Business Analytics Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "business-analytics-601-skill-advanced-6",
-          "options": [
-            {
-              "id": "a",
-              "text": "Broadcast conclusions without assumptions"
-            },
-            {
-              "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
-            },
-            {
-              "id": "c",
-              "text": "Share only final outcomes after completion"
-            },
-            {
-              "id": "d",
-              "text": "Limit updates to a single informal channel"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
-        },
-        {
-          "id": "business-analytics-601-l03-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "business-analytics-601-skill-advanced-7",
-          "options": [
-            {
-              "id": "a",
-              "text": "Blame assignment without system updates"
-            },
-            {
-              "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
-            },
-            {
-              "id": "c",
-              "text": "One-time fixes without retesting"
-            },
-            {
-              "id": "d",
-              "text": "Issue closure based on elapsed time"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
-        },
-        {
-          "id": "business-analytics-601-l03-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Business Analytics Research and Leadership?",
-          "skillId": "business-analytics-601-skill-advanced-8",
-          "options": [
-            {
-              "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
-            },
-            {
-              "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
-            },
-            {
-              "id": "c",
-              "text": "Ignore correlated failure modes"
-            },
-            {
-              "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
-            }
-          ],
-          "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
         }
       ]
     },
@@ -359,8 +259,8 @@ export const BusinessAnalytics601Module: LearningModule = {
         {
           "id": "business-analytics-601-l04-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Case Study Decision Tree",
+          "content": "A visual representation of the case study's central dilemma, showing different decision paths and their potential outcomes based on competing constraints like cost, safety, and reliability."
         }
       ],
       "chunks": [
@@ -368,19 +268,19 @@ export const BusinessAnalytics601Module: LearningModule = {
           "id": "business-analytics-601-l04-c1",
           "kind": "concept",
           "title": "Scenario Architecture",
-          "content": "In this lesson, we will frame a case that highlights the competing constraints found in business systems diagnostics. We will analyze the impact of different business decisions and conduct tradeoff analyses. This approach will help learners understand how to balance various factors when making decisions that affect business outcomes.\nContext recap: In this lesson, we will frame a case that highlights the competing constraints found in business systems diagnostics. We will analyze the impact of different business decisions and conduct tradeoff analyses. This approach will help learners understand how to balance various factors when making decisions that affect business outcomes."
+          "content": "Analyze a real-world case study involving competing business constraints. We'll frame the problem, diagnose the system, and evaluate the potential impact of various strategic choices. This will sharpen your ability to navigate complex business dilemmas."
         },
         {
           "id": "business-analytics-601-l04-c2",
           "kind": "practice",
           "title": "Tradeoff Framing",
-          "content": "In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparison will enable them to make informed decisions that consider multiple aspects of business operations and their potential impacts.\nContext recap: In this practice session, learners will compare different options available to them, focusing on key dimensions such as safety, reliability, cost, equity, and governance. This comparison will enable them to make informed decisions that consider multiple aspects of business operations and their potential impacts."
+          "content": "Practice framing tradeoffs. You will compare alternative solutions across critical dimensions like safety, reliability, cost, and governance. This exercise teaches you to articulate and weigh the pros and cons of each option systematically."
         },
         {
           "id": "business-analytics-601-l04-c3",
           "kind": "recap",
           "title": "Decision Memo Pattern",
-          "content": "In our recap, we will outline the essential components of a decision memo. Each recommendation made should include assumptions, evidence to support the decision, risk controls to mitigate potential issues, and fallback plans in case the initial decision does not yield the expected results. This structured approach ensures thoroughness and accountability in decision-making.\nContext recap: In our recap, we will outline the essential components of a decision memo. Each recommendation made should include assumptions, evidence to support the decision, risk controls to mitigate potential issues, and fallback plans in case the initial decision does not yield the expected results. This structured approach ensures thoroughness and accountability in decision-making."
+          "content": "Learn the structure of a professional decision memo. We'll recap how to present a recommendation by clearly stating assumptions, providing supporting evidence, outlining risk controls, and defining fallback plans for accountable decision-making."
         }
       ]
     },
@@ -393,8 +293,8 @@ export const BusinessAnalytics601Module: LearningModule = {
         {
           "id": "business-analytics-601-l05-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Simulation Control Panel",
+          "content": "A screenshot of the simulation interface, highlighting key levers for adjusting performance targets and governance controls, and the dashboard for monitoring real-time outcomes."
         }
       ],
       "chunks": [
@@ -402,13 +302,13 @@ export const BusinessAnalytics601Module: LearningModule = {
           "id": "business-analytics-601-l05-c1",
           "kind": "practice",
           "title": "Live Scenario Controls",
-          "content": "In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This exercise will help them understand how to manage competing priorities effectively, ensuring that they can achieve optimal performance while adhering to necessary governance standards.\nContext recap: In this interactive practice, learners will operate scenario controls while balancing performance and governance constraints. This exercise will help them understand how to manage competing priorities effectively, ensuring that they can achieve optimal performance while adhering to necessary governance standards."
+          "content": "Step into a live simulation. You will manage a business scenario in real-time, using control levers to balance performance goals with governance constraints. This clinic tests your decision-making skills under pressure."
         },
         {
           "id": "business-analytics-601-l05-c2",
           "kind": "recap",
           "title": "Adaptive Response Design",
-          "content": "In our recap, we will discuss the design of effective adaptive responses. These responses should update control gates as needed while maintaining traceability and accountability. This ensures that all changes are documented and that the decision-making process remains transparent.\nContext recap: In our recap, we will discuss the design of effective adaptive responses. These responses should update control gates as needed while maintaining traceability and accountability. This ensures that all changes are documented and that the decision-making process remains transparent."
+          "content": "Recap the principles of adaptive response. We'll discuss how to modify control gates during a live scenario while maintaining a clear audit trail. This ensures that your responses are both agile and accountable."
         }
       ],
       "interactiveActivities": [
@@ -429,8 +329,8 @@ export const BusinessAnalytics601Module: LearningModule = {
         {
           "id": "business-analytics-601-l06-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Key Concepts Review",
+          "content": "A summary of core ideas from Lessons 4 & 5: Tradeoff Framing, Decision Memo Structure, Adaptive Response, and balancing performance vs. governance in a simulation."
         }
       ],
       "questions": [
@@ -536,103 +436,103 @@ export const BusinessAnalytics601Module: LearningModule = {
         },
         {
           "id": "business-analytics-601-l06-q5",
-          "text": "What is the best way to compare competing interventions in advanced Business?",
-          "skillId": "business-analytics-601-skill-advanced-5",
+          "text": "In a complex case study, two proposed solutions have similar expected financial returns. What is the most critical next step for a tradeoff analysis?",
+          "skillId": "business-analytics-601-skill-case5",
           "options": [
             {
               "id": "a",
-              "text": "Choose the option with the most persuasive narrative"
+              "text": "Choose the one presented by the most senior manager."
             },
             {
               "id": "b",
-              "text": "Score alternatives against shared metrics, side effects, and uncertainty bounds"
+              "text": "Analyze and compare their secondary impacts, such as operational risk, brand reputation, and equity."
             },
             {
               "id": "c",
-              "text": "Switch metrics after results arrive"
+              "text": "Select the solution that can be implemented the fastest, ignoring other factors."
             },
             {
               "id": "d",
-              "text": "Prioritize whichever option has the shortest memo"
+              "text": "Flip a coin to save time."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Defensible comparisons require shared metrics, side-effect accounting, and uncertainty disclosure."
+          "explanation": "A thorough tradeoff analysis goes beyond primary metrics to evaluate secondary impacts and hidden costs, which is crucial when primary outcomes are similar."
         },
         {
           "id": "business-analytics-601-l06-q6",
-          "text": "In high-stakes Business Analytics Research and Leadership execution, which communication protocol is strongest?",
-          "skillId": "business-analytics-601-skill-advanced-6",
+          "text": "During a business simulation, an unexpected market event causes performance metrics to drop sharply. What is the best initial response according to the principle of adaptive response?",
+          "skillId": "business-analytics-601-skill-case6",
           "options": [
             {
               "id": "a",
-              "text": "Broadcast conclusions without assumptions"
+              "text": "Immediately abandon the original strategy and try something random."
             },
             {
               "id": "b",
-              "text": "Publish assumptions, confidence ranges, and decision checkpoints to stakeholders"
+              "text": "Wait for the simulation to end before analyzing the data."
             },
             {
               "id": "c",
-              "text": "Share only final outcomes after completion"
+              "text": "Activate a pre-planned fallback procedure while analyzing the event's root cause to inform the next adjustment."
             },
             {
               "id": "d",
-              "text": "Limit updates to a single informal channel"
+              "text": "Double down on the current strategy, assuming the event is a temporary anomaly."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "High-stakes communication must expose assumptions, confidence, and checkpoints."
+          "correctOptionId": "c",
+          "explanation": "Adaptive response involves using pre-defined fallback plans to stabilize the situation while gathering data to make an informed strategic adjustment, rather than panicking or ignoring the event."
         },
         {
           "id": "business-analytics-601-l06-q7",
-          "text": "A mature remediation loop in advanced Business should prioritize:",
-          "skillId": "business-analytics-601-skill-advanced-7",
+          "text": "When writing a decision memo for a high-stakes recommendation, what component is essential for ensuring accountability?",
+          "skillId": "business-analytics-601-skill-case7",
           "options": [
             {
               "id": "a",
-              "text": "Blame assignment without system updates"
+              "text": "Using complex jargon to sound more authoritative."
             },
             {
               "id": "b",
-              "text": "Root-cause analysis, control redesign, and measurable follow-up verification"
+              "text": "Only including data that supports the recommendation."
             },
             {
               "id": "c",
-              "text": "One-time fixes without retesting"
+              "text": "A section detailing key assumptions, identified risks, and proposed mitigation controls."
             },
             {
               "id": "d",
-              "text": "Issue closure based on elapsed time"
+              "text": "A guarantee that the recommendation will succeed without any risks."
             }
           ],
-          "correctOptionId": "b",
-          "explanation": "Mature remediation ties root causes to control redesign and verification."
+          "correctOptionId": "c",
+          "explanation": "Accountable decision-making requires transparency about the underlying assumptions and potential risks, along with a plan to manage them."
         },
         {
           "id": "business-analytics-601-l06-q8",
-          "text": "Which portfolio decision rule best balances performance and resilience in Business Analytics Research and Leadership?",
-          "skillId": "business-analytics-601-skill-advanced-8",
+          "text": "In the simulation clinic, why is it important to maintain traceability when updating control gates?",
+          "skillId": "business-analytics-601-skill-case8",
           "options": [
             {
               "id": "a",
-              "text": "Maximize short-term gains regardless of concentration risk"
+              "text": "It is not important; speed is the only goal."
             },
             {
               "id": "b",
-              "text": "Optimize for expected value while enforcing risk limits and contingency capacity"
+              "text": "To create a clear audit trail that explains why decisions were changed, linking actions to outcomes for post-simulation review."
             },
             {
               "id": "c",
-              "text": "Ignore correlated failure modes"
+              "text": "To make the simulation more difficult for the user."
             },
             {
               "id": "d",
-              "text": "Commit all resources to one irreversible pathway"
+              "text": "To satisfy a requirement that has no practical purpose."
             }
           ],
           "correctOptionId": "b",
-          "explanation": "Balanced portfolios combine value optimization with explicit risk limits and contingency options."
+          "explanation": "Traceability ensures that every adaptive change is documented and justified, which is fundamental for accountability and learning from the simulation results."
         }
       ]
     },
@@ -645,8 +545,8 @@ export const BusinessAnalytics601Module: LearningModule = {
         {
           "id": "business-analytics-601-l07-a1",
           "type": "image",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Stakeholder Impact Map",
+          "content": "A diagram illustrating how a single business decision can create a ripple effect of positive and negative impacts across various stakeholder groups, including customers, employees, the community, and the environment."
         }
       ],
       "chunks": [
@@ -654,19 +554,19 @@ export const BusinessAnalytics601Module: LearningModule = {
           "id": "business-analytics-601-l07-c1",
           "kind": "concept",
           "title": "Stakeholder Impact Distribution",
-          "content": "In this lesson, learners will map out the distribution of impacts among different stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from business decisions. This understanding is crucial for ensuring that all voices are considered in the decision-making process.\nContext recap: In this lesson, learners will map out the distribution of impacts among different stakeholders. They will analyze the benefits, burdens, and any delayed effects that may arise from business decisions. This understanding is crucial for ensuring that all voices are considered in the decision-making process."
+          "content": "Learn to map the full impact of business decisions across all stakeholders. We will analyze how benefits and burdens are distributed, considering both immediate and long-term effects. This is key to making equitable and responsible choices."
         },
         {
           "id": "business-analytics-601-l07-c2",
           "kind": "concept",
           "title": "Accountability Architecture",
-          "content": "In this section, we will explore the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. Understanding this architecture is essential for fostering trust and responsibility in business analytics.\nContext recap: In this section, we will explore the architecture of accountability within decision-making processes. This includes ensuring that there is traceability for decisions made, rights for review, and obligations for remediation when necessary. Understanding this architecture is essential for fostering trust and responsibility in business analytics."
+          "content": "Examine the architecture of accountability. We will cover the importance of decision traceability, stakeholder rights of review, and the obligation to remediate negative outcomes. A strong accountability framework builds trust and ensures responsible governance."
         },
         {
           "id": "business-analytics-601-l07-c3",
           "kind": "recap",
           "title": "Responsible Leadership Checklist",
-          "content": "At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds our ability to adapt and recover from challenges. This checklist is a great tool for responsible leadership in business analytics.\nContext recap: At the end of our lesson, we have a helpful checklist that connects important outcomes with ethical considerations, ensures we follow policies, and builds our ability to adapt and recover from challenges. This checklist is a great tool for responsible leadership in business analytics."
+          "content": "Conclude with a responsible leadership checklist. This tool helps you connect business outcomes with ethical principles, ensure policy compliance, and build organizational resilience. Use it to guide your leadership in business analytics."
         }
       ],
       "flashcards": [
@@ -696,8 +596,8 @@ export const BusinessAnalytics601Module: LearningModule = {
         {
           "id": "business-analytics-601-l08-a1",
           "type": "practice",
-          "title": "Guided Practice",
-          "content": "Use a structured method, make assumptions explicit, and validate recommendations with measurable evidence."
+          "title": "Defense Evaluation Rubric",
+          "content": "A rubric outlining the criteria for a successful capstone defense, including clarity of claims, strength of evidence, handling of uncertainty, and responsiveness to critical questions."
         }
       ],
       "chunks": [
@@ -705,13 +605,13 @@ export const BusinessAnalytics601Module: LearningModule = {
           "id": "business-analytics-601-l08-c1",
           "kind": "practice",
           "title": "Defense Brief Assembly",
-          "content": "In this interactive activity, students will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and pathways for remediation. This exercise helps learners practice critical thinking and effective communication skills.\nContext recap: In this interactive activity, students will work together to create a comprehensive brief. This brief will include well-supported claims, solid evidence, clear boundaries of uncertainty, and pathways for remediation. This exercise helps learners practice critical thinking and effective communication skills."
+          "content": "Prepare for your capstone defense. In this lab, you will assemble a defense brief that synthesizes your analysis. It must include a clear claim, supporting evidence, defined uncertainty bounds, and a viable remediation plan."
         },
         {
           "id": "business-analytics-601-l08-c2",
           "kind": "recap",
           "title": "Expert Panel Rehearsal",
-          "content": "During this session, students will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of stakeholders. This rehearsal is essential for building confidence and improving their presentation skills.\nContext recap: During this session, students will practice their responses to various critiques that may come from experts in the field. They will prepare for questions related to technical aspects, governance issues, and the perspectives of stakeholders. This rehearsal is essential for building confidence and improving their presentation skills."
+          "content": "Rehearse your defense in a simulated expert panel. You will practice responding to challenging critiques on technical methods, governance implications, and stakeholder impacts. This rehearsal builds the confidence needed to defend your work effectively."
         }
       ],
       "interactiveActivities": [

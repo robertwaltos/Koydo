@@ -5,179 +5,315 @@ export const cdl_general_knowledge_101_Module: LearningModule = {
   "title": "CDL General Knowledge",
   "description": "Master the General Knowledge section of the CDL exam — the foundation every commercial driver must pass regardless of license class (A, B, or C). Covers vehicle inspection, basic control, safe driving, transporting cargo, hazardous conditions, emergency procedures, and FMCSA regulations. Based on the official FMCSA CDL Manual used by all 50 states.",
   "subject": "CDL",
-  "tags": ["core", "curriculum", "cdl", "trades", "exam-prep", "general-knowledge"],
+  "tags": [
+    "core",
+    "curriculum",
+    "cdl",
+    "trades",
+    "exam-prep",
+    "general-knowledge"
+  ],
   "minAge": 18,
   "maxAge": 99,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "difficultyBand": "beginner",
-  "localeSupport": ["en", "es"],
+  "localeSupport": [
+    "en",
+    "es"
+  ],
   "thumbnail": "/assets/cdl/cab-dashboard.png",
   "learningObjectives": [
-    "Identify the components inspected during a CDL pre-trip vehicle inspection",
-    "Apply safe driving techniques for commercial motor vehicles in varied conditions",
-    "Explain cargo securement requirements including weight distribution and tie-down rules",
-    "Describe proper procedures for driving in hazardous conditions (rain, ice, fog, mountains)",
-    "Recognize emergency situations and apply appropriate response procedures",
-    "Understand FMCSA Hours of Service (HOS) regulations and logbook requirements",
-    "Interpret road signs, signals, and pavement markings relevant to commercial vehicles",
-    "Understand the ELDT (Entry-Level Driver Training) requirement and CLP 14-day hold period"
+    "Demonstrate the seven-step CDL pre-trip vehicle inspection process",
+    "Apply fundamental vehicle control techniques for starting, stopping, turning, and backing",
+    "Implement safe driving strategies for speed and space management in varied conditions",
+    "Explain and apply FMCSA cargo securement rules, including weight distribution and tie-down requirements",
+    "Describe proper procedures for driving in hazardous conditions like rain, ice, fog, and mountains",
+    "Recognize and respond appropriately to common driving emergencies",
+    "Comply with FMCSA Hours of Service (HOS) and Drug & Alcohol regulations",
+    "Interpret road signs, signals, and pavement markings, including those specific to commercial vehicles",
+    "Understand procedures for safely navigating railroad-highway grade crossings"
   ],
   "lessons": [
     {
       "id": "cdl-gk-101-l01",
-      "title": "Vehicle Systems and Pre-Trip Inspection",
+      "title": "The Pre-Trip Vehicle Inspection",
       "type": "video",
-      "duration": 14,
+      "duration": 18,
       "chunks": [
         {
           "id": "cdl-gk-101-l01-c1",
-          "title": "Why Pre-Trip Inspections Matter",
-          "content": "Federal law (FMCSR 392.7 and 396.13) requires every commercial driver to perform a pre-trip inspection before driving. This is not optional — it protects you, other motorists, and your CDL. [Visual Prompt: A driver walking around a semi-truck with a checklist, pointing at tires, lights, and coupling devices.] The inspection covers seven major areas: engine compartment, cab interior, exterior walk-around, steering/suspension, brakes, wheels/tires, and coupling system (for combination vehicles). An examiner during your CDL skills test will ask you to demonstrate this inspection in order, explaining what you are checking and why. Missing a critical defect on the road can result in out-of-service orders, fines up to $16,000, and loss of your CDL."
+          "title": "Why Inspect? The Seven-Step Method",
+          "content": "A thorough pre-trip inspection is your first line of defense and a federal requirement (FMCSR §392.7). It protects you, the public, and your cargo. A failed roadside inspection can result in fines, out-of-service orders, and points against your safety record. We'll use a systematic seven-step method, the same one used in the CDL skills test. [Visual Prompt: A driver holding a clipboard next to a truck, with a circular arrow graphic showing the 7 steps: Vehicle Overview, Engine Compartment, In-Cab & Safe Start, Walk-Around, Coupling System, Trailer, and Brake Test.] This ensures you check everything in a logical order and don't miss critical components."
         },
         {
           "id": "cdl-gk-101-l01-c2",
-          "title": "Engine Compartment Checks",
-          "content": "Start your pre-trip at the front of the vehicle with the engine off and parking brake set. [Visual Prompt: Labeled diagram of a diesel engine compartment showing oil dipstick, coolant reservoir, power steering reservoir, belts, hoses, alternator, and air compressor.] Check engine oil level (should be between add and full marks on dipstick). Check coolant level in the overflow reservoir — never open a pressurized radiator cap. Inspect the power steering fluid level. Look at all belts for cracks, fraying, or excessive wear — a broken serpentine belt will disable your alternator and air compressor. Check hoses for leaks, bulges, or abrasion. Inspect the air compressor for oil leaks and proper mounting. Check the water pump for leaks. Look at the wiring harness for loose or damaged connections."
+          "title": "Step 2: Engine Compartment",
+          "content": "With the parking brakes set and wheels chocked, open the hood. [Visual Prompt: A clean, labeled diagram of a commercial truck engine compartment. Highlighted items: oil dipstick, coolant reservoir, power steering fluid reservoir, alternator, air compressor, belts, and hoses.] Check fluid levels: engine oil, coolant, and power steering fluid. Inspect all belts for tightness (no more than 3/4 inch of play), cracks, or fraying. Check hoses for leaks, bulges, or damage. Ensure the air compressor and alternator are securely mounted and not leaking. Look for any loose wiring or signs of fluid leaks on the ground beneath the engine."
         },
         {
           "id": "cdl-gk-101-l01-c3",
-          "title": "Tires, Wheels, and Brake Inspection",
-          "content": "Tire failures are among the top causes of commercial vehicle crashes. [Visual Prompt: Cross-section diagram of a commercial tire showing tread depth measurement with a gauge, sidewall inspection points, and proper inflation pressure markings.] Federal minimum tread depth is 4/32 inch on steer tires and 2/32 inch on all other tires. Check for cuts, bulges, or tread separation. Verify tire pressure — underinflation causes overheating and blowouts. Inspect lug nuts for looseness, cracks, or missing nuts. Check for rust trails around lug nuts (indicates looseness). Look at brake drums or rotors for cracks. Check brake linings through inspection holes — minimum thickness is typically 1/4 inch. On disc brakes, check pad thickness. Inspect brake chambers for air leaks by listening. Check slack adjusters — pull them by hand; more than 1 inch of movement means the brakes need adjustment."
+          "title": "Step 3: In-Cab Inspection and Safe Start",
+          "content": "Inside the cab, ensure your seatbelt is secure and the vehicle is in neutral. [Visual Prompt: A driver's view of a truck dashboard with key gauges and controls highlighted: oil pressure, water temperature, ammeter/voltmeter, air pressure gauges, and safety equipment like fire extinguisher and triangles.] Start the engine and check that the oil pressure gauge shows rising pressure. Check the ammeter/voltmeter for a normal reading (12-14 volts). Verify that both air pressure gauges build to their cutout pressure (around 120-125 psi). Test your horn, windshield wipers, and all lights (headlights, high beams, turn signals, 4-way flashers). Check for safety equipment: a fully charged fire extinguisher, spare fuses, and three reflective triangles."
+        },
+        {
+          "id": "cdl-gk-101-l01-c4",
+          "title": "Step 4: The Walk-Around (Tires, Wheels, Brakes, Suspension)",
+          "content": "The walk-around covers the entire exterior. [Visual Prompt: Close-up shot of a truck wheel assembly. Callouts point to the tire tread, sidewall, lug nuts, brake drum, and slack adjuster.] For every tire, check for proper inflation, even wear, and a minimum tread depth of 4/32 inch on steer tires and 2/32 inch on all others. Inspect wheels for cracks or illegal welds. Check that all lug nuts are present and tight, looking for rust trails. Inspect brake components: drums or rotors for cracks, and linings for a minimum thickness of 1/4 inch. Check slack adjusters; with brakes released, they should not move more than 1 inch when pulled by hand. Look at suspension parts like leaf springs, checking for cracks or missing leaves."
         }
       ],
       "flashcards": [
-        { "id": "cdl-gk-101-l01-f1", "front": "What is the minimum tread depth for steer tires on a commercial vehicle?", "back": "4/32 inch (approximately 3.2 mm)." },
-        { "id": "cdl-gk-101-l01-f2", "front": "What federal regulation requires pre-trip inspections?", "back": "FMCSR 392.7 (parts and accessories) and 396.13 (driver inspection report)." },
-        { "id": "cdl-gk-101-l01-f3", "front": "How do you check brake adjustment on S-cam brakes?", "back": "Pull the slack adjuster by hand. If it moves more than about 1 inch, the brakes are out of adjustment." },
-        { "id": "cdl-gk-101-l01-f4", "front": "What are the seven major areas of a pre-trip inspection?", "back": "Engine compartment, cab interior, exterior walk-around, steering/suspension, brakes, wheels/tires, and coupling system." }
+        {
+          "id": "cdl-gk-101-l01-f1",
+          "front": "What is the minimum legal tread depth for a front steer tire?",
+          "back": "4/32 of an inch."
+        },
+        {
+          "id": "cdl-gk-101-l01-f2",
+          "front": "During an in-cab inspection, what is the typical cutout pressure for the air compressor?",
+          "back": "Approximately 120-125 psi."
+        },
+        {
+          "id": "cdl-gk-101-l01-f3",
+          "front": "How much play should a slack adjuster have when the brakes are released?",
+          "back": "No more than about 1 inch when pulled by hand."
+        },
+        {
+          "id": "cdl-gk-101-l01-f4",
+          "front": "What three pieces of emergency equipment must be in your vehicle?",
+          "back": "A properly rated and charged fire extinguisher, spare fuses (unless equipped with circuit breakers), and three reflective triangles."
+        }
       ]
     },
     {
       "id": "cdl-gk-101-l02",
-      "title": "Driving Safely: Space Management and Speed",
+      "title": "Basic Vehicle Control",
       "type": "video",
-      "duration": 12,
+      "duration": 10,
       "chunks": [
         {
           "id": "cdl-gk-101-l02-c1",
-          "title": "Following Distance and Stopping Distance",
-          "content": "A fully loaded tractor-trailer at highway speed needs significantly more distance to stop than a car. [Visual Prompt: Comparison diagram showing a car stopping in 150 feet vs a loaded truck stopping in 500+ feet at 55 mph, with perception, reaction, and braking distances labeled.] At 55 mph, a loaded truck needs approximately 390 feet of braking distance alone — plus another 60 feet for perception and 60 feet for reaction time. Total stopping distance: over 500 feet (nearly two football fields). The standard following distance rule: at least 1 second for every 10 feet of vehicle length, at speeds above 40 mph add 1 extra second. For a 60-foot vehicle at highway speed, that means at least 7 seconds of following distance. In poor conditions (rain, fog, night), double the following distance."
+          "title": "Starting, Steering, and Stopping",
+          "content": "Controlling a large vehicle requires smooth, deliberate actions. When accelerating, do so smoothly to avoid mechanical damage and cargo shifts. When steering, use both hands and make turns slowly and correctly. [Visual Prompt: Animation showing hand-over-hand steering for a sharp turn and shuffle steering for slight curves.] Stopping a heavy vehicle requires planning. Brake smoothly and early. Avoid 'stabbing' the brakes, which can be unsettling for the vehicle and cargo. Always look far ahead to anticipate stops."
         },
         {
           "id": "cdl-gk-101-l02-c2",
-          "title": "Speed Management on Curves and Grades",
-          "content": "The number one cause of truck rollovers is entering a curve too fast. [Visual Prompt: Aerial view of a highway curve with a posted speed limit sign of 35 mph and a yellow truck advisory sign of 25 mph, showing the correct truck path through the curve.] Posted speed limits are set for cars. Commercial vehicles, especially loaded ones with a high center of gravity, often need to travel 5-10 mph below the posted curve speed. On downgrades, use the braking effect of the engine by selecting a low gear BEFORE starting the descent — the gear you would use to climb the hill is usually the right gear for going down. Never ride the brakes continuously on a long downgrade; this causes brake fade (loss of braking power due to overheating). Use snub braking instead: apply brakes firmly to reduce speed by 5 mph, then release completely to let brakes cool."
+          "title": "Turning and Off-Tracking",
+          "content": "Large vehicles have significant 'off-tracking,' where the rear wheels follow a shorter path than the front wheels in a turn. [Visual Prompt: Overhead diagram showing a tractor-trailer making a right turn. The path of the front steer tires is shown in blue, and the shorter, tighter path of the rear trailer tires is shown in red, highlighting the off-tracking space.] To manage this, you must use the correct turning technique. For a right turn, keep the front of your vehicle in the middle of the intersection before starting your turn (a 'button hook' turn). For a left turn, ensure you reach the center of the intersection before turning to avoid cutting off other drivers."
         },
         {
           "id": "cdl-gk-101-l02-c3",
-          "title": "Lane Management and Blind Spots",
-          "content": "Commercial vehicles have large blind spots (No-Zones) on all four sides. [Visual Prompt: Bird's-eye diagram of a semi-truck showing the four No-Zones: front (20 feet), rear (200 feet), left side (1 lane), and right side (2 lanes), with cars positioned in each zone colored red.] The right-side No-Zone extends two full lanes and is the most dangerous — always check your right mirror before turning right. The front No-Zone extends about 20 feet ahead. The rear No-Zone extends approximately 200 feet behind. When changing lanes, check mirrors, signal early, and check mirrors again. Stay in the right lane whenever possible. When passing, do so on the left only and ensure you can see the passed vehicle in your mirror before returning to the right lane. Never linger alongside another vehicle in their blind spot."
+          "title": "Backing Safely: G.O.A.L.",
+          "content": "Backing is one of the most dangerous maneuvers. Before you back, remember the acronym G.O.A.L.: Get Out And Look. [Visual Prompt: A driver is shown getting out of the cab, walking a full circle around the truck and trailer, and then using a spotter with agreed-upon hand signals during the backing maneuver.] Walk completely around your vehicle to check for overhead and side clearance, obstacles, and people. If possible, use a reliable spotter and agree on hand signals before you start. Back slowly, use your mirrors constantly, and don't be afraid to pull forward to correct your position. If you lose sight of your spotter, stop immediately."
         }
       ],
       "flashcards": [
-        { "id": "cdl-gk-101-l02-f1", "front": "What is the following distance rule for a 60-foot truck at highway speed?", "back": "At least 7 seconds (1 second per 10 feet of vehicle length, plus 1 extra second above 40 mph)." },
-        { "id": "cdl-gk-101-l02-f2", "front": "What is brake fade?", "back": "Loss of braking power caused by overheating from continuous brake application, especially on long downgrades." },
-        { "id": "cdl-gk-101-l02-f3", "front": "Which side of a truck has the largest blind spot?", "back": "The right side — it extends approximately two full lanes." },
-        { "id": "cdl-gk-101-l02-f4", "front": "What gear should you select before descending a long grade?", "back": "The same gear you would use to climb the hill. Select it BEFORE starting the descent." }
+        {
+          "id": "cdl-gk-101-l02-f1",
+          "front": "What is 'off-tracking'?",
+          "back": "The tendency of the rear wheels to follow a shorter path than the front wheels during a turn."
+        },
+        {
+          "id": "cdl-gk-101-l02-f2",
+          "front": "What does the acronym G.O.A.L. stand for in backing?",
+          "back": "Get Out And Look. It's the most important rule for safe backing."
+        },
+        {
+          "id": "cdl-gk-101-l02-f3",
+          "front": "When making a right turn, why should you avoid turning too early?",
+          "back": "To prevent your rear wheels from hitting the curb, a pole, or other objects due to off-tracking."
+        }
       ]
     },
     {
       "id": "cdl-gk-101-l03",
+      "title": "Driving Safely: Speed and Space Management",
+      "type": "video",
+      "duration": 15,
+      "chunks": [
+        {
+          "id": "cdl-gk-101-l03-c1",
+          "title": "Seeing Hazards: The 12-15 Second Rule",
+          "content": "Safe driving is proactive, not reactive. You must see hazards before they become emergencies. The rule is to look ahead 12-15 seconds. [Visual Prompt: A driver's point-of-view on a highway. A transparent overlay highlights the road ahead, with a marker at the 1/4 mile point labeled '12-15 seconds at highway speed'.] At highway speeds, this is about a quarter of a mile. This gives you time to identify potential problems like brake lights, merging traffic, or road obstructions and plan your response. Constantly scan your mirrors to know what is happening around and behind you."
+        },
+        {
+          "id": "cdl-gk-101-l03-c2",
+          "title": "Managing Space: Following Distance and Blind Spots",
+          "content": "Space is your best defense. For following distance, use this formula: 1 second for every 10 feet of vehicle length, plus an additional second for speeds over 40 mph. For a typical 60-foot rig, this means at least 7 seconds. Double this in bad weather. [Visual Prompt: Bird's-eye diagram of a semi-truck showing the four large 'No-Zones' (blind spots) colored in red: 20 feet in front, 200 feet in back, one lane to the left, and two lanes to the right.] Be aware of your massive blind spots, or 'No-Zones.' The largest is on your right side. Always signal early, check your mirrors, and make a physical head check (lean forward) before changing lanes or turning."
+        },
+        {
+          "id": "cdl-gk-101-l03-c3",
+          "title": "Managing Speed: Curves, Grades, and Slippery Surfaces",
+          "content": "Posted speed limits are for cars, not 80,000-pound trucks. The #1 cause of rollovers is excessive speed in a curve or on a ramp. Slow down before you enter the curve. On long downgrades, use the engine's braking power. [Visual Prompt: A side-view animation of a truck on a steep downgrade. It shows the driver downshifting *before* the grade, then using intermittent 'snub braking' (5 mph reduction, then release) instead of riding the brakes.] Select a gear low enough to maintain a safe speed without constant braking. This prevents brake fade, a dangerous loss of stopping power from overheating. On slippery surfaces, reduce speed by 1/3 on wet roads and by 1/2 or more on snow and ice."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "cdl-gk-101-l03-f1",
+          "front": "How far ahead should you be looking while driving on the highway?",
+          "back": "12 to 15 seconds, which is about a quarter of a mile at highway speeds."
+        },
+        {
+          "id": "cdl-gk-101-l03-f2",
+          "front": "What is brake fade and how do you prevent it on a long downgrade?",
+          "back": "Brake fade is the loss of braking power due to overheating. Prevent it by using a low gear for engine braking and applying brakes intermittently (snub braking)."
+        },
+        {
+          "id": "cdl-gk-101-l03-f3",
+          "front": "Which side of a commercial truck has the largest blind spot?",
+          "back": "The right side, which can extend out two full lanes."
+        },
+        {
+          "id": "cdl-gk-101-l03-f4",
+          "front": "What is the minimum following distance for a 60-foot truck at 55 mph?",
+          "back": "At least 7 seconds (1 second per 10 feet of vehicle, plus 1 second for speed over 40 mph)."
+        }
+      ]
+    },
+    {
+      "id": "cdl-gk-101-l04",
       "title": "Transporting Cargo Safely",
       "type": "video",
       "duration": 12,
       "chunks": [
         {
-          "id": "cdl-gk-101-l03-c1",
-          "title": "Cargo Securement Basics",
-          "content": "Improperly secured cargo causes over 730 crashes per year in the US. [Visual Prompt: Flatbed trailer showing proper tie-down arrangement with chains, straps, and edge protectors on a load of steel beams, with FMCSA cargo securement rules overlaid.] The FMCSA cargo securement rules (Part 393, Subparts I and J) require that cargo be immobilized or secured to prevent shifting. Every 150 miles or 3 hours (whichever comes first), you must stop and inspect your cargo securement. For the first 50 miles of a trip, you must also stop and re-check. The aggregate working load limit of all tie-downs must be at least 50% of the cargo weight. One tie-down is required for articles 5 feet or less in length, and up to 1,100 lbs. Two tie-downs are needed for cargo longer than 5 feet or heavier than 1,100 lbs, plus one additional tie-down for every additional 10 feet of length."
-        },
-        {
-          "id": "cdl-gk-101-l03-c2",
-          "title": "Weight Distribution and Center of Gravity",
-          "content": "How you load a truck directly affects handling and safety. [Visual Prompt: Side-view diagram of a trailer showing three loading scenarios: correctly centered cargo (green checkmark), top-heavy cargo (red X with rollover warning), and front-heavy cargo (red X with steering difficulty warning).] The center of gravity should be as low and as close to the center of the vehicle as possible. A high center of gravity makes rollovers much more likely on curves and in evasive maneuvers. Weight must be evenly distributed side-to-side; uneven loading causes the vehicle to lean and can lead to tire failure on the overloaded side. Know your axle weight limits: steer axle typically 12,000-14,000 lbs, drive axles 34,000 lbs, and trailer tandem axles 34,000 lbs. Maximum gross vehicle weight is 80,000 lbs on Interstate highways (some states allow higher with permits). Use certified truck scales to verify compliance."
-        },
-        {
-          "id": "cdl-gk-101-l03-c3",
-          "title": "Hazardous Conditions and Emergency Cargo Issues",
-          "content": "Cargo emergencies require quick, safe response. [Visual Prompt: Split screen showing a driver pulling over safely to re-secure shifted cargo, and a hazmat placard system chart showing the 9 hazard classes.] If you feel cargo shifting while driving, pull over at the first safe location and re-secure before continuing. Never attempt to secure cargo while the vehicle is moving. If cargo falls onto the roadway, park safely, turn on hazard flashers, and set reflective triangles. For hazardous materials cargo, additional rules apply: you need a Hazmat endorsement (H), proper placards displayed on all four sides, shipping papers accessible in the cab, and knowledge of emergency response procedures. If you are hauling sealed cargo, you are responsible for ensuring the vehicle is not overloaded and that the cargo does not shift based on how the vehicle handles."
-        }
-      ],
-      "flashcards": [
-        { "id": "cdl-gk-101-l03-f1", "front": "How often must you stop to check cargo securement during a trip?", "back": "Within the first 50 miles, then every 150 miles or 3 hours (whichever comes first)." },
-        { "id": "cdl-gk-101-l03-f2", "front": "What is the maximum gross vehicle weight on US Interstate highways?", "back": "80,000 lbs (without special permits)." },
-        { "id": "cdl-gk-101-l03-f3", "front": "What is the minimum aggregate working load limit for tie-downs?", "back": "At least 50% of the cargo weight." },
-        { "id": "cdl-gk-101-l03-f4", "front": "Why is a high center of gravity dangerous for commercial vehicles?", "back": "It significantly increases rollover risk on curves, ramps, and during evasive maneuvers." }
-      ]
-    },
-    {
-      "id": "cdl-gk-101-l04",
-      "title": "Hours of Service and FMCSA Regulations",
-      "type": "video",
-      "duration": 12,
-      "chunks": [
-        {
           "id": "cdl-gk-101-l04-c1",
-          "title": "Hours of Service (HOS) Rules",
-          "content": "The FMCSA Hours of Service rules exist to prevent fatigue-related crashes. [Visual Prompt: Timeline infographic showing a 24-hour clock with color-coded blocks: 11 hours driving (green), 3 hours on-duty not driving (yellow), 10 hours off-duty (blue), with the 14-hour window highlighted.] For property-carrying CMV drivers: You may drive a maximum of 11 hours after 10 consecutive hours off duty. All driving must occur within a 14-hour window after coming on duty — this window cannot be extended by taking breaks. After 8 consecutive hours of driving, you must take a 30-minute break before driving again. You cannot drive after 60 hours on duty in 7 consecutive days (or 70 hours in 8 days). The 7/8-day clock resets after 34 or more consecutive hours off duty (the 34-hour restart). All hours must be recorded in a Record of Duty Status (RODS) — most carriers now use Electronic Logging Devices (ELDs) as required by federal mandate."
+          "title": "Weight Distribution and Center of Gravity",
+          "content": "Proper loading is critical for vehicle stability. [Visual Prompt: Side-view diagram of a trailer showing three loading scenarios: correctly centered cargo (green checkmark), top-heavy cargo (red X with a rollover warning icon), and front-heavy cargo (red X with a steering difficulty icon).] Keep the cargo's center of gravity as low and as centered as possible. A high center of gravity dramatically increases the risk of rollover. Distribute weight evenly to comply with legal axle weight limits (e.g., 12,000 lbs on steers, 34,000 lbs on tandems) and prevent handling problems. The gross vehicle weight limit on most interstate highways is 80,000 lbs."
         },
         {
           "id": "cdl-gk-101-l04-c2",
-          "title": "ELD Mandate and Logbook Basics",
-          "content": "Since December 2019, most commercial drivers must use Electronic Logging Devices (ELDs). [Visual Prompt: Photo of an ELD device mounted on a truck dashboard showing duty status, with the four duty statuses labeled: Off Duty, Sleeper Berth, Driving, On-Duty Not Driving.] ELDs automatically record driving time when the vehicle is in motion. Drivers must properly annotate their logs with locations, shipping document numbers, and any edits. There are four duty statuses: Off Duty (resting, personal time), Sleeper Berth (time in the sleeper), Driving (behind the wheel with vehicle in motion), and On-Duty Not Driving (loading, unloading, inspections, fueling, paperwork). Drivers must keep records of the current day plus the previous 7 days. Falsifying logs is a serious federal offense that can result in CDL disqualification. Roadside inspectors will review your ELD records during Level I and Level III inspections."
+          "title": "Cargo Securement Rules",
+          "content": "You are responsible for your cargo, even if you didn't load it. The FMCSA requires cargo to be secured to prevent shifting, falling, or leaking. [Visual Prompt: A flatbed trailer with a load of concrete pipes. Callouts point to the minimum number of tie-downs required, proper use of straps, and edge protectors to prevent strap damage.] The aggregate working load limit (WLL) of your tie-downs must be at least half the weight of the cargo. You need at least two tie-downs for cargo longer than 5 feet, and one additional tie-down for every 10 feet of cargo length beyond the first 10 feet."
         },
         {
           "id": "cdl-gk-101-l04-c3",
-          "title": "Drug and Alcohol Regulations",
-          "content": "The FMCSA has zero tolerance for driving a CMV under the influence. [Visual Prompt: Infographic showing BAC limits: 0.04% CDL disqualification threshold vs 0.08% for regular drivers, with a red prohibited symbol over alcohol and controlled substances.] The BAC limit for commercial drivers is 0.04% — half the limit for regular drivers. You cannot consume alcohol within 4 hours of driving a CMV. If you refuse a drug or alcohol test, it is treated as a positive result. Pre-employment, random, reasonable suspicion, post-accident, return-to-duty, and follow-up testing are all required under FMCSA drug and alcohol testing programs (49 CFR Part 382). A positive drug test or DUI results in immediate CDL disqualification — first offense: 1 year (3 years if hauling hazmat); second offense: lifetime disqualification. The FMCSA Drug and Alcohol Clearinghouse tracks all violations across carriers nationwide."
+          "title": "Inspecting Cargo During Transit",
+          "content": "Cargo can shift and tie-downs can loosen. Federal rules require you to inspect your cargo and securement devices within the first 50 miles of a trip. [Visual Prompt: A driver pulled over at a safe rest area, walking around the trailer and physically checking the tension of the cargo straps.] After the initial check, you must re-inspect your cargo whenever you make a change of duty status, or every 3 hours or 150 miles, whichever comes first. If you are hauling sealed cargo, you can't inspect it directly, but you are still responsible for knowing it is not overloaded and for sensing any shifts in the load through how the vehicle handles."
         }
       ],
       "flashcards": [
-        { "id": "cdl-gk-101-l04-f1", "front": "How many hours can a property-carrying CMV driver drive after 10 hours off duty?", "back": "A maximum of 11 hours, within a 14-hour on-duty window." },
-        { "id": "cdl-gk-101-l04-f2", "front": "What is the BAC limit for commercial drivers?", "back": "0.04% — half the limit for regular passenger vehicle drivers." },
-        { "id": "cdl-gk-101-l04-f3", "front": "How many consecutive hours off duty are needed for a 7/8-day restart?", "back": "34 consecutive hours off duty." },
-        { "id": "cdl-gk-101-l04-f4", "front": "What happens if a CDL driver refuses a drug or alcohol test?", "back": "It is treated as a positive result, leading to CDL disqualification." }
+        {
+          "id": "cdl-gk-101-l04-f1",
+          "front": "How often must you inspect your cargo during a trip?",
+          "back": "Within the first 50 miles, and then every 3 hours or 150 miles (whichever comes first), or when you change duty status."
+        },
+        {
+          "id": "cdl-gk-101-l04-f2",
+          "front": "What is the maximum gross vehicle weight on most U.S. Interstate highways without a special permit?",
+          "back": "80,000 pounds."
+        },
+        {
+          "id": "cdl-gk-101-l04-f3",
+          "front": "The total strength (aggregate WLL) of your tie-downs must be at least what percentage of the cargo's weight?",
+          "back": "50 percent."
+        },
+        {
+          "id": "cdl-gk-101-l04-f4",
+          "front": "Why is a high center of gravity dangerous?",
+          "back": "It makes the vehicle less stable and significantly increases the risk of rolling over, especially in curves or during sudden maneuvers."
+        }
       ]
     },
     {
       "id": "cdl-gk-101-l05",
-      "title": "Road Signs, Signals, and Hazardous Conditions",
+      "title": "Hazardous Conditions and Emergencies",
       "type": "interactive",
       "duration": 15,
       "chunks": [
         {
           "id": "cdl-gk-101-l05-c1",
-          "title": "Road Signs for Commercial Vehicles",
-          "content": "Commercial drivers must recognize all standard road signs plus signs specific to CMVs. [Visual Prompt: Grid of 12 road signs arranged in categories — regulatory (speed limit, no trucks, weight limit, low clearance), warning (steep grade, curve, bridge weight), and guide (truck route, weigh station, rest area).] Key CMV-specific signs: Low Clearance signs (diamond or rectangular) — know your vehicle height and add at least 6 inches for safety. Weight Limit signs may apply to bridges, roads, or specific axle limits. 'No Trucks' or 'No CMVs' signs restrict commercial vehicles on certain roads. Weigh Station signs indicate mandatory stops — if the station is open and you meet the weight threshold, you must enter. Steep Grade signs show the percent grade and distance — critical for selecting the right gear. Runaway Truck Ramp signs indicate emergency escape ramps on steep descents."
+          "title": "Driving in Hazardous Weather",
+          "content": "Adverse weather demands extra caution. [Visual Prompt: Four-panel illustration showing a truck in: 1) Rain with a 'Hydroplaning Risk' warning, 2) Snow with a 'Reduced Traction' warning, 3) Fog with a 'Low Visibility' warning, and 4) Crosswinds with a 'Trailer Sway' warning.] In heavy rain, reduce speed by 1/3. In snow or ice, reduce speed by 1/2 or more and increase following distance dramatically. Use low-beam headlights in fog; high beams will reflect off the fog and worsen visibility. In strong crosswinds, be prepared for sudden gusts, especially when coming out from under an overpass. If conditions become unsafe, pull over and wait."
         },
         {
           "id": "cdl-gk-101-l05-c2",
-          "title": "Driving in Hazardous Weather",
-          "content": "Commercial vehicles are more affected by adverse weather than passenger cars. [Visual Prompt: Four-panel illustration showing a truck in rain (hydroplaning risk), snow (reduced traction), fog (limited visibility), and crosswind (trailer sway).] In heavy rain, reduce speed by 1/3. Hydroplaning can begin at speeds as low as 30 mph on standing water. If you feel the steering get light, ease off the accelerator — do not brake hard. In snow and ice, reduce speed significantly and increase following distance to at least double. Use low-beam headlights in fog — high beams reflect off moisture and reduce visibility. In strong crosswinds, keep a firm grip on the steering wheel and reduce speed. High-profile vehicles and empty trailers are especially vulnerable to wind. If conditions are severe enough that you cannot drive safely, park at a safe location and wait. No load is worth your life or others'."
+          "title": "Railroad-Highway Crossings",
+          "content": "Never take chances at a railroad crossing. A loaded truck can take 14 seconds or more to cross a double track. [Visual Prompt: Diagram of a railroad crossing showing a truck stopped no closer than 15 feet and no farther than 50 feet from the nearest rail. A callout explains the difference between a passive crossing (signs only) and an active crossing (lights and gates).] Know that some vehicles, like those carrying passengers or placarded hazardous materials, MUST stop at all crossings. If you get stuck on the tracks, get out of the vehicle immediately, move away from the tracks in the direction the train is coming from, and call 911 or the emergency number posted at the crossing."
         },
         {
           "id": "cdl-gk-101-l05-c3",
-          "title": "Emergency Procedures",
-          "content": "Knowing how to handle emergencies can save lives. [Visual Prompt: Decision flowchart for tire blowout: 'Hold steering firmly → Do NOT brake → Accelerate slightly → Gradually slow down → Pull off road safely → Turn on 4-ways → Set triangles.'] Tire blowout: grip the steering wheel firmly, do NOT brake immediately, accelerate slightly to stabilize, then gradually slow down and pull over. Brake failure: downshift to the lowest gear possible, use the emergency/parking brake gradually (not all at once), look for an escape route or runaway truck ramp. Skidding: turn into the skid (steer in the direction the rear is sliding), get off the brakes, and avoid sharp steering inputs. If you must leave the road, it is usually better to drive off than to swerve back and forth. After any emergency stop, set reflective triangles: one within 10 feet of the vehicle, one at 100 feet behind, and one at 200 feet behind (or beyond a curve/hill crest if applicable)."
+          "title": "Emergency Maneuvers and Procedures",
+          "content": "Knowing what to do in an emergency can save your life. [Visual Prompt: A decision flowchart for a steer tire blowout: '1. Grip Wheel Firmly -> 2. Do NOT Brake -> 3. Stay Off Accelerator -> 4. Slow Down Gradually -> 5. Pull Off Road Safely.'] For a tire blowout, hold the steering wheel firmly and do not brake hard. For brake failure, downshift, apply the parking brake gently, and look for an escape route like a runaway truck ramp. In a skid, stop braking and turn the wheel in the direction you want the vehicle to go. After any emergency stop on the roadside, activate your 4-way flashers and set out your reflective triangles within 10 minutes: one 100 feet behind, one 200 feet behind, and one within 10 feet of the rear of the vehicle."
         }
       ],
       "flashcards": [
-        { "id": "cdl-gk-101-l05-f1", "front": "By how much should you reduce speed in heavy rain?", "back": "Reduce speed by at least 1/3 of the posted speed limit." },
-        { "id": "cdl-gk-101-l05-f2", "front": "Where should reflective triangles be placed after an emergency stop?", "back": "Within 10 feet of the vehicle, at 100 feet behind, and at 200 feet behind." },
-        { "id": "cdl-gk-101-l05-f3", "front": "What should you do during a tire blowout?", "back": "Hold the wheel firmly, do NOT brake, accelerate slightly to stabilize, then gradually slow down and pull over safely." },
-        { "id": "cdl-gk-101-l05-f4", "front": "What type of headlights should you use in fog?", "back": "Low-beam headlights. High beams reflect off moisture and reduce visibility." }
+        {
+          "id": "cdl-gk-101-l05-f1",
+          "front": "What is the proper procedure for a steer tire blowout?",
+          "back": "Grip the steering wheel firmly, do not brake, let the vehicle slow down on its own, and then pull over safely."
+        },
+        {
+          "id": "cdl-gk-101-l05-f2",
+          "front": "How far from a railroad track should you stop?",
+          "back": "No closer than 15 feet and no farther than 50 feet."
+        },
+        {
+          "id": "cdl-gk-101-l05-f3",
+          "front": "Where should you place reflective triangles after an emergency stop on a two-lane road?",
+          "back": "One 10 feet from the rear, one 100 feet from the rear, and one 100 feet from the front of the vehicle."
+        },
+        {
+          "id": "cdl-gk-101-l05-f4",
+          "front": "What type of headlights should you use in fog and why?",
+          "back": "Low-beam headlights. High beams reflect off the moisture in the fog, reducing your visibility even more."
+        }
       ]
     },
     {
       "id": "cdl-gk-101-l06",
+      "title": "FMCSA Regulations and Driver Wellness",
+      "type": "video",
+      "duration": 12,
+      "chunks": [
+        {
+          "id": "cdl-gk-101-l06-c1",
+          "title": "Hours of Service (HOS) Rules",
+          "content": "HOS rules are designed to prevent fatigued driving. For property-carrying drivers, the key limits are: [Visual Prompt: An infographic timeline of a 24-hour day with color-coded blocks representing the main HOS rules: 11-Hour Driving Limit, 14-Hour On-Duty Window, 10-Hour Off-Duty Requirement, and 30-Minute Break.] You may drive a maximum of 11 hours after 10 consecutive hours off duty. You may not drive beyond the 14th consecutive hour after coming on duty. You must take a 30-minute break after 8 hours of driving time. You also have a 60-hour/7-day or 70-hour/8-day limit, which can be reset by a 34-hour restart."
+        },
+        {
+          "id": "cdl-gk-101-l06-c2",
+          "title": "Logbooks and Electronic Logging Devices (ELDs)",
+          "content": "Your Record of Duty Status (RODS), or logbook, tracks your compliance with HOS. Most drivers are now required to use an Electronic Logging Device (ELD). [Visual Prompt: A close-up photo of an ELD screen on a truck's dashboard, showing the four main duty statuses: Off Duty, Sleeper Berth, Driving, and On-Duty Not Driving.] The ELD automatically records driving time. You are responsible for manually selecting your non-driving duty statuses and certifying your logs each day. You must be able to explain your logs to a roadside inspector and have the required supporting documents, such as fuel receipts and bills of lading."
+        },
+        {
+          "id": "cdl-gk-101-l06-c3",
+          "title": "Drug and Alcohol Regulations",
+          "content": "The FMCSA has a zero-tolerance policy for drug and alcohol use. [Visual Prompt: A split infographic. Left side shows a beer bottle with a red circle and slash, labeled 'Illegal to consume alcohol within 4 hours of duty.' Right side shows a BAC meter with 0.04% highlighted as the 'CDL Disqualification' limit.] The blood alcohol concentration (BAC) limit for CDL holders is 0.04%. Any detectable amount means you will be put out-of-service for 24 hours. Refusing a test is the same as failing it. A first offense DUI or positive drug test in a CMV results in a 1-year CDL disqualification; a second offense results in a lifetime ban."
+        }
+      ],
+      "flashcards": [
+        {
+          "id": "cdl-gk-101-l06-f1",
+          "front": "What are the 11-hour and 14-hour rules for property-carrying drivers?",
+          "back": "You can drive a maximum of 11 hours within a 14-hour window after coming on duty."
+        },
+        {
+          "id": "cdl-gk-101-l06-f2",
+          "front": "What is the legal Blood Alcohol Concentration (BAC) limit for a CDL driver on duty?",
+          "back": "0.04%. Any detectable amount (e.g., 0.02%) will result in a 24-hour out-of-service order."
+        },
+        {
+          "id": "cdl-gk-101-l06-f3",
+          "front": "How many consecutive hours off duty are required to reset your 60/70-hour clock?",
+          "back": "A minimum of 34 consecutive hours off duty."
+        },
+        {
+          "id": "cdl-gk-101-l06-f4",
+          "front": "What happens if a CDL driver refuses to take a required drug or alcohol test?",
+          "back": "The refusal is treated as a positive test result, leading to immediate CDL disqualification."
+        }
+      ]
+    },
+    {
+      "id": "cdl-gk-101-l07",
       "title": "CDL General Knowledge Practice Exam",
       "type": "quiz",
       "duration": 30,
       "chunks": [
         {
-          "id": "cdl-gk-101-l06-c1",
-          "title": "Practice Exam Overview",
-          "content": "This practice exam simulates the actual CDL General Knowledge test. The real exam has 50 multiple-choice questions covering all General Knowledge topics. You need 80% (40 correct answers) to pass. Questions are drawn from the FMCSA CDL Manual and cover: vehicle inspection, basic vehicle control, safe driving practices, transporting cargo, air brakes (basic knowledge), hazardous conditions, emergency procedures, and federal regulations. Time limit is typically 60 minutes, though some states do not impose a time limit. Take this practice test under timed conditions to simulate the real experience. Review all incorrect answers carefully — the explanations reference specific sections of the CDL manual."
+          "id": "cdl-gk-101-l07-c1",
+          "title": "Test Your Knowledge",
+          "content": "This practice exam is designed to simulate the official state CDL General Knowledge test. The real exam typically consists of 50 multiple-choice questions, and you must score at least 80% (40 correct answers) to pass. [Visual Prompt: A sample multiple-choice question on a computer screen, formatted like a DMV test, with four answer options.] The questions cover all topics from the previous lessons: vehicle inspection, safe driving, cargo, regulations, and emergencies. Read each question and all possible answers carefully before selecting the best one. Use this as an opportunity to identify any areas where you need more review before taking the official exam."
         }
       ],
       "flashcards": []
