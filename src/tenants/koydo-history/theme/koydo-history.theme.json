@@ -1,0 +1,51 @@
+{
+  "id": "koydo-history",
+  "displayName": "Koydo History",
+  "palette": {
+    "primary": "#92400e",
+    "primary_light": "#d97706",
+    "primary_dark": "#78350f",
+    "secondary": "#b45309",
+    "accent": "#dc2626",
+    "parchment": "#fef3c7",
+    "ink": "#1c1917",
+    "background": "#fffbeb",
+    "surface": "#ffffff",
+    "surface_raised": "#fef3c7",
+    "text_primary": "#1c1917",
+    "text_secondary": "#78350f",
+    "text_muted": "#a16207",
+    "border": "#fde68a",
+    "success": "#16a34a",
+    "warning": "#d97706",
+    "error": "#dc2626"
+  },
+  "darkPalette": {
+    "primary": "#d97706",
+    "primary_light": "#f59e0b",
+    "primary_dark": "#92400e",
+    "secondary": "#b45309",
+    "accent": "#ef4444",
+    "background": "#1c1917",
+    "surface": "#292524",
+    "surface_raised": "#44403c",
+    "text_primary": "#fef3c7",
+    "text_secondary": "#d97706",
+    "text_muted": "#a16207",
+    "border": "#44403c"
+  },
+  "typography": {
+    "fontFamily": "'Merriweather', 'Georgia', serif",
+    "fontFamilyHeading": "'Playfair Display', 'Georgia', serif",
+    "baseFontSize": "16px"
+  },
+  "spacing": {
+    "borderRadius": "0.5rem",
+    "cardPadding": "1.25rem"
+  },
+  "motion": {
+    "spring": false,
+    "reducedMotion": false,
+    "transitionSpeed": "normal"
+  }
+}
