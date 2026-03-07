@@ -1,0 +1,49 @@
+{
+  "id": "koydo-language",
+  "displayName": "Koydo Lingua",
+  "palette": {
+    "primary": "#2563eb",
+    "primary_light": "#60a5fa",
+    "primary_dark": "#1d4ed8",
+    "secondary": "#ec4899",
+    "accent": "#14b8a6",
+    "background": "#faf5ff",
+    "surface": "#ffffff",
+    "surface_raised": "#f3e8ff",
+    "text_primary": "#1e1b4b",
+    "text_secondary": "#6d28d9",
+    "text_muted": "#a78bfa",
+    "border": "#ede9fe",
+    "success": "#10b981",
+    "warning": "#f59e0b",
+    "error": "#ef4444"
+  },
+  "darkPalette": {
+    "primary": "#60a5fa",
+    "primary_light": "#93c5fd",
+    "primary_dark": "#2563eb",
+    "secondary": "#f472b6",
+    "accent": "#2dd4bf",
+    "background": "#0f0720",
+    "surface": "#1e1040",
+    "surface_raised": "#2d1f5e",
+    "text_primary": "#f5f3ff",
+    "text_secondary": "#c4b5fd",
+    "text_muted": "#7c3aed",
+    "border": "#2d1f5e"
+  },
+  "typography": {
+    "fontFamily": "'Inter', system-ui, sans-serif",
+    "fontFamilyHeading": "'Inter', system-ui, sans-serif",
+    "baseFontSize": "16px"
+  },
+  "spacing": {
+    "borderRadius": "1rem",
+    "cardPadding": "1.25rem"
+  },
+  "motion": {
+    "spring": true,
+    "reducedMotion": false,
+    "transitionSpeed": "normal"
+  }
+}

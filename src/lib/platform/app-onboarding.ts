@@ -109,6 +109,27 @@ const APP_ONBOARDING: Record<string, OnboardingConfig> = {
     heroSubtitle: "Science-backed exercises for memory, logic, and focus",
     skipAllowed: true,
   },
+  koydo_language: {
+    steps: ["welcome", "age_check", "skill_level", "subject_pick"],
+    theme: "standard",
+    heroTitle: "Learn Any Language",
+    heroSubtitle: "Speak with confidence using AI conversation partners",
+    skipAllowed: true,
+  },
+  koydo_music: {
+    steps: ["welcome", "skill_level", "subject_pick"],
+    theme: "energetic",
+    heroTitle: "Welcome to Music Lab",
+    heroSubtitle: "Theory, instruments, and music creation",
+    skipAllowed: true,
+  },
+  koydo_health: {
+    steps: ["welcome", "age_check", "skill_level", "subject_pick"],
+    theme: "standard",
+    heroTitle: "Your Health Journey",
+    heroSubtitle: "Nutrition, fitness, and body science education",
+    skipAllowed: true,
+  },
 
   // ── Regional variants ──────────────────────────────────────────────────────
   koydo_math_es: {
@@ -182,6 +203,9 @@ const APP_NAV_LAYOUTS: Record<string, AppNavLayout> = {
   koydo_trades: "sidebar",
   koydo_stem: "sidebar",
   koydo_neuro: "sidebar",
+  koydo_language: "full",
+  koydo_music: "sidebar",
+  koydo_health: "sidebar",
   // Regional variants inherit parent layout
   koydo_math_es: "full",
   koydo_exam_jp: "exam_dashboard",
@@ -268,6 +292,30 @@ const APP_HERO_CONFIGS: Record<string, AppHeroConfig> = {
     title: "Train Your Brain",
     subtitle: "Science-backed exercises for memory, logic, and focus",
     ctaLabel: "Start Training",
+    ctaHref: "/dashboard",
+    showVoicePicker: false,
+    showStageNav: false,
+  },
+  koydo_language: {
+    title: "Learn Any Language",
+    subtitle: "8+ languages with AI conversation partners",
+    ctaLabel: "Start Learning",
+    ctaHref: "/dashboard",
+    showVoicePicker: false,
+    showStageNav: false,
+  },
+  koydo_music: {
+    title: "Music Lab",
+    subtitle: "Theory, instruments, and music creation tools",
+    ctaLabel: "Start Playing",
+    ctaHref: "/dashboard",
+    showVoicePicker: false,
+    showStageNav: false,
+  },
+  koydo_health: {
+    title: "Your Health Journey",
+    subtitle: "Nutrition, fitness, and body science education",
+    ctaLabel: "Get Started",
     ctaHref: "/dashboard",
     showVoicePicker: false,
     showStageNav: false,

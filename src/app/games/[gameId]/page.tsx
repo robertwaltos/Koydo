@@ -298,6 +298,8 @@ const LEGACY_COMPONENTS: Record<string, React.ComponentType> = {
   "truck-highway": lazyGames["TruckHighway"],
   "dual-n-back": lazyGames["DualNBack"],
   "color-stroop": lazyGames["ColorStroop"],
+  "sequence-memory": lazyGames["SequenceMemory"],
+  "rapid-calc": lazyGames["RapidCalc"],
 };
 
 function reportAsCoreType(gameId: string): GameType {

@@ -1,0 +1,52 @@
+{
+  "id": "koydo-music",
+  "displayName": "Koydo Music Lab",
+  "palette": {
+    "primary": "#7c3aed",
+    "primary_light": "#a78bfa",
+    "primary_dark": "#6d28d9",
+    "secondary": "#ec4899",
+    "accent": "#06b6d4",
+    "rhythm_red": "#ef4444",
+    "melody_blue": "#3b82f6",
+    "harmony_green": "#10b981",
+    "background": "#faf5ff",
+    "surface": "#ffffff",
+    "surface_raised": "#f3e8ff",
+    "text_primary": "#1e1b4b",
+    "text_secondary": "#5b21b6",
+    "text_muted": "#a78bfa",
+    "border": "#ede9fe",
+    "success": "#10b981",
+    "warning": "#f59e0b",
+    "error": "#ef4444"
+  },
+  "darkPalette": {
+    "primary": "#a78bfa",
+    "primary_light": "#c4b5fd",
+    "primary_dark": "#7c3aed",
+    "secondary": "#f472b6",
+    "accent": "#22d3ee",
+    "background": "#0c0015",
+    "surface": "#1a0a30",
+    "surface_raised": "#2d1450",
+    "text_primary": "#f5f3ff",
+    "text_secondary": "#c4b5fd",
+    "text_muted": "#7c3aed",
+    "border": "#2d1450"
+  },
+  "typography": {
+    "fontFamily": "'Inter', system-ui, sans-serif",
+    "fontFamilyHeading": "'Inter', system-ui, sans-serif",
+    "baseFontSize": "16px"
+  },
+  "spacing": {
+    "borderRadius": "1rem",
+    "cardPadding": "1.25rem"
+  },
+  "motion": {
+    "spring": true,
+    "reducedMotion": false,
+    "transitionSpeed": "fast"
+  }
+}

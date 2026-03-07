@@ -715,6 +715,8 @@ export const PIPELINE_GAMES: RegisteredGame[] = [
   g("truck-highway", "Truck Highway", "CDL-themed endless driving game with traffic avoidance and trivia checkpoints", { category: "adventure", ageMin: 16, ageMax: 99, educationalWeight: 85, mechanic: "precision-choice" }),
   g("dual-n-back", "Dual N-Back", "Working memory training — remember positions and letters from N steps back", { category: "logic", ageMin: 12, ageMax: 99, educationalWeight: 95, mechanic: "pattern-scan" }),
   g("color-stroop", "Color Stroop Test", "Processing speed test — identify ink colors while ignoring word text", { category: "logic", ageMin: 10, ageMax: 99, educationalWeight: 90, mechanic: "precision-choice" }),
+  g("sequence-memory", "Sequence Memory", "Watch and repeat growing sequences of flashing cells to train visual memory", { category: "logic", ageMin: 8, ageMax: 99, educationalWeight: 90, mechanic: "pattern-scan" }),
+  g("rapid-calc", "Rapid Calculation", "Solve as many math problems as possible in 60 seconds with streak bonuses", { category: "math", ageMin: 8, ageMax: 99, educationalWeight: 95, mechanic: "precision-choice" }),
 ];
 
 export const GAME_CATALOG: RegisteredGame[] = [

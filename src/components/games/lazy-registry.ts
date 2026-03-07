@@ -251,6 +251,8 @@ const lazyGames: Record<string, ComponentType<any>> = {
   "TruckHighway": dynamic(() => import("./game-truck-highway"), { ssr: false }),
   "DualNBack": dynamic(() => import("./game-dual-n-back"), { ssr: false }),
   "ColorStroop": dynamic(() => import("./game-color-stroop"), { ssr: false }),
+  "SequenceMemory": dynamic(() => import("./game-sequence-memory"), { ssr: false }),
+  "RapidCalc": dynamic(() => import("./game-rapid-calc"), { ssr: false }),
 };
 
 export default lazyGames;

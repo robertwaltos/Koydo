@@ -19,6 +19,9 @@ import koydoSatTheme from "@/tenants/koydo-sat/theme/koydo-sat.theme.json";
 import koydoFinanceTheme from "@/tenants/koydo-finance/theme/koydo-finance.theme.json";
 import koydoMathTheme from "@/tenants/koydo-math/theme/koydo-math.theme.json";
 import koydoNeuroTheme from "@/tenants/koydo-neuro/theme/koydo-neuro.theme.json";
+import koydoLanguageTheme from "@/tenants/koydo-language/theme/koydo-language.theme.json";
+import koydoMusicTheme from "@/tenants/koydo-music/theme/koydo-music.theme.json";
+import koydoHealthTheme from "@/tenants/koydo-health/theme/koydo-health.theme.json";
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -224,6 +227,15 @@ const MATH_DARK_THEME_CONFIG = mathThemeConfig.dark;
 const neuroThemeConfig = buildTenantThemeConfig(koydoNeuroTheme as TenantThemeSchema, "#0891b2");
 const NEURO_THEME_CONFIG = neuroThemeConfig.light;
 const NEURO_DARK_THEME_CONFIG = neuroThemeConfig.dark;
+const languageThemeConfig = buildTenantThemeConfig(koydoLanguageTheme as TenantThemeSchema, "#2563eb");
+const LANGUAGE_THEME_CONFIG = languageThemeConfig.light;
+const LANGUAGE_DARK_THEME_CONFIG = languageThemeConfig.dark;
+const musicThemeConfig = buildTenantThemeConfig(koydoMusicTheme as TenantThemeSchema, "#7c3aed");
+const MUSIC_THEME_CONFIG = musicThemeConfig.light;
+const MUSIC_DARK_THEME_CONFIG = musicThemeConfig.dark;
+const healthThemeConfig = buildTenantThemeConfig(koydoHealthTheme as TenantThemeSchema, "#059669");
+const HEALTH_THEME_CONFIG = healthThemeConfig.light;
+const HEALTH_DARK_THEME_CONFIG = healthThemeConfig.dark;
 
 /**
  * Fetch manifest from `app_manifests` table via the admin API.
@@ -406,6 +418,69 @@ export const STATIC_MANIFESTS: Record<string, AppManifest> = {
         subtitle: "Train your brain with science-backed exercises",
         description: "Brain training app with exercises targeting Memory, Logic, Processing Speed, Attention, and Verbal skills. Includes neuroscience courses on brain health, cognitive psychology, and sleep science. Track your Brain Performance Index over time.",
         keywords: ["brain training", "neuroscience", "memory", "cognitive", "brain games", "mental fitness", "focus", "attention"],
+      },
+    },
+  },
+  koydo_language: {
+    appId: "koydo_language",
+    displayName: "Koydo Lingua",
+    themeConfig: LANGUAGE_THEME_CONFIG,
+    darkThemeConfig: LANGUAGE_DARK_THEME_CONFIG,
+    enabledSubjects: ["Languages"],
+    minAge: 8, maxAge: 99, isActive: true,
+    supportedLocales: ["en", "es", "fr", "de", "ja", "zh", "ko", "pt", "ar"],
+    defaultLocale: "en",
+    region: "global",
+    defaultCurrency: "USD",
+    pricingTier: "freemium",
+    storeListing: {
+      en: {
+        title: "Koydo Lingua",
+        subtitle: "Learn any language with AI conversation partners",
+        description: "Master 8+ languages with speaking, listening, reading, and writing exercises. AI conversation partners adapt to your level. Pronunciation tracking, spaced-repetition flashcards, and daily study plans.",
+        keywords: ["language learning", "learn Spanish", "learn French", "learn Japanese", "learn Chinese", "conversation", "pronunciation", "vocabulary"],
+      },
+    },
+  },
+  koydo_music: {
+    appId: "koydo_music",
+    displayName: "Koydo Music Lab",
+    themeConfig: MUSIC_THEME_CONFIG,
+    darkThemeConfig: MUSIC_DARK_THEME_CONFIG,
+    enabledSubjects: ["Music", "Arts"],
+    minAge: 6, maxAge: 99, isActive: true,
+    supportedLocales: ["en", "es", "de", "ja"],
+    defaultLocale: "en",
+    region: "global",
+    defaultCurrency: "USD",
+    pricingTier: "freemium",
+    storeListing: {
+      en: {
+        title: "Koydo Music Lab",
+        subtitle: "Learn music theory, instruments, and composition",
+        description: "Comprehensive music education covering theory (scales, chords, harmony), instruments (piano, guitar, drums, vocal), and creation tools (melody maker, beat maker, chord sandbox). Ear training games and sight-reading practice included.",
+        keywords: ["music theory", "piano lessons", "guitar lessons", "ear training", "composition", "music education", "chord progressions", "beat making"],
+      },
+    },
+  },
+  koydo_health: {
+    appId: "koydo_health",
+    displayName: "Koydo Health",
+    themeConfig: HEALTH_THEME_CONFIG,
+    darkThemeConfig: HEALTH_DARK_THEME_CONFIG,
+    enabledSubjects: ["Health", "Nutrition", "Fitness", "Anatomy"],
+    minAge: 13, maxAge: 99, isActive: true,
+    supportedLocales: ["en", "es"],
+    defaultLocale: "en",
+    region: "global",
+    defaultCurrency: "USD",
+    pricingTier: "freemium",
+    storeListing: {
+      en: {
+        title: "Koydo Health",
+        subtitle: "Wellness, nutrition, and body science education",
+        description: "Learn about nutrition, fitness, mental health, and human anatomy. Includes wellness tools (BMI calculator, calorie tracker, meditation timer), body systems explorer, and daily health tips.",
+        keywords: ["health education", "nutrition", "fitness", "mental health", "anatomy", "wellness", "meditation", "body science"],
       },
     },
   },
@@ -676,6 +751,9 @@ export const APP_ID_TO_VARIANT: Record<string, AppVariant> = {
   koydo_stem: "teen",
   koydo_cdl: "adult",
   koydo_neuro: "teen",
+  koydo_language: "full",
+  koydo_music: "full",
+  koydo_health: "teen",
   // Regional variants
   koydo_math_es: "teen",
   koydo_exam_jp: "teen",

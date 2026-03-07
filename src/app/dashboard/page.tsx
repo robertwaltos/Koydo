@@ -32,6 +32,9 @@ import SatDashboard from "@/tenants/koydo-sat/components/SatDashboard";
 import FinanceDashboard from "@/tenants/koydo-finance/components/FinanceDashboard";
 import MathDashboard from "@/tenants/koydo-math/components/MathDashboard";
 import NeuroDashboard from "@/tenants/koydo-neuro/components/NeuroDashboard";
+import LanguageDashboard from "@/tenants/koydo-language/components/LanguageDashboard";
+import MusicDashboard from "@/tenants/koydo-music/components/MusicDashboard";
+import HealthDashboard from "@/tenants/koydo-health/components/HealthDashboard";
 import { getActiveProfileId } from "@/lib/profiles/active-profile-server";
 import { Play } from "lucide-react";
 
@@ -225,6 +228,18 @@ export default async function DashboardPage() {
 
   if (appId === "koydo_neuro") {
     return <NeuroDashboard />;
+  }
+
+  if (appId === "koydo_language") {
+    return <LanguageDashboard />;
+  }
+
+  if (appId === "koydo_music") {
+    return <MusicDashboard />;
+  }
+
+  if (appId === "koydo_health") {
+    return <HealthDashboard />;
   }
 
   if (isJuniorApp) {
