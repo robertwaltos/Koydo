@@ -713,6 +713,8 @@ export const PIPELINE_GAMES: RegisteredGame[] = [
   g("light-towers", "Light Towers", "Place lights to illuminate every cell without conflicts", { category: "logic", ageMin: 7, ageMax: 99, educationalWeight: 80, mechanic: "pattern-scan" }),
   g("capital-quest", "Capital Quest", "Match countries to their capitals and learn world geography", { category: "adventure", ageMin: 7, ageMax: 14, educationalWeight: 85, mechanic: "precision-choice" }),
   g("truck-highway", "Truck Highway", "CDL-themed endless driving game with traffic avoidance and trivia checkpoints", { category: "adventure", ageMin: 16, ageMax: 99, educationalWeight: 85, mechanic: "precision-choice" }),
+  g("dual-n-back", "Dual N-Back", "Working memory training — remember positions and letters from N steps back", { category: "logic", ageMin: 12, ageMax: 99, educationalWeight: 95, mechanic: "pattern-scan" }),
+  g("color-stroop", "Color Stroop Test", "Processing speed test — identify ink colors while ignoring word text", { category: "logic", ageMin: 10, ageMax: 99, educationalWeight: 90, mechanic: "precision-choice" }),
 ];
 
 export const GAME_CATALOG: RegisteredGame[] = [

@@ -249,6 +249,8 @@ const lazyGames: Record<string, ComponentType<any>> = {
   "GameLightTowers": dynamic(() => import("./game-light-towers"), { ssr: false }),
   "GameCapitalQuest": dynamic(() => import("./game-capital-quest"), { ssr: false }),
   "TruckHighway": dynamic(() => import("./game-truck-highway"), { ssr: false }),
+  "DualNBack": dynamic(() => import("./game-dual-n-back"), { ssr: false }),
+  "ColorStroop": dynamic(() => import("./game-color-stroop"), { ssr: false }),
 };
 
 export default lazyGames;

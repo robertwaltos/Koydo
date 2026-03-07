@@ -296,6 +296,8 @@ const LEGACY_COMPONENTS: Record<string, React.ComponentType> = {
   "light-towers": lazyGames["GameLightTowers"],
   "capital-quest": lazyGames["GameCapitalQuest"],
   "truck-highway": lazyGames["TruckHighway"],
+  "dual-n-back": lazyGames["DualNBack"],
+  "color-stroop": lazyGames["ColorStroop"],
 };
 
 function reportAsCoreType(gameId: string): GameType {
