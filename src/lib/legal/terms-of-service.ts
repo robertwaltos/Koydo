@@ -4,8 +4,8 @@ import {
   type JurisdictionCode,
 } from "@/lib/legal/jurisdictions";
 
-export const TERMS_VERSION = "2026-03-03";
-export const TERMS_EFFECTIVE_DATE = "2026-03-03";
+export const TERMS_VERSION = "2026-03-07";
+export const TERMS_EFFECTIVE_DATE = "2026-03-07";
 
 type TermsSection = {
   id: string;
@@ -83,6 +83,19 @@ const BASE_TERMS_SECTIONS: readonly TermsSection[] = [
       "You retain ownership of content you submit, but grant Koydo a worldwide, royalty-free license to host, process, and display that content as needed to operate, secure, and improve the Service.",
       "If you submit feedback, feature ideas, or suggestions, we may use them without restriction or compensation.",
       "Educational outputs and AI-assisted content are provided for learning support and may contain errors; you remain responsible for decisions made based on generated content.",
+      "Koydo does not use your personal data, learning progress, submitted content, or any user-generated material to train, fine-tune, or improve artificial intelligence or machine learning models. Lesson text may be sent to third-party AI providers (OpenAI, Google Gemini, Anthropic Claude, xAI Grok) solely to generate educational content in real time; no personal data is included in these requests and no data is retained by these providers for model training. AI features are restricted for users under 13 in accordance with COPPA.",
+    ],
+  },
+  {
+    id: "data-processing-lawful-basis",
+    title: "6A. Data Processing and Lawful Basis (GDPR)",
+    paragraphs: [
+      "For users in the European Economic Area (EEA), United Kingdom, and Switzerland, we process personal data under the following lawful bases as defined by GDPR Article 6(1):",
+      "(a) Contract performance (Art. 6(1)(b)): processing necessary to provide the Service, including account creation, authentication, learning progress tracking, subscription management, and customer support.",
+      "(b) Consent (Art. 6(1)(a)): analytics and usage tracking via Mixpanel (adults only, consent-gated via our cookie consent mechanism). You may withdraw consent at any time via the 'Manage Cookies' control in the site footer, without affecting the lawfulness of processing prior to withdrawal.",
+      "(c) Legitimate interest (Art. 6(1)(f)): security monitoring, fraud prevention, abuse detection, and service integrity protection. We have balanced these interests against your rights and determined they do not override your fundamental rights and freedoms.",
+      "(d) Legal obligation (Art. 6(1)(c)): retention of billing records as required by tax and financial regulations, and compliance with lawful data requests from authorities.",
+      "You have the right to access, rectify, erase, restrict processing, port your data, and object to processing. To exercise these rights, contact dpo@koydo.app.",
     ],
   },
   {
@@ -102,6 +115,7 @@ const BASE_TERMS_SECTIONS: readonly TermsSection[] = [
       "Except where prohibited by applicable law (such as in the EU/UK), disputes arising from these Terms or the Service are resolved by binding individual arbitration and not by jury trial or class/representative proceeding.",
       "You may opt out of arbitration within 30 days of initial acceptance by sending your account email and a clear opt-out request to legal@koydo.app.",
       "If your regional law limits arbitration or class waiver enforcement for your claim type, that limitation applies only to the extent required by law.",
+      "The binding arbitration and class action waiver provisions in this section do not apply to users under 18 years of age. Disputes involving minors shall be resolved in accordance with applicable law and the courts of competent jurisdiction.",
     ],
   },
   {

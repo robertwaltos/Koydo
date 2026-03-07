@@ -6,15 +6,43 @@ import { sanitizeNextPath } from "@/lib/routing/next-path";
 
 type ConsentMethod = "email_verification" | "micro_charge" | "id_check";
 
+const CONSENT_METHODS: {
+  id: ConsentMethod;
+  label: string;
+  description: string;
+}[] = [
+  {
+    id: "email_verification",
+    label: "Email verification",
+    description:
+      "We send a verification link to the parent's email. The parent clicks the link to confirm consent.",
+  },
+  {
+    id: "micro_charge",
+    label: "Credit/debit card micro-charge ($0.50, refunded)",
+    description:
+      "A $0.50 charge is placed on the parent's card and immediately refunded. This proves the parent holds a valid payment method, meeting FTC verifiable parental consent requirements.",
+  },
+  {
+    id: "id_check",
+    label: "Government ID verification",
+    description:
+      "The parent uploads a government-issued photo ID. The ID is verified, then immediately deleted. This is the highest assurance method for COPPA compliance.",
+  },
+];
+
 export default function ParentConsentForm() {
   const searchParams = useSearchParams();
   const nextPath = sanitizeNextPath(searchParams.get("next"));
   const [parentEmail, setParentEmail] = useState("");
-  const [consentMethod, setConsentMethod] = useState<ConsentMethod>("email_verification");
+  const [consentMethod, setConsentMethod] =
+    useState<ConsentMethod>("email_verification");
   const [region, setRegion] = useState("US");
   const [verificationUrl, setVerificationUrl] = useState<string | null>(null);
   const [status, setStatus] = useState<string>("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const selectedMethod = CONSENT_METHODS.find((m) => m.id === consentMethod);
 
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -42,7 +70,9 @@ export default function ParentConsentForm() {
       };
 
       if (response.status === 401) {
-        setStatus("Please sign in as the child account first, then resubmit consent.");
+        setStatus(
+          "Please sign in as the child account first, then resubmit consent.",
+        );
         return;
       }
 
@@ -65,10 +95,13 @@ export default function ParentConsentForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="mt-6 space-y-4">
+    <form onSubmit={onSubmit} className="mt-6 space-y-5">
       <div>
-        <label className="mb-1 block text-sm font-medium" htmlFor="parentEmail">
-          Parent email
+        <label
+          className="mb-1 block text-sm font-medium"
+          htmlFor="parentEmail"
+        >
+          Parent / guardian email
         </label>
         <input
           id="parentEmail"
@@ -80,21 +113,38 @@ export default function ParentConsentForm() {
         />
       </div>
 
-      <div>
-        <label className="mb-1 block text-sm font-medium" htmlFor="consentMethod">
-          Verification method
-        </label>
-        <select
-          id="consentMethod"
-          value={consentMethod}
-          onChange={(event) => setConsentMethod(event.target.value as ConsentMethod)}
-          className="ui-focus-ring w-full rounded-md border border-border bg-surface px-3 py-2 text-sm"
-        >
-          <option value="email_verification">Email verification</option>
-          <option value="micro_charge">Credit card micro-charge</option>
-          <option value="id_check">ID check</option>
-        </select>
-      </div>
+      <fieldset>
+        <legend className="mb-2 block text-sm font-medium">
+          Choose a verification method
+        </legend>
+        <div className="space-y-2">
+          {CONSENT_METHODS.map((method) => (
+            <label
+              key={method.id}
+              className={`flex cursor-pointer items-start gap-3 rounded-lg border px-4 py-3 transition-colors ${
+                consentMethod === method.id
+                  ? "border-accent bg-accent/5"
+                  : "border-border bg-surface hover:border-zinc-400"
+              }`}
+            >
+              <input
+                type="radio"
+                name="consentMethod"
+                value={method.id}
+                checked={consentMethod === method.id}
+                onChange={() => setConsentMethod(method.id)}
+                className="mt-0.5 h-4 w-4 text-accent"
+              />
+              <div>
+                <span className="text-sm font-semibold">{method.label}</span>
+                <p className="mt-0.5 text-xs text-zinc-500">
+                  {method.description}
+                </p>
+              </div>
+            </label>
+          ))}
+        </div>
+      </fieldset>
 
       <div>
         <label className="mb-1 block text-sm font-medium" htmlFor="region">
@@ -109,10 +159,18 @@ export default function ParentConsentForm() {
         />
       </div>
 
+      {selectedMethod && consentMethod !== "email_verification" && (
+        <p className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
+          {consentMethod === "micro_charge"
+            ? "After submitting, you will be redirected to a secure payment page to complete the $0.50 verification charge. The charge is refunded immediately."
+            : "After submitting, you will be guided through a secure ID upload process. Your ID is verified and then permanently deleted."}
+        </p>
+      )}
+
       <button
         type="submit"
         disabled={isSubmitting}
-        className="ui-soft-button ui-focus-ring rounded-md bg-accent px-4 py-2 text-sm text-white disabled:opacity-70"
+        className="ui-soft-button ui-focus-ring min-h-11 w-full rounded-md bg-accent px-4 py-2 text-sm font-semibold text-white disabled:opacity-70"
       >
         {isSubmitting ? "Submitting..." : "Submit consent request"}
       </button>
@@ -127,6 +185,21 @@ export default function ParentConsentForm() {
       ) : null}
 
       {status ? <p className="text-sm text-zinc-600">{status}</p> : null}
+
+      <p className="text-xs text-zinc-400">
+        Koydo complies with the Children&apos;s Online Privacy Protection Act
+        (COPPA). We collect the minimum data necessary and never sell personal
+        information. See our{" "}
+        <a
+          href="/legal/privacy"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline"
+        >
+          Privacy Policy
+        </a>{" "}
+        for details.
+      </p>
     </form>
   );
 }

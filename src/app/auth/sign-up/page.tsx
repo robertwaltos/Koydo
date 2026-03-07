@@ -91,7 +91,7 @@ function SignUpPageInner() {
     }
 
     if (!acceptedTerms) {
-      setStatus("You must accept the Terms of Service to continue.");
+      setStatus("You must accept the Terms of Service and Privacy Policy to continue.");
       return;
     }
 
@@ -331,7 +331,10 @@ function SignUpPageInner() {
                   <Link href={termsHref} target="_blank" rel="noopener noreferrer" className="font-semibold underline">
                     Terms of Service
                   </Link>
-                  {billingState ? ` for ${billingState}` : ""}.
+                  {billingState ? ` for ${billingState}` : ""} and the{" "}
+                  <Link href="/legal/privacy" target="_blank" rel="noopener noreferrer" className="font-semibold underline">
+                    Privacy Policy
+                  </Link>.
                 </span>
               </label>
 
