@@ -19,7 +19,8 @@ export const cdl_general_knowledge_101_Module: LearningModule = {
     "Describe proper procedures for driving in hazardous conditions (rain, ice, fog, mountains)",
     "Recognize emergency situations and apply appropriate response procedures",
     "Understand FMCSA Hours of Service (HOS) regulations and logbook requirements",
-    "Interpret road signs, signals, and pavement markings relevant to commercial vehicles"
+    "Interpret road signs, signals, and pavement markings relevant to commercial vehicles",
+    "Understand the ELDT (Entry-Level Driver Training) requirement and CLP 14-day hold period"
   ],
   "lessons": [
     {
